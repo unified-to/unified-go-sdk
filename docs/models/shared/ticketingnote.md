@@ -1,0 +1,14 @@
+# TicketingNote
+
+
+## Fields
+
+| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `AgentID`                                                                   | **string*                                                                   | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `CreatedAt`                                                                 | [*types.Date](../../types/date.md)                                          | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `CustomerID`                                                                | **string*                                                                   | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `Description`                                                               | **string*                                                                   | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `ID`                                                                        | **string*                                                                   | :heavy_minus_sign:                                                          | N/A                                                                         |
+| `Raw`                                                                       | [PropertyTicketingNoteRaw](../../models/shared/propertyticketingnoteraw.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| `UpdatedAt`                                                                 | **string*                                                                   | :heavy_minus_sign:                                                          | N/A                                                                         |

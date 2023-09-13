@@ -1,0 +1,15 @@
+# CrmPipeline
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `Active`                                                                 | **bool*                                                                  | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `CreatedAt`                                                              | [*types.Date](../../types/date.md)                                       | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `DealProbability`                                                        | **bool*                                                                  | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `DisplayOrder`                                                           | **float64*                                                               | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `ID`                                                                     | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Name`                                                                   | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Raw`                                                                    | [*PropertyCrmPipelineRaw](../../models/shared/propertycrmpipelineraw.md) | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `UpdatedAt`                                                              | [*types.Date](../../types/date.md)                                       | :heavy_minus_sign:                                                       | N/A                                                                      |

@@ -1,0 +1,14 @@
+# GetTicketingConnectionIDCustomerRequest
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `ConnectionID`                                                           | *string*                                                                 | :heavy_check_mark:                                                       | ID of the connection                                                     |
+| `Limit`                                                                  | **float64*                                                               | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Offset`                                                                 | **float64*                                                               | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Order`                                                                  | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Query`                                                                  | **string*                                                                | :heavy_minus_sign:                                                       | Query string to search. eg. email address or name                        |
+| `Sort`                                                                   | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `UpdatedGte`                                                             | [*types.Date](../../types/date.md)                                       | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |

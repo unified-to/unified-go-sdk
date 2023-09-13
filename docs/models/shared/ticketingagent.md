@@ -1,0 +1,14 @@
+# TicketingAgent
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `CreatedAt`                                                                   | [*types.Date](../../types/date.md)                                            | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Emails`                                                                      | [][TicketingEmail](../../models/shared/ticketingemail.md)                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `ID`                                                                          | **string*                                                                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Name`                                                                        | **string*                                                                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Raw`                                                                         | [PropertyTicketingAgentRaw](../../models/shared/propertyticketingagentraw.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `Telephones`                                                                  | [][TicketingTelephone](../../models/shared/ticketingtelephone.md)             | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `UpdatedAt`                                                                   | [*types.Date](../../types/date.md)                                            | :heavy_minus_sign:                                                            | N/A                                                                           |

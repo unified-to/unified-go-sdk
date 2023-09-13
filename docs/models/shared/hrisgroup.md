@@ -1,0 +1,18 @@
+# HrisGroup
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `CreatedAt`                                                          | [*types.Date](../../types/date.md)                                   | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `Description`                                                        | **string*                                                            | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `EmployeeIds`                                                        | []*string*                                                           | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `ID`                                                                 | **string*                                                            | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `IsActive`                                                           | **bool*                                                              | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `ManagerIds`                                                         | []*string*                                                           | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `Name`                                                               | **string*                                                            | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `ParentID`                                                           | **string*                                                            | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `Raw`                                                                | [*PropertyHrisGroupRaw](../../models/shared/propertyhrisgroupraw.md) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `Type`                                                               | [*HrisGroupType](../../models/shared/hrisgrouptype.md)               | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `UpdatedAt`                                                          | [*types.Date](../../types/date.md)                                   | :heavy_minus_sign:                                                   | N/A                                                                  |
