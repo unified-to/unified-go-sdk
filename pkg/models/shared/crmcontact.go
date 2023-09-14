@@ -3,7 +3,7 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // CrmContact - A contact represents a person that optionally is associated with a deal and/or a company
@@ -11,8 +11,8 @@ type CrmContact struct {
 	Address *PropertyCrmContactAddress `json:"address,omitempty"`
 	Company *string                    `json:"company,omitempty"`
 	// An array of company IDs associated with this contact
-	CompanyIds []string    `json:"company_ids,omitempty"`
-	CreatedAt  *types.Date `json:"created_at,omitempty"`
+	CompanyIds []string   `json:"company_ids,omitempty"`
+	CreatedAt  *time.Time `json:"created_at,omitempty"`
 	// An array of deal IDs associated with this contact
 	DealIds []string `json:"deal_ids,omitempty"`
 	// An array of email addresses for this contact
@@ -24,7 +24,7 @@ type CrmContact struct {
 	// An array of telephones for this contact
 	Telephones []CrmTelephone `json:"telephones,omitempty"`
 	Title      *string        `json:"title,omitempty"`
-	UpdatedAt  *types.Date    `json:"updated_at,omitempty"`
+	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (o *CrmContact) GetAddress() *PropertyCrmContactAddress {
@@ -48,7 +48,7 @@ func (o *CrmContact) GetCompanyIds() []string {
 	return o.CompanyIds
 }
 
-func (o *CrmContact) GetCreatedAt() *types.Date {
+func (o *CrmContact) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -104,7 +104,7 @@ func (o *CrmContact) GetTitle() *string {
 	return o.Title
 }
 
-func (o *CrmContact) GetUpdatedAt() *types.Date {
+func (o *CrmContact) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

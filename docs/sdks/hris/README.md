@@ -148,7 +148,7 @@ func main() {
         Order: unifiedto.String("corporis"),
         Query: unifiedto.String("explicabo"),
         Sort: unifiedto.String("distinctio"),
-        UpdatedGte: types.MustDateFromString("2021-08-12"),
+        UpdatedGte: types.MustTimeFromString("2021-08-12T22:16:16.253Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -256,7 +256,7 @@ func main() {
         Order: unifiedto.String("illo"),
         Query: unifiedto.String("illo"),
         Sort: unifiedto.String("deleniti"),
-        UpdatedGte: types.MustDateFromString("2022-07-26"),
+        UpdatedGte: types.MustTimeFromString("2022-07-26T10:34:40.123Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -370,8 +370,8 @@ func main() {
                 Region: unifiedto.String("unde"),
                 RegionCode: unifiedto.String("autem"),
             },
-            CreatedAt: types.MustDateFromString("2022-07-11"),
-            DateOfBirth: types.MustDateFromString("2022-02-18"),
+            CreatedAt: types.MustTimeFromString("2022-07-11T08:13:45.102Z"),
+            DateOfBirth: types.MustTimeFromString("2022-02-18T07:36:00.073Z"),
             Department: unifiedto.String("autem"),
             Division: unifiedto.String("placeat"),
             Emails: []shared.HrisEmail{
@@ -384,7 +384,7 @@ func main() {
             EmploymentStatus: shared.HrisEmployeeEmploymentStatusInactive.ToPointer(),
             EmploymentType: shared.HrisEmployeeEmploymentTypeIntern.ToPointer(),
             Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
-            HiredAt: types.MustDateFromString("2020-08-13"),
+            HiredAt: types.MustTimeFromString("2020-08-13T08:33:47.369Z"),
             ID: unifiedto.String("ef234c95-5b9b-4df2-990a-bd9bbcc2725e"),
             Location: unifiedto.String("impedit"),
             ManagerID: unifiedto.String("magni"),
@@ -397,9 +397,9 @@ func main() {
                     Type: shared.HrisTelephoneTypeWork.ToPointer(),
                 },
             },
-            TerminatedAt: types.MustDateFromString("2022-06-27"),
+            TerminatedAt: types.MustTimeFromString("2022-06-27T13:37:26.116Z"),
             Title: unifiedto.String("Mr."),
-            UpdatedAt: types.MustDateFromString("2021-10-27"),
+            UpdatedAt: types.MustTimeFromString("2021-10-27T12:07:56.119Z"),
         },
         ConnectionID: "excepturi",
         ID: "ef68e45c-8add-4fac-b545-00430c6632b4",
@@ -455,7 +455,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Hris.PatchHrisConnectionIDGroupID(ctx, operations.PatchHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustDateFromString("2022-05-31"),
+            CreatedAt: types.MustTimeFromString("2022-05-31T02:06:03.542Z"),
             Description: unifiedto.String("inventore"),
             EmployeeIds: []string{
                 "sapiente",
@@ -469,7 +469,7 @@ func main() {
             ParentID: unifiedto.String("qui"),
             Raw: &shared.PropertyHrisGroupRaw{},
             Type: shared.HrisGroupTypeDepartment.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-12-06"),
+            UpdatedAt: types.MustTimeFromString("2022-12-06T03:55:58.108Z"),
         },
         ConnectionID: "quisquam",
         ID: "7c0f0f87-3f9d-45c2-9fd3-e0b4a4a4253c",
@@ -535,8 +535,8 @@ func main() {
                 Region: unifiedto.String("pariatur"),
                 RegionCode: unifiedto.String("porro"),
             },
-            CreatedAt: types.MustDateFromString("2022-09-23"),
-            DateOfBirth: types.MustDateFromString("2021-07-11"),
+            CreatedAt: types.MustTimeFromString("2022-09-23T16:00:07.090Z"),
+            DateOfBirth: types.MustTimeFromString("2021-07-11T10:12:07.009Z"),
             Department: unifiedto.String("itaque"),
             Division: unifiedto.String("sit"),
             Emails: []shared.HrisEmail{
@@ -549,7 +549,7 @@ func main() {
             EmploymentStatus: shared.HrisEmployeeEmploymentStatusActive.ToPointer(),
             EmploymentType: shared.HrisEmployeeEmploymentTypeFullTime.ToPointer(),
             Gender: shared.HrisEmployeeGenderFemale.ToPointer(),
-            HiredAt: types.MustDateFromString("2021-01-27"),
+            HiredAt: types.MustTimeFromString("2021-01-27T23:42:02.589Z"),
             ID: unifiedto.String("12a4ba9d-5998-4819-acfd-0c77c53e7e7d"),
             Location: unifiedto.String("eius"),
             ManagerID: unifiedto.String("accusamus"),
@@ -562,9 +562,9 @@ func main() {
                     Type: shared.HrisTelephoneTypeFax.ToPointer(),
                 },
             },
-            TerminatedAt: types.MustDateFromString("2021-06-09"),
+            TerminatedAt: types.MustTimeFromString("2021-06-09T00:38:41.199Z"),
             Title: unifiedto.String("Mrs."),
-            UpdatedAt: types.MustDateFromString("2022-06-19"),
+            UpdatedAt: types.MustTimeFromString("2022-06-19T22:55:28.813Z"),
         },
         ConnectionID: "saepe",
     }, operationSecurity)
@@ -619,7 +619,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Hris.PostHrisConnectionIDGroup(ctx, operations.PostHrisConnectionIDGroupRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustDateFromString("2022-10-11"),
+            CreatedAt: types.MustTimeFromString("2022-10-11T00:06:05.180Z"),
             Description: unifiedto.String("sint"),
             EmployeeIds: []string{
                 "ea",
@@ -633,7 +633,7 @@ func main() {
             ParentID: unifiedto.String("voluptatum"),
             Raw: &shared.PropertyHrisGroupRaw{},
             Type: shared.HrisGroupTypeSubDepartment.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-02-14"),
+            UpdatedAt: types.MustTimeFromString("2022-02-14T18:55:03.442Z"),
         },
         ConnectionID: "commodi",
     }, operationSecurity)
@@ -698,8 +698,8 @@ func main() {
                 Region: unifiedto.String("nisi"),
                 RegionCode: unifiedto.String("occaecati"),
             },
-            CreatedAt: types.MustDateFromString("2022-12-15"),
-            DateOfBirth: types.MustDateFromString("2020-03-31"),
+            CreatedAt: types.MustTimeFromString("2022-12-15T12:15:10.431Z"),
+            DateOfBirth: types.MustTimeFromString("2020-03-31T16:49:34.939Z"),
             Department: unifiedto.String("odio"),
             Division: unifiedto.String("nihil"),
             Emails: []shared.HrisEmail{
@@ -712,7 +712,7 @@ func main() {
             EmploymentStatus: shared.HrisEmployeeEmploymentStatusInactive.ToPointer(),
             EmploymentType: shared.HrisEmployeeEmploymentTypeOther.ToPointer(),
             Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
-            HiredAt: types.MustDateFromString("2022-06-18"),
+            HiredAt: types.MustTimeFromString("2022-06-18T09:54:51.929Z"),
             ID: unifiedto.String("06e61b0d-3087-414c-a0a3-d98637ca85c3"),
             Location: unifiedto.String("delectus"),
             ManagerID: unifiedto.String("repudiandae"),
@@ -725,9 +725,9 @@ func main() {
                     Type: shared.HrisTelephoneTypeFax.ToPointer(),
                 },
             },
-            TerminatedAt: types.MustDateFromString("2021-02-20"),
+            TerminatedAt: types.MustTimeFromString("2021-02-20T15:13:08.610Z"),
             Title: unifiedto.String("Mrs."),
-            UpdatedAt: types.MustDateFromString("2022-01-28"),
+            UpdatedAt: types.MustTimeFromString("2022-01-28T12:53:07.770Z"),
         },
         ConnectionID: "placeat",
         ID: "98f13af2-8db2-4cf2-bf4f-3ded356d7e14",
@@ -783,7 +783,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Hris.PutHrisConnectionIDGroupID(ctx, operations.PutHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustDateFromString("2022-08-29"),
+            CreatedAt: types.MustTimeFromString("2022-08-29T10:06:09.751Z"),
             Description: unifiedto.String("beatae"),
             EmployeeIds: []string{
                 "eligendi",
@@ -797,7 +797,7 @@ func main() {
             ParentID: unifiedto.String("ab"),
             Raw: &shared.PropertyHrisGroupRaw{},
             Type: shared.HrisGroupTypeDivision.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2020-11-07"),
+            UpdatedAt: types.MustTimeFromString("2020-11-07T15:44:18.546Z"),
         },
         ConnectionID: "quasi",
         ID: "2c5ba825-fe22-4cd5-8ba6-fbfec932af68",

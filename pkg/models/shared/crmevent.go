@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type CrmEventType string
@@ -51,8 +51,8 @@ type CrmEvent struct {
 	// An array of company IDs associated with this event
 	CompanyIds []string `json:"company_ids,omitempty"`
 	// An array of contact IDs associated with this event
-	ContactIds []string    `json:"contact_ids,omitempty"`
-	CreatedAt  *types.Date `json:"created_at,omitempty"`
+	ContactIds []string   `json:"contact_ids,omitempty"`
+	CreatedAt  *time.Time `json:"created_at,omitempty"`
 	// An array of deal IDs associated with this event
 	DealIds []string `json:"deal_ids,omitempty"`
 	// The email object, when type = email
@@ -67,7 +67,7 @@ type CrmEvent struct {
 	// The task object, when type = task
 	Task      *PropertyCrmEventTask `json:"task,omitempty"`
 	Type      *CrmEventType         `json:"type,omitempty"`
-	UpdatedAt *types.Date           `json:"updated_at,omitempty"`
+	UpdatedAt *time.Time            `json:"updated_at,omitempty"`
 }
 
 func (o *CrmEvent) GetCall() *PropertyCrmEventCall {
@@ -91,7 +91,7 @@ func (o *CrmEvent) GetContactIds() []string {
 	return o.ContactIds
 }
 
-func (o *CrmEvent) GetCreatedAt() *types.Date {
+func (o *CrmEvent) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -154,7 +154,7 @@ func (o *CrmEvent) GetType() *CrmEventType {
 	return o.Type
 }
 
-func (o *CrmEvent) GetUpdatedAt() *types.Date {
+func (o *CrmEvent) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

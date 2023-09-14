@@ -156,7 +156,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.1.0",
+			SDKVersion:        "0.1.1",
 			GenVersion:        "2.109.3",
 		},
 	}

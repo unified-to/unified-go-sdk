@@ -31,7 +31,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
         ConnectionID: unifiedto.String("voluptate"),
-        CreatedLte: types.MustDateFromString("2022-04-12"),
+        CreatedLte: types.MustTimeFromString("2022-04-12T10:47:34.158Z"),
         Env: unifiedto.String("eaque"),
         Error: unifiedto.Bool(false),
         ExternalXref: unifiedto.String("pariatur"),
@@ -40,7 +40,7 @@ func main() {
         Offset: unifiedto.Float64(166.27),
         Order: unifiedto.String("fugiat"),
         Sort: unifiedto.String("amet"),
-        UpdatedGte: types.MustDateFromString("2022-03-27"),
+        UpdatedGte: types.MustTimeFromString("2022-03-27T19:22:24.458Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)

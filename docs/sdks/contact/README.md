@@ -260,7 +260,7 @@ func main() {
         Order: unifiedto.String("aperiam"),
         Query: unifiedto.String("dolores"),
         Sort: unifiedto.String("illum"),
-        UpdatedGte: types.MustDateFromString("2022-10-31"),
+        UpdatedGte: types.MustTimeFromString("2022-10-31T07:46:10.277Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -369,7 +369,7 @@ func main() {
         Order: unifiedto.String("ratione"),
         Query: unifiedto.String("iure"),
         Sort: unifiedto.String("tempora"),
-        UpdatedGte: types.MustDateFromString("2022-05-21"),
+        UpdatedGte: types.MustTimeFromString("2022-05-21T02:14:12.604Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -487,7 +487,7 @@ func main() {
             CompanyIds: []string{
                 "ad",
             },
-            CreatedAt: types.MustDateFromString("2022-11-07"),
+            CreatedAt: types.MustTimeFromString("2022-11-07T21:20:17.353Z"),
             DealIds: []string{
                 "suscipit",
             },
@@ -507,7 +507,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Mrs."),
-            UpdatedAt: types.MustDateFromString("2022-01-12"),
+            UpdatedAt: types.MustTimeFromString("2022-01-12T14:31:46.273Z"),
         },
         ConnectionID: "iste",
         ID: "390c5888-0983-4dab-b9ef-3ffdd9f7f079",
@@ -668,7 +668,7 @@ func main() {
     res, err := s.Contact.PatchUcConnectionIDContactID(ctx, operations.PatchUcConnectionIDContactIDRequest{
         UcContact: &shared.UcContact{
             Company: unifiedto.String("Graham - Zboncak"),
-            CreatedAt: types.MustDateFromString("2022-05-10"),
+            CreatedAt: types.MustTimeFromString("2022-05-10T21:25:57.790Z"),
             Emails: []shared.UcEmail{
                 shared.UcEmail{
                     Email: "Augustine.Davis50@hotmail.com",
@@ -685,7 +685,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Ms."),
-            UpdatedAt: types.MustDateFromString("2022-01-25"),
+            UpdatedAt: types.MustTimeFromString("2022-01-25T19:10:58.985Z"),
         },
         ConnectionID: "unde",
         ID: "c3ddc5f1-11de-4a10-a6d5-41a4d190feb2",
@@ -755,7 +755,7 @@ func main() {
             CompanyIds: []string{
                 "facilis",
             },
-            CreatedAt: types.MustDateFromString("2022-01-29"),
+            CreatedAt: types.MustTimeFromString("2022-01-29T03:16:14.679Z"),
             DealIds: []string{
                 "amet",
             },
@@ -775,7 +775,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Ms."),
-            UpdatedAt: types.MustDateFromString("2022-11-30"),
+            UpdatedAt: types.MustTimeFromString("2022-11-30T23:34:54.352Z"),
         },
         ConnectionID: "fuga",
     }, operationSecurity)
@@ -831,7 +831,7 @@ func main() {
     res, err := s.Contact.PostUcConnectionIDContact(ctx, operations.PostUcConnectionIDContactRequest{
         UcContact: &shared.UcContact{
             Company: unifiedto.String("Braun and Sons"),
-            CreatedAt: types.MustDateFromString("2020-05-06"),
+            CreatedAt: types.MustTimeFromString("2020-05-06T08:27:54.041Z"),
             Emails: []shared.UcEmail{
                 shared.UcEmail{
                     Email: "Caleb.Dickens1@yahoo.com",
@@ -848,7 +848,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Mr."),
-            UpdatedAt: types.MustDateFromString("2021-05-16"),
+            UpdatedAt: types.MustTimeFromString("2021-05-16T15:40:19.045Z"),
         },
         ConnectionID: "magnam",
     }, operationSecurity)
@@ -917,7 +917,7 @@ func main() {
             CompanyIds: []string{
                 "hic",
             },
-            CreatedAt: types.MustDateFromString("2022-10-10"),
+            CreatedAt: types.MustTimeFromString("2022-10-10T04:57:04.387Z"),
             DealIds: []string{
                 "nobis",
             },
@@ -937,7 +937,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Dr."),
-            UpdatedAt: types.MustDateFromString("2022-07-21"),
+            UpdatedAt: types.MustTimeFromString("2022-07-21T21:21:59.349Z"),
         },
         ConnectionID: "nam",
         ID: "271a289c-57e8-454e-9043-9d2224656946",
@@ -1098,7 +1098,7 @@ func main() {
     res, err := s.Contact.PutUcConnectionIDContactID(ctx, operations.PutUcConnectionIDContactIDRequest{
         UcContact: &shared.UcContact{
             Company: unifiedto.String("Murphy, Pfannerstill and Feest"),
-            CreatedAt: types.MustDateFromString("2022-06-26"),
+            CreatedAt: types.MustTimeFromString("2022-06-26T16:56:56.149Z"),
             Emails: []shared.UcEmail{
                 shared.UcEmail{
                     Email: "Dax_Boehm30@hotmail.com",
@@ -1115,7 +1115,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Miss"),
-            UpdatedAt: types.MustDateFromString("2021-06-23"),
+            UpdatedAt: types.MustTimeFromString("2021-06-23T12:33:28.750Z"),
         },
         ConnectionID: "est",
         ID: "12d02529-270b-48d5-b22d-d895b8bcf24d",

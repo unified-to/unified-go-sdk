@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type HrisEmployeeEmploymentStatus string
@@ -151,8 +151,8 @@ func (e *HrisEmployeeMaritalStatus) UnmarshalJSON(data []byte) error {
 
 type HrisEmployee struct {
 	Address          *PropertyHrisEmployeeAddress  `json:"address,omitempty"`
-	CreatedAt        *types.Date                   `json:"created_at,omitempty"`
-	DateOfBirth      *types.Date                   `json:"date_of_birth,omitempty"`
+	CreatedAt        *time.Time                    `json:"created_at,omitempty"`
+	DateOfBirth      *time.Time                    `json:"date_of_birth,omitempty"`
 	Department       *string                       `json:"department,omitempty"`
 	Division         *string                       `json:"division,omitempty"`
 	Emails           []HrisEmail                   `json:"emails,omitempty"`
@@ -160,7 +160,7 @@ type HrisEmployee struct {
 	EmploymentStatus *HrisEmployeeEmploymentStatus `json:"employment_status,omitempty"`
 	EmploymentType   *HrisEmployeeEmploymentType   `json:"employment_type,omitempty"`
 	Gender           *HrisEmployeeGender           `json:"gender,omitempty"`
-	HiredAt          *types.Date                   `json:"hired_at,omitempty"`
+	HiredAt          *time.Time                    `json:"hired_at,omitempty"`
 	ID               *string                       `json:"id,omitempty"`
 	Location         *string                       `json:"location,omitempty"`
 	ManagerID        *string                       `json:"manager_id,omitempty"`
@@ -168,9 +168,9 @@ type HrisEmployee struct {
 	Name             *string                       `json:"name,omitempty"`
 	Raw              *PropertyHrisEmployeeRaw      `json:"raw,omitempty"`
 	Telephones       []HrisTelephone               `json:"telephones,omitempty"`
-	TerminatedAt     *types.Date                   `json:"terminated_at,omitempty"`
+	TerminatedAt     *time.Time                    `json:"terminated_at,omitempty"`
 	Title            *string                       `json:"title,omitempty"`
-	UpdatedAt        *types.Date                   `json:"updated_at,omitempty"`
+	UpdatedAt        *time.Time                    `json:"updated_at,omitempty"`
 }
 
 func (o *HrisEmployee) GetAddress() *PropertyHrisEmployeeAddress {
@@ -180,14 +180,14 @@ func (o *HrisEmployee) GetAddress() *PropertyHrisEmployeeAddress {
 	return o.Address
 }
 
-func (o *HrisEmployee) GetCreatedAt() *types.Date {
+func (o *HrisEmployee) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.CreatedAt
 }
 
-func (o *HrisEmployee) GetDateOfBirth() *types.Date {
+func (o *HrisEmployee) GetDateOfBirth() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -243,7 +243,7 @@ func (o *HrisEmployee) GetGender() *HrisEmployeeGender {
 	return o.Gender
 }
 
-func (o *HrisEmployee) GetHiredAt() *types.Date {
+func (o *HrisEmployee) GetHiredAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -299,7 +299,7 @@ func (o *HrisEmployee) GetTelephones() []HrisTelephone {
 	return o.Telephones
 }
 
-func (o *HrisEmployee) GetTerminatedAt() *types.Date {
+func (o *HrisEmployee) GetTerminatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -313,7 +313,7 @@ func (o *HrisEmployee) GetTitle() *string {
 	return o.Title
 }
 
-func (o *HrisEmployee) GetUpdatedAt() *types.Date {
+func (o *HrisEmployee) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

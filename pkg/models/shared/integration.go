@@ -3,7 +3,7 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // Integration - Informational object for supported integrations.
@@ -13,7 +13,7 @@ type Integration struct {
 	// The categories of support solutions that this integration has
 	Categories           []PropertyIntegrationCategories `json:"categories"`
 	Color                *string                         `json:"color,omitempty"`
-	CreatedAt            *types.Date                     `json:"created_at,omitempty"`
+	CreatedAt            *time.Time                      `json:"created_at,omitempty"`
 	FaIcon               *string                         `json:"fa_icon,omitempty"`
 	InProgress           bool                            `json:"in_progress"`
 	IsActive             *bool                           `json:"is_active,omitempty"`
@@ -21,15 +21,15 @@ type Integration struct {
 	Name                 string                          `json:"name"`
 	RateLimitDescription *string                         `json:"rate_limit_description,omitempty"`
 	Support              map[string]IntegrationSupport   `json:"support"`
-	TestedAt             *types.Date                     `json:"tested_at,omitempty"`
+	TestedAt             *time.Time                      `json:"tested_at,omitempty"`
 	TextColor            *string                         `json:"text_color,omitempty"`
 	// instructions for the user on how to find the token/key
 	TokenInstructions []string `json:"token_instructions,omitempty"`
 	// if auth_types = 'token'
-	TokenNames []string    `json:"token_names,omitempty"`
-	Type       string      `json:"type"`
-	UpdatedAt  *types.Date `json:"updated_at,omitempty"`
-	WebURL     *string     `json:"web_url,omitempty"`
+	TokenNames []string   `json:"token_names,omitempty"`
+	Type       string     `json:"type"`
+	UpdatedAt  *time.Time `json:"updated_at,omitempty"`
+	WebURL     *string    `json:"web_url,omitempty"`
 }
 
 func (o *Integration) GetAPIDocsURL() *string {
@@ -60,7 +60,7 @@ func (o *Integration) GetColor() *string {
 	return o.Color
 }
 
-func (o *Integration) GetCreatedAt() *types.Date {
+func (o *Integration) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -116,7 +116,7 @@ func (o *Integration) GetSupport() map[string]IntegrationSupport {
 	return o.Support
 }
 
-func (o *Integration) GetTestedAt() *types.Date {
+func (o *Integration) GetTestedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -151,7 +151,7 @@ func (o *Integration) GetType() string {
 	return o.Type
 }
 
-func (o *Integration) GetUpdatedAt() *types.Date {
+func (o *Integration) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

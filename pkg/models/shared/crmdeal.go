@@ -3,26 +3,26 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // CrmDeal - A deal represents an opportunity with companies and/or contacts
 type CrmDeal struct {
-	Amount      *float64    `json:"amount,omitempty"`
-	ClosedAt    *types.Date `json:"closed_at,omitempty"`
-	CreatedAt   *types.Date `json:"created_at,omitempty"`
-	Currency    *string     `json:"currency,omitempty"`
-	ID          *string     `json:"id,omitempty"`
-	LostReason  *string     `json:"lost_reason,omitempty"`
-	Name        *string     `json:"name,omitempty"`
-	Pipeline    *string     `json:"pipeline,omitempty"`
-	Probability *float64    `json:"probability,omitempty"`
+	Amount      *float64   `json:"amount,omitempty"`
+	ClosedAt    *time.Time `json:"closed_at,omitempty"`
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Currency    *string    `json:"currency,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	LostReason  *string    `json:"lost_reason,omitempty"`
+	Name        *string    `json:"name,omitempty"`
+	Pipeline    *string    `json:"pipeline,omitempty"`
+	Probability *float64   `json:"probability,omitempty"`
 	// The raw data returned by the integration for this deal
 	Raw       *PropertyCrmDealRaw `json:"raw,omitempty"`
 	Source    *string             `json:"source,omitempty"`
 	Stage     *string             `json:"stage,omitempty"`
 	Tags      []string            `json:"tags,omitempty"`
-	UpdatedAt *types.Date         `json:"updated_at,omitempty"`
+	UpdatedAt *time.Time          `json:"updated_at,omitempty"`
 	WonReason *string             `json:"won_reason,omitempty"`
 }
 
@@ -33,14 +33,14 @@ func (o *CrmDeal) GetAmount() *float64 {
 	return o.Amount
 }
 
-func (o *CrmDeal) GetClosedAt() *types.Date {
+func (o *CrmDeal) GetClosedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.ClosedAt
 }
 
-func (o *CrmDeal) GetCreatedAt() *types.Date {
+func (o *CrmDeal) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -117,7 +117,7 @@ func (o *CrmDeal) GetTags() []string {
 	return o.Tags
 }
 
-func (o *CrmDeal) GetUpdatedAt() *types.Date {
+func (o *CrmDeal) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

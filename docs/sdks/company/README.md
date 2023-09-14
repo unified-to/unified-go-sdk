@@ -149,7 +149,7 @@ func main() {
         Order: unifiedto.String("pariatur"),
         Query: unifiedto.String("harum"),
         Sort: unifiedto.String("dolore"),
-        UpdatedGte: types.MustDateFromString("2021-09-11"),
+        UpdatedGte: types.MustTimeFromString("2021-09-11T06:54:38.386Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -316,7 +316,7 @@ func main() {
                 Region: unifiedto.String("quas"),
                 RegionCode: unifiedto.String("consequuntur"),
             },
-            CreatedAt: types.MustDateFromString("2022-10-03"),
+            CreatedAt: types.MustTimeFromString("2022-10-03T16:02:53.877Z"),
             DealIds: []string{
                 "aliquid",
             },
@@ -338,7 +338,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeOther.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-04-11"),
+            UpdatedAt: types.MustTimeFromString("2022-04-11T06:13:47.031Z"),
             Websites: []string{
                 "ipsam",
             },
@@ -460,7 +460,7 @@ func main() {
                 Region: unifiedto.String("mollitia"),
                 RegionCode: unifiedto.String("cumque"),
             },
-            CreatedAt: types.MustDateFromString("2022-09-08"),
+            CreatedAt: types.MustTimeFromString("2022-09-08T12:56:45.780Z"),
             DealIds: []string{
                 "eum",
             },
@@ -482,7 +482,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeWork.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-01-14"),
+            UpdatedAt: types.MustTimeFromString("2022-01-14T22:16:14.005Z"),
             Websites: []string{
                 "numquam",
             },
@@ -551,7 +551,7 @@ func main() {
                 Region: unifiedto.String("dignissimos"),
                 RegionCode: unifiedto.String("esse"),
             },
-            CreatedAt: types.MustDateFromString("2021-12-22"),
+            CreatedAt: types.MustTimeFromString("2021-12-22T21:12:12.654Z"),
             DealIds: []string{
                 "esse",
             },
@@ -573,7 +573,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeHome.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-01-07"),
+            UpdatedAt: types.MustTimeFromString("2022-01-07T01:07:05.981Z"),
             Websites: []string{
                 "sequi",
             },

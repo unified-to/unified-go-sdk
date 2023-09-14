@@ -3,20 +3,20 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type TicketingAgent struct {
-	CreatedAt  *types.Date               `json:"created_at,omitempty"`
+	CreatedAt  *time.Time                `json:"created_at,omitempty"`
 	Emails     []TicketingEmail          `json:"emails,omitempty"`
 	ID         *string                   `json:"id,omitempty"`
 	Name       *string                   `json:"name,omitempty"`
 	Raw        PropertyTicketingAgentRaw `json:"raw"`
 	Telephones []TicketingTelephone      `json:"telephones,omitempty"`
-	UpdatedAt  *types.Date               `json:"updated_at,omitempty"`
+	UpdatedAt  *time.Time                `json:"updated_at,omitempty"`
 }
 
-func (o *TicketingAgent) GetCreatedAt() *types.Date {
+func (o *TicketingAgent) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -58,7 +58,7 @@ func (o *TicketingAgent) GetTelephones() []TicketingTelephone {
 	return o.Telephones
 }
 
-func (o *TicketingAgent) GetUpdatedAt() *types.Date {
+func (o *TicketingAgent) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

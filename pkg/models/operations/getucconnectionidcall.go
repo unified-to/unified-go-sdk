@@ -4,8 +4,8 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"net/http"
+	"time"
 )
 
 type GetUcConnectionIDCallSecurity struct {
@@ -31,7 +31,7 @@ type GetUcConnectionIDCallRequest struct {
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *types.Date `queryParam:"style=form,explode=true,name=updated_gte"`
+	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *GetUcConnectionIDCallRequest) GetAgentID() *string {
@@ -90,7 +90,7 @@ func (o *GetUcConnectionIDCallRequest) GetSort() *string {
 	return o.Sort
 }
 
-func (o *GetUcConnectionIDCallRequest) GetUpdatedGte() *types.Date {
+func (o *GetUcConnectionIDCallRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}

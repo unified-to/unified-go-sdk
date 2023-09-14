@@ -91,7 +91,7 @@ func main() {
         Order: unifiedto.String("reiciendis"),
         Query: unifiedto.String("minus"),
         Sort: unifiedto.String("iure"),
-        UpdatedGte: types.MustDateFromString("2022-11-11"),
+        UpdatedGte: types.MustTimeFromString("2022-11-11T00:39:35.207Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -207,7 +207,7 @@ func main() {
                     RegionCode: unifiedto.String("tempora"),
                 },
             },
-            ClosedAt: types.MustDateFromString("2022-05-27"),
+            ClosedAt: types.MustTimeFromString("2022-05-27T21:54:13.074Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
                     Currency: unifiedto.String("rem"),
@@ -217,7 +217,7 @@ func main() {
                     Type: shared.AtsCompensationTypeEquity,
                 },
             },
-            CreatedAt: types.MustDateFromString("2022-08-10"),
+            CreatedAt: types.MustTimeFromString("2022-08-10T22:57:33.587Z"),
             Departments: []string{
                 "aperiam",
             },
@@ -238,7 +238,7 @@ func main() {
             },
             Remote: unifiedto.Bool(false),
             Status: shared.AtsJobStatusPending.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-07-04"),
+            UpdatedAt: types.MustTimeFromString("2022-07-04T21:18:33.130Z"),
         },
         ConnectionID: "unde",
         ID: "2bcd440e-a98b-4ecc-a048-6de0d56d73b0",
@@ -306,7 +306,7 @@ func main() {
                     RegionCode: unifiedto.String("ullam"),
                 },
             },
-            ClosedAt: types.MustDateFromString("2022-07-06"),
+            ClosedAt: types.MustTimeFromString("2022-07-06T19:55:18.068Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
                     Currency: unifiedto.String("enim"),
@@ -316,7 +316,7 @@ func main() {
                     Type: shared.AtsCompensationTypeStockOptions,
                 },
             },
-            CreatedAt: types.MustDateFromString("2022-01-28"),
+            CreatedAt: types.MustTimeFromString("2022-01-28T21:56:06.312Z"),
             Departments: []string{
                 "consectetur",
             },
@@ -337,7 +337,7 @@ func main() {
             },
             Remote: unifiedto.Bool(false),
             Status: shared.AtsJobStatusDraft.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-04-19"),
+            UpdatedAt: types.MustTimeFromString("2022-04-19T01:37:46.134Z"),
         },
         ConnectionID: "eius",
     }, operationSecurity)
@@ -404,7 +404,7 @@ func main() {
                     RegionCode: unifiedto.String("unde"),
                 },
             },
-            ClosedAt: types.MustDateFromString("2022-03-17"),
+            ClosedAt: types.MustTimeFromString("2022-03-17T10:24:00.538Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
                     Currency: unifiedto.String("id"),
@@ -414,7 +414,7 @@ func main() {
                     Type: shared.AtsCompensationTypeSalary,
                 },
             },
-            CreatedAt: types.MustDateFromString("2022-08-21"),
+            CreatedAt: types.MustTimeFromString("2022-08-21T15:07:46.264Z"),
             Departments: []string{
                 "a",
             },
@@ -435,7 +435,7 @@ func main() {
             },
             Remote: unifiedto.Bool(false),
             Status: shared.AtsJobStatusDraft.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2020-12-28"),
+            UpdatedAt: types.MustTimeFromString("2020-12-28T11:43:36.436Z"),
         },
         ConnectionID: "dignissimos",
         ID: "0c43351c-3dd1-4eb8-b7f7-5f4f23f1c0a5",

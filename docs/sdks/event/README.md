@@ -259,7 +259,7 @@ func main() {
         Order: unifiedto.String("facilis"),
         Query: unifiedto.String("sapiente"),
         Sort: unifiedto.String("maxime"),
-        UpdatedGte: types.MustDateFromString("2022-10-11"),
+        UpdatedGte: types.MustTimeFromString("2022-10-11T22:27:53.755Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -373,7 +373,7 @@ func main() {
             ContactIds: []string{
                 "commodi",
             },
-            CreatedAt: types.MustDateFromString("2021-10-18"),
+            CreatedAt: types.MustTimeFromString("2021-10-18T23:17:50.935Z"),
             DealIds: []string{
                 "qui",
             },
@@ -391,8 +391,8 @@ func main() {
             ID: unifiedto.String("4cc6b788-90a3-4fd3-881d-a10f8c23df93"),
             Meeting: &shared.PropertyCrmEventMeeting{
                 Description: unifiedto.String("quae"),
-                EndAt: types.MustDateFromString("2021-01-28"),
-                StartAt: types.MustDateFromString("2022-02-09"),
+                EndAt: types.MustTimeFromString("2021-01-28T19:50:54.435Z"),
+                StartAt: types.MustTimeFromString("2022-02-09T08:20:37.262Z"),
                 Title: unifiedto.String("Dr."),
             },
             Note: &shared.PropertyCrmEventNote{
@@ -405,7 +405,7 @@ func main() {
                 Status: unifiedto.String("numquam"),
             },
             Type: shared.CrmEventTypeMeeting.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2020-08-13"),
+            UpdatedAt: types.MustTimeFromString("2020-08-13T07:08:20.678Z"),
         },
         ConnectionID: "sint",
         ID: "43513772-6d15-4321-b832-a56d69180ff6",
@@ -627,7 +627,7 @@ func main() {
             ContactIds: []string{
                 "architecto",
             },
-            CreatedAt: types.MustDateFromString("2020-10-13"),
+            CreatedAt: types.MustTimeFromString("2020-10-13T11:08:25.283Z"),
             DealIds: []string{
                 "alias",
             },
@@ -645,8 +645,8 @@ func main() {
             ID: unifiedto.String("7b51996b-5b4b-450e-af71-2b7a7ab0344b"),
             Meeting: &shared.PropertyCrmEventMeeting{
                 Description: unifiedto.String("inventore"),
-                EndAt: types.MustDateFromString("2022-11-20"),
-                StartAt: types.MustDateFromString("2022-08-01"),
+                EndAt: types.MustTimeFromString("2022-11-20T13:22:34.695Z"),
+                StartAt: types.MustTimeFromString("2022-08-01T07:59:36.823Z"),
                 Title: unifiedto.String("Ms."),
             },
             Note: &shared.PropertyCrmEventNote{
@@ -659,7 +659,7 @@ func main() {
                 Status: unifiedto.String("rem"),
             },
             Type: shared.CrmEventTypeTask.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-01-23"),
+            UpdatedAt: types.MustTimeFromString("2022-01-23T07:05:36.436Z"),
         },
         ConnectionID: "velit",
     }, operationSecurity)
@@ -724,7 +724,7 @@ func main() {
             ContactIds: []string{
                 "quod",
             },
-            CreatedAt: types.MustDateFromString("2020-05-30"),
+            CreatedAt: types.MustTimeFromString("2020-05-30T09:15:09.119Z"),
             DealIds: []string{
                 "dolor",
             },
@@ -742,8 +742,8 @@ func main() {
             ID: unifiedto.String("3e4e080a-a104-4186-ac75-9e02f3702c5c"),
             Meeting: &shared.PropertyCrmEventMeeting{
                 Description: unifiedto.String("laudantium"),
-                EndAt: types.MustDateFromString("2022-08-02"),
-                StartAt: types.MustDateFromString("2022-05-30"),
+                EndAt: types.MustTimeFromString("2022-08-02T07:50:37.926Z"),
+                StartAt: types.MustTimeFromString("2022-05-30T16:07:16.405Z"),
                 Title: unifiedto.String("Mr."),
             },
             Note: &shared.PropertyCrmEventNote{
@@ -756,7 +756,7 @@ func main() {
                 Status: unifiedto.String("culpa"),
             },
             Type: shared.CrmEventTypeEmail.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-07-25"),
+            UpdatedAt: types.MustTimeFromString("2022-07-25T01:13:49.601Z"),
         },
         ConnectionID: "alias",
         ID: "7bf375b4-4282-4821-bdb2-f69e59267c71",

@@ -91,7 +91,7 @@ func main() {
         Order: unifiedto.String("non"),
         Query: unifiedto.String("tempore"),
         Sort: unifiedto.String("quae"),
-        UpdatedGte: types.MustDateFromString("2022-08-03"),
+        UpdatedGte: types.MustTimeFromString("2022-08-03T04:30:42.588Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -208,7 +208,7 @@ func main() {
             },
             CompanyID: unifiedto.String("incidunt"),
             ContactID: unifiedto.String("id"),
-            CreatedAt: types.MustDateFromString("2021-10-20"),
+            CreatedAt: types.MustTimeFromString("2021-10-20T07:58:35.149Z"),
             CreatorUserID: unifiedto.String("quaerat"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
@@ -225,7 +225,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeHome.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-04-13"),
+            UpdatedAt: types.MustTimeFromString("2022-04-13T09:05:51.677Z"),
             UserID: unifiedto.String("autem"),
         },
         ConnectionID: "ea",
@@ -295,7 +295,7 @@ func main() {
             },
             CompanyID: unifiedto.String("natus"),
             ContactID: unifiedto.String("molestiae"),
-            CreatedAt: types.MustDateFromString("2020-03-03"),
+            CreatedAt: types.MustTimeFromString("2020-03-03T18:07:31.494Z"),
             CreatorUserID: unifiedto.String("hic"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
@@ -312,7 +312,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeWork.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-04-24"),
+            UpdatedAt: types.MustTimeFromString("2022-04-24T12:06:20.344Z"),
             UserID: unifiedto.String("odit"),
         },
         ConnectionID: "aut",
@@ -381,7 +381,7 @@ func main() {
             },
             CompanyID: unifiedto.String("facere"),
             ContactID: unifiedto.String("laudantium"),
-            CreatedAt: types.MustDateFromString("2022-09-11"),
+            CreatedAt: types.MustTimeFromString("2022-09-11T02:42:21.444Z"),
             CreatorUserID: unifiedto.String("fuga"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
@@ -398,7 +398,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2021-12-04"),
+            UpdatedAt: types.MustTimeFromString("2021-12-04T00:59:07.070Z"),
             UserID: unifiedto.String("eveniet"),
         },
         ConnectionID: "molestiae",

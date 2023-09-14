@@ -91,7 +91,7 @@ func main() {
         Order: unifiedto.String("molestiae"),
         Query: unifiedto.String("ipsam"),
         Sort: unifiedto.String("quos"),
-        UpdatedGte: types.MustDateFromString("2020-09-30"),
+        UpdatedGte: types.MustTimeFromString("2020-09-30T08:18:10.798Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -199,7 +199,7 @@ func main() {
             ID: unifiedto.String("34afb073-5cb6-4285-94a2-9aaa1e169156"),
             Name: unifiedto.String("Adrian Schuster"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustDateFromString("2022-06-17"),
+            UpdatedAt: types.MustTimeFromString("2022-06-17T09:25:28.057Z"),
         },
         ConnectionID: "perferendis",
         ID: "9505bf03-a93e-4944-80ca-37fb10789032",
@@ -259,7 +259,7 @@ func main() {
             ID: unifiedto.String("c333172e-2dd7-49ec-b4ba-7e88ddb36fd1"),
             Name: unifiedto.String("Lucas Schneider"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustDateFromString("2022-03-20"),
+            UpdatedAt: types.MustTimeFromString("2022-03-20T02:47:07.461Z"),
         },
         ConnectionID: "quas",
     }, operationSecurity)
@@ -318,7 +318,7 @@ func main() {
             ID: unifiedto.String("573474f0-a740-4fb4-ab44-1c3a09e76399"),
             Name: unifiedto.String("Ms. Eula Leffler"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustDateFromString("2021-03-29"),
+            UpdatedAt: types.MustTimeFromString("2021-03-29T15:45:25.588Z"),
         },
         ConnectionID: "odio",
         ID: "94455ebc-550a-41c4-a6b5-9c8366fdcc13",

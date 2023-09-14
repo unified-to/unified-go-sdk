@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type TicketingTicketStatus string
@@ -37,8 +37,8 @@ func (e *TicketingTicketStatus) UnmarshalJSON(data []byte) error {
 
 type TicketingTicket struct {
 	Category    *string                    `json:"category,omitempty"`
-	ClosedAt    *types.Date                `json:"closed_at,omitempty"`
-	CreatedAt   *types.Date                `json:"created_at,omitempty"`
+	ClosedAt    *time.Time                 `json:"closed_at,omitempty"`
+	CreatedAt   *time.Time                 `json:"created_at,omitempty"`
 	CustomerID  *string                    `json:"customer_id,omitempty"`
 	Description *string                    `json:"description,omitempty"`
 	ID          *string                    `json:"id,omitempty"`
@@ -49,7 +49,7 @@ type TicketingTicket struct {
 	Status      *TicketingTicketStatus     `json:"status,omitempty"`
 	Subject     *string                    `json:"subject,omitempty"`
 	Tags        []string                   `json:"tags,omitempty"`
-	UpdatedAt   *types.Date                `json:"updated_at,omitempty"`
+	UpdatedAt   *time.Time                 `json:"updated_at,omitempty"`
 }
 
 func (o *TicketingTicket) GetCategory() *string {
@@ -59,14 +59,14 @@ func (o *TicketingTicket) GetCategory() *string {
 	return o.Category
 }
 
-func (o *TicketingTicket) GetClosedAt() *types.Date {
+func (o *TicketingTicket) GetClosedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.ClosedAt
 }
 
-func (o *TicketingTicket) GetCreatedAt() *types.Date {
+func (o *TicketingTicket) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -143,7 +143,7 @@ func (o *TicketingTicket) GetTags() []string {
 	return o.Tags
 }
 
-func (o *TicketingTicket) GetUpdatedAt() *types.Date {
+func (o *TicketingTicket) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

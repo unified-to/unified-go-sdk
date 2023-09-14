@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 6016f36b77ae6e28520d2802ba26703e
+  docChecksum: 9169cb16868732e7726b05e14961b1c5
   docVersion: "1.0"
   speakeasyVersion: 1.83.2
   generationVersion: 2.109.3
@@ -19,7 +19,7 @@ features:
     globalServerURLs: 2.82.0
     methodSecurity: 2.81.2
 go:
-  version: 0.1.0
+  version: 0.1.1
   clientServerStatusCodesAsErrors: true
   maxMethodParams: 0
   packageName: github.com/unified-to/unified-go-sdk

@@ -93,7 +93,7 @@ func main() {
         Query: unifiedto.String("voluptate"),
         Sort: unifiedto.String("et"),
         TicketID: "recusandae",
-        UpdatedGte: types.MustDateFromString("2022-05-19"),
+        UpdatedGte: types.MustTimeFromString("2022-05-19T12:21:22.703Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -199,7 +199,7 @@ func main() {
     res, err := s.Note.PatchTicketingConnectionIDNotesTicketIDID(ctx, operations.PatchTicketingConnectionIDNotesTicketIDIDRequest{
         TicketingNote: &shared.TicketingNote{
             AgentID: unifiedto.String("cum"),
-            CreatedAt: types.MustDateFromString("2022-07-23"),
+            CreatedAt: types.MustTimeFromString("2022-07-23T08:55:47.914Z"),
             CustomerID: unifiedto.String("dolorum"),
             Description: unifiedto.String("amet"),
             ID: unifiedto.String("8a8a88c1-4420-40c2-8aeb-1ae1ecf8c349"),
@@ -262,7 +262,7 @@ func main() {
     res, err := s.Note.PostTicketingConnectionIDNotesTicketID(ctx, operations.PostTicketingConnectionIDNotesTicketIDRequest{
         TicketingNote: &shared.TicketingNote{
             AgentID: unifiedto.String("sit"),
-            CreatedAt: types.MustDateFromString("2021-04-03"),
+            CreatedAt: types.MustTimeFromString("2021-04-03T18:27:00.342Z"),
             CustomerID: unifiedto.String("vel"),
             Description: unifiedto.String("autem"),
             ID: unifiedto.String("e97e0541-0334-47d7-8ff2-491145fab9e5"),
@@ -324,7 +324,7 @@ func main() {
     res, err := s.Note.PutTicketingConnectionIDNotesTicketIDID(ctx, operations.PutTicketingConnectionIDNotesTicketIDIDRequest{
         TicketingNote: &shared.TicketingNote{
             AgentID: unifiedto.String("fuga"),
-            CreatedAt: types.MustDateFromString("2022-05-09"),
+            CreatedAt: types.MustTimeFromString("2022-05-09T22:54:29.590Z"),
             CustomerID: unifiedto.String("amet"),
             Description: unifiedto.String("nisi"),
             ID: unifiedto.String("664eaa6b-f2ff-414e-8c1b-352accedacc5"),

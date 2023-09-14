@@ -93,7 +93,7 @@ func main() {
         Offset: unifiedto.Float64(1979.82),
         Order: unifiedto.String("provident"),
         Sort: unifiedto.String("ex"),
-        UpdatedGte: types.MustDateFromString("2021-03-13"),
+        UpdatedGte: types.MustTimeFromString("2021-03-13T14:26:08.551Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -209,7 +209,7 @@ func main() {
                     "illo",
                 },
                 ExpiresIn: unifiedto.Float64(7782.42),
-                ExpiryDate: types.MustDateFromString("2022-03-18"),
+                ExpiryDate: types.MustTimeFromString("2022-03-18T01:27:23.704Z"),
                 Key: unifiedto.String("distinctio"),
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
                 Name: unifiedto.String("Felipe Homenick"),
@@ -226,7 +226,7 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesEnrich,
             },
-            CreatedAt: types.MustDateFromString("2022-09-06"),
+            CreatedAt: types.MustTimeFromString("2022-09-06T09:53:00.602Z"),
             Environment: unifiedto.String("sequi"),
             ExternalXref: unifiedto.String("beatae"),
             ID: unifiedto.String("7747dc91-5ad2-4caf-9dd6-723dc0f5ae2f"),
@@ -235,7 +235,7 @@ func main() {
             Permissions: []shared.PropertyConnectionPermissions{
                 shared.PropertyConnectionPermissionsTicketingCustomerRead,
             },
-            UpdatedAt: types.MustDateFromString("2022-04-24"),
+            UpdatedAt: types.MustTimeFromString("2022-04-24T15:26:26.341Z"),
             WorkspaceID: unifiedto.String("ducimus"),
         },
         ID: "00878756-143f-45a6-898b-55554080d40b",
@@ -303,7 +303,7 @@ func main() {
                 "laboriosam",
             },
             ExpiresIn: unifiedto.Float64(7203.19),
-            ExpiryDate: types.MustDateFromString("2022-01-08"),
+            ExpiryDate: types.MustTimeFromString("2022-01-08T15:51:51.663Z"),
             Key: unifiedto.String("consectetur"),
             Meta: &shared.PropertyPropertyConnectionAuthMeta{},
             Name: unifiedto.String("Ms. Wilbert McGlynn"),
@@ -320,7 +320,7 @@ func main() {
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesEnrich,
         },
-        CreatedAt: types.MustDateFromString("2022-07-28"),
+        CreatedAt: types.MustTimeFromString("2022-07-28T08:20:43.554Z"),
         Environment: unifiedto.String("ipsam"),
         ExternalXref: unifiedto.String("nostrum"),
         ID: unifiedto.String("3819b474-b0ed-420e-9624-8fff639a910a"),
@@ -329,7 +329,7 @@ func main() {
         Permissions: []shared.PropertyConnectionPermissions{
             shared.PropertyConnectionPermissionsHrisGroupWrite,
         },
-        UpdatedAt: types.MustDateFromString("2020-12-12"),
+        UpdatedAt: types.MustTimeFromString("2020-12-12T11:22:41.690Z"),
         WorkspaceID: unifiedto.String("tempore"),
     }, operationSecurity)
     if err != nil {
@@ -396,7 +396,7 @@ func main() {
                     "accusamus",
                 },
                 ExpiresIn: unifiedto.Float64(682.92),
-                ExpiryDate: types.MustDateFromString("2020-08-18"),
+                ExpiryDate: types.MustTimeFromString("2020-08-18T14:47:31.331Z"),
                 Key: unifiedto.String("eaque"),
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
                 Name: unifiedto.String("Miss Lois Cruickshank"),
@@ -413,7 +413,7 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesMartech,
             },
-            CreatedAt: types.MustDateFromString("2022-02-10"),
+            CreatedAt: types.MustTimeFromString("2022-02-10T02:37:22.453Z"),
             Environment: unifiedto.String("nobis"),
             ExternalXref: unifiedto.String("asperiores"),
             ID: unifiedto.String("da8d0c54-9ef0-4300-8978-a61fa1cf2068"),
@@ -422,7 +422,7 @@ func main() {
             Permissions: []shared.PropertyConnectionPermissions{
                 shared.PropertyConnectionPermissionsAtsJobRead,
             },
-            UpdatedAt: types.MustDateFromString("2022-07-16"),
+            UpdatedAt: types.MustTimeFromString("2022-07-16T11:02:07.974Z"),
             WorkspaceID: unifiedto.String("quod"),
         },
         ID: "1ffc71dc-a163-4f2a-bc80-a97ff334cddf",

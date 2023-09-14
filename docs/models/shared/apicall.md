@@ -6,7 +6,7 @@
 | Field                                             | Type                                              | Required                                          | Description                                       |
 | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
 | `ConnectionID`                                    | **string*                                         | :heavy_minus_sign:                                | N/A                                               |
-| `CreatedAt`                                       | [*types.Date](../../types/date.md)                | :heavy_minus_sign:                                | N/A                                               |
+| `CreatedAt`                                       | [*time.Time](https://pkg.go.dev/time#Time)        | :heavy_minus_sign:                                | N/A                                               |
 | `Environment`                                     | **string*                                         | :heavy_minus_sign:                                | N/A                                               |
 | `Error`                                           | **string*                                         | :heavy_minus_sign:                                | N/A                                               |
 | `ExternalXref`                                    | **string*                                         | :heavy_minus_sign:                                | N/A                                               |

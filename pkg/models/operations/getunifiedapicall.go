@@ -4,8 +4,8 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"net/http"
+	"time"
 )
 
 type GetUnifiedApicallSecurity struct {
@@ -23,8 +23,8 @@ type GetUnifiedApicallRequest struct {
 	// Filter the results to just this integration's API calls
 	ConnectionID *string `queryParam:"style=form,explode=true,name=connection_id"`
 	// Return only results whose updated date is equal or less to this value
-	CreatedLte *types.Date `queryParam:"style=form,explode=true,name=created_lte"`
-	Env        *string     `queryParam:"style=form,explode=true,name=env"`
+	CreatedLte *time.Time `queryParam:"style=form,explode=true,name=created_lte"`
+	Env        *string    `queryParam:"style=form,explode=true,name=env"`
 	// Filter the results for API Calls with errors
 	Error *bool `queryParam:"style=form,explode=true,name=error"`
 	// Filter the results to only those integrations for your user referenced by this value
@@ -36,7 +36,7 @@ type GetUnifiedApicallRequest struct {
 	Order           *string  `queryParam:"style=form,explode=true,name=order"`
 	Sort            *string  `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *types.Date `queryParam:"style=form,explode=true,name=updated_gte"`
+	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *GetUnifiedApicallRequest) GetConnectionID() *string {
@@ -46,7 +46,7 @@ func (o *GetUnifiedApicallRequest) GetConnectionID() *string {
 	return o.ConnectionID
 }
 
-func (o *GetUnifiedApicallRequest) GetCreatedLte() *types.Date {
+func (o *GetUnifiedApicallRequest) GetCreatedLte() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -109,7 +109,7 @@ func (o *GetUnifiedApicallRequest) GetSort() *string {
 	return o.Sort
 }
 
-func (o *GetUnifiedApicallRequest) GetUpdatedGte() *types.Date {
+func (o *GetUnifiedApicallRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}

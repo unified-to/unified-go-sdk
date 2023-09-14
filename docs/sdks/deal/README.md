@@ -93,7 +93,7 @@ func main() {
         Order: unifiedto.String("aspernatur"),
         Query: unifiedto.String("ut"),
         Sort: unifiedto.String("deserunt"),
-        UpdatedGte: types.MustDateFromString("2022-02-20"),
+        UpdatedGte: types.MustTimeFromString("2022-02-20T22:48:15.284Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -198,8 +198,8 @@ func main() {
     res, err := s.Deal.PatchCrmConnectionIDDealID(ctx, operations.PatchCrmConnectionIDDealIDRequest{
         CrmDeal: &shared.CrmDeal{
             Amount: unifiedto.Float64(2743.68),
-            ClosedAt: types.MustDateFromString("2021-02-04"),
-            CreatedAt: types.MustDateFromString("2021-12-30"),
+            ClosedAt: types.MustTimeFromString("2021-02-04T20:36:14.764Z"),
+            CreatedAt: types.MustTimeFromString("2021-12-30T15:49:38.515Z"),
             Currency: unifiedto.String("hic"),
             ID: unifiedto.String("8f1bf0bc-8e1f-4206-95d8-31d0081090f6"),
             LostReason: unifiedto.String("nihil"),
@@ -212,7 +212,7 @@ func main() {
             Tags: []string{
                 "quos",
             },
-            UpdatedAt: types.MustDateFromString("2022-03-17"),
+            UpdatedAt: types.MustTimeFromString("2022-03-17T20:43:59.276Z"),
             WonReason: unifiedto.String("exercitationem"),
         },
         ConnectionID: "molestiae",
@@ -270,8 +270,8 @@ func main() {
     res, err := s.Deal.PostCrmConnectionIDDeal(ctx, operations.PostCrmConnectionIDDealRequest{
         CrmDeal: &shared.CrmDeal{
             Amount: unifiedto.Float64(6489.85),
-            ClosedAt: types.MustDateFromString("2022-04-04"),
-            CreatedAt: types.MustDateFromString("2020-05-19"),
+            ClosedAt: types.MustTimeFromString("2022-04-04T11:17:39.742Z"),
+            CreatedAt: types.MustTimeFromString("2020-05-19T07:26:52.477Z"),
             Currency: unifiedto.String("natus"),
             ID: unifiedto.String("dda33dcd-6348-43e4-a7a9-8e4df37e45b8"),
             LostReason: unifiedto.String("omnis"),
@@ -284,7 +284,7 @@ func main() {
             Tags: []string{
                 "numquam",
             },
-            UpdatedAt: types.MustDateFromString("2022-08-25"),
+            UpdatedAt: types.MustTimeFromString("2022-08-25T17:34:42.796Z"),
             WonReason: unifiedto.String("consectetur"),
         },
         ConnectionID: "dicta",
@@ -341,8 +341,8 @@ func main() {
     res, err := s.Deal.PutCrmConnectionIDDealID(ctx, operations.PutCrmConnectionIDDealIDRequest{
         CrmDeal: &shared.CrmDeal{
             Amount: unifiedto.Float64(551.24),
-            ClosedAt: types.MustDateFromString("2022-12-18"),
-            CreatedAt: types.MustDateFromString("2022-04-06"),
+            ClosedAt: types.MustTimeFromString("2022-12-18T04:51:10.637Z"),
+            CreatedAt: types.MustTimeFromString("2022-04-06T10:46:32.109Z"),
             Currency: unifiedto.String("facere"),
             ID: unifiedto.String("354c092b-d734-4f02-849d-86f4bb20fe5d"),
             LostReason: unifiedto.String("provident"),
@@ -355,7 +355,7 @@ func main() {
             Tags: []string{
                 "placeat",
             },
-            UpdatedAt: types.MustDateFromString("2021-01-19"),
+            UpdatedAt: types.MustTimeFromString("2021-01-19T07:13:22.442Z"),
             WonReason: unifiedto.String("modi"),
         },
         ConnectionID: "enim",

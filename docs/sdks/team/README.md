@@ -91,7 +91,7 @@ func main() {
         Order: unifiedto.String("sunt"),
         Query: unifiedto.String("vitae"),
         Sort: unifiedto.String("ex"),
-        UpdatedGte: types.MustDateFromString("2022-01-05"),
+        UpdatedGte: types.MustTimeFromString("2022-01-05T07:41:51.025Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -195,12 +195,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.PatchCrmConnectionIDTeamID(ctx, operations.PatchCrmConnectionIDTeamIDRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustDateFromString("2020-04-24"),
+            CreatedAt: types.MustTimeFromString("2020-04-24T00:39:17.172Z"),
             Description: unifiedto.String("harum"),
             ID: unifiedto.String("3b6e241c-3109-4983-a63c-66dcbb7df6cb"),
             Name: unifiedto.String("Jenny Rolfson"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustDateFromString("2022-12-14"),
+            UpdatedAt: types.MustTimeFromString("2022-12-14T00:49:36.543Z"),
             UserIds: []string{
                 "praesentium",
             },
@@ -259,12 +259,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.PostCrmConnectionIDTeam(ctx, operations.PostCrmConnectionIDTeamRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustDateFromString("2022-12-18"),
+            CreatedAt: types.MustTimeFromString("2022-12-18T11:11:12.745Z"),
             Description: unifiedto.String("possimus"),
             ID: unifiedto.String("6c8b2a5f-0022-407e-8048-f90009ed2902"),
             Name: unifiedto.String("Brandy Tillman"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustDateFromString("2021-02-19"),
+            UpdatedAt: types.MustTimeFromString("2021-02-19T10:57:16.366Z"),
             UserIds: []string{
                 "iste",
             },
@@ -322,12 +322,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.PutCrmConnectionIDTeamID(ctx, operations.PutCrmConnectionIDTeamIDRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustDateFromString("2022-09-20"),
+            CreatedAt: types.MustTimeFromString("2022-09-20T15:32:20.854Z"),
             Description: unifiedto.String("sunt"),
             ID: unifiedto.String("61e91500-323b-42c0-9b92-4771f5669e5b"),
             Name: unifiedto.String("Tricia Sawayn"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustDateFromString("2022-07-25"),
+            UpdatedAt: types.MustTimeFromString("2022-07-25T07:35:50.345Z"),
             UserIds: []string{
                 "ea",
             },

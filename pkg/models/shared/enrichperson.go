@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type EnrichPersonGender string
@@ -43,7 +43,7 @@ type EnrichPerson struct {
 	Birthdate     *string                      `json:"birthdate,omitempty"`
 	Company       *string                      `json:"company,omitempty"`
 	CompanyDomain *string                      `json:"company_domain,omitempty"`
-	CreatedAt     *types.Date                  `json:"created_at,omitempty"`
+	CreatedAt     *time.Time                   `json:"created_at,omitempty"`
 	// An array of email addresses for this person
 	Emails         []EnrichEmail       `json:"emails,omitempty"`
 	FacebookURL    *string             `json:"facebook_url,omitempty"`
@@ -62,7 +62,7 @@ type EnrichPerson struct {
 	Title         *string                   `json:"title,omitempty"`
 	TwitterHandle *string                   `json:"twitter_handle,omitempty"`
 	TwitterURL    *string                   `json:"twitter_url,omitempty"`
-	UpdatedAt     *types.Date               `json:"updated_at,omitempty"`
+	UpdatedAt     *time.Time                `json:"updated_at,omitempty"`
 	UtcOffset     *float64                  `json:"utc_offset,omitempty"`
 	WorkHistories []EnrichPersonWorkHistory `json:"work_histories,omitempty"`
 }
@@ -102,7 +102,7 @@ func (o *EnrichPerson) GetCompanyDomain() *string {
 	return o.CompanyDomain
 }
 
-func (o *EnrichPerson) GetCreatedAt() *types.Date {
+func (o *EnrichPerson) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -214,7 +214,7 @@ func (o *EnrichPerson) GetTwitterURL() *string {
 	return o.TwitterURL
 }
 
-func (o *EnrichPerson) GetUpdatedAt() *types.Date {
+func (o *EnrichPerson) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

@@ -197,7 +197,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
         ConnectionID: unifiedto.String("magni"),
-        CreatedLte: types.MustDateFromString("2022-05-24"),
+        CreatedLte: types.MustTimeFromString("2022-05-24T09:06:17.139Z"),
         Env: unifiedto.String("maxime"),
         Error: unifiedto.Bool(false),
         ExternalXref: unifiedto.String("vitae"),
@@ -206,7 +206,7 @@ func main() {
         Offset: unifiedto.Float64(1150.28),
         Order: unifiedto.String("blanditiis"),
         Sort: unifiedto.String("ipsam"),
-        UpdatedGte: types.MustDateFromString("2022-08-08"),
+        UpdatedGte: types.MustTimeFromString("2022-08-08T20:31:22.144Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -316,7 +316,7 @@ func main() {
         Offset: unifiedto.Float64(603.93),
         Order: unifiedto.String("qui"),
         Sort: unifiedto.String("labore"),
-        UpdatedGte: types.MustDateFromString("2022-11-05"),
+        UpdatedGte: types.MustTimeFromString("2022-11-05T10:44:25.961Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -426,7 +426,7 @@ func main() {
         Order: unifiedto.String("impedit"),
         Sort: unifiedto.String("optio"),
         Summary: unifiedto.Bool(false),
-        UpdatedGte: types.MustDateFromString("2022-09-12"),
+        UpdatedGte: types.MustTimeFromString("2022-09-12T15:50:36.450Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -737,7 +737,7 @@ func main() {
         Offset: unifiedto.Float64(9332.28),
         Order: unifiedto.String("excepturi"),
         Sort: unifiedto.String("eligendi"),
-        UpdatedGte: types.MustDateFromString("2022-04-26"),
+        UpdatedGte: types.MustTimeFromString("2022-04-26T06:44:29.423Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -853,7 +853,7 @@ func main() {
                     "ut",
                 },
                 ExpiresIn: unifiedto.Float64(3924.24),
-                ExpiryDate: types.MustDateFromString("2021-01-28"),
+                ExpiryDate: types.MustTimeFromString("2021-01-28T23:49:19.065Z"),
                 Key: unifiedto.String("eum"),
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
                 Name: unifiedto.String("Albert Schmidt MD"),
@@ -870,7 +870,7 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesAuth,
             },
-            CreatedAt: types.MustDateFromString("2021-02-21"),
+            CreatedAt: types.MustTimeFromString("2021-02-21T07:53:55.382Z"),
             Environment: unifiedto.String("laboriosam"),
             ExternalXref: unifiedto.String("harum"),
             ID: unifiedto.String("626012eb-a057-4988-8672-0c3103f1a40c"),
@@ -879,7 +879,7 @@ func main() {
             Permissions: []shared.PropertyConnectionPermissions{
                 shared.PropertyConnectionPermissionsAtsJobRead,
             },
-            UpdatedAt: types.MustDateFromString("2022-02-08"),
+            UpdatedAt: types.MustTimeFromString("2022-02-08T06:53:00.234Z"),
             WorkspaceID: unifiedto.String("quo"),
         },
         ID: "8688fd8e-c6fc-4031-a8f0-aaaeee004eba",
@@ -934,13 +934,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.PatchUnifiedUser(ctx, shared.User{
-        CreatedAt: types.MustDateFromString("2022-04-05"),
+        CreatedAt: types.MustTimeFromString("2022-04-05T01:32:39.778Z"),
         Email: unifiedto.String("Kavon12@hotmail.com"),
         Environment: unifiedto.String("harum"),
         ID: unifiedto.String("e509c508-7131-4f06-b0bc-e55a8687143c"),
         Meta: &shared.PropertyUserMeta{},
         Name: "Mrs. Darryl Morar",
-        UpdatedAt: types.MustDateFromString("2021-07-05"),
+        UpdatedAt: types.MustTimeFromString("2021-07-05T20:55:18.206Z"),
         WorkspaceID: "sint",
         WorkspaceIds: []string{
             "odio",
@@ -1009,7 +1009,7 @@ func main() {
                 "in",
             },
             ExpiresIn: unifiedto.Float64(8765.83),
-            ExpiryDate: types.MustDateFromString("2022-07-06"),
+            ExpiryDate: types.MustTimeFromString("2022-07-06T05:57:07.995Z"),
             Key: unifiedto.String("voluptatum"),
             Meta: &shared.PropertyPropertyConnectionAuthMeta{},
             Name: unifiedto.String("Neil Grimes"),
@@ -1026,7 +1026,7 @@ func main() {
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesMartech,
         },
-        CreatedAt: types.MustDateFromString("2022-09-06"),
+        CreatedAt: types.MustTimeFromString("2022-09-06T07:44:31.963Z"),
         Environment: unifiedto.String("totam"),
         ExternalXref: unifiedto.String("laboriosam"),
         ID: unifiedto.String("2d2a31f9-b14a-4a6b-9ec7-f444232e9a5d"),
@@ -1035,7 +1035,7 @@ func main() {
         Permissions: []shared.PropertyConnectionPermissions{
             shared.PropertyConnectionPermissionsAtsInterviewRead,
         },
-        UpdatedAt: types.MustDateFromString("2022-05-01"),
+        UpdatedAt: types.MustTimeFromString("2022-05-01T01:22:05.452Z"),
         WorkspaceID: unifiedto.String("cumque"),
     }, operationSecurity)
     if err != nil {
@@ -1089,9 +1089,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.PostUnifiedWebhookConnectionIDObject(ctx, operations.PostUnifiedWebhookConnectionIDObjectRequest{
         Webhook: &shared.Webhook{
-            CheckedAt: types.MustDateFromString("2021-07-13"),
+            CheckedAt: types.MustTimeFromString("2021-07-13T18:24:14.540Z"),
             ConnectionID: "sed",
-            CreatedAt: types.MustDateFromString("2021-12-08"),
+            CreatedAt: types.MustTimeFromString("2021-12-08T04:18:23.721Z"),
             Environment: unifiedto.String("cupiditate"),
             Events: []shared.PropertyWebhookEvents{
                 shared.PropertyWebhookEventsCreated,
@@ -1105,7 +1105,7 @@ func main() {
             Subscriptions: []string{
                 "iusto",
             },
-            UpdatedAt: types.MustDateFromString("2022-07-12"),
+            UpdatedAt: types.MustTimeFromString("2022-07-12T13:27:28.756Z"),
             WorkspaceID: "praesentium",
         },
         ConnectionID: "maiores",
@@ -1178,7 +1178,7 @@ func main() {
                     "voluptas",
                 },
                 ExpiresIn: unifiedto.Float64(2226.69),
-                ExpiryDate: types.MustDateFromString("2020-12-30"),
+                ExpiryDate: types.MustTimeFromString("2020-12-30T11:42:07.241Z"),
                 Key: unifiedto.String("aut"),
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
                 Name: unifiedto.String("Velma Baumbach"),
@@ -1195,7 +1195,7 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesCrm,
             },
-            CreatedAt: types.MustDateFromString("2022-07-24"),
+            CreatedAt: types.MustTimeFromString("2022-07-24T05:34:55.315Z"),
             Environment: unifiedto.String("adipisci"),
             ExternalXref: unifiedto.String("voluptatem"),
             ID: unifiedto.String("d8f8b89d-9ca6-4075-a56f-c0ebe67155e2"),
@@ -1204,7 +1204,7 @@ func main() {
             Permissions: []shared.PropertyConnectionPermissions{
                 shared.PropertyConnectionPermissionsAtsScorecardWrite,
             },
-            UpdatedAt: types.MustDateFromString("2022-04-26"),
+            UpdatedAt: types.MustTimeFromString("2022-04-26T12:57:03.822Z"),
             WorkspaceID: unifiedto.String("ipsum"),
         },
         ID: "070d6e29-7f58-41fa-baaa-7d801088076f",
@@ -1259,13 +1259,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.PutUnifiedUser(ctx, shared.User{
-        CreatedAt: types.MustDateFromString("2021-12-05"),
+        CreatedAt: types.MustTimeFromString("2021-12-05T11:57:07.239Z"),
         Email: unifiedto.String("Gillian.Walsh62@hotmail.com"),
         Environment: unifiedto.String("laudantium"),
         ID: unifiedto.String("14088269-b6a7-40b0-9d82-f94fffbd1e1e"),
         Meta: &shared.PropertyUserMeta{},
         Name: "Debra Stiedemann",
-        UpdatedAt: types.MustDateFromString("2022-06-05"),
+        UpdatedAt: types.MustTimeFromString("2022-06-05T07:44:58.092Z"),
         WorkspaceID: "doloremque",
         WorkspaceIds: []string{
             "sequi",

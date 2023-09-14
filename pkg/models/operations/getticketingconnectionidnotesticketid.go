@@ -4,8 +4,8 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"net/http"
+	"time"
 )
 
 type GetTicketingConnectionIDNotesTicketIDSecurity struct {
@@ -31,7 +31,7 @@ type GetTicketingConnectionIDNotesTicketIDRequest struct {
 	// ID of the ticket
 	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *types.Date `queryParam:"style=form,explode=true,name=updated_gte"`
+	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetConnectionID() string {
@@ -83,7 +83,7 @@ func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetTicketID() string {
 	return o.TicketID
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetUpdatedGte() *types.Date {
+func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}

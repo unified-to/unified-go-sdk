@@ -3,7 +3,7 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // MarketingList - Mailing List
@@ -13,7 +13,7 @@ type MarketingList struct {
 	Name      *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this list
 	Raw       *PropertyMarketingListRaw `json:"raw,omitempty"`
-	UpdatedAt *types.Date               `json:"updated_at,omitempty"`
+	UpdatedAt *time.Time                `json:"updated_at,omitempty"`
 }
 
 func (o *MarketingList) GetCreatedAt() *string {
@@ -44,7 +44,7 @@ func (o *MarketingList) GetRaw() *PropertyMarketingListRaw {
 	return o.Raw
 }
 
-func (o *MarketingList) GetUpdatedAt() *types.Date {
+func (o *MarketingList) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

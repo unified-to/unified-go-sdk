@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type AtsInterviewStatus string
@@ -41,16 +41,16 @@ func (e *AtsInterviewStatus) UnmarshalJSON(data []byte) error {
 type AtsInterview struct {
 	ApplicationID     *string                  `json:"application_id,omitempty"`
 	CandidateID       *string                  `json:"candidate_id,omitempty"`
-	CreatedAt         *types.Date              `json:"created_at,omitempty"`
-	EndAt             *types.Date              `json:"end_at,omitempty"`
+	CreatedAt         *time.Time               `json:"created_at,omitempty"`
+	EndAt             *time.Time               `json:"end_at,omitempty"`
 	ExternalEventXref *string                  `json:"external_event_xref,omitempty"`
 	ID                *string                  `json:"id,omitempty"`
 	JobID             *string                  `json:"job_id,omitempty"`
 	Location          *string                  `json:"location,omitempty"`
 	Raw               *PropertyAtsInterviewRaw `json:"raw,omitempty"`
-	StartAt           *types.Date              `json:"start_at,omitempty"`
+	StartAt           *time.Time               `json:"start_at,omitempty"`
 	Status            *AtsInterviewStatus      `json:"status,omitempty"`
-	UpdatedAt         *types.Date              `json:"updated_at,omitempty"`
+	UpdatedAt         *time.Time               `json:"updated_at,omitempty"`
 	UserIds           []string                 `json:"user_ids,omitempty"`
 }
 
@@ -68,14 +68,14 @@ func (o *AtsInterview) GetCandidateID() *string {
 	return o.CandidateID
 }
 
-func (o *AtsInterview) GetCreatedAt() *types.Date {
+func (o *AtsInterview) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.CreatedAt
 }
 
-func (o *AtsInterview) GetEndAt() *types.Date {
+func (o *AtsInterview) GetEndAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -117,7 +117,7 @@ func (o *AtsInterview) GetRaw() *PropertyAtsInterviewRaw {
 	return o.Raw
 }
 
-func (o *AtsInterview) GetStartAt() *types.Date {
+func (o *AtsInterview) GetStartAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -131,7 +131,7 @@ func (o *AtsInterview) GetStatus() *AtsInterviewStatus {
 	return o.Status
 }
 
-func (o *AtsInterview) GetUpdatedAt() *types.Date {
+func (o *AtsInterview) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

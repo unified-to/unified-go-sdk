@@ -3,21 +3,21 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type UcCall struct {
-	AgencyID  string      `json:"agency_id"`
-	ContactID *string     `json:"contact_id,omitempty"`
-	CreatedAt *types.Date `json:"created_at,omitempty"`
-	EndAt     *types.Date `json:"end_at,omitempty"`
-	ID        *string     `json:"id,omitempty"`
+	AgencyID  string     `json:"agency_id"`
+	ContactID *string    `json:"contact_id,omitempty"`
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	EndAt     *time.Time `json:"end_at,omitempty"`
+	ID        *string    `json:"id,omitempty"`
 	// The raw data returned by the integration for this call
 	Raw     PropertyUcCallRaw `json:"raw"`
-	StartAt *types.Date       `json:"start_at,omitempty"`
+	StartAt *time.Time        `json:"start_at,omitempty"`
 	// The telephone number called
 	Telephone *PropertyUcCallTelephone `json:"telephone,omitempty"`
-	UpdatedAt *types.Date              `json:"updated_at,omitempty"`
+	UpdatedAt *time.Time               `json:"updated_at,omitempty"`
 }
 
 func (o *UcCall) GetAgencyID() string {
@@ -34,14 +34,14 @@ func (o *UcCall) GetContactID() *string {
 	return o.ContactID
 }
 
-func (o *UcCall) GetCreatedAt() *types.Date {
+func (o *UcCall) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.CreatedAt
 }
 
-func (o *UcCall) GetEndAt() *types.Date {
+func (o *UcCall) GetEndAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -62,7 +62,7 @@ func (o *UcCall) GetRaw() PropertyUcCallRaw {
 	return o.Raw
 }
 
-func (o *UcCall) GetStartAt() *types.Date {
+func (o *UcCall) GetStartAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -76,7 +76,7 @@ func (o *UcCall) GetTelephone() *PropertyUcCallTelephone {
 	return o.Telephone
 }
 
-func (o *UcCall) GetUpdatedAt() *types.Date {
+func (o *UcCall) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

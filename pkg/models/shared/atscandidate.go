@@ -3,13 +3,13 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type AtsCandidate struct {
 	Address     *PropertyAtsCandidateAddress `json:"address,omitempty"`
 	CompanyName *string                      `json:"company_name,omitempty"`
-	CreatedAt   *types.Date                  `json:"created_at,omitempty"`
+	CreatedAt   *time.Time                   `json:"created_at,omitempty"`
 	Emails      []AtsEmail                   `json:"emails,omitempty"`
 	ExternalID  *string                      `json:"external_id,omitempty"`
 	ID          *string                      `json:"id,omitempty"`
@@ -19,7 +19,7 @@ type AtsCandidate struct {
 	Tags        []string                     `json:"tags,omitempty"`
 	Telephones  []AtsTelephone               `json:"telephones,omitempty"`
 	Title       *string                      `json:"title,omitempty"`
-	UpdatedAt   *types.Date                  `json:"updated_at,omitempty"`
+	UpdatedAt   *time.Time                   `json:"updated_at,omitempty"`
 }
 
 func (o *AtsCandidate) GetAddress() *PropertyAtsCandidateAddress {
@@ -36,7 +36,7 @@ func (o *AtsCandidate) GetCompanyName() *string {
 	return o.CompanyName
 }
 
-func (o *AtsCandidate) GetCreatedAt() *types.Date {
+func (o *AtsCandidate) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -106,7 +106,7 @@ func (o *AtsCandidate) GetTitle() *string {
 	return o.Title
 }
 
-func (o *AtsCandidate) GetUpdatedAt() *types.Date {
+func (o *AtsCandidate) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

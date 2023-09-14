@@ -3,7 +3,7 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type CrmFile struct {
@@ -11,7 +11,7 @@ type CrmFile struct {
 	ActivityID  *string             `json:"activity_id,omitempty"`
 	CompanyID   *string             `json:"company_id,omitempty"`
 	ContactID   *string             `json:"contact_id,omitempty"`
-	CreatedAt   *types.Date         `json:"created_at,omitempty"`
+	CreatedAt   *time.Time          `json:"created_at,omitempty"`
 	DealID      *string             `json:"deal_id,omitempty"`
 	Description *string             `json:"description,omitempty"`
 	FileName    *string             `json:"file_name,omitempty"`
@@ -21,7 +21,7 @@ type CrmFile struct {
 	ID          *string             `json:"id,omitempty"`
 	LeadID      *string             `json:"lead_id,omitempty"`
 	Raw         *PropertyCrmFileRaw `json:"raw,omitempty"`
-	UpdatedAt   *types.Date         `json:"updated_at,omitempty"`
+	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
 	UserID      *string             `json:"user_id,omitempty"`
 }
 
@@ -53,7 +53,7 @@ func (o *CrmFile) GetContactID() *string {
 	return o.ContactID
 }
 
-func (o *CrmFile) GetCreatedAt() *types.Date {
+func (o *CrmFile) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -123,7 +123,7 @@ func (o *CrmFile) GetRaw() *PropertyCrmFileRaw {
 	return o.Raw
 }
 
-func (o *CrmFile) GetUpdatedAt() *types.Date {
+func (o *CrmFile) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

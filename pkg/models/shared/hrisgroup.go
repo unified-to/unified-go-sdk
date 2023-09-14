@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type HrisGroupType string
@@ -51,7 +51,7 @@ func (e *HrisGroupType) UnmarshalJSON(data []byte) error {
 }
 
 type HrisGroup struct {
-	CreatedAt   *types.Date           `json:"created_at,omitempty"`
+	CreatedAt   *time.Time            `json:"created_at,omitempty"`
 	Description *string               `json:"description,omitempty"`
 	EmployeeIds []string              `json:"employee_ids,omitempty"`
 	ID          *string               `json:"id,omitempty"`
@@ -61,10 +61,10 @@ type HrisGroup struct {
 	ParentID    *string               `json:"parent_id,omitempty"`
 	Raw         *PropertyHrisGroupRaw `json:"raw,omitempty"`
 	Type        *HrisGroupType        `json:"type,omitempty"`
-	UpdatedAt   *types.Date           `json:"updated_at,omitempty"`
+	UpdatedAt   *time.Time            `json:"updated_at,omitempty"`
 }
 
-func (o *HrisGroup) GetCreatedAt() *types.Date {
+func (o *HrisGroup) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -134,7 +134,7 @@ func (o *HrisGroup) GetType() *HrisGroupType {
 	return o.Type
 }
 
-func (o *HrisGroup) GetUpdatedAt() *types.Date {
+func (o *HrisGroup) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

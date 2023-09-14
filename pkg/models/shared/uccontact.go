@@ -3,13 +3,13 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // UcContact - A contact represents a person that optionally is associated with a call
 type UcContact struct {
-	Company   *string     `json:"company,omitempty"`
-	CreatedAt *types.Date `json:"created_at,omitempty"`
+	Company   *string    `json:"company,omitempty"`
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of email addresses for this contact
 	Emails []UcEmail `json:"emails,omitempty"`
 	ID     *string   `json:"id,omitempty"`
@@ -19,7 +19,7 @@ type UcContact struct {
 	// An array of telephones for this contact
 	Telephones []UcTelephone `json:"telephones,omitempty"`
 	Title      *string       `json:"title,omitempty"`
-	UpdatedAt  *types.Date   `json:"updated_at,omitempty"`
+	UpdatedAt  *time.Time    `json:"updated_at,omitempty"`
 }
 
 func (o *UcContact) GetCompany() *string {
@@ -29,7 +29,7 @@ func (o *UcContact) GetCompany() *string {
 	return o.Company
 }
 
-func (o *UcContact) GetCreatedAt() *types.Date {
+func (o *UcContact) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -78,7 +78,7 @@ func (o *UcContact) GetTitle() *string {
 	return o.Title
 }
 
-func (o *UcContact) GetUpdatedAt() *types.Date {
+func (o *UcContact) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

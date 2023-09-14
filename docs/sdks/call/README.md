@@ -37,7 +37,7 @@ func main() {
         Order: unifiedto.String("accusamus"),
         Query: unifiedto.String("doloremque"),
         Sort: unifiedto.String("nisi"),
-        UpdatedGte: types.MustDateFromString("2021-02-24"),
+        UpdatedGte: types.MustTimeFromString("2021-02-24T20:48:23.002Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)

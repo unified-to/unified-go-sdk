@@ -3,12 +3,12 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // UcAgent - Represents an agent
 type UcAgent struct {
-	CreatedAt *types.Date `json:"created_at,omitempty"`
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of email addresses for this agent
 	Emails []UcEmail `json:"emails,omitempty"`
 	ID     *string   `json:"id,omitempty"`
@@ -16,10 +16,10 @@ type UcAgent struct {
 	// The raw data returned by the integration for this agent
 	Raw        PropertyUcAgentRaw `json:"raw"`
 	Telephones []UcTelephone      `json:"telephones,omitempty"`
-	UpdatedAt  *types.Date        `json:"updated_at,omitempty"`
+	UpdatedAt  *time.Time         `json:"updated_at,omitempty"`
 }
 
-func (o *UcAgent) GetCreatedAt() *types.Date {
+func (o *UcAgent) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -61,7 +61,7 @@ func (o *UcAgent) GetTelephones() []UcTelephone {
 	return o.Telephones
 }
 
-func (o *UcAgent) GetUpdatedAt() *types.Date {
+func (o *UcAgent) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

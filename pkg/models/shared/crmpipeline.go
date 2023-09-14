@@ -3,18 +3,18 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type CrmPipeline struct {
 	Active          *bool                   `json:"active,omitempty"`
-	CreatedAt       *types.Date             `json:"created_at,omitempty"`
+	CreatedAt       *time.Time              `json:"created_at,omitempty"`
 	DealProbability *bool                   `json:"deal_probability,omitempty"`
 	DisplayOrder    *float64                `json:"display_order,omitempty"`
 	ID              *string                 `json:"id,omitempty"`
 	Name            *string                 `json:"name,omitempty"`
 	Raw             *PropertyCrmPipelineRaw `json:"raw,omitempty"`
-	UpdatedAt       *types.Date             `json:"updated_at,omitempty"`
+	UpdatedAt       *time.Time              `json:"updated_at,omitempty"`
 }
 
 func (o *CrmPipeline) GetActive() *bool {
@@ -24,7 +24,7 @@ func (o *CrmPipeline) GetActive() *bool {
 	return o.Active
 }
 
-func (o *CrmPipeline) GetCreatedAt() *types.Date {
+func (o *CrmPipeline) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -66,7 +66,7 @@ func (o *CrmPipeline) GetRaw() *PropertyCrmPipelineRaw {
 	return o.Raw
 }
 
-func (o *CrmPipeline) GetUpdatedAt() *types.Date {
+func (o *CrmPipeline) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

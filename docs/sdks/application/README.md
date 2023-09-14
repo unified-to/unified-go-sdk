@@ -93,7 +93,7 @@ func main() {
         Order: unifiedto.String("quidem"),
         Query: unifiedto.String("voluptatibus"),
         Sort: unifiedto.String("voluptas"),
-        UpdatedGte: types.MustDateFromString("2022-08-22"),
+        UpdatedGte: types.MustTimeFromString("2022-08-22T21:20:36.034Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -197,17 +197,17 @@ func main() {
     ctx := context.Background()
     res, err := s.Application.PatchAtsConnectionIDApplicationID(ctx, operations.PatchAtsConnectionIDApplicationIDRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustDateFromString("2021-09-28"),
+            AppliedAt: types.MustTimeFromString("2021-09-28T20:14:16.452Z"),
             CandidateID: unifiedto.String("alias"),
-            CreatedAt: types.MustDateFromString("2022-01-24"),
+            CreatedAt: types.MustTimeFromString("2022-01-24T12:18:47.570Z"),
             ID: unifiedto.String("46ce2af7-a73c-4f3b-a453-f870b326b5a7"),
             JobID: unifiedto.String("ipsum"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustDateFromString("2022-10-24"),
+            RejectedAt: types.MustTimeFromString("2022-10-24T22:37:32.805Z"),
             RejectedReason: unifiedto.String("cupiditate"),
             Source: unifiedto.String("maxime"),
             Status: shared.AtsApplicationStatusHired.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-10-07"),
+            UpdatedAt: types.MustTimeFromString("2022-10-07T04:50:29.805Z"),
         },
         ConnectionID: "laborum",
         ID: "8422bb67-9d23-4227-95bf-0cbb1e31b8b9",
@@ -263,17 +263,17 @@ func main() {
     ctx := context.Background()
     res, err := s.Application.PostAtsConnectionIDApplication(ctx, operations.PostAtsConnectionIDApplicationRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustDateFromString("2022-01-14"),
+            AppliedAt: types.MustTimeFromString("2022-01-14T21:26:14.171Z"),
             CandidateID: unifiedto.String("dolorem"),
-            CreatedAt: types.MustDateFromString("2022-09-18"),
+            CreatedAt: types.MustTimeFromString("2022-09-18T06:37:26.413Z"),
             ID: unifiedto.String("3a1108e0-adcf-44b9-a187-9fce953f73ef"),
             JobID: unifiedto.String("dignissimos"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustDateFromString("2020-11-08"),
+            RejectedAt: types.MustTimeFromString("2020-11-08T11:03:10.206Z"),
             RejectedReason: unifiedto.String("quod"),
             Source: unifiedto.String("odio"),
             Status: shared.AtsApplicationStatusBackgroundCheck.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2021-04-02"),
+            UpdatedAt: types.MustTimeFromString("2021-04-02T18:28:29.036Z"),
         },
         ConnectionID: "ducimus",
     }, operationSecurity)
@@ -328,17 +328,17 @@ func main() {
     ctx := context.Background()
     res, err := s.Application.PutAtsConnectionIDApplicationID(ctx, operations.PutAtsConnectionIDApplicationIDRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustDateFromString("2022-02-26"),
+            AppliedAt: types.MustTimeFromString("2022-02-26T17:44:28.591Z"),
             CandidateID: unifiedto.String("illum"),
-            CreatedAt: types.MustDateFromString("2022-05-20"),
+            CreatedAt: types.MustTimeFromString("2022-05-20T11:24:00.260Z"),
             ID: unifiedto.String("c0f5d2cf-f7c7-40a4-9626-d436813f16d9"),
             JobID: unifiedto.String("voluptatibus"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustDateFromString("2022-01-15"),
+            RejectedAt: types.MustTimeFromString("2022-01-15T07:05:18.296Z"),
             RejectedReason: unifiedto.String("quisquam"),
             Source: unifiedto.String("saepe"),
             Status: shared.AtsApplicationStatusFirstInterview.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2021-12-03"),
+            UpdatedAt: types.MustTimeFromString("2021-12-03T14:20:49.127Z"),
         },
         ConnectionID: "veniam",
         ID: "6146c3e2-50fb-4008-842e-141aac366c8d",

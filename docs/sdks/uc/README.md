@@ -94,7 +94,7 @@ func main() {
         Order: unifiedto.String("suscipit"),
         Query: unifiedto.String("explicabo"),
         Sort: unifiedto.String("quos"),
-        UpdatedGte: types.MustDateFromString("2022-10-16"),
+        UpdatedGte: types.MustTimeFromString("2022-10-16T11:52:18.503Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -153,7 +153,7 @@ func main() {
         Order: unifiedto.String("provident"),
         Query: unifiedto.String("maxime"),
         Sort: unifiedto.String("officiis"),
-        UpdatedGte: types.MustDateFromString("2022-11-01"),
+        UpdatedGte: types.MustTimeFromString("2022-11-01T07:11:20.903Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -211,7 +211,7 @@ func main() {
         Order: unifiedto.String("doloribus"),
         Query: unifiedto.String("earum"),
         Sort: unifiedto.String("commodi"),
-        UpdatedGte: types.MustDateFromString("2022-08-09"),
+        UpdatedGte: types.MustTimeFromString("2022-08-09T11:19:33.586Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -316,7 +316,7 @@ func main() {
     res, err := s.Uc.PatchUcConnectionIDContactID(ctx, operations.PatchUcConnectionIDContactIDRequest{
         UcContact: &shared.UcContact{
             Company: unifiedto.String("Kreiger - Gutmann"),
-            CreatedAt: types.MustDateFromString("2022-06-03"),
+            CreatedAt: types.MustTimeFromString("2022-06-03T00:19:22.099Z"),
             Emails: []shared.UcEmail{
                 shared.UcEmail{
                     Email: "Leanna_Walsh26@yahoo.com",
@@ -333,7 +333,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Ms."),
-            UpdatedAt: types.MustDateFromString("2022-02-04"),
+            UpdatedAt: types.MustTimeFromString("2022-02-04T19:42:40.275Z"),
         },
         ConnectionID: "laudantium",
         ID: "8f86996c-8e22-4be0-a3cf-47893bd23f86",
@@ -390,7 +390,7 @@ func main() {
     res, err := s.Uc.PostUcConnectionIDContact(ctx, operations.PostUcConnectionIDContactRequest{
         UcContact: &shared.UcContact{
             Company: unifiedto.String("Abbott - Beatty"),
-            CreatedAt: types.MustDateFromString("2021-10-06"),
+            CreatedAt: types.MustTimeFromString("2021-10-06T16:45:34.362Z"),
             Emails: []shared.UcEmail{
                 shared.UcEmail{
                     Email: "Ova.Kovacek@gmail.com",
@@ -407,7 +407,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Miss"),
-            UpdatedAt: types.MustDateFromString("2022-05-29"),
+            UpdatedAt: types.MustTimeFromString("2022-05-29T03:50:25.472Z"),
         },
         ConnectionID: "expedita",
     }, operationSecurity)
@@ -463,7 +463,7 @@ func main() {
     res, err := s.Uc.PutUcConnectionIDContactID(ctx, operations.PutUcConnectionIDContactIDRequest{
         UcContact: &shared.UcContact{
             Company: unifiedto.String("Lynch - Zemlak"),
-            CreatedAt: types.MustDateFromString("2022-11-29"),
+            CreatedAt: types.MustTimeFromString("2022-11-29T18:41:38.693Z"),
             Emails: []shared.UcEmail{
                 shared.UcEmail{
                     Email: "Cary.McKenzie@hotmail.com",
@@ -480,7 +480,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Mr."),
-            UpdatedAt: types.MustDateFromString("2022-10-31"),
+            UpdatedAt: types.MustTimeFromString("2022-10-31T15:11:09.832Z"),
         },
         ConnectionID: "reiciendis",
         ID: "5b9d3cb1-1a76-487d-b100-e8e2b9b0d746",

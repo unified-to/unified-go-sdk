@@ -3,15 +3,15 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // PropertyCrmEventMeeting - The meeting object, when type = meeting
 type PropertyCrmEventMeeting struct {
-	Description *string     `json:"description,omitempty"`
-	EndAt       *types.Date `json:"end_at,omitempty"`
-	StartAt     *types.Date `json:"start_at,omitempty"`
-	Title       *string     `json:"title,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	EndAt       *time.Time `json:"end_at,omitempty"`
+	StartAt     *time.Time `json:"start_at,omitempty"`
+	Title       *string    `json:"title,omitempty"`
 }
 
 func (o *PropertyCrmEventMeeting) GetDescription() *string {
@@ -21,14 +21,14 @@ func (o *PropertyCrmEventMeeting) GetDescription() *string {
 	return o.Description
 }
 
-func (o *PropertyCrmEventMeeting) GetEndAt() *types.Date {
+func (o *PropertyCrmEventMeeting) GetEndAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.EndAt
 }
 
-func (o *PropertyCrmEventMeeting) GetStartAt() *types.Date {
+func (o *PropertyCrmEventMeeting) GetStartAt() *time.Time {
 	if o == nil {
 		return nil
 	}

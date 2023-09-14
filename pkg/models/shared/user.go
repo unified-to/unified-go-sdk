@@ -3,24 +3,24 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // The User object represents you on the system. A user can belong to multiple workspaces (ie. organizations).
 type User struct {
-	CreatedAt   *types.Date       `json:"created_at,omitempty"`
+	CreatedAt   *time.Time        `json:"created_at,omitempty"`
 	Email       *string           `json:"email,omitempty"`
 	Environment *string           `json:"environment,omitempty"`
 	ID          *string           `json:"id,omitempty"`
 	Meta        *PropertyUserMeta `json:"meta,omitempty"`
 	Name        string            `json:"name"`
-	UpdatedAt   *types.Date       `json:"updated_at,omitempty"`
+	UpdatedAt   *time.Time        `json:"updated_at,omitempty"`
 	WorkspaceID string            `json:"workspace_id"`
 	// A list of all of the user's workspaces
 	WorkspaceIds []string `json:"workspace_ids"`
 }
 
-func (o *User) GetCreatedAt() *types.Date {
+func (o *User) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -62,7 +62,7 @@ func (o *User) GetName() string {
 	return o.Name
 }
 
-func (o *User) GetUpdatedAt() *types.Date {
+func (o *User) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

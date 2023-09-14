@@ -263,7 +263,7 @@ func main() {
         Order: unifiedto.String("debitis"),
         Query: unifiedto.String("dolore"),
         Sort: unifiedto.String("in"),
-        UpdatedGte: types.MustDateFromString("2022-01-15"),
+        UpdatedGte: types.MustTimeFromString("2022-01-15T17:11:52.134Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -371,7 +371,7 @@ func main() {
         Order: unifiedto.String("molestiae"),
         Query: unifiedto.String("eaque"),
         Sort: unifiedto.String("tempora"),
-        UpdatedGte: types.MustDateFromString("2022-03-06"),
+        UpdatedGte: types.MustTimeFromString("2022-03-06T22:27:54.190Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -480,7 +480,7 @@ func main() {
         Query: unifiedto.String("harum"),
         Sort: unifiedto.String("veritatis"),
         TicketID: "quas",
-        UpdatedGte: types.MustDateFromString("2021-07-31"),
+        UpdatedGte: types.MustTimeFromString("2021-07-31T21:20:45.941Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -591,7 +591,7 @@ func main() {
         Order: unifiedto.String("velit"),
         Query: unifiedto.String("libero"),
         Sort: unifiedto.String("soluta"),
-        UpdatedGte: types.MustDateFromString("2022-01-21"),
+        UpdatedGte: types.MustTimeFromString("2022-01-21T15:01:10.881Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -695,7 +695,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingConnectionIDAgentID(ctx, operations.PatchTicketingConnectionIDAgentIDRequest{
         TicketingAgent: &shared.TicketingAgent{
-            CreatedAt: types.MustDateFromString("2022-05-08"),
+            CreatedAt: types.MustTimeFromString("2022-05-08T09:12:54.892Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
                     Email: "Brad.Olson@gmail.com",
@@ -711,7 +711,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-04-15"),
+            UpdatedAt: types.MustTimeFromString("2022-04-15T11:30:38.762Z"),
         },
         ConnectionID: "cum",
         ID: "f7143356-f634-49a1-a424-9b211ce46b95",
@@ -767,7 +767,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingConnectionIDCustomerID(ctx, operations.PatchTicketingConnectionIDCustomerIDRequest{
         TicketingCustomer: &shared.TicketingCustomer{
-            CreatedAt: types.MustDateFromString("2022-07-29"),
+            CreatedAt: types.MustTimeFromString("2022-07-29T08:43:35.611Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
                     Email: "Brandi35@gmail.com",
@@ -786,7 +786,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeHome.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-02-14"),
+            UpdatedAt: types.MustTimeFromString("2022-02-14T22:17:14.340Z"),
         },
         ConnectionID: "aperiam",
         ID: "36f5c388-664f-4698-9530-a2e2aed6aaf8",
@@ -843,7 +843,7 @@ func main() {
     res, err := s.Ticketing.PatchTicketingConnectionIDNotesTicketIDID(ctx, operations.PatchTicketingConnectionIDNotesTicketIDIDRequest{
         TicketingNote: &shared.TicketingNote{
             AgentID: unifiedto.String("ea"),
-            CreatedAt: types.MustDateFromString("2022-03-24"),
+            CreatedAt: types.MustTimeFromString("2022-03-24T22:55:36.292Z"),
             CustomerID: unifiedto.String("eos"),
             Description: unifiedto.String("praesentium"),
             ID: unifiedto.String("d040c69a-3d90-46f6-abd5-ad7ec7394f25"),
@@ -906,8 +906,8 @@ func main() {
     res, err := s.Ticketing.PatchTicketingConnectionIDTicketID(ctx, operations.PatchTicketingConnectionIDTicketIDRequest{
         TicketingTicket: &shared.TicketingTicket{
             Category: unifiedto.String("officia"),
-            ClosedAt: types.MustDateFromString("2022-01-28"),
-            CreatedAt: types.MustDateFromString("2022-02-09"),
+            ClosedAt: types.MustTimeFromString("2022-01-28T05:10:10.473Z"),
+            CreatedAt: types.MustTimeFromString("2022-02-09T11:50:25.266Z"),
             CustomerID: unifiedto.String("quam"),
             Description: unifiedto.String("dolorum"),
             ID: unifiedto.String("ef13402e-945f-4537-83ef-de1198221f9b"),
@@ -920,7 +920,7 @@ func main() {
             Tags: []string{
                 "deserunt",
             },
-            UpdatedAt: types.MustDateFromString("2020-02-21"),
+            UpdatedAt: types.MustTimeFromString("2020-02-21T15:04:19.759Z"),
         },
         ConnectionID: "repudiandae",
         ID: "69682ace-efb0-44f8-8512-caabea708ed5",
@@ -976,7 +976,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.PostTicketingConnectionIDAgent(ctx, operations.PostTicketingConnectionIDAgentRequest{
         TicketingAgent: &shared.TicketingAgent{
-            CreatedAt: types.MustDateFromString("2022-05-21"),
+            CreatedAt: types.MustTimeFromString("2022-05-21T16:53:45.567Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
                     Email: "Raven.Frami@yahoo.com",
@@ -992,7 +992,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeHome.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2020-03-13"),
+            UpdatedAt: types.MustTimeFromString("2020-03-13T17:02:39.583Z"),
         },
         ConnectionID: "similique",
     }, operationSecurity)
@@ -1047,7 +1047,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.PostTicketingConnectionIDCustomer(ctx, operations.PostTicketingConnectionIDCustomerRequest{
         TicketingCustomer: &shared.TicketingCustomer{
-            CreatedAt: types.MustDateFromString("2021-11-22"),
+            CreatedAt: types.MustTimeFromString("2021-11-22T08:46:26.211Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
                     Email: "Sabina.Gulgowski59@hotmail.com",
@@ -1066,7 +1066,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-11-08"),
+            UpdatedAt: types.MustTimeFromString("2022-11-08T14:43:03.666Z"),
         },
         ConnectionID: "debitis",
     }, operationSecurity)
@@ -1122,7 +1122,7 @@ func main() {
     res, err := s.Ticketing.PostTicketingConnectionIDNotesTicketID(ctx, operations.PostTicketingConnectionIDNotesTicketIDRequest{
         TicketingNote: &shared.TicketingNote{
             AgentID: unifiedto.String("quidem"),
-            CreatedAt: types.MustDateFromString("2022-07-05"),
+            CreatedAt: types.MustTimeFromString("2022-07-05T14:59:15.588Z"),
             CustomerID: unifiedto.String("magnam"),
             Description: unifiedto.String("vel"),
             ID: unifiedto.String("030fe183-76c2-4bed-ae76-790ed0c16a7b"),
@@ -1184,8 +1184,8 @@ func main() {
     res, err := s.Ticketing.PostTicketingConnectionIDTicket(ctx, operations.PostTicketingConnectionIDTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
             Category: unifiedto.String("rem"),
-            ClosedAt: types.MustDateFromString("2022-12-31"),
-            CreatedAt: types.MustDateFromString("2022-09-20"),
+            ClosedAt: types.MustTimeFromString("2022-12-31T16:32:53.167Z"),
+            CreatedAt: types.MustTimeFromString("2022-09-20T04:19:27.059Z"),
             CustomerID: unifiedto.String("totam"),
             Description: unifiedto.String("unde"),
             ID: unifiedto.String("f6770ef0-4809-41a2-ba25-ee6c75af8a60"),
@@ -1198,7 +1198,7 @@ func main() {
             Tags: []string{
                 "dolore",
             },
-            UpdatedAt: types.MustDateFromString("2022-01-27"),
+            UpdatedAt: types.MustTimeFromString("2022-01-27T16:39:01.281Z"),
         },
         ConnectionID: "perferendis",
     }, operationSecurity)
@@ -1253,7 +1253,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.PutTicketingConnectionIDAgentID(ctx, operations.PutTicketingConnectionIDAgentIDRequest{
         TicketingAgent: &shared.TicketingAgent{
-            CreatedAt: types.MustDateFromString("2022-02-01"),
+            CreatedAt: types.MustTimeFromString("2022-02-01T01:30:25.348Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
                     Email: "Sigrid_Hilll@yahoo.com",
@@ -1269,7 +1269,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeHome.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-05-28"),
+            UpdatedAt: types.MustTimeFromString("2022-05-28T17:33:55.487Z"),
         },
         ConnectionID: "assumenda",
         ID: "5a65b4d5-562d-49b7-99e2-d6fcf557629d",
@@ -1325,7 +1325,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.PutTicketingConnectionIDCustomerID(ctx, operations.PutTicketingConnectionIDCustomerIDRequest{
         TicketingCustomer: &shared.TicketingCustomer{
-            CreatedAt: types.MustDateFromString("2021-11-27"),
+            CreatedAt: types.MustTimeFromString("2021-11-27T14:28:08.554Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
                     Email: "Enola63@yahoo.com",
@@ -1344,7 +1344,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-11-17"),
+            UpdatedAt: types.MustTimeFromString("2022-11-17T00:52:06.013Z"),
         },
         ConnectionID: "autem",
         ID: "600da0e3-aa61-4c6f-a09d-852b53b32c8c",
@@ -1401,7 +1401,7 @@ func main() {
     res, err := s.Ticketing.PutTicketingConnectionIDNotesTicketIDID(ctx, operations.PutTicketingConnectionIDNotesTicketIDIDRequest{
         TicketingNote: &shared.TicketingNote{
             AgentID: unifiedto.String("dignissimos"),
-            CreatedAt: types.MustDateFromString("2022-06-05"),
+            CreatedAt: types.MustTimeFromString("2022-06-05T09:20:14.169Z"),
             CustomerID: unifiedto.String("eligendi"),
             Description: unifiedto.String("esse"),
             ID: unifiedto.String("10e1673d-905c-4b4b-adef-3c127c390995"),
@@ -1464,8 +1464,8 @@ func main() {
     res, err := s.Ticketing.PutTicketingConnectionIDTicketID(ctx, operations.PutTicketingConnectionIDTicketIDRequest{
         TicketingTicket: &shared.TicketingTicket{
             Category: unifiedto.String("placeat"),
-            ClosedAt: types.MustDateFromString("2021-06-17"),
-            CreatedAt: types.MustDateFromString("2021-01-22"),
+            ClosedAt: types.MustTimeFromString("2021-06-17T09:59:15.139Z"),
+            CreatedAt: types.MustTimeFromString("2021-01-22T11:03:32.954Z"),
             CustomerID: unifiedto.String("aut"),
             Description: unifiedto.String("soluta"),
             ID: unifiedto.String("7d176492-6b0c-4f5e-acb6-ebabe5e0b99f"),
@@ -1478,7 +1478,7 @@ func main() {
             Tags: []string{
                 "quas",
             },
-            UpdatedAt: types.MustDateFromString("2021-10-30"),
+            UpdatedAt: types.MustTimeFromString("2021-10-30T17:09:24.055Z"),
         },
         ConnectionID: "deserunt",
         ID: "87bb7aec-be56-49d7-8cb0-69907f989441",

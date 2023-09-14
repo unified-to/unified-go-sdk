@@ -93,7 +93,7 @@ func main() {
         Order: unifiedto.String("adipisci"),
         Query: unifiedto.String("occaecati"),
         Sort: unifiedto.String("exercitationem"),
-        UpdatedGte: types.MustDateFromString("2022-11-09"),
+        UpdatedGte: types.MustTimeFromString("2022-11-09T17:01:20.907Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -198,8 +198,8 @@ func main() {
     res, err := s.Ticket.PatchTicketingConnectionIDTicketID(ctx, operations.PatchTicketingConnectionIDTicketIDRequest{
         TicketingTicket: &shared.TicketingTicket{
             Category: unifiedto.String("animi"),
-            ClosedAt: types.MustDateFromString("2022-06-11"),
-            CreatedAt: types.MustDateFromString("2022-11-29"),
+            ClosedAt: types.MustTimeFromString("2022-06-11T08:56:14.494Z"),
+            CreatedAt: types.MustTimeFromString("2022-11-29T12:43:22.264Z"),
             CustomerID: unifiedto.String("voluptatum"),
             Description: unifiedto.String("eius"),
             ID: unifiedto.String("439b3de8-756c-4cce-870c-d2147b6e6152"),
@@ -212,7 +212,7 @@ func main() {
             Tags: []string{
                 "doloremque",
             },
-            UpdatedAt: types.MustDateFromString("2021-05-28"),
+            UpdatedAt: types.MustTimeFromString("2021-05-28T17:29:45.347Z"),
         },
         ConnectionID: "eligendi",
         ID: "3a4b9a5b-f935-4dfe-974f-a4b1e9c097ed",
@@ -269,8 +269,8 @@ func main() {
     res, err := s.Ticket.PostTicketingConnectionIDTicket(ctx, operations.PostTicketingConnectionIDTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
             Category: unifiedto.String("animi"),
-            ClosedAt: types.MustDateFromString("2022-11-09"),
-            CreatedAt: types.MustDateFromString("2022-09-13"),
+            ClosedAt: types.MustTimeFromString("2022-11-09T20:11:20.304Z"),
+            CreatedAt: types.MustTimeFromString("2022-09-13T02:47:18.896Z"),
             CustomerID: unifiedto.String("numquam"),
             Description: unifiedto.String("fugit"),
             ID: unifiedto.String("e1a9237e-9984-4c80-b479-e891923c18ca"),
@@ -283,7 +283,7 @@ func main() {
             Tags: []string{
                 "enim",
             },
-            UpdatedAt: types.MustDateFromString("2022-06-24"),
+            UpdatedAt: types.MustTimeFromString("2022-06-24T00:19:38.232Z"),
         },
         ConnectionID: "cupiditate",
     }, operationSecurity)
@@ -339,8 +339,8 @@ func main() {
     res, err := s.Ticket.PutTicketingConnectionIDTicketID(ctx, operations.PutTicketingConnectionIDTicketIDRequest{
         TicketingTicket: &shared.TicketingTicket{
             Category: unifiedto.String("explicabo"),
-            ClosedAt: types.MustDateFromString("2022-09-23"),
-            CreatedAt: types.MustDateFromString("2021-01-13"),
+            ClosedAt: types.MustTimeFromString("2022-09-23T16:36:11.812Z"),
+            CreatedAt: types.MustTimeFromString("2021-01-13T15:10:22.653Z"),
             CustomerID: unifiedto.String("consequuntur"),
             Description: unifiedto.String("doloremque"),
             ID: unifiedto.String("207e4fae-038c-4d7f-9bc2-cabaf7fc2ccb"),
@@ -353,7 +353,7 @@ func main() {
             Tags: []string{
                 "aperiam",
             },
-            UpdatedAt: types.MustDateFromString("2020-02-02"),
+            UpdatedAt: types.MustTimeFromString("2020-02-02T17:11:25.452Z"),
         },
         ConnectionID: "nisi",
         ID: "8eaedb2e-e70b-4e06-9fb3-6add704080e0",

@@ -3,17 +3,17 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type EnrichPersonWorkHistory struct {
-	CompanyDomain *string     `json:"company_domain,omitempty"`
-	CompanyID     *string     `json:"company_id,omitempty"`
-	CompanyName   *string     `json:"company_name,omitempty"`
-	EndAt         *types.Date `json:"end_at,omitempty"`
-	Location      *string     `json:"location,omitempty"`
-	StartAt       *types.Date `json:"start_at,omitempty"`
-	Title         string      `json:"title"`
+	CompanyDomain *string    `json:"company_domain,omitempty"`
+	CompanyID     *string    `json:"company_id,omitempty"`
+	CompanyName   *string    `json:"company_name,omitempty"`
+	EndAt         *time.Time `json:"end_at,omitempty"`
+	Location      *string    `json:"location,omitempty"`
+	StartAt       *time.Time `json:"start_at,omitempty"`
+	Title         string     `json:"title"`
 }
 
 func (o *EnrichPersonWorkHistory) GetCompanyDomain() *string {
@@ -37,7 +37,7 @@ func (o *EnrichPersonWorkHistory) GetCompanyName() *string {
 	return o.CompanyName
 }
 
-func (o *EnrichPersonWorkHistory) GetEndAt() *types.Date {
+func (o *EnrichPersonWorkHistory) GetEndAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -51,7 +51,7 @@ func (o *EnrichPersonWorkHistory) GetLocation() *string {
 	return o.Location
 }
 
-func (o *EnrichPersonWorkHistory) GetStartAt() *types.Date {
+func (o *EnrichPersonWorkHistory) GetStartAt() *time.Time {
 	if o == nil {
 		return nil
 	}

@@ -143,7 +143,7 @@ func main() {
         Order: unifiedto.String("unde"),
         Query: unifiedto.String("consequatur"),
         Sort: unifiedto.String("quaerat"),
-        UpdatedGte: types.MustDateFromString("2022-03-13"),
+        UpdatedGte: types.MustTimeFromString("2022-03-13T04:13:10.861Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -352,7 +352,7 @@ func main() {
                 Region: unifiedto.String("repellat"),
                 RegionCode: unifiedto.String("voluptatum"),
             },
-            CreatedAt: types.MustDateFromString("2021-04-22"),
+            CreatedAt: types.MustTimeFromString("2021-04-22T20:59:04.118Z"),
             Currency: unifiedto.String("amet"),
             Department: unifiedto.String("totam"),
             Division: unifiedto.String("ex"),
@@ -375,7 +375,7 @@ func main() {
             },
             Timezone: unifiedto.String("accusamus"),
             Title: unifiedto.String("Mrs."),
-            UpdatedAt: types.MustDateFromString("2022-04-24"),
+            UpdatedAt: types.MustTimeFromString("2022-04-24T03:57:57.473Z"),
         },
         ConnectionID: "sit",
         ID: "e8fbc48d-dc7e-469b-9351-0505014dca10",
@@ -430,13 +430,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.PatchUnifiedUser(ctx, shared.User{
-        CreatedAt: types.MustDateFromString("2022-06-17"),
+        CreatedAt: types.MustTimeFromString("2022-06-17T20:12:07.816Z"),
         Email: unifiedto.String("Candido.Hahn@yahoo.com"),
         Environment: unifiedto.String("impedit"),
         ID: unifiedto.String("36e94889-2782-4d34-a0b8-fc0d59f57b9f"),
         Meta: &shared.PropertyUserMeta{},
         Name: "Miss Ian Connelly",
-        UpdatedAt: types.MustDateFromString("2022-07-09"),
+        UpdatedAt: types.MustTimeFromString("2022-07-09T07:24:05.365Z"),
         WorkspaceID: "deleniti",
         WorkspaceIds: []string{
             "aperiam",
@@ -504,7 +504,7 @@ func main() {
                 Region: unifiedto.String("magnam"),
                 RegionCode: unifiedto.String("recusandae"),
             },
-            CreatedAt: types.MustDateFromString("2022-12-13"),
+            CreatedAt: types.MustTimeFromString("2022-12-13T13:34:20.729Z"),
             Currency: unifiedto.String("maiores"),
             Department: unifiedto.String("tempora"),
             Division: unifiedto.String("reprehenderit"),
@@ -527,7 +527,7 @@ func main() {
             },
             Timezone: unifiedto.String("illo"),
             Title: unifiedto.String("Dr."),
-            UpdatedAt: types.MustDateFromString("2020-08-23"),
+            UpdatedAt: types.MustTimeFromString("2020-08-23T15:43:14.003Z"),
         },
         ConnectionID: "sequi",
     }, operationSecurity)
@@ -593,7 +593,7 @@ func main() {
                 Region: unifiedto.String("omnis"),
                 RegionCode: unifiedto.String("itaque"),
             },
-            CreatedAt: types.MustDateFromString("2022-11-29"),
+            CreatedAt: types.MustTimeFromString("2022-11-29T02:49:06.048Z"),
             Currency: unifiedto.String("fugiat"),
             Department: unifiedto.String("provident"),
             Division: unifiedto.String("voluptatem"),
@@ -616,7 +616,7 @@ func main() {
             },
             Timezone: unifiedto.String("maxime"),
             Title: unifiedto.String("Ms."),
-            UpdatedAt: types.MustDateFromString("2022-10-11"),
+            UpdatedAt: types.MustTimeFromString("2022-10-11T03:37:06.147Z"),
         },
         ConnectionID: "vitae",
         ID: "cabdab76-7a44-44dd-8da0-abe58eb3d54b",
@@ -671,13 +671,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.PutUnifiedUser(ctx, shared.User{
-        CreatedAt: types.MustDateFromString("2022-11-07"),
+        CreatedAt: types.MustTimeFromString("2022-11-07T21:46:44.444Z"),
         Email: unifiedto.String("Melissa_Dooley30@hotmail.com"),
         Environment: unifiedto.String("sint"),
         ID: unifiedto.String("b8e5c18b-25e8-47f6-8823-255be95c0cbc"),
         Meta: &shared.PropertyUserMeta{},
         Name: "Billy Schmeler",
-        UpdatedAt: types.MustDateFromString("2022-06-05"),
+        UpdatedAt: types.MustTimeFromString("2022-06-05T12:45:52.497Z"),
         WorkspaceID: "quae",
         WorkspaceIds: []string{
             "quos",

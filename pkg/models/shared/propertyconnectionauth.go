@@ -3,7 +3,7 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // PropertyConnectionAuth - An authentication object that represents a specific authorized user's connection to an integration.
@@ -18,7 +18,7 @@ type PropertyConnectionAuth struct {
 	ConsumerSecret *string                             `json:"consumer_secret,omitempty"`
 	Emails         []string                            `json:"emails,omitempty"`
 	ExpiresIn      *float64                            `json:"expires_in,omitempty"`
-	ExpiryDate     *types.Date                         `json:"expiry_date,omitempty"`
+	ExpiryDate     *time.Time                          `json:"expiry_date,omitempty"`
 	Key            *string                             `json:"key,omitempty"`
 	Meta           *PropertyPropertyConnectionAuthMeta `json:"meta,omitempty"`
 	Name           *string                             `json:"name,omitempty"`
@@ -101,7 +101,7 @@ func (o *PropertyConnectionAuth) GetExpiresIn() *float64 {
 	return o.ExpiresIn
 }
 
-func (o *PropertyConnectionAuth) GetExpiryDate() *types.Date {
+func (o *PropertyConnectionAuth) GetExpiryDate() *time.Time {
 	if o == nil {
 		return nil
 	}

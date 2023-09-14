@@ -3,12 +3,12 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type TicketingNote struct {
 	AgentID     *string                  `json:"agent_id,omitempty"`
-	CreatedAt   *types.Date              `json:"created_at,omitempty"`
+	CreatedAt   *time.Time               `json:"created_at,omitempty"`
 	CustomerID  *string                  `json:"customer_id,omitempty"`
 	Description *string                  `json:"description,omitempty"`
 	ID          *string                  `json:"id,omitempty"`
@@ -23,7 +23,7 @@ func (o *TicketingNote) GetAgentID() *string {
 	return o.AgentID
 }
 
-func (o *TicketingNote) GetCreatedAt() *types.Date {
+func (o *TicketingNote) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

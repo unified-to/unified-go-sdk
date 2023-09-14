@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type AtsApplicationStatus string
@@ -66,20 +66,20 @@ func (e *AtsApplicationStatus) UnmarshalJSON(data []byte) error {
 }
 
 type AtsApplication struct {
-	AppliedAt      *types.Date                `json:"applied_at,omitempty"`
+	AppliedAt      *time.Time                 `json:"applied_at,omitempty"`
 	CandidateID    *string                    `json:"candidate_id,omitempty"`
-	CreatedAt      *types.Date                `json:"created_at,omitempty"`
+	CreatedAt      *time.Time                 `json:"created_at,omitempty"`
 	ID             *string                    `json:"id,omitempty"`
 	JobID          *string                    `json:"job_id,omitempty"`
 	Raw            *PropertyAtsApplicationRaw `json:"raw,omitempty"`
-	RejectedAt     *types.Date                `json:"rejected_at,omitempty"`
+	RejectedAt     *time.Time                 `json:"rejected_at,omitempty"`
 	RejectedReason *string                    `json:"rejected_reason,omitempty"`
 	Source         *string                    `json:"source,omitempty"`
 	Status         *AtsApplicationStatus      `json:"status,omitempty"`
-	UpdatedAt      *types.Date                `json:"updated_at,omitempty"`
+	UpdatedAt      *time.Time                 `json:"updated_at,omitempty"`
 }
 
-func (o *AtsApplication) GetAppliedAt() *types.Date {
+func (o *AtsApplication) GetAppliedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -93,7 +93,7 @@ func (o *AtsApplication) GetCandidateID() *string {
 	return o.CandidateID
 }
 
-func (o *AtsApplication) GetCreatedAt() *types.Date {
+func (o *AtsApplication) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -121,7 +121,7 @@ func (o *AtsApplication) GetRaw() *PropertyAtsApplicationRaw {
 	return o.Raw
 }
 
-func (o *AtsApplication) GetRejectedAt() *types.Date {
+func (o *AtsApplication) GetRejectedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -149,7 +149,7 @@ func (o *AtsApplication) GetStatus() *AtsApplicationStatus {
 	return o.Status
 }
 
-func (o *AtsApplication) GetUpdatedAt() *types.Date {
+func (o *AtsApplication) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"net/http"
+	"time"
 )
 
 type GetUnifiedIntegrationSecurity struct {
@@ -80,7 +80,7 @@ type GetUnifiedIntegrationRequest struct {
 	Sort       *string                           `queryParam:"style=form,explode=true,name=sort"`
 	Summary    *bool                             `queryParam:"style=form,explode=true,name=summary"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *types.Date `queryParam:"style=form,explode=true,name=updated_gte"`
+	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *GetUnifiedIntegrationRequest) GetActive() *bool {
@@ -132,7 +132,7 @@ func (o *GetUnifiedIntegrationRequest) GetSummary() *bool {
 	return o.Summary
 }
 
-func (o *GetUnifiedIntegrationRequest) GetUpdatedGte() *types.Date {
+func (o *GetUnifiedIntegrationRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}

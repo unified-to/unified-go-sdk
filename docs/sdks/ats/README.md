@@ -321,7 +321,7 @@ func main() {
         Order: unifiedto.String("deleniti"),
         Query: unifiedto.String("itaque"),
         Sort: unifiedto.String("dolorum"),
-        UpdatedGte: types.MustDateFromString("2022-05-23"),
+        UpdatedGte: types.MustTimeFromString("2022-05-23T15:36:15.509Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -429,7 +429,7 @@ func main() {
         Order: unifiedto.String("voluptas"),
         Query: unifiedto.String("asperiores"),
         Sort: unifiedto.String("aperiam"),
-        UpdatedGte: types.MustDateFromString("2022-09-09"),
+        UpdatedGte: types.MustTimeFromString("2022-09-09T19:48:26.093Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -538,7 +538,7 @@ func main() {
         Order: unifiedto.String("assumenda"),
         Query: unifiedto.String("nemo"),
         Sort: unifiedto.String("recusandae"),
-        UpdatedGte: types.MustDateFromString("2022-12-15"),
+        UpdatedGte: types.MustTimeFromString("2022-12-15T04:58:32.488Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -646,7 +646,7 @@ func main() {
         Order: unifiedto.String("voluptas"),
         Query: unifiedto.String("voluptas"),
         Sort: unifiedto.String("voluptas"),
-        UpdatedGte: types.MustDateFromString("2022-04-02"),
+        UpdatedGte: types.MustTimeFromString("2022-04-02T16:36:53.419Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -757,7 +757,7 @@ func main() {
         Order: unifiedto.String("in"),
         Query: unifiedto.String("commodi"),
         Sort: unifiedto.String("quidem"),
-        UpdatedGte: types.MustDateFromString("2022-08-15"),
+        UpdatedGte: types.MustTimeFromString("2022-08-15T21:51:46.128Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -861,17 +861,17 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PatchAtsConnectionIDApplicationID(ctx, operations.PatchAtsConnectionIDApplicationIDRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustDateFromString("2022-02-08"),
+            AppliedAt: types.MustTimeFromString("2022-02-08T08:59:54.184Z"),
             CandidateID: unifiedto.String("rem"),
-            CreatedAt: types.MustDateFromString("2022-04-02"),
+            CreatedAt: types.MustTimeFromString("2022-04-02T00:47:15.232Z"),
             ID: unifiedto.String("a55efd20-e457-4e18-98b6-a89fbe3a5aa8"),
             JobID: unifiedto.String("accusamus"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustDateFromString("2022-06-16"),
+            RejectedAt: types.MustTimeFromString("2022-06-16T13:22:48.429Z"),
             RejectedReason: unifiedto.String("fugit"),
             Source: unifiedto.String("ut"),
             Status: shared.AtsApplicationStatusHired.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-05-14"),
+            UpdatedAt: types.MustTimeFromString("2022-05-14T04:54:08.545Z"),
         },
         ConnectionID: "expedita",
         ID: "4075088e-5186-4206-9e90-4f3b1194b8ab",
@@ -938,7 +938,7 @@ func main() {
                 RegionCode: unifiedto.String("mollitia"),
             },
             CompanyName: unifiedto.String("veniam"),
-            CreatedAt: types.MustDateFromString("2022-03-18"),
+            CreatedAt: types.MustTimeFromString("2022-03-18T08:14:24.399Z"),
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
                     Email: "Avis_Littel@hotmail.com",
@@ -960,7 +960,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Ms."),
-            UpdatedAt: types.MustDateFromString("2022-02-04"),
+            UpdatedAt: types.MustTimeFromString("2022-02-04T04:20:12.809Z"),
         },
         ConnectionID: "consequuntur",
         ID: "9e973e92-2a57-4a15-be3e-060807e2b6e3",
@@ -1018,16 +1018,16 @@ func main() {
         AtsInterview: &shared.AtsInterview{
             ApplicationID: unifiedto.String("laborum"),
             CandidateID: unifiedto.String("distinctio"),
-            CreatedAt: types.MustDateFromString("2021-12-15"),
-            EndAt: types.MustDateFromString("2022-09-05"),
+            CreatedAt: types.MustTimeFromString("2021-12-15T04:55:40.282Z"),
+            EndAt: types.MustTimeFromString("2022-09-05T23:50:51.335Z"),
             ExternalEventXref: unifiedto.String("repellat"),
             ID: unifiedto.String("0597a60f-f2a5-44a3-9e94-764a3e865e79"),
             JobID: unifiedto.String("quis"),
             Location: unifiedto.String("eum"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustDateFromString("2021-03-22"),
+            StartAt: types.MustTimeFromString("2021-03-22T21:44:03.640Z"),
             Status: shared.AtsInterviewStatusScheduled.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-11-26"),
+            UpdatedAt: types.MustTimeFromString("2022-11-26T15:59:49.659Z"),
             UserIds: []string{
                 "animi",
             },
@@ -1098,7 +1098,7 @@ func main() {
                     RegionCode: unifiedto.String("provident"),
                 },
             },
-            ClosedAt: types.MustDateFromString("2020-10-06"),
+            ClosedAt: types.MustTimeFromString("2020-10-06T18:56:18.922Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
                     Currency: unifiedto.String("hic"),
@@ -1108,7 +1108,7 @@ func main() {
                     Type: shared.AtsCompensationTypeStockOptions,
                 },
             },
-            CreatedAt: types.MustDateFromString("2020-04-29"),
+            CreatedAt: types.MustTimeFromString("2020-04-29T11:28:14.354Z"),
             Departments: []string{
                 "aliquid",
             },
@@ -1129,7 +1129,7 @@ func main() {
             },
             Remote: unifiedto.Bool(false),
             Status: shared.AtsJobStatusPending.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-12-10"),
+            UpdatedAt: types.MustTimeFromString("2022-12-10T12:17:45.772Z"),
         },
         ConnectionID: "laborum",
         ID: "15db6a66-0659-4a1a-9eaa-b5851d6c645b",
@@ -1187,14 +1187,14 @@ func main() {
         AtsScorecard: &shared.AtsScorecard{
             ApplicationID: unifiedto.String("voluptatem"),
             CandidateID: unifiedto.String("molestias"),
-            CreatedAt: types.MustDateFromString("2022-03-15"),
+            CreatedAt: types.MustTimeFromString("2022-03-15T05:57:22.639Z"),
             ID: unifiedto.String("1891baa0-fe1a-4de0-88e6-f8c5f350d8cd"),
             InterviewID: unifiedto.String("nam"),
             InterviewerID: unifiedto.String("ipsam"),
             JobID: unifiedto.String("culpa"),
             Raw: shared.PropertyAtsScorecardRaw{},
             Recommendation: shared.AtsScorecardRecommendationDefinitelyNo.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-12-02"),
+            UpdatedAt: types.MustTimeFromString("2022-12-02T14:32:21.843Z"),
         },
         ConnectionID: "deleniti",
         ID: "14301042-1813-4d52-88ec-e7e253b66845",
@@ -1250,17 +1250,17 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PostAtsConnectionIDApplication(ctx, operations.PostAtsConnectionIDApplicationRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustDateFromString("2022-03-21"),
+            AppliedAt: types.MustTimeFromString("2022-03-21T18:14:19.097Z"),
             CandidateID: unifiedto.String("autem"),
-            CreatedAt: types.MustDateFromString("2021-11-01"),
+            CreatedAt: types.MustTimeFromString("2021-11-01T18:57:38.460Z"),
             ID: unifiedto.String("e205e16d-eab3-4fec-9578-a64584273a84"),
             JobID: unifiedto.String("quasi"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustDateFromString("2021-04-19"),
+            RejectedAt: types.MustTimeFromString("2021-04-19T03:31:22.925Z"),
             RejectedReason: unifiedto.String("dicta"),
             Source: unifiedto.String("nisi"),
             Status: shared.AtsApplicationStatusReviewing.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-12-14"),
+            UpdatedAt: types.MustTimeFromString("2022-12-14T21:58:33.872Z"),
         },
         ConnectionID: "cupiditate",
     }, operationSecurity)
@@ -1326,7 +1326,7 @@ func main() {
                 RegionCode: unifiedto.String("minima"),
             },
             CompanyName: unifiedto.String("praesentium"),
-            CreatedAt: types.MustDateFromString("2022-02-06"),
+            CreatedAt: types.MustTimeFromString("2022-02-06T01:23:27.992Z"),
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
                     Email: "Katheryn.Johns52@hotmail.com",
@@ -1348,7 +1348,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Miss"),
-            UpdatedAt: types.MustDateFromString("2022-07-08"),
+            UpdatedAt: types.MustTimeFromString("2022-07-08T17:52:09.255Z"),
         },
         ConnectionID: "voluptate",
     }, operationSecurity)
@@ -1405,16 +1405,16 @@ func main() {
         AtsInterview: &shared.AtsInterview{
             ApplicationID: unifiedto.String("sequi"),
             CandidateID: unifiedto.String("dignissimos"),
-            CreatedAt: types.MustDateFromString("2022-03-22"),
-            EndAt: types.MustDateFromString("2021-04-24"),
+            CreatedAt: types.MustTimeFromString("2022-03-22T23:13:00.381Z"),
+            EndAt: types.MustTimeFromString("2021-04-24T17:00:12.334Z"),
             ExternalEventXref: unifiedto.String("iure"),
             ID: unifiedto.String("2f64d1db-1f2c-4431-8661-e96349e1cf9e"),
             JobID: unifiedto.String("alias"),
             Location: unifiedto.String("nisi"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustDateFromString("2022-04-10"),
+            StartAt: types.MustTimeFromString("2022-04-10T19:32:47.130Z"),
             Status: shared.AtsInterviewStatusComplete.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-10-11"),
+            UpdatedAt: types.MustTimeFromString("2022-10-11T01:40:09.903Z"),
             UserIds: []string{
                 "iusto",
             },
@@ -1484,7 +1484,7 @@ func main() {
                     RegionCode: unifiedto.String("impedit"),
                 },
             },
-            ClosedAt: types.MustDateFromString("2022-08-23"),
+            ClosedAt: types.MustTimeFromString("2022-08-23T12:57:35.673Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
                     Currency: unifiedto.String("est"),
@@ -1494,7 +1494,7 @@ func main() {
                     Type: shared.AtsCompensationTypeSalary,
                 },
             },
-            CreatedAt: types.MustDateFromString("2022-04-20"),
+            CreatedAt: types.MustTimeFromString("2022-04-20T16:11:36.555Z"),
             Departments: []string{
                 "vitae",
             },
@@ -1515,7 +1515,7 @@ func main() {
             },
             Remote: unifiedto.Bool(false),
             Status: shared.AtsJobStatusArchived.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-10-05"),
+            UpdatedAt: types.MustTimeFromString("2022-10-05T07:59:39.108Z"),
         },
         ConnectionID: "aperiam",
     }, operationSecurity)
@@ -1572,14 +1572,14 @@ func main() {
         AtsScorecard: &shared.AtsScorecard{
             ApplicationID: unifiedto.String("totam"),
             CandidateID: unifiedto.String("dolore"),
-            CreatedAt: types.MustDateFromString("2020-11-09"),
+            CreatedAt: types.MustTimeFromString("2020-11-09T00:25:03.486Z"),
             ID: unifiedto.String("0672d1ad-879e-4eb9-a65b-85efbd02bae0"),
             InterviewID: unifiedto.String("expedita"),
             InterviewerID: unifiedto.String("officiis"),
             JobID: unifiedto.String("eos"),
             Raw: shared.PropertyAtsScorecardRaw{},
             Recommendation: shared.AtsScorecardRecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-06-28"),
+            UpdatedAt: types.MustTimeFromString("2022-06-28T19:16:42.798Z"),
         },
         ConnectionID: "odit",
     }, operationSecurity)
@@ -1634,17 +1634,17 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PutAtsConnectionIDApplicationID(ctx, operations.PutAtsConnectionIDApplicationIDRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustDateFromString("2022-08-22"),
+            AppliedAt: types.MustTimeFromString("2022-08-22T23:12:04.283Z"),
             CandidateID: unifiedto.String("error"),
-            CreatedAt: types.MustDateFromString("2022-04-13"),
+            CreatedAt: types.MustTimeFromString("2022-04-13T22:13:24.007Z"),
             ID: unifiedto.String("ea4b5197-f924-443d-a7ce-52b895c537c6"),
             JobID: unifiedto.String("modi"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustDateFromString("2022-09-14"),
+            RejectedAt: types.MustTimeFromString("2022-09-14T03:12:12.516Z"),
             RejectedReason: unifiedto.String("voluptates"),
             Source: unifiedto.String("maiores"),
             Status: shared.AtsApplicationStatusOffered.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-04-10"),
+            UpdatedAt: types.MustTimeFromString("2022-04-10T10:41:17.662Z"),
         },
         ConnectionID: "ratione",
         ID: "4896c3ca-5acf-4be2-bd57-07577929177d",
@@ -1711,7 +1711,7 @@ func main() {
                 RegionCode: unifiedto.String("cum"),
             },
             CompanyName: unifiedto.String("dicta"),
-            CreatedAt: types.MustDateFromString("2021-12-30"),
+            CreatedAt: types.MustTimeFromString("2021-12-30T18:01:47.888Z"),
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
                     Email: "Chanel16@yahoo.com",
@@ -1733,7 +1733,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Mr."),
-            UpdatedAt: types.MustDateFromString("2022-09-01"),
+            UpdatedAt: types.MustTimeFromString("2022-09-01T10:17:19.810Z"),
         },
         ConnectionID: "libero",
         ID: "197cd44e-2f52-4d82-9351-3bb6f48b656b",
@@ -1791,16 +1791,16 @@ func main() {
         AtsInterview: &shared.AtsInterview{
             ApplicationID: unifiedto.String("minus"),
             CandidateID: unifiedto.String("facere"),
-            CreatedAt: types.MustDateFromString("2022-07-26"),
-            EndAt: types.MustDateFromString("2022-01-10"),
+            CreatedAt: types.MustTimeFromString("2022-07-26T02:32:48.491Z"),
+            EndAt: types.MustTimeFromString("2022-01-10T13:20:53.595Z"),
             ExternalEventXref: unifiedto.String("voluptatibus"),
             ID: unifiedto.String("2e4b2753-7a8c-4d9e-b319-c177d525f77b"),
             JobID: unifiedto.String("illo"),
             Location: unifiedto.String("ab"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustDateFromString("2022-02-14"),
+            StartAt: types.MustTimeFromString("2022-02-14T02:26:29.574Z"),
             Status: shared.AtsInterviewStatusComplete.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-05-02"),
+            UpdatedAt: types.MustTimeFromString("2022-05-02T04:00:18.906Z"),
             UserIds: []string{
                 "eos",
             },
@@ -1871,7 +1871,7 @@ func main() {
                     RegionCode: unifiedto.String("amet"),
                 },
             },
-            ClosedAt: types.MustDateFromString("2022-11-18"),
+            ClosedAt: types.MustTimeFromString("2022-11-18T21:12:35.377Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
                     Currency: unifiedto.String("laudantium"),
@@ -1881,7 +1881,7 @@ func main() {
                     Type: shared.AtsCompensationTypeBonus,
                 },
             },
-            CreatedAt: types.MustDateFromString("2021-08-24"),
+            CreatedAt: types.MustTimeFromString("2021-08-24T16:29:13.432Z"),
             Departments: []string{
                 "necessitatibus",
             },
@@ -1902,7 +1902,7 @@ func main() {
             },
             Remote: unifiedto.Bool(false),
             Status: shared.AtsJobStatusOpen.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2021-01-30"),
+            UpdatedAt: types.MustTimeFromString("2021-01-30T14:43:38.066Z"),
         },
         ConnectionID: "amet",
         ID: "f2ceda7e-23f2-4257-811f-af4b7544e472",
@@ -1960,14 +1960,14 @@ func main() {
         AtsScorecard: &shared.AtsScorecard{
             ApplicationID: unifiedto.String("accusamus"),
             CandidateID: unifiedto.String("rem"),
-            CreatedAt: types.MustDateFromString("2022-11-10"),
+            CreatedAt: types.MustTimeFromString("2022-11-10T05:40:49.537Z"),
             ID: unifiedto.String("857a5b40-463a-47d5-b5f1-400e764ad733"),
             InterviewID: unifiedto.String("quaerat"),
             InterviewerID: unifiedto.String("itaque"),
             JobID: unifiedto.String("minus"),
             Raw: shared.PropertyAtsScorecardRaw{},
             Recommendation: shared.AtsScorecardRecommendationDefinitelyNo.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-01-14"),
+            UpdatedAt: types.MustTimeFromString("2022-01-14T14:18:21.018Z"),
         },
         ConnectionID: "quas",
         ID: "1b36a080-88d1-400e-bada-200ef0422eb2",

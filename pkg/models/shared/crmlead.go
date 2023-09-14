@@ -3,7 +3,7 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type CrmLead struct {
@@ -11,14 +11,14 @@ type CrmLead struct {
 	Address       *PropertyCrmLeadAddress `json:"address,omitempty"`
 	CompanyID     *string                 `json:"company_id,omitempty"`
 	ContactID     *string                 `json:"contact_id,omitempty"`
-	CreatedAt     *types.Date             `json:"created_at,omitempty"`
+	CreatedAt     *time.Time              `json:"created_at,omitempty"`
 	CreatorUserID *string                 `json:"creator_user_id,omitempty"`
 	Emails        []CrmEmail              `json:"emails,omitempty"`
 	ID            *string                 `json:"id,omitempty"`
 	Name          *string                 `json:"name,omitempty"`
 	Raw           *PropertyCrmLeadRaw     `json:"raw,omitempty"`
 	Telephones    []CrmTelephone          `json:"telephones,omitempty"`
-	UpdatedAt     *types.Date             `json:"updated_at,omitempty"`
+	UpdatedAt     *time.Time              `json:"updated_at,omitempty"`
 	UserID        *string                 `json:"user_id,omitempty"`
 }
 
@@ -50,7 +50,7 @@ func (o *CrmLead) GetContactID() *string {
 	return o.ContactID
 }
 
-func (o *CrmLead) GetCreatedAt() *types.Date {
+func (o *CrmLead) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -99,7 +99,7 @@ func (o *CrmLead) GetTelephones() []CrmTelephone {
 	return o.Telephones
 }
 
-func (o *CrmLead) GetUpdatedAt() *types.Date {
+func (o *CrmLead) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

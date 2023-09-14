@@ -41,7 +41,7 @@ func main() {
         Order: unifiedto.String("ea"),
         Sort: unifiedto.String("veniam"),
         Summary: unifiedto.Bool(false),
-        UpdatedGte: types.MustDateFromString("2021-01-26"),
+        UpdatedGte: types.MustTimeFromString("2021-01-26T22:48:04.970Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)

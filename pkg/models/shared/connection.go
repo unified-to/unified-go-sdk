@@ -3,7 +3,7 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // Connection - A connection represents a specific authentication of an integration.
@@ -13,14 +13,14 @@ type Connection struct {
 	AuthAwsArn *string                 `json:"auth_aws_arn,omitempty"`
 	// The Integration categories that this connection supports
 	Categories      []PropertyConnectionCategories  `json:"categories"`
-	CreatedAt       *types.Date                     `json:"created_at,omitempty"`
+	CreatedAt       *time.Time                      `json:"created_at,omitempty"`
 	Environment     *string                         `json:"environment,omitempty"`
 	ExternalXref    *string                         `json:"external_xref,omitempty"`
 	ID              *string                         `json:"id,omitempty"`
 	IntegrationType string                          `json:"integration_type"`
 	IsPaused        *bool                           `json:"is_paused,omitempty"`
 	Permissions     []PropertyConnectionPermissions `json:"permissions"`
-	UpdatedAt       *types.Date                     `json:"updated_at,omitempty"`
+	UpdatedAt       *time.Time                      `json:"updated_at,omitempty"`
 	WorkspaceID     *string                         `json:"workspace_id,omitempty"`
 }
 
@@ -45,7 +45,7 @@ func (o *Connection) GetCategories() []PropertyConnectionCategories {
 	return o.Categories
 }
 
-func (o *Connection) GetCreatedAt() *types.Date {
+func (o *Connection) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -94,7 +94,7 @@ func (o *Connection) GetPermissions() []PropertyConnectionPermissions {
 	return o.Permissions
 }
 
-func (o *Connection) GetUpdatedAt() *types.Date {
+func (o *Connection) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

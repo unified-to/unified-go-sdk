@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type WebhookObjectType string
@@ -118,9 +118,9 @@ func (e *WebhookObjectType) UnmarshalJSON(data []byte) error {
 
 // Webhook - A webhook is used to POST new/updated information to your server.
 type Webhook struct {
-	CheckedAt       *types.Date             `json:"checked_at,omitempty"`
+	CheckedAt       *time.Time              `json:"checked_at,omitempty"`
 	ConnectionID    string                  `json:"connection_id"`
-	CreatedAt       *types.Date             `json:"created_at,omitempty"`
+	CreatedAt       *time.Time              `json:"created_at,omitempty"`
 	Environment     *string                 `json:"environment,omitempty"`
 	Events          []PropertyWebhookEvents `json:"events"`
 	HookURL         string                  `json:"hook_url"`
@@ -130,12 +130,12 @@ type Webhook struct {
 	Interval        float64                 `json:"interval"`
 	ObjectType      WebhookObjectType       `json:"object_type"`
 	// integration-specific subscriptions IDs
-	Subscriptions []string    `json:"subscriptions,omitempty"`
-	UpdatedAt     *types.Date `json:"updated_at,omitempty"`
-	WorkspaceID   string      `json:"workspace_id"`
+	Subscriptions []string   `json:"subscriptions,omitempty"`
+	UpdatedAt     *time.Time `json:"updated_at,omitempty"`
+	WorkspaceID   string     `json:"workspace_id"`
 }
 
-func (o *Webhook) GetCheckedAt() *types.Date {
+func (o *Webhook) GetCheckedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -149,7 +149,7 @@ func (o *Webhook) GetConnectionID() string {
 	return o.ConnectionID
 }
 
-func (o *Webhook) GetCreatedAt() *types.Date {
+func (o *Webhook) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -219,7 +219,7 @@ func (o *Webhook) GetSubscriptions() []string {
 	return o.Subscriptions
 }
 
-func (o *Webhook) GetUpdatedAt() *types.Date {
+func (o *Webhook) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

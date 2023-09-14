@@ -88,7 +88,7 @@ func main() {
         Offset: unifiedto.Float64(9427.54),
         Order: unifiedto.String("eum"),
         Sort: unifiedto.String("rem"),
-        UpdatedGte: types.MustDateFromString("2022-05-29"),
+        UpdatedGte: types.MustTimeFromString("2022-05-29T07:20:34.094Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -191,9 +191,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Webhook.PostUnifiedWebhookConnectionIDObject(ctx, operations.PostUnifiedWebhookConnectionIDObjectRequest{
         Webhook: &shared.Webhook{
-            CheckedAt: types.MustDateFromString("2022-08-13"),
+            CheckedAt: types.MustTimeFromString("2022-08-13T23:23:14.155Z"),
             ConnectionID: "minima",
-            CreatedAt: types.MustDateFromString("2020-02-03"),
+            CreatedAt: types.MustTimeFromString("2020-02-03T17:57:01.294Z"),
             Environment: unifiedto.String("fugiat"),
             Events: []shared.PropertyWebhookEvents{
                 shared.PropertyWebhookEventsUpdated,
@@ -207,7 +207,7 @@ func main() {
             Subscriptions: []string{
                 "iure",
             },
-            UpdatedAt: types.MustDateFromString("2021-05-13"),
+            UpdatedAt: types.MustTimeFromString("2021-05-13T02:27:36.070Z"),
             WorkspaceID: "debitis",
         },
         ConnectionID: "reiciendis",

@@ -3,12 +3,12 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 // MarketingMember - A member represents a person
 type MarketingMember struct {
-	CreatedAt *types.Date `json:"created_at,omitempty"`
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of email addresses for this member
 	Emails []MarketingEmail `json:"emails,omitempty"`
 	ID     *string          `json:"id,omitempty"`
@@ -18,11 +18,11 @@ type MarketingMember struct {
 	// The raw data returned by the integration for this member
 	Raw *PropertyMarketingMemberRaw `json:"raw,omitempty"`
 	// An array of tags associated with this member
-	Tags      []string    `json:"tags,omitempty"`
-	UpdatedAt *types.Date `json:"updated_at,omitempty"`
+	Tags      []string   `json:"tags,omitempty"`
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
-func (o *MarketingMember) GetCreatedAt() *types.Date {
+func (o *MarketingMember) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -71,7 +71,7 @@ func (o *MarketingMember) GetTags() []string {
 	return o.Tags
 }
 
-func (o *MarketingMember) GetUpdatedAt() *types.Date {
+func (o *MarketingMember) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

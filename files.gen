@@ -387,7 +387,6 @@ docs/models/operations/deleteticketingconnectionidagentidsecurity.md
 docs/models/operations/deleteticketingconnectionidagentidrequest.md
 docs/models/operations/deleteticketingconnectionidagentidresponse.md
 docs/models/operations/getticketingconnectionidagentsecurity.md
-docs/types/date.md
 docs/models/operations/getticketingconnectionidagentrequest.md
 docs/models/operations/getticketingconnectionidagentresponse.md
 docs/models/operations/getticketingconnectionidagentidsecurity.md

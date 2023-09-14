@@ -91,7 +91,7 @@ func main() {
         Order: unifiedto.String("accusamus"),
         Query: unifiedto.String("totam"),
         Sort: unifiedto.String("reiciendis"),
-        UpdatedGte: types.MustDateFromString("2022-06-05"),
+        UpdatedGte: types.MustTimeFromString("2022-06-05T16:37:51.499Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -206,7 +206,7 @@ func main() {
                 RegionCode: unifiedto.String("consequuntur"),
             },
             CompanyName: unifiedto.String("veniam"),
-            CreatedAt: types.MustDateFromString("2021-01-31"),
+            CreatedAt: types.MustTimeFromString("2021-01-31T23:06:28.366Z"),
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
                     Email: "Dylan.Gerhold72@yahoo.com",
@@ -228,7 +228,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Mr."),
-            UpdatedAt: types.MustDateFromString("2022-11-17"),
+            UpdatedAt: types.MustTimeFromString("2022-11-17T22:55:28.189Z"),
         },
         ConnectionID: "nobis",
         ID: "e2169e51-0019-4c6d-85e3-4762799bfbbe",
@@ -295,7 +295,7 @@ func main() {
                 RegionCode: unifiedto.String("nemo"),
             },
             CompanyName: unifiedto.String("illum"),
-            CreatedAt: types.MustDateFromString("2022-07-04"),
+            CreatedAt: types.MustTimeFromString("2022-07-04T05:44:09.732Z"),
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
                     Email: "Reynold_Walter32@yahoo.com",
@@ -317,7 +317,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Dr."),
-            UpdatedAt: types.MustDateFromString("2020-07-30"),
+            UpdatedAt: types.MustTimeFromString("2020-07-30T17:13:23.320Z"),
         },
         ConnectionID: "consequatur",
     }, operationSecurity)
@@ -383,7 +383,7 @@ func main() {
                 RegionCode: unifiedto.String("asperiores"),
             },
             CompanyName: unifiedto.String("rem"),
-            CreatedAt: types.MustDateFromString("2022-08-15"),
+            CreatedAt: types.MustTimeFromString("2022-08-15T01:59:03.683Z"),
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
                     Email: "Winona45@hotmail.com",
@@ -405,7 +405,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Mrs."),
-            UpdatedAt: types.MustDateFromString("2022-04-23"),
+            UpdatedAt: types.MustTimeFromString("2022-04-23T19:34:08.217Z"),
         },
         ConnectionID: "nemo",
         ID: "0cf876ff-b901-4c6e-8bb4-e243cf789ffa",

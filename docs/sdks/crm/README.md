@@ -879,7 +879,7 @@ func main() {
         Order: unifiedto.String("consectetur"),
         Query: unifiedto.String("asperiores"),
         Sort: unifiedto.String("architecto"),
-        UpdatedGte: types.MustDateFromString("2021-05-10"),
+        UpdatedGte: types.MustTimeFromString("2021-05-10T22:41:33.400Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -989,7 +989,7 @@ func main() {
         Order: unifiedto.String("eligendi"),
         Query: unifiedto.String("minima"),
         Sort: unifiedto.String("omnis"),
-        UpdatedGte: types.MustDateFromString("2022-09-10"),
+        UpdatedGte: types.MustTimeFromString("2022-09-10T11:36:46.786Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -1099,7 +1099,7 @@ func main() {
         Order: unifiedto.String("dicta"),
         Query: unifiedto.String("hic"),
         Sort: unifiedto.String("praesentium"),
-        UpdatedGte: types.MustDateFromString("2022-12-24"),
+        UpdatedGte: types.MustTimeFromString("2022-12-24T18:19:51.545Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -1210,7 +1210,7 @@ func main() {
         Order: unifiedto.String("iure"),
         Query: unifiedto.String("aliquid"),
         Sort: unifiedto.String("cum"),
-        UpdatedGte: types.MustDateFromString("2021-06-03"),
+        UpdatedGte: types.MustTimeFromString("2021-06-03T09:21:56.039Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -1321,7 +1321,7 @@ func main() {
         Order: unifiedto.String("debitis"),
         Query: unifiedto.String("quis"),
         Sort: unifiedto.String("eaque"),
-        UpdatedGte: types.MustDateFromString("2022-09-20"),
+        UpdatedGte: types.MustTimeFromString("2022-09-20T06:36:53.290Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -1429,7 +1429,7 @@ func main() {
         Order: unifiedto.String("accusamus"),
         Query: unifiedto.String("animi"),
         Sort: unifiedto.String("necessitatibus"),
-        UpdatedGte: types.MustDateFromString("2022-01-08"),
+        UpdatedGte: types.MustTimeFromString("2022-01-08T01:01:32.152Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -1537,7 +1537,7 @@ func main() {
         Order: unifiedto.String("optio"),
         Query: unifiedto.String("nobis"),
         Sort: unifiedto.String("recusandae"),
-        UpdatedGte: types.MustDateFromString("2022-03-07"),
+        UpdatedGte: types.MustTimeFromString("2022-03-07T13:59:07.330Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -1645,7 +1645,7 @@ func main() {
         Order: unifiedto.String("doloremque"),
         Query: unifiedto.String("quas"),
         Sort: unifiedto.String("dolores"),
-        UpdatedGte: types.MustDateFromString("2022-07-17"),
+        UpdatedGte: types.MustTimeFromString("2022-07-17T03:35:07.023Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -1753,7 +1753,7 @@ func main() {
         Order: unifiedto.String("eos"),
         Query: unifiedto.String("id"),
         Sort: unifiedto.String("modi"),
-        UpdatedGte: types.MustDateFromString("2021-02-14"),
+        UpdatedGte: types.MustTimeFromString("2021-02-14T21:03:13.786Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -1868,7 +1868,7 @@ func main() {
                 Region: unifiedto.String("tempora"),
                 RegionCode: unifiedto.String("quam"),
             },
-            CreatedAt: types.MustDateFromString("2022-08-19"),
+            CreatedAt: types.MustTimeFromString("2022-08-19T22:52:38.662Z"),
             DealIds: []string{
                 "nesciunt",
             },
@@ -1890,7 +1890,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2020-10-28"),
+            UpdatedAt: types.MustTimeFromString("2020-10-28T03:30:55.690Z"),
             Websites: []string{
                 "ullam",
             },
@@ -2015,7 +2015,7 @@ func main() {
             CompanyIds: []string{
                 "sed",
             },
-            CreatedAt: types.MustDateFromString("2022-01-04"),
+            CreatedAt: types.MustTimeFromString("2022-01-04T11:29:46.023Z"),
             DealIds: []string{
                 "quae",
             },
@@ -2035,7 +2035,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Dr."),
-            UpdatedAt: types.MustDateFromString("2022-01-22"),
+            UpdatedAt: types.MustTimeFromString("2022-01-22T12:02:56.688Z"),
         },
         ConnectionID: "at",
         ID: "074009ef-8d29-4de1-9d70-97b5da08c57f",
@@ -2196,8 +2196,8 @@ func main() {
     res, err := s.Crm.PatchCrmConnectionIDDealID(ctx, operations.PatchCrmConnectionIDDealIDRequest{
         CrmDeal: &shared.CrmDeal{
             Amount: unifiedto.Float64(3738.4),
-            ClosedAt: types.MustDateFromString("2020-08-24"),
-            CreatedAt: types.MustDateFromString("2022-03-03"),
+            ClosedAt: types.MustTimeFromString("2020-08-24T08:27:20.153Z"),
+            CreatedAt: types.MustTimeFromString("2022-03-03T18:16:48.691Z"),
             Currency: unifiedto.String("autem"),
             ID: unifiedto.String("82cb70f8-cfd5-4fb6-a91b-9a9f74846e2c"),
             LostReason: unifiedto.String("dolorem"),
@@ -2210,7 +2210,7 @@ func main() {
             Tags: []string{
                 "quibusdam",
             },
-            UpdatedAt: types.MustDateFromString("2021-03-03"),
+            UpdatedAt: types.MustTimeFromString("2021-03-03T07:16:13.857Z"),
             WonReason: unifiedto.String("nihil"),
         },
         ConnectionID: "ad",
@@ -2277,7 +2277,7 @@ func main() {
             ContactIds: []string{
                 "corrupti",
             },
-            CreatedAt: types.MustDateFromString("2021-02-14"),
+            CreatedAt: types.MustTimeFromString("2021-02-14T11:02:35.160Z"),
             DealIds: []string{
                 "praesentium",
             },
@@ -2295,8 +2295,8 @@ func main() {
             ID: unifiedto.String("5359d983-87f7-4a79-8d72-cd2484da2172"),
             Meeting: &shared.PropertyCrmEventMeeting{
                 Description: unifiedto.String("omnis"),
-                EndAt: types.MustDateFromString("2022-06-12"),
-                StartAt: types.MustDateFromString("2021-06-27"),
+                EndAt: types.MustTimeFromString("2022-06-12T16:07:26.364Z"),
+                StartAt: types.MustTimeFromString("2021-06-27T13:27:59.360Z"),
                 Title: unifiedto.String("Mrs."),
             },
             Note: &shared.PropertyCrmEventNote{
@@ -2309,7 +2309,7 @@ func main() {
                 Status: unifiedto.String("maiores"),
             },
             Type: shared.CrmEventTypeNote.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-07-27"),
+            UpdatedAt: types.MustTimeFromString("2022-07-27T02:27:11.758Z"),
         },
         ConnectionID: "sint",
         ID: "ac1e41d8-a23c-423e-b4f2-dfa4a197f6de",
@@ -2525,7 +2525,7 @@ func main() {
             ActivityID: unifiedto.String("maiores"),
             CompanyID: unifiedto.String("nam"),
             ContactID: unifiedto.String("pariatur"),
-            CreatedAt: types.MustDateFromString("2022-03-15"),
+            CreatedAt: types.MustTimeFromString("2022-03-15T04:15:28.441Z"),
             DealID: unifiedto.String("vitae"),
             Description: unifiedto.String("delectus"),
             FileName: unifiedto.String("delectus"),
@@ -2535,7 +2535,7 @@ func main() {
             ID: unifiedto.String("e2ae4fb5-cb35-4d17-a38f-1edb78359ecc"),
             LeadID: unifiedto.String("minima"),
             Raw: &shared.PropertyCrmFileRaw{},
-            UpdatedAt: types.MustDateFromString("2020-11-23"),
+            UpdatedAt: types.MustTimeFromString("2020-11-23T21:12:07.453Z"),
             UserID: unifiedto.String("praesentium"),
         },
         ConnectionID: "vel",
@@ -2605,7 +2605,7 @@ func main() {
             },
             CompanyID: unifiedto.String("repudiandae"),
             ContactID: unifiedto.String("reiciendis"),
-            CreatedAt: types.MustDateFromString("2021-12-15"),
+            CreatedAt: types.MustTimeFromString("2021-12-15T05:55:06.508Z"),
             CreatorUserID: unifiedto.String("voluptatem"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
@@ -2622,7 +2622,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-12-18"),
+            UpdatedAt: types.MustTimeFromString("2022-12-18T11:36:52.499Z"),
             UserID: unifiedto.String("dicta"),
         },
         ConnectionID: "illo",
@@ -2680,13 +2680,13 @@ func main() {
     res, err := s.Crm.PatchCrmConnectionIDPipelineID(ctx, operations.PatchCrmConnectionIDPipelineIDRequest{
         CrmPipeline: &shared.CrmPipeline{
             Active: unifiedto.Bool(false),
-            CreatedAt: types.MustDateFromString("2021-02-20"),
+            CreatedAt: types.MustTimeFromString("2021-02-20T18:12:52.838Z"),
             DealProbability: unifiedto.Bool(false),
             DisplayOrder: unifiedto.Float64(6107.66),
             ID: unifiedto.String("cbd795ee-65e0-476c-87ab-f616ea5c7164"),
             Name: unifiedto.String("Daisy Franey"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustDateFromString("2022-12-15"),
+            UpdatedAt: types.MustTimeFromString("2022-12-15T04:54:27.796Z"),
         },
         ConnectionID: "asperiores",
         ID: "2e09d19d-2fc2-4f9e-ae10-5944b935d237",
@@ -2742,12 +2742,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.PatchCrmConnectionIDTeamID(ctx, operations.PatchCrmConnectionIDTeamIDRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustDateFromString("2022-01-04"),
+            CreatedAt: types.MustTimeFromString("2022-01-04T13:54:43.971Z"),
             Description: unifiedto.String("dolores"),
             ID: unifiedto.String("f90849d6-aed4-4aec-b753-7cd9222c9ff5"),
             Name: unifiedto.String("Miss Joanne Morar"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustDateFromString("2021-01-30"),
+            UpdatedAt: types.MustTimeFromString("2021-01-30T22:59:32.750Z"),
             UserIds: []string{
                 "laborum",
             },
@@ -2817,7 +2817,7 @@ func main() {
                 Region: unifiedto.String("nihil"),
                 RegionCode: unifiedto.String("voluptas"),
             },
-            CreatedAt: types.MustDateFromString("2021-03-06"),
+            CreatedAt: types.MustTimeFromString("2021-03-06T07:25:14.438Z"),
             Currency: unifiedto.String("voluptate"),
             Department: unifiedto.String("vitae"),
             Division: unifiedto.String("reiciendis"),
@@ -2840,7 +2840,7 @@ func main() {
             },
             Timezone: unifiedto.String("voluptatibus"),
             Title: unifiedto.String("Dr."),
-            UpdatedAt: types.MustDateFromString("2022-03-09"),
+            UpdatedAt: types.MustTimeFromString("2022-03-09T00:13:28.384Z"),
         },
         ConnectionID: "corrupti",
         ID: "28da0131-9112-4964-a645-c1d81f29042f",
@@ -2907,7 +2907,7 @@ func main() {
                 Region: unifiedto.String("saepe"),
                 RegionCode: unifiedto.String("ipsa"),
             },
-            CreatedAt: types.MustDateFromString("2022-12-01"),
+            CreatedAt: types.MustTimeFromString("2022-12-01T21:16:09.744Z"),
             DealIds: []string{
                 "harum",
             },
@@ -2929,7 +2929,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2020-02-02"),
+            UpdatedAt: types.MustTimeFromString("2020-02-02T16:41:43.438Z"),
             Websites: []string{
                 "ex",
             },
@@ -3001,7 +3001,7 @@ func main() {
             CompanyIds: []string{
                 "iste",
             },
-            CreatedAt: types.MustDateFromString("2022-03-20"),
+            CreatedAt: types.MustTimeFromString("2022-03-20T19:25:56.778Z"),
             DealIds: []string{
                 "eaque",
             },
@@ -3021,7 +3021,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Ms."),
-            UpdatedAt: types.MustDateFromString("2022-02-26"),
+            UpdatedAt: types.MustTimeFromString("2022-02-26T21:44:20.533Z"),
         },
         ConnectionID: "adipisci",
     }, operationSecurity)
@@ -3077,8 +3077,8 @@ func main() {
     res, err := s.Crm.PostCrmConnectionIDDeal(ctx, operations.PostCrmConnectionIDDealRequest{
         CrmDeal: &shared.CrmDeal{
             Amount: unifiedto.Float64(7937.52),
-            ClosedAt: types.MustDateFromString("2022-05-03"),
-            CreatedAt: types.MustDateFromString("2022-01-08"),
+            ClosedAt: types.MustTimeFromString("2022-05-03T09:24:51.424Z"),
+            CreatedAt: types.MustTimeFromString("2022-01-08T22:42:52.319Z"),
             Currency: unifiedto.String("perspiciatis"),
             ID: unifiedto.String("c242c7b6-6a1f-430c-b3df-5b6719890f42"),
             LostReason: unifiedto.String("est"),
@@ -3091,7 +3091,7 @@ func main() {
             Tags: []string{
                 "tempore",
             },
-            UpdatedAt: types.MustDateFromString("2022-08-11"),
+            UpdatedAt: types.MustTimeFromString("2022-08-11T19:14:18.431Z"),
             WonReason: unifiedto.String("aperiam"),
         },
         ConnectionID: "minima",
@@ -3157,7 +3157,7 @@ func main() {
             ContactIds: []string{
                 "reprehenderit",
             },
-            CreatedAt: types.MustDateFromString("2022-09-06"),
+            CreatedAt: types.MustTimeFromString("2022-09-06T00:55:33.119Z"),
             DealIds: []string{
                 "voluptates",
             },
@@ -3175,8 +3175,8 @@ func main() {
             ID: unifiedto.String("9c9c3f56-7e0e-4252-b65b-1d62fcdace1f"),
             Meeting: &shared.PropertyCrmEventMeeting{
                 Description: unifiedto.String("consequatur"),
-                EndAt: types.MustDateFromString("2022-11-10"),
-                StartAt: types.MustDateFromString("2022-08-12"),
+                EndAt: types.MustTimeFromString("2022-11-10T21:53:17.505Z"),
+                StartAt: types.MustTimeFromString("2022-08-12T01:19:59.870Z"),
                 Title: unifiedto.String("Miss"),
             },
             Note: &shared.PropertyCrmEventNote{
@@ -3189,7 +3189,7 @@ func main() {
                 Status: unifiedto.String("earum"),
             },
             Type: shared.CrmEventTypeNote.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-03-17"),
+            UpdatedAt: types.MustTimeFromString("2022-03-17T16:09:49.019Z"),
         },
         ConnectionID: "quibusdam",
     }, operationSecurity)
@@ -3248,7 +3248,7 @@ func main() {
             ActivityID: unifiedto.String("accusantium"),
             CompanyID: unifiedto.String("nulla"),
             ContactID: unifiedto.String("inventore"),
-            CreatedAt: types.MustDateFromString("2021-04-23"),
+            CreatedAt: types.MustTimeFromString("2021-04-23T13:22:50.149Z"),
             DealID: unifiedto.String("excepturi"),
             Description: unifiedto.String("nostrum"),
             FileName: unifiedto.String("sint"),
@@ -3258,7 +3258,7 @@ func main() {
             ID: unifiedto.String("9e39266c-bd95-4f7a-a2b2-4113695d1e66"),
             LeadID: unifiedto.String("excepturi"),
             Raw: &shared.PropertyCrmFileRaw{},
-            UpdatedAt: types.MustDateFromString("2021-01-03"),
+            UpdatedAt: types.MustTimeFromString("2021-01-03T16:10:13.814Z"),
             UserID: unifiedto.String("placeat"),
         },
         ConnectionID: "eligendi",
@@ -3327,7 +3327,7 @@ func main() {
             },
             CompanyID: unifiedto.String("ad"),
             ContactID: unifiedto.String("incidunt"),
-            CreatedAt: types.MustDateFromString("2022-10-05"),
+            CreatedAt: types.MustTimeFromString("2022-10-05T13:16:43.183Z"),
             CreatorUserID: unifiedto.String("atque"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
@@ -3344,7 +3344,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeOther.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-07-30"),
+            UpdatedAt: types.MustTimeFromString("2022-07-30T21:23:46.073Z"),
             UserID: unifiedto.String("dolorem"),
         },
         ConnectionID: "explicabo",
@@ -3401,13 +3401,13 @@ func main() {
     res, err := s.Crm.PostCrmConnectionIDPipeline(ctx, operations.PostCrmConnectionIDPipelineRequest{
         CrmPipeline: &shared.CrmPipeline{
             Active: unifiedto.Bool(false),
-            CreatedAt: types.MustDateFromString("2021-10-09"),
+            CreatedAt: types.MustTimeFromString("2021-10-09T23:12:13.436Z"),
             DealProbability: unifiedto.Bool(false),
             DisplayOrder: unifiedto.Float64(5796.9),
             ID: unifiedto.String("54b6fa22-0636-4982-8553-cb10006bef49"),
             Name: unifiedto.String("Martha Ward"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustDateFromString("2022-08-17"),
+            UpdatedAt: types.MustTimeFromString("2022-08-17T04:23:48.087Z"),
         },
         ConnectionID: "nesciunt",
     }, operationSecurity)
@@ -3462,12 +3462,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.PostCrmConnectionIDTeam(ctx, operations.PostCrmConnectionIDTeamRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustDateFromString("2022-01-19"),
+            CreatedAt: types.MustTimeFromString("2022-01-19T21:20:19.403Z"),
             Description: unifiedto.String("eius"),
             ID: unifiedto.String("9366ac8e-e0f2-4bf1-9588-d40d03f3deba"),
             Name: unifiedto.String("Faye Kreiger"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustDateFromString("2022-01-25"),
+            UpdatedAt: types.MustTimeFromString("2022-01-25T05:40:03.032Z"),
             UserIds: []string{
                 "cupiditate",
             },
@@ -3536,7 +3536,7 @@ func main() {
                 Region: unifiedto.String("dolore"),
                 RegionCode: unifiedto.String("perferendis"),
             },
-            CreatedAt: types.MustDateFromString("2022-03-25"),
+            CreatedAt: types.MustTimeFromString("2022-03-25T18:04:46.803Z"),
             Currency: unifiedto.String("libero"),
             Department: unifiedto.String("dolor"),
             Division: unifiedto.String("nesciunt"),
@@ -3559,7 +3559,7 @@ func main() {
             },
             Timezone: unifiedto.String("quae"),
             Title: unifiedto.String("Mrs."),
-            UpdatedAt: types.MustDateFromString("2022-04-20"),
+            UpdatedAt: types.MustTimeFromString("2022-04-20T19:05:05.653Z"),
         },
         ConnectionID: "laboriosam",
     }, operationSecurity)
@@ -3625,7 +3625,7 @@ func main() {
                 Region: unifiedto.String("saepe"),
                 RegionCode: unifiedto.String("assumenda"),
             },
-            CreatedAt: types.MustDateFromString("2022-08-27"),
+            CreatedAt: types.MustTimeFromString("2022-08-27T00:13:35.019Z"),
             DealIds: []string{
                 "dolore",
             },
@@ -3647,7 +3647,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-10-16"),
+            UpdatedAt: types.MustTimeFromString("2022-10-16T02:41:29.464Z"),
             Websites: []string{
                 "ex",
             },
@@ -3772,7 +3772,7 @@ func main() {
             CompanyIds: []string{
                 "quaerat",
             },
-            CreatedAt: types.MustDateFromString("2020-11-15"),
+            CreatedAt: types.MustTimeFromString("2020-11-15T07:36:34.212Z"),
             DealIds: []string{
                 "libero",
             },
@@ -3792,7 +3792,7 @@ func main() {
                 },
             },
             Title: unifiedto.String("Ms."),
-            UpdatedAt: types.MustDateFromString("2020-06-03"),
+            UpdatedAt: types.MustTimeFromString("2020-06-03T03:25:43.201Z"),
         },
         ConnectionID: "nemo",
         ID: "97ff4711-aa1b-4c74-b86c-ecc74f77b484",
@@ -3953,8 +3953,8 @@ func main() {
     res, err := s.Crm.PutCrmConnectionIDDealID(ctx, operations.PutCrmConnectionIDDealIDRequest{
         CrmDeal: &shared.CrmDeal{
             Amount: unifiedto.Float64(4502.9),
-            ClosedAt: types.MustDateFromString("2022-07-29"),
-            CreatedAt: types.MustDateFromString("2022-04-18"),
+            ClosedAt: types.MustTimeFromString("2022-07-29T20:23:21.998Z"),
+            CreatedAt: types.MustTimeFromString("2022-04-18T00:26:00.845Z"),
             Currency: unifiedto.String("quis"),
             ID: unifiedto.String("4aa432b4-7e17-463c-9208-c23e9802d82f"),
             LostReason: unifiedto.String("alias"),
@@ -3967,7 +3967,7 @@ func main() {
             Tags: []string{
                 "ea",
             },
-            UpdatedAt: types.MustDateFromString("2022-09-15"),
+            UpdatedAt: types.MustTimeFromString("2022-09-15T14:22:34.731Z"),
             WonReason: unifiedto.String("repudiandae"),
         },
         ConnectionID: "recusandae",
@@ -4034,7 +4034,7 @@ func main() {
             ContactIds: []string{
                 "dolore",
             },
-            CreatedAt: types.MustDateFromString("2022-04-24"),
+            CreatedAt: types.MustTimeFromString("2022-04-24T17:49:43.208Z"),
             DealIds: []string{
                 "illum",
             },
@@ -4052,8 +4052,8 @@ func main() {
             ID: unifiedto.String("cc503f6c-39bc-4d0a-a290-f957f385189a"),
             Meeting: &shared.PropertyCrmEventMeeting{
                 Description: unifiedto.String("possimus"),
-                EndAt: types.MustDateFromString("2022-02-11"),
-                StartAt: types.MustDateFromString("2021-05-31"),
+                EndAt: types.MustTimeFromString("2022-02-11T04:42:06.535Z"),
+                StartAt: types.MustTimeFromString("2021-05-31T22:12:13.308Z"),
                 Title: unifiedto.String("Mr."),
             },
             Note: &shared.PropertyCrmEventNote{
@@ -4066,7 +4066,7 @@ func main() {
                 Status: unifiedto.String("dolorem"),
             },
             Type: shared.CrmEventTypeEmail.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2021-02-13"),
+            UpdatedAt: types.MustTimeFromString("2021-02-13T00:37:19.915Z"),
         },
         ConnectionID: "odio",
         ID: "9fb9de40-32ba-426f-9368-ba9216bcb415",
@@ -4282,7 +4282,7 @@ func main() {
             ActivityID: unifiedto.String("quis"),
             CompanyID: unifiedto.String("possimus"),
             ContactID: unifiedto.String("reiciendis"),
-            CreatedAt: types.MustDateFromString("2022-01-31"),
+            CreatedAt: types.MustTimeFromString("2022-01-31T11:59:12.250Z"),
             DealID: unifiedto.String("iste"),
             Description: unifiedto.String("ex"),
             FileName: unifiedto.String("odit"),
@@ -4292,7 +4292,7 @@ func main() {
             ID: unifiedto.String("ef2b0a3e-42c1-4aa0-90e9-aac2e9135586"),
             LeadID: unifiedto.String("fugiat"),
             Raw: &shared.PropertyCrmFileRaw{},
-            UpdatedAt: types.MustDateFromString("2022-06-12"),
+            UpdatedAt: types.MustTimeFromString("2022-06-12T01:32:42.693Z"),
             UserID: unifiedto.String("delectus"),
         },
         ConnectionID: "sint",
@@ -4362,7 +4362,7 @@ func main() {
             },
             CompanyID: unifiedto.String("fuga"),
             ContactID: unifiedto.String("assumenda"),
-            CreatedAt: types.MustDateFromString("2022-10-30"),
+            CreatedAt: types.MustTimeFromString("2022-10-30T18:31:55.664Z"),
             CreatorUserID: unifiedto.String("beatae"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
@@ -4379,7 +4379,7 @@ func main() {
                     Type: shared.CrmTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustDateFromString("2022-12-22"),
+            UpdatedAt: types.MustTimeFromString("2022-12-22T05:54:49.594Z"),
             UserID: unifiedto.String("nostrum"),
         },
         ConnectionID: "doloremque",
@@ -4437,13 +4437,13 @@ func main() {
     res, err := s.Crm.PutCrmConnectionIDPipelineID(ctx, operations.PutCrmConnectionIDPipelineIDRequest{
         CrmPipeline: &shared.CrmPipeline{
             Active: unifiedto.Bool(false),
-            CreatedAt: types.MustDateFromString("2021-02-13"),
+            CreatedAt: types.MustTimeFromString("2021-02-13T05:37:28.481Z"),
             DealProbability: unifiedto.Bool(false),
             DisplayOrder: unifiedto.Float64(7807.03),
             ID: unifiedto.String("8b3a2875-c6c1-4fe6-86d0-7d2a9c87ae50"),
             Name: unifiedto.String("Gerald Keebler"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustDateFromString("2022-05-17"),
+            UpdatedAt: types.MustTimeFromString("2022-05-17T08:54:26.898Z"),
         },
         ConnectionID: "veritatis",
         ID: "d9136a7e-8d53-4213-b3f6-58752db764c5",
@@ -4499,12 +4499,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.PutCrmConnectionIDTeamID(ctx, operations.PutCrmConnectionIDTeamIDRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustDateFromString("2021-01-08"),
+            CreatedAt: types.MustTimeFromString("2021-01-08T19:51:30.319Z"),
             Description: unifiedto.String("doloremque"),
             ID: unifiedto.String("a56cebca-da29-4ca7-9181-c95671663c53"),
             Name: unifiedto.String("Candice Hane"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustDateFromString("2022-11-27"),
+            UpdatedAt: types.MustTimeFromString("2022-11-27T21:57:18.105Z"),
             UserIds: []string{
                 "autem",
             },
@@ -4574,7 +4574,7 @@ func main() {
                 Region: unifiedto.String("sint"),
                 RegionCode: unifiedto.String("incidunt"),
             },
-            CreatedAt: types.MustDateFromString("2022-08-05"),
+            CreatedAt: types.MustTimeFromString("2022-08-05T18:58:20.416Z"),
             Currency: unifiedto.String("aperiam"),
             Department: unifiedto.String("itaque"),
             Division: unifiedto.String("quo"),
@@ -4597,7 +4597,7 @@ func main() {
             },
             Timezone: unifiedto.String("dolores"),
             Title: unifiedto.String("Miss"),
-            UpdatedAt: types.MustDateFromString("2021-05-08"),
+            UpdatedAt: types.MustTimeFromString("2021-05-08T11:32:15.746Z"),
         },
         ConnectionID: "iure",
         ID: "3388e4d8-039e-4a5f-9b18-a244fd619039",

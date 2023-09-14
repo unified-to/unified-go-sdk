@@ -149,7 +149,7 @@ func main() {
         Order: unifiedto.String("excepturi"),
         Query: unifiedto.String("ipsa"),
         Sort: unifiedto.String("velit"),
-        UpdatedGte: types.MustDateFromString("2022-12-03"),
+        UpdatedGte: types.MustTimeFromString("2022-12-03T21:28:14.776Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -258,7 +258,7 @@ func main() {
         Order: unifiedto.String("commodi"),
         Query: unifiedto.String("veritatis"),
         Sort: unifiedto.String("reiciendis"),
-        UpdatedGte: types.MustDateFromString("2020-05-30"),
+        UpdatedGte: types.MustTimeFromString("2020-05-30T08:39:08.252Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -367,7 +367,7 @@ func main() {
             ID: unifiedto.String("85e43734-a5d7-42d9-add7-85be5e7afe55"),
             Name: unifiedto.String("Kristina Kozey"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustDateFromString("2022-11-15"),
+            UpdatedAt: types.MustTimeFromString("2022-11-15T19:44:05.359Z"),
         },
         ConnectionID: "laudantium",
         ID: "1f44e3a2-3394-4a68-8c80-d30ff72164d0",
@@ -423,7 +423,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Martech.PatchMartechConnectionIDListIDMemberID(ctx, operations.PatchMartechConnectionIDListIDMemberIDRequest{
         MarketingMember: &shared.MarketingMember{
-            CreatedAt: types.MustDateFromString("2021-11-04"),
+            CreatedAt: types.MustTimeFromString("2021-11-04T00:39:44.335Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
                     Email: "Zora_Volkman@gmail.com",
@@ -439,7 +439,7 @@ func main() {
             Tags: []string{
                 "harum",
             },
-            UpdatedAt: types.MustDateFromString("2022-04-25"),
+            UpdatedAt: types.MustTimeFromString("2022-04-25T11:53:38.687Z"),
         },
         ConnectionID: "ipsam",
         ID: "b908d4e3-0491-4aa3-9d4a-839f03bab77b",
@@ -500,7 +500,7 @@ func main() {
             ID: unifiedto.String("8f031398-4507-4e0e-b9c7-e23ecb060465"),
             Name: unifiedto.String("Kate Cummerata"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustDateFromString("2022-02-21"),
+            UpdatedAt: types.MustTimeFromString("2022-02-21T18:28:51.367Z"),
         },
         ConnectionID: "autem",
     }, operationSecurity)
@@ -555,7 +555,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Martech.PostMartechConnectionIDListIDMember(ctx, operations.PostMartechConnectionIDListIDMemberRequest{
         MarketingMember: &shared.MarketingMember{
-            CreatedAt: types.MustDateFromString("2021-11-13"),
+            CreatedAt: types.MustTimeFromString("2021-11-13T23:02:04.436Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
                     Email: "Ines_Swift@yahoo.com",
@@ -571,7 +571,7 @@ func main() {
             Tags: []string{
                 "fugiat",
             },
-            UpdatedAt: types.MustDateFromString("2022-04-07"),
+            UpdatedAt: types.MustTimeFromString("2022-04-07T09:46:27.417Z"),
         },
         ConnectionID: "harum",
         ListID: "inventore",
@@ -631,7 +631,7 @@ func main() {
             ID: unifiedto.String("e255fdc4-80d6-4e33-8867-5cbf186856a7"),
             Name: unifiedto.String("Jaime Conroy"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustDateFromString("2021-03-04"),
+            UpdatedAt: types.MustTimeFromString("2021-03-04T08:28:08.196Z"),
         },
         ConnectionID: "assumenda",
         ID: "0fc282c6-66af-43c3-b558-9bea5d264e41",
@@ -687,7 +687,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Martech.PutMartechConnectionIDListIDMemberID(ctx, operations.PutMartechConnectionIDListIDMemberIDRequest{
         MarketingMember: &shared.MarketingMember{
-            CreatedAt: types.MustDateFromString("2022-06-10"),
+            CreatedAt: types.MustTimeFromString("2022-06-10T00:17:48.769Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
                     Email: "Mark54@hotmail.com",
@@ -703,7 +703,7 @@ func main() {
             Tags: []string{
                 "nihil",
             },
-            UpdatedAt: types.MustDateFromString("2022-03-31"),
+            UpdatedAt: types.MustTimeFromString("2022-03-31T07:19:18.789Z"),
         },
         ConnectionID: "rem",
         ID: "860543c0-a304-49c3-8f6c-0276e7b21bad",

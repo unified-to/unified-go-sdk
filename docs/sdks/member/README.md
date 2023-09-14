@@ -93,7 +93,7 @@ func main() {
         Order: unifiedto.String("numquam"),
         Query: unifiedto.String("dignissimos"),
         Sort: unifiedto.String("natus"),
-        UpdatedGte: types.MustDateFromString("2022-03-19"),
+        UpdatedGte: types.MustTimeFromString("2022-03-19T03:29:08.234Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -198,7 +198,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.PatchMartechConnectionIDListIDMemberID(ctx, operations.PatchMartechConnectionIDListIDMemberIDRequest{
         MarketingMember: &shared.MarketingMember{
-            CreatedAt: types.MustDateFromString("2022-08-11"),
+            CreatedAt: types.MustTimeFromString("2022-08-11T15:05:29.161Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
                     Email: "Ella32@yahoo.com",
@@ -214,7 +214,7 @@ func main() {
             Tags: []string{
                 "nisi",
             },
-            UpdatedAt: types.MustDateFromString("2022-07-05"),
+            UpdatedAt: types.MustTimeFromString("2022-07-05T01:28:10.122Z"),
         },
         ConnectionID: "aliquam",
         ID: "1e43b234-2417-4d13-a3f6-2aa9ae4ae8ab",
@@ -271,7 +271,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.PostMartechConnectionIDListIDMember(ctx, operations.PostMartechConnectionIDListIDMemberRequest{
         MarketingMember: &shared.MarketingMember{
-            CreatedAt: types.MustDateFromString("2021-10-26"),
+            CreatedAt: types.MustTimeFromString("2021-10-26T01:34:29.397Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
                     Email: "Elena80@hotmail.com",
@@ -287,7 +287,7 @@ func main() {
             Tags: []string{
                 "cum",
             },
-            UpdatedAt: types.MustDateFromString("2022-10-14"),
+            UpdatedAt: types.MustTimeFromString("2022-10-14T03:48:43.146Z"),
         },
         ConnectionID: "labore",
         ListID: "modi",
@@ -343,7 +343,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.PutMartechConnectionIDListIDMemberID(ctx, operations.PutMartechConnectionIDListIDMemberIDRequest{
         MarketingMember: &shared.MarketingMember{
-            CreatedAt: types.MustDateFromString("2021-09-21"),
+            CreatedAt: types.MustTimeFromString("2021-09-21T15:05:12.667Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
                     Email: "Geoffrey.Mitchell53@hotmail.com",
@@ -359,7 +359,7 @@ func main() {
             Tags: []string{
                 "suscipit",
             },
-            UpdatedAt: types.MustDateFromString("2022-08-12"),
+            UpdatedAt: types.MustTimeFromString("2022-08-12T05:09:42.944Z"),
         },
         ConnectionID: "optio",
         ID: "523105e7-c34c-4ab0-acb8-12a66148944a",

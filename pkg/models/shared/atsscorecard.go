@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type AtsScorecardRecommendation string
@@ -44,14 +44,14 @@ func (e *AtsScorecardRecommendation) UnmarshalJSON(data []byte) error {
 type AtsScorecard struct {
 	ApplicationID  *string                     `json:"application_id,omitempty"`
 	CandidateID    *string                     `json:"candidate_id,omitempty"`
-	CreatedAt      *types.Date                 `json:"created_at,omitempty"`
+	CreatedAt      *time.Time                  `json:"created_at,omitempty"`
 	ID             *string                     `json:"id,omitempty"`
 	InterviewID    *string                     `json:"interview_id,omitempty"`
 	InterviewerID  *string                     `json:"interviewer_id,omitempty"`
 	JobID          *string                     `json:"job_id,omitempty"`
 	Raw            PropertyAtsScorecardRaw     `json:"raw"`
 	Recommendation *AtsScorecardRecommendation `json:"recommendation,omitempty"`
-	UpdatedAt      *types.Date                 `json:"updated_at,omitempty"`
+	UpdatedAt      *time.Time                  `json:"updated_at,omitempty"`
 }
 
 func (o *AtsScorecard) GetApplicationID() *string {
@@ -68,7 +68,7 @@ func (o *AtsScorecard) GetCandidateID() *string {
 	return o.CandidateID
 }
 
-func (o *AtsScorecard) GetCreatedAt() *types.Date {
+func (o *AtsScorecard) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -117,7 +117,7 @@ func (o *AtsScorecard) GetRecommendation() *AtsScorecardRecommendation {
 	return o.Recommendation
 }
 
-func (o *AtsScorecard) GetUpdatedAt() *types.Date {
+func (o *AtsScorecard) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

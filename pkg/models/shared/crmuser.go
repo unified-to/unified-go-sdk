@@ -3,13 +3,13 @@
 package shared
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type CrmUser struct {
 	Active         *bool                   `json:"active,omitempty"`
 	Address        *PropertyCrmUserAddress `json:"address,omitempty"`
-	CreatedAt      *types.Date             `json:"created_at,omitempty"`
+	CreatedAt      *time.Time              `json:"created_at,omitempty"`
 	Currency       *string                 `json:"currency,omitempty"`
 	Department     *string                 `json:"department,omitempty"`
 	Division       *string                 `json:"division,omitempty"`
@@ -22,7 +22,7 @@ type CrmUser struct {
 	Telephones     []CrmTelephone          `json:"telephones,omitempty"`
 	Timezone       *string                 `json:"timezone,omitempty"`
 	Title          *string                 `json:"title,omitempty"`
-	UpdatedAt      *types.Date             `json:"updated_at,omitempty"`
+	UpdatedAt      *time.Time              `json:"updated_at,omitempty"`
 }
 
 func (o *CrmUser) GetActive() *bool {
@@ -39,7 +39,7 @@ func (o *CrmUser) GetAddress() *PropertyCrmUserAddress {
 	return o.Address
 }
 
-func (o *CrmUser) GetCreatedAt() *types.Date {
+func (o *CrmUser) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -130,7 +130,7 @@ func (o *CrmUser) GetTitle() *string {
 	return o.Title
 }
 
-func (o *CrmUser) GetUpdatedAt() *types.Date {
+func (o *CrmUser) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

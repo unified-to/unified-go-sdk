@@ -91,7 +91,7 @@ func main() {
         Order: unifiedto.String("sequi"),
         Query: unifiedto.String("culpa"),
         Sort: unifiedto.String("ratione"),
-        UpdatedGte: types.MustDateFromString("2022-03-30"),
+        UpdatedGte: types.MustTimeFromString("2022-03-30T02:59:59.063Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -196,13 +196,13 @@ func main() {
     res, err := s.Pipeline.PatchCrmConnectionIDPipelineID(ctx, operations.PatchCrmConnectionIDPipelineIDRequest{
         CrmPipeline: &shared.CrmPipeline{
             Active: unifiedto.Bool(false),
-            CreatedAt: types.MustDateFromString("2022-01-06"),
+            CreatedAt: types.MustTimeFromString("2022-01-06T01:33:11.339Z"),
             DealProbability: unifiedto.Bool(false),
             DisplayOrder: unifiedto.Float64(8302.16),
             ID: unifiedto.String("4f62127a-607d-4160-a294-514c3db9ca9f"),
             Name: unifiedto.String("Brandy Powlowski"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustDateFromString("2021-03-30"),
+            UpdatedAt: types.MustTimeFromString("2021-03-30T20:29:28.566Z"),
         },
         ConnectionID: "quos",
         ID: "78703493-f49a-4a84-a5a3-283279b719d1",
@@ -259,13 +259,13 @@ func main() {
     res, err := s.Pipeline.PostCrmConnectionIDPipeline(ctx, operations.PostCrmConnectionIDPipelineRequest{
         CrmPipeline: &shared.CrmPipeline{
             Active: unifiedto.Bool(false),
-            CreatedAt: types.MustDateFromString("2020-05-07"),
+            CreatedAt: types.MustTimeFromString("2020-05-07T22:58:48.615Z"),
             DealProbability: unifiedto.Bool(false),
             DisplayOrder: unifiedto.Float64(6422.68),
             ID: unifiedto.String("673d86e3-b35e-449a-b135-778ce54cacb0"),
             Name: unifiedto.String("Chris Terry"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustDateFromString("2022-09-03"),
+            UpdatedAt: types.MustTimeFromString("2022-09-03T20:01:11.409Z"),
         },
         ConnectionID: "voluptatem",
     }, operationSecurity)
@@ -321,13 +321,13 @@ func main() {
     res, err := s.Pipeline.PutCrmConnectionIDPipelineID(ctx, operations.PutCrmConnectionIDPipelineIDRequest{
         CrmPipeline: &shared.CrmPipeline{
             Active: unifiedto.Bool(false),
-            CreatedAt: types.MustDateFromString("2022-08-22"),
+            CreatedAt: types.MustTimeFromString("2022-08-22T17:28:32.263Z"),
             DealProbability: unifiedto.Bool(false),
             DisplayOrder: unifiedto.Float64(6880.36),
             ID: unifiedto.String("acf63b21-5186-4ab5-a3a0-22614315d156"),
             Name: unifiedto.String("Victor Mayer"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustDateFromString("2022-11-25"),
+            UpdatedAt: types.MustTimeFromString("2022-11-25T09:18:50.894Z"),
         },
         ConnectionID: "officia",
         ID: "fc7186ff-20b7-4a73-9f40-ca0d7657c164",

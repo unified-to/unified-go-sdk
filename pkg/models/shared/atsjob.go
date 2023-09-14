@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type AtsJobEmploymentType string
@@ -97,9 +97,9 @@ func (e *AtsJobStatus) UnmarshalJSON(data []byte) error {
 
 type AtsJob struct {
 	Addresses        []AtsAddress          `json:"addresses,omitempty"`
-	ClosedAt         *types.Date           `json:"closed_at,omitempty"`
+	ClosedAt         *time.Time            `json:"closed_at,omitempty"`
 	Compensation     []AtsCompensation     `json:"compensation,omitempty"`
-	CreatedAt        *types.Date           `json:"created_at,omitempty"`
+	CreatedAt        *time.Time            `json:"created_at,omitempty"`
 	Departments      []string              `json:"departments,omitempty"`
 	Description      *string               `json:"description,omitempty"`
 	EmploymentType   *AtsJobEmploymentType `json:"employment_type,omitempty"`
@@ -112,7 +112,7 @@ type AtsJob struct {
 	RecruiterIds     []string              `json:"recruiter_ids,omitempty"`
 	Remote           *bool                 `json:"remote,omitempty"`
 	Status           *AtsJobStatus         `json:"status,omitempty"`
-	UpdatedAt        *types.Date           `json:"updated_at,omitempty"`
+	UpdatedAt        *time.Time            `json:"updated_at,omitempty"`
 }
 
 func (o *AtsJob) GetAddresses() []AtsAddress {
@@ -122,7 +122,7 @@ func (o *AtsJob) GetAddresses() []AtsAddress {
 	return o.Addresses
 }
 
-func (o *AtsJob) GetClosedAt() *types.Date {
+func (o *AtsJob) GetClosedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -136,7 +136,7 @@ func (o *AtsJob) GetCompensation() []AtsCompensation {
 	return o.Compensation
 }
 
-func (o *AtsJob) GetCreatedAt() *types.Date {
+func (o *AtsJob) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -227,7 +227,7 @@ func (o *AtsJob) GetStatus() *AtsJobStatus {
 	return o.Status
 }
 
-func (o *AtsJob) GetUpdatedAt() *types.Date {
+func (o *AtsJob) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

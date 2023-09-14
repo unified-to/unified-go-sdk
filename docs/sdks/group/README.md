@@ -91,7 +91,7 @@ func main() {
         Order: unifiedto.String("voluptates"),
         Query: unifiedto.String("alias"),
         Sort: unifiedto.String("placeat"),
-        UpdatedGte: types.MustDateFromString("2022-03-07"),
+        UpdatedGte: types.MustTimeFromString("2022-03-07T00:11:41.235Z"),
     }, operationSecurity)
     if err != nil {
         log.Fatal(err)
@@ -195,7 +195,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.PatchHrisConnectionIDGroupID(ctx, operations.PatchHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustDateFromString("2022-05-13"),
+            CreatedAt: types.MustTimeFromString("2022-05-13T18:14:16.753Z"),
             Description: unifiedto.String("aliquam"),
             EmployeeIds: []string{
                 "iusto",
@@ -209,7 +209,7 @@ func main() {
             ParentID: unifiedto.String("consectetur"),
             Raw: &shared.PropertyHrisGroupRaw{},
             Type: shared.HrisGroupTypeDepartment.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-12-28"),
+            UpdatedAt: types.MustTimeFromString("2022-12-28T08:43:09.661Z"),
         },
         ConnectionID: "delectus",
         ID: "3138f30d-f3db-4022-baa5-65fb8f652ebb",
@@ -265,7 +265,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.PostHrisConnectionIDGroup(ctx, operations.PostHrisConnectionIDGroupRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustDateFromString("2021-04-22"),
+            CreatedAt: types.MustTimeFromString("2021-04-22T16:44:51.151Z"),
             Description: unifiedto.String("dolor"),
             EmployeeIds: []string{
                 "praesentium",
@@ -279,7 +279,7 @@ func main() {
             ParentID: unifiedto.String("exercitationem"),
             Raw: &shared.PropertyHrisGroupRaw{},
             Type: shared.HrisGroupTypeDepartment.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-08-30"),
+            UpdatedAt: types.MustTimeFromString("2022-08-30T17:09:47.110Z"),
         },
         ConnectionID: "unde",
     }, operationSecurity)
@@ -334,7 +334,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.PutHrisConnectionIDGroupID(ctx, operations.PutHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustDateFromString("2022-04-06"),
+            CreatedAt: types.MustTimeFromString("2022-04-06T01:39:03.213Z"),
             Description: unifiedto.String("aut"),
             EmployeeIds: []string{
                 "expedita",
@@ -348,7 +348,7 @@ func main() {
             ParentID: unifiedto.String("quidem"),
             Raw: &shared.PropertyHrisGroupRaw{},
             Type: shared.HrisGroupTypeBusinessUnit.ToPointer(),
-            UpdatedAt: types.MustDateFromString("2022-08-19"),
+            UpdatedAt: types.MustTimeFromString("2022-08-19T01:14:09.290Z"),
         },
         ConnectionID: "voluptate",
         ID: "c7edaf39-d16f-4bf7-afd1-62b303e3023b",

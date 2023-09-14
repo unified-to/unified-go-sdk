@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"time"
 )
 
 type APICallType string
@@ -40,7 +40,7 @@ func (e *APICallType) UnmarshalJSON(data []byte) error {
 
 type APICall struct {
 	ConnectionID    *string     `json:"connection_id,omitempty"`
-	CreatedAt       *types.Date `json:"created_at,omitempty"`
+	CreatedAt       *time.Time  `json:"created_at,omitempty"`
 	Environment     *string     `json:"environment,omitempty"`
 	Error           *string     `json:"error,omitempty"`
 	ExternalXref    *string     `json:"external_xref,omitempty"`
@@ -63,7 +63,7 @@ func (o *APICall) GetConnectionID() *string {
 	return o.ConnectionID
 }
 
-func (o *APICall) GetCreatedAt() *types.Date {
+func (o *APICall) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
