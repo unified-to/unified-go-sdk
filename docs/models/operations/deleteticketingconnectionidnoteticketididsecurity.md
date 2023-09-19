@@ -1,4 +1,4 @@
-# PatchTicketingConnectionIDNotesTicketIDIDSecurity
+# DeleteTicketingConnectionIDNoteTicketIDIDSecurity
 
 
 ## Fields

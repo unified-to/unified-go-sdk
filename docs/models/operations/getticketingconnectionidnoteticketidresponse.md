@@ -1,4 +1,4 @@
-# GetTicketingConnectionIDNotesTicketIDResponse
+# GetTicketingConnectionIDNoteTicketIDResponse
 
 
 ## Fields

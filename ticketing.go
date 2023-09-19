@@ -138,10 +138,10 @@ func (s *ticketing) DeleteTicketingConnectionIDCustomerID(ctx context.Context, r
 	return res, nil
 }
 
-// DeleteTicketingConnectionIDNotesTicketIDID - Remove a note
-func (s *ticketing) DeleteTicketingConnectionIDNotesTicketIDID(ctx context.Context, request operations.DeleteTicketingConnectionIDNotesTicketIDIDRequest, security operations.DeleteTicketingConnectionIDNotesTicketIDIDSecurity) (*operations.DeleteTicketingConnectionIDNotesTicketIDIDResponse, error) {
+// DeleteTicketingConnectionIDNoteTicketIDID - Remove a note
+func (s *ticketing) DeleteTicketingConnectionIDNoteTicketIDID(ctx context.Context, request operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest, security operations.DeleteTicketingConnectionIDNoteTicketIDIDSecurity) (*operations.DeleteTicketingConnectionIDNoteTicketIDIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/notes/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -172,7 +172,7 @@ func (s *ticketing) DeleteTicketingConnectionIDNotesTicketIDID(ctx context.Conte
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.DeleteTicketingConnectionIDNotesTicketIDIDResponse{
+	res := &operations.DeleteTicketingConnectionIDNoteTicketIDIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -186,7 +186,7 @@ func (s *ticketing) DeleteTicketingConnectionIDNotesTicketIDID(ctx context.Conte
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.DeleteTicketingConnectionIDNotesTicketIDIDDefaultApplicationJSONString = &out
+			res.DeleteTicketingConnectionIDNoteTicketIDIDDefaultApplicationJSONString = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -504,10 +504,10 @@ func (s *ticketing) GetTicketingConnectionIDCustomerID(ctx context.Context, requ
 	return res, nil
 }
 
-// GetTicketingConnectionIDNotesTicketID - List all notes
-func (s *ticketing) GetTicketingConnectionIDNotesTicketID(ctx context.Context, request operations.GetTicketingConnectionIDNotesTicketIDRequest, security operations.GetTicketingConnectionIDNotesTicketIDSecurity) (*operations.GetTicketingConnectionIDNotesTicketIDResponse, error) {
+// GetTicketingConnectionIDNoteTicketID - List all notes
+func (s *ticketing) GetTicketingConnectionIDNoteTicketID(ctx context.Context, request operations.GetTicketingConnectionIDNoteTicketIDRequest, security operations.GetTicketingConnectionIDNoteTicketIDSecurity) (*operations.GetTicketingConnectionIDNoteTicketIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/notes/{ticket_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -542,7 +542,7 @@ func (s *ticketing) GetTicketingConnectionIDNotesTicketID(ctx context.Context, r
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetTicketingConnectionIDNotesTicketIDResponse{
+	res := &operations.GetTicketingConnectionIDNoteTicketIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -569,10 +569,10 @@ func (s *ticketing) GetTicketingConnectionIDNotesTicketID(ctx context.Context, r
 	return res, nil
 }
 
-// GetTicketingConnectionIDNotesTicketIDID - Retrieve a note
-func (s *ticketing) GetTicketingConnectionIDNotesTicketIDID(ctx context.Context, request operations.GetTicketingConnectionIDNotesTicketIDIDRequest, security operations.GetTicketingConnectionIDNotesTicketIDIDSecurity) (*operations.GetTicketingConnectionIDNotesTicketIDIDResponse, error) {
+// GetTicketingConnectionIDNoteTicketIDID - Retrieve a note
+func (s *ticketing) GetTicketingConnectionIDNoteTicketIDID(ctx context.Context, request operations.GetTicketingConnectionIDNoteTicketIDIDRequest, security operations.GetTicketingConnectionIDNoteTicketIDIDSecurity) (*operations.GetTicketingConnectionIDNoteTicketIDIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/notes/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -603,7 +603,7 @@ func (s *ticketing) GetTicketingConnectionIDNotesTicketIDID(ctx context.Context,
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetTicketingConnectionIDNotesTicketIDIDResponse{
+	res := &operations.GetTicketingConnectionIDNoteTicketIDIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -892,10 +892,10 @@ func (s *ticketing) PatchTicketingConnectionIDCustomerID(ctx context.Context, re
 	return res, nil
 }
 
-// PatchTicketingConnectionIDNotesTicketIDID - Update a note
-func (s *ticketing) PatchTicketingConnectionIDNotesTicketIDID(ctx context.Context, request operations.PatchTicketingConnectionIDNotesTicketIDIDRequest, security operations.PatchTicketingConnectionIDNotesTicketIDIDSecurity) (*operations.PatchTicketingConnectionIDNotesTicketIDIDResponse, error) {
+// PatchTicketingConnectionIDNoteTicketIDID - Update a note
+func (s *ticketing) PatchTicketingConnectionIDNoteTicketIDID(ctx context.Context, request operations.PatchTicketingConnectionIDNoteTicketIDIDRequest, security operations.PatchTicketingConnectionIDNoteTicketIDIDSecurity) (*operations.PatchTicketingConnectionIDNoteTicketIDIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/notes/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -933,7 +933,7 @@ func (s *ticketing) PatchTicketingConnectionIDNotesTicketIDID(ctx context.Contex
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PatchTicketingConnectionIDNotesTicketIDIDResponse{
+	res := &operations.PatchTicketingConnectionIDNoteTicketIDIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -1164,10 +1164,10 @@ func (s *ticketing) PostTicketingConnectionIDCustomer(ctx context.Context, reque
 	return res, nil
 }
 
-// PostTicketingConnectionIDNotesTicketID - Create a note
-func (s *ticketing) PostTicketingConnectionIDNotesTicketID(ctx context.Context, request operations.PostTicketingConnectionIDNotesTicketIDRequest, security operations.PostTicketingConnectionIDNotesTicketIDSecurity) (*operations.PostTicketingConnectionIDNotesTicketIDResponse, error) {
+// PostTicketingConnectionIDNoteTicketID - Create a note
+func (s *ticketing) PostTicketingConnectionIDNoteTicketID(ctx context.Context, request operations.PostTicketingConnectionIDNoteTicketIDRequest, security operations.PostTicketingConnectionIDNoteTicketIDSecurity) (*operations.PostTicketingConnectionIDNoteTicketIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/notes/{ticket_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -1205,7 +1205,7 @@ func (s *ticketing) PostTicketingConnectionIDNotesTicketID(ctx context.Context, 
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostTicketingConnectionIDNotesTicketIDResponse{
+	res := &operations.PostTicketingConnectionIDNoteTicketIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -1436,10 +1436,10 @@ func (s *ticketing) PutTicketingConnectionIDCustomerID(ctx context.Context, requ
 	return res, nil
 }
 
-// PutTicketingConnectionIDNotesTicketIDID - Update a note
-func (s *ticketing) PutTicketingConnectionIDNotesTicketIDID(ctx context.Context, request operations.PutTicketingConnectionIDNotesTicketIDIDRequest, security operations.PutTicketingConnectionIDNotesTicketIDIDSecurity) (*operations.PutTicketingConnectionIDNotesTicketIDIDResponse, error) {
+// PutTicketingConnectionIDNoteTicketIDID - Update a note
+func (s *ticketing) PutTicketingConnectionIDNoteTicketIDID(ctx context.Context, request operations.PutTicketingConnectionIDNoteTicketIDIDRequest, security operations.PutTicketingConnectionIDNoteTicketIDIDSecurity) (*operations.PutTicketingConnectionIDNoteTicketIDIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/notes/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -1477,7 +1477,7 @@ func (s *ticketing) PutTicketingConnectionIDNotesTicketIDID(ctx context.Context,
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PutTicketingConnectionIDNotesTicketIDIDResponse{
+	res := &operations.PutTicketingConnectionIDNoteTicketIDIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

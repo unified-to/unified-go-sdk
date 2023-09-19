@@ -412,12 +412,12 @@ func main() {
 
 ### [Note](docs/sdks/note/README.md)
 
-* [DeleteTicketingConnectionIDNotesTicketIDID](docs/sdks/note/README.md#deleteticketingconnectionidnotesticketidid) - Remove a note
-* [GetTicketingConnectionIDNotesTicketID](docs/sdks/note/README.md#getticketingconnectionidnotesticketid) - List all notes
-* [GetTicketingConnectionIDNotesTicketIDID](docs/sdks/note/README.md#getticketingconnectionidnotesticketidid) - Retrieve a note
-* [PatchTicketingConnectionIDNotesTicketIDID](docs/sdks/note/README.md#patchticketingconnectionidnotesticketidid) - Update a note
-* [PostTicketingConnectionIDNotesTicketID](docs/sdks/note/README.md#postticketingconnectionidnotesticketid) - Create a note
-* [PutTicketingConnectionIDNotesTicketIDID](docs/sdks/note/README.md#putticketingconnectionidnotesticketidid) - Update a note
+* [DeleteTicketingConnectionIDNoteTicketIDID](docs/sdks/note/README.md#deleteticketingconnectionidnoteticketidid) - Remove a note
+* [GetTicketingConnectionIDNoteTicketID](docs/sdks/note/README.md#getticketingconnectionidnoteticketid) - List all notes
+* [GetTicketingConnectionIDNoteTicketIDID](docs/sdks/note/README.md#getticketingconnectionidnoteticketidid) - Retrieve a note
+* [PatchTicketingConnectionIDNoteTicketIDID](docs/sdks/note/README.md#patchticketingconnectionidnoteticketidid) - Update a note
+* [PostTicketingConnectionIDNoteTicketID](docs/sdks/note/README.md#postticketingconnectionidnoteticketid) - Create a note
+* [PutTicketingConnectionIDNoteTicketIDID](docs/sdks/note/README.md#putticketingconnectionidnoteticketidid) - Update a note
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
 
@@ -462,27 +462,27 @@ func main() {
 
 * [DeleteTicketingConnectionIDAgentID](docs/sdks/ticketing/README.md#deleteticketingconnectionidagentid) - Remove a agent
 * [DeleteTicketingConnectionIDCustomerID](docs/sdks/ticketing/README.md#deleteticketingconnectionidcustomerid) - Remove a customer
-* [DeleteTicketingConnectionIDNotesTicketIDID](docs/sdks/ticketing/README.md#deleteticketingconnectionidnotesticketidid) - Remove a note
+* [DeleteTicketingConnectionIDNoteTicketIDID](docs/sdks/ticketing/README.md#deleteticketingconnectionidnoteticketidid) - Remove a note
 * [DeleteTicketingConnectionIDTicketID](docs/sdks/ticketing/README.md#deleteticketingconnectionidticketid) - Remove a ticket
 * [GetTicketingConnectionIDAgent](docs/sdks/ticketing/README.md#getticketingconnectionidagent) - List all agents
 * [GetTicketingConnectionIDAgentID](docs/sdks/ticketing/README.md#getticketingconnectionidagentid) - Retrieve a agent
 * [GetTicketingConnectionIDCustomer](docs/sdks/ticketing/README.md#getticketingconnectionidcustomer) - List all customers
 * [GetTicketingConnectionIDCustomerID](docs/sdks/ticketing/README.md#getticketingconnectionidcustomerid) - Retrieve a customer
-* [GetTicketingConnectionIDNotesTicketID](docs/sdks/ticketing/README.md#getticketingconnectionidnotesticketid) - List all notes
-* [GetTicketingConnectionIDNotesTicketIDID](docs/sdks/ticketing/README.md#getticketingconnectionidnotesticketidid) - Retrieve a note
+* [GetTicketingConnectionIDNoteTicketID](docs/sdks/ticketing/README.md#getticketingconnectionidnoteticketid) - List all notes
+* [GetTicketingConnectionIDNoteTicketIDID](docs/sdks/ticketing/README.md#getticketingconnectionidnoteticketidid) - Retrieve a note
 * [GetTicketingConnectionIDTicket](docs/sdks/ticketing/README.md#getticketingconnectionidticket) - List all tickets
 * [GetTicketingConnectionIDTicketID](docs/sdks/ticketing/README.md#getticketingconnectionidticketid) - Retrieve a ticket
 * [PatchTicketingConnectionIDAgentID](docs/sdks/ticketing/README.md#patchticketingconnectionidagentid) - Update a agent
 * [PatchTicketingConnectionIDCustomerID](docs/sdks/ticketing/README.md#patchticketingconnectionidcustomerid) - Update a customer
-* [PatchTicketingConnectionIDNotesTicketIDID](docs/sdks/ticketing/README.md#patchticketingconnectionidnotesticketidid) - Update a note
+* [PatchTicketingConnectionIDNoteTicketIDID](docs/sdks/ticketing/README.md#patchticketingconnectionidnoteticketidid) - Update a note
 * [PatchTicketingConnectionIDTicketID](docs/sdks/ticketing/README.md#patchticketingconnectionidticketid) - Update a ticket
 * [PostTicketingConnectionIDAgent](docs/sdks/ticketing/README.md#postticketingconnectionidagent) - Create a agent
 * [PostTicketingConnectionIDCustomer](docs/sdks/ticketing/README.md#postticketingconnectionidcustomer) - Create a customer
-* [PostTicketingConnectionIDNotesTicketID](docs/sdks/ticketing/README.md#postticketingconnectionidnotesticketid) - Create a note
+* [PostTicketingConnectionIDNoteTicketID](docs/sdks/ticketing/README.md#postticketingconnectionidnoteticketid) - Create a note
 * [PostTicketingConnectionIDTicket](docs/sdks/ticketing/README.md#postticketingconnectionidticket) - Create a ticket
 * [PutTicketingConnectionIDAgentID](docs/sdks/ticketing/README.md#putticketingconnectionidagentid) - Update a agent
 * [PutTicketingConnectionIDCustomerID](docs/sdks/ticketing/README.md#putticketingconnectionidcustomerid) - Update a customer
-* [PutTicketingConnectionIDNotesTicketIDID](docs/sdks/ticketing/README.md#putticketingconnectionidnotesticketidid) - Update a note
+* [PutTicketingConnectionIDNoteTicketIDID](docs/sdks/ticketing/README.md#putticketingconnectionidnoteticketidid) - Update a note
 * [PutTicketingConnectionIDTicketID](docs/sdks/ticketing/README.md#putticketingconnectionidticketid) - Update a ticket
 
 ### [Uc](docs/sdks/uc/README.md)

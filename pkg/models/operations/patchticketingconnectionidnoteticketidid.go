@@ -7,18 +7,18 @@ import (
 	"net/http"
 )
 
-type PatchTicketingConnectionIDNotesTicketIDIDSecurity struct {
+type PatchTicketingConnectionIDNoteTicketIDIDSecurity struct {
 	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
 }
 
-func (o *PatchTicketingConnectionIDNotesTicketIDIDSecurity) GetJwt() string {
+func (o *PatchTicketingConnectionIDNoteTicketIDIDSecurity) GetJwt() string {
 	if o == nil {
 		return ""
 	}
 	return o.Jwt
 }
 
-type PatchTicketingConnectionIDNotesTicketIDIDRequest struct {
+type PatchTicketingConnectionIDNoteTicketIDIDRequest struct {
 	TicketingNote *shared.TicketingNote `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
@@ -28,35 +28,35 @@ type PatchTicketingConnectionIDNotesTicketIDIDRequest struct {
 	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
 }
 
-func (o *PatchTicketingConnectionIDNotesTicketIDIDRequest) GetTicketingNote() *shared.TicketingNote {
+func (o *PatchTicketingConnectionIDNoteTicketIDIDRequest) GetTicketingNote() *shared.TicketingNote {
 	if o == nil {
 		return nil
 	}
 	return o.TicketingNote
 }
 
-func (o *PatchTicketingConnectionIDNotesTicketIDIDRequest) GetConnectionID() string {
+func (o *PatchTicketingConnectionIDNoteTicketIDIDRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *PatchTicketingConnectionIDNotesTicketIDIDRequest) GetID() string {
+func (o *PatchTicketingConnectionIDNoteTicketIDIDRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-func (o *PatchTicketingConnectionIDNotesTicketIDIDRequest) GetTicketID() string {
+func (o *PatchTicketingConnectionIDNoteTicketIDIDRequest) GetTicketID() string {
 	if o == nil {
 		return ""
 	}
 	return o.TicketID
 }
 
-type PatchTicketingConnectionIDNotesTicketIDIDResponse struct {
+type PatchTicketingConnectionIDNoteTicketIDIDResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
@@ -64,28 +64,28 @@ type PatchTicketingConnectionIDNotesTicketIDIDResponse struct {
 	TicketingNote *shared.TicketingNote
 }
 
-func (o *PatchTicketingConnectionIDNotesTicketIDIDResponse) GetContentType() string {
+func (o *PatchTicketingConnectionIDNoteTicketIDIDResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *PatchTicketingConnectionIDNotesTicketIDIDResponse) GetStatusCode() int {
+func (o *PatchTicketingConnectionIDNoteTicketIDIDResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *PatchTicketingConnectionIDNotesTicketIDIDResponse) GetRawResponse() *http.Response {
+func (o *PatchTicketingConnectionIDNoteTicketIDIDResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
 	return o.RawResponse
 }
 
-func (o *PatchTicketingConnectionIDNotesTicketIDIDResponse) GetTicketingNote() *shared.TicketingNote {
+func (o *PatchTicketingConnectionIDNoteTicketIDIDResponse) GetTicketingNote() *shared.TicketingNote {
 	if o == nil {
 		return nil
 	}

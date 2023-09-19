@@ -7,18 +7,18 @@ import (
 	"net/http"
 )
 
-type GetTicketingConnectionIDNotesTicketIDIDSecurity struct {
+type GetTicketingConnectionIDNoteTicketIDIDSecurity struct {
 	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDIDSecurity) GetJwt() string {
+func (o *GetTicketingConnectionIDNoteTicketIDIDSecurity) GetJwt() string {
 	if o == nil {
 		return ""
 	}
 	return o.Jwt
 }
 
-type GetTicketingConnectionIDNotesTicketIDIDRequest struct {
+type GetTicketingConnectionIDNoteTicketIDIDRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// ID of the Note
@@ -27,28 +27,28 @@ type GetTicketingConnectionIDNotesTicketIDIDRequest struct {
 	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDIDRequest) GetConnectionID() string {
+func (o *GetTicketingConnectionIDNoteTicketIDIDRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDIDRequest) GetID() string {
+func (o *GetTicketingConnectionIDNoteTicketIDIDRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDIDRequest) GetTicketID() string {
+func (o *GetTicketingConnectionIDNoteTicketIDIDRequest) GetTicketID() string {
 	if o == nil {
 		return ""
 	}
 	return o.TicketID
 }
 
-type GetTicketingConnectionIDNotesTicketIDIDResponse struct {
+type GetTicketingConnectionIDNoteTicketIDIDResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
@@ -56,28 +56,28 @@ type GetTicketingConnectionIDNotesTicketIDIDResponse struct {
 	TicketingNote *shared.TicketingNote
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDIDResponse) GetContentType() string {
+func (o *GetTicketingConnectionIDNoteTicketIDIDResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDIDResponse) GetStatusCode() int {
+func (o *GetTicketingConnectionIDNoteTicketIDIDResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDIDResponse) GetRawResponse() *http.Response {
+func (o *GetTicketingConnectionIDNoteTicketIDIDResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
 	return o.RawResponse
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDIDResponse) GetTicketingNote() *shared.TicketingNote {
+func (o *GetTicketingConnectionIDNoteTicketIDIDResponse) GetTicketingNote() *shared.TicketingNote {
 	if o == nil {
 		return nil
 	}

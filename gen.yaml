@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 9169cb16868732e7726b05e14961b1c5
+  docChecksum: 5bd36b53552fa02e224d43312e46580b
   docVersion: "1.0"
-  speakeasyVersion: 1.83.2
-  generationVersion: 2.109.3
+  speakeasyVersion: 1.87.0
+  generationVersion: 2.116.0
 generation:
   comments:
     disableComments: false
@@ -14,12 +14,12 @@ generation:
   tagNamespacingDisabled: false
 features:
   go:
-    core: 2.88.1
+    core: 2.88.2
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
     methodSecurity: 2.81.2
 go:
-  version: 0.1.1
+  version: 0.1.2
   clientServerStatusCodesAsErrors: true
   maxMethodParams: 0
   packageName: github.com/unified-to/unified-go-sdk

@@ -8,18 +8,18 @@ import (
 	"time"
 )
 
-type GetTicketingConnectionIDNotesTicketIDSecurity struct {
+type GetTicketingConnectionIDNoteTicketIDSecurity struct {
 	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDSecurity) GetJwt() string {
+func (o *GetTicketingConnectionIDNoteTicketIDSecurity) GetJwt() string {
 	if o == nil {
 		return ""
 	}
 	return o.Jwt
 }
 
-type GetTicketingConnectionIDNotesTicketIDRequest struct {
+type GetTicketingConnectionIDNoteTicketIDRequest struct {
 	// ID of the connection
 	ConnectionID string   `pathParam:"style=simple,explode=false,name=connection_id"`
 	Limit        *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -34,63 +34,63 @@ type GetTicketingConnectionIDNotesTicketIDRequest struct {
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetConnectionID() string {
+func (o *GetTicketingConnectionIDNoteTicketIDRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetLimit() *float64 {
+func (o *GetTicketingConnectionIDNoteTicketIDRequest) GetLimit() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Limit
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetOffset() *float64 {
+func (o *GetTicketingConnectionIDNoteTicketIDRequest) GetOffset() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Offset
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetOrder() *string {
+func (o *GetTicketingConnectionIDNoteTicketIDRequest) GetOrder() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Order
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetQuery() *string {
+func (o *GetTicketingConnectionIDNoteTicketIDRequest) GetQuery() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Query
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetSort() *string {
+func (o *GetTicketingConnectionIDNoteTicketIDRequest) GetSort() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Sort
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetTicketID() string {
+func (o *GetTicketingConnectionIDNoteTicketIDRequest) GetTicketID() string {
 	if o == nil {
 		return ""
 	}
 	return o.TicketID
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDRequest) GetUpdatedGte() *time.Time {
+func (o *GetTicketingConnectionIDNoteTicketIDRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.UpdatedGte
 }
 
-type GetTicketingConnectionIDNotesTicketIDResponse struct {
+type GetTicketingConnectionIDNoteTicketIDResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
@@ -98,28 +98,28 @@ type GetTicketingConnectionIDNotesTicketIDResponse struct {
 	TicketingNotes []shared.TicketingNote
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDResponse) GetContentType() string {
+func (o *GetTicketingConnectionIDNoteTicketIDResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDResponse) GetStatusCode() int {
+func (o *GetTicketingConnectionIDNoteTicketIDResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDResponse) GetRawResponse() *http.Response {
+func (o *GetTicketingConnectionIDNoteTicketIDResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
 	return o.RawResponse
 }
 
-func (o *GetTicketingConnectionIDNotesTicketIDResponse) GetTicketingNotes() []shared.TicketingNote {
+func (o *GetTicketingConnectionIDNoteTicketIDResponse) GetTicketingNotes() []shared.TicketingNote {
 	if o == nil {
 		return nil
 	}

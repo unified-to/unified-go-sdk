@@ -1,4 +1,4 @@
-# PatchTicketingConnectionIDNotesTicketIDIDResponse
+# PatchTicketingConnectionIDNoteTicketIDIDResponse
 
 
 ## Fields
