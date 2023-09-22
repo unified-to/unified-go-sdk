@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type DeletePassthroughConnectionIDPathSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *DeletePassthroughConnectionIDPathSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type DeletePassthroughConnectionIDPathRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

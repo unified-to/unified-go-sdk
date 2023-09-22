@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -20,6 +21,17 @@ type CrmLead struct {
 	Telephones    []CrmTelephone          `json:"telephones,omitempty"`
 	UpdatedAt     *time.Time              `json:"updated_at,omitempty"`
 	UserID        *string                 `json:"user_id,omitempty"`
+}
+
+func (c CrmLead) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CrmLead) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *CrmLead) GetActive() *bool {

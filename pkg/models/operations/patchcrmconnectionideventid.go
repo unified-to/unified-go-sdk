@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PatchCrmConnectionIDEventIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PatchCrmConnectionIDEventIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PatchCrmConnectionIDEventIDRequest struct {
 	// An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
 	CrmEvent *shared.CrmEvent `request:"mediaType=application/json"`

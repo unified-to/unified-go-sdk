@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PutCrmConnectionIDContactIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PutCrmConnectionIDContactIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PutCrmConnectionIDContactIDRequest struct {
 	// A contact represents a person that optionally is associated with a deal and/or a company
 	CrmContact *shared.CrmContact `request:"mediaType=application/json"`

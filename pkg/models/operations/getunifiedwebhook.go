@@ -4,20 +4,10 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
 	"time"
 )
-
-type GetUnifiedWebhookSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *GetUnifiedWebhookSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
 
 type GetUnifiedWebhookRequest struct {
 	Env   *string  `queryParam:"style=form,explode=true,name=env"`
@@ -29,6 +19,17 @@ type GetUnifiedWebhookRequest struct {
 	Sort   *string  `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+}
+
+func (g GetUnifiedWebhookRequest) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(g, "", false)
+}
+
+func (g *GetUnifiedWebhookRequest) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &g, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *GetUnifiedWebhookRequest) GetEnv() *string {

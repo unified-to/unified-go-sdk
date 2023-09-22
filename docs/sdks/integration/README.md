@@ -19,30 +19,32 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetUnifiedIntegrationSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegration(ctx, operations.GetUnifiedIntegrationRequest{
-        Active: unifiedto.Bool(false),
+        Active: unifiedgosdk.Bool(false),
         Categories: []GetUnifiedIntegrationCategories{
             operations.GetUnifiedIntegrationCategoriesHris,
         },
-        Limit: unifiedto.Float64(2394.27),
-        Offset: unifiedto.Float64(8487.85),
-        Order: unifiedto.String("ea"),
-        Sort: unifiedto.String("veniam"),
-        Summary: unifiedto.Bool(false),
+        Limit: unifiedgosdk.Float64(2394.27),
+        Offset: unifiedgosdk.Float64(8487.85),
+        Order: unifiedgosdk.String("ea"),
+        Sort: unifiedgosdk.String("veniam"),
+        Summary: unifiedgosdk.Bool(false),
         UpdatedGte: types.MustTimeFromString("2021-01-26T22:48:04.970Z"),
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,11 +57,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetUnifiedIntegrationRequest](../../models/operations/getunifiedintegrationrequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [operations.GetUnifiedIntegrationSecurity](../../models/operations/getunifiedintegrationsecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.GetUnifiedIntegrationRequest](../../models/operations/getunifiedintegrationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
@@ -79,27 +80,32 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
+            Jwt: "",
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationAuthWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedto.String("earum"),
-        ExternalXref: unifiedto.String("placeat"),
-        FailureRedirect: unifiedto.String("saepe"),
+        Env: unifiedgosdk.String("earum"),
+        ExternalXref: unifiedgosdk.String("placeat"),
+        FailureRedirect: unifiedgosdk.String("saepe"),
         IntegrationType: "quod",
-        Lang: unifiedto.String("odit"),
-        Redirect: unifiedto.Bool(false),
+        Lang: unifiedgosdk.String("odit"),
+        Redirect: unifiedgosdk.Bool(false),
         Scopes: []GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes{
             operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesHrisGroupWrite,
         },
-        State: unifiedto.String("at"),
-        Subdomain: unifiedto.String("ea"),
-        SuccessRedirect: unifiedto.String("provident"),
+        State: unifiedgosdk.String("at"),
+        Subdomain: unifiedgosdk.String("ea"),
+        SuccessRedirect: unifiedgosdk.String("provident"),
         WorkspaceID: "inventore",
     })
     if err != nil {
@@ -137,20 +143,22 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetUnifiedIntegrationIntegrationTypeSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationIntegrationType(ctx, operations.GetUnifiedIntegrationIntegrationTypeRequest{
         IntegrationType: "ea",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -163,11 +171,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                                              | :heavy_check_mark:                                                                                                                 | The context to use for the request.                                                                                                |
-| `request`                                                                                                                          | [operations.GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/getunifiedintegrationintegrationtyperequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `security`                                                                                                                         | [operations.GetUnifiedIntegrationIntegrationTypeSecurity](../../models/operations/getunifiedintegrationintegrationtypesecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                                            | :heavy_check_mark:                                                                                                               | The context to use for the request.                                                                                              |
+| `request`                                                                                                                        | [operations.GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/getunifiedintegrationintegrationtyperequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
@@ -187,21 +194,26 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
+            Jwt: "",
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationWorkspaceWorkspaceID(ctx, operations.GetUnifiedIntegrationWorkspaceWorkspaceIDRequest{
-        Active: unifiedto.Bool(false),
+        Active: unifiedgosdk.Bool(false),
         Categories: []GetUnifiedIntegrationWorkspaceWorkspaceIDCategories{
             operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategoriesUc,
         },
-        Env: unifiedto.String("quam"),
-        Summary: unifiedto.Bool(false),
+        Env: unifiedgosdk.String("quam"),
+        Summary: unifiedgosdk.Bool(false),
         WorkspaceID: "delectus",
     })
     if err != nil {

@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -24,6 +25,17 @@ type CrmDeal struct {
 	Tags      []string            `json:"tags,omitempty"`
 	UpdatedAt *time.Time          `json:"updated_at,omitempty"`
 	WonReason *string             `json:"won_reason,omitempty"`
+}
+
+func (c CrmDeal) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CrmDeal) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *CrmDeal) GetAmount() *float64 {

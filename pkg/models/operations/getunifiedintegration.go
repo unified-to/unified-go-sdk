@@ -6,20 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
 	"time"
 )
-
-type GetUnifiedIntegrationSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *GetUnifiedIntegrationSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
 
 type GetUnifiedIntegrationCategories string
 
@@ -81,6 +71,17 @@ type GetUnifiedIntegrationRequest struct {
 	Summary    *bool                             `queryParam:"style=form,explode=true,name=summary"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+}
+
+func (g GetUnifiedIntegrationRequest) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(g, "", false)
+}
+
+func (g *GetUnifiedIntegrationRequest) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &g, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *GetUnifiedIntegrationRequest) GetActive() *bool {

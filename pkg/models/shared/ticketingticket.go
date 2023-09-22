@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -50,6 +51,17 @@ type TicketingTicket struct {
 	Subject     *string                    `json:"subject,omitempty"`
 	Tags        []string                   `json:"tags,omitempty"`
 	UpdatedAt   *time.Time                 `json:"updated_at,omitempty"`
+}
+
+func (t TicketingTicket) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *TicketingTicket) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *TicketingTicket) GetCategory() *string {

@@ -4,20 +4,10 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
 	"time"
 )
-
-type GetMartechConnectionIDListSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *GetMartechConnectionIDListSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
 
 type GetMartechConnectionIDListRequest struct {
 	// ID of the connection
@@ -30,6 +20,17 @@ type GetMartechConnectionIDListRequest struct {
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+}
+
+func (g GetMartechConnectionIDListRequest) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(g, "", false)
+}
+
+func (g *GetMartechConnectionIDListRequest) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &g, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *GetMartechConnectionIDListRequest) GetConnectionID() string {

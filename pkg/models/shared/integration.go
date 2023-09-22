@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -30,6 +31,17 @@ type Integration struct {
 	Type       string     `json:"type"`
 	UpdatedAt  *time.Time `json:"updated_at,omitempty"`
 	WebURL     *string    `json:"web_url,omitempty"`
+}
+
+func (i Integration) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(i, "", false)
+}
+
+func (i *Integration) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &i, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *Integration) GetAPIDocsURL() *string {

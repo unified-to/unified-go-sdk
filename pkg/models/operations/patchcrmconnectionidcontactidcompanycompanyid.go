@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PatchCrmConnectionIDContactIDCompanyCompanyIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PatchCrmConnectionIDContactIDCompanyCompanyIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PatchCrmConnectionIDContactIDCompanyCompanyIDRequest struct {
 	// ID of the company
 	CompanyID string `pathParam:"style=simple,explode=false,name=company_id"`

@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PatchHrisConnectionIDGroupIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PatchHrisConnectionIDGroupIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PatchHrisConnectionIDGroupIDRequest struct {
 	HrisGroup *shared.HrisGroup `request:"mediaType=application/json"`
 	// ID of the connection

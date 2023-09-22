@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type GetMartechConnectionIDListIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *GetMartechConnectionIDListIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type GetMartechConnectionIDListIDRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

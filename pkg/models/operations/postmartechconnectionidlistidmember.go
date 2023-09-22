@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PostMartechConnectionIDListIDMemberSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PostMartechConnectionIDListIDMemberSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PostMartechConnectionIDListIDMemberRequest struct {
 	// A member represents a person
 	MarketingMember *shared.MarketingMember `request:"mediaType=application/json"`

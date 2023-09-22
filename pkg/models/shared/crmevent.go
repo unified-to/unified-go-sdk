@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -68,6 +69,17 @@ type CrmEvent struct {
 	Task      *PropertyCrmEventTask `json:"task,omitempty"`
 	Type      *CrmEventType         `json:"type,omitempty"`
 	UpdatedAt *time.Time            `json:"updated_at,omitempty"`
+}
+
+func (c CrmEvent) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CrmEvent) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *CrmEvent) GetCall() *PropertyCrmEventCall {

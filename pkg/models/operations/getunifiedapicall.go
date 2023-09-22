@@ -4,20 +4,10 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
 	"time"
 )
-
-type GetUnifiedApicallSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *GetUnifiedApicallSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
 
 type GetUnifiedApicallRequest struct {
 	// Filter the results to just this integration's API calls
@@ -37,6 +27,17 @@ type GetUnifiedApicallRequest struct {
 	Sort            *string  `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+}
+
+func (g GetUnifiedApicallRequest) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(g, "", false)
+}
+
+func (g *GetUnifiedApicallRequest) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &g, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *GetUnifiedApicallRequest) GetConnectionID() *string {

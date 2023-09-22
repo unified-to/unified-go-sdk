@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -113,6 +114,17 @@ type AtsJob struct {
 	Remote           *bool                 `json:"remote,omitempty"`
 	Status           *AtsJobStatus         `json:"status,omitempty"`
 	UpdatedAt        *time.Time            `json:"updated_at,omitempty"`
+}
+
+func (a AtsJob) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AtsJob) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *AtsJob) GetAddresses() []AtsAddress {

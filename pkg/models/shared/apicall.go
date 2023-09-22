@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -41,7 +42,7 @@ func (e *APICallType) UnmarshalJSON(data []byte) error {
 type APICall struct {
 	ConnectionID    *string     `json:"connection_id,omitempty"`
 	CreatedAt       *time.Time  `json:"created_at,omitempty"`
-	Environment     *string     `json:"environment,omitempty"`
+	Environment     *string     `default:"Production" json:"environment"`
 	Error           *string     `json:"error,omitempty"`
 	ExternalXref    *string     `json:"external_xref,omitempty"`
 	ID              *string     `json:"id,omitempty"`
@@ -54,6 +55,17 @@ type APICall struct {
 	Status          string      `json:"status"`
 	Type            APICallType `json:"type"`
 	WorkspaceID     string      `json:"workspace_id"`
+}
+
+func (a APICall) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *APICall) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *APICall) GetConnectionID() *string {

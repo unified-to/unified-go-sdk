@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -52,6 +53,17 @@ type AtsScorecard struct {
 	Raw            PropertyAtsScorecardRaw     `json:"raw"`
 	Recommendation *AtsScorecardRecommendation `json:"recommendation,omitempty"`
 	UpdatedAt      *time.Time                  `json:"updated_at,omitempty"`
+}
+
+func (a AtsScorecard) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AtsScorecard) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *AtsScorecard) GetApplicationID() *string {

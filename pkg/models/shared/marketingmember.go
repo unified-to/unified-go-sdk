@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -20,6 +21,17 @@ type MarketingMember struct {
 	// An array of tags associated with this member
 	Tags      []string   `json:"tags,omitempty"`
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+}
+
+func (m MarketingMember) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(m, "", false)
+}
+
+func (m *MarketingMember) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &m, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *MarketingMember) GetCreatedAt() *time.Time {

@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PatchMartechConnectionIDListIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PatchMartechConnectionIDListIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PatchMartechConnectionIDListIDRequest struct {
 	// Mailing List
 	MarketingList *shared.MarketingList `request:"mediaType=application/json"`

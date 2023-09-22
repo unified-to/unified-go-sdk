@@ -21,21 +21,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteTicketingConnectionIDCustomerIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Customer.DeleteTicketingConnectionIDCustomerID(ctx, operations.DeleteTicketingConnectionIDCustomerIDRequest{
         ConnectionID: "nulla",
         ID: "acd38ed0-dc67-41dc-bf1e-3af15920c90d",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,11 +50,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                                | :heavy_check_mark:                                                                                                                   | The context to use for the request.                                                                                                  |
-| `request`                                                                                                                            | [operations.DeleteTicketingConnectionIDCustomerIDRequest](../../models/operations/deleteticketingconnectionidcustomeridrequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [operations.DeleteTicketingConnectionIDCustomerIDSecurity](../../models/operations/deleteticketingconnectionidcustomeridsecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                                              | :heavy_check_mark:                                                                                                                 | The context to use for the request.                                                                                                |
+| `request`                                                                                                                          | [operations.DeleteTicketingConnectionIDCustomerIDRequest](../../models/operations/deleteticketingconnectionidcustomeridrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -72,27 +73,29 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetTicketingConnectionIDCustomerSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Customer.GetTicketingConnectionIDCustomer(ctx, operations.GetTicketingConnectionIDCustomerRequest{
         ConnectionID: "ab",
-        Limit: unifiedto.Float64(7414.54),
-        Offset: unifiedto.Float64(2975.19),
-        Order: unifiedto.String("natus"),
-        Query: unifiedto.String("aperiam"),
-        Sort: unifiedto.String("dicta"),
+        Limit: unifiedgosdk.Float64(7414.54),
+        Offset: unifiedgosdk.Float64(2975.19),
+        Order: unifiedgosdk.String("natus"),
+        Query: unifiedgosdk.String("aperiam"),
+        Sort: unifiedgosdk.String("dicta"),
         UpdatedGte: types.MustTimeFromString("2022-06-25T18:37:10.473Z"),
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -105,11 +108,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                                      | :heavy_check_mark:                                                                                                         | The context to use for the request.                                                                                        |
-| `request`                                                                                                                  | [operations.GetTicketingConnectionIDCustomerRequest](../../models/operations/getticketingconnectionidcustomerrequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [operations.GetTicketingConnectionIDCustomerSecurity](../../models/operations/getticketingconnectionidcustomersecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
+| `request`                                                                                                                | [operations.GetTicketingConnectionIDCustomerRequest](../../models/operations/getticketingconnectionidcustomerrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
@@ -129,21 +131,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetTicketingConnectionIDCustomerIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Customer.GetTicketingConnectionIDCustomerID(ctx, operations.GetTicketingConnectionIDCustomerIDRequest{
         ConnectionID: "harum",
         ID: "d89c8a32-639d-4a5b-bb69-02b881a94f64",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -156,11 +160,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                          | :heavy_check_mark:                                                                                                             | The context to use for the request.                                                                                            |
-| `request`                                                                                                                      | [operations.GetTicketingConnectionIDCustomerIDRequest](../../models/operations/getticketingconnectionidcustomeridrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [operations.GetTicketingConnectionIDCustomerIDSecurity](../../models/operations/getticketingconnectionidcustomeridsecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                                        | :heavy_check_mark:                                                                                                           | The context to use for the request.                                                                                          |
+| `request`                                                                                                                    | [operations.GetTicketingConnectionIDCustomerIDRequest](../../models/operations/getticketingconnectionidcustomeridrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -180,17 +183,18 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PatchTicketingConnectionIDCustomerIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Customer.PatchTicketingConnectionIDCustomerID(ctx, operations.PatchTicketingConnectionIDCustomerIDRequest{
@@ -202,8 +206,8 @@ func main() {
                     Type: shared.TicketingEmailTypeWork.ToPointer(),
                 },
             },
-            ID: unifiedto.String("af8c691d-732d-49fb-af94-76a2ae8dcc50"),
-            Name: unifiedto.String("Clifton Nicolas"),
+            ID: unifiedgosdk.String("af8c691d-732d-49fb-af94-76a2ae8dcc50"),
+            Name: unifiedgosdk.String("Clifton Nicolas"),
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
                 "dicta",
@@ -218,7 +222,7 @@ func main() {
         },
         ConnectionID: "voluptate",
         ID: "84893075-0a00-4e96-aec7-36d43194398c",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -231,11 +235,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                                              | :heavy_check_mark:                                                                                                                 | The context to use for the request.                                                                                                |
-| `request`                                                                                                                          | [operations.PatchTicketingConnectionIDCustomerIDRequest](../../models/operations/patchticketingconnectionidcustomeridrequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `security`                                                                                                                         | [operations.PatchTicketingConnectionIDCustomerIDSecurity](../../models/operations/patchticketingconnectionidcustomeridsecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                                            | :heavy_check_mark:                                                                                                               | The context to use for the request.                                                                                              |
+| `request`                                                                                                                        | [operations.PatchTicketingConnectionIDCustomerIDRequest](../../models/operations/patchticketingconnectionidcustomeridrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
@@ -255,17 +258,18 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PostTicketingConnectionIDCustomerSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Customer.PostTicketingConnectionIDCustomer(ctx, operations.PostTicketingConnectionIDCustomerRequest{
@@ -277,8 +281,8 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedto.String("8ed3d3ab-7ca3-4c5c-a864-9a70cfd5d698"),
-            Name: unifiedto.String("Rudy Kirlin III"),
+            ID: unifiedgosdk.String("8ed3d3ab-7ca3-4c5c-a864-9a70cfd5d698"),
+            Name: unifiedgosdk.String("Rudy Kirlin III"),
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
                 "magnam",
@@ -292,7 +296,7 @@ func main() {
             UpdatedAt: types.MustTimeFromString("2022-07-25T05:00:03.848Z"),
         },
         ConnectionID: "voluptate",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -305,11 +309,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                                        | :heavy_check_mark:                                                                                                           | The context to use for the request.                                                                                          |
-| `request`                                                                                                                    | [operations.PostTicketingConnectionIDCustomerRequest](../../models/operations/postticketingconnectionidcustomerrequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [operations.PostTicketingConnectionIDCustomerSecurity](../../models/operations/postticketingconnectionidcustomersecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                                      | :heavy_check_mark:                                                                                                         | The context to use for the request.                                                                                        |
+| `request`                                                                                                                  | [operations.PostTicketingConnectionIDCustomerRequest](../../models/operations/postticketingconnectionidcustomerrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -329,17 +332,18 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PutTicketingConnectionIDCustomerIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Customer.PutTicketingConnectionIDCustomerID(ctx, operations.PutTicketingConnectionIDCustomerIDRequest{
@@ -351,8 +355,8 @@ func main() {
                     Type: shared.TicketingEmailTypeOther.ToPointer(),
                 },
             },
-            ID: unifiedto.String("492ed14b-8a2c-4195-8545-e955dcc185ea"),
-            Name: unifiedto.String("Miss Lindsay Adams"),
+            ID: unifiedgosdk.String("492ed14b-8a2c-4195-8545-e955dcc185ea"),
+            Name: unifiedgosdk.String("Miss Lindsay Adams"),
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
                 "cumque",
@@ -367,7 +371,7 @@ func main() {
         },
         ConnectionID: "explicabo",
         ID: "daa784ab-a3d2-430e-9f73-811a115382bd",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -380,11 +384,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                          | :heavy_check_mark:                                                                                                             | The context to use for the request.                                                                                            |
-| `request`                                                                                                                      | [operations.PutTicketingConnectionIDCustomerIDRequest](../../models/operations/putticketingconnectionidcustomeridrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [operations.PutTicketingConnectionIDCustomerIDSecurity](../../models/operations/putticketingconnectionidcustomeridsecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                                        | :heavy_check_mark:                                                                                                           | The context to use for the request.                                                                                          |
+| `request`                                                                                                                    | [operations.PutTicketingConnectionIDCustomerIDRequest](../../models/operations/putticketingconnectionidcustomeridrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response

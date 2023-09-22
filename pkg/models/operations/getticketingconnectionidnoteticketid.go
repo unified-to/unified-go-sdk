@@ -4,20 +4,10 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
 	"time"
 )
-
-type GetTicketingConnectionIDNoteTicketIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *GetTicketingConnectionIDNoteTicketIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
 
 type GetTicketingConnectionIDNoteTicketIDRequest struct {
 	// ID of the connection
@@ -32,6 +22,17 @@ type GetTicketingConnectionIDNoteTicketIDRequest struct {
 	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+}
+
+func (g GetTicketingConnectionIDNoteTicketIDRequest) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(g, "", false)
+}
+
+func (g *GetTicketingConnectionIDNoteTicketIDRequest) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &g, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *GetTicketingConnectionIDNoteTicketIDRequest) GetConnectionID() string {

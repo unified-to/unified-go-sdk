@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -77,6 +78,17 @@ type AtsApplication struct {
 	Source         *string                    `json:"source,omitempty"`
 	Status         *AtsApplicationStatus      `json:"status,omitempty"`
 	UpdatedAt      *time.Time                 `json:"updated_at,omitempty"`
+}
+
+func (a AtsApplication) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AtsApplication) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *AtsApplication) GetAppliedAt() *time.Time {

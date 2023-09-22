@@ -17,31 +17,33 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetUnifiedApicallSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
-        ConnectionID: unifiedto.String("voluptate"),
-        CreatedLte: types.MustTimeFromString("2022-04-12T10:47:34.158Z"),
-        Env: unifiedto.String("eaque"),
-        Error: unifiedto.Bool(false),
-        ExternalXref: unifiedto.String("pariatur"),
-        IntegrationType: unifiedto.String("nemo"),
-        Limit: unifiedto.Float64(9755.22),
-        Offset: unifiedto.Float64(166.27),
-        Order: unifiedto.String("fugiat"),
-        Sort: unifiedto.String("amet"),
-        UpdatedGte: types.MustTimeFromString("2022-03-27T19:22:24.458Z"),
-    }, operationSecurity)
+        ConnectionID: unifiedgosdk.String("perspiciatis"),
+        CreatedLte: types.MustTimeFromString("2022-03-20T23:16:34.777Z"),
+        Env: unifiedgosdk.String("consequuntur"),
+        Error: unifiedgosdk.Bool(false),
+        ExternalXref: unifiedgosdk.String("blanditiis"),
+        IntegrationType: unifiedgosdk.String("error"),
+        Limit: unifiedgosdk.Float64(503.7),
+        Offset: unifiedgosdk.Float64(5772.29),
+        Order: unifiedgosdk.String("rerum"),
+        Sort: unifiedgosdk.String("adipisci"),
+        UpdatedGte: types.MustTimeFromString("2020-03-14T00:51:21.656Z"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,11 +56,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.GetUnifiedApicallRequest](../../models/operations/getunifiedapicallrequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.GetUnifiedApicallSecurity](../../models/operations/getunifiedapicallsecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.GetUnifiedApicallRequest](../../models/operations/getunifiedapicallrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
@@ -78,20 +79,22 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetUnifiedApicallIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Apicall.GetUnifiedApicallID(ctx, operations.GetUnifiedApicallIDRequest{
-        ID: "5fbb2587-0532-402c-b3d5-fe9b90c28909",
-    }, operationSecurity)
+        ID: "49a8d9cb-f486-4333-a3f9-b77f3a410067",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -104,11 +107,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.GetUnifiedApicallIDRequest](../../models/operations/getunifiedapicallidrequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `security`                                                                                       | [operations.GetUnifiedApicallIDSecurity](../../models/operations/getunifiedapicallidsecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.GetUnifiedApicallIDRequest](../../models/operations/getunifiedapicallidrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response

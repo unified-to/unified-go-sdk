@@ -16,21 +16,26 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
+            Jwt: "",
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Login.GetUnifiedIntegrationLoginWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedto.String("veniam"),
-        FailureRedirect: unifiedto.String("nemo"),
+        Env: unifiedgosdk.String("veniam"),
+        FailureRedirect: unifiedgosdk.String("nemo"),
         IntegrationType: "voluptatum",
-        Redirect: unifiedto.Bool(false),
-        State: unifiedto.String("quia"),
-        SuccessRedirect: unifiedto.String("quisquam"),
+        Redirect: unifiedgosdk.Bool(false),
+        State: unifiedgosdk.String("quia"),
+        SuccessRedirect: unifiedgosdk.String("quisquam"),
         WorkspaceID: "et",
     })
     if err != nil {

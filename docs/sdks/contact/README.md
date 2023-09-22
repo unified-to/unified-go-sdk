@@ -33,21 +33,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteCrmConnectionIDContactIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.DeleteCrmConnectionIDContactID(ctx, operations.DeleteCrmConnectionIDContactIDRequest{
-        ConnectionID: "molestias",
-        ID: "57a9e618-76c6-4ab2-9d29-dfc94d6fecd7",
-    }, operationSecurity)
+        ConnectionID: "porro",
+        ID: "6ab21d29-dfc9-44d6-becd-799390066a6d",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -60,11 +62,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
-| `request`                                                                                                              | [operations.DeleteCrmConnectionIDContactIDRequest](../../models/operations/deletecrmconnectionidcontactidrequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [operations.DeleteCrmConnectionIDContactIDSecurity](../../models/operations/deletecrmconnectionidcontactidsecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.DeleteCrmConnectionIDContactIDRequest](../../models/operations/deletecrmconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
@@ -84,22 +85,24 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.DeleteCrmConnectionIDContactIDCompanyCompanyID(ctx, operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDRequest{
-        CompanyID: "iste",
-        ConnectionID: "provident",
-        ID: "390066a6-d2d0-4003-9533-8cec086fa21e",
-    }, operationSecurity)
+        CompanyID: "explicabo",
+        ConnectionID: "fugiat",
+        ID: "00035533-8cec-4086-ba21-e9152cb31191",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -112,11 +115,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                                                  | :heavy_check_mark:                                                                                                                                     | The context to use for the request.                                                                                                                    |
-| `request`                                                                                                                                              | [operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDRequest](../../models/operations/deletecrmconnectionidcontactidcompanycompanyidrequest.md)   | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `security`                                                                                                                                             | [operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDSecurity](../../models/operations/deletecrmconnectionidcontactidcompanycompanyidsecurity.md) | :heavy_check_mark:                                                                                                                                     | The security requirements to use for the request.                                                                                                      |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                                                | :heavy_check_mark:                                                                                                                                   | The context to use for the request.                                                                                                                  |
+| `request`                                                                                                                                            | [operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDRequest](../../models/operations/deletecrmconnectionidcontactidcompanycompanyidrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
 
 
 ### Response
@@ -136,22 +138,24 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteCrmConnectionIDContactIDDealDealIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.DeleteCrmConnectionIDContactIDDealDealID(ctx, operations.DeleteCrmConnectionIDContactIDDealDealIDRequest{
-        ConnectionID: "iste",
-        DealID: "dicta",
-        ID: "52cb3119-167b-48e3-88db-03408d6d364f",
-    }, operationSecurity)
+        ConnectionID: "autem",
+        DealID: "ducimus",
+        ID: "b8e3c8db-0340-48d6-9364-ffd455906d12",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -164,11 +168,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                                                      | :heavy_check_mark:                                                                                                                         | The context to use for the request.                                                                                                        |
-| `request`                                                                                                                                  | [operations.DeleteCrmConnectionIDContactIDDealDealIDRequest](../../models/operations/deletecrmconnectionidcontactiddealdealidrequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [operations.DeleteCrmConnectionIDContactIDDealDealIDSecurity](../../models/operations/deletecrmconnectionidcontactiddealdealidsecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                                    | :heavy_check_mark:                                                                                                                       | The context to use for the request.                                                                                                      |
+| `request`                                                                                                                                | [operations.DeleteCrmConnectionIDContactIDDealDealIDRequest](../../models/operations/deletecrmconnectionidcontactiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response
@@ -188,21 +191,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteUcConnectionIDContactIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.DeleteUcConnectionIDContactID(ctx, operations.DeleteUcConnectionIDContactIDRequest{
-        ConnectionID: "tenetur",
-        ID: "d455906d-1263-4d48-a935-c2c9e81f30be",
-    }, operationSecurity)
+        ConnectionID: "commodi",
+        ID: "3d48e935-c2c9-4e81-b30b-e3e43202d721",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -215,11 +220,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
-| `request`                                                                                                            | [operations.DeleteUcConnectionIDContactIDRequest](../../models/operations/deleteucconnectionidcontactidrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.DeleteUcConnectionIDContactIDSecurity](../../models/operations/deleteucconnectionidcontactidsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.DeleteUcConnectionIDContactIDRequest](../../models/operations/deleteucconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -239,29 +243,31 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetCrmConnectionIDContactSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.GetCrmConnectionIDContact(ctx, operations.GetCrmConnectionIDContactRequest{
-        CompanyID: unifiedto.String("sequi"),
-        ConnectionID: "recusandae",
-        DealID: unifiedto.String("labore"),
-        Limit: unifiedto.Float64(2406.24),
-        Offset: unifiedto.Float64(1667.41),
-        Order: unifiedto.String("aperiam"),
-        Query: unifiedto.String("dolores"),
-        Sort: unifiedto.String("illum"),
-        UpdatedGte: types.MustTimeFromString("2022-10-31T07:46:10.277Z"),
-    }, operationSecurity)
+        CompanyID: unifiedgosdk.String("aliquid"),
+        ConnectionID: "ad",
+        DealID: unifiedgosdk.String("voluptate"),
+        Limit: unifiedgosdk.Float64(4265.94),
+        Offset: unifiedgosdk.Float64(3249.99),
+        Order: unifiedgosdk.String("sit"),
+        Query: unifiedgosdk.String("vel"),
+        Sort: unifiedgosdk.String("laboriosam"),
+        UpdatedGte: types.MustTimeFromString("2022-11-27T15:29:14.022Z"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -274,11 +280,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.GetCrmConnectionIDContactRequest](../../models/operations/getcrmconnectionidcontactrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.GetCrmConnectionIDContactSecurity](../../models/operations/getcrmconnectionidcontactsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.GetCrmConnectionIDContactRequest](../../models/operations/getcrmconnectionidcontactrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
@@ -298,21 +303,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetCrmConnectionIDContactIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.GetCrmConnectionIDContactID(ctx, operations.GetCrmConnectionIDContactIDRequest{
-        ConnectionID: "beatae",
-        ID: "65765066-4187-40d9-921f-9ad030c4ecc1",
-    }, operationSecurity)
+        ConnectionID: "rem",
+        ID: "70d9d21f-9ad0-430c-8ecc-11a083642906",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -325,11 +332,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.GetCrmConnectionIDContactIDRequest](../../models/operations/getcrmconnectionidcontactidrequest.md)   | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `security`                                                                                                       | [operations.GetCrmConnectionIDContactIDSecurity](../../models/operations/getcrmconnectionidcontactidsecurity.md) | :heavy_check_mark:                                                                                               | The security requirements to use for the request.                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.GetCrmConnectionIDContactIDRequest](../../models/operations/getcrmconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
@@ -349,28 +355,30 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetUcConnectionIDContactSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.GetUcConnectionIDContact(ctx, operations.GetUcConnectionIDContactRequest{
-        AgentID: unifiedto.String("beatae"),
-        ConnectionID: "id",
-        Limit: unifiedto.Float64(90.6),
-        Offset: unifiedto.Float64(5515.76),
-        Order: unifiedto.String("ratione"),
-        Query: unifiedto.String("iure"),
-        Sort: unifiedto.String("tempora"),
-        UpdatedGte: types.MustTimeFromString("2022-05-21T02:14:12.604Z"),
-    }, operationSecurity)
+        AgentID: unifiedgosdk.String("laudantium"),
+        ConnectionID: "facilis",
+        Limit: unifiedgosdk.Float64(5146.09),
+        Offset: unifiedgosdk.Float64(3530.75),
+        Order: unifiedgosdk.String("aut"),
+        Query: unifiedgosdk.String("quia"),
+        Sort: unifiedgosdk.String("officia"),
+        UpdatedGte: types.MustTimeFromString("2022-08-22T02:23:15.742Z"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -383,11 +391,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.GetUcConnectionIDContactRequest](../../models/operations/getucconnectionidcontactrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [operations.GetUcConnectionIDContactSecurity](../../models/operations/getucconnectionidcontactsecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.GetUcConnectionIDContactRequest](../../models/operations/getucconnectionidcontactrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
@@ -407,21 +414,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetUcConnectionIDContactIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.GetUcConnectionIDContactID(ctx, operations.GetUcConnectionIDContactIDRequest{
-        ConnectionID: "voluptatem",
-        ID: "68b8502a-55e7-4f73-bc84-5e320a319f4b",
-    }, operationSecurity)
+        ConnectionID: "accusamus",
+        ID: "7f73bc84-5e32-40a3-99f4-badf947c9a86",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -434,11 +443,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.GetUcConnectionIDContactIDRequest](../../models/operations/getucconnectionidcontactidrequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [operations.GetUcConnectionIDContactIDSecurity](../../models/operations/getucconnectionidcontactidsecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.GetUcConnectionIDContactIDRequest](../../models/operations/getucconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
@@ -458,60 +466,61 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PatchCrmConnectionIDContactIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.PatchCrmConnectionIDContactID(ctx, operations.PatchCrmConnectionIDContactIDRequest{
         CrmContact: &shared.CrmContact{
             Address: &shared.PropertyCrmContactAddress{
-                Address1: unifiedto.String("dolorum"),
-                Address2: unifiedto.String("quibusdam"),
-                City: unifiedto.String("Mission"),
-                Country: unifiedto.String("El Salvador"),
-                CountryCode: unifiedto.String("KM"),
-                PostalCode: unifiedto.String("66534-7721"),
-                Region: unifiedto.String("magnam"),
-                RegionCode: unifiedto.String("dolores"),
+                Address1: unifiedgosdk.String("nihil"),
+                Address2: unifiedgosdk.String("facilis"),
+                City: unifiedgosdk.String("Goyetteberg"),
+                Country: unifiedgosdk.String("French Polynesia"),
+                CountryCode: unifiedgosdk.String("CH"),
+                PostalCode: unifiedgosdk.String("44350"),
+                Region: unifiedgosdk.String("suscipit"),
+                RegionCode: unifiedgosdk.String("quibusdam"),
             },
-            Company: unifiedto.String("Kemmer - Kassulke"),
+            Company: unifiedgosdk.String("Russel, Nader and Little"),
             CompanyIds: []string{
-                "ad",
+                "voluptates",
             },
-            CreatedAt: types.MustTimeFromString("2022-11-07T21:20:17.353Z"),
+            CreatedAt: types.MustTimeFromString("2021-11-25T22:17:39.417Z"),
             DealIds: []string{
-                "suscipit",
+                "illo",
             },
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedto.String("Rupert_Russel@hotmail.com"),
-                    Type: shared.CrmEmailTypeOther.ToPointer(),
+                    Email: unifiedgosdk.String("Nyasia76@hotmail.com"),
+                    Type: shared.CrmEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedto.String("f51fcb4c-593e-4c12-8daa-d0ec7afedbd8"),
-            Name: unifiedto.String("Paulette White"),
+            ID: unifiedgosdk.String("93ec12cd-aad0-4ec7-afed-bd80df448a47"),
+            Name: unifiedgosdk.String("Jackie Fahey DDS"),
             Raw: &shared.PropertyCrmContactRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "corrupti",
-                    Type: shared.CrmTelephoneTypeFax.ToPointer(),
+                    Telephone: "minima",
+                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
                 },
             },
-            Title: unifiedto.String("Mrs."),
-            UpdatedAt: types.MustTimeFromString("2022-01-12T14:31:46.273Z"),
+            Title: unifiedgosdk.String("Ms."),
+            UpdatedAt: types.MustTimeFromString("2022-12-11T07:04:52.187Z"),
         },
-        ConnectionID: "iste",
-        ID: "390c5888-0983-4dab-b9ef-3ffdd9f7f079",
-    }, operationSecurity)
+        ConnectionID: "provident",
+        ID: "83dabf9e-f3ff-4dd9-b7f0-79af4d35724c",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -524,11 +533,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
-| `request`                                                                                                            | [operations.PatchCrmConnectionIDContactIDRequest](../../models/operations/patchcrmconnectionidcontactidrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.PatchCrmConnectionIDContactIDSecurity](../../models/operations/patchcrmconnectionidcontactidsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.PatchCrmConnectionIDContactIDRequest](../../models/operations/patchcrmconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -548,22 +556,24 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PatchCrmConnectionIDContactIDCompanyCompanyIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.PatchCrmConnectionIDContactIDCompanyCompanyID(ctx, operations.PatchCrmConnectionIDContactIDCompanyCompanyIDRequest{
-        CompanyID: "similique",
-        ConnectionID: "asperiores",
-        ID: "4d35724c-db0f-44d2-8118-7d56844eded8",
-    }, operationSecurity)
+        CompanyID: "fugiat",
+        ConnectionID: "soluta",
+        ID: "0f4d2811-87d5-4684-8ede-d85a9065e628",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -576,11 +586,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                                                | :heavy_check_mark:                                                                                                                                   | The context to use for the request.                                                                                                                  |
-| `request`                                                                                                                                            | [operations.PatchCrmConnectionIDContactIDCompanyCompanyIDRequest](../../models/operations/patchcrmconnectionidcontactidcompanycompanyidrequest.md)   | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `security`                                                                                                                                           | [operations.PatchCrmConnectionIDContactIDCompanyCompanyIDSecurity](../../models/operations/patchcrmconnectionidcontactidcompanycompanyidsecurity.md) | :heavy_check_mark:                                                                                                                                   | The security requirements to use for the request.                                                                                                    |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                                                              | :heavy_check_mark:                                                                                                                                 | The context to use for the request.                                                                                                                |
+| `request`                                                                                                                                          | [operations.PatchCrmConnectionIDContactIDCompanyCompanyIDRequest](../../models/operations/patchcrmconnectionidcontactidcompanycompanyidrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
 
 
 ### Response
@@ -600,22 +609,24 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PatchCrmConnectionIDContactIDDealDealIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.PatchCrmConnectionIDContactIDDealDealID(ctx, operations.PatchCrmConnectionIDContactIDDealDealIDRequest{
-        ConnectionID: "enim",
-        DealID: "animi",
-        ID: "9065e628-bdfc-4203-ab6c-879923b7e135",
-    }, operationSecurity)
+        ConnectionID: "quidem",
+        DealID: "illum",
+        ID: "fc2032b6-c879-4923-b7e1-3584f7ae12c6",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -628,11 +639,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                                    | :heavy_check_mark:                                                                                                                       | The context to use for the request.                                                                                                      |
-| `request`                                                                                                                                | [operations.PatchCrmConnectionIDContactIDDealDealIDRequest](../../models/operations/patchcrmconnectionidcontactiddealdealidrequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `security`                                                                                                                               | [operations.PatchCrmConnectionIDContactIDDealDealIDSecurity](../../models/operations/patchcrmconnectionidcontactiddealdealidsecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                                  | :heavy_check_mark:                                                                                                                     | The context to use for the request.                                                                                                    |
+| `request`                                                                                                                              | [operations.PatchCrmConnectionIDContactIDDealDealIDRequest](../../models/operations/patchcrmconnectionidcontactiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response
@@ -652,44 +662,45 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PatchUcConnectionIDContactIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.PatchUcConnectionIDContactID(ctx, operations.PatchUcConnectionIDContactIDRequest{
         UcContact: &shared.UcContact{
-            Company: unifiedto.String("Graham - Zboncak"),
-            CreatedAt: types.MustTimeFromString("2022-05-10T21:25:57.790Z"),
+            Company: unifiedgosdk.String("Morissette - Brown"),
+            CreatedAt: types.MustTimeFromString("2021-06-15T21:46:49.215Z"),
             Emails: []shared.UcEmail{
                 shared.UcEmail{
-                    Email: "Augustine.Davis50@hotmail.com",
+                    Email: "Nicolas8@gmail.com",
                     Type: shared.UcEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedto.String("1f82ce11-5717-4230-9377-dcfa89df975e"),
-            Name: unifiedto.String("Erica Jerde"),
+            ID: unifiedgosdk.String("71723053-77dc-4fa8-9df9-75e356686092"),
+            Name: unifiedgosdk.String("Austin Runte"),
             Raw: &shared.PropertyUcContactRaw{},
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
-                    Telephone: "aliquid",
-                    Type: shared.UcTelephoneTypeWork.ToPointer(),
+                    Telephone: "temporibus",
+                    Type: shared.UcTelephoneTypeFax.ToPointer(),
                 },
             },
-            Title: unifiedto.String("Ms."),
-            UpdatedAt: types.MustTimeFromString("2022-01-25T19:10:58.985Z"),
+            Title: unifiedgosdk.String("Mrs."),
+            UpdatedAt: types.MustTimeFromString("2022-09-08T04:57:24.220Z"),
         },
-        ConnectionID: "unde",
-        ID: "c3ddc5f1-11de-4a10-a6d5-41a4d190feb2",
-    }, operationSecurity)
+        ConnectionID: "vitae",
+        ID: "1dea1026-d541-4a4d-990f-eb21780bccc0",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -702,11 +713,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.PatchUcConnectionIDContactIDRequest](../../models/operations/patchucconnectionidcontactidrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.PatchUcConnectionIDContactIDSecurity](../../models/operations/patchucconnectionidcontactidsecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.PatchUcConnectionIDContactIDRequest](../../models/operations/patchucconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
@@ -726,59 +736,60 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PostCrmConnectionIDContactSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.PostCrmConnectionIDContact(ctx, operations.PostCrmConnectionIDContactRequest{
         CrmContact: &shared.CrmContact{
             Address: &shared.PropertyCrmContactAddress{
-                Address1: unifiedto.String("vitae"),
-                Address2: unifiedto.String("odio"),
-                City: unifiedto.String("Amyacester"),
-                Country: unifiedto.String("Slovenia"),
-                CountryCode: unifiedto.String("SI"),
-                PostalCode: unifiedto.String("08778-8725"),
-                Region: unifiedto.String("tempora"),
-                RegionCode: unifiedto.String("esse"),
+                Address1: unifiedgosdk.String("possimus"),
+                Address2: unifiedgosdk.String("distinctio"),
+                City: unifiedgosdk.String("Shanahanhaven"),
+                Country: unifiedgosdk.String("Saint Helena"),
+                CountryCode: unifiedgosdk.String("FR"),
+                PostalCode: unifiedgosdk.String("24059-7392"),
+                Region: unifiedgosdk.String("natus"),
+                RegionCode: unifiedgosdk.String("ab"),
             },
-            Company: unifiedto.String("Lowe Group"),
+            Company: unifiedgosdk.String("Keeling, Prohaska and Schowalter"),
             CompanyIds: []string{
-                "facilis",
+                "ab",
             },
-            CreatedAt: types.MustTimeFromString("2022-01-29T03:16:14.679Z"),
+            CreatedAt: types.MustTimeFromString("2022-07-02T04:44:41.833Z"),
             DealIds: []string{
-                "amet",
+                "porro",
             },
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedto.String("Annetta_Torphy@yahoo.com"),
-                    Type: shared.CrmEmailTypeOther.ToPointer(),
+                    Email: unifiedgosdk.String("Omer.Graham25@gmail.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
                 },
             },
-            ID: unifiedto.String("158c4c4e-5459-49ea-b422-60e9b200ce78"),
-            Name: unifiedto.String("Carl Rath"),
+            ID: unifiedgosdk.String("99ea3422-60e9-4b20-8ce7-8a1bd8fb7a0a"),
+            Name: unifiedgosdk.String("Julie Homenick"),
             Raw: &shared.PropertyCrmContactRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "maiores",
-                    Type: shared.CrmTelephoneTypeFax.ToPointer(),
+                    Telephone: "dignissimos",
+                    Type: shared.CrmTelephoneTypeWork.ToPointer(),
                 },
             },
-            Title: unifiedto.String("Ms."),
-            UpdatedAt: types.MustTimeFromString("2022-11-30T23:34:54.352Z"),
+            Title: unifiedgosdk.String("Mr."),
+            UpdatedAt: types.MustTimeFromString("2022-01-24T20:30:44.279Z"),
         },
-        ConnectionID: "fuga",
-    }, operationSecurity)
+        ConnectionID: "aut",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -791,11 +802,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.PostCrmConnectionIDContactRequest](../../models/operations/postcrmconnectionidcontactrequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [operations.PostCrmConnectionIDContactSecurity](../../models/operations/postcrmconnectionidcontactsecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.PostCrmConnectionIDContactRequest](../../models/operations/postcrmconnectionidcontactrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
@@ -815,43 +825,44 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PostUcConnectionIDContactSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.PostUcConnectionIDContact(ctx, operations.PostUcConnectionIDContactRequest{
         UcContact: &shared.UcContact{
-            Company: unifiedto.String("Braun and Sons"),
-            CreatedAt: types.MustTimeFromString("2020-05-06T08:27:54.041Z"),
+            Company: unifiedgosdk.String("Koch - Windler"),
+            CreatedAt: types.MustTimeFromString("2022-08-16T16:49:13.505Z"),
             Emails: []shared.UcEmail{
                 shared.UcEmail{
-                    Email: "Caleb.Dickens1@yahoo.com",
+                    Email: "Sonia_Morar@gmail.com",
                     Type: shared.UcEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedto.String("7fa30e9a-f725-4b29-9220-30d83f5aeb77"),
-            Name: unifiedto.String("Mr. Tracy Shields"),
+            ID: unifiedgosdk.String("25b29122-030d-483f-9aeb-7799d22e8c1f"),
+            Name: unifiedgosdk.String("Clifford Mertz"),
             Raw: &shared.PropertyUcContactRaw{},
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
-                    Telephone: "deleniti",
-                    Type: shared.UcTelephoneTypeFax.ToPointer(),
+                    Telephone: "sunt",
+                    Type: shared.UcTelephoneTypeHome.ToPointer(),
                 },
             },
-            Title: unifiedto.String("Mr."),
-            UpdatedAt: types.MustTimeFromString("2021-05-16T15:40:19.045Z"),
+            Title: unifiedgosdk.String("Dr."),
+            UpdatedAt: types.MustTimeFromString("2020-08-28T22:20:14.231Z"),
         },
-        ConnectionID: "magnam",
-    }, operationSecurity)
+        ConnectionID: "quaerat",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -864,11 +875,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.PostUcConnectionIDContactRequest](../../models/operations/postucconnectionidcontactrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.PostUcConnectionIDContactSecurity](../../models/operations/postucconnectionidcontactsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.PostUcConnectionIDContactRequest](../../models/operations/postucconnectionidcontactrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
@@ -888,60 +898,61 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PutCrmConnectionIDContactIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.PutCrmConnectionIDContactID(ctx, operations.PutCrmConnectionIDContactIDRequest{
         CrmContact: &shared.CrmContact{
             Address: &shared.PropertyCrmContactAddress{
-                Address1: unifiedto.String("perspiciatis"),
-                Address2: unifiedto.String("amet"),
-                City: unifiedto.String("Braedenbury"),
-                Country: unifiedto.String("Venezuela"),
-                CountryCode: unifiedto.String("SY"),
-                PostalCode: unifiedto.String("31754-4817"),
-                Region: unifiedto.String("consequuntur"),
-                RegionCode: unifiedto.String("possimus"),
+                Address1: unifiedgosdk.String("magni"),
+                Address2: unifiedgosdk.String("cumque"),
+                City: unifiedgosdk.String("Isidroview"),
+                Country: unifiedgosdk.String("Singapore"),
+                CountryCode: unifiedgosdk.String("CA"),
+                PostalCode: unifiedgosdk.String("18963-7970"),
+                Region: unifiedgosdk.String("nobis"),
+                RegionCode: unifiedgosdk.String("esse"),
             },
-            Company: unifiedto.String("Pollich, Haag and Rosenbaum"),
+            Company: unifiedgosdk.String("Christiansen - Donnelly"),
             CompanyIds: []string{
-                "hic",
+                "alias",
             },
-            CreatedAt: types.MustTimeFromString("2022-10-10T04:57:04.387Z"),
+            CreatedAt: types.MustTimeFromString("2021-05-04T15:01:38.967Z"),
             DealIds: []string{
-                "nobis",
+                "numquam",
             },
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedto.String("Gladyce0@yahoo.com"),
+                    Email: unifiedgosdk.String("Will69@gmail.com"),
                     Type: shared.CrmEmailTypeOther.ToPointer(),
                 },
             },
-            ID: unifiedto.String("841fb1bd-23fd-4b14-9b6b-e5a685998e22"),
-            Name: unifiedto.String("Dr. Hugo Daugherty"),
+            ID: unifiedgosdk.String("23fdb14d-b6be-45a6-8599-8e22ae20da16"),
+            Name: unifiedgosdk.String("Sylvester Cormier"),
             Raw: &shared.PropertyCrmContactRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "quae",
-                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
+                    Telephone: "iusto",
+                    Type: shared.CrmTelephoneTypeWork.ToPointer(),
                 },
             },
-            Title: unifiedto.String("Dr."),
-            UpdatedAt: types.MustTimeFromString("2022-07-21T21:21:59.349Z"),
+            Title: unifiedgosdk.String("Miss"),
+            UpdatedAt: types.MustTimeFromString("2022-07-01T20:28:02.172Z"),
         },
-        ConnectionID: "nam",
-        ID: "271a289c-57e8-454e-9043-9d2224656946",
-    }, operationSecurity)
+        ConnectionID: "sint",
+        ID: "c57e854e-9043-49d2-a246-569462407084",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -954,11 +965,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.PutCrmConnectionIDContactIDRequest](../../models/operations/putcrmconnectionidcontactidrequest.md)   | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `security`                                                                                                       | [operations.PutCrmConnectionIDContactIDSecurity](../../models/operations/putcrmconnectionidcontactidsecurity.md) | :heavy_check_mark:                                                                                               | The security requirements to use for the request.                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.PutCrmConnectionIDContactIDRequest](../../models/operations/putcrmconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
@@ -978,22 +988,24 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PutCrmConnectionIDContactIDCompanyCompanyIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.PutCrmConnectionIDContactIDCompanyCompanyID(ctx, operations.PutCrmConnectionIDContactIDCompanyCompanyIDRequest{
-        CompanyID: "explicabo",
-        ConnectionID: "modi",
-        ID: "07084f7a-b37c-4ef0-a225-194db55410ad",
-    }, operationSecurity)
+        CompanyID: "delectus",
+        ConnectionID: "quam",
+        ID: "ab37cef0-2225-4194-9b55-410adc669af9",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1006,11 +1018,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                                                            | :heavy_check_mark:                                                                                                                               | The context to use for the request.                                                                                                              |
-| `request`                                                                                                                                        | [operations.PutCrmConnectionIDContactIDCompanyCompanyIDRequest](../../models/operations/putcrmconnectionidcontactidcompanycompanyidrequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `security`                                                                                                                                       | [operations.PutCrmConnectionIDContactIDCompanyCompanyIDSecurity](../../models/operations/putcrmconnectionidcontactidcompanycompanyidsecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                                          | :heavy_check_mark:                                                                                                                             | The context to use for the request.                                                                                                            |
+| `request`                                                                                                                                      | [operations.PutCrmConnectionIDContactIDCompanyCompanyIDRequest](../../models/operations/putcrmconnectionidcontactidcompanycompanyidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
 
 
 ### Response
@@ -1030,22 +1041,24 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PutCrmConnectionIDContactIDDealDealIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.PutCrmConnectionIDContactIDDealDealID(ctx, operations.PutCrmConnectionIDContactIDDealDealIDRequest{
-        ConnectionID: "quo",
-        DealID: "suscipit",
-        ID: "69af90a2-6c7c-4dc9-81f0-68981d6bb33c",
-    }, operationSecurity)
+        ConnectionID: "alias",
+        DealID: "deserunt",
+        ID: "26c7cdc9-81f0-4689-81d6-bb33cfaa348c",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1058,11 +1071,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                                | :heavy_check_mark:                                                                                                                   | The context to use for the request.                                                                                                  |
-| `request`                                                                                                                            | [operations.PutCrmConnectionIDContactIDDealDealIDRequest](../../models/operations/putcrmconnectionidcontactiddealdealidrequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [operations.PutCrmConnectionIDContactIDDealDealIDSecurity](../../models/operations/putcrmconnectionidcontactiddealdealidsecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                                              | :heavy_check_mark:                                                                                                                 | The context to use for the request.                                                                                                |
+| `request`                                                                                                                          | [operations.PutCrmConnectionIDContactIDDealDealIDRequest](../../models/operations/putcrmconnectionidcontactiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -1082,44 +1094,45 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PutUcConnectionIDContactIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Contact.PutUcConnectionIDContactID(ctx, operations.PutUcConnectionIDContactIDRequest{
         UcContact: &shared.UcContact{
-            Company: unifiedto.String("Murphy, Pfannerstill and Feest"),
-            CreatedAt: types.MustTimeFromString("2022-06-26T16:56:56.149Z"),
+            Company: unifiedgosdk.String("Boehm LLC"),
+            CreatedAt: types.MustTimeFromString("2022-02-04T10:58:23.701Z"),
             Emails: []shared.UcEmail{
                 shared.UcEmail{
-                    Email: "Dax_Boehm30@hotmail.com",
-                    Type: shared.UcEmailTypeWork.ToPointer(),
+                    Email: "Jerrold.Watsica98@gmail.com",
+                    Type: shared.UcEmailTypeOther.ToPointer(),
                 },
             },
-            ID: unifiedto.String("7ee4fcf0-c42b-478f-9562-6398a0dc7663"),
-            Name: unifiedto.String("Jamie Schneider"),
+            ID: unifiedgosdk.String("f0c42b78-f156-4263-98a0-dc766324ccb0"),
+            Name: unifiedgosdk.String("Leticia Leannon"),
             Raw: &shared.PropertyUcContactRaw{},
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
-                    Telephone: "accusantium",
-                    Type: shared.UcTelephoneTypeOther.ToPointer(),
+                    Telephone: "inventore",
+                    Type: shared.UcTelephoneTypeWork.ToPointer(),
                 },
             },
-            Title: unifiedto.String("Miss"),
-            UpdatedAt: types.MustTimeFromString("2021-06-23T12:33:28.750Z"),
+            Title: unifiedgosdk.String("Dr."),
+            UpdatedAt: types.MustTimeFromString("2022-10-30T04:54:37.407Z"),
         },
-        ConnectionID: "est",
-        ID: "12d02529-270b-48d5-b22d-d895b8bcf24d",
-    }, operationSecurity)
+        ConnectionID: "enim",
+        ID: "29270b8d-5722-4dd8-95b8-bcf24db95969",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1132,11 +1145,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.PutUcConnectionIDContactIDRequest](../../models/operations/putucconnectionidcontactidrequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [operations.PutUcConnectionIDContactIDSecurity](../../models/operations/putucconnectionidcontactidsecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.PutUcConnectionIDContactIDRequest](../../models/operations/putucconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response

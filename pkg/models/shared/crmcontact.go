@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -25,6 +26,17 @@ type CrmContact struct {
 	Telephones []CrmTelephone `json:"telephones,omitempty"`
 	Title      *string        `json:"title,omitempty"`
 	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
+}
+
+func (c CrmContact) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CrmContact) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *CrmContact) GetAddress() *PropertyCrmContactAddress {

@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -18,6 +19,17 @@ type UcCall struct {
 	// The telephone number called
 	Telephone *PropertyUcCallTelephone `json:"telephone,omitempty"`
 	UpdatedAt *time.Time               `json:"updated_at,omitempty"`
+}
+
+func (u UcCall) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(u, "", false)
+}
+
+func (u *UcCall) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &u, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *UcCall) GetAgencyID() string {

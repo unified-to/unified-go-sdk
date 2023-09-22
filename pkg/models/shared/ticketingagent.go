@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -14,6 +15,17 @@ type TicketingAgent struct {
 	Raw        PropertyTicketingAgentRaw `json:"raw"`
 	Telephones []TicketingTelephone      `json:"telephones,omitempty"`
 	UpdatedAt  *time.Time                `json:"updated_at,omitempty"`
+}
+
+func (t TicketingAgent) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *TicketingAgent) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *TicketingAgent) GetCreatedAt() *time.Time {

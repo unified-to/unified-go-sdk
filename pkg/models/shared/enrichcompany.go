@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -38,6 +39,17 @@ type EnrichCompany struct {
 	YearFounded   *float64          `json:"year_founded,omitempty"`
 	YelpURL       *string           `json:"yelp_url,omitempty"`
 	YoutubeURL    *string           `json:"youtube_url,omitempty"`
+}
+
+func (e EnrichCompany) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(e, "", false)
+}
+
+func (e *EnrichCompany) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &e, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *EnrichCompany) GetAddress() *PropertyEnrichCompanyAddress {

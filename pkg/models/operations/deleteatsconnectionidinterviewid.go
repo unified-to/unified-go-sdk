@@ -6,17 +6,6 @@ import (
 	"net/http"
 )
 
-type DeleteAtsConnectionIDInterviewIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *DeleteAtsConnectionIDInterviewIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type DeleteAtsConnectionIDInterviewIDRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

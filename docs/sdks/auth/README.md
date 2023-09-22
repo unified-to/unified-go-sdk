@@ -17,28 +17,33 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
+            Jwt: "",
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Auth.GetUnifiedIntegrationAuthWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedto.String("beatae"),
-        ExternalXref: unifiedto.String("aliquid"),
-        FailureRedirect: unifiedto.String("modi"),
-        IntegrationType: "optio",
-        Lang: unifiedto.String("voluptatibus"),
-        Redirect: unifiedto.Bool(false),
+        Env: unifiedgosdk.String("quia"),
+        ExternalXref: unifiedgosdk.String("ullam"),
+        FailureRedirect: unifiedgosdk.String("quisquam"),
+        IntegrationType: "dicta",
+        Lang: unifiedgosdk.String("voluptatibus"),
+        Redirect: unifiedgosdk.Bool(false),
         Scopes: []GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes{
-            operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesMartechMemberRead,
+            operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesTicketingNoteWrite,
         },
-        State: unifiedto.String("officia"),
-        Subdomain: unifiedto.String("libero"),
-        SuccessRedirect: unifiedto.String("totam"),
-        WorkspaceID: "sequi",
+        State: unifiedgosdk.String("quae"),
+        Subdomain: unifiedgosdk.String("officiis"),
+        SuccessRedirect: unifiedgosdk.String("architecto"),
+        WorkspaceID: "architecto",
     })
     if err != nil {
         log.Fatal(err)
@@ -75,22 +80,27 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
+            Jwt: "",
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Auth.GetUnifiedIntegrationLoginWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedto.String("aliquid"),
-        FailureRedirect: unifiedto.String("ea"),
-        IntegrationType: "impedit",
-        Redirect: unifiedto.Bool(false),
-        State: unifiedto.String("ducimus"),
-        SuccessRedirect: unifiedto.String("odit"),
-        WorkspaceID: "velit",
+        Env: unifiedgosdk.String("enim"),
+        FailureRedirect: unifiedgosdk.String("optio"),
+        IntegrationType: "rem",
+        Redirect: unifiedgosdk.Bool(false),
+        State: unifiedgosdk.String("perferendis"),
+        SuccessRedirect: unifiedgosdk.String("facilis"),
+        WorkspaceID: "reiciendis",
     })
     if err != nil {
         log.Fatal(err)

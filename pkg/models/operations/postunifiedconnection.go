@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PostUnifiedConnectionSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PostUnifiedConnectionSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PostUnifiedConnectionResponse struct {
 	// Successful
 	Connection  *shared.Connection

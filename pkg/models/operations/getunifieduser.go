@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type GetUnifiedUserSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *GetUnifiedUserSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type GetUnifiedUserResponse struct {
 	ContentType string
 	StatusCode  int

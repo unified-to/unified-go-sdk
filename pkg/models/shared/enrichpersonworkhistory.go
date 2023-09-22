@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -14,6 +15,17 @@ type EnrichPersonWorkHistory struct {
 	Location      *string    `json:"location,omitempty"`
 	StartAt       *time.Time `json:"start_at,omitempty"`
 	Title         string     `json:"title"`
+}
+
+func (e EnrichPersonWorkHistory) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(e, "", false)
+}
+
+func (e *EnrichPersonWorkHistory) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &e, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *EnrichPersonWorkHistory) GetCompanyDomain() *string {

@@ -16,29 +16,31 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetUcConnectionIDCallSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Call.GetUcConnectionIDCall(ctx, operations.GetUcConnectionIDCallRequest{
-        AgentID: unifiedto.String("reiciendis"),
-        ConnectionID: "repellat",
-        ContactID: unifiedto.String("nulla"),
-        Limit: unifiedto.Float64(6711.16),
-        Offset: unifiedto.Float64(6176.57),
-        Order: unifiedto.String("accusamus"),
-        Query: unifiedto.String("doloremque"),
-        Sort: unifiedto.String("nisi"),
-        UpdatedGte: types.MustTimeFromString("2021-02-24T20:48:23.002Z"),
-    }, operationSecurity)
+        AgentID: unifiedgosdk.String("a"),
+        ConnectionID: "iste",
+        ContactID: unifiedgosdk.String("dicta"),
+        Limit: unifiedgosdk.Float64(5524.39),
+        Offset: unifiedgosdk.Float64(3563.15),
+        Order: unifiedgosdk.String("dolore"),
+        Query: unifiedgosdk.String("modi"),
+        Sort: unifiedgosdk.String("itaque"),
+        UpdatedGte: types.MustTimeFromString("2022-03-15T19:59:59.350Z"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,11 +53,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetUcConnectionIDCallRequest](../../models/operations/getucconnectionidcallrequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [operations.GetUcConnectionIDCallSecurity](../../models/operations/getucconnectionidcallsecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.GetUcConnectionIDCallRequest](../../models/operations/getucconnectionidcallrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response

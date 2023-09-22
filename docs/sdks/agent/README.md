@@ -22,21 +22,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteTicketingConnectionIDAgentIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Agent.DeleteTicketingConnectionIDAgentID(ctx, operations.DeleteTicketingConnectionIDAgentIDRequest{
-        ConnectionID: "perferendis",
-        ID: "5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb",
-    }, operationSecurity)
+        ConnectionID: "esse",
+        ID: "39205929-396f-4ea7-996e-b10faaa2352c",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,11 +51,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                          | :heavy_check_mark:                                                                                                             | The context to use for the request.                                                                                            |
-| `request`                                                                                                                      | [operations.DeleteTicketingConnectionIDAgentIDRequest](../../models/operations/deleteticketingconnectionidagentidrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [operations.DeleteTicketingConnectionIDAgentIDSecurity](../../models/operations/deleteticketingconnectionidagentidsecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                                        | :heavy_check_mark:                                                                                                           | The context to use for the request.                                                                                          |
+| `request`                                                                                                                    | [operations.DeleteTicketingConnectionIDAgentIDRequest](../../models/operations/deleteticketingconnectionidagentidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -73,27 +74,29 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetTicketingConnectionIDAgentSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Agent.GetTicketingConnectionIDAgent(ctx, operations.GetTicketingConnectionIDAgentRequest{
-        ConnectionID: "esse",
-        Limit: unifiedto.Float64(2165.5),
-        Offset: unifiedto.Float64(5684.34),
-        Order: unifiedto.String("aspernatur"),
-        Query: unifiedto.String("perferendis"),
-        Sort: unifiedto.String("ad"),
-        UpdatedGte: types.MustTimeFromString("2022-09-13T17:41:46.141Z"),
-    }, operationSecurity)
+        ConnectionID: "enim",
+        Limit: unifiedgosdk.Float64(6078.31),
+        Offset: unifiedgosdk.Float64(3637.11),
+        Order: unifiedgosdk.String("minima"),
+        Query: unifiedgosdk.String("excepturi"),
+        Sort: unifiedgosdk.String("accusantium"),
+        UpdatedGte: types.MustTimeFromString("2022-05-14T11:45:33.094Z"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -106,11 +109,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
-| `request`                                                                                                            | [operations.GetTicketingConnectionIDAgentRequest](../../models/operations/getticketingconnectionidagentrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.GetTicketingConnectionIDAgentSecurity](../../models/operations/getticketingconnectionidagentsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.GetTicketingConnectionIDAgentRequest](../../models/operations/getticketingconnectionidagentrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -130,21 +132,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetTicketingConnectionIDAgentIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Agent.GetTicketingConnectionIDAgentID(ctx, operations.GetTicketingConnectionIDAgentIDRequest{
-        ConnectionID: "iste",
-        ID: "396fea75-96eb-410f-aaa2-352c5955907a",
-    }, operationSecurity)
+        ConnectionID: "doloribus",
+        ID: "f1a3a2fa-9467-4739-a51a-a52c3f5ad019",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -157,11 +161,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
-| `request`                                                                                                                | [operations.GetTicketingConnectionIDAgentIDRequest](../../models/operations/getticketingconnectionidagentidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.GetTicketingConnectionIDAgentIDSecurity](../../models/operations/getticketingconnectionidagentidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.GetTicketingConnectionIDAgentIDRequest](../../models/operations/getticketingconnectionidagentidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -181,28 +184,30 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetUcConnectionIDAgentSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Agent.GetUcConnectionIDAgent(ctx, operations.GetUcConnectionIDAgentRequest{
-        ConnectionID: "doloribus",
-        ContactID: unifiedto.String("sapiente"),
-        Limit: unifiedto.Float64(1020.44),
-        Offset: unifiedto.Float64(6527.9),
-        Order: unifiedto.String("dolorem"),
-        Query: unifiedto.String("culpa"),
-        Sort: unifiedto.String("consequuntur"),
-        UpdatedGte: types.MustTimeFromString("2021-01-15T20:18:47.519Z"),
-    }, operationSecurity)
+        ConnectionID: "temporibus",
+        ContactID: unifiedgosdk.String("laborum"),
+        Limit: unifiedgosdk.Float64(960.98),
+        Offset: unifiedgosdk.Float64(9719.45),
+        Order: unifiedgosdk.String("voluptatibus"),
+        Query: unifiedgosdk.String("vero"),
+        Sort: unifiedgosdk.String("nihil"),
+        UpdatedGte: types.MustTimeFromString("2021-01-17T23:08:44.457Z"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -215,11 +220,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetUcConnectionIDAgentRequest](../../models/operations/getucconnectionidagentrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.GetUcConnectionIDAgentSecurity](../../models/operations/getucconnectionidagentsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetUcConnectionIDAgentRequest](../../models/operations/getucconnectionidagentrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
@@ -239,42 +243,43 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PatchTicketingConnectionIDAgentIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Agent.PatchTicketingConnectionIDAgentID(ctx, operations.PatchTicketingConnectionIDAgentIDRequest{
         TicketingAgent: &shared.TicketingAgent{
-            CreatedAt: types.MustTimeFromString("2022-06-30T02:19:51.375Z"),
+            CreatedAt: types.MustTimeFromString("2022-05-25T05:33:11.349Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Jamil62@yahoo.com",
+                    Email: "Myrtis44@yahoo.com",
                     Type: shared.TicketingEmailTypeWork.ToPointer(),
                 },
             },
-            ID: unifiedto.String("51aa52c3-f5ad-4019-9a1f-fe78f097b007"),
-            Name: unifiedto.String("Shawna Carter"),
+            ID: unifiedgosdk.String("f15471b5-e6e1-43b9-9d48-8e1e91e450ad"),
+            Name: unifiedgosdk.String("Joanna Rau"),
             Raw: shared.PropertyTicketingAgentRaw{},
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "iusto",
+                    Telephone: "modi",
                     Type: shared.TicketingTelephoneTypeWork.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2022-05-13T20:56:04.612Z"),
+            UpdatedAt: types.MustTimeFromString("2022-05-31T22:08:47.731Z"),
         },
-        ConnectionID: "accusamus",
-        ID: "6e13b99d-488e-41e9-9e45-0ad2abd44269",
-    }, operationSecurity)
+        ConnectionID: "quos",
+        ID: "02d502a9-4bb4-4f63-8969-e9a3efa77dfb",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -287,11 +292,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                                        | :heavy_check_mark:                                                                                                           | The context to use for the request.                                                                                          |
-| `request`                                                                                                                    | [operations.PatchTicketingConnectionIDAgentIDRequest](../../models/operations/patchticketingconnectionidagentidrequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [operations.PatchTicketingConnectionIDAgentIDSecurity](../../models/operations/patchticketingconnectionidagentidsecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                                      | :heavy_check_mark:                                                                                                         | The context to use for the request.                                                                                        |
+| `request`                                                                                                                  | [operations.PatchTicketingConnectionIDAgentIDRequest](../../models/operations/patchticketingconnectionidagentidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -311,41 +315,42 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PostTicketingConnectionIDAgentSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Agent.PostTicketingConnectionIDAgent(ctx, operations.PostTicketingConnectionIDAgentRequest{
         TicketingAgent: &shared.TicketingAgent{
-            CreatedAt: types.MustTimeFromString("2022-12-17T07:42:55.593Z"),
+            CreatedAt: types.MustTimeFromString("2022-09-14T10:27:07.590Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Rhoda14@gmail.com",
+                    Email: "Raquel_Jenkins@hotmail.com",
                     Type: shared.TicketingEmailTypeOther.ToPointer(),
                 },
             },
-            ID: unifiedto.String("94bb4f63-c969-4e9a-befa-77dfb14cd66a"),
-            Name: unifiedto.String("Alfred McClure"),
+            ID: unifiedgosdk.String("395efb9b-a88f-43a6-a997-074ba4469b6e"),
+            Name: unifiedgosdk.String("Ms. Julie Gusikowski"),
             Raw: shared.PropertyTicketingAgentRaw{},
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "delectus",
-                    Type: shared.TicketingTelephoneTypeFax.ToPointer(),
+                    Telephone: "provident",
+                    Type: shared.TicketingTelephoneTypeOther.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2021-07-20T13:32:41.687Z"),
+            UpdatedAt: types.MustTimeFromString("2022-12-07T10:53:17.121Z"),
         },
-        ConnectionID: "id",
-    }, operationSecurity)
+        ConnectionID: "mollitia",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -358,11 +363,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
-| `request`                                                                                                              | [operations.PostTicketingConnectionIDAgentRequest](../../models/operations/postticketingconnectionidagentrequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [operations.PostTicketingConnectionIDAgentSecurity](../../models/operations/postticketingconnectionidagentsecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.PostTicketingConnectionIDAgentRequest](../../models/operations/postticketingconnectionidagentrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
@@ -382,42 +386,43 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PutTicketingConnectionIDAgentIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Agent.PutTicketingConnectionIDAgentID(ctx, operations.PutTicketingConnectionIDAgentIDRequest{
         TicketingAgent: &shared.TicketingAgent{
-            CreatedAt: types.MustTimeFromString("2021-12-07T18:13:34.827Z"),
+            CreatedAt: types.MustTimeFromString("2021-01-16T22:43:33.071Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Daren.Nolan@hotmail.com",
-                    Type: shared.TicketingEmailTypeHome.ToPointer(),
+                    Email: "Holden.Ernser36@gmail.com",
+                    Type: shared.TicketingEmailTypeWork.ToPointer(),
                 },
             },
-            ID: unifiedto.String("97074ba4-469b-46e2-9419-59890afa563e"),
-            Name: unifiedto.String("Vivian Boyle"),
+            ID: unifiedgosdk.String("6fe4c8b7-11e5-4b7f-92ed-028921cddc69"),
+            Name: unifiedgosdk.String("Dr. Rosemary Bartoletti"),
             Raw: shared.PropertyTicketingAgentRaw{},
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "debitis",
-                    Type: shared.TicketingTelephoneTypeHome.ToPointer(),
+                    Telephone: "ipsam",
+                    Type: shared.TicketingTelephoneTypeOther.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2021-05-22T23:02:53.221Z"),
+            UpdatedAt: types.MustTimeFromString("2022-04-12T10:47:34.158Z"),
         },
-        ConnectionID: "facilis",
-        ID: "711e5b7f-d2ed-4028-921c-ddc692601fb5",
-    }, operationSecurity)
+        ConnectionID: "eaque",
+        ID: "d5f0d30c-5fbb-4258-b053-202c73d5fe9b",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -430,11 +435,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
-| `request`                                                                                                                | [operations.PutTicketingConnectionIDAgentIDRequest](../../models/operations/putticketingconnectionidagentidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.PutTicketingConnectionIDAgentIDSecurity](../../models/operations/putticketingconnectionidagentidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.PutTicketingConnectionIDAgentIDRequest](../../models/operations/putticketingconnectionidagentidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response

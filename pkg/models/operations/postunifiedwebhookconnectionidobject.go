@@ -9,17 +9,6 @@ import (
 	"net/http"
 )
 
-type PostUnifiedWebhookConnectionIDObjectSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PostUnifiedWebhookConnectionIDObjectSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PostUnifiedWebhookConnectionIDObjectEvents string
 
 const (

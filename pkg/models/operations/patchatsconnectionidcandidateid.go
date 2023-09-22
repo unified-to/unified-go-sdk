@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PatchAtsConnectionIDCandidateIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PatchAtsConnectionIDCandidateIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PatchAtsConnectionIDCandidateIDRequest struct {
 	AtsCandidate *shared.AtsCandidate `request:"mediaType=application/json"`
 	// ID of the connection

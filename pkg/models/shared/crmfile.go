@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -23,6 +24,17 @@ type CrmFile struct {
 	Raw         *PropertyCrmFileRaw `json:"raw,omitempty"`
 	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
 	UserID      *string             `json:"user_id,omitempty"`
+}
+
+func (c CrmFile) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CrmFile) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *CrmFile) GetActive() *bool {

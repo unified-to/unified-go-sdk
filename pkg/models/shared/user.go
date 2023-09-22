@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -10,7 +11,7 @@ import (
 type User struct {
 	CreatedAt   *time.Time        `json:"created_at,omitempty"`
 	Email       *string           `json:"email,omitempty"`
-	Environment *string           `json:"environment,omitempty"`
+	Environment *string           `default:"Production" json:"environment"`
 	ID          *string           `json:"id,omitempty"`
 	Meta        *PropertyUserMeta `json:"meta,omitempty"`
 	Name        string            `json:"name"`
@@ -18,6 +19,17 @@ type User struct {
 	WorkspaceID string            `json:"workspace_id"`
 	// A list of all of the user's workspaces
 	WorkspaceIds []string `json:"workspace_ids"`
+}
+
+func (u User) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(u, "", false)
+}
+
+func (u *User) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &u, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *User) GetCreatedAt() *time.Time {

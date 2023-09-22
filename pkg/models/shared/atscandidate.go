@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -20,6 +21,17 @@ type AtsCandidate struct {
 	Telephones  []AtsTelephone               `json:"telephones,omitempty"`
 	Title       *string                      `json:"title,omitempty"`
 	UpdatedAt   *time.Time                   `json:"updated_at,omitempty"`
+}
+
+func (a AtsCandidate) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AtsCandidate) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *AtsCandidate) GetAddress() *PropertyAtsCandidateAddress {

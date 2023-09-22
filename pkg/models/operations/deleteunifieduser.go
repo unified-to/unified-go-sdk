@@ -6,17 +6,6 @@ import (
 	"net/http"
 )
 
-type DeleteUnifiedUserSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *DeleteUnifiedUserSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type DeleteUnifiedUserResponse struct {
 	ContentType string
 	StatusCode  int

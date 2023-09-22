@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PatchUnifiedUserSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PatchUnifiedUserSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PatchUnifiedUserResponse struct {
 	ContentType string
 	StatusCode  int

@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -65,6 +66,17 @@ type EnrichPerson struct {
 	UpdatedAt     *time.Time                `json:"updated_at,omitempty"`
 	UtcOffset     *float64                  `json:"utc_offset,omitempty"`
 	WorkHistories []EnrichPersonWorkHistory `json:"work_histories,omitempty"`
+}
+
+func (e EnrichPerson) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(e, "", false)
+}
+
+func (e *EnrichPerson) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &e, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *EnrichPerson) GetAddress() *PropertyEnrichPersonAddress {

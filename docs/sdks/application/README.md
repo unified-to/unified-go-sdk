@@ -21,21 +21,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteAtsConnectionIDApplicationIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Application.DeleteAtsConnectionIDApplicationID(ctx, operations.DeleteAtsConnectionIDApplicationIDRequest{
-        ConnectionID: "rerum",
-        ID: "3fe49a8d-9cbf-4486-b332-3f9b77f3a410",
-    }, operationSecurity)
+        ConnectionID: "quaerat",
+        ID: "ebf69280-d1ba-477a-89eb-f737ae4203ce",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,11 +50,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                          | :heavy_check_mark:                                                                                                             | The context to use for the request.                                                                                            |
-| `request`                                                                                                                      | [operations.DeleteAtsConnectionIDApplicationIDRequest](../../models/operations/deleteatsconnectionidapplicationidrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [operations.DeleteAtsConnectionIDApplicationIDSecurity](../../models/operations/deleteatsconnectionidapplicationidsecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                                        | :heavy_check_mark:                                                                                                           | The context to use for the request.                                                                                          |
+| `request`                                                                                                                    | [operations.DeleteAtsConnectionIDApplicationIDRequest](../../models/operations/deleteatsconnectionidapplicationidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -72,29 +73,31 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetAtsConnectionIDApplicationSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Application.GetAtsConnectionIDApplication(ctx, operations.GetAtsConnectionIDApplicationRequest{
-        CandidateID: unifiedto.String("ipsa"),
-        ConnectionID: "iure",
-        JobID: unifiedto.String("odio"),
-        Limit: unifiedto.Float64(3117.96),
-        Offset: unifiedto.Float64(8810.05),
-        Order: unifiedto.String("quidem"),
-        Query: unifiedto.String("voluptatibus"),
-        Sort: unifiedto.String("voluptas"),
-        UpdatedGte: types.MustTimeFromString("2022-08-22T21:20:36.034Z"),
-    }, operationSecurity)
+        CandidateID: unifiedgosdk.String("ad"),
+        ConnectionID: "saepe",
+        JobID: unifiedgosdk.String("suscipit"),
+        Limit: unifiedgosdk.Float64(6457.85),
+        Offset: unifiedgosdk.Float64(5883.17),
+        Order: unifiedgosdk.String("minima"),
+        Query: unifiedgosdk.String("repellendus"),
+        Sort: unifiedgosdk.String("totam"),
+        UpdatedGte: types.MustTimeFromString("2022-12-31T23:01:47.942Z"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -107,11 +110,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
-| `request`                                                                                                            | [operations.GetAtsConnectionIDApplicationRequest](../../models/operations/getatsconnectionidapplicationrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.GetAtsConnectionIDApplicationSecurity](../../models/operations/getatsconnectionidapplicationsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.GetAtsConnectionIDApplicationRequest](../../models/operations/getatsconnectionidapplicationrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -131,21 +133,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetAtsConnectionIDApplicationIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Application.GetAtsConnectionIDApplicationID(ctx, operations.GetAtsConnectionIDApplicationIDRequest{
-        ConnectionID: "atque",
-        ID: "0d1ba77a-89eb-4f73-bae4-203ce5e6a95d",
-    }, operationSecurity)
+        ConnectionID: "at",
+        ID: "446ce2af-7a73-4cf3-be45-3f870b326b5a",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -158,11 +162,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
-| `request`                                                                                                                | [operations.GetAtsConnectionIDApplicationIDRequest](../../models/operations/getatsconnectionidapplicationidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.GetAtsConnectionIDApplicationIDSecurity](../../models/operations/getatsconnectionidapplicationidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.GetAtsConnectionIDApplicationIDRequest](../../models/operations/getatsconnectionidapplicationidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -182,36 +185,37 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PatchAtsConnectionIDApplicationIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Application.PatchAtsConnectionIDApplicationID(ctx, operations.PatchAtsConnectionIDApplicationIDRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustTimeFromString("2021-09-28T20:14:16.452Z"),
-            CandidateID: unifiedto.String("alias"),
-            CreatedAt: types.MustTimeFromString("2022-01-24T12:18:47.570Z"),
-            ID: unifiedto.String("46ce2af7-a73c-4f3b-a453-f870b326b5a7"),
-            JobID: unifiedto.String("ipsum"),
+            AppliedAt: types.MustTimeFromString("2022-10-14T13:38:40.307Z"),
+            CandidateID: unifiedgosdk.String("incidunt"),
+            CreatedAt: types.MustTimeFromString("2022-05-31T19:46:08.472Z"),
+            ID: unifiedgosdk.String("cdb1a842-2bb6-479d-a322-715bf0cbb1e3"),
+            JobID: unifiedgosdk.String("veritatis"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustTimeFromString("2022-10-24T22:37:32.805Z"),
-            RejectedReason: unifiedto.String("cupiditate"),
-            Source: unifiedto.String("maxime"),
-            Status: shared.AtsApplicationStatusHired.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-10-07T04:50:29.805Z"),
+            RejectedAt: types.MustTimeFromString("2021-11-23T21:35:15.992Z"),
+            RejectedReason: unifiedgosdk.String("tempore"),
+            Source: unifiedgosdk.String("cupiditate"),
+            Status: shared.AtsApplicationStatusNew.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2022-05-16T23:21:11.104Z"),
         },
-        ConnectionID: "laborum",
-        ID: "8422bb67-9d23-4227-95bf-0cbb1e31b8b9",
-    }, operationSecurity)
+        ConnectionID: "dolore",
+        ID: "43a1108e-0adc-4f4b-9218-79fce953f73e",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -224,11 +228,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                                        | :heavy_check_mark:                                                                                                           | The context to use for the request.                                                                                          |
-| `request`                                                                                                                    | [operations.PatchAtsConnectionIDApplicationIDRequest](../../models/operations/patchatsconnectionidapplicationidrequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [operations.PatchAtsConnectionIDApplicationIDSecurity](../../models/operations/patchatsconnectionidapplicationidsecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                                      | :heavy_check_mark:                                                                                                         | The context to use for the request.                                                                                        |
+| `request`                                                                                                                  | [operations.PatchAtsConnectionIDApplicationIDRequest](../../models/operations/patchatsconnectionidapplicationidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -248,35 +251,36 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PostAtsConnectionIDApplicationSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Application.PostAtsConnectionIDApplication(ctx, operations.PostAtsConnectionIDApplicationRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustTimeFromString("2022-01-14T21:26:14.171Z"),
-            CandidateID: unifiedto.String("dolorem"),
-            CreatedAt: types.MustTimeFromString("2022-09-18T06:37:26.413Z"),
-            ID: unifiedto.String("3a1108e0-adcf-44b9-a187-9fce953f73ef"),
-            JobID: unifiedto.String("dignissimos"),
+            AppliedAt: types.MustTimeFromString("2021-07-10T23:11:25.857Z"),
+            CandidateID: unifiedgosdk.String("hic"),
+            CreatedAt: types.MustTimeFromString("2021-05-27T13:58:14.379Z"),
+            ID: unifiedgosdk.String("7abd74dd-39c0-4f5d-acff-7c70a45626d4"),
+            JobID: unifiedgosdk.String("ratione"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustTimeFromString("2020-11-08T11:03:10.206Z"),
-            RejectedReason: unifiedto.String("quod"),
-            Source: unifiedto.String("odio"),
-            Status: shared.AtsApplicationStatusBackgroundCheck.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2021-04-02T18:28:29.036Z"),
+            RejectedAt: types.MustTimeFromString("2022-06-28T08:50:44.084Z"),
+            RejectedReason: unifiedgosdk.String("dicta"),
+            Source: unifiedgosdk.String("dolor"),
+            Status: shared.AtsApplicationStatusRejected.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2022-08-05T18:23:03.713Z"),
         },
-        ConnectionID: "ducimus",
-    }, operationSecurity)
+        ConnectionID: "nulla",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -289,11 +293,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
-| `request`                                                                                                              | [operations.PostAtsConnectionIDApplicationRequest](../../models/operations/postatsconnectionidapplicationrequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [operations.PostAtsConnectionIDApplicationSecurity](../../models/operations/postatsconnectionidapplicationsecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.PostAtsConnectionIDApplicationRequest](../../models/operations/postatsconnectionidapplicationrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
@@ -313,36 +316,37 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PutAtsConnectionIDApplicationIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Application.PutAtsConnectionIDApplicationID(ctx, operations.PutAtsConnectionIDApplicationIDRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustTimeFromString("2022-02-26T17:44:28.591Z"),
-            CandidateID: unifiedto.String("illum"),
-            CreatedAt: types.MustTimeFromString("2022-05-20T11:24:00.260Z"),
-            ID: unifiedto.String("c0f5d2cf-f7c7-40a4-9626-d436813f16d9"),
-            JobID: unifiedto.String("voluptatibus"),
+            AppliedAt: types.MustTimeFromString("2021-01-20T18:27:01.887Z"),
+            CandidateID: unifiedgosdk.String("nostrum"),
+            CreatedAt: types.MustTimeFromString("2020-08-20T04:25:24.387Z"),
+            ID: unifiedgosdk.String("e6c55614-6c3e-4250-bb00-8c42e141aac3"),
+            JobID: unifiedgosdk.String("eum"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustTimeFromString("2022-01-15T07:05:18.296Z"),
-            RejectedReason: unifiedto.String("quisquam"),
-            Source: unifiedto.String("saepe"),
-            Status: shared.AtsApplicationStatusFirstInterview.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2021-12-03T14:20:49.127Z"),
+            RejectedAt: types.MustTimeFromString("2022-04-01T11:18:05.592Z"),
+            RejectedReason: unifiedgosdk.String("quas"),
+            Source: unifiedgosdk.String("assumenda"),
+            Status: shared.AtsApplicationStatusHired.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2022-04-10T15:05:31.822Z"),
         },
-        ConnectionID: "veniam",
-        ID: "6146c3e2-50fb-4008-842e-141aac366c8d",
-    }, operationSecurity)
+        ConnectionID: "quasi",
+        ID: "44290747-4778-4a7b-9466-d28c10ab3cdc",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -355,11 +359,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
-| `request`                                                                                                                | [operations.PutAtsConnectionIDApplicationIDRequest](../../models/operations/putatsconnectionidapplicationidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.PutAtsConnectionIDApplicationIDSecurity](../../models/operations/putatsconnectionidapplicationidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.PutAtsConnectionIDApplicationIDRequest](../../models/operations/putatsconnectionidapplicationidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response

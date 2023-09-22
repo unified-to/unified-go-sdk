@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PostCrmConnectionIDCompanySecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PostCrmConnectionIDCompanySecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PostCrmConnectionIDCompanyRequest struct {
 	// A company represents an organization that optionally is associated with a deal and/or contacts
 	CrmCompany *shared.CrmCompany `request:"mediaType=application/json"`

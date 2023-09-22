@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -171,6 +172,17 @@ type HrisEmployee struct {
 	TerminatedAt     *time.Time                    `json:"terminated_at,omitempty"`
 	Title            *string                       `json:"title,omitempty"`
 	UpdatedAt        *time.Time                    `json:"updated_at,omitempty"`
+}
+
+func (h HrisEmployee) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(h, "", false)
+}
+
+func (h *HrisEmployee) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &h, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *HrisEmployee) GetAddress() *PropertyHrisEmployeeAddress {

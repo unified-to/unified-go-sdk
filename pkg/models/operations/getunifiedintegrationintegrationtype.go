@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type GetUnifiedIntegrationIntegrationTypeSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *GetUnifiedIntegrationIntegrationTypeSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type GetUnifiedIntegrationIntegrationTypeRequest struct {
 	// Type of the supported integration
 	IntegrationType string `pathParam:"style=simple,explode=false,name=integration_type"`

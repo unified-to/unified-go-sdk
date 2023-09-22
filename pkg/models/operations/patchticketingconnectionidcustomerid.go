@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PatchTicketingConnectionIDCustomerIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PatchTicketingConnectionIDCustomerIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PatchTicketingConnectionIDCustomerIDRequest struct {
 	TicketingCustomer *shared.TicketingCustomer `request:"mediaType=application/json"`
 	// ID of the connection

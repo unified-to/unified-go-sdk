@@ -21,20 +21,22 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteUnifiedConnectionIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Connection.DeleteUnifiedConnectionID(ctx, operations.DeleteUnifiedConnectionIDRequest{
-        ID: "bf60c321-f023-4b75-9236-7fe1a0cc8df7",
-    }, operationSecurity)
+        ID: "b75d2367-fe1a-40cc-8df7-9f0a396d90c3",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,11 +49,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.DeleteUnifiedConnectionIDRequest](../../models/operations/deleteunifiedconnectionidrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.DeleteUnifiedConnectionIDSecurity](../../models/operations/deleteunifiedconnectionidsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.DeleteUnifiedConnectionIDRequest](../../models/operations/deleteunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
@@ -71,30 +72,32 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetUnifiedConnectionSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Connection.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
         Categories: []GetUnifiedConnectionCategories{
-            operations.GetUnifiedConnectionCategoriesEnrich,
+            operations.GetUnifiedConnectionCategoriesAuth,
         },
-        Env: unifiedto.String("sapiente"),
-        ExternalXref: unifiedto.String("aperiam"),
-        Limit: unifiedto.Float64(6277.17),
-        Offset: unifiedto.Float64(1979.82),
-        Order: unifiedto.String("provident"),
-        Sort: unifiedto.String("ex"),
-        UpdatedGte: types.MustTimeFromString("2021-03-13T14:26:08.551Z"),
-    }, operationSecurity)
+        Env: unifiedgosdk.String("labore"),
+        ExternalXref: unifiedgosdk.String("expedita"),
+        Limit: unifiedgosdk.Float64(4467.37),
+        Offset: unifiedgosdk.Float64(7898.7),
+        Order: unifiedgosdk.String("sunt"),
+        Sort: unifiedgosdk.String("enim"),
+        UpdatedGte: types.MustTimeFromString("2020-01-24T16:46:41.592Z"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -107,11 +110,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetUnifiedConnectionRequest](../../models/operations/getunifiedconnectionrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `security`                                                                                         | [operations.GetUnifiedConnectionSecurity](../../models/operations/getunifiedconnectionsecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.GetUnifiedConnectionRequest](../../models/operations/getunifiedconnectionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
@@ -131,20 +133,22 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetUnifiedConnectionIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Connection.GetUnifiedConnectionID(ctx, operations.GetUnifiedConnectionIDRequest{
-        ID: "0c364b7c-15df-4bac-a188-b1c4ee2c8c6c",
-    }, operationSecurity)
+        ID: "bace188b-1c4e-4e2c-8c6c-e611feeb1c7c",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -157,11 +161,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetUnifiedConnectionIDRequest](../../models/operations/getunifiedconnectionidrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.GetUnifiedConnectionIDSecurity](../../models/operations/getunifiedconnectionidsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetUnifiedConnectionIDRequest](../../models/operations/getunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
@@ -181,65 +184,66 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PatchUnifiedConnectionIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Connection.PatchUnifiedConnectionID(ctx, operations.PatchUnifiedConnectionIDRequest{
         Connection: &shared.Connection{
             Auth: &shared.PropertyConnectionAuth{
-                AccessToken: unifiedto.String("recusandae"),
-                APIURL: unifiedto.String("ex"),
-                AppID: unifiedto.String("beatae"),
-                AuthorizeURL: unifiedto.String("veritatis"),
-                ClientID: unifiedto.String("maiores"),
-                ClientSecret: unifiedto.String("itaque"),
-                ConsumerKey: unifiedto.String("vero"),
-                ConsumerSecret: unifiedto.String("quidem"),
+                AccessToken: unifiedgosdk.String("distinctio"),
+                APIURL: unifiedgosdk.String("possimus"),
+                AppID: unifiedgosdk.String("cum"),
+                AuthorizeURL: unifiedgosdk.String("suscipit"),
+                ClientID: unifiedgosdk.String("saepe"),
+                ClientSecret: unifiedgosdk.String("earum"),
+                ConsumerKey: unifiedgosdk.String("quod"),
+                ConsumerSecret: unifiedgosdk.String("nihil"),
                 Emails: []string{
-                    "illo",
+                    "quaerat",
                 },
-                ExpiresIn: unifiedto.Float64(7782.42),
-                ExpiryDate: types.MustTimeFromString("2022-03-18T01:27:23.704Z"),
-                Key: unifiedto.String("distinctio"),
+                ExpiresIn: unifiedgosdk.Float64(2159.59),
+                ExpiryDate: types.MustTimeFromString("2022-06-27T03:53:09.176Z"),
+                Key: unifiedgosdk.String("rerum"),
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
-                Name: unifiedto.String("Felipe Homenick"),
+                Name: unifiedgosdk.String("Harry Hammes IV"),
                 OtherAuthInfo: []string{
-                    "quod",
+                    "esse",
                 },
-                Pem: unifiedto.String("nihil"),
-                RefreshToken: unifiedto.String("quaerat"),
-                State: unifiedto.String("ipsum"),
-                Token: unifiedto.String("ducimus"),
-                TokenURL: unifiedto.String("laudantium"),
+                Pem: unifiedgosdk.String("magnam"),
+                RefreshToken: unifiedgosdk.String("odio"),
+                State: unifiedgosdk.String("nulla"),
+                Token: unifiedgosdk.String("impedit"),
+                TokenURL: unifiedgosdk.String("cupiditate"),
             },
-            AuthAwsArn: unifiedto.String("rerum"),
+            AuthAwsArn: unifiedgosdk.String("illo"),
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesEnrich,
+                shared.PropertyConnectionCategoriesAuth,
             },
-            CreatedAt: types.MustTimeFromString("2022-09-06T09:53:00.602Z"),
-            Environment: unifiedto.String("sequi"),
-            ExternalXref: unifiedto.String("beatae"),
-            ID: unifiedto.String("7747dc91-5ad2-4caf-9dd6-723dc0f5ae2f"),
-            IntegrationType: "neque",
-            IsPaused: unifiedto.Bool(false),
+            CreatedAt: types.MustTimeFromString("2021-04-21T08:26:42.931Z"),
+            Environment: unifiedgosdk.String("fugit"),
+            ExternalXref: unifiedgosdk.String("maxime"),
+            ID: unifiedgosdk.String("af5dd672-3dc0-4f5a-a2f3-a6b700878756"),
+            IntegrationType: "ab",
+            IsPaused: unifiedgosdk.Bool(false),
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsTicketingCustomerRead,
+                shared.PropertyConnectionPermissionsCrmUserWrite,
             },
-            UpdatedAt: types.MustTimeFromString("2022-04-24T15:26:26.341Z"),
-            WorkspaceID: unifiedto.String("ducimus"),
+            UpdatedAt: types.MustTimeFromString("2022-01-16T17:11:29.866Z"),
+            WorkspaceID: unifiedgosdk.String("corporis"),
         },
-        ID: "00878756-143f-45a6-898b-55554080d40b",
-    }, operationSecurity)
+        ID: "a6c98b55-5540-480d-80bc-acc6cbd6b5f3",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -252,11 +256,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.PatchUnifiedConnectionIDRequest](../../models/operations/patchunifiedconnectionidrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [operations.PatchUnifiedConnectionIDSecurity](../../models/operations/patchunifiedconnectionidsecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.PatchUnifiedConnectionIDRequest](../../models/operations/patchunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
@@ -276,62 +279,62 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PostUnifiedConnectionSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Connection.PostUnifiedConnection(ctx, shared.Connection{
         Auth: &shared.PropertyConnectionAuth{
-            AccessToken: unifiedto.String("nobis"),
-            APIURL: unifiedto.String("similique"),
-            AppID: unifiedto.String("porro"),
-            AuthorizeURL: unifiedto.String("impedit"),
-            ClientID: unifiedto.String("nisi"),
-            ClientSecret: unifiedto.String("cumque"),
-            ConsumerKey: unifiedto.String("soluta"),
-            ConsumerSecret: unifiedto.String("fugiat"),
+            AccessToken: unifiedgosdk.String("necessitatibus"),
+            APIURL: unifiedgosdk.String("maxime"),
+            AppID: unifiedgosdk.String("cupiditate"),
+            AuthorizeURL: unifiedgosdk.String("voluptatem"),
+            ClientID: unifiedgosdk.String("provident"),
+            ClientSecret: unifiedgosdk.String("adipisci"),
+            ConsumerKey: unifiedgosdk.String("accusantium"),
+            ConsumerSecret: unifiedgosdk.String("magnam"),
             Emails: []string{
-                "laboriosam",
+                "repellat",
             },
-            ExpiresIn: unifiedto.Float64(7203.19),
-            ExpiryDate: types.MustTimeFromString("2022-01-08T15:51:51.663Z"),
-            Key: unifiedto.String("consectetur"),
+            ExpiresIn: unifiedgosdk.Float64(6076.31),
+            ExpiryDate: types.MustTimeFromString("2022-07-29T13:50:17.340Z"),
+            Key: unifiedgosdk.String("cum"),
             Meta: &shared.PropertyPropertyConnectionAuthMeta{},
-            Name: unifiedto.String("Ms. Wilbert McGlynn"),
+            Name: unifiedgosdk.String("Rufus Conroy"),
             OtherAuthInfo: []string{
-                "accusantium",
+                "sequi",
             },
-            Pem: unifiedto.String("magnam"),
-            RefreshToken: unifiedto.String("repellat"),
-            State: unifiedto.String("omnis"),
-            Token: unifiedto.String("explicabo"),
-            TokenURL: unifiedto.String("vel"),
+            Pem: unifiedgosdk.String("voluptatum"),
+            RefreshToken: unifiedgosdk.String("quasi"),
+            State: unifiedgosdk.String("error"),
+            Token: unifiedgosdk.String("nobis"),
+            TokenURL: unifiedgosdk.String("tempora"),
         },
-        AuthAwsArn: unifiedto.String("cum"),
+        AuthAwsArn: unifiedgosdk.String("voluptate"),
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesEnrich,
+            shared.PropertyConnectionCategoriesAts,
         },
-        CreatedAt: types.MustTimeFromString("2022-07-28T08:20:43.554Z"),
-        Environment: unifiedto.String("ipsam"),
-        ExternalXref: unifiedto.String("nostrum"),
-        ID: unifiedto.String("3819b474-b0ed-420e-9624-8fff639a910a"),
-        IntegrationType: "nam",
-        IsPaused: unifiedto.Bool(false),
+        CreatedAt: types.MustTimeFromString("2022-11-28T03:21:08.707Z"),
+        Environment: unifiedgosdk.String("voluptates"),
+        ExternalXref: unifiedgosdk.String("possimus"),
+        ID: unifiedgosdk.String("20e56248-fff6-439a-910a-bdcab6267669"),
+        IntegrationType: "laboriosam",
+        IsPaused: unifiedgosdk.Bool(false),
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsHrisGroupWrite,
+            shared.PropertyConnectionPermissionsAtsCandidateWrite,
         },
-        UpdatedAt: types.MustTimeFromString("2020-12-12T11:22:41.690Z"),
-        WorkspaceID: unifiedto.String("tempore"),
-    }, operationSecurity)
+        UpdatedAt: types.MustTimeFromString("2022-01-26T21:22:49.757Z"),
+        WorkspaceID: unifiedgosdk.String("quisquam"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -344,11 +347,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [shared.Connection](../../models/shared/connection.md)                                               | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [operations.PostUnifiedConnectionSecurity](../../models/operations/postunifiedconnectionsecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
+| Parameter                                              | Type                                                   | Required                                               | Description                                            |
+| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
+| `ctx`                                                  | [context.Context](https://pkg.go.dev/context#Context)  | :heavy_check_mark:                                     | The context to use for the request.                    |
+| `request`                                              | [shared.Connection](../../models/shared/connection.md) | :heavy_check_mark:                                     | The request object to use for the request.             |
 
 
 ### Response
@@ -368,65 +370,66 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PutUnifiedConnectionIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Connection.PutUnifiedConnectionID(ctx, operations.PutUnifiedConnectionIDRequest{
         Connection: &shared.Connection{
             Auth: &shared.PropertyConnectionAuth{
-                AccessToken: unifiedto.String("commodi"),
-                APIURL: unifiedto.String("fugit"),
-                AppID: unifiedto.String("suscipit"),
-                AuthorizeURL: unifiedto.String("voluptate"),
-                ClientID: unifiedto.String("nisi"),
-                ClientSecret: unifiedto.String("aliquid"),
-                ConsumerKey: unifiedto.String("provident"),
-                ConsumerSecret: unifiedto.String("laboriosam"),
+                AccessToken: unifiedgosdk.String("eaque"),
+                APIURL: unifiedgosdk.String("alias"),
+                AppID: unifiedgosdk.String("qui"),
+                AuthorizeURL: unifiedgosdk.String("consequuntur"),
+                ClientID: unifiedgosdk.String("vitae"),
+                ClientSecret: unifiedgosdk.String("quidem"),
+                ConsumerKey: unifiedgosdk.String("sequi"),
+                ConsumerSecret: unifiedgosdk.String("amet"),
                 Emails: []string{
-                    "accusamus",
+                    "exercitationem",
                 },
-                ExpiresIn: unifiedto.Float64(682.92),
-                ExpiryDate: types.MustTimeFromString("2020-08-18T14:47:31.331Z"),
-                Key: unifiedto.String("eaque"),
+                ExpiresIn: unifiedgosdk.Float64(8470.18),
+                ExpiryDate: types.MustTimeFromString("2021-10-18T19:31:06.005Z"),
+                Key: unifiedgosdk.String("similique"),
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
-                Name: unifiedto.String("Miss Lois Cruickshank"),
+                Name: unifiedgosdk.String("Garry Fahey"),
                 OtherAuthInfo: []string{
-                    "amet",
+                    "asperiores",
                 },
-                Pem: unifiedto.String("exercitationem"),
-                RefreshToken: unifiedto.String("illum"),
-                State: unifiedto.String("praesentium"),
-                Token: unifiedto.String("unde"),
-                TokenURL: unifiedto.String("similique"),
+                Pem: unifiedgosdk.String("temporibus"),
+                RefreshToken: unifiedgosdk.String("id"),
+                State: unifiedgosdk.String("atque"),
+                Token: unifiedgosdk.String("quibusdam"),
+                TokenURL: unifiedgosdk.String("sit"),
             },
-            AuthAwsArn: unifiedto.String("eligendi"),
+            AuthAwsArn: unifiedgosdk.String("quo"),
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesMartech,
+                shared.PropertyConnectionCategoriesAts,
             },
-            CreatedAt: types.MustTimeFromString("2022-02-10T02:37:22.453Z"),
-            Environment: unifiedto.String("nobis"),
-            ExternalXref: unifiedto.String("asperiores"),
-            ID: unifiedto.String("da8d0c54-9ef0-4300-8978-a61fa1cf2068"),
-            IntegrationType: "totam",
-            IsPaused: unifiedto.Bool(false),
+            CreatedAt: types.MustTimeFromString("2022-05-30T05:35:32.331Z"),
+            Environment: unifiedgosdk.String("vero"),
+            ExternalXref: unifiedgosdk.String("earum"),
+            ID: unifiedgosdk.String("03004978-a61f-4a1c-b206-88f77c1ffc71"),
+            IntegrationType: "facere",
+            IsPaused: unifiedgosdk.Bool(false),
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsAtsJobRead,
+                shared.PropertyConnectionPermissionsHrisGroupRead,
             },
-            UpdatedAt: types.MustTimeFromString("2022-07-16T11:02:07.974Z"),
-            WorkspaceID: unifiedto.String("quod"),
+            UpdatedAt: types.MustTimeFromString("2022-11-13T09:13:55.156Z"),
+            WorkspaceID: unifiedgosdk.String("ex"),
         },
-        ID: "1ffc71dc-a163-4f2a-bc80-a97ff334cddf",
-    }, operationSecurity)
+        ID: "3f2a3c80-a97f-4f33-8cdd-f857a9e61876",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -439,11 +442,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.PutUnifiedConnectionIDRequest](../../models/operations/putunifiedconnectionidrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.PutUnifiedConnectionIDSecurity](../../models/operations/putunifiedconnectionidsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.PutUnifiedConnectionIDRequest](../../models/operations/putunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response

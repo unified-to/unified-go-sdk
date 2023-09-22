@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -14,6 +15,17 @@ type MarketingList struct {
 	// The raw data returned by the integration for this list
 	Raw       *PropertyMarketingListRaw `json:"raw,omitempty"`
 	UpdatedAt *time.Time                `json:"updated_at,omitempty"`
+}
+
+func (m MarketingList) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(m, "", false)
+}
+
+func (m *MarketingList) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &m, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *MarketingList) GetCreatedAt() *string {

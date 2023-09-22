@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -15,6 +16,17 @@ type TicketingCustomer struct {
 	Tags       []string                     `json:"tags,omitempty"`
 	Telephones []TicketingTelephone         `json:"telephones,omitempty"`
 	UpdatedAt  *time.Time                   `json:"updated_at,omitempty"`
+}
+
+func (t TicketingCustomer) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *TicketingCustomer) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *TicketingCustomer) GetCreatedAt() *time.Time {

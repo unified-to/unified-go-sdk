@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -62,6 +63,17 @@ type HrisGroup struct {
 	Raw         *PropertyHrisGroupRaw `json:"raw,omitempty"`
 	Type        *HrisGroupType        `json:"type,omitempty"`
 	UpdatedAt   *time.Time            `json:"updated_at,omitempty"`
+}
+
+func (h HrisGroup) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(h, "", false)
+}
+
+func (h *HrisGroup) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &h, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *HrisGroup) GetCreatedAt() *time.Time {

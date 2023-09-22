@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type PutCrmConnectionIDLeadIDSecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *PutCrmConnectionIDLeadIDSecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type PutCrmConnectionIDLeadIDRequest struct {
 	CrmLead *shared.CrmLead `request:"mediaType=application/json"`
 	// ID of the connection

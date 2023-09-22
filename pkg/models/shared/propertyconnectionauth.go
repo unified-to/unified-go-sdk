@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -29,6 +30,17 @@ type PropertyConnectionAuth struct {
 	State         *string  `json:"state,omitempty"`
 	Token         *string  `json:"token,omitempty"`
 	TokenURL      *string  `json:"token_url,omitempty"`
+}
+
+func (p PropertyConnectionAuth) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(p, "", false)
+}
+
+func (p *PropertyConnectionAuth) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *PropertyConnectionAuth) GetAccessToken() *string {

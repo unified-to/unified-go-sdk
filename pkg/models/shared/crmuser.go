@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -23,6 +24,17 @@ type CrmUser struct {
 	Timezone       *string                 `json:"timezone,omitempty"`
 	Title          *string                 `json:"title,omitempty"`
 	UpdatedAt      *time.Time              `json:"updated_at,omitempty"`
+}
+
+func (c CrmUser) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CrmUser) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *CrmUser) GetActive() *bool {

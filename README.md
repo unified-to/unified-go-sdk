@@ -16,29 +16,29 @@ go get github.com/unified-to/unified-go-sdk
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```go
 package main
 
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteTicketingConnectionIDAgentIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Agent.DeleteTicketingConnectionIDAgentID(ctx, operations.DeleteTicketingConnectionIDAgentIDRequest{
-        ConnectionID: "corrupti",
-        ID: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
-    }, operationSecurity)
+        ConnectionID: "perferendis",
+        ID: "5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -541,6 +541,38 @@ func main() {
 * [GetUnifiedWebhookID](docs/sdks/webhook/README.md#getunifiedwebhookid) - Retrieve webhook by its ID
 * [PostUnifiedWebhookConnectionIDObject](docs/sdks/webhook/README.md#postunifiedwebhookconnectionidobject) - Create webhook subscription
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `nil`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+
+
+<!-- End Pagination -->
+
+
+
+<!-- Start Go Types -->
+
+<!-- End Go Types -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

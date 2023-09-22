@@ -7,17 +7,6 @@ import (
 	"net/http"
 )
 
-type GetEnrichConnectionIDCompanySecurity struct {
-	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
-}
-
-func (o *GetEnrichConnectionIDCompanySecurity) GetJwt() string {
-	if o == nil {
-		return ""
-	}
-	return o.Jwt
-}
-
 type GetEnrichConnectionIDCompanyRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

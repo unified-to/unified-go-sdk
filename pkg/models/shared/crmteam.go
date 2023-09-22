@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -14,6 +15,17 @@ type CrmTeam struct {
 	Raw         *PropertyCrmTeamRaw `json:"raw,omitempty"`
 	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
 	UserIds     []string            `json:"user_ids,omitempty"`
+}
+
+func (c CrmTeam) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CrmTeam) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *CrmTeam) GetCreatedAt() *time.Time {

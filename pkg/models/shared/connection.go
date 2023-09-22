@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -14,7 +15,7 @@ type Connection struct {
 	// The Integration categories that this connection supports
 	Categories      []PropertyConnectionCategories  `json:"categories"`
 	CreatedAt       *time.Time                      `json:"created_at,omitempty"`
-	Environment     *string                         `json:"environment,omitempty"`
+	Environment     *string                         `default:"Production" json:"environment"`
 	ExternalXref    *string                         `json:"external_xref,omitempty"`
 	ID              *string                         `json:"id,omitempty"`
 	IntegrationType string                          `json:"integration_type"`
@@ -22,6 +23,17 @@ type Connection struct {
 	Permissions     []PropertyConnectionPermissions `json:"permissions"`
 	UpdatedAt       *time.Time                      `json:"updated_at,omitempty"`
 	WorkspaceID     *string                         `json:"workspace_id,omitempty"`
+}
+
+func (c Connection) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *Connection) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *Connection) GetAuth() *PropertyConnectionAuth {

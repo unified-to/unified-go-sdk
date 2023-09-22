@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -121,7 +122,7 @@ type Webhook struct {
 	CheckedAt       *time.Time              `json:"checked_at,omitempty"`
 	ConnectionID    string                  `json:"connection_id"`
 	CreatedAt       *time.Time              `json:"created_at,omitempty"`
-	Environment     *string                 `json:"environment,omitempty"`
+	Environment     *string                 `default:"Production" json:"environment"`
 	Events          []PropertyWebhookEvents `json:"events"`
 	HookURL         string                  `json:"hook_url"`
 	ID              *string                 `json:"id,omitempty"`
@@ -133,6 +134,17 @@ type Webhook struct {
 	Subscriptions []string   `json:"subscriptions,omitempty"`
 	UpdatedAt     *time.Time `json:"updated_at,omitempty"`
 	WorkspaceID   string     `json:"workspace_id"`
+}
+
+func (w Webhook) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(w, "", false)
+}
+
+func (w *Webhook) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &w, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *Webhook) GetCheckedAt() *time.Time {

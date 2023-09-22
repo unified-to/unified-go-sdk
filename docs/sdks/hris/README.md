@@ -27,21 +27,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteHrisConnectionIDEmployeeIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.DeleteHrisConnectionIDEmployeeID(ctx, operations.DeleteHrisConnectionIDEmployeeIDRequest{
         ConnectionID: "excepturi",
         ID: "3e34316c-f55b-4431-b553-ccf1c204c4ad",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,11 +56,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                                      | :heavy_check_mark:                                                                                                         | The context to use for the request.                                                                                        |
-| `request`                                                                                                                  | [operations.DeleteHrisConnectionIDEmployeeIDRequest](../../models/operations/deletehrisconnectionidemployeeidrequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [operations.DeleteHrisConnectionIDEmployeeIDSecurity](../../models/operations/deletehrisconnectionidemployeeidsecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
+| `request`                                                                                                                | [operations.DeleteHrisConnectionIDEmployeeIDRequest](../../models/operations/deletehrisconnectionidemployeeidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
@@ -78,21 +79,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.DeleteHrisConnectionIDGroupIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.DeleteHrisConnectionIDGroupID(ctx, operations.DeleteHrisConnectionIDGroupIDRequest{
         ConnectionID: "quod",
         ID: "c9904c51-95b8-4648-8efa-78f1e2d3b901",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -105,11 +108,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
-| `request`                                                                                                            | [operations.DeleteHrisConnectionIDGroupIDRequest](../../models/operations/deletehrisconnectionidgroupidrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.DeleteHrisConnectionIDGroupIDSecurity](../../models/operations/deletehrisconnectionidgroupidsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.DeleteHrisConnectionIDGroupIDRequest](../../models/operations/deletehrisconnectionidgroupidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -129,27 +131,29 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetHrisConnectionIDEmployeeSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisConnectionIDEmployee(ctx, operations.GetHrisConnectionIDEmployeeRequest{
         ConnectionID: "saepe",
-        Limit: unifiedto.Float64(289.94),
-        Offset: unifiedto.Float64(5725.89),
-        Order: unifiedto.String("corporis"),
-        Query: unifiedto.String("explicabo"),
-        Sort: unifiedto.String("distinctio"),
+        Limit: unifiedgosdk.Float64(289.94),
+        Offset: unifiedgosdk.Float64(5725.89),
+        Order: unifiedgosdk.String("corporis"),
+        Query: unifiedgosdk.String("explicabo"),
+        Sort: unifiedgosdk.String("distinctio"),
         UpdatedGte: types.MustTimeFromString("2021-08-12T22:16:16.253Z"),
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -162,11 +166,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.GetHrisConnectionIDEmployeeRequest](../../models/operations/gethrisconnectionidemployeerequest.md)   | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `security`                                                                                                       | [operations.GetHrisConnectionIDEmployeeSecurity](../../models/operations/gethrisconnectionidemployeesecurity.md) | :heavy_check_mark:                                                                                               | The security requirements to use for the request.                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.GetHrisConnectionIDEmployeeRequest](../../models/operations/gethrisconnectionidemployeerequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
@@ -186,21 +189,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetHrisConnectionIDEmployeeIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisConnectionIDEmployeeID(ctx, operations.GetHrisConnectionIDEmployeeIDRequest{
         ConnectionID: "tempora",
         ID: "cbb19f71-3d95-4a41-a9c1-387271e18ea9",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -213,11 +218,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
-| `request`                                                                                                            | [operations.GetHrisConnectionIDEmployeeIDRequest](../../models/operations/gethrisconnectionidemployeeidrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.GetHrisConnectionIDEmployeeIDSecurity](../../models/operations/gethrisconnectionidemployeeidsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.GetHrisConnectionIDEmployeeIDRequest](../../models/operations/gethrisconnectionidemployeeidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -237,27 +241,29 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetHrisConnectionIDGroupSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisConnectionIDGroup(ctx, operations.GetHrisConnectionIDGroupRequest{
         ConnectionID: "debitis",
-        Limit: unifiedto.Float64(2501.58),
-        Offset: unifiedto.Float64(3333.54),
-        Order: unifiedto.String("illo"),
-        Query: unifiedto.String("illo"),
-        Sort: unifiedto.String("deleniti"),
+        Limit: unifiedgosdk.Float64(2501.58),
+        Offset: unifiedgosdk.Float64(3333.54),
+        Order: unifiedgosdk.String("illo"),
+        Query: unifiedgosdk.String("illo"),
+        Sort: unifiedgosdk.String("deleniti"),
         UpdatedGte: types.MustTimeFromString("2022-07-26T10:34:40.123Z"),
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -270,11 +276,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.GetHrisConnectionIDGroupRequest](../../models/operations/gethrisconnectionidgrouprequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [operations.GetHrisConnectionIDGroupSecurity](../../models/operations/gethrisconnectionidgroupsecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.GetHrisConnectionIDGroupRequest](../../models/operations/gethrisconnectionidgrouprequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
@@ -294,21 +299,23 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.GetHrisConnectionIDGroupIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisConnectionIDGroupID(ctx, operations.GetHrisConnectionIDGroupIDRequest{
         ConnectionID: "optio",
         ID: "c57fbd60-b1a7-48ed-a9a9-d4eea85658c2",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -321,11 +328,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.GetHrisConnectionIDGroupIDRequest](../../models/operations/gethrisconnectionidgroupidrequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [operations.GetHrisConnectionIDGroupIDSecurity](../../models/operations/gethrisconnectionidgroupidsecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.GetHrisConnectionIDGroupIDRequest](../../models/operations/gethrisconnectionidgroupidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
@@ -345,51 +351,52 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PatchHrisConnectionIDEmployeeIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.PatchHrisConnectionIDEmployeeID(ctx, operations.PatchHrisConnectionIDEmployeeIDRequest{
         HrisEmployee: &shared.HrisEmployee{
             Address: &shared.PropertyHrisEmployeeAddress{
-                Address1: unifiedto.String("at"),
-                Address2: unifiedto.String("modi"),
-                City: unifiedto.String("Findlay"),
-                Country: unifiedto.String("Saint Martin"),
-                CountryCode: unifiedto.String("LI"),
-                PostalCode: unifiedto.String("69291-4598"),
-                Region: unifiedto.String("unde"),
-                RegionCode: unifiedto.String("autem"),
+                Address1: unifiedgosdk.String("at"),
+                Address2: unifiedgosdk.String("modi"),
+                City: unifiedgosdk.String("Findlay"),
+                Country: unifiedgosdk.String("Saint Martin"),
+                CountryCode: unifiedgosdk.String("LI"),
+                PostalCode: unifiedgosdk.String("69291-4598"),
+                Region: unifiedgosdk.String("unde"),
+                RegionCode: unifiedgosdk.String("autem"),
             },
             CreatedAt: types.MustTimeFromString("2022-07-11T08:13:45.102Z"),
             DateOfBirth: types.MustTimeFromString("2022-02-18T07:36:00.073Z"),
-            Department: unifiedto.String("autem"),
-            Division: unifiedto.String("placeat"),
+            Department: unifiedgosdk.String("autem"),
+            Division: unifiedgosdk.String("placeat"),
             Emails: []shared.HrisEmail{
                 shared.HrisEmail{
                     Email: "Blaze97@yahoo.com",
                     Type: shared.HrisEmailTypeOther.ToPointer(),
                 },
             },
-            EmployeeNumber: unifiedto.String("id"),
+            EmployeeNumber: unifiedgosdk.String("id"),
             EmploymentStatus: shared.HrisEmployeeEmploymentStatusInactive.ToPointer(),
             EmploymentType: shared.HrisEmployeeEmploymentTypeIntern.ToPointer(),
             Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
             HiredAt: types.MustTimeFromString("2020-08-13T08:33:47.369Z"),
-            ID: unifiedto.String("ef234c95-5b9b-4df2-990a-bd9bbcc2725e"),
-            Location: unifiedto.String("impedit"),
-            ManagerID: unifiedto.String("magni"),
+            ID: unifiedgosdk.String("ef234c95-5b9b-4df2-990a-bd9bbcc2725e"),
+            Location: unifiedgosdk.String("impedit"),
+            ManagerID: unifiedgosdk.String("magni"),
             MaritalStatus: shared.HrisEmployeeMaritalStatusMarried.ToPointer(),
-            Name: unifiedto.String("Sabrina Schamberger Sr."),
+            Name: unifiedgosdk.String("Sabrina Schamberger Sr."),
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
@@ -398,12 +405,12 @@ func main() {
                 },
             },
             TerminatedAt: types.MustTimeFromString("2022-06-27T13:37:26.116Z"),
-            Title: unifiedto.String("Mr."),
+            Title: unifiedgosdk.String("Mr."),
             UpdatedAt: types.MustTimeFromString("2021-10-27T12:07:56.119Z"),
         },
         ConnectionID: "excepturi",
         ID: "ef68e45c-8add-4fac-b545-00430c6632b4",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -416,11 +423,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
-| `request`                                                                                                                | [operations.PatchHrisConnectionIDEmployeeIDRequest](../../models/operations/patchhrisconnectionidemployeeidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.PatchHrisConnectionIDEmployeeIDSecurity](../../models/operations/patchhrisconnectionidemployeeidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.PatchHrisConnectionIDEmployeeIDRequest](../../models/operations/patchhrisconnectionidemployeeidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -440,40 +446,41 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PatchHrisConnectionIDGroupIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.PatchHrisConnectionIDGroupID(ctx, operations.PatchHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
             CreatedAt: types.MustTimeFromString("2022-05-31T02:06:03.542Z"),
-            Description: unifiedto.String("inventore"),
+            Description: unifiedgosdk.String("inventore"),
             EmployeeIds: []string{
                 "sapiente",
             },
-            ID: unifiedto.String("df01c3e9-1e8f-47bc-a9d4-60a77eceb26d"),
-            IsActive: unifiedto.Bool(false),
+            ID: unifiedgosdk.String("df01c3e9-1e8f-47bc-a9d4-60a77eceb26d"),
+            IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
                 "architecto",
             },
-            Name: unifiedto.String("Lorene Bosco"),
-            ParentID: unifiedto.String("qui"),
+            Name: unifiedgosdk.String("Lorene Bosco"),
+            ParentID: unifiedgosdk.String("qui"),
             Raw: &shared.PropertyHrisGroupRaw{},
             Type: shared.HrisGroupTypeDepartment.ToPointer(),
             UpdatedAt: types.MustTimeFromString("2022-12-06T03:55:58.108Z"),
         },
         ConnectionID: "quisquam",
         ID: "7c0f0f87-3f9d-45c2-9fd3-e0b4a4a4253c",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -486,11 +493,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.PatchHrisConnectionIDGroupIDRequest](../../models/operations/patchhrisconnectionidgroupidrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.PatchHrisConnectionIDGroupIDSecurity](../../models/operations/patchhrisconnectionidgroupidsecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.PatchHrisConnectionIDGroupIDRequest](../../models/operations/patchhrisconnectionidgroupidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
@@ -510,51 +516,52 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PostHrisConnectionIDEmployeeSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.PostHrisConnectionIDEmployee(ctx, operations.PostHrisConnectionIDEmployeeRequest{
         HrisEmployee: &shared.HrisEmployee{
             Address: &shared.PropertyHrisEmployeeAddress{
-                Address1: unifiedto.String("amet"),
-                Address2: unifiedto.String("ipsa"),
-                City: unifiedto.String("West Jaunitaland"),
-                Country: unifiedto.String("Bahrain"),
-                CountryCode: unifiedto.String("YE"),
-                PostalCode: unifiedto.String("18494"),
-                Region: unifiedto.String("pariatur"),
-                RegionCode: unifiedto.String("porro"),
+                Address1: unifiedgosdk.String("amet"),
+                Address2: unifiedgosdk.String("ipsa"),
+                City: unifiedgosdk.String("West Jaunitaland"),
+                Country: unifiedgosdk.String("Bahrain"),
+                CountryCode: unifiedgosdk.String("YE"),
+                PostalCode: unifiedgosdk.String("18494"),
+                Region: unifiedgosdk.String("pariatur"),
+                RegionCode: unifiedgosdk.String("porro"),
             },
             CreatedAt: types.MustTimeFromString("2022-09-23T16:00:07.090Z"),
             DateOfBirth: types.MustTimeFromString("2021-07-11T10:12:07.009Z"),
-            Department: unifiedto.String("itaque"),
-            Division: unifiedto.String("sit"),
+            Department: unifiedgosdk.String("itaque"),
+            Division: unifiedgosdk.String("sit"),
             Emails: []shared.HrisEmail{
                 shared.HrisEmail{
                     Email: "Timmothy68@yahoo.com",
                     Type: shared.HrisEmailTypeHome.ToPointer(),
                 },
             },
-            EmployeeNumber: unifiedto.String("culpa"),
+            EmployeeNumber: unifiedgosdk.String("culpa"),
             EmploymentStatus: shared.HrisEmployeeEmploymentStatusActive.ToPointer(),
             EmploymentType: shared.HrisEmployeeEmploymentTypeFullTime.ToPointer(),
             Gender: shared.HrisEmployeeGenderFemale.ToPointer(),
             HiredAt: types.MustTimeFromString("2021-01-27T23:42:02.589Z"),
-            ID: unifiedto.String("12a4ba9d-5998-4819-acfd-0c77c53e7e7d"),
-            Location: unifiedto.String("eius"),
-            ManagerID: unifiedto.String("accusamus"),
+            ID: unifiedgosdk.String("12a4ba9d-5998-4819-acfd-0c77c53e7e7d"),
+            Location: unifiedgosdk.String("eius"),
+            ManagerID: unifiedgosdk.String("accusamus"),
             MaritalStatus: shared.HrisEmployeeMaritalStatusSingle.ToPointer(),
-            Name: unifiedto.String("Sophie Lesch"),
+            Name: unifiedgosdk.String("Sophie Lesch"),
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
@@ -563,11 +570,11 @@ func main() {
                 },
             },
             TerminatedAt: types.MustTimeFromString("2021-06-09T00:38:41.199Z"),
-            Title: unifiedto.String("Mrs."),
+            Title: unifiedgosdk.String("Mrs."),
             UpdatedAt: types.MustTimeFromString("2022-06-19T22:55:28.813Z"),
         },
         ConnectionID: "saepe",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -580,11 +587,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.PostHrisConnectionIDEmployeeRequest](../../models/operations/posthrisconnectionidemployeerequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.PostHrisConnectionIDEmployeeSecurity](../../models/operations/posthrisconnectionidemployeesecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.PostHrisConnectionIDEmployeeRequest](../../models/operations/posthrisconnectionidemployeerequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
@@ -604,39 +610,40 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PostHrisConnectionIDGroupSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.PostHrisConnectionIDGroup(ctx, operations.PostHrisConnectionIDGroupRequest{
         HrisGroup: &shared.HrisGroup{
             CreatedAt: types.MustTimeFromString("2022-10-11T00:06:05.180Z"),
-            Description: unifiedto.String("sint"),
+            Description: unifiedgosdk.String("sint"),
             EmployeeIds: []string{
                 "ea",
             },
-            ID: unifiedto.String("703fec31-c508-424d-989a-36a6b2d27eb7"),
-            IsActive: unifiedto.Bool(false),
+            ID: unifiedgosdk.String("703fec31-c508-424d-989a-36a6b2d27eb7"),
+            IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
                 "accusantium",
             },
-            Name: unifiedto.String("Harriet Orn DDS"),
-            ParentID: unifiedto.String("voluptatum"),
+            Name: unifiedgosdk.String("Harriet Orn DDS"),
+            ParentID: unifiedgosdk.String("voluptatum"),
             Raw: &shared.PropertyHrisGroupRaw{},
             Type: shared.HrisGroupTypeSubDepartment.ToPointer(),
             UpdatedAt: types.MustTimeFromString("2022-02-14T18:55:03.442Z"),
         },
         ConnectionID: "commodi",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -649,11 +656,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.PostHrisConnectionIDGroupRequest](../../models/operations/posthrisconnectionidgrouprequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.PostHrisConnectionIDGroupSecurity](../../models/operations/posthrisconnectionidgroupsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.PostHrisConnectionIDGroupRequest](../../models/operations/posthrisconnectionidgrouprequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
@@ -673,51 +679,52 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PutHrisConnectionIDEmployeeIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.PutHrisConnectionIDEmployeeID(ctx, operations.PutHrisConnectionIDEmployeeIDRequest{
         HrisEmployee: &shared.HrisEmployee{
             Address: &shared.PropertyHrisEmployeeAddress{
-                Address1: unifiedto.String("debitis"),
-                Address2: unifiedto.String("commodi"),
-                City: unifiedto.String("South Izaiahhaven"),
-                Country: unifiedto.String("Paraguay"),
-                CountryCode: unifiedto.String("MS"),
-                PostalCode: unifiedto.String("72740-9977"),
-                Region: unifiedto.String("nisi"),
-                RegionCode: unifiedto.String("occaecati"),
+                Address1: unifiedgosdk.String("debitis"),
+                Address2: unifiedgosdk.String("commodi"),
+                City: unifiedgosdk.String("South Izaiahhaven"),
+                Country: unifiedgosdk.String("Paraguay"),
+                CountryCode: unifiedgosdk.String("MS"),
+                PostalCode: unifiedgosdk.String("72740-9977"),
+                Region: unifiedgosdk.String("nisi"),
+                RegionCode: unifiedgosdk.String("occaecati"),
             },
             CreatedAt: types.MustTimeFromString("2022-12-15T12:15:10.431Z"),
             DateOfBirth: types.MustTimeFromString("2020-03-31T16:49:34.939Z"),
-            Department: unifiedto.String("odio"),
-            Division: unifiedto.String("nihil"),
+            Department: unifiedgosdk.String("odio"),
+            Division: unifiedgosdk.String("nihil"),
             Emails: []shared.HrisEmail{
                 shared.HrisEmail{
                     Email: "Tamia.Doyle@gmail.com",
                     Type: shared.HrisEmailTypeHome.ToPointer(),
                 },
             },
-            EmployeeNumber: unifiedto.String("iusto"),
+            EmployeeNumber: unifiedgosdk.String("iusto"),
             EmploymentStatus: shared.HrisEmployeeEmploymentStatusInactive.ToPointer(),
             EmploymentType: shared.HrisEmployeeEmploymentTypeOther.ToPointer(),
             Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
             HiredAt: types.MustTimeFromString("2022-06-18T09:54:51.929Z"),
-            ID: unifiedto.String("06e61b0d-3087-414c-a0a3-d98637ca85c3"),
-            Location: unifiedto.String("delectus"),
-            ManagerID: unifiedto.String("repudiandae"),
+            ID: unifiedgosdk.String("06e61b0d-3087-414c-a0a3-d98637ca85c3"),
+            Location: unifiedgosdk.String("delectus"),
+            ManagerID: unifiedgosdk.String("repudiandae"),
             MaritalStatus: shared.HrisEmployeeMaritalStatusMarried.ToPointer(),
-            Name: unifiedto.String("Erin Kris"),
+            Name: unifiedgosdk.String("Erin Kris"),
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
@@ -726,12 +733,12 @@ func main() {
                 },
             },
             TerminatedAt: types.MustTimeFromString("2021-02-20T15:13:08.610Z"),
-            Title: unifiedto.String("Mrs."),
+            Title: unifiedgosdk.String("Mrs."),
             UpdatedAt: types.MustTimeFromString("2022-01-28T12:53:07.770Z"),
         },
         ConnectionID: "placeat",
         ID: "98f13af2-8db2-4cf2-bf4f-3ded356d7e14",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -744,11 +751,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
-| `request`                                                                                                            | [operations.PutHrisConnectionIDEmployeeIDRequest](../../models/operations/puthrisconnectionidemployeeidrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.PutHrisConnectionIDEmployeeIDSecurity](../../models/operations/puthrisconnectionidemployeeidsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.PutHrisConnectionIDEmployeeIDRequest](../../models/operations/puthrisconnectionidemployeeidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -768,40 +774,41 @@ package main
 import(
 	"context"
 	"log"
-	"github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
-    s := unifiedto.New()
-    operationSecurity := operations.PutHrisConnectionIDGroupIDSecurity{
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(shared.Security{
             Jwt: "",
-        }
+        }),
+    )
 
     ctx := context.Background()
     res, err := s.Hris.PutHrisConnectionIDGroupID(ctx, operations.PutHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
             CreatedAt: types.MustTimeFromString("2022-08-29T10:06:09.751Z"),
-            Description: unifiedto.String("beatae"),
+            Description: unifiedgosdk.String("beatae"),
             EmployeeIds: []string{
                 "eligendi",
             },
-            ID: unifiedto.String("d98196d5-5af6-49a1-84b7-9ae33681c23c"),
-            IsActive: unifiedto.Bool(false),
+            ID: unifiedgosdk.String("d98196d5-5af6-49a1-84b7-9ae33681c23c"),
+            IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
                 "dolorem",
             },
-            Name: unifiedto.String("Grant Klein PhD"),
-            ParentID: unifiedto.String("ab"),
+            Name: unifiedgosdk.String("Grant Klein PhD"),
+            ParentID: unifiedgosdk.String("ab"),
             Raw: &shared.PropertyHrisGroupRaw{},
             Type: shared.HrisGroupTypeDivision.ToPointer(),
             UpdatedAt: types.MustTimeFromString("2020-11-07T15:44:18.546Z"),
         },
         ConnectionID: "quasi",
         ID: "2c5ba825-fe22-4cd5-8ba6-fbfec932af68",
-    }, operationSecurity)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -814,11 +821,10 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.PutHrisConnectionIDGroupIDRequest](../../models/operations/puthrisconnectionidgroupidrequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [operations.PutHrisConnectionIDGroupIDSecurity](../../models/operations/puthrisconnectionidgroupidsecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.PutHrisConnectionIDGroupIDRequest](../../models/operations/puthrisconnectionidgroupidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response

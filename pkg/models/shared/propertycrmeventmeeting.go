@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
@@ -12,6 +13,17 @@ type PropertyCrmEventMeeting struct {
 	EndAt       *time.Time `json:"end_at,omitempty"`
 	StartAt     *time.Time `json:"start_at,omitempty"`
 	Title       *string    `json:"title,omitempty"`
+}
+
+func (p PropertyCrmEventMeeting) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(p, "", false)
+}
+
+func (p *PropertyCrmEventMeeting) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *PropertyCrmEventMeeting) GetDescription() *string {
