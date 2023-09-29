@@ -1,4 +1,5 @@
 # Connection
+(*Connection*)
 
 ### Available Operations
 
@@ -35,7 +36,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.DeleteUnifiedConnectionID(ctx, operations.DeleteUnifiedConnectionIDRequest{
-        ID: "b75d2367-fe1a-40cc-8df7-9f0a396d90c3",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,15 +89,15 @@ func main() {
     ctx := context.Background()
     res, err := s.Connection.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
         Categories: []GetUnifiedConnectionCategories{
-            operations.GetUnifiedConnectionCategoriesAuth,
+            operations.GetUnifiedConnectionCategoriesAts,
         },
-        Env: unifiedgosdk.String("labore"),
-        ExternalXref: unifiedgosdk.String("expedita"),
-        Limit: unifiedgosdk.Float64(4467.37),
-        Offset: unifiedgosdk.Float64(7898.7),
-        Order: unifiedgosdk.String("sunt"),
-        Sort: unifiedgosdk.String("enim"),
-        UpdatedGte: types.MustTimeFromString("2020-01-24T16:46:41.592Z"),
+        Env: unifiedgosdk.String("copying invoice coulomb"),
+        ExternalXref: unifiedgosdk.String("Islands West"),
+        Limit: unifiedgosdk.Float64(7809.21),
+        Offset: unifiedgosdk.Float64(2750.2),
+        Order: unifiedgosdk.String("Volkswagen architect"),
+        Sort: unifiedgosdk.String("consequently synthesizing Technician"),
+        UpdatedGte: types.MustTimeFromString("2021-11-09T20:41:53.442Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -147,7 +148,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.GetUnifiedConnectionID(ctx, operations.GetUnifiedConnectionIDRequest{
-        ID: "bace188b-1c4e-4e2c-8c6c-e611feeb1c7c",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -201,48 +202,48 @@ func main() {
     res, err := s.Connection.PatchUnifiedConnectionID(ctx, operations.PatchUnifiedConnectionIDRequest{
         Connection: &shared.Connection{
             Auth: &shared.PropertyConnectionAuth{
-                AccessToken: unifiedgosdk.String("distinctio"),
-                APIURL: unifiedgosdk.String("possimus"),
-                AppID: unifiedgosdk.String("cum"),
-                AuthorizeURL: unifiedgosdk.String("suscipit"),
-                ClientID: unifiedgosdk.String("saepe"),
-                ClientSecret: unifiedgosdk.String("earum"),
-                ConsumerKey: unifiedgosdk.String("quod"),
-                ConsumerSecret: unifiedgosdk.String("nihil"),
+                AccessToken: unifiedgosdk.String("Northwest Cupertino"),
+                APIURL: unifiedgosdk.String("Center Curium Electric"),
+                AppID: unifiedgosdk.String("female fragrant"),
+                AuthorizeURL: unifiedgosdk.String("Electric Bicycle payment"),
+                ClientID: unifiedgosdk.String("transmitting North"),
+                ClientSecret: unifiedgosdk.String("mole Gasoline morph"),
+                ConsumerKey: unifiedgosdk.String("Keyboard Antimony primary"),
+                ConsumerSecret: unifiedgosdk.String("yearly"),
                 Emails: []string{
-                    "quaerat",
+                    "athwart",
                 },
-                ExpiresIn: unifiedgosdk.Float64(2159.59),
-                ExpiryDate: types.MustTimeFromString("2022-06-27T03:53:09.176Z"),
-                Key: unifiedgosdk.String("rerum"),
+                ExpiresIn: unifiedgosdk.Float64(3185.09),
+                ExpiryDate: types.MustTimeFromString("2022-08-12T13:21:47.977Z"),
+                Key: unifiedgosdk.String("<key>"),
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
-                Name: unifiedgosdk.String("Harry Hammes IV"),
+                Name: unifiedgosdk.String("inside Rupee"),
                 OtherAuthInfo: []string{
-                    "esse",
+                    "Future",
                 },
-                Pem: unifiedgosdk.String("magnam"),
-                RefreshToken: unifiedgosdk.String("odio"),
-                State: unifiedgosdk.String("nulla"),
-                Token: unifiedgosdk.String("impedit"),
-                TokenURL: unifiedgosdk.String("cupiditate"),
+                Pem: unifiedgosdk.String("guard Internal"),
+                RefreshToken: unifiedgosdk.String("Diesel"),
+                State: unifiedgosdk.String("copy Cotton Bicycle"),
+                Token: unifiedgosdk.String("drive gold"),
+                TokenURL: unifiedgosdk.String("now"),
             },
-            AuthAwsArn: unifiedgosdk.String("illo"),
+            AuthAwsArn: unifiedgosdk.String("yum"),
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesAuth,
+                shared.PropertyConnectionCategoriesHris,
             },
-            CreatedAt: types.MustTimeFromString("2021-04-21T08:26:42.931Z"),
-            Environment: unifiedgosdk.String("fugit"),
-            ExternalXref: unifiedgosdk.String("maxime"),
-            ID: unifiedgosdk.String("af5dd672-3dc0-4f5a-a2f3-a6b700878756"),
-            IntegrationType: "ab",
+            CreatedAt: types.MustTimeFromString("2021-06-18T22:02:30.822Z"),
+            Environment: unifiedgosdk.String("Northwest Balanced"),
+            ExternalXref: unifiedgosdk.String("boo"),
+            ID: unifiedgosdk.String("<ID>"),
+            IntegrationType: "Soft",
             IsPaused: unifiedgosdk.Bool(false),
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmUserWrite,
+                shared.PropertyConnectionPermissionsCrmLeadRead,
             },
-            UpdatedAt: types.MustTimeFromString("2022-01-16T17:11:29.866Z"),
-            WorkspaceID: unifiedgosdk.String("corporis"),
+            UpdatedAt: types.MustTimeFromString("2022-07-27T15:43:44.767Z"),
+            WorkspaceID: unifiedgosdk.String("extend"),
         },
-        ID: "a6c98b55-5540-480d-80bc-acc6cbd6b5f3",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -294,46 +295,46 @@ func main() {
     ctx := context.Background()
     res, err := s.Connection.PostUnifiedConnection(ctx, shared.Connection{
         Auth: &shared.PropertyConnectionAuth{
-            AccessToken: unifiedgosdk.String("necessitatibus"),
-            APIURL: unifiedgosdk.String("maxime"),
-            AppID: unifiedgosdk.String("cupiditate"),
-            AuthorizeURL: unifiedgosdk.String("voluptatem"),
-            ClientID: unifiedgosdk.String("provident"),
-            ClientSecret: unifiedgosdk.String("adipisci"),
-            ConsumerKey: unifiedgosdk.String("accusantium"),
-            ConsumerSecret: unifiedgosdk.String("magnam"),
+            AccessToken: unifiedgosdk.String("asperiores indexing"),
+            APIURL: unifiedgosdk.String("plus pace global"),
+            AppID: unifiedgosdk.String("And port"),
+            AuthorizeURL: unifiedgosdk.String("West whiteboard"),
+            ClientID: unifiedgosdk.String("Folk"),
+            ClientSecret: unifiedgosdk.String("Northwest Modern"),
+            ConsumerKey: unifiedgosdk.String("Southeast deposit"),
+            ConsumerSecret: unifiedgosdk.String("Falls irritating up"),
             Emails: []string{
-                "repellat",
+                "intuitive",
             },
-            ExpiresIn: unifiedgosdk.Float64(6076.31),
-            ExpiryDate: types.MustTimeFromString("2022-07-29T13:50:17.340Z"),
-            Key: unifiedgosdk.String("cum"),
+            ExpiresIn: unifiedgosdk.Float64(4121.5),
+            ExpiryDate: types.MustTimeFromString("2021-01-21T03:25:42.786Z"),
+            Key: unifiedgosdk.String("<key>"),
             Meta: &shared.PropertyPropertyConnectionAuthMeta{},
-            Name: unifiedgosdk.String("Rufus Conroy"),
+            Name: unifiedgosdk.String("membership Classical schnitzel"),
             OtherAuthInfo: []string{
-                "sequi",
+                "Convertible",
             },
-            Pem: unifiedgosdk.String("voluptatum"),
-            RefreshToken: unifiedgosdk.String("quasi"),
-            State: unifiedgosdk.String("error"),
-            Token: unifiedgosdk.String("nobis"),
-            TokenURL: unifiedgosdk.String("tempora"),
+            Pem: unifiedgosdk.String("magenta Riel bolívar"),
+            RefreshToken: unifiedgosdk.String("Pula"),
+            State: unifiedgosdk.String("white"),
+            Token: unifiedgosdk.String("Northwest"),
+            TokenURL: unifiedgosdk.String("unbutton"),
         },
-        AuthAwsArn: unifiedgosdk.String("voluptate"),
+        AuthAwsArn: unifiedgosdk.String("Investor circuit"),
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesAts,
         },
-        CreatedAt: types.MustTimeFromString("2022-11-28T03:21:08.707Z"),
-        Environment: unifiedgosdk.String("voluptates"),
-        ExternalXref: unifiedgosdk.String("possimus"),
-        ID: unifiedgosdk.String("20e56248-fff6-439a-910a-bdcab6267669"),
-        IntegrationType: "laboriosam",
+        CreatedAt: types.MustTimeFromString("2023-01-25T14:37:40.202Z"),
+        Environment: unifiedgosdk.String("Hat watt"),
+        ExternalXref: unifiedgosdk.String("Sausages tan"),
+        ID: unifiedgosdk.String("<ID>"),
+        IntegrationType: "Principal Extended velit",
         IsPaused: unifiedgosdk.Bool(false),
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsCandidateWrite,
+            shared.PropertyConnectionPermissionsCrmFileWrite,
         },
-        UpdatedAt: types.MustTimeFromString("2022-01-26T21:22:49.757Z"),
-        WorkspaceID: unifiedgosdk.String("quisquam"),
+        UpdatedAt: types.MustTimeFromString("2021-09-22T05:13:05.778Z"),
+        WorkspaceID: unifiedgosdk.String("Auto"),
     })
     if err != nil {
         log.Fatal(err)
@@ -387,48 +388,48 @@ func main() {
     res, err := s.Connection.PutUnifiedConnectionID(ctx, operations.PutUnifiedConnectionIDRequest{
         Connection: &shared.Connection{
             Auth: &shared.PropertyConnectionAuth{
-                AccessToken: unifiedgosdk.String("eaque"),
-                APIURL: unifiedgosdk.String("alias"),
-                AppID: unifiedgosdk.String("qui"),
-                AuthorizeURL: unifiedgosdk.String("consequuntur"),
-                ClientID: unifiedgosdk.String("vitae"),
-                ClientSecret: unifiedgosdk.String("quidem"),
-                ConsumerKey: unifiedgosdk.String("sequi"),
-                ConsumerSecret: unifiedgosdk.String("amet"),
+                AccessToken: unifiedgosdk.String("female Buckinghamshire"),
+                APIURL: unifiedgosdk.String("Web"),
+                AppID: unifiedgosdk.String("pumpkin Account"),
+                AuthorizeURL: unifiedgosdk.String("dolorem Hybrid white"),
+                ClientID: unifiedgosdk.String("ohm"),
+                ClientSecret: unifiedgosdk.String("Pennsylvania Executive"),
+                ConsumerKey: unifiedgosdk.String("silver Account Accountability"),
+                ConsumerSecret: unifiedgosdk.String("Mouse"),
                 Emails: []string{
-                    "exercitationem",
+                    "oh",
                 },
-                ExpiresIn: unifiedgosdk.Float64(8470.18),
-                ExpiryDate: types.MustTimeFromString("2021-10-18T19:31:06.005Z"),
-                Key: unifiedgosdk.String("similique"),
+                ExpiresIn: unifiedgosdk.Float64(8946.31),
+                ExpiryDate: types.MustTimeFromString("2022-01-29T12:35:08.478Z"),
+                Key: unifiedgosdk.String("<key>"),
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
-                Name: unifiedgosdk.String("Garry Fahey"),
+                Name: unifiedgosdk.String("incidentally shrimp bypass"),
                 OtherAuthInfo: []string{
-                    "asperiores",
+                    "invoice",
                 },
-                Pem: unifiedgosdk.String("temporibus"),
-                RefreshToken: unifiedgosdk.String("id"),
-                State: unifiedgosdk.String("atque"),
-                Token: unifiedgosdk.String("quibusdam"),
-                TokenURL: unifiedgosdk.String("sit"),
+                Pem: unifiedgosdk.String("recent midst Northeast"),
+                RefreshToken: unifiedgosdk.String("Product"),
+                State: unifiedgosdk.String("circuit precious"),
+                Token: unifiedgosdk.String("gee collaborative withdrawal"),
+                TokenURL: unifiedgosdk.String("Platinum"),
             },
-            AuthAwsArn: unifiedgosdk.String("quo"),
+            AuthAwsArn: unifiedgosdk.String("suddenly Fiat"),
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesAts,
+                shared.PropertyConnectionCategoriesUc,
             },
-            CreatedAt: types.MustTimeFromString("2022-05-30T05:35:32.331Z"),
-            Environment: unifiedgosdk.String("vero"),
-            ExternalXref: unifiedgosdk.String("earum"),
-            ID: unifiedgosdk.String("03004978-a61f-4a1c-b206-88f77c1ffc71"),
-            IntegrationType: "facere",
+            CreatedAt: types.MustTimeFromString("2022-09-20T19:51:21.025Z"),
+            Environment: unifiedgosdk.String("redundant Southeast Camren"),
+            ExternalXref: unifiedgosdk.String("firewall"),
+            ID: unifiedgosdk.String("<ID>"),
+            IntegrationType: "Beauty",
             IsPaused: unifiedgosdk.Bool(false),
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsHrisGroupRead,
+                shared.PropertyConnectionPermissionsWebhook,
             },
-            UpdatedAt: types.MustTimeFromString("2022-11-13T09:13:55.156Z"),
-            WorkspaceID: unifiedgosdk.String("ex"),
+            UpdatedAt: types.MustTimeFromString("2023-12-30T14:20:47.994Z"),
+            WorkspaceID: unifiedgosdk.String("parse Peso Investment"),
         },
-        ID: "3f2a3c80-a97f-4f33-8cdd-f857a9e61876",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

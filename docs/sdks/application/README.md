@@ -1,4 +1,5 @@
 # Application
+(*Application*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.DeleteAtsConnectionIDApplicationID(ctx, operations.DeleteAtsConnectionIDApplicationIDRequest{
-        ConnectionID: "quaerat",
-        ID: "ebf69280-d1ba-477a-89eb-f737ae4203ce",
+        ConnectionID: "markets sievert meh",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,15 +89,15 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.GetAtsConnectionIDApplication(ctx, operations.GetAtsConnectionIDApplicationRequest{
-        CandidateID: unifiedgosdk.String("ad"),
-        ConnectionID: "saepe",
-        JobID: unifiedgosdk.String("suscipit"),
-        Limit: unifiedgosdk.Float64(6457.85),
-        Offset: unifiedgosdk.Float64(5883.17),
-        Order: unifiedgosdk.String("minima"),
-        Query: unifiedgosdk.String("repellendus"),
-        Sort: unifiedgosdk.String("totam"),
-        UpdatedGte: types.MustTimeFromString("2022-12-31T23:01:47.942Z"),
+        CandidateID: unifiedgosdk.String("turquoise"),
+        ConnectionID: "Regional Bedfordshire",
+        JobID: unifiedgosdk.String("Northwest portal Electric"),
+        Limit: unifiedgosdk.Float64(576.8),
+        Offset: unifiedgosdk.Float64(7467.13),
+        Order: unifiedgosdk.String("Architect"),
+        Query: unifiedgosdk.String("loosely contingency"),
+        Sort: unifiedgosdk.String("female"),
+        UpdatedGte: types.MustTimeFromString("2023-09-05T13:59:23.348Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -147,8 +148,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.GetAtsConnectionIDApplicationID(ctx, operations.GetAtsConnectionIDApplicationIDRequest{
-        ConnectionID: "at",
-        ID: "446ce2af-7a73-4cf3-be45-3f870b326b5a",
+        ConnectionID: "Buckinghamshire functionalities",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -201,20 +202,20 @@ func main() {
     ctx := context.Background()
     res, err := s.Application.PatchAtsConnectionIDApplicationID(ctx, operations.PatchAtsConnectionIDApplicationIDRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustTimeFromString("2022-10-14T13:38:40.307Z"),
-            CandidateID: unifiedgosdk.String("incidunt"),
-            CreatedAt: types.MustTimeFromString("2022-05-31T19:46:08.472Z"),
-            ID: unifiedgosdk.String("cdb1a842-2bb6-479d-a322-715bf0cbb1e3"),
-            JobID: unifiedgosdk.String("veritatis"),
+            AppliedAt: types.MustTimeFromString("2023-10-17T09:51:42.165Z"),
+            CandidateID: unifiedgosdk.String("North et beyond"),
+            CreatedAt: types.MustTimeFromString("2023-01-08T08:26:22.845Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            JobID: unifiedgosdk.String("ick Sausages Bronze"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustTimeFromString("2021-11-23T21:35:15.992Z"),
-            RejectedReason: unifiedgosdk.String("tempore"),
-            Source: unifiedgosdk.String("cupiditate"),
-            Status: shared.AtsApplicationStatusNew.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-05-16T23:21:11.104Z"),
+            RejectedAt: types.MustTimeFromString("2023-10-18T00:47:25.469Z"),
+            RejectedReason: unifiedgosdk.String("Avon Sum quis"),
+            Source: unifiedgosdk.String("Carolina Wooden Pop"),
+            Status: shared.AtsApplicationStatusHired.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2021-07-20T22:05:46.009Z"),
         },
-        ConnectionID: "dolore",
-        ID: "43a1108e-0adc-4f4b-9218-79fce953f73e",
+        ConnectionID: "Baby Paucek",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -267,19 +268,19 @@ func main() {
     ctx := context.Background()
     res, err := s.Application.PostAtsConnectionIDApplication(ctx, operations.PostAtsConnectionIDApplicationRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustTimeFromString("2021-07-10T23:11:25.857Z"),
-            CandidateID: unifiedgosdk.String("hic"),
-            CreatedAt: types.MustTimeFromString("2021-05-27T13:58:14.379Z"),
-            ID: unifiedgosdk.String("7abd74dd-39c0-4f5d-acff-7c70a45626d4"),
-            JobID: unifiedgosdk.String("ratione"),
+            AppliedAt: types.MustTimeFromString("2021-10-26T15:24:28.979Z"),
+            CandidateID: unifiedgosdk.String("solid"),
+            CreatedAt: types.MustTimeFromString("2022-09-13T17:17:33.049Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            JobID: unifiedgosdk.String("Gloves Pizza virtual"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustTimeFromString("2022-06-28T08:50:44.084Z"),
-            RejectedReason: unifiedgosdk.String("dicta"),
-            Source: unifiedgosdk.String("dolor"),
-            Status: shared.AtsApplicationStatusRejected.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-08-05T18:23:03.713Z"),
+            RejectedAt: types.MustTimeFromString("2023-12-27T18:41:56.821Z"),
+            RejectedReason: unifiedgosdk.String("Northwest Kids"),
+            Source: unifiedgosdk.String("Human Tasty Loan"),
+            Status: shared.AtsApplicationStatusNew.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2022-11-01T21:08:50.319Z"),
         },
-        ConnectionID: "nulla",
+        ConnectionID: "Jazz",
     })
     if err != nil {
         log.Fatal(err)
@@ -332,20 +333,20 @@ func main() {
     ctx := context.Background()
     res, err := s.Application.PutAtsConnectionIDApplicationID(ctx, operations.PutAtsConnectionIDApplicationIDRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustTimeFromString("2021-01-20T18:27:01.887Z"),
-            CandidateID: unifiedgosdk.String("nostrum"),
-            CreatedAt: types.MustTimeFromString("2020-08-20T04:25:24.387Z"),
-            ID: unifiedgosdk.String("e6c55614-6c3e-4250-bb00-8c42e141aac3"),
-            JobID: unifiedgosdk.String("eum"),
+            AppliedAt: types.MustTimeFromString("2022-06-15T22:25:51.833Z"),
+            CandidateID: unifiedgosdk.String("farad Indianapolis"),
+            CreatedAt: types.MustTimeFromString("2022-04-01T21:03:58.880Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            JobID: unifiedgosdk.String("enable foreground"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustTimeFromString("2022-04-01T11:18:05.592Z"),
-            RejectedReason: unifiedgosdk.String("quas"),
-            Source: unifiedgosdk.String("assumenda"),
-            Status: shared.AtsApplicationStatusHired.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-04-10T15:05:31.822Z"),
+            RejectedAt: types.MustTimeFromString("2022-11-06T11:41:30.414Z"),
+            RejectedReason: unifiedgosdk.String("virtual North plum"),
+            Source: unifiedgosdk.String("Fort solid"),
+            Status: shared.AtsApplicationStatusSubmitted.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2021-02-21T04:47:57.079Z"),
         },
-        ConnectionID: "quasi",
-        ID: "44290747-4778-4a7b-9466-d28c10ab3cdc",
+        ConnectionID: "Southeast",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

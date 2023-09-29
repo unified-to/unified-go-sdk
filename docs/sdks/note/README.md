@@ -1,4 +1,5 @@
 # Note
+(*Note*)
 
 ### Available Operations
 
@@ -35,9 +36,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Note.DeleteTicketingConnectionIDNoteTicketIDID(ctx, operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest{
-        ConnectionID: "recusandae",
-        ID: "9085075b-c253-4825-b343-fb0a4e66ea47",
-        TicketID: "exercitationem",
+        ConnectionID: "DRAM Liaison",
+        ID: "<ID>",
+        TicketID: "Tasty exploit",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,14 +90,14 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Note.GetTicketingConnectionIDNoteTicketID(ctx, operations.GetTicketingConnectionIDNoteTicketIDRequest{
-        ConnectionID: "molestiae",
-        Limit: unifiedgosdk.Float64(5096.38),
-        Offset: unifiedgosdk.Float64(8540.88),
-        Order: unifiedgosdk.String("ab"),
-        Query: unifiedgosdk.String("voluptate"),
-        Sort: unifiedgosdk.String("et"),
-        TicketID: "recusandae",
-        UpdatedGte: types.MustTimeFromString("2022-05-19T12:21:22.703Z"),
+        ConnectionID: "Account revolutionary",
+        Limit: unifiedgosdk.Float64(2310.88),
+        Offset: unifiedgosdk.Float64(6688.82),
+        Order: unifiedgosdk.String("AI"),
+        Query: unifiedgosdk.String("stanch Investor attitude"),
+        Sort: unifiedgosdk.String("Cotton"),
+        TicketID: "Handmade Kia",
+        UpdatedGte: types.MustTimeFromString("2022-05-26T17:12:11.333Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -147,9 +148,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Note.GetTicketingConnectionIDNoteTicketIDID(ctx, operations.GetTicketingConnectionIDNoteTicketIDIDRequest{
-        ConnectionID: "eius",
-        ID: "1818fc67-9b6b-42f2-9359-b855d015b62c",
-        TicketID: "quos",
+        ConnectionID: "for",
+        ID: "<ID>",
+        TicketID: "female",
     })
     if err != nil {
         log.Fatal(err)
@@ -202,17 +203,17 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.PatchTicketingConnectionIDNoteTicketIDID(ctx, operations.PatchTicketingConnectionIDNoteTicketIDIDRequest{
         TicketingNote: &shared.TicketingNote{
-            AgentID: unifiedgosdk.String("cum"),
-            CreatedAt: types.MustTimeFromString("2022-07-23T08:55:47.914Z"),
-            CustomerID: unifiedgosdk.String("dolorum"),
-            Description: unifiedgosdk.String("amet"),
-            ID: unifiedgosdk.String("8a8a88c1-4420-40c2-8aeb-1ae1ecf8c349"),
+            AgentID: unifiedgosdk.String("compress Oganesson"),
+            CreatedAt: types.MustTimeFromString("2022-02-16T08:13:19.991Z"),
+            CustomerID: unifiedgosdk.String("demystify"),
+            Description: unifiedgosdk.String("Fundamental demand-driven workforce"),
+            ID: unifiedgosdk.String("<ID>"),
             Raw: shared.PropertyTicketingNoteRaw{},
-            UpdatedAt: unifiedgosdk.String("modi"),
+            UpdatedAt: unifiedgosdk.String("Nissan"),
         },
-        ConnectionID: "commodi",
-        ID: "bba7a05a-8b4a-49ec-9b36-88cca3632727",
-        TicketID: "iure",
+        ConnectionID: "Chicken",
+        ID: "<ID>",
+        TicketID: "frictionless convergence officia",
     })
     if err != nil {
         log.Fatal(err)
@@ -265,16 +266,16 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.PostTicketingConnectionIDNoteTicketID(ctx, operations.PostTicketingConnectionIDNoteTicketIDRequest{
         TicketingNote: &shared.TicketingNote{
-            AgentID: unifiedgosdk.String("sit"),
-            CreatedAt: types.MustTimeFromString("2021-04-03T18:27:00.342Z"),
-            CustomerID: unifiedgosdk.String("vel"),
-            Description: unifiedgosdk.String("autem"),
-            ID: unifiedgosdk.String("e97e0541-0334-47d7-8ff2-491145fab9e5"),
+            AgentID: unifiedgosdk.String("Plantation blue"),
+            CreatedAt: types.MustTimeFromString("2021-06-11T06:54:31.529Z"),
+            CustomerID: unifiedgosdk.String("asymmetric"),
+            Description: unifiedgosdk.String("Expanded intermediate attitude"),
+            ID: unifiedgosdk.String("<ID>"),
             Raw: shared.PropertyTicketingNoteRaw{},
-            UpdatedAt: unifiedgosdk.String("perspiciatis"),
+            UpdatedAt: unifiedgosdk.String("naturally"),
         },
-        ConnectionID: "laborum",
-        TicketID: "incidunt",
+        ConnectionID: "Wagon Sulfur",
+        TicketID: "digital",
     })
     if err != nil {
         log.Fatal(err)
@@ -327,17 +328,17 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.PutTicketingConnectionIDNoteTicketIDID(ctx, operations.PutTicketingConnectionIDNoteTicketIDIDRequest{
         TicketingNote: &shared.TicketingNote{
-            AgentID: unifiedgosdk.String("fuga"),
-            CreatedAt: types.MustTimeFromString("2022-05-09T22:54:29.590Z"),
-            CustomerID: unifiedgosdk.String("amet"),
-            Description: unifiedgosdk.String("nisi"),
-            ID: unifiedgosdk.String("664eaa6b-f2ff-414e-8c1b-352accedacc5"),
+            AgentID: unifiedgosdk.String("SMTP Cis"),
+            CreatedAt: types.MustTimeFromString("2022-07-27T18:14:06.584Z"),
+            CustomerID: unifiedgosdk.String("Carolina"),
+            Description: unifiedgosdk.String("Integrated asymmetric strategy"),
+            ID: unifiedgosdk.String("<ID>"),
             Raw: shared.PropertyTicketingNoteRaw{},
-            UpdatedAt: unifiedgosdk.String("consequuntur"),
+            UpdatedAt: unifiedgosdk.String("Northeast Morocco supposing"),
         },
-        ConnectionID: "qui",
-        ID: "7814eca0-16bc-441e-a134-2d4104a25ef7",
-        TicketID: "quasi",
+        ConnectionID: "DNS Fermium",
+        ID: "<ID>",
+        TicketID: "Southwest round",
     })
     if err != nil {
         log.Fatal(err)

@@ -38,11 +38,14 @@ func (o *PutMartechConnectionIDListIDRequest) GetID() string {
 }
 
 type PutMartechConnectionIDListIDResponse struct {
+	// HTTP response content type for this operation
 	ContentType string
 	// Successful
 	MarketingList *shared.MarketingList
-	StatusCode    int
-	RawResponse   *http.Response
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
+	RawResponse *http.Response
 }
 
 func (o *PutMartechConnectionIDListIDResponse) GetContentType() string {

@@ -103,9 +103,12 @@ func (o *GetAtsConnectionIDApplicationRequest) GetUpdatedGte() *time.Time {
 type GetAtsConnectionIDApplicationResponse struct {
 	// Successful
 	AtsApplications []shared.AtsApplication
-	ContentType     string
-	StatusCode      int
-	RawResponse     *http.Response
+	// HTTP response content type for this operation
+	ContentType string
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
+	RawResponse *http.Response
 }
 
 func (o *GetAtsConnectionIDApplicationResponse) GetAtsApplications() []shared.AtsApplication {

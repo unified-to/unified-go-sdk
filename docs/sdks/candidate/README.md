@@ -1,4 +1,5 @@
 # Candidate
+(*Candidate*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.DeleteAtsConnectionIDCandidateID(ctx, operations.DeleteAtsConnectionIDCandidateIDRequest{
-        ConnectionID: "consequuntur",
-        ID: "defcce8f-1977-4773-a635-62a7b408f05e",
+        ConnectionID: "multimedia",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,13 +89,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.GetAtsConnectionIDCandidate(ctx, operations.GetAtsConnectionIDCandidateRequest{
-        ConnectionID: "neque",
-        Limit: unifiedgosdk.Float64(8163.65),
-        Offset: unifiedgosdk.Float64(3071.73),
-        Order: unifiedgosdk.String("quos"),
-        Query: unifiedgosdk.String("doloribus"),
-        Sort: unifiedgosdk.String("fugiat"),
-        UpdatedGte: types.MustTimeFromString("2021-01-28T10:50:17.967Z"),
+        ConnectionID: "Northwest forceful Moore",
+        Limit: unifiedgosdk.Float64(2623.89),
+        Offset: unifiedgosdk.Float64(7811.91),
+        Order: unifiedgosdk.String("Mouse whether deploy"),
+        Query: unifiedgosdk.String("pink"),
+        Sort: unifiedgosdk.String("huzzah thistle"),
+        UpdatedGte: types.MustTimeFromString("2022-03-13T15:14:03.645Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -145,8 +146,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.GetAtsConnectionIDCandidateID(ctx, operations.GetAtsConnectionIDCandidateIDRequest{
-        ConnectionID: "velit",
-        ID: "13a1f5fd-9425-49c0-b36f-25ea944f3b75",
+        ConnectionID: "ha Loan",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -200,42 +201,42 @@ func main() {
     res, err := s.Candidate.PatchAtsConnectionIDCandidateID(ctx, operations.PatchAtsConnectionIDCandidateIDRequest{
         AtsCandidate: &shared.AtsCandidate{
             Address: &shared.PropertyAtsCandidateAddress{
-                Address1: unifiedgosdk.String("ex"),
-                Address2: unifiedgosdk.String("minus"),
-                City: unifiedgosdk.String("North Tylerview"),
-                Country: unifiedgosdk.String("Senegal"),
-                CountryCode: unifiedgosdk.String("CZ"),
-                PostalCode: unifiedgosdk.String("63113"),
-                Region: unifiedgosdk.String("magni"),
-                RegionCode: unifiedgosdk.String("incidunt"),
+                Address1: unifiedgosdk.String("closely Goyette plus"),
+                Address2: unifiedgosdk.String("culpa"),
+                City: unifiedgosdk.String("Darrinshire"),
+                Country: unifiedgosdk.String("Mongolia"),
+                CountryCode: unifiedgosdk.String("GW"),
+                PostalCode: unifiedgosdk.String("05275"),
+                Region: unifiedgosdk.String("TLS calculating"),
+                RegionCode: unifiedgosdk.String("up Argon Internal"),
             },
-            CompanyName: unifiedgosdk.String("adipisci"),
-            CreatedAt: types.MustTimeFromString("2022-07-24T00:20:38.347Z"),
+            CompanyName: unifiedgosdk.String("Fadel, Schulist and Koss"),
+            CreatedAt: types.MustTimeFromString("2022-12-09T07:16:54.728Z"),
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
-                    Email: "Melyna.Quigley36@yahoo.com",
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
+                    Email: "Gregory63@gmail.com",
+                    Type: shared.AtsEmailTypeOther.ToPointer(),
                 },
             },
-            ExternalID: unifiedgosdk.String("consequuntur"),
-            ID: unifiedgosdk.String("3a45cefc-5fde-410a-8ce2-169e510019c6"),
-            ImageURL: unifiedgosdk.String("quibusdam"),
-            Name: unifiedgosdk.String("Corey Walker"),
+            ExternalID: unifiedgosdk.String("Elegant"),
+            ID: unifiedgosdk.String("<ID>"),
+            ImageURL: unifiedgosdk.String("Tricycle Yttrium Hybrid"),
+            Name: unifiedgosdk.String("ornery whether"),
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "dignissimos",
+                "Cadillac",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "laboriosam",
-                    Type: shared.AtsTelephoneTypeWork.ToPointer(),
+                    Telephone: "Marketing Cotton",
+                    Type: shared.AtsTelephoneTypeHome.ToPointer(),
                 },
             },
-            Title: unifiedgosdk.String("Ms."),
-            UpdatedAt: types.MustTimeFromString("2021-10-28T15:35:10.950Z"),
+            Title: unifiedgosdk.String("East"),
+            UpdatedAt: types.MustTimeFromString("2023-10-31T11:53:36.953Z"),
         },
-        ConnectionID: "cum",
-        ID: "fbbe6949-fb2b-4b4e-8ae6-c3d5db3adebd",
+        ConnectionID: "redundant Tricycle unloose",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -289,41 +290,41 @@ func main() {
     res, err := s.Candidate.PostAtsConnectionIDCandidate(ctx, operations.PostAtsConnectionIDCandidateRequest{
         AtsCandidate: &shared.AtsCandidate{
             Address: &shared.PropertyAtsCandidateAddress{
-                Address1: unifiedgosdk.String("ad"),
-                Address2: unifiedgosdk.String("facere"),
-                City: unifiedgosdk.String("Veumchester"),
-                Country: unifiedgosdk.String("Faroe Islands"),
-                CountryCode: unifiedgosdk.String("SI"),
-                PostalCode: unifiedgosdk.String("03656"),
-                Region: unifiedgosdk.String("est"),
-                RegionCode: unifiedgosdk.String("occaecati"),
+                Address1: unifiedgosdk.String("incubate"),
+                Address2: unifiedgosdk.String("azure Trans"),
+                City: unifiedgosdk.String("Port Rory"),
+                Country: unifiedgosdk.String("El Salvador"),
+                CountryCode: unifiedgosdk.String("CX"),
+                PostalCode: unifiedgosdk.String("54222-0235"),
+                Region: unifiedgosdk.String("modi fooey"),
+                RegionCode: unifiedgosdk.String("Metal TCP incidunt"),
             },
-            CompanyName: unifiedgosdk.String("labore"),
-            CreatedAt: types.MustTimeFromString("2022-12-10T16:31:33.706Z"),
+            CompanyName: unifiedgosdk.String("McCullough, Rosenbaum and Daugherty"),
+            CreatedAt: types.MustTimeFromString("2023-02-07T05:55:59.357Z"),
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
-                    Email: "Green75@gmail.com",
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                    Email: "Eleanora.Rogahn44@hotmail.com",
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
                 },
             },
-            ExternalID: unifiedgosdk.String("nostrum"),
-            ID: unifiedgosdk.String("e9d9a457-8adc-41ac-a00d-ec001ac802e2"),
-            ImageURL: unifiedgosdk.String("necessitatibus"),
-            Name: unifiedgosdk.String("Jose Mante"),
+            ExternalID: unifiedgosdk.String("South though"),
+            ID: unifiedgosdk.String("<ID>"),
+            ImageURL: unifiedgosdk.String("Pants"),
+            Name: unifiedgosdk.String("Raleigh"),
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "laudantium",
+                "morph",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "maiores",
-                    Type: shared.AtsTelephoneTypeWork.ToPointer(),
+                    Telephone: "lavender Sedan Folk",
+                    Type: shared.AtsTelephoneTypeOther.ToPointer(),
                 },
             },
-            Title: unifiedgosdk.String("Dr."),
-            UpdatedAt: types.MustTimeFromString("2022-10-06T09:51:21.294Z"),
+            Title: unifiedgosdk.String("Savings panel"),
+            UpdatedAt: types.MustTimeFromString("2022-02-09T15:32:35.578Z"),
         },
-        ConnectionID: "suscipit",
+        ConnectionID: "Ngultrum red glean",
     })
     if err != nil {
         log.Fatal(err)
@@ -377,42 +378,42 @@ func main() {
     res, err := s.Candidate.PutAtsConnectionIDCandidateID(ctx, operations.PutAtsConnectionIDCandidateIDRequest{
         AtsCandidate: &shared.AtsCandidate{
             Address: &shared.PropertyAtsCandidateAddress{
-                Address1: unifiedgosdk.String("earum"),
-                Address2: unifiedgosdk.String("doloribus"),
-                City: unifiedgosdk.String("West Jade"),
-                Country: unifiedgosdk.String("Jersey"),
-                CountryCode: unifiedgosdk.String("RO"),
-                PostalCode: unifiedgosdk.String("28501"),
-                Region: unifiedgosdk.String("impedit"),
-                RegionCode: unifiedgosdk.String("beatae"),
+                Address1: unifiedgosdk.String("archive"),
+                Address2: unifiedgosdk.String("Specialist Kyat"),
+                City: unifiedgosdk.String("New Dennis"),
+                Country: unifiedgosdk.String("Mauritius"),
+                CountryCode: unifiedgosdk.String("TL"),
+                PostalCode: unifiedgosdk.String("49105-9909"),
+                Region: unifiedgosdk.String("copy olive"),
+                RegionCode: unifiedgosdk.String("withdrawal cumque person"),
             },
-            CompanyName: unifiedgosdk.String("incidunt"),
-            CreatedAt: types.MustTimeFromString("2022-11-11T05:11:31.731Z"),
+            CompanyName: unifiedgosdk.String("Kuhn and Sons"),
+            CreatedAt: types.MustTimeFromString("2022-01-28T10:51:00.922Z"),
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
-                    Email: "Maybell.Abshire@yahoo.com",
-                    Type: shared.AtsEmailTypeWork.ToPointer(),
+                    Email: "Hester.Jenkins@gmail.com",
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
                 },
             },
-            ExternalID: unifiedgosdk.String("id"),
-            ID: unifiedgosdk.String("668151a4-72af-4923-8594-9f83f350cf87"),
-            ImageURL: unifiedgosdk.String("aliquid"),
-            Name: unifiedgosdk.String("Tommie Rohan Sr."),
+            ExternalID: unifiedgosdk.String("Loan EXE"),
+            ID: unifiedgosdk.String("<ID>"),
+            ImageURL: unifiedgosdk.String("deliver executive RSS"),
+            Name: unifiedgosdk.String("because aha black"),
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "minus",
+                "program",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "commodi",
+                    Telephone: "empower exit Pangender",
                     Type: shared.AtsTelephoneTypeMobile.ToPointer(),
                 },
             },
-            Title: unifiedgosdk.String("Miss"),
-            UpdatedAt: types.MustTimeFromString("2021-08-12T13:33:07.290Z"),
+            Title: unifiedgosdk.String("Corporate anenst Electronic"),
+            UpdatedAt: types.MustTimeFromString("2022-03-30T08:00:53.284Z"),
         },
-        ConnectionID: "modi",
-        ID: "e243cf78-9ffa-4fed-a53e-5ae6e0ac184c",
+        ConnectionID: "Flerovium azure",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

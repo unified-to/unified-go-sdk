@@ -1,4 +1,5 @@
 # Lead
+(*Lead*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.DeleteCrmConnectionIDLeadID(ctx, operations.DeleteCrmConnectionIDLeadIDRequest{
-        ConnectionID: "totam",
-        ID: "6c3ae7d7-b67f-4eef-9e14-2d95b1dbecef",
+        ConnectionID: "Senior azure",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,13 +89,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.GetCrmConnectionIDLead(ctx, operations.GetCrmConnectionIDLeadRequest{
-        ConnectionID: "voluptatibus",
-        Limit: unifiedgosdk.Float64(4809.57),
-        Offset: unifiedgosdk.Float64(7789.75),
-        Order: unifiedgosdk.String("non"),
-        Query: unifiedgosdk.String("tempore"),
-        Sort: unifiedgosdk.String("quae"),
-        UpdatedGte: types.MustTimeFromString("2022-08-03T04:30:42.588Z"),
+        ConnectionID: "Computer Hop",
+        Limit: unifiedgosdk.Float64(7411.81),
+        Offset: unifiedgosdk.Float64(9004.32),
+        Order: unifiedgosdk.String("Operations candela Integration"),
+        Query: unifiedgosdk.String("impactful transform"),
+        Sort: unifiedgosdk.String("Tala defense Southwest"),
+        UpdatedGte: types.MustTimeFromString("2021-09-29T00:37:32.184Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -145,8 +146,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.GetCrmConnectionIDLeadID(ctx, operations.GetCrmConnectionIDLeadIDRequest{
-        ConnectionID: "itaque",
-        ID: "9278275e-ea76-4817-8680-63f799b7956c",
+        ConnectionID: "users Minnesota Bypass",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -201,39 +202,39 @@ func main() {
         CrmLead: &shared.CrmLead{
             Active: unifiedgosdk.Bool(false),
             Address: &shared.PropertyCrmLeadAddress{
-                Address1: unifiedgosdk.String("quae"),
-                Address2: unifiedgosdk.String("quidem"),
-                City: unifiedgosdk.String("Fort Maddisontown"),
-                Country: unifiedgosdk.String("Paraguay"),
-                CountryCode: unifiedgosdk.String("PY"),
-                PostalCode: unifiedgosdk.String("06209"),
-                Region: unifiedgosdk.String("reprehenderit"),
-                RegionCode: unifiedgosdk.String("quo"),
+                Address1: unifiedgosdk.String("Cambridgeshire"),
+                Address2: unifiedgosdk.String("Oriental farad male"),
+                City: unifiedgosdk.String("D'Amorebury"),
+                Country: unifiedgosdk.String("Reunion"),
+                CountryCode: unifiedgosdk.String("UY"),
+                PostalCode: unifiedgosdk.String("87017-9001"),
+                Region: unifiedgosdk.String("Buckinghamshire Electric"),
+                RegionCode: unifiedgosdk.String("South gee"),
             },
-            CompanyID: unifiedgosdk.String("incidunt"),
-            ContactID: unifiedgosdk.String("id"),
-            CreatedAt: types.MustTimeFromString("2021-10-20T07:58:35.149Z"),
-            CreatorUserID: unifiedgosdk.String("quaerat"),
+            CompanyID: unifiedgosdk.String("Gasoline conglomeration Tennessine"),
+            ContactID: unifiedgosdk.String("grow hub"),
+            CreatedAt: types.MustTimeFromString("2023-06-09T15:23:12.644Z"),
+            CreatorUserID: unifiedgosdk.String("voluptates"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedgosdk.String("Giovanni48@gmail.com"),
-                    Type: shared.CrmEmailTypeWork.ToPointer(),
+                    Email: unifiedgosdk.String("Jeffrey.Denesik52@yahoo.com"),
+                    Type: shared.CrmEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.String("657b01a0-7c08-4fd3-921c-257930d6f093"),
-            Name: unifiedgosdk.String("Earl Towne"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("whiteboard lumen"),
             Raw: &shared.PropertyCrmLeadRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "aliquam",
-                    Type: shared.CrmTelephoneTypeHome.ToPointer(),
+                    Telephone: "Cheese before against",
+                    Type: shared.CrmTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2022-04-13T09:05:51.677Z"),
-            UserID: unifiedgosdk.String("autem"),
+            UpdatedAt: types.MustTimeFromString("2022-07-12T14:19:50.007Z"),
+            UserID: unifiedgosdk.String("Games yellow Towels"),
         },
-        ConnectionID: "ea",
-        ID: "dfa1011a-091b-43ec-8b53-862de1a9d14f",
+        ConnectionID: "brr misuse",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -288,38 +289,38 @@ func main() {
         CrmLead: &shared.CrmLead{
             Active: unifiedgosdk.Bool(false),
             Address: &shared.PropertyCrmLeadAddress{
-                Address1: unifiedgosdk.String("debitis"),
-                Address2: unifiedgosdk.String("reprehenderit"),
-                City: unifiedgosdk.String("Fort Fritzville"),
-                Country: unifiedgosdk.String("Bangladesh"),
-                CountryCode: unifiedgosdk.String("ZA"),
-                PostalCode: unifiedgosdk.String("02028-9722"),
-                Region: unifiedgosdk.String("laudantium"),
-                RegionCode: unifiedgosdk.String("velit"),
+                Address1: unifiedgosdk.String("XSS Country knowledge"),
+                Address2: unifiedgosdk.String("structure"),
+                City: unifiedgosdk.String("Giovaniton"),
+                Country: unifiedgosdk.String("Ghana"),
+                CountryCode: unifiedgosdk.String("CO"),
+                PostalCode: unifiedgosdk.String("34495-0585"),
+                Region: unifiedgosdk.String("Modern"),
+                RegionCode: unifiedgosdk.String("Diesel"),
             },
-            CompanyID: unifiedgosdk.String("natus"),
-            ContactID: unifiedgosdk.String("molestiae"),
-            CreatedAt: types.MustTimeFromString("2020-03-03T18:07:31.494Z"),
-            CreatorUserID: unifiedgosdk.String("hic"),
+            CompanyID: unifiedgosdk.String("yuppify"),
+            ContactID: unifiedgosdk.String("demanding scratch male"),
+            CreatedAt: types.MustTimeFromString("2023-03-07T11:22:05.657Z"),
+            CreatorUserID: unifiedgosdk.String("masticate South"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedgosdk.String("Hanna86@yahoo.com"),
-                    Type: shared.CrmEmailTypeWork.ToPointer(),
+                    Email: unifiedgosdk.String("Gregorio37@gmail.com"),
+                    Type: shared.CrmEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.String("2090fc15-7ac9-4fe1-961c-e9be41c869dd"),
-            Name: unifiedgosdk.String("Rosemarie Moen V"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("Granite Tools"),
             Raw: &shared.PropertyCrmLeadRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "repellendus",
+                    Telephone: "Hassium Balanced male",
                     Type: shared.CrmTelephoneTypeWork.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2022-04-24T12:06:20.344Z"),
-            UserID: unifiedgosdk.String("odit"),
+            UpdatedAt: types.MustTimeFromString("2021-06-26T11:56:58.926Z"),
+            UserID: unifiedgosdk.String("Consultant"),
         },
-        ConnectionID: "aut",
+        ConnectionID: "solutions gosh",
     })
     if err != nil {
         log.Fatal(err)
@@ -374,39 +375,39 @@ func main() {
         CrmLead: &shared.CrmLead{
             Active: unifiedgosdk.Bool(false),
             Address: &shared.PropertyCrmLeadAddress{
-                Address1: unifiedgosdk.String("eaque"),
-                Address2: unifiedgosdk.String("deserunt"),
-                City: unifiedgosdk.String("New Vito"),
-                Country: unifiedgosdk.String("Uruguay"),
-                CountryCode: unifiedgosdk.String("ST"),
-                PostalCode: unifiedgosdk.String("63489"),
-                Region: unifiedgosdk.String("laudantium"),
-                RegionCode: unifiedgosdk.String("sapiente"),
+                Address1: unifiedgosdk.String("Extension"),
+                Address2: unifiedgosdk.String("supposing Dorado Assistant"),
+                City: unifiedgosdk.String("South Gate"),
+                Country: unifiedgosdk.String("Reunion"),
+                CountryCode: unifiedgosdk.String("IS"),
+                PostalCode: unifiedgosdk.String("73732-2192"),
+                Region: unifiedgosdk.String("JBOD phew"),
+                RegionCode: unifiedgosdk.String("Southeast Framingham female"),
             },
-            CompanyID: unifiedgosdk.String("facere"),
-            ContactID: unifiedgosdk.String("laudantium"),
-            CreatedAt: types.MustTimeFromString("2022-09-11T02:42:21.444Z"),
-            CreatorUserID: unifiedgosdk.String("fuga"),
+            CompanyID: unifiedgosdk.String("deposit male"),
+            ContactID: unifiedgosdk.String("bunch edge"),
+            CreatedAt: types.MustTimeFromString("2021-04-03T18:08:02.798Z"),
+            CreatorUserID: unifiedgosdk.String("East Panama"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedgosdk.String("Shannon73@yahoo.com"),
-                    Type: shared.CrmEmailTypeOther.ToPointer(),
+                    Email: unifiedgosdk.String("Jamal20@yahoo.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.String("620cd9c5-afdd-404c-b752-512beae1d87e"),
-            Name: unifiedgosdk.String("Roosevelt Hessel"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("pianist"),
             Raw: &shared.PropertyCrmLeadRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "quod",
-                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
+                    Telephone: "caricature female",
+                    Type: shared.CrmTelephoneTypeHome.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2021-12-04T00:59:07.070Z"),
-            UserID: unifiedgosdk.String("eveniet"),
+            UpdatedAt: types.MustTimeFromString("2022-08-09T07:11:50.077Z"),
+            UserID: unifiedgosdk.String("Designer Folding"),
         },
-        ConnectionID: "molestiae",
-        ID: "a8831166-2cda-46d7-bc1d-86066237d422",
+        ConnectionID: "Lanthanum wink Regional",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

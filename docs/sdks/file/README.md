@@ -1,4 +1,5 @@
 # File
+(*File*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.File.DeleteCrmConnectionIDFileID(ctx, operations.DeleteCrmConnectionIDFileIDRequest{
-        ConnectionID: "adipisci",
-        ID: "febdf676-b720-46da-b750-052a5647edc4",
+        ConnectionID: "Bicycle",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,16 +89,16 @@ func main() {
 
     ctx := context.Background()
     res, err := s.File.GetCrmConnectionIDFile(ctx, operations.GetCrmConnectionIDFileRequest{
-        CompanyID: unifiedgosdk.String("sequi"),
-        ConnectionID: "natus",
-        ContactID: unifiedgosdk.String("saepe"),
-        DealID: unifiedgosdk.String("quibusdam"),
-        Limit: unifiedgosdk.Float64(5481.43),
-        Offset: unifiedgosdk.Float64(8071.51),
-        Order: unifiedgosdk.String("aliquam"),
-        Query: unifiedgosdk.String("adipisci"),
-        Sort: unifiedgosdk.String("explicabo"),
-        UpdatedGte: types.MustTimeFromString("2022-01-22T06:38:09.253Z"),
+        CompanyID: unifiedgosdk.String("reboot"),
+        ConnectionID: "customise far",
+        ContactID: unifiedgosdk.String("Electronic proactive"),
+        DealID: unifiedgosdk.String("withdrawal deposit Gloves"),
+        Limit: unifiedgosdk.Float64(1588.79),
+        Offset: unifiedgosdk.Float64(3754.81),
+        Order: unifiedgosdk.String("Implemented fairly meh"),
+        Query: unifiedgosdk.String("FTP Producer"),
+        Sort: unifiedgosdk.String("soprano deliverables"),
+        UpdatedGte: types.MustTimeFromString("2022-03-02T03:00:09.711Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -148,8 +149,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.File.GetCrmConnectionIDFileID(ctx, operations.GetCrmConnectionIDFileIDRequest{
-        ConnectionID: "incidunt",
-        ID: "1240d448-7ac6-493b-94c3-b9d2488d795a",
+        ConnectionID: "Bicycle",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -203,24 +204,24 @@ func main() {
     res, err := s.File.PatchCrmConnectionIDFileID(ctx, operations.PatchCrmConnectionIDFileIDRequest{
         CrmFile: &shared.CrmFile{
             Active: unifiedgosdk.Bool(false),
-            ActivityID: unifiedgosdk.String("fuga"),
-            CompanyID: unifiedgosdk.String("incidunt"),
-            ContactID: unifiedgosdk.String("aspernatur"),
-            CreatedAt: types.MustTimeFromString("2020-08-02T08:40:50.776Z"),
-            DealID: unifiedgosdk.String("dolore"),
-            Description: unifiedgosdk.String("accusantium"),
-            FileName: unifiedgosdk.String("corporis"),
-            FileSize: unifiedgosdk.Float64(3881.8),
-            FileType: unifiedgosdk.String("laboriosam"),
-            FileURL: unifiedgosdk.String("omnis"),
-            ID: unifiedgosdk.String("f69a006d-2124-4945-8819-d7c3b1b41844"),
-            LeadID: unifiedgosdk.String("consequatur"),
+            ActivityID: unifiedgosdk.String("duh Handmade harness"),
+            CompanyID: unifiedgosdk.String("CFP"),
+            ContactID: unifiedgosdk.String("unaware yellow generating"),
+            CreatedAt: types.MustTimeFromString("2021-05-04T04:54:33.785Z"),
+            DealID: unifiedgosdk.String("channels SUV"),
+            Description: unifiedgosdk.String("De-engineered didactic hardware"),
+            FileName: unifiedgosdk.String("metical_silver_yellow.html"),
+            FileSize: unifiedgosdk.Float64(6861.53),
+            FileType: unifiedgosdk.String("video"),
+            FileURL: unifiedgosdk.String("navigate Funk"),
+            ID: unifiedgosdk.String("<ID>"),
+            LeadID: unifiedgosdk.String("internal"),
             Raw: &shared.PropertyCrmFileRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-12-09T21:50:08.252Z"),
-            UserID: unifiedgosdk.String("saepe"),
+            UpdatedAt: types.MustTimeFromString("2023-02-21T13:46:42.012Z"),
+            UserID: unifiedgosdk.String("Interactions"),
         },
-        ConnectionID: "accusantium",
-        ID: "0310d023-dc90-41f5-afd2-a6c44846ae9d",
+        ConnectionID: "Handcrafted",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -274,23 +275,23 @@ func main() {
     res, err := s.File.PostCrmConnectionIDFile(ctx, operations.PostCrmConnectionIDFileRequest{
         CrmFile: &shared.CrmFile{
             Active: unifiedgosdk.Bool(false),
-            ActivityID: unifiedgosdk.String("praesentium"),
-            CompanyID: unifiedgosdk.String("occaecati"),
-            ContactID: unifiedgosdk.String("eos"),
-            CreatedAt: types.MustTimeFromString("2022-10-08T19:31:07.425Z"),
-            DealID: unifiedgosdk.String("nobis"),
-            Description: unifiedgosdk.String("quos"),
-            FileName: unifiedgosdk.String("provident"),
-            FileSize: unifiedgosdk.Float64(4099.18),
-            FileType: unifiedgosdk.String("consequuntur"),
-            FileURL: unifiedgosdk.String("delectus"),
-            ID: unifiedgosdk.String("4896bf51-e465-42d3-8343-d61778af4912"),
-            LeadID: unifiedgosdk.String("numquam"),
+            ActivityID: unifiedgosdk.String("tan impedit Pickup"),
+            CompanyID: unifiedgosdk.String("Manager"),
+            ContactID: unifiedgosdk.String("Florida Shoes East"),
+            CreatedAt: types.MustTimeFromString("2023-01-08T11:37:24.708Z"),
+            DealID: unifiedgosdk.String("Agent"),
+            Description: unifiedgosdk.String("Multi-lateral well-modulated portal"),
+            FileName: unifiedgosdk.String("panel_city.wav"),
+            FileSize: unifiedgosdk.Float64(1401.73),
+            FileType: unifiedgosdk.String("application"),
+            FileURL: unifiedgosdk.String("for Chips under"),
+            ID: unifiedgosdk.String("<ID>"),
+            LeadID: unifiedgosdk.String("abaft Checking"),
             Raw: &shared.PropertyCrmFileRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-07-08T10:09:32.871Z"),
-            UserID: unifiedgosdk.String("magni"),
+            UpdatedAt: types.MustTimeFromString("2023-02-25T09:46:59.608Z"),
+            UserID: unifiedgosdk.String("Mexico withdrawal"),
         },
-        ConnectionID: "enim",
+        ConnectionID: "national Lead",
     })
     if err != nil {
         log.Fatal(err)
@@ -344,24 +345,24 @@ func main() {
     res, err := s.File.PutCrmConnectionIDFileID(ctx, operations.PutCrmConnectionIDFileIDRequest{
         CrmFile: &shared.CrmFile{
             Active: unifiedgosdk.Bool(false),
-            ActivityID: unifiedgosdk.String("eveniet"),
-            CompanyID: unifiedgosdk.String("commodi"),
-            ContactID: unifiedgosdk.String("magni"),
-            CreatedAt: types.MustTimeFromString("2022-05-23T03:31:28.636Z"),
-            DealID: unifiedgosdk.String("aut"),
-            Description: unifiedgosdk.String("occaecati"),
-            FileName: unifiedgosdk.String("vero"),
-            FileSize: unifiedgosdk.Float64(6231.5),
-            FileType: unifiedgosdk.String("inventore"),
-            FileURL: unifiedgosdk.String("ipsa"),
-            ID: unifiedgosdk.String("44a5de59-ac77-4066-b0cf-1cf593260525"),
-            LeadID: unifiedgosdk.String("beatae"),
+            ActivityID: unifiedgosdk.String("Cotton"),
+            CompanyID: unifiedgosdk.String("Northeast"),
+            ContactID: unifiedgosdk.String("Computer"),
+            CreatedAt: types.MustTimeFromString("2021-04-09T13:10:01.367Z"),
+            DealID: unifiedgosdk.String("toward confiscate East"),
+            Description: unifiedgosdk.String("Devolved upward-trending matrices"),
+            FileName: unifiedgosdk.String("generation_tactics.wav"),
+            FileSize: unifiedgosdk.Float64(4770.09),
+            FileType: unifiedgosdk.String("audio"),
+            FileURL: unifiedgosdk.String("framework azure Metal"),
+            ID: unifiedgosdk.String("<ID>"),
+            LeadID: unifiedgosdk.String("ampere costume"),
             Raw: &shared.PropertyCrmFileRaw{},
-            UpdatedAt: types.MustTimeFromString("2021-10-17T02:29:52.101Z"),
-            UserID: unifiedgosdk.String("ex"),
+            UpdatedAt: types.MustTimeFromString("2023-05-15T05:04:24.130Z"),
+            UserID: unifiedgosdk.String("Research payment"),
         },
-        ConnectionID: "harum",
-        ID: "b426897d-99a2-4d33-9670-e93ee6cf59f3",
+        ConnectionID: "East Associate Mazda",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

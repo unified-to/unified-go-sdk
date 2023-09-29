@@ -31,9 +31,12 @@ func (o *GetAtsConnectionIDCandidateIDRequest) GetID() string {
 type GetAtsConnectionIDCandidateIDResponse struct {
 	// Successful
 	AtsCandidate *shared.AtsCandidate
-	ContentType  string
-	StatusCode   int
-	RawResponse  *http.Response
+	// HTTP response content type for this operation
+	ContentType string
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
+	RawResponse *http.Response
 }
 
 func (o *GetAtsConnectionIDCandidateIDResponse) GetAtsCandidate() *shared.AtsCandidate {

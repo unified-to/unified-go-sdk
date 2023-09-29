@@ -1,4 +1,5 @@
 # Auth
+(*Auth*)
 
 ### Available Operations
 
@@ -31,19 +32,19 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Auth.GetUnifiedIntegrationAuthWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedgosdk.String("quia"),
-        ExternalXref: unifiedgosdk.String("ullam"),
-        FailureRedirect: unifiedgosdk.String("quisquam"),
-        IntegrationType: "dicta",
-        Lang: unifiedgosdk.String("voluptatibus"),
+        Env: unifiedgosdk.String("Algerian"),
+        ExternalXref: unifiedgosdk.String("Cambridgeshire Surinam"),
+        FailureRedirect: unifiedgosdk.String("Designer Drive"),
+        IntegrationType: "program Home",
+        Lang: unifiedgosdk.String("Plastic program"),
         Redirect: unifiedgosdk.Bool(false),
         Scopes: []GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes{
-            operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesTicketingNoteWrite,
+            operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesCrmFileRead,
         },
-        State: unifiedgosdk.String("quae"),
-        Subdomain: unifiedgosdk.String("officiis"),
-        SuccessRedirect: unifiedgosdk.String("architecto"),
-        WorkspaceID: "architecto",
+        State: unifiedgosdk.String("Functionality Product"),
+        Subdomain: unifiedgosdk.String("payment Developer Dynamic"),
+        SuccessRedirect: unifiedgosdk.String("Northeast"),
+        WorkspaceID: "duh empower Kwanza",
     })
     if err != nil {
         log.Fatal(err)
@@ -94,13 +95,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Auth.GetUnifiedIntegrationLoginWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedgosdk.String("enim"),
-        FailureRedirect: unifiedgosdk.String("optio"),
-        IntegrationType: "rem",
+        Env: unifiedgosdk.String("Rubber"),
+        FailureRedirect: unifiedgosdk.String("gold Cambridgeshire"),
+        IntegrationType: "Plastic services pixel",
         Redirect: unifiedgosdk.Bool(false),
-        State: unifiedgosdk.String("perferendis"),
-        SuccessRedirect: unifiedgosdk.String("facilis"),
-        WorkspaceID: "reiciendis",
+        State: unifiedgosdk.String("Volkswagen Southwest"),
+        SuccessRedirect: unifiedgosdk.String("drive integrated Bicycle"),
+        WorkspaceID: "Fantastic recontextualize Frozen",
     })
     if err != nil {
         log.Fatal(err)

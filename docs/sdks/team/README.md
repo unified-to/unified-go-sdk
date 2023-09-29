@@ -1,4 +1,5 @@
 # Team
+(*Team*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Team.DeleteCrmConnectionIDTeamID(ctx, operations.DeleteCrmConnectionIDTeamIDRequest{
-        ConnectionID: "ab",
-        ID: "bbf05527-1b25-411d-9606-dd1b28272bc9",
+        ConnectionID: "Diverse",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,13 +89,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Team.GetCrmConnectionIDTeam(ctx, operations.GetCrmConnectionIDTeamRequest{
-        ConnectionID: "placeat",
-        Limit: unifiedgosdk.Float64(1884.9),
-        Offset: unifiedgosdk.Float64(1694.68),
-        Order: unifiedgosdk.String("sunt"),
-        Query: unifiedgosdk.String("vitae"),
-        Sort: unifiedgosdk.String("ex"),
-        UpdatedGte: types.MustTimeFromString("2022-01-05T07:41:51.025Z"),
+        ConnectionID: "bath Lamborghini",
+        Limit: unifiedgosdk.Float64(1042.31),
+        Offset: unifiedgosdk.Float64(1586.42),
+        Order: unifiedgosdk.String("Diesel Bike virtual"),
+        Query: unifiedgosdk.String("bakery"),
+        Sort: unifiedgosdk.String("Senior"),
+        UpdatedGte: types.MustTimeFromString("2021-12-04T23:56:00.028Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -145,8 +146,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Team.GetCrmConnectionIDTeamID(ctx, operations.GetCrmConnectionIDTeamIDRequest{
-        ConnectionID: "rerum",
-        ID: "1880fcbb-2b93-4c15-b670-bd1784831653",
+        ConnectionID: "Intelligent invoice Tesla",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -199,18 +200,18 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.PatchCrmConnectionIDTeamID(ctx, operations.PatchCrmConnectionIDTeamIDRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustTimeFromString("2020-04-24T00:39:17.172Z"),
-            Description: unifiedgosdk.String("harum"),
-            ID: unifiedgosdk.String("3b6e241c-3109-4983-a63c-66dcbb7df6cb"),
-            Name: unifiedgosdk.String("Jenny Rolfson"),
+            CreatedAt: types.MustTimeFromString("2021-05-20T12:47:48.451Z"),
+            Description: unifiedgosdk.String("Automated executive emulation"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("Internal experiences"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-12-14T00:49:36.543Z"),
+            UpdatedAt: types.MustTimeFromString("2022-05-22T09:41:53.599Z"),
             UserIds: []string{
-                "praesentium",
+                "lumen",
             },
         },
-        ConnectionID: "recusandae",
-        ID: "0713774d-e4fe-4e10-9d97-80a10c47b950",
+        ConnectionID: "up Candace",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -263,17 +264,17 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.PostCrmConnectionIDTeam(ctx, operations.PostCrmConnectionIDTeamRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustTimeFromString("2022-12-18T11:11:12.745Z"),
-            Description: unifiedgosdk.String("possimus"),
-            ID: unifiedgosdk.String("6c8b2a5f-0022-407e-8048-f90009ed2902"),
-            Name: unifiedgosdk.String("Brandy Tillman"),
+            CreatedAt: types.MustTimeFromString("2022-02-12T08:57:03.070Z"),
+            Description: unifiedgosdk.String("Organic transitional portal"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("male bandwidth"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustTimeFromString("2021-02-19T10:57:16.366Z"),
+            UpdatedAt: types.MustTimeFromString("2022-12-29T15:50:04.365Z"),
             UserIds: []string{
-                "iste",
+                "meter",
             },
         },
-        ConnectionID: "pariatur",
+        ConnectionID: "Guaynabo AGP East",
     })
     if err != nil {
         log.Fatal(err)
@@ -326,18 +327,18 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.PutCrmConnectionIDTeamID(ctx, operations.PutCrmConnectionIDTeamIDRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustTimeFromString("2022-09-20T15:32:20.854Z"),
-            Description: unifiedgosdk.String("sunt"),
-            ID: unifiedgosdk.String("61e91500-323b-42c0-9b92-4771f5669e5b"),
-            Name: unifiedgosdk.String("Tricia Sawayn"),
+            CreatedAt: types.MustTimeFromString("2023-08-14T23:28:53.515Z"),
+            Description: unifiedgosdk.String("Inverse multi-tasking task-force"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("Indonesia Orchestrator Division"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-07-25T07:35:50.345Z"),
+            UpdatedAt: types.MustTimeFromString("2022-10-23T23:13:25.973Z"),
             UserIds: []string{
-                "ea",
+                "thoroughly",
             },
         },
-        ConnectionID: "labore",
-        ID: "9d84eb9e-4cfd-4227-ae0b-88fb87d6fa5b",
+        ConnectionID: "delectus",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

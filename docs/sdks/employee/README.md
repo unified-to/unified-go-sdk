@@ -1,4 +1,5 @@
 # Employee
+(*Employee*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.DeleteHrisConnectionIDEmployeeID(ctx, operations.DeleteHrisConnectionIDEmployeeIDRequest{
-        ConnectionID: "delectus",
-        ID: "4844225e-75b7-4960-a5c0-efa6f93b90a1",
+        ConnectionID: "Laredo turquoise port",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,13 +89,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.GetHrisConnectionIDEmployee(ctx, operations.GetHrisConnectionIDEmployeeRequest{
-        ConnectionID: "distinctio",
-        Limit: unifiedgosdk.Float64(5362.02),
-        Offset: unifiedgosdk.Float64(7558.48),
-        Order: unifiedgosdk.String("unde"),
-        Query: unifiedgosdk.String("veniam"),
-        Sort: unifiedgosdk.String("nam"),
-        UpdatedGte: types.MustTimeFromString("2022-08-28T08:17:40.334Z"),
+        ConnectionID: "initiatives greedily project",
+        Limit: unifiedgosdk.Float64(1798.52),
+        Offset: unifiedgosdk.Float64(6683.19),
+        Order: unifiedgosdk.String("Sports"),
+        Query: unifiedgosdk.String("TLS"),
+        Sort: unifiedgosdk.String("Jazz Trans"),
+        UpdatedGte: types.MustTimeFromString("2021-04-09T17:32:06.988Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -145,8 +146,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.GetHrisConnectionIDEmployeeID(ctx, operations.GetHrisConnectionIDEmployeeIDRequest{
-        ConnectionID: "explicabo",
-        ID: "54b739f4-fe77-4210-91f6-558c99c722d2",
+        ConnectionID: "Keyboard cleverly Rubber",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -200,48 +201,48 @@ func main() {
     res, err := s.Employee.PatchHrisConnectionIDEmployeeID(ctx, operations.PatchHrisConnectionIDEmployeeIDRequest{
         HrisEmployee: &shared.HrisEmployee{
             Address: &shared.PropertyHrisEmployeeAddress{
-                Address1: unifiedgosdk.String("nam"),
-                Address2: unifiedgosdk.String("optio"),
-                City: unifiedgosdk.String("Fort Kentonburgh"),
-                Country: unifiedgosdk.String("Anguilla"),
-                CountryCode: unifiedgosdk.String("LS"),
-                PostalCode: unifiedgosdk.String("85866"),
-                Region: unifiedgosdk.String("recusandae"),
-                RegionCode: unifiedgosdk.String("doloremque"),
+                Address1: unifiedgosdk.String("Tennessee virtual"),
+                Address2: unifiedgosdk.String("Assurance forecast"),
+                City: unifiedgosdk.String("Baton Rouge"),
+                Country: unifiedgosdk.String("Bahamas"),
+                CountryCode: unifiedgosdk.String("TW"),
+                PostalCode: unifiedgosdk.String("93632"),
+                Region: unifiedgosdk.String("Bailey"),
+                RegionCode: unifiedgosdk.String("navigating Oregon"),
             },
-            CreatedAt: types.MustTimeFromString("2022-11-04T08:22:44.750Z"),
-            DateOfBirth: types.MustTimeFromString("2020-06-24T16:30:44.804Z"),
-            Department: unifiedgosdk.String("voluptate"),
-            Division: unifiedgosdk.String("placeat"),
+            CreatedAt: types.MustTimeFromString("2023-01-31T08:11:49.561Z"),
+            DateOfBirth: types.MustTimeFromString("2021-10-08T23:14:10.860Z"),
+            Department: unifiedgosdk.String("soupy web Robust"),
+            Division: unifiedgosdk.String("Corporate loudly quantify"),
             Emails: []shared.HrisEmail{
                 shared.HrisEmail{
-                    Email: "Manuela_Schowalter@hotmail.com",
-                    Type: shared.HrisEmailTypeWork.ToPointer(),
+                    Email: "Wendy_Kovacek@hotmail.com",
+                    Type: shared.HrisEmailTypeOther.ToPointer(),
                 },
             },
-            EmployeeNumber: unifiedgosdk.String("minus"),
+            EmployeeNumber: unifiedgosdk.String("hydrate indigo transmit"),
             EmploymentStatus: shared.HrisEmployeeEmploymentStatusInactive.ToPointer(),
-            EmploymentType: shared.HrisEmployeeEmploymentTypeCasual.ToPointer(),
-            Gender: shared.HrisEmployeeGenderMale.ToPointer(),
-            HiredAt: types.MustTimeFromString("2020-02-21T17:23:34.909Z"),
-            ID: unifiedgosdk.String("e9e15df9-0390-47f3-b831-983d42e54a85"),
-            Location: unifiedgosdk.String("dolore"),
-            ManagerID: unifiedgosdk.String("commodi"),
+            EmploymentType: shared.HrisEmployeeEmploymentTypeFullTime.ToPointer(),
+            Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
+            HiredAt: types.MustTimeFromString("2021-07-20T11:37:42.486Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            Location: unifiedgosdk.String("withdrawal wonderfully"),
+            ManagerID: unifiedgosdk.String("molestias white Gainesville"),
             MaritalStatus: shared.HrisEmployeeMaritalStatusMarried.ToPointer(),
-            Name: unifiedgosdk.String("Ramona Kub"),
+            Name: unifiedgosdk.String("tensely technologies"),
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "consequatur",
-                    Type: shared.HrisTelephoneTypeWork.ToPointer(),
+                    Telephone: "Northeast Music Hassium",
+                    Type: shared.HrisTelephoneTypeMobile.ToPointer(),
                 },
             },
-            TerminatedAt: types.MustTimeFromString("2022-10-20T10:23:58.834Z"),
-            Title: unifiedgosdk.String("Dr."),
-            UpdatedAt: types.MustTimeFromString("2022-09-26T09:29:33.100Z"),
+            TerminatedAt: types.MustTimeFromString("2023-08-07T01:58:28.622Z"),
+            Title: unifiedgosdk.String("failing Southwest Kuhn"),
+            UpdatedAt: types.MustTimeFromString("2023-05-18T01:32:56.083Z"),
         },
-        ConnectionID: "nihil",
-        ID: "1d51aaa6-ddf5-4abd-a487-c5fc2b862a00",
+        ConnectionID: "South Money past",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -295,47 +296,47 @@ func main() {
     res, err := s.Employee.PostHrisConnectionIDEmployee(ctx, operations.PostHrisConnectionIDEmployeeRequest{
         HrisEmployee: &shared.HrisEmployee{
             Address: &shared.PropertyHrisEmployeeAddress{
-                Address1: unifiedgosdk.String("nobis"),
-                Address2: unifiedgosdk.String("saepe"),
-                City: unifiedgosdk.String("Irvine"),
-                Country: unifiedgosdk.String("Montserrat"),
-                CountryCode: unifiedgosdk.String("TT"),
-                PostalCode: unifiedgosdk.String("00034"),
-                Region: unifiedgosdk.String("suscipit"),
-                RegionCode: unifiedgosdk.String("dolor"),
+                Address1: unifiedgosdk.String("Southeast ea withdrawal"),
+                Address2: unifiedgosdk.String("Developer"),
+                City: unifiedgosdk.String("Grand Forks"),
+                Country: unifiedgosdk.String("Cayman Islands"),
+                CountryCode: unifiedgosdk.String("BM"),
+                PostalCode: unifiedgosdk.String("63867-8134"),
+                Region: unifiedgosdk.String("teal Northwest firewall"),
+                RegionCode: unifiedgosdk.String("doubt Diesel COM"),
             },
-            CreatedAt: types.MustTimeFromString("2022-04-09T11:38:39.555Z"),
-            DateOfBirth: types.MustTimeFromString("2020-12-14T05:42:01.818Z"),
-            Department: unifiedgosdk.String("nihil"),
-            Division: unifiedgosdk.String("similique"),
+            CreatedAt: types.MustTimeFromString("2022-09-25T20:39:21.870Z"),
+            DateOfBirth: types.MustTimeFromString("2022-04-06T20:53:56.362Z"),
+            Department: unifiedgosdk.String("payment mull"),
+            Division: unifiedgosdk.String("Blues red"),
             Emails: []shared.HrisEmail{
                 shared.HrisEmail{
-                    Email: "Roman_Torp27@hotmail.com",
-                    Type: shared.HrisEmailTypeHome.ToPointer(),
+                    Email: "Jacquelyn8@hotmail.com",
+                    Type: shared.HrisEmailTypeWork.ToPointer(),
                 },
             },
-            EmployeeNumber: unifiedgosdk.String("dolor"),
-            EmploymentStatus: shared.HrisEmployeeEmploymentStatusActive.ToPointer(),
-            EmploymentType: shared.HrisEmployeeEmploymentTypeCasual.ToPointer(),
-            Gender: shared.HrisEmployeeGenderFemale.ToPointer(),
-            HiredAt: types.MustTimeFromString("2022-11-14T11:24:15.321Z"),
-            ID: unifiedgosdk.String("38e1a735-ac26-4ae3-bbef-971a8f46bca1"),
-            Location: unifiedgosdk.String("quae"),
-            ManagerID: unifiedgosdk.String("aut"),
-            MaritalStatus: shared.HrisEmployeeMaritalStatusMarried.ToPointer(),
-            Name: unifiedgosdk.String("Frankie Mohr"),
+            EmployeeNumber: unifiedgosdk.String("North Southeast"),
+            EmploymentStatus: shared.HrisEmployeeEmploymentStatusInactive.ToPointer(),
+            EmploymentType: shared.HrisEmployeeEmploymentTypeVolunteer.ToPointer(),
+            Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
+            HiredAt: types.MustTimeFromString("2021-03-26T14:20:42.258Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            Location: unifiedgosdk.String("East"),
+            ManagerID: unifiedgosdk.String("Maserati"),
+            MaritalStatus: shared.HrisEmployeeMaritalStatusSingle.ToPointer(),
+            Name: unifiedgosdk.String("Xenogender copy"),
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "soluta",
-                    Type: shared.HrisTelephoneTypeOther.ToPointer(),
+                    Telephone: "hmph",
+                    Type: shared.HrisTelephoneTypeWork.ToPointer(),
                 },
             },
-            TerminatedAt: types.MustTimeFromString("2022-11-23T11:50:41.638Z"),
-            Title: unifiedgosdk.String("Dr."),
-            UpdatedAt: types.MustTimeFromString("2022-07-01T14:41:51.539Z"),
+            TerminatedAt: types.MustTimeFromString("2022-08-16T03:13:22.861Z"),
+            Title: unifiedgosdk.String("Regional synthesize"),
+            UpdatedAt: types.MustTimeFromString("2022-06-15T02:35:02.446Z"),
         },
-        ConnectionID: "eligendi",
+        ConnectionID: "past",
     })
     if err != nil {
         log.Fatal(err)
@@ -389,48 +390,48 @@ func main() {
     res, err := s.Employee.PutHrisConnectionIDEmployeeID(ctx, operations.PutHrisConnectionIDEmployeeIDRequest{
         HrisEmployee: &shared.HrisEmployee{
             Address: &shared.PropertyHrisEmployeeAddress{
-                Address1: unifiedgosdk.String("tenetur"),
-                Address2: unifiedgosdk.String("deleniti"),
-                City: unifiedgosdk.String("Stantonfort"),
-                Country: unifiedgosdk.String("Namibia"),
-                CountryCode: unifiedgosdk.String("WF"),
-                PostalCode: unifiedgosdk.String("75563"),
-                Region: unifiedgosdk.String("quis"),
-                RegionCode: unifiedgosdk.String("doloremque"),
+                Address1: unifiedgosdk.String("Northwest"),
+                Address2: unifiedgosdk.String("and"),
+                City: unifiedgosdk.String("Uniquefield"),
+                Country: unifiedgosdk.String("Virgin Islands, British"),
+                CountryCode: unifiedgosdk.String("AE"),
+                PostalCode: unifiedgosdk.String("41682"),
+                Region: unifiedgosdk.String("Adventure Avon"),
+                RegionCode: unifiedgosdk.String("bah South"),
             },
-            CreatedAt: types.MustTimeFromString("2022-02-19T05:47:56.169Z"),
-            DateOfBirth: types.MustTimeFromString("2022-08-03T10:40:15.780Z"),
-            Department: unifiedgosdk.String("eveniet"),
-            Division: unifiedgosdk.String("possimus"),
+            CreatedAt: types.MustTimeFromString("2023-07-18T13:59:47.040Z"),
+            DateOfBirth: types.MustTimeFromString("2022-04-19T17:38:57.783Z"),
+            Department: unifiedgosdk.String("West auxiliary"),
+            Division: unifiedgosdk.String("volt"),
             Emails: []shared.HrisEmail{
                 shared.HrisEmail{
-                    Email: "Claire_Frami3@gmail.com",
-                    Type: shared.HrisEmailTypeOther.ToPointer(),
+                    Email: "Kenton_Turcotte@gmail.com",
+                    Type: shared.HrisEmailTypeHome.ToPointer(),
                 },
             },
-            EmployeeNumber: unifiedgosdk.String("officiis"),
-            EmploymentStatus: shared.HrisEmployeeEmploymentStatusInactive.ToPointer(),
+            EmployeeNumber: unifiedgosdk.String("DNS coulomb Berkshire"),
+            EmploymentStatus: shared.HrisEmployeeEmploymentStatusActive.ToPointer(),
             EmploymentType: shared.HrisEmployeeEmploymentTypeCasual.ToPointer(),
-            Gender: shared.HrisEmployeeGenderTrans.ToPointer(),
-            HiredAt: types.MustTimeFromString("2022-08-31T15:51:12.518Z"),
-            ID: unifiedgosdk.String("432a986e-b7e1-44ca-9640-89150097019a"),
-            Location: unifiedgosdk.String("eius"),
-            ManagerID: unifiedgosdk.String("rem"),
-            MaritalStatus: shared.HrisEmployeeMaritalStatusSingle.ToPointer(),
-            Name: unifiedgosdk.String("Armando Wehner"),
+            Gender: shared.HrisEmployeeGenderFemale.ToPointer(),
+            HiredAt: types.MustTimeFromString("2022-10-08T23:22:26.211Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            Location: unifiedgosdk.String("East primary"),
+            ManagerID: unifiedgosdk.String("Tokelau"),
+            MaritalStatus: shared.HrisEmployeeMaritalStatusMarried.ToPointer(),
+            Name: unifiedgosdk.String("Bespoke Investment"),
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "reprehenderit",
-                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                    Telephone: "East Investment",
+                    Type: shared.HrisTelephoneTypeOther.ToPointer(),
                 },
             },
-            TerminatedAt: types.MustTimeFromString("2021-04-08T14:13:47.569Z"),
-            Title: unifiedgosdk.String("Mr."),
-            UpdatedAt: types.MustTimeFromString("2022-02-05T17:52:52.343Z"),
+            TerminatedAt: types.MustTimeFromString("2022-03-28T08:29:30.386Z"),
+            Title: unifiedgosdk.String("unless"),
+            UpdatedAt: types.MustTimeFromString("2022-06-29T10:38:14.570Z"),
         },
-        ConnectionID: "consequatur",
-        ID: "1105d389-0816-42c6-beb6-8a0f657b7d03",
+        ConnectionID: "Designer Tennessine",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

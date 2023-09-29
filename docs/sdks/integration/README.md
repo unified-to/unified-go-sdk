@@ -1,4 +1,5 @@
 # Integration
+(*Integration*)
 
 ### Available Operations
 
@@ -36,14 +37,14 @@ func main() {
     res, err := s.Integration.GetUnifiedIntegration(ctx, operations.GetUnifiedIntegrationRequest{
         Active: unifiedgosdk.Bool(false),
         Categories: []GetUnifiedIntegrationCategories{
-            operations.GetUnifiedIntegrationCategoriesHris,
+            operations.GetUnifiedIntegrationCategoriesEnrich,
         },
-        Limit: unifiedgosdk.Float64(2394.27),
-        Offset: unifiedgosdk.Float64(8487.85),
-        Order: unifiedgosdk.String("ea"),
-        Sort: unifiedgosdk.String("veniam"),
+        Limit: unifiedgosdk.Float64(7363.95),
+        Offset: unifiedgosdk.Float64(8214.4),
+        Order: unifiedgosdk.String("Nelda Implemented"),
+        Sort: unifiedgosdk.String("cabinet"),
         Summary: unifiedgosdk.Bool(false),
-        UpdatedGte: types.MustTimeFromString("2021-01-26T22:48:04.970Z"),
+        UpdatedGte: types.MustTimeFromString("2022-02-05T00:16:37.455Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -94,19 +95,19 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationAuthWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedgosdk.String("earum"),
-        ExternalXref: unifiedgosdk.String("placeat"),
-        FailureRedirect: unifiedgosdk.String("saepe"),
-        IntegrationType: "quod",
-        Lang: unifiedgosdk.String("odit"),
+        Env: unifiedgosdk.String("Algerian"),
+        ExternalXref: unifiedgosdk.String("Cambridgeshire Surinam"),
+        FailureRedirect: unifiedgosdk.String("Designer Drive"),
+        IntegrationType: "program Home",
+        Lang: unifiedgosdk.String("Plastic program"),
         Redirect: unifiedgosdk.Bool(false),
         Scopes: []GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes{
-            operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesHrisGroupWrite,
+            operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesCrmFileRead,
         },
-        State: unifiedgosdk.String("at"),
-        Subdomain: unifiedgosdk.String("ea"),
-        SuccessRedirect: unifiedgosdk.String("provident"),
-        WorkspaceID: "inventore",
+        State: unifiedgosdk.String("Functionality Product"),
+        Subdomain: unifiedgosdk.String("payment Developer Dynamic"),
+        SuccessRedirect: unifiedgosdk.String("Northeast"),
+        WorkspaceID: "duh empower Kwanza",
     })
     if err != nil {
         log.Fatal(err)
@@ -157,7 +158,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationIntegrationType(ctx, operations.GetUnifiedIntegrationIntegrationTypeRequest{
-        IntegrationType: "ea",
+        IntegrationType: "Pizza Electric",
     })
     if err != nil {
         log.Fatal(err)
@@ -210,11 +211,11 @@ func main() {
     res, err := s.Integration.GetUnifiedIntegrationWorkspaceWorkspaceID(ctx, operations.GetUnifiedIntegrationWorkspaceWorkspaceIDRequest{
         Active: unifiedgosdk.Bool(false),
         Categories: []GetUnifiedIntegrationWorkspaceWorkspaceIDCategories{
-            operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategoriesUc,
+            operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategoriesHris,
         },
-        Env: unifiedgosdk.String("quam"),
+        Env: unifiedgosdk.String("North Southeast exercitationem"),
         Summary: unifiedgosdk.Bool(false),
-        WorkspaceID: "delectus",
+        WorkspaceID: "Bronze Plastic",
     })
     if err != nil {
         log.Fatal(err)

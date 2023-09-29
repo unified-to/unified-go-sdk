@@ -1,4 +1,5 @@
 # Deal
+(*Deal*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Deal.DeleteCrmConnectionIDDealID(ctx, operations.DeleteCrmConnectionIDDealIDRequest{
-        ConnectionID: "ducimus",
-        ID: "ed565076-21c5-48f4-9739-6564c20a0711",
+        ConnectionID: "Fresh",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,15 +89,15 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Deal.GetCrmConnectionIDDeal(ctx, operations.GetCrmConnectionIDDealRequest{
-        CompanyID: unifiedgosdk.String("similique"),
-        ConnectionID: "omnis",
-        ContactID: unifiedgosdk.String("commodi"),
-        Limit: unifiedgosdk.Float64(1166.35),
-        Offset: unifiedgosdk.Float64(8489.26),
-        Order: unifiedgosdk.String("aspernatur"),
-        Query: unifiedgosdk.String("ut"),
-        Sort: unifiedgosdk.String("deserunt"),
-        UpdatedGte: types.MustTimeFromString("2022-02-20T22:48:15.284Z"),
+        CompanyID: unifiedgosdk.String("Tools Card copying"),
+        ConnectionID: "Renminbi",
+        ContactID: unifiedgosdk.String("till payment World"),
+        Limit: unifiedgosdk.Float64(8656.16),
+        Offset: unifiedgosdk.Float64(4455.8),
+        Order: unifiedgosdk.String("global"),
+        Query: unifiedgosdk.String("Program Bespoke Wisconsin"),
+        Sort: unifiedgosdk.String("Netherlands under"),
+        UpdatedGte: types.MustTimeFromString("2022-12-23T01:47:21.816Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -147,8 +148,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Deal.GetCrmConnectionIDDealID(ctx, operations.GetCrmConnectionIDDealIDRequest{
-        ConnectionID: "facilis",
-        ID: "b8f532d8-92cf-4781-acb5-12c878240bf5",
+        ConnectionID: "Concrete Director",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -201,26 +202,26 @@ func main() {
     ctx := context.Background()
     res, err := s.Deal.PatchCrmConnectionIDDealID(ctx, operations.PatchCrmConnectionIDDealIDRequest{
         CrmDeal: &shared.CrmDeal{
-            Amount: unifiedgosdk.Float64(2743.68),
-            ClosedAt: types.MustTimeFromString("2021-02-04T20:36:14.764Z"),
-            CreatedAt: types.MustTimeFromString("2021-12-30T15:49:38.515Z"),
-            Currency: unifiedgosdk.String("hic"),
-            ID: unifiedgosdk.String("8f1bf0bc-8e1f-4206-95d8-31d0081090f6"),
-            LostReason: unifiedgosdk.String("nihil"),
-            Name: unifiedgosdk.String("Loretta Howe"),
-            Pipeline: unifiedgosdk.String("doloribus"),
-            Probability: unifiedgosdk.Float64(1877.7),
+            Amount: unifiedgosdk.Float64(7725.78),
+            ClosedAt: types.MustTimeFromString("2021-10-28T08:42:49.591Z"),
+            CreatedAt: types.MustTimeFromString("2023-04-23T15:03:53.999Z"),
+            Currency: unifiedgosdk.String("Afghani"),
+            ID: unifiedgosdk.String("<ID>"),
+            LostReason: unifiedgosdk.String("North"),
+            Name: unifiedgosdk.String("midnight"),
+            Pipeline: unifiedgosdk.String("envisioneer Functionality Loan"),
+            Probability: unifiedgosdk.Float64(7051.73),
             Raw: &shared.PropertyCrmDealRaw{},
-            Source: unifiedgosdk.String("id"),
-            Stage: unifiedgosdk.String("ex"),
+            Source: unifiedgosdk.String("Krone"),
+            Stage: unifiedgosdk.String("pascal aliquam gripping"),
             Tags: []string{
-                "quos",
+                "where",
             },
-            UpdatedAt: types.MustTimeFromString("2022-03-17T20:43:59.276Z"),
-            WonReason: unifiedgosdk.String("exercitationem"),
+            UpdatedAt: types.MustTimeFromString("2022-04-05T10:21:22.505Z"),
+            WonReason: unifiedgosdk.String("Savings kilogram"),
         },
-        ConnectionID: "molestiae",
-        ID: "68dce742-409a-4215-a086-01489a5f63e3",
+        ConnectionID: "Chair weber silver",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -273,25 +274,25 @@ func main() {
     ctx := context.Background()
     res, err := s.Deal.PostCrmConnectionIDDeal(ctx, operations.PostCrmConnectionIDDealRequest{
         CrmDeal: &shared.CrmDeal{
-            Amount: unifiedgosdk.Float64(6489.85),
-            ClosedAt: types.MustTimeFromString("2022-04-04T11:17:39.742Z"),
-            CreatedAt: types.MustTimeFromString("2020-05-19T07:26:52.477Z"),
-            Currency: unifiedgosdk.String("natus"),
-            ID: unifiedgosdk.String("dda33dcd-6348-43e4-a7a9-8e4df37e45b8"),
-            LostReason: unifiedgosdk.String("omnis"),
-            Name: unifiedgosdk.String("Bernice Schultz I"),
-            Pipeline: unifiedgosdk.String("recusandae"),
-            Probability: unifiedgosdk.Float64(784.86),
+            Amount: unifiedgosdk.Float64(6144.41),
+            ClosedAt: types.MustTimeFromString("2022-07-10T09:55:59.977Z"),
+            CreatedAt: types.MustTimeFromString("2022-01-20T07:28:03.436Z"),
+            Currency: unifiedgosdk.String("Convertible Marks"),
+            ID: unifiedgosdk.String("<ID>"),
+            LostReason: unifiedgosdk.String("pfft female"),
+            Name: unifiedgosdk.String("Expressway"),
+            Pipeline: unifiedgosdk.String("withdrawal Extended busily"),
+            Probability: unifiedgosdk.Float64(7998.22),
             Raw: &shared.PropertyCrmDealRaw{},
-            Source: unifiedgosdk.String("ipsum"),
-            Stage: unifiedgosdk.String("error"),
+            Source: unifiedgosdk.String("spiffy sometimes"),
+            Stage: unifiedgosdk.String("transmitter"),
             Tags: []string{
-                "numquam",
+                "intermediate",
             },
-            UpdatedAt: types.MustTimeFromString("2022-08-25T17:34:42.796Z"),
-            WonReason: unifiedgosdk.String("consectetur"),
+            UpdatedAt: types.MustTimeFromString("2022-10-06T18:34:11.762Z"),
+            WonReason: unifiedgosdk.String("Cisgender input HTTP"),
         },
-        ConnectionID: "dicta",
+        ConnectionID: "accusantium Checking",
     })
     if err != nil {
         log.Fatal(err)
@@ -344,26 +345,26 @@ func main() {
     ctx := context.Background()
     res, err := s.Deal.PutCrmConnectionIDDealID(ctx, operations.PutCrmConnectionIDDealIDRequest{
         CrmDeal: &shared.CrmDeal{
-            Amount: unifiedgosdk.Float64(551.24),
-            ClosedAt: types.MustTimeFromString("2022-12-18T04:51:10.637Z"),
-            CreatedAt: types.MustTimeFromString("2022-04-06T10:46:32.109Z"),
-            Currency: unifiedgosdk.String("facere"),
-            ID: unifiedgosdk.String("354c092b-d734-4f02-849d-86f4bb20fe5d"),
-            LostReason: unifiedgosdk.String("provident"),
-            Name: unifiedgosdk.String("Ashley Schmeler"),
-            Pipeline: unifiedgosdk.String("itaque"),
-            Probability: unifiedgosdk.Float64(4920.7),
+            Amount: unifiedgosdk.Float64(4050.98),
+            ClosedAt: types.MustTimeFromString("2022-01-15T04:05:31.641Z"),
+            CreatedAt: types.MustTimeFromString("2023-06-04T01:28:32.466Z"),
+            Currency: unifiedgosdk.String("Bermudian Dollar (customarily known as Bermuda Dollar)"),
+            ID: unifiedgosdk.String("<ID>"),
+            LostReason: unifiedgosdk.String("laudantium Southwest"),
+            Name: unifiedgosdk.String("wail Developer"),
+            Pipeline: unifiedgosdk.String("male Samarium Gourde"),
+            Probability: unifiedgosdk.Float64(6728.74),
             Raw: &shared.PropertyCrmDealRaw{},
-            Source: unifiedgosdk.String("magnam"),
-            Stage: unifiedgosdk.String("excepturi"),
+            Source: unifiedgosdk.String("Stage Gasoline Metal"),
+            Stage: unifiedgosdk.String("Corporate withdrawal Tasty"),
             Tags: []string{
-                "placeat",
+                "extranet",
             },
-            UpdatedAt: types.MustTimeFromString("2021-01-19T07:13:22.442Z"),
-            WonReason: unifiedgosdk.String("modi"),
+            UpdatedAt: types.MustTimeFromString("2021-10-16T22:38:02.052Z"),
+            WonReason: unifiedgosdk.String("phooey"),
         },
-        ConnectionID: "enim",
-        ID: "a27f69e2-c9e6-4d10-a9db-3ad4c6b03108",
+        ConnectionID: "Jazz",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

@@ -1,4 +1,5 @@
 # Document
+(*Document*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Document.DeleteAtsConnectionIDScorecardID(ctx, operations.DeleteAtsConnectionIDScorecardIDRequest{
-        ConnectionID: "facere",
-        ID: "9c337473-082b-494f-aab1-fd5671e9c326",
+        ConnectionID: "Agent intrepid",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,16 +89,16 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Document.GetAtsConnectionIDScorecard(ctx, operations.GetAtsConnectionIDScorecardRequest{
-        ApplicationID: unifiedgosdk.String("neque"),
-        CandidateID: unifiedgosdk.String("enim"),
-        ConnectionID: "eaque",
-        InterviewID: unifiedgosdk.String("officia"),
-        Limit: unifiedgosdk.Float64(2702.53),
-        Offset: unifiedgosdk.Float64(4310.35),
-        Order: unifiedgosdk.String("molestiae"),
-        Query: unifiedgosdk.String("architecto"),
-        Sort: unifiedgosdk.String("aliquam"),
-        UpdatedGte: types.MustTimeFromString("2022-07-12T22:54:11.511Z"),
+        ApplicationID: unifiedgosdk.String("Licensed deep"),
+        CandidateID: unifiedgosdk.String("happily"),
+        ConnectionID: "lunch accusamus",
+        InterviewID: unifiedgosdk.String("for famously Southwest"),
+        Limit: unifiedgosdk.Float64(950.05),
+        Offset: unifiedgosdk.Float64(6133.23),
+        Order: unifiedgosdk.String("withdrawal"),
+        Query: unifiedgosdk.String("Bicycle copy Bronze"),
+        Sort: unifiedgosdk.String("ouch non ut"),
+        UpdatedGte: types.MustTimeFromString("2021-06-01T09:53:52.927Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -148,8 +149,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Document.GetAtsConnectionIDScorecardID(ctx, operations.GetAtsConnectionIDScorecardIDRequest{
-        ConnectionID: "blanditiis",
-        ID: "9ce0e991-594d-493a-b4c0-252fe3b4b4db",
+        ConnectionID: "East mobile Mini",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -202,19 +203,19 @@ func main() {
     ctx := context.Background()
     res, err := s.Document.PatchAtsConnectionIDScorecardID(ctx, operations.PatchAtsConnectionIDScorecardIDRequest{
         AtsScorecard: &shared.AtsScorecard{
-            ApplicationID: unifiedgosdk.String("atque"),
-            CandidateID: unifiedgosdk.String("tempore"),
-            CreatedAt: types.MustTimeFromString("2022-07-22T19:46:16.313Z"),
-            ID: unifiedgosdk.String("8ebb6e1d-2cf5-402b-afb2-cbc4635d5e65"),
-            InterviewID: unifiedgosdk.String("at"),
-            InterviewerID: unifiedgosdk.String("culpa"),
-            JobID: unifiedgosdk.String("alias"),
+            ApplicationID: unifiedgosdk.String("Carter Hatchback functionalities"),
+            CandidateID: unifiedgosdk.String("disagree gold New"),
+            CreatedAt: types.MustTimeFromString("2023-05-08T15:11:07.692Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            InterviewID: unifiedgosdk.String("blue"),
+            InterviewerID: unifiedgosdk.String("North Buckinghamshire blur"),
+            JobID: unifiedgosdk.String("kelvin hack Fantastic"),
             Raw: shared.PropertyAtsScorecardRaw{},
             Recommendation: shared.AtsScorecardRecommendationDefinitelyNo.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2021-06-03T11:24:52.324Z"),
+            UpdatedAt: types.MustTimeFromString("2022-11-18T04:49:38.005Z"),
         },
-        ConnectionID: "dolor",
-        ID: "e951a1e3-0fda-4966-889d-7b78673e13a1",
+        ConnectionID: "hacking meter",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -267,18 +268,18 @@ func main() {
     ctx := context.Background()
     res, err := s.Document.PostAtsConnectionIDScorecard(ctx, operations.PostAtsConnectionIDScorecardRequest{
         AtsScorecard: &shared.AtsScorecard{
-            ApplicationID: unifiedgosdk.String("eos"),
-            CandidateID: unifiedgosdk.String("dolorum"),
-            CreatedAt: types.MustTimeFromString("2022-04-19T16:37:31.203Z"),
-            ID: unifiedgosdk.String("99249459-4487-4f5c-8438-36b86b3cdf64"),
-            InterviewID: unifiedgosdk.String("dicta"),
-            InterviewerID: unifiedgosdk.String("minima"),
-            JobID: unifiedgosdk.String("facilis"),
+            ApplicationID: unifiedgosdk.String("female bah"),
+            CandidateID: unifiedgosdk.String("if since"),
+            CreatedAt: types.MustTimeFromString("2022-02-26T00:06:29.981Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            InterviewID: unifiedgosdk.String("invoice"),
+            InterviewerID: unifiedgosdk.String("male"),
+            JobID: unifiedgosdk.String("Accountability"),
             Raw: shared.PropertyAtsScorecardRaw{},
-            Recommendation: shared.AtsScorecardRecommendationDefinitelyNo.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-09-13T14:57:39.091Z"),
+            Recommendation: shared.AtsScorecardRecommendationStrongYes.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2023-10-04T17:15:51.015Z"),
         },
-        ConnectionID: "molestias",
+        ConnectionID: "Legacy tan",
     })
     if err != nil {
         log.Fatal(err)
@@ -331,19 +332,19 @@ func main() {
     ctx := context.Background()
     res, err := s.Document.PutAtsConnectionIDScorecardID(ctx, operations.PutAtsConnectionIDScorecardIDRequest{
         AtsScorecard: &shared.AtsScorecard{
-            ApplicationID: unifiedgosdk.String("hic"),
-            CandidateID: unifiedgosdk.String("error"),
-            CreatedAt: types.MustTimeFromString("2020-02-11T23:32:43.703Z"),
-            ID: unifiedgosdk.String("13f4eedb-e78b-4f60-a825-894ea763d5c7"),
-            InterviewID: unifiedgosdk.String("fugit"),
-            InterviewerID: unifiedgosdk.String("voluptate"),
-            JobID: unifiedgosdk.String("provident"),
+            ApplicationID: unifiedgosdk.String("East Granite"),
+            CandidateID: unifiedgosdk.String("South"),
+            CreatedAt: types.MustTimeFromString("2022-03-02T12:33:41.490Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            InterviewID: unifiedgosdk.String("Texas Technetium hack"),
+            InterviewerID: unifiedgosdk.String("Adventure Kyrgyz Organic"),
+            JobID: unifiedgosdk.String("Home Dynamic Integration"),
             Raw: shared.PropertyAtsScorecardRaw{},
             Recommendation: shared.AtsScorecardRecommendationNo.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-01-28T06:25:58.770Z"),
+            UpdatedAt: types.MustTimeFromString("2023-11-13T03:01:57.066Z"),
         },
-        ConnectionID: "laudantium",
-        ID: "5148d6d5-49e5-4635-b33b-c0f970c42fc9",
+        ConnectionID: "Transexual Manager Rap",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

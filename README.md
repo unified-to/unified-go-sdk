@@ -36,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Agent.DeleteTicketingConnectionIDAgentID(ctx, operations.DeleteTicketingConnectionIDAgentIDRequest{
-        ConnectionID: "perferendis",
-        ID: "5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb",
+        ConnectionID: "navigate",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -546,8 +546,6 @@ func main() {
 
 <!-- Start Dev Containers -->
 
-
-
 <!-- End Dev Containers -->
 
 
@@ -560,8 +558,6 @@ returned response object will have a `Next` method that can be called to pull do
 return value of `Next` is `nil`, then there are no more pages to be fetched.
 
 Here's an example of one such pagination call:
-
-
 <!-- End Pagination -->
 
 

@@ -1,4 +1,5 @@
 # Passthrough
+(*Passthrough*)
 
 ### Available Operations
 
@@ -34,8 +35,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.DeletePassthroughConnectionIDPath(ctx, operations.DeletePassthroughConnectionIDPathRequest{
-        ConnectionID: "fugiat",
-        Path: "debitis",
+        ConnectionID: "Planner Checking Tricycle",
+        Path: "/usr/obj",
     })
     if err != nil {
         log.Fatal(err)
@@ -86,8 +87,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.GetPassthroughConnectionIDPath(ctx, operations.GetPassthroughConnectionIDPathRequest{
-        ConnectionID: "minima",
-        Path: "ducimus",
+        ConnectionID: "Global",
+        Path: "/private/var",
     })
     if err != nil {
         log.Fatal(err)
@@ -138,8 +139,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.PatchPassthroughConnectionIDPath(ctx, operations.PatchPassthroughConnectionIDPathRequest{
-        ConnectionID: "est",
-        Path: "dicta",
+        ConnectionID: "average maroon",
+        Path: "/proc",
         Undefined: &shared.Undefined{},
     })
     if err != nil {
@@ -191,8 +192,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.PostPassthroughConnectionIDPath(ctx, operations.PostPassthroughConnectionIDPathRequest{
-        ConnectionID: "architecto",
-        Path: "fugiat",
+        ConnectionID: "Computer Hip",
+        Path: "/boot/defaults",
         Undefined: &shared.Undefined{},
     })
     if err != nil {
@@ -244,8 +245,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.PutPassthroughConnectionIDPath(ctx, operations.PutPassthroughConnectionIDPathRequest{
-        ConnectionID: "eum",
-        Path: "vitae",
+        ConnectionID: "Computer Oriental",
+        Path: "/usr/local/src",
         Undefined: &shared.Undefined{},
     })
     if err != nil {

@@ -37,10 +37,13 @@ func (o *PatchCrmConnectionIDLeadIDRequest) GetID() string {
 }
 
 type PatchCrmConnectionIDLeadIDResponse struct {
+	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	CrmLead     *shared.CrmLead
-	StatusCode  int
+	CrmLead *shared.CrmLead
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 

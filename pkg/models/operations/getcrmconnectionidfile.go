@@ -110,10 +110,13 @@ func (o *GetCrmConnectionIDFileRequest) GetUpdatedGte() *time.Time {
 }
 
 type GetCrmConnectionIDFileResponse struct {
+	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	CrmFiles    []shared.CrmFile
-	StatusCode  int
+	CrmFiles []shared.CrmFile
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 

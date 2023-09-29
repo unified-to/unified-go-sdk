@@ -21,8 +21,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Agent.DeleteTicketingConnectionIDAgentID(ctx, operations.DeleteTicketingConnectionIDAgentIDRequest{
-        ConnectionID: "corrupti",
-        ID: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
+        ConnectionID: "navigate",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

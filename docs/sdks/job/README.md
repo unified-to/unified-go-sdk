@@ -1,4 +1,5 @@
 # Job
+(*Job*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Job.DeleteAtsConnectionIDJobID(ctx, operations.DeleteAtsConnectionIDJobIDRequest{
-        ConnectionID: "adipisci",
-        ID: "2e3b49db-e0f2-43b7-b6d9-948d6eded477",
+        ConnectionID: "Sedan Bedfordshire Hybrid",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,13 +89,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Job.GetAtsConnectionIDJob(ctx, operations.GetAtsConnectionIDJobRequest{
-        ConnectionID: "voluptas",
-        Limit: unifiedgosdk.Float64(5378.51),
-        Offset: unifiedgosdk.Float64(504.05),
-        Order: unifiedgosdk.String("reiciendis"),
-        Query: unifiedgosdk.String("minus"),
-        Sort: unifiedgosdk.String("iure"),
-        UpdatedGte: types.MustTimeFromString("2022-11-11T00:39:35.207Z"),
+        ConnectionID: "City katal",
+        Limit: unifiedgosdk.Float64(3542.62),
+        Offset: unifiedgosdk.Float64(5417.97),
+        Order: unifiedgosdk.String("publisher"),
+        Query: unifiedgosdk.String("Folding"),
+        Sort: unifiedgosdk.String("Kip gross recontextualize"),
+        UpdatedGte: types.MustTimeFromString("2022-10-12T03:36:20.050Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -145,8 +146,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Job.GetAtsConnectionIDJobID(ctx, operations.GetAtsConnectionIDJobIDRequest{
-        ConnectionID: "iure",
-        ID: "a82e5e82-fd28-4d10-80a7-e91392ab44cb",
+        ConnectionID: "Jazz",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -201,51 +202,51 @@ func main() {
         AtsJob: &shared.AtsJob{
             Addresses: []shared.AtsAddress{
                 shared.AtsAddress{
-                    Address1: unifiedgosdk.String("architecto"),
-                    Address2: unifiedgosdk.String("totam"),
-                    City: unifiedgosdk.String("West Aaron"),
-                    Country: unifiedgosdk.String("Aruba"),
-                    CountryCode: unifiedgosdk.String("LA"),
-                    PostalCode: unifiedgosdk.String("23078-3185"),
-                    Region: unifiedgosdk.String("illo"),
-                    RegionCode: unifiedgosdk.String("tempora"),
+                    Address1: unifiedgosdk.String("Transexual"),
+                    Address2: unifiedgosdk.String("Planner redundant Towels"),
+                    City: unifiedgosdk.String("Starkboro"),
+                    Country: unifiedgosdk.String("Chad"),
+                    CountryCode: unifiedgosdk.String("NU"),
+                    PostalCode: unifiedgosdk.String("22603"),
+                    Region: unifiedgosdk.String("Cambridgeshire"),
+                    RegionCode: unifiedgosdk.String("Account Copernicium at"),
                 },
             },
-            ClosedAt: types.MustTimeFromString("2022-05-27T21:54:13.074Z"),
+            ClosedAt: types.MustTimeFromString("2023-01-02T09:14:26.844Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
-                    Currency: unifiedgosdk.String("rem"),
+                    Currency: unifiedgosdk.String("Metical"),
                     Frequency: shared.AtsCompensationFrequencyHour.ToPointer(),
-                    Max: unifiedgosdk.Float64(6129.79),
-                    Min: unifiedgosdk.Float64(7255.92),
-                    Type: shared.AtsCompensationTypeEquity,
+                    Max: unifiedgosdk.Float64(1424.24),
+                    Min: unifiedgosdk.Float64(3626.17),
+                    Type: shared.AtsCompensationTypeSalary,
                 },
             },
-            CreatedAt: types.MustTimeFromString("2022-08-10T22:57:33.587Z"),
+            CreatedAt: types.MustTimeFromString("2022-03-16T15:29:37.822Z"),
             Departments: []string{
-                "aperiam",
+                "Sports",
             },
-            Description: unifiedgosdk.String("similique"),
-            EmploymentType: shared.AtsJobEmploymentTypeFreelance.ToPointer(),
+            Description: unifiedgosdk.String("Operative bi-directional capability"),
+            EmploymentType: shared.AtsJobEmploymentTypeIntern.ToPointer(),
             HiringManagerIds: []string{
-                "pariatur",
+                "Hop",
             },
-            ID: unifiedgosdk.String("fde410c3-7daa-4918-aa49-d9625d3caffc"),
-            LanguageLocale: unifiedgosdk.String("inventore"),
-            Name: unifiedgosdk.String("Guy Von"),
+            ID: unifiedgosdk.String("<ID>"),
+            LanguageLocale: unifiedgosdk.String("hence gracefully invoice"),
+            Name: unifiedgosdk.String("Southeast vacantly Uranium"),
             PublicJobUrls: []string{
-                "modi",
+                "Keith",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "quaerat",
+                "happily",
             },
             Remote: unifiedgosdk.Bool(false),
-            Status: shared.AtsJobStatusPending.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-07-04T21:18:33.130Z"),
+            Status: shared.AtsJobStatusOpen.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2023-08-04T07:33:03.088Z"),
         },
-        ConnectionID: "unde",
-        ID: "2bcd440e-a98b-4ecc-a048-6de0d56d73b0",
+        ConnectionID: "Cis benchmark",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -300,50 +301,50 @@ func main() {
         AtsJob: &shared.AtsJob{
             Addresses: []shared.AtsAddress{
                 shared.AtsAddress{
-                    Address1: unifiedgosdk.String("quae"),
-                    Address2: unifiedgosdk.String("quis"),
-                    City: unifiedgosdk.String("North Consuelo"),
-                    Country: unifiedgosdk.String("Turkmenistan"),
-                    CountryCode: unifiedgosdk.String("LK"),
-                    PostalCode: unifiedgosdk.String("74149-9447"),
-                    Region: unifiedgosdk.String("iure"),
-                    RegionCode: unifiedgosdk.String("ullam"),
+                    Address1: unifiedgosdk.String("Forward"),
+                    Address2: unifiedgosdk.String("Electric fuchsia kelvin"),
+                    City: unifiedgosdk.String("Fort Sibylmouth"),
+                    Country: unifiedgosdk.String("Solomon Islands"),
+                    CountryCode: unifiedgosdk.String("DO"),
+                    PostalCode: unifiedgosdk.String("39037"),
+                    Region: unifiedgosdk.String("Rockford"),
+                    RegionCode: unifiedgosdk.String("Trafficway eaque athwart"),
                 },
             },
-            ClosedAt: types.MustTimeFromString("2022-07-06T19:55:18.068Z"),
+            ClosedAt: types.MustTimeFromString("2022-04-22T19:01:40.265Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
-                    Currency: unifiedgosdk.String("enim"),
-                    Frequency: shared.AtsCompensationFrequencyWeek.ToPointer(),
-                    Max: unifiedgosdk.Float64(3432.31),
-                    Min: unifiedgosdk.Float64(6902.62),
-                    Type: shared.AtsCompensationTypeStockOptions,
+                    Currency: unifiedgosdk.String("Gourde"),
+                    Frequency: shared.AtsCompensationFrequencyYear.ToPointer(),
+                    Max: unifiedgosdk.Float64(5349.62),
+                    Min: unifiedgosdk.Float64(526.63),
+                    Type: shared.AtsCompensationTypeEquity,
                 },
             },
-            CreatedAt: types.MustTimeFromString("2022-01-28T21:56:06.312Z"),
+            CreatedAt: types.MustTimeFromString("2021-04-02T18:44:02.642Z"),
             Departments: []string{
-                "consectetur",
+                "Polonium",
             },
-            Description: unifiedgosdk.String("vero"),
-            EmploymentType: shared.AtsJobEmploymentTypeContractor.ToPointer(),
+            Description: unifiedgosdk.String("Progressive disintermediate matrix"),
+            EmploymentType: shared.AtsJobEmploymentTypeIntern.ToPointer(),
             HiringManagerIds: []string{
-                "optio",
+                "itaque",
             },
-            ID: unifiedgosdk.String("fcc6a91e-c526-424d-8001-4ef45cea11ac"),
-            LanguageLocale: unifiedgosdk.String("minima"),
-            Name: unifiedgosdk.String("Henrietta Powlowski"),
+            ID: unifiedgosdk.String("<ID>"),
+            LanguageLocale: unifiedgosdk.String("the joyfully"),
+            Name: unifiedgosdk.String("Other because harbor"),
             PublicJobUrls: []string{
-                "nostrum",
+                "coil",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "corrupti",
+                "JSON",
             },
             Remote: unifiedgosdk.Bool(false),
-            Status: shared.AtsJobStatusDraft.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-04-19T01:37:46.134Z"),
+            Status: shared.AtsJobStatusArchived.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2022-05-24T04:21:24.567Z"),
         },
-        ConnectionID: "eius",
+        ConnectionID: "Coordinator applications",
     })
     if err != nil {
         log.Fatal(err)
@@ -398,51 +399,51 @@ func main() {
         AtsJob: &shared.AtsJob{
             Addresses: []shared.AtsAddress{
                 shared.AtsAddress{
-                    Address1: unifiedgosdk.String("voluptatem"),
-                    Address2: unifiedgosdk.String("magnam"),
-                    City: unifiedgosdk.String("West Randibury"),
-                    Country: unifiedgosdk.String("Rwanda"),
-                    CountryCode: unifiedgosdk.String("MK"),
-                    PostalCode: unifiedgosdk.String("89820-0695"),
-                    Region: unifiedgosdk.String("doloribus"),
-                    RegionCode: unifiedgosdk.String("unde"),
+                    Address1: unifiedgosdk.String("cotton Washington"),
+                    Address2: unifiedgosdk.String("rosin meanwhile male"),
+                    City: unifiedgosdk.String("East Sierra"),
+                    Country: unifiedgosdk.String("Somalia"),
+                    CountryCode: unifiedgosdk.String("BQ"),
+                    PostalCode: unifiedgosdk.String("63475-6123"),
+                    Region: unifiedgosdk.String("lighthearted online Bicycle"),
+                    RegionCode: unifiedgosdk.String("robust"),
                 },
             },
-            ClosedAt: types.MustTimeFromString("2022-03-17T10:24:00.538Z"),
+            ClosedAt: types.MustTimeFromString("2021-05-06T11:53:52.940Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
-                    Currency: unifiedgosdk.String("id"),
-                    Frequency: shared.AtsCompensationFrequencyWeek.ToPointer(),
-                    Max: unifiedgosdk.Float64(1012.53),
-                    Min: unifiedgosdk.Float64(7482.56),
-                    Type: shared.AtsCompensationTypeSalary,
+                    Currency: unifiedgosdk.String("Iranian Rial"),
+                    Frequency: shared.AtsCompensationFrequencyYear.ToPointer(),
+                    Max: unifiedgosdk.Float64(5965.42),
+                    Min: unifiedgosdk.Float64(5273.81),
+                    Type: shared.AtsCompensationTypeBonus,
                 },
             },
-            CreatedAt: types.MustTimeFromString("2022-08-21T15:07:46.264Z"),
+            CreatedAt: types.MustTimeFromString("2023-07-19T02:36:00.215Z"),
             Departments: []string{
-                "a",
+                "embrace",
             },
-            Description: unifiedgosdk.String("architecto"),
-            EmploymentType: shared.AtsJobEmploymentTypeFreelance.ToPointer(),
+            Description: unifiedgosdk.String("Programmable tertiary benchmark"),
+            EmploymentType: shared.AtsJobEmploymentTypeContractor.ToPointer(),
             HiringManagerIds: []string{
-                "vitae",
+                "New",
             },
-            ID: unifiedgosdk.String("4718c6fa-2fad-40c0-ac5d-95472cdd14fc"),
-            LanguageLocale: unifiedgosdk.String("eius"),
-            Name: unifiedgosdk.String("Miss Bridget King"),
+            ID: unifiedgosdk.String("<ID>"),
+            LanguageLocale: unifiedgosdk.String("Facilitator Gasoline application"),
+            Name: unifiedgosdk.String("North impractical"),
             PublicJobUrls: []string{
-                "fuga",
+                "clamber",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "laudantium",
+                "West",
             },
             Remote: unifiedgosdk.Bool(false),
-            Status: shared.AtsJobStatusDraft.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2020-12-28T11:43:36.436Z"),
+            Status: shared.AtsJobStatusClosed.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2023-02-01T04:41:47.094Z"),
         },
-        ConnectionID: "dignissimos",
-        ID: "0c43351c-3dd1-4eb8-b7f7-5f4f23f1c0a5",
+        ConnectionID: "North",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

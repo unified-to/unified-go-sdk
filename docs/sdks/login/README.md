@@ -1,4 +1,5 @@
 # Login
+(*Login*)
 
 ### Available Operations
 
@@ -30,13 +31,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Login.GetUnifiedIntegrationLoginWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedgosdk.String("veniam"),
-        FailureRedirect: unifiedgosdk.String("nemo"),
-        IntegrationType: "voluptatum",
+        Env: unifiedgosdk.String("Rubber"),
+        FailureRedirect: unifiedgosdk.String("gold Cambridgeshire"),
+        IntegrationType: "Plastic services pixel",
         Redirect: unifiedgosdk.Bool(false),
-        State: unifiedgosdk.String("quia"),
-        SuccessRedirect: unifiedgosdk.String("quisquam"),
-        WorkspaceID: "et",
+        State: unifiedgosdk.String("Volkswagen Southwest"),
+        SuccessRedirect: unifiedgosdk.String("drive integrated Bicycle"),
+        WorkspaceID: "Fantastic recontextualize Frozen",
     })
     if err != nil {
         log.Fatal(err)

@@ -1,4 +1,5 @@
 # Interview
+(*Interview*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Interview.DeleteAtsConnectionIDInterviewID(ctx, operations.DeleteAtsConnectionIDInterviewIDRequest{
-        ConnectionID: "minus",
-        ID: "7dda70ec-60e6-4075-894d-61c14cd90227",
+        ConnectionID: "redundant Health Hayes",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,14 +89,14 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Interview.GetAtsConnectionIDInterview(ctx, operations.GetAtsConnectionIDInterviewRequest{
-        ApplicationID: unifiedgosdk.String("recusandae"),
-        ConnectionID: "neque",
-        Limit: unifiedgosdk.Float64(4704),
-        Offset: unifiedgosdk.Float64(7513.92),
-        Order: unifiedgosdk.String("eaque"),
-        Query: unifiedgosdk.String("facere"),
-        Sort: unifiedgosdk.String("iste"),
-        UpdatedGte: types.MustTimeFromString("2022-07-18T13:22:41.461Z"),
+        ApplicationID: unifiedgosdk.String("Fresh Pickup converse"),
+        ConnectionID: "vortals",
+        Limit: unifiedgosdk.Float64(5167.08),
+        Offset: unifiedgosdk.Float64(6488.61),
+        Order: unifiedgosdk.String("Oregon Metal"),
+        Query: unifiedgosdk.String("Account"),
+        Sort: unifiedgosdk.String("haptic"),
+        UpdatedGte: types.MustTimeFromString("2021-09-23T19:46:35.825Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -146,8 +147,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Interview.GetAtsConnectionIDInterviewID(ctx, operations.GetAtsConnectionIDInterviewIDRequest{
-        ConnectionID: "reiciendis",
-        ID: "1a5491ab-e975-41b1-86d2-3e03e69815aa",
+        ConnectionID: "Loan Gorgeous lux",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -200,24 +201,24 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.PatchAtsConnectionIDInterviewID(ctx, operations.PatchAtsConnectionIDInterviewIDRequest{
         AtsInterview: &shared.AtsInterview{
-            ApplicationID: unifiedgosdk.String("officiis"),
-            CandidateID: unifiedgosdk.String("omnis"),
-            CreatedAt: types.MustTimeFromString("2021-02-14T06:16:40.973Z"),
-            EndAt: types.MustTimeFromString("2020-07-04T00:06:57.464Z"),
-            ExternalEventXref: unifiedgosdk.String("necessitatibus"),
-            ID: unifiedgosdk.String("9e729c9d-4f2d-48a4-8640-ca60db73a2f9"),
-            JobID: unifiedgosdk.String("dolorem"),
-            Location: unifiedgosdk.String("maiores"),
+            ApplicationID: unifiedgosdk.String("SSD green pascal"),
+            CandidateID: unifiedgosdk.String("Buckinghamshire example"),
+            CreatedAt: types.MustTimeFromString("2021-08-24T08:30:07.073Z"),
+            EndAt: types.MustTimeFromString("2021-06-27T04:06:46.373Z"),
+            ExternalEventXref: unifiedgosdk.String("apropos Gadolinium"),
+            ID: unifiedgosdk.String("<ID>"),
+            JobID: unifiedgosdk.String("transgender transmitting"),
+            Location: unifiedgosdk.String("Investor synthesizing"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustTimeFromString("2022-07-30T22:40:12.837Z"),
+            StartAt: types.MustTimeFromString("2021-01-19T01:51:02.213Z"),
             Status: shared.AtsInterviewStatusAwaitingFeedback.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2020-08-23T06:10:38.086Z"),
+            UpdatedAt: types.MustTimeFromString("2022-01-21T17:38:09.113Z"),
             UserIds: []string{
-                "quae",
+                "Honda",
             },
         },
-        ConnectionID: "possimus",
-        ID: "8da56122-026a-4b8f-a774-85c1976af980",
+        ConnectionID: "Myrl Dram Trail",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -270,23 +271,23 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.PostAtsConnectionIDInterview(ctx, operations.PostAtsConnectionIDInterviewRequest{
         AtsInterview: &shared.AtsInterview{
-            ApplicationID: unifiedgosdk.String("nulla"),
-            CandidateID: unifiedgosdk.String("culpa"),
-            CreatedAt: types.MustTimeFromString("2022-05-03T00:35:12.279Z"),
-            EndAt: types.MustTimeFromString("2022-07-01T18:15:54.042Z"),
-            ExternalEventXref: unifiedgosdk.String("unde"),
-            ID: unifiedgosdk.String("fc44db27-4530-4e5c-87c6-d0cbcfdcd334"),
-            JobID: unifiedgosdk.String("facilis"),
-            Location: unifiedgosdk.String("autem"),
+            ApplicationID: unifiedgosdk.String("round Hat Savings"),
+            CandidateID: unifiedgosdk.String("Northeast"),
+            CreatedAt: types.MustTimeFromString("2022-12-27T10:33:09.160Z"),
+            EndAt: types.MustTimeFromString("2021-11-12T23:57:19.974Z"),
+            ExternalEventXref: unifiedgosdk.String("platforms"),
+            ID: unifiedgosdk.String("<ID>"),
+            JobID: unifiedgosdk.String("payment panel Identity"),
+            Location: unifiedgosdk.String("Northwest Buckinghamshire"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustTimeFromString("2021-10-11T12:48:40.365Z"),
-            Status: shared.AtsInterviewStatusScheduled.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-04-07T13:36:21.889Z"),
+            StartAt: types.MustTimeFromString("2022-11-02T05:07:18.592Z"),
+            Status: shared.AtsInterviewStatusComplete.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2023-07-13T16:35:04.177Z"),
             UserIds: []string{
-                "minus",
+                "Chevrolet",
             },
         },
-        ConnectionID: "repudiandae",
+        ConnectionID: "Shoes Northeast SMTP",
     })
     if err != nil {
         log.Fatal(err)
@@ -339,24 +340,24 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.PutAtsConnectionIDInterviewID(ctx, operations.PutAtsConnectionIDInterviewIDRequest{
         AtsInterview: &shared.AtsInterview{
-            ApplicationID: unifiedgosdk.String("quisquam"),
-            CandidateID: unifiedgosdk.String("mollitia"),
-            CreatedAt: types.MustTimeFromString("2022-04-26T08:01:34.967Z"),
-            EndAt: types.MustTimeFromString("2022-04-30T16:16:14.065Z"),
-            ExternalEventXref: unifiedgosdk.String("voluptates"),
-            ID: unifiedgosdk.String("e5e0da8b-9af6-4ad0-9486-e7b413cbe2d1"),
-            JobID: unifiedgosdk.String("molestiae"),
-            Location: unifiedgosdk.String("ea"),
+            ApplicationID: unifiedgosdk.String("Generic capacitor"),
+            CandidateID: unifiedgosdk.String("Road disbelieve"),
+            CreatedAt: types.MustTimeFromString("2022-06-22T01:57:06.573Z"),
+            EndAt: types.MustTimeFromString("2022-05-28T02:29:32.144Z"),
+            ExternalEventXref: unifiedgosdk.String("architectures"),
+            ID: unifiedgosdk.String("<ID>"),
+            JobID: unifiedgosdk.String("Casper 1080p South"),
+            Location: unifiedgosdk.String("program siemens Cis"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustTimeFromString("2020-07-27T11:23:20.202Z"),
-            Status: shared.AtsInterviewStatusScheduled.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-03-28T14:55:27.491Z"),
+            StartAt: types.MustTimeFromString("2021-03-14T15:20:41.084Z"),
+            Status: shared.AtsInterviewStatusAwaitingFeedback.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2023-07-14T19:59:39.905Z"),
             UserIds: []string{
-                "adipisci",
+                "East",
             },
         },
-        ConnectionID: "pariatur",
-        ID: "40f61d17-1157-4cbe-9ee4-f7211840772f",
+        ConnectionID: "ASCII yet Hybrid",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

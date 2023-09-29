@@ -101,10 +101,13 @@ func (o *GetCrmConnectionIDContactRequest) GetUpdatedGte() *time.Time {
 }
 
 type GetCrmConnectionIDContactResponse struct {
+	// HTTP response content type for this operation
 	ContentType string
 	// Successful
 	CrmContacts []shared.CrmContact
-	StatusCode  int
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 

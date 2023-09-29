@@ -85,9 +85,12 @@ func (o *GetAtsConnectionIDCandidateRequest) GetUpdatedGte() *time.Time {
 type GetAtsConnectionIDCandidateResponse struct {
 	// Successful
 	AtsCandidates []shared.AtsCandidate
-	ContentType   string
-	StatusCode    int
-	RawResponse   *http.Response
+	// HTTP response content type for this operation
+	ContentType string
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
+	RawResponse *http.Response
 }
 
 func (o *GetAtsConnectionIDCandidateResponse) GetAtsCandidates() []shared.AtsCandidate {

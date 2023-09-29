@@ -1,4 +1,5 @@
 # Hris
+(*Hris*)
 
 ### Available Operations
 
@@ -41,8 +42,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.DeleteHrisConnectionIDEmployeeID(ctx, operations.DeleteHrisConnectionIDEmployeeIDRequest{
-        ConnectionID: "excepturi",
-        ID: "3e34316c-f55b-4431-b553-ccf1c204c4ad",
+        ConnectionID: "Laredo turquoise port",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -93,8 +94,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.DeleteHrisConnectionIDGroupID(ctx, operations.DeleteHrisConnectionIDGroupIDRequest{
-        ConnectionID: "quod",
-        ID: "c9904c51-95b8-4648-8efa-78f1e2d3b901",
+        ConnectionID: "consequently platforms Metal",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -146,13 +147,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisConnectionIDEmployee(ctx, operations.GetHrisConnectionIDEmployeeRequest{
-        ConnectionID: "saepe",
-        Limit: unifiedgosdk.Float64(289.94),
-        Offset: unifiedgosdk.Float64(5725.89),
-        Order: unifiedgosdk.String("corporis"),
-        Query: unifiedgosdk.String("explicabo"),
-        Sort: unifiedgosdk.String("distinctio"),
-        UpdatedGte: types.MustTimeFromString("2021-08-12T22:16:16.253Z"),
+        ConnectionID: "initiatives greedily project",
+        Limit: unifiedgosdk.Float64(1798.52),
+        Offset: unifiedgosdk.Float64(6683.19),
+        Order: unifiedgosdk.String("Sports"),
+        Query: unifiedgosdk.String("TLS"),
+        Sort: unifiedgosdk.String("Jazz Trans"),
+        UpdatedGte: types.MustTimeFromString("2021-04-09T17:32:06.988Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -203,8 +204,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisConnectionIDEmployeeID(ctx, operations.GetHrisConnectionIDEmployeeIDRequest{
-        ConnectionID: "tempora",
-        ID: "cbb19f71-3d95-4a41-a9c1-387271e18ea9",
+        ConnectionID: "Keyboard cleverly Rubber",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -256,13 +257,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisConnectionIDGroup(ctx, operations.GetHrisConnectionIDGroupRequest{
-        ConnectionID: "debitis",
-        Limit: unifiedgosdk.Float64(2501.58),
-        Offset: unifiedgosdk.Float64(3333.54),
-        Order: unifiedgosdk.String("illo"),
-        Query: unifiedgosdk.String("illo"),
-        Sort: unifiedgosdk.String("deleniti"),
-        UpdatedGte: types.MustTimeFromString("2022-07-26T10:34:40.123Z"),
+        ConnectionID: "Loan",
+        Limit: unifiedgosdk.Float64(3486.96),
+        Offset: unifiedgosdk.Float64(9705.73),
+        Order: unifiedgosdk.String("Coordinator"),
+        Query: unifiedgosdk.String("World"),
+        Sort: unifiedgosdk.String("Dollar"),
+        UpdatedGte: types.MustTimeFromString("2021-01-15T16:06:13.340Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -313,8 +314,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisConnectionIDGroupID(ctx, operations.GetHrisConnectionIDGroupIDRequest{
-        ConnectionID: "optio",
-        ID: "c57fbd60-b1a7-48ed-a9a9-d4eea85658c2",
+        ConnectionID: "behind",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -368,48 +369,48 @@ func main() {
     res, err := s.Hris.PatchHrisConnectionIDEmployeeID(ctx, operations.PatchHrisConnectionIDEmployeeIDRequest{
         HrisEmployee: &shared.HrisEmployee{
             Address: &shared.PropertyHrisEmployeeAddress{
-                Address1: unifiedgosdk.String("at"),
-                Address2: unifiedgosdk.String("modi"),
-                City: unifiedgosdk.String("Findlay"),
-                Country: unifiedgosdk.String("Saint Martin"),
-                CountryCode: unifiedgosdk.String("LI"),
-                PostalCode: unifiedgosdk.String("69291-4598"),
-                Region: unifiedgosdk.String("unde"),
-                RegionCode: unifiedgosdk.String("autem"),
+                Address1: unifiedgosdk.String("Tennessee virtual"),
+                Address2: unifiedgosdk.String("Assurance forecast"),
+                City: unifiedgosdk.String("Baton Rouge"),
+                Country: unifiedgosdk.String("Bahamas"),
+                CountryCode: unifiedgosdk.String("TW"),
+                PostalCode: unifiedgosdk.String("93632"),
+                Region: unifiedgosdk.String("Bailey"),
+                RegionCode: unifiedgosdk.String("navigating Oregon"),
             },
-            CreatedAt: types.MustTimeFromString("2022-07-11T08:13:45.102Z"),
-            DateOfBirth: types.MustTimeFromString("2022-02-18T07:36:00.073Z"),
-            Department: unifiedgosdk.String("autem"),
-            Division: unifiedgosdk.String("placeat"),
+            CreatedAt: types.MustTimeFromString("2023-01-31T08:11:49.561Z"),
+            DateOfBirth: types.MustTimeFromString("2021-10-08T23:14:10.860Z"),
+            Department: unifiedgosdk.String("soupy web Robust"),
+            Division: unifiedgosdk.String("Corporate loudly quantify"),
             Emails: []shared.HrisEmail{
                 shared.HrisEmail{
-                    Email: "Blaze97@yahoo.com",
+                    Email: "Wendy_Kovacek@hotmail.com",
                     Type: shared.HrisEmailTypeOther.ToPointer(),
                 },
             },
-            EmployeeNumber: unifiedgosdk.String("id"),
+            EmployeeNumber: unifiedgosdk.String("hydrate indigo transmit"),
             EmploymentStatus: shared.HrisEmployeeEmploymentStatusInactive.ToPointer(),
-            EmploymentType: shared.HrisEmployeeEmploymentTypeIntern.ToPointer(),
+            EmploymentType: shared.HrisEmployeeEmploymentTypeFullTime.ToPointer(),
             Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
-            HiredAt: types.MustTimeFromString("2020-08-13T08:33:47.369Z"),
-            ID: unifiedgosdk.String("ef234c95-5b9b-4df2-990a-bd9bbcc2725e"),
-            Location: unifiedgosdk.String("impedit"),
-            ManagerID: unifiedgosdk.String("magni"),
+            HiredAt: types.MustTimeFromString("2021-07-20T11:37:42.486Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            Location: unifiedgosdk.String("withdrawal wonderfully"),
+            ManagerID: unifiedgosdk.String("molestias white Gainesville"),
             MaritalStatus: shared.HrisEmployeeMaritalStatusMarried.ToPointer(),
-            Name: unifiedgosdk.String("Sabrina Schamberger Sr."),
+            Name: unifiedgosdk.String("tensely technologies"),
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "totam",
-                    Type: shared.HrisTelephoneTypeWork.ToPointer(),
+                    Telephone: "Northeast Music Hassium",
+                    Type: shared.HrisTelephoneTypeMobile.ToPointer(),
                 },
             },
-            TerminatedAt: types.MustTimeFromString("2022-06-27T13:37:26.116Z"),
-            Title: unifiedgosdk.String("Mr."),
-            UpdatedAt: types.MustTimeFromString("2021-10-27T12:07:56.119Z"),
+            TerminatedAt: types.MustTimeFromString("2023-08-07T01:58:28.622Z"),
+            Title: unifiedgosdk.String("failing Southwest Kuhn"),
+            UpdatedAt: types.MustTimeFromString("2023-05-18T01:32:56.083Z"),
         },
-        ConnectionID: "excepturi",
-        ID: "ef68e45c-8add-4fac-b545-00430c6632b4",
+        ConnectionID: "South Money past",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -462,24 +463,24 @@ func main() {
     ctx := context.Background()
     res, err := s.Hris.PatchHrisConnectionIDGroupID(ctx, operations.PatchHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustTimeFromString("2022-05-31T02:06:03.542Z"),
-            Description: unifiedgosdk.String("inventore"),
+            CreatedAt: types.MustTimeFromString("2023-10-19T05:30:26.390Z"),
+            Description: unifiedgosdk.String("Stand-alone asymmetric orchestration"),
             EmployeeIds: []string{
-                "sapiente",
+                "shootdown",
             },
-            ID: unifiedgosdk.String("df01c3e9-1e8f-47bc-a9d4-60a77eceb26d"),
+            ID: unifiedgosdk.String("<ID>"),
             IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
-                "architecto",
+                "24/7",
             },
-            Name: unifiedgosdk.String("Lorene Bosco"),
-            ParentID: unifiedgosdk.String("qui"),
+            Name: unifiedgosdk.String("Agender trainer"),
+            ParentID: unifiedgosdk.String("Configuration Kids Sedan"),
             Raw: &shared.PropertyHrisGroupRaw{},
-            Type: shared.HrisGroupTypeDepartment.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-12-06T03:55:58.108Z"),
+            Type: shared.HrisGroupTypeDivision.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2021-08-18T16:48:12.885Z"),
         },
-        ConnectionID: "quisquam",
-        ID: "7c0f0f87-3f9d-45c2-9fd3-e0b4a4a4253c",
+        ConnectionID: "Intersex",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -533,47 +534,47 @@ func main() {
     res, err := s.Hris.PostHrisConnectionIDEmployee(ctx, operations.PostHrisConnectionIDEmployeeRequest{
         HrisEmployee: &shared.HrisEmployee{
             Address: &shared.PropertyHrisEmployeeAddress{
-                Address1: unifiedgosdk.String("amet"),
-                Address2: unifiedgosdk.String("ipsa"),
-                City: unifiedgosdk.String("West Jaunitaland"),
-                Country: unifiedgosdk.String("Bahrain"),
-                CountryCode: unifiedgosdk.String("YE"),
-                PostalCode: unifiedgosdk.String("18494"),
-                Region: unifiedgosdk.String("pariatur"),
-                RegionCode: unifiedgosdk.String("porro"),
+                Address1: unifiedgosdk.String("Southeast ea withdrawal"),
+                Address2: unifiedgosdk.String("Developer"),
+                City: unifiedgosdk.String("Grand Forks"),
+                Country: unifiedgosdk.String("Cayman Islands"),
+                CountryCode: unifiedgosdk.String("BM"),
+                PostalCode: unifiedgosdk.String("63867-8134"),
+                Region: unifiedgosdk.String("teal Northwest firewall"),
+                RegionCode: unifiedgosdk.String("doubt Diesel COM"),
             },
-            CreatedAt: types.MustTimeFromString("2022-09-23T16:00:07.090Z"),
-            DateOfBirth: types.MustTimeFromString("2021-07-11T10:12:07.009Z"),
-            Department: unifiedgosdk.String("itaque"),
-            Division: unifiedgosdk.String("sit"),
+            CreatedAt: types.MustTimeFromString("2022-09-25T20:39:21.870Z"),
+            DateOfBirth: types.MustTimeFromString("2022-04-06T20:53:56.362Z"),
+            Department: unifiedgosdk.String("payment mull"),
+            Division: unifiedgosdk.String("Blues red"),
             Emails: []shared.HrisEmail{
                 shared.HrisEmail{
-                    Email: "Timmothy68@yahoo.com",
-                    Type: shared.HrisEmailTypeHome.ToPointer(),
+                    Email: "Jacquelyn8@hotmail.com",
+                    Type: shared.HrisEmailTypeWork.ToPointer(),
                 },
             },
-            EmployeeNumber: unifiedgosdk.String("culpa"),
-            EmploymentStatus: shared.HrisEmployeeEmploymentStatusActive.ToPointer(),
-            EmploymentType: shared.HrisEmployeeEmploymentTypeFullTime.ToPointer(),
-            Gender: shared.HrisEmployeeGenderFemale.ToPointer(),
-            HiredAt: types.MustTimeFromString("2021-01-27T23:42:02.589Z"),
-            ID: unifiedgosdk.String("12a4ba9d-5998-4819-acfd-0c77c53e7e7d"),
-            Location: unifiedgosdk.String("eius"),
-            ManagerID: unifiedgosdk.String("accusamus"),
+            EmployeeNumber: unifiedgosdk.String("North Southeast"),
+            EmploymentStatus: shared.HrisEmployeeEmploymentStatusInactive.ToPointer(),
+            EmploymentType: shared.HrisEmployeeEmploymentTypeVolunteer.ToPointer(),
+            Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
+            HiredAt: types.MustTimeFromString("2021-03-26T14:20:42.258Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            Location: unifiedgosdk.String("East"),
+            ManagerID: unifiedgosdk.String("Maserati"),
             MaritalStatus: shared.HrisEmployeeMaritalStatusSingle.ToPointer(),
-            Name: unifiedgosdk.String("Sophie Lesch"),
+            Name: unifiedgosdk.String("Xenogender copy"),
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "consequatur",
-                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                    Telephone: "hmph",
+                    Type: shared.HrisTelephoneTypeWork.ToPointer(),
                 },
             },
-            TerminatedAt: types.MustTimeFromString("2021-06-09T00:38:41.199Z"),
-            Title: unifiedgosdk.String("Mrs."),
-            UpdatedAt: types.MustTimeFromString("2022-06-19T22:55:28.813Z"),
+            TerminatedAt: types.MustTimeFromString("2022-08-16T03:13:22.861Z"),
+            Title: unifiedgosdk.String("Regional synthesize"),
+            UpdatedAt: types.MustTimeFromString("2022-06-15T02:35:02.446Z"),
         },
-        ConnectionID: "saepe",
+        ConnectionID: "past",
     })
     if err != nil {
         log.Fatal(err)
@@ -626,23 +627,23 @@ func main() {
     ctx := context.Background()
     res, err := s.Hris.PostHrisConnectionIDGroup(ctx, operations.PostHrisConnectionIDGroupRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustTimeFromString("2022-10-11T00:06:05.180Z"),
-            Description: unifiedgosdk.String("sint"),
+            CreatedAt: types.MustTimeFromString("2021-02-23T15:35:38.483Z"),
+            Description: unifiedgosdk.String("Configurable stable product"),
             EmployeeIds: []string{
-                "ea",
+                "Auto",
             },
-            ID: unifiedgosdk.String("703fec31-c508-424d-989a-36a6b2d27eb7"),
+            ID: unifiedgosdk.String("<ID>"),
             IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
-                "accusantium",
+                "JSON",
             },
-            Name: unifiedgosdk.String("Harriet Orn DDS"),
-            ParentID: unifiedgosdk.String("voluptatum"),
+            Name: unifiedgosdk.String("whereas Usability transmitting"),
+            ParentID: unifiedgosdk.String("invoice Cyclocross Electric"),
             Raw: &shared.PropertyHrisGroupRaw{},
-            Type: shared.HrisGroupTypeSubDepartment.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-02-14T18:55:03.442Z"),
+            Type: shared.HrisGroupTypeGroup.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2021-04-30T12:40:50.129Z"),
         },
-        ConnectionID: "commodi",
+        ConnectionID: "Hybrid Schenectady",
     })
     if err != nil {
         log.Fatal(err)
@@ -696,48 +697,48 @@ func main() {
     res, err := s.Hris.PutHrisConnectionIDEmployeeID(ctx, operations.PutHrisConnectionIDEmployeeIDRequest{
         HrisEmployee: &shared.HrisEmployee{
             Address: &shared.PropertyHrisEmployeeAddress{
-                Address1: unifiedgosdk.String("debitis"),
-                Address2: unifiedgosdk.String("commodi"),
-                City: unifiedgosdk.String("South Izaiahhaven"),
-                Country: unifiedgosdk.String("Paraguay"),
-                CountryCode: unifiedgosdk.String("MS"),
-                PostalCode: unifiedgosdk.String("72740-9977"),
-                Region: unifiedgosdk.String("nisi"),
-                RegionCode: unifiedgosdk.String("occaecati"),
+                Address1: unifiedgosdk.String("Northwest"),
+                Address2: unifiedgosdk.String("and"),
+                City: unifiedgosdk.String("Uniquefield"),
+                Country: unifiedgosdk.String("Virgin Islands, British"),
+                CountryCode: unifiedgosdk.String("AE"),
+                PostalCode: unifiedgosdk.String("41682"),
+                Region: unifiedgosdk.String("Adventure Avon"),
+                RegionCode: unifiedgosdk.String("bah South"),
             },
-            CreatedAt: types.MustTimeFromString("2022-12-15T12:15:10.431Z"),
-            DateOfBirth: types.MustTimeFromString("2020-03-31T16:49:34.939Z"),
-            Department: unifiedgosdk.String("odio"),
-            Division: unifiedgosdk.String("nihil"),
+            CreatedAt: types.MustTimeFromString("2023-07-18T13:59:47.040Z"),
+            DateOfBirth: types.MustTimeFromString("2022-04-19T17:38:57.783Z"),
+            Department: unifiedgosdk.String("West auxiliary"),
+            Division: unifiedgosdk.String("volt"),
             Emails: []shared.HrisEmail{
                 shared.HrisEmail{
-                    Email: "Tamia.Doyle@gmail.com",
+                    Email: "Kenton_Turcotte@gmail.com",
                     Type: shared.HrisEmailTypeHome.ToPointer(),
                 },
             },
-            EmployeeNumber: unifiedgosdk.String("iusto"),
-            EmploymentStatus: shared.HrisEmployeeEmploymentStatusInactive.ToPointer(),
-            EmploymentType: shared.HrisEmployeeEmploymentTypeOther.ToPointer(),
-            Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
-            HiredAt: types.MustTimeFromString("2022-06-18T09:54:51.929Z"),
-            ID: unifiedgosdk.String("06e61b0d-3087-414c-a0a3-d98637ca85c3"),
-            Location: unifiedgosdk.String("delectus"),
-            ManagerID: unifiedgosdk.String("repudiandae"),
+            EmployeeNumber: unifiedgosdk.String("DNS coulomb Berkshire"),
+            EmploymentStatus: shared.HrisEmployeeEmploymentStatusActive.ToPointer(),
+            EmploymentType: shared.HrisEmployeeEmploymentTypeCasual.ToPointer(),
+            Gender: shared.HrisEmployeeGenderFemale.ToPointer(),
+            HiredAt: types.MustTimeFromString("2022-10-08T23:22:26.211Z"),
+            ID: unifiedgosdk.String("<ID>"),
+            Location: unifiedgosdk.String("East primary"),
+            ManagerID: unifiedgosdk.String("Tokelau"),
             MaritalStatus: shared.HrisEmployeeMaritalStatusMarried.ToPointer(),
-            Name: unifiedgosdk.String("Erin Kris"),
+            Name: unifiedgosdk.String("Bespoke Investment"),
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "harum",
-                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                    Telephone: "East Investment",
+                    Type: shared.HrisTelephoneTypeOther.ToPointer(),
                 },
             },
-            TerminatedAt: types.MustTimeFromString("2021-02-20T15:13:08.610Z"),
-            Title: unifiedgosdk.String("Mrs."),
-            UpdatedAt: types.MustTimeFromString("2022-01-28T12:53:07.770Z"),
+            TerminatedAt: types.MustTimeFromString("2022-03-28T08:29:30.386Z"),
+            Title: unifiedgosdk.String("unless"),
+            UpdatedAt: types.MustTimeFromString("2022-06-29T10:38:14.570Z"),
         },
-        ConnectionID: "placeat",
-        ID: "98f13af2-8db2-4cf2-bf4f-3ded356d7e14",
+        ConnectionID: "Designer Tennessine",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -790,24 +791,24 @@ func main() {
     ctx := context.Background()
     res, err := s.Hris.PutHrisConnectionIDGroupID(ctx, operations.PutHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustTimeFromString("2022-08-29T10:06:09.751Z"),
-            Description: unifiedgosdk.String("beatae"),
+            CreatedAt: types.MustTimeFromString("2022-08-10T12:11:42.375Z"),
+            Description: unifiedgosdk.String("Decentralized methodical projection"),
             EmployeeIds: []string{
-                "eligendi",
+                "Credit",
             },
-            ID: unifiedgosdk.String("d98196d5-5af6-49a1-84b7-9ae33681c23c"),
+            ID: unifiedgosdk.String("<ID>"),
             IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
-                "dolorem",
+                "South",
             },
-            Name: unifiedgosdk.String("Grant Klein PhD"),
-            ParentID: unifiedgosdk.String("ab"),
+            Name: unifiedgosdk.String("Jeep brr Northwest"),
+            ParentID: unifiedgosdk.String("quickly Licensed"),
             Raw: &shared.PropertyHrisGroupRaw{},
-            Type: shared.HrisGroupTypeDivision.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2020-11-07T15:44:18.546Z"),
+            Type: shared.HrisGroupTypeBusinessUnit.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2021-11-08T00:11:45.458Z"),
         },
-        ConnectionID: "quasi",
-        ID: "2c5ba825-fe22-4cd5-8ba6-fbfec932af68",
+        ConnectionID: "vortals interface Gasoline",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

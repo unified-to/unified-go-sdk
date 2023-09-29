@@ -1,4 +1,5 @@
 # List
+(*List*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.List.DeleteMartechConnectionIDListID(ctx, operations.DeleteMartechConnectionIDListIDRequest{
-        ConnectionID: "molestiae",
-        ID: "866db8a7-49e3-4984-911c-c75e4f0c004b",
+        ConnectionID: "Minivan",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,13 +89,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.List.GetMartechConnectionIDList(ctx, operations.GetMartechConnectionIDListRequest{
-        ConnectionID: "minima",
-        Limit: unifiedgosdk.Float64(7315.15),
-        Offset: unifiedgosdk.Float64(6991.28),
-        Order: unifiedgosdk.String("molestiae"),
-        Query: unifiedgosdk.String("ipsam"),
-        Sort: unifiedgosdk.String("quos"),
-        UpdatedGte: types.MustTimeFromString("2020-09-30T08:18:10.798Z"),
+        ConnectionID: "silver DeKalb",
+        Limit: unifiedgosdk.Float64(9799.48),
+        Offset: unifiedgosdk.Float64(4800.63),
+        Order: unifiedgosdk.String("Bedfordshire"),
+        Query: unifiedgosdk.String("Hip Pass"),
+        Sort: unifiedgosdk.String("since"),
+        UpdatedGte: types.MustTimeFromString("2022-03-26T19:40:00.770Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -145,8 +146,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.List.GetMartechConnectionIDListID(ctx, operations.GetMartechConnectionIDListIDRequest{
-        ConnectionID: "cupiditate",
-        ID: "4562f006-9685-4fcd-9a17-3d84bbe24f29",
+        ConnectionID: "Jewelery orange",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -199,14 +200,14 @@ func main() {
     ctx := context.Background()
     res, err := s.List.PatchMartechConnectionIDListID(ctx, operations.PatchMartechConnectionIDListIDRequest{
         MarketingList: &shared.MarketingList{
-            CreatedAt: unifiedgosdk.String("praesentium"),
-            ID: unifiedgosdk.String("34afb073-5cb6-4285-94a2-9aaa1e169156"),
-            Name: unifiedgosdk.String("Adrian Schuster"),
+            CreatedAt: unifiedgosdk.String("Funk"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("lime Fiat"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-06-17T09:25:28.057Z"),
+            UpdatedAt: types.MustTimeFromString("2021-01-15T20:51:24.192Z"),
         },
-        ConnectionID: "perferendis",
-        ID: "9505bf03-a93e-4944-80ca-37fb10789032",
+        ConnectionID: "male sheepishly Intelligent",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -259,13 +260,13 @@ func main() {
     ctx := context.Background()
     res, err := s.List.PostMartechConnectionIDList(ctx, operations.PostMartechConnectionIDListRequest{
         MarketingList: &shared.MarketingList{
-            CreatedAt: unifiedgosdk.String("deserunt"),
-            ID: unifiedgosdk.String("c333172e-2dd7-49ec-b4ba-7e88ddb36fd1"),
-            Name: unifiedgosdk.String("Lucas Schneider"),
+            CreatedAt: unifiedgosdk.String("synergistic Transexual Steel"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("Virginia whoever Bicycle"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-03-20T02:47:07.461Z"),
+            UpdatedAt: types.MustTimeFromString("2023-04-27T09:56:39.589Z"),
         },
-        ConnectionID: "quas",
+        ConnectionID: "Hybrid",
     })
     if err != nil {
         log.Fatal(err)
@@ -318,14 +319,14 @@ func main() {
     ctx := context.Background()
     res, err := s.List.PutMartechConnectionIDListID(ctx, operations.PutMartechConnectionIDListIDRequest{
         MarketingList: &shared.MarketingList{
-            CreatedAt: unifiedgosdk.String("autem"),
-            ID: unifiedgosdk.String("573474f0-a740-4fb4-ab44-1c3a09e76399"),
-            Name: unifiedgosdk.String("Ms. Eula Leffler"),
+            CreatedAt: unifiedgosdk.String("Underpass initiatives"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("North Progressive Assistant"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustTimeFromString("2021-03-29T15:45:25.588Z"),
+            UpdatedAt: types.MustTimeFromString("2023-10-03T22:31:39.028Z"),
         },
-        ConnectionID: "odio",
-        ID: "94455ebc-550a-41c4-a6b5-9c8366fdcc13",
+        ConnectionID: "Security Legacy onto",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

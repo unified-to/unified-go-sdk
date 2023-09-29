@@ -1,4 +1,5 @@
 # User
+(*User*)
 
 ### Available Operations
 
@@ -40,8 +41,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.DeleteCrmConnectionIDUserID(ctx, operations.DeleteCrmConnectionIDUserIDRequest{
-        ConnectionID: "deleniti",
-        ID: "b1d187b5-1eb5-4fd3-8bfe-03490cf20254",
+        ConnectionID: "Intranet Data",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -140,13 +141,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.GetCrmConnectionIDUser(ctx, operations.GetCrmConnectionIDUserRequest{
-        ConnectionID: "id",
-        Limit: unifiedgosdk.Float64(6080.08),
-        Offset: unifiedgosdk.Float64(3220.16),
-        Order: unifiedgosdk.String("unde"),
-        Query: unifiedgosdk.String("consequatur"),
-        Sort: unifiedgosdk.String("quaerat"),
-        UpdatedGte: types.MustTimeFromString("2022-03-13T04:13:10.861Z"),
+        ConnectionID: "suit Electronic Tampa",
+        Limit: unifiedgosdk.Float64(2883.34),
+        Offset: unifiedgosdk.Float64(8886.55),
+        Order: unifiedgosdk.String("despite"),
+        Query: unifiedgosdk.String("frightfully Fitness"),
+        Sort: unifiedgosdk.String("success servant"),
+        UpdatedGte: types.MustTimeFromString("2023-02-23T05:53:04.259Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -197,8 +198,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.GetCrmConnectionIDUserID(ctx, operations.GetCrmConnectionIDUserIDRequest{
-        ConnectionID: "distinctio",
-        ID: "462d6bc9-917f-498e-8792-b979a413d6a8",
+        ConnectionID: "connecting Program",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -347,42 +348,42 @@ func main() {
         CrmUser: &shared.CrmUser{
             Active: unifiedgosdk.Bool(false),
             Address: &shared.PropertyCrmUserAddress{
-                Address1: unifiedgosdk.String("impedit"),
-                Address2: unifiedgosdk.String("perspiciatis"),
-                City: unifiedgosdk.String("South Josianeberg"),
-                Country: unifiedgosdk.String("Papua New Guinea"),
-                CountryCode: unifiedgosdk.String("TG"),
-                PostalCode: unifiedgosdk.String("40808-6577"),
-                Region: unifiedgosdk.String("repellat"),
-                RegionCode: unifiedgosdk.String("voluptatum"),
+                Address1: unifiedgosdk.String("Customer"),
+                Address2: unifiedgosdk.String("violet groupware blanditiis"),
+                City: unifiedgosdk.String("South Phoebeshire"),
+                Country: unifiedgosdk.String("Thailand"),
+                CountryCode: unifiedgosdk.String("NO"),
+                PostalCode: unifiedgosdk.String("30801-4594"),
+                Region: unifiedgosdk.String("portals Vanadium"),
+                RegionCode: unifiedgosdk.String("Future"),
             },
-            CreatedAt: types.MustTimeFromString("2021-04-22T20:59:04.118Z"),
-            Currency: unifiedgosdk.String("amet"),
-            Department: unifiedgosdk.String("totam"),
-            Division: unifiedgosdk.String("ex"),
+            CreatedAt: types.MustTimeFromString("2023-01-04T02:42:28.788Z"),
+            Currency: unifiedgosdk.String("Guinea Franc"),
+            Department: unifiedgosdk.String("Gloves global rosin"),
+            Division: unifiedgosdk.String("Berkshire Europium"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedgosdk.String("Bennie_Langosh@gmail.com"),
-                    Type: shared.CrmEmailTypeOther.ToPointer(),
+                    Email: unifiedgosdk.String("Wade.Dach@gmail.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.String("76c002fa-cb13-4ac2-8c81-43b866c575a1"),
-            ImageURL: unifiedgosdk.String("recusandae"),
-            LanguageLocale: unifiedgosdk.String("quia"),
-            Name: unifiedgosdk.String("Carla Lubowitz"),
+            ID: unifiedgosdk.String("<ID>"),
+            ImageURL: unifiedgosdk.String("Checking"),
+            LanguageLocale: unifiedgosdk.String("Sedan Porsche matrix"),
+            Name: unifiedgosdk.String("superstructure Nissan sedately"),
             Raw: &shared.PropertyCrmUserRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "accusantium",
-                    Type: shared.CrmTelephoneTypeFax.ToPointer(),
+                    Telephone: "unto ubiquitous input",
+                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
                 },
             },
-            Timezone: unifiedgosdk.String("accusamus"),
-            Title: unifiedgosdk.String("Mrs."),
-            UpdatedAt: types.MustTimeFromString("2022-04-24T03:57:57.473Z"),
+            Timezone: unifiedgosdk.String("America/Tijuana"),
+            Title: unifiedgosdk.String("Computer Bicycle"),
+            UpdatedAt: types.MustTimeFromString("2021-12-13T16:36:33.886Z"),
         },
-        ConnectionID: "sit",
-        ID: "e8fbc48d-dc7e-469b-9351-0505014dca10",
+        ConnectionID: "gold generating",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -433,16 +434,16 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.PatchUnifiedUser(ctx, shared.User{
-        CreatedAt: types.MustTimeFromString("2022-06-17T20:12:07.816Z"),
-        Email: unifiedgosdk.String("Candido.Hahn@yahoo.com"),
-        Environment: unifiedgosdk.String("impedit"),
-        ID: unifiedgosdk.String("36e94889-2782-4d34-a0b8-fc0d59f57b9f"),
+        CreatedAt: types.MustTimeFromString("2022-04-24T15:25:24.483Z"),
+        Email: unifiedgosdk.String("Emmalee.Quitzon@yahoo.com"),
+        Environment: unifiedgosdk.String("Bicycle"),
+        ID: unifiedgosdk.String("<ID>"),
         Meta: &shared.PropertyUserMeta{},
-        Name: "Miss Ian Connelly",
-        UpdatedAt: types.MustTimeFromString("2022-07-09T07:24:05.365Z"),
-        WorkspaceID: "deleniti",
+        Name: "vice compressing",
+        UpdatedAt: types.MustTimeFromString("2023-05-05T16:52:20.023Z"),
+        WorkspaceID: "Hybrid methodologies",
         WorkspaceIds: []string{
-            "aperiam",
+            "Potassium",
         },
     })
     if err != nil {
@@ -498,41 +499,41 @@ func main() {
         CrmUser: &shared.CrmUser{
             Active: unifiedgosdk.Bool(false),
             Address: &shared.PropertyCrmUserAddress{
-                Address1: unifiedgosdk.String("quos"),
-                Address2: unifiedgosdk.String("maxime"),
-                City: unifiedgosdk.String("South Nestor"),
-                Country: unifiedgosdk.String("Mongolia"),
-                CountryCode: unifiedgosdk.String("TO"),
-                PostalCode: unifiedgosdk.String("94023"),
-                Region: unifiedgosdk.String("magnam"),
-                RegionCode: unifiedgosdk.String("recusandae"),
+                Address1: unifiedgosdk.String("driver East"),
+                Address2: unifiedgosdk.String("relationships Computer navigate"),
+                City: unifiedgosdk.String("Homestead"),
+                Country: unifiedgosdk.String("Cayman Islands"),
+                CountryCode: unifiedgosdk.String("BW"),
+                PostalCode: unifiedgosdk.String("34958"),
+                Region: unifiedgosdk.String("South"),
+                RegionCode: unifiedgosdk.String("morph an colossal"),
             },
-            CreatedAt: types.MustTimeFromString("2022-12-13T13:34:20.729Z"),
-            Currency: unifiedgosdk.String("maiores"),
-            Department: unifiedgosdk.String("tempora"),
-            Division: unifiedgosdk.String("reprehenderit"),
+            CreatedAt: types.MustTimeFromString("2021-02-02T08:27:21.693Z"),
+            Currency: unifiedgosdk.String("Cayman Islands Dollar"),
+            Department: unifiedgosdk.String("um"),
+            Division: unifiedgosdk.String("West sievert generating"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedgosdk.String("Stuart22@yahoo.com"),
+                    Email: unifiedgosdk.String("Jadon_Schumm45@gmail.com"),
                     Type: shared.CrmEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.String("483f748e-efcc-4b69-9541-b4b393f35666"),
-            ImageURL: unifiedgosdk.String("consequuntur"),
-            LanguageLocale: unifiedgosdk.String("quis"),
-            Name: unifiedgosdk.String("Tomas Pacocha"),
+            ID: unifiedgosdk.String("<ID>"),
+            ImageURL: unifiedgosdk.String("radian Borders Southeast"),
+            LanguageLocale: unifiedgosdk.String("Silicon Awesome Industrial"),
+            Name: unifiedgosdk.String("Mouse Accounts"),
             Raw: &shared.PropertyCrmUserRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "consequuntur",
-                    Type: shared.CrmTelephoneTypeWork.ToPointer(),
+                    Telephone: "ohm Southeast ROI",
+                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
                 },
             },
-            Timezone: unifiedgosdk.String("illo"),
-            Title: unifiedgosdk.String("Dr."),
-            UpdatedAt: types.MustTimeFromString("2020-08-23T15:43:14.003Z"),
+            Timezone: unifiedgosdk.String("Europe/Bratislava"),
+            Title: unifiedgosdk.String("Money"),
+            UpdatedAt: types.MustTimeFromString("2023-12-09T10:24:50.054Z"),
         },
-        ConnectionID: "sequi",
+        ConnectionID: "competent calculate",
     })
     if err != nil {
         log.Fatal(err)
@@ -587,42 +588,42 @@ func main() {
         CrmUser: &shared.CrmUser{
             Active: unifiedgosdk.Bool(false),
             Address: &shared.PropertyCrmUserAddress{
-                Address1: unifiedgosdk.String("reprehenderit"),
-                Address2: unifiedgosdk.String("sint"),
-                City: unifiedgosdk.String("Hintzfurt"),
-                Country: unifiedgosdk.String("Martinique"),
-                CountryCode: unifiedgosdk.String("TR"),
-                PostalCode: unifiedgosdk.String("08257-3819"),
-                Region: unifiedgosdk.String("omnis"),
-                RegionCode: unifiedgosdk.String("itaque"),
+                Address1: unifiedgosdk.String("Honduras"),
+                Address2: unifiedgosdk.String("Oxygen Libyan Burundi"),
+                City: unifiedgosdk.String("North Gertrudefield"),
+                Country: unifiedgosdk.String("Belgium"),
+                CountryCode: unifiedgosdk.String("DK"),
+                PostalCode: unifiedgosdk.String("00781"),
+                Region: unifiedgosdk.String("Wagon"),
+                RegionCode: unifiedgosdk.String("how overriding"),
             },
-            CreatedAt: types.MustTimeFromString("2022-11-29T02:49:06.048Z"),
-            Currency: unifiedgosdk.String("fugiat"),
-            Department: unifiedgosdk.String("provident"),
-            Division: unifiedgosdk.String("voluptatem"),
+            CreatedAt: types.MustTimeFromString("2023-03-13T00:47:15.649Z"),
+            Currency: unifiedgosdk.String("Pakistan Rupee"),
+            Department: unifiedgosdk.String("Tricycle vaguely"),
+            Division: unifiedgosdk.String("Severn bluetooth Argon"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedgosdk.String("Rosanna45@hotmail.com"),
-                    Type: shared.CrmEmailTypeHome.ToPointer(),
+                    Email: unifiedgosdk.String("Karl_Stehr4@hotmail.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.String("6bfc7677-f0f5-404a-ae48-28fb6daee19c"),
-            ImageURL: unifiedgosdk.String("explicabo"),
-            LanguageLocale: unifiedgosdk.String("nisi"),
-            Name: unifiedgosdk.String("Frank Ryan"),
+            ID: unifiedgosdk.String("<ID>"),
+            ImageURL: unifiedgosdk.String("AGP romance didactic"),
+            LanguageLocale: unifiedgosdk.String("ROI Polarised"),
+            Name: unifiedgosdk.String("olive synthesizing"),
             Raw: &shared.PropertyCrmUserRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "quasi",
-                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
+                    Telephone: "Honda Indiana",
+                    Type: shared.CrmTelephoneTypeFax.ToPointer(),
                 },
             },
-            Timezone: unifiedgosdk.String("maxime"),
-            Title: unifiedgosdk.String("Ms."),
-            UpdatedAt: types.MustTimeFromString("2022-10-11T03:37:06.147Z"),
+            Timezone: unifiedgosdk.String("Asia/Novosibirsk"),
+            Title: unifiedgosdk.String("compelling red compressing"),
+            UpdatedAt: types.MustTimeFromString("2022-09-03T15:59:05.095Z"),
         },
-        ConnectionID: "vitae",
-        ID: "cabdab76-7a44-44dd-8da0-abe58eb3d54b",
+        ConnectionID: "relationships",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -673,16 +674,16 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.PutUnifiedUser(ctx, shared.User{
-        CreatedAt: types.MustTimeFromString("2022-11-07T21:46:44.444Z"),
-        Email: unifiedgosdk.String("Melissa_Dooley30@hotmail.com"),
-        Environment: unifiedgosdk.String("sint"),
-        ID: unifiedgosdk.String("b8e5c18b-25e8-47f6-8823-255be95c0cbc"),
+        CreatedAt: types.MustTimeFromString("2023-07-31T04:46:29.769Z"),
+        Email: unifiedgosdk.String("Selena59@yahoo.com"),
+        Environment: unifiedgosdk.String("Bedfordshire Lucia"),
+        ID: unifiedgosdk.String("<ID>"),
         Meta: &shared.PropertyUserMeta{},
-        Name: "Billy Schmeler",
-        UpdatedAt: types.MustTimeFromString("2022-06-05T12:45:52.497Z"),
-        WorkspaceID: "quae",
+        Name: "Bicycle hacking South",
+        UpdatedAt: types.MustTimeFromString("2023-03-15T15:08:26.238Z"),
+        WorkspaceID: "Card defect",
         WorkspaceIds: []string{
-            "quos",
+            "repudiandae",
         },
     })
     if err != nil {

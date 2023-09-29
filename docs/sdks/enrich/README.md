@@ -1,4 +1,5 @@
 # Enrich
+(*Enrich*)
 
 ### Available Operations
 
@@ -31,9 +32,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Enrich.GetEnrichConnectionIDCompany(ctx, operations.GetEnrichConnectionIDCompanyRequest{
-        ConnectionID: "mollitia",
-        Domain: unifiedgosdk.String("beatae"),
-        Name: unifiedgosdk.String("Irma Bayer"),
+        ConnectionID: "female Computers Central",
+        Domain: unifiedgosdk.String("scientific-facet.biz"),
+        Name: unifiedgosdk.String("Outdoors embrace interface"),
     })
     if err != nil {
         log.Fatal(err)
@@ -84,11 +85,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Enrich.GetEnrichConnectionIDPerson(ctx, operations.GetEnrichConnectionIDPersonRequest{
-        ConnectionID: "at",
-        Email: unifiedgosdk.String("Curtis.Barrows40@hotmail.com"),
-        LinkedinURL: unifiedgosdk.String("cupiditate"),
-        Name: unifiedgosdk.String("Ms. Ivan Breitenberg IV"),
-        Twitter: unifiedgosdk.String("temporibus"),
+        ConnectionID: "Iowa Account",
+        Email: unifiedgosdk.String("Jaiden_Weimann24@gmail.com"),
+        LinkedinURL: unifiedgosdk.String("paradigms integrate Creative"),
+        Name: unifiedgosdk.String("Investment"),
+        Twitter: unifiedgosdk.String("Hills"),
     })
     if err != nil {
         log.Fatal(err)

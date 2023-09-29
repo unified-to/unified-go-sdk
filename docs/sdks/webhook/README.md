@@ -1,4 +1,5 @@
 # Webhook
+(*Webhook*)
 
 ### Available Operations
 
@@ -33,7 +34,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Webhook.DeleteUnifiedWebhookID(ctx, operations.DeleteUnifiedWebhookIDRequest{
-        ID: "d73809a0-2f06-4e92-a8b5-6065a5074bef",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -85,13 +86,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Webhook.GetUnifiedWebhook(ctx, operations.GetUnifiedWebhookRequest{
-        Env: unifiedgosdk.String("cum"),
-        Limit: unifiedgosdk.Float64(5185.71),
-        Object: unifiedgosdk.String("laborum"),
-        Offset: unifiedgosdk.Float64(9427.54),
-        Order: unifiedgosdk.String("eum"),
-        Sort: unifiedgosdk.String("rem"),
-        UpdatedGte: types.MustTimeFromString("2022-05-29T07:20:34.094Z"),
+        Env: unifiedgosdk.String("Investor methodical Fitness"),
+        Limit: unifiedgosdk.Float64(8087.22),
+        Object: unifiedgosdk.String("Franc past salmon"),
+        Offset: unifiedgosdk.Float64(5240.75),
+        Order: unifiedgosdk.String("program"),
+        Sort: unifiedgosdk.String("below JSON"),
+        UpdatedGte: types.MustTimeFromString("2022-05-29T13:22:55.562Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -142,7 +143,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Webhook.GetUnifiedWebhookID(ctx, operations.GetUnifiedWebhookIDRequest{
-        ID: "d2b99404-363a-4096-8c05-3876e39def9c",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -195,30 +196,30 @@ func main() {
     ctx := context.Background()
     res, err := s.Webhook.PostUnifiedWebhookConnectionIDObject(ctx, operations.PostUnifiedWebhookConnectionIDObjectRequest{
         Webhook: &shared.Webhook{
-            CheckedAt: types.MustTimeFromString("2022-08-13T23:23:14.155Z"),
-            ConnectionID: "minima",
-            CreatedAt: types.MustTimeFromString("2020-02-03T17:57:01.294Z"),
-            Environment: unifiedgosdk.String("fugiat"),
+            CheckedAt: types.MustTimeFromString("2021-02-25T07:12:08.980Z"),
+            ConnectionID: "deposit 1080p Passenger",
+            CreatedAt: types.MustTimeFromString("2023-02-21T14:58:56.193Z"),
+            Environment: unifiedgosdk.String("Minnesota Soap"),
             Events: []shared.PropertyWebhookEvents{
                 shared.PropertyWebhookEventsUpdated,
             },
-            HookURL: "ipsum",
-            ID: unifiedgosdk.String("54e5cb94-9770-417a-a620-4bb26ca4e999"),
+            HookURL: "Table female ken",
+            ID: unifiedgosdk.String("<ID>"),
             IncludeRaw: unifiedgosdk.Bool(false),
-            IntegrationType: "quos",
-            Interval: 1768.7,
+            IntegrationType: "chocolate",
+            Interval: 1710.16,
             ObjectType: shared.WebhookObjectTypeEnrichCompany,
             Subscriptions: []string{
-                "iure",
+                "female",
             },
-            UpdatedAt: types.MustTimeFromString("2021-05-13T02:27:36.070Z"),
-            WorkspaceID: "debitis",
+            UpdatedAt: types.MustTimeFromString("2022-08-02T17:13:06.397Z"),
+            WorkspaceID: "hertz",
         },
-        ConnectionID: "reiciendis",
+        ConnectionID: "Borders",
         Events: []PostUnifiedWebhookConnectionIDObjectEvents{
             operations.PostUnifiedWebhookConnectionIDObjectEventsCreated,
         },
-        Object: "perferendis",
+        Object: "scalable",
     })
     if err != nil {
         log.Fatal(err)

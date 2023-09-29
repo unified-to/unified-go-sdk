@@ -1,4 +1,5 @@
 # Pipeline
+(*Pipeline*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pipeline.DeleteCrmConnectionIDPipelineID(ctx, operations.DeleteCrmConnectionIDPipelineIDRequest{
-        ConnectionID: "laboriosam",
-        ID: "73d522b8-28a9-4030-a60f-024c79b4cc64",
+        ConnectionID: "Customer",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,13 +89,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pipeline.GetCrmConnectionIDPipeline(ctx, operations.GetCrmConnectionIDPipelineRequest{
-        ConnectionID: "eligendi",
-        Limit: unifiedgosdk.Float64(1687.36),
-        Offset: unifiedgosdk.Float64(7276.04),
-        Order: unifiedgosdk.String("sequi"),
-        Query: unifiedgosdk.String("culpa"),
-        Sort: unifiedgosdk.String("ratione"),
-        UpdatedGte: types.MustTimeFromString("2022-03-30T02:59:59.063Z"),
+        ConnectionID: "dirty Awesome Checking",
+        Limit: unifiedgosdk.Float64(9055.88),
+        Offset: unifiedgosdk.Float64(3443.76),
+        Order: unifiedgosdk.String("glom"),
+        Query: unifiedgosdk.String("panel"),
+        Sort: unifiedgosdk.String("Latin tightly"),
+        UpdatedGte: types.MustTimeFromString("2022-03-01T15:47:43.244Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -145,8 +146,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pipeline.GetCrmConnectionIDPipelineID(ctx, operations.GetCrmConnectionIDPipelineIDRequest{
-        ConnectionID: "labore",
-        ID: "88ade62f-6aa5-458a-a5e2-083016ca34bb",
+        ConnectionID: "Tricycle roughly markets",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -200,16 +201,16 @@ func main() {
     res, err := s.Pipeline.PatchCrmConnectionIDPipelineID(ctx, operations.PatchCrmConnectionIDPipelineIDRequest{
         CrmPipeline: &shared.CrmPipeline{
             Active: unifiedgosdk.Bool(false),
-            CreatedAt: types.MustTimeFromString("2022-01-06T01:33:11.339Z"),
+            CreatedAt: types.MustTimeFromString("2023-08-24T17:39:51.183Z"),
             DealProbability: unifiedgosdk.Bool(false),
-            DisplayOrder: unifiedgosdk.Float64(8302.16),
-            ID: unifiedgosdk.String("4f62127a-607d-4160-a294-514c3db9ca9f"),
-            Name: unifiedgosdk.String("Brandy Powlowski"),
+            DisplayOrder: unifiedgosdk.Float64(664.58),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("bandwidth"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustTimeFromString("2021-03-30T20:29:28.566Z"),
+            UpdatedAt: types.MustTimeFromString("2023-11-27T01:55:15.440Z"),
         },
-        ConnectionID: "quos",
-        ID: "78703493-f49a-4a84-a5a3-283279b719d1",
+        ConnectionID: "Chips",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -263,15 +264,15 @@ func main() {
     res, err := s.Pipeline.PostCrmConnectionIDPipeline(ctx, operations.PostCrmConnectionIDPipelineRequest{
         CrmPipeline: &shared.CrmPipeline{
             Active: unifiedgosdk.Bool(false),
-            CreatedAt: types.MustTimeFromString("2020-05-07T22:58:48.615Z"),
+            CreatedAt: types.MustTimeFromString("2023-12-10T23:55:22.206Z"),
             DealProbability: unifiedgosdk.Bool(false),
-            DisplayOrder: unifiedgosdk.Float64(6422.68),
-            ID: unifiedgosdk.String("673d86e3-b35e-449a-b135-778ce54cacb0"),
-            Name: unifiedgosdk.String("Chris Terry"),
+            DisplayOrder: unifiedgosdk.Float64(3879.73),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("upward Mayaguez"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-09-03T20:01:11.409Z"),
+            UpdatedAt: types.MustTimeFromString("2021-09-25T10:43:23.679Z"),
         },
-        ConnectionID: "voluptatem",
+        ConnectionID: "Lead Health",
     })
     if err != nil {
         log.Fatal(err)
@@ -325,16 +326,16 @@ func main() {
     res, err := s.Pipeline.PutCrmConnectionIDPipelineID(ctx, operations.PutCrmConnectionIDPipelineIDRequest{
         CrmPipeline: &shared.CrmPipeline{
             Active: unifiedgosdk.Bool(false),
-            CreatedAt: types.MustTimeFromString("2022-08-22T17:28:32.263Z"),
+            CreatedAt: types.MustTimeFromString("2021-05-16T17:24:47.805Z"),
             DealProbability: unifiedgosdk.Bool(false),
-            DisplayOrder: unifiedgosdk.Float64(6880.36),
-            ID: unifiedgosdk.String("acf63b21-5186-4ab5-a3a0-22614315d156"),
-            Name: unifiedgosdk.String("Victor Mayer"),
+            DisplayOrder: unifiedgosdk.Float64(5470.76),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("West"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-11-25T09:18:50.894Z"),
+            UpdatedAt: types.MustTimeFromString("2022-02-28T07:49:31.151Z"),
         },
-        ConnectionID: "officia",
-        ID: "fc7186ff-20b7-4a73-9f40-ca0d7657c164",
+        ConnectionID: "optimizing",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

@@ -1,4 +1,5 @@
 # Group
+(*Group*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Group.DeleteHrisConnectionIDGroupID(ctx, operations.DeleteHrisConnectionIDGroupIDRequest{
-        ConnectionID: "ipsam",
-        ID: "8aaeacae-323a-431b-b7ba-1cc97716c802",
+        ConnectionID: "consequently platforms Metal",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,13 +89,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Group.GetHrisConnectionIDGroup(ctx, operations.GetHrisConnectionIDGroupRequest{
-        ConnectionID: "minus",
-        Limit: unifiedgosdk.Float64(7864.46),
-        Offset: unifiedgosdk.Float64(5742.21),
-        Order: unifiedgosdk.String("voluptates"),
-        Query: unifiedgosdk.String("alias"),
-        Sort: unifiedgosdk.String("placeat"),
-        UpdatedGte: types.MustTimeFromString("2022-03-07T00:11:41.235Z"),
+        ConnectionID: "Loan",
+        Limit: unifiedgosdk.Float64(3486.96),
+        Offset: unifiedgosdk.Float64(9705.73),
+        Order: unifiedgosdk.String("Coordinator"),
+        Query: unifiedgosdk.String("World"),
+        Sort: unifiedgosdk.String("Dollar"),
+        UpdatedGte: types.MustTimeFromString("2021-01-15T16:06:13.340Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -145,8 +146,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Group.GetHrisConnectionIDGroupID(ctx, operations.GetHrisConnectionIDGroupIDRequest{
-        ConnectionID: "iste",
-        ID: "d323f1aa-63ed-49cf-9c85-6bcba51ef245",
+        ConnectionID: "behind",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -199,24 +200,24 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.PatchHrisConnectionIDGroupID(ctx, operations.PatchHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustTimeFromString("2022-05-13T18:14:16.753Z"),
-            Description: unifiedgosdk.String("aliquam"),
+            CreatedAt: types.MustTimeFromString("2023-10-19T05:30:26.390Z"),
+            Description: unifiedgosdk.String("Stand-alone asymmetric orchestration"),
             EmployeeIds: []string{
-                "iusto",
+                "shootdown",
             },
-            ID: unifiedgosdk.String("facf116c-dd54-444a-b562-873c7dd9efaf"),
+            ID: unifiedgosdk.String("<ID>"),
             IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
-                "labore",
+                "24/7",
             },
-            Name: unifiedgosdk.String("Cristina Russel"),
-            ParentID: unifiedgosdk.String("consectetur"),
+            Name: unifiedgosdk.String("Agender trainer"),
+            ParentID: unifiedgosdk.String("Configuration Kids Sedan"),
             Raw: &shared.PropertyHrisGroupRaw{},
-            Type: shared.HrisGroupTypeDepartment.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-12-28T08:43:09.661Z"),
+            Type: shared.HrisGroupTypeDivision.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2021-08-18T16:48:12.885Z"),
         },
-        ConnectionID: "delectus",
-        ID: "3138f30d-f3db-4022-baa5-65fb8f652ebb",
+        ConnectionID: "Intersex",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -269,23 +270,23 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.PostHrisConnectionIDGroup(ctx, operations.PostHrisConnectionIDGroupRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustTimeFromString("2021-04-22T16:44:51.151Z"),
-            Description: unifiedgosdk.String("dolor"),
+            CreatedAt: types.MustTimeFromString("2021-02-23T15:35:38.483Z"),
+            Description: unifiedgosdk.String("Configurable stable product"),
             EmployeeIds: []string{
-                "praesentium",
+                "Auto",
             },
-            ID: unifiedgosdk.String("38387902-43b2-493d-ab30-e917f50fda04"),
+            ID: unifiedgosdk.String("<ID>"),
             IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
-                "porro",
+                "JSON",
             },
-            Name: unifiedgosdk.String("Wm Boyer"),
-            ParentID: unifiedgosdk.String("exercitationem"),
+            Name: unifiedgosdk.String("whereas Usability transmitting"),
+            ParentID: unifiedgosdk.String("invoice Cyclocross Electric"),
             Raw: &shared.PropertyHrisGroupRaw{},
-            Type: shared.HrisGroupTypeDepartment.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-08-30T17:09:47.110Z"),
+            Type: shared.HrisGroupTypeGroup.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2021-04-30T12:40:50.129Z"),
         },
-        ConnectionID: "unde",
+        ConnectionID: "Hybrid Schenectady",
     })
     if err != nil {
         log.Fatal(err)
@@ -338,24 +339,24 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.PutHrisConnectionIDGroupID(ctx, operations.PutHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustTimeFromString("2022-04-06T01:39:03.213Z"),
-            Description: unifiedgosdk.String("aut"),
+            CreatedAt: types.MustTimeFromString("2022-08-10T12:11:42.375Z"),
+            Description: unifiedgosdk.String("Decentralized methodical projection"),
             EmployeeIds: []string{
-                "expedita",
+                "Credit",
             },
-            ID: unifiedgosdk.String("c3bb7446-64eb-41d0-b388-b0d1bb17afee"),
+            ID: unifiedgosdk.String("<ID>"),
             IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
-                "reprehenderit",
+                "South",
             },
-            Name: unifiedgosdk.String("Latoya Hodkiewicz"),
-            ParentID: unifiedgosdk.String("quidem"),
+            Name: unifiedgosdk.String("Jeep brr Northwest"),
+            ParentID: unifiedgosdk.String("quickly Licensed"),
             Raw: &shared.PropertyHrisGroupRaw{},
             Type: shared.HrisGroupTypeBusinessUnit.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-08-19T01:14:09.290Z"),
+            UpdatedAt: types.MustTimeFromString("2021-11-08T00:11:45.458Z"),
         },
-        ConnectionID: "voluptate",
-        ID: "c7edaf39-d16f-4bf7-afd1-62b303e3023b",
+        ConnectionID: "vortals interface Gasoline",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

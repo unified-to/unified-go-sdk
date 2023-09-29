@@ -1,4 +1,5 @@
 # Call
+(*Call*)
 
 ### Available Operations
 
@@ -31,15 +32,15 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Call.GetUcConnectionIDCall(ctx, operations.GetUcConnectionIDCallRequest{
-        AgentID: unifiedgosdk.String("a"),
-        ConnectionID: "iste",
-        ContactID: unifiedgosdk.String("dicta"),
-        Limit: unifiedgosdk.Float64(5524.39),
-        Offset: unifiedgosdk.Float64(3563.15),
-        Order: unifiedgosdk.String("dolore"),
-        Query: unifiedgosdk.String("modi"),
-        Sort: unifiedgosdk.String("itaque"),
-        UpdatedGte: types.MustTimeFromString("2022-03-15T19:59:59.350Z"),
+        AgentID: unifiedgosdk.String("Directives"),
+        ConnectionID: "female than",
+        ContactID: unifiedgosdk.String("reintermediate Enid Applications"),
+        Limit: unifiedgosdk.Float64(1980.39),
+        Offset: unifiedgosdk.Float64(3478),
+        Order: unifiedgosdk.String("white Oklahoma Functionality"),
+        Query: unifiedgosdk.String("pricing whether Hillsboro"),
+        Sort: unifiedgosdk.String("Wooden desensitize SCSI"),
+        UpdatedGte: types.MustTimeFromString("2021-11-03T12:40:46.997Z"),
     })
     if err != nil {
         log.Fatal(err)

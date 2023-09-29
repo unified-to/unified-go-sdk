@@ -28,10 +28,13 @@ func (o *PostCrmConnectionIDTeamRequest) GetConnectionID() string {
 }
 
 type PostCrmConnectionIDTeamResponse struct {
+	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	CrmTeam     *shared.CrmTeam
-	StatusCode  int
+	CrmTeam *shared.CrmTeam
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 

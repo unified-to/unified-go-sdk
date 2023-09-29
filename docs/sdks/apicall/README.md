@@ -1,4 +1,5 @@
 # Apicall
+(*Apicall*)
 
 ### Available Operations
 
@@ -32,17 +33,17 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
-        ConnectionID: unifiedgosdk.String("perspiciatis"),
-        CreatedLte: types.MustTimeFromString("2022-03-20T23:16:34.777Z"),
-        Env: unifiedgosdk.String("consequuntur"),
+        ConnectionID: unifiedgosdk.String("delectus green Hybrid"),
+        CreatedLte: types.MustTimeFromString("2021-04-02T21:36:49.952Z"),
+        Env: unifiedgosdk.String("Fantastic Iodine indexing"),
         Error: unifiedgosdk.Bool(false),
-        ExternalXref: unifiedgosdk.String("blanditiis"),
-        IntegrationType: unifiedgosdk.String("error"),
-        Limit: unifiedgosdk.Float64(503.7),
-        Offset: unifiedgosdk.Float64(5772.29),
-        Order: unifiedgosdk.String("rerum"),
-        Sort: unifiedgosdk.String("adipisci"),
-        UpdatedGte: types.MustTimeFromString("2020-03-14T00:51:21.656Z"),
+        ExternalXref: unifiedgosdk.String("Music"),
+        IntegrationType: unifiedgosdk.String("Soft"),
+        Limit: unifiedgosdk.Float64(2390.64),
+        Offset: unifiedgosdk.Float64(3757.34),
+        Order: unifiedgosdk.String("mobile envisioneer"),
+        Sort: unifiedgosdk.String("North payment opposite"),
+        UpdatedGte: types.MustTimeFromString("2021-08-11T16:18:13.644Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -93,7 +94,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Apicall.GetUnifiedApicallID(ctx, operations.GetUnifiedApicallIDRequest{
-        ID: "49a8d9cb-f486-4333-a3f9-b77f3a410067",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

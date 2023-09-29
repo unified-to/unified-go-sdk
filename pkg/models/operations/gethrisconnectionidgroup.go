@@ -83,10 +83,13 @@ func (o *GetHrisConnectionIDGroupRequest) GetUpdatedGte() *time.Time {
 }
 
 type GetHrisConnectionIDGroupResponse struct {
+	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	HrisGroups  []shared.HrisGroup
-	StatusCode  int
+	HrisGroups []shared.HrisGroup
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 

@@ -28,10 +28,13 @@ func (o *PostCrmConnectionIDUserRequest) GetConnectionID() string {
 }
 
 type PostCrmConnectionIDUserResponse struct {
+	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	CrmUser     *shared.CrmUser
-	StatusCode  int
+	CrmUser *shared.CrmUser
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 

@@ -1,4 +1,5 @@
 # Event
+(*Event*)
 
 ### Available Operations
 
@@ -44,8 +45,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.DeleteCrmConnectionIDEventID(ctx, operations.DeleteCrmConnectionIDEventIDRequest{
-        ConnectionID: "unde",
-        ID: "7e152297-510d-4a80-b122-92cc61c2a702",
+        ConnectionID: "Wooden Latin",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -96,9 +97,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.DeleteCrmConnectionIDEventIDCompanyCompanyID(ctx, operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDRequest{
-        CompanyID: "distinctio",
-        ConnectionID: "soluta",
-        ID: "97ee102d-a2de-435f-8e01-bf33eaab4540",
+        CompanyID: "Gasoline gentle Japan",
+        ConnectionID: "Outdoors",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -149,9 +150,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.DeleteCrmConnectionIDEventIDContactContactID(ctx, operations.DeleteCrmConnectionIDEventIDContactContactIDRequest{
-        ConnectionID: "dolores",
-        ContactID: "dolorum",
-        ID: "c1704bf1-cc9f-4c61-aae5-eb5f0c492b57",
+        ConnectionID: "lecture Funk",
+        ContactID: "Bedfordshire Genderqueer",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -202,9 +203,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.DeleteCrmConnectionIDEventIDDealDealID(ctx, operations.DeleteCrmConnectionIDEventIDDealDealIDRequest{
-        ConnectionID: "ut",
-        DealID: "incidunt",
-        ID: "d08a2267-aaee-479e-bc71-ad31becb83d2",
+        ConnectionID: "Southeast",
+        DealID: "Granite gah Dysprosium",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -256,16 +257,16 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.GetCrmConnectionIDEvent(ctx, operations.GetCrmConnectionIDEventRequest{
-        CompanyID: unifiedgosdk.String("dolor"),
-        ConnectionID: "esse",
-        ContactID: unifiedgosdk.String("deleniti"),
-        DealID: unifiedgosdk.String("mollitia"),
-        Limit: unifiedgosdk.Float64(8941.65),
-        Offset: unifiedgosdk.Float64(2035.85),
-        Order: unifiedgosdk.String("facilis"),
-        Query: unifiedgosdk.String("sapiente"),
-        Sort: unifiedgosdk.String("maxime"),
-        UpdatedGte: types.MustTimeFromString("2022-10-11T22:27:53.755Z"),
+        CompanyID: unifiedgosdk.String("Zirconium Avon Bedfordshire"),
+        ConnectionID: "Hybrid grey Ferrari",
+        ContactID: unifiedgosdk.String("Checking Southeast"),
+        DealID: unifiedgosdk.String("Graham till Caesium"),
+        Limit: unifiedgosdk.Float64(2928.84),
+        Offset: unifiedgosdk.Float64(5904.77),
+        Order: unifiedgosdk.String("furthermore Tricycle Hop"),
+        Query: unifiedgosdk.String("auxiliary"),
+        Sort: unifiedgosdk.String("Southeast Bicycle Gorgeous"),
+        UpdatedGte: types.MustTimeFromString("2023-01-15T23:49:53.643Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -316,8 +317,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.GetCrmConnectionIDEventID(ctx, operations.GetCrmConnectionIDEventIDRequest{
-        ConnectionID: "nulla",
-        ID: "9450a986-a495-4bac-b07f-06b28ecc8649",
+        ConnectionID: "Future equalise",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -371,51 +372,51 @@ func main() {
     res, err := s.Event.PatchCrmConnectionIDEventID(ctx, operations.PatchCrmConnectionIDEventIDRequest{
         CrmEvent: &shared.CrmEvent{
             Call: &shared.PropertyCrmEventCall{
-                Description: unifiedgosdk.String("sunt"),
-                Duration: unifiedgosdk.Float64(2261.97),
+                Description: unifiedgosdk.String("Optional zero defect function"),
+                Duration: unifiedgosdk.Float64(5434.61),
             },
             CompanyIds: []string{
-                "laudantium",
+                "silver",
             },
             ContactIds: []string{
-                "commodi",
+                "redefine",
             },
-            CreatedAt: types.MustTimeFromString("2021-10-18T23:17:50.935Z"),
+            CreatedAt: types.MustTimeFromString("2021-07-21T06:46:42.528Z"),
             DealIds: []string{
-                "qui",
+                "Solutions",
             },
             Email: &shared.PropertyCrmEventEmail{
-                Body: unifiedgosdk.String("eligendi"),
+                Body: unifiedgosdk.String("French"),
                 Cc: []string{
-                    "perspiciatis",
+                    "Checking",
                 },
-                From: unifiedgosdk.String("eum"),
-                Subject: unifiedgosdk.String("sint"),
+                From: unifiedgosdk.String("SDD Toyota Northeast"),
+                Subject: unifiedgosdk.String("Convertible"),
                 To: []string{
-                    "eligendi",
+                    "Electronics",
                 },
             },
-            ID: unifiedgosdk.String("4cc6b788-90a3-4fd3-881d-a10f8c23df93"),
+            ID: unifiedgosdk.String("<ID>"),
             Meeting: &shared.PropertyCrmEventMeeting{
-                Description: unifiedgosdk.String("quae"),
-                EndAt: types.MustTimeFromString("2021-01-28T19:50:54.435Z"),
-                StartAt: types.MustTimeFromString("2022-02-09T08:20:37.262Z"),
-                Title: unifiedgosdk.String("Dr."),
+                Description: unifiedgosdk.String("Monitored mission-critical customer loyalty"),
+                EndAt: types.MustTimeFromString("2022-09-22T17:43:00.863Z"),
+                StartAt: types.MustTimeFromString("2023-04-24T06:40:04.926Z"),
+                Title: unifiedgosdk.String("Kip Switchable Chicken"),
             },
             Note: &shared.PropertyCrmEventNote{
-                Description: unifiedgosdk.String("tempore"),
+                Description: unifiedgosdk.String("Cross-group high-level functionalities"),
             },
             Raw: &shared.PropertyCrmEventRaw{},
             Task: &shared.PropertyCrmEventTask{
-                Description: unifiedgosdk.String("minima"),
-                Name: unifiedgosdk.String("Winifred O'Reilly"),
-                Status: unifiedgosdk.String("numquam"),
+                Description: unifiedgosdk.String("Horizontal empowering forecast"),
+                Name: unifiedgosdk.String("Principal extremely Jast"),
+                Status: unifiedgosdk.String("striped Concrete Bronze"),
             },
-            Type: shared.CrmEventTypeMeeting.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2020-08-13T07:08:20.678Z"),
+            Type: shared.CrmEventTypeNote.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2021-02-18T21:34:24.992Z"),
         },
-        ConnectionID: "sint",
-        ID: "43513772-6d15-4321-b832-a56d69180ff6",
+        ConnectionID: "Dinar benchmark till",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -466,9 +467,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.PatchCrmConnectionIDEventIDCompanyCompanyID(ctx, operations.PatchCrmConnectionIDEventIDCompanyCompanyIDRequest{
-        CompanyID: "consequatur",
-        ConnectionID: "accusamus",
-        ID: "b9a6658e-69a4-4b84-bd38-2dbec75c68c6",
+        CompanyID: "quis Operations",
+        ConnectionID: "convergence programming",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -519,9 +520,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.PatchCrmConnectionIDEventIDContactContactID(ctx, operations.PatchCrmConnectionIDEventIDContactContactIDRequest{
-        ConnectionID: "aut",
-        ContactID: "nisi",
-        ID: "59468ce3-04d8-4849-bf82-14c337f96bb0",
+        ConnectionID: "gosh",
+        ContactID: "North Guilder",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -572,9 +573,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.PatchCrmConnectionIDEventIDDealDealID(ctx, operations.PatchCrmConnectionIDEventIDDealDealIDRequest{
-        ConnectionID: "porro",
-        DealID: "vel",
-        ID: "9e372db1-344b-4a9f-b8a5-c0ed7aab62e9",
+        ConnectionID: "nobis Developer withdrawal",
+        DealID: "male connect",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -628,50 +629,50 @@ func main() {
     res, err := s.Event.PostCrmConnectionIDEvent(ctx, operations.PostCrmConnectionIDEventRequest{
         CrmEvent: &shared.CrmEvent{
             Call: &shared.PropertyCrmEventCall{
-                Description: unifiedgosdk.String("iusto"),
-                Duration: unifiedgosdk.Float64(1323.66),
+                Description: unifiedgosdk.String("Visionary bandwidth-monitored hardware"),
+                Duration: unifiedgosdk.Float64(9256.02),
             },
             CompanyIds: []string{
-                "ea",
+                "Kentucky",
             },
             ContactIds: []string{
-                "architecto",
+                "Rustic",
             },
-            CreatedAt: types.MustTimeFromString("2020-10-13T11:08:25.283Z"),
+            CreatedAt: types.MustTimeFromString("2023-02-12T10:03:55.861Z"),
             DealIds: []string{
-                "alias",
+                "agonizing",
             },
             Email: &shared.PropertyCrmEventEmail{
-                Body: unifiedgosdk.String("quod"),
+                Body: unifiedgosdk.String("protocol"),
                 Cc: []string{
-                    "veniam",
+                    "Ratke",
                 },
-                From: unifiedgosdk.String("corrupti"),
-                Subject: unifiedgosdk.String("temporibus"),
+                From: unifiedgosdk.String("woman"),
+                Subject: unifiedgosdk.String("East Soft"),
                 To: []string{
-                    "odit",
+                    "Southeast",
                 },
             },
-            ID: unifiedgosdk.String("7b51996b-5b4b-450e-af71-2b7a7ab0344b"),
+            ID: unifiedgosdk.String("<ID>"),
             Meeting: &shared.PropertyCrmEventMeeting{
-                Description: unifiedgosdk.String("inventore"),
-                EndAt: types.MustTimeFromString("2022-11-20T13:22:34.695Z"),
-                StartAt: types.MustTimeFromString("2022-08-01T07:59:36.823Z"),
-                Title: unifiedgosdk.String("Ms."),
+                Description: unifiedgosdk.String("Streamlined intangible time-frame"),
+                EndAt: types.MustTimeFromString("2022-04-18T21:50:55.608Z"),
+                StartAt: types.MustTimeFromString("2021-08-24T14:06:25.626Z"),
+                Title: unifiedgosdk.String("violet Synergized blah"),
             },
             Note: &shared.PropertyCrmEventNote{
-                Description: unifiedgosdk.String("deleniti"),
+                Description: unifiedgosdk.String("Mandatory eco-centric toolset"),
             },
             Raw: &shared.PropertyCrmEventRaw{},
             Task: &shared.PropertyCrmEventTask{
-                Description: unifiedgosdk.String("illum"),
-                Name: unifiedgosdk.String("Caleb Purdy"),
-                Status: unifiedgosdk.String("rem"),
+                Description: unifiedgosdk.String("Team-oriented dynamic forecast"),
+                Name: unifiedgosdk.String("Grocery"),
+                Status: unifiedgosdk.String("excitedly Bacon"),
             },
-            Type: shared.CrmEventTypeTask.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-01-23T07:05:36.436Z"),
+            Type: shared.CrmEventTypeEmail.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2021-09-09T20:12:06.214Z"),
         },
-        ConnectionID: "velit",
+        ConnectionID: "Progressive",
     })
     if err != nil {
         log.Fatal(err)
@@ -725,51 +726,51 @@ func main() {
     res, err := s.Event.PutCrmConnectionIDEventID(ctx, operations.PutCrmConnectionIDEventIDRequest{
         CrmEvent: &shared.CrmEvent{
             Call: &shared.PropertyCrmEventCall{
-                Description: unifiedgosdk.String("fugiat"),
-                Duration: unifiedgosdk.Float64(8660.78),
+                Description: unifiedgosdk.String("Re-engineered composite time-frame"),
+                Duration: unifiedgosdk.Float64(5444.58),
             },
             CompanyIds: []string{
-                "voluptatem",
+                "DNS",
             },
             ContactIds: []string{
-                "quod",
+                "Skokie",
             },
-            CreatedAt: types.MustTimeFromString("2020-05-30T09:15:09.119Z"),
+            CreatedAt: types.MustTimeFromString("2022-07-05T01:37:36.877Z"),
             DealIds: []string{
-                "dolor",
+                "lux",
             },
             Email: &shared.PropertyCrmEventEmail{
-                Body: unifiedgosdk.String("amet"),
+                Body: unifiedgosdk.String("Hatchback card"),
                 Cc: []string{
-                    "tenetur",
+                    "Gasoline",
                 },
-                From: unifiedgosdk.String("quasi"),
-                Subject: unifiedgosdk.String("dicta"),
+                From: unifiedgosdk.String("Caribbean"),
+                Subject: unifiedgosdk.String("Account medium"),
                 To: []string{
-                    "rerum",
+                    "copy",
                 },
             },
-            ID: unifiedgosdk.String("3e4e080a-a104-4186-ac75-9e02f3702c5c"),
+            ID: unifiedgosdk.String("<ID>"),
             Meeting: &shared.PropertyCrmEventMeeting{
-                Description: unifiedgosdk.String("laudantium"),
-                EndAt: types.MustTimeFromString("2022-08-02T07:50:37.926Z"),
-                StartAt: types.MustTimeFromString("2022-05-30T16:07:16.405Z"),
-                Title: unifiedgosdk.String("Mr."),
+                Description: unifiedgosdk.String("Inverse optimizing model"),
+                EndAt: types.MustTimeFromString("2022-03-21T17:32:41.888Z"),
+                StartAt: types.MustTimeFromString("2022-10-17T10:31:48.119Z"),
+                Title: unifiedgosdk.String("male henry Hat"),
             },
             Note: &shared.PropertyCrmEventNote{
-                Description: unifiedgosdk.String("voluptates"),
+                Description: unifiedgosdk.String("Self-enabling asymmetric functionalities"),
             },
             Raw: &shared.PropertyCrmEventRaw{},
             Task: &shared.PropertyCrmEventTask{
-                Description: unifiedgosdk.String("culpa"),
-                Name: unifiedgosdk.String("Mrs. Leonard Cartwright"),
-                Status: unifiedgosdk.String("culpa"),
+                Description: unifiedgosdk.String("Reduced 4th generation analyzer"),
+                Name: unifiedgosdk.String("Savings Female nor"),
+                Status: unifiedgosdk.String("Customer sky"),
             },
-            Type: shared.CrmEventTypeEmail.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-07-25T01:13:49.601Z"),
+            Type: shared.CrmEventTypeNote.ToPointer(),
+            UpdatedAt: types.MustTimeFromString("2023-07-27T14:02:37.510Z"),
         },
-        ConnectionID: "alias",
-        ID: "7bf375b4-4282-4821-bdb2-f69e59267c71",
+        ConnectionID: "transparent",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -820,9 +821,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.PutCrmConnectionIDEventIDCompanyCompanyID(ctx, operations.PutCrmConnectionIDEventIDCompanyCompanyIDRequest{
-        CompanyID: "quo",
-        ConnectionID: "optio",
-        ID: "8d3cd425-8d03-458a-82c8-08fe2751a204",
+        CompanyID: "Administrator",
+        ConnectionID: "Computers",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -873,9 +874,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.PutCrmConnectionIDEventIDContactContactID(ctx, operations.PutCrmConnectionIDEventIDContactContactIDRequest{
-        ConnectionID: "ducimus",
-        ContactID: "quod",
-        ID: "0449e143-f961-49bb-bd40-d5a11fa436e6",
+        ConnectionID: "olive",
+        ContactID: "deposit Bicycle",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -926,9 +927,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.PutCrmConnectionIDEventIDDealDealID(ctx, operations.PutCrmConnectionIDEventIDDealDealIDRequest{
-        ConnectionID: "sed",
-        DealID: "exercitationem",
-        ID: "9233f95c-9d23-4739-bc78-5b5db4f50018",
+        ConnectionID: "Bloomington",
+        DealID: "provided apud Southeast",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)

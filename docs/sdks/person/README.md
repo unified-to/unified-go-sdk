@@ -1,4 +1,5 @@
 # Person
+(*Person*)
 
 ### Available Operations
 
@@ -30,11 +31,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Person.GetEnrichConnectionIDPerson(ctx, operations.GetEnrichConnectionIDPersonRequest{
-        ConnectionID: "numquam",
-        Email: unifiedgosdk.String("Donna44@yahoo.com"),
-        LinkedinURL: unifiedgosdk.String("laboriosam"),
-        Name: unifiedgosdk.String("Phillip Waelchi"),
-        Twitter: unifiedgosdk.String("totam"),
+        ConnectionID: "Iowa Account",
+        Email: unifiedgosdk.String("Jaiden_Weimann24@gmail.com"),
+        LinkedinURL: unifiedgosdk.String("paradigms integrate Creative"),
+        Name: unifiedgosdk.String("Investment"),
+        Twitter: unifiedgosdk.String("Hills"),
     })
     if err != nil {
         log.Fatal(err)

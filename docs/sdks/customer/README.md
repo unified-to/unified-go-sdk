@@ -1,4 +1,5 @@
 # Customer
+(*Customer*)
 
 ### Available Operations
 
@@ -35,8 +36,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.DeleteTicketingConnectionIDCustomerID(ctx, operations.DeleteTicketingConnectionIDCustomerIDRequest{
-        ConnectionID: "nulla",
-        ID: "acd38ed0-dc67-41dc-bf1e-3af15920c90d",
+        ConnectionID: "Electric Gloves pish",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,13 +89,13 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.GetTicketingConnectionIDCustomer(ctx, operations.GetTicketingConnectionIDCustomerRequest{
-        ConnectionID: "ab",
-        Limit: unifiedgosdk.Float64(7414.54),
-        Offset: unifiedgosdk.Float64(2975.19),
-        Order: unifiedgosdk.String("natus"),
-        Query: unifiedgosdk.String("aperiam"),
-        Sort: unifiedgosdk.String("dicta"),
-        UpdatedGte: types.MustTimeFromString("2022-06-25T18:37:10.473Z"),
+        ConnectionID: "SDD because Salad",
+        Limit: unifiedgosdk.Float64(8049.62),
+        Offset: unifiedgosdk.Float64(4323.42),
+        Order: unifiedgosdk.String("override"),
+        Query: unifiedgosdk.String("Rolls 1080p"),
+        Sort: unifiedgosdk.String("quantifying Southeast Kansas"),
+        UpdatedGte: types.MustTimeFromString("2023-12-20T19:18:39.254Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -145,8 +146,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.GetTicketingConnectionIDCustomerID(ctx, operations.GetTicketingConnectionIDCustomerIDRequest{
-        ConnectionID: "harum",
-        ID: "d89c8a32-639d-4a5b-bb69-02b881a94f64",
+        ConnectionID: "further Ebert",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -199,29 +200,29 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.PatchTicketingConnectionIDCustomerID(ctx, operations.PatchTicketingConnectionIDCustomerIDRequest{
         TicketingCustomer: &shared.TicketingCustomer{
-            CreatedAt: types.MustTimeFromString("2022-08-10T23:28:30.532Z"),
+            CreatedAt: types.MustTimeFromString("2023-01-22T19:33:25.134Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Donny_OKeefe@yahoo.com",
-                    Type: shared.TicketingEmailTypeWork.ToPointer(),
+                    Email: "Ora.Labadie94@yahoo.com",
+                    Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.String("af8c691d-732d-49fb-af94-76a2ae8dcc50"),
-            Name: unifiedgosdk.String("Clifton Nicolas"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("sensitise whiteboard Smyrna"),
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
-                "dicta",
+                "Hialeah",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "eos",
-                    Type: shared.TicketingTelephoneTypeFax.ToPointer(),
+                    Telephone: "connect",
+                    Type: shared.TicketingTelephoneTypeWork.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2022-10-15T18:32:49.022Z"),
+            UpdatedAt: types.MustTimeFromString("2023-12-28T17:48:45.929Z"),
         },
-        ConnectionID: "voluptate",
-        ID: "84893075-0a00-4e96-aec7-36d43194398c",
+        ConnectionID: "Tennessine",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
@@ -274,28 +275,28 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.PostTicketingConnectionIDCustomer(ctx, operations.PostTicketingConnectionIDCustomerRequest{
         TicketingCustomer: &shared.TicketingCustomer{
-            CreatedAt: types.MustTimeFromString("2022-06-17T14:22:05.995Z"),
+            CreatedAt: types.MustTimeFromString("2022-05-23T15:06:12.012Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Nils22@gmail.com",
-                    Type: shared.TicketingEmailTypeHome.ToPointer(),
+                    Email: "Austin44@yahoo.com",
+                    Type: shared.TicketingEmailTypeWork.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.String("8ed3d3ab-7ca3-4c5c-a864-9a70cfd5d698"),
-            Name: unifiedgosdk.String("Rudy Kirlin III"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("Configuration neural"),
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
-                "magnam",
+                "engineer",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "ad",
-                    Type: shared.TicketingTelephoneTypeWork.ToPointer(),
+                    Telephone: "Gasoline North gorgeous",
+                    Type: shared.TicketingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2022-07-25T05:00:03.848Z"),
+            UpdatedAt: types.MustTimeFromString("2022-10-09T07:25:23.111Z"),
         },
-        ConnectionID: "voluptate",
+        ConnectionID: "mole purple",
     })
     if err != nil {
         log.Fatal(err)
@@ -348,29 +349,29 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.PutTicketingConnectionIDCustomerID(ctx, operations.PutTicketingConnectionIDCustomerIDRequest{
         TicketingCustomer: &shared.TicketingCustomer{
-            CreatedAt: types.MustTimeFromString("2022-09-26T16:23:23.443Z"),
+            CreatedAt: types.MustTimeFromString("2021-04-21T09:25:32.395Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Shanny.Padberg@yahoo.com",
-                    Type: shared.TicketingEmailTypeOther.ToPointer(),
+                    Email: "Shawna42@hotmail.com",
+                    Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.String("492ed14b-8a2c-4195-8545-e955dcc185ea"),
-            Name: unifiedgosdk.String("Miss Lindsay Adams"),
+            ID: unifiedgosdk.String("<ID>"),
+            Name: unifiedgosdk.String("gray"),
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
-                "cumque",
+                "Associate",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "quaerat",
-                    Type: shared.TicketingTelephoneTypeWork.ToPointer(),
+                    Telephone: "Sausages ivory Small",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2021-05-15T13:31:18.582Z"),
+            UpdatedAt: types.MustTimeFromString("2022-09-01T05:56:15.314Z"),
         },
-        ConnectionID: "explicabo",
-        ID: "daa784ab-a3d2-430e-9f73-811a115382bd",
+        ConnectionID: "mobile Cotton",
+        ID: "<ID>",
     })
     if err != nil {
         log.Fatal(err)
