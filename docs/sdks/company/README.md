@@ -4,15 +4,12 @@
 ### Available Operations
 
 * [DeleteCrmConnectionIDCompanyID](#deletecrmconnectionidcompanyid) - Remove a company
-* [DeleteCrmConnectionIDCompanyIDDealDealID](#deletecrmconnectionidcompanyiddealdealid) - Remove deal association from a company
 * [GetCrmConnectionIDCompany](#getcrmconnectionidcompany) - List all companies
 * [GetCrmConnectionIDCompanyID](#getcrmconnectionidcompanyid) - Retrieve a company
 * [GetEnrichConnectionIDCompany](#getenrichconnectionidcompany) - Retrieve enrichment information for a company
 * [PatchCrmConnectionIDCompanyID](#patchcrmconnectionidcompanyid) - Update a company
-* [PatchCrmConnectionIDCompanyIDDealDealID](#patchcrmconnectionidcompanyiddealdealid) - Associate a deal with a company
 * [PostCrmConnectionIDCompany](#postcrmconnectionidcompany) - Create a company
 * [PutCrmConnectionIDCompanyID](#putcrmconnectionidcompanyid) - Update a company
-* [PutCrmConnectionIDCompanyIDDealDealID](#putcrmconnectionidcompanyiddealdealid) - Associate a deal with a company
 
 ## DeleteCrmConnectionIDCompanyID
 
@@ -64,59 +61,6 @@ func main() {
 ### Response
 
 **[*operations.DeleteCrmConnectionIDCompanyIDResponse](../../models/operations/deletecrmconnectionidcompanyidresponse.md), error**
-
-
-## DeleteCrmConnectionIDCompanyIDDealDealID
-
-Remove deal association from a company
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
-    )
-
-    ctx := context.Background()
-    res, err := s.Company.DeleteCrmConnectionIDCompanyIDDealDealID(ctx, operations.DeleteCrmConnectionIDCompanyIDDealDealIDRequest{
-        ConnectionID: "Carolina",
-        DealID: "Technician",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmCompany != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                                    | :heavy_check_mark:                                                                                                                       | The context to use for the request.                                                                                                      |
-| `request`                                                                                                                                | [operations.DeleteCrmConnectionIDCompanyIDDealDealIDRequest](../../models/operations/deletecrmconnectionidcompanyiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-
-
-### Response
-
-**[*operations.DeleteCrmConnectionIDCompanyIDDealDealIDResponse](../../models/operations/deletecrmconnectionidcompanyiddealdealidresponse.md), error**
 
 
 ## GetCrmConnectionIDCompany
@@ -376,59 +320,6 @@ func main() {
 **[*operations.PatchCrmConnectionIDCompanyIDResponse](../../models/operations/patchcrmconnectionidcompanyidresponse.md), error**
 
 
-## PatchCrmConnectionIDCompanyIDDealDealID
-
-Associate a deal with a company
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
-    )
-
-    ctx := context.Background()
-    res, err := s.Company.PatchCrmConnectionIDCompanyIDDealDealID(ctx, operations.PatchCrmConnectionIDCompanyIDDealDealIDRequest{
-        ConnectionID: "virtual BMX Tuna",
-        DealID: "frightened quia generating",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmCompany != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                                  | :heavy_check_mark:                                                                                                                     | The context to use for the request.                                                                                                    |
-| `request`                                                                                                                              | [operations.PatchCrmConnectionIDCompanyIDDealDealIDRequest](../../models/operations/patchcrmconnectionidcompanyiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-
-
-### Response
-
-**[*operations.PatchCrmConnectionIDCompanyIDDealDealIDResponse](../../models/operations/patchcrmconnectionidcompanyiddealdealidresponse.md), error**
-
-
 ## PostCrmConnectionIDCompany
 
 Create a company
@@ -610,57 +501,4 @@ func main() {
 ### Response
 
 **[*operations.PutCrmConnectionIDCompanyIDResponse](../../models/operations/putcrmconnectionidcompanyidresponse.md), error**
-
-
-## PutCrmConnectionIDCompanyIDDealDealID
-
-Associate a deal with a company
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
-    )
-
-    ctx := context.Background()
-    res, err := s.Company.PutCrmConnectionIDCompanyIDDealDealID(ctx, operations.PutCrmConnectionIDCompanyIDDealDealIDRequest{
-        ConnectionID: "Hybrid Mississippi Savings",
-        DealID: "West Hill Woman",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmCompany != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                                              | :heavy_check_mark:                                                                                                                 | The context to use for the request.                                                                                                |
-| `request`                                                                                                                          | [operations.PutCrmConnectionIDCompanyIDDealDealIDRequest](../../models/operations/putcrmconnectionidcompanyiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-
-
-### Response
-
-**[*operations.PutCrmConnectionIDCompanyIDDealDealIDResponse](../../models/operations/putcrmconnectionidcompanyiddealdealidresponse.md), error**
 

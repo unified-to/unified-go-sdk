@@ -132,15 +132,12 @@ func main() {
 ### [Company](docs/sdks/company/README.md)
 
 * [DeleteCrmConnectionIDCompanyID](docs/sdks/company/README.md#deletecrmconnectionidcompanyid) - Remove a company
-* [DeleteCrmConnectionIDCompanyIDDealDealID](docs/sdks/company/README.md#deletecrmconnectionidcompanyiddealdealid) - Remove deal association from a company
 * [GetCrmConnectionIDCompany](docs/sdks/company/README.md#getcrmconnectionidcompany) - List all companies
 * [GetCrmConnectionIDCompanyID](docs/sdks/company/README.md#getcrmconnectionidcompanyid) - Retrieve a company
 * [GetEnrichConnectionIDCompany](docs/sdks/company/README.md#getenrichconnectionidcompany) - Retrieve enrichment information for a company
 * [PatchCrmConnectionIDCompanyID](docs/sdks/company/README.md#patchcrmconnectionidcompanyid) - Update a company
-* [PatchCrmConnectionIDCompanyIDDealDealID](docs/sdks/company/README.md#patchcrmconnectionidcompanyiddealdealid) - Associate a deal with a company
 * [PostCrmConnectionIDCompany](docs/sdks/company/README.md#postcrmconnectionidcompany) - Create a company
 * [PutCrmConnectionIDCompanyID](docs/sdks/company/README.md#putcrmconnectionidcompanyid) - Update a company
-* [PutCrmConnectionIDCompanyIDDealDealID](docs/sdks/company/README.md#putcrmconnectionidcompanyiddealdealid) - Associate a deal with a company
 
 ### [Connection](docs/sdks/connection/README.md)
 
@@ -154,36 +151,24 @@ func main() {
 ### [Contact](docs/sdks/contact/README.md)
 
 * [DeleteCrmConnectionIDContactID](docs/sdks/contact/README.md#deletecrmconnectionidcontactid) - Remove a contact
-* [DeleteCrmConnectionIDContactIDCompanyCompanyID](docs/sdks/contact/README.md#deletecrmconnectionidcontactidcompanycompanyid) - Remove company association from a contact
-* [DeleteCrmConnectionIDContactIDDealDealID](docs/sdks/contact/README.md#deletecrmconnectionidcontactiddealdealid) - Remove deal association from a contact
 * [DeleteUcConnectionIDContactID](docs/sdks/contact/README.md#deleteucconnectionidcontactid) - Remove a contact
 * [GetCrmConnectionIDContact](docs/sdks/contact/README.md#getcrmconnectionidcontact) - List all contacts
 * [GetCrmConnectionIDContactID](docs/sdks/contact/README.md#getcrmconnectionidcontactid) - Retrieve a contact
 * [GetUcConnectionIDContact](docs/sdks/contact/README.md#getucconnectionidcontact) - List all contacts
 * [GetUcConnectionIDContactID](docs/sdks/contact/README.md#getucconnectionidcontactid) - Retrieve a contact
 * [PatchCrmConnectionIDContactID](docs/sdks/contact/README.md#patchcrmconnectionidcontactid) - Update a contact
-* [PatchCrmConnectionIDContactIDCompanyCompanyID](docs/sdks/contact/README.md#patchcrmconnectionidcontactidcompanycompanyid) - Associate a company with a contact
-* [PatchCrmConnectionIDContactIDDealDealID](docs/sdks/contact/README.md#patchcrmconnectionidcontactiddealdealid) - Associate a deal with a contact
 * [PatchUcConnectionIDContactID](docs/sdks/contact/README.md#patchucconnectionidcontactid) - Update a contact
 * [PostCrmConnectionIDContact](docs/sdks/contact/README.md#postcrmconnectionidcontact) - Create a contact
 * [PostUcConnectionIDContact](docs/sdks/contact/README.md#postucconnectionidcontact) - Create a contact
 * [PutCrmConnectionIDContactID](docs/sdks/contact/README.md#putcrmconnectionidcontactid) - Update a contact
-* [PutCrmConnectionIDContactIDCompanyCompanyID](docs/sdks/contact/README.md#putcrmconnectionidcontactidcompanycompanyid) - Associate a company with a contact
-* [PutCrmConnectionIDContactIDDealDealID](docs/sdks/contact/README.md#putcrmconnectionidcontactiddealdealid) - Associate a deal with a contact
 * [PutUcConnectionIDContactID](docs/sdks/contact/README.md#putucconnectionidcontactid) - Update a contact
 
 ### [Crm](docs/sdks/crm/README.md)
 
 * [DeleteCrmConnectionIDCompanyID](docs/sdks/crm/README.md#deletecrmconnectionidcompanyid) - Remove a company
-* [DeleteCrmConnectionIDCompanyIDDealDealID](docs/sdks/crm/README.md#deletecrmconnectionidcompanyiddealdealid) - Remove deal association from a company
 * [DeleteCrmConnectionIDContactID](docs/sdks/crm/README.md#deletecrmconnectionidcontactid) - Remove a contact
-* [DeleteCrmConnectionIDContactIDCompanyCompanyID](docs/sdks/crm/README.md#deletecrmconnectionidcontactidcompanycompanyid) - Remove company association from a contact
-* [DeleteCrmConnectionIDContactIDDealDealID](docs/sdks/crm/README.md#deletecrmconnectionidcontactiddealdealid) - Remove deal association from a contact
 * [DeleteCrmConnectionIDDealID](docs/sdks/crm/README.md#deletecrmconnectioniddealid) - Remove a deal
 * [DeleteCrmConnectionIDEventID](docs/sdks/crm/README.md#deletecrmconnectionideventid) - Remove a event
-* [DeleteCrmConnectionIDEventIDCompanyCompanyID](docs/sdks/crm/README.md#deletecrmconnectionideventidcompanycompanyid) - Remove company association from an event
-* [DeleteCrmConnectionIDEventIDContactContactID](docs/sdks/crm/README.md#deletecrmconnectionideventidcontactcontactid) - Remove contact association from an event
-* [DeleteCrmConnectionIDEventIDDealDealID](docs/sdks/crm/README.md#deletecrmconnectionideventiddealdealid) - Remove deal association from an event
 * [DeleteCrmConnectionIDFileID](docs/sdks/crm/README.md#deletecrmconnectionidfileid) - Remove a file
 * [DeleteCrmConnectionIDLeadID](docs/sdks/crm/README.md#deletecrmconnectionidleadid) - Remove a lead
 * [DeleteCrmConnectionIDPipelineID](docs/sdks/crm/README.md#deletecrmconnectionidpipelineid) - Remove a pipeline
@@ -208,15 +193,9 @@ func main() {
 * [GetCrmConnectionIDUser](docs/sdks/crm/README.md#getcrmconnectioniduser) - List all users
 * [GetCrmConnectionIDUserID](docs/sdks/crm/README.md#getcrmconnectioniduserid) - Retrieve a user
 * [PatchCrmConnectionIDCompanyID](docs/sdks/crm/README.md#patchcrmconnectionidcompanyid) - Update a company
-* [PatchCrmConnectionIDCompanyIDDealDealID](docs/sdks/crm/README.md#patchcrmconnectionidcompanyiddealdealid) - Associate a deal with a company
 * [PatchCrmConnectionIDContactID](docs/sdks/crm/README.md#patchcrmconnectionidcontactid) - Update a contact
-* [PatchCrmConnectionIDContactIDCompanyCompanyID](docs/sdks/crm/README.md#patchcrmconnectionidcontactidcompanycompanyid) - Associate a company with a contact
-* [PatchCrmConnectionIDContactIDDealDealID](docs/sdks/crm/README.md#patchcrmconnectionidcontactiddealdealid) - Associate a deal with a contact
 * [PatchCrmConnectionIDDealID](docs/sdks/crm/README.md#patchcrmconnectioniddealid) - Update a deal
 * [PatchCrmConnectionIDEventID](docs/sdks/crm/README.md#patchcrmconnectionideventid) - Update a event
-* [PatchCrmConnectionIDEventIDCompanyCompanyID](docs/sdks/crm/README.md#patchcrmconnectionideventidcompanycompanyid) - Associate a company with an event
-* [PatchCrmConnectionIDEventIDContactContactID](docs/sdks/crm/README.md#patchcrmconnectionideventidcontactcontactid) - Associate a contact with an event
-* [PatchCrmConnectionIDEventIDDealDealID](docs/sdks/crm/README.md#patchcrmconnectionideventiddealdealid) - Associate a deal with an event
 * [PatchCrmConnectionIDFileID](docs/sdks/crm/README.md#patchcrmconnectionidfileid) - Update a file
 * [PatchCrmConnectionIDLeadID](docs/sdks/crm/README.md#patchcrmconnectionidleadid) - Update a lead
 * [PatchCrmConnectionIDPipelineID](docs/sdks/crm/README.md#patchcrmconnectionidpipelineid) - Update a pipeline
@@ -232,15 +211,9 @@ func main() {
 * [PostCrmConnectionIDTeam](docs/sdks/crm/README.md#postcrmconnectionidteam) - Create a team
 * [PostCrmConnectionIDUser](docs/sdks/crm/README.md#postcrmconnectioniduser) - Create a user
 * [PutCrmConnectionIDCompanyID](docs/sdks/crm/README.md#putcrmconnectionidcompanyid) - Update a company
-* [PutCrmConnectionIDCompanyIDDealDealID](docs/sdks/crm/README.md#putcrmconnectionidcompanyiddealdealid) - Associate a deal with a company
 * [PutCrmConnectionIDContactID](docs/sdks/crm/README.md#putcrmconnectionidcontactid) - Update a contact
-* [PutCrmConnectionIDContactIDCompanyCompanyID](docs/sdks/crm/README.md#putcrmconnectionidcontactidcompanycompanyid) - Associate a company with a contact
-* [PutCrmConnectionIDContactIDDealDealID](docs/sdks/crm/README.md#putcrmconnectionidcontactiddealdealid) - Associate a deal with a contact
 * [PutCrmConnectionIDDealID](docs/sdks/crm/README.md#putcrmconnectioniddealid) - Update a deal
 * [PutCrmConnectionIDEventID](docs/sdks/crm/README.md#putcrmconnectionideventid) - Update a event
-* [PutCrmConnectionIDEventIDCompanyCompanyID](docs/sdks/crm/README.md#putcrmconnectionideventidcompanycompanyid) - Associate a company with an event
-* [PutCrmConnectionIDEventIDContactContactID](docs/sdks/crm/README.md#putcrmconnectionideventidcontactcontactid) - Associate a contact with an event
-* [PutCrmConnectionIDEventIDDealDealID](docs/sdks/crm/README.md#putcrmconnectionideventiddealdealid) - Associate a deal with an event
 * [PutCrmConnectionIDFileID](docs/sdks/crm/README.md#putcrmconnectionidfileid) - Update a file
 * [PutCrmConnectionIDLeadID](docs/sdks/crm/README.md#putcrmconnectionidleadid) - Update a lead
 * [PutCrmConnectionIDPipelineID](docs/sdks/crm/README.md#putcrmconnectionidpipelineid) - Update a pipeline
@@ -291,20 +264,11 @@ func main() {
 ### [Event](docs/sdks/event/README.md)
 
 * [DeleteCrmConnectionIDEventID](docs/sdks/event/README.md#deletecrmconnectionideventid) - Remove a event
-* [DeleteCrmConnectionIDEventIDCompanyCompanyID](docs/sdks/event/README.md#deletecrmconnectionideventidcompanycompanyid) - Remove company association from an event
-* [DeleteCrmConnectionIDEventIDContactContactID](docs/sdks/event/README.md#deletecrmconnectionideventidcontactcontactid) - Remove contact association from an event
-* [DeleteCrmConnectionIDEventIDDealDealID](docs/sdks/event/README.md#deletecrmconnectionideventiddealdealid) - Remove deal association from an event
 * [GetCrmConnectionIDEvent](docs/sdks/event/README.md#getcrmconnectionidevent) - List all events
 * [GetCrmConnectionIDEventID](docs/sdks/event/README.md#getcrmconnectionideventid) - Retrieve a event
 * [PatchCrmConnectionIDEventID](docs/sdks/event/README.md#patchcrmconnectionideventid) - Update a event
-* [PatchCrmConnectionIDEventIDCompanyCompanyID](docs/sdks/event/README.md#patchcrmconnectionideventidcompanycompanyid) - Associate a company with an event
-* [PatchCrmConnectionIDEventIDContactContactID](docs/sdks/event/README.md#patchcrmconnectionideventidcontactcontactid) - Associate a contact with an event
-* [PatchCrmConnectionIDEventIDDealDealID](docs/sdks/event/README.md#patchcrmconnectionideventiddealdealid) - Associate a deal with an event
 * [PostCrmConnectionIDEvent](docs/sdks/event/README.md#postcrmconnectionidevent) - Create a event
 * [PutCrmConnectionIDEventID](docs/sdks/event/README.md#putcrmconnectionideventid) - Update a event
-* [PutCrmConnectionIDEventIDCompanyCompanyID](docs/sdks/event/README.md#putcrmconnectionideventidcompanycompanyid) - Associate a company with an event
-* [PutCrmConnectionIDEventIDContactContactID](docs/sdks/event/README.md#putcrmconnectionideventidcontactcontactid) - Associate a contact with an event
-* [PutCrmConnectionIDEventIDDealDealID](docs/sdks/event/README.md#putcrmconnectionideventiddealdealid) - Associate a deal with an event
 
 ### [File](docs/sdks/file/README.md)
 
