@@ -76,7 +76,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -88,16 +87,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
-        Categories: []GetUnifiedConnectionCategories{
+        Categories: []operations.GetUnifiedConnectionCategories{
             operations.GetUnifiedConnectionCategoriesAts,
         },
-        Env: unifiedgosdk.String("copying invoice coulomb"),
-        ExternalXref: unifiedgosdk.String("Islands West"),
-        Limit: unifiedgosdk.Float64(7809.21),
-        Offset: unifiedgosdk.Float64(2750.2),
-        Order: unifiedgosdk.String("Volkswagen architect"),
-        Sort: unifiedgosdk.String("consequently synthesizing Technician"),
-        UpdatedGte: types.MustTimeFromString("2021-11-09T20:41:53.442Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -188,7 +180,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -202,46 +193,21 @@ func main() {
     res, err := s.Connection.PatchUnifiedConnectionID(ctx, operations.PatchUnifiedConnectionIDRequest{
         Connection: &shared.Connection{
             Auth: &shared.PropertyConnectionAuth{
-                AccessToken: unifiedgosdk.String("Northwest Cupertino"),
-                APIURL: unifiedgosdk.String("Center Curium Electric"),
-                AppID: unifiedgosdk.String("female fragrant"),
-                AuthorizeURL: unifiedgosdk.String("Electric Bicycle payment"),
-                ClientID: unifiedgosdk.String("transmitting North"),
-                ClientSecret: unifiedgosdk.String("mole Gasoline morph"),
-                ConsumerKey: unifiedgosdk.String("Keyboard Antimony primary"),
-                ConsumerSecret: unifiedgosdk.String("yearly"),
                 Emails: []string{
-                    "athwart",
+                    "Executive",
                 },
-                ExpiresIn: unifiedgosdk.Float64(3185.09),
-                ExpiryDate: types.MustTimeFromString("2022-08-12T13:21:47.977Z"),
-                Key: unifiedgosdk.String("<key>"),
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
-                Name: unifiedgosdk.String("inside Rupee"),
                 OtherAuthInfo: []string{
-                    "Future",
+                    "Cupertino",
                 },
-                Pem: unifiedgosdk.String("guard Internal"),
-                RefreshToken: unifiedgosdk.String("Diesel"),
-                State: unifiedgosdk.String("copy Cotton Bicycle"),
-                Token: unifiedgosdk.String("drive gold"),
-                TokenURL: unifiedgosdk.String("now"),
             },
-            AuthAwsArn: unifiedgosdk.String("yum"),
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesHris,
+                shared.PropertyConnectionCategoriesMartech,
             },
-            CreatedAt: types.MustTimeFromString("2021-06-18T22:02:30.822Z"),
-            Environment: unifiedgosdk.String("Northwest Balanced"),
-            ExternalXref: unifiedgosdk.String("boo"),
-            ID: unifiedgosdk.String("<ID>"),
-            IntegrationType: "Soft",
-            IsPaused: unifiedgosdk.Bool(false),
+            IntegrationType: "India",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmLeadRead,
+                shared.PropertyConnectionPermissionsAtsApplicationWrite,
             },
-            UpdatedAt: types.MustTimeFromString("2022-07-27T15:43:44.767Z"),
-            WorkspaceID: unifiedgosdk.String("extend"),
         },
         ID: "<ID>",
     })
@@ -282,7 +248,6 @@ import(
 	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -293,48 +258,23 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Connection.PostUnifiedConnection(ctx, shared.Connection{
+    res, err := s.Connection.PostUnifiedConnection(ctx, &shared.Connection{
         Auth: &shared.PropertyConnectionAuth{
-            AccessToken: unifiedgosdk.String("asperiores indexing"),
-            APIURL: unifiedgosdk.String("plus pace global"),
-            AppID: unifiedgosdk.String("And port"),
-            AuthorizeURL: unifiedgosdk.String("West whiteboard"),
-            ClientID: unifiedgosdk.String("Folk"),
-            ClientSecret: unifiedgosdk.String("Northwest Modern"),
-            ConsumerKey: unifiedgosdk.String("Southeast deposit"),
-            ConsumerSecret: unifiedgosdk.String("Falls irritating up"),
             Emails: []string{
-                "intuitive",
+                "RSS",
             },
-            ExpiresIn: unifiedgosdk.Float64(4121.5),
-            ExpiryDate: types.MustTimeFromString("2021-01-21T03:25:42.786Z"),
-            Key: unifiedgosdk.String("<key>"),
             Meta: &shared.PropertyPropertyConnectionAuthMeta{},
-            Name: unifiedgosdk.String("membership Classical schnitzel"),
             OtherAuthInfo: []string{
-                "Convertible",
+                "locate",
             },
-            Pem: unifiedgosdk.String("magenta Riel bolívar"),
-            RefreshToken: unifiedgosdk.String("Pula"),
-            State: unifiedgosdk.String("white"),
-            Token: unifiedgosdk.String("Northwest"),
-            TokenURL: unifiedgosdk.String("unbutton"),
         },
-        AuthAwsArn: unifiedgosdk.String("Investor circuit"),
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesAts,
+            shared.PropertyConnectionCategoriesCrm,
         },
-        CreatedAt: types.MustTimeFromString("2023-01-25T14:37:40.202Z"),
-        Environment: unifiedgosdk.String("Hat watt"),
-        ExternalXref: unifiedgosdk.String("Sausages tan"),
-        ID: unifiedgosdk.String("<ID>"),
-        IntegrationType: "Principal Extended velit",
-        IsPaused: unifiedgosdk.Bool(false),
+        IntegrationType: "plus pace global",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsCrmFileWrite,
+            shared.PropertyConnectionPermissionsTicketingAgentWrite,
         },
-        UpdatedAt: types.MustTimeFromString("2021-09-22T05:13:05.778Z"),
-        WorkspaceID: unifiedgosdk.String("Auto"),
     })
     if err != nil {
         log.Fatal(err)
@@ -374,7 +314,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -388,46 +327,21 @@ func main() {
     res, err := s.Connection.PutUnifiedConnectionID(ctx, operations.PutUnifiedConnectionIDRequest{
         Connection: &shared.Connection{
             Auth: &shared.PropertyConnectionAuth{
-                AccessToken: unifiedgosdk.String("female Buckinghamshire"),
-                APIURL: unifiedgosdk.String("Web"),
-                AppID: unifiedgosdk.String("pumpkin Account"),
-                AuthorizeURL: unifiedgosdk.String("dolorem Hybrid white"),
-                ClientID: unifiedgosdk.String("ohm"),
-                ClientSecret: unifiedgosdk.String("Pennsylvania Executive"),
-                ConsumerKey: unifiedgosdk.String("silver Account Accountability"),
-                ConsumerSecret: unifiedgosdk.String("Mouse"),
                 Emails: []string{
-                    "oh",
+                    "Assurance",
                 },
-                ExpiresIn: unifiedgosdk.Float64(8946.31),
-                ExpiryDate: types.MustTimeFromString("2022-01-29T12:35:08.478Z"),
-                Key: unifiedgosdk.String("<key>"),
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
-                Name: unifiedgosdk.String("incidentally shrimp bypass"),
                 OtherAuthInfo: []string{
-                    "invoice",
+                    "Avon",
                 },
-                Pem: unifiedgosdk.String("recent midst Northeast"),
-                RefreshToken: unifiedgosdk.String("Product"),
-                State: unifiedgosdk.String("circuit precious"),
-                Token: unifiedgosdk.String("gee collaborative withdrawal"),
-                TokenURL: unifiedgosdk.String("Platinum"),
             },
-            AuthAwsArn: unifiedgosdk.String("suddenly Fiat"),
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesUc,
+                shared.PropertyConnectionCategoriesMartech,
             },
-            CreatedAt: types.MustTimeFromString("2022-09-20T19:51:21.025Z"),
-            Environment: unifiedgosdk.String("redundant Southeast Camren"),
-            ExternalXref: unifiedgosdk.String("firewall"),
-            ID: unifiedgosdk.String("<ID>"),
-            IntegrationType: "Beauty",
-            IsPaused: unifiedgosdk.Bool(false),
+            IntegrationType: "Web",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsWebhook,
+                shared.PropertyConnectionPermissionsCrmFileRead,
             },
-            UpdatedAt: types.MustTimeFromString("2023-12-30T14:20:47.994Z"),
-            WorkspaceID: unifiedgosdk.String("parse Peso Investment"),
         },
         ID: "<ID>",
     })

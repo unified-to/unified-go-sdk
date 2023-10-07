@@ -56,6 +56,7 @@ pkg/utils/requestbody.go
 pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
+tests/helpers.go
 pkg/models/operations/deleteticketingconnectionidagentid.go
 pkg/models/operations/getticketingconnectionidagent.go
 pkg/models/operations/getticketingconnectionidagentid.go

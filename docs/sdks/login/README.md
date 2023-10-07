@@ -31,13 +31,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Login.GetUnifiedIntegrationLoginWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedgosdk.String("Rubber"),
-        FailureRedirect: unifiedgosdk.String("gold Cambridgeshire"),
-        IntegrationType: "Plastic services pixel",
-        Redirect: unifiedgosdk.Bool(false),
-        State: unifiedgosdk.String("Volkswagen Southwest"),
-        SuccessRedirect: unifiedgosdk.String("drive integrated Bicycle"),
-        WorkspaceID: "Fantastic recontextualize Frozen",
+        IntegrationType: "Rubber",
+        WorkspaceID: "gold Cambridgeshire",
     })
     if err != nil {
         log.Fatal(err)

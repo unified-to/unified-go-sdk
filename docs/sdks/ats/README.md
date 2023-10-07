@@ -309,7 +309,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -321,15 +320,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsConnectionIDApplication(ctx, operations.GetAtsConnectionIDApplicationRequest{
-        CandidateID: unifiedgosdk.String("turquoise"),
-        ConnectionID: "Regional Bedfordshire",
-        JobID: unifiedgosdk.String("Northwest portal Electric"),
-        Limit: unifiedgosdk.Float64(576.8),
-        Offset: unifiedgosdk.Float64(7467.13),
-        Order: unifiedgosdk.String("Architect"),
-        Query: unifiedgosdk.String("loosely contingency"),
-        Sort: unifiedgosdk.String("female"),
-        UpdatedGte: types.MustTimeFromString("2023-09-05T13:59:23.348Z"),
+        ConnectionID: "turquoise",
     })
     if err != nil {
         log.Fatal(err)
@@ -421,7 +412,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -434,12 +424,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsConnectionIDCandidate(ctx, operations.GetAtsConnectionIDCandidateRequest{
         ConnectionID: "Northwest forceful Moore",
-        Limit: unifiedgosdk.Float64(2623.89),
-        Offset: unifiedgosdk.Float64(7811.91),
-        Order: unifiedgosdk.String("Mouse whether deploy"),
-        Query: unifiedgosdk.String("pink"),
-        Sort: unifiedgosdk.String("huzzah thistle"),
-        UpdatedGte: types.MustTimeFromString("2022-03-13T15:14:03.645Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -531,7 +515,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -543,14 +526,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsConnectionIDInterview(ctx, operations.GetAtsConnectionIDInterviewRequest{
-        ApplicationID: unifiedgosdk.String("Fresh Pickup converse"),
-        ConnectionID: "vortals",
-        Limit: unifiedgosdk.Float64(5167.08),
-        Offset: unifiedgosdk.Float64(6488.61),
-        Order: unifiedgosdk.String("Oregon Metal"),
-        Query: unifiedgosdk.String("Account"),
-        Sort: unifiedgosdk.String("haptic"),
-        UpdatedGte: types.MustTimeFromString("2021-09-23T19:46:35.825Z"),
+        ConnectionID: "Fresh Pickup converse",
     })
     if err != nil {
         log.Fatal(err)
@@ -642,7 +618,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -655,12 +630,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsConnectionIDJob(ctx, operations.GetAtsConnectionIDJobRequest{
         ConnectionID: "City katal",
-        Limit: unifiedgosdk.Float64(3542.62),
-        Offset: unifiedgosdk.Float64(5417.97),
-        Order: unifiedgosdk.String("publisher"),
-        Query: unifiedgosdk.String("Folding"),
-        Sort: unifiedgosdk.String("Kip gross recontextualize"),
-        UpdatedGte: types.MustTimeFromString("2022-10-12T03:36:20.050Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -752,7 +721,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -764,16 +732,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsConnectionIDScorecard(ctx, operations.GetAtsConnectionIDScorecardRequest{
-        ApplicationID: unifiedgosdk.String("Licensed deep"),
-        CandidateID: unifiedgosdk.String("happily"),
-        ConnectionID: "lunch accusamus",
-        InterviewID: unifiedgosdk.String("for famously Southwest"),
-        Limit: unifiedgosdk.Float64(950.05),
-        Offset: unifiedgosdk.Float64(6133.23),
-        Order: unifiedgosdk.String("withdrawal"),
-        Query: unifiedgosdk.String("Bicycle copy Bronze"),
-        Sort: unifiedgosdk.String("ouch non ut"),
-        UpdatedGte: types.MustTimeFromString("2021-06-01T09:53:52.927Z"),
+        ConnectionID: "Licensed deep",
     })
     if err != nil {
         log.Fatal(err)
@@ -865,7 +824,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -878,19 +836,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PatchAtsConnectionIDApplicationID(ctx, operations.PatchAtsConnectionIDApplicationIDRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustTimeFromString("2023-10-17T09:51:42.165Z"),
-            CandidateID: unifiedgosdk.String("North et beyond"),
-            CreatedAt: types.MustTimeFromString("2023-01-08T08:26:22.845Z"),
-            ID: unifiedgosdk.String("<ID>"),
-            JobID: unifiedgosdk.String("ick Sausages Bronze"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustTimeFromString("2023-10-18T00:47:25.469Z"),
-            RejectedReason: unifiedgosdk.String("Avon Sum quis"),
-            Source: unifiedgosdk.String("Carolina Wooden Pop"),
-            Status: shared.AtsApplicationStatusHired.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2021-07-20T22:05:46.009Z"),
         },
-        ConnectionID: "Baby Paucek",
+        ConnectionID: "mole Northeast Southwest",
         ID: "<ID>",
     })
     if err != nil {
@@ -931,7 +879,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -944,42 +891,23 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PatchAtsConnectionIDCandidateID(ctx, operations.PatchAtsConnectionIDCandidateIDRequest{
         AtsCandidate: &shared.AtsCandidate{
-            Address: &shared.PropertyAtsCandidateAddress{
-                Address1: unifiedgosdk.String("closely Goyette plus"),
-                Address2: unifiedgosdk.String("culpa"),
-                City: unifiedgosdk.String("Darrinshire"),
-                Country: unifiedgosdk.String("Mongolia"),
-                CountryCode: unifiedgosdk.String("GW"),
-                PostalCode: unifiedgosdk.String("05275"),
-                Region: unifiedgosdk.String("TLS calculating"),
-                RegionCode: unifiedgosdk.String("up Argon Internal"),
-            },
-            CompanyName: unifiedgosdk.String("Fadel, Schulist and Koss"),
-            CreatedAt: types.MustTimeFromString("2022-12-09T07:16:54.728Z"),
+            Address: &shared.PropertyAtsCandidateAddress{},
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
-                    Email: "Gregory63@gmail.com",
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                    Email: "Stella57@hotmail.com",
                 },
             },
-            ExternalID: unifiedgosdk.String("Elegant"),
-            ID: unifiedgosdk.String("<ID>"),
-            ImageURL: unifiedgosdk.String("Tricycle Yttrium Hybrid"),
-            Name: unifiedgosdk.String("ornery whether"),
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "Cadillac",
+                "Chips",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "Marketing Cotton",
-                    Type: shared.AtsTelephoneTypeHome.ToPointer(),
+                    Telephone: "culpa",
                 },
             },
-            Title: unifiedgosdk.String("East"),
-            UpdatedAt: types.MustTimeFromString("2023-10-31T11:53:36.953Z"),
         },
-        ConnectionID: "redundant Tricycle unloose",
+        ConnectionID: "Unbranded Country",
         ID: "<ID>",
     })
     if err != nil {
@@ -1020,7 +948,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1033,23 +960,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PatchAtsConnectionIDInterviewID(ctx, operations.PatchAtsConnectionIDInterviewIDRequest{
         AtsInterview: &shared.AtsInterview{
-            ApplicationID: unifiedgosdk.String("SSD green pascal"),
-            CandidateID: unifiedgosdk.String("Buckinghamshire example"),
-            CreatedAt: types.MustTimeFromString("2021-08-24T08:30:07.073Z"),
-            EndAt: types.MustTimeFromString("2021-06-27T04:06:46.373Z"),
-            ExternalEventXref: unifiedgosdk.String("apropos Gadolinium"),
-            ID: unifiedgosdk.String("<ID>"),
-            JobID: unifiedgosdk.String("transgender transmitting"),
-            Location: unifiedgosdk.String("Investor synthesizing"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustTimeFromString("2021-01-19T01:51:02.213Z"),
-            Status: shared.AtsInterviewStatusAwaitingFeedback.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-01-21T17:38:09.113Z"),
             UserIds: []string{
-                "Honda",
+                "coulomb",
             },
         },
-        ConnectionID: "Myrl Dram Trail",
+        ConnectionID: "green pascal illo",
         ID: "<ID>",
     })
     if err != nil {
@@ -1090,7 +1006,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1104,51 +1019,28 @@ func main() {
     res, err := s.Ats.PatchAtsConnectionIDJobID(ctx, operations.PatchAtsConnectionIDJobIDRequest{
         AtsJob: &shared.AtsJob{
             Addresses: []shared.AtsAddress{
-                shared.AtsAddress{
-                    Address1: unifiedgosdk.String("Transexual"),
-                    Address2: unifiedgosdk.String("Planner redundant Towels"),
-                    City: unifiedgosdk.String("Starkboro"),
-                    Country: unifiedgosdk.String("Chad"),
-                    CountryCode: unifiedgosdk.String("NU"),
-                    PostalCode: unifiedgosdk.String("22603"),
-                    Region: unifiedgosdk.String("Cambridgeshire"),
-                    RegionCode: unifiedgosdk.String("Account Copernicium at"),
-                },
+                shared.AtsAddress{},
             },
-            ClosedAt: types.MustTimeFromString("2023-01-02T09:14:26.844Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
-                    Currency: unifiedgosdk.String("Metical"),
-                    Frequency: shared.AtsCompensationFrequencyHour.ToPointer(),
-                    Max: unifiedgosdk.Float64(1424.24),
-                    Min: unifiedgosdk.Float64(3626.17),
-                    Type: shared.AtsCompensationTypeSalary,
+                    Type: shared.AtsCompensationTypeBonus,
                 },
             },
-            CreatedAt: types.MustTimeFromString("2022-03-16T15:29:37.822Z"),
             Departments: []string{
-                "Sports",
+                "Transexual",
             },
-            Description: unifiedgosdk.String("Operative bi-directional capability"),
-            EmploymentType: shared.AtsJobEmploymentTypeIntern.ToPointer(),
             HiringManagerIds: []string{
-                "Hop",
+                "leach",
             },
-            ID: unifiedgosdk.String("<ID>"),
-            LanguageLocale: unifiedgosdk.String("hence gracefully invoice"),
-            Name: unifiedgosdk.String("Southeast vacantly Uranium"),
             PublicJobUrls: []string{
-                "Keith",
+                "national",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "happily",
+                "Kia",
             },
-            Remote: unifiedgosdk.Bool(false),
-            Status: shared.AtsJobStatusOpen.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2023-08-04T07:33:03.088Z"),
         },
-        ConnectionID: "Cis benchmark",
+        ConnectionID: "Ferrari Facilitator",
         ID: "<ID>",
     })
     if err != nil {
@@ -1189,7 +1081,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1202,18 +1093,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PatchAtsConnectionIDScorecardID(ctx, operations.PatchAtsConnectionIDScorecardIDRequest{
         AtsScorecard: &shared.AtsScorecard{
-            ApplicationID: unifiedgosdk.String("Carter Hatchback functionalities"),
-            CandidateID: unifiedgosdk.String("disagree gold New"),
-            CreatedAt: types.MustTimeFromString("2023-05-08T15:11:07.692Z"),
-            ID: unifiedgosdk.String("<ID>"),
-            InterviewID: unifiedgosdk.String("blue"),
-            InterviewerID: unifiedgosdk.String("North Buckinghamshire blur"),
-            JobID: unifiedgosdk.String("kelvin hack Fantastic"),
             Raw: shared.PropertyAtsScorecardRaw{},
-            Recommendation: shared.AtsScorecardRecommendationDefinitelyNo.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-11-18T04:49:38.005Z"),
         },
-        ConnectionID: "hacking meter",
+        ConnectionID: "Carter Hatchback functionalities",
         ID: "<ID>",
     })
     if err != nil {
@@ -1254,7 +1136,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1267,19 +1148,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PostAtsConnectionIDApplication(ctx, operations.PostAtsConnectionIDApplicationRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustTimeFromString("2021-10-26T15:24:28.979Z"),
-            CandidateID: unifiedgosdk.String("solid"),
-            CreatedAt: types.MustTimeFromString("2022-09-13T17:17:33.049Z"),
-            ID: unifiedgosdk.String("<ID>"),
-            JobID: unifiedgosdk.String("Gloves Pizza virtual"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustTimeFromString("2023-12-27T18:41:56.821Z"),
-            RejectedReason: unifiedgosdk.String("Northwest Kids"),
-            Source: unifiedgosdk.String("Human Tasty Loan"),
-            Status: shared.AtsApplicationStatusNew.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-11-01T21:08:50.319Z"),
         },
-        ConnectionID: "Jazz",
+        ConnectionID: "Berkshire",
     })
     if err != nil {
         log.Fatal(err)
@@ -1319,7 +1190,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1332,42 +1202,23 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PostAtsConnectionIDCandidate(ctx, operations.PostAtsConnectionIDCandidateRequest{
         AtsCandidate: &shared.AtsCandidate{
-            Address: &shared.PropertyAtsCandidateAddress{
-                Address1: unifiedgosdk.String("incubate"),
-                Address2: unifiedgosdk.String("azure Trans"),
-                City: unifiedgosdk.String("Port Rory"),
-                Country: unifiedgosdk.String("El Salvador"),
-                CountryCode: unifiedgosdk.String("CX"),
-                PostalCode: unifiedgosdk.String("54222-0235"),
-                Region: unifiedgosdk.String("modi fooey"),
-                RegionCode: unifiedgosdk.String("Metal TCP incidunt"),
-            },
-            CompanyName: unifiedgosdk.String("McCullough, Rosenbaum and Daugherty"),
-            CreatedAt: types.MustTimeFromString("2023-02-07T05:55:59.357Z"),
+            Address: &shared.PropertyAtsCandidateAddress{},
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
-                    Email: "Eleanora.Rogahn44@hotmail.com",
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
+                    Email: "Elmore.Mante@gmail.com",
                 },
             },
-            ExternalID: unifiedgosdk.String("South though"),
-            ID: unifiedgosdk.String("<ID>"),
-            ImageURL: unifiedgosdk.String("Pants"),
-            Name: unifiedgosdk.String("Raleigh"),
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "morph",
+                "than",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "lavender Sedan Folk",
-                    Type: shared.AtsTelephoneTypeOther.ToPointer(),
+                    Telephone: "Wooden siemens Wooden",
                 },
             },
-            Title: unifiedgosdk.String("Savings panel"),
-            UpdatedAt: types.MustTimeFromString("2022-02-09T15:32:35.578Z"),
         },
-        ConnectionID: "Ngultrum red glean",
+        ConnectionID: "Jazz Ball",
     })
     if err != nil {
         log.Fatal(err)
@@ -1407,7 +1258,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1420,23 +1270,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PostAtsConnectionIDInterview(ctx, operations.PostAtsConnectionIDInterviewRequest{
         AtsInterview: &shared.AtsInterview{
-            ApplicationID: unifiedgosdk.String("round Hat Savings"),
-            CandidateID: unifiedgosdk.String("Northeast"),
-            CreatedAt: types.MustTimeFromString("2022-12-27T10:33:09.160Z"),
-            EndAt: types.MustTimeFromString("2021-11-12T23:57:19.974Z"),
-            ExternalEventXref: unifiedgosdk.String("platforms"),
-            ID: unifiedgosdk.String("<ID>"),
-            JobID: unifiedgosdk.String("payment panel Identity"),
-            Location: unifiedgosdk.String("Northwest Buckinghamshire"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustTimeFromString("2022-11-02T05:07:18.592Z"),
-            Status: shared.AtsInterviewStatusComplete.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2023-07-13T16:35:04.177Z"),
             UserIds: []string{
-                "Chevrolet",
+                "Tricycle",
             },
         },
-        ConnectionID: "Shoes Northeast SMTP",
+        ConnectionID: "Hat Savings Electronic",
     })
     if err != nil {
         log.Fatal(err)
@@ -1476,7 +1315,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1490,51 +1328,28 @@ func main() {
     res, err := s.Ats.PostAtsConnectionIDJob(ctx, operations.PostAtsConnectionIDJobRequest{
         AtsJob: &shared.AtsJob{
             Addresses: []shared.AtsAddress{
-                shared.AtsAddress{
-                    Address1: unifiedgosdk.String("Forward"),
-                    Address2: unifiedgosdk.String("Electric fuchsia kelvin"),
-                    City: unifiedgosdk.String("Fort Sibylmouth"),
-                    Country: unifiedgosdk.String("Solomon Islands"),
-                    CountryCode: unifiedgosdk.String("DO"),
-                    PostalCode: unifiedgosdk.String("39037"),
-                    Region: unifiedgosdk.String("Rockford"),
-                    RegionCode: unifiedgosdk.String("Trafficway eaque athwart"),
-                },
+                shared.AtsAddress{},
             },
-            ClosedAt: types.MustTimeFromString("2022-04-22T19:01:40.265Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
-                    Currency: unifiedgosdk.String("Gourde"),
-                    Frequency: shared.AtsCompensationFrequencyYear.ToPointer(),
-                    Max: unifiedgosdk.Float64(5349.62),
-                    Min: unifiedgosdk.Float64(526.63),
-                    Type: shared.AtsCompensationTypeEquity,
+                    Type: shared.AtsCompensationTypeSalary,
                 },
             },
-            CreatedAt: types.MustTimeFromString("2021-04-02T18:44:02.642Z"),
             Departments: []string{
-                "Polonium",
+                "Forward",
             },
-            Description: unifiedgosdk.String("Progressive disintermediate matrix"),
-            EmploymentType: shared.AtsJobEmploymentTypeIntern.ToPointer(),
             HiringManagerIds: []string{
-                "itaque",
+                "Americium",
             },
-            ID: unifiedgosdk.String("<ID>"),
-            LanguageLocale: unifiedgosdk.String("the joyfully"),
-            Name: unifiedgosdk.String("Other because harbor"),
             PublicJobUrls: []string{
-                "coil",
+                "shiny",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "JSON",
+                "yellow",
             },
-            Remote: unifiedgosdk.Bool(false),
-            Status: shared.AtsJobStatusArchived.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-05-24T04:21:24.567Z"),
         },
-        ConnectionID: "Coordinator applications",
+        ConnectionID: "neatly Diesel virtual",
     })
     if err != nil {
         log.Fatal(err)
@@ -1574,7 +1389,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1587,18 +1401,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PostAtsConnectionIDScorecard(ctx, operations.PostAtsConnectionIDScorecardRequest{
         AtsScorecard: &shared.AtsScorecard{
-            ApplicationID: unifiedgosdk.String("female bah"),
-            CandidateID: unifiedgosdk.String("if since"),
-            CreatedAt: types.MustTimeFromString("2022-02-26T00:06:29.981Z"),
-            ID: unifiedgosdk.String("<ID>"),
-            InterviewID: unifiedgosdk.String("invoice"),
-            InterviewerID: unifiedgosdk.String("male"),
-            JobID: unifiedgosdk.String("Accountability"),
             Raw: shared.PropertyAtsScorecardRaw{},
-            Recommendation: shared.AtsScorecardRecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2023-10-04T17:15:51.015Z"),
         },
-        ConnectionID: "Legacy tan",
+        ConnectionID: "female bah",
     })
     if err != nil {
         log.Fatal(err)
@@ -1638,7 +1443,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1651,19 +1455,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PutAtsConnectionIDApplicationID(ctx, operations.PutAtsConnectionIDApplicationIDRequest{
         AtsApplication: &shared.AtsApplication{
-            AppliedAt: types.MustTimeFromString("2022-06-15T22:25:51.833Z"),
-            CandidateID: unifiedgosdk.String("farad Indianapolis"),
-            CreatedAt: types.MustTimeFromString("2022-04-01T21:03:58.880Z"),
-            ID: unifiedgosdk.String("<ID>"),
-            JobID: unifiedgosdk.String("enable foreground"),
             Raw: &shared.PropertyAtsApplicationRaw{},
-            RejectedAt: types.MustTimeFromString("2022-11-06T11:41:30.414Z"),
-            RejectedReason: unifiedgosdk.String("virtual North plum"),
-            Source: unifiedgosdk.String("Fort solid"),
-            Status: shared.AtsApplicationStatusSubmitted.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2021-02-21T04:47:57.079Z"),
         },
-        ConnectionID: "Southeast",
+        ConnectionID: "input Electric",
         ID: "<ID>",
     })
     if err != nil {
@@ -1704,7 +1498,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1717,42 +1510,23 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PutAtsConnectionIDCandidateID(ctx, operations.PutAtsConnectionIDCandidateIDRequest{
         AtsCandidate: &shared.AtsCandidate{
-            Address: &shared.PropertyAtsCandidateAddress{
-                Address1: unifiedgosdk.String("archive"),
-                Address2: unifiedgosdk.String("Specialist Kyat"),
-                City: unifiedgosdk.String("New Dennis"),
-                Country: unifiedgosdk.String("Mauritius"),
-                CountryCode: unifiedgosdk.String("TL"),
-                PostalCode: unifiedgosdk.String("49105-9909"),
-                Region: unifiedgosdk.String("copy olive"),
-                RegionCode: unifiedgosdk.String("withdrawal cumque person"),
-            },
-            CompanyName: unifiedgosdk.String("Kuhn and Sons"),
-            CreatedAt: types.MustTimeFromString("2022-01-28T10:51:00.922Z"),
+            Address: &shared.PropertyAtsCandidateAddress{},
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
-                    Email: "Hester.Jenkins@gmail.com",
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
+                    Email: "Giovanny_Botsford@gmail.com",
                 },
             },
-            ExternalID: unifiedgosdk.String("Loan EXE"),
-            ID: unifiedgosdk.String("<ID>"),
-            ImageURL: unifiedgosdk.String("deliver executive RSS"),
-            Name: unifiedgosdk.String("because aha black"),
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "program",
+                "deploy",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "empower exit Pangender",
-                    Type: shared.AtsTelephoneTypeMobile.ToPointer(),
+                    Telephone: "knowledge officiis",
                 },
             },
-            Title: unifiedgosdk.String("Corporate anenst Electronic"),
-            UpdatedAt: types.MustTimeFromString("2022-03-30T08:00:53.284Z"),
         },
-        ConnectionID: "Flerovium azure",
+        ConnectionID: "Personal Madagascar",
         ID: "<ID>",
     })
     if err != nil {
@@ -1793,7 +1567,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1806,23 +1579,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PutAtsConnectionIDInterviewID(ctx, operations.PutAtsConnectionIDInterviewIDRequest{
         AtsInterview: &shared.AtsInterview{
-            ApplicationID: unifiedgosdk.String("Generic capacitor"),
-            CandidateID: unifiedgosdk.String("Road disbelieve"),
-            CreatedAt: types.MustTimeFromString("2022-06-22T01:57:06.573Z"),
-            EndAt: types.MustTimeFromString("2022-05-28T02:29:32.144Z"),
-            ExternalEventXref: unifiedgosdk.String("architectures"),
-            ID: unifiedgosdk.String("<ID>"),
-            JobID: unifiedgosdk.String("Casper 1080p South"),
-            Location: unifiedgosdk.String("program siemens Cis"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustTimeFromString("2021-03-14T15:20:41.084Z"),
-            Status: shared.AtsInterviewStatusAwaitingFeedback.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2023-07-14T19:59:39.905Z"),
             UserIds: []string{
-                "East",
+                "amet",
             },
         },
-        ConnectionID: "ASCII yet Hybrid",
+        ConnectionID: "capacitor Auto",
         ID: "<ID>",
     })
     if err != nil {
@@ -1863,7 +1625,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1877,51 +1638,28 @@ func main() {
     res, err := s.Ats.PutAtsConnectionIDJobID(ctx, operations.PutAtsConnectionIDJobIDRequest{
         AtsJob: &shared.AtsJob{
             Addresses: []shared.AtsAddress{
-                shared.AtsAddress{
-                    Address1: unifiedgosdk.String("cotton Washington"),
-                    Address2: unifiedgosdk.String("rosin meanwhile male"),
-                    City: unifiedgosdk.String("East Sierra"),
-                    Country: unifiedgosdk.String("Somalia"),
-                    CountryCode: unifiedgosdk.String("BQ"),
-                    PostalCode: unifiedgosdk.String("63475-6123"),
-                    Region: unifiedgosdk.String("lighthearted online Bicycle"),
-                    RegionCode: unifiedgosdk.String("robust"),
-                },
+                shared.AtsAddress{},
             },
-            ClosedAt: types.MustTimeFromString("2021-05-06T11:53:52.940Z"),
             Compensation: []shared.AtsCompensation{
                 shared.AtsCompensation{
-                    Currency: unifiedgosdk.String("Iranian Rial"),
-                    Frequency: shared.AtsCompensationFrequencyYear.ToPointer(),
-                    Max: unifiedgosdk.Float64(5965.42),
-                    Min: unifiedgosdk.Float64(5273.81),
-                    Type: shared.AtsCompensationTypeBonus,
+                    Type: shared.AtsCompensationTypeStockOptions,
                 },
             },
-            CreatedAt: types.MustTimeFromString("2023-07-19T02:36:00.215Z"),
             Departments: []string{
-                "embrace",
+                "cotton",
             },
-            Description: unifiedgosdk.String("Programmable tertiary benchmark"),
-            EmploymentType: shared.AtsJobEmploymentTypeContractor.ToPointer(),
             HiringManagerIds: []string{
-                "New",
+                "Washington",
             },
-            ID: unifiedgosdk.String("<ID>"),
-            LanguageLocale: unifiedgosdk.String("Facilitator Gasoline application"),
-            Name: unifiedgosdk.String("North impractical"),
             PublicJobUrls: []string{
-                "clamber",
+                "Hybrid",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "West",
+                "henry",
             },
-            Remote: unifiedgosdk.Bool(false),
-            Status: shared.AtsJobStatusClosed.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2023-02-01T04:41:47.094Z"),
         },
-        ConnectionID: "North",
+        ConnectionID: "male Intelligent",
         ID: "<ID>",
     })
     if err != nil {
@@ -1962,7 +1700,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -1975,18 +1712,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PutAtsConnectionIDScorecardID(ctx, operations.PutAtsConnectionIDScorecardIDRequest{
         AtsScorecard: &shared.AtsScorecard{
-            ApplicationID: unifiedgosdk.String("East Granite"),
-            CandidateID: unifiedgosdk.String("South"),
-            CreatedAt: types.MustTimeFromString("2022-03-02T12:33:41.490Z"),
-            ID: unifiedgosdk.String("<ID>"),
-            InterviewID: unifiedgosdk.String("Texas Technetium hack"),
-            InterviewerID: unifiedgosdk.String("Adventure Kyrgyz Organic"),
-            JobID: unifiedgosdk.String("Home Dynamic Integration"),
             Raw: shared.PropertyAtsScorecardRaw{},
-            Recommendation: shared.AtsScorecardRecommendationNo.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2023-11-13T03:01:57.066Z"),
         },
-        ConnectionID: "Transexual Manager Rap",
+        ConnectionID: "East Granite",
         ID: "<ID>",
     })
     if err != nil {

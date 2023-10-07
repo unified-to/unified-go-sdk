@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [DeleteHrisConnectionIDGroupID](#deletehrisconnectionidgroupid) - Remove a Group
-* [GetHrisConnectionIDGroup](#gethrisconnectionidgroup) - List all Groups
-* [GetHrisConnectionIDGroupID](#gethrisconnectionidgroupid) - Retrieve a Group
-* [PatchHrisConnectionIDGroupID](#patchhrisconnectionidgroupid) - Update a Group
-* [PostHrisConnectionIDGroup](#posthrisconnectionidgroup) - Create a Group
-* [PutHrisConnectionIDGroupID](#puthrisconnectionidgroupid) - Update a Group
+* [DeleteHrisConnectionIDGroupID](#deletehrisconnectionidgroupid) - Remove a group
+* [GetHrisConnectionIDGroup](#gethrisconnectionidgroup) - List all groups
+* [GetHrisConnectionIDGroupID](#gethrisconnectionidgroupid) - Retrieve a group
+* [PatchHrisConnectionIDGroupID](#patchhrisconnectionidgroupid) - Update a group
+* [PostHrisConnectionIDGroup](#posthrisconnectionidgroup) - Create a group
+* [PutHrisConnectionIDGroupID](#puthrisconnectionidgroupid) - Update a group
 
 ## DeleteHrisConnectionIDGroupID
 
-Remove a Group
+Remove a group
 
 ### Example Usage
 
@@ -64,7 +64,7 @@ func main() {
 
 ## GetHrisConnectionIDGroup
 
-List all Groups
+List all groups
 
 ### Example Usage
 
@@ -77,7 +77,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -90,12 +89,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.GetHrisConnectionIDGroup(ctx, operations.GetHrisConnectionIDGroupRequest{
         ConnectionID: "Loan",
-        Limit: unifiedgosdk.Float64(3486.96),
-        Offset: unifiedgosdk.Float64(9705.73),
-        Order: unifiedgosdk.String("Coordinator"),
-        Query: unifiedgosdk.String("World"),
-        Sort: unifiedgosdk.String("Dollar"),
-        UpdatedGte: types.MustTimeFromString("2021-01-15T16:06:13.340Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -122,7 +115,7 @@ func main() {
 
 ## GetHrisConnectionIDGroupID
 
-Retrieve a Group
+Retrieve a group
 
 ### Example Usage
 
@@ -174,7 +167,7 @@ func main() {
 
 ## PatchHrisConnectionIDGroupID
 
-Update a Group
+Update a group
 
 ### Example Usage
 
@@ -187,7 +180,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -200,23 +192,15 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.PatchHrisConnectionIDGroupID(ctx, operations.PatchHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustTimeFromString("2023-10-19T05:30:26.390Z"),
-            Description: unifiedgosdk.String("Stand-alone asymmetric orchestration"),
             EmployeeIds: []string{
-                "shootdown",
+                "gosh",
             },
-            ID: unifiedgosdk.String("<ID>"),
-            IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
-                "24/7",
+                "Northwest",
             },
-            Name: unifiedgosdk.String("Agender trainer"),
-            ParentID: unifiedgosdk.String("Configuration Kids Sedan"),
             Raw: &shared.PropertyHrisGroupRaw{},
-            Type: shared.HrisGroupTypeDivision.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2021-08-18T16:48:12.885Z"),
         },
-        ConnectionID: "Intersex",
+        ConnectionID: "grey East Agender",
         ID: "<ID>",
     })
     if err != nil {
@@ -244,7 +228,7 @@ func main() {
 
 ## PostHrisConnectionIDGroup
 
-Create a Group
+Create a group
 
 ### Example Usage
 
@@ -257,7 +241,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -270,23 +253,15 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.PostHrisConnectionIDGroup(ctx, operations.PostHrisConnectionIDGroupRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustTimeFromString("2021-02-23T15:35:38.483Z"),
-            Description: unifiedgosdk.String("Configurable stable product"),
             EmployeeIds: []string{
-                "Auto",
+                "Bhutan",
             },
-            ID: unifiedgosdk.String("<ID>"),
-            IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
-                "JSON",
+                "Polestar",
             },
-            Name: unifiedgosdk.String("whereas Usability transmitting"),
-            ParentID: unifiedgosdk.String("invoice Cyclocross Electric"),
             Raw: &shared.PropertyHrisGroupRaw{},
-            Type: shared.HrisGroupTypeGroup.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2021-04-30T12:40:50.129Z"),
         },
-        ConnectionID: "Hybrid Schenectady",
+        ConnectionID: "Cab XSS",
     })
     if err != nil {
         log.Fatal(err)
@@ -313,7 +288,7 @@ func main() {
 
 ## PutHrisConnectionIDGroupID
 
-Update a Group
+Update a group
 
 ### Example Usage
 
@@ -326,7 +301,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -339,23 +313,15 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.PutHrisConnectionIDGroupID(ctx, operations.PutHrisConnectionIDGroupIDRequest{
         HrisGroup: &shared.HrisGroup{
-            CreatedAt: types.MustTimeFromString("2022-08-10T12:11:42.375Z"),
-            Description: unifiedgosdk.String("Decentralized methodical projection"),
             EmployeeIds: []string{
-                "Credit",
+                "panel",
             },
-            ID: unifiedgosdk.String("<ID>"),
-            IsActive: unifiedgosdk.Bool(false),
             ManagerIds: []string{
-                "South",
+                "And",
             },
-            Name: unifiedgosdk.String("Jeep brr Northwest"),
-            ParentID: unifiedgosdk.String("quickly Licensed"),
             Raw: &shared.PropertyHrisGroupRaw{},
-            Type: shared.HrisGroupTypeBusinessUnit.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2021-11-08T00:11:45.458Z"),
         },
-        ConnectionID: "vortals interface Gasoline",
+        ConnectionID: "Small woman solid",
         ID: "<ID>",
     })
     if err != nil {

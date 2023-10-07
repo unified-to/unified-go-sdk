@@ -24,7 +24,7 @@ func newEmployee(sdkConfig sdkConfiguration) *employee {
 	}
 }
 
-// DeleteHrisConnectionIDEmployeeID - Remove a Employee
+// DeleteHrisConnectionIDEmployeeID - Remove an employee
 func (s *employee) DeleteHrisConnectionIDEmployeeID(ctx context.Context, request operations.DeleteHrisConnectionIDEmployeeIDRequest) (*operations.DeleteHrisConnectionIDEmployeeIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee/{id}", request, nil)
@@ -49,13 +49,6 @@ func (s *employee) DeleteHrisConnectionIDEmployeeID(ctx context.Context, request
 		return nil, fmt.Errorf("error sending request: no response")
 	}
 
-	rawBody, err := io.ReadAll(httpRes.Body)
-	if err != nil {
-		return nil, fmt.Errorf("error reading response body: %w", err)
-	}
-	httpRes.Body.Close()
-	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.DeleteHrisConnectionIDEmployeeIDResponse{
@@ -63,6 +56,13 @@ func (s *employee) DeleteHrisConnectionIDEmployeeID(ctx context.Context, request
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
@@ -81,7 +81,7 @@ func (s *employee) DeleteHrisConnectionIDEmployeeID(ctx context.Context, request
 	return res, nil
 }
 
-// GetHrisConnectionIDEmployee - List all Employees
+// GetHrisConnectionIDEmployee - List all employees
 func (s *employee) GetHrisConnectionIDEmployee(ctx context.Context, request operations.GetHrisConnectionIDEmployeeRequest) (*operations.GetHrisConnectionIDEmployeeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee", request, nil)
@@ -110,13 +110,6 @@ func (s *employee) GetHrisConnectionIDEmployee(ctx context.Context, request oper
 		return nil, fmt.Errorf("error sending request: no response")
 	}
 
-	rawBody, err := io.ReadAll(httpRes.Body)
-	if err != nil {
-		return nil, fmt.Errorf("error reading response body: %w", err)
-	}
-	httpRes.Body.Close()
-	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetHrisConnectionIDEmployeeResponse{
@@ -124,6 +117,13 @@ func (s *employee) GetHrisConnectionIDEmployee(ctx context.Context, request oper
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
 	case httpRes.StatusCode == 200:
 		switch {
@@ -146,7 +146,7 @@ func (s *employee) GetHrisConnectionIDEmployee(ctx context.Context, request oper
 	return res, nil
 }
 
-// GetHrisConnectionIDEmployeeID - Retrieve a Employee
+// GetHrisConnectionIDEmployeeID - Retrieve an employee
 func (s *employee) GetHrisConnectionIDEmployeeID(ctx context.Context, request operations.GetHrisConnectionIDEmployeeIDRequest) (*operations.GetHrisConnectionIDEmployeeIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee/{id}", request, nil)
@@ -171,13 +171,6 @@ func (s *employee) GetHrisConnectionIDEmployeeID(ctx context.Context, request op
 		return nil, fmt.Errorf("error sending request: no response")
 	}
 
-	rawBody, err := io.ReadAll(httpRes.Body)
-	if err != nil {
-		return nil, fmt.Errorf("error reading response body: %w", err)
-	}
-	httpRes.Body.Close()
-	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetHrisConnectionIDEmployeeIDResponse{
@@ -185,6 +178,13 @@ func (s *employee) GetHrisConnectionIDEmployeeID(ctx context.Context, request op
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
 	case httpRes.StatusCode == 200:
 		switch {
@@ -207,7 +207,7 @@ func (s *employee) GetHrisConnectionIDEmployeeID(ctx context.Context, request op
 	return res, nil
 }
 
-// PatchHrisConnectionIDEmployeeID - Update a Employee
+// PatchHrisConnectionIDEmployeeID - Update an employee
 func (s *employee) PatchHrisConnectionIDEmployeeID(ctx context.Context, request operations.PatchHrisConnectionIDEmployeeIDRequest) (*operations.PatchHrisConnectionIDEmployeeIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee/{id}", request, nil)
@@ -239,13 +239,6 @@ func (s *employee) PatchHrisConnectionIDEmployeeID(ctx context.Context, request 
 		return nil, fmt.Errorf("error sending request: no response")
 	}
 
-	rawBody, err := io.ReadAll(httpRes.Body)
-	if err != nil {
-		return nil, fmt.Errorf("error reading response body: %w", err)
-	}
-	httpRes.Body.Close()
-	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PatchHrisConnectionIDEmployeeIDResponse{
@@ -253,6 +246,13 @@ func (s *employee) PatchHrisConnectionIDEmployeeID(ctx context.Context, request 
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
 	case httpRes.StatusCode == 200:
 		switch {
@@ -275,7 +275,7 @@ func (s *employee) PatchHrisConnectionIDEmployeeID(ctx context.Context, request 
 	return res, nil
 }
 
-// PostHrisConnectionIDEmployee - Create a Employee
+// PostHrisConnectionIDEmployee - Create an employee
 func (s *employee) PostHrisConnectionIDEmployee(ctx context.Context, request operations.PostHrisConnectionIDEmployeeRequest) (*operations.PostHrisConnectionIDEmployeeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee", request, nil)
@@ -307,13 +307,6 @@ func (s *employee) PostHrisConnectionIDEmployee(ctx context.Context, request ope
 		return nil, fmt.Errorf("error sending request: no response")
 	}
 
-	rawBody, err := io.ReadAll(httpRes.Body)
-	if err != nil {
-		return nil, fmt.Errorf("error reading response body: %w", err)
-	}
-	httpRes.Body.Close()
-	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PostHrisConnectionIDEmployeeResponse{
@@ -321,6 +314,13 @@ func (s *employee) PostHrisConnectionIDEmployee(ctx context.Context, request ope
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
 	case httpRes.StatusCode == 200:
 		switch {
@@ -343,7 +343,7 @@ func (s *employee) PostHrisConnectionIDEmployee(ctx context.Context, request ope
 	return res, nil
 }
 
-// PutHrisConnectionIDEmployeeID - Update a Employee
+// PutHrisConnectionIDEmployeeID - Update an employee
 func (s *employee) PutHrisConnectionIDEmployeeID(ctx context.Context, request operations.PutHrisConnectionIDEmployeeIDRequest) (*operations.PutHrisConnectionIDEmployeeIDResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee/{id}", request, nil)
@@ -375,13 +375,6 @@ func (s *employee) PutHrisConnectionIDEmployeeID(ctx context.Context, request op
 		return nil, fmt.Errorf("error sending request: no response")
 	}
 
-	rawBody, err := io.ReadAll(httpRes.Body)
-	if err != nil {
-		return nil, fmt.Errorf("error reading response body: %w", err)
-	}
-	httpRes.Body.Close()
-	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
-
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PutHrisConnectionIDEmployeeIDResponse{
@@ -389,6 +382,13 @@ func (s *employee) PutHrisConnectionIDEmployeeID(ctx context.Context, request op
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
 	case httpRes.StatusCode == 200:
 		switch {

@@ -77,7 +77,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -89,16 +88,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.GetCrmConnectionIDEvent(ctx, operations.GetCrmConnectionIDEventRequest{
-        CompanyID: unifiedgosdk.String("Zirconium Avon Bedfordshire"),
-        ConnectionID: "Hybrid grey Ferrari",
-        ContactID: unifiedgosdk.String("Checking Southeast"),
-        DealID: unifiedgosdk.String("Graham till Caesium"),
-        Limit: unifiedgosdk.Float64(2928.84),
-        Offset: unifiedgosdk.Float64(5904.77),
-        Order: unifiedgosdk.String("furthermore Tricycle Hop"),
-        Query: unifiedgosdk.String("auxiliary"),
-        Sort: unifiedgosdk.String("Southeast Bicycle Gorgeous"),
-        UpdatedGte: types.MustTimeFromString("2023-01-15T23:49:53.643Z"),
+        ConnectionID: "Zirconium Avon Bedfordshire",
     })
     if err != nil {
         log.Fatal(err)
@@ -190,7 +180,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -203,51 +192,30 @@ func main() {
     ctx := context.Background()
     res, err := s.Event.PatchCrmConnectionIDEventID(ctx, operations.PatchCrmConnectionIDEventIDRequest{
         CrmEvent: &shared.CrmEvent{
-            Call: &shared.PropertyCrmEventCall{
-                Description: unifiedgosdk.String("Optional zero defect function"),
-                Duration: unifiedgosdk.Float64(5434.61),
-            },
+            Call: &shared.PropertyCrmEventCall{},
             CompanyIds: []string{
-                "silver",
+                "parse",
             },
             ContactIds: []string{
-                "redefine",
+                "intranet",
             },
-            CreatedAt: types.MustTimeFromString("2021-07-21T06:46:42.528Z"),
             DealIds: []string{
-                "Solutions",
+                "silver",
             },
             Email: &shared.PropertyCrmEventEmail{
-                Body: unifiedgosdk.String("French"),
                 Cc: []string{
-                    "Checking",
+                    "redefine",
                 },
-                From: unifiedgosdk.String("SDD Toyota Northeast"),
-                Subject: unifiedgosdk.String("Convertible"),
                 To: []string{
-                    "Electronics",
+                    "Baby",
                 },
             },
-            ID: unifiedgosdk.String("<ID>"),
-            Meeting: &shared.PropertyCrmEventMeeting{
-                Description: unifiedgosdk.String("Monitored mission-critical customer loyalty"),
-                EndAt: types.MustTimeFromString("2022-09-22T17:43:00.863Z"),
-                StartAt: types.MustTimeFromString("2023-04-24T06:40:04.926Z"),
-                Title: unifiedgosdk.String("Kip Switchable Chicken"),
-            },
-            Note: &shared.PropertyCrmEventNote{
-                Description: unifiedgosdk.String("Cross-group high-level functionalities"),
-            },
+            Meeting: &shared.PropertyCrmEventMeeting{},
+            Note: &shared.PropertyCrmEventNote{},
             Raw: &shared.PropertyCrmEventRaw{},
-            Task: &shared.PropertyCrmEventTask{
-                Description: unifiedgosdk.String("Horizontal empowering forecast"),
-                Name: unifiedgosdk.String("Principal extremely Jast"),
-                Status: unifiedgosdk.String("striped Concrete Bronze"),
-            },
-            Type: shared.CrmEventTypeNote.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2021-02-18T21:34:24.992Z"),
+            Task: &shared.PropertyCrmEventTask{},
         },
-        ConnectionID: "Dinar benchmark till",
+        ConnectionID: "Steel",
         ID: "<ID>",
     })
     if err != nil {
@@ -288,7 +256,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -301,51 +268,30 @@ func main() {
     ctx := context.Background()
     res, err := s.Event.PostCrmConnectionIDEvent(ctx, operations.PostCrmConnectionIDEventRequest{
         CrmEvent: &shared.CrmEvent{
-            Call: &shared.PropertyCrmEventCall{
-                Description: unifiedgosdk.String("Visionary bandwidth-monitored hardware"),
-                Duration: unifiedgosdk.Float64(9256.02),
-            },
+            Call: &shared.PropertyCrmEventCall{},
             CompanyIds: []string{
-                "Kentucky",
+                "carburize",
             },
             ContactIds: []string{
-                "Rustic",
+                "SDR",
             },
-            CreatedAt: types.MustTimeFromString("2023-02-12T10:03:55.861Z"),
             DealIds: []string{
-                "agonizing",
+                "Kentucky",
             },
             Email: &shared.PropertyCrmEventEmail{
-                Body: unifiedgosdk.String("protocol"),
                 Cc: []string{
-                    "Ratke",
+                    "Rustic",
                 },
-                From: unifiedgosdk.String("woman"),
-                Subject: unifiedgosdk.String("East Soft"),
                 To: []string{
-                    "Southeast",
+                    "male",
                 },
             },
-            ID: unifiedgosdk.String("<ID>"),
-            Meeting: &shared.PropertyCrmEventMeeting{
-                Description: unifiedgosdk.String("Streamlined intangible time-frame"),
-                EndAt: types.MustTimeFromString("2022-04-18T21:50:55.608Z"),
-                StartAt: types.MustTimeFromString("2021-08-24T14:06:25.626Z"),
-                Title: unifiedgosdk.String("violet Synergized blah"),
-            },
-            Note: &shared.PropertyCrmEventNote{
-                Description: unifiedgosdk.String("Mandatory eco-centric toolset"),
-            },
+            Meeting: &shared.PropertyCrmEventMeeting{},
+            Note: &shared.PropertyCrmEventNote{},
             Raw: &shared.PropertyCrmEventRaw{},
-            Task: &shared.PropertyCrmEventTask{
-                Description: unifiedgosdk.String("Team-oriented dynamic forecast"),
-                Name: unifiedgosdk.String("Grocery"),
-                Status: unifiedgosdk.String("excitedly Bacon"),
-            },
-            Type: shared.CrmEventTypeEmail.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2021-09-09T20:12:06.214Z"),
+            Task: &shared.PropertyCrmEventTask{},
         },
-        ConnectionID: "Progressive",
+        ConnectionID: "Hat",
     })
     if err != nil {
         log.Fatal(err)
@@ -385,7 +331,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -398,51 +343,30 @@ func main() {
     ctx := context.Background()
     res, err := s.Event.PutCrmConnectionIDEventID(ctx, operations.PutCrmConnectionIDEventIDRequest{
         CrmEvent: &shared.CrmEvent{
-            Call: &shared.PropertyCrmEventCall{
-                Description: unifiedgosdk.String("Re-engineered composite time-frame"),
-                Duration: unifiedgosdk.Float64(5444.58),
-            },
+            Call: &shared.PropertyCrmEventCall{},
             CompanyIds: []string{
-                "DNS",
+                "Iron",
             },
             ContactIds: []string{
-                "Skokie",
+                "marshmallow",
             },
-            CreatedAt: types.MustTimeFromString("2022-07-05T01:37:36.877Z"),
             DealIds: []string{
-                "lux",
+                "DNS",
             },
             Email: &shared.PropertyCrmEventEmail{
-                Body: unifiedgosdk.String("Hatchback card"),
                 Cc: []string{
-                    "Gasoline",
+                    "Skokie",
                 },
-                From: unifiedgosdk.String("Caribbean"),
-                Subject: unifiedgosdk.String("Account medium"),
                 To: []string{
-                    "copy",
+                    "calculating",
                 },
             },
-            ID: unifiedgosdk.String("<ID>"),
-            Meeting: &shared.PropertyCrmEventMeeting{
-                Description: unifiedgosdk.String("Inverse optimizing model"),
-                EndAt: types.MustTimeFromString("2022-03-21T17:32:41.888Z"),
-                StartAt: types.MustTimeFromString("2022-10-17T10:31:48.119Z"),
-                Title: unifiedgosdk.String("male henry Hat"),
-            },
-            Note: &shared.PropertyCrmEventNote{
-                Description: unifiedgosdk.String("Self-enabling asymmetric functionalities"),
-            },
+            Meeting: &shared.PropertyCrmEventMeeting{},
+            Note: &shared.PropertyCrmEventNote{},
             Raw: &shared.PropertyCrmEventRaw{},
-            Task: &shared.PropertyCrmEventTask{
-                Description: unifiedgosdk.String("Reduced 4th generation analyzer"),
-                Name: unifiedgosdk.String("Savings Female nor"),
-                Status: unifiedgosdk.String("Customer sky"),
-            },
-            Type: shared.CrmEventTypeNote.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2023-07-27T14:02:37.510Z"),
+            Task: &shared.PropertyCrmEventTask{},
         },
-        ConnectionID: "transparent",
+        ConnectionID: "Blues firewall engineer",
         ID: "<ID>",
     })
     if err != nil {

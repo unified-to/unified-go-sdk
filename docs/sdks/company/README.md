@@ -78,7 +78,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -91,14 +90,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.GetCrmConnectionIDCompany(ctx, operations.GetCrmConnectionIDCompanyRequest{
         ConnectionID: "indexing",
-        ContactID: unifiedgosdk.String("Porsche firewall"),
-        DealID: unifiedgosdk.String("Hafnium Computers"),
-        Limit: unifiedgosdk.Float64(902.85),
-        Offset: unifiedgosdk.Float64(2893.88),
-        Order: unifiedgosdk.String("Interactions relationships juxtapose"),
-        Query: unifiedgosdk.String("newton Luxembourg"),
-        Sort: unifiedgosdk.String("Dakota quantifying Actinium"),
-        UpdatedGte: types.MustTimeFromString("2022-09-27T07:42:48.074Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -202,8 +193,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.GetEnrichConnectionIDCompany(ctx, operations.GetEnrichConnectionIDCompanyRequest{
         ConnectionID: "female Computers Central",
-        Domain: unifiedgosdk.String("scientific-facet.biz"),
-        Name: unifiedgosdk.String("Outdoors embrace interface"),
     })
     if err != nil {
         log.Fatal(err)
@@ -243,7 +232,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -256,45 +244,27 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.PatchCrmConnectionIDCompanyID(ctx, operations.PatchCrmConnectionIDCompanyIDRequest{
         CrmCompany: &shared.CrmCompany{
-            Active: unifiedgosdk.Bool(false),
-            Address: &shared.PropertyCrmCompanyAddress{
-                Address1: unifiedgosdk.String("invoice"),
-                Address2: unifiedgosdk.String("indexing Ford"),
-                City: unifiedgosdk.String("McAllen"),
-                Country: unifiedgosdk.String("Netherlands"),
-                CountryCode: unifiedgosdk.String("PF"),
-                PostalCode: unifiedgosdk.String("93486"),
-                Region: unifiedgosdk.String("Steel impactful"),
-                RegionCode: unifiedgosdk.String("Dong"),
-            },
-            CreatedAt: types.MustTimeFromString("2023-07-25T08:43:38.995Z"),
+            Address: &shared.PropertyCrmCompanyAddress{},
             DealIds: []string{
-                "usefully",
+                "Soft",
             },
             Emails: []shared.CrmEmail{
-                shared.CrmEmail{
-                    Email: unifiedgosdk.String("Annabel31@gmail.com"),
-                    Type: shared.CrmEmailTypeWork.ToPointer(),
-                },
+                shared.CrmEmail{},
             },
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("Toys Vermont Astatine"),
             Raw: &shared.PropertyCrmCompanyRaw{},
             Tags: []string{
-                "Trigender",
+                "invoice",
             },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "female",
-                    Type: shared.CrmTelephoneTypeHome.ToPointer(),
+                    Telephone: "miniature Quality",
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2021-12-22T11:39:56.432Z"),
             Websites: []string{
-                "Latin",
+                "redefine",
             },
         },
-        ConnectionID: "North kilogram connecting",
+        ConnectionID: "invoice National",
         ID: "<ID>",
     })
     if err != nil {
@@ -335,7 +305,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -348,45 +317,27 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.PostCrmConnectionIDCompany(ctx, operations.PostCrmConnectionIDCompanyRequest{
         CrmCompany: &shared.CrmCompany{
-            Active: unifiedgosdk.Bool(false),
-            Address: &shared.PropertyCrmCompanyAddress{
-                Address1: unifiedgosdk.String("consequently gosh"),
-                Address2: unifiedgosdk.String("phooey"),
-                City: unifiedgosdk.String("Antonettaville"),
-                Country: unifiedgosdk.String("Lebanon"),
-                CountryCode: unifiedgosdk.String("SI"),
-                PostalCode: unifiedgosdk.String("79462"),
-                Region: unifiedgosdk.String("orchid Oxygen Kids"),
-                RegionCode: unifiedgosdk.String("Electric utilisation"),
-            },
-            CreatedAt: types.MustTimeFromString("2021-10-01T08:46:18.197Z"),
+            Address: &shared.PropertyCrmCompanyAddress{},
             DealIds: []string{
-                "Tennessee",
+                "Personal",
             },
             Emails: []shared.CrmEmail{
-                shared.CrmEmail{
-                    Email: unifiedgosdk.String("Jaida.McDermott26@yahoo.com"),
-                    Type: shared.CrmEmailTypeOther.ToPointer(),
-                },
+                shared.CrmEmail{},
             },
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("Hydrogen Wooden"),
             Raw: &shared.PropertyCrmCompanyRaw{},
             Tags: []string{
-                "CSS",
+                "gosh",
             },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "Account invoice",
-                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
+                    Telephone: "phooey",
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2021-09-12T17:31:24.634Z"),
             Websites: []string{
-                "Intuitive",
+                "primary",
             },
         },
-        ConnectionID: "Gasoline",
+        ConnectionID: "neural",
     })
     if err != nil {
         log.Fatal(err)
@@ -426,7 +377,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -439,45 +389,27 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.PutCrmConnectionIDCompanyID(ctx, operations.PutCrmConnectionIDCompanyIDRequest{
         CrmCompany: &shared.CrmCompany{
-            Active: unifiedgosdk.Bool(false),
-            Address: &shared.PropertyCrmCompanyAddress{
-                Address1: unifiedgosdk.String("Northwest Northwest"),
-                Address2: unifiedgosdk.String("portals Diesel"),
-                City: unifiedgosdk.String("Azusa"),
-                Country: unifiedgosdk.String("Qatar"),
-                CountryCode: unifiedgosdk.String("CG"),
-                PostalCode: unifiedgosdk.String("52396"),
-                Region: unifiedgosdk.String("Tuna sticky lest"),
-                RegionCode: unifiedgosdk.String("Soft boo Missoula"),
-            },
-            CreatedAt: types.MustTimeFromString("2022-05-14T19:17:30.970Z"),
+            Address: &shared.PropertyCrmCompanyAddress{},
             DealIds: []string{
-                "Hybrid",
+                "dicta",
             },
             Emails: []shared.CrmEmail{
-                shared.CrmEmail{
-                    Email: unifiedgosdk.String("Vance_Cruickshank93@gmail.com"),
-                    Type: shared.CrmEmailTypeHome.ToPointer(),
-                },
+                shared.CrmEmail{},
             },
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("lest Northwest"),
             Raw: &shared.PropertyCrmCompanyRaw{},
             Tags: []string{
-                "East",
+                "background",
             },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "Bronze round",
-                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
+                    Telephone: "veniam secondary",
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2022-02-21T09:41:36.696Z"),
             Websites: []string{
-                "Keyboard",
+                "Southwest",
             },
         },
-        ConnectionID: "orange Bespoke",
+        ConnectionID: "Calcium",
         ID: "<ID>",
     })
     if err != nil {

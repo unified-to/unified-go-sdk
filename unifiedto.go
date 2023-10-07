@@ -146,6 +146,7 @@ func WithClient(client HTTPClient) SDKOption {
 		sdk.sdkConfiguration.DefaultClient = client
 	}
 }
+
 func withSecurity(security interface{}) func(context.Context) (interface{}, error) {
 	return func(context.Context) (interface{}, error) {
 		return &security, nil
@@ -153,18 +154,11 @@ func withSecurity(security interface{}) func(context.Context) (interface{}, erro
 }
 
 // WithSecurity configures the SDK to use the provided security details
-func WithSecurity(security shared.Security) SDKOption {
-	return func(sdk *UnifiedTo) {
-		sdk.sdkConfiguration.Security = withSecurity(security)
-	}
-}
 
-// WithSecuritySource configures the SDK to invoke the Security Source function on each method call to determine authentication
-func WithSecuritySource(security func(context.Context) (shared.Security, error)) SDKOption {
+func WithSecurity(jwt string) SDKOption {
 	return func(sdk *UnifiedTo) {
-		sdk.sdkConfiguration.Security = func(ctx context.Context) (interface{}, error) {
-			return security(ctx)
-		}
+		security := shared.Security{Jwt: jwt}
+		sdk.sdkConfiguration.Security = withSecurity(&security)
 	}
 }
 
@@ -180,9 +174,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.4.0",
-			GenVersion:        "2.143.2",
-			UserAgent:         "speakeasy-sdk/go 0.4.0 2.143.2 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.4.1",
+			GenVersion:        "2.150.0",
+			UserAgent:         "speakeasy-sdk/go 0.4.1 2.150.0 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {

@@ -20,7 +20,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -32,15 +31,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Call.GetUcConnectionIDCall(ctx, operations.GetUcConnectionIDCallRequest{
-        AgentID: unifiedgosdk.String("Directives"),
-        ConnectionID: "female than",
-        ContactID: unifiedgosdk.String("reintermediate Enid Applications"),
-        Limit: unifiedgosdk.Float64(1980.39),
-        Offset: unifiedgosdk.Float64(3478),
-        Order: unifiedgosdk.String("white Oklahoma Functionality"),
-        Query: unifiedgosdk.String("pricing whether Hillsboro"),
-        Sort: unifiedgosdk.String("Wooden desensitize SCSI"),
-        UpdatedGte: types.MustTimeFromString("2021-11-03T12:40:46.997Z"),
+        ConnectionID: "Directives",
     })
     if err != nil {
         log.Fatal(err)

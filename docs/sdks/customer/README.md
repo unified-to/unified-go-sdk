@@ -77,7 +77,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -90,12 +89,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.GetTicketingConnectionIDCustomer(ctx, operations.GetTicketingConnectionIDCustomerRequest{
         ConnectionID: "SDD because Salad",
-        Limit: unifiedgosdk.Float64(8049.62),
-        Offset: unifiedgosdk.Float64(4323.42),
-        Order: unifiedgosdk.String("override"),
-        Query: unifiedgosdk.String("Rolls 1080p"),
-        Sort: unifiedgosdk.String("quantifying Southeast Kansas"),
-        UpdatedGte: types.MustTimeFromString("2023-12-20T19:18:39.254Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -187,7 +180,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -200,28 +192,22 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.PatchTicketingConnectionIDCustomerID(ctx, operations.PatchTicketingConnectionIDCustomerIDRequest{
         TicketingCustomer: &shared.TicketingCustomer{
-            CreatedAt: types.MustTimeFromString("2023-01-22T19:33:25.134Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Ora.Labadie94@yahoo.com",
-                    Type: shared.TicketingEmailTypeHome.ToPointer(),
+                    Email: "Jaren_Ryan@hotmail.com",
                 },
             },
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("sensitise whiteboard Smyrna"),
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
-                "Hialeah",
+                "Waco",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "connect",
-                    Type: shared.TicketingTelephoneTypeWork.ToPointer(),
+                    Telephone: "youthfully orange",
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2023-12-28T17:48:45.929Z"),
         },
-        ConnectionID: "Tennessine",
+        ConnectionID: "Smyrna Hialeah auxiliary",
         ID: "<ID>",
     })
     if err != nil {
@@ -262,7 +248,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -275,28 +260,22 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.PostTicketingConnectionIDCustomer(ctx, operations.PostTicketingConnectionIDCustomerRequest{
         TicketingCustomer: &shared.TicketingCustomer{
-            CreatedAt: types.MustTimeFromString("2022-05-23T15:06:12.012Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Austin44@yahoo.com",
-                    Type: shared.TicketingEmailTypeWork.ToPointer(),
+                    Email: "Jaquelin.Boyer@yahoo.com",
                 },
             },
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("Configuration neural"),
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
-                "engineer",
+                "withdrawal",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "Gasoline North gorgeous",
-                    Type: shared.TicketingTelephoneTypeFax.ToPointer(),
+                    Telephone: "Configuration neural",
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2022-10-09T07:25:23.111Z"),
         },
-        ConnectionID: "mole purple",
+        ConnectionID: "Product Hybrid",
     })
     if err != nil {
         log.Fatal(err)
@@ -336,7 +315,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -349,28 +327,22 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.PutTicketingConnectionIDCustomerID(ctx, operations.PutTicketingConnectionIDCustomerIDRequest{
         TicketingCustomer: &shared.TicketingCustomer{
-            CreatedAt: types.MustTimeFromString("2021-04-21T09:25:32.395Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Shawna42@hotmail.com",
-                    Type: shared.TicketingEmailTypeHome.ToPointer(),
+                    Email: "Raleigh.Torp42@gmail.com",
                 },
             },
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("gray"),
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
-                "Associate",
+                "copy",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "Sausages ivory Small",
-                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                    Telephone: "Developer Buckinghamshire Sausages",
                 },
             },
-            UpdatedAt: types.MustTimeFromString("2022-09-01T05:56:15.314Z"),
         },
-        ConnectionID: "mobile Cotton",
+        ConnectionID: "kilogram",
         ID: "<ID>",
     })
     if err != nil {

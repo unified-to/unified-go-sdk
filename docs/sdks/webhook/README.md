@@ -74,7 +74,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -85,15 +84,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Webhook.GetUnifiedWebhook(ctx, operations.GetUnifiedWebhookRequest{
-        Env: unifiedgosdk.String("Investor methodical Fitness"),
-        Limit: unifiedgosdk.Float64(8087.22),
-        Object: unifiedgosdk.String("Franc past salmon"),
-        Offset: unifiedgosdk.Float64(5240.75),
-        Order: unifiedgosdk.String("program"),
-        Sort: unifiedgosdk.String("below JSON"),
-        UpdatedGte: types.MustTimeFromString("2022-05-29T13:22:55.562Z"),
-    })
+    res, err := s.Webhook.GetUnifiedWebhook(ctx, operations.GetUnifiedWebhookRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -183,7 +174,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -196,30 +186,24 @@ func main() {
     ctx := context.Background()
     res, err := s.Webhook.PostUnifiedWebhookConnectionIDObject(ctx, operations.PostUnifiedWebhookConnectionIDObjectRequest{
         Webhook: &shared.Webhook{
-            CheckedAt: types.MustTimeFromString("2021-02-25T07:12:08.980Z"),
-            ConnectionID: "deposit 1080p Passenger",
-            CreatedAt: types.MustTimeFromString("2023-02-21T14:58:56.193Z"),
-            Environment: unifiedgosdk.String("Minnesota Soap"),
+            ConnectionID: "drat",
             Events: []shared.PropertyWebhookEvents{
                 shared.PropertyWebhookEventsUpdated,
             },
-            HookURL: "Table female ken",
-            ID: unifiedgosdk.String("<ID>"),
-            IncludeRaw: unifiedgosdk.Bool(false),
-            IntegrationType: "chocolate",
-            Interval: 1710.16,
-            ObjectType: shared.WebhookObjectTypeEnrichCompany,
+            HookURL: "siemens National",
+            IntegrationType: "GB Rustic deposit",
+            Interval: 6073.96,
+            ObjectType: shared.WebhookObjectTypeCrmContact,
             Subscriptions: []string{
-                "female",
+                "Diesel",
             },
-            UpdatedAt: types.MustTimeFromString("2022-08-02T17:13:06.397Z"),
-            WorkspaceID: "hertz",
+            WorkspaceID: "female ken",
         },
-        ConnectionID: "Borders",
-        Events: []PostUnifiedWebhookConnectionIDObjectEvents{
-            operations.PostUnifiedWebhookConnectionIDObjectEventsCreated,
+        ConnectionID: "chocolate",
+        Events: []operations.PostUnifiedWebhookConnectionIDObjectEvents{
+            operations.PostUnifiedWebhookConnectionIDObjectEventsUpdated,
         },
-        Object: "scalable",
+        Object: "female driver",
     })
     if err != nil {
         log.Fatal(err)

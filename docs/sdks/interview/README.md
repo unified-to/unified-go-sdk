@@ -77,7 +77,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -89,14 +88,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Interview.GetAtsConnectionIDInterview(ctx, operations.GetAtsConnectionIDInterviewRequest{
-        ApplicationID: unifiedgosdk.String("Fresh Pickup converse"),
-        ConnectionID: "vortals",
-        Limit: unifiedgosdk.Float64(5167.08),
-        Offset: unifiedgosdk.Float64(6488.61),
-        Order: unifiedgosdk.String("Oregon Metal"),
-        Query: unifiedgosdk.String("Account"),
-        Sort: unifiedgosdk.String("haptic"),
-        UpdatedGte: types.MustTimeFromString("2021-09-23T19:46:35.825Z"),
+        ConnectionID: "Fresh Pickup converse",
     })
     if err != nil {
         log.Fatal(err)
@@ -188,7 +180,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -201,23 +192,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.PatchAtsConnectionIDInterviewID(ctx, operations.PatchAtsConnectionIDInterviewIDRequest{
         AtsInterview: &shared.AtsInterview{
-            ApplicationID: unifiedgosdk.String("SSD green pascal"),
-            CandidateID: unifiedgosdk.String("Buckinghamshire example"),
-            CreatedAt: types.MustTimeFromString("2021-08-24T08:30:07.073Z"),
-            EndAt: types.MustTimeFromString("2021-06-27T04:06:46.373Z"),
-            ExternalEventXref: unifiedgosdk.String("apropos Gadolinium"),
-            ID: unifiedgosdk.String("<ID>"),
-            JobID: unifiedgosdk.String("transgender transmitting"),
-            Location: unifiedgosdk.String("Investor synthesizing"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustTimeFromString("2021-01-19T01:51:02.213Z"),
-            Status: shared.AtsInterviewStatusAwaitingFeedback.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2022-01-21T17:38:09.113Z"),
             UserIds: []string{
-                "Honda",
+                "coulomb",
             },
         },
-        ConnectionID: "Myrl Dram Trail",
+        ConnectionID: "green pascal illo",
         ID: "<ID>",
     })
     if err != nil {
@@ -258,7 +238,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -271,23 +250,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.PostAtsConnectionIDInterview(ctx, operations.PostAtsConnectionIDInterviewRequest{
         AtsInterview: &shared.AtsInterview{
-            ApplicationID: unifiedgosdk.String("round Hat Savings"),
-            CandidateID: unifiedgosdk.String("Northeast"),
-            CreatedAt: types.MustTimeFromString("2022-12-27T10:33:09.160Z"),
-            EndAt: types.MustTimeFromString("2021-11-12T23:57:19.974Z"),
-            ExternalEventXref: unifiedgosdk.String("platforms"),
-            ID: unifiedgosdk.String("<ID>"),
-            JobID: unifiedgosdk.String("payment panel Identity"),
-            Location: unifiedgosdk.String("Northwest Buckinghamshire"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustTimeFromString("2022-11-02T05:07:18.592Z"),
-            Status: shared.AtsInterviewStatusComplete.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2023-07-13T16:35:04.177Z"),
             UserIds: []string{
-                "Chevrolet",
+                "Tricycle",
             },
         },
-        ConnectionID: "Shoes Northeast SMTP",
+        ConnectionID: "Hat Savings Electronic",
     })
     if err != nil {
         log.Fatal(err)
@@ -327,7 +295,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -340,23 +307,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.PutAtsConnectionIDInterviewID(ctx, operations.PutAtsConnectionIDInterviewIDRequest{
         AtsInterview: &shared.AtsInterview{
-            ApplicationID: unifiedgosdk.String("Generic capacitor"),
-            CandidateID: unifiedgosdk.String("Road disbelieve"),
-            CreatedAt: types.MustTimeFromString("2022-06-22T01:57:06.573Z"),
-            EndAt: types.MustTimeFromString("2022-05-28T02:29:32.144Z"),
-            ExternalEventXref: unifiedgosdk.String("architectures"),
-            ID: unifiedgosdk.String("<ID>"),
-            JobID: unifiedgosdk.String("Casper 1080p South"),
-            Location: unifiedgosdk.String("program siemens Cis"),
             Raw: &shared.PropertyAtsInterviewRaw{},
-            StartAt: types.MustTimeFromString("2021-03-14T15:20:41.084Z"),
-            Status: shared.AtsInterviewStatusAwaitingFeedback.ToPointer(),
-            UpdatedAt: types.MustTimeFromString("2023-07-14T19:59:39.905Z"),
             UserIds: []string{
-                "East",
+                "amet",
             },
         },
-        ConnectionID: "ASCII yet Hybrid",
+        ConnectionID: "capacitor Auto",
         ID: "<ID>",
     })
     if err != nil {

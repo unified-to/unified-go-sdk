@@ -23,7 +23,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -35,16 +34,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegration(ctx, operations.GetUnifiedIntegrationRequest{
-        Active: unifiedgosdk.Bool(false),
-        Categories: []GetUnifiedIntegrationCategories{
+        Categories: []operations.GetUnifiedIntegrationCategories{
             operations.GetUnifiedIntegrationCategoriesEnrich,
         },
-        Limit: unifiedgosdk.Float64(7363.95),
-        Offset: unifiedgosdk.Float64(8214.4),
-        Order: unifiedgosdk.String("Nelda Implemented"),
-        Sort: unifiedgosdk.String("cabinet"),
-        Summary: unifiedgosdk.Bool(false),
-        UpdatedGte: types.MustTimeFromString("2022-02-05T00:16:37.455Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -95,19 +87,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationAuthWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedgosdk.String("Algerian"),
-        ExternalXref: unifiedgosdk.String("Cambridgeshire Surinam"),
-        FailureRedirect: unifiedgosdk.String("Designer Drive"),
-        IntegrationType: "program Home",
-        Lang: unifiedgosdk.String("Plastic program"),
-        Redirect: unifiedgosdk.Bool(false),
-        Scopes: []GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes{
-            operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesCrmFileRead,
+        IntegrationType: "Algerian",
+        Scopes: []operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes{
+            operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesMartechMemberWrite,
         },
-        State: unifiedgosdk.String("Functionality Product"),
-        Subdomain: unifiedgosdk.String("payment Developer Dynamic"),
-        SuccessRedirect: unifiedgosdk.String("Northeast"),
-        WorkspaceID: "duh empower Kwanza",
+        WorkspaceID: "hound",
     })
     if err != nil {
         log.Fatal(err)
@@ -209,13 +193,10 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationWorkspaceWorkspaceID(ctx, operations.GetUnifiedIntegrationWorkspaceWorkspaceIDRequest{
-        Active: unifiedgosdk.Bool(false),
-        Categories: []GetUnifiedIntegrationWorkspaceWorkspaceIDCategories{
+        Categories: []operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategories{
             operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategoriesHris,
         },
-        Env: unifiedgosdk.String("North Southeast exercitationem"),
-        Summary: unifiedgosdk.Bool(false),
-        WorkspaceID: "Bronze Plastic",
+        WorkspaceID: "North Southeast exercitationem",
     })
     if err != nil {
         log.Fatal(err)

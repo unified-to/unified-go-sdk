@@ -77,7 +77,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -90,12 +89,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Pipeline.GetCrmConnectionIDPipeline(ctx, operations.GetCrmConnectionIDPipelineRequest{
         ConnectionID: "dirty Awesome Checking",
-        Limit: unifiedgosdk.Float64(9055.88),
-        Offset: unifiedgosdk.Float64(3443.76),
-        Order: unifiedgosdk.String("glom"),
-        Query: unifiedgosdk.String("panel"),
-        Sort: unifiedgosdk.String("Latin tightly"),
-        UpdatedGte: types.MustTimeFromString("2022-03-01T15:47:43.244Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -187,7 +180,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -200,16 +192,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Pipeline.PatchCrmConnectionIDPipelineID(ctx, operations.PatchCrmConnectionIDPipelineIDRequest{
         CrmPipeline: &shared.CrmPipeline{
-            Active: unifiedgosdk.Bool(false),
-            CreatedAt: types.MustTimeFromString("2023-08-24T17:39:51.183Z"),
-            DealProbability: unifiedgosdk.Bool(false),
-            DisplayOrder: unifiedgosdk.Float64(664.58),
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("bandwidth"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustTimeFromString("2023-11-27T01:55:15.440Z"),
         },
-        ConnectionID: "Chips",
+        ConnectionID: "Bedfordshire bandwidth a",
         ID: "<ID>",
     })
     if err != nil {
@@ -250,7 +235,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -263,16 +247,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Pipeline.PostCrmConnectionIDPipeline(ctx, operations.PostCrmConnectionIDPipelineRequest{
         CrmPipeline: &shared.CrmPipeline{
-            Active: unifiedgosdk.Bool(false),
-            CreatedAt: types.MustTimeFromString("2023-12-10T23:55:22.206Z"),
-            DealProbability: unifiedgosdk.Bool(false),
-            DisplayOrder: unifiedgosdk.Float64(3879.73),
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("upward Mayaguez"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustTimeFromString("2021-09-25T10:43:23.679Z"),
         },
-        ConnectionID: "Lead Health",
+        ConnectionID: "Interface alpaca program",
     })
     if err != nil {
         log.Fatal(err)
@@ -312,7 +289,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -325,16 +301,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Pipeline.PutCrmConnectionIDPipelineID(ctx, operations.PutCrmConnectionIDPipelineIDRequest{
         CrmPipeline: &shared.CrmPipeline{
-            Active: unifiedgosdk.Bool(false),
-            CreatedAt: types.MustTimeFromString("2021-05-16T17:24:47.805Z"),
-            DealProbability: unifiedgosdk.Bool(false),
-            DisplayOrder: unifiedgosdk.Float64(5470.76),
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("West"),
             Raw: &shared.PropertyCrmPipelineRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-02-28T07:49:31.151Z"),
         },
-        ConnectionID: "optimizing",
+        ConnectionID: "back",
         ID: "<ID>",
     })
     if err != nil {

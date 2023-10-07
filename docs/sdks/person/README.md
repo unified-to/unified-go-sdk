@@ -32,10 +32,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Person.GetEnrichConnectionIDPerson(ctx, operations.GetEnrichConnectionIDPersonRequest{
         ConnectionID: "Iowa Account",
-        Email: unifiedgosdk.String("Jaiden_Weimann24@gmail.com"),
-        LinkedinURL: unifiedgosdk.String("paradigms integrate Creative"),
-        Name: unifiedgosdk.String("Investment"),
-        Twitter: unifiedgosdk.String("Hills"),
     })
     if err != nil {
         log.Fatal(err)

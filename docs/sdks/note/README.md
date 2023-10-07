@@ -78,7 +78,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -91,13 +90,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.GetTicketingConnectionIDNoteTicketID(ctx, operations.GetTicketingConnectionIDNoteTicketIDRequest{
         ConnectionID: "Account revolutionary",
-        Limit: unifiedgosdk.Float64(2310.88),
-        Offset: unifiedgosdk.Float64(6688.82),
-        Order: unifiedgosdk.String("AI"),
-        Query: unifiedgosdk.String("stanch Investor attitude"),
-        Sort: unifiedgosdk.String("Cotton"),
-        TicketID: "Handmade Kia",
-        UpdatedGte: types.MustTimeFromString("2022-05-26T17:12:11.333Z"),
+        TicketID: "Associate",
     })
     if err != nil {
         log.Fatal(err)
@@ -190,7 +183,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -203,17 +195,11 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.PatchTicketingConnectionIDNoteTicketIDID(ctx, operations.PatchTicketingConnectionIDNoteTicketIDIDRequest{
         TicketingNote: &shared.TicketingNote{
-            AgentID: unifiedgosdk.String("compress Oganesson"),
-            CreatedAt: types.MustTimeFromString("2022-02-16T08:13:19.991Z"),
-            CustomerID: unifiedgosdk.String("demystify"),
-            Description: unifiedgosdk.String("Fundamental demand-driven workforce"),
-            ID: unifiedgosdk.String("<ID>"),
             Raw: shared.PropertyTicketingNoteRaw{},
-            UpdatedAt: unifiedgosdk.String("Nissan"),
         },
-        ConnectionID: "Chicken",
+        ConnectionID: "compress Oganesson",
         ID: "<ID>",
-        TicketID: "frictionless convergence officia",
+        TicketID: "York Fantastic",
     })
     if err != nil {
         log.Fatal(err)
@@ -253,7 +239,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -266,16 +251,10 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.PostTicketingConnectionIDNoteTicketID(ctx, operations.PostTicketingConnectionIDNoteTicketIDRequest{
         TicketingNote: &shared.TicketingNote{
-            AgentID: unifiedgosdk.String("Plantation blue"),
-            CreatedAt: types.MustTimeFromString("2021-06-11T06:54:31.529Z"),
-            CustomerID: unifiedgosdk.String("asymmetric"),
-            Description: unifiedgosdk.String("Expanded intermediate attitude"),
-            ID: unifiedgosdk.String("<ID>"),
             Raw: shared.PropertyTicketingNoteRaw{},
-            UpdatedAt: unifiedgosdk.String("naturally"),
         },
-        ConnectionID: "Wagon Sulfur",
-        TicketID: "digital",
+        ConnectionID: "Plantation blue",
+        TicketID: "Ford",
     })
     if err != nil {
         log.Fatal(err)
@@ -315,7 +294,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -328,17 +306,11 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.PutTicketingConnectionIDNoteTicketIDID(ctx, operations.PutTicketingConnectionIDNoteTicketIDIDRequest{
         TicketingNote: &shared.TicketingNote{
-            AgentID: unifiedgosdk.String("SMTP Cis"),
-            CreatedAt: types.MustTimeFromString("2022-07-27T18:14:06.584Z"),
-            CustomerID: unifiedgosdk.String("Carolina"),
-            Description: unifiedgosdk.String("Integrated asymmetric strategy"),
-            ID: unifiedgosdk.String("<ID>"),
             Raw: shared.PropertyTicketingNoteRaw{},
-            UpdatedAt: unifiedgosdk.String("Northeast Morocco supposing"),
         },
-        ConnectionID: "DNS Fermium",
+        ConnectionID: "SMTP Cis",
         ID: "<ID>",
-        TicketID: "Southwest round",
+        TicketID: "East benchmark",
     })
     if err != nil {
         log.Fatal(err)

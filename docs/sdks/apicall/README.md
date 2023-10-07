@@ -21,7 +21,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -32,19 +31,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
-        ConnectionID: unifiedgosdk.String("delectus green Hybrid"),
-        CreatedLte: types.MustTimeFromString("2021-04-02T21:36:49.952Z"),
-        Env: unifiedgosdk.String("Fantastic Iodine indexing"),
-        Error: unifiedgosdk.Bool(false),
-        ExternalXref: unifiedgosdk.String("Music"),
-        IntegrationType: unifiedgosdk.String("Soft"),
-        Limit: unifiedgosdk.Float64(2390.64),
-        Offset: unifiedgosdk.Float64(3757.34),
-        Order: unifiedgosdk.String("mobile envisioneer"),
-        Sort: unifiedgosdk.String("North payment opposite"),
-        UpdatedGte: types.MustTimeFromString("2021-08-11T16:18:13.644Z"),
-    })
+    res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{})
     if err != nil {
         log.Fatal(err)
     }

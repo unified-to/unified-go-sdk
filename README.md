@@ -249,12 +249,12 @@ func main() {
 
 ### [Employee](docs/sdks/employee/README.md)
 
-* [DeleteHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#deletehrisconnectionidemployeeid) - Remove a Employee
-* [GetHrisConnectionIDEmployee](docs/sdks/employee/README.md#gethrisconnectionidemployee) - List all Employees
-* [GetHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#gethrisconnectionidemployeeid) - Retrieve a Employee
-* [PatchHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#patchhrisconnectionidemployeeid) - Update a Employee
-* [PostHrisConnectionIDEmployee](docs/sdks/employee/README.md#posthrisconnectionidemployee) - Create a Employee
-* [PutHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#puthrisconnectionidemployeeid) - Update a Employee
+* [DeleteHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#deletehrisconnectionidemployeeid) - Remove an employee
+* [GetHrisConnectionIDEmployee](docs/sdks/employee/README.md#gethrisconnectionidemployee) - List all employees
+* [GetHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#gethrisconnectionidemployeeid) - Retrieve an employee
+* [PatchHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#patchhrisconnectionidemployeeid) - Update an employee
+* [PostHrisConnectionIDEmployee](docs/sdks/employee/README.md#posthrisconnectionidemployee) - Create an employee
+* [PutHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#puthrisconnectionidemployeeid) - Update an employee
 
 ### [Enrich](docs/sdks/enrich/README.md)
 
@@ -281,27 +281,27 @@ func main() {
 
 ### [Group](docs/sdks/group/README.md)
 
-* [DeleteHrisConnectionIDGroupID](docs/sdks/group/README.md#deletehrisconnectionidgroupid) - Remove a Group
-* [GetHrisConnectionIDGroup](docs/sdks/group/README.md#gethrisconnectionidgroup) - List all Groups
-* [GetHrisConnectionIDGroupID](docs/sdks/group/README.md#gethrisconnectionidgroupid) - Retrieve a Group
-* [PatchHrisConnectionIDGroupID](docs/sdks/group/README.md#patchhrisconnectionidgroupid) - Update a Group
-* [PostHrisConnectionIDGroup](docs/sdks/group/README.md#posthrisconnectionidgroup) - Create a Group
-* [PutHrisConnectionIDGroupID](docs/sdks/group/README.md#puthrisconnectionidgroupid) - Update a Group
+* [DeleteHrisConnectionIDGroupID](docs/sdks/group/README.md#deletehrisconnectionidgroupid) - Remove a group
+* [GetHrisConnectionIDGroup](docs/sdks/group/README.md#gethrisconnectionidgroup) - List all groups
+* [GetHrisConnectionIDGroupID](docs/sdks/group/README.md#gethrisconnectionidgroupid) - Retrieve a group
+* [PatchHrisConnectionIDGroupID](docs/sdks/group/README.md#patchhrisconnectionidgroupid) - Update a group
+* [PostHrisConnectionIDGroup](docs/sdks/group/README.md#posthrisconnectionidgroup) - Create a group
+* [PutHrisConnectionIDGroupID](docs/sdks/group/README.md#puthrisconnectionidgroupid) - Update a group
 
 ### [Hris](docs/sdks/hris/README.md)
 
-* [DeleteHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#deletehrisconnectionidemployeeid) - Remove a Employee
-* [DeleteHrisConnectionIDGroupID](docs/sdks/hris/README.md#deletehrisconnectionidgroupid) - Remove a Group
-* [GetHrisConnectionIDEmployee](docs/sdks/hris/README.md#gethrisconnectionidemployee) - List all Employees
-* [GetHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#gethrisconnectionidemployeeid) - Retrieve a Employee
-* [GetHrisConnectionIDGroup](docs/sdks/hris/README.md#gethrisconnectionidgroup) - List all Groups
-* [GetHrisConnectionIDGroupID](docs/sdks/hris/README.md#gethrisconnectionidgroupid) - Retrieve a Group
-* [PatchHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#patchhrisconnectionidemployeeid) - Update a Employee
-* [PatchHrisConnectionIDGroupID](docs/sdks/hris/README.md#patchhrisconnectionidgroupid) - Update a Group
-* [PostHrisConnectionIDEmployee](docs/sdks/hris/README.md#posthrisconnectionidemployee) - Create a Employee
-* [PostHrisConnectionIDGroup](docs/sdks/hris/README.md#posthrisconnectionidgroup) - Create a Group
-* [PutHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#puthrisconnectionidemployeeid) - Update a Employee
-* [PutHrisConnectionIDGroupID](docs/sdks/hris/README.md#puthrisconnectionidgroupid) - Update a Group
+* [DeleteHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#deletehrisconnectionidemployeeid) - Remove an employee
+* [DeleteHrisConnectionIDGroupID](docs/sdks/hris/README.md#deletehrisconnectionidgroupid) - Remove a group
+* [GetHrisConnectionIDEmployee](docs/sdks/hris/README.md#gethrisconnectionidemployee) - List all employees
+* [GetHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#gethrisconnectionidemployeeid) - Retrieve an employee
+* [GetHrisConnectionIDGroup](docs/sdks/hris/README.md#gethrisconnectionidgroup) - List all groups
+* [GetHrisConnectionIDGroupID](docs/sdks/hris/README.md#gethrisconnectionidgroupid) - Retrieve a group
+* [PatchHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#patchhrisconnectionidemployeeid) - Update an employee
+* [PatchHrisConnectionIDGroupID](docs/sdks/hris/README.md#patchhrisconnectionidgroupid) - Update a group
+* [PostHrisConnectionIDEmployee](docs/sdks/hris/README.md#posthrisconnectionidemployee) - Create an employee
+* [PostHrisConnectionIDGroup](docs/sdks/hris/README.md#posthrisconnectionidgroup) - Create a group
+* [PutHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#puthrisconnectionidemployeeid) - Update an employee
+* [PutHrisConnectionIDGroupID](docs/sdks/hris/README.md#puthrisconnectionidgroupid) - Update a group
 
 ### [Integration](docs/sdks/integration/README.md)
 

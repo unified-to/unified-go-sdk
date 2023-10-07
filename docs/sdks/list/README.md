@@ -77,7 +77,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -90,12 +89,6 @@ func main() {
     ctx := context.Background()
     res, err := s.List.GetMartechConnectionIDList(ctx, operations.GetMartechConnectionIDListRequest{
         ConnectionID: "silver DeKalb",
-        Limit: unifiedgosdk.Float64(9799.48),
-        Offset: unifiedgosdk.Float64(4800.63),
-        Order: unifiedgosdk.String("Bedfordshire"),
-        Query: unifiedgosdk.String("Hip Pass"),
-        Sort: unifiedgosdk.String("since"),
-        UpdatedGte: types.MustTimeFromString("2022-03-26T19:40:00.770Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -187,7 +180,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -200,13 +192,9 @@ func main() {
     ctx := context.Background()
     res, err := s.List.PatchMartechConnectionIDListID(ctx, operations.PatchMartechConnectionIDListIDRequest{
         MarketingList: &shared.MarketingList{
-            CreatedAt: unifiedgosdk.String("Funk"),
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("lime Fiat"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustTimeFromString("2021-01-15T20:51:24.192Z"),
         },
-        ConnectionID: "male sheepishly Intelligent",
+        ConnectionID: "Funk",
         ID: "<ID>",
     })
     if err != nil {
@@ -247,7 +235,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -260,13 +247,9 @@ func main() {
     ctx := context.Background()
     res, err := s.List.PostMartechConnectionIDList(ctx, operations.PostMartechConnectionIDListRequest{
         MarketingList: &shared.MarketingList{
-            CreatedAt: unifiedgosdk.String("synergistic Transexual Steel"),
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("Virginia whoever Bicycle"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustTimeFromString("2023-04-27T09:56:39.589Z"),
         },
-        ConnectionID: "Hybrid",
+        ConnectionID: "synergistic Transexual Steel",
     })
     if err != nil {
         log.Fatal(err)
@@ -306,7 +289,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -319,13 +301,9 @@ func main() {
     ctx := context.Background()
     res, err := s.List.PutMartechConnectionIDListID(ctx, operations.PutMartechConnectionIDListIDRequest{
         MarketingList: &shared.MarketingList{
-            CreatedAt: unifiedgosdk.String("Underpass initiatives"),
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("North Progressive Assistant"),
             Raw: &shared.PropertyMarketingListRaw{},
-            UpdatedAt: types.MustTimeFromString("2023-10-03T22:31:39.028Z"),
         },
-        ConnectionID: "Security Legacy onto",
+        ConnectionID: "Underpass initiatives",
         ID: "<ID>",
     })
     if err != nil {

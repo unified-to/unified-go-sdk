@@ -77,7 +77,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -90,12 +89,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.GetCrmConnectionIDTeam(ctx, operations.GetCrmConnectionIDTeamRequest{
         ConnectionID: "bath Lamborghini",
-        Limit: unifiedgosdk.Float64(1042.31),
-        Offset: unifiedgosdk.Float64(1586.42),
-        Order: unifiedgosdk.String("Diesel Bike virtual"),
-        Query: unifiedgosdk.String("bakery"),
-        Sort: unifiedgosdk.String("Senior"),
-        UpdatedGte: types.MustTimeFromString("2021-12-04T23:56:00.028Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -187,7 +180,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -200,17 +192,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.PatchCrmConnectionIDTeamID(ctx, operations.PatchCrmConnectionIDTeamIDRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustTimeFromString("2021-05-20T12:47:48.451Z"),
-            Description: unifiedgosdk.String("Automated executive emulation"),
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("Internal experiences"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-05-22T09:41:53.599Z"),
             UserIds: []string{
-                "lumen",
+                "Arizona",
             },
         },
-        ConnectionID: "up Candace",
+        ConnectionID: "Internal experiences",
         ID: "<ID>",
     })
     if err != nil {
@@ -251,7 +238,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -264,17 +250,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.PostCrmConnectionIDTeam(ctx, operations.PostCrmConnectionIDTeamRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustTimeFromString("2022-02-12T08:57:03.070Z"),
-            Description: unifiedgosdk.String("Organic transitional portal"),
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("male bandwidth"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-12-29T15:50:04.365Z"),
             UserIds: []string{
-                "meter",
+                "local",
             },
         },
-        ConnectionID: "Guaynabo AGP East",
+        ConnectionID: "pascal male bandwidth",
     })
     if err != nil {
         log.Fatal(err)
@@ -314,7 +295,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -327,17 +307,12 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.PutCrmConnectionIDTeamID(ctx, operations.PutCrmConnectionIDTeamIDRequest{
         CrmTeam: &shared.CrmTeam{
-            CreatedAt: types.MustTimeFromString("2023-08-14T23:28:53.515Z"),
-            Description: unifiedgosdk.String("Inverse multi-tasking task-force"),
-            ID: unifiedgosdk.String("<ID>"),
-            Name: unifiedgosdk.String("Indonesia Orchestrator Division"),
             Raw: &shared.PropertyCrmTeamRaw{},
-            UpdatedAt: types.MustTimeFromString("2022-10-23T23:13:25.973Z"),
             UserIds: []string{
-                "thoroughly",
+                "immense",
             },
         },
-        ConnectionID: "delectus",
+        ConnectionID: "duh Indonesia",
         ID: "<ID>",
     })
     if err != nil {

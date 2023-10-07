@@ -78,7 +78,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -91,13 +90,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.GetMartechConnectionIDListIDMember(ctx, operations.GetMartechConnectionIDListIDMemberRequest{
         ConnectionID: "fuchsia economics",
-        Limit: unifiedgosdk.Float64(3725.92),
-        ListID: "Southwest",
-        Offset: unifiedgosdk.Float64(1114.27),
-        Order: unifiedgosdk.String("emulation"),
-        Query: unifiedgosdk.String("male male"),
-        Sort: unifiedgosdk.String("Arizona Oklahoma Land"),
-        UpdatedGte: types.MustTimeFromString("2021-03-19T13:12:48.332Z"),
+        ListID: "Bronze cackle",
     })
     if err != nil {
         log.Fatal(err)
@@ -190,7 +183,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -203,27 +195,22 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.PatchMartechConnectionIDListIDMemberID(ctx, operations.PatchMartechConnectionIDListIDMemberIDRequest{
         MarketingMember: &shared.MarketingMember{
-            CreatedAt: types.MustTimeFromString("2022-06-21T07:15:04.418Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
-                    Email: "Zula_Bogan76@hotmail.com",
-                    Type: shared.MarketingEmailTypeHome.ToPointer(),
+                    Email: "Otto93@yahoo.com",
                 },
             },
-            ID: unifiedgosdk.String("<ID>"),
             ListIds: []string{
-                "gadzooks",
+                "Accounts",
             },
-            Name: unifiedgosdk.String("Haven Hatchback"),
             Raw: &shared.PropertyMarketingMemberRaw{},
             Tags: []string{
-                "mutiny",
+                "capacitor",
             },
-            UpdatedAt: types.MustTimeFromString("2021-08-13T23:04:27.910Z"),
         },
-        ConnectionID: "female",
+        ConnectionID: "yowza online",
         ID: "<ID>",
-        ListID: "yellow overriding Rock",
+        ListID: "to XSS",
     })
     if err != nil {
         log.Fatal(err)
@@ -263,7 +250,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -276,26 +262,21 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.PostMartechConnectionIDListIDMember(ctx, operations.PostMartechConnectionIDListIDMemberRequest{
         MarketingMember: &shared.MarketingMember{
-            CreatedAt: types.MustTimeFromString("2022-12-27T02:49:51.488Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
-                    Email: "Esta.Dach@hotmail.com",
-                    Type: shared.MarketingEmailTypeOther.ToPointer(),
+                    Email: "Tomas37@yahoo.com",
                 },
             },
-            ID: unifiedgosdk.String("<ID>"),
             ListIds: []string{
-                "virtual",
+                "drive",
             },
-            Name: unifiedgosdk.String("dolorum Wooden Granite"),
             Raw: &shared.PropertyMarketingMemberRaw{},
             Tags: []string{
-                "Road",
+                "virtual",
             },
-            UpdatedAt: types.MustTimeFromString("2021-06-09T19:47:01.060Z"),
         },
-        ConnectionID: "Pennsylvania leverage sheath",
-        ListID: "parse exercitationem",
+        ConnectionID: "dolorum Wooden Granite",
+        ListID: "Green Convertible newton",
     })
     if err != nil {
         log.Fatal(err)
@@ -335,7 +316,6 @@ import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 )
 
 func main() {
@@ -348,27 +328,22 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.PutMartechConnectionIDListIDMemberID(ctx, operations.PutMartechConnectionIDListIDMemberIDRequest{
         MarketingMember: &shared.MarketingMember{
-            CreatedAt: types.MustTimeFromString("2023-09-24T05:00:50.743Z"),
             Emails: []shared.MarketingEmail{
                 shared.MarketingEmail{
-                    Email: "Lorenz_Kautzer@hotmail.com",
-                    Type: shared.MarketingEmailTypeHome.ToPointer(),
+                    Email: "Mikayla_Nader@hotmail.com",
                 },
             },
-            ID: unifiedgosdk.String("<ID>"),
             ListIds: []string{
-                "SMS",
+                "octave",
             },
-            Name: unifiedgosdk.String("East platforms"),
             Raw: &shared.PropertyMarketingMemberRaw{},
             Tags: []string{
-                "Estonia",
+                "SMS",
             },
-            UpdatedAt: types.MustTimeFromString("2023-01-20T05:09:32.775Z"),
         },
-        ConnectionID: "following quia Intelligent",
+        ConnectionID: "East platforms",
         ID: "<ID>",
-        ListID: "Cab",
+        ListID: "Frozen",
     })
     if err != nil {
         log.Fatal(err)

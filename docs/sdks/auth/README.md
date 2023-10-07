@@ -32,19 +32,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Auth.GetUnifiedIntegrationAuthWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedgosdk.String("Algerian"),
-        ExternalXref: unifiedgosdk.String("Cambridgeshire Surinam"),
-        FailureRedirect: unifiedgosdk.String("Designer Drive"),
-        IntegrationType: "program Home",
-        Lang: unifiedgosdk.String("Plastic program"),
-        Redirect: unifiedgosdk.Bool(false),
-        Scopes: []GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes{
-            operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesCrmFileRead,
+        IntegrationType: "Algerian",
+        Scopes: []operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes{
+            operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopesMartechMemberWrite,
         },
-        State: unifiedgosdk.String("Functionality Product"),
-        Subdomain: unifiedgosdk.String("payment Developer Dynamic"),
-        SuccessRedirect: unifiedgosdk.String("Northeast"),
-        WorkspaceID: "duh empower Kwanza",
+        WorkspaceID: "hound",
     })
     if err != nil {
         log.Fatal(err)
@@ -95,13 +87,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Auth.GetUnifiedIntegrationLoginWorkspaceIDIntegrationType(ctx, operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest{
-        Env: unifiedgosdk.String("Rubber"),
-        FailureRedirect: unifiedgosdk.String("gold Cambridgeshire"),
-        IntegrationType: "Plastic services pixel",
-        Redirect: unifiedgosdk.Bool(false),
-        State: unifiedgosdk.String("Volkswagen Southwest"),
-        SuccessRedirect: unifiedgosdk.String("drive integrated Bicycle"),
-        WorkspaceID: "Fantastic recontextualize Frozen",
+        IntegrationType: "Rubber",
+        WorkspaceID: "gold Cambridgeshire",
     })
     if err != nil {
         log.Fatal(err)
