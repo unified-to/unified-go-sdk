@@ -8,6 +8,7 @@ import (
 )
 
 type PostAtsConnectionIDApplicationRequest struct {
+	// An application is an association object between a candidate and a job
 	AtsApplication *shared.AtsApplication `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

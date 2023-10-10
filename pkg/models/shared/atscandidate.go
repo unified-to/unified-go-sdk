@@ -7,7 +7,9 @@ import (
 	"time"
 )
 
+// AtsCandidate - A candidate looking for work
 type AtsCandidate struct {
+	// Unified address object
 	Address     *PropertyAtsCandidateAddress `json:"address,omitempty"`
 	CompanyName *string                      `json:"company_name,omitempty"`
 	CreatedAt   *time.Time                   `json:"created_at,omitempty"`

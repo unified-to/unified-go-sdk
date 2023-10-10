@@ -1,11 +1,13 @@
 # AtsCandidate
 
+A candidate looking for work
+
 
 ## Fields
 
 | Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `Address`                                                                          | [*PropertyAtsCandidateAddress](../../models/shared/propertyatscandidateaddress.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Address`                                                                          | [*PropertyAtsCandidateAddress](../../models/shared/propertyatscandidateaddress.md) | :heavy_minus_sign:                                                                 | Unified address object                                                             |
 | `CompanyName`                                                                      | **string*                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
 | `CreatedAt`                                                                        | [*time.Time](https://pkg.go.dev/time#Time)                                         | :heavy_minus_sign:                                                                 | N/A                                                                                |
 | `Emails`                                                                           | [][AtsEmail](../../models/shared/atsemail.md)                                      | :heavy_minus_sign:                                                                 | N/A                                                                                |

@@ -47,9 +47,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -99,9 +97,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -151,9 +147,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -204,9 +198,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -256,9 +248,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -307,9 +297,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -359,9 +347,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -410,9 +396,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -462,9 +446,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -514,9 +496,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -567,9 +547,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -618,9 +596,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -670,9 +646,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -735,9 +709,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -803,9 +775,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -859,9 +829,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -917,9 +885,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -981,9 +947,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -1048,9 +1012,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -1103,9 +1065,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -1160,9 +1120,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -1225,9 +1183,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -1293,9 +1249,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()
@@ -1349,9 +1303,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(shared.Security{
-            Jwt: "",
-        }),
+        unifiedgosdk.WithSecurity(""),
     )
 
     ctx := context.Background()

@@ -37,6 +37,7 @@ func (e *AtsEmailType) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// AtsEmail - An unified email object
 type AtsEmail struct {
 	Email string        `json:"email"`
 	Type  *AtsEmailType `json:"type,omitempty"`

@@ -66,6 +66,7 @@ func (e *AtsApplicationStatus) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// AtsApplication - An application is an association object between a candidate and a job
 type AtsApplication struct {
 	AppliedAt      *time.Time                 `json:"applied_at,omitempty"`
 	CandidateID    *string                    `json:"candidate_id,omitempty"`

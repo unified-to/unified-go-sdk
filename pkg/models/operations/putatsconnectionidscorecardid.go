@@ -8,6 +8,7 @@ import (
 )
 
 type PutAtsConnectionIDScorecardIDRequest struct {
+	// A scorecard is feedback/assessment of a candidate's interview
 	AtsScorecard *shared.AtsScorecard `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

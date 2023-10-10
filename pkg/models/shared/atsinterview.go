@@ -39,6 +39,7 @@ func (e *AtsInterviewStatus) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// AtsInterview - An interview between a candidate for a specific job
 type AtsInterview struct {
 	ApplicationID     *string                  `json:"application_id,omitempty"`
 	CandidateID       *string                  `json:"candidate_id,omitempty"`

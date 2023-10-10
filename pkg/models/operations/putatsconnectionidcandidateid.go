@@ -8,6 +8,7 @@ import (
 )
 
 type PutAtsConnectionIDCandidateIDRequest struct {
+	// A candidate looking for work
 	AtsCandidate *shared.AtsCandidate `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

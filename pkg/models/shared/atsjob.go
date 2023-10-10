@@ -96,6 +96,7 @@ func (e *AtsJobStatus) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// AtsJob - An opened position/job
 type AtsJob struct {
 	Addresses        []AtsAddress          `json:"addresses,omitempty"`
 	ClosedAt         *time.Time            `json:"closed_at,omitempty"`
