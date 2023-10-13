@@ -1,0 +1,16 @@
+# ListAtsApplicationsRequest
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `CandidateID`                                                            | **string*                                                                | :heavy_minus_sign:                                                       | The candidate ID to filter results                                       |
+| `ConnectionID`                                                           | *string*                                                                 | :heavy_check_mark:                                                       | ID of the connection                                                     |
+| `JobID`                                                                  | **string*                                                                | :heavy_minus_sign:                                                       | The job ID to filter results                                             |
+| `Limit`                                                                  | **float64*                                                               | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Offset`                                                                 | **float64*                                                               | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Order`                                                                  | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Query`                                                                  | **string*                                                                | :heavy_minus_sign:                                                       | Query string to search. eg. email address or name                        |
+| `Sort`                                                                   | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `UpdatedGte`                                                             | [*time.Time](https://pkg.go.dev/time#Time)                               | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |

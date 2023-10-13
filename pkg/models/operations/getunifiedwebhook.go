@@ -4,81 +4,19 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type GetUnifiedWebhookRequest struct {
-	Env   *string  `queryParam:"style=form,explode=true,name=env"`
-	Limit *float64 `queryParam:"style=form,explode=true,name=limit"`
-	// Filter the results for webhooks for only this object
-	Object *string  `queryParam:"style=form,explode=true,name=object"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	Sort   *string  `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	// ID of the Webhook
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (g GetUnifiedWebhookRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(g, "", false)
-}
-
-func (g *GetUnifiedWebhookRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &g, "", false, false); err != nil {
-		return err
-	}
-	return nil
-}
-
-func (o *GetUnifiedWebhookRequest) GetEnv() *string {
+func (o *GetUnifiedWebhookRequest) GetID() string {
 	if o == nil {
-		return nil
+		return ""
 	}
-	return o.Env
-}
-
-func (o *GetUnifiedWebhookRequest) GetLimit() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Limit
-}
-
-func (o *GetUnifiedWebhookRequest) GetObject() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Object
-}
-
-func (o *GetUnifiedWebhookRequest) GetOffset() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Offset
-}
-
-func (o *GetUnifiedWebhookRequest) GetOrder() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Order
-}
-
-func (o *GetUnifiedWebhookRequest) GetSort() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Sort
-}
-
-func (o *GetUnifiedWebhookRequest) GetUpdatedGte() *time.Time {
-	if o == nil {
-		return nil
-	}
-	return o.UpdatedGte
+	return o.ID
 }
 
 type GetUnifiedWebhookResponse struct {
@@ -89,7 +27,7 @@ type GetUnifiedWebhookResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	Webhooks []shared.Webhook
+	Webhook *shared.Webhook
 }
 
 func (o *GetUnifiedWebhookResponse) GetContentType() string {
@@ -113,9 +51,9 @@ func (o *GetUnifiedWebhookResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *GetUnifiedWebhookResponse) GetWebhooks() []shared.Webhook {
+func (o *GetUnifiedWebhookResponse) GetWebhook() *shared.Webhook {
 	if o == nil {
 		return nil
 	}
-	return o.Webhooks
+	return o.Webhook
 }

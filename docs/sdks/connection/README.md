@@ -3,230 +3,14 @@
 
 ### Available Operations
 
-* [DeleteUnifiedConnectionID](#deleteunifiedconnectionid) - Remove connection
-* [GetUnifiedConnection](#getunifiedconnection) - List all connections
-* [GetUnifiedConnectionID](#getunifiedconnectionid) - Retrieve connection
-* [PatchUnifiedConnectionID](#patchunifiedconnectionid) - Update connection
-* [PostUnifiedConnection](#postunifiedconnection) - Create connection
-* [PutUnifiedConnectionID](#putunifiedconnectionid) - Update connection
+* [CreateUnifiedConnection](#createunifiedconnection) - Create connection
+* [GetUnifiedConnection](#getunifiedconnection) - Retrieve connection
+* [ListUnifiedConnections](#listunifiedconnections) - List all connections
+* [PatchUnifiedConnection](#patchunifiedconnection) - Update connection
+* [RemoveUnifiedConnection](#removeunifiedconnection) - Remove connection
+* [UpdateUnifiedConnection](#updateunifiedconnection) - Update connection
 
-## DeleteUnifiedConnectionID
-
-Remove connection
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Connection.DeleteUnifiedConnectionID(ctx, operations.DeleteUnifiedConnectionIDRequest{
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.StatusCode == http.StatusOK {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.DeleteUnifiedConnectionIDRequest](../../models/operations/deleteunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-
-### Response
-
-**[*operations.DeleteUnifiedConnectionIDResponse](../../models/operations/deleteunifiedconnectionidresponse.md), error**
-
-
-## GetUnifiedConnection
-
-List all connections
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Connection.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
-        Categories: []operations.GetUnifiedConnectionCategories{
-            operations.GetUnifiedConnectionCategoriesAts,
-        },
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.Connections != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.GetUnifiedConnectionRequest](../../models/operations/getunifiedconnectionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-
-### Response
-
-**[*operations.GetUnifiedConnectionResponse](../../models/operations/getunifiedconnectionresponse.md), error**
-
-
-## GetUnifiedConnectionID
-
-Retrieve connection
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Connection.GetUnifiedConnectionID(ctx, operations.GetUnifiedConnectionIDRequest{
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.Connection != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetUnifiedConnectionIDRequest](../../models/operations/getunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-
-### Response
-
-**[*operations.GetUnifiedConnectionIDResponse](../../models/operations/getunifiedconnectionidresponse.md), error**
-
-
-## PatchUnifiedConnectionID
-
-Update connection
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Connection.PatchUnifiedConnectionID(ctx, operations.PatchUnifiedConnectionIDRequest{
-        Connection: &shared.Connection{
-            Auth: &shared.PropertyConnectionAuth{
-                Emails: []string{
-                    "Executive",
-                },
-                Meta: &shared.PropertyPropertyConnectionAuthMeta{},
-                OtherAuthInfo: []string{
-                    "Cupertino",
-                },
-            },
-            Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesMartech,
-            },
-            IntegrationType: "India",
-            Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsAtsApplicationWrite,
-            },
-        },
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.Connection != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PatchUnifiedConnectionIDRequest](../../models/operations/patchunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-
-### Response
-
-**[*operations.PatchUnifiedConnectionIDResponse](../../models/operations/patchunifiedconnectionidresponse.md), error**
-
-
-## PostUnifiedConnection
+## CreateUnifiedConnection
 
 Create connection
 
@@ -248,22 +32,22 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Connection.PostUnifiedConnection(ctx, &shared.Connection{
+    res, err := s.Connection.CreateUnifiedConnection(ctx, &shared.Connection{
         Auth: &shared.PropertyConnectionAuth{
             Emails: []string{
-                "RSS",
+                "likewise",
             },
             Meta: &shared.PropertyPropertyConnectionAuthMeta{},
             OtherAuthInfo: []string{
-                "locate",
+                "Rwanda",
             },
         },
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesCrm,
         },
-        IntegrationType: "plus pace global",
+        IntegrationType: "Maserati",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsTicketingAgentWrite,
+            shared.PropertyConnectionPermissionsCrmLeadWrite,
         },
     })
     if err != nil {
@@ -286,10 +70,110 @@ func main() {
 
 ### Response
 
-**[*operations.PostUnifiedConnectionResponse](../../models/operations/postunifiedconnectionresponse.md), error**
+**[*operations.CreateUnifiedConnectionResponse](../../models/operations/createunifiedconnectionresponse.md), error**
 
 
-## PutUnifiedConnectionID
+## GetUnifiedConnection
+
+Retrieve connection
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Connection.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.Connection != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.GetUnifiedConnectionRequest](../../models/operations/getunifiedconnectionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+
+### Response
+
+**[*operations.GetUnifiedConnectionResponse](../../models/operations/getunifiedconnectionresponse.md), error**
+
+
+## ListUnifiedConnections
+
+List all connections
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Connection.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{
+        Categories: []operations.ListUnifiedConnectionsCategories{
+            operations.ListUnifiedConnectionsCategoriesCrm,
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.Connections != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.ListUnifiedConnectionsRequest](../../models/operations/listunifiedconnectionsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+
+### Response
+
+**[*operations.ListUnifiedConnectionsResponse](../../models/operations/listunifiedconnectionsresponse.md), error**
+
+
+## PatchUnifiedConnection
 
 Update connection
 
@@ -312,21 +196,21 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Connection.PutUnifiedConnectionID(ctx, operations.PutUnifiedConnectionIDRequest{
+    res, err := s.Connection.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
         Connection: &shared.Connection{
             Auth: &shared.PropertyConnectionAuth{
                 Emails: []string{
-                    "Assurance",
+                    "International",
                 },
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
                 OtherAuthInfo: []string{
-                    "Avon",
+                    "square",
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesMartech,
+                shared.PropertyConnectionCategoriesAts,
             },
-            IntegrationType: "Web",
+            IntegrationType: "Montana",
             Permissions: []shared.PropertyConnectionPermissions{
                 shared.PropertyConnectionPermissionsCrmFileRead,
             },
@@ -348,10 +232,126 @@ func main() {
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.PutUnifiedConnectionIDRequest](../../models/operations/putunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.PatchUnifiedConnectionRequest](../../models/operations/patchunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[*operations.PutUnifiedConnectionIDResponse](../../models/operations/putunifiedconnectionidresponse.md), error**
+**[*operations.PatchUnifiedConnectionResponse](../../models/operations/patchunifiedconnectionresponse.md), error**
+
+
+## RemoveUnifiedConnection
+
+Remove connection
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Connection.RemoveUnifiedConnection(ctx, operations.RemoveUnifiedConnectionRequest{
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.StatusCode == http.StatusOK {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.RemoveUnifiedConnectionRequest](../../models/operations/removeunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[*operations.RemoveUnifiedConnectionResponse](../../models/operations/removeunifiedconnectionresponse.md), error**
+
+
+## UpdateUnifiedConnection
+
+Update connection
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Connection.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
+        Connection: &shared.Connection{
+            Auth: &shared.PropertyConnectionAuth{
+                Emails: []string{
+                    "tan",
+                },
+                Meta: &shared.PropertyPropertyConnectionAuthMeta{},
+                OtherAuthInfo: []string{
+                    "revitalize",
+                },
+            },
+            Categories: []shared.PropertyConnectionCategories{
+                shared.PropertyConnectionCategoriesCrm,
+            },
+            IntegrationType: "from",
+            Permissions: []shared.PropertyConnectionPermissions{
+                shared.PropertyConnectionPermissionsAtsApplicationRead,
+            },
+        },
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.Connection != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.UpdateUnifiedConnectionRequest](../../models/operations/updateunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[*operations.UpdateUnifiedConnectionResponse](../../models/operations/updateunifiedconnectionresponse.md), error**
 

@@ -24,15 +24,83 @@ func newTeam(sdkConfig sdkConfiguration) *team {
 	}
 }
 
-// DeleteCrmConnectionIDTeamID - Remove a team
-func (s *team) DeleteCrmConnectionIDTeamID(ctx context.Context, request operations.DeleteCrmConnectionIDTeamIDRequest) (*operations.DeleteCrmConnectionIDTeamIDResponse, error) {
+// CreateCrmTeam - Create a team
+func (s *team) CreateCrmTeam(ctx context.Context, request operations.CreateCrmTeamRequest) (*operations.CreateCrmTeamResponse, error) {
+	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/team", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmTeam", "json", `request:"mediaType=application/json"`)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.sdkConfiguration.SecurityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateCrmTeamResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out shared.CrmTeam
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.CrmTeam = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+}
+
+// GetCrmTeam - Retrieve a team
+func (s *team) GetCrmTeam(ctx context.Context, request operations.GetCrmTeamRequest) (*operations.GetCrmTeamResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/team/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
@@ -51,7 +119,7 @@ func (s *team) DeleteCrmConnectionIDTeamID(ctx context.Context, request operatio
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.DeleteCrmConnectionIDTeamIDResponse{
+	res := &operations.GetCrmTeamResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -64,25 +132,29 @@ func (s *team) DeleteCrmConnectionIDTeamID(ctx context.Context, request operatio
 	httpRes.Body.Close()
 	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out shared.CrmTeam
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.CrmTeam = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
+		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			out := string(rawBody)
-			res.DeleteCrmConnectionIDTeamIDDefaultApplicationJSONString = &out
-		default:
-			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
-		}
 	}
 
 	return res, nil
 }
 
-// GetCrmConnectionIDTeam - List all teams
-func (s *team) GetCrmConnectionIDTeam(ctx context.Context, request operations.GetCrmConnectionIDTeamRequest) (*operations.GetCrmConnectionIDTeamResponse, error) {
+// ListCrmTeams - List all teams
+func (s *team) ListCrmTeams(ctx context.Context, request operations.ListCrmTeamsRequest) (*operations.ListCrmTeamsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/team", request, nil)
 	if err != nil {
@@ -112,7 +184,7 @@ func (s *team) GetCrmConnectionIDTeam(ctx context.Context, request operations.Ge
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetCrmConnectionIDTeamResponse{
+	res := &operations.ListCrmTeamsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -146,69 +218,8 @@ func (s *team) GetCrmConnectionIDTeam(ctx context.Context, request operations.Ge
 	return res, nil
 }
 
-// GetCrmConnectionIDTeamID - Retrieve a team
-func (s *team) GetCrmConnectionIDTeamID(ctx context.Context, request operations.GetCrmConnectionIDTeamIDRequest) (*operations.GetCrmConnectionIDTeamIDResponse, error) {
-	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/team/{id}", request, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error generating URL: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-	req.Header.Set("Accept", "application/json")
-	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
-
-	client := s.sdkConfiguration.SecurityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetCrmConnectionIDTeamIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-
-	rawBody, err := io.ReadAll(httpRes.Body)
-	if err != nil {
-		return nil, fmt.Errorf("error reading response body: %w", err)
-	}
-	httpRes.Body.Close()
-	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.CrmTeam
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			res.CrmTeam = &out
-		default:
-			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	}
-
-	return res, nil
-}
-
-// PatchCrmConnectionIDTeamID - Update a team
-func (s *team) PatchCrmConnectionIDTeamID(ctx context.Context, request operations.PatchCrmConnectionIDTeamIDRequest) (*operations.PatchCrmConnectionIDTeamIDResponse, error) {
+// PatchCrmTeam - Update a team
+func (s *team) PatchCrmTeam(ctx context.Context, request operations.PatchCrmTeamRequest) (*operations.PatchCrmTeamResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/team/{id}", request, nil)
 	if err != nil {
@@ -241,7 +252,7 @@ func (s *team) PatchCrmConnectionIDTeamID(ctx context.Context, request operation
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PatchCrmConnectionIDTeamIDResponse{
+	res := &operations.PatchCrmTeamResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -275,27 +286,20 @@ func (s *team) PatchCrmConnectionIDTeamID(ctx context.Context, request operation
 	return res, nil
 }
 
-// PostCrmConnectionIDTeam - Create a team
-func (s *team) PostCrmConnectionIDTeam(ctx context.Context, request operations.PostCrmConnectionIDTeamRequest) (*operations.PostCrmConnectionIDTeamResponse, error) {
+// RemoveCrmTeam - Remove a team
+func (s *team) RemoveCrmTeam(ctx context.Context, request operations.RemoveCrmTeamRequest) (*operations.RemoveCrmTeamResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/team", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/team/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmTeam", "json", `request:"mediaType=application/json"`)
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
-
-	req.Header.Set("Content-Type", reqContentType)
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -309,7 +313,7 @@ func (s *team) PostCrmConnectionIDTeam(ctx context.Context, request operations.P
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostCrmConnectionIDTeamResponse{
+	res := &operations.RemoveCrmTeamResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -322,29 +326,25 @@ func (s *team) PostCrmConnectionIDTeam(ctx context.Context, request operations.P
 	httpRes.Body.Close()
 	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.CrmTeam
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			res.CrmTeam = &out
-		default:
-			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
-		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			out := string(rawBody)
+			res.RemoveCrmTeamDefaultApplicationJSONString = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
+		}
 	}
 
 	return res, nil
 }
 
-// PutCrmConnectionIDTeamID - Update a team
-func (s *team) PutCrmConnectionIDTeamID(ctx context.Context, request operations.PutCrmConnectionIDTeamIDRequest) (*operations.PutCrmConnectionIDTeamIDResponse, error) {
+// UpdateCrmTeam - Update a team
+func (s *team) UpdateCrmTeam(ctx context.Context, request operations.UpdateCrmTeamRequest) (*operations.UpdateCrmTeamResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/team/{id}", request, nil)
 	if err != nil {
@@ -377,7 +377,7 @@ func (s *team) PutCrmConnectionIDTeamID(ctx context.Context, request operations.
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PutCrmConnectionIDTeamIDResponse{
+	res := &operations.UpdateCrmTeamResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

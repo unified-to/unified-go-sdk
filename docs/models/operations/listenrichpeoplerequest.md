@@ -1,0 +1,12 @@
+# ListEnrichPeopleRequest
+
+
+## Fields
+
+| Field                                      | Type                                       | Required                                   | Description                                |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| `ConnectionID`                             | *string*                                   | :heavy_check_mark:                         | ID of the connection                       |
+| `Email`                                    | **string*                                  | :heavy_minus_sign:                         | The email of the person to search          |
+| `LinkedinURL`                              | **string*                                  | :heavy_minus_sign:                         | The LinkedIn URL of the person to search   |
+| `Name`                                     | **string*                                  | :heavy_minus_sign:                         | The name of the person to search           |
+| `Twitter`                                  | **string*                                  | :heavy_minus_sign:                         | The twitter handle of the person to search |

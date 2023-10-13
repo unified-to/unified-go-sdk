@@ -33,15 +33,27 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Agent.DeleteTicketingConnectionIDAgentID(ctx, operations.DeleteTicketingConnectionIDAgentIDRequest{
-		ConnectionID: "navigate",
-		ID:           "<ID>",
+	res, err := s.Agent.CreateTicketingAgent(ctx, operations.CreateTicketingAgentRequest{
+		TicketingAgent: &shared.TicketingAgent{
+			Emails: []shared.TicketingEmail{
+				shared.TicketingEmail{
+					Email: "Paolo.Cole8@yahoo.com",
+				},
+			},
+			Raw: shared.PropertyTicketingAgentRaw{},
+			Telephones: []shared.TicketingTelephone{
+				shared.TicketingTelephone{
+					Telephone: "scarcely Soap navigating",
+				},
+			},
+		},
+		ConnectionID: "smoothly Algeria",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.StatusCode == http.StatusOK {
+	if res.TicketingAgent != nil {
 		// handle response
 	}
 }
@@ -55,454 +67,444 @@ func main() {
 
 ### [Agent](docs/sdks/agent/README.md)
 
-* [DeleteTicketingConnectionIDAgentID](docs/sdks/agent/README.md#deleteticketingconnectionidagentid) - Remove a agent
-* [GetTicketingConnectionIDAgent](docs/sdks/agent/README.md#getticketingconnectionidagent) - List all agents
-* [GetTicketingConnectionIDAgentID](docs/sdks/agent/README.md#getticketingconnectionidagentid) - Retrieve a agent
-* [GetUcConnectionIDAgent](docs/sdks/agent/README.md#getucconnectionidagent) - List all agents
-* [PatchTicketingConnectionIDAgentID](docs/sdks/agent/README.md#patchticketingconnectionidagentid) - Update a agent
-* [PostTicketingConnectionIDAgent](docs/sdks/agent/README.md#postticketingconnectionidagent) - Create a agent
-* [PutTicketingConnectionIDAgentID](docs/sdks/agent/README.md#putticketingconnectionidagentid) - Update a agent
+* [CreateTicketingAgent](docs/sdks/agent/README.md#createticketingagent) - Create a agent
+* [GetTicketingAgent](docs/sdks/agent/README.md#getticketingagent) - Retrieve a agent
+* [ListTicketingAgents](docs/sdks/agent/README.md#listticketingagents) - List all agents
+* [ListUcAgents](docs/sdks/agent/README.md#listucagents) - List all agents
+* [PatchTicketingAgent](docs/sdks/agent/README.md#patchticketingagent) - Update a agent
+* [RemoveTicketingAgent](docs/sdks/agent/README.md#removeticketingagent) - Remove a agent
+* [UpdateTicketingAgent](docs/sdks/agent/README.md#updateticketingagent) - Update a agent
 
 ### [Apicall](docs/sdks/apicall/README.md)
 
-* [GetUnifiedApicall](docs/sdks/apicall/README.md#getunifiedapicall) - Returns API Calls
-* [GetUnifiedApicallID](docs/sdks/apicall/README.md#getunifiedapicallid) - Retrieve specific API Call by its ID
+* [GetUnifiedApicall](docs/sdks/apicall/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
+* [ListUnifiedApicalls](docs/sdks/apicall/README.md#listunifiedapicalls) - Returns API Calls
 
 ### [Application](docs/sdks/application/README.md)
 
-* [DeleteAtsConnectionIDApplicationID](docs/sdks/application/README.md#deleteatsconnectionidapplicationid) - Remove an application
-* [GetAtsConnectionIDApplication](docs/sdks/application/README.md#getatsconnectionidapplication) - List all applications
-* [GetAtsConnectionIDApplicationID](docs/sdks/application/README.md#getatsconnectionidapplicationid) - Retrieve an application
-* [PatchAtsConnectionIDApplicationID](docs/sdks/application/README.md#patchatsconnectionidapplicationid) - Update an application
-* [PostAtsConnectionIDApplication](docs/sdks/application/README.md#postatsconnectionidapplication) - Create an application
-* [PutAtsConnectionIDApplicationID](docs/sdks/application/README.md#putatsconnectionidapplicationid) - Update an application
+* [CreateAtsApplication](docs/sdks/application/README.md#createatsapplication) - Create an application
+* [GetAtsApplication](docs/sdks/application/README.md#getatsapplication) - Retrieve an application
+* [ListAtsApplications](docs/sdks/application/README.md#listatsapplications) - List all applications
+* [PatchAtsApplication](docs/sdks/application/README.md#patchatsapplication) - Update an application
+* [RemoveAtsApplication](docs/sdks/application/README.md#removeatsapplication) - Remove an application
+* [UpdateAtsApplication](docs/sdks/application/README.md#updateatsapplication) - Update an application
 
 ### [Ats](docs/sdks/ats/README.md)
 
-* [DeleteAtsConnectionIDApplicationID](docs/sdks/ats/README.md#deleteatsconnectionidapplicationid) - Remove an application
-* [DeleteAtsConnectionIDCandidateID](docs/sdks/ats/README.md#deleteatsconnectionidcandidateid) - Remove a candidate
-* [DeleteAtsConnectionIDInterviewID](docs/sdks/ats/README.md#deleteatsconnectionidinterviewid) - Remove a interview
-* [DeleteAtsConnectionIDJobID](docs/sdks/ats/README.md#deleteatsconnectionidjobid) - Remove a job
-* [DeleteAtsConnectionIDScorecardID](docs/sdks/ats/README.md#deleteatsconnectionidscorecardid) - Remove a scorecard
-* [GetAtsConnectionIDApplication](docs/sdks/ats/README.md#getatsconnectionidapplication) - List all applications
-* [GetAtsConnectionIDApplicationID](docs/sdks/ats/README.md#getatsconnectionidapplicationid) - Retrieve an application
-* [GetAtsConnectionIDCandidate](docs/sdks/ats/README.md#getatsconnectionidcandidate) - List all candidates
-* [GetAtsConnectionIDCandidateID](docs/sdks/ats/README.md#getatsconnectionidcandidateid) - Retrieve a candidate
-* [GetAtsConnectionIDInterview](docs/sdks/ats/README.md#getatsconnectionidinterview) - List all interviews
-* [GetAtsConnectionIDInterviewID](docs/sdks/ats/README.md#getatsconnectionidinterviewid) - Retrieve a interview
-* [GetAtsConnectionIDJob](docs/sdks/ats/README.md#getatsconnectionidjob) - List all jobs
-* [GetAtsConnectionIDJobID](docs/sdks/ats/README.md#getatsconnectionidjobid) - Retrieve a job
-* [GetAtsConnectionIDScorecard](docs/sdks/ats/README.md#getatsconnectionidscorecard) - List all scorecards
-* [GetAtsConnectionIDScorecardID](docs/sdks/ats/README.md#getatsconnectionidscorecardid) - Retrieve a scorecard
-* [PatchAtsConnectionIDApplicationID](docs/sdks/ats/README.md#patchatsconnectionidapplicationid) - Update an application
-* [PatchAtsConnectionIDCandidateID](docs/sdks/ats/README.md#patchatsconnectionidcandidateid) - Update a candidate
-* [PatchAtsConnectionIDInterviewID](docs/sdks/ats/README.md#patchatsconnectionidinterviewid) - Update a interview
-* [PatchAtsConnectionIDJobID](docs/sdks/ats/README.md#patchatsconnectionidjobid) - Update a job
-* [PatchAtsConnectionIDScorecardID](docs/sdks/ats/README.md#patchatsconnectionidscorecardid) - Update a scorecard
-* [PostAtsConnectionIDApplication](docs/sdks/ats/README.md#postatsconnectionidapplication) - Create an application
-* [PostAtsConnectionIDCandidate](docs/sdks/ats/README.md#postatsconnectionidcandidate) - Create a candidate
-* [PostAtsConnectionIDInterview](docs/sdks/ats/README.md#postatsconnectionidinterview) - Create a interview
-* [PostAtsConnectionIDJob](docs/sdks/ats/README.md#postatsconnectionidjob) - Create a job
-* [PostAtsConnectionIDScorecard](docs/sdks/ats/README.md#postatsconnectionidscorecard) - Create a scorecard
-* [PutAtsConnectionIDApplicationID](docs/sdks/ats/README.md#putatsconnectionidapplicationid) - Update an application
-* [PutAtsConnectionIDCandidateID](docs/sdks/ats/README.md#putatsconnectionidcandidateid) - Update a candidate
-* [PutAtsConnectionIDInterviewID](docs/sdks/ats/README.md#putatsconnectionidinterviewid) - Update a interview
-* [PutAtsConnectionIDJobID](docs/sdks/ats/README.md#putatsconnectionidjobid) - Update a job
-* [PutAtsConnectionIDScorecardID](docs/sdks/ats/README.md#putatsconnectionidscorecardid) - Update a scorecard
+* [CreateAtsApplication](docs/sdks/ats/README.md#createatsapplication) - Create an application
+* [CreateAtsCandidate](docs/sdks/ats/README.md#createatscandidate) - Create a candidate
+* [CreateAtsInterview](docs/sdks/ats/README.md#createatsinterview) - Create a interview
+* [CreateAtsJob](docs/sdks/ats/README.md#createatsjob) - Create a job
+* [CreateAtsScorecard](docs/sdks/ats/README.md#createatsscorecard) - Create a scorecard
+* [GetAtsApplication](docs/sdks/ats/README.md#getatsapplication) - Retrieve an application
+* [GetAtsCandidate](docs/sdks/ats/README.md#getatscandidate) - Retrieve a candidate
+* [GetAtsInterview](docs/sdks/ats/README.md#getatsinterview) - Retrieve a interview
+* [GetAtsJob](docs/sdks/ats/README.md#getatsjob) - Retrieve a job
+* [GetAtsScorecard](docs/sdks/ats/README.md#getatsscorecard) - Retrieve a scorecard
+* [ListAtsApplications](docs/sdks/ats/README.md#listatsapplications) - List all applications
+* [ListAtsCandidates](docs/sdks/ats/README.md#listatscandidates) - List all candidates
+* [ListAtsInterviews](docs/sdks/ats/README.md#listatsinterviews) - List all interviews
+* [ListAtsJobs](docs/sdks/ats/README.md#listatsjobs) - List all jobs
+* [ListAtsScorecards](docs/sdks/ats/README.md#listatsscorecards) - List all scorecards
+* [PatchAtsApplication](docs/sdks/ats/README.md#patchatsapplication) - Update an application
+* [PatchAtsCandidate](docs/sdks/ats/README.md#patchatscandidate) - Update a candidate
+* [PatchAtsInterview](docs/sdks/ats/README.md#patchatsinterview) - Update a interview
+* [PatchAtsJob](docs/sdks/ats/README.md#patchatsjob) - Update a job
+* [PatchAtsScorecard](docs/sdks/ats/README.md#patchatsscorecard) - Update a scorecard
+* [RemoveAtsApplication](docs/sdks/ats/README.md#removeatsapplication) - Remove an application
+* [RemoveAtsCandidate](docs/sdks/ats/README.md#removeatscandidate) - Remove a candidate
+* [RemoveAtsInterview](docs/sdks/ats/README.md#removeatsinterview) - Remove a interview
+* [RemoveAtsJob](docs/sdks/ats/README.md#removeatsjob) - Remove a job
+* [RemoveAtsScorecard](docs/sdks/ats/README.md#removeatsscorecard) - Remove a scorecard
+* [UpdateAtsApplication](docs/sdks/ats/README.md#updateatsapplication) - Update an application
+* [UpdateAtsCandidate](docs/sdks/ats/README.md#updateatscandidate) - Update a candidate
+* [UpdateAtsInterview](docs/sdks/ats/README.md#updateatsinterview) - Update a interview
+* [UpdateAtsJob](docs/sdks/ats/README.md#updateatsjob) - Update a job
+* [UpdateAtsScorecard](docs/sdks/ats/README.md#updateatsscorecard) - Update a scorecard
 
 ### [Auth](docs/sdks/auth/README.md)
 
-* [GetUnifiedIntegrationAuthWorkspaceIDIntegrationType](docs/sdks/auth/README.md#getunifiedintegrationauthworkspaceidintegrationtype) - Create connection indirectly
-* [GetUnifiedIntegrationLoginWorkspaceIDIntegrationType](docs/sdks/auth/README.md#getunifiedintegrationloginworkspaceidintegrationtype) - Sign in a user
+* [GetUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Create connection indirectly
+* [GetUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
 
 ### [Call](docs/sdks/call/README.md)
 
-* [GetUcConnectionIDCall](docs/sdks/call/README.md#getucconnectionidcall) - List all calls
+* [ListUcCalls](docs/sdks/call/README.md#listuccalls) - List all calls
 
 ### [Candidate](docs/sdks/candidate/README.md)
 
-* [DeleteAtsConnectionIDCandidateID](docs/sdks/candidate/README.md#deleteatsconnectionidcandidateid) - Remove a candidate
-* [GetAtsConnectionIDCandidate](docs/sdks/candidate/README.md#getatsconnectionidcandidate) - List all candidates
-* [GetAtsConnectionIDCandidateID](docs/sdks/candidate/README.md#getatsconnectionidcandidateid) - Retrieve a candidate
-* [PatchAtsConnectionIDCandidateID](docs/sdks/candidate/README.md#patchatsconnectionidcandidateid) - Update a candidate
-* [PostAtsConnectionIDCandidate](docs/sdks/candidate/README.md#postatsconnectionidcandidate) - Create a candidate
-* [PutAtsConnectionIDCandidateID](docs/sdks/candidate/README.md#putatsconnectionidcandidateid) - Update a candidate
+* [CreateAtsCandidate](docs/sdks/candidate/README.md#createatscandidate) - Create a candidate
+* [GetAtsCandidate](docs/sdks/candidate/README.md#getatscandidate) - Retrieve a candidate
+* [ListAtsCandidates](docs/sdks/candidate/README.md#listatscandidates) - List all candidates
+* [PatchAtsCandidate](docs/sdks/candidate/README.md#patchatscandidate) - Update a candidate
+* [RemoveAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
+* [UpdateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
 
 ### [Company](docs/sdks/company/README.md)
 
-* [DeleteCrmConnectionIDCompanyID](docs/sdks/company/README.md#deletecrmconnectionidcompanyid) - Remove a company
-* [GetCrmConnectionIDCompany](docs/sdks/company/README.md#getcrmconnectionidcompany) - List all companies
-* [GetCrmConnectionIDCompanyID](docs/sdks/company/README.md#getcrmconnectionidcompanyid) - Retrieve a company
-* [GetEnrichConnectionIDCompany](docs/sdks/company/README.md#getenrichconnectionidcompany) - Retrieve enrichment information for a company
-* [PatchCrmConnectionIDCompanyID](docs/sdks/company/README.md#patchcrmconnectionidcompanyid) - Update a company
-* [PostCrmConnectionIDCompany](docs/sdks/company/README.md#postcrmconnectionidcompany) - Create a company
-* [PutCrmConnectionIDCompanyID](docs/sdks/company/README.md#putcrmconnectionidcompanyid) - Update a company
+* [CreateCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
+* [GetCrmCompany](docs/sdks/company/README.md#getcrmcompany) - Retrieve a company
+* [ListCrmCompanies](docs/sdks/company/README.md#listcrmcompanies) - List all companies
+* [ListEnrichCompanies](docs/sdks/company/README.md#listenrichcompanies) - Retrieve enrichment information for a company
+* [PatchCrmCompany](docs/sdks/company/README.md#patchcrmcompany) - Update a company
+* [RemoveCrmCompany](docs/sdks/company/README.md#removecrmcompany) - Remove a company
+* [UpdateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 
 ### [Connection](docs/sdks/connection/README.md)
 
-* [DeleteUnifiedConnectionID](docs/sdks/connection/README.md#deleteunifiedconnectionid) - Remove connection
-* [GetUnifiedConnection](docs/sdks/connection/README.md#getunifiedconnection) - List all connections
-* [GetUnifiedConnectionID](docs/sdks/connection/README.md#getunifiedconnectionid) - Retrieve connection
-* [PatchUnifiedConnectionID](docs/sdks/connection/README.md#patchunifiedconnectionid) - Update connection
-* [PostUnifiedConnection](docs/sdks/connection/README.md#postunifiedconnection) - Create connection
-* [PutUnifiedConnectionID](docs/sdks/connection/README.md#putunifiedconnectionid) - Update connection
+* [CreateUnifiedConnection](docs/sdks/connection/README.md#createunifiedconnection) - Create connection
+* [GetUnifiedConnection](docs/sdks/connection/README.md#getunifiedconnection) - Retrieve connection
+* [ListUnifiedConnections](docs/sdks/connection/README.md#listunifiedconnections) - List all connections
+* [PatchUnifiedConnection](docs/sdks/connection/README.md#patchunifiedconnection) - Update connection
+* [RemoveUnifiedConnection](docs/sdks/connection/README.md#removeunifiedconnection) - Remove connection
+* [UpdateUnifiedConnection](docs/sdks/connection/README.md#updateunifiedconnection) - Update connection
 
 ### [Contact](docs/sdks/contact/README.md)
 
-* [DeleteCrmConnectionIDContactID](docs/sdks/contact/README.md#deletecrmconnectionidcontactid) - Remove a contact
-* [DeleteUcConnectionIDContactID](docs/sdks/contact/README.md#deleteucconnectionidcontactid) - Remove a contact
-* [GetCrmConnectionIDContact](docs/sdks/contact/README.md#getcrmconnectionidcontact) - List all contacts
-* [GetCrmConnectionIDContactID](docs/sdks/contact/README.md#getcrmconnectionidcontactid) - Retrieve a contact
-* [GetUcConnectionIDContact](docs/sdks/contact/README.md#getucconnectionidcontact) - List all contacts
-* [GetUcConnectionIDContactID](docs/sdks/contact/README.md#getucconnectionidcontactid) - Retrieve a contact
-* [PatchCrmConnectionIDContactID](docs/sdks/contact/README.md#patchcrmconnectionidcontactid) - Update a contact
-* [PatchUcConnectionIDContactID](docs/sdks/contact/README.md#patchucconnectionidcontactid) - Update a contact
-* [PostCrmConnectionIDContact](docs/sdks/contact/README.md#postcrmconnectionidcontact) - Create a contact
-* [PostUcConnectionIDContact](docs/sdks/contact/README.md#postucconnectionidcontact) - Create a contact
-* [PutCrmConnectionIDContactID](docs/sdks/contact/README.md#putcrmconnectionidcontactid) - Update a contact
-* [PutUcConnectionIDContactID](docs/sdks/contact/README.md#putucconnectionidcontactid) - Update a contact
+* [CreateCrmContact](docs/sdks/contact/README.md#createcrmcontact) - Create a contact
+* [CreateUcContact](docs/sdks/contact/README.md#createuccontact) - Create a contact
+* [GetCrmContact](docs/sdks/contact/README.md#getcrmcontact) - Retrieve a contact
+* [GetUcContact](docs/sdks/contact/README.md#getuccontact) - Retrieve a contact
+* [ListCrmContacts](docs/sdks/contact/README.md#listcrmcontacts) - List all contacts
+* [ListUcContacts](docs/sdks/contact/README.md#listuccontacts) - List all contacts
+* [PatchCrmContact](docs/sdks/contact/README.md#patchcrmcontact) - Update a contact
+* [PatchUcContact](docs/sdks/contact/README.md#patchuccontact) - Update a contact
+* [RemoveCrmContact](docs/sdks/contact/README.md#removecrmcontact) - Remove a contact
+* [RemoveUcContact](docs/sdks/contact/README.md#removeuccontact) - Remove a contact
+* [UpdateCrmContact](docs/sdks/contact/README.md#updatecrmcontact) - Update a contact
+* [UpdateUcContact](docs/sdks/contact/README.md#updateuccontact) - Update a contact
 
 ### [Crm](docs/sdks/crm/README.md)
 
-* [DeleteCrmConnectionIDCompanyID](docs/sdks/crm/README.md#deletecrmconnectionidcompanyid) - Remove a company
-* [DeleteCrmConnectionIDContactID](docs/sdks/crm/README.md#deletecrmconnectionidcontactid) - Remove a contact
-* [DeleteCrmConnectionIDDealID](docs/sdks/crm/README.md#deletecrmconnectioniddealid) - Remove a deal
-* [DeleteCrmConnectionIDEventID](docs/sdks/crm/README.md#deletecrmconnectionideventid) - Remove a event
-* [DeleteCrmConnectionIDFileID](docs/sdks/crm/README.md#deletecrmconnectionidfileid) - Remove a file
-* [DeleteCrmConnectionIDLeadID](docs/sdks/crm/README.md#deletecrmconnectionidleadid) - Remove a lead
-* [DeleteCrmConnectionIDPipelineID](docs/sdks/crm/README.md#deletecrmconnectionidpipelineid) - Remove a pipeline
-* [DeleteCrmConnectionIDTeamID](docs/sdks/crm/README.md#deletecrmconnectionidteamid) - Remove a team
-* [DeleteCrmConnectionIDUserID](docs/sdks/crm/README.md#deletecrmconnectioniduserid) - Remove a user
-* [GetCrmConnectionIDCompany](docs/sdks/crm/README.md#getcrmconnectionidcompany) - List all companies
-* [GetCrmConnectionIDCompanyID](docs/sdks/crm/README.md#getcrmconnectionidcompanyid) - Retrieve a company
-* [GetCrmConnectionIDContact](docs/sdks/crm/README.md#getcrmconnectionidcontact) - List all contacts
-* [GetCrmConnectionIDContactID](docs/sdks/crm/README.md#getcrmconnectionidcontactid) - Retrieve a contact
-* [GetCrmConnectionIDDeal](docs/sdks/crm/README.md#getcrmconnectioniddeal) - List all deals
-* [GetCrmConnectionIDDealID](docs/sdks/crm/README.md#getcrmconnectioniddealid) - Retrieve a deal
-* [GetCrmConnectionIDEvent](docs/sdks/crm/README.md#getcrmconnectionidevent) - List all events
-* [GetCrmConnectionIDEventID](docs/sdks/crm/README.md#getcrmconnectionideventid) - Retrieve a event
-* [GetCrmConnectionIDFile](docs/sdks/crm/README.md#getcrmconnectionidfile) - List all files
-* [GetCrmConnectionIDFileID](docs/sdks/crm/README.md#getcrmconnectionidfileid) - Retrieve a file
-* [GetCrmConnectionIDLead](docs/sdks/crm/README.md#getcrmconnectionidlead) - List all leads
-* [GetCrmConnectionIDLeadID](docs/sdks/crm/README.md#getcrmconnectionidleadid) - Retrieve a lead
-* [GetCrmConnectionIDPipeline](docs/sdks/crm/README.md#getcrmconnectionidpipeline) - List all pipelines
-* [GetCrmConnectionIDPipelineID](docs/sdks/crm/README.md#getcrmconnectionidpipelineid) - Retrieve a pipeline
-* [GetCrmConnectionIDTeam](docs/sdks/crm/README.md#getcrmconnectionidteam) - List all teams
-* [GetCrmConnectionIDTeamID](docs/sdks/crm/README.md#getcrmconnectionidteamid) - Retrieve a team
-* [GetCrmConnectionIDUser](docs/sdks/crm/README.md#getcrmconnectioniduser) - List all users
-* [GetCrmConnectionIDUserID](docs/sdks/crm/README.md#getcrmconnectioniduserid) - Retrieve a user
-* [PatchCrmConnectionIDCompanyID](docs/sdks/crm/README.md#patchcrmconnectionidcompanyid) - Update a company
-* [PatchCrmConnectionIDContactID](docs/sdks/crm/README.md#patchcrmconnectionidcontactid) - Update a contact
-* [PatchCrmConnectionIDDealID](docs/sdks/crm/README.md#patchcrmconnectioniddealid) - Update a deal
-* [PatchCrmConnectionIDEventID](docs/sdks/crm/README.md#patchcrmconnectionideventid) - Update a event
-* [PatchCrmConnectionIDFileID](docs/sdks/crm/README.md#patchcrmconnectionidfileid) - Update a file
-* [PatchCrmConnectionIDLeadID](docs/sdks/crm/README.md#patchcrmconnectionidleadid) - Update a lead
-* [PatchCrmConnectionIDPipelineID](docs/sdks/crm/README.md#patchcrmconnectionidpipelineid) - Update a pipeline
-* [PatchCrmConnectionIDTeamID](docs/sdks/crm/README.md#patchcrmconnectionidteamid) - Update a team
-* [PatchCrmConnectionIDUserID](docs/sdks/crm/README.md#patchcrmconnectioniduserid) - Update a user
-* [PostCrmConnectionIDCompany](docs/sdks/crm/README.md#postcrmconnectionidcompany) - Create a company
-* [PostCrmConnectionIDContact](docs/sdks/crm/README.md#postcrmconnectionidcontact) - Create a contact
-* [PostCrmConnectionIDDeal](docs/sdks/crm/README.md#postcrmconnectioniddeal) - Create a deal
-* [PostCrmConnectionIDEvent](docs/sdks/crm/README.md#postcrmconnectionidevent) - Create a event
-* [PostCrmConnectionIDFile](docs/sdks/crm/README.md#postcrmconnectionidfile) - Create a file
-* [PostCrmConnectionIDLead](docs/sdks/crm/README.md#postcrmconnectionidlead) - Create a lead
-* [PostCrmConnectionIDPipeline](docs/sdks/crm/README.md#postcrmconnectionidpipeline) - Create a pipeline
-* [PostCrmConnectionIDTeam](docs/sdks/crm/README.md#postcrmconnectionidteam) - Create a team
-* [PostCrmConnectionIDUser](docs/sdks/crm/README.md#postcrmconnectioniduser) - Create a user
-* [PutCrmConnectionIDCompanyID](docs/sdks/crm/README.md#putcrmconnectionidcompanyid) - Update a company
-* [PutCrmConnectionIDContactID](docs/sdks/crm/README.md#putcrmconnectionidcontactid) - Update a contact
-* [PutCrmConnectionIDDealID](docs/sdks/crm/README.md#putcrmconnectioniddealid) - Update a deal
-* [PutCrmConnectionIDEventID](docs/sdks/crm/README.md#putcrmconnectionideventid) - Update a event
-* [PutCrmConnectionIDFileID](docs/sdks/crm/README.md#putcrmconnectionidfileid) - Update a file
-* [PutCrmConnectionIDLeadID](docs/sdks/crm/README.md#putcrmconnectionidleadid) - Update a lead
-* [PutCrmConnectionIDPipelineID](docs/sdks/crm/README.md#putcrmconnectionidpipelineid) - Update a pipeline
-* [PutCrmConnectionIDTeamID](docs/sdks/crm/README.md#putcrmconnectionidteamid) - Update a team
-* [PutCrmConnectionIDUserID](docs/sdks/crm/README.md#putcrmconnectioniduserid) - Update a user
+* [CreateCrmCompany](docs/sdks/crm/README.md#createcrmcompany) - Create a company
+* [CreateCrmContact](docs/sdks/crm/README.md#createcrmcontact) - Create a contact
+* [CreateCrmDeal](docs/sdks/crm/README.md#createcrmdeal) - Create a deal
+* [CreateCrmEvent](docs/sdks/crm/README.md#createcrmevent) - Create a event
+* [CreateCrmFile](docs/sdks/crm/README.md#createcrmfile) - Create a file
+* [CreateCrmLead](docs/sdks/crm/README.md#createcrmlead) - Create a lead
+* [CreateCrmPipeline](docs/sdks/crm/README.md#createcrmpipeline) - Create a pipeline
+* [CreateCrmTeam](docs/sdks/crm/README.md#createcrmteam) - Create a team
+* [CreateCrmUser](docs/sdks/crm/README.md#createcrmuser) - Create a user
+* [GetCrmCompany](docs/sdks/crm/README.md#getcrmcompany) - Retrieve a company
+* [GetCrmContact](docs/sdks/crm/README.md#getcrmcontact) - Retrieve a contact
+* [GetCrmDeal](docs/sdks/crm/README.md#getcrmdeal) - Retrieve a deal
+* [GetCrmEvent](docs/sdks/crm/README.md#getcrmevent) - Retrieve a event
+* [GetCrmFile](docs/sdks/crm/README.md#getcrmfile) - Retrieve a file
+* [GetCrmLead](docs/sdks/crm/README.md#getcrmlead) - Retrieve a lead
+* [GetCrmPipeline](docs/sdks/crm/README.md#getcrmpipeline) - Retrieve a pipeline
+* [GetCrmTeam](docs/sdks/crm/README.md#getcrmteam) - Retrieve a team
+* [GetCrmUser](docs/sdks/crm/README.md#getcrmuser) - Retrieve a user
+* [ListCrmCompanies](docs/sdks/crm/README.md#listcrmcompanies) - List all companies
+* [ListCrmContacts](docs/sdks/crm/README.md#listcrmcontacts) - List all contacts
+* [ListCrmDeals](docs/sdks/crm/README.md#listcrmdeals) - List all deals
+* [ListCrmEvents](docs/sdks/crm/README.md#listcrmevents) - List all events
+* [ListCrmFiles](docs/sdks/crm/README.md#listcrmfiles) - List all files
+* [ListCrmLeads](docs/sdks/crm/README.md#listcrmleads) - List all leads
+* [ListCrmPipelines](docs/sdks/crm/README.md#listcrmpipelines) - List all pipelines
+* [ListCrmTeams](docs/sdks/crm/README.md#listcrmteams) - List all teams
+* [ListCrmUsers](docs/sdks/crm/README.md#listcrmusers) - List all users
+* [PatchCrmCompany](docs/sdks/crm/README.md#patchcrmcompany) - Update a company
+* [PatchCrmContact](docs/sdks/crm/README.md#patchcrmcontact) - Update a contact
+* [PatchCrmDeal](docs/sdks/crm/README.md#patchcrmdeal) - Update a deal
+* [PatchCrmEvent](docs/sdks/crm/README.md#patchcrmevent) - Update a event
+* [PatchCrmFile](docs/sdks/crm/README.md#patchcrmfile) - Update a file
+* [PatchCrmLead](docs/sdks/crm/README.md#patchcrmlead) - Update a lead
+* [PatchCrmPipeline](docs/sdks/crm/README.md#patchcrmpipeline) - Update a pipeline
+* [PatchCrmTeam](docs/sdks/crm/README.md#patchcrmteam) - Update a team
+* [PatchCrmUser](docs/sdks/crm/README.md#patchcrmuser) - Update a user
+* [RemoveCrmCompany](docs/sdks/crm/README.md#removecrmcompany) - Remove a company
+* [RemoveCrmContact](docs/sdks/crm/README.md#removecrmcontact) - Remove a contact
+* [RemoveCrmDeal](docs/sdks/crm/README.md#removecrmdeal) - Remove a deal
+* [RemoveCrmEvent](docs/sdks/crm/README.md#removecrmevent) - Remove a event
+* [RemoveCrmFile](docs/sdks/crm/README.md#removecrmfile) - Remove a file
+* [RemoveCrmLead](docs/sdks/crm/README.md#removecrmlead) - Remove a lead
+* [RemoveCrmPipeline](docs/sdks/crm/README.md#removecrmpipeline) - Remove a pipeline
+* [RemoveCrmTeam](docs/sdks/crm/README.md#removecrmteam) - Remove a team
+* [RemoveCrmUser](docs/sdks/crm/README.md#removecrmuser) - Remove a user
+* [UpdateCrmCompany](docs/sdks/crm/README.md#updatecrmcompany) - Update a company
+* [UpdateCrmContact](docs/sdks/crm/README.md#updatecrmcontact) - Update a contact
+* [UpdateCrmDeal](docs/sdks/crm/README.md#updatecrmdeal) - Update a deal
+* [UpdateCrmEvent](docs/sdks/crm/README.md#updatecrmevent) - Update a event
+* [UpdateCrmFile](docs/sdks/crm/README.md#updatecrmfile) - Update a file
+* [UpdateCrmLead](docs/sdks/crm/README.md#updatecrmlead) - Update a lead
+* [UpdateCrmPipeline](docs/sdks/crm/README.md#updatecrmpipeline) - Update a pipeline
+* [UpdateCrmTeam](docs/sdks/crm/README.md#updatecrmteam) - Update a team
+* [UpdateCrmUser](docs/sdks/crm/README.md#updatecrmuser) - Update a user
 
 ### [Customer](docs/sdks/customer/README.md)
 
-* [DeleteTicketingConnectionIDCustomerID](docs/sdks/customer/README.md#deleteticketingconnectionidcustomerid) - Remove a customer
-* [GetTicketingConnectionIDCustomer](docs/sdks/customer/README.md#getticketingconnectionidcustomer) - List all customers
-* [GetTicketingConnectionIDCustomerID](docs/sdks/customer/README.md#getticketingconnectionidcustomerid) - Retrieve a customer
-* [PatchTicketingConnectionIDCustomerID](docs/sdks/customer/README.md#patchticketingconnectionidcustomerid) - Update a customer
-* [PostTicketingConnectionIDCustomer](docs/sdks/customer/README.md#postticketingconnectionidcustomer) - Create a customer
-* [PutTicketingConnectionIDCustomerID](docs/sdks/customer/README.md#putticketingconnectionidcustomerid) - Update a customer
+* [CreateTicketingCustomer](docs/sdks/customer/README.md#createticketingcustomer) - Create a customer
+* [GetTicketingCustomer](docs/sdks/customer/README.md#getticketingcustomer) - Retrieve a customer
+* [ListTicketingCustomers](docs/sdks/customer/README.md#listticketingcustomers) - List all customers
+* [PatchTicketingCustomer](docs/sdks/customer/README.md#patchticketingcustomer) - Update a customer
+* [RemoveTicketingCustomer](docs/sdks/customer/README.md#removeticketingcustomer) - Remove a customer
+* [UpdateTicketingCustomer](docs/sdks/customer/README.md#updateticketingcustomer) - Update a customer
 
 ### [Deal](docs/sdks/deal/README.md)
 
-* [DeleteCrmConnectionIDDealID](docs/sdks/deal/README.md#deletecrmconnectioniddealid) - Remove a deal
-* [GetCrmConnectionIDDeal](docs/sdks/deal/README.md#getcrmconnectioniddeal) - List all deals
-* [GetCrmConnectionIDDealID](docs/sdks/deal/README.md#getcrmconnectioniddealid) - Retrieve a deal
-* [PatchCrmConnectionIDDealID](docs/sdks/deal/README.md#patchcrmconnectioniddealid) - Update a deal
-* [PostCrmConnectionIDDeal](docs/sdks/deal/README.md#postcrmconnectioniddeal) - Create a deal
-* [PutCrmConnectionIDDealID](docs/sdks/deal/README.md#putcrmconnectioniddealid) - Update a deal
+* [CreateCrmDeal](docs/sdks/deal/README.md#createcrmdeal) - Create a deal
+* [GetCrmDeal](docs/sdks/deal/README.md#getcrmdeal) - Retrieve a deal
+* [ListCrmDeals](docs/sdks/deal/README.md#listcrmdeals) - List all deals
+* [PatchCrmDeal](docs/sdks/deal/README.md#patchcrmdeal) - Update a deal
+* [RemoveCrmDeal](docs/sdks/deal/README.md#removecrmdeal) - Remove a deal
+* [UpdateCrmDeal](docs/sdks/deal/README.md#updatecrmdeal) - Update a deal
 
 ### [Document](docs/sdks/document/README.md)
 
-* [DeleteAtsConnectionIDScorecardID](docs/sdks/document/README.md#deleteatsconnectionidscorecardid) - Remove a scorecard
-* [GetAtsConnectionIDScorecard](docs/sdks/document/README.md#getatsconnectionidscorecard) - List all scorecards
-* [GetAtsConnectionIDScorecardID](docs/sdks/document/README.md#getatsconnectionidscorecardid) - Retrieve a scorecard
-* [PatchAtsConnectionIDScorecardID](docs/sdks/document/README.md#patchatsconnectionidscorecardid) - Update a scorecard
-* [PostAtsConnectionIDScorecard](docs/sdks/document/README.md#postatsconnectionidscorecard) - Create a scorecard
-* [PutAtsConnectionIDScorecardID](docs/sdks/document/README.md#putatsconnectionidscorecardid) - Update a scorecard
+* [CreateAtsScorecard](docs/sdks/document/README.md#createatsscorecard) - Create a scorecard
+* [GetAtsScorecard](docs/sdks/document/README.md#getatsscorecard) - Retrieve a scorecard
+* [ListAtsScorecards](docs/sdks/document/README.md#listatsscorecards) - List all scorecards
+* [PatchAtsScorecard](docs/sdks/document/README.md#patchatsscorecard) - Update a scorecard
+* [RemoveAtsScorecard](docs/sdks/document/README.md#removeatsscorecard) - Remove a scorecard
+* [UpdateAtsScorecard](docs/sdks/document/README.md#updateatsscorecard) - Update a scorecard
 
 ### [Employee](docs/sdks/employee/README.md)
 
-* [DeleteHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#deletehrisconnectionidemployeeid) - Remove an employee
-* [GetHrisConnectionIDEmployee](docs/sdks/employee/README.md#gethrisconnectionidemployee) - List all employees
-* [GetHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#gethrisconnectionidemployeeid) - Retrieve an employee
-* [PatchHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#patchhrisconnectionidemployeeid) - Update an employee
-* [PostHrisConnectionIDEmployee](docs/sdks/employee/README.md#posthrisconnectionidemployee) - Create an employee
-* [PutHrisConnectionIDEmployeeID](docs/sdks/employee/README.md#puthrisconnectionidemployeeid) - Update an employee
+* [CreateHrisEmployee](docs/sdks/employee/README.md#createhrisemployee) - Create an employee
+* [GetHrisEmployee](docs/sdks/employee/README.md#gethrisemployee) - Retrieve an employee
+* [ListHrisEmployees](docs/sdks/employee/README.md#listhrisemployees) - List all employees
+* [PatchHrisEmployee](docs/sdks/employee/README.md#patchhrisemployee) - Update an employee
+* [RemoveHrisEmployee](docs/sdks/employee/README.md#removehrisemployee) - Remove an employee
+* [UpdateHrisEmployee](docs/sdks/employee/README.md#updatehrisemployee) - Update an employee
 
 ### [Enrich](docs/sdks/enrich/README.md)
 
-* [GetEnrichConnectionIDCompany](docs/sdks/enrich/README.md#getenrichconnectionidcompany) - Retrieve enrichment information for a company
-* [GetEnrichConnectionIDPerson](docs/sdks/enrich/README.md#getenrichconnectionidperson) - Retrieve enrichment information for a person
+* [ListEnrichCompanies](docs/sdks/enrich/README.md#listenrichcompanies) - Retrieve enrichment information for a company
+* [ListEnrichPeople](docs/sdks/enrich/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
 ### [Event](docs/sdks/event/README.md)
 
-* [DeleteCrmConnectionIDEventID](docs/sdks/event/README.md#deletecrmconnectionideventid) - Remove a event
-* [GetCrmConnectionIDEvent](docs/sdks/event/README.md#getcrmconnectionidevent) - List all events
-* [GetCrmConnectionIDEventID](docs/sdks/event/README.md#getcrmconnectionideventid) - Retrieve a event
-* [PatchCrmConnectionIDEventID](docs/sdks/event/README.md#patchcrmconnectionideventid) - Update a event
-* [PostCrmConnectionIDEvent](docs/sdks/event/README.md#postcrmconnectionidevent) - Create a event
-* [PutCrmConnectionIDEventID](docs/sdks/event/README.md#putcrmconnectionideventid) - Update a event
+* [CreateCrmEvent](docs/sdks/event/README.md#createcrmevent) - Create a event
+* [GetCrmEvent](docs/sdks/event/README.md#getcrmevent) - Retrieve a event
+* [ListCrmEvents](docs/sdks/event/README.md#listcrmevents) - List all events
+* [PatchCrmEvent](docs/sdks/event/README.md#patchcrmevent) - Update a event
+* [RemoveCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove a event
+* [UpdateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update a event
 
 ### [File](docs/sdks/file/README.md)
 
-* [DeleteCrmConnectionIDFileID](docs/sdks/file/README.md#deletecrmconnectionidfileid) - Remove a file
-* [GetCrmConnectionIDFile](docs/sdks/file/README.md#getcrmconnectionidfile) - List all files
-* [GetCrmConnectionIDFileID](docs/sdks/file/README.md#getcrmconnectionidfileid) - Retrieve a file
-* [PatchCrmConnectionIDFileID](docs/sdks/file/README.md#patchcrmconnectionidfileid) - Update a file
-* [PostCrmConnectionIDFile](docs/sdks/file/README.md#postcrmconnectionidfile) - Create a file
-* [PutCrmConnectionIDFileID](docs/sdks/file/README.md#putcrmconnectionidfileid) - Update a file
+* [CreateCrmFile](docs/sdks/file/README.md#createcrmfile) - Create a file
+* [GetCrmFile](docs/sdks/file/README.md#getcrmfile) - Retrieve a file
+* [ListCrmFiles](docs/sdks/file/README.md#listcrmfiles) - List all files
+* [PatchCrmFile](docs/sdks/file/README.md#patchcrmfile) - Update a file
+* [RemoveCrmFile](docs/sdks/file/README.md#removecrmfile) - Remove a file
+* [UpdateCrmFile](docs/sdks/file/README.md#updatecrmfile) - Update a file
 
 ### [Group](docs/sdks/group/README.md)
 
-* [DeleteHrisConnectionIDGroupID](docs/sdks/group/README.md#deletehrisconnectionidgroupid) - Remove a group
-* [GetHrisConnectionIDGroup](docs/sdks/group/README.md#gethrisconnectionidgroup) - List all groups
-* [GetHrisConnectionIDGroupID](docs/sdks/group/README.md#gethrisconnectionidgroupid) - Retrieve a group
-* [PatchHrisConnectionIDGroupID](docs/sdks/group/README.md#patchhrisconnectionidgroupid) - Update a group
-* [PostHrisConnectionIDGroup](docs/sdks/group/README.md#posthrisconnectionidgroup) - Create a group
-* [PutHrisConnectionIDGroupID](docs/sdks/group/README.md#puthrisconnectionidgroupid) - Update a group
+* [CreateHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
+* [GetHrisGroup](docs/sdks/group/README.md#gethrisgroup) - Retrieve a group
+* [ListHrisGroups](docs/sdks/group/README.md#listhrisgroups) - List all groups
+* [PatchHrisGroup](docs/sdks/group/README.md#patchhrisgroup) - Update a group
+* [RemoveHrisGroup](docs/sdks/group/README.md#removehrisgroup) - Remove a group
+* [UpdateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
 
 ### [Hris](docs/sdks/hris/README.md)
 
-* [DeleteHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#deletehrisconnectionidemployeeid) - Remove an employee
-* [DeleteHrisConnectionIDGroupID](docs/sdks/hris/README.md#deletehrisconnectionidgroupid) - Remove a group
-* [GetHrisConnectionIDEmployee](docs/sdks/hris/README.md#gethrisconnectionidemployee) - List all employees
-* [GetHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#gethrisconnectionidemployeeid) - Retrieve an employee
-* [GetHrisConnectionIDGroup](docs/sdks/hris/README.md#gethrisconnectionidgroup) - List all groups
-* [GetHrisConnectionIDGroupID](docs/sdks/hris/README.md#gethrisconnectionidgroupid) - Retrieve a group
-* [PatchHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#patchhrisconnectionidemployeeid) - Update an employee
-* [PatchHrisConnectionIDGroupID](docs/sdks/hris/README.md#patchhrisconnectionidgroupid) - Update a group
-* [PostHrisConnectionIDEmployee](docs/sdks/hris/README.md#posthrisconnectionidemployee) - Create an employee
-* [PostHrisConnectionIDGroup](docs/sdks/hris/README.md#posthrisconnectionidgroup) - Create a group
-* [PutHrisConnectionIDEmployeeID](docs/sdks/hris/README.md#puthrisconnectionidemployeeid) - Update an employee
-* [PutHrisConnectionIDGroupID](docs/sdks/hris/README.md#puthrisconnectionidgroupid) - Update a group
+* [CreateHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
+* [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
+* [GetHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
+* [GetHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
+* [ListHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
+* [ListHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
+* [PatchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
+* [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
+* [RemoveHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
+* [RemoveHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
+* [UpdateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
+* [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 
 ### [Integration](docs/sdks/integration/README.md)
 
-* [GetUnifiedIntegration](docs/sdks/integration/README.md#getunifiedintegration) - Returns all integrations
-* [GetUnifiedIntegrationAuthWorkspaceIDIntegrationType](docs/sdks/integration/README.md#getunifiedintegrationauthworkspaceidintegrationtype) - Create connection indirectly
-* [GetUnifiedIntegrationIntegrationType](docs/sdks/integration/README.md#getunifiedintegrationintegrationtype) - Retrieve an integration
-* [GetUnifiedIntegrationWorkspaceWorkspaceID](docs/sdks/integration/README.md#getunifiedintegrationworkspaceworkspaceid) - Returns all activated integrations in a workspace
+* [GetUnifiedIntegration](docs/sdks/integration/README.md#getunifiedintegration) - Retrieve an integration
+* [GetUnifiedIntegrationAuth](docs/sdks/integration/README.md#getunifiedintegrationauth) - Create connection indirectly
+* [ListUnifiedIntegrationWorkspaces](docs/sdks/integration/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
+* [ListUnifiedIntegrations](docs/sdks/integration/README.md#listunifiedintegrations) - Returns all integrations
 
 ### [Interview](docs/sdks/interview/README.md)
 
-* [DeleteAtsConnectionIDInterviewID](docs/sdks/interview/README.md#deleteatsconnectionidinterviewid) - Remove a interview
-* [GetAtsConnectionIDInterview](docs/sdks/interview/README.md#getatsconnectionidinterview) - List all interviews
-* [GetAtsConnectionIDInterviewID](docs/sdks/interview/README.md#getatsconnectionidinterviewid) - Retrieve a interview
-* [PatchAtsConnectionIDInterviewID](docs/sdks/interview/README.md#patchatsconnectionidinterviewid) - Update a interview
-* [PostAtsConnectionIDInterview](docs/sdks/interview/README.md#postatsconnectionidinterview) - Create a interview
-* [PutAtsConnectionIDInterviewID](docs/sdks/interview/README.md#putatsconnectionidinterviewid) - Update a interview
+* [CreateAtsInterview](docs/sdks/interview/README.md#createatsinterview) - Create a interview
+* [GetAtsInterview](docs/sdks/interview/README.md#getatsinterview) - Retrieve a interview
+* [ListAtsInterviews](docs/sdks/interview/README.md#listatsinterviews) - List all interviews
+* [PatchAtsInterview](docs/sdks/interview/README.md#patchatsinterview) - Update a interview
+* [RemoveAtsInterview](docs/sdks/interview/README.md#removeatsinterview) - Remove a interview
+* [UpdateAtsInterview](docs/sdks/interview/README.md#updateatsinterview) - Update a interview
 
 ### [Job](docs/sdks/job/README.md)
 
-* [DeleteAtsConnectionIDJobID](docs/sdks/job/README.md#deleteatsconnectionidjobid) - Remove a job
-* [GetAtsConnectionIDJob](docs/sdks/job/README.md#getatsconnectionidjob) - List all jobs
-* [GetAtsConnectionIDJobID](docs/sdks/job/README.md#getatsconnectionidjobid) - Retrieve a job
-* [PatchAtsConnectionIDJobID](docs/sdks/job/README.md#patchatsconnectionidjobid) - Update a job
-* [PostAtsConnectionIDJob](docs/sdks/job/README.md#postatsconnectionidjob) - Create a job
-* [PutAtsConnectionIDJobID](docs/sdks/job/README.md#putatsconnectionidjobid) - Update a job
+* [CreateAtsJob](docs/sdks/job/README.md#createatsjob) - Create a job
+* [GetAtsJob](docs/sdks/job/README.md#getatsjob) - Retrieve a job
+* [ListAtsJobs](docs/sdks/job/README.md#listatsjobs) - List all jobs
+* [PatchAtsJob](docs/sdks/job/README.md#patchatsjob) - Update a job
+* [RemoveAtsJob](docs/sdks/job/README.md#removeatsjob) - Remove a job
+* [UpdateAtsJob](docs/sdks/job/README.md#updateatsjob) - Update a job
 
 ### [Lead](docs/sdks/lead/README.md)
 
-* [DeleteCrmConnectionIDLeadID](docs/sdks/lead/README.md#deletecrmconnectionidleadid) - Remove a lead
-* [GetCrmConnectionIDLead](docs/sdks/lead/README.md#getcrmconnectionidlead) - List all leads
-* [GetCrmConnectionIDLeadID](docs/sdks/lead/README.md#getcrmconnectionidleadid) - Retrieve a lead
-* [PatchCrmConnectionIDLeadID](docs/sdks/lead/README.md#patchcrmconnectionidleadid) - Update a lead
-* [PostCrmConnectionIDLead](docs/sdks/lead/README.md#postcrmconnectionidlead) - Create a lead
-* [PutCrmConnectionIDLeadID](docs/sdks/lead/README.md#putcrmconnectionidleadid) - Update a lead
+* [CreateCrmLead](docs/sdks/lead/README.md#createcrmlead) - Create a lead
+* [GetCrmLead](docs/sdks/lead/README.md#getcrmlead) - Retrieve a lead
+* [ListCrmLeads](docs/sdks/lead/README.md#listcrmleads) - List all leads
+* [PatchCrmLead](docs/sdks/lead/README.md#patchcrmlead) - Update a lead
+* [RemoveCrmLead](docs/sdks/lead/README.md#removecrmlead) - Remove a lead
+* [UpdateCrmLead](docs/sdks/lead/README.md#updatecrmlead) - Update a lead
 
 ### [List](docs/sdks/list/README.md)
 
-* [DeleteMartechConnectionIDListID](docs/sdks/list/README.md#deletemartechconnectionidlistid) - Remove a list
-* [GetMartechConnectionIDList](docs/sdks/list/README.md#getmartechconnectionidlist) - List all lists
-* [GetMartechConnectionIDListID](docs/sdks/list/README.md#getmartechconnectionidlistid) - Retrieve a list
-* [PatchMartechConnectionIDListID](docs/sdks/list/README.md#patchmartechconnectionidlistid) - Update a list
-* [PostMartechConnectionIDList](docs/sdks/list/README.md#postmartechconnectionidlist) - Create a list
-* [PutMartechConnectionIDListID](docs/sdks/list/README.md#putmartechconnectionidlistid) - Update a list
+* [CreateMartechList](docs/sdks/list/README.md#createmartechlist) - Create a list
+* [GetMartechList](docs/sdks/list/README.md#getmartechlist) - Retrieve a list
+* [ListMartechLists](docs/sdks/list/README.md#listmartechlists) - List all lists
+* [PatchMartechList](docs/sdks/list/README.md#patchmartechlist) - Update a list
+* [RemoveMartechList](docs/sdks/list/README.md#removemartechlist) - Remove a list
+* [UpdateMartechList](docs/sdks/list/README.md#updatemartechlist) - Update a list
 
 ### [Login](docs/sdks/login/README.md)
 
-* [GetUnifiedIntegrationLoginWorkspaceIDIntegrationType](docs/sdks/login/README.md#getunifiedintegrationloginworkspaceidintegrationtype) - Sign in a user
+* [GetUnifiedIntegrationLogin](docs/sdks/login/README.md#getunifiedintegrationlogin) - Sign in a user
 
 ### [Martech](docs/sdks/martech/README.md)
 
-* [DeleteMartechConnectionIDListID](docs/sdks/martech/README.md#deletemartechconnectionidlistid) - Remove a list
-* [DeleteMartechConnectionIDListIDMemberID](docs/sdks/martech/README.md#deletemartechconnectionidlistidmemberid) - Remove member from a list
-* [GetMartechConnectionIDList](docs/sdks/martech/README.md#getmartechconnectionidlist) - List all lists
-* [GetMartechConnectionIDListID](docs/sdks/martech/README.md#getmartechconnectionidlistid) - Retrieve a list
-* [GetMartechConnectionIDListIDMember](docs/sdks/martech/README.md#getmartechconnectionidlistidmember) - List all members in a list
-* [GetMartechConnectionIDListIDMemberID](docs/sdks/martech/README.md#getmartechconnectionidlistidmemberid) - Retrieve a member from a list
-* [PatchMartechConnectionIDListID](docs/sdks/martech/README.md#patchmartechconnectionidlistid) - Update a list
-* [PatchMartechConnectionIDListIDMemberID](docs/sdks/martech/README.md#patchmartechconnectionidlistidmemberid) - Update a member in a list
-* [PostMartechConnectionIDList](docs/sdks/martech/README.md#postmartechconnectionidlist) - Create a list
-* [PostMartechConnectionIDListIDMember](docs/sdks/martech/README.md#postmartechconnectionidlistidmember) - Create a member in a list
-* [PutMartechConnectionIDListID](docs/sdks/martech/README.md#putmartechconnectionidlistid) - Update a list
-* [PutMartechConnectionIDListIDMemberID](docs/sdks/martech/README.md#putmartechconnectionidlistidmemberid) - Update a member in a list
+* [CreateMartechList](docs/sdks/martech/README.md#createmartechlist) - Create a list
+* [CreateMartechMember](docs/sdks/martech/README.md#createmartechmember) - Create a member in a list
+* [GetMartechList](docs/sdks/martech/README.md#getmartechlist) - Retrieve a list
+* [GetMartechMember](docs/sdks/martech/README.md#getmartechmember) - Retrieve a member from a list
+* [ListMartechLists](docs/sdks/martech/README.md#listmartechlists) - List all lists
+* [ListMartechMembers](docs/sdks/martech/README.md#listmartechmembers) - List all members in a list
+* [PatchMartechList](docs/sdks/martech/README.md#patchmartechlist) - Update a list
+* [PatchMartechMember](docs/sdks/martech/README.md#patchmartechmember) - Update a member in a list
+* [RemoveMartechList](docs/sdks/martech/README.md#removemartechlist) - Remove a list
+* [RemoveMartechMember](docs/sdks/martech/README.md#removemartechmember) - Remove member from a list
+* [UpdateMartechList](docs/sdks/martech/README.md#updatemartechlist) - Update a list
+* [UpdateMartechMember](docs/sdks/martech/README.md#updatemartechmember) - Update a member in a list
 
 ### [Member](docs/sdks/member/README.md)
 
-* [DeleteMartechConnectionIDListIDMemberID](docs/sdks/member/README.md#deletemartechconnectionidlistidmemberid) - Remove member from a list
-* [GetMartechConnectionIDListIDMember](docs/sdks/member/README.md#getmartechconnectionidlistidmember) - List all members in a list
-* [GetMartechConnectionIDListIDMemberID](docs/sdks/member/README.md#getmartechconnectionidlistidmemberid) - Retrieve a member from a list
-* [PatchMartechConnectionIDListIDMemberID](docs/sdks/member/README.md#patchmartechconnectionidlistidmemberid) - Update a member in a list
-* [PostMartechConnectionIDListIDMember](docs/sdks/member/README.md#postmartechconnectionidlistidmember) - Create a member in a list
-* [PutMartechConnectionIDListIDMemberID](docs/sdks/member/README.md#putmartechconnectionidlistidmemberid) - Update a member in a list
+* [CreateMartechMember](docs/sdks/member/README.md#createmartechmember) - Create a member in a list
+* [GetMartechMember](docs/sdks/member/README.md#getmartechmember) - Retrieve a member from a list
+* [ListMartechMembers](docs/sdks/member/README.md#listmartechmembers) - List all members in a list
+* [PatchMartechMember](docs/sdks/member/README.md#patchmartechmember) - Update a member in a list
+* [RemoveMartechMember](docs/sdks/member/README.md#removemartechmember) - Remove member from a list
+* [UpdateMartechMember](docs/sdks/member/README.md#updatemartechmember) - Update a member in a list
 
 ### [Note](docs/sdks/note/README.md)
 
-* [DeleteTicketingConnectionIDNoteTicketIDID](docs/sdks/note/README.md#deleteticketingconnectionidnoteticketidid) - Remove a note
-* [GetTicketingConnectionIDNoteTicketID](docs/sdks/note/README.md#getticketingconnectionidnoteticketid) - List all notes
-* [GetTicketingConnectionIDNoteTicketIDID](docs/sdks/note/README.md#getticketingconnectionidnoteticketidid) - Retrieve a note
-* [PatchTicketingConnectionIDNoteTicketIDID](docs/sdks/note/README.md#patchticketingconnectionidnoteticketidid) - Update a note
-* [PostTicketingConnectionIDNoteTicketID](docs/sdks/note/README.md#postticketingconnectionidnoteticketid) - Create a note
-* [PutTicketingConnectionIDNoteTicketIDID](docs/sdks/note/README.md#putticketingconnectionidnoteticketidid) - Update a note
+* [CreateTicketingNote](docs/sdks/note/README.md#createticketingnote) - Create a note
+* [GetTicketingNote](docs/sdks/note/README.md#getticketingnote) - Retrieve a note
+* [ListTicketingNotes](docs/sdks/note/README.md#listticketingnotes) - List all notes
+* [PatchTicketingNote](docs/sdks/note/README.md#patchticketingnote) - Update a note
+* [RemoveTicketingNote](docs/sdks/note/README.md#removeticketingnote) - Remove a note
+* [UpdateTicketingNote](docs/sdks/note/README.md#updateticketingnote) - Update a note
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
 
-* [DeletePassthroughConnectionIDPath](docs/sdks/passthrough/README.md#deletepassthroughconnectionidpath) - Passthrough DELETE
-* [GetPassthroughConnectionIDPath](docs/sdks/passthrough/README.md#getpassthroughconnectionidpath) - Passthrough GET
-* [PatchPassthroughConnectionIDPath](docs/sdks/passthrough/README.md#patchpassthroughconnectionidpath) - Passthrough PUT
-* [PostPassthroughConnectionIDPath](docs/sdks/passthrough/README.md#postpassthroughconnectionidpath) - Passthrough POST
-* [PutPassthroughConnectionIDPath](docs/sdks/passthrough/README.md#putpassthroughconnectionidpath) - Passthrough PUT
+* [CreatePassthrough](docs/sdks/passthrough/README.md#createpassthrough) - Passthrough POST
+* [ListPassthroughs](docs/sdks/passthrough/README.md#listpassthroughs) - Passthrough GET
+* [PatchPassthrough](docs/sdks/passthrough/README.md#patchpassthrough) - Passthrough PUT
+* [RemovePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
+* [UpdatePassthrough](docs/sdks/passthrough/README.md#updatepassthrough) - Passthrough PUT
 
 ### [Person](docs/sdks/person/README.md)
 
-* [GetEnrichConnectionIDPerson](docs/sdks/person/README.md#getenrichconnectionidperson) - Retrieve enrichment information for a person
+* [ListEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
 ### [Pipeline](docs/sdks/pipeline/README.md)
 
-* [DeleteCrmConnectionIDPipelineID](docs/sdks/pipeline/README.md#deletecrmconnectionidpipelineid) - Remove a pipeline
-* [GetCrmConnectionIDPipeline](docs/sdks/pipeline/README.md#getcrmconnectionidpipeline) - List all pipelines
-* [GetCrmConnectionIDPipelineID](docs/sdks/pipeline/README.md#getcrmconnectionidpipelineid) - Retrieve a pipeline
-* [PatchCrmConnectionIDPipelineID](docs/sdks/pipeline/README.md#patchcrmconnectionidpipelineid) - Update a pipeline
-* [PostCrmConnectionIDPipeline](docs/sdks/pipeline/README.md#postcrmconnectionidpipeline) - Create a pipeline
-* [PutCrmConnectionIDPipelineID](docs/sdks/pipeline/README.md#putcrmconnectionidpipelineid) - Update a pipeline
+* [CreateCrmPipeline](docs/sdks/pipeline/README.md#createcrmpipeline) - Create a pipeline
+* [GetCrmPipeline](docs/sdks/pipeline/README.md#getcrmpipeline) - Retrieve a pipeline
+* [ListCrmPipelines](docs/sdks/pipeline/README.md#listcrmpipelines) - List all pipelines
+* [PatchCrmPipeline](docs/sdks/pipeline/README.md#patchcrmpipeline) - Update a pipeline
+* [RemoveCrmPipeline](docs/sdks/pipeline/README.md#removecrmpipeline) - Remove a pipeline
+* [UpdateCrmPipeline](docs/sdks/pipeline/README.md#updatecrmpipeline) - Update a pipeline
 
 ### [Team](docs/sdks/team/README.md)
 
-* [DeleteCrmConnectionIDTeamID](docs/sdks/team/README.md#deletecrmconnectionidteamid) - Remove a team
-* [GetCrmConnectionIDTeam](docs/sdks/team/README.md#getcrmconnectionidteam) - List all teams
-* [GetCrmConnectionIDTeamID](docs/sdks/team/README.md#getcrmconnectionidteamid) - Retrieve a team
-* [PatchCrmConnectionIDTeamID](docs/sdks/team/README.md#patchcrmconnectionidteamid) - Update a team
-* [PostCrmConnectionIDTeam](docs/sdks/team/README.md#postcrmconnectionidteam) - Create a team
-* [PutCrmConnectionIDTeamID](docs/sdks/team/README.md#putcrmconnectionidteamid) - Update a team
+* [CreateCrmTeam](docs/sdks/team/README.md#createcrmteam) - Create a team
+* [GetCrmTeam](docs/sdks/team/README.md#getcrmteam) - Retrieve a team
+* [ListCrmTeams](docs/sdks/team/README.md#listcrmteams) - List all teams
+* [PatchCrmTeam](docs/sdks/team/README.md#patchcrmteam) - Update a team
+* [RemoveCrmTeam](docs/sdks/team/README.md#removecrmteam) - Remove a team
+* [UpdateCrmTeam](docs/sdks/team/README.md#updatecrmteam) - Update a team
 
 ### [Ticket](docs/sdks/ticket/README.md)
 
-* [DeleteTicketingConnectionIDTicketID](docs/sdks/ticket/README.md#deleteticketingconnectionidticketid) - Remove a ticket
-* [GetTicketingConnectionIDTicket](docs/sdks/ticket/README.md#getticketingconnectionidticket) - List all tickets
-* [GetTicketingConnectionIDTicketID](docs/sdks/ticket/README.md#getticketingconnectionidticketid) - Retrieve a ticket
-* [PatchTicketingConnectionIDTicketID](docs/sdks/ticket/README.md#patchticketingconnectionidticketid) - Update a ticket
-* [PostTicketingConnectionIDTicket](docs/sdks/ticket/README.md#postticketingconnectionidticket) - Create a ticket
-* [PutTicketingConnectionIDTicketID](docs/sdks/ticket/README.md#putticketingconnectionidticketid) - Update a ticket
+* [CreateTicketingTicket](docs/sdks/ticket/README.md#createticketingticket) - Create a ticket
+* [GetTicketingTicket](docs/sdks/ticket/README.md#getticketingticket) - Retrieve a ticket
+* [ListTicketingTickets](docs/sdks/ticket/README.md#listticketingtickets) - List all tickets
+* [PatchTicketingTicket](docs/sdks/ticket/README.md#patchticketingticket) - Update a ticket
+* [RemoveTicketingTicket](docs/sdks/ticket/README.md#removeticketingticket) - Remove a ticket
+* [UpdateTicketingTicket](docs/sdks/ticket/README.md#updateticketingticket) - Update a ticket
 
 ### [Ticketing](docs/sdks/ticketing/README.md)
 
-* [DeleteTicketingConnectionIDAgentID](docs/sdks/ticketing/README.md#deleteticketingconnectionidagentid) - Remove a agent
-* [DeleteTicketingConnectionIDCustomerID](docs/sdks/ticketing/README.md#deleteticketingconnectionidcustomerid) - Remove a customer
-* [DeleteTicketingConnectionIDNoteTicketIDID](docs/sdks/ticketing/README.md#deleteticketingconnectionidnoteticketidid) - Remove a note
-* [DeleteTicketingConnectionIDTicketID](docs/sdks/ticketing/README.md#deleteticketingconnectionidticketid) - Remove a ticket
-* [GetTicketingConnectionIDAgent](docs/sdks/ticketing/README.md#getticketingconnectionidagent) - List all agents
-* [GetTicketingConnectionIDAgentID](docs/sdks/ticketing/README.md#getticketingconnectionidagentid) - Retrieve a agent
-* [GetTicketingConnectionIDCustomer](docs/sdks/ticketing/README.md#getticketingconnectionidcustomer) - List all customers
-* [GetTicketingConnectionIDCustomerID](docs/sdks/ticketing/README.md#getticketingconnectionidcustomerid) - Retrieve a customer
-* [GetTicketingConnectionIDNoteTicketID](docs/sdks/ticketing/README.md#getticketingconnectionidnoteticketid) - List all notes
-* [GetTicketingConnectionIDNoteTicketIDID](docs/sdks/ticketing/README.md#getticketingconnectionidnoteticketidid) - Retrieve a note
-* [GetTicketingConnectionIDTicket](docs/sdks/ticketing/README.md#getticketingconnectionidticket) - List all tickets
-* [GetTicketingConnectionIDTicketID](docs/sdks/ticketing/README.md#getticketingconnectionidticketid) - Retrieve a ticket
-* [PatchTicketingConnectionIDAgentID](docs/sdks/ticketing/README.md#patchticketingconnectionidagentid) - Update a agent
-* [PatchTicketingConnectionIDCustomerID](docs/sdks/ticketing/README.md#patchticketingconnectionidcustomerid) - Update a customer
-* [PatchTicketingConnectionIDNoteTicketIDID](docs/sdks/ticketing/README.md#patchticketingconnectionidnoteticketidid) - Update a note
-* [PatchTicketingConnectionIDTicketID](docs/sdks/ticketing/README.md#patchticketingconnectionidticketid) - Update a ticket
-* [PostTicketingConnectionIDAgent](docs/sdks/ticketing/README.md#postticketingconnectionidagent) - Create a agent
-* [PostTicketingConnectionIDCustomer](docs/sdks/ticketing/README.md#postticketingconnectionidcustomer) - Create a customer
-* [PostTicketingConnectionIDNoteTicketID](docs/sdks/ticketing/README.md#postticketingconnectionidnoteticketid) - Create a note
-* [PostTicketingConnectionIDTicket](docs/sdks/ticketing/README.md#postticketingconnectionidticket) - Create a ticket
-* [PutTicketingConnectionIDAgentID](docs/sdks/ticketing/README.md#putticketingconnectionidagentid) - Update a agent
-* [PutTicketingConnectionIDCustomerID](docs/sdks/ticketing/README.md#putticketingconnectionidcustomerid) - Update a customer
-* [PutTicketingConnectionIDNoteTicketIDID](docs/sdks/ticketing/README.md#putticketingconnectionidnoteticketidid) - Update a note
-* [PutTicketingConnectionIDTicketID](docs/sdks/ticketing/README.md#putticketingconnectionidticketid) - Update a ticket
+* [CreateTicketingAgent](docs/sdks/ticketing/README.md#createticketingagent) - Create a agent
+* [CreateTicketingCustomer](docs/sdks/ticketing/README.md#createticketingcustomer) - Create a customer
+* [CreateTicketingNote](docs/sdks/ticketing/README.md#createticketingnote) - Create a note
+* [CreateTicketingTicket](docs/sdks/ticketing/README.md#createticketingticket) - Create a ticket
+* [GetTicketingAgent](docs/sdks/ticketing/README.md#getticketingagent) - Retrieve a agent
+* [GetTicketingCustomer](docs/sdks/ticketing/README.md#getticketingcustomer) - Retrieve a customer
+* [GetTicketingNote](docs/sdks/ticketing/README.md#getticketingnote) - Retrieve a note
+* [GetTicketingTicket](docs/sdks/ticketing/README.md#getticketingticket) - Retrieve a ticket
+* [ListTicketingAgents](docs/sdks/ticketing/README.md#listticketingagents) - List all agents
+* [ListTicketingCustomers](docs/sdks/ticketing/README.md#listticketingcustomers) - List all customers
+* [ListTicketingNotes](docs/sdks/ticketing/README.md#listticketingnotes) - List all notes
+* [ListTicketingTickets](docs/sdks/ticketing/README.md#listticketingtickets) - List all tickets
+* [PatchTicketingAgent](docs/sdks/ticketing/README.md#patchticketingagent) - Update a agent
+* [PatchTicketingCustomer](docs/sdks/ticketing/README.md#patchticketingcustomer) - Update a customer
+* [PatchTicketingNote](docs/sdks/ticketing/README.md#patchticketingnote) - Update a note
+* [PatchTicketingTicket](docs/sdks/ticketing/README.md#patchticketingticket) - Update a ticket
+* [RemoveTicketingAgent](docs/sdks/ticketing/README.md#removeticketingagent) - Remove a agent
+* [RemoveTicketingCustomer](docs/sdks/ticketing/README.md#removeticketingcustomer) - Remove a customer
+* [RemoveTicketingNote](docs/sdks/ticketing/README.md#removeticketingnote) - Remove a note
+* [RemoveTicketingTicket](docs/sdks/ticketing/README.md#removeticketingticket) - Remove a ticket
+* [UpdateTicketingAgent](docs/sdks/ticketing/README.md#updateticketingagent) - Update a agent
+* [UpdateTicketingCustomer](docs/sdks/ticketing/README.md#updateticketingcustomer) - Update a customer
+* [UpdateTicketingNote](docs/sdks/ticketing/README.md#updateticketingnote) - Update a note
+* [UpdateTicketingTicket](docs/sdks/ticketing/README.md#updateticketingticket) - Update a ticket
 
 ### [Uc](docs/sdks/uc/README.md)
 
-* [DeleteUcConnectionIDContactID](docs/sdks/uc/README.md#deleteucconnectionidcontactid) - Remove a contact
-* [GetUcConnectionIDAgent](docs/sdks/uc/README.md#getucconnectionidagent) - List all agents
-* [GetUcConnectionIDCall](docs/sdks/uc/README.md#getucconnectionidcall) - List all calls
-* [GetUcConnectionIDContact](docs/sdks/uc/README.md#getucconnectionidcontact) - List all contacts
-* [GetUcConnectionIDContactID](docs/sdks/uc/README.md#getucconnectionidcontactid) - Retrieve a contact
-* [PatchUcConnectionIDContactID](docs/sdks/uc/README.md#patchucconnectionidcontactid) - Update a contact
-* [PostUcConnectionIDContact](docs/sdks/uc/README.md#postucconnectionidcontact) - Create a contact
-* [PutUcConnectionIDContactID](docs/sdks/uc/README.md#putucconnectionidcontactid) - Update a contact
+* [CreateUcContact](docs/sdks/uc/README.md#createuccontact) - Create a contact
+* [GetUcContact](docs/sdks/uc/README.md#getuccontact) - Retrieve a contact
+* [ListUcAgents](docs/sdks/uc/README.md#listucagents) - List all agents
+* [ListUcCalls](docs/sdks/uc/README.md#listuccalls) - List all calls
+* [ListUcContacts](docs/sdks/uc/README.md#listuccontacts) - List all contacts
+* [PatchUcContact](docs/sdks/uc/README.md#patchuccontact) - Update a contact
+* [RemoveUcContact](docs/sdks/uc/README.md#removeuccontact) - Remove a contact
+* [UpdateUcContact](docs/sdks/uc/README.md#updateuccontact) - Update a contact
 
 ### [Unified](docs/sdks/unified/README.md)
 
-* [DeleteUnifiedConnectionID](docs/sdks/unified/README.md#deleteunifiedconnectionid) - Remove connection
-* [DeleteUnifiedUser](docs/sdks/unified/README.md#deleteunifieduser) - Delete your user object
-* [DeleteUnifiedWebhookID](docs/sdks/unified/README.md#deleteunifiedwebhookid) - Remove webhook subscription
-* [GetUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Returns API Calls
-* [GetUnifiedApicallID](docs/sdks/unified/README.md#getunifiedapicallid) - Retrieve specific API Call by its ID
-* [GetUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - List all connections
-* [GetUnifiedConnectionID](docs/sdks/unified/README.md#getunifiedconnectionid) - Retrieve connection
-* [GetUnifiedIntegration](docs/sdks/unified/README.md#getunifiedintegration) - Returns all integrations
-* [GetUnifiedIntegrationAuthWorkspaceIDIntegrationType](docs/sdks/unified/README.md#getunifiedintegrationauthworkspaceidintegrationtype) - Create connection indirectly
-* [GetUnifiedIntegrationIntegrationType](docs/sdks/unified/README.md#getunifiedintegrationintegrationtype) - Retrieve an integration
-* [GetUnifiedIntegrationWorkspaceWorkspaceID](docs/sdks/unified/README.md#getunifiedintegrationworkspaceworkspaceid) - Returns all activated integrations in a workspace
-* [GetUnifiedUser](docs/sdks/unified/README.md#getunifieduser) - Retrieve your user object
-* [GetUnifiedUserToken](docs/sdks/unified/README.md#getunifiedusertoken) - Retrieve your user token
-* [GetUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Returns all registered webhooks
-* [GetUnifiedWebhookID](docs/sdks/unified/README.md#getunifiedwebhookid) - Retrieve webhook by its ID
-* [PatchUnifiedConnectionID](docs/sdks/unified/README.md#patchunifiedconnectionid) - Update connection
-* [PatchUnifiedUser](docs/sdks/unified/README.md#patchunifieduser) - Updates your user object
-* [PostUnifiedConnection](docs/sdks/unified/README.md#postunifiedconnection) - Create connection
-* [PostUnifiedWebhookConnectionIDObject](docs/sdks/unified/README.md#postunifiedwebhookconnectionidobject) - Create webhook subscription
-* [PutUnifiedConnectionID](docs/sdks/unified/README.md#putunifiedconnectionid) - Update connection
-* [PutUnifiedUser](docs/sdks/unified/README.md#putunifieduser) - Updates your user object
+* [CreateUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
+* [CreateUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
+* [GetUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
+* [GetUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
+* [GetUnifiedIntegration](docs/sdks/unified/README.md#getunifiedintegration) - Retrieve an integration
+* [GetUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Create connection indirectly
+* [GetUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
+* [ListUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
+* [ListUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
+* [ListUnifiedIntegrationWorkspaces](docs/sdks/unified/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
+* [ListUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
+* [ListUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
+* [PatchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
+* [RemoveUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
+* [RemoveUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
+* [UpdateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 
 ### [User](docs/sdks/user/README.md)
 
-* [DeleteCrmConnectionIDUserID](docs/sdks/user/README.md#deletecrmconnectioniduserid) - Remove a user
-* [DeleteUnifiedUser](docs/sdks/user/README.md#deleteunifieduser) - Delete your user object
-* [GetCrmConnectionIDUser](docs/sdks/user/README.md#getcrmconnectioniduser) - List all users
-* [GetCrmConnectionIDUserID](docs/sdks/user/README.md#getcrmconnectioniduserid) - Retrieve a user
-* [GetUnifiedUser](docs/sdks/user/README.md#getunifieduser) - Retrieve your user object
-* [GetUnifiedUserToken](docs/sdks/user/README.md#getunifiedusertoken) - Retrieve your user token
-* [PatchCrmConnectionIDUserID](docs/sdks/user/README.md#patchcrmconnectioniduserid) - Update a user
-* [PatchUnifiedUser](docs/sdks/user/README.md#patchunifieduser) - Updates your user object
-* [PostCrmConnectionIDUser](docs/sdks/user/README.md#postcrmconnectioniduser) - Create a user
-* [PutCrmConnectionIDUserID](docs/sdks/user/README.md#putcrmconnectioniduserid) - Update a user
-* [PutUnifiedUser](docs/sdks/user/README.md#putunifieduser) - Updates your user object
+* [CreateCrmUser](docs/sdks/user/README.md#createcrmuser) - Create a user
+* [GetCrmUser](docs/sdks/user/README.md#getcrmuser) - Retrieve a user
+* [ListCrmUsers](docs/sdks/user/README.md#listcrmusers) - List all users
+* [PatchCrmUser](docs/sdks/user/README.md#patchcrmuser) - Update a user
+* [RemoveCrmUser](docs/sdks/user/README.md#removecrmuser) - Remove a user
+* [UpdateCrmUser](docs/sdks/user/README.md#updatecrmuser) - Update a user
 
 ### [Webhook](docs/sdks/webhook/README.md)
 
-* [DeleteUnifiedWebhookID](docs/sdks/webhook/README.md#deleteunifiedwebhookid) - Remove webhook subscription
-* [GetUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Returns all registered webhooks
-* [GetUnifiedWebhookID](docs/sdks/webhook/README.md#getunifiedwebhookid) - Retrieve webhook by its ID
-* [PostUnifiedWebhookConnectionIDObject](docs/sdks/webhook/README.md#postunifiedwebhookconnectionidobject) - Create webhook subscription
+* [CreateUnifiedWebhook](docs/sdks/webhook/README.md#createunifiedwebhook) - Create webhook subscription
+* [GetUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Retrieve webhook by its ID
+* [ListUnifiedWebhooks](docs/sdks/webhook/README.md#listunifiedwebhooks) - Returns all registered webhooks
+* [RemoveUnifiedWebhook](docs/sdks/webhook/README.md#removeunifiedwebhook) - Remove webhook subscription
 <!-- End SDK Available Operations -->
 
 

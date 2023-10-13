@@ -18,15 +18,27 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Agent.DeleteTicketingConnectionIDAgentID(ctx, operations.DeleteTicketingConnectionIDAgentIDRequest{
-		ConnectionID: "navigate",
-		ID:           "<ID>",
+	res, err := s.Agent.CreateTicketingAgent(ctx, operations.CreateTicketingAgentRequest{
+		TicketingAgent: &shared.TicketingAgent{
+			Emails: []shared.TicketingEmail{
+				shared.TicketingEmail{
+					Email: "Paolo.Cole8@yahoo.com",
+				},
+			},
+			Raw: shared.PropertyTicketingAgentRaw{},
+			Telephones: []shared.TicketingTelephone{
+				shared.TicketingTelephone{
+					Telephone: "scarcely Soap navigating",
+				},
+			},
+		},
+		ConnectionID: "smoothly Algeria",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.StatusCode == http.StatusOK {
+	if res.TicketingAgent != nil {
 		// handle response
 	}
 }

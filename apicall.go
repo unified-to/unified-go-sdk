@@ -25,10 +25,13 @@ func newApicall(sdkConfig sdkConfiguration) *apicall {
 	}
 }
 
-// GetUnifiedApicall - Returns API Calls
+// GetUnifiedApicall - Retrieve specific API Call by its ID
 func (s *apicall) GetUnifiedApicall(ctx context.Context, request operations.GetUnifiedApicallRequest) (*operations.GetUnifiedApicallResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url := strings.TrimSuffix(baseURL, "/") + "/unified/apicall"
+	url, err := utils.GenerateURL(ctx, baseURL, "/unified/apicall/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -36,10 +39,6 @@ func (s *apicall) GetUnifiedApicall(ctx context.Context, request operations.GetU
 	}
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -69,12 +68,12 @@ func (s *apicall) GetUnifiedApicall(ctx context.Context, request operations.GetU
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.APICall
+			var out shared.APICall
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.APICalls = out
+			res.APICall = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -87,13 +86,10 @@ func (s *apicall) GetUnifiedApicall(ctx context.Context, request operations.GetU
 	return res, nil
 }
 
-// GetUnifiedApicallID - Retrieve specific API Call by its ID
-func (s *apicall) GetUnifiedApicallID(ctx context.Context, request operations.GetUnifiedApicallIDRequest) (*operations.GetUnifiedApicallIDResponse, error) {
+// ListUnifiedApicalls - Returns API Calls
+func (s *apicall) ListUnifiedApicalls(ctx context.Context, request operations.ListUnifiedApicallsRequest) (*operations.ListUnifiedApicallsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/unified/apicall/{id}", request, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error generating URL: %w", err)
-	}
+	url := strings.TrimSuffix(baseURL, "/") + "/unified/apicall"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,6 +97,10 @@ func (s *apicall) GetUnifiedApicallID(ctx context.Context, request operations.Ge
 	}
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -114,7 +114,7 @@ func (s *apicall) GetUnifiedApicallID(ctx context.Context, request operations.Ge
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetUnifiedApicallIDResponse{
+	res := &operations.ListUnifiedApicallsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -130,12 +130,12 @@ func (s *apicall) GetUnifiedApicallID(ctx context.Context, request operations.Ge
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.APICall
+			var out []shared.APICall
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.APICall = &out
+			res.APICalls = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

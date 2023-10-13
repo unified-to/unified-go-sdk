@@ -3,9 +3,9 @@
 
 ### Available Operations
 
-* [GetUcConnectionIDCall](#getucconnectionidcall) - List all calls
+* [ListUcCalls](#listuccalls) - List all calls
 
-## GetUcConnectionIDCall
+## ListUcCalls
 
 List all calls
 
@@ -28,8 +28,8 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Call.GetUcConnectionIDCall(ctx, operations.GetUcConnectionIDCallRequest{
-        ConnectionID: "Directives",
+    res, err := s.Call.ListUcCalls(ctx, operations.ListUcCallsRequest{
+        ConnectionID: "optical",
     })
     if err != nil {
         log.Fatal(err)
@@ -43,13 +43,13 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetUcConnectionIDCallRequest](../../models/operations/getucconnectionidcallrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
+| `request`                                                                      | [operations.ListUcCallsRequest](../../models/operations/listuccallsrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 
 ### Response
 
-**[*operations.GetUcConnectionIDCallResponse](../../models/operations/getucconnectionidcallresponse.md), error**
+**[*operations.ListUcCallsResponse](../../models/operations/listuccallsresponse.md), error**
 

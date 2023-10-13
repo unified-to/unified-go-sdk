@@ -24,8 +24,8 @@ func newPerson(sdkConfig sdkConfiguration) *person {
 	}
 }
 
-// GetEnrichConnectionIDPerson - Retrieve enrichment information for a person
-func (s *person) GetEnrichConnectionIDPerson(ctx context.Context, request operations.GetEnrichConnectionIDPersonRequest) (*operations.GetEnrichConnectionIDPersonResponse, error) {
+// ListEnrichPeople - Retrieve enrichment information for a person
+func (s *person) ListEnrichPeople(ctx context.Context, request operations.ListEnrichPeopleRequest) (*operations.ListEnrichPeopleResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/person", request, nil)
 	if err != nil {
@@ -55,7 +55,7 @@ func (s *person) GetEnrichConnectionIDPerson(ctx context.Context, request operat
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetEnrichConnectionIDPersonResponse{
+	res := &operations.ListEnrichPeopleResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

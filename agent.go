@@ -24,15 +24,83 @@ func newAgent(sdkConfig sdkConfiguration) *agent {
 	}
 }
 
-// DeleteTicketingConnectionIDAgentID - Remove a agent
-func (s *agent) DeleteTicketingConnectionIDAgentID(ctx context.Context, request operations.DeleteTicketingConnectionIDAgentIDRequest) (*operations.DeleteTicketingConnectionIDAgentIDResponse, error) {
+// CreateTicketingAgent - Create a agent
+func (s *agent) CreateTicketingAgent(ctx context.Context, request operations.CreateTicketingAgentRequest) (*operations.CreateTicketingAgentResponse, error) {
+	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/agent", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingAgent", "json", `request:"mediaType=application/json"`)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.sdkConfiguration.SecurityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateTicketingAgentResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out shared.TicketingAgent
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.TicketingAgent = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+}
+
+// GetTicketingAgent - Retrieve a agent
+func (s *agent) GetTicketingAgent(ctx context.Context, request operations.GetTicketingAgentRequest) (*operations.GetTicketingAgentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/agent/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
@@ -51,7 +119,7 @@ func (s *agent) DeleteTicketingConnectionIDAgentID(ctx context.Context, request 
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.DeleteTicketingConnectionIDAgentIDResponse{
+	res := &operations.GetTicketingAgentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -64,25 +132,29 @@ func (s *agent) DeleteTicketingConnectionIDAgentID(ctx context.Context, request 
 	httpRes.Body.Close()
 	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out shared.TicketingAgent
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.TicketingAgent = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
+		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			out := string(rawBody)
-			res.DeleteTicketingConnectionIDAgentIDDefaultApplicationJSONString = &out
-		default:
-			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
-		}
 	}
 
 	return res, nil
 }
 
-// GetTicketingConnectionIDAgent - List all agents
-func (s *agent) GetTicketingConnectionIDAgent(ctx context.Context, request operations.GetTicketingConnectionIDAgentRequest) (*operations.GetTicketingConnectionIDAgentResponse, error) {
+// ListTicketingAgents - List all agents
+func (s *agent) ListTicketingAgents(ctx context.Context, request operations.ListTicketingAgentsRequest) (*operations.ListTicketingAgentsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/agent", request, nil)
 	if err != nil {
@@ -112,7 +184,7 @@ func (s *agent) GetTicketingConnectionIDAgent(ctx context.Context, request opera
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetTicketingConnectionIDAgentResponse{
+	res := &operations.ListTicketingAgentsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -146,69 +218,8 @@ func (s *agent) GetTicketingConnectionIDAgent(ctx context.Context, request opera
 	return res, nil
 }
 
-// GetTicketingConnectionIDAgentID - Retrieve a agent
-func (s *agent) GetTicketingConnectionIDAgentID(ctx context.Context, request operations.GetTicketingConnectionIDAgentIDRequest) (*operations.GetTicketingConnectionIDAgentIDResponse, error) {
-	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/agent/{id}", request, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error generating URL: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-	req.Header.Set("Accept", "application/json")
-	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
-
-	client := s.sdkConfiguration.SecurityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetTicketingConnectionIDAgentIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-
-	rawBody, err := io.ReadAll(httpRes.Body)
-	if err != nil {
-		return nil, fmt.Errorf("error reading response body: %w", err)
-	}
-	httpRes.Body.Close()
-	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.TicketingAgent
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			res.TicketingAgent = &out
-		default:
-			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	}
-
-	return res, nil
-}
-
-// GetUcConnectionIDAgent - List all agents
-func (s *agent) GetUcConnectionIDAgent(ctx context.Context, request operations.GetUcConnectionIDAgentRequest) (*operations.GetUcConnectionIDAgentResponse, error) {
+// ListUcAgents - List all agents
+func (s *agent) ListUcAgents(ctx context.Context, request operations.ListUcAgentsRequest) (*operations.ListUcAgentsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/agent", request, nil)
 	if err != nil {
@@ -238,7 +249,7 @@ func (s *agent) GetUcConnectionIDAgent(ctx context.Context, request operations.G
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetUcConnectionIDAgentResponse{
+	res := &operations.ListUcAgentsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -272,8 +283,8 @@ func (s *agent) GetUcConnectionIDAgent(ctx context.Context, request operations.G
 	return res, nil
 }
 
-// PatchTicketingConnectionIDAgentID - Update a agent
-func (s *agent) PatchTicketingConnectionIDAgentID(ctx context.Context, request operations.PatchTicketingConnectionIDAgentIDRequest) (*operations.PatchTicketingConnectionIDAgentIDResponse, error) {
+// PatchTicketingAgent - Update a agent
+func (s *agent) PatchTicketingAgent(ctx context.Context, request operations.PatchTicketingAgentRequest) (*operations.PatchTicketingAgentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/agent/{id}", request, nil)
 	if err != nil {
@@ -306,7 +317,7 @@ func (s *agent) PatchTicketingConnectionIDAgentID(ctx context.Context, request o
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PatchTicketingConnectionIDAgentIDResponse{
+	res := &operations.PatchTicketingAgentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -340,27 +351,20 @@ func (s *agent) PatchTicketingConnectionIDAgentID(ctx context.Context, request o
 	return res, nil
 }
 
-// PostTicketingConnectionIDAgent - Create a agent
-func (s *agent) PostTicketingConnectionIDAgent(ctx context.Context, request operations.PostTicketingConnectionIDAgentRequest) (*operations.PostTicketingConnectionIDAgentResponse, error) {
+// RemoveTicketingAgent - Remove a agent
+func (s *agent) RemoveTicketingAgent(ctx context.Context, request operations.RemoveTicketingAgentRequest) (*operations.RemoveTicketingAgentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/agent", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/agent/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingAgent", "json", `request:"mediaType=application/json"`)
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
-
-	req.Header.Set("Content-Type", reqContentType)
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -374,7 +378,7 @@ func (s *agent) PostTicketingConnectionIDAgent(ctx context.Context, request oper
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostTicketingConnectionIDAgentResponse{
+	res := &operations.RemoveTicketingAgentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -387,29 +391,25 @@ func (s *agent) PostTicketingConnectionIDAgent(ctx context.Context, request oper
 	httpRes.Body.Close()
 	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.TicketingAgent
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			res.TicketingAgent = &out
-		default:
-			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
-		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			out := string(rawBody)
+			res.RemoveTicketingAgentDefaultApplicationJSONString = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
+		}
 	}
 
 	return res, nil
 }
 
-// PutTicketingConnectionIDAgentID - Update a agent
-func (s *agent) PutTicketingConnectionIDAgentID(ctx context.Context, request operations.PutTicketingConnectionIDAgentIDRequest) (*operations.PutTicketingConnectionIDAgentIDResponse, error) {
+// UpdateTicketingAgent - Update a agent
+func (s *agent) UpdateTicketingAgent(ctx context.Context, request operations.UpdateTicketingAgentRequest) (*operations.UpdateTicketingAgentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/agent/{id}", request, nil)
 	if err != nil {
@@ -442,7 +442,7 @@ func (s *agent) PutTicketingConnectionIDAgentID(ctx context.Context, request ope
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PutTicketingConnectionIDAgentIDResponse{
+	res := &operations.UpdateTicketingAgentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

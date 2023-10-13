@@ -24,8 +24,8 @@ func newEnrich(sdkConfig sdkConfiguration) *enrich {
 	}
 }
 
-// GetEnrichConnectionIDCompany - Retrieve enrichment information for a company
-func (s *enrich) GetEnrichConnectionIDCompany(ctx context.Context, request operations.GetEnrichConnectionIDCompanyRequest) (*operations.GetEnrichConnectionIDCompanyResponse, error) {
+// ListEnrichCompanies - Retrieve enrichment information for a company
+func (s *enrich) ListEnrichCompanies(ctx context.Context, request operations.ListEnrichCompaniesRequest) (*operations.ListEnrichCompaniesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/company", request, nil)
 	if err != nil {
@@ -55,7 +55,7 @@ func (s *enrich) GetEnrichConnectionIDCompany(ctx context.Context, request opera
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetEnrichConnectionIDCompanyResponse{
+	res := &operations.ListEnrichCompaniesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -89,8 +89,8 @@ func (s *enrich) GetEnrichConnectionIDCompany(ctx context.Context, request opera
 	return res, nil
 }
 
-// GetEnrichConnectionIDPerson - Retrieve enrichment information for a person
-func (s *enrich) GetEnrichConnectionIDPerson(ctx context.Context, request operations.GetEnrichConnectionIDPersonRequest) (*operations.GetEnrichConnectionIDPersonResponse, error) {
+// ListEnrichPeople - Retrieve enrichment information for a person
+func (s *enrich) ListEnrichPeople(ctx context.Context, request operations.ListEnrichPeopleRequest) (*operations.ListEnrichPeopleResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/person", request, nil)
 	if err != nil {
@@ -120,7 +120,7 @@ func (s *enrich) GetEnrichConnectionIDPerson(ctx context.Context, request operat
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetEnrichConnectionIDPersonResponse{
+	res := &operations.ListEnrichPeopleResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

@@ -3,12 +3,6 @@
 
 ## Fields
 
-| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| `Env`                                                                    | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
-| `Limit`                                                                  | **float64*                                                               | :heavy_minus_sign:                                                       | N/A                                                                      |
-| `Object`                                                                 | **string*                                                                | :heavy_minus_sign:                                                       | Filter the results for webhooks for only this object                     |
-| `Offset`                                                                 | **float64*                                                               | :heavy_minus_sign:                                                       | N/A                                                                      |
-| `Order`                                                                  | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
-| `Sort`                                                                   | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
-| `UpdatedGte`                                                             | [*time.Time](https://pkg.go.dev/time#Time)                               | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |
+| Field              | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `ID`               | *string*           | :heavy_check_mark: | ID of the Webhook  |

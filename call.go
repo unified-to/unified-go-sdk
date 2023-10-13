@@ -24,8 +24,8 @@ func newCall(sdkConfig sdkConfiguration) *call {
 	}
 }
 
-// GetUcConnectionIDCall - List all calls
-func (s *call) GetUcConnectionIDCall(ctx context.Context, request operations.GetUcConnectionIDCallRequest) (*operations.GetUcConnectionIDCallResponse, error) {
+// ListUcCalls - List all calls
+func (s *call) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest) (*operations.ListUcCallsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/call", request, nil)
 	if err != nil {
@@ -55,7 +55,7 @@ func (s *call) GetUcConnectionIDCall(ctx context.Context, request operations.Get
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetUcConnectionIDCallResponse{
+	res := &operations.ListUcCallsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

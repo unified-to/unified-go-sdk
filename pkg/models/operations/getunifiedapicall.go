@@ -4,122 +4,24 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type GetUnifiedApicallRequest struct {
-	// Filter the results to just this integration's API calls
-	ConnectionID *string `queryParam:"style=form,explode=true,name=connection_id"`
-	// Return only results whose updated date is equal or less to this value
-	CreatedLte *time.Time `queryParam:"style=form,explode=true,name=created_lte"`
-	Env        *string    `queryParam:"style=form,explode=true,name=env"`
-	// Filter the results for API Calls with errors
-	Error *bool `queryParam:"style=form,explode=true,name=error"`
-	// Filter the results to only those integrations for your user referenced by this value
-	ExternalXref *string `queryParam:"style=form,explode=true,name=external_xref"`
-	// Filter the results for connections with this integration
-	IntegrationType *string  `queryParam:"style=form,explode=true,name=integration_type"`
-	Limit           *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset          *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order           *string  `queryParam:"style=form,explode=true,name=order"`
-	Sort            *string  `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	// ID of the Apicall
+	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (g GetUnifiedApicallRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(g, "", false)
-}
-
-func (g *GetUnifiedApicallRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &g, "", false, false); err != nil {
-		return err
-	}
-	return nil
-}
-
-func (o *GetUnifiedApicallRequest) GetConnectionID() *string {
+func (o *GetUnifiedApicallRequest) GetID() string {
 	if o == nil {
-		return nil
+		return ""
 	}
-	return o.ConnectionID
-}
-
-func (o *GetUnifiedApicallRequest) GetCreatedLte() *time.Time {
-	if o == nil {
-		return nil
-	}
-	return o.CreatedLte
-}
-
-func (o *GetUnifiedApicallRequest) GetEnv() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Env
-}
-
-func (o *GetUnifiedApicallRequest) GetError() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.Error
-}
-
-func (o *GetUnifiedApicallRequest) GetExternalXref() *string {
-	if o == nil {
-		return nil
-	}
-	return o.ExternalXref
-}
-
-func (o *GetUnifiedApicallRequest) GetIntegrationType() *string {
-	if o == nil {
-		return nil
-	}
-	return o.IntegrationType
-}
-
-func (o *GetUnifiedApicallRequest) GetLimit() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Limit
-}
-
-func (o *GetUnifiedApicallRequest) GetOffset() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Offset
-}
-
-func (o *GetUnifiedApicallRequest) GetOrder() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Order
-}
-
-func (o *GetUnifiedApicallRequest) GetSort() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Sort
-}
-
-func (o *GetUnifiedApicallRequest) GetUpdatedGte() *time.Time {
-	if o == nil {
-		return nil
-	}
-	return o.UpdatedGte
+	return o.ID
 }
 
 type GetUnifiedApicallResponse struct {
 	// Successful
-	APICalls []shared.APICall
+	APICall *shared.APICall
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -128,11 +30,11 @@ type GetUnifiedApicallResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetUnifiedApicallResponse) GetAPICalls() []shared.APICall {
+func (o *GetUnifiedApicallResponse) GetAPICall() *shared.APICall {
 	if o == nil {
 		return nil
 	}
-	return o.APICalls
+	return o.APICall
 }
 
 func (o *GetUnifiedApicallResponse) GetContentType() string {
