@@ -46,6 +46,10 @@ func (s *ticketing) CreateTicketingAgent(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
 	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
@@ -114,6 +118,10 @@ func (s *ticketing) CreateTicketingCustomer(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
 	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
@@ -163,7 +171,7 @@ func (s *ticketing) CreateTicketingCustomer(ctx context.Context, request operati
 // CreateTicketingNote - Create a note
 func (s *ticketing) CreateTicketingNote(ctx context.Context, request operations.CreateTicketingNoteRequest) (*operations.CreateTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -181,6 +189,10 @@ func (s *ticketing) CreateTicketingNote(ctx context.Context, request operations.
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
 
 	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -250,6 +262,10 @@ func (s *ticketing) CreateTicketingTicket(ctx context.Context, request operation
 
 	req.Header.Set("Content-Type", reqContentType)
 
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
 	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
@@ -310,6 +326,10 @@ func (s *ticketing) GetTicketingAgent(ctx context.Context, request operations.Ge
 	}
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -372,6 +392,10 @@ func (s *ticketing) GetTicketingCustomer(ctx context.Context, request operations
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
 
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
 	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
@@ -421,7 +445,7 @@ func (s *ticketing) GetTicketingCustomer(ctx context.Context, request operations
 // GetTicketingNote - Retrieve a note
 func (s *ticketing) GetTicketingNote(ctx context.Context, request operations.GetTicketingNoteRequest) (*operations.GetTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -432,6 +456,10 @@ func (s *ticketing) GetTicketingNote(ctx context.Context, request operations.Get
 	}
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -493,6 +521,10 @@ func (s *ticketing) GetTicketingTicket(ctx context.Context, request operations.G
 	}
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -673,7 +705,7 @@ func (s *ticketing) ListTicketingCustomers(ctx context.Context, request operatio
 // ListTicketingNotes - List all notes
 func (s *ticketing) ListTicketingNotes(ctx context.Context, request operations.ListTicketingNotesRequest) (*operations.ListTicketingNotesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -822,6 +854,10 @@ func (s *ticketing) PatchTicketingAgent(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
 	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
@@ -890,6 +926,10 @@ func (s *ticketing) PatchTicketingCustomer(ctx context.Context, request operatio
 
 	req.Header.Set("Content-Type", reqContentType)
 
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
 	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
@@ -939,7 +979,7 @@ func (s *ticketing) PatchTicketingCustomer(ctx context.Context, request operatio
 // PatchTicketingNote - Update a note
 func (s *ticketing) PatchTicketingNote(ctx context.Context, request operations.PatchTicketingNoteRequest) (*operations.PatchTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -957,6 +997,10 @@ func (s *ticketing) PatchTicketingNote(ctx context.Context, request operations.P
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
 
 	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -1025,6 +1069,10 @@ func (s *ticketing) PatchTicketingTicket(ctx context.Context, request operations
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
 
 	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -1189,7 +1237,7 @@ func (s *ticketing) RemoveTicketingCustomer(ctx context.Context, request operati
 // RemoveTicketingNote - Remove a note
 func (s *ticketing) RemoveTicketingNote(ctx context.Context, request operations.RemoveTicketingNoteRequest) (*operations.RemoveTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -1322,6 +1370,10 @@ func (s *ticketing) UpdateTicketingAgent(ctx context.Context, request operations
 
 	req.Header.Set("Content-Type", reqContentType)
 
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
 	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
@@ -1390,6 +1442,10 @@ func (s *ticketing) UpdateTicketingCustomer(ctx context.Context, request operati
 
 	req.Header.Set("Content-Type", reqContentType)
 
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
 	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
@@ -1439,7 +1495,7 @@ func (s *ticketing) UpdateTicketingCustomer(ctx context.Context, request operati
 // UpdateTicketingNote - Update a note
 func (s *ticketing) UpdateTicketingNote(ctx context.Context, request operations.UpdateTicketingNoteRequest) (*operations.UpdateTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -1457,6 +1513,10 @@ func (s *ticketing) UpdateTicketingNote(ctx context.Context, request operations.
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
 
 	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -1525,6 +1585,10 @@ func (s *ticketing) UpdateTicketingTicket(ctx context.Context, request operation
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
 
 	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 

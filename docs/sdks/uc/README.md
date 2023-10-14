@@ -50,6 +50,9 @@ func main() {
             },
         },
         ConnectionID: "meanwhile",
+        Fields: []string{
+            "whose",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -99,6 +102,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Uc.GetUcContact(ctx, operations.GetUcContactRequest{
         ConnectionID: "JBOD ivory fool",
+        Fields: []string{
+            "Mouse",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -149,6 +155,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Uc.ListUcAgents(ctx, operations.ListUcAgentsRequest{
         ConnectionID: "Representative",
+        Fields: []string{
+            "olive",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -198,6 +207,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Uc.ListUcCalls(ctx, operations.ListUcCallsRequest{
         ConnectionID: "optical",
+        Fields: []string{
+            "South",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -247,6 +259,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Uc.ListUcContacts(ctx, operations.ListUcContactsRequest{
         ConnectionID: "Bicycle male",
+        Fields: []string{
+            "East",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -309,6 +324,9 @@ func main() {
             },
         },
         ConnectionID: "South Pants candela",
+        Fields: []string{
+            "Investor",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -422,6 +440,9 @@ func main() {
             },
         },
         ConnectionID: "Cruiser",
+        Fields: []string{
+            "Awesome",
+        },
         ID: "<ID>",
     })
     if err != nil {

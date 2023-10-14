@@ -38,6 +38,9 @@ func main() {
             Raw: &shared.PropertyMarketingListRaw{},
         },
         ConnectionID: "Architect responsive",
+        Fields: []string{
+            "Recycled",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -87,6 +90,9 @@ func main() {
     ctx := context.Background()
     res, err := s.List.GetMartechList(ctx, operations.GetMartechListRequest{
         ConnectionID: "Franklin Bicycle Victoria",
+        Fields: []string{
+            "Fish",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -137,6 +143,9 @@ func main() {
     ctx := context.Background()
     res, err := s.List.ListMartechLists(ctx, operations.ListMartechListsRequest{
         ConnectionID: "DeKalb magenta black",
+        Fields: []string{
+            "provided",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -189,6 +198,9 @@ func main() {
             Raw: &shared.PropertyMarketingListRaw{},
         },
         ConnectionID: "Operations Liaison",
+        Fields: []string{
+            "phooey",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -292,6 +304,9 @@ func main() {
             Raw: &shared.PropertyMarketingListRaw{},
         },
         ConnectionID: "Secured Kia Stroman",
+        Fields: []string{
+            "invoice",
+        },
         ID: "<ID>",
     })
     if err != nil {

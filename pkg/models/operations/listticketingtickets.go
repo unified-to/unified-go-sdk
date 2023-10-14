@@ -15,10 +15,12 @@ type ListTicketingTicketsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The customer ID to filter results
-	CustomerID *string  `queryParam:"style=form,explode=true,name=customer_id"`
-	Limit      *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order      *string  `queryParam:"style=form,explode=true,name=order"`
+	CustomerID *string `queryParam:"style=form,explode=true,name=customer_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
@@ -56,6 +58,13 @@ func (o *ListTicketingTicketsRequest) GetCustomerID() *string {
 		return nil
 	}
 	return o.CustomerID
+}
+
+func (o *ListTicketingTicketsRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 func (o *ListTicketingTicketsRequest) GetLimit() *float64 {

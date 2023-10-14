@@ -57,6 +57,9 @@ func main() {
             },
         },
         ConnectionID: "magenta Data woot",
+        Fields: []string{
+            "payment",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -106,6 +109,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.GetCrmCompany(ctx, operations.GetCrmCompanyRequest{
         ConnectionID: "THX Strategist deposit",
+        Fields: []string{
+            "snag",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -156,6 +162,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.ListCrmCompanies(ctx, operations.ListCrmCompaniesRequest{
         ConnectionID: "Jazz solid Lamborghini",
+        Fields: []string{
+            "Sleek",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -275,6 +284,9 @@ func main() {
             },
         },
         ConnectionID: "Trans",
+        Fields: []string{
+            "Money",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -396,6 +408,9 @@ func main() {
             },
         },
         ConnectionID: "Southeast ad",
+        Fields: []string{
+            "Practical",
+        },
         ID: "<ID>",
     })
     if err != nil {

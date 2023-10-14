@@ -104,6 +104,9 @@ func main() {
             },
         },
         ConnectionID: "magenta Data woot",
+        Fields: []string{
+            "payment",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -171,6 +174,9 @@ func main() {
             },
         },
         ConnectionID: "Cambridgeshire Passenger Producer",
+        Fields: []string{
+            "Krypton",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -226,6 +232,9 @@ func main() {
             },
         },
         ConnectionID: "Music Rap",
+        Fields: []string{
+            "wind",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -299,6 +308,9 @@ func main() {
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "Savings",
+        Fields: []string{
+            "within",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -351,6 +363,9 @@ func main() {
             Raw: &shared.PropertyCrmFileRaw{},
         },
         ConnectionID: "ASCII Wooden the",
+        Fields: []string{
+            "Tungsten",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -412,6 +427,9 @@ func main() {
             },
         },
         ConnectionID: "ability Einsteinium Orchestrator",
+        Fields: []string{
+            "orchid",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -464,6 +482,9 @@ func main() {
             Raw: &shared.PropertyCrmPipelineRaw{},
         },
         ConnectionID: "Paradigm Vista fuchsia",
+        Fields: []string{
+            "Hatchback",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -519,6 +540,9 @@ func main() {
             },
         },
         ConnectionID: "as New Senior",
+        Fields: []string{
+            "Buckinghamshire",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -580,6 +604,9 @@ func main() {
             },
         },
         ConnectionID: "Incredible Virginia",
+        Fields: []string{
+            "Keyboard",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -629,6 +656,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmCompany(ctx, operations.GetCrmCompanyRequest{
         ConnectionID: "THX Strategist deposit",
+        Fields: []string{
+            "snag",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -679,6 +709,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmContact(ctx, operations.GetCrmContactRequest{
         ConnectionID: "Oregon",
+        Fields: []string{
+            "methodology",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -729,6 +762,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmDeal(ctx, operations.GetCrmDealRequest{
         ConnectionID: "male orange",
+        Fields: []string{
+            "Reduced",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -779,6 +815,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmEvent(ctx, operations.GetCrmEventRequest{
         ConnectionID: "Metal South blockchains",
+        Fields: []string{
+            "comics",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -829,6 +868,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmFile(ctx, operations.GetCrmFileRequest{
         ConnectionID: "ease",
+        Fields: []string{
+            "bypassing",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -879,6 +921,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmLead(ctx, operations.GetCrmLeadRequest{
         ConnectionID: "Handmade Keyboard yum",
+        Fields: []string{
+            "magnetic",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -929,6 +974,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmPipeline(ctx, operations.GetCrmPipelineRequest{
         ConnectionID: "withdrawal Southeast",
+        Fields: []string{
+            "evolve",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -979,6 +1027,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmTeam(ctx, operations.GetCrmTeamRequest{
         ConnectionID: "digital awful",
+        Fields: []string{
+            "Peru",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1029,6 +1080,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmUser(ctx, operations.GetCrmUserRequest{
         ConnectionID: "Bespoke Dollar",
+        Fields: []string{
+            "unto",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1079,6 +1133,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmCompanies(ctx, operations.ListCrmCompaniesRequest{
         ConnectionID: "Jazz solid Lamborghini",
+        Fields: []string{
+            "Sleek",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1128,6 +1185,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmContacts(ctx, operations.ListCrmContactsRequest{
         ConnectionID: "Awesome index steradian",
+        Fields: []string{
+            "District",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1177,6 +1237,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmDeals(ctx, operations.ListCrmDealsRequest{
         ConnectionID: "Lamborghini",
+        Fields: []string{
+            "female",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1226,6 +1289,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmEvents(ctx, operations.ListCrmEventsRequest{
         ConnectionID: "invoice gratefully",
+        Fields: []string{
+            "impactful",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1275,6 +1341,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmFiles(ctx, operations.ListCrmFilesRequest{
         ConnectionID: "lavender Genderflux Southeast",
+        Fields: []string{
+            "invoice",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1324,6 +1393,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmLeads(ctx, operations.ListCrmLeadsRequest{
         ConnectionID: "International",
+        Fields: []string{
+            "ratione",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1373,6 +1445,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmPipelines(ctx, operations.ListCrmPipelinesRequest{
         ConnectionID: "primary",
+        Fields: []string{
+            "female",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1422,6 +1497,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmTeams(ctx, operations.ListCrmTeamsRequest{
         ConnectionID: "Classical microchip Wooden",
+        Fields: []string{
+            "Lutetium",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1471,6 +1549,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmUsers(ctx, operations.ListCrmUsersRequest{
         ConnectionID: "careless Costa",
+        Fields: []string{
+            "olive",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1541,6 +1622,9 @@ func main() {
             },
         },
         ConnectionID: "Trans",
+        Fields: []string{
+            "Money",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1609,6 +1693,9 @@ func main() {
             },
         },
         ConnectionID: "Future Diesel",
+        Fields: []string{
+            "syndicate",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1665,6 +1752,9 @@ func main() {
             },
         },
         ConnectionID: "Platinum female",
+        Fields: []string{
+            "Berkshire",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1739,6 +1829,9 @@ func main() {
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "female",
+        Fields: []string{
+            "Connecticut",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1792,6 +1885,9 @@ func main() {
             Raw: &shared.PropertyCrmFileRaw{},
         },
         ConnectionID: "bluetooth",
+        Fields: []string{
+            "Bronze",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1854,6 +1950,9 @@ func main() {
             },
         },
         ConnectionID: "Ball Chips",
+        Fields: []string{
+            "Southwest",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1907,6 +2006,9 @@ func main() {
             Raw: &shared.PropertyCrmPipelineRaw{},
         },
         ConnectionID: "imperfect Costa Southwest",
+        Fields: []string{
+            "excluding",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1963,6 +2065,9 @@ func main() {
             },
         },
         ConnectionID: "Transexual compress redefine",
+        Fields: []string{
+            "gold",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -2025,6 +2130,9 @@ func main() {
             },
         },
         ConnectionID: "katal Industrial Classical",
+        Fields: []string{
+            "boo",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -2546,6 +2654,9 @@ func main() {
             },
         },
         ConnectionID: "Southeast ad",
+        Fields: []string{
+            "Practical",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -2614,6 +2725,9 @@ func main() {
             },
         },
         ConnectionID: "man panel",
+        Fields: []string{
+            "Mauritania",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -2670,6 +2784,9 @@ func main() {
             },
         },
         ConnectionID: "Shirt",
+        Fields: []string{
+            "whiteboard",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -2744,6 +2861,9 @@ func main() {
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "Accountability",
+        Fields: []string{
+            "Manager",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -2797,6 +2917,9 @@ func main() {
             Raw: &shared.PropertyCrmFileRaw{},
         },
         ConnectionID: "Orchestrator",
+        Fields: []string{
+            "male",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -2859,6 +2982,9 @@ func main() {
             },
         },
         ConnectionID: "Pickup Polestar Checking",
+        Fields: []string{
+            "Concrete",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -2912,6 +3038,9 @@ func main() {
             Raw: &shared.PropertyCrmPipelineRaw{},
         },
         ConnectionID: "needily",
+        Fields: []string{
+            "Androgyne",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -2968,6 +3097,9 @@ func main() {
             },
         },
         ConnectionID: "Dakota",
+        Fields: []string{
+            "female",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -3030,6 +3162,9 @@ func main() {
             },
         },
         ConnectionID: "Savings",
+        Fields: []string{
+            "Corwin",
+        },
         ID: "<ID>",
     })
     if err != nil {

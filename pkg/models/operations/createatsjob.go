@@ -12,6 +12,8 @@ type CreateAtsJobRequest struct {
 	AtsJob *shared.AtsJob `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateAtsJobRequest) GetAtsJob() *shared.AtsJob {
@@ -26,6 +28,13 @@ func (o *CreateAtsJobRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateAtsJobRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateAtsJobResponse struct {

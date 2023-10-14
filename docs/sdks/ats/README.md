@@ -62,6 +62,9 @@ func main() {
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
         ConnectionID: "incidentally Mandatory meanwhile",
+        Fields: []string{
+            "Human",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -128,6 +131,9 @@ func main() {
             },
         },
         ConnectionID: "bypass Creative Legacy",
+        Fields: []string{
+            "Bronze",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -183,6 +189,9 @@ func main() {
             },
         },
         ConnectionID: "Frozen",
+        Fields: []string{
+            "deposit",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -255,6 +264,9 @@ func main() {
             },
         },
         ConnectionID: "Savings Customer Loan",
+        Fields: []string{
+            "SMS",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -307,6 +319,9 @@ func main() {
             Raw: shared.PropertyAtsScorecardRaw{},
         },
         ConnectionID: "Northwest Account",
+        Fields: []string{
+            "Yuan",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -356,6 +371,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsApplication(ctx, operations.GetAtsApplicationRequest{
         ConnectionID: "anenst Balboa",
+        Fields: []string{
+            "navigate",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -406,6 +424,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsCandidate(ctx, operations.GetAtsCandidateRequest{
         ConnectionID: "Markets",
+        Fields: []string{
+            "payment",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -456,6 +477,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsInterview(ctx, operations.GetAtsInterviewRequest{
         ConnectionID: "syndicate longingly Mobility",
+        Fields: []string{
+            "grease",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -506,6 +530,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsJob(ctx, operations.GetAtsJobRequest{
         ConnectionID: "runway",
+        Fields: []string{
+            "Bronze",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -556,6 +583,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsScorecard(ctx, operations.GetAtsScorecardRequest{
         ConnectionID: "Executive",
+        Fields: []string{
+            "Berkelium",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -606,6 +636,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsApplications(ctx, operations.ListAtsApplicationsRequest{
         ConnectionID: "Summit",
+        Fields: []string{
+            "violet",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -655,6 +688,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsCandidates(ctx, operations.ListAtsCandidatesRequest{
         ConnectionID: "mole clearly",
+        Fields: []string{
+            "Van",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -704,6 +740,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsInterviews(ctx, operations.ListAtsInterviewsRequest{
         ConnectionID: "Northeast",
+        Fields: []string{
+            "Ergonomic",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -753,6 +792,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsJobs(ctx, operations.ListAtsJobsRequest{
         ConnectionID: "niches SQL",
+        Fields: []string{
+            "1080p",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -802,6 +844,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsScorecards(ctx, operations.ListAtsScorecardsRequest{
         ConnectionID: "Hybrid Bugatti",
+        Fields: []string{
+            "frantically",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -854,6 +899,9 @@ func main() {
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
         ConnectionID: "South grey",
+        Fields: []string{
+            "Technician",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -921,6 +969,9 @@ func main() {
             },
         },
         ConnectionID: "World Van transitional",
+        Fields: []string{
+            "green",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -977,6 +1028,9 @@ func main() {
             },
         },
         ConnectionID: "Francium",
+        Fields: []string{
+            "Cambridgeshire",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1050,6 +1104,9 @@ func main() {
             },
         },
         ConnectionID: "gold Principal",
+        Fields: []string{
+            "BMW",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1103,6 +1160,9 @@ func main() {
             Raw: shared.PropertyAtsScorecardRaw{},
         },
         ConnectionID: "eek",
+        Fields: []string{
+            "engage",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1406,6 +1466,9 @@ func main() {
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
         ConnectionID: "Rosie",
+        Fields: []string{
+            "triangular",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1473,6 +1536,9 @@ func main() {
             },
         },
         ConnectionID: "Zackery male Gloves",
+        Fields: []string{
+            "threadbare",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1529,6 +1595,9 @@ func main() {
             },
         },
         ConnectionID: "Account omnis Gorgeous",
+        Fields: []string{
+            "magenta",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1602,6 +1671,9 @@ func main() {
             },
         },
         ConnectionID: "euthanise system",
+        Fields: []string{
+            "payment",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -1655,6 +1727,9 @@ func main() {
             Raw: shared.PropertyAtsScorecardRaw{},
         },
         ConnectionID: "grey",
+        Fields: []string{
+            "Baby",
+        },
         ID: "<ID>",
     })
     if err != nil {

@@ -16,6 +16,8 @@ type ListAtsScorecardsRequest struct {
 	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// The interview ID to filter results
 	InterviewID *string  `queryParam:"style=form,explode=true,name=interview_id"`
 	Limit       *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -58,6 +60,13 @@ func (o *ListAtsScorecardsRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *ListAtsScorecardsRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 func (o *ListAtsScorecardsRequest) GetInterviewID() *string {

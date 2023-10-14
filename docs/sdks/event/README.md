@@ -59,6 +59,9 @@ func main() {
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "Savings",
+        Fields: []string{
+            "within",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -108,6 +111,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Event.GetCrmEvent(ctx, operations.GetCrmEventRequest{
         ConnectionID: "Metal South blockchains",
+        Fields: []string{
+            "comics",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -158,6 +164,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Event.ListCrmEvents(ctx, operations.ListCrmEventsRequest{
         ConnectionID: "invoice gratefully",
+        Fields: []string{
+            "impactful",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -231,6 +240,9 @@ func main() {
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "female",
+        Fields: []string{
+            "Connecticut",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -355,6 +367,9 @@ func main() {
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "Accountability",
+        Fields: []string{
+            "Manager",
+        },
         ID: "<ID>",
     })
     if err != nil {

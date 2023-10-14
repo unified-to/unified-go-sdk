@@ -11,6 +11,8 @@ type CreateHrisGroupRequest struct {
 	HrisGroup *shared.HrisGroup `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateHrisGroupRequest) GetHrisGroup() *shared.HrisGroup {
@@ -25,6 +27,13 @@ func (o *CreateHrisGroupRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateHrisGroupRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateHrisGroupResponse struct {

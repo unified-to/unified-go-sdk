@@ -11,6 +11,8 @@ type CreateCrmUserRequest struct {
 	CrmUser *shared.CrmUser `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateCrmUserRequest) GetCrmUser() *shared.CrmUser {
@@ -25,6 +27,13 @@ func (o *CreateCrmUserRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateCrmUserRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateCrmUserResponse struct {

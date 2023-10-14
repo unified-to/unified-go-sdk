@@ -49,6 +49,9 @@ func main() {
             },
         },
         ConnectionID: "smoothly Algeria",
+        Fields: []string{
+            "payment",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -98,6 +101,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Agent.GetTicketingAgent(ctx, operations.GetTicketingAgentRequest{
         ConnectionID: "Lamborghini",
+        Fields: []string{
+            "SAS",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -148,6 +154,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Agent.ListTicketingAgents(ctx, operations.ListTicketingAgentsRequest{
         ConnectionID: "Mazda",
+        Fields: []string{
+            "Home",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -197,6 +206,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Agent.ListUcAgents(ctx, operations.ListUcAgentsRequest{
         ConnectionID: "Representative",
+        Fields: []string{
+            "olive",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -259,6 +271,9 @@ func main() {
             },
         },
         ConnectionID: "by",
+        Fields: []string{
+            "Bedfordshire",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -372,6 +387,9 @@ func main() {
             },
         },
         ConnectionID: "beside Usability Bedfordshire",
+        Fields: []string{
+            "SSD",
+        },
         ID: "<ID>",
     })
     if err != nil {

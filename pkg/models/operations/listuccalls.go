@@ -12,11 +12,13 @@ import (
 type ListUcCallsRequest struct {
 	AgentID *string `queryParam:"style=form,explode=true,name=agent_id"`
 	// ID of the connection
-	ConnectionID string   `pathParam:"style=simple,explode=false,name=connection_id"`
-	ContactID    *string  `queryParam:"style=form,explode=true,name=contact_id"`
-	Limit        *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset       *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order        *string  `queryParam:"style=form,explode=true,name=order"`
+	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
+	ContactID    *string `queryParam:"style=form,explode=true,name=contact_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
@@ -54,6 +56,13 @@ func (o *ListUcCallsRequest) GetContactID() *string {
 		return nil
 	}
 	return o.ContactID
+}
+
+func (o *ListUcCallsRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 func (o *ListUcCallsRequest) GetLimit() *float64 {

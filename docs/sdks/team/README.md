@@ -41,6 +41,9 @@ func main() {
             },
         },
         ConnectionID: "as New Senior",
+        Fields: []string{
+            "Buckinghamshire",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -90,6 +93,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.GetCrmTeam(ctx, operations.GetCrmTeamRequest{
         ConnectionID: "digital awful",
+        Fields: []string{
+            "Peru",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -140,6 +146,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Team.ListCrmTeams(ctx, operations.ListCrmTeamsRequest{
         ConnectionID: "Classical microchip Wooden",
+        Fields: []string{
+            "Lutetium",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -195,6 +204,9 @@ func main() {
             },
         },
         ConnectionID: "Transexual compress redefine",
+        Fields: []string{
+            "gold",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -301,6 +313,9 @@ func main() {
             },
         },
         ConnectionID: "Dakota",
+        Fields: []string{
+            "female",
+        },
         ID: "<ID>",
     })
     if err != nil {

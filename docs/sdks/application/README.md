@@ -38,6 +38,9 @@ func main() {
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
         ConnectionID: "incidentally Mandatory meanwhile",
+        Fields: []string{
+            "Human",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -87,6 +90,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Application.GetAtsApplication(ctx, operations.GetAtsApplicationRequest{
         ConnectionID: "anenst Balboa",
+        Fields: []string{
+            "navigate",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -137,6 +143,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Application.ListAtsApplications(ctx, operations.ListAtsApplicationsRequest{
         ConnectionID: "Summit",
+        Fields: []string{
+            "violet",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -189,6 +198,9 @@ func main() {
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
         ConnectionID: "South grey",
+        Fields: []string{
+            "Technician",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -292,6 +304,9 @@ func main() {
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
         ConnectionID: "Rosie",
+        Fields: []string{
+            "triangular",
+        },
         ID: "<ID>",
     })
     if err != nil {

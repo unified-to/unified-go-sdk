@@ -48,6 +48,9 @@ func main() {
 			},
 		},
 		ConnectionID: "smoothly Algeria",
+		Fields: []string{
+			"payment",
+		},
 	})
 	if err != nil {
 		log.Fatal(err)

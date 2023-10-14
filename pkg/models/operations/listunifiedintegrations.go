@@ -6,9 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListUnifiedIntegrationsCategories string
@@ -64,24 +62,13 @@ type ListUnifiedIntegrationsRequest struct {
 	Active *bool `queryParam:"style=form,explode=true,name=active"`
 	// Filter the results on these categories
 	Categories []ListUnifiedIntegrationsCategories `queryParam:"style=form,explode=true,name=categories"`
+	Env        *string                             `queryParam:"style=form,explode=true,name=env"`
 	Limit      *float64                            `queryParam:"style=form,explode=true,name=limit"`
 	Offset     *float64                            `queryParam:"style=form,explode=true,name=offset"`
 	Order      *string                             `queryParam:"style=form,explode=true,name=order"`
 	Sort       *string                             `queryParam:"style=form,explode=true,name=sort"`
 	Summary    *bool                               `queryParam:"style=form,explode=true,name=summary"`
-	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListUnifiedIntegrationsRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListUnifiedIntegrationsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string                             `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListUnifiedIntegrationsRequest) GetActive() *bool {
@@ -96,6 +83,13 @@ func (o *ListUnifiedIntegrationsRequest) GetCategories() []ListUnifiedIntegratio
 		return nil
 	}
 	return o.Categories
+}
+
+func (o *ListUnifiedIntegrationsRequest) GetEnv() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Env
 }
 
 func (o *ListUnifiedIntegrationsRequest) GetLimit() *float64 {
@@ -133,7 +127,7 @@ func (o *ListUnifiedIntegrationsRequest) GetSummary() *bool {
 	return o.Summary
 }
 
-func (o *ListUnifiedIntegrationsRequest) GetUpdatedGte() *time.Time {
+func (o *ListUnifiedIntegrationsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

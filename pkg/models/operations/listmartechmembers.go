@@ -11,8 +11,10 @@ import (
 
 type ListMartechMembersRequest struct {
 	// ID of the connection
-	ConnectionID string   `pathParam:"style=simple,explode=false,name=connection_id"`
-	Limit        *float64 `queryParam:"style=form,explode=true,name=limit"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	// ID of the list
 	ListID string   `pathParam:"style=simple,explode=false,name=list_id"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
@@ -40,6 +42,13 @@ func (o *ListMartechMembersRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *ListMartechMembersRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 func (o *ListMartechMembersRequest) GetLimit() *float64 {

@@ -38,7 +38,10 @@ func main() {
             Raw: shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "Books kilogram hmph",
-        TicketID: "Dakota function interface",
+        Fields: []string{
+            "yowza",
+        },
+        TicketID: "Markets executive Hoeger",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,8 +91,11 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.GetTicketingNote(ctx, operations.GetTicketingNoteRequest{
         ConnectionID: "joule program",
+        Fields: []string{
+            "SUV",
+        },
         ID: "<ID>",
-        TicketID: "Fitness Applications Switchable",
+        TicketID: "payment Architect",
     })
     if err != nil {
         log.Fatal(err)
@@ -139,7 +145,10 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.ListTicketingNotes(ctx, operations.ListTicketingNotesRequest{
         ConnectionID: "Hybrid North",
-        TicketID: "Kroon Marvin Ford",
+        Fields: []string{
+            "hosepipe",
+        },
+        TicketID: "Marvin",
     })
     if err != nil {
         log.Fatal(err)
@@ -192,8 +201,11 @@ func main() {
             Raw: shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "Bicycle Southwest Darmstadtium",
+        Fields: []string{
+            "Plastic",
+        },
         ID: "<ID>",
-        TicketID: "index",
+        TicketID: "Investor bypass EXE",
     })
     if err != nil {
         log.Fatal(err)
@@ -297,8 +309,11 @@ func main() {
             Raw: shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "via among Quality",
+        Fields: []string{
+            "bluetooth",
+        },
         ID: "<ID>",
-        TicketID: "Brand when",
+        TicketID: "when",
     })
     if err != nil {
         log.Fatal(err)

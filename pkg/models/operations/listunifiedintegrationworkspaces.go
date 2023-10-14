@@ -58,11 +58,15 @@ func (e *ListUnifiedIntegrationWorkspacesCategories) UnmarshalJSON(data []byte) 
 }
 
 type ListUnifiedIntegrationWorkspacesRequest struct {
+	// Filter the results for only the workspace's active integrations
 	Active *bool `queryParam:"style=form,explode=true,name=active"`
 	// Filter the results on these categories
 	Categories []ListUnifiedIntegrationWorkspacesCategories `queryParam:"style=form,explode=true,name=categories"`
 	Env        *string                                      `queryParam:"style=form,explode=true,name=env"`
+	Limit      *float64                                     `queryParam:"style=form,explode=true,name=limit"`
+	Offset     *float64                                     `queryParam:"style=form,explode=true,name=offset"`
 	Summary    *bool                                        `queryParam:"style=form,explode=true,name=summary"`
+	UpdatedGte *string                                      `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The ID of the workspace
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
 }
@@ -88,11 +92,32 @@ func (o *ListUnifiedIntegrationWorkspacesRequest) GetEnv() *string {
 	return o.Env
 }
 
+func (o *ListUnifiedIntegrationWorkspacesRequest) GetLimit() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.Limit
+}
+
+func (o *ListUnifiedIntegrationWorkspacesRequest) GetOffset() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.Offset
+}
+
 func (o *ListUnifiedIntegrationWorkspacesRequest) GetSummary() *bool {
 	if o == nil {
 		return nil
 	}
 	return o.Summary
+}
+
+func (o *ListUnifiedIntegrationWorkspacesRequest) GetUpdatedGte() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UpdatedGte
 }
 
 func (o *ListUnifiedIntegrationWorkspacesRequest) GetWorkspaceID() string {

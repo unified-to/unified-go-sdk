@@ -15,7 +15,9 @@ type ListCrmContactsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The deal ID to filter results
-	DealID *string  `queryParam:"style=form,explode=true,name=deal_id"`
+	DealID *string `queryParam:"style=form,explode=true,name=deal_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
@@ -56,6 +58,13 @@ func (o *ListCrmContactsRequest) GetDealID() *string {
 		return nil
 	}
 	return o.DealID
+}
+
+func (o *ListCrmContactsRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 func (o *ListCrmContactsRequest) GetLimit() *float64 {

@@ -49,7 +49,10 @@ func main() {
             },
         },
         ConnectionID: "South Electronic calculate",
-        ListID: "ew scalable Hassium",
+        Fields: []string{
+            "translate",
+        },
+        ListID: "scalable",
     })
     if err != nil {
         log.Fatal(err)
@@ -99,8 +102,11 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.GetMartechMember(ctx, operations.GetMartechMemberRequest{
         ConnectionID: "Yuan",
+        Fields: []string{
+            "Gibraltar",
+        },
         ID: "<ID>",
-        ListID: "vertical Northeast",
+        ListID: "Iceland",
     })
     if err != nil {
         log.Fatal(err)
@@ -150,7 +156,10 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
         ConnectionID: "Money",
-        ListID: "structure",
+        Fields: []string{
+            "Practical",
+        },
+        ListID: "Thallium Bike outrageous",
     })
     if err != nil {
         log.Fatal(err)
@@ -214,8 +223,11 @@ func main() {
             },
         },
         ConnectionID: "Unbranded overriding Money",
+        Fields: []string{
+            "Brand",
+        },
         ID: "<ID>",
-        ListID: "as variant West",
+        ListID: "West integrated",
     })
     if err != nil {
         log.Fatal(err)
@@ -330,8 +342,11 @@ func main() {
             },
         },
         ConnectionID: "Checking deploy Hermaphrodite",
+        Fields: []string{
+            "navigate",
+        },
         ID: "<ID>",
-        ListID: "Bespoke below",
+        ListID: "methodologies state Computer",
     })
     if err != nil {
         log.Fatal(err)

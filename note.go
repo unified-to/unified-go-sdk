@@ -27,7 +27,7 @@ func newNote(sdkConfig sdkConfiguration) *note {
 // CreateTicketingNote - Create a note
 func (s *note) CreateTicketingNote(ctx context.Context, request operations.CreateTicketingNoteRequest) (*operations.CreateTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -45,6 +45,10 @@ func (s *note) CreateTicketingNote(ctx context.Context, request operations.Creat
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
 
 	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -95,7 +99,7 @@ func (s *note) CreateTicketingNote(ctx context.Context, request operations.Creat
 // GetTicketingNote - Retrieve a note
 func (s *note) GetTicketingNote(ctx context.Context, request operations.GetTicketingNoteRequest) (*operations.GetTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -106,6 +110,10 @@ func (s *note) GetTicketingNote(ctx context.Context, request operations.GetTicke
 	}
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -156,7 +164,7 @@ func (s *note) GetTicketingNote(ctx context.Context, request operations.GetTicke
 // ListTicketingNotes - List all notes
 func (s *note) ListTicketingNotes(ctx context.Context, request operations.ListTicketingNotesRequest) (*operations.ListTicketingNotesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -221,7 +229,7 @@ func (s *note) ListTicketingNotes(ctx context.Context, request operations.ListTi
 // PatchTicketingNote - Update a note
 func (s *note) PatchTicketingNote(ctx context.Context, request operations.PatchTicketingNoteRequest) (*operations.PatchTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -239,6 +247,10 @@ func (s *note) PatchTicketingNote(ctx context.Context, request operations.PatchT
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
 
 	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 
@@ -289,7 +301,7 @@ func (s *note) PatchTicketingNote(ctx context.Context, request operations.PatchT
 // RemoveTicketingNote - Remove a note
 func (s *note) RemoveTicketingNote(ctx context.Context, request operations.RemoveTicketingNoteRequest) (*operations.RemoveTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -346,7 +358,7 @@ func (s *note) RemoveTicketingNote(ctx context.Context, request operations.Remov
 // UpdateTicketingNote - Update a note
 func (s *note) UpdateTicketingNote(ctx context.Context, request operations.UpdateTicketingNoteRequest) (*operations.UpdateTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{ticket_id}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -364,6 +376,10 @@ func (s *note) UpdateTicketingNote(ctx context.Context, request operations.Updat
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
 
 	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	client := s.sdkConfiguration.SecurityClient
 

@@ -11,6 +11,8 @@ type CreateTicketingCustomerRequest struct {
 	TicketingCustomer *shared.TicketingCustomer `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateTicketingCustomerRequest) GetTicketingCustomer() *shared.TicketingCustomer {
@@ -25,6 +27,13 @@ func (o *CreateTicketingCustomerRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateTicketingCustomerRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateTicketingCustomerResponse struct {

@@ -59,6 +59,9 @@ func main() {
             },
         },
         ConnectionID: "Cambridgeshire Passenger Producer",
+        Fields: []string{
+            "Krypton",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -121,6 +124,9 @@ func main() {
             },
         },
         ConnectionID: "meanwhile",
+        Fields: []string{
+            "whose",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -170,6 +176,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Contact.GetCrmContact(ctx, operations.GetCrmContactRequest{
         ConnectionID: "Oregon",
+        Fields: []string{
+            "methodology",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -220,6 +229,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Contact.GetUcContact(ctx, operations.GetUcContactRequest{
         ConnectionID: "JBOD ivory fool",
+        Fields: []string{
+            "Mouse",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -270,6 +282,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Contact.ListCrmContacts(ctx, operations.ListCrmContactsRequest{
         ConnectionID: "Awesome index steradian",
+        Fields: []string{
+            "District",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -319,6 +334,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Contact.ListUcContacts(ctx, operations.ListUcContactsRequest{
         ConnectionID: "Bicycle male",
+        Fields: []string{
+            "East",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -386,6 +404,9 @@ func main() {
             },
         },
         ConnectionID: "Future Diesel",
+        Fields: []string{
+            "syndicate",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -449,6 +470,9 @@ func main() {
             },
         },
         ConnectionID: "South Pants candela",
+        Fields: []string{
+            "Investor",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -617,6 +641,9 @@ func main() {
             },
         },
         ConnectionID: "man panel",
+        Fields: []string{
+            "Mauritania",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -680,6 +707,9 @@ func main() {
             },
         },
         ConnectionID: "Cruiser",
+        Fields: []string{
+            "Awesome",
+        },
         ID: "<ID>",
     })
     if err != nil {

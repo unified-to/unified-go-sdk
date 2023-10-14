@@ -58,6 +58,9 @@ func main() {
             },
         },
         ConnectionID: "Savings Customer Loan",
+        Fields: []string{
+            "SMS",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -107,6 +110,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Job.GetAtsJob(ctx, operations.GetAtsJobRequest{
         ConnectionID: "runway",
+        Fields: []string{
+            "Bronze",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -157,6 +163,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Job.ListAtsJobs(ctx, operations.ListAtsJobsRequest{
         ConnectionID: "niches SQL",
+        Fields: []string{
+            "1080p",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -229,6 +238,9 @@ func main() {
             },
         },
         ConnectionID: "gold Principal",
+        Fields: []string{
+            "BMW",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -352,6 +364,9 @@ func main() {
             },
         },
         ConnectionID: "euthanise system",
+        Fields: []string{
+            "payment",
+        },
         ID: "<ID>",
     })
     if err != nil {

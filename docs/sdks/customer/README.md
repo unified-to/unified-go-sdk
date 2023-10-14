@@ -51,6 +51,9 @@ func main() {
             },
         },
         ConnectionID: "Osmium blissfully",
+        Fields: []string{
+            "24/7",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -100,6 +103,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.GetTicketingCustomer(ctx, operations.GetTicketingCustomerRequest{
         ConnectionID: "benchmark",
+        Fields: []string{
+            "Cambridgeshire",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -150,6 +156,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.ListTicketingCustomers(ctx, operations.ListTicketingCustomersRequest{
         ConnectionID: "Carrollton yellow",
+        Fields: []string{
+            "until",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -215,6 +224,9 @@ func main() {
             },
         },
         ConnectionID: "Fermium Northeast Metal",
+        Fields: []string{
+            "Rustic",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -331,6 +343,9 @@ func main() {
             },
         },
         ConnectionID: "Avon Southwest",
+        Fields: []string{
+            "Soft",
+        },
         ID: "<ID>",
     })
     if err != nil {

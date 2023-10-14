@@ -47,6 +47,9 @@ func main() {
             },
         },
         ConnectionID: "ability Einsteinium Orchestrator",
+        Fields: []string{
+            "orchid",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -96,6 +99,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Lead.GetCrmLead(ctx, operations.GetCrmLeadRequest{
         ConnectionID: "Handmade Keyboard yum",
+        Fields: []string{
+            "magnetic",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -146,6 +152,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Lead.ListCrmLeads(ctx, operations.ListCrmLeadsRequest{
         ConnectionID: "International",
+        Fields: []string{
+            "ratione",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -207,6 +216,9 @@ func main() {
             },
         },
         ConnectionID: "Ball Chips",
+        Fields: []string{
+            "Southwest",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -319,6 +331,9 @@ func main() {
             },
         },
         ConnectionID: "Pickup Polestar Checking",
+        Fields: []string{
+            "Concrete",
+        },
         ID: "<ID>",
     })
     if err != nil {

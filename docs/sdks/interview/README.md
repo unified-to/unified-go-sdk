@@ -41,6 +41,9 @@ func main() {
             },
         },
         ConnectionID: "Frozen",
+        Fields: []string{
+            "deposit",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -90,6 +93,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.GetAtsInterview(ctx, operations.GetAtsInterviewRequest{
         ConnectionID: "syndicate longingly Mobility",
+        Fields: []string{
+            "grease",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -140,6 +146,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.ListAtsInterviews(ctx, operations.ListAtsInterviewsRequest{
         ConnectionID: "Northeast",
+        Fields: []string{
+            "Ergonomic",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -195,6 +204,9 @@ func main() {
             },
         },
         ConnectionID: "Francium",
+        Fields: []string{
+            "Cambridgeshire",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -301,6 +313,9 @@ func main() {
             },
         },
         ConnectionID: "Account omnis Gorgeous",
+        Fields: []string{
+            "magenta",
+        },
         ID: "<ID>",
     })
     if err != nil {

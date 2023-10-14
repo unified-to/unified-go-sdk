@@ -41,6 +41,9 @@ func main() {
             },
         },
         ConnectionID: "Music Rap",
+        Fields: []string{
+            "wind",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -90,6 +93,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Deal.GetCrmDeal(ctx, operations.GetCrmDealRequest{
         ConnectionID: "male orange",
+        Fields: []string{
+            "Reduced",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -140,6 +146,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Deal.ListCrmDeals(ctx, operations.ListCrmDealsRequest{
         ConnectionID: "Lamborghini",
+        Fields: []string{
+            "female",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -195,6 +204,9 @@ func main() {
             },
         },
         ConnectionID: "Platinum female",
+        Fields: []string{
+            "Berkshire",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -301,6 +313,9 @@ func main() {
             },
         },
         ConnectionID: "Shirt",
+        Fields: []string{
+            "whiteboard",
+        },
         ID: "<ID>",
     })
     if err != nil {

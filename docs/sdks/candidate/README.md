@@ -52,6 +52,9 @@ func main() {
             },
         },
         ConnectionID: "bypass Creative Legacy",
+        Fields: []string{
+            "Bronze",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -101,6 +104,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Candidate.GetAtsCandidate(ctx, operations.GetAtsCandidateRequest{
         ConnectionID: "Markets",
+        Fields: []string{
+            "payment",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -151,6 +157,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Candidate.ListAtsCandidates(ctx, operations.ListAtsCandidatesRequest{
         ConnectionID: "mole clearly",
+        Fields: []string{
+            "Van",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -217,6 +226,9 @@ func main() {
             },
         },
         ConnectionID: "World Van transitional",
+        Fields: []string{
+            "green",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -334,6 +346,9 @@ func main() {
             },
         },
         ConnectionID: "Zackery male Gloves",
+        Fields: []string{
+            "threadbare",
+        },
         ID: "<ID>",
     })
     if err != nil {

@@ -55,6 +55,9 @@ func main() {
             },
         },
         ConnectionID: "ack Recycled",
+        Fields: []string{
+            "Southwest",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -113,6 +116,9 @@ func main() {
             Raw: &shared.PropertyHrisGroupRaw{},
         },
         ConnectionID: "Technetium",
+        Fields: []string{
+            "Tactics",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -162,6 +168,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Hris.GetHrisEmployee(ctx, operations.GetHrisEmployeeRequest{
         ConnectionID: "Automated",
+        Fields: []string{
+            "West",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -212,6 +221,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Hris.GetHrisGroup(ctx, operations.GetHrisGroupRequest{
         ConnectionID: "Cedi state Cadillac",
+        Fields: []string{
+            "optical",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -262,6 +274,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Hris.ListHrisEmployees(ctx, operations.ListHrisEmployeesRequest{
         ConnectionID: "Table moratorium",
+        Fields: []string{
+            "payment",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -311,6 +326,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Hris.ListHrisGroups(ctx, operations.ListHrisGroupsRequest{
         ConnectionID: "Bronze Rubber",
+        Fields: []string{
+            "feel",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -374,6 +392,9 @@ func main() {
             },
         },
         ConnectionID: "barring transmitting Hybrid",
+        Fields: []string{
+            "Mesa",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -433,6 +454,9 @@ func main() {
             Raw: &shared.PropertyHrisGroupRaw{},
         },
         ConnectionID: "bluetooth West",
+        Fields: []string{
+            "Intersex",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -597,6 +621,9 @@ func main() {
             },
         },
         ConnectionID: "Jewelery slap",
+        Fields: []string{
+            "secrete",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -656,6 +683,9 @@ func main() {
             Raw: &shared.PropertyHrisGroupRaw{},
         },
         ConnectionID: "bashfully",
+        Fields: []string{
+            "Avon",
+        },
         ID: "<ID>",
     })
     if err != nil {

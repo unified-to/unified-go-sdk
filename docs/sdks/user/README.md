@@ -47,6 +47,9 @@ func main() {
             },
         },
         ConnectionID: "Incredible Virginia",
+        Fields: []string{
+            "Keyboard",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -96,6 +99,9 @@ func main() {
     ctx := context.Background()
     res, err := s.User.GetCrmUser(ctx, operations.GetCrmUserRequest{
         ConnectionID: "Bespoke Dollar",
+        Fields: []string{
+            "unto",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -146,6 +152,9 @@ func main() {
     ctx := context.Background()
     res, err := s.User.ListCrmUsers(ctx, operations.ListCrmUsersRequest{
         ConnectionID: "careless Costa",
+        Fields: []string{
+            "olive",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -207,6 +216,9 @@ func main() {
             },
         },
         ConnectionID: "katal Industrial Classical",
+        Fields: []string{
+            "boo",
+        },
         ID: "<ID>",
     })
     if err != nil {
@@ -319,6 +331,9 @@ func main() {
             },
         },
         ConnectionID: "Savings",
+        Fields: []string{
+            "Corwin",
+        },
         ID: "<ID>",
     })
     if err != nil {
