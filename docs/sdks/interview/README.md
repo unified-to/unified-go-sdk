@@ -41,9 +41,6 @@ func main() {
             },
         },
         ConnectionID: "Frozen",
-        Fields: []string{
-            "deposit",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -204,9 +201,6 @@ func main() {
             },
         },
         ConnectionID: "Francium",
-        Fields: []string{
-            "Cambridgeshire",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -313,9 +307,6 @@ func main() {
             },
         },
         ConnectionID: "Account omnis Gorgeous",
-        Fields: []string{
-            "magenta",
-        },
         ID: "<ID>",
     })
     if err != nil {

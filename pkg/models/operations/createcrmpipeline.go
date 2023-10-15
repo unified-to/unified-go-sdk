@@ -11,8 +11,6 @@ type CreateCrmPipelineRequest struct {
 	CrmPipeline *shared.CrmPipeline `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateCrmPipelineRequest) GetCrmPipeline() *shared.CrmPipeline {
@@ -27,13 +25,6 @@ func (o *CreateCrmPipelineRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
-}
-
-func (o *CreateCrmPipelineRequest) GetFields() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Fields
 }
 
 type CreateCrmPipelineResponse struct {

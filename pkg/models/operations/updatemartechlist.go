@@ -12,8 +12,6 @@ type UpdateMartechListRequest struct {
 	MarketingList *shared.MarketingList `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the List
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
@@ -30,13 +28,6 @@ func (o *UpdateMartechListRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
-}
-
-func (o *UpdateMartechListRequest) GetFields() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Fields
 }
 
 func (o *UpdateMartechListRequest) GetID() string {

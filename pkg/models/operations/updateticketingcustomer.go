@@ -11,8 +11,6 @@ type UpdateTicketingCustomerRequest struct {
 	TicketingCustomer *shared.TicketingCustomer `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Customer
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
@@ -29,13 +27,6 @@ func (o *UpdateTicketingCustomerRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
-}
-
-func (o *UpdateTicketingCustomerRequest) GetFields() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Fields
 }
 
 func (o *UpdateTicketingCustomerRequest) GetID() string {

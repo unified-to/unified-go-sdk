@@ -59,9 +59,6 @@ func main() {
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "Savings",
-        Fields: []string{
-            "within",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -240,9 +237,6 @@ func main() {
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "female",
-        Fields: []string{
-            "Connecticut",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -367,9 +361,6 @@ func main() {
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "Accountability",
-        Fields: []string{
-            "Manager",
-        },
         ID: "<ID>",
     })
     if err != nil {

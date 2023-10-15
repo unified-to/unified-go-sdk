@@ -38,9 +38,6 @@ func main() {
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
         ConnectionID: "incidentally Mandatory meanwhile",
-        Fields: []string{
-            "Human",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -198,9 +195,6 @@ func main() {
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
         ConnectionID: "South grey",
-        Fields: []string{
-            "Technician",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -304,9 +298,6 @@ func main() {
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
         ConnectionID: "Rosie",
-        Fields: []string{
-            "triangular",
-        },
         ID: "<ID>",
     })
     if err != nil {

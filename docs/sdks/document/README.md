@@ -38,9 +38,6 @@ func main() {
             Raw: shared.PropertyAtsScorecardRaw{},
         },
         ConnectionID: "Northwest Account",
-        Fields: []string{
-            "Yuan",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -198,9 +195,6 @@ func main() {
             Raw: shared.PropertyAtsScorecardRaw{},
         },
         ConnectionID: "eek",
-        Fields: []string{
-            "engage",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -304,9 +298,6 @@ func main() {
             Raw: shared.PropertyAtsScorecardRaw{},
         },
         ConnectionID: "grey",
-        Fields: []string{
-            "Baby",
-        },
         ID: "<ID>",
     })
     if err != nil {

@@ -38,9 +38,6 @@ func main() {
             Raw: &shared.PropertyCrmFileRaw{},
         },
         ConnectionID: "ASCII Wooden the",
-        Fields: []string{
-            "Tungsten",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -198,9 +195,6 @@ func main() {
             Raw: &shared.PropertyCrmFileRaw{},
         },
         ConnectionID: "bluetooth",
-        Fields: []string{
-            "Bronze",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -304,9 +298,6 @@ func main() {
             Raw: &shared.PropertyCrmFileRaw{},
         },
         ConnectionID: "Orchestrator",
-        Fields: []string{
-            "male",
-        },
         ID: "<ID>",
     })
     if err != nil {

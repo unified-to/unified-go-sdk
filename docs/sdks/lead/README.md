@@ -47,9 +47,6 @@ func main() {
             },
         },
         ConnectionID: "ability Einsteinium Orchestrator",
-        Fields: []string{
-            "orchid",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -216,9 +213,6 @@ func main() {
             },
         },
         ConnectionID: "Ball Chips",
-        Fields: []string{
-            "Southwest",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -331,9 +325,6 @@ func main() {
             },
         },
         ConnectionID: "Pickup Polestar Checking",
-        Fields: []string{
-            "Concrete",
-        },
         ID: "<ID>",
     })
     if err != nil {

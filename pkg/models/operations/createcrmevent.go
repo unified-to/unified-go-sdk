@@ -12,8 +12,6 @@ type CreateCrmEventRequest struct {
 	CrmEvent *shared.CrmEvent `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateCrmEventRequest) GetCrmEvent() *shared.CrmEvent {
@@ -28,13 +26,6 @@ func (o *CreateCrmEventRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
-}
-
-func (o *CreateCrmEventRequest) GetFields() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Fields
 }
 
 type CreateCrmEventResponse struct {

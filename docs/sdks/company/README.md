@@ -57,9 +57,6 @@ func main() {
             },
         },
         ConnectionID: "magenta Data woot",
-        Fields: []string{
-            "payment",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -284,9 +281,6 @@ func main() {
             },
         },
         ConnectionID: "Trans",
-        Fields: []string{
-            "Money",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -408,9 +402,6 @@ func main() {
             },
         },
         ConnectionID: "Southeast ad",
-        Fields: []string{
-            "Practical",
-        },
         ID: "<ID>",
     })
     if err != nil {

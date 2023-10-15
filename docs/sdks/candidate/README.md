@@ -52,9 +52,6 @@ func main() {
             },
         },
         ConnectionID: "bypass Creative Legacy",
-        Fields: []string{
-            "Bronze",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -226,9 +223,6 @@ func main() {
             },
         },
         ConnectionID: "World Van transitional",
-        Fields: []string{
-            "green",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -346,9 +340,6 @@ func main() {
             },
         },
         ConnectionID: "Zackery male Gloves",
-        Fields: []string{
-            "threadbare",
-        },
         ID: "<ID>",
     })
     if err != nil {

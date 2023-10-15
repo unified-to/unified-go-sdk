@@ -51,9 +51,6 @@ func main() {
             },
         },
         ConnectionID: "Osmium blissfully",
-        Fields: []string{
-            "24/7",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -224,9 +221,6 @@ func main() {
             },
         },
         ConnectionID: "Fermium Northeast Metal",
-        Fields: []string{
-            "Rustic",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -343,9 +337,6 @@ func main() {
             },
         },
         ConnectionID: "Avon Southwest",
-        Fields: []string{
-            "Soft",
-        },
         ID: "<ID>",
     })
     if err != nil {

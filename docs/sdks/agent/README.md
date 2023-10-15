@@ -49,9 +49,6 @@ func main() {
             },
         },
         ConnectionID: "smoothly Algeria",
-        Fields: []string{
-            "payment",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -271,9 +268,6 @@ func main() {
             },
         },
         ConnectionID: "by",
-        Fields: []string{
-            "Bedfordshire",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -387,9 +381,6 @@ func main() {
             },
         },
         ConnectionID: "beside Usability Bedfordshire",
-        Fields: []string{
-            "SSD",
-        },
         ID: "<ID>",
     })
     if err != nil {

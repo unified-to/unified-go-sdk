@@ -11,8 +11,6 @@ type CreateCrmFileRequest struct {
 	CrmFile *shared.CrmFile `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateCrmFileRequest) GetCrmFile() *shared.CrmFile {
@@ -27,13 +25,6 @@ func (o *CreateCrmFileRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
-}
-
-func (o *CreateCrmFileRequest) GetFields() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Fields
 }
 
 type CreateCrmFileResponse struct {

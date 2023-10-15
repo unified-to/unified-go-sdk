@@ -58,9 +58,6 @@ func main() {
             },
         },
         ConnectionID: "Savings Customer Loan",
-        Fields: []string{
-            "SMS",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -238,9 +235,6 @@ func main() {
             },
         },
         ConnectionID: "gold Principal",
-        Fields: []string{
-            "BMW",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -364,9 +358,6 @@ func main() {
             },
         },
         ConnectionID: "euthanise system",
-        Fields: []string{
-            "payment",
-        },
         ID: "<ID>",
     })
     if err != nil {

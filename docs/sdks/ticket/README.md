@@ -41,9 +41,6 @@ func main() {
             },
         },
         ConnectionID: "indigo",
-        Fields: []string{
-            "silver",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -204,9 +201,6 @@ func main() {
             },
         },
         ConnectionID: "Pizza Concrete",
-        Fields: []string{
-            "redefine",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -313,9 +307,6 @@ func main() {
             },
         },
         ConnectionID: "Agender caring optimal",
-        Fields: []string{
-            "tan",
-        },
         ID: "<ID>",
     })
     if err != nil {

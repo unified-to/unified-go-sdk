@@ -38,9 +38,6 @@ func main() {
             Raw: &shared.PropertyMarketingListRaw{},
         },
         ConnectionID: "Architect responsive",
-        Fields: []string{
-            "Recycled",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -198,9 +195,6 @@ func main() {
             Raw: &shared.PropertyMarketingListRaw{},
         },
         ConnectionID: "Operations Liaison",
-        Fields: []string{
-            "phooey",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -304,9 +298,6 @@ func main() {
             Raw: &shared.PropertyMarketingListRaw{},
         },
         ConnectionID: "Secured Kia Stroman",
-        Fields: []string{
-            "invoice",
-        },
         ID: "<ID>",
     })
     if err != nil {

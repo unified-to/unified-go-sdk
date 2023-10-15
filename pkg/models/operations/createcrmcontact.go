@@ -12,8 +12,6 @@ type CreateCrmContactRequest struct {
 	CrmContact *shared.CrmContact `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateCrmContactRequest) GetCrmContact() *shared.CrmContact {
@@ -28,13 +26,6 @@ func (o *CreateCrmContactRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
-}
-
-func (o *CreateCrmContactRequest) GetFields() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Fields
 }
 
 type CreateCrmContactResponse struct {

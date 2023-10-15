@@ -12,8 +12,6 @@ type CreateAtsCandidateRequest struct {
 	AtsCandidate *shared.AtsCandidate `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateAtsCandidateRequest) GetAtsCandidate() *shared.AtsCandidate {
@@ -28,13 +26,6 @@ func (o *CreateAtsCandidateRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
-}
-
-func (o *CreateAtsCandidateRequest) GetFields() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Fields
 }
 
 type CreateAtsCandidateResponse struct {

@@ -49,10 +49,7 @@ func main() {
             },
         },
         ConnectionID: "South Electronic calculate",
-        Fields: []string{
-            "translate",
-        },
-        ListID: "scalable",
+        ListID: "ew scalable Hassium",
     })
     if err != nil {
         log.Fatal(err)
@@ -223,11 +220,8 @@ func main() {
             },
         },
         ConnectionID: "Unbranded overriding Money",
-        Fields: []string{
-            "Brand",
-        },
         ID: "<ID>",
-        ListID: "West integrated",
+        ListID: "as variant West",
     })
     if err != nil {
         log.Fatal(err)
@@ -342,11 +336,8 @@ func main() {
             },
         },
         ConnectionID: "Checking deploy Hermaphrodite",
-        Fields: []string{
-            "navigate",
-        },
         ID: "<ID>",
-        ListID: "methodologies state Computer",
+        ListID: "Bespoke below",
     })
     if err != nil {
         log.Fatal(err)

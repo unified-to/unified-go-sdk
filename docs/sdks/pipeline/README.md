@@ -38,9 +38,6 @@ func main() {
             Raw: &shared.PropertyCrmPipelineRaw{},
         },
         ConnectionID: "Paradigm Vista fuchsia",
-        Fields: []string{
-            "Hatchback",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -198,9 +195,6 @@ func main() {
             Raw: &shared.PropertyCrmPipelineRaw{},
         },
         ConnectionID: "imperfect Costa Southwest",
-        Fields: []string{
-            "excluding",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -304,9 +298,6 @@ func main() {
             Raw: &shared.PropertyCrmPipelineRaw{},
         },
         ConnectionID: "needily",
-        Fields: []string{
-            "Androgyne",
-        },
         ID: "<ID>",
     })
     if err != nil {

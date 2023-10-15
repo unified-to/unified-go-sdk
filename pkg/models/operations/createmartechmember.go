@@ -12,8 +12,6 @@ type CreateMartechMemberRequest struct {
 	MarketingMember *shared.MarketingMember `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the list
 	ListID string `pathParam:"style=simple,explode=false,name=list_id"`
 }
@@ -30,13 +28,6 @@ func (o *CreateMartechMemberRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
-}
-
-func (o *CreateMartechMemberRequest) GetFields() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Fields
 }
 
 func (o *CreateMartechMemberRequest) GetListID() string {

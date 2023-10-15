@@ -12,8 +12,6 @@ type PatchAtsApplicationRequest struct {
 	AtsApplication *shared.AtsApplication `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Application
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
@@ -30,13 +28,6 @@ func (o *PatchAtsApplicationRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
-}
-
-func (o *PatchAtsApplicationRequest) GetFields() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Fields
 }
 
 func (o *PatchAtsApplicationRequest) GetID() string {

@@ -49,9 +49,6 @@ func main() {
             },
         },
         ConnectionID: "ack Recycled",
-        Fields: []string{
-            "Southwest",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -220,9 +217,6 @@ func main() {
             },
         },
         ConnectionID: "barring transmitting Hybrid",
-        Fields: []string{
-            "Mesa",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -337,9 +331,6 @@ func main() {
             },
         },
         ConnectionID: "Jewelery slap",
-        Fields: []string{
-            "secrete",
-        },
         ID: "<ID>",
     })
     if err != nil {

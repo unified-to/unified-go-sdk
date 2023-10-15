@@ -38,10 +38,7 @@ func main() {
             Raw: shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "Books kilogram hmph",
-        Fields: []string{
-            "yowza",
-        },
-        TicketID: "Markets executive Hoeger",
+        TicketID: "Dakota function interface",
     })
     if err != nil {
         log.Fatal(err)
@@ -201,11 +198,8 @@ func main() {
             Raw: shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "Bicycle Southwest Darmstadtium",
-        Fields: []string{
-            "Plastic",
-        },
         ID: "<ID>",
-        TicketID: "Investor bypass EXE",
+        TicketID: "index",
     })
     if err != nil {
         log.Fatal(err)
@@ -309,11 +303,8 @@ func main() {
             Raw: shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "via among Quality",
-        Fields: []string{
-            "bluetooth",
-        },
         ID: "<ID>",
-        TicketID: "when",
+        TicketID: "Brand when",
     })
     if err != nil {
         log.Fatal(err)
