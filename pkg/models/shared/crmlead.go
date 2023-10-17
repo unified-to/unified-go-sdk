@@ -8,7 +8,6 @@ import (
 )
 
 type CrmLead struct {
-	Active        *bool                   `json:"active,omitempty"`
 	Address       *PropertyCrmLeadAddress `json:"address,omitempty"`
 	CompanyID     *string                 `json:"company_id,omitempty"`
 	ContactID     *string                 `json:"contact_id,omitempty"`
@@ -16,8 +15,10 @@ type CrmLead struct {
 	CreatorUserID *string                 `json:"creator_user_id,omitempty"`
 	Emails        []CrmEmail              `json:"emails,omitempty"`
 	ID            *string                 `json:"id,omitempty"`
+	IsActive      *bool                   `json:"is_active,omitempty"`
 	Name          *string                 `json:"name,omitempty"`
 	Raw           *PropertyCrmLeadRaw     `json:"raw,omitempty"`
+	Source        *string                 `json:"source,omitempty"`
 	Telephones    []CrmTelephone          `json:"telephones,omitempty"`
 	UpdatedAt     *time.Time              `json:"updated_at,omitempty"`
 	UserID        *string                 `json:"user_id,omitempty"`
@@ -32,13 +33,6 @@ func (c *CrmLead) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (o *CrmLead) GetActive() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.Active
 }
 
 func (o *CrmLead) GetAddress() *PropertyCrmLeadAddress {
@@ -90,6 +84,13 @@ func (o *CrmLead) GetID() *string {
 	return o.ID
 }
 
+func (o *CrmLead) GetIsActive() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsActive
+}
+
 func (o *CrmLead) GetName() *string {
 	if o == nil {
 		return nil
@@ -102,6 +103,13 @@ func (o *CrmLead) GetRaw() *PropertyCrmLeadRaw {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *CrmLead) GetSource() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Source
 }
 
 func (o *CrmLead) GetTelephones() []CrmTelephone {

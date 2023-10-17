@@ -9,14 +9,14 @@ import (
 
 // CrmCompany - A company represents an organization that optionally is associated with a deal and/or contacts
 type CrmCompany struct {
-	Active    *bool                      `json:"active,omitempty"`
 	Address   *PropertyCrmCompanyAddress `json:"address,omitempty"`
 	CreatedAt *time.Time                 `json:"created_at,omitempty"`
 	// An array of deal IDs associated with this contact
-	DealIds []string   `json:"deal_ids,omitempty"`
-	Emails  []CrmEmail `json:"emails,omitempty"`
-	ID      *string    `json:"id,omitempty"`
-	Name    *string    `json:"name,omitempty"`
+	DealIds  []string   `json:"deal_ids,omitempty"`
+	Emails   []CrmEmail `json:"emails,omitempty"`
+	ID       *string    `json:"id,omitempty"`
+	IsActive *bool      `json:"is_active,omitempty"`
+	Name     *string    `json:"name,omitempty"`
 	// The raw data returned by the integration for this company
 	Raw        *PropertyCrmCompanyRaw `json:"raw,omitempty"`
 	Tags       []string               `json:"tags,omitempty"`
@@ -34,13 +34,6 @@ func (c *CrmCompany) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (o *CrmCompany) GetActive() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.Active
 }
 
 func (o *CrmCompany) GetAddress() *PropertyCrmCompanyAddress {
@@ -76,6 +69,13 @@ func (o *CrmCompany) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *CrmCompany) GetIsActive() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsActive
 }
 
 func (o *CrmCompany) GetName() *string {

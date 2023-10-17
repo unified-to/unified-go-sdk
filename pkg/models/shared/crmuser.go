@@ -8,7 +8,6 @@ import (
 )
 
 type CrmUser struct {
-	Active         *bool                   `json:"active,omitempty"`
 	Address        *PropertyCrmUserAddress `json:"address,omitempty"`
 	CreatedAt      *time.Time              `json:"created_at,omitempty"`
 	Currency       *string                 `json:"currency,omitempty"`
@@ -17,6 +16,7 @@ type CrmUser struct {
 	Emails         []CrmEmail              `json:"emails,omitempty"`
 	ID             *string                 `json:"id,omitempty"`
 	ImageURL       *string                 `json:"image_url,omitempty"`
+	IsActive       *bool                   `json:"is_active,omitempty"`
 	LanguageLocale *string                 `json:"language_locale,omitempty"`
 	Name           *string                 `json:"name,omitempty"`
 	Raw            *PropertyCrmUserRaw     `json:"raw,omitempty"`
@@ -35,13 +35,6 @@ func (c *CrmUser) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (o *CrmUser) GetActive() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.Active
 }
 
 func (o *CrmUser) GetAddress() *PropertyCrmUserAddress {
@@ -98,6 +91,13 @@ func (o *CrmUser) GetImageURL() *string {
 		return nil
 	}
 	return o.ImageURL
+}
+
+func (o *CrmUser) GetIsActive() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsActive
 }
 
 func (o *CrmUser) GetLanguageLocale() *string {

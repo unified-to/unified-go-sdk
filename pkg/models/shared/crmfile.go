@@ -8,7 +8,6 @@ import (
 )
 
 type CrmFile struct {
-	Active      *bool               `json:"active,omitempty"`
 	ActivityID  *string             `json:"activity_id,omitempty"`
 	CompanyID   *string             `json:"company_id,omitempty"`
 	ContactID   *string             `json:"contact_id,omitempty"`
@@ -20,6 +19,7 @@ type CrmFile struct {
 	FileType    *string             `json:"file_type,omitempty"`
 	FileURL     *string             `json:"file_url,omitempty"`
 	ID          *string             `json:"id,omitempty"`
+	IsActive    *bool               `json:"is_active,omitempty"`
 	LeadID      *string             `json:"lead_id,omitempty"`
 	Raw         *PropertyCrmFileRaw `json:"raw,omitempty"`
 	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
@@ -35,13 +35,6 @@ func (c *CrmFile) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (o *CrmFile) GetActive() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.Active
 }
 
 func (o *CrmFile) GetActivityID() *string {
@@ -119,6 +112,13 @@ func (o *CrmFile) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *CrmFile) GetIsActive() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsActive
 }
 
 func (o *CrmFile) GetLeadID() *string {

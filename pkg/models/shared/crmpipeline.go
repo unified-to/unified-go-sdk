@@ -8,11 +8,11 @@ import (
 )
 
 type CrmPipeline struct {
-	Active          *bool                   `json:"active,omitempty"`
 	CreatedAt       *time.Time              `json:"created_at,omitempty"`
 	DealProbability *bool                   `json:"deal_probability,omitempty"`
 	DisplayOrder    *float64                `json:"display_order,omitempty"`
 	ID              *string                 `json:"id,omitempty"`
+	IsActive        *bool                   `json:"is_active,omitempty"`
 	Name            *string                 `json:"name,omitempty"`
 	Raw             *PropertyCrmPipelineRaw `json:"raw,omitempty"`
 	UpdatedAt       *time.Time              `json:"updated_at,omitempty"`
@@ -27,13 +27,6 @@ func (c *CrmPipeline) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (o *CrmPipeline) GetActive() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.Active
 }
 
 func (o *CrmPipeline) GetCreatedAt() *time.Time {
@@ -62,6 +55,13 @@ func (o *CrmPipeline) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *CrmPipeline) GetIsActive() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsActive
 }
 
 func (o *CrmPipeline) GetName() *string {

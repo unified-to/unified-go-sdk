@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: a8230ab553637c9a88d12a3ad6e747a0
+  docChecksum: 2ac6fb3a1354f4c27baae8d213cd423e
   docVersion: "1.0"
-  speakeasyVersion: 1.99.2
-  generationVersion: 2.155.1
+  speakeasyVersion: 1.100.2
+  generationVersion: 2.159.2
 generation:
   comments:
     disableComments: false
@@ -19,7 +19,7 @@ features:
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.0
 go:
-  version: 0.4.5
+  version: 0.4.6
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   maxMethodParams: 0
