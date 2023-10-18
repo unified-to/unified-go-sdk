@@ -10,8 +10,6 @@
 * [CreateCrmFile](#createcrmfile) - Create a file
 * [CreateCrmLead](#createcrmlead) - Create a lead
 * [CreateCrmPipeline](#createcrmpipeline) - Create a pipeline
-* [CreateCrmTeam](#createcrmteam) - Create a team
-* [CreateCrmUser](#createcrmuser) - Create a user
 * [GetCrmCompany](#getcrmcompany) - Retrieve a company
 * [GetCrmContact](#getcrmcontact) - Retrieve a contact
 * [GetCrmDeal](#getcrmdeal) - Retrieve a deal
@@ -19,8 +17,6 @@
 * [GetCrmFile](#getcrmfile) - Retrieve a file
 * [GetCrmLead](#getcrmlead) - Retrieve a lead
 * [GetCrmPipeline](#getcrmpipeline) - Retrieve a pipeline
-* [GetCrmTeam](#getcrmteam) - Retrieve a team
-* [GetCrmUser](#getcrmuser) - Retrieve a user
 * [ListCrmCompanies](#listcrmcompanies) - List all companies
 * [ListCrmContacts](#listcrmcontacts) - List all contacts
 * [ListCrmDeals](#listcrmdeals) - List all deals
@@ -28,8 +24,6 @@
 * [ListCrmFiles](#listcrmfiles) - List all files
 * [ListCrmLeads](#listcrmleads) - List all leads
 * [ListCrmPipelines](#listcrmpipelines) - List all pipelines
-* [ListCrmTeams](#listcrmteams) - List all teams
-* [ListCrmUsers](#listcrmusers) - List all users
 * [PatchCrmCompany](#patchcrmcompany) - Update a company
 * [PatchCrmContact](#patchcrmcontact) - Update a contact
 * [PatchCrmDeal](#patchcrmdeal) - Update a deal
@@ -37,8 +31,6 @@
 * [PatchCrmFile](#patchcrmfile) - Update a file
 * [PatchCrmLead](#patchcrmlead) - Update a lead
 * [PatchCrmPipeline](#patchcrmpipeline) - Update a pipeline
-* [PatchCrmTeam](#patchcrmteam) - Update a team
-* [PatchCrmUser](#patchcrmuser) - Update a user
 * [RemoveCrmCompany](#removecrmcompany) - Remove a company
 * [RemoveCrmContact](#removecrmcontact) - Remove a contact
 * [RemoveCrmDeal](#removecrmdeal) - Remove a deal
@@ -46,8 +38,6 @@
 * [RemoveCrmFile](#removecrmfile) - Remove a file
 * [RemoveCrmLead](#removecrmlead) - Remove a lead
 * [RemoveCrmPipeline](#removecrmpipeline) - Remove a pipeline
-* [RemoveCrmTeam](#removecrmteam) - Remove a team
-* [RemoveCrmUser](#removecrmuser) - Remove a user
 * [UpdateCrmCompany](#updatecrmcompany) - Update a company
 * [UpdateCrmContact](#updatecrmcontact) - Update a contact
 * [UpdateCrmDeal](#updatecrmdeal) - Update a deal
@@ -55,8 +45,6 @@
 * [UpdateCrmFile](#updatecrmfile) - Update a file
 * [UpdateCrmLead](#updatecrmlead) - Update a lead
 * [UpdateCrmPipeline](#updatecrmpipeline) - Update a pipeline
-* [UpdateCrmTeam](#updatecrmteam) - Update a team
-* [UpdateCrmUser](#updatecrmuser) - Update a user
 
 ## CreateCrmCompany
 
@@ -488,122 +476,6 @@ func main() {
 **[*operations.CreateCrmPipelineResponse](../../models/operations/createcrmpipelineresponse.md), error**
 
 
-## CreateCrmTeam
-
-Create a team
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.CreateCrmTeam(ctx, operations.CreateCrmTeamRequest{
-        CrmTeam: &shared.CrmTeam{
-            Raw: &shared.PropertyCrmTeamRaw{},
-            UserIds: []string{
-                "exercitationem",
-            },
-        },
-        ConnectionID: "who",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmTeam != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.CreateCrmTeamRequest](../../models/operations/createcrmteamrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[*operations.CreateCrmTeamResponse](../../models/operations/createcrmteamresponse.md), error**
-
-
-## CreateCrmUser
-
-Create a user
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.CreateCrmUser(ctx, operations.CreateCrmUserRequest{
-        CrmUser: &shared.CrmUser{
-            Address: &shared.PropertyCrmUserAddress{},
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: &shared.PropertyCrmUserRaw{},
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "zero",
-                },
-            },
-        },
-        ConnectionID: "male",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmUser != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.CreateCrmUserRequest](../../models/operations/createcrmuserrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[*operations.CreateCrmUserResponse](../../models/operations/createcrmuserresponse.md), error**
-
-
 ## GetCrmCompany
 
 Retrieve a company
@@ -975,112 +847,6 @@ func main() {
 **[*operations.GetCrmPipelineResponse](../../models/operations/getcrmpipelineresponse.md), error**
 
 
-## GetCrmTeam
-
-Retrieve a team
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.GetCrmTeam(ctx, operations.GetCrmTeamRequest{
-        ConnectionID: "online",
-        Fields: []string{
-            "Outdoors",
-        },
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmTeam != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.GetCrmTeamRequest](../../models/operations/getcrmteamrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-
-
-### Response
-
-**[*operations.GetCrmTeamResponse](../../models/operations/getcrmteamresponse.md), error**
-
-
-## GetCrmUser
-
-Retrieve a user
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.GetCrmUser(ctx, operations.GetCrmUserRequest{
-        ConnectionID: "adipisci",
-        Fields: []string{
-            "connect",
-        },
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmUser != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
-| `request`                                                                    | [operations.GetCrmUserRequest](../../models/operations/getcrmuserrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-
-
-### Response
-
-**[*operations.GetCrmUserResponse](../../models/operations/getcrmuserresponse.md), error**
-
-
 ## ListCrmCompanies
 
 List all companies
@@ -1443,110 +1209,6 @@ func main() {
 ### Response
 
 **[*operations.ListCrmPipelinesResponse](../../models/operations/listcrmpipelinesresponse.md), error**
-
-
-## ListCrmTeams
-
-List all teams
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.ListCrmTeams(ctx, operations.ListCrmTeamsRequest{
-        ConnectionID: "Celsius",
-        Fields: []string{
-            "microchip",
-        },
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmTeams != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.ListCrmTeamsRequest](../../models/operations/listcrmteamsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[*operations.ListCrmTeamsResponse](../../models/operations/listcrmteamsresponse.md), error**
-
-
-## ListCrmUsers
-
-List all users
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.ListCrmUsers(ctx, operations.ListCrmUsersRequest{
-        ConnectionID: "CFA",
-        Fields: []string{
-            "Costa",
-        },
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmUsers != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.ListCrmUsersRequest](../../models/operations/listcrmusersrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[*operations.ListCrmUsersResponse](../../models/operations/listcrmusersresponse.md), error**
 
 
 ## PatchCrmCompany
@@ -1986,124 +1648,6 @@ func main() {
 **[*operations.PatchCrmPipelineResponse](../../models/operations/patchcrmpipelineresponse.md), error**
 
 
-## PatchCrmTeam
-
-Update a team
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.PatchCrmTeam(ctx, operations.PatchCrmTeamRequest{
-        CrmTeam: &shared.CrmTeam{
-            Raw: &shared.PropertyCrmTeamRaw{},
-            UserIds: []string{
-                "Account",
-            },
-        },
-        ConnectionID: "Customer",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmTeam != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.PatchCrmTeamRequest](../../models/operations/patchcrmteamrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[*operations.PatchCrmTeamResponse](../../models/operations/patchcrmteamresponse.md), error**
-
-
-## PatchCrmUser
-
-Update a user
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.PatchCrmUser(ctx, operations.PatchCrmUserRequest{
-        CrmUser: &shared.CrmUser{
-            Address: &shared.PropertyCrmUserAddress{},
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: &shared.PropertyCrmUserRaw{},
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "Demiflux",
-                },
-            },
-        },
-        ConnectionID: "grey",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmUser != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.PatchCrmUserRequest](../../models/operations/patchcrmuserrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[*operations.PatchCrmUserResponse](../../models/operations/patchcrmuserresponse.md), error**
-
-
 ## RemoveCrmCompany
 
 Remove a company
@@ -2452,106 +1996,6 @@ func main() {
 ### Response
 
 **[*operations.RemoveCrmPipelineResponse](../../models/operations/removecrmpipelineresponse.md), error**
-
-
-## RemoveCrmTeam
-
-Remove a team
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.RemoveCrmTeam(ctx, operations.RemoveCrmTeamRequest{
-        ConnectionID: "Cotton",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.StatusCode == http.StatusOK {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.RemoveCrmTeamRequest](../../models/operations/removecrmteamrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[*operations.RemoveCrmTeamResponse](../../models/operations/removecrmteamresponse.md), error**
-
-
-## RemoveCrmUser
-
-Remove a user
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.RemoveCrmUser(ctx, operations.RemoveCrmUserRequest{
-        ConnectionID: "yellow",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.StatusCode == http.StatusOK {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.RemoveCrmUserRequest](../../models/operations/removecrmuserrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[*operations.RemoveCrmUserResponse](../../models/operations/removecrmuserresponse.md), error**
 
 
 ## UpdateCrmCompany
@@ -2989,122 +2433,4 @@ func main() {
 ### Response
 
 **[*operations.UpdateCrmPipelineResponse](../../models/operations/updatecrmpipelineresponse.md), error**
-
-
-## UpdateCrmTeam
-
-Update a team
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.UpdateCrmTeam(ctx, operations.UpdateCrmTeamRequest{
-        CrmTeam: &shared.CrmTeam{
-            Raw: &shared.PropertyCrmTeamRaw{},
-            UserIds: []string{
-                "Carbon",
-            },
-        },
-        ConnectionID: "East",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmTeam != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.UpdateCrmTeamRequest](../../models/operations/updatecrmteamrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[*operations.UpdateCrmTeamResponse](../../models/operations/updatecrmteamresponse.md), error**
-
-
-## UpdateCrmUser
-
-Update a user
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Crm.UpdateCrmUser(ctx, operations.UpdateCrmUserRequest{
-        CrmUser: &shared.CrmUser{
-            Address: &shared.PropertyCrmUserAddress{},
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: &shared.PropertyCrmUserRaw{},
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "benchmark",
-                },
-            },
-        },
-        ConnectionID: "Rustic",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.CrmUser != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.UpdateCrmUserRequest](../../models/operations/updatecrmuserrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[*operations.UpdateCrmUserResponse](../../models/operations/updatecrmuserresponse.md), error**
 

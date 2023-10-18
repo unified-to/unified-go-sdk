@@ -3,92 +3,24 @@
 
 ### Available Operations
 
-* [CreateTicketingAgent](#createticketingagent) - Create a agent
 * [CreateTicketingCustomer](#createticketingcustomer) - Create a customer
 * [CreateTicketingNote](#createticketingnote) - Create a note
 * [CreateTicketingTicket](#createticketingticket) - Create a ticket
-* [GetTicketingAgent](#getticketingagent) - Retrieve a agent
 * [GetTicketingCustomer](#getticketingcustomer) - Retrieve a customer
 * [GetTicketingNote](#getticketingnote) - Retrieve a note
 * [GetTicketingTicket](#getticketingticket) - Retrieve a ticket
-* [ListTicketingAgents](#listticketingagents) - List all agents
 * [ListTicketingCustomers](#listticketingcustomers) - List all customers
 * [ListTicketingNotes](#listticketingnotes) - List all notes
 * [ListTicketingTickets](#listticketingtickets) - List all tickets
-* [PatchTicketingAgent](#patchticketingagent) - Update a agent
 * [PatchTicketingCustomer](#patchticketingcustomer) - Update a customer
 * [PatchTicketingNote](#patchticketingnote) - Update a note
 * [PatchTicketingTicket](#patchticketingticket) - Update a ticket
-* [RemoveTicketingAgent](#removeticketingagent) - Remove a agent
 * [RemoveTicketingCustomer](#removeticketingcustomer) - Remove a customer
 * [RemoveTicketingNote](#removeticketingnote) - Remove a note
 * [RemoveTicketingTicket](#removeticketingticket) - Remove a ticket
-* [UpdateTicketingAgent](#updateticketingagent) - Update a agent
 * [UpdateTicketingCustomer](#updateticketingcustomer) - Update a customer
 * [UpdateTicketingNote](#updateticketingnote) - Update a note
 * [UpdateTicketingTicket](#updateticketingticket) - Update a ticket
-
-## CreateTicketingAgent
-
-Create a agent
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Ticketing.CreateTicketingAgent(ctx, operations.CreateTicketingAgentRequest{
-        TicketingAgent: &shared.TicketingAgent{
-            Emails: []shared.TicketingEmail{
-                shared.TicketingEmail{
-                    Email: "Paolo.Cole8@yahoo.com",
-                },
-            },
-            Raw: shared.PropertyTicketingAgentRaw{},
-            Telephones: []shared.TicketingTelephone{
-                shared.TicketingTelephone{
-                    Telephone: "Seaborgium",
-                },
-            },
-        },
-        ConnectionID: "Manager",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.TicketingAgent != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.CreateTicketingAgentRequest](../../models/operations/createticketingagentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-
-### Response
-
-**[*operations.CreateTicketingAgentResponse](../../models/operations/createticketingagentresponse.md), error**
-
 
 ## CreateTicketingCustomer
 
@@ -263,59 +195,6 @@ func main() {
 **[*operations.CreateTicketingTicketResponse](../../models/operations/createticketingticketresponse.md), error**
 
 
-## GetTicketingAgent
-
-Retrieve a agent
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Ticketing.GetTicketingAgent(ctx, operations.GetTicketingAgentRequest{
-        ConnectionID: "Tennessee",
-        Fields: []string{
-            "connect",
-        },
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.TicketingAgent != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetTicketingAgentRequest](../../models/operations/getticketingagentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-
-### Response
-
-**[*operations.GetTicketingAgentResponse](../../models/operations/getticketingagentresponse.md), error**
-
-
 ## GetTicketingCustomer
 
 Retrieve a customer
@@ -476,58 +355,6 @@ func main() {
 **[*operations.GetTicketingTicketResponse](../../models/operations/getticketingticketresponse.md), error**
 
 
-## ListTicketingAgents
-
-List all agents
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Ticketing.ListTicketingAgents(ctx, operations.ListTicketingAgentsRequest{
-        ConnectionID: "transparent",
-        Fields: []string{
-            "Corporate",
-        },
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.TicketingAgents != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListTicketingAgentsRequest](../../models/operations/listticketingagentsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-
-### Response
-
-**[*operations.ListTicketingAgentsResponse](../../models/operations/listticketingagentsresponse.md), error**
-
-
 ## ListTicketingCustomers
 
 List all customers
@@ -683,69 +510,6 @@ func main() {
 ### Response
 
 **[*operations.ListTicketingTicketsResponse](../../models/operations/listticketingticketsresponse.md), error**
-
-
-## PatchTicketingAgent
-
-Update a agent
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Ticketing.PatchTicketingAgent(ctx, operations.PatchTicketingAgentRequest{
-        TicketingAgent: &shared.TicketingAgent{
-            Emails: []shared.TicketingEmail{
-                shared.TicketingEmail{
-                    Email: "Danyka87@hotmail.com",
-                },
-            },
-            Raw: shared.PropertyTicketingAgentRaw{},
-            Telephones: []shared.TicketingTelephone{
-                shared.TicketingTelephone{
-                    Telephone: "fuchsia",
-                },
-            },
-        },
-        ConnectionID: "Small",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.TicketingAgent != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.PatchTicketingAgentRequest](../../models/operations/patchticketingagentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-
-### Response
-
-**[*operations.PatchTicketingAgentResponse](../../models/operations/patchticketingagentresponse.md), error**
 
 
 ## PatchTicketingCustomer
@@ -924,56 +688,6 @@ func main() {
 **[*operations.PatchTicketingTicketResponse](../../models/operations/patchticketingticketresponse.md), error**
 
 
-## RemoveTicketingAgent
-
-Remove a agent
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Ticketing.RemoveTicketingAgent(ctx, operations.RemoveTicketingAgentRequest{
-        ConnectionID: "Northwest",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.StatusCode == http.StatusOK {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.RemoveTicketingAgentRequest](../../models/operations/removeticketingagentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-
-### Response
-
-**[*operations.RemoveTicketingAgentResponse](../../models/operations/removeticketingagentresponse.md), error**
-
-
 ## RemoveTicketingCustomer
 
 Remove a customer
@@ -1123,69 +837,6 @@ func main() {
 ### Response
 
 **[*operations.RemoveTicketingTicketResponse](../../models/operations/removeticketingticketresponse.md), error**
-
-
-## UpdateTicketingAgent
-
-Update a agent
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Ticketing.UpdateTicketingAgent(ctx, operations.UpdateTicketingAgentRequest{
-        TicketingAgent: &shared.TicketingAgent{
-            Emails: []shared.TicketingEmail{
-                shared.TicketingEmail{
-                    Email: "Lorenz39@hotmail.com",
-                },
-            },
-            Raw: shared.PropertyTicketingAgentRaw{},
-            Telephones: []shared.TicketingTelephone{
-                shared.TicketingTelephone{
-                    Telephone: "Philippines",
-                },
-            },
-        },
-        ConnectionID: "SMS",
-        ID: "<ID>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.TicketingAgent != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateTicketingAgentRequest](../../models/operations/updateticketingagentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-
-### Response
-
-**[*operations.UpdateTicketingAgentResponse](../../models/operations/updateticketingagentresponse.md), error**
 
 
 ## UpdateTicketingCustomer

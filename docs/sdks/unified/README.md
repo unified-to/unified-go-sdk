@@ -57,7 +57,7 @@ func main() {
         },
         IntegrationType: "revolutionize",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsTicketingAgentWrite,
+            shared.PropertyConnectionPermissionsCrmPipelineWrite,
         },
     })
     if err != nil {
@@ -115,7 +115,7 @@ func main() {
             HookURL: "male",
             IntegrationType: "Representative",
             Interval: 9342.25,
-            ObjectType: shared.WebhookObjectTypeCrmDeal,
+            ObjectType: shared.WebhookObjectTypeCrmContact,
             Subscriptions: []string{
                 "Account",
             },
@@ -323,7 +323,7 @@ func main() {
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "supposing",
         Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesTicketingNoteRead,
+            operations.GetUnifiedIntegrationAuthScopesTicketingCustomerRead,
         },
         WorkspaceID: "Van",
     })
@@ -686,7 +686,7 @@ func main() {
             },
             IntegrationType: "Northeast",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsMartechListRead,
+                shared.PropertyConnectionPermissionsCrmLeadRead,
             },
         },
         ID: "<ID>",
@@ -851,7 +851,7 @@ func main() {
             },
             IntegrationType: "Cambridgeshire",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmTeamWrite,
+                shared.PropertyConnectionPermissionsCrmEventWrite,
             },
         },
         ID: "<ID>",

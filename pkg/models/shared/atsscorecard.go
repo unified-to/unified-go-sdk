@@ -45,6 +45,7 @@ func (e *AtsScorecardRecommendation) UnmarshalJSON(data []byte) error {
 type AtsScorecard struct {
 	ApplicationID  *string                     `json:"application_id,omitempty"`
 	CandidateID    *string                     `json:"candidate_id,omitempty"`
+	Comment        *string                     `json:"comment,omitempty"`
 	CreatedAt      *time.Time                  `json:"created_at,omitempty"`
 	ID             *string                     `json:"id,omitempty"`
 	InterviewID    *string                     `json:"interview_id,omitempty"`
@@ -78,6 +79,13 @@ func (o *AtsScorecard) GetCandidateID() *string {
 		return nil
 	}
 	return o.CandidateID
+}
+
+func (o *AtsScorecard) GetComment() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Comment
 }
 
 func (o *AtsScorecard) GetCreatedAt() *time.Time {

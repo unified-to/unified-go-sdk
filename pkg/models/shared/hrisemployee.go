@@ -153,6 +153,7 @@ func (e *HrisEmployeeMaritalStatus) UnmarshalJSON(data []byte) error {
 type HrisEmployee struct {
 	Address          *PropertyHrisEmployeeAddress  `json:"address,omitempty"`
 	CreatedAt        *time.Time                    `json:"created_at,omitempty"`
+	Currency         *string                       `json:"currency,omitempty"`
 	DateOfBirth      *time.Time                    `json:"date_of_birth,omitempty"`
 	Department       *string                       `json:"department,omitempty"`
 	Division         *string                       `json:"division,omitempty"`
@@ -163,6 +164,8 @@ type HrisEmployee struct {
 	Gender           *HrisEmployeeGender           `json:"gender,omitempty"`
 	HiredAt          *time.Time                    `json:"hired_at,omitempty"`
 	ID               *string                       `json:"id,omitempty"`
+	ImageURL         *string                       `json:"image_url,omitempty"`
+	LanguageLocale   *string                       `json:"language_locale,omitempty"`
 	Location         *string                       `json:"location,omitempty"`
 	ManagerID        *string                       `json:"manager_id,omitempty"`
 	MaritalStatus    *HrisEmployeeMaritalStatus    `json:"marital_status,omitempty"`
@@ -170,6 +173,7 @@ type HrisEmployee struct {
 	Raw              *PropertyHrisEmployeeRaw      `json:"raw,omitempty"`
 	Telephones       []HrisTelephone               `json:"telephones,omitempty"`
 	TerminatedAt     *time.Time                    `json:"terminated_at,omitempty"`
+	Timezone         *string                       `json:"timezone,omitempty"`
 	Title            *string                       `json:"title,omitempty"`
 	UpdatedAt        *time.Time                    `json:"updated_at,omitempty"`
 }
@@ -197,6 +201,13 @@ func (o *HrisEmployee) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return o.CreatedAt
+}
+
+func (o *HrisEmployee) GetCurrency() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Currency
 }
 
 func (o *HrisEmployee) GetDateOfBirth() *time.Time {
@@ -269,6 +280,20 @@ func (o *HrisEmployee) GetID() *string {
 	return o.ID
 }
 
+func (o *HrisEmployee) GetImageURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ImageURL
+}
+
+func (o *HrisEmployee) GetLanguageLocale() *string {
+	if o == nil {
+		return nil
+	}
+	return o.LanguageLocale
+}
+
 func (o *HrisEmployee) GetLocation() *string {
 	if o == nil {
 		return nil
@@ -316,6 +341,13 @@ func (o *HrisEmployee) GetTerminatedAt() *time.Time {
 		return nil
 	}
 	return o.TerminatedAt
+}
+
+func (o *HrisEmployee) GetTimezone() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Timezone
 }
 
 func (o *HrisEmployee) GetTitle() *string {

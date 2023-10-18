@@ -32,7 +32,7 @@ func main() {
     res, err := s.Auth.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "supposing",
         Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesTicketingNoteRead,
+            operations.GetUnifiedIntegrationAuthScopesTicketingCustomerRead,
         },
         WorkspaceID: "Van",
     })

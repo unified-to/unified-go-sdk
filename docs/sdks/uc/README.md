@@ -5,7 +5,6 @@
 
 * [CreateUcContact](#createuccontact) - Create a contact
 * [GetUcContact](#getuccontact) - Retrieve a contact
-* [ListUcAgents](#listucagents) - List all agents
 * [ListUcCalls](#listuccalls) - List all calls
 * [ListUcContacts](#listuccontacts) - List all contacts
 * [PatchUcContact](#patchuccontact) - Update a contact
@@ -125,58 +124,6 @@ func main() {
 ### Response
 
 **[*operations.GetUcContactResponse](../../models/operations/getuccontactresponse.md), error**
-
-
-## ListUcAgents
-
-List all agents
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Uc.ListUcAgents(ctx, operations.ListUcAgentsRequest{
-        ConnectionID: "Ohio",
-        Fields: []string{
-            "huzzah",
-        },
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.UcAgents != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.ListUcAgentsRequest](../../models/operations/listucagentsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[*operations.ListUcAgentsResponse](../../models/operations/listucagentsresponse.md), error**
 
 
 ## ListUcCalls

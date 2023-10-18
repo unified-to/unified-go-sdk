@@ -10,11 +10,19 @@ import (
 type PropertyConnectionPermissions string
 
 const (
+	PropertyConnectionPermissionsAuthLogin              PropertyConnectionPermissions = "auth_login"
 	PropertyConnectionPermissionsAtsScorecardRead       PropertyConnectionPermissions = "ats_scorecard_read"
 	PropertyConnectionPermissionsAtsScorecardWrite      PropertyConnectionPermissions = "ats_scorecard_write"
 	PropertyConnectionPermissionsAtsApplicationRead     PropertyConnectionPermissions = "ats_application_read"
 	PropertyConnectionPermissionsAtsApplicationWrite    PropertyConnectionPermissions = "ats_application_write"
-	PropertyConnectionPermissionsAuthLogin              PropertyConnectionPermissions = "auth_login"
+	PropertyConnectionPermissionsAtsCandidateRead       PropertyConnectionPermissions = "ats_candidate_read"
+	PropertyConnectionPermissionsAtsCandidateWrite      PropertyConnectionPermissions = "ats_candidate_write"
+	PropertyConnectionPermissionsAtsInterviewRead       PropertyConnectionPermissions = "ats_interview_read"
+	PropertyConnectionPermissionsAtsInterviewWrite      PropertyConnectionPermissions = "ats_interview_write"
+	PropertyConnectionPermissionsAtsJobRead             PropertyConnectionPermissions = "ats_job_read"
+	PropertyConnectionPermissionsAtsJobWrite            PropertyConnectionPermissions = "ats_job_write"
+	PropertyConnectionPermissionsAtsDocumentRead        PropertyConnectionPermissions = "ats_document_read"
+	PropertyConnectionPermissionsAtsDocumentWrite       PropertyConnectionPermissions = "ats_document_write"
 	PropertyConnectionPermissionsCrmCompanyRead         PropertyConnectionPermissions = "crm_company_read"
 	PropertyConnectionPermissionsCrmCompanyWrite        PropertyConnectionPermissions = "crm_company_write"
 	PropertyConnectionPermissionsCrmContactRead         PropertyConnectionPermissions = "crm_contact_read"
@@ -23,22 +31,16 @@ const (
 	PropertyConnectionPermissionsCrmDealWrite           PropertyConnectionPermissions = "crm_deal_write"
 	PropertyConnectionPermissionsCrmEventRead           PropertyConnectionPermissions = "crm_event_read"
 	PropertyConnectionPermissionsCrmEventWrite          PropertyConnectionPermissions = "crm_event_write"
-	PropertyConnectionPermissionsCrmUserRead            PropertyConnectionPermissions = "crm_user_read"
-	PropertyConnectionPermissionsCrmUserWrite           PropertyConnectionPermissions = "crm_user_write"
 	PropertyConnectionPermissionsCrmLeadRead            PropertyConnectionPermissions = "crm_lead_read"
 	PropertyConnectionPermissionsCrmLeadWrite           PropertyConnectionPermissions = "crm_lead_write"
 	PropertyConnectionPermissionsCrmFileRead            PropertyConnectionPermissions = "crm_file_read"
 	PropertyConnectionPermissionsCrmFileWrite           PropertyConnectionPermissions = "crm_file_write"
 	PropertyConnectionPermissionsCrmPipelineRead        PropertyConnectionPermissions = "crm_pipeline_read"
 	PropertyConnectionPermissionsCrmPipelineWrite       PropertyConnectionPermissions = "crm_pipeline_write"
-	PropertyConnectionPermissionsCrmTeamRead            PropertyConnectionPermissions = "crm_team_read"
-	PropertyConnectionPermissionsCrmTeamWrite           PropertyConnectionPermissions = "crm_team_write"
 	PropertyConnectionPermissionsMartechListRead        PropertyConnectionPermissions = "martech_list_read"
 	PropertyConnectionPermissionsMartechListWrite       PropertyConnectionPermissions = "martech_list_write"
 	PropertyConnectionPermissionsMartechMemberRead      PropertyConnectionPermissions = "martech_member_read"
 	PropertyConnectionPermissionsMartechMemberWrite     PropertyConnectionPermissions = "martech_member_write"
-	PropertyConnectionPermissionsTicketingAgentRead     PropertyConnectionPermissions = "ticketing_agent_read"
-	PropertyConnectionPermissionsTicketingAgentWrite    PropertyConnectionPermissions = "ticketing_agent_write"
 	PropertyConnectionPermissionsTicketingCustomerRead  PropertyConnectionPermissions = "ticketing_customer_read"
 	PropertyConnectionPermissionsTicketingCustomerWrite PropertyConnectionPermissions = "ticketing_customer_write"
 	PropertyConnectionPermissionsTicketingTicketRead    PropertyConnectionPermissions = "ticketing_ticket_read"
@@ -49,12 +51,7 @@ const (
 	PropertyConnectionPermissionsHrisEmployeeWrite      PropertyConnectionPermissions = "hris_employee_write"
 	PropertyConnectionPermissionsHrisGroupRead          PropertyConnectionPermissions = "hris_group_read"
 	PropertyConnectionPermissionsHrisGroupWrite         PropertyConnectionPermissions = "hris_group_write"
-	PropertyConnectionPermissionsAtsCandidateRead       PropertyConnectionPermissions = "ats_candidate_read"
-	PropertyConnectionPermissionsAtsCandidateWrite      PropertyConnectionPermissions = "ats_candidate_write"
-	PropertyConnectionPermissionsAtsInterviewRead       PropertyConnectionPermissions = "ats_interview_read"
-	PropertyConnectionPermissionsAtsInterviewWrite      PropertyConnectionPermissions = "ats_interview_write"
-	PropertyConnectionPermissionsAtsJobRead             PropertyConnectionPermissions = "ats_job_read"
-	PropertyConnectionPermissionsAtsJobWrite            PropertyConnectionPermissions = "ats_job_write"
+	PropertyConnectionPermissionsUcCallRead             PropertyConnectionPermissions = "uc_call_read"
 	PropertyConnectionPermissionsWebhook                PropertyConnectionPermissions = "webhook"
 )
 
@@ -68,6 +65,8 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
+	case "auth_login":
+		fallthrough
 	case "ats_scorecard_read":
 		fallthrough
 	case "ats_scorecard_write":
@@ -76,7 +75,21 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "ats_application_write":
 		fallthrough
-	case "auth_login":
+	case "ats_candidate_read":
+		fallthrough
+	case "ats_candidate_write":
+		fallthrough
+	case "ats_interview_read":
+		fallthrough
+	case "ats_interview_write":
+		fallthrough
+	case "ats_job_read":
+		fallthrough
+	case "ats_job_write":
+		fallthrough
+	case "ats_document_read":
+		fallthrough
+	case "ats_document_write":
 		fallthrough
 	case "crm_company_read":
 		fallthrough
@@ -94,10 +107,6 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "crm_event_write":
 		fallthrough
-	case "crm_user_read":
-		fallthrough
-	case "crm_user_write":
-		fallthrough
 	case "crm_lead_read":
 		fallthrough
 	case "crm_lead_write":
@@ -110,10 +119,6 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "crm_pipeline_write":
 		fallthrough
-	case "crm_team_read":
-		fallthrough
-	case "crm_team_write":
-		fallthrough
 	case "martech_list_read":
 		fallthrough
 	case "martech_list_write":
@@ -121,10 +126,6 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "martech_member_read":
 		fallthrough
 	case "martech_member_write":
-		fallthrough
-	case "ticketing_agent_read":
-		fallthrough
-	case "ticketing_agent_write":
 		fallthrough
 	case "ticketing_customer_read":
 		fallthrough
@@ -146,17 +147,7 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "hris_group_write":
 		fallthrough
-	case "ats_candidate_read":
-		fallthrough
-	case "ats_candidate_write":
-		fallthrough
-	case "ats_interview_read":
-		fallthrough
-	case "ats_interview_write":
-		fallthrough
-	case "ats_job_read":
-		fallthrough
-	case "ats_job_write":
+	case "uc_call_read":
 		fallthrough
 	case "webhook":
 		*e = PropertyConnectionPermissions(v)

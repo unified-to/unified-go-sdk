@@ -47,7 +47,7 @@ func main() {
         },
         IntegrationType: "revolutionize",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsTicketingAgentWrite,
+            shared.PropertyConnectionPermissionsCrmPipelineWrite,
         },
     })
     if err != nil {
@@ -212,7 +212,7 @@ func main() {
             },
             IntegrationType: "Northeast",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsMartechListRead,
+                shared.PropertyConnectionPermissionsCrmLeadRead,
             },
         },
         ID: "<ID>",
@@ -328,7 +328,7 @@ func main() {
             },
             IntegrationType: "Cambridgeshire",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmTeamWrite,
+                shared.PropertyConnectionPermissionsCrmEventWrite,
             },
         },
         ID: "<ID>",

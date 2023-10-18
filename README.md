@@ -33,27 +33,14 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Agent.CreateTicketingAgent(ctx, operations.CreateTicketingAgentRequest{
-		TicketingAgent: &shared.TicketingAgent{
-			Emails: []shared.TicketingEmail{
-				shared.TicketingEmail{
-					Email: "Paolo.Cole8@yahoo.com",
-				},
-			},
-			Raw: shared.PropertyTicketingAgentRaw{},
-			Telephones: []shared.TicketingTelephone{
-				shared.TicketingTelephone{
-					Telephone: "Seaborgium",
-				},
-			},
-		},
-		ConnectionID: "Manager",
+	res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
+		ID: "<ID>",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.TicketingAgent != nil {
+	if res.APICall != nil {
 		// handle response
 	}
 }
@@ -64,16 +51,6 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-
-### [Agent](docs/sdks/agent/README.md)
-
-* [CreateTicketingAgent](docs/sdks/agent/README.md#createticketingagent) - Create a agent
-* [GetTicketingAgent](docs/sdks/agent/README.md#getticketingagent) - Retrieve a agent
-* [ListTicketingAgents](docs/sdks/agent/README.md#listticketingagents) - List all agents
-* [ListUcAgents](docs/sdks/agent/README.md#listucagents) - List all agents
-* [PatchTicketingAgent](docs/sdks/agent/README.md#patchticketingagent) - Update a agent
-* [RemoveTicketingAgent](docs/sdks/agent/README.md#removeticketingagent) - Remove a agent
-* [UpdateTicketingAgent](docs/sdks/agent/README.md#updateticketingagent) - Update a agent
 
 ### [Apicall](docs/sdks/apicall/README.md)
 
@@ -183,8 +160,6 @@ func main() {
 * [CreateCrmFile](docs/sdks/crm/README.md#createcrmfile) - Create a file
 * [CreateCrmLead](docs/sdks/crm/README.md#createcrmlead) - Create a lead
 * [CreateCrmPipeline](docs/sdks/crm/README.md#createcrmpipeline) - Create a pipeline
-* [CreateCrmTeam](docs/sdks/crm/README.md#createcrmteam) - Create a team
-* [CreateCrmUser](docs/sdks/crm/README.md#createcrmuser) - Create a user
 * [GetCrmCompany](docs/sdks/crm/README.md#getcrmcompany) - Retrieve a company
 * [GetCrmContact](docs/sdks/crm/README.md#getcrmcontact) - Retrieve a contact
 * [GetCrmDeal](docs/sdks/crm/README.md#getcrmdeal) - Retrieve a deal
@@ -192,8 +167,6 @@ func main() {
 * [GetCrmFile](docs/sdks/crm/README.md#getcrmfile) - Retrieve a file
 * [GetCrmLead](docs/sdks/crm/README.md#getcrmlead) - Retrieve a lead
 * [GetCrmPipeline](docs/sdks/crm/README.md#getcrmpipeline) - Retrieve a pipeline
-* [GetCrmTeam](docs/sdks/crm/README.md#getcrmteam) - Retrieve a team
-* [GetCrmUser](docs/sdks/crm/README.md#getcrmuser) - Retrieve a user
 * [ListCrmCompanies](docs/sdks/crm/README.md#listcrmcompanies) - List all companies
 * [ListCrmContacts](docs/sdks/crm/README.md#listcrmcontacts) - List all contacts
 * [ListCrmDeals](docs/sdks/crm/README.md#listcrmdeals) - List all deals
@@ -201,8 +174,6 @@ func main() {
 * [ListCrmFiles](docs/sdks/crm/README.md#listcrmfiles) - List all files
 * [ListCrmLeads](docs/sdks/crm/README.md#listcrmleads) - List all leads
 * [ListCrmPipelines](docs/sdks/crm/README.md#listcrmpipelines) - List all pipelines
-* [ListCrmTeams](docs/sdks/crm/README.md#listcrmteams) - List all teams
-* [ListCrmUsers](docs/sdks/crm/README.md#listcrmusers) - List all users
 * [PatchCrmCompany](docs/sdks/crm/README.md#patchcrmcompany) - Update a company
 * [PatchCrmContact](docs/sdks/crm/README.md#patchcrmcontact) - Update a contact
 * [PatchCrmDeal](docs/sdks/crm/README.md#patchcrmdeal) - Update a deal
@@ -210,8 +181,6 @@ func main() {
 * [PatchCrmFile](docs/sdks/crm/README.md#patchcrmfile) - Update a file
 * [PatchCrmLead](docs/sdks/crm/README.md#patchcrmlead) - Update a lead
 * [PatchCrmPipeline](docs/sdks/crm/README.md#patchcrmpipeline) - Update a pipeline
-* [PatchCrmTeam](docs/sdks/crm/README.md#patchcrmteam) - Update a team
-* [PatchCrmUser](docs/sdks/crm/README.md#patchcrmuser) - Update a user
 * [RemoveCrmCompany](docs/sdks/crm/README.md#removecrmcompany) - Remove a company
 * [RemoveCrmContact](docs/sdks/crm/README.md#removecrmcontact) - Remove a contact
 * [RemoveCrmDeal](docs/sdks/crm/README.md#removecrmdeal) - Remove a deal
@@ -219,8 +188,6 @@ func main() {
 * [RemoveCrmFile](docs/sdks/crm/README.md#removecrmfile) - Remove a file
 * [RemoveCrmLead](docs/sdks/crm/README.md#removecrmlead) - Remove a lead
 * [RemoveCrmPipeline](docs/sdks/crm/README.md#removecrmpipeline) - Remove a pipeline
-* [RemoveCrmTeam](docs/sdks/crm/README.md#removecrmteam) - Remove a team
-* [RemoveCrmUser](docs/sdks/crm/README.md#removecrmuser) - Remove a user
 * [UpdateCrmCompany](docs/sdks/crm/README.md#updatecrmcompany) - Update a company
 * [UpdateCrmContact](docs/sdks/crm/README.md#updatecrmcontact) - Update a contact
 * [UpdateCrmDeal](docs/sdks/crm/README.md#updatecrmdeal) - Update a deal
@@ -228,8 +195,6 @@ func main() {
 * [UpdateCrmFile](docs/sdks/crm/README.md#updatecrmfile) - Update a file
 * [UpdateCrmLead](docs/sdks/crm/README.md#updatecrmlead) - Update a lead
 * [UpdateCrmPipeline](docs/sdks/crm/README.md#updatecrmpipeline) - Update a pipeline
-* [UpdateCrmTeam](docs/sdks/crm/README.md#updatecrmteam) - Update a team
-* [UpdateCrmUser](docs/sdks/crm/README.md#updatecrmuser) - Update a user
 
 ### [Customer](docs/sdks/customer/README.md)
 
@@ -415,15 +380,6 @@ func main() {
 * [RemoveCrmPipeline](docs/sdks/pipeline/README.md#removecrmpipeline) - Remove a pipeline
 * [UpdateCrmPipeline](docs/sdks/pipeline/README.md#updatecrmpipeline) - Update a pipeline
 
-### [Team](docs/sdks/team/README.md)
-
-* [CreateCrmTeam](docs/sdks/team/README.md#createcrmteam) - Create a team
-* [GetCrmTeam](docs/sdks/team/README.md#getcrmteam) - Retrieve a team
-* [ListCrmTeams](docs/sdks/team/README.md#listcrmteams) - List all teams
-* [PatchCrmTeam](docs/sdks/team/README.md#patchcrmteam) - Update a team
-* [RemoveCrmTeam](docs/sdks/team/README.md#removecrmteam) - Remove a team
-* [UpdateCrmTeam](docs/sdks/team/README.md#updatecrmteam) - Update a team
-
 ### [Ticket](docs/sdks/ticket/README.md)
 
 * [CreateTicketingTicket](docs/sdks/ticket/README.md#createticketingticket) - Create a ticket
@@ -435,27 +391,21 @@ func main() {
 
 ### [Ticketing](docs/sdks/ticketing/README.md)
 
-* [CreateTicketingAgent](docs/sdks/ticketing/README.md#createticketingagent) - Create a agent
 * [CreateTicketingCustomer](docs/sdks/ticketing/README.md#createticketingcustomer) - Create a customer
 * [CreateTicketingNote](docs/sdks/ticketing/README.md#createticketingnote) - Create a note
 * [CreateTicketingTicket](docs/sdks/ticketing/README.md#createticketingticket) - Create a ticket
-* [GetTicketingAgent](docs/sdks/ticketing/README.md#getticketingagent) - Retrieve a agent
 * [GetTicketingCustomer](docs/sdks/ticketing/README.md#getticketingcustomer) - Retrieve a customer
 * [GetTicketingNote](docs/sdks/ticketing/README.md#getticketingnote) - Retrieve a note
 * [GetTicketingTicket](docs/sdks/ticketing/README.md#getticketingticket) - Retrieve a ticket
-* [ListTicketingAgents](docs/sdks/ticketing/README.md#listticketingagents) - List all agents
 * [ListTicketingCustomers](docs/sdks/ticketing/README.md#listticketingcustomers) - List all customers
 * [ListTicketingNotes](docs/sdks/ticketing/README.md#listticketingnotes) - List all notes
 * [ListTicketingTickets](docs/sdks/ticketing/README.md#listticketingtickets) - List all tickets
-* [PatchTicketingAgent](docs/sdks/ticketing/README.md#patchticketingagent) - Update a agent
 * [PatchTicketingCustomer](docs/sdks/ticketing/README.md#patchticketingcustomer) - Update a customer
 * [PatchTicketingNote](docs/sdks/ticketing/README.md#patchticketingnote) - Update a note
 * [PatchTicketingTicket](docs/sdks/ticketing/README.md#patchticketingticket) - Update a ticket
-* [RemoveTicketingAgent](docs/sdks/ticketing/README.md#removeticketingagent) - Remove a agent
 * [RemoveTicketingCustomer](docs/sdks/ticketing/README.md#removeticketingcustomer) - Remove a customer
 * [RemoveTicketingNote](docs/sdks/ticketing/README.md#removeticketingnote) - Remove a note
 * [RemoveTicketingTicket](docs/sdks/ticketing/README.md#removeticketingticket) - Remove a ticket
-* [UpdateTicketingAgent](docs/sdks/ticketing/README.md#updateticketingagent) - Update a agent
 * [UpdateTicketingCustomer](docs/sdks/ticketing/README.md#updateticketingcustomer) - Update a customer
 * [UpdateTicketingNote](docs/sdks/ticketing/README.md#updateticketingnote) - Update a note
 * [UpdateTicketingTicket](docs/sdks/ticketing/README.md#updateticketingticket) - Update a ticket
@@ -464,7 +414,6 @@ func main() {
 
 * [CreateUcContact](docs/sdks/uc/README.md#createuccontact) - Create a contact
 * [GetUcContact](docs/sdks/uc/README.md#getuccontact) - Retrieve a contact
-* [ListUcAgents](docs/sdks/uc/README.md#listucagents) - List all agents
 * [ListUcCalls](docs/sdks/uc/README.md#listuccalls) - List all calls
 * [ListUcContacts](docs/sdks/uc/README.md#listuccontacts) - List all contacts
 * [PatchUcContact](docs/sdks/uc/README.md#patchuccontact) - Update a contact
@@ -489,15 +438,6 @@ func main() {
 * [RemoveUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [RemoveUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [UpdateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
-
-### [User](docs/sdks/user/README.md)
-
-* [CreateCrmUser](docs/sdks/user/README.md#createcrmuser) - Create a user
-* [GetCrmUser](docs/sdks/user/README.md#getcrmuser) - Retrieve a user
-* [ListCrmUsers](docs/sdks/user/README.md#listcrmusers) - List all users
-* [PatchCrmUser](docs/sdks/user/README.md#patchcrmuser) - Update a user
-* [RemoveCrmUser](docs/sdks/user/README.md#removecrmuser) - Remove a user
-* [UpdateCrmUser](docs/sdks/user/README.md#updatecrmuser) - Update a user
 
 ### [Webhook](docs/sdks/webhook/README.md)
 

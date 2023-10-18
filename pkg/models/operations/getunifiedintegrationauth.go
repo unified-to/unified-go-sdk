@@ -11,11 +11,19 @@ import (
 type GetUnifiedIntegrationAuthScopes string
 
 const (
+	GetUnifiedIntegrationAuthScopesAuthLogin              GetUnifiedIntegrationAuthScopes = "auth_login"
 	GetUnifiedIntegrationAuthScopesAtsScorecardRead       GetUnifiedIntegrationAuthScopes = "ats_scorecard_read"
 	GetUnifiedIntegrationAuthScopesAtsScorecardWrite      GetUnifiedIntegrationAuthScopes = "ats_scorecard_write"
 	GetUnifiedIntegrationAuthScopesAtsApplicationRead     GetUnifiedIntegrationAuthScopes = "ats_application_read"
 	GetUnifiedIntegrationAuthScopesAtsApplicationWrite    GetUnifiedIntegrationAuthScopes = "ats_application_write"
-	GetUnifiedIntegrationAuthScopesAuthLogin              GetUnifiedIntegrationAuthScopes = "auth_login"
+	GetUnifiedIntegrationAuthScopesAtsCandidateRead       GetUnifiedIntegrationAuthScopes = "ats_candidate_read"
+	GetUnifiedIntegrationAuthScopesAtsCandidateWrite      GetUnifiedIntegrationAuthScopes = "ats_candidate_write"
+	GetUnifiedIntegrationAuthScopesAtsInterviewRead       GetUnifiedIntegrationAuthScopes = "ats_interview_read"
+	GetUnifiedIntegrationAuthScopesAtsInterviewWrite      GetUnifiedIntegrationAuthScopes = "ats_interview_write"
+	GetUnifiedIntegrationAuthScopesAtsJobRead             GetUnifiedIntegrationAuthScopes = "ats_job_read"
+	GetUnifiedIntegrationAuthScopesAtsJobWrite            GetUnifiedIntegrationAuthScopes = "ats_job_write"
+	GetUnifiedIntegrationAuthScopesAtsDocumentRead        GetUnifiedIntegrationAuthScopes = "ats_document_read"
+	GetUnifiedIntegrationAuthScopesAtsDocumentWrite       GetUnifiedIntegrationAuthScopes = "ats_document_write"
 	GetUnifiedIntegrationAuthScopesCrmCompanyRead         GetUnifiedIntegrationAuthScopes = "crm_company_read"
 	GetUnifiedIntegrationAuthScopesCrmCompanyWrite        GetUnifiedIntegrationAuthScopes = "crm_company_write"
 	GetUnifiedIntegrationAuthScopesCrmContactRead         GetUnifiedIntegrationAuthScopes = "crm_contact_read"
@@ -24,22 +32,16 @@ const (
 	GetUnifiedIntegrationAuthScopesCrmDealWrite           GetUnifiedIntegrationAuthScopes = "crm_deal_write"
 	GetUnifiedIntegrationAuthScopesCrmEventRead           GetUnifiedIntegrationAuthScopes = "crm_event_read"
 	GetUnifiedIntegrationAuthScopesCrmEventWrite          GetUnifiedIntegrationAuthScopes = "crm_event_write"
-	GetUnifiedIntegrationAuthScopesCrmUserRead            GetUnifiedIntegrationAuthScopes = "crm_user_read"
-	GetUnifiedIntegrationAuthScopesCrmUserWrite           GetUnifiedIntegrationAuthScopes = "crm_user_write"
 	GetUnifiedIntegrationAuthScopesCrmLeadRead            GetUnifiedIntegrationAuthScopes = "crm_lead_read"
 	GetUnifiedIntegrationAuthScopesCrmLeadWrite           GetUnifiedIntegrationAuthScopes = "crm_lead_write"
 	GetUnifiedIntegrationAuthScopesCrmFileRead            GetUnifiedIntegrationAuthScopes = "crm_file_read"
 	GetUnifiedIntegrationAuthScopesCrmFileWrite           GetUnifiedIntegrationAuthScopes = "crm_file_write"
 	GetUnifiedIntegrationAuthScopesCrmPipelineRead        GetUnifiedIntegrationAuthScopes = "crm_pipeline_read"
 	GetUnifiedIntegrationAuthScopesCrmPipelineWrite       GetUnifiedIntegrationAuthScopes = "crm_pipeline_write"
-	GetUnifiedIntegrationAuthScopesCrmTeamRead            GetUnifiedIntegrationAuthScopes = "crm_team_read"
-	GetUnifiedIntegrationAuthScopesCrmTeamWrite           GetUnifiedIntegrationAuthScopes = "crm_team_write"
 	GetUnifiedIntegrationAuthScopesMartechListRead        GetUnifiedIntegrationAuthScopes = "martech_list_read"
 	GetUnifiedIntegrationAuthScopesMartechListWrite       GetUnifiedIntegrationAuthScopes = "martech_list_write"
 	GetUnifiedIntegrationAuthScopesMartechMemberRead      GetUnifiedIntegrationAuthScopes = "martech_member_read"
 	GetUnifiedIntegrationAuthScopesMartechMemberWrite     GetUnifiedIntegrationAuthScopes = "martech_member_write"
-	GetUnifiedIntegrationAuthScopesTicketingAgentRead     GetUnifiedIntegrationAuthScopes = "ticketing_agent_read"
-	GetUnifiedIntegrationAuthScopesTicketingAgentWrite    GetUnifiedIntegrationAuthScopes = "ticketing_agent_write"
 	GetUnifiedIntegrationAuthScopesTicketingCustomerRead  GetUnifiedIntegrationAuthScopes = "ticketing_customer_read"
 	GetUnifiedIntegrationAuthScopesTicketingCustomerWrite GetUnifiedIntegrationAuthScopes = "ticketing_customer_write"
 	GetUnifiedIntegrationAuthScopesTicketingTicketRead    GetUnifiedIntegrationAuthScopes = "ticketing_ticket_read"
@@ -50,12 +52,7 @@ const (
 	GetUnifiedIntegrationAuthScopesHrisEmployeeWrite      GetUnifiedIntegrationAuthScopes = "hris_employee_write"
 	GetUnifiedIntegrationAuthScopesHrisGroupRead          GetUnifiedIntegrationAuthScopes = "hris_group_read"
 	GetUnifiedIntegrationAuthScopesHrisGroupWrite         GetUnifiedIntegrationAuthScopes = "hris_group_write"
-	GetUnifiedIntegrationAuthScopesAtsCandidateRead       GetUnifiedIntegrationAuthScopes = "ats_candidate_read"
-	GetUnifiedIntegrationAuthScopesAtsCandidateWrite      GetUnifiedIntegrationAuthScopes = "ats_candidate_write"
-	GetUnifiedIntegrationAuthScopesAtsInterviewRead       GetUnifiedIntegrationAuthScopes = "ats_interview_read"
-	GetUnifiedIntegrationAuthScopesAtsInterviewWrite      GetUnifiedIntegrationAuthScopes = "ats_interview_write"
-	GetUnifiedIntegrationAuthScopesAtsJobRead             GetUnifiedIntegrationAuthScopes = "ats_job_read"
-	GetUnifiedIntegrationAuthScopesAtsJobWrite            GetUnifiedIntegrationAuthScopes = "ats_job_write"
+	GetUnifiedIntegrationAuthScopesUcCallRead             GetUnifiedIntegrationAuthScopes = "uc_call_read"
 	GetUnifiedIntegrationAuthScopesWebhook                GetUnifiedIntegrationAuthScopes = "webhook"
 )
 
@@ -69,6 +66,8 @@ func (e *GetUnifiedIntegrationAuthScopes) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
+	case "auth_login":
+		fallthrough
 	case "ats_scorecard_read":
 		fallthrough
 	case "ats_scorecard_write":
@@ -77,7 +76,21 @@ func (e *GetUnifiedIntegrationAuthScopes) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "ats_application_write":
 		fallthrough
-	case "auth_login":
+	case "ats_candidate_read":
+		fallthrough
+	case "ats_candidate_write":
+		fallthrough
+	case "ats_interview_read":
+		fallthrough
+	case "ats_interview_write":
+		fallthrough
+	case "ats_job_read":
+		fallthrough
+	case "ats_job_write":
+		fallthrough
+	case "ats_document_read":
+		fallthrough
+	case "ats_document_write":
 		fallthrough
 	case "crm_company_read":
 		fallthrough
@@ -95,10 +108,6 @@ func (e *GetUnifiedIntegrationAuthScopes) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "crm_event_write":
 		fallthrough
-	case "crm_user_read":
-		fallthrough
-	case "crm_user_write":
-		fallthrough
 	case "crm_lead_read":
 		fallthrough
 	case "crm_lead_write":
@@ -111,10 +120,6 @@ func (e *GetUnifiedIntegrationAuthScopes) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "crm_pipeline_write":
 		fallthrough
-	case "crm_team_read":
-		fallthrough
-	case "crm_team_write":
-		fallthrough
 	case "martech_list_read":
 		fallthrough
 	case "martech_list_write":
@@ -122,10 +127,6 @@ func (e *GetUnifiedIntegrationAuthScopes) UnmarshalJSON(data []byte) error {
 	case "martech_member_read":
 		fallthrough
 	case "martech_member_write":
-		fallthrough
-	case "ticketing_agent_read":
-		fallthrough
-	case "ticketing_agent_write":
 		fallthrough
 	case "ticketing_customer_read":
 		fallthrough
@@ -147,17 +148,7 @@ func (e *GetUnifiedIntegrationAuthScopes) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "hris_group_write":
 		fallthrough
-	case "ats_candidate_read":
-		fallthrough
-	case "ats_candidate_write":
-		fallthrough
-	case "ats_interview_read":
-		fallthrough
-	case "ats_interview_write":
-		fallthrough
-	case "ats_job_read":
-		fallthrough
-	case "ats_job_write":
+	case "uc_call_read":
 		fallthrough
 	case "webhook":
 		*e = GetUnifiedIntegrationAuthScopes(v)

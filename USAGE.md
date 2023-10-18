@@ -18,27 +18,14 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Agent.CreateTicketingAgent(ctx, operations.CreateTicketingAgentRequest{
-		TicketingAgent: &shared.TicketingAgent{
-			Emails: []shared.TicketingEmail{
-				shared.TicketingEmail{
-					Email: "Paolo.Cole8@yahoo.com",
-				},
-			},
-			Raw: shared.PropertyTicketingAgentRaw{},
-			Telephones: []shared.TicketingTelephone{
-				shared.TicketingTelephone{
-					Telephone: "Seaborgium",
-				},
-			},
-		},
-		ConnectionID: "Manager",
+	res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
+		ID: "<ID>",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.TicketingAgent != nil {
+	if res.APICall != nil {
 		// handle response
 	}
 }

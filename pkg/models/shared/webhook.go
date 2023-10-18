@@ -25,22 +25,18 @@ const (
 	WebhookObjectTypeCrmFile           WebhookObjectType = "crm_file"
 	WebhookObjectTypeCrmLead           WebhookObjectType = "crm_lead"
 	WebhookObjectTypeCrmPipeline       WebhookObjectType = "crm_pipeline"
-	WebhookObjectTypeCrmTeam           WebhookObjectType = "crm_team"
-	WebhookObjectTypeCrmUser           WebhookObjectType = "crm_user"
-	WebhookObjectTypeEnrichCompany     WebhookObjectType = "enrich_company"
-	WebhookObjectTypeEnrichPerson      WebhookObjectType = "enrich_person"
 	WebhookObjectTypeHrisEmployee      WebhookObjectType = "hris_employee"
 	WebhookObjectTypeHrisGroup         WebhookObjectType = "hris_group"
 	WebhookObjectTypeMartechList       WebhookObjectType = "martech_list"
 	WebhookObjectTypeMartechMember     WebhookObjectType = "martech_member"
 	WebhookObjectTypePassthrough       WebhookObjectType = "passthrough"
-	WebhookObjectTypeTicketingAgent    WebhookObjectType = "ticketing_agent"
-	WebhookObjectTypeTicketingCustomer WebhookObjectType = "ticketing_customer"
 	WebhookObjectTypeTicketingNote     WebhookObjectType = "ticketing_note"
 	WebhookObjectTypeTicketingTicket   WebhookObjectType = "ticketing_ticket"
-	WebhookObjectTypeUcAgent           WebhookObjectType = "uc_agent"
-	WebhookObjectTypeUcCall            WebhookObjectType = "uc_call"
+	WebhookObjectTypeTicketingCustomer WebhookObjectType = "ticketing_customer"
 	WebhookObjectTypeUcContact         WebhookObjectType = "uc_contact"
+	WebhookObjectTypeUcCall            WebhookObjectType = "uc_call"
+	WebhookObjectTypeEnrichPerson      WebhookObjectType = "enrich_person"
+	WebhookObjectTypeEnrichCompany     WebhookObjectType = "enrich_company"
 )
 
 func (e WebhookObjectType) ToPointer() *WebhookObjectType {
@@ -79,14 +75,6 @@ func (e *WebhookObjectType) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "crm_pipeline":
 		fallthrough
-	case "crm_team":
-		fallthrough
-	case "crm_user":
-		fallthrough
-	case "enrich_company":
-		fallthrough
-	case "enrich_person":
-		fallthrough
 	case "hris_employee":
 		fallthrough
 	case "hris_group":
@@ -97,19 +85,19 @@ func (e *WebhookObjectType) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "passthrough":
 		fallthrough
-	case "ticketing_agent":
-		fallthrough
-	case "ticketing_customer":
-		fallthrough
 	case "ticketing_note":
 		fallthrough
 	case "ticketing_ticket":
 		fallthrough
-	case "uc_agent":
+	case "ticketing_customer":
+		fallthrough
+	case "uc_contact":
 		fallthrough
 	case "uc_call":
 		fallthrough
-	case "uc_contact":
+	case "enrich_person":
+		fallthrough
+	case "enrich_company":
 		*e = WebhookObjectType(v)
 		return nil
 	default:

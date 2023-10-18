@@ -66,7 +66,6 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 
 // UnifiedTo - Unified.to API: One API to Rule Them All
 type UnifiedTo struct {
-	Agent       *agent
 	Apicall     *apicall
 	Application *application
 	Ats         *ats
@@ -98,12 +97,10 @@ type UnifiedTo struct {
 	Passthrough *passthrough
 	Person      *person
 	Pipeline    *pipeline
-	Team        *team
 	Ticket      *ticket
 	Ticketing   *ticketing
 	Uc          *uc
 	Unified     *unified
-	User        *user
 	Webhook     *webhook
 
 	sdkConfiguration sdkConfiguration
@@ -174,9 +171,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.4.7",
+			SDKVersion:        "0.4.8",
 			GenVersion:        "2.161.0",
-			UserAgent:         "speakeasy-sdk/go 0.4.7 2.161.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:         "speakeasy-sdk/go 0.4.8 2.161.0 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -194,8 +191,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 			sdk.sdkConfiguration.SecurityClient = sdk.sdkConfiguration.DefaultClient
 		}
 	}
-
-	sdk.Agent = newAgent(sdk.sdkConfiguration)
 
 	sdk.Apicall = newApicall(sdk.sdkConfiguration)
 
@@ -259,8 +254,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Pipeline = newPipeline(sdk.sdkConfiguration)
 
-	sdk.Team = newTeam(sdk.sdkConfiguration)
-
 	sdk.Ticket = newTicket(sdk.sdkConfiguration)
 
 	sdk.Ticketing = newTicketing(sdk.sdkConfiguration)
@@ -268,8 +261,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Uc = newUc(sdk.sdkConfiguration)
 
 	sdk.Unified = newUnified(sdk.sdkConfiguration)
-
-	sdk.User = newUser(sdk.sdkConfiguration)
 
 	sdk.Webhook = newWebhook(sdk.sdkConfiguration)
 

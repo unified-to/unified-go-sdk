@@ -40,7 +40,7 @@ func main() {
             HookURL: "male",
             IntegrationType: "Representative",
             Interval: 9342.25,
-            ObjectType: shared.WebhookObjectTypeCrmDeal,
+            ObjectType: shared.WebhookObjectTypeCrmContact,
             Subscriptions: []string{
                 "Account",
             },
