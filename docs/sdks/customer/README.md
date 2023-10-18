@@ -46,11 +46,11 @@ func main() {
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "Cargo Georgia earum",
+                    Telephone: "tepid",
                 },
             },
         },
-        ConnectionID: "Osmium blissfully",
+        ConnectionID: "Bedfordshire",
     })
     if err != nil {
         log.Fatal(err)
@@ -99,9 +99,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.GetTicketingCustomer(ctx, operations.GetTicketingCustomerRequest{
-        ConnectionID: "benchmark",
+        ConnectionID: "Berkshire",
         Fields: []string{
-            "Cambridgeshire",
+            "Gloves",
         },
         ID: "<ID>",
     })
@@ -152,9 +152,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.ListTicketingCustomers(ctx, operations.ListTicketingCustomersRequest{
-        ConnectionID: "Carrollton yellow",
+        ConnectionID: "adapter",
         Fields: []string{
-            "until",
+            "Unions",
         },
     })
     if err != nil {
@@ -216,11 +216,11 @@ func main() {
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "psst",
+                    Telephone: "Frozen",
                 },
             },
         },
-        ConnectionID: "Fermium Northeast Metal",
+        ConnectionID: "calculating",
         ID: "<ID>",
     })
     if err != nil {
@@ -270,7 +270,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.RemoveTicketingCustomer(ctx, operations.RemoveTicketingCustomerRequest{
-        ConnectionID: "salmon",
+        ConnectionID: "West",
         ID: "<ID>",
     })
     if err != nil {
@@ -332,11 +332,11 @@ func main() {
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "navigating",
+                    Telephone: "Sleek",
                 },
             },
         },
-        ConnectionID: "Avon Southwest",
+        ConnectionID: "Bolivia",
         ID: "<ID>",
     })
     if err != nil {

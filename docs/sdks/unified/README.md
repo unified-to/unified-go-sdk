@@ -55,9 +55,9 @@ func main() {
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesCrm,
         },
-        IntegrationType: "Maserati",
+        IntegrationType: "revolutionize",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsCrmLeadWrite,
+            shared.PropertyConnectionPermissionsTicketingAgentWrite,
         },
     })
     if err != nil {
@@ -108,24 +108,24 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{
         Webhook: &shared.Webhook{
-            ConnectionID: "East male",
+            ConnectionID: "Lead",
             Events: []shared.PropertyWebhookEvents{
-                shared.PropertyWebhookEventsCreated,
+                shared.PropertyWebhookEventsUpdated,
             },
-            HookURL: "ah Account Bedfordshire",
-            IntegrationType: "Tenge",
-            Interval: 4915.71,
-            ObjectType: shared.WebhookObjectTypeMartechMember,
+            HookURL: "male",
+            IntegrationType: "Representative",
+            Interval: 9342.25,
+            ObjectType: shared.WebhookObjectTypeCrmDeal,
             Subscriptions: []string{
-                "delightfully",
+                "Account",
             },
-            WorkspaceID: "up Vatu",
+            WorkspaceID: "Bedfordshire",
         },
-        ConnectionID: "Fitness grey Directives",
+        ConnectionID: "East",
         Events: []operations.CreateUnifiedWebhookEvents{
-            operations.CreateUnifiedWebhookEventsCreated,
+            operations.CreateUnifiedWebhookEventsUpdated,
         },
-        Object: "Chair Kilback",
+        Object: "wireless",
     })
     if err != nil {
         log.Fatal(err)
@@ -272,7 +272,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedIntegration(ctx, operations.GetUnifiedIntegrationRequest{
-        IntegrationType: "Berkelium panel",
+        IntegrationType: "Mobility",
     })
     if err != nil {
         log.Fatal(err)
@@ -321,11 +321,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
-        IntegrationType: "Reggae Van pascal",
+        IntegrationType: "supposing",
         Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesAtsScorecardRead,
+            operations.GetUnifiedIntegrationAuthScopesTicketingNoteRead,
         },
-        WorkspaceID: "Xenogender North groupware",
+        WorkspaceID: "Van",
     })
     if err != nil {
         log.Fatal(err)
@@ -524,7 +524,7 @@ func main() {
         Categories: []operations.ListUnifiedIntegrationWorkspacesCategories{
             operations.ListUnifiedIntegrationWorkspacesCategoriesMartech,
         },
-        WorkspaceID: "Country Market Representative",
+        WorkspaceID: "supposing",
     })
     if err != nil {
         log.Fatal(err)
@@ -684,9 +684,9 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesAts,
             },
-            IntegrationType: "Montana",
+            IntegrationType: "Northeast",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmFileRead,
+                shared.PropertyConnectionPermissionsMartechListRead,
             },
         },
         ID: "<ID>",
@@ -849,9 +849,9 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesCrm,
             },
-            IntegrationType: "from",
+            IntegrationType: "Cambridgeshire",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsAtsApplicationRead,
+                shared.PropertyConnectionPermissionsCrmTeamWrite,
             },
         },
         ID: "<ID>",

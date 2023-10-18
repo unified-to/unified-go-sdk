@@ -8,7 +8,6 @@ import (
 )
 
 type PatchAtsJobRequest struct {
-	// An opened position/job
 	AtsJob *shared.AtsJob `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

@@ -48,8 +48,8 @@ func main() {
                 "SAS",
             },
         },
-        ConnectionID: "South Electronic calculate",
-        ListID: "ew scalable Hassium",
+        ConnectionID: "bobcat",
+        ListID: "global",
     })
     if err != nil {
         log.Fatal(err)
@@ -98,12 +98,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Member.GetMartechMember(ctx, operations.GetMartechMemberRequest{
-        ConnectionID: "Yuan",
+        ConnectionID: "Japan",
         Fields: []string{
-            "Gibraltar",
+            "orange",
         },
         ID: "<ID>",
-        ListID: "Iceland",
+        ListID: "Gibraltar",
     })
     if err != nil {
         log.Fatal(err)
@@ -152,11 +152,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Member.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
-        ConnectionID: "Money",
+        ConnectionID: "Frida",
         Fields: []string{
-            "Practical",
+            "structure",
         },
-        ListID: "Thallium Bike outrageous",
+        ListID: "Thallium",
     })
     if err != nil {
         log.Fatal(err)
@@ -219,9 +219,9 @@ func main() {
                 "Synchronised",
             },
         },
-        ConnectionID: "Unbranded overriding Money",
+        ConnectionID: "electric",
         ID: "<ID>",
-        ListID: "as variant West",
+        ListID: "psst",
     })
     if err != nil {
         log.Fatal(err)
@@ -270,9 +270,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Member.RemoveMartechMember(ctx, operations.RemoveMartechMemberRequest{
-        ConnectionID: "Fitness",
+        ConnectionID: "integrated",
         ID: "<ID>",
-        ListID: "HTTP solid",
+        ListID: "Analyst",
     })
     if err != nil {
         log.Fatal(err)
@@ -335,9 +335,9 @@ func main() {
                 "Bike",
             },
         },
-        ConnectionID: "Checking deploy Hermaphrodite",
+        ConnectionID: "Hyundai",
         ID: "<ID>",
-        ListID: "Bespoke below",
+        ListID: "North",
     })
     if err != nil {
         log.Fatal(err)

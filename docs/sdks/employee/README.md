@@ -44,11 +44,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "Gloves with",
+                    Telephone: "composite",
                 },
             },
         },
-        ConnectionID: "ack Recycled",
+        ConnectionID: "redefine",
     })
     if err != nil {
         log.Fatal(err)
@@ -97,9 +97,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.GetHrisEmployee(ctx, operations.GetHrisEmployeeRequest{
-        ConnectionID: "Automated",
+        ConnectionID: "Louisiana",
         Fields: []string{
-            "West",
+            "Afghanistan",
         },
         ID: "<ID>",
     })
@@ -150,9 +150,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.ListHrisEmployees(ctx, operations.ListHrisEmployeesRequest{
-        ConnectionID: "Table moratorium",
+        ConnectionID: "overriding",
         Fields: []string{
-            "payment",
+            "Krona",
         },
     })
     if err != nil {
@@ -212,11 +212,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "shameful",
+                    Telephone: "cyan",
                 },
             },
         },
-        ConnectionID: "barring transmitting Hybrid",
+        ConnectionID: "farad",
         ID: "<ID>",
     })
     if err != nil {
@@ -266,7 +266,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.RemoveHrisEmployee(ctx, operations.RemoveHrisEmployeeRequest{
-        ConnectionID: "Architect",
+        ConnectionID: "Chicken",
         ID: "<ID>",
     })
     if err != nil {
@@ -326,11 +326,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "Web Borders North",
+                    Telephone: "Mazda",
                 },
             },
         },
-        ConnectionID: "Jewelery slap",
+        ConnectionID: "Brand",
         ID: "<ID>",
     })
     if err != nil {

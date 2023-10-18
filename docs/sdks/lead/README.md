@@ -42,11 +42,11 @@ func main() {
             Raw: &shared.PropertyCrmLeadRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "port steradian prize",
+                    Telephone: "Designer",
                 },
             },
         },
-        ConnectionID: "ability Einsteinium Orchestrator",
+        ConnectionID: "Soft",
     })
     if err != nil {
         log.Fatal(err)
@@ -95,9 +95,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.GetCrmLead(ctx, operations.GetCrmLeadRequest{
-        ConnectionID: "Handmade Keyboard yum",
+        ConnectionID: "how",
         Fields: []string{
-            "magnetic",
+            "Curium",
         },
         ID: "<ID>",
     })
@@ -148,9 +148,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.ListCrmLeads(ctx, operations.ListCrmLeadsRequest{
-        ConnectionID: "International",
+        ConnectionID: "Implementation",
         Fields: []string{
-            "ratione",
+            "dam",
         },
     })
     if err != nil {
@@ -208,11 +208,11 @@ func main() {
             Raw: &shared.PropertyCrmLeadRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "teal Hat",
+                    Telephone: "deposit",
                 },
             },
         },
-        ConnectionID: "Ball Chips",
+        ConnectionID: "Bike",
         ID: "<ID>",
     })
     if err != nil {
@@ -262,7 +262,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.RemoveCrmLead(ctx, operations.RemoveCrmLeadRequest{
-        ConnectionID: "Southeast",
+        ConnectionID: "Springs",
         ID: "<ID>",
     })
     if err != nil {
@@ -320,11 +320,11 @@ func main() {
             Raw: &shared.PropertyCrmLeadRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "compelling",
+                    Telephone: "Northwest",
                 },
             },
         },
-        ConnectionID: "Pickup Polestar Checking",
+        ConnectionID: "violation",
         ID: "<ID>",
     })
     if err != nil {

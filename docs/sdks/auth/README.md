@@ -30,11 +30,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Auth.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
-        IntegrationType: "Reggae Van pascal",
+        IntegrationType: "supposing",
         Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesAtsScorecardRead,
+            operations.GetUnifiedIntegrationAuthScopesTicketingNoteRead,
         },
-        WorkspaceID: "Xenogender North groupware",
+        WorkspaceID: "Van",
     })
     if err != nil {
         log.Fatal(err)
@@ -83,8 +83,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Auth.GetUnifiedIntegrationLogin(ctx, operations.GetUnifiedIntegrationLoginRequest{
-        IntegrationType: "Bicycle markets Soft",
-        WorkspaceID: "bus Strontium",
+        IntegrationType: "when",
+        WorkspaceID: "Tricycle",
     })
     if err != nil {
         log.Fatal(err)

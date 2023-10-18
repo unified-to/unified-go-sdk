@@ -2,7 +2,6 @@
 
 package shared
 
-// PropertyAtsCandidateAddress - Unified address object
 type PropertyAtsCandidateAddress struct {
 	Address1    *string `json:"address1,omitempty"`
 	Address2    *string `json:"address2,omitempty"`

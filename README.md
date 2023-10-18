@@ -43,11 +43,11 @@ func main() {
 			Raw: shared.PropertyTicketingAgentRaw{},
 			Telephones: []shared.TicketingTelephone{
 				shared.TicketingTelephone{
-					Telephone: "scarcely Soap navigating",
+					Telephone: "Seaborgium",
 				},
 			},
 		},
-		ConnectionID: "smoothly Algeria",
+		ConnectionID: "Manager",
 	})
 	if err != nil {
 		log.Fatal(err)

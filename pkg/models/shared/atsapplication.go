@@ -24,6 +24,7 @@ const (
 	AtsApplicationStatusAccepted        AtsApplicationStatus = "ACCEPTED"
 	AtsApplicationStatusHired           AtsApplicationStatus = "HIRED"
 	AtsApplicationStatusRejected        AtsApplicationStatus = "REJECTED"
+	AtsApplicationStatusWithdrawn       AtsApplicationStatus = "WITHDRAWN"
 )
 
 func (e AtsApplicationStatus) ToPointer() *AtsApplicationStatus {
@@ -59,6 +60,8 @@ func (e *AtsApplicationStatus) UnmarshalJSON(data []byte) error {
 	case "HIRED":
 		fallthrough
 	case "REJECTED":
+		fallthrough
+	case "WITHDRAWN":
 		*e = AtsApplicationStatus(v)
 		return nil
 	default:
@@ -66,7 +69,6 @@ func (e *AtsApplicationStatus) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// AtsApplication - An application is an association object between a candidate and a job
 type AtsApplication struct {
 	AppliedAt      *time.Time                 `json:"applied_at,omitempty"`
 	CandidateID    *string                    `json:"candidate_id,omitempty"`

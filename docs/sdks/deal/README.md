@@ -40,7 +40,7 @@ func main() {
                 "Toys",
             },
         },
-        ConnectionID: "Music Rap",
+        ConnectionID: "hacking",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,9 +89,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Deal.GetCrmDeal(ctx, operations.GetCrmDealRequest{
-        ConnectionID: "male orange",
+        ConnectionID: "payment",
         Fields: []string{
-            "Reduced",
+            "mint",
         },
         ID: "<ID>",
     })
@@ -142,9 +142,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Deal.ListCrmDeals(ctx, operations.ListCrmDealsRequest{
-        ConnectionID: "Lamborghini",
+        ConnectionID: "Southeast",
         Fields: []string{
-            "female",
+            "synthesize",
         },
     })
     if err != nil {
@@ -200,7 +200,7 @@ func main() {
                 "consign",
             },
         },
-        ConnectionID: "Platinum female",
+        ConnectionID: "withdrawal",
         ID: "<ID>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Deal.RemoveCrmDeal(ctx, operations.RemoveCrmDealRequest{
-        ConnectionID: "Nihonium",
+        ConnectionID: "Handmade",
         ID: "<ID>",
     })
     if err != nil {
@@ -306,7 +306,7 @@ func main() {
                 "South",
             },
         },
-        ConnectionID: "Shirt",
+        ConnectionID: "global",
         ID: "<ID>",
     })
     if err != nil {

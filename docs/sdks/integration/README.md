@@ -32,7 +32,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegration(ctx, operations.GetUnifiedIntegrationRequest{
-        IntegrationType: "Berkelium panel",
+        IntegrationType: "Mobility",
     })
     if err != nil {
         log.Fatal(err)
@@ -81,11 +81,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
-        IntegrationType: "Reggae Van pascal",
+        IntegrationType: "supposing",
         Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesAtsScorecardRead,
+            operations.GetUnifiedIntegrationAuthScopesTicketingNoteRead,
         },
-        WorkspaceID: "Xenogender North groupware",
+        WorkspaceID: "Van",
     })
     if err != nil {
         log.Fatal(err)
@@ -137,7 +137,7 @@ func main() {
         Categories: []operations.ListUnifiedIntegrationWorkspacesCategories{
             operations.ListUnifiedIntegrationWorkspacesCategoriesMartech,
         },
-        WorkspaceID: "Country Market Representative",
+        WorkspaceID: "supposing",
     })
     if err != nil {
         log.Fatal(err)

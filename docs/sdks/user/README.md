@@ -42,11 +42,11 @@ func main() {
             Raw: &shared.PropertyCrmUserRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "await male",
+                    Telephone: "zero",
                 },
             },
         },
-        ConnectionID: "Incredible Virginia",
+        ConnectionID: "male",
     })
     if err != nil {
         log.Fatal(err)
@@ -95,9 +95,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.GetCrmUser(ctx, operations.GetCrmUserRequest{
-        ConnectionID: "Bespoke Dollar",
+        ConnectionID: "adipisci",
         Fields: []string{
-            "unto",
+            "connect",
         },
         ID: "<ID>",
     })
@@ -148,9 +148,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.ListCrmUsers(ctx, operations.ListCrmUsersRequest{
-        ConnectionID: "careless Costa",
+        ConnectionID: "CFA",
         Fields: []string{
-            "olive",
+            "Costa",
         },
     })
     if err != nil {
@@ -208,11 +208,11 @@ func main() {
             Raw: &shared.PropertyCrmUserRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "Bronze composite",
+                    Telephone: "Demiflux",
                 },
             },
         },
-        ConnectionID: "katal Industrial Classical",
+        ConnectionID: "grey",
         ID: "<ID>",
     })
     if err != nil {
@@ -262,7 +262,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.User.RemoveCrmUser(ctx, operations.RemoveCrmUserRequest{
-        ConnectionID: "Southeast",
+        ConnectionID: "yellow",
         ID: "<ID>",
     })
     if err != nil {
@@ -320,11 +320,11 @@ func main() {
             Raw: &shared.PropertyCrmUserRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "Idaho green",
+                    Telephone: "benchmark",
                 },
             },
         },
-        ConnectionID: "Savings",
+        ConnectionID: "Rustic",
         ID: "<ID>",
     })
     if err != nil {

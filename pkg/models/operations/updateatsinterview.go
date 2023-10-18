@@ -8,7 +8,6 @@ import (
 )
 
 type UpdateAtsInterviewRequest struct {
-	// An interview between a candidate for a specific job
 	AtsInterview *shared.AtsInterview `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

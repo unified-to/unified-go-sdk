@@ -43,7 +43,7 @@ func main() {
             },
             Raw: &shared.PropertyHrisGroupRaw{},
         },
-        ConnectionID: "Technetium",
+        ConnectionID: "South",
     })
     if err != nil {
         log.Fatal(err)
@@ -92,9 +92,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Group.GetHrisGroup(ctx, operations.GetHrisGroupRequest{
-        ConnectionID: "Cedi state Cadillac",
+        ConnectionID: "likewise",
         Fields: []string{
-            "optical",
+            "while",
         },
         ID: "<ID>",
     })
@@ -145,9 +145,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Group.ListHrisGroups(ctx, operations.ListHrisGroupsRequest{
-        ConnectionID: "Bronze Rubber",
+        ConnectionID: "Northwest",
         Fields: []string{
-            "feel",
+            "however",
         },
     })
     if err != nil {
@@ -206,7 +206,7 @@ func main() {
             },
             Raw: &shared.PropertyHrisGroupRaw{},
         },
-        ConnectionID: "bluetooth West",
+        ConnectionID: "indexing",
         ID: "<ID>",
     })
     if err != nil {
@@ -256,7 +256,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Group.RemoveHrisGroup(ctx, operations.RemoveHrisGroupRequest{
-        ConnectionID: "Human Soft Unbranded",
+        ConnectionID: "glistening",
         ID: "<ID>",
     })
     if err != nil {
@@ -315,7 +315,7 @@ func main() {
             },
             Raw: &shared.PropertyHrisGroupRaw{},
         },
-        ConnectionID: "bashfully",
+        ConnectionID: "Southwest",
         ID: "<ID>",
     })
     if err != nil {

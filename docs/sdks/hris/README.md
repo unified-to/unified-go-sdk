@@ -50,11 +50,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "Gloves with",
+                    Telephone: "composite",
                 },
             },
         },
-        ConnectionID: "ack Recycled",
+        ConnectionID: "redefine",
     })
     if err != nil {
         log.Fatal(err)
@@ -112,7 +112,7 @@ func main() {
             },
             Raw: &shared.PropertyHrisGroupRaw{},
         },
-        ConnectionID: "Technetium",
+        ConnectionID: "South",
     })
     if err != nil {
         log.Fatal(err)
@@ -161,9 +161,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisEmployee(ctx, operations.GetHrisEmployeeRequest{
-        ConnectionID: "Automated",
+        ConnectionID: "Louisiana",
         Fields: []string{
-            "West",
+            "Afghanistan",
         },
         ID: "<ID>",
     })
@@ -214,9 +214,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisGroup(ctx, operations.GetHrisGroupRequest{
-        ConnectionID: "Cedi state Cadillac",
+        ConnectionID: "likewise",
         Fields: []string{
-            "optical",
+            "while",
         },
         ID: "<ID>",
     })
@@ -267,9 +267,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.ListHrisEmployees(ctx, operations.ListHrisEmployeesRequest{
-        ConnectionID: "Table moratorium",
+        ConnectionID: "overriding",
         Fields: []string{
-            "payment",
+            "Krona",
         },
     })
     if err != nil {
@@ -319,9 +319,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.ListHrisGroups(ctx, operations.ListHrisGroupsRequest{
-        ConnectionID: "Bronze Rubber",
+        ConnectionID: "Northwest",
         Fields: []string{
-            "feel",
+            "however",
         },
     })
     if err != nil {
@@ -381,11 +381,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "shameful",
+                    Telephone: "cyan",
                 },
             },
         },
-        ConnectionID: "barring transmitting Hybrid",
+        ConnectionID: "farad",
         ID: "<ID>",
     })
     if err != nil {
@@ -444,7 +444,7 @@ func main() {
             },
             Raw: &shared.PropertyHrisGroupRaw{},
         },
-        ConnectionID: "bluetooth West",
+        ConnectionID: "indexing",
         ID: "<ID>",
     })
     if err != nil {
@@ -494,7 +494,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.RemoveHrisEmployee(ctx, operations.RemoveHrisEmployeeRequest{
-        ConnectionID: "Architect",
+        ConnectionID: "Chicken",
         ID: "<ID>",
     })
     if err != nil {
@@ -544,7 +544,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.RemoveHrisGroup(ctx, operations.RemoveHrisGroupRequest{
-        ConnectionID: "Human Soft Unbranded",
+        ConnectionID: "glistening",
         ID: "<ID>",
     })
     if err != nil {
@@ -604,11 +604,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "Web Borders North",
+                    Telephone: "Mazda",
                 },
             },
         },
-        ConnectionID: "Jewelery slap",
+        ConnectionID: "Brand",
         ID: "<ID>",
     })
     if err != nil {
@@ -667,7 +667,7 @@ func main() {
             },
             Raw: &shared.PropertyHrisGroupRaw{},
         },
-        ConnectionID: "bashfully",
+        ConnectionID: "Southwest",
         ID: "<ID>",
     })
     if err != nil {

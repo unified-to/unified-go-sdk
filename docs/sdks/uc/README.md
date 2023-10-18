@@ -45,11 +45,11 @@ func main() {
             Raw: &shared.PropertyUcContactRaw{},
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
-                    Telephone: "indigo indeed",
+                    Telephone: "challenge",
                 },
             },
         },
-        ConnectionID: "meanwhile",
+        ConnectionID: "azure",
     })
     if err != nil {
         log.Fatal(err)
@@ -98,9 +98,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.GetUcContact(ctx, operations.GetUcContactRequest{
-        ConnectionID: "JBOD ivory fool",
+        ConnectionID: "for",
         Fields: []string{
-            "Mouse",
+            "deposit",
         },
         ID: "<ID>",
     })
@@ -151,9 +151,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.ListUcAgents(ctx, operations.ListUcAgentsRequest{
-        ConnectionID: "Representative",
+        ConnectionID: "Ohio",
         Fields: []string{
-            "olive",
+            "huzzah",
         },
     })
     if err != nil {
@@ -203,9 +203,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.ListUcCalls(ctx, operations.ListUcCallsRequest{
-        ConnectionID: "optical",
+        ConnectionID: "Liberia",
         Fields: []string{
-            "South",
+            "Cargo",
         },
     })
     if err != nil {
@@ -255,9 +255,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.ListUcContacts(ctx, operations.ListUcContactsRequest{
-        ConnectionID: "Bicycle male",
+        ConnectionID: "application",
         Fields: []string{
-            "East",
+            "Xenogender",
         },
     })
     if err != nil {
@@ -316,11 +316,11 @@ func main() {
             Raw: &shared.PropertyUcContactRaw{},
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
-                    Telephone: "male",
+                    Telephone: "Borders",
                 },
             },
         },
-        ConnectionID: "South Pants candela",
+        ConnectionID: "Carolina",
         ID: "<ID>",
     })
     if err != nil {
@@ -370,7 +370,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.RemoveUcContact(ctx, operations.RemoveUcContactRequest{
-        ConnectionID: "Configurable",
+        ConnectionID: "Plastic",
         ID: "<ID>",
     })
     if err != nil {
@@ -429,11 +429,11 @@ func main() {
             Raw: &shared.PropertyUcContactRaw{},
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
-                    Telephone: "Illinois Electronic Northwest",
+                    Telephone: "Convertible",
                 },
             },
         },
-        ConnectionID: "Cruiser",
+        ConnectionID: "Wooden",
         ID: "<ID>",
     })
     if err != nil {

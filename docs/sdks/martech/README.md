@@ -43,7 +43,7 @@ func main() {
         MarketingList: &shared.MarketingList{
             Raw: &shared.PropertyMarketingListRaw{},
         },
-        ConnectionID: "Architect responsive",
+        ConnectionID: "Latin",
     })
     if err != nil {
         log.Fatal(err)
@@ -106,8 +106,8 @@ func main() {
                 "SAS",
             },
         },
-        ConnectionID: "South Electronic calculate",
-        ListID: "ew scalable Hassium",
+        ConnectionID: "bobcat",
+        ListID: "global",
     })
     if err != nil {
         log.Fatal(err)
@@ -156,9 +156,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.GetMartechList(ctx, operations.GetMartechListRequest{
-        ConnectionID: "Franklin Bicycle Victoria",
+        ConnectionID: "red",
         Fields: []string{
-            "Fish",
+            "users",
         },
         ID: "<ID>",
     })
@@ -209,12 +209,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.GetMartechMember(ctx, operations.GetMartechMemberRequest{
-        ConnectionID: "Yuan",
+        ConnectionID: "Japan",
         Fields: []string{
-            "Gibraltar",
+            "orange",
         },
         ID: "<ID>",
-        ListID: "Iceland",
+        ListID: "Gibraltar",
     })
     if err != nil {
         log.Fatal(err)
@@ -263,9 +263,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.ListMartechLists(ctx, operations.ListMartechListsRequest{
-        ConnectionID: "DeKalb magenta black",
+        ConnectionID: "above",
         Fields: []string{
-            "provided",
+            "Fantastic",
         },
     })
     if err != nil {
@@ -315,11 +315,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
-        ConnectionID: "Money",
+        ConnectionID: "Frida",
         Fields: []string{
-            "Practical",
+            "structure",
         },
-        ListID: "Thallium Bike outrageous",
+        ListID: "Thallium",
     })
     if err != nil {
         log.Fatal(err)
@@ -371,7 +371,7 @@ func main() {
         MarketingList: &shared.MarketingList{
             Raw: &shared.PropertyMarketingListRaw{},
         },
-        ConnectionID: "Operations Liaison",
+        ConnectionID: "Classical",
         ID: "<ID>",
     })
     if err != nil {
@@ -435,9 +435,9 @@ func main() {
                 "Synchronised",
             },
         },
-        ConnectionID: "Unbranded overriding Money",
+        ConnectionID: "electric",
         ID: "<ID>",
-        ListID: "as variant West",
+        ListID: "psst",
     })
     if err != nil {
         log.Fatal(err)
@@ -486,7 +486,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.RemoveMartechList(ctx, operations.RemoveMartechListRequest{
-        ConnectionID: "misty",
+        ConnectionID: "Northwest",
         ID: "<ID>",
     })
     if err != nil {
@@ -536,9 +536,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.RemoveMartechMember(ctx, operations.RemoveMartechMemberRequest{
-        ConnectionID: "Fitness",
+        ConnectionID: "integrated",
         ID: "<ID>",
-        ListID: "HTTP solid",
+        ListID: "Analyst",
     })
     if err != nil {
         log.Fatal(err)
@@ -590,7 +590,7 @@ func main() {
         MarketingList: &shared.MarketingList{
             Raw: &shared.PropertyMarketingListRaw{},
         },
-        ConnectionID: "Secured Kia Stroman",
+        ConnectionID: "innocently",
         ID: "<ID>",
     })
     if err != nil {
@@ -654,9 +654,9 @@ func main() {
                 "Bike",
             },
         },
-        ConnectionID: "Checking deploy Hermaphrodite",
+        ConnectionID: "Hyundai",
         ID: "<ID>",
-        ListID: "Bespoke below",
+        ListID: "North",
     })
     if err != nil {
         log.Fatal(err)

@@ -40,7 +40,7 @@ func main() {
                 "exercitationem",
             },
         },
-        ConnectionID: "as New Senior",
+        ConnectionID: "who",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,9 +89,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Team.GetCrmTeam(ctx, operations.GetCrmTeamRequest{
-        ConnectionID: "digital awful",
+        ConnectionID: "online",
         Fields: []string{
-            "Peru",
+            "Outdoors",
         },
         ID: "<ID>",
     })
@@ -142,9 +142,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Team.ListCrmTeams(ctx, operations.ListCrmTeamsRequest{
-        ConnectionID: "Classical microchip Wooden",
+        ConnectionID: "Celsius",
         Fields: []string{
-            "Lutetium",
+            "microchip",
         },
     })
     if err != nil {
@@ -200,7 +200,7 @@ func main() {
                 "Account",
             },
         },
-        ConnectionID: "Transexual compress redefine",
+        ConnectionID: "Customer",
         ID: "<ID>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Team.RemoveCrmTeam(ctx, operations.RemoveCrmTeamRequest{
-        ConnectionID: "Sol",
+        ConnectionID: "Cotton",
         ID: "<ID>",
     })
     if err != nil {
@@ -306,7 +306,7 @@ func main() {
                 "Carbon",
             },
         },
-        ConnectionID: "Dakota",
+        ConnectionID: "East",
         ID: "<ID>",
     })
     if err != nil {

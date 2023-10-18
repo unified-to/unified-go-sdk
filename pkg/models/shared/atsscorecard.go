@@ -42,7 +42,6 @@ func (e *AtsScorecardRecommendation) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// AtsScorecard - A scorecard is feedback/assessment of a candidate's interview
 type AtsScorecard struct {
 	ApplicationID  *string                     `json:"application_id,omitempty"`
 	CandidateID    *string                     `json:"candidate_id,omitempty"`

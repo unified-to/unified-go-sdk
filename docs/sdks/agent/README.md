@@ -44,11 +44,11 @@ func main() {
             Raw: shared.PropertyTicketingAgentRaw{},
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "scarcely Soap navigating",
+                    Telephone: "Seaborgium",
                 },
             },
         },
-        ConnectionID: "smoothly Algeria",
+        ConnectionID: "Manager",
     })
     if err != nil {
         log.Fatal(err)
@@ -97,9 +97,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Agent.GetTicketingAgent(ctx, operations.GetTicketingAgentRequest{
-        ConnectionID: "Lamborghini",
+        ConnectionID: "Tennessee",
         Fields: []string{
-            "SAS",
+            "connect",
         },
         ID: "<ID>",
     })
@@ -150,9 +150,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Agent.ListTicketingAgents(ctx, operations.ListTicketingAgentsRequest{
-        ConnectionID: "Mazda",
+        ConnectionID: "transparent",
         Fields: []string{
-            "Home",
+            "Corporate",
         },
     })
     if err != nil {
@@ -202,9 +202,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Agent.ListUcAgents(ctx, operations.ListUcAgentsRequest{
-        ConnectionID: "Representative",
+        ConnectionID: "Ohio",
         Fields: []string{
-            "olive",
+            "huzzah",
         },
     })
     if err != nil {
@@ -263,11 +263,11 @@ func main() {
             Raw: shared.PropertyTicketingAgentRaw{},
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "envious",
+                    Telephone: "fuchsia",
                 },
             },
         },
-        ConnectionID: "by",
+        ConnectionID: "Small",
         ID: "<ID>",
     })
     if err != nil {
@@ -317,7 +317,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Agent.RemoveTicketingAgent(ctx, operations.RemoveTicketingAgentRequest{
-        ConnectionID: "monitor",
+        ConnectionID: "Northwest",
         ID: "<ID>",
     })
     if err != nil {
@@ -376,11 +376,11 @@ func main() {
             Raw: shared.PropertyTicketingAgentRaw{},
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "female",
+                    Telephone: "Philippines",
                 },
             },
         },
-        ConnectionID: "beside Usability Bedfordshire",
+        ConnectionID: "SMS",
         ID: "<ID>",
     })
     if err != nil {

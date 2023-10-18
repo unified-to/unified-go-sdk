@@ -37,8 +37,8 @@ func main() {
         TicketingNote: &shared.TicketingNote{
             Raw: shared.PropertyTicketingNoteRaw{},
         },
-        ConnectionID: "Books kilogram hmph",
-        TicketID: "Dakota function interface",
+        ConnectionID: "Cruiser",
+        TicketID: "kilogram",
     })
     if err != nil {
         log.Fatal(err)
@@ -87,12 +87,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Note.GetTicketingNote(ctx, operations.GetTicketingNoteRequest{
-        ConnectionID: "joule program",
+        ConnectionID: "SSD",
         Fields: []string{
-            "SUV",
+            "intranet",
         },
         ID: "<ID>",
-        TicketID: "payment Architect",
+        TicketID: "Fresh",
     })
     if err != nil {
         log.Fatal(err)
@@ -141,11 +141,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Note.ListTicketingNotes(ctx, operations.ListTicketingNotesRequest{
-        ConnectionID: "Hybrid North",
+        ConnectionID: "Data",
         Fields: []string{
-            "hosepipe",
+            "because",
         },
-        TicketID: "Marvin",
+        TicketID: "Zimbabwe",
     })
     if err != nil {
         log.Fatal(err)
@@ -197,9 +197,9 @@ func main() {
         TicketingNote: &shared.TicketingNote{
             Raw: shared.PropertyTicketingNoteRaw{},
         },
-        ConnectionID: "Bicycle Southwest Darmstadtium",
+        ConnectionID: "soon",
         ID: "<ID>",
-        TicketID: "index",
+        TicketID: "Strategist",
     })
     if err != nil {
         log.Fatal(err)
@@ -248,9 +248,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Note.RemoveTicketingNote(ctx, operations.RemoveTicketingNoteRequest{
-        ConnectionID: "Granite hm West",
+        ConnectionID: "Bicycle",
         ID: "<ID>",
-        TicketID: "in",
+        TicketID: "hm",
     })
     if err != nil {
         log.Fatal(err)
@@ -302,9 +302,9 @@ func main() {
         TicketingNote: &shared.TicketingNote{
             Raw: shared.PropertyTicketingNoteRaw{},
         },
-        ConnectionID: "via among Quality",
+        ConnectionID: "lavender",
         ID: "<ID>",
-        TicketID: "Brand when",
+        TicketID: "waterspout",
     })
     if err != nil {
         log.Fatal(err)

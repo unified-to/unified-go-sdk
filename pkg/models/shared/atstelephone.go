@@ -43,7 +43,6 @@ func (e *AtsTelephoneType) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// AtsTelephone - A unified telephone object
 type AtsTelephone struct {
 	Telephone string            `json:"telephone"`
 	Type      *AtsTelephoneType `json:"type,omitempty"`

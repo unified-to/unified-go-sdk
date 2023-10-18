@@ -49,14 +49,14 @@ func main() {
             },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "Germany",
+                    Telephone: "Car",
                 },
             },
             Websites: []string{
-                "yippee",
+                "experiences",
             },
         },
-        ConnectionID: "magenta Data woot",
+        ConnectionID: "soluta",
     })
     if err != nil {
         log.Fatal(err)
@@ -105,9 +105,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.GetCrmCompany(ctx, operations.GetCrmCompanyRequest{
-        ConnectionID: "THX Strategist deposit",
+        ConnectionID: "forenenst",
         Fields: []string{
-            "snag",
+            "Mini",
         },
         ID: "<ID>",
     })
@@ -158,9 +158,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.ListCrmCompanies(ctx, operations.ListCrmCompaniesRequest{
-        ConnectionID: "Jazz solid Lamborghini",
+        ConnectionID: "override",
         Fields: []string{
-            "Sleek",
+            "withdrawal",
         },
     })
     if err != nil {
@@ -210,7 +210,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.ListEnrichCompanies(ctx, operations.ListEnrichCompaniesRequest{
-        ConnectionID: "Chips",
+        ConnectionID: "Bike",
     })
     if err != nil {
         log.Fatal(err)
@@ -273,14 +273,14 @@ func main() {
             },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "haptic Phased",
+                    Telephone: "indexing",
                 },
             },
             Websites: []string{
-                "Investment",
+                "array",
             },
         },
-        ConnectionID: "Trans",
+        ConnectionID: "Genderflux",
         ID: "<ID>",
     })
     if err != nil {
@@ -330,7 +330,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.RemoveCrmCompany(ctx, operations.RemoveCrmCompanyRequest{
-        ConnectionID: "Mayaguez index wireless",
+        ConnectionID: "although",
         ID: "<ID>",
     })
     if err != nil {
@@ -394,14 +394,14 @@ func main() {
             },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "Account alarm infrastructure",
+                    Telephone: "except",
                 },
             },
             Websites: []string{
-                "Visionary",
+                "enterprise",
             },
         },
-        ConnectionID: "Southeast ad",
+        ConnectionID: "alarm",
         ID: "<ID>",
     })
     if err != nil {

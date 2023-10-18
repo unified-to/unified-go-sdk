@@ -47,11 +47,11 @@ func main() {
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "but Pop fluid",
+                    Telephone: "who",
                 },
             },
         },
-        ConnectionID: "bypass Creative Legacy",
+        ConnectionID: "New",
     })
     if err != nil {
         log.Fatal(err)
@@ -100,9 +100,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.GetAtsCandidate(ctx, operations.GetAtsCandidateRequest{
-        ConnectionID: "Markets",
+        ConnectionID: "Generic",
         Fields: []string{
-            "payment",
+            "hub",
         },
         ID: "<ID>",
     })
@@ -153,9 +153,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.ListAtsCandidates(ctx, operations.ListAtsCandidatesRequest{
-        ConnectionID: "mole clearly",
+        ConnectionID: "Mobility",
         Fields: []string{
-            "Van",
+            "Cambridgeshire",
         },
     })
     if err != nil {
@@ -218,11 +218,11 @@ func main() {
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "payment Books",
+                    Telephone: "esse",
                 },
             },
         },
-        ConnectionID: "World Van transitional",
+        ConnectionID: "Dynamic",
         ID: "<ID>",
     })
     if err != nil {
@@ -272,7 +272,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.RemoveAtsCandidate(ctx, operations.RemoveAtsCandidateRequest{
-        ConnectionID: "Accountability Recumbent Ball",
+        ConnectionID: "male",
         ID: "<ID>",
     })
     if err != nil {
@@ -335,11 +335,11 @@ func main() {
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "DNS monetize Dynamic",
+                    Telephone: "now",
                 },
             },
         },
-        ConnectionID: "Zackery male Gloves",
+        ConnectionID: "Gloves",
         ID: "<ID>",
     })
     if err != nil {

@@ -85,7 +85,6 @@ func (e *AtsCompensationType) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// AtsCompensation - Unified compensation object for a job
 type AtsCompensation struct {
 	Currency  *string                   `json:"currency,omitempty"`
 	Frequency *AtsCompensationFrequency `json:"frequency,omitempty"`

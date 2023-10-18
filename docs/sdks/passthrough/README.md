@@ -33,8 +33,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.CreatePassthrough(ctx, operations.CreatePassthroughRequest{
-        ConnectionID: "UTF8",
-        Path: "/home",
+        ConnectionID: "turquoise",
+        Path: "/var",
         Undefined: &shared.Undefined{},
     })
     if err != nil {
@@ -84,8 +84,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.ListPassthroughs(ctx, operations.ListPassthroughsRequest{
-        ConnectionID: "circuit Loan",
-        Path: "/usr",
+        ConnectionID: "nisi",
+        Path: "/etc/ppp",
     })
     if err != nil {
         log.Fatal(err)
@@ -134,8 +134,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.PatchPassthrough(ctx, operations.PatchPassthroughRequest{
-        ConnectionID: "VGA",
-        Path: "/opt/lib",
+        ConnectionID: "brand",
+        Path: "/var/mail",
         Undefined: &shared.Undefined{},
     })
     if err != nil {
@@ -185,8 +185,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.RemovePassthrough(ctx, operations.RemovePassthroughRequest{
-        ConnectionID: "Maine",
-        Path: "/boot",
+        ConnectionID: "North",
+        Path: "/opt/bin",
     })
     if err != nil {
         log.Fatal(err)
@@ -235,8 +235,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.UpdatePassthrough(ctx, operations.UpdatePassthroughRequest{
-        ConnectionID: "Manager",
-        Path: "/private/var",
+        ConnectionID: "Northwest",
+        Path: "/var/mail",
         Undefined: &shared.Undefined{},
     })
     if err != nil {

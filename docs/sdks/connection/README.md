@@ -45,9 +45,9 @@ func main() {
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesCrm,
         },
-        IntegrationType: "Maserati",
+        IntegrationType: "revolutionize",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsCrmLeadWrite,
+            shared.PropertyConnectionPermissionsTicketingAgentWrite,
         },
     })
     if err != nil {
@@ -210,9 +210,9 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesAts,
             },
-            IntegrationType: "Montana",
+            IntegrationType: "Northeast",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmFileRead,
+                shared.PropertyConnectionPermissionsMartechListRead,
             },
         },
         ID: "<ID>",
@@ -326,9 +326,9 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesCrm,
             },
-            IntegrationType: "from",
+            IntegrationType: "Cambridgeshire",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsAtsApplicationRead,
+                shared.PropertyConnectionPermissionsCrmTeamWrite,
             },
         },
         ID: "<ID>",

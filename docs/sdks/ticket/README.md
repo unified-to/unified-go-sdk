@@ -40,7 +40,7 @@ func main() {
                 "sky",
             },
         },
-        ConnectionID: "indigo",
+        ConnectionID: "Cheese",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,9 +89,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticket.GetTicketingTicket(ctx, operations.GetTicketingTicketRequest{
-        ConnectionID: "Zimbabwe Dollar",
+        ConnectionID: "Marks",
         Fields: []string{
-            "Alaska",
+            "Dollar",
         },
         ID: "<ID>",
     })
@@ -142,9 +142,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticket.ListTicketingTickets(ctx, operations.ListTicketingTicketsRequest{
-        ConnectionID: "Tools Southwest",
+        ConnectionID: "Cisgender",
         Fields: []string{
-            "invoice",
+            "archive",
         },
     })
     if err != nil {
@@ -200,7 +200,7 @@ func main() {
                 "Bespoke",
             },
         },
-        ConnectionID: "Pizza Concrete",
+        ConnectionID: "program",
         ID: "<ID>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticket.RemoveTicketingTicket(ctx, operations.RemoveTicketingTicketRequest{
-        ConnectionID: "Handmade",
+        ConnectionID: "communities",
         ID: "<ID>",
     })
     if err != nil {
@@ -306,7 +306,7 @@ func main() {
                 "Rhode",
             },
         },
-        ConnectionID: "Agender caring optimal",
+        ConnectionID: "gee",
         ID: "<ID>",
     })
     if err != nil {

@@ -37,7 +37,7 @@ func main() {
         AtsScorecard: &shared.AtsScorecard{
             Raw: shared.PropertyAtsScorecardRaw{},
         },
-        ConnectionID: "Northwest Account",
+        ConnectionID: "Brunei",
     })
     if err != nil {
         log.Fatal(err)
@@ -86,9 +86,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Document.GetAtsScorecard(ctx, operations.GetAtsScorecardRequest{
-        ConnectionID: "Executive",
+        ConnectionID: "Cordoba",
         Fields: []string{
-            "Berkelium",
+            "Nissan",
         },
         ID: "<ID>",
     })
@@ -139,9 +139,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Document.ListAtsScorecards(ctx, operations.ListAtsScorecardsRequest{
-        ConnectionID: "Hybrid Bugatti",
+        ConnectionID: "synthesizing",
         Fields: []string{
-            "frantically",
+            "surprised",
         },
     })
     if err != nil {
@@ -194,7 +194,7 @@ func main() {
         AtsScorecard: &shared.AtsScorecard{
             Raw: shared.PropertyAtsScorecardRaw{},
         },
-        ConnectionID: "eek",
+        ConnectionID: "Falls",
         ID: "<ID>",
     })
     if err != nil {
@@ -244,7 +244,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Document.RemoveAtsScorecard(ctx, operations.RemoveAtsScorecardRequest{
-        ConnectionID: "Cambridgeshire maximized",
+        ConnectionID: "approach",
         ID: "<ID>",
     })
     if err != nil {
@@ -297,7 +297,7 @@ func main() {
         AtsScorecard: &shared.AtsScorecard{
             Raw: shared.PropertyAtsScorecardRaw{},
         },
-        ConnectionID: "grey",
+        ConnectionID: "East",
         ID: "<ID>",
     })
     if err != nil {
