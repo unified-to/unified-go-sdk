@@ -19,10 +19,12 @@ type ListAtsScorecardsRequest struct {
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// The interview ID to filter results
-	InterviewID *string  `queryParam:"style=form,explode=true,name=interview_id"`
-	Limit       *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset      *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order       *string  `queryParam:"style=form,explode=true,name=order"`
+	InterviewID *string `queryParam:"style=form,explode=true,name=interview_id"`
+	// The job ID to filter results
+	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`
+	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
@@ -74,6 +76,13 @@ func (o *ListAtsScorecardsRequest) GetInterviewID() *string {
 		return nil
 	}
 	return o.InterviewID
+}
+
+func (o *ListAtsScorecardsRequest) GetJobID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.JobID
 }
 
 func (o *ListAtsScorecardsRequest) GetLimit() *float64 {
