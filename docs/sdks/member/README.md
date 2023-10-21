@@ -41,15 +41,15 @@ func main() {
                 },
             },
             ListIds: []string{
-                "input",
+                "string",
             },
             Raw: &shared.PropertyMarketingMemberRaw{},
             Tags: []string{
-                "SAS",
+                "string",
             },
         },
-        ConnectionID: "bobcat",
-        ListID: "global",
+        ConnectionID: "string",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -98,12 +98,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Member.GetMartechMember(ctx, operations.GetMartechMemberRequest{
-        ConnectionID: "Japan",
+        ConnectionID: "string",
         Fields: []string{
-            "orange",
+            "string",
         },
         ID: "<ID>",
-        ListID: "Gibraltar",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -152,11 +152,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Member.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
-        ConnectionID: "Frida",
+        ConnectionID: "string",
         Fields: []string{
-            "structure",
+            "string",
         },
-        ListID: "Thallium",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -212,16 +212,16 @@ func main() {
                 },
             },
             ListIds: []string{
-                "Handcrafted",
+                "string",
             },
             Raw: &shared.PropertyMarketingMemberRaw{},
             Tags: []string{
-                "Synchronised",
+                "string",
             },
         },
-        ConnectionID: "electric",
+        ConnectionID: "string",
         ID: "<ID>",
-        ListID: "psst",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -270,9 +270,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Member.RemoveMartechMember(ctx, operations.RemoveMartechMemberRequest{
-        ConnectionID: "integrated",
+        ConnectionID: "string",
         ID: "<ID>",
-        ListID: "Analyst",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -328,16 +328,16 @@ func main() {
                 },
             },
             ListIds: []string{
-                "connect",
+                "string",
             },
             Raw: &shared.PropertyMarketingMemberRaw{},
             Tags: []string{
-                "Bike",
+                "string",
             },
         },
-        ConnectionID: "Hyundai",
+        ConnectionID: "string",
         ID: "<ID>",
-        ListID: "North",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)

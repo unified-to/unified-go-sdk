@@ -50,11 +50,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "composite",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "redefine",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -105,14 +105,14 @@ func main() {
     res, err := s.Hris.CreateHrisGroup(ctx, operations.CreateHrisGroupRequest{
         HrisGroup: &shared.HrisGroup{
             EmployeeIds: []string{
-                "transmitter",
+                "string",
             },
             ManagerIds: []string{
-                "dependable",
+                "string",
             },
             Raw: &shared.PropertyHrisGroupRaw{},
         },
-        ConnectionID: "South",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -161,9 +161,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisEmployee(ctx, operations.GetHrisEmployeeRequest{
-        ConnectionID: "Louisiana",
+        ConnectionID: "string",
         Fields: []string{
-            "Afghanistan",
+            "string",
         },
         ID: "<ID>",
     })
@@ -214,9 +214,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisGroup(ctx, operations.GetHrisGroupRequest{
-        ConnectionID: "likewise",
+        ConnectionID: "string",
         Fields: []string{
-            "while",
+            "string",
         },
         ID: "<ID>",
     })
@@ -267,9 +267,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.ListHrisEmployees(ctx, operations.ListHrisEmployeesRequest{
-        ConnectionID: "overriding",
+        ConnectionID: "string",
         Fields: []string{
-            "Krona",
+            "string",
         },
     })
     if err != nil {
@@ -319,9 +319,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.ListHrisGroups(ctx, operations.ListHrisGroupsRequest{
-        ConnectionID: "Northwest",
+        ConnectionID: "string",
         Fields: []string{
-            "however",
+            "string",
         },
     })
     if err != nil {
@@ -381,11 +381,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "cyan",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "farad",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -437,14 +437,14 @@ func main() {
     res, err := s.Hris.PatchHrisGroup(ctx, operations.PatchHrisGroupRequest{
         HrisGroup: &shared.HrisGroup{
             EmployeeIds: []string{
-                "scalable",
+                "string",
             },
             ManagerIds: []string{
-                "Bespoke",
+                "string",
             },
             Raw: &shared.PropertyHrisGroupRaw{},
         },
-        ConnectionID: "indexing",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -494,7 +494,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.RemoveHrisEmployee(ctx, operations.RemoveHrisEmployeeRequest{
-        ConnectionID: "Chicken",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -544,7 +544,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.RemoveHrisGroup(ctx, operations.RemoveHrisGroupRequest{
-        ConnectionID: "glistening",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -604,11 +604,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "Mazda",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Brand",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -660,14 +660,14 @@ func main() {
     res, err := s.Hris.UpdateHrisGroup(ctx, operations.UpdateHrisGroupRequest{
         HrisGroup: &shared.HrisGroup{
             EmployeeIds: []string{
-                "disintermediate",
+                "string",
             },
             ManagerIds: []string{
-                "schemas",
+                "string",
             },
             Raw: &shared.PropertyHrisGroupRaw{},
         },
-        ConnectionID: "Southwest",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

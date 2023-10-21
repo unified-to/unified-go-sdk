@@ -61,7 +61,7 @@ func main() {
         AtsApplication: &shared.AtsApplication{
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
-        ConnectionID: "Hassium",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -119,15 +119,15 @@ func main() {
             },
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "radian",
+                "string",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "who",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "New",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -179,10 +179,10 @@ func main() {
         AtsInterview: &shared.AtsInterview{
             Raw: &shared.PropertyAtsInterviewRaw{},
             UserIds: []string{
-                "Metrics",
+                "string",
             },
         },
-        ConnectionID: "Bar",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -241,20 +241,20 @@ func main() {
                 },
             },
             Departments: []string{
-                "Loan",
+                "string",
             },
             HiringManagerIds: []string{
-                "driver",
+                "string",
             },
             PublicJobUrls: []string{
-                "Transmasculine",
+                "string",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "Mini",
+                "string",
             },
         },
-        ConnectionID: "health",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -306,7 +306,7 @@ func main() {
         AtsScorecard: &shared.AtsScorecard{
             Raw: shared.PropertyAtsScorecardRaw{},
         },
-        ConnectionID: "Brunei",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -355,9 +355,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsApplication(ctx, operations.GetAtsApplicationRequest{
-        ConnectionID: "mobile",
+        ConnectionID: "string",
         Fields: []string{
-            "Key",
+            "string",
         },
         ID: "<ID>",
     })
@@ -408,9 +408,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsCandidate(ctx, operations.GetAtsCandidateRequest{
-        ConnectionID: "Generic",
+        ConnectionID: "string",
         Fields: []string{
-            "hub",
+            "string",
         },
         ID: "<ID>",
     })
@@ -461,9 +461,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsInterview(ctx, operations.GetAtsInterviewRequest{
-        ConnectionID: "yum",
+        ConnectionID: "string",
         Fields: []string{
-            "programming",
+            "string",
         },
         ID: "<ID>",
     })
@@ -514,9 +514,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsJob(ctx, operations.GetAtsJobRequest{
-        ConnectionID: "Southwest",
+        ConnectionID: "string",
         Fields: []string{
-            "panel",
+            "string",
         },
         ID: "<ID>",
     })
@@ -567,9 +567,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsScorecard(ctx, operations.GetAtsScorecardRequest{
-        ConnectionID: "Cordoba",
+        ConnectionID: "string",
         Fields: []string{
-            "Nissan",
+            "string",
         },
         ID: "<ID>",
     })
@@ -620,9 +620,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsApplications(ctx, operations.ListAtsApplicationsRequest{
-        ConnectionID: "Cambodia",
+        ConnectionID: "string",
         Fields: []string{
-            "models",
+            "string",
         },
     })
     if err != nil {
@@ -672,9 +672,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsCandidates(ctx, operations.ListAtsCandidatesRequest{
-        ConnectionID: "Mobility",
+        ConnectionID: "string",
         Fields: []string{
-            "Cambridgeshire",
+            "string",
         },
     })
     if err != nil {
@@ -724,9 +724,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsInterviews(ctx, operations.ListAtsInterviewsRequest{
-        ConnectionID: "Bronze",
+        ConnectionID: "string",
         Fields: []string{
-            "Wooden",
+            "string",
         },
     })
     if err != nil {
@@ -776,9 +776,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsJobs(ctx, operations.ListAtsJobsRequest{
-        ConnectionID: "firmware",
+        ConnectionID: "string",
         Fields: []string{
-            "Praseodymium",
+            "string",
         },
     })
     if err != nil {
@@ -828,9 +828,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsScorecards(ctx, operations.ListAtsScorecardsRequest{
-        ConnectionID: "synthesizing",
+        ConnectionID: "string",
         Fields: []string{
-            "surprised",
+            "string",
         },
     })
     if err != nil {
@@ -883,7 +883,7 @@ func main() {
         AtsApplication: &shared.AtsApplication{
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
-        ConnectionID: "Lead",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -942,15 +942,15 @@ func main() {
             },
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "Credit",
+                "string",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "esse",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Dynamic",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1003,10 +1003,10 @@ func main() {
         AtsInterview: &shared.AtsInterview{
             Raw: &shared.PropertyAtsInterviewRaw{},
             UserIds: []string{
-                "courageously",
+                "string",
             },
         },
-        ConnectionID: "Handmade",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1066,20 +1066,20 @@ func main() {
                 },
             },
             Departments: []string{
-                "indigo",
+                "string",
             },
             HiringManagerIds: []string{
-                "Bedfordshire",
+                "string",
             },
             PublicJobUrls: []string{
-                "North",
+                "string",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "mainland",
+                "string",
             },
         },
-        ConnectionID: "microchip",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1132,7 +1132,7 @@ func main() {
         AtsScorecard: &shared.AtsScorecard{
             Raw: shared.PropertyAtsScorecardRaw{},
         },
-        ConnectionID: "Falls",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1182,7 +1182,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsApplication(ctx, operations.RemoveAtsApplicationRequest{
-        ConnectionID: "gently",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1232,7 +1232,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsCandidate(ctx, operations.RemoveAtsCandidateRequest{
-        ConnectionID: "male",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1282,7 +1282,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsInterview(ctx, operations.RemoveAtsInterviewRequest{
-        ConnectionID: "green",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1332,7 +1332,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsJob(ctx, operations.RemoveAtsJobRequest{
-        ConnectionID: "Northeast",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1382,7 +1382,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsScorecard(ctx, operations.RemoveAtsScorecardRequest{
-        ConnectionID: "approach",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1435,7 +1435,7 @@ func main() {
         AtsApplication: &shared.AtsApplication{
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
-        ConnectionID: "Keyboard",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1494,15 +1494,15 @@ func main() {
             },
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "B2C",
+                "string",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "now",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Gloves",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1555,10 +1555,10 @@ func main() {
         AtsInterview: &shared.AtsInterview{
             Raw: &shared.PropertyAtsInterviewRaw{},
             UserIds: []string{
-                "maroon",
+                "string",
             },
         },
-        ConnectionID: "maroon",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1618,20 +1618,20 @@ func main() {
                 },
             },
             Departments: []string{
-                "Plastic",
+                "string",
             },
             HiringManagerIds: []string{
-                "West",
+                "string",
             },
             PublicJobUrls: []string{
-                "Direct",
+                "string",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "SMS",
+                "string",
             },
         },
-        ConnectionID: "asperiores",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -1684,7 +1684,7 @@ func main() {
         AtsScorecard: &shared.AtsScorecard{
             Raw: shared.PropertyAtsScorecardRaw{},
         },
-        ConnectionID: "East",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

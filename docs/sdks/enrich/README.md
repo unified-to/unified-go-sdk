@@ -30,7 +30,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Enrich.ListEnrichCompanies(ctx, operations.ListEnrichCompaniesRequest{
-        ConnectionID: "Bike",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -79,7 +79,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Enrich.ListEnrichPeople(ctx, operations.ListEnrichPeopleRequest{
-        ConnectionID: "Southwest",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)

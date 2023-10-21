@@ -42,15 +42,15 @@ func main() {
             },
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
-                "Borders",
+                "string",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "tepid",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Bedfordshire",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -99,9 +99,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.GetTicketingCustomer(ctx, operations.GetTicketingCustomerRequest{
-        ConnectionID: "Berkshire",
+        ConnectionID: "string",
         Fields: []string{
-            "Gloves",
+            "string",
         },
         ID: "<ID>",
     })
@@ -152,9 +152,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.ListTicketingCustomers(ctx, operations.ListTicketingCustomersRequest{
-        ConnectionID: "adapter",
+        ConnectionID: "string",
         Fields: []string{
-            "Unions",
+            "string",
         },
     })
     if err != nil {
@@ -212,15 +212,15 @@ func main() {
             },
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
-                "Brownsville",
+                "string",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "Frozen",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "calculating",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -270,7 +270,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.RemoveTicketingCustomer(ctx, operations.RemoveTicketingCustomerRequest{
-        ConnectionID: "West",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -328,15 +328,15 @@ func main() {
             },
             Raw: shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
-                "Barium",
+                "string",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "Sleek",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Bolivia",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

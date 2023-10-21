@@ -37,7 +37,7 @@ func main() {
         CrmFile: &shared.CrmFile{
             Raw: &shared.PropertyCrmFileRaw{},
         },
-        ConnectionID: "loyally",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -86,9 +86,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.File.GetCrmFile(ctx, operations.GetCrmFileRequest{
-        ConnectionID: "Southwest",
+        ConnectionID: "string",
         Fields: []string{
-            "sexy",
+            "string",
         },
         ID: "<ID>",
     })
@@ -139,9 +139,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.File.ListCrmFiles(ctx, operations.ListCrmFilesRequest{
-        ConnectionID: "Bicycle",
+        ConnectionID: "string",
         Fields: []string{
-            "Genderflux",
+            "string",
         },
     })
     if err != nil {
@@ -194,7 +194,7 @@ func main() {
         CrmFile: &shared.CrmFile{
             Raw: &shared.PropertyCrmFileRaw{},
         },
-        ConnectionID: "Health",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -244,7 +244,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.File.RemoveCrmFile(ctx, operations.RemoveCrmFileRequest{
-        ConnectionID: "Zambia",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -297,7 +297,7 @@ func main() {
         CrmFile: &shared.CrmFile{
             Raw: &shared.PropertyCrmFileRaw{},
         },
-        ConnectionID: "Plano",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

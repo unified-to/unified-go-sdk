@@ -33,24 +33,24 @@ func main() {
     ctx := context.Background()
     res, err := s.Webhook.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{
         Webhook: &shared.Webhook{
-            ConnectionID: "Lead",
+            ConnectionID: "string",
             Events: []shared.PropertyWebhookEvents{
-                shared.PropertyWebhookEventsUpdated,
+                shared.PropertyWebhookEventsCreated,
             },
-            HookURL: "male",
-            IntegrationType: "Representative",
-            Interval: 9342.25,
-            ObjectType: shared.WebhookObjectTypeCrmContact,
+            HookURL: "string",
+            IntegrationType: "string",
+            Interval: 188.12,
+            ObjectType: shared.WebhookObjectTypeCrmLead,
             Subscriptions: []string{
-                "Account",
+                "string",
             },
-            WorkspaceID: "Bedfordshire",
+            WorkspaceID: "string",
         },
-        ConnectionID: "East",
+        ConnectionID: "string",
         Events: []operations.CreateUnifiedWebhookEvents{
-            operations.CreateUnifiedWebhookEventsUpdated,
+            operations.CreateUnifiedWebhookEventsCreated,
         },
-        Object: "wireless",
+        Object: "string",
     })
     if err != nil {
         log.Fatal(err)

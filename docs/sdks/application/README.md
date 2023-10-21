@@ -37,7 +37,7 @@ func main() {
         AtsApplication: &shared.AtsApplication{
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
-        ConnectionID: "Hassium",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -86,9 +86,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.GetAtsApplication(ctx, operations.GetAtsApplicationRequest{
-        ConnectionID: "mobile",
+        ConnectionID: "string",
         Fields: []string{
-            "Key",
+            "string",
         },
         ID: "<ID>",
     })
@@ -139,9 +139,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.ListAtsApplications(ctx, operations.ListAtsApplicationsRequest{
-        ConnectionID: "Cambodia",
+        ConnectionID: "string",
         Fields: []string{
-            "models",
+            "string",
         },
     })
     if err != nil {
@@ -194,7 +194,7 @@ func main() {
         AtsApplication: &shared.AtsApplication{
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
-        ConnectionID: "Lead",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -244,7 +244,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.RemoveAtsApplication(ctx, operations.RemoveAtsApplicationRequest{
-        ConnectionID: "gently",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -297,7 +297,7 @@ func main() {
         AtsApplication: &shared.AtsApplication{
             Raw: &shared.PropertyAtsApplicationRaw{},
         },
-        ConnectionID: "Keyboard",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

@@ -37,10 +37,10 @@ func main() {
         AtsInterview: &shared.AtsInterview{
             Raw: &shared.PropertyAtsInterviewRaw{},
             UserIds: []string{
-                "Metrics",
+                "string",
             },
         },
-        ConnectionID: "Bar",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,9 +89,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Interview.GetAtsInterview(ctx, operations.GetAtsInterviewRequest{
-        ConnectionID: "yum",
+        ConnectionID: "string",
         Fields: []string{
-            "programming",
+            "string",
         },
         ID: "<ID>",
     })
@@ -142,9 +142,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Interview.ListAtsInterviews(ctx, operations.ListAtsInterviewsRequest{
-        ConnectionID: "Bronze",
+        ConnectionID: "string",
         Fields: []string{
-            "Wooden",
+            "string",
         },
     })
     if err != nil {
@@ -197,10 +197,10 @@ func main() {
         AtsInterview: &shared.AtsInterview{
             Raw: &shared.PropertyAtsInterviewRaw{},
             UserIds: []string{
-                "courageously",
+                "string",
             },
         },
-        ConnectionID: "Handmade",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Interview.RemoveAtsInterview(ctx, operations.RemoveAtsInterviewRequest{
-        ConnectionID: "green",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -303,10 +303,10 @@ func main() {
         AtsInterview: &shared.AtsInterview{
             Raw: &shared.PropertyAtsInterviewRaw{},
             UserIds: []string{
-                "maroon",
+                "string",
             },
         },
-        ConnectionID: "maroon",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

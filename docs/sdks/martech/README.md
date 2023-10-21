@@ -43,7 +43,7 @@ func main() {
         MarketingList: &shared.MarketingList{
             Raw: &shared.PropertyMarketingListRaw{},
         },
-        ConnectionID: "Latin",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -99,15 +99,15 @@ func main() {
                 },
             },
             ListIds: []string{
-                "input",
+                "string",
             },
             Raw: &shared.PropertyMarketingMemberRaw{},
             Tags: []string{
-                "SAS",
+                "string",
             },
         },
-        ConnectionID: "bobcat",
-        ListID: "global",
+        ConnectionID: "string",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -156,9 +156,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.GetMartechList(ctx, operations.GetMartechListRequest{
-        ConnectionID: "red",
+        ConnectionID: "string",
         Fields: []string{
-            "users",
+            "string",
         },
         ID: "<ID>",
     })
@@ -209,12 +209,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.GetMartechMember(ctx, operations.GetMartechMemberRequest{
-        ConnectionID: "Japan",
+        ConnectionID: "string",
         Fields: []string{
-            "orange",
+            "string",
         },
         ID: "<ID>",
-        ListID: "Gibraltar",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -263,9 +263,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.ListMartechLists(ctx, operations.ListMartechListsRequest{
-        ConnectionID: "above",
+        ConnectionID: "string",
         Fields: []string{
-            "Fantastic",
+            "string",
         },
     })
     if err != nil {
@@ -315,11 +315,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
-        ConnectionID: "Frida",
+        ConnectionID: "string",
         Fields: []string{
-            "structure",
+            "string",
         },
-        ListID: "Thallium",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -371,7 +371,7 @@ func main() {
         MarketingList: &shared.MarketingList{
             Raw: &shared.PropertyMarketingListRaw{},
         },
-        ConnectionID: "Classical",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -428,16 +428,16 @@ func main() {
                 },
             },
             ListIds: []string{
-                "Handcrafted",
+                "string",
             },
             Raw: &shared.PropertyMarketingMemberRaw{},
             Tags: []string{
-                "Synchronised",
+                "string",
             },
         },
-        ConnectionID: "electric",
+        ConnectionID: "string",
         ID: "<ID>",
-        ListID: "psst",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -486,7 +486,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.RemoveMartechList(ctx, operations.RemoveMartechListRequest{
-        ConnectionID: "Northwest",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -536,9 +536,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Martech.RemoveMartechMember(ctx, operations.RemoveMartechMemberRequest{
-        ConnectionID: "integrated",
+        ConnectionID: "string",
         ID: "<ID>",
-        ListID: "Analyst",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -590,7 +590,7 @@ func main() {
         MarketingList: &shared.MarketingList{
             Raw: &shared.PropertyMarketingListRaw{},
         },
-        ConnectionID: "innocently",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -647,16 +647,16 @@ func main() {
                 },
             },
             ListIds: []string{
-                "connect",
+                "string",
             },
             Raw: &shared.PropertyMarketingMemberRaw{},
             Tags: []string{
-                "Bike",
+                "string",
             },
         },
-        ConnectionID: "Hyundai",
+        ConnectionID: "string",
         ID: "<ID>",
-        ListID: "North",
+        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)

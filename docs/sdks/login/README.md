@@ -29,8 +29,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Login.GetUnifiedIntegrationLogin(ctx, operations.GetUnifiedIntegrationLoginRequest{
-        IntegrationType: "when",
-        WorkspaceID: "Tricycle",
+        IntegrationType: "string",
+        WorkspaceID: "string",
     })
     if err != nil {
         log.Fatal(err)

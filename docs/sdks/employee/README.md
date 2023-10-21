@@ -44,11 +44,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "composite",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "redefine",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -97,9 +97,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.GetHrisEmployee(ctx, operations.GetHrisEmployeeRequest{
-        ConnectionID: "Louisiana",
+        ConnectionID: "string",
         Fields: []string{
-            "Afghanistan",
+            "string",
         },
         ID: "<ID>",
     })
@@ -150,9 +150,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.ListHrisEmployees(ctx, operations.ListHrisEmployeesRequest{
-        ConnectionID: "overriding",
+        ConnectionID: "string",
         Fields: []string{
-            "Krona",
+            "string",
         },
     })
     if err != nil {
@@ -212,11 +212,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "cyan",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "farad",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -266,7 +266,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.RemoveHrisEmployee(ctx, operations.RemoveHrisEmployeeRequest{
-        ConnectionID: "Chicken",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -326,11 +326,11 @@ func main() {
             Raw: &shared.PropertyHrisEmployeeRaw{},
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
-                    Telephone: "Mazda",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Brand",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

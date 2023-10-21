@@ -37,10 +37,10 @@ func main() {
         TicketingTicket: &shared.TicketingTicket{
             Raw: shared.PropertyTicketingTicketRaw{},
             Tags: []string{
-                "sky",
+                "string",
             },
         },
-        ConnectionID: "Cheese",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,9 +89,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticket.GetTicketingTicket(ctx, operations.GetTicketingTicketRequest{
-        ConnectionID: "Marks",
+        ConnectionID: "string",
         Fields: []string{
-            "Dollar",
+            "string",
         },
         ID: "<ID>",
     })
@@ -142,9 +142,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticket.ListTicketingTickets(ctx, operations.ListTicketingTicketsRequest{
-        ConnectionID: "Cisgender",
+        ConnectionID: "string",
         Fields: []string{
-            "archive",
+            "string",
         },
     })
     if err != nil {
@@ -197,10 +197,10 @@ func main() {
         TicketingTicket: &shared.TicketingTicket{
             Raw: shared.PropertyTicketingTicketRaw{},
             Tags: []string{
-                "Bespoke",
+                "string",
             },
         },
-        ConnectionID: "program",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticket.RemoveTicketingTicket(ctx, operations.RemoveTicketingTicketRequest{
-        ConnectionID: "communities",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -303,10 +303,10 @@ func main() {
         TicketingTicket: &shared.TicketingTicket{
             Raw: shared.PropertyTicketingTicketRaw{},
             Tags: []string{
-                "Rhode",
+                "string",
             },
         },
-        ConnectionID: "gee",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

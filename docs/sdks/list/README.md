@@ -37,7 +37,7 @@ func main() {
         MarketingList: &shared.MarketingList{
             Raw: &shared.PropertyMarketingListRaw{},
         },
-        ConnectionID: "Latin",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -86,9 +86,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.List.GetMartechList(ctx, operations.GetMartechListRequest{
-        ConnectionID: "red",
+        ConnectionID: "string",
         Fields: []string{
-            "users",
+            "string",
         },
         ID: "<ID>",
     })
@@ -139,9 +139,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.List.ListMartechLists(ctx, operations.ListMartechListsRequest{
-        ConnectionID: "above",
+        ConnectionID: "string",
         Fields: []string{
-            "Fantastic",
+            "string",
         },
     })
     if err != nil {
@@ -194,7 +194,7 @@ func main() {
         MarketingList: &shared.MarketingList{
             Raw: &shared.PropertyMarketingListRaw{},
         },
-        ConnectionID: "Classical",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -244,7 +244,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.List.RemoveMartechList(ctx, operations.RemoveMartechListRequest{
-        ConnectionID: "Northwest",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -297,7 +297,7 @@ func main() {
         MarketingList: &shared.MarketingList{
             Raw: &shared.PropertyMarketingListRaw{},
         },
-        ConnectionID: "innocently",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

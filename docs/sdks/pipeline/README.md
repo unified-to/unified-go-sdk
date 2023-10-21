@@ -37,7 +37,7 @@ func main() {
         CrmPipeline: &shared.CrmPipeline{
             Raw: &shared.PropertyCrmPipelineRaw{},
         },
-        ConnectionID: "Mazda",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -86,9 +86,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pipeline.GetCrmPipeline(ctx, operations.GetCrmPipelineRequest{
-        ConnectionID: "withdrawal",
+        ConnectionID: "string",
         Fields: []string{
-            "online",
+            "string",
         },
         ID: "<ID>",
     })
@@ -139,9 +139,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pipeline.ListCrmPipelines(ctx, operations.ListCrmPipelinesRequest{
-        ConnectionID: "Southeast",
+        ConnectionID: "string",
         Fields: []string{
-            "Concrete",
+            "string",
         },
     })
     if err != nil {
@@ -194,7 +194,7 @@ func main() {
         CrmPipeline: &shared.CrmPipeline{
             Raw: &shared.PropertyCrmPipelineRaw{},
         },
-        ConnectionID: "unimpressively",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -244,7 +244,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Pipeline.RemoveCrmPipeline(ctx, operations.RemoveCrmPipelineRequest{
-        ConnectionID: "protocol",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -297,7 +297,7 @@ func main() {
         CrmPipeline: &shared.CrmPipeline{
             Raw: &shared.PropertyCrmPipelineRaw{},
         },
-        ConnectionID: "functionalities",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

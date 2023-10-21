@@ -43,10 +43,10 @@ func main() {
         CrmContact: &shared.CrmContact{
             Address: &shared.PropertyCrmContactAddress{},
             CompanyIds: []string{
-                "Mendelevium",
+                "string",
             },
             DealIds: []string{
-                "Account",
+                "string",
             },
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
@@ -54,11 +54,11 @@ func main() {
             Raw: &shared.PropertyCrmContactRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "Chips",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "superb",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -116,11 +116,11 @@ func main() {
             Raw: &shared.PropertyUcContactRaw{},
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
-                    Telephone: "challenge",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "azure",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -169,9 +169,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.GetCrmContact(ctx, operations.GetCrmContactRequest{
-        ConnectionID: "North",
+        ConnectionID: "string",
         Fields: []string{
-            "Silver",
+            "string",
         },
         ID: "<ID>",
     })
@@ -222,9 +222,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.GetUcContact(ctx, operations.GetUcContactRequest{
-        ConnectionID: "for",
+        ConnectionID: "string",
         Fields: []string{
-            "deposit",
+            "string",
         },
         ID: "<ID>",
     })
@@ -275,9 +275,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.ListCrmContacts(ctx, operations.ListCrmContactsRequest{
-        ConnectionID: "female",
+        ConnectionID: "string",
         Fields: []string{
-            "Research",
+            "string",
         },
     })
     if err != nil {
@@ -327,9 +327,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.ListUcContacts(ctx, operations.ListUcContactsRequest{
-        ConnectionID: "application",
+        ConnectionID: "string",
         Fields: []string{
-            "Xenogender",
+            "string",
         },
     })
     if err != nil {
@@ -382,10 +382,10 @@ func main() {
         CrmContact: &shared.CrmContact{
             Address: &shared.PropertyCrmContactAddress{},
             CompanyIds: []string{
-                "architecture",
+                "string",
             },
             DealIds: []string{
-                "Buckinghamshire",
+                "string",
             },
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
@@ -393,11 +393,11 @@ func main() {
             Raw: &shared.PropertyCrmContactRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "morph",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "array",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -456,11 +456,11 @@ func main() {
             Raw: &shared.PropertyUcContactRaw{},
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
-                    Telephone: "Borders",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Carolina",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -510,7 +510,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.RemoveCrmContact(ctx, operations.RemoveCrmContactRequest{
-        ConnectionID: "plum",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -560,7 +560,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.RemoveUcContact(ctx, operations.RemoveUcContactRequest{
-        ConnectionID: "Plastic",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -613,10 +613,10 @@ func main() {
         CrmContact: &shared.CrmContact{
             Address: &shared.PropertyCrmContactAddress{},
             CompanyIds: []string{
-                "Universal",
+                "string",
             },
             DealIds: []string{
-                "Harbors",
+                "string",
             },
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
@@ -624,11 +624,11 @@ func main() {
             Raw: &shared.PropertyCrmContactRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "relieved",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "backing",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -687,11 +687,11 @@ func main() {
             Raw: &shared.PropertyUcContactRaw{},
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
-                    Telephone: "Convertible",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Wooden",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

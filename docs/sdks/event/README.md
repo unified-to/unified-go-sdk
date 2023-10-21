@@ -37,20 +37,20 @@ func main() {
         CrmEvent: &shared.CrmEvent{
             Call: &shared.PropertyCrmEventCall{},
             CompanyIds: []string{
-                "repeatedly",
+                "string",
             },
             ContactIds: []string{
-                "Sedan",
+                "string",
             },
             DealIds: []string{
-                "altruistic",
+                "string",
             },
             Email: &shared.PropertyCrmEventEmail{
                 Cc: []string{
-                    "Hills",
+                    "string",
                 },
                 To: []string{
-                    "Bronze",
+                    "string",
                 },
             },
             Meeting: &shared.PropertyCrmEventMeeting{},
@@ -58,7 +58,7 @@ func main() {
             Raw: &shared.PropertyCrmEventRaw{},
             Task: &shared.PropertyCrmEventTask{},
         },
-        ConnectionID: "Northwest",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -107,9 +107,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.GetCrmEvent(ctx, operations.GetCrmEventRequest{
-        ConnectionID: "Technetium",
+        ConnectionID: "string",
         Fields: []string{
-            "Ergonomic",
+            "string",
         },
         ID: "<ID>",
     })
@@ -160,9 +160,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.ListCrmEvents(ctx, operations.ListCrmEventsRequest{
-        ConnectionID: "withdrawal",
+        ConnectionID: "string",
         Fields: []string{
-            "empower",
+            "string",
         },
     })
     if err != nil {
@@ -215,20 +215,20 @@ func main() {
         CrmEvent: &shared.CrmEvent{
             Call: &shared.PropertyCrmEventCall{},
             CompanyIds: []string{
-                "XML",
+                "string",
             },
             ContactIds: []string{
-                "Accountability",
+                "string",
             },
             DealIds: []string{
-                "copying",
+                "string",
             },
             Email: &shared.PropertyCrmEventEmail{
                 Cc: []string{
-                    "after",
+                    "string",
                 },
                 To: []string{
-                    "Research",
+                    "string",
                 },
             },
             Meeting: &shared.PropertyCrmEventMeeting{},
@@ -236,7 +236,7 @@ func main() {
             Raw: &shared.PropertyCrmEventRaw{},
             Task: &shared.PropertyCrmEventTask{},
         },
-        ConnectionID: "Metal",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -286,7 +286,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.RemoveCrmEvent(ctx, operations.RemoveCrmEventRequest{
-        ConnectionID: "enterprise",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -339,20 +339,20 @@ func main() {
         CrmEvent: &shared.CrmEvent{
             Call: &shared.PropertyCrmEventCall{},
             CompanyIds: []string{
-                "Account",
+                "string",
             },
             ContactIds: []string{
-                "DRAM",
+                "string",
             },
             DealIds: []string{
-                "input",
+                "string",
             },
             Email: &shared.PropertyCrmEventEmail{
                 Cc: []string{
-                    "Bicycle",
+                    "string",
                 },
                 To: []string{
-                    "Wagon",
+                    "string",
                 },
             },
             Meeting: &shared.PropertyCrmEventMeeting{},
@@ -360,7 +360,7 @@ func main() {
             Raw: &shared.PropertyCrmEventRaw{},
             Task: &shared.PropertyCrmEventTask{},
         },
-        ConnectionID: "Borders",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

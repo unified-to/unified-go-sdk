@@ -29,9 +29,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Call.ListUcCalls(ctx, operations.ListUcCallsRequest{
-        ConnectionID: "Liberia",
+        ConnectionID: "string",
         Fields: []string{
-            "Cargo",
+            "string",
         },
     })
     if err != nil {

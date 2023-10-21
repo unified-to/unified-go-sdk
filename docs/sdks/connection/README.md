@@ -35,19 +35,19 @@ func main() {
     res, err := s.Connection.CreateUnifiedConnection(ctx, &shared.Connection{
         Auth: &shared.PropertyConnectionAuth{
             Emails: []string{
-                "likewise",
+                "string",
             },
             Meta: &shared.PropertyPropertyConnectionAuthMeta{},
             OtherAuthInfo: []string{
-                "Rwanda",
+                "string",
             },
         },
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesCrm,
+            shared.PropertyConnectionCategoriesUc,
         },
-        IntegrationType: "revolutionize",
+        IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsCrmPipelineWrite,
+            shared.PropertyConnectionPermissionsCrmDealWrite,
         },
     })
     if err != nil {
@@ -200,19 +200,19 @@ func main() {
         Connection: &shared.Connection{
             Auth: &shared.PropertyConnectionAuth{
                 Emails: []string{
-                    "International",
+                    "string",
                 },
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
                 OtherAuthInfo: []string{
-                    "square",
+                    "string",
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesAts,
+                shared.PropertyConnectionCategoriesEnrich,
             },
-            IntegrationType: "Northeast",
+            IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmLeadRead,
+                shared.PropertyConnectionPermissionsMartechMemberWrite,
             },
         },
         ID: "<ID>",
@@ -316,19 +316,19 @@ func main() {
         Connection: &shared.Connection{
             Auth: &shared.PropertyConnectionAuth{
                 Emails: []string{
-                    "tan",
+                    "string",
                 },
                 Meta: &shared.PropertyPropertyConnectionAuthMeta{},
                 OtherAuthInfo: []string{
-                    "revitalize",
+                    "string",
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesCrm,
+                shared.PropertyConnectionCategoriesTicketing,
             },
-            IntegrationType: "Cambridgeshire",
+            IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmEventWrite,
+                shared.PropertyConnectionPermissionsCrmLeadRead,
             },
         },
         ID: "<ID>",

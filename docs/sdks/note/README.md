@@ -37,8 +37,8 @@ func main() {
         TicketingNote: &shared.TicketingNote{
             Raw: shared.PropertyTicketingNoteRaw{},
         },
-        ConnectionID: "Cruiser",
-        TicketID: "kilogram",
+        ConnectionID: "string",
+        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -87,12 +87,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Note.GetTicketingNote(ctx, operations.GetTicketingNoteRequest{
-        ConnectionID: "SSD",
+        ConnectionID: "string",
         Fields: []string{
-            "intranet",
+            "string",
         },
         ID: "<ID>",
-        TicketID: "Fresh",
+        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -141,11 +141,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Note.ListTicketingNotes(ctx, operations.ListTicketingNotesRequest{
-        ConnectionID: "Data",
+        ConnectionID: "string",
         Fields: []string{
-            "because",
+            "string",
         },
-        TicketID: "Zimbabwe",
+        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -197,9 +197,9 @@ func main() {
         TicketingNote: &shared.TicketingNote{
             Raw: shared.PropertyTicketingNoteRaw{},
         },
-        ConnectionID: "soon",
+        ConnectionID: "string",
         ID: "<ID>",
-        TicketID: "Strategist",
+        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -248,9 +248,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Note.RemoveTicketingNote(ctx, operations.RemoveTicketingNoteRequest{
-        ConnectionID: "Bicycle",
+        ConnectionID: "string",
         ID: "<ID>",
-        TicketID: "hm",
+        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -302,9 +302,9 @@ func main() {
         TicketingNote: &shared.TicketingNote{
             Raw: shared.PropertyTicketingNoteRaw{},
         },
-        ConnectionID: "lavender",
+        ConnectionID: "string",
         ID: "<ID>",
-        TicketID: "waterspout",
+        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)

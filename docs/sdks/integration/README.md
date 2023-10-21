@@ -32,7 +32,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegration(ctx, operations.GetUnifiedIntegrationRequest{
-        IntegrationType: "Mobility",
+        IntegrationType: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -81,11 +81,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
-        IntegrationType: "supposing",
+        IntegrationType: "string",
         Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesTicketingCustomerRead,
+            operations.GetUnifiedIntegrationAuthScopesHrisGroupRead,
         },
-        WorkspaceID: "Van",
+        WorkspaceID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -137,7 +137,7 @@ func main() {
         Categories: []operations.ListUnifiedIntegrationWorkspacesCategories{
             operations.ListUnifiedIntegrationWorkspacesCategoriesMartech,
         },
-        WorkspaceID: "supposing",
+        WorkspaceID: "string",
     })
     if err != nil {
         log.Fatal(err)

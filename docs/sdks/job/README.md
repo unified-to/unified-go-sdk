@@ -44,20 +44,20 @@ func main() {
                 },
             },
             Departments: []string{
-                "Loan",
+                "string",
             },
             HiringManagerIds: []string{
-                "driver",
+                "string",
             },
             PublicJobUrls: []string{
-                "Transmasculine",
+                "string",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "Mini",
+                "string",
             },
         },
-        ConnectionID: "health",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -106,9 +106,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Job.GetAtsJob(ctx, operations.GetAtsJobRequest{
-        ConnectionID: "Southwest",
+        ConnectionID: "string",
         Fields: []string{
-            "panel",
+            "string",
         },
         ID: "<ID>",
     })
@@ -159,9 +159,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Job.ListAtsJobs(ctx, operations.ListAtsJobsRequest{
-        ConnectionID: "firmware",
+        ConnectionID: "string",
         Fields: []string{
-            "Praseodymium",
+            "string",
         },
     })
     if err != nil {
@@ -221,20 +221,20 @@ func main() {
                 },
             },
             Departments: []string{
-                "indigo",
+                "string",
             },
             HiringManagerIds: []string{
-                "Bedfordshire",
+                "string",
             },
             PublicJobUrls: []string{
-                "North",
+                "string",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "mainland",
+                "string",
             },
         },
-        ConnectionID: "microchip",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -284,7 +284,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Job.RemoveAtsJob(ctx, operations.RemoveAtsJobRequest{
-        ConnectionID: "Northeast",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -344,20 +344,20 @@ func main() {
                 },
             },
             Departments: []string{
-                "Plastic",
+                "string",
             },
             HiringManagerIds: []string{
-                "West",
+                "string",
             },
             PublicJobUrls: []string{
-                "Direct",
+                "string",
             },
             Raw: &shared.PropertyAtsJobRaw{},
             RecruiterIds: []string{
-                "SMS",
+                "string",
             },
         },
-        ConnectionID: "asperiores",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

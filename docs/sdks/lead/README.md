@@ -42,11 +42,11 @@ func main() {
             Raw: &shared.PropertyCrmLeadRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "Designer",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Soft",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -95,9 +95,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.GetCrmLead(ctx, operations.GetCrmLeadRequest{
-        ConnectionID: "how",
+        ConnectionID: "string",
         Fields: []string{
-            "Curium",
+            "string",
         },
         ID: "<ID>",
     })
@@ -148,9 +148,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.ListCrmLeads(ctx, operations.ListCrmLeadsRequest{
-        ConnectionID: "Implementation",
+        ConnectionID: "string",
         Fields: []string{
-            "dam",
+            "string",
         },
     })
     if err != nil {
@@ -208,11 +208,11 @@ func main() {
             Raw: &shared.PropertyCrmLeadRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "deposit",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Bike",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -262,7 +262,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.RemoveCrmLead(ctx, operations.RemoveCrmLeadRequest{
-        ConnectionID: "Springs",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -320,11 +320,11 @@ func main() {
             Raw: &shared.PropertyCrmLeadRaw{},
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "Northwest",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "violation",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

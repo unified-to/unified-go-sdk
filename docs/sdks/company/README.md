@@ -38,25 +38,25 @@ func main() {
         CrmCompany: &shared.CrmCompany{
             Address: &shared.PropertyCrmCompanyAddress{},
             DealIds: []string{
-                "connecting",
+                "string",
             },
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
             Raw: &shared.PropertyCrmCompanyRaw{},
             Tags: []string{
-                "carouse",
+                "string",
             },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "Car",
+                    Telephone: "string",
                 },
             },
             Websites: []string{
-                "experiences",
+                "string",
             },
         },
-        ConnectionID: "soluta",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -105,9 +105,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.GetCrmCompany(ctx, operations.GetCrmCompanyRequest{
-        ConnectionID: "forenenst",
+        ConnectionID: "string",
         Fields: []string{
-            "Mini",
+            "string",
         },
         ID: "<ID>",
     })
@@ -158,9 +158,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.ListCrmCompanies(ctx, operations.ListCrmCompaniesRequest{
-        ConnectionID: "override",
+        ConnectionID: "string",
         Fields: []string{
-            "withdrawal",
+            "string",
         },
     })
     if err != nil {
@@ -210,7 +210,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.ListEnrichCompanies(ctx, operations.ListEnrichCompaniesRequest{
-        ConnectionID: "Bike",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -262,25 +262,25 @@ func main() {
         CrmCompany: &shared.CrmCompany{
             Address: &shared.PropertyCrmCompanyAddress{},
             DealIds: []string{
-                "Producer",
+                "string",
             },
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
             Raw: &shared.PropertyCrmCompanyRaw{},
             Tags: []string{
-                "Corporate",
+                "string",
             },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "indexing",
+                    Telephone: "string",
                 },
             },
             Websites: []string{
-                "array",
+                "string",
             },
         },
-        ConnectionID: "Genderflux",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -330,7 +330,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.RemoveCrmCompany(ctx, operations.RemoveCrmCompanyRequest{
-        ConnectionID: "although",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -383,25 +383,25 @@ func main() {
         CrmCompany: &shared.CrmCompany{
             Address: &shared.PropertyCrmCompanyAddress{},
             DealIds: []string{
-                "SMS",
+                "string",
             },
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
             Raw: &shared.PropertyCrmCompanyRaw{},
             Tags: []string{
-                "barrel",
+                "string",
             },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "except",
+                    Telephone: "string",
                 },
             },
             Websites: []string{
-                "enterprise",
+                "string",
             },
         },
-        ConnectionID: "alarm",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

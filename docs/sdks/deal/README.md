@@ -37,10 +37,10 @@ func main() {
         CrmDeal: &shared.CrmDeal{
             Raw: &shared.PropertyCrmDealRaw{},
             Tags: []string{
-                "Toys",
+                "string",
             },
         },
-        ConnectionID: "hacking",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,9 +89,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Deal.GetCrmDeal(ctx, operations.GetCrmDealRequest{
-        ConnectionID: "payment",
+        ConnectionID: "string",
         Fields: []string{
-            "mint",
+            "string",
         },
         ID: "<ID>",
     })
@@ -142,9 +142,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Deal.ListCrmDeals(ctx, operations.ListCrmDealsRequest{
-        ConnectionID: "Southeast",
+        ConnectionID: "string",
         Fields: []string{
-            "synthesize",
+            "string",
         },
     })
     if err != nil {
@@ -197,10 +197,10 @@ func main() {
         CrmDeal: &shared.CrmDeal{
             Raw: &shared.PropertyCrmDealRaw{},
             Tags: []string{
-                "consign",
+                "string",
             },
         },
-        ConnectionID: "withdrawal",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Deal.RemoveCrmDeal(ctx, operations.RemoveCrmDealRequest{
-        ConnectionID: "Handmade",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -303,10 +303,10 @@ func main() {
         CrmDeal: &shared.CrmDeal{
             Raw: &shared.PropertyCrmDealRaw{},
             Tags: []string{
-                "South",
+                "string",
             },
         },
-        ConnectionID: "global",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {

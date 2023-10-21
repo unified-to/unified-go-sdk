@@ -43,15 +43,15 @@ func main() {
             },
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "radian",
+                "string",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "who",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "New",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -100,9 +100,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.GetAtsCandidate(ctx, operations.GetAtsCandidateRequest{
-        ConnectionID: "Generic",
+        ConnectionID: "string",
         Fields: []string{
-            "hub",
+            "string",
         },
         ID: "<ID>",
     })
@@ -153,9 +153,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.ListAtsCandidates(ctx, operations.ListAtsCandidatesRequest{
-        ConnectionID: "Mobility",
+        ConnectionID: "string",
         Fields: []string{
-            "Cambridgeshire",
+            "string",
         },
     })
     if err != nil {
@@ -214,15 +214,15 @@ func main() {
             },
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "Credit",
+                "string",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "esse",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Dynamic",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -272,7 +272,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.RemoveAtsCandidate(ctx, operations.RemoveAtsCandidateRequest{
-        ConnectionID: "male",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
@@ -331,15 +331,15 @@ func main() {
             },
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
-                "B2C",
+                "string",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "now",
+                    Telephone: "string",
                 },
             },
         },
-        ConnectionID: "Gloves",
+        ConnectionID: "string",
         ID: "<ID>",
     })
     if err != nil {
