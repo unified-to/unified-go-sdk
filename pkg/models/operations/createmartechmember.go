@@ -12,8 +12,6 @@ type CreateMartechMemberRequest struct {
 	MarketingMember *shared.MarketingMember `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// ID of the list
-	ListID string `pathParam:"style=simple,explode=false,name=list_id"`
 }
 
 func (o *CreateMartechMemberRequest) GetMarketingMember() *shared.MarketingMember {
@@ -28,13 +26,6 @@ func (o *CreateMartechMemberRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
-}
-
-func (o *CreateMartechMemberRequest) GetListID() string {
-	if o == nil {
-		return ""
-	}
-	return o.ListID
 }
 
 type CreateMartechMemberResponse struct {

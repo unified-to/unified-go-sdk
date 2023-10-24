@@ -115,7 +115,6 @@ func main() {
             Raw: shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "string",
-        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -277,7 +276,6 @@ func main() {
             "string",
         },
         ID: "<ID>",
-        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -435,7 +433,6 @@ func main() {
         Fields: []string{
             "string",
         },
-        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -607,7 +604,6 @@ func main() {
         },
         ConnectionID: "string",
         ID: "<ID>",
-        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -764,7 +760,6 @@ func main() {
     res, err := s.Ticketing.RemoveTicketingNote(ctx, operations.RemoveTicketingNoteRequest{
         ConnectionID: "string",
         ID: "<ID>",
-        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -934,7 +929,6 @@ func main() {
         },
         ConnectionID: "string",
         ID: "<ID>",
-        TicketID: "string",
     })
     if err != nil {
         log.Fatal(err)

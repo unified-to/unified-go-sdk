@@ -14,8 +14,6 @@ type PatchMartechMemberRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// ID of the Member
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// ID of the list
-	ListID string `pathParam:"style=simple,explode=false,name=list_id"`
 }
 
 func (o *PatchMartechMemberRequest) GetMarketingMember() *shared.MarketingMember {
@@ -37,13 +35,6 @@ func (o *PatchMartechMemberRequest) GetID() string {
 		return ""
 	}
 	return o.ID
-}
-
-func (o *PatchMartechMemberRequest) GetListID() string {
-	if o == nil {
-		return ""
-	}
-	return o.ListID
 }
 
 type PatchMartechMemberResponse struct {

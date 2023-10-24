@@ -20,8 +20,8 @@ type ListTicketingNotesRequest struct {
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
-	// ID of the ticket
-	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
+	// Usually required
+	TicketID *string `queryParam:"style=form,explode=true,name=ticket_id"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -86,9 +86,9 @@ func (o *ListTicketingNotesRequest) GetSort() *string {
 	return o.Sort
 }
 
-func (o *ListTicketingNotesRequest) GetTicketID() string {
+func (o *ListTicketingNotesRequest) GetTicketID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.TicketID
 }

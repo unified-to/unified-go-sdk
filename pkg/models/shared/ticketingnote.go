@@ -14,6 +14,7 @@ type TicketingNote struct {
 	Description *string                  `json:"description,omitempty"`
 	ID          *string                  `json:"id,omitempty"`
 	Raw         PropertyTicketingNoteRaw `json:"raw"`
+	TicketID    *string                  `json:"ticket_id,omitempty"`
 	UpdatedAt   *string                  `json:"updated_at,omitempty"`
 }
 
@@ -68,6 +69,13 @@ func (o *TicketingNote) GetRaw() PropertyTicketingNoteRaw {
 		return PropertyTicketingNoteRaw{}
 	}
 	return o.Raw
+}
+
+func (o *TicketingNote) GetTicketID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.TicketID
 }
 
 func (o *TicketingNote) GetUpdatedAt() *string {

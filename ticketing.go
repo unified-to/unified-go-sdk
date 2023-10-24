@@ -95,7 +95,7 @@ func (s *ticketing) CreateTicketingCustomer(ctx context.Context, request operati
 // CreateTicketingNote - Create a note
 func (s *ticketing) CreateTicketingNote(ctx context.Context, request operations.CreateTicketingNoteRequest) (*operations.CreateTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -296,7 +296,7 @@ func (s *ticketing) GetTicketingCustomer(ctx context.Context, request operations
 // GetTicketingNote - Retrieve a note
 func (s *ticketing) GetTicketingNote(ctx context.Context, request operations.GetTicketingNoteRequest) (*operations.GetTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -491,7 +491,7 @@ func (s *ticketing) ListTicketingCustomers(ctx context.Context, request operatio
 // ListTicketingNotes - List all notes
 func (s *ticketing) ListTicketingNotes(ctx context.Context, request operations.ListTicketingNotesRequest) (*operations.ListTicketingNotesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -689,7 +689,7 @@ func (s *ticketing) PatchTicketingCustomer(ctx context.Context, request operatio
 // PatchTicketingNote - Update a note
 func (s *ticketing) PatchTicketingNote(ctx context.Context, request operations.PatchTicketingNoteRequest) (*operations.PatchTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -882,7 +882,7 @@ func (s *ticketing) RemoveTicketingCustomer(ctx context.Context, request operati
 // RemoveTicketingNote - Remove a note
 func (s *ticketing) RemoveTicketingNote(ctx context.Context, request operations.RemoveTicketingNoteRequest) (*operations.RemoveTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -1064,7 +1064,7 @@ func (s *ticketing) UpdateTicketingCustomer(ctx context.Context, request operati
 // UpdateTicketingNote - Update a note
 func (s *ticketing) UpdateTicketingNote(ctx context.Context, request operations.UpdateTicketingNoteRequest) (*operations.UpdateTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/{ticket_id}/note/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}

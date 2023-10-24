@@ -14,8 +14,6 @@ type GetMartechMemberRequest struct {
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Member
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// ID of the list
-	ListID string `pathParam:"style=simple,explode=false,name=list_id"`
 }
 
 func (o *GetMartechMemberRequest) GetConnectionID() string {
@@ -37,13 +35,6 @@ func (o *GetMartechMemberRequest) GetID() string {
 		return ""
 	}
 	return o.ID
-}
-
-func (o *GetMartechMemberRequest) GetListID() string {
-	if o == nil {
-		return ""
-	}
-	return o.ListID
 }
 
 type GetMartechMemberResponse struct {

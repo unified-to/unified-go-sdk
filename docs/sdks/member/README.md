@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [CreateMartechMember](#createmartechmember) - Create a member in a list
-* [GetMartechMember](#getmartechmember) - Retrieve a member from a list
-* [ListMartechMembers](#listmartechmembers) - List all members in a list
-* [PatchMartechMember](#patchmartechmember) - Update a member in a list
-* [RemoveMartechMember](#removemartechmember) - Remove member from a list
-* [UpdateMartechMember](#updatemartechmember) - Update a member in a list
+* [CreateMartechMember](#createmartechmember) - Create a member
+* [GetMartechMember](#getmartechmember) - Retrieve a member
+* [ListMartechMembers](#listmartechmembers) - List all members
+* [PatchMartechMember](#patchmartechmember) - Update a member
+* [RemoveMartechMember](#removemartechmember) - Remove member
+* [UpdateMartechMember](#updatemartechmember) - Update a member
 
 ## CreateMartechMember
 
-Create a member in a list
+Create a member
 
 ### Example Usage
 
@@ -49,7 +49,6 @@ func main() {
             },
         },
         ConnectionID: "string",
-        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -76,7 +75,7 @@ func main() {
 
 ## GetMartechMember
 
-Retrieve a member from a list
+Retrieve a member
 
 ### Example Usage
 
@@ -103,7 +102,6 @@ func main() {
             "string",
         },
         ID: "<ID>",
-        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -130,7 +128,7 @@ func main() {
 
 ## ListMartechMembers
 
-List all members in a list
+List all members
 
 ### Example Usage
 
@@ -156,7 +154,6 @@ func main() {
         Fields: []string{
             "string",
         },
-        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -183,7 +180,7 @@ func main() {
 
 ## PatchMartechMember
 
-Update a member in a list
+Update a member
 
 ### Example Usage
 
@@ -221,7 +218,6 @@ func main() {
         },
         ConnectionID: "string",
         ID: "<ID>",
-        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -248,7 +244,7 @@ func main() {
 
 ## RemoveMartechMember
 
-Remove member from a list
+Remove member
 
 ### Example Usage
 
@@ -272,7 +268,6 @@ func main() {
     res, err := s.Member.RemoveMartechMember(ctx, operations.RemoveMartechMemberRequest{
         ConnectionID: "string",
         ID: "<ID>",
-        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)
@@ -299,7 +294,7 @@ func main() {
 
 ## UpdateMartechMember
 
-Update a member in a list
+Update a member
 
 ### Example Usage
 
@@ -337,7 +332,6 @@ func main() {
         },
         ConnectionID: "string",
         ID: "<ID>",
-        ListID: "string",
     })
     if err != nil {
         log.Fatal(err)

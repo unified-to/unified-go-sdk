@@ -24,10 +24,10 @@ func newMember(sdkConfig sdkConfiguration) *member {
 	}
 }
 
-// CreateMartechMember - Create a member in a list
+// CreateMartechMember - Create a member
 func (s *member) CreateMartechMember(ctx context.Context, request operations.CreateMartechMemberRequest) (*operations.CreateMartechMemberResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/{list_id}/member", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/member", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -92,10 +92,10 @@ func (s *member) CreateMartechMember(ctx context.Context, request operations.Cre
 	return res, nil
 }
 
-// GetMartechMember - Retrieve a member from a list
+// GetMartechMember - Retrieve a member
 func (s *member) GetMartechMember(ctx context.Context, request operations.GetMartechMemberRequest) (*operations.GetMartechMemberResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/{list_id}/member/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/member/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -157,10 +157,10 @@ func (s *member) GetMartechMember(ctx context.Context, request operations.GetMar
 	return res, nil
 }
 
-// ListMartechMembers - List all members in a list
+// ListMartechMembers - List all members
 func (s *member) ListMartechMembers(ctx context.Context, request operations.ListMartechMembersRequest) (*operations.ListMartechMembersResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/{list_id}/member", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/member", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -222,10 +222,10 @@ func (s *member) ListMartechMembers(ctx context.Context, request operations.List
 	return res, nil
 }
 
-// PatchMartechMember - Update a member in a list
+// PatchMartechMember - Update a member
 func (s *member) PatchMartechMember(ctx context.Context, request operations.PatchMartechMemberRequest) (*operations.PatchMartechMemberResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/{list_id}/member/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/member/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -290,10 +290,10 @@ func (s *member) PatchMartechMember(ctx context.Context, request operations.Patc
 	return res, nil
 }
 
-// RemoveMartechMember - Remove member from a list
+// RemoveMartechMember - Remove member
 func (s *member) RemoveMartechMember(ctx context.Context, request operations.RemoveMartechMemberRequest) (*operations.RemoveMartechMemberResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/{list_id}/member/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/member/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -347,10 +347,10 @@ func (s *member) RemoveMartechMember(ctx context.Context, request operations.Rem
 	return res, nil
 }
 
-// UpdateMartechMember - Update a member in a list
+// UpdateMartechMember - Update a member
 func (s *member) UpdateMartechMember(ctx context.Context, request operations.UpdateMartechMemberRequest) (*operations.UpdateMartechMemberResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/{list_id}/member/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/member/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}

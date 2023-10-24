@@ -15,8 +15,8 @@ type ListMartechMembersRequest struct {
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	// ID of the list
-	ListID string   `pathParam:"style=simple,explode=false,name=list_id"`
+	// Usually required
+	ListID *string  `queryParam:"style=form,explode=true,name=list_id"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
@@ -58,9 +58,9 @@ func (o *ListMartechMembersRequest) GetLimit() *float64 {
 	return o.Limit
 }
 
-func (o *ListMartechMembersRequest) GetListID() string {
+func (o *ListMartechMembersRequest) GetListID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.ListID
 }

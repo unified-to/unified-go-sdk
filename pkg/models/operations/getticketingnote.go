@@ -14,8 +14,6 @@ type GetTicketingNoteRequest struct {
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Note
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// ID of the ticket
-	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
 }
 
 func (o *GetTicketingNoteRequest) GetConnectionID() string {
@@ -37,13 +35,6 @@ func (o *GetTicketingNoteRequest) GetID() string {
 		return ""
 	}
 	return o.ID
-}
-
-func (o *GetTicketingNoteRequest) GetTicketID() string {
-	if o == nil {
-		return ""
-	}
-	return o.TicketID
 }
 
 type GetTicketingNoteResponse struct {

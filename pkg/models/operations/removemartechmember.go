@@ -11,8 +11,6 @@ type RemoveMartechMemberRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// ID of the Member
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// ID of the list
-	ListID string `pathParam:"style=simple,explode=false,name=list_id"`
 }
 
 func (o *RemoveMartechMemberRequest) GetConnectionID() string {
@@ -27,13 +25,6 @@ func (o *RemoveMartechMemberRequest) GetID() string {
 		return ""
 	}
 	return o.ID
-}
-
-func (o *RemoveMartechMemberRequest) GetListID() string {
-	if o == nil {
-		return ""
-	}
-	return o.ListID
 }
 
 type RemoveMartechMemberResponse struct {

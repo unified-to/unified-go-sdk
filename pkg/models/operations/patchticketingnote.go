@@ -13,8 +13,6 @@ type PatchTicketingNoteRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// ID of the Note
 	ID string `pathParam:"style=simple,explode=false,name=id"`
-	// ID of the ticket
-	TicketID string `pathParam:"style=simple,explode=false,name=ticket_id"`
 }
 
 func (o *PatchTicketingNoteRequest) GetTicketingNote() *shared.TicketingNote {
@@ -36,13 +34,6 @@ func (o *PatchTicketingNoteRequest) GetID() string {
 		return ""
 	}
 	return o.ID
-}
-
-func (o *PatchTicketingNoteRequest) GetTicketID() string {
-	if o == nil {
-		return ""
-	}
-	return o.TicketID
 }
 
 type PatchTicketingNoteResponse struct {
