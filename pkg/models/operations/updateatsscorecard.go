@@ -11,7 +11,7 @@ type UpdateAtsScorecardRequest struct {
 	AtsScorecard *shared.AtsScorecard `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// ID of the Document
+	// ID of the Scorecard
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 

@@ -70,31 +70,37 @@ func main() {
 
 * [CreateAtsApplication](docs/sdks/ats/README.md#createatsapplication) - Create an application
 * [CreateAtsCandidate](docs/sdks/ats/README.md#createatscandidate) - Create a candidate
+* [CreateAtsDocument](docs/sdks/ats/README.md#createatsdocument) - Create a document
 * [CreateAtsInterview](docs/sdks/ats/README.md#createatsinterview) - Create a interview
 * [CreateAtsJob](docs/sdks/ats/README.md#createatsjob) - Create a job
 * [CreateAtsScorecard](docs/sdks/ats/README.md#createatsscorecard) - Create a scorecard
 * [GetAtsApplication](docs/sdks/ats/README.md#getatsapplication) - Retrieve an application
 * [GetAtsCandidate](docs/sdks/ats/README.md#getatscandidate) - Retrieve a candidate
+* [GetAtsDocument](docs/sdks/ats/README.md#getatsdocument) - Retrieve a document
 * [GetAtsInterview](docs/sdks/ats/README.md#getatsinterview) - Retrieve a interview
 * [GetAtsJob](docs/sdks/ats/README.md#getatsjob) - Retrieve a job
 * [GetAtsScorecard](docs/sdks/ats/README.md#getatsscorecard) - Retrieve a scorecard
 * [ListAtsApplications](docs/sdks/ats/README.md#listatsapplications) - List all applications
 * [ListAtsCandidates](docs/sdks/ats/README.md#listatscandidates) - List all candidates
+* [ListAtsDocuments](docs/sdks/ats/README.md#listatsdocuments) - List all documents
 * [ListAtsInterviews](docs/sdks/ats/README.md#listatsinterviews) - List all interviews
 * [ListAtsJobs](docs/sdks/ats/README.md#listatsjobs) - List all jobs
 * [ListAtsScorecards](docs/sdks/ats/README.md#listatsscorecards) - List all scorecards
 * [PatchAtsApplication](docs/sdks/ats/README.md#patchatsapplication) - Update an application
 * [PatchAtsCandidate](docs/sdks/ats/README.md#patchatscandidate) - Update a candidate
+* [PatchAtsDocument](docs/sdks/ats/README.md#patchatsdocument) - Update a document
 * [PatchAtsInterview](docs/sdks/ats/README.md#patchatsinterview) - Update a interview
 * [PatchAtsJob](docs/sdks/ats/README.md#patchatsjob) - Update a job
 * [PatchAtsScorecard](docs/sdks/ats/README.md#patchatsscorecard) - Update a scorecard
 * [RemoveAtsApplication](docs/sdks/ats/README.md#removeatsapplication) - Remove an application
 * [RemoveAtsCandidate](docs/sdks/ats/README.md#removeatscandidate) - Remove a candidate
+* [RemoveAtsDocument](docs/sdks/ats/README.md#removeatsdocument) - Remove a document
 * [RemoveAtsInterview](docs/sdks/ats/README.md#removeatsinterview) - Remove a interview
 * [RemoveAtsJob](docs/sdks/ats/README.md#removeatsjob) - Remove a job
 * [RemoveAtsScorecard](docs/sdks/ats/README.md#removeatsscorecard) - Remove a scorecard
 * [UpdateAtsApplication](docs/sdks/ats/README.md#updateatsapplication) - Update an application
 * [UpdateAtsCandidate](docs/sdks/ats/README.md#updateatscandidate) - Update a candidate
+* [UpdateAtsDocument](docs/sdks/ats/README.md#updateatsdocument) - Update a document
 * [UpdateAtsInterview](docs/sdks/ats/README.md#updateatsinterview) - Update a interview
 * [UpdateAtsJob](docs/sdks/ats/README.md#updateatsjob) - Update a job
 * [UpdateAtsScorecard](docs/sdks/ats/README.md#updateatsscorecard) - Update a scorecard
@@ -216,12 +222,12 @@ func main() {
 
 ### [Document](docs/sdks/document/README.md)
 
-* [CreateAtsScorecard](docs/sdks/document/README.md#createatsscorecard) - Create a scorecard
-* [GetAtsScorecard](docs/sdks/document/README.md#getatsscorecard) - Retrieve a scorecard
-* [ListAtsScorecards](docs/sdks/document/README.md#listatsscorecards) - List all scorecards
-* [PatchAtsScorecard](docs/sdks/document/README.md#patchatsscorecard) - Update a scorecard
-* [RemoveAtsScorecard](docs/sdks/document/README.md#removeatsscorecard) - Remove a scorecard
-* [UpdateAtsScorecard](docs/sdks/document/README.md#updateatsscorecard) - Update a scorecard
+* [CreateAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
+* [GetAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
+* [ListAtsDocuments](docs/sdks/document/README.md#listatsdocuments) - List all documents
+* [PatchAtsDocument](docs/sdks/document/README.md#patchatsdocument) - Update a document
+* [RemoveAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
+* [UpdateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
 
 ### [Employee](docs/sdks/employee/README.md)
 
@@ -379,6 +385,15 @@ func main() {
 * [PatchCrmPipeline](docs/sdks/pipeline/README.md#patchcrmpipeline) - Update a pipeline
 * [RemoveCrmPipeline](docs/sdks/pipeline/README.md#removecrmpipeline) - Remove a pipeline
 * [UpdateCrmPipeline](docs/sdks/pipeline/README.md#updatecrmpipeline) - Update a pipeline
+
+### [Scorecard](docs/sdks/scorecard/README.md)
+
+* [CreateAtsScorecard](docs/sdks/scorecard/README.md#createatsscorecard) - Create a scorecard
+* [GetAtsScorecard](docs/sdks/scorecard/README.md#getatsscorecard) - Retrieve a scorecard
+* [ListAtsScorecards](docs/sdks/scorecard/README.md#listatsscorecards) - List all scorecards
+* [PatchAtsScorecard](docs/sdks/scorecard/README.md#patchatsscorecard) - Update a scorecard
+* [RemoveAtsScorecard](docs/sdks/scorecard/README.md#removeatsscorecard) - Remove a scorecard
+* [UpdateAtsScorecard](docs/sdks/scorecard/README.md#updateatsscorecard) - Update a scorecard
 
 ### [Ticket](docs/sdks/ticket/README.md)
 

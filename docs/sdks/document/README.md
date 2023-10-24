@@ -3,68 +3,16 @@
 
 ### Available Operations
 
-* [CreateAtsScorecard](#createatsscorecard) - Create a scorecard
-* [GetAtsScorecard](#getatsscorecard) - Retrieve a scorecard
-* [ListAtsScorecards](#listatsscorecards) - List all scorecards
-* [PatchAtsScorecard](#patchatsscorecard) - Update a scorecard
-* [RemoveAtsScorecard](#removeatsscorecard) - Remove a scorecard
-* [UpdateAtsScorecard](#updateatsscorecard) - Update a scorecard
+* [CreateAtsDocument](#createatsdocument) - Create a document
+* [GetAtsDocument](#getatsdocument) - Retrieve a document
+* [ListAtsDocuments](#listatsdocuments) - List all documents
+* [PatchAtsDocument](#patchatsdocument) - Update a document
+* [RemoveAtsDocument](#removeatsdocument) - Remove a document
+* [UpdateAtsDocument](#updateatsdocument) - Update a document
 
-## CreateAtsScorecard
+## CreateAtsDocument
 
-Create a scorecard
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Document.CreateAtsScorecard(ctx, operations.CreateAtsScorecardRequest{
-        AtsScorecard: &shared.AtsScorecard{
-            Raw: shared.PropertyAtsScorecardRaw{},
-        },
-        ConnectionID: "string",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.AtsScorecard != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.CreateAtsScorecardRequest](../../models/operations/createatsscorecardrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-
-
-### Response
-
-**[*operations.CreateAtsScorecardResponse](../../models/operations/createatsscorecardresponse.md), error**
-
-
-## GetAtsScorecard
-
-Retrieve a scorecard
+Create a document
 
 ### Example Usage
 
@@ -85,70 +33,17 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Document.GetAtsScorecard(ctx, operations.GetAtsScorecardRequest{
-        ConnectionID: "string",
-        Fields: []string{
-            "string",
+    res, err := s.Document.CreateAtsDocument(ctx, operations.CreateAtsDocumentRequest{
+        AtsDocument: &shared.AtsDocument{
+            Raw: shared.PropertyAtsDocumentRaw{},
         },
-        ID: "<ID>",
+        ConnectionID: "string",
     })
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AtsScorecard != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.GetAtsScorecardRequest](../../models/operations/getatsscorecardrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-
-
-### Response
-
-**[*operations.GetAtsScorecardResponse](../../models/operations/getatsscorecardresponse.md), error**
-
-
-## ListAtsScorecards
-
-List all scorecards
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
-
-    ctx := context.Background()
-    res, err := s.Document.ListAtsScorecards(ctx, operations.ListAtsScorecardsRequest{
-        ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.AtsScorecards != nil {
+    if res.AtsDocument != nil {
         // handle response
     }
 }
@@ -159,17 +54,17 @@ func main() {
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.ListAtsScorecardsRequest](../../models/operations/listatsscorecardsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `request`                                                                                  | [operations.CreateAtsDocumentRequest](../../models/operations/createatsdocumentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[*operations.ListAtsScorecardsResponse](../../models/operations/listatsscorecardsresponse.md), error**
+**[*operations.CreateAtsDocumentResponse](../../models/operations/createatsdocumentresponse.md), error**
 
 
-## PatchAtsScorecard
+## GetAtsDocument
 
-Update a scorecard
+Retrieve a document
 
 ### Example Usage
 
@@ -190,9 +85,114 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Document.PatchAtsScorecard(ctx, operations.PatchAtsScorecardRequest{
-        AtsScorecard: &shared.AtsScorecard{
-            Raw: shared.PropertyAtsScorecardRaw{},
+    res, err := s.Document.GetAtsDocument(ctx, operations.GetAtsDocumentRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.GetAtsDocumentRequest](../../models/operations/getatsdocumentrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[*operations.GetAtsDocumentResponse](../../models/operations/getatsdocumentresponse.md), error**
+
+
+## ListAtsDocuments
+
+List all documents
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Document.ListAtsDocuments(ctx, operations.ListAtsDocumentsRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsDocuments != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListAtsDocumentsRequest](../../models/operations/listatsdocumentsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[*operations.ListAtsDocumentsResponse](../../models/operations/listatsdocumentsresponse.md), error**
+
+
+## PatchAtsDocument
+
+Update a document
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Document.PatchAtsDocument(ctx, operations.PatchAtsDocumentRequest{
+        AtsDocument: &shared.AtsDocument{
+            Raw: shared.PropertyAtsDocumentRaw{},
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -201,7 +201,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AtsScorecard != nil {
+    if res.AtsDocument != nil {
         // handle response
     }
 }
@@ -209,20 +209,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.PatchAtsScorecardRequest](../../models/operations/patchatsscorecardrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.PatchAtsDocumentRequest](../../models/operations/patchatsdocumentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[*operations.PatchAtsScorecardResponse](../../models/operations/patchatsscorecardresponse.md), error**
+**[*operations.PatchAtsDocumentResponse](../../models/operations/patchatsdocumentresponse.md), error**
 
 
-## RemoveAtsScorecard
+## RemoveAtsDocument
 
-Remove a scorecard
+Remove a document
 
 ### Example Usage
 
@@ -243,7 +243,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Document.RemoveAtsScorecard(ctx, operations.RemoveAtsScorecardRequest{
+    res, err := s.Document.RemoveAtsDocument(ctx, operations.RemoveAtsDocumentRequest{
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -259,20 +259,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.RemoveAtsScorecardRequest](../../models/operations/removeatsscorecardrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.RemoveAtsDocumentRequest](../../models/operations/removeatsdocumentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[*operations.RemoveAtsScorecardResponse](../../models/operations/removeatsscorecardresponse.md), error**
+**[*operations.RemoveAtsDocumentResponse](../../models/operations/removeatsdocumentresponse.md), error**
 
 
-## UpdateAtsScorecard
+## UpdateAtsDocument
 
-Update a scorecard
+Update a document
 
 ### Example Usage
 
@@ -293,9 +293,9 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Document.UpdateAtsScorecard(ctx, operations.UpdateAtsScorecardRequest{
-        AtsScorecard: &shared.AtsScorecard{
-            Raw: shared.PropertyAtsScorecardRaw{},
+    res, err := s.Document.UpdateAtsDocument(ctx, operations.UpdateAtsDocumentRequest{
+        AtsDocument: &shared.AtsDocument{
+            Raw: shared.PropertyAtsDocumentRaw{},
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -304,7 +304,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AtsScorecard != nil {
+    if res.AtsDocument != nil {
         // handle response
     }
 }
@@ -312,13 +312,13 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.UpdateAtsScorecardRequest](../../models/operations/updateatsscorecardrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.UpdateAtsDocumentRequest](../../models/operations/updateatsdocumentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[*operations.UpdateAtsScorecardResponse](../../models/operations/updateatsscorecardresponse.md), error**
+**[*operations.UpdateAtsDocumentResponse](../../models/operations/updateatsdocumentresponse.md), error**
 

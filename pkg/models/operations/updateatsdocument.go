@@ -7,38 +7,38 @@ import (
 	"net/http"
 )
 
-type PatchAtsScorecardRequest struct {
-	AtsScorecard *shared.AtsScorecard `request:"mediaType=application/json"`
+type UpdateAtsDocumentRequest struct {
+	AtsDocument *shared.AtsDocument `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// ID of the Scorecard
+	// ID of the Document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchAtsScorecardRequest) GetAtsScorecard() *shared.AtsScorecard {
+func (o *UpdateAtsDocumentRequest) GetAtsDocument() *shared.AtsDocument {
 	if o == nil {
 		return nil
 	}
-	return o.AtsScorecard
+	return o.AtsDocument
 }
 
-func (o *PatchAtsScorecardRequest) GetConnectionID() string {
+func (o *UpdateAtsDocumentRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *PatchAtsScorecardRequest) GetID() string {
+func (o *UpdateAtsDocumentRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type PatchAtsScorecardResponse struct {
+type UpdateAtsDocumentResponse struct {
 	// Successful
-	AtsScorecard *shared.AtsScorecard
+	AtsDocument *shared.AtsDocument
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -47,28 +47,28 @@ type PatchAtsScorecardResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAtsScorecardResponse) GetAtsScorecard() *shared.AtsScorecard {
+func (o *UpdateAtsDocumentResponse) GetAtsDocument() *shared.AtsDocument {
 	if o == nil {
 		return nil
 	}
-	return o.AtsScorecard
+	return o.AtsDocument
 }
 
-func (o *PatchAtsScorecardResponse) GetContentType() string {
+func (o *UpdateAtsDocumentResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *PatchAtsScorecardResponse) GetStatusCode() int {
+func (o *UpdateAtsDocumentResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *PatchAtsScorecardResponse) GetRawResponse() *http.Response {
+func (o *UpdateAtsDocumentResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

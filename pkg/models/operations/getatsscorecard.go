@@ -12,7 +12,7 @@ type GetAtsScorecardRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	// ID of the Document
+	// ID of the Scorecard
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 

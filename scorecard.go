@@ -14,25 +14,25 @@ import (
 	"net/http"
 )
 
-type document struct {
+type scorecard struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newDocument(sdkConfig sdkConfiguration) *document {
-	return &document{
+func newScorecard(sdkConfig sdkConfiguration) *scorecard {
+	return &scorecard{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
-// CreateAtsDocument - Create a document
-func (s *document) CreateAtsDocument(ctx context.Context, request operations.CreateAtsDocumentRequest) (*operations.CreateAtsDocumentResponse, error) {
+// CreateAtsScorecard - Create a scorecard
+func (s *scorecard) CreateAtsScorecard(ctx context.Context, request operations.CreateAtsScorecardRequest) (*operations.CreateAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsDocument", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsScorecard", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +58,7 @@ func (s *document) CreateAtsDocument(ctx context.Context, request operations.Cre
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.CreateAtsDocumentResponse{
+	res := &operations.CreateAtsScorecardResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -74,12 +74,12 @@ func (s *document) CreateAtsDocument(ctx context.Context, request operations.Cre
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AtsDocument
+			var out shared.AtsScorecard
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AtsDocument = &out
+			res.AtsScorecard = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -92,10 +92,10 @@ func (s *document) CreateAtsDocument(ctx context.Context, request operations.Cre
 	return res, nil
 }
 
-// GetAtsDocument - Retrieve a document
-func (s *document) GetAtsDocument(ctx context.Context, request operations.GetAtsDocumentRequest) (*operations.GetAtsDocumentResponse, error) {
+// GetAtsScorecard - Retrieve a scorecard
+func (s *scorecard) GetAtsScorecard(ctx context.Context, request operations.GetAtsScorecardRequest) (*operations.GetAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -123,7 +123,7 @@ func (s *document) GetAtsDocument(ctx context.Context, request operations.GetAts
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAtsDocumentResponse{
+	res := &operations.GetAtsScorecardResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -139,12 +139,12 @@ func (s *document) GetAtsDocument(ctx context.Context, request operations.GetAts
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AtsDocument
+			var out shared.AtsScorecard
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AtsDocument = &out
+			res.AtsScorecard = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -157,10 +157,10 @@ func (s *document) GetAtsDocument(ctx context.Context, request operations.GetAts
 	return res, nil
 }
 
-// ListAtsDocuments - List all documents
-func (s *document) ListAtsDocuments(ctx context.Context, request operations.ListAtsDocumentsRequest) (*operations.ListAtsDocumentsResponse, error) {
+// ListAtsScorecards - List all scorecards
+func (s *scorecard) ListAtsScorecards(ctx context.Context, request operations.ListAtsScorecardsRequest) (*operations.ListAtsScorecardsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -188,7 +188,7 @@ func (s *document) ListAtsDocuments(ctx context.Context, request operations.List
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.ListAtsDocumentsResponse{
+	res := &operations.ListAtsScorecardsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -204,12 +204,12 @@ func (s *document) ListAtsDocuments(ctx context.Context, request operations.List
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.AtsDocument
+			var out []shared.AtsScorecard
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AtsDocuments = out
+			res.AtsScorecards = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -222,15 +222,15 @@ func (s *document) ListAtsDocuments(ctx context.Context, request operations.List
 	return res, nil
 }
 
-// PatchAtsDocument - Update a document
-func (s *document) PatchAtsDocument(ctx context.Context, request operations.PatchAtsDocumentRequest) (*operations.PatchAtsDocumentResponse, error) {
+// PatchAtsScorecard - Update a scorecard
+func (s *scorecard) PatchAtsScorecard(ctx context.Context, request operations.PatchAtsScorecardRequest) (*operations.PatchAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsDocument", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsScorecard", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -256,7 +256,7 @@ func (s *document) PatchAtsDocument(ctx context.Context, request operations.Patc
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PatchAtsDocumentResponse{
+	res := &operations.PatchAtsScorecardResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -272,12 +272,12 @@ func (s *document) PatchAtsDocument(ctx context.Context, request operations.Patc
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AtsDocument
+			var out shared.AtsScorecard
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AtsDocument = &out
+			res.AtsScorecard = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -290,10 +290,10 @@ func (s *document) PatchAtsDocument(ctx context.Context, request operations.Patc
 	return res, nil
 }
 
-// RemoveAtsDocument - Remove a document
-func (s *document) RemoveAtsDocument(ctx context.Context, request operations.RemoveAtsDocumentRequest) (*operations.RemoveAtsDocumentResponse, error) {
+// RemoveAtsScorecard - Remove a scorecard
+func (s *scorecard) RemoveAtsScorecard(ctx context.Context, request operations.RemoveAtsScorecardRequest) (*operations.RemoveAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -317,7 +317,7 @@ func (s *document) RemoveAtsDocument(ctx context.Context, request operations.Rem
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.RemoveAtsDocumentResponse{
+	res := &operations.RemoveAtsScorecardResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -338,7 +338,7 @@ func (s *document) RemoveAtsDocument(ctx context.Context, request operations.Rem
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsDocumentDefaultApplicationJSONString = &out
+			res.RemoveAtsScorecardDefaultApplicationJSONString = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -347,15 +347,15 @@ func (s *document) RemoveAtsDocument(ctx context.Context, request operations.Rem
 	return res, nil
 }
 
-// UpdateAtsDocument - Update a document
-func (s *document) UpdateAtsDocument(ctx context.Context, request operations.UpdateAtsDocumentRequest) (*operations.UpdateAtsDocumentResponse, error) {
+// UpdateAtsScorecard - Update a scorecard
+func (s *scorecard) UpdateAtsScorecard(ctx context.Context, request operations.UpdateAtsScorecardRequest) (*operations.UpdateAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsDocument", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsScorecard", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -381,7 +381,7 @@ func (s *document) UpdateAtsDocument(ctx context.Context, request operations.Upd
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.UpdateAtsDocumentResponse{
+	res := &operations.UpdateAtsScorecardResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -397,12 +397,12 @@ func (s *document) UpdateAtsDocument(ctx context.Context, request operations.Upd
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AtsDocument
+			var out shared.AtsScorecard
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AtsDocument = &out
+			res.AtsScorecard = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

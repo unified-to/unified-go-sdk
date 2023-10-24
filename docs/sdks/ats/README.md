@@ -5,31 +5,37 @@
 
 * [CreateAtsApplication](#createatsapplication) - Create an application
 * [CreateAtsCandidate](#createatscandidate) - Create a candidate
+* [CreateAtsDocument](#createatsdocument) - Create a document
 * [CreateAtsInterview](#createatsinterview) - Create a interview
 * [CreateAtsJob](#createatsjob) - Create a job
 * [CreateAtsScorecard](#createatsscorecard) - Create a scorecard
 * [GetAtsApplication](#getatsapplication) - Retrieve an application
 * [GetAtsCandidate](#getatscandidate) - Retrieve a candidate
+* [GetAtsDocument](#getatsdocument) - Retrieve a document
 * [GetAtsInterview](#getatsinterview) - Retrieve a interview
 * [GetAtsJob](#getatsjob) - Retrieve a job
 * [GetAtsScorecard](#getatsscorecard) - Retrieve a scorecard
 * [ListAtsApplications](#listatsapplications) - List all applications
 * [ListAtsCandidates](#listatscandidates) - List all candidates
+* [ListAtsDocuments](#listatsdocuments) - List all documents
 * [ListAtsInterviews](#listatsinterviews) - List all interviews
 * [ListAtsJobs](#listatsjobs) - List all jobs
 * [ListAtsScorecards](#listatsscorecards) - List all scorecards
 * [PatchAtsApplication](#patchatsapplication) - Update an application
 * [PatchAtsCandidate](#patchatscandidate) - Update a candidate
+* [PatchAtsDocument](#patchatsdocument) - Update a document
 * [PatchAtsInterview](#patchatsinterview) - Update a interview
 * [PatchAtsJob](#patchatsjob) - Update a job
 * [PatchAtsScorecard](#patchatsscorecard) - Update a scorecard
 * [RemoveAtsApplication](#removeatsapplication) - Remove an application
 * [RemoveAtsCandidate](#removeatscandidate) - Remove a candidate
+* [RemoveAtsDocument](#removeatsdocument) - Remove a document
 * [RemoveAtsInterview](#removeatsinterview) - Remove a interview
 * [RemoveAtsJob](#removeatsjob) - Remove a job
 * [RemoveAtsScorecard](#removeatsscorecard) - Remove a scorecard
 * [UpdateAtsApplication](#updateatsapplication) - Update an application
 * [UpdateAtsCandidate](#updateatscandidate) - Update a candidate
+* [UpdateAtsDocument](#updateatsdocument) - Update a document
 * [UpdateAtsInterview](#updateatsinterview) - Update a interview
 * [UpdateAtsJob](#updateatsjob) - Update a job
 * [UpdateAtsScorecard](#updateatsscorecard) - Update a scorecard
@@ -150,6 +156,58 @@ func main() {
 ### Response
 
 **[*operations.CreateAtsCandidateResponse](../../models/operations/createatscandidateresponse.md), error**
+
+
+## CreateAtsDocument
+
+Create a document
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.CreateAtsDocument(ctx, operations.CreateAtsDocumentRequest{
+        AtsDocument: &shared.AtsDocument{
+            Raw: shared.PropertyAtsDocumentRaw{},
+        },
+        ConnectionID: "string",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.CreateAtsDocumentRequest](../../models/operations/createatsdocumentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[*operations.CreateAtsDocumentResponse](../../models/operations/createatsdocumentresponse.md), error**
 
 
 ## CreateAtsInterview
@@ -437,6 +495,59 @@ func main() {
 **[*operations.GetAtsCandidateResponse](../../models/operations/getatscandidateresponse.md), error**
 
 
+## GetAtsDocument
+
+Retrieve a document
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.GetAtsDocument(ctx, operations.GetAtsDocumentRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.GetAtsDocumentRequest](../../models/operations/getatsdocumentrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[*operations.GetAtsDocumentResponse](../../models/operations/getatsdocumentresponse.md), error**
+
+
 ## GetAtsInterview
 
 Retrieve a interview
@@ -698,6 +809,58 @@ func main() {
 ### Response
 
 **[*operations.ListAtsCandidatesResponse](../../models/operations/listatscandidatesresponse.md), error**
+
+
+## ListAtsDocuments
+
+List all documents
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.ListAtsDocuments(ctx, operations.ListAtsDocumentsRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsDocuments != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListAtsDocumentsRequest](../../models/operations/listatsdocumentsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[*operations.ListAtsDocumentsResponse](../../models/operations/listatsdocumentsresponse.md), error**
 
 
 ## ListAtsInterviews
@@ -974,6 +1137,59 @@ func main() {
 ### Response
 
 **[*operations.PatchAtsCandidateResponse](../../models/operations/patchatscandidateresponse.md), error**
+
+
+## PatchAtsDocument
+
+Update a document
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.PatchAtsDocument(ctx, operations.PatchAtsDocumentRequest{
+        AtsDocument: &shared.AtsDocument{
+            Raw: shared.PropertyAtsDocumentRaw{},
+        },
+        ConnectionID: "string",
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.PatchAtsDocumentRequest](../../models/operations/patchatsdocumentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[*operations.PatchAtsDocumentResponse](../../models/operations/patchatsdocumentresponse.md), error**
 
 
 ## PatchAtsInterview
@@ -1258,6 +1474,56 @@ func main() {
 **[*operations.RemoveAtsCandidateResponse](../../models/operations/removeatscandidateresponse.md), error**
 
 
+## RemoveAtsDocument
+
+Remove a document
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.RemoveAtsDocument(ctx, operations.RemoveAtsDocumentRequest{
+        ConnectionID: "string",
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.StatusCode == http.StatusOK {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.RemoveAtsDocumentRequest](../../models/operations/removeatsdocumentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[*operations.RemoveAtsDocumentResponse](../../models/operations/removeatsdocumentresponse.md), error**
+
+
 ## RemoveAtsInterview
 
 Remove a interview
@@ -1526,6 +1792,59 @@ func main() {
 ### Response
 
 **[*operations.UpdateAtsCandidateResponse](../../models/operations/updateatscandidateresponse.md), error**
+
+
+## UpdateAtsDocument
+
+Update a document
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.UpdateAtsDocument(ctx, operations.UpdateAtsDocumentRequest{
+        AtsDocument: &shared.AtsDocument{
+            Raw: shared.PropertyAtsDocumentRaw{},
+        },
+        ConnectionID: "string",
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.UpdateAtsDocumentRequest](../../models/operations/updateatsdocumentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[*operations.UpdateAtsDocumentResponse](../../models/operations/updateatsdocumentresponse.md), error**
 
 
 ## UpdateAtsInterview

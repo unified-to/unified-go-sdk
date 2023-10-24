@@ -6,28 +6,28 @@ import (
 	"net/http"
 )
 
-type RemoveAtsScorecardRequest struct {
+type RemoveAtsDocumentRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// ID of the Scorecard
+	// ID of the Document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveAtsScorecardRequest) GetConnectionID() string {
+func (o *RemoveAtsDocumentRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *RemoveAtsScorecardRequest) GetID() string {
+func (o *RemoveAtsDocumentRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type RemoveAtsScorecardResponse struct {
+type RemoveAtsDocumentResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -35,33 +35,33 @@ type RemoveAtsScorecardResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	RemoveAtsScorecardDefaultApplicationJSONString *string
+	RemoveAtsDocumentDefaultApplicationJSONString *string
 }
 
-func (o *RemoveAtsScorecardResponse) GetContentType() string {
+func (o *RemoveAtsDocumentResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *RemoveAtsScorecardResponse) GetStatusCode() int {
+func (o *RemoveAtsDocumentResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *RemoveAtsScorecardResponse) GetRawResponse() *http.Response {
+func (o *RemoveAtsDocumentResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
 	return o.RawResponse
 }
 
-func (o *RemoveAtsScorecardResponse) GetRemoveAtsScorecardDefaultApplicationJSONString() *string {
+func (o *RemoveAtsDocumentResponse) GetRemoveAtsDocumentDefaultApplicationJSONString() *string {
 	if o == nil {
 		return nil
 	}
-	return o.RemoveAtsScorecardDefaultApplicationJSONString
+	return o.RemoveAtsDocumentDefaultApplicationJSONString
 }
