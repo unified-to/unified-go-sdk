@@ -183,7 +183,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.CreateAtsDocument(ctx, operations.CreateAtsDocumentRequest{
         AtsDocument: &shared.AtsDocument{
-            Raw: shared.PropertyAtsDocumentRaw{},
+            Raw: &shared.PropertyAtsDocumentRaw{},
         },
         ConnectionID: "string",
     })
@@ -1164,7 +1164,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.PatchAtsDocument(ctx, operations.PatchAtsDocumentRequest{
         AtsDocument: &shared.AtsDocument{
-            Raw: shared.PropertyAtsDocumentRaw{},
+            Raw: &shared.PropertyAtsDocumentRaw{},
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -1819,7 +1819,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsDocument(ctx, operations.UpdateAtsDocumentRequest{
         AtsDocument: &shared.AtsDocument{
-            Raw: shared.PropertyAtsDocumentRaw{},
+            Raw: &shared.PropertyAtsDocumentRaw{},
         },
         ConnectionID: "string",
         ID: "<ID>",

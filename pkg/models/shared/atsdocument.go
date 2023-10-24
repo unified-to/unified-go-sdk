@@ -49,17 +49,17 @@ func (e *AtsDocumentType) UnmarshalJSON(data []byte) error {
 }
 
 type AtsDocument struct {
-	ApplicationID *string                `json:"application_id,omitempty"`
-	CandidateID   *string                `json:"candidate_id,omitempty"`
-	CreatedAt     *time.Time             `json:"created_at,omitempty"`
-	DocumentURL   *string                `json:"document_url,omitempty"`
-	Filename      *string                `json:"filename,omitempty"`
-	ID            *string                `json:"id,omitempty"`
-	JobID         *string                `json:"job_id,omitempty"`
-	Raw           PropertyAtsDocumentRaw `json:"raw"`
-	Type          *AtsDocumentType       `json:"type,omitempty"`
-	UpdatedAt     *time.Time             `json:"updated_at,omitempty"`
-	UserID        *string                `json:"user_id,omitempty"`
+	ApplicationID *string                 `json:"application_id,omitempty"`
+	CandidateID   *string                 `json:"candidate_id,omitempty"`
+	CreatedAt     *time.Time              `json:"created_at,omitempty"`
+	DocumentURL   *string                 `json:"document_url,omitempty"`
+	Filename      *string                 `json:"filename,omitempty"`
+	ID            *string                 `json:"id,omitempty"`
+	JobID         *string                 `json:"job_id,omitempty"`
+	Raw           *PropertyAtsDocumentRaw `json:"raw,omitempty"`
+	Type          *AtsDocumentType        `json:"type,omitempty"`
+	UpdatedAt     *time.Time              `json:"updated_at,omitempty"`
+	UserID        *string                 `json:"user_id,omitempty"`
 }
 
 func (a AtsDocument) MarshalJSON() ([]byte, error) {
@@ -122,9 +122,9 @@ func (o *AtsDocument) GetJobID() *string {
 	return o.JobID
 }
 
-func (o *AtsDocument) GetRaw() PropertyAtsDocumentRaw {
+func (o *AtsDocument) GetRaw() *PropertyAtsDocumentRaw {
 	if o == nil {
-		return PropertyAtsDocumentRaw{}
+		return nil
 	}
 	return o.Raw
 }
