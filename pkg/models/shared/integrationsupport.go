@@ -46,6 +46,7 @@ type IntegrationSupport struct {
 	ListContactID       *bool                                     `json:"list_contact_id,omitempty"`
 	ListCustomerID      *bool                                     `json:"list_customer_id,omitempty"`
 	ListDealID          *bool                                     `json:"list_deal_id,omitempty"`
+	ListInvoiceID       *bool                                     `json:"list_invoice_id,omitempty"`
 	ListJobID           *bool                                     `json:"list_job_id,omitempty"`
 	ListLimit           *bool                                     `json:"list_limit,omitempty"`
 	ListOffset          *bool                                     `json:"list_offset,omitempty"`
@@ -120,6 +121,13 @@ func (o *IntegrationSupport) GetListDealID() *bool {
 		return nil
 	}
 	return o.ListDealID
+}
+
+func (o *IntegrationSupport) GetListInvoiceID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListInvoiceID
 }
 
 func (o *IntegrationSupport) GetListJobID() *bool {

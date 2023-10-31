@@ -37,7 +37,6 @@ func (e *CreateUnifiedWebhookEvents) UnmarshalJSON(data []byte) error {
 }
 
 type CreateUnifiedWebhookRequest struct {
-	// A webhook is used to POST new/updated information to your server.
 	Webhook *shared.Webhook `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

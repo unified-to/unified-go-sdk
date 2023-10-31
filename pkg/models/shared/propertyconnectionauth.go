@@ -24,12 +24,14 @@ type PropertyConnectionAuth struct {
 	Meta           *PropertyPropertyConnectionAuthMeta `json:"meta,omitempty"`
 	Name           *string                             `json:"name,omitempty"`
 	// When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
-	OtherAuthInfo []string `json:"other_auth_info,omitempty"`
-	Pem           *string  `json:"pem,omitempty"`
-	RefreshToken  *string  `json:"refresh_token,omitempty"`
-	State         *string  `json:"state,omitempty"`
-	Token         *string  `json:"token,omitempty"`
-	TokenURL      *string  `json:"token_url,omitempty"`
+	OtherAuthInfo           []string   `json:"other_auth_info,omitempty"`
+	Pem                     *string    `json:"pem,omitempty"`
+	RefreshToken            *string    `json:"refresh_token,omitempty"`
+	RefreshTokenExpiresDate *time.Time `json:"refresh_token_expires_date,omitempty"`
+	RefreshTokenExpiresIn   *float64   `json:"refresh_token_expires_in,omitempty"`
+	State                   *string    `json:"state,omitempty"`
+	Token                   *string    `json:"token,omitempty"`
+	TokenURL                *string    `json:"token_url,omitempty"`
 }
 
 func (p PropertyConnectionAuth) MarshalJSON() ([]byte, error) {
@@ -160,6 +162,20 @@ func (o *PropertyConnectionAuth) GetRefreshToken() *string {
 		return nil
 	}
 	return o.RefreshToken
+}
+
+func (o *PropertyConnectionAuth) GetRefreshTokenExpiresDate() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.RefreshTokenExpiresDate
+}
+
+func (o *PropertyConnectionAuth) GetRefreshTokenExpiresIn() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.RefreshTokenExpiresIn
 }
 
 func (o *PropertyConnectionAuth) GetState() *string {
