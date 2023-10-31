@@ -32,7 +32,7 @@ func main() {
     res, err := s.Auth.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
         Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesHrisGroupRead,
+            operations.GetUnifiedIntegrationAuthScopesHrisEmployeeWrite,
         },
         WorkspaceID: "string",
     })

@@ -14,3 +14,4 @@
 | `PropertyIntegrationCategoriesMartech`     | martech                                    |
 | `PropertyIntegrationCategoriesTicketing`   | ticketing                                  |
 | `PropertyIntegrationCategoriesUc`          | uc                                         |
+| `PropertyIntegrationCategoriesAccounting`  | accounting                                 |

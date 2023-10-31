@@ -12,31 +12,34 @@ import (
 type WebhookObjectType string
 
 const (
-	WebhookObjectTypeAtsApplication    WebhookObjectType = "ats_application"
-	WebhookObjectTypeAtsCandidate      WebhookObjectType = "ats_candidate"
-	WebhookObjectTypeAtsDocument       WebhookObjectType = "ats_document"
-	WebhookObjectTypeAtsInterview      WebhookObjectType = "ats_interview"
-	WebhookObjectTypeAtsJob            WebhookObjectType = "ats_job"
-	WebhookObjectTypeAtsScorecard      WebhookObjectType = "ats_scorecard"
-	WebhookObjectTypeCrmCompany        WebhookObjectType = "crm_company"
-	WebhookObjectTypeCrmContact        WebhookObjectType = "crm_contact"
-	WebhookObjectTypeCrmDeal           WebhookObjectType = "crm_deal"
-	WebhookObjectTypeCrmEvent          WebhookObjectType = "crm_event"
-	WebhookObjectTypeCrmFile           WebhookObjectType = "crm_file"
-	WebhookObjectTypeCrmLead           WebhookObjectType = "crm_lead"
-	WebhookObjectTypeCrmPipeline       WebhookObjectType = "crm_pipeline"
-	WebhookObjectTypeHrisEmployee      WebhookObjectType = "hris_employee"
-	WebhookObjectTypeHrisGroup         WebhookObjectType = "hris_group"
-	WebhookObjectTypeMartechList       WebhookObjectType = "martech_list"
-	WebhookObjectTypeMartechMember     WebhookObjectType = "martech_member"
-	WebhookObjectTypePassthrough       WebhookObjectType = "passthrough"
-	WebhookObjectTypeTicketingNote     WebhookObjectType = "ticketing_note"
-	WebhookObjectTypeTicketingTicket   WebhookObjectType = "ticketing_ticket"
-	WebhookObjectTypeTicketingCustomer WebhookObjectType = "ticketing_customer"
-	WebhookObjectTypeUcContact         WebhookObjectType = "uc_contact"
-	WebhookObjectTypeUcCall            WebhookObjectType = "uc_call"
-	WebhookObjectTypeEnrichPerson      WebhookObjectType = "enrich_person"
-	WebhookObjectTypeEnrichCompany     WebhookObjectType = "enrich_company"
+	WebhookObjectTypeAccountingCustomer WebhookObjectType = "accounting_customer"
+	WebhookObjectTypeAccountingInvoice  WebhookObjectType = "accounting_invoice"
+	WebhookObjectTypeAccountingPayment  WebhookObjectType = "accounting_payment"
+	WebhookObjectTypeAtsApplication     WebhookObjectType = "ats_application"
+	WebhookObjectTypeAtsCandidate       WebhookObjectType = "ats_candidate"
+	WebhookObjectTypeAtsDocument        WebhookObjectType = "ats_document"
+	WebhookObjectTypeAtsInterview       WebhookObjectType = "ats_interview"
+	WebhookObjectTypeAtsJob             WebhookObjectType = "ats_job"
+	WebhookObjectTypeAtsScorecard       WebhookObjectType = "ats_scorecard"
+	WebhookObjectTypeCrmCompany         WebhookObjectType = "crm_company"
+	WebhookObjectTypeCrmContact         WebhookObjectType = "crm_contact"
+	WebhookObjectTypeCrmDeal            WebhookObjectType = "crm_deal"
+	WebhookObjectTypeCrmEvent           WebhookObjectType = "crm_event"
+	WebhookObjectTypeCrmFile            WebhookObjectType = "crm_file"
+	WebhookObjectTypeCrmLead            WebhookObjectType = "crm_lead"
+	WebhookObjectTypeCrmPipeline        WebhookObjectType = "crm_pipeline"
+	WebhookObjectTypeHrisEmployee       WebhookObjectType = "hris_employee"
+	WebhookObjectTypeHrisGroup          WebhookObjectType = "hris_group"
+	WebhookObjectTypeMartechList        WebhookObjectType = "martech_list"
+	WebhookObjectTypeMartechMember      WebhookObjectType = "martech_member"
+	WebhookObjectTypePassthrough        WebhookObjectType = "passthrough"
+	WebhookObjectTypeTicketingNote      WebhookObjectType = "ticketing_note"
+	WebhookObjectTypeTicketingTicket    WebhookObjectType = "ticketing_ticket"
+	WebhookObjectTypeTicketingCustomer  WebhookObjectType = "ticketing_customer"
+	WebhookObjectTypeUcContact          WebhookObjectType = "uc_contact"
+	WebhookObjectTypeUcCall             WebhookObjectType = "uc_call"
+	WebhookObjectTypeEnrichPerson       WebhookObjectType = "enrich_person"
+	WebhookObjectTypeEnrichCompany      WebhookObjectType = "enrich_company"
 )
 
 func (e WebhookObjectType) ToPointer() *WebhookObjectType {
@@ -49,6 +52,12 @@ func (e *WebhookObjectType) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
+	case "accounting_customer":
+		fallthrough
+	case "accounting_invoice":
+		fallthrough
+	case "accounting_payment":
+		fallthrough
 	case "ats_application":
 		fallthrough
 	case "ats_candidate":

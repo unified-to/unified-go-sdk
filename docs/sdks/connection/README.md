@@ -43,11 +43,11 @@ func main() {
             },
         },
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesUc,
+            shared.PropertyConnectionCategoriesAccounting,
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsCrmDealWrite,
+            shared.PropertyConnectionPermissionsCrmCompanyWrite,
         },
     })
     if err != nil {
@@ -147,7 +147,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Connection.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{
         Categories: []operations.ListUnifiedConnectionsCategories{
-            operations.ListUnifiedConnectionsCategoriesCrm,
+            operations.ListUnifiedConnectionsCategoriesEnrich,
         },
     })
     if err != nil {
@@ -208,11 +208,11 @@ func main() {
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesEnrich,
+                shared.PropertyConnectionCategoriesMartech,
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsMartechMemberWrite,
+                shared.PropertyConnectionPermissionsMartechListWrite,
             },
         },
         ID: "<ID>",
@@ -328,7 +328,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmLeadRead,
+                shared.PropertyConnectionPermissionsCrmDealWrite,
             },
         },
         ID: "<ID>",

@@ -23,6 +23,7 @@ const (
 	ListUnifiedConnectionsCategoriesMartech     ListUnifiedConnectionsCategories = "martech"
 	ListUnifiedConnectionsCategoriesTicketing   ListUnifiedConnectionsCategories = "ticketing"
 	ListUnifiedConnectionsCategoriesUc          ListUnifiedConnectionsCategories = "uc"
+	ListUnifiedConnectionsCategoriesAccounting  ListUnifiedConnectionsCategories = "accounting"
 )
 
 func (e ListUnifiedConnectionsCategories) ToPointer() *ListUnifiedConnectionsCategories {
@@ -52,6 +53,8 @@ func (e *ListUnifiedConnectionsCategories) UnmarshalJSON(data []byte) error {
 	case "ticketing":
 		fallthrough
 	case "uc":
+		fallthrough
+	case "accounting":
 		*e = ListUnifiedConnectionsCategories(v)
 		return nil
 	default:

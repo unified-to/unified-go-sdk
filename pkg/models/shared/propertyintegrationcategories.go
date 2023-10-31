@@ -19,6 +19,7 @@ const (
 	PropertyIntegrationCategoriesMartech     PropertyIntegrationCategories = "martech"
 	PropertyIntegrationCategoriesTicketing   PropertyIntegrationCategories = "ticketing"
 	PropertyIntegrationCategoriesUc          PropertyIntegrationCategories = "uc"
+	PropertyIntegrationCategoriesAccounting  PropertyIntegrationCategories = "accounting"
 )
 
 func (e PropertyIntegrationCategories) ToPointer() *PropertyIntegrationCategories {
@@ -48,6 +49,8 @@ func (e *PropertyIntegrationCategories) UnmarshalJSON(data []byte) error {
 	case "ticketing":
 		fallthrough
 	case "uc":
+		fallthrough
+	case "accounting":
 		*e = PropertyIntegrationCategories(v)
 		return nil
 	default:

@@ -33,14 +33,29 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
-		ID: "<ID>",
+	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
+		AccountingCustomer: &shared.AccountingCustomer{
+			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
+			Emails: []shared.AccountingEmail{
+				shared.AccountingEmail{
+					Email: "Kevon_Schultz42@gmail.com",
+				},
+			},
+			Raw:             &shared.PropertyAccountingCustomerRaw{},
+			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
+			Telephones: []shared.AccountingTelephone{
+				shared.AccountingTelephone{
+					Telephone: "string",
+				},
+			},
+		},
+		ConnectionID: "string",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.APICall != nil {
+	if res.AccountingCustomer != nil {
 		// handle response
 	}
 }
@@ -51,6 +66,27 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
+
+### [Accounting](docs/sdks/accounting/README.md)
+
+* [CreateAccountingCustomer](docs/sdks/accounting/README.md#createaccountingcustomer) - Create a customer
+* [CreateAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create a invoice
+* [CreateAccountingPayment](docs/sdks/accounting/README.md#createaccountingpayment) - Create a payment
+* [GetAccountingCustomer](docs/sdks/accounting/README.md#getaccountingcustomer) - Retrieve a customer
+* [GetAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve a invoice
+* [GetAccountingPayment](docs/sdks/accounting/README.md#getaccountingpayment) - Retrieve a payment
+* [ListAccountingCustomers](docs/sdks/accounting/README.md#listaccountingcustomers) - List all customers
+* [ListAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
+* [ListAccountingPayments](docs/sdks/accounting/README.md#listaccountingpayments) - List all payments
+* [PatchAccountingCustomer](docs/sdks/accounting/README.md#patchaccountingcustomer) - Update a customer
+* [PatchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update a invoice
+* [PatchAccountingPayment](docs/sdks/accounting/README.md#patchaccountingpayment) - Update a payment
+* [RemoveAccountingCustomer](docs/sdks/accounting/README.md#removeaccountingcustomer) - Remove a customer
+* [RemoveAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove a invoice
+* [RemoveAccountingPayment](docs/sdks/accounting/README.md#removeaccountingpayment) - Remove a payment
+* [UpdateAccountingCustomer](docs/sdks/accounting/README.md#updateaccountingcustomer) - Update a customer
+* [UpdateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update a invoice
+* [UpdateAccountingPayment](docs/sdks/accounting/README.md#updateaccountingpayment) - Update a payment
 
 ### [Apicall](docs/sdks/apicall/README.md)
 
@@ -204,11 +240,17 @@ func main() {
 
 ### [Customer](docs/sdks/customer/README.md)
 
+* [CreateAccountingCustomer](docs/sdks/customer/README.md#createaccountingcustomer) - Create a customer
 * [CreateTicketingCustomer](docs/sdks/customer/README.md#createticketingcustomer) - Create a customer
+* [GetAccountingCustomer](docs/sdks/customer/README.md#getaccountingcustomer) - Retrieve a customer
 * [GetTicketingCustomer](docs/sdks/customer/README.md#getticketingcustomer) - Retrieve a customer
+* [ListAccountingCustomers](docs/sdks/customer/README.md#listaccountingcustomers) - List all customers
 * [ListTicketingCustomers](docs/sdks/customer/README.md#listticketingcustomers) - List all customers
+* [PatchAccountingCustomer](docs/sdks/customer/README.md#patchaccountingcustomer) - Update a customer
 * [PatchTicketingCustomer](docs/sdks/customer/README.md#patchticketingcustomer) - Update a customer
+* [RemoveAccountingCustomer](docs/sdks/customer/README.md#removeaccountingcustomer) - Remove a customer
 * [RemoveTicketingCustomer](docs/sdks/customer/README.md#removeticketingcustomer) - Remove a customer
+* [UpdateAccountingCustomer](docs/sdks/customer/README.md#updateaccountingcustomer) - Update a customer
 * [UpdateTicketingCustomer](docs/sdks/customer/README.md#updateticketingcustomer) - Update a customer
 
 ### [Deal](docs/sdks/deal/README.md)
@@ -301,6 +343,15 @@ func main() {
 * [RemoveAtsInterview](docs/sdks/interview/README.md#removeatsinterview) - Remove a interview
 * [UpdateAtsInterview](docs/sdks/interview/README.md#updateatsinterview) - Update a interview
 
+### [Invoice](docs/sdks/invoice/README.md)
+
+* [CreateAccountingInvoice](docs/sdks/invoice/README.md#createaccountinginvoice) - Create a invoice
+* [GetAccountingInvoice](docs/sdks/invoice/README.md#getaccountinginvoice) - Retrieve a invoice
+* [ListAccountingInvoices](docs/sdks/invoice/README.md#listaccountinginvoices) - List all invoices
+* [PatchAccountingInvoice](docs/sdks/invoice/README.md#patchaccountinginvoice) - Update a invoice
+* [RemoveAccountingInvoice](docs/sdks/invoice/README.md#removeaccountinginvoice) - Remove a invoice
+* [UpdateAccountingInvoice](docs/sdks/invoice/README.md#updateaccountinginvoice) - Update a invoice
+
 ### [Job](docs/sdks/job/README.md)
 
 * [CreateAtsJob](docs/sdks/job/README.md#createatsjob) - Create a job
@@ -372,6 +423,15 @@ func main() {
 * [PatchPassthrough](docs/sdks/passthrough/README.md#patchpassthrough) - Passthrough PUT
 * [RemovePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
 * [UpdatePassthrough](docs/sdks/passthrough/README.md#updatepassthrough) - Passthrough PUT
+
+### [Payment](docs/sdks/payment/README.md)
+
+* [CreateAccountingPayment](docs/sdks/payment/README.md#createaccountingpayment) - Create a payment
+* [GetAccountingPayment](docs/sdks/payment/README.md#getaccountingpayment) - Retrieve a payment
+* [ListAccountingPayments](docs/sdks/payment/README.md#listaccountingpayments) - List all payments
+* [PatchAccountingPayment](docs/sdks/payment/README.md#patchaccountingpayment) - Update a payment
+* [RemoveAccountingPayment](docs/sdks/payment/README.md#removeaccountingpayment) - Remove a payment
+* [UpdateAccountingPayment](docs/sdks/payment/README.md#updateaccountingpayment) - Update a payment
 
 ### [Person](docs/sdks/person/README.md)
 
@@ -492,8 +552,6 @@ Here's an example of one such pagination call:
 # Error Handling
 
 Handling errors in your SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
-
-
 <!-- End Error Handling -->
 
 
@@ -531,14 +589,29 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
-		ID: "<ID>",
+	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
+		AccountingCustomer: &shared.AccountingCustomer{
+			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
+			Emails: []shared.AccountingEmail{
+				shared.AccountingEmail{
+					Email: "Kevon_Schultz42@gmail.com",
+				},
+			},
+			Raw:             &shared.PropertyAccountingCustomerRaw{},
+			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
+			Telephones: []shared.AccountingTelephone{
+				shared.AccountingTelephone{
+					Telephone: "string",
+				},
+			},
+		},
+		ConnectionID: "string",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.APICall != nil {
+	if res.AccountingCustomer != nil {
 		// handle response
 	}
 }
@@ -569,14 +642,29 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
-		ID: "<ID>",
+	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
+		AccountingCustomer: &shared.AccountingCustomer{
+			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
+			Emails: []shared.AccountingEmail{
+				shared.AccountingEmail{
+					Email: "Kevon_Schultz42@gmail.com",
+				},
+			},
+			Raw:             &shared.PropertyAccountingCustomerRaw{},
+			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
+			Telephones: []shared.AccountingTelephone{
+				shared.AccountingTelephone{
+					Telephone: "string",
+				},
+			},
+		},
+		ConnectionID: "string",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.APICall != nil {
+	if res.AccountingCustomer != nil {
 		// handle response
 	}
 }

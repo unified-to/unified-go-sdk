@@ -1,8 +1,8 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 9825b84d00ee308c6c17b312a18bc174
+  docChecksum: 7b1cb43287adc82723644e87b73cba93
   docVersion: "1.0"
-  speakeasyVersion: 1.109.0
+  speakeasyVersion: 1.109.1
   generationVersion: 2.173.0
 generation:
   comments:
@@ -20,7 +20,7 @@ features:
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.0
 go:
-  version: 0.6.4
+  version: 0.6.5
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   installationURL: https://github.com/unified-to/unified-go-sdk

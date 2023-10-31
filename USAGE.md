@@ -18,14 +18,29 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
-		ID: "<ID>",
+	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
+		AccountingCustomer: &shared.AccountingCustomer{
+			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
+			Emails: []shared.AccountingEmail{
+				shared.AccountingEmail{
+					Email: "Kevon_Schultz42@gmail.com",
+				},
+			},
+			Raw:             &shared.PropertyAccountingCustomerRaw{},
+			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
+			Telephones: []shared.AccountingTelephone{
+				shared.AccountingTelephone{
+					Telephone: "string",
+				},
+			},
+		},
+		ConnectionID: "string",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if res.APICall != nil {
+	if res.AccountingCustomer != nil {
 		// handle response
 	}
 }

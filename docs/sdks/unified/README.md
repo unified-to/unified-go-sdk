@@ -53,11 +53,11 @@ func main() {
             },
         },
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesUc,
+            shared.PropertyConnectionCategoriesAccounting,
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsCrmDealWrite,
+            shared.PropertyConnectionPermissionsCrmCompanyWrite,
         },
     })
     if err != nil {
@@ -115,7 +115,7 @@ func main() {
             HookURL: "string",
             IntegrationType: "string",
             Interval: 188.12,
-            ObjectType: shared.WebhookObjectTypeCrmLead,
+            ObjectType: shared.WebhookObjectTypeCrmEvent,
             Subscriptions: []string{
                 "string",
             },
@@ -323,7 +323,7 @@ func main() {
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
         Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesHrisGroupRead,
+            operations.GetUnifiedIntegrationAuthScopesHrisEmployeeWrite,
         },
         WorkspaceID: "string",
     })
@@ -471,7 +471,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{
         Categories: []operations.ListUnifiedConnectionsCategories{
-            operations.ListUnifiedConnectionsCategoriesCrm,
+            operations.ListUnifiedConnectionsCategoriesEnrich,
         },
     })
     if err != nil {
@@ -522,7 +522,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
         Categories: []operations.ListUnifiedIntegrationWorkspacesCategories{
-            operations.ListUnifiedIntegrationWorkspacesCategoriesMartech,
+            operations.ListUnifiedIntegrationWorkspacesCategoriesTicketing,
         },
         WorkspaceID: "string",
     })
@@ -682,11 +682,11 @@ func main() {
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesEnrich,
+                shared.PropertyConnectionCategoriesMartech,
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsMartechMemberWrite,
+                shared.PropertyConnectionPermissionsMartechListWrite,
             },
         },
         ID: "<ID>",
@@ -851,7 +851,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmLeadRead,
+                shared.PropertyConnectionPermissionsCrmDealWrite,
             },
         },
         ID: "<ID>",

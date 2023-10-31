@@ -21,6 +21,7 @@ const (
 	ListUnifiedIntegrationWorkspacesCategoriesMartech     ListUnifiedIntegrationWorkspacesCategories = "martech"
 	ListUnifiedIntegrationWorkspacesCategoriesTicketing   ListUnifiedIntegrationWorkspacesCategories = "ticketing"
 	ListUnifiedIntegrationWorkspacesCategoriesUc          ListUnifiedIntegrationWorkspacesCategories = "uc"
+	ListUnifiedIntegrationWorkspacesCategoriesAccounting  ListUnifiedIntegrationWorkspacesCategories = "accounting"
 )
 
 func (e ListUnifiedIntegrationWorkspacesCategories) ToPointer() *ListUnifiedIntegrationWorkspacesCategories {
@@ -50,6 +51,8 @@ func (e *ListUnifiedIntegrationWorkspacesCategories) UnmarshalJSON(data []byte) 
 	case "ticketing":
 		fallthrough
 	case "uc":
+		fallthrough
+	case "accounting":
 		*e = ListUnifiedIntegrationWorkspacesCategories(v)
 		return nil
 	default:

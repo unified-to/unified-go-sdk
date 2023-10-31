@@ -14,3 +14,4 @@
 | `ListUnifiedConnectionsCategoriesMartech`     | martech                                       |
 | `ListUnifiedConnectionsCategoriesTicketing`   | ticketing                                     |
 | `ListUnifiedConnectionsCategoriesUc`          | uc                                            |
+| `ListUnifiedConnectionsCategoriesAccounting`  | accounting                                    |

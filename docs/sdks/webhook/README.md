@@ -40,7 +40,7 @@ func main() {
             HookURL: "string",
             IntegrationType: "string",
             Interval: 188.12,
-            ObjectType: shared.WebhookObjectTypeCrmLead,
+            ObjectType: shared.WebhookObjectTypeCrmEvent,
             Subscriptions: []string{
                 "string",
             },

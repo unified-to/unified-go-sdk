@@ -11,49 +11,55 @@ import (
 type GetUnifiedIntegrationAuthScopes string
 
 const (
-	GetUnifiedIntegrationAuthScopesAuthLogin              GetUnifiedIntegrationAuthScopes = "auth_login"
-	GetUnifiedIntegrationAuthScopesAtsScorecardRead       GetUnifiedIntegrationAuthScopes = "ats_scorecard_read"
-	GetUnifiedIntegrationAuthScopesAtsScorecardWrite      GetUnifiedIntegrationAuthScopes = "ats_scorecard_write"
-	GetUnifiedIntegrationAuthScopesAtsApplicationRead     GetUnifiedIntegrationAuthScopes = "ats_application_read"
-	GetUnifiedIntegrationAuthScopesAtsApplicationWrite    GetUnifiedIntegrationAuthScopes = "ats_application_write"
-	GetUnifiedIntegrationAuthScopesAtsCandidateRead       GetUnifiedIntegrationAuthScopes = "ats_candidate_read"
-	GetUnifiedIntegrationAuthScopesAtsCandidateWrite      GetUnifiedIntegrationAuthScopes = "ats_candidate_write"
-	GetUnifiedIntegrationAuthScopesAtsInterviewRead       GetUnifiedIntegrationAuthScopes = "ats_interview_read"
-	GetUnifiedIntegrationAuthScopesAtsInterviewWrite      GetUnifiedIntegrationAuthScopes = "ats_interview_write"
-	GetUnifiedIntegrationAuthScopesAtsJobRead             GetUnifiedIntegrationAuthScopes = "ats_job_read"
-	GetUnifiedIntegrationAuthScopesAtsJobWrite            GetUnifiedIntegrationAuthScopes = "ats_job_write"
-	GetUnifiedIntegrationAuthScopesAtsDocumentRead        GetUnifiedIntegrationAuthScopes = "ats_document_read"
-	GetUnifiedIntegrationAuthScopesAtsDocumentWrite       GetUnifiedIntegrationAuthScopes = "ats_document_write"
-	GetUnifiedIntegrationAuthScopesCrmCompanyRead         GetUnifiedIntegrationAuthScopes = "crm_company_read"
-	GetUnifiedIntegrationAuthScopesCrmCompanyWrite        GetUnifiedIntegrationAuthScopes = "crm_company_write"
-	GetUnifiedIntegrationAuthScopesCrmContactRead         GetUnifiedIntegrationAuthScopes = "crm_contact_read"
-	GetUnifiedIntegrationAuthScopesCrmContactWrite        GetUnifiedIntegrationAuthScopes = "crm_contact_write"
-	GetUnifiedIntegrationAuthScopesCrmDealRead            GetUnifiedIntegrationAuthScopes = "crm_deal_read"
-	GetUnifiedIntegrationAuthScopesCrmDealWrite           GetUnifiedIntegrationAuthScopes = "crm_deal_write"
-	GetUnifiedIntegrationAuthScopesCrmEventRead           GetUnifiedIntegrationAuthScopes = "crm_event_read"
-	GetUnifiedIntegrationAuthScopesCrmEventWrite          GetUnifiedIntegrationAuthScopes = "crm_event_write"
-	GetUnifiedIntegrationAuthScopesCrmLeadRead            GetUnifiedIntegrationAuthScopes = "crm_lead_read"
-	GetUnifiedIntegrationAuthScopesCrmLeadWrite           GetUnifiedIntegrationAuthScopes = "crm_lead_write"
-	GetUnifiedIntegrationAuthScopesCrmFileRead            GetUnifiedIntegrationAuthScopes = "crm_file_read"
-	GetUnifiedIntegrationAuthScopesCrmFileWrite           GetUnifiedIntegrationAuthScopes = "crm_file_write"
-	GetUnifiedIntegrationAuthScopesCrmPipelineRead        GetUnifiedIntegrationAuthScopes = "crm_pipeline_read"
-	GetUnifiedIntegrationAuthScopesCrmPipelineWrite       GetUnifiedIntegrationAuthScopes = "crm_pipeline_write"
-	GetUnifiedIntegrationAuthScopesMartechListRead        GetUnifiedIntegrationAuthScopes = "martech_list_read"
-	GetUnifiedIntegrationAuthScopesMartechListWrite       GetUnifiedIntegrationAuthScopes = "martech_list_write"
-	GetUnifiedIntegrationAuthScopesMartechMemberRead      GetUnifiedIntegrationAuthScopes = "martech_member_read"
-	GetUnifiedIntegrationAuthScopesMartechMemberWrite     GetUnifiedIntegrationAuthScopes = "martech_member_write"
-	GetUnifiedIntegrationAuthScopesTicketingCustomerRead  GetUnifiedIntegrationAuthScopes = "ticketing_customer_read"
-	GetUnifiedIntegrationAuthScopesTicketingCustomerWrite GetUnifiedIntegrationAuthScopes = "ticketing_customer_write"
-	GetUnifiedIntegrationAuthScopesTicketingTicketRead    GetUnifiedIntegrationAuthScopes = "ticketing_ticket_read"
-	GetUnifiedIntegrationAuthScopesTicketingTicketWrite   GetUnifiedIntegrationAuthScopes = "ticketing_ticket_write"
-	GetUnifiedIntegrationAuthScopesTicketingNoteRead      GetUnifiedIntegrationAuthScopes = "ticketing_note_read"
-	GetUnifiedIntegrationAuthScopesTicketingNoteWrite     GetUnifiedIntegrationAuthScopes = "ticketing_note_write"
-	GetUnifiedIntegrationAuthScopesHrisEmployeeRead       GetUnifiedIntegrationAuthScopes = "hris_employee_read"
-	GetUnifiedIntegrationAuthScopesHrisEmployeeWrite      GetUnifiedIntegrationAuthScopes = "hris_employee_write"
-	GetUnifiedIntegrationAuthScopesHrisGroupRead          GetUnifiedIntegrationAuthScopes = "hris_group_read"
-	GetUnifiedIntegrationAuthScopesHrisGroupWrite         GetUnifiedIntegrationAuthScopes = "hris_group_write"
-	GetUnifiedIntegrationAuthScopesUcCallRead             GetUnifiedIntegrationAuthScopes = "uc_call_read"
-	GetUnifiedIntegrationAuthScopesWebhook                GetUnifiedIntegrationAuthScopes = "webhook"
+	GetUnifiedIntegrationAuthScopesAuthLogin               GetUnifiedIntegrationAuthScopes = "auth_login"
+	GetUnifiedIntegrationAuthScopesAccountingInvoiceRead   GetUnifiedIntegrationAuthScopes = "accounting_invoice_read"
+	GetUnifiedIntegrationAuthScopesAccountingInvoiceWrite  GetUnifiedIntegrationAuthScopes = "accounting_invoice_write"
+	GetUnifiedIntegrationAuthScopesAccountingCustomerRead  GetUnifiedIntegrationAuthScopes = "accounting_customer_read"
+	GetUnifiedIntegrationAuthScopesAccountingCustomerWrite GetUnifiedIntegrationAuthScopes = "accounting_customer_write"
+	GetUnifiedIntegrationAuthScopesAccountingPaymentRead   GetUnifiedIntegrationAuthScopes = "accounting_payment_read"
+	GetUnifiedIntegrationAuthScopesAccountingPaymentWrite  GetUnifiedIntegrationAuthScopes = "accounting_payment_write"
+	GetUnifiedIntegrationAuthScopesAtsScorecardRead        GetUnifiedIntegrationAuthScopes = "ats_scorecard_read"
+	GetUnifiedIntegrationAuthScopesAtsScorecardWrite       GetUnifiedIntegrationAuthScopes = "ats_scorecard_write"
+	GetUnifiedIntegrationAuthScopesAtsApplicationRead      GetUnifiedIntegrationAuthScopes = "ats_application_read"
+	GetUnifiedIntegrationAuthScopesAtsApplicationWrite     GetUnifiedIntegrationAuthScopes = "ats_application_write"
+	GetUnifiedIntegrationAuthScopesAtsCandidateRead        GetUnifiedIntegrationAuthScopes = "ats_candidate_read"
+	GetUnifiedIntegrationAuthScopesAtsCandidateWrite       GetUnifiedIntegrationAuthScopes = "ats_candidate_write"
+	GetUnifiedIntegrationAuthScopesAtsInterviewRead        GetUnifiedIntegrationAuthScopes = "ats_interview_read"
+	GetUnifiedIntegrationAuthScopesAtsInterviewWrite       GetUnifiedIntegrationAuthScopes = "ats_interview_write"
+	GetUnifiedIntegrationAuthScopesAtsJobRead              GetUnifiedIntegrationAuthScopes = "ats_job_read"
+	GetUnifiedIntegrationAuthScopesAtsJobWrite             GetUnifiedIntegrationAuthScopes = "ats_job_write"
+	GetUnifiedIntegrationAuthScopesAtsDocumentRead         GetUnifiedIntegrationAuthScopes = "ats_document_read"
+	GetUnifiedIntegrationAuthScopesAtsDocumentWrite        GetUnifiedIntegrationAuthScopes = "ats_document_write"
+	GetUnifiedIntegrationAuthScopesCrmCompanyRead          GetUnifiedIntegrationAuthScopes = "crm_company_read"
+	GetUnifiedIntegrationAuthScopesCrmCompanyWrite         GetUnifiedIntegrationAuthScopes = "crm_company_write"
+	GetUnifiedIntegrationAuthScopesCrmContactRead          GetUnifiedIntegrationAuthScopes = "crm_contact_read"
+	GetUnifiedIntegrationAuthScopesCrmContactWrite         GetUnifiedIntegrationAuthScopes = "crm_contact_write"
+	GetUnifiedIntegrationAuthScopesCrmDealRead             GetUnifiedIntegrationAuthScopes = "crm_deal_read"
+	GetUnifiedIntegrationAuthScopesCrmDealWrite            GetUnifiedIntegrationAuthScopes = "crm_deal_write"
+	GetUnifiedIntegrationAuthScopesCrmEventRead            GetUnifiedIntegrationAuthScopes = "crm_event_read"
+	GetUnifiedIntegrationAuthScopesCrmEventWrite           GetUnifiedIntegrationAuthScopes = "crm_event_write"
+	GetUnifiedIntegrationAuthScopesCrmLeadRead             GetUnifiedIntegrationAuthScopes = "crm_lead_read"
+	GetUnifiedIntegrationAuthScopesCrmLeadWrite            GetUnifiedIntegrationAuthScopes = "crm_lead_write"
+	GetUnifiedIntegrationAuthScopesCrmFileRead             GetUnifiedIntegrationAuthScopes = "crm_file_read"
+	GetUnifiedIntegrationAuthScopesCrmFileWrite            GetUnifiedIntegrationAuthScopes = "crm_file_write"
+	GetUnifiedIntegrationAuthScopesCrmPipelineRead         GetUnifiedIntegrationAuthScopes = "crm_pipeline_read"
+	GetUnifiedIntegrationAuthScopesCrmPipelineWrite        GetUnifiedIntegrationAuthScopes = "crm_pipeline_write"
+	GetUnifiedIntegrationAuthScopesMartechListRead         GetUnifiedIntegrationAuthScopes = "martech_list_read"
+	GetUnifiedIntegrationAuthScopesMartechListWrite        GetUnifiedIntegrationAuthScopes = "martech_list_write"
+	GetUnifiedIntegrationAuthScopesMartechMemberRead       GetUnifiedIntegrationAuthScopes = "martech_member_read"
+	GetUnifiedIntegrationAuthScopesMartechMemberWrite      GetUnifiedIntegrationAuthScopes = "martech_member_write"
+	GetUnifiedIntegrationAuthScopesTicketingCustomerRead   GetUnifiedIntegrationAuthScopes = "ticketing_customer_read"
+	GetUnifiedIntegrationAuthScopesTicketingCustomerWrite  GetUnifiedIntegrationAuthScopes = "ticketing_customer_write"
+	GetUnifiedIntegrationAuthScopesTicketingTicketRead     GetUnifiedIntegrationAuthScopes = "ticketing_ticket_read"
+	GetUnifiedIntegrationAuthScopesTicketingTicketWrite    GetUnifiedIntegrationAuthScopes = "ticketing_ticket_write"
+	GetUnifiedIntegrationAuthScopesTicketingNoteRead       GetUnifiedIntegrationAuthScopes = "ticketing_note_read"
+	GetUnifiedIntegrationAuthScopesTicketingNoteWrite      GetUnifiedIntegrationAuthScopes = "ticketing_note_write"
+	GetUnifiedIntegrationAuthScopesHrisEmployeeRead        GetUnifiedIntegrationAuthScopes = "hris_employee_read"
+	GetUnifiedIntegrationAuthScopesHrisEmployeeWrite       GetUnifiedIntegrationAuthScopes = "hris_employee_write"
+	GetUnifiedIntegrationAuthScopesHrisGroupRead           GetUnifiedIntegrationAuthScopes = "hris_group_read"
+	GetUnifiedIntegrationAuthScopesHrisGroupWrite          GetUnifiedIntegrationAuthScopes = "hris_group_write"
+	GetUnifiedIntegrationAuthScopesUcCallRead              GetUnifiedIntegrationAuthScopes = "uc_call_read"
+	GetUnifiedIntegrationAuthScopesWebhook                 GetUnifiedIntegrationAuthScopes = "webhook"
 )
 
 func (e GetUnifiedIntegrationAuthScopes) ToPointer() *GetUnifiedIntegrationAuthScopes {
@@ -67,6 +73,18 @@ func (e *GetUnifiedIntegrationAuthScopes) UnmarshalJSON(data []byte) error {
 	}
 	switch v {
 	case "auth_login":
+		fallthrough
+	case "accounting_invoice_read":
+		fallthrough
+	case "accounting_invoice_write":
+		fallthrough
+	case "accounting_customer_read":
+		fallthrough
+	case "accounting_customer_write":
+		fallthrough
+	case "accounting_payment_read":
+		fallthrough
+	case "accounting_payment_write":
 		fallthrough
 	case "ats_scorecard_read":
 		fallthrough

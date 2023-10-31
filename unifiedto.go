@@ -66,6 +66,7 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 
 // UnifiedTo - Unified.to API: One API to Rule Them All
 type UnifiedTo struct {
+	Accounting  *accounting
 	Apicall     *apicall
 	Application *application
 	Ats         *ats
@@ -87,6 +88,7 @@ type UnifiedTo struct {
 	Hris        *hris
 	Integration *integration
 	Interview   *interview
+	Invoice     *invoice
 	Job         *job
 	Lead        *lead
 	List        *list
@@ -95,6 +97,7 @@ type UnifiedTo struct {
 	Member      *member
 	Note        *note
 	Passthrough *passthrough
+	Payment     *payment
 	Person      *person
 	Pipeline    *pipeline
 	Scorecard   *scorecard
@@ -172,9 +175,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.6.4",
+			SDKVersion:        "0.6.5",
 			GenVersion:        "2.173.0",
-			UserAgent:         "speakeasy-sdk/go 0.6.4 2.173.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:         "speakeasy-sdk/go 0.6.5 2.173.0 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -192,6 +195,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 			sdk.sdkConfiguration.SecurityClient = sdk.sdkConfiguration.DefaultClient
 		}
 	}
+
+	sdk.Accounting = newAccounting(sdk.sdkConfiguration)
 
 	sdk.Apicall = newApicall(sdk.sdkConfiguration)
 
@@ -235,6 +240,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Interview = newInterview(sdk.sdkConfiguration)
 
+	sdk.Invoice = newInvoice(sdk.sdkConfiguration)
+
 	sdk.Job = newJob(sdk.sdkConfiguration)
 
 	sdk.Lead = newLead(sdk.sdkConfiguration)
@@ -250,6 +257,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Note = newNote(sdk.sdkConfiguration)
 
 	sdk.Passthrough = newPassthrough(sdk.sdkConfiguration)
+
+	sdk.Payment = newPayment(sdk.sdkConfiguration)
 
 	sdk.Person = newPerson(sdk.sdkConfiguration)
 
