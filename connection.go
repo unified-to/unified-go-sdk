@@ -15,18 +15,18 @@ import (
 	"strings"
 )
 
-type connection struct {
+type Connection struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newConnection(sdkConfig sdkConfiguration) *connection {
-	return &connection{
+func newConnection(sdkConfig sdkConfiguration) *Connection {
+	return &Connection{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateUnifiedConnection - Create connection
-func (s *connection) CreateUnifiedConnection(ctx context.Context, request *shared.Connection) (*operations.CreateUnifiedConnectionResponse, error) {
+func (s *Connection) CreateUnifiedConnection(ctx context.Context, request *shared.Connection) (*operations.CreateUnifiedConnectionResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/unified/connection"
 
@@ -91,7 +91,7 @@ func (s *connection) CreateUnifiedConnection(ctx context.Context, request *share
 }
 
 // GetUnifiedConnection - Retrieve connection
-func (s *connection) GetUnifiedConnection(ctx context.Context, request operations.GetUnifiedConnectionRequest) (*operations.GetUnifiedConnectionResponse, error) {
+func (s *Connection) GetUnifiedConnection(ctx context.Context, request operations.GetUnifiedConnectionRequest) (*operations.GetUnifiedConnectionResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {
@@ -152,7 +152,7 @@ func (s *connection) GetUnifiedConnection(ctx context.Context, request operation
 }
 
 // ListUnifiedConnections - List all connections
-func (s *connection) ListUnifiedConnections(ctx context.Context, request operations.ListUnifiedConnectionsRequest) (*operations.ListUnifiedConnectionsResponse, error) {
+func (s *Connection) ListUnifiedConnections(ctx context.Context, request operations.ListUnifiedConnectionsRequest) (*operations.ListUnifiedConnectionsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/unified/connection"
 
@@ -214,7 +214,7 @@ func (s *connection) ListUnifiedConnections(ctx context.Context, request operati
 }
 
 // PatchUnifiedConnection - Update connection
-func (s *connection) PatchUnifiedConnection(ctx context.Context, request operations.PatchUnifiedConnectionRequest) (*operations.PatchUnifiedConnectionResponse, error) {
+func (s *Connection) PatchUnifiedConnection(ctx context.Context, request operations.PatchUnifiedConnectionRequest) (*operations.PatchUnifiedConnectionResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {
@@ -282,7 +282,7 @@ func (s *connection) PatchUnifiedConnection(ctx context.Context, request operati
 }
 
 // RemoveUnifiedConnection - Remove connection
-func (s *connection) RemoveUnifiedConnection(ctx context.Context, request operations.RemoveUnifiedConnectionRequest) (*operations.RemoveUnifiedConnectionResponse, error) {
+func (s *Connection) RemoveUnifiedConnection(ctx context.Context, request operations.RemoveUnifiedConnectionRequest) (*operations.RemoveUnifiedConnectionResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {
@@ -329,7 +329,7 @@ func (s *connection) RemoveUnifiedConnection(ctx context.Context, request operat
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveUnifiedConnectionDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -339,7 +339,7 @@ func (s *connection) RemoveUnifiedConnection(ctx context.Context, request operat
 }
 
 // UpdateUnifiedConnection - Update connection
-func (s *connection) UpdateUnifiedConnection(ctx context.Context, request operations.UpdateUnifiedConnectionRequest) (*operations.UpdateUnifiedConnectionResponse, error) {
+func (s *Connection) UpdateUnifiedConnection(ctx context.Context, request operations.UpdateUnifiedConnectionRequest) (*operations.UpdateUnifiedConnectionResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {

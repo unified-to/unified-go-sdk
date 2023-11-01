@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type hris struct {
+type Hris struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newHris(sdkConfig sdkConfiguration) *hris {
-	return &hris{
+func newHris(sdkConfig sdkConfiguration) *Hris {
+	return &Hris{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateHrisEmployee - Create an employee
-func (s *hris) CreateHrisEmployee(ctx context.Context, request operations.CreateHrisEmployeeRequest) (*operations.CreateHrisEmployeeResponse, error) {
+func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.CreateHrisEmployeeRequest) (*operations.CreateHrisEmployeeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *hris) CreateHrisEmployee(ctx context.Context, request operations.Create
 }
 
 // CreateHrisGroup - Create a group
-func (s *hris) CreateHrisGroup(ctx context.Context, request operations.CreateHrisGroupRequest) (*operations.CreateHrisGroupResponse, error) {
+func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHrisGroupRequest) (*operations.CreateHrisGroupResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/group", request, nil)
 	if err != nil {
@@ -161,7 +161,7 @@ func (s *hris) CreateHrisGroup(ctx context.Context, request operations.CreateHri
 }
 
 // GetHrisEmployee - Retrieve an employee
-func (s *hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEmployeeRequest) (*operations.GetHrisEmployeeResponse, error) {
+func (s *Hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEmployeeRequest) (*operations.GetHrisEmployeeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee/{id}", request, nil)
 	if err != nil {
@@ -226,7 +226,7 @@ func (s *hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEm
 }
 
 // GetHrisGroup - Retrieve a group
-func (s *hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroupRequest) (*operations.GetHrisGroupResponse, error) {
+func (s *Hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroupRequest) (*operations.GetHrisGroupResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/group/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroup
 }
 
 // ListHrisEmployees - List all employees
-func (s *hris) ListHrisEmployees(ctx context.Context, request operations.ListHrisEmployeesRequest) (*operations.ListHrisEmployeesResponse, error) {
+func (s *Hris) ListHrisEmployees(ctx context.Context, request operations.ListHrisEmployeesRequest) (*operations.ListHrisEmployeesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee", request, nil)
 	if err != nil {
@@ -356,7 +356,7 @@ func (s *hris) ListHrisEmployees(ctx context.Context, request operations.ListHri
 }
 
 // ListHrisGroups - List all groups
-func (s *hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGroupsRequest) (*operations.ListHrisGroupsResponse, error) {
+func (s *Hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGroupsRequest) (*operations.ListHrisGroupsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/group", request, nil)
 	if err != nil {
@@ -421,7 +421,7 @@ func (s *hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGr
 }
 
 // PatchHrisEmployee - Update an employee
-func (s *hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHrisEmployeeRequest) (*operations.PatchHrisEmployeeResponse, error) {
+func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHrisEmployeeRequest) (*operations.PatchHrisEmployeeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee/{id}", request, nil)
 	if err != nil {
@@ -489,7 +489,7 @@ func (s *hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHr
 }
 
 // PatchHrisGroup - Update a group
-func (s *hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisGroupRequest) (*operations.PatchHrisGroupResponse, error) {
+func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisGroupRequest) (*operations.PatchHrisGroupResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/group/{id}", request, nil)
 	if err != nil {
@@ -557,7 +557,7 @@ func (s *hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisG
 }
 
 // RemoveHrisEmployee - Remove an employee
-func (s *hris) RemoveHrisEmployee(ctx context.Context, request operations.RemoveHrisEmployeeRequest) (*operations.RemoveHrisEmployeeResponse, error) {
+func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.RemoveHrisEmployeeRequest) (*operations.RemoveHrisEmployeeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee/{id}", request, nil)
 	if err != nil {
@@ -604,7 +604,7 @@ func (s *hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveHrisEmployeeDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -614,7 +614,7 @@ func (s *hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 }
 
 // RemoveHrisGroup - Remove a group
-func (s *hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHrisGroupRequest) (*operations.RemoveHrisGroupResponse, error) {
+func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHrisGroupRequest) (*operations.RemoveHrisGroupResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/group/{id}", request, nil)
 	if err != nil {
@@ -661,7 +661,7 @@ func (s *hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveHrisGroupDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -671,7 +671,7 @@ func (s *hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 }
 
 // UpdateHrisEmployee - Update an employee
-func (s *hris) UpdateHrisEmployee(ctx context.Context, request operations.UpdateHrisEmployeeRequest) (*operations.UpdateHrisEmployeeResponse, error) {
+func (s *Hris) UpdateHrisEmployee(ctx context.Context, request operations.UpdateHrisEmployeeRequest) (*operations.UpdateHrisEmployeeResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee/{id}", request, nil)
 	if err != nil {
@@ -739,7 +739,7 @@ func (s *hris) UpdateHrisEmployee(ctx context.Context, request operations.Update
 }
 
 // UpdateHrisGroup - Update a group
-func (s *hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHrisGroupRequest) (*operations.UpdateHrisGroupResponse, error) {
+func (s *Hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHrisGroupRequest) (*operations.UpdateHrisGroupResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/group/{id}", request, nil)
 	if err != nil {

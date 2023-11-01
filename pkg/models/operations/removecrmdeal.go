@@ -35,7 +35,7 @@ type RemoveCrmDealResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	RemoveCrmDealDefaultApplicationJSONString *string
+	Res *string
 }
 
 func (o *RemoveCrmDealResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveCrmDealResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveCrmDealResponse) GetRemoveCrmDealDefaultApplicationJSONString() *string {
+func (o *RemoveCrmDealResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.RemoveCrmDealDefaultApplicationJSONString
+	return o.Res
 }

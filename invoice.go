@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type invoice struct {
+type Invoice struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newInvoice(sdkConfig sdkConfiguration) *invoice {
-	return &invoice{
+func newInvoice(sdkConfig sdkConfiguration) *Invoice {
+	return &Invoice{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateAccountingInvoice - Create a invoice
-func (s *invoice) CreateAccountingInvoice(ctx context.Context, request operations.CreateAccountingInvoiceRequest) (*operations.CreateAccountingInvoiceResponse, error) {
+func (s *Invoice) CreateAccountingInvoice(ctx context.Context, request operations.CreateAccountingInvoiceRequest) (*operations.CreateAccountingInvoiceResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *invoice) CreateAccountingInvoice(ctx context.Context, request operation
 }
 
 // GetAccountingInvoice - Retrieve a invoice
-func (s *invoice) GetAccountingInvoice(ctx context.Context, request operations.GetAccountingInvoiceRequest) (*operations.GetAccountingInvoiceResponse, error) {
+func (s *Invoice) GetAccountingInvoice(ctx context.Context, request operations.GetAccountingInvoiceRequest) (*operations.GetAccountingInvoiceResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *invoice) GetAccountingInvoice(ctx context.Context, request operations.G
 }
 
 // ListAccountingInvoices - List all invoices
-func (s *invoice) ListAccountingInvoices(ctx context.Context, request operations.ListAccountingInvoicesRequest) (*operations.ListAccountingInvoicesResponse, error) {
+func (s *Invoice) ListAccountingInvoices(ctx context.Context, request operations.ListAccountingInvoicesRequest) (*operations.ListAccountingInvoicesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *invoice) ListAccountingInvoices(ctx context.Context, request operations
 }
 
 // PatchAccountingInvoice - Update a invoice
-func (s *invoice) PatchAccountingInvoice(ctx context.Context, request operations.PatchAccountingInvoiceRequest) (*operations.PatchAccountingInvoiceResponse, error) {
+func (s *Invoice) PatchAccountingInvoice(ctx context.Context, request operations.PatchAccountingInvoiceRequest) (*operations.PatchAccountingInvoiceResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *invoice) PatchAccountingInvoice(ctx context.Context, request operations
 }
 
 // RemoveAccountingInvoice - Remove a invoice
-func (s *invoice) RemoveAccountingInvoice(ctx context.Context, request operations.RemoveAccountingInvoiceRequest) (*operations.RemoveAccountingInvoiceResponse, error) {
+func (s *Invoice) RemoveAccountingInvoice(ctx context.Context, request operations.RemoveAccountingInvoiceRequest) (*operations.RemoveAccountingInvoiceResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *invoice) RemoveAccountingInvoice(ctx context.Context, request operation
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAccountingInvoiceDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *invoice) RemoveAccountingInvoice(ctx context.Context, request operation
 }
 
 // UpdateAccountingInvoice - Update a invoice
-func (s *invoice) UpdateAccountingInvoice(ctx context.Context, request operations.UpdateAccountingInvoiceRequest) (*operations.UpdateAccountingInvoiceResponse, error) {
+func (s *Invoice) UpdateAccountingInvoice(ctx context.Context, request operations.UpdateAccountingInvoiceRequest) (*operations.UpdateAccountingInvoiceResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice/{id}", request, nil)
 	if err != nil {

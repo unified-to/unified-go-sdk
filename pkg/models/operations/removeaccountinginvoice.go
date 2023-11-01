@@ -35,7 +35,7 @@ type RemoveAccountingInvoiceResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	RemoveAccountingInvoiceDefaultApplicationJSONString *string
+	Res *string
 }
 
 func (o *RemoveAccountingInvoiceResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveAccountingInvoiceResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveAccountingInvoiceResponse) GetRemoveAccountingInvoiceDefaultApplicationJSONString() *string {
+func (o *RemoveAccountingInvoiceResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.RemoveAccountingInvoiceDefaultApplicationJSONString
+	return o.Res
 }

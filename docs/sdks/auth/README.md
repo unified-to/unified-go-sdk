@@ -1,5 +1,5 @@
 # Auth
-(*Auth*)
+(*.Auth*)
 
 ### Available Operations
 
@@ -31,8 +31,8 @@ func main() {
     ctx := context.Background()
     res, err := s.Auth.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
-        Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesHrisEmployeeWrite,
+        Scopes: []operations.Scopes{
+            operations.ScopesHrisEmployeeWrite,
         },
         WorkspaceID: "string",
     })
@@ -40,7 +40,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetUnifiedIntegrationAuth200ApplicationJSONString != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -90,7 +90,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetUnifiedIntegrationLogin200ApplicationJSONString != nil {
+    if res.Res != nil {
         // handle response
     }
 }

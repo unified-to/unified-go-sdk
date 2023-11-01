@@ -1,5 +1,5 @@
 # Customer
-(*Customer*)
+(*.Customer*)
 
 ### Available Operations
 

@@ -1,5 +1,5 @@
 # Accounting
-(*Accounting*)
+(*.Accounting*)
 
 ### Available Operations
 

@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type event struct {
+type Event struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newEvent(sdkConfig sdkConfiguration) *event {
-	return &event{
+func newEvent(sdkConfig sdkConfiguration) *Event {
+	return &Event{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateCrmEvent - Create a event
-func (s *event) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEventRequest) (*operations.CreateCrmEventResponse, error) {
+func (s *Event) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEventRequest) (*operations.CreateCrmEventResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *event) CreateCrmEvent(ctx context.Context, request operations.CreateCrm
 }
 
 // GetCrmEvent - Retrieve a event
-func (s *event) GetCrmEvent(ctx context.Context, request operations.GetCrmEventRequest) (*operations.GetCrmEventResponse, error) {
+func (s *Event) GetCrmEvent(ctx context.Context, request operations.GetCrmEventRequest) (*operations.GetCrmEventResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *event) GetCrmEvent(ctx context.Context, request operations.GetCrmEventR
 }
 
 // ListCrmEvents - List all events
-func (s *event) ListCrmEvents(ctx context.Context, request operations.ListCrmEventsRequest) (*operations.ListCrmEventsResponse, error) {
+func (s *Event) ListCrmEvents(ctx context.Context, request operations.ListCrmEventsRequest) (*operations.ListCrmEventsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *event) ListCrmEvents(ctx context.Context, request operations.ListCrmEve
 }
 
 // PatchCrmEvent - Update a event
-func (s *event) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEventRequest) (*operations.PatchCrmEventResponse, error) {
+func (s *Event) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEventRequest) (*operations.PatchCrmEventResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *event) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEv
 }
 
 // RemoveCrmEvent - Remove a event
-func (s *event) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEventRequest) (*operations.RemoveCrmEventResponse, error) {
+func (s *Event) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEventRequest) (*operations.RemoveCrmEventResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *event) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrm
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmEventDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *event) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrm
 }
 
 // UpdateCrmEvent - Update a event
-func (s *event) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEventRequest) (*operations.UpdateCrmEventResponse, error) {
+func (s *Event) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEventRequest) (*operations.UpdateCrmEventResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event/{id}", request, nil)
 	if err != nil {

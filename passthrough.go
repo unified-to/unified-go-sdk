@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type passthrough struct {
+type Passthrough struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newPassthrough(sdkConfig sdkConfiguration) *passthrough {
-	return &passthrough{
+func newPassthrough(sdkConfig sdkConfiguration) *Passthrough {
+	return &Passthrough{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreatePassthrough - Passthrough POST
-func (s *passthrough) CreatePassthrough(ctx context.Context, request operations.CreatePassthroughRequest) (*operations.CreatePassthroughResponse, error) {
+func (s *Passthrough) CreatePassthrough(ctx context.Context, request operations.CreatePassthroughRequest) (*operations.CreatePassthroughResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/passthrough/{connection_id}/{path}", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *passthrough) CreatePassthrough(ctx context.Context, request operations.
 }
 
 // ListPassthroughs - Passthrough GET
-func (s *passthrough) ListPassthroughs(ctx context.Context, request operations.ListPassthroughsRequest) (*operations.ListPassthroughsResponse, error) {
+func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.ListPassthroughsRequest) (*operations.ListPassthroughsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/passthrough/{connection_id}/{path}", request, nil)
 	if err != nil {
@@ -154,7 +154,7 @@ func (s *passthrough) ListPassthroughs(ctx context.Context, request operations.L
 }
 
 // PatchPassthrough - Passthrough PUT
-func (s *passthrough) PatchPassthrough(ctx context.Context, request operations.PatchPassthroughRequest) (*operations.PatchPassthroughResponse, error) {
+func (s *Passthrough) PatchPassthrough(ctx context.Context, request operations.PatchPassthroughRequest) (*operations.PatchPassthroughResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/passthrough/{connection_id}/{path}", request, nil)
 	if err != nil {
@@ -222,7 +222,7 @@ func (s *passthrough) PatchPassthrough(ctx context.Context, request operations.P
 }
 
 // RemovePassthrough - Passthrough DELETE
-func (s *passthrough) RemovePassthrough(ctx context.Context, request operations.RemovePassthroughRequest) (*operations.RemovePassthroughResponse, error) {
+func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.RemovePassthroughRequest) (*operations.RemovePassthroughResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/passthrough/{connection_id}/{path}", request, nil)
 	if err != nil {
@@ -283,7 +283,7 @@ func (s *passthrough) RemovePassthrough(ctx context.Context, request operations.
 }
 
 // UpdatePassthrough - Passthrough PUT
-func (s *passthrough) UpdatePassthrough(ctx context.Context, request operations.UpdatePassthroughRequest) (*operations.UpdatePassthroughResponse, error) {
+func (s *Passthrough) UpdatePassthrough(ctx context.Context, request operations.UpdatePassthroughRequest) (*operations.UpdatePassthroughResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/passthrough/{connection_id}/{path}", request, nil)
 	if err != nil {

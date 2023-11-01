@@ -9,18 +9,18 @@ import (
 	"time"
 )
 
-type HrisEmployeeEmploymentStatus string
+type EmploymentStatus string
 
 const (
-	HrisEmployeeEmploymentStatusActive   HrisEmployeeEmploymentStatus = "ACTIVE"
-	HrisEmployeeEmploymentStatusInactive HrisEmployeeEmploymentStatus = "INACTIVE"
+	EmploymentStatusActive   EmploymentStatus = "ACTIVE"
+	EmploymentStatusInactive EmploymentStatus = "INACTIVE"
 )
 
-func (e HrisEmployeeEmploymentStatus) ToPointer() *HrisEmployeeEmploymentStatus {
+func (e EmploymentStatus) ToPointer() *EmploymentStatus {
 	return &e
 }
 
-func (e *HrisEmployeeEmploymentStatus) UnmarshalJSON(data []byte) error {
+func (e *EmploymentStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -29,10 +29,10 @@ func (e *HrisEmployeeEmploymentStatus) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
-		*e = HrisEmployeeEmploymentStatus(v)
+		*e = EmploymentStatus(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HrisEmployeeEmploymentStatus: %v", v)
+		return fmt.Errorf("invalid value for EmploymentStatus: %v", v)
 	}
 }
 
@@ -123,18 +123,18 @@ func (e *HrisEmployeeGender) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type HrisEmployeeMaritalStatus string
+type MaritalStatus string
 
 const (
-	HrisEmployeeMaritalStatusMarried HrisEmployeeMaritalStatus = "MARRIED"
-	HrisEmployeeMaritalStatusSingle  HrisEmployeeMaritalStatus = "SINGLE"
+	MaritalStatusMarried MaritalStatus = "MARRIED"
+	MaritalStatusSingle  MaritalStatus = "SINGLE"
 )
 
-func (e HrisEmployeeMaritalStatus) ToPointer() *HrisEmployeeMaritalStatus {
+func (e MaritalStatus) ToPointer() *MaritalStatus {
 	return &e
 }
 
-func (e *HrisEmployeeMaritalStatus) UnmarshalJSON(data []byte) error {
+func (e *MaritalStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -143,39 +143,39 @@ func (e *HrisEmployeeMaritalStatus) UnmarshalJSON(data []byte) error {
 	case "MARRIED":
 		fallthrough
 	case "SINGLE":
-		*e = HrisEmployeeMaritalStatus(v)
+		*e = MaritalStatus(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HrisEmployeeMaritalStatus: %v", v)
+		return fmt.Errorf("invalid value for MaritalStatus: %v", v)
 	}
 }
 
 type HrisEmployee struct {
-	Address          *PropertyHrisEmployeeAddress  `json:"address,omitempty"`
-	CreatedAt        *time.Time                    `json:"created_at,omitempty"`
-	Currency         *string                       `json:"currency,omitempty"`
-	DateOfBirth      *time.Time                    `json:"date_of_birth,omitempty"`
-	Department       *string                       `json:"department,omitempty"`
-	Division         *string                       `json:"division,omitempty"`
-	Emails           []HrisEmail                   `json:"emails,omitempty"`
-	EmployeeNumber   *string                       `json:"employee_number,omitempty"`
-	EmploymentStatus *HrisEmployeeEmploymentStatus `json:"employment_status,omitempty"`
-	EmploymentType   *HrisEmployeeEmploymentType   `json:"employment_type,omitempty"`
-	Gender           *HrisEmployeeGender           `json:"gender,omitempty"`
-	HiredAt          *time.Time                    `json:"hired_at,omitempty"`
-	ID               *string                       `json:"id,omitempty"`
-	ImageURL         *string                       `json:"image_url,omitempty"`
-	LanguageLocale   *string                       `json:"language_locale,omitempty"`
-	Location         *string                       `json:"location,omitempty"`
-	ManagerID        *string                       `json:"manager_id,omitempty"`
-	MaritalStatus    *HrisEmployeeMaritalStatus    `json:"marital_status,omitempty"`
-	Name             *string                       `json:"name,omitempty"`
-	Raw              *PropertyHrisEmployeeRaw      `json:"raw,omitempty"`
-	Telephones       []HrisTelephone               `json:"telephones,omitempty"`
-	TerminatedAt     *time.Time                    `json:"terminated_at,omitempty"`
-	Timezone         *string                       `json:"timezone,omitempty"`
-	Title            *string                       `json:"title,omitempty"`
-	UpdatedAt        *time.Time                    `json:"updated_at,omitempty"`
+	Address          *PropertyHrisEmployeeAddress `json:"address,omitempty"`
+	CreatedAt        *time.Time                   `json:"created_at,omitempty"`
+	Currency         *string                      `json:"currency,omitempty"`
+	DateOfBirth      *time.Time                   `json:"date_of_birth,omitempty"`
+	Department       *string                      `json:"department,omitempty"`
+	Division         *string                      `json:"division,omitempty"`
+	Emails           []HrisEmail                  `json:"emails,omitempty"`
+	EmployeeNumber   *string                      `json:"employee_number,omitempty"`
+	EmploymentStatus *EmploymentStatus            `json:"employment_status,omitempty"`
+	EmploymentType   *HrisEmployeeEmploymentType  `json:"employment_type,omitempty"`
+	Gender           *HrisEmployeeGender          `json:"gender,omitempty"`
+	HiredAt          *time.Time                   `json:"hired_at,omitempty"`
+	ID               *string                      `json:"id,omitempty"`
+	ImageURL         *string                      `json:"image_url,omitempty"`
+	LanguageLocale   *string                      `json:"language_locale,omitempty"`
+	Location         *string                      `json:"location,omitempty"`
+	ManagerID        *string                      `json:"manager_id,omitempty"`
+	MaritalStatus    *MaritalStatus               `json:"marital_status,omitempty"`
+	Name             *string                      `json:"name,omitempty"`
+	Raw              *PropertyHrisEmployeeRaw     `json:"raw,omitempty"`
+	Telephones       []HrisTelephone              `json:"telephones,omitempty"`
+	TerminatedAt     *time.Time                   `json:"terminated_at,omitempty"`
+	Timezone         *string                      `json:"timezone,omitempty"`
+	Title            *string                      `json:"title,omitempty"`
+	UpdatedAt        *time.Time                   `json:"updated_at,omitempty"`
 }
 
 func (h HrisEmployee) MarshalJSON() ([]byte, error) {
@@ -245,7 +245,7 @@ func (o *HrisEmployee) GetEmployeeNumber() *string {
 	return o.EmployeeNumber
 }
 
-func (o *HrisEmployee) GetEmploymentStatus() *HrisEmployeeEmploymentStatus {
+func (o *HrisEmployee) GetEmploymentStatus() *EmploymentStatus {
 	if o == nil {
 		return nil
 	}
@@ -308,7 +308,7 @@ func (o *HrisEmployee) GetManagerID() *string {
 	return o.ManagerID
 }
 
-func (o *HrisEmployee) GetMaritalStatus() *HrisEmployeeMaritalStatus {
+func (o *HrisEmployee) GetMaritalStatus() *MaritalStatus {
 	if o == nil {
 		return nil
 	}

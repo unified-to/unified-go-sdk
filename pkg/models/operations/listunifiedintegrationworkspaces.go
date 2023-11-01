@@ -9,26 +9,26 @@ import (
 	"net/http"
 )
 
-type ListUnifiedIntegrationWorkspacesCategories string
+type QueryParamCategories string
 
 const (
-	ListUnifiedIntegrationWorkspacesCategoriesPassthrough ListUnifiedIntegrationWorkspacesCategories = "passthrough"
-	ListUnifiedIntegrationWorkspacesCategoriesHris        ListUnifiedIntegrationWorkspacesCategories = "hris"
-	ListUnifiedIntegrationWorkspacesCategoriesAts         ListUnifiedIntegrationWorkspacesCategories = "ats"
-	ListUnifiedIntegrationWorkspacesCategoriesAuth        ListUnifiedIntegrationWorkspacesCategories = "auth"
-	ListUnifiedIntegrationWorkspacesCategoriesCrm         ListUnifiedIntegrationWorkspacesCategories = "crm"
-	ListUnifiedIntegrationWorkspacesCategoriesEnrich      ListUnifiedIntegrationWorkspacesCategories = "enrich"
-	ListUnifiedIntegrationWorkspacesCategoriesMartech     ListUnifiedIntegrationWorkspacesCategories = "martech"
-	ListUnifiedIntegrationWorkspacesCategoriesTicketing   ListUnifiedIntegrationWorkspacesCategories = "ticketing"
-	ListUnifiedIntegrationWorkspacesCategoriesUc          ListUnifiedIntegrationWorkspacesCategories = "uc"
-	ListUnifiedIntegrationWorkspacesCategoriesAccounting  ListUnifiedIntegrationWorkspacesCategories = "accounting"
+	QueryParamCategoriesPassthrough QueryParamCategories = "passthrough"
+	QueryParamCategoriesHris        QueryParamCategories = "hris"
+	QueryParamCategoriesAts         QueryParamCategories = "ats"
+	QueryParamCategoriesAuth        QueryParamCategories = "auth"
+	QueryParamCategoriesCrm         QueryParamCategories = "crm"
+	QueryParamCategoriesEnrich      QueryParamCategories = "enrich"
+	QueryParamCategoriesMartech     QueryParamCategories = "martech"
+	QueryParamCategoriesTicketing   QueryParamCategories = "ticketing"
+	QueryParamCategoriesUc          QueryParamCategories = "uc"
+	QueryParamCategoriesAccounting  QueryParamCategories = "accounting"
 )
 
-func (e ListUnifiedIntegrationWorkspacesCategories) ToPointer() *ListUnifiedIntegrationWorkspacesCategories {
+func (e QueryParamCategories) ToPointer() *QueryParamCategories {
 	return &e
 }
 
-func (e *ListUnifiedIntegrationWorkspacesCategories) UnmarshalJSON(data []byte) error {
+func (e *QueryParamCategories) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -53,10 +53,10 @@ func (e *ListUnifiedIntegrationWorkspacesCategories) UnmarshalJSON(data []byte) 
 	case "uc":
 		fallthrough
 	case "accounting":
-		*e = ListUnifiedIntegrationWorkspacesCategories(v)
+		*e = QueryParamCategories(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListUnifiedIntegrationWorkspacesCategories: %v", v)
+		return fmt.Errorf("invalid value for QueryParamCategories: %v", v)
 	}
 }
 
@@ -64,12 +64,12 @@ type ListUnifiedIntegrationWorkspacesRequest struct {
 	// Filter the results for only the workspace's active integrations
 	Active *bool `queryParam:"style=form,explode=true,name=active"`
 	// Filter the results on these categories
-	Categories []ListUnifiedIntegrationWorkspacesCategories `queryParam:"style=form,explode=true,name=categories"`
-	Env        *string                                      `queryParam:"style=form,explode=true,name=env"`
-	Limit      *float64                                     `queryParam:"style=form,explode=true,name=limit"`
-	Offset     *float64                                     `queryParam:"style=form,explode=true,name=offset"`
-	Summary    *bool                                        `queryParam:"style=form,explode=true,name=summary"`
-	UpdatedGte *string                                      `queryParam:"style=form,explode=true,name=updated_gte"`
+	Categories []QueryParamCategories `queryParam:"style=form,explode=true,name=categories"`
+	Env        *string                `queryParam:"style=form,explode=true,name=env"`
+	Limit      *float64               `queryParam:"style=form,explode=true,name=limit"`
+	Offset     *float64               `queryParam:"style=form,explode=true,name=offset"`
+	Summary    *bool                  `queryParam:"style=form,explode=true,name=summary"`
+	UpdatedGte *string                `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The ID of the workspace
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
 }
@@ -81,7 +81,7 @@ func (o *ListUnifiedIntegrationWorkspacesRequest) GetActive() *bool {
 	return o.Active
 }
 
-func (o *ListUnifiedIntegrationWorkspacesRequest) GetCategories() []ListUnifiedIntegrationWorkspacesCategories {
+func (o *ListUnifiedIntegrationWorkspacesRequest) GetCategories() []QueryParamCategories {
 	if o == nil {
 		return nil
 	}

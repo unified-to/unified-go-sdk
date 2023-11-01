@@ -35,7 +35,7 @@ type RemoveMartechListResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	RemoveMartechListDefaultApplicationJSONString *string
+	Res *string
 }
 
 func (o *RemoveMartechListResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveMartechListResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveMartechListResponse) GetRemoveMartechListDefaultApplicationJSONString() *string {
+func (o *RemoveMartechListResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.RemoveMartechListDefaultApplicationJSONString
+	return o.Res
 }

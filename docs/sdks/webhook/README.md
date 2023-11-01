@@ -1,5 +1,5 @@
 # Webhook
-(*Webhook*)
+(*.Webhook*)
 
 ### Available Operations
 
@@ -40,15 +40,15 @@ func main() {
             HookURL: "string",
             IntegrationType: "string",
             Interval: 188.12,
-            ObjectType: shared.WebhookObjectTypeCrmEvent,
+            ObjectType: shared.ObjectTypeCrmEvent,
             Subscriptions: []string{
                 "string",
             },
             WorkspaceID: "string",
         },
         ConnectionID: "string",
-        Events: []operations.CreateUnifiedWebhookEvents{
-            operations.CreateUnifiedWebhookEventsCreated,
+        Events: []operations.Events{
+            operations.EventsCreated,
         },
         Object: "string",
     })

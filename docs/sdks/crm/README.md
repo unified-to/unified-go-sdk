@@ -1,5 +1,5 @@
 # Crm
-(*Crm*)
+(*.Crm*)
 
 ### Available Operations
 

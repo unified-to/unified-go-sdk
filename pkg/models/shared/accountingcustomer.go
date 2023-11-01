@@ -9,27 +9,27 @@ import (
 	"time"
 )
 
-type AccountingCustomerTaxExemption string
+type TaxExemption string
 
 const (
-	AccountingCustomerTaxExemptionFederalGov     AccountingCustomerTaxExemption = "FEDERAL_GOV"
-	AccountingCustomerTaxExemptionRegionGov      AccountingCustomerTaxExemption = "REGION_GOV"
-	AccountingCustomerTaxExemptionLocalGov       AccountingCustomerTaxExemption = "LOCAL_GOV"
-	AccountingCustomerTaxExemptionTribalGov      AccountingCustomerTaxExemption = "TRIBAL_GOV"
-	AccountingCustomerTaxExemptionCharitableOrg  AccountingCustomerTaxExemption = "CHARITABLE_ORG"
-	AccountingCustomerTaxExemptionReligiousOrg   AccountingCustomerTaxExemption = "RELIGIOUS_ORG"
-	AccountingCustomerTaxExemptionEducationalOrg AccountingCustomerTaxExemption = "EDUCATIONAL_ORG"
-	AccountingCustomerTaxExemptionMedicalOrg     AccountingCustomerTaxExemption = "MEDICAL_ORG"
-	AccountingCustomerTaxExemptionResale         AccountingCustomerTaxExemption = "RESALE"
-	AccountingCustomerTaxExemptionForeign        AccountingCustomerTaxExemption = "FOREIGN"
-	AccountingCustomerTaxExemptionOther          AccountingCustomerTaxExemption = "OTHER"
+	TaxExemptionFederalGov     TaxExemption = "FEDERAL_GOV"
+	TaxExemptionRegionGov      TaxExemption = "REGION_GOV"
+	TaxExemptionLocalGov       TaxExemption = "LOCAL_GOV"
+	TaxExemptionTribalGov      TaxExemption = "TRIBAL_GOV"
+	TaxExemptionCharitableOrg  TaxExemption = "CHARITABLE_ORG"
+	TaxExemptionReligiousOrg   TaxExemption = "RELIGIOUS_ORG"
+	TaxExemptionEducationalOrg TaxExemption = "EDUCATIONAL_ORG"
+	TaxExemptionMedicalOrg     TaxExemption = "MEDICAL_ORG"
+	TaxExemptionResale         TaxExemption = "RESALE"
+	TaxExemptionForeign        TaxExemption = "FOREIGN"
+	TaxExemptionOther          TaxExemption = "OTHER"
 )
 
-func (e AccountingCustomerTaxExemption) ToPointer() *AccountingCustomerTaxExemption {
+func (e TaxExemption) ToPointer() *TaxExemption {
 	return &e
 }
 
-func (e *AccountingCustomerTaxExemption) UnmarshalJSON(data []byte) error {
+func (e *TaxExemption) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -56,10 +56,10 @@ func (e *AccountingCustomerTaxExemption) UnmarshalJSON(data []byte) error {
 	case "FOREIGN":
 		fallthrough
 	case "OTHER":
-		*e = AccountingCustomerTaxExemption(v)
+		*e = TaxExemption(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountingCustomerTaxExemption: %v", v)
+		return fmt.Errorf("invalid value for TaxExemption: %v", v)
 	}
 }
 
@@ -73,7 +73,7 @@ type AccountingCustomer struct {
 	Name            *string                                    `json:"name,omitempty"`
 	Raw             *PropertyAccountingCustomerRaw             `json:"raw,omitempty"`
 	ShippingAddress *PropertyAccountingCustomerShippingAddress `json:"shipping_address,omitempty"`
-	TaxExemption    *AccountingCustomerTaxExemption            `json:"tax_exemption,omitempty"`
+	TaxExemption    *TaxExemption                              `json:"tax_exemption,omitempty"`
 	Telephones      []AccountingTelephone                      `json:"telephones,omitempty"`
 	UpdatedAt       *time.Time                                 `json:"updated_at,omitempty"`
 }
@@ -152,7 +152,7 @@ func (o *AccountingCustomer) GetShippingAddress() *PropertyAccountingCustomerShi
 	return o.ShippingAddress
 }
 
-func (o *AccountingCustomer) GetTaxExemption() *AccountingCustomerTaxExemption {
+func (o *AccountingCustomer) GetTaxExemption() *TaxExemption {
 	if o == nil {
 		return nil
 	}

@@ -1,5 +1,5 @@
 # File
-(*File*)
+(*.File*)
 
 ### Available Operations
 

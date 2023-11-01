@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type lead struct {
+type Lead struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newLead(sdkConfig sdkConfiguration) *lead {
-	return &lead{
+func newLead(sdkConfig sdkConfiguration) *Lead {
+	return &Lead{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateCrmLead - Create a lead
-func (s *lead) CreateCrmLead(ctx context.Context, request operations.CreateCrmLeadRequest) (*operations.CreateCrmLeadResponse, error) {
+func (s *Lead) CreateCrmLead(ctx context.Context, request operations.CreateCrmLeadRequest) (*operations.CreateCrmLeadResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *lead) CreateCrmLead(ctx context.Context, request operations.CreateCrmLe
 }
 
 // GetCrmLead - Retrieve a lead
-func (s *lead) GetCrmLead(ctx context.Context, request operations.GetCrmLeadRequest) (*operations.GetCrmLeadResponse, error) {
+func (s *Lead) GetCrmLead(ctx context.Context, request operations.GetCrmLeadRequest) (*operations.GetCrmLeadResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *lead) GetCrmLead(ctx context.Context, request operations.GetCrmLeadRequ
 }
 
 // ListCrmLeads - List all leads
-func (s *lead) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsRequest) (*operations.ListCrmLeadsResponse, error) {
+func (s *Lead) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsRequest) (*operations.ListCrmLeadsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *lead) ListCrmLeads(ctx context.Context, request operations.ListCrmLeads
 }
 
 // PatchCrmLead - Update a lead
-func (s *lead) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadRequest) (*operations.PatchCrmLeadResponse, error) {
+func (s *Lead) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadRequest) (*operations.PatchCrmLeadResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *lead) PatchCrmLead(ctx context.Context, request operations.PatchCrmLead
 }
 
 // RemoveCrmLead - Remove a lead
-func (s *lead) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLeadRequest) (*operations.RemoveCrmLeadResponse, error) {
+func (s *Lead) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLeadRequest) (*operations.RemoveCrmLeadResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *lead) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLe
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmLeadDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *lead) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLe
 }
 
 // UpdateCrmLead - Update a lead
-func (s *lead) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLeadRequest) (*operations.UpdateCrmLeadResponse, error) {
+func (s *Lead) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLeadRequest) (*operations.UpdateCrmLeadResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead/{id}", request, nil)
 	if err != nil {

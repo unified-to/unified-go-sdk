@@ -9,26 +9,26 @@ import (
 	"time"
 )
 
-type AtsJobEmploymentType string
+type EmploymentType string
 
 const (
-	AtsJobEmploymentTypeFullTime   AtsJobEmploymentType = "FULL_TIME"
-	AtsJobEmploymentTypePartTime   AtsJobEmploymentType = "PART_TIME"
-	AtsJobEmploymentTypeContractor AtsJobEmploymentType = "CONTRACTOR"
-	AtsJobEmploymentTypeIntern     AtsJobEmploymentType = "INTERN"
-	AtsJobEmploymentTypeConsultant AtsJobEmploymentType = "CONSULTANT"
-	AtsJobEmploymentTypeVolunteer  AtsJobEmploymentType = "VOLUNTEER"
-	AtsJobEmploymentTypeCasual     AtsJobEmploymentType = "CASUAL"
-	AtsJobEmploymentTypeSeasonal   AtsJobEmploymentType = "SEASONAL"
-	AtsJobEmploymentTypeFreelance  AtsJobEmploymentType = "FREELANCE"
-	AtsJobEmploymentTypeOther      AtsJobEmploymentType = "OTHER"
+	EmploymentTypeFullTime   EmploymentType = "FULL_TIME"
+	EmploymentTypePartTime   EmploymentType = "PART_TIME"
+	EmploymentTypeContractor EmploymentType = "CONTRACTOR"
+	EmploymentTypeIntern     EmploymentType = "INTERN"
+	EmploymentTypeConsultant EmploymentType = "CONSULTANT"
+	EmploymentTypeVolunteer  EmploymentType = "VOLUNTEER"
+	EmploymentTypeCasual     EmploymentType = "CASUAL"
+	EmploymentTypeSeasonal   EmploymentType = "SEASONAL"
+	EmploymentTypeFreelance  EmploymentType = "FREELANCE"
+	EmploymentTypeOther      EmploymentType = "OTHER"
 )
 
-func (e AtsJobEmploymentType) ToPointer() *AtsJobEmploymentType {
+func (e EmploymentType) ToPointer() *EmploymentType {
 	return &e
 }
 
-func (e *AtsJobEmploymentType) UnmarshalJSON(data []byte) error {
+func (e *EmploymentType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -53,10 +53,10 @@ func (e *AtsJobEmploymentType) UnmarshalJSON(data []byte) error {
 	case "FREELANCE":
 		fallthrough
 	case "OTHER":
-		*e = AtsJobEmploymentType(v)
+		*e = EmploymentType(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AtsJobEmploymentType: %v", v)
+		return fmt.Errorf("invalid value for EmploymentType: %v", v)
 	}
 }
 
@@ -97,23 +97,23 @@ func (e *AtsJobStatus) UnmarshalJSON(data []byte) error {
 }
 
 type AtsJob struct {
-	Addresses        []AtsAddress          `json:"addresses,omitempty"`
-	ClosedAt         *time.Time            `json:"closed_at,omitempty"`
-	Compensation     []AtsCompensation     `json:"compensation,omitempty"`
-	CreatedAt        *time.Time            `json:"created_at,omitempty"`
-	Departments      []string              `json:"departments,omitempty"`
-	Description      *string               `json:"description,omitempty"`
-	EmploymentType   *AtsJobEmploymentType `json:"employment_type,omitempty"`
-	HiringManagerIds []string              `json:"hiring_manager_ids,omitempty"`
-	ID               *string               `json:"id,omitempty"`
-	LanguageLocale   *string               `json:"language_locale,omitempty"`
-	Name             *string               `json:"name,omitempty"`
-	PublicJobUrls    []string              `json:"public_job_urls,omitempty"`
-	Raw              *PropertyAtsJobRaw    `json:"raw,omitempty"`
-	RecruiterIds     []string              `json:"recruiter_ids,omitempty"`
-	Remote           *bool                 `json:"remote,omitempty"`
-	Status           *AtsJobStatus         `json:"status,omitempty"`
-	UpdatedAt        *time.Time            `json:"updated_at,omitempty"`
+	Addresses        []AtsAddress       `json:"addresses,omitempty"`
+	ClosedAt         *time.Time         `json:"closed_at,omitempty"`
+	Compensation     []AtsCompensation  `json:"compensation,omitempty"`
+	CreatedAt        *time.Time         `json:"created_at,omitempty"`
+	Departments      []string           `json:"departments,omitempty"`
+	Description      *string            `json:"description,omitempty"`
+	EmploymentType   *EmploymentType    `json:"employment_type,omitempty"`
+	HiringManagerIds []string           `json:"hiring_manager_ids,omitempty"`
+	ID               *string            `json:"id,omitempty"`
+	LanguageLocale   *string            `json:"language_locale,omitempty"`
+	Name             *string            `json:"name,omitempty"`
+	PublicJobUrls    []string           `json:"public_job_urls,omitempty"`
+	Raw              *PropertyAtsJobRaw `json:"raw,omitempty"`
+	RecruiterIds     []string           `json:"recruiter_ids,omitempty"`
+	Remote           *bool              `json:"remote,omitempty"`
+	Status           *AtsJobStatus      `json:"status,omitempty"`
+	UpdatedAt        *time.Time         `json:"updated_at,omitempty"`
 }
 
 func (a AtsJob) MarshalJSON() ([]byte, error) {
@@ -169,7 +169,7 @@ func (o *AtsJob) GetDescription() *string {
 	return o.Description
 }
 
-func (o *AtsJob) GetEmploymentType() *AtsJobEmploymentType {
+func (o *AtsJob) GetEmploymentType() *EmploymentType {
 	if o == nil {
 		return nil
 	}

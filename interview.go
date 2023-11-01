@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type interview struct {
+type Interview struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newInterview(sdkConfig sdkConfiguration) *interview {
-	return &interview{
+func newInterview(sdkConfig sdkConfiguration) *Interview {
+	return &Interview{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateAtsInterview - Create a interview
-func (s *interview) CreateAtsInterview(ctx context.Context, request operations.CreateAtsInterviewRequest) (*operations.CreateAtsInterviewResponse, error) {
+func (s *Interview) CreateAtsInterview(ctx context.Context, request operations.CreateAtsInterviewRequest) (*operations.CreateAtsInterviewResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *interview) CreateAtsInterview(ctx context.Context, request operations.C
 }
 
 // GetAtsInterview - Retrieve a interview
-func (s *interview) GetAtsInterview(ctx context.Context, request operations.GetAtsInterviewRequest) (*operations.GetAtsInterviewResponse, error) {
+func (s *Interview) GetAtsInterview(ctx context.Context, request operations.GetAtsInterviewRequest) (*operations.GetAtsInterviewResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *interview) GetAtsInterview(ctx context.Context, request operations.GetA
 }
 
 // ListAtsInterviews - List all interviews
-func (s *interview) ListAtsInterviews(ctx context.Context, request operations.ListAtsInterviewsRequest) (*operations.ListAtsInterviewsResponse, error) {
+func (s *Interview) ListAtsInterviews(ctx context.Context, request operations.ListAtsInterviewsRequest) (*operations.ListAtsInterviewsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *interview) ListAtsInterviews(ctx context.Context, request operations.Li
 }
 
 // PatchAtsInterview - Update a interview
-func (s *interview) PatchAtsInterview(ctx context.Context, request operations.PatchAtsInterviewRequest) (*operations.PatchAtsInterviewResponse, error) {
+func (s *Interview) PatchAtsInterview(ctx context.Context, request operations.PatchAtsInterviewRequest) (*operations.PatchAtsInterviewResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *interview) PatchAtsInterview(ctx context.Context, request operations.Pa
 }
 
 // RemoveAtsInterview - Remove a interview
-func (s *interview) RemoveAtsInterview(ctx context.Context, request operations.RemoveAtsInterviewRequest) (*operations.RemoveAtsInterviewResponse, error) {
+func (s *Interview) RemoveAtsInterview(ctx context.Context, request operations.RemoveAtsInterviewRequest) (*operations.RemoveAtsInterviewResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *interview) RemoveAtsInterview(ctx context.Context, request operations.R
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsInterviewDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *interview) RemoveAtsInterview(ctx context.Context, request operations.R
 }
 
 // UpdateAtsInterview - Update a interview
-func (s *interview) UpdateAtsInterview(ctx context.Context, request operations.UpdateAtsInterviewRequest) (*operations.UpdateAtsInterviewResponse, error) {
+func (s *Interview) UpdateAtsInterview(ctx context.Context, request operations.UpdateAtsInterviewRequest) (*operations.UpdateAtsInterviewResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview/{id}", request, nil)
 	if err != nil {

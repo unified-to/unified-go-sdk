@@ -1,5 +1,5 @@
 # Connection
-(*Connection*)
+(*.Connection*)
 
 ### Available Operations
 
@@ -146,8 +146,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{
-        Categories: []operations.ListUnifiedConnectionsCategories{
-            operations.ListUnifiedConnectionsCategoriesEnrich,
+        Categories: []operations.Categories{
+            operations.CategoriesEnrich,
         },
     })
     if err != nil {

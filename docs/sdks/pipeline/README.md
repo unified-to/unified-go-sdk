@@ -1,5 +1,5 @@
 # Pipeline
-(*Pipeline*)
+(*.Pipeline*)
 
 ### Available Operations
 

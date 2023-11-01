@@ -35,7 +35,7 @@ type RemoveAtsDocumentResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	RemoveAtsDocumentDefaultApplicationJSONString *string
+	Res *string
 }
 
 func (o *RemoveAtsDocumentResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveAtsDocumentResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveAtsDocumentResponse) GetRemoveAtsDocumentDefaultApplicationJSONString() *string {
+func (o *RemoveAtsDocumentResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.RemoveAtsDocumentDefaultApplicationJSONString
+	return o.Res
 }

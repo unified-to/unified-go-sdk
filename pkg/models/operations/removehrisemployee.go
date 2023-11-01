@@ -35,7 +35,7 @@ type RemoveHrisEmployeeResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	RemoveHrisEmployeeDefaultApplicationJSONString *string
+	Res *string
 }
 
 func (o *RemoveHrisEmployeeResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveHrisEmployeeResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveHrisEmployeeResponse) GetRemoveHrisEmployeeDefaultApplicationJSONString() *string {
+func (o *RemoveHrisEmployeeResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.RemoveHrisEmployeeDefaultApplicationJSONString
+	return o.Res
 }

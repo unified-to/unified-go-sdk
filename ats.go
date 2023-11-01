@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type ats struct {
+type Ats struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newAts(sdkConfig sdkConfiguration) *ats {
-	return &ats{
+func newAts(sdkConfig sdkConfiguration) *Ats {
+	return &Ats{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateAtsApplication - Create an application
-func (s *ats) CreateAtsApplication(ctx context.Context, request operations.CreateAtsApplicationRequest) (*operations.CreateAtsApplicationResponse, error) {
+func (s *Ats) CreateAtsApplication(ctx context.Context, request operations.CreateAtsApplicationRequest) (*operations.CreateAtsApplicationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *ats) CreateAtsApplication(ctx context.Context, request operations.Creat
 }
 
 // CreateAtsCandidate - Create a candidate
-func (s *ats) CreateAtsCandidate(ctx context.Context, request operations.CreateAtsCandidateRequest) (*operations.CreateAtsCandidateResponse, error) {
+func (s *Ats) CreateAtsCandidate(ctx context.Context, request operations.CreateAtsCandidateRequest) (*operations.CreateAtsCandidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate", request, nil)
 	if err != nil {
@@ -161,7 +161,7 @@ func (s *ats) CreateAtsCandidate(ctx context.Context, request operations.CreateA
 }
 
 // CreateAtsDocument - Create a document
-func (s *ats) CreateAtsDocument(ctx context.Context, request operations.CreateAtsDocumentRequest) (*operations.CreateAtsDocumentResponse, error) {
+func (s *Ats) CreateAtsDocument(ctx context.Context, request operations.CreateAtsDocumentRequest) (*operations.CreateAtsDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document", request, nil)
 	if err != nil {
@@ -229,7 +229,7 @@ func (s *ats) CreateAtsDocument(ctx context.Context, request operations.CreateAt
 }
 
 // CreateAtsInterview - Create a interview
-func (s *ats) CreateAtsInterview(ctx context.Context, request operations.CreateAtsInterviewRequest) (*operations.CreateAtsInterviewResponse, error) {
+func (s *Ats) CreateAtsInterview(ctx context.Context, request operations.CreateAtsInterviewRequest) (*operations.CreateAtsInterviewResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview", request, nil)
 	if err != nil {
@@ -297,7 +297,7 @@ func (s *ats) CreateAtsInterview(ctx context.Context, request operations.CreateA
 }
 
 // CreateAtsJob - Create a job
-func (s *ats) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobRequest) (*operations.CreateAtsJobResponse, error) {
+func (s *Ats) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobRequest) (*operations.CreateAtsJobResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job", request, nil)
 	if err != nil {
@@ -365,7 +365,7 @@ func (s *ats) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 }
 
 // CreateAtsScorecard - Create a scorecard
-func (s *ats) CreateAtsScorecard(ctx context.Context, request operations.CreateAtsScorecardRequest) (*operations.CreateAtsScorecardResponse, error) {
+func (s *Ats) CreateAtsScorecard(ctx context.Context, request operations.CreateAtsScorecardRequest) (*operations.CreateAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard", request, nil)
 	if err != nil {
@@ -433,7 +433,7 @@ func (s *ats) CreateAtsScorecard(ctx context.Context, request operations.CreateA
 }
 
 // GetAtsApplication - Retrieve an application
-func (s *ats) GetAtsApplication(ctx context.Context, request operations.GetAtsApplicationRequest) (*operations.GetAtsApplicationResponse, error) {
+func (s *Ats) GetAtsApplication(ctx context.Context, request operations.GetAtsApplicationRequest) (*operations.GetAtsApplicationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application/{id}", request, nil)
 	if err != nil {
@@ -498,7 +498,7 @@ func (s *ats) GetAtsApplication(ctx context.Context, request operations.GetAtsAp
 }
 
 // GetAtsCandidate - Retrieve a candidate
-func (s *ats) GetAtsCandidate(ctx context.Context, request operations.GetAtsCandidateRequest) (*operations.GetAtsCandidateResponse, error) {
+func (s *Ats) GetAtsCandidate(ctx context.Context, request operations.GetAtsCandidateRequest) (*operations.GetAtsCandidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate/{id}", request, nil)
 	if err != nil {
@@ -563,7 +563,7 @@ func (s *ats) GetAtsCandidate(ctx context.Context, request operations.GetAtsCand
 }
 
 // GetAtsDocument - Retrieve a document
-func (s *ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocumentRequest) (*operations.GetAtsDocumentResponse, error) {
+func (s *Ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocumentRequest) (*operations.GetAtsDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
 	if err != nil {
@@ -628,7 +628,7 @@ func (s *ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocum
 }
 
 // GetAtsInterview - Retrieve a interview
-func (s *ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInterviewRequest) (*operations.GetAtsInterviewResponse, error) {
+func (s *Ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInterviewRequest) (*operations.GetAtsInterviewResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview/{id}", request, nil)
 	if err != nil {
@@ -693,7 +693,7 @@ func (s *ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInte
 }
 
 // GetAtsJob - Retrieve a job
-func (s *ats) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest) (*operations.GetAtsJobResponse, error) {
+func (s *Ats) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest) (*operations.GetAtsJobResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job/{id}", request, nil)
 	if err != nil {
@@ -758,7 +758,7 @@ func (s *ats) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 }
 
 // GetAtsScorecard - Retrieve a scorecard
-func (s *ats) GetAtsScorecard(ctx context.Context, request operations.GetAtsScorecardRequest) (*operations.GetAtsScorecardResponse, error) {
+func (s *Ats) GetAtsScorecard(ctx context.Context, request operations.GetAtsScorecardRequest) (*operations.GetAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {
@@ -823,7 +823,7 @@ func (s *ats) GetAtsScorecard(ctx context.Context, request operations.GetAtsScor
 }
 
 // ListAtsApplications - List all applications
-func (s *ats) ListAtsApplications(ctx context.Context, request operations.ListAtsApplicationsRequest) (*operations.ListAtsApplicationsResponse, error) {
+func (s *Ats) ListAtsApplications(ctx context.Context, request operations.ListAtsApplicationsRequest) (*operations.ListAtsApplicationsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application", request, nil)
 	if err != nil {
@@ -888,7 +888,7 @@ func (s *ats) ListAtsApplications(ctx context.Context, request operations.ListAt
 }
 
 // ListAtsCandidates - List all candidates
-func (s *ats) ListAtsCandidates(ctx context.Context, request operations.ListAtsCandidatesRequest) (*operations.ListAtsCandidatesResponse, error) {
+func (s *Ats) ListAtsCandidates(ctx context.Context, request operations.ListAtsCandidatesRequest) (*operations.ListAtsCandidatesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate", request, nil)
 	if err != nil {
@@ -953,7 +953,7 @@ func (s *ats) ListAtsCandidates(ctx context.Context, request operations.ListAtsC
 }
 
 // ListAtsDocuments - List all documents
-func (s *ats) ListAtsDocuments(ctx context.Context, request operations.ListAtsDocumentsRequest) (*operations.ListAtsDocumentsResponse, error) {
+func (s *Ats) ListAtsDocuments(ctx context.Context, request operations.ListAtsDocumentsRequest) (*operations.ListAtsDocumentsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document", request, nil)
 	if err != nil {
@@ -1018,7 +1018,7 @@ func (s *ats) ListAtsDocuments(ctx context.Context, request operations.ListAtsDo
 }
 
 // ListAtsInterviews - List all interviews
-func (s *ats) ListAtsInterviews(ctx context.Context, request operations.ListAtsInterviewsRequest) (*operations.ListAtsInterviewsResponse, error) {
+func (s *Ats) ListAtsInterviews(ctx context.Context, request operations.ListAtsInterviewsRequest) (*operations.ListAtsInterviewsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview", request, nil)
 	if err != nil {
@@ -1083,7 +1083,7 @@ func (s *ats) ListAtsInterviews(ctx context.Context, request operations.ListAtsI
 }
 
 // ListAtsJobs - List all jobs
-func (s *ats) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsRequest) (*operations.ListAtsJobsResponse, error) {
+func (s *Ats) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsRequest) (*operations.ListAtsJobsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job", request, nil)
 	if err != nil {
@@ -1148,7 +1148,7 @@ func (s *ats) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 }
 
 // ListAtsScorecards - List all scorecards
-func (s *ats) ListAtsScorecards(ctx context.Context, request operations.ListAtsScorecardsRequest) (*operations.ListAtsScorecardsResponse, error) {
+func (s *Ats) ListAtsScorecards(ctx context.Context, request operations.ListAtsScorecardsRequest) (*operations.ListAtsScorecardsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard", request, nil)
 	if err != nil {
@@ -1213,7 +1213,7 @@ func (s *ats) ListAtsScorecards(ctx context.Context, request operations.ListAtsS
 }
 
 // PatchAtsApplication - Update an application
-func (s *ats) PatchAtsApplication(ctx context.Context, request operations.PatchAtsApplicationRequest) (*operations.PatchAtsApplicationResponse, error) {
+func (s *Ats) PatchAtsApplication(ctx context.Context, request operations.PatchAtsApplicationRequest) (*operations.PatchAtsApplicationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application/{id}", request, nil)
 	if err != nil {
@@ -1281,7 +1281,7 @@ func (s *ats) PatchAtsApplication(ctx context.Context, request operations.PatchA
 }
 
 // PatchAtsCandidate - Update a candidate
-func (s *ats) PatchAtsCandidate(ctx context.Context, request operations.PatchAtsCandidateRequest) (*operations.PatchAtsCandidateResponse, error) {
+func (s *Ats) PatchAtsCandidate(ctx context.Context, request operations.PatchAtsCandidateRequest) (*operations.PatchAtsCandidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate/{id}", request, nil)
 	if err != nil {
@@ -1349,7 +1349,7 @@ func (s *ats) PatchAtsCandidate(ctx context.Context, request operations.PatchAts
 }
 
 // PatchAtsDocument - Update a document
-func (s *ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsDocumentRequest) (*operations.PatchAtsDocumentResponse, error) {
+func (s *Ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsDocumentRequest) (*operations.PatchAtsDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
 	if err != nil {
@@ -1417,7 +1417,7 @@ func (s *ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsD
 }
 
 // PatchAtsInterview - Update a interview
-func (s *ats) PatchAtsInterview(ctx context.Context, request operations.PatchAtsInterviewRequest) (*operations.PatchAtsInterviewResponse, error) {
+func (s *Ats) PatchAtsInterview(ctx context.Context, request operations.PatchAtsInterviewRequest) (*operations.PatchAtsInterviewResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview/{id}", request, nil)
 	if err != nil {
@@ -1485,7 +1485,7 @@ func (s *ats) PatchAtsInterview(ctx context.Context, request operations.PatchAts
 }
 
 // PatchAtsJob - Update a job
-func (s *ats) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobRequest) (*operations.PatchAtsJobResponse, error) {
+func (s *Ats) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobRequest) (*operations.PatchAtsJobResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job/{id}", request, nil)
 	if err != nil {
@@ -1553,7 +1553,7 @@ func (s *ats) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 }
 
 // PatchAtsScorecard - Update a scorecard
-func (s *ats) PatchAtsScorecard(ctx context.Context, request operations.PatchAtsScorecardRequest) (*operations.PatchAtsScorecardResponse, error) {
+func (s *Ats) PatchAtsScorecard(ctx context.Context, request operations.PatchAtsScorecardRequest) (*operations.PatchAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {
@@ -1621,7 +1621,7 @@ func (s *ats) PatchAtsScorecard(ctx context.Context, request operations.PatchAts
 }
 
 // RemoveAtsApplication - Remove an application
-func (s *ats) RemoveAtsApplication(ctx context.Context, request operations.RemoveAtsApplicationRequest) (*operations.RemoveAtsApplicationResponse, error) {
+func (s *Ats) RemoveAtsApplication(ctx context.Context, request operations.RemoveAtsApplicationRequest) (*operations.RemoveAtsApplicationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application/{id}", request, nil)
 	if err != nil {
@@ -1668,7 +1668,7 @@ func (s *ats) RemoveAtsApplication(ctx context.Context, request operations.Remov
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsApplicationDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1678,7 +1678,7 @@ func (s *ats) RemoveAtsApplication(ctx context.Context, request operations.Remov
 }
 
 // RemoveAtsCandidate - Remove a candidate
-func (s *ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveAtsCandidateRequest) (*operations.RemoveAtsCandidateResponse, error) {
+func (s *Ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveAtsCandidateRequest) (*operations.RemoveAtsCandidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate/{id}", request, nil)
 	if err != nil {
@@ -1725,7 +1725,7 @@ func (s *ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveA
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsCandidateDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1735,7 +1735,7 @@ func (s *ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveA
 }
 
 // RemoveAtsDocument - Remove a document
-func (s *ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAtsDocumentRequest) (*operations.RemoveAtsDocumentResponse, error) {
+func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAtsDocumentRequest) (*operations.RemoveAtsDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
 	if err != nil {
@@ -1782,7 +1782,7 @@ func (s *ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAt
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsDocumentDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1792,7 +1792,7 @@ func (s *ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAt
 }
 
 // RemoveAtsInterview - Remove a interview
-func (s *ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveAtsInterviewRequest) (*operations.RemoveAtsInterviewResponse, error) {
+func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveAtsInterviewRequest) (*operations.RemoveAtsInterviewResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview/{id}", request, nil)
 	if err != nil {
@@ -1839,7 +1839,7 @@ func (s *ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveA
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsInterviewDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1849,7 +1849,7 @@ func (s *ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveA
 }
 
 // RemoveAtsJob - Remove a job
-func (s *ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobRequest) (*operations.RemoveAtsJobResponse, error) {
+func (s *Ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobRequest) (*operations.RemoveAtsJobResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job/{id}", request, nil)
 	if err != nil {
@@ -1896,7 +1896,7 @@ func (s *ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsJobDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1906,7 +1906,7 @@ func (s *ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 }
 
 // RemoveAtsScorecard - Remove a scorecard
-func (s *ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveAtsScorecardRequest) (*operations.RemoveAtsScorecardResponse, error) {
+func (s *Ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveAtsScorecardRequest) (*operations.RemoveAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {
@@ -1953,7 +1953,7 @@ func (s *ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveA
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsScorecardDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1963,7 +1963,7 @@ func (s *ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveA
 }
 
 // UpdateAtsApplication - Update an application
-func (s *ats) UpdateAtsApplication(ctx context.Context, request operations.UpdateAtsApplicationRequest) (*operations.UpdateAtsApplicationResponse, error) {
+func (s *Ats) UpdateAtsApplication(ctx context.Context, request operations.UpdateAtsApplicationRequest) (*operations.UpdateAtsApplicationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application/{id}", request, nil)
 	if err != nil {
@@ -2031,7 +2031,7 @@ func (s *ats) UpdateAtsApplication(ctx context.Context, request operations.Updat
 }
 
 // UpdateAtsCandidate - Update a candidate
-func (s *ats) UpdateAtsCandidate(ctx context.Context, request operations.UpdateAtsCandidateRequest) (*operations.UpdateAtsCandidateResponse, error) {
+func (s *Ats) UpdateAtsCandidate(ctx context.Context, request operations.UpdateAtsCandidateRequest) (*operations.UpdateAtsCandidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate/{id}", request, nil)
 	if err != nil {
@@ -2099,7 +2099,7 @@ func (s *ats) UpdateAtsCandidate(ctx context.Context, request operations.UpdateA
 }
 
 // UpdateAtsDocument - Update a document
-func (s *ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAtsDocumentRequest) (*operations.UpdateAtsDocumentResponse, error) {
+func (s *Ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAtsDocumentRequest) (*operations.UpdateAtsDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
 	if err != nil {
@@ -2167,7 +2167,7 @@ func (s *ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAt
 }
 
 // UpdateAtsInterview - Update a interview
-func (s *ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateAtsInterviewRequest) (*operations.UpdateAtsInterviewResponse, error) {
+func (s *Ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateAtsInterviewRequest) (*operations.UpdateAtsInterviewResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/interview/{id}", request, nil)
 	if err != nil {
@@ -2235,7 +2235,7 @@ func (s *ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateA
 }
 
 // UpdateAtsJob - Update a job
-func (s *ats) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobRequest) (*operations.UpdateAtsJobResponse, error) {
+func (s *Ats) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobRequest) (*operations.UpdateAtsJobResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job/{id}", request, nil)
 	if err != nil {
@@ -2303,7 +2303,7 @@ func (s *ats) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobR
 }
 
 // UpdateAtsScorecard - Update a scorecard
-func (s *ats) UpdateAtsScorecard(ctx context.Context, request operations.UpdateAtsScorecardRequest) (*operations.UpdateAtsScorecardResponse, error) {
+func (s *Ats) UpdateAtsScorecard(ctx context.Context, request operations.UpdateAtsScorecardRequest) (*operations.UpdateAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {

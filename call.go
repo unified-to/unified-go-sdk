@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type call struct {
+type Call struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newCall(sdkConfig sdkConfiguration) *call {
-	return &call{
+func newCall(sdkConfig sdkConfiguration) *Call {
+	return &Call{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // ListUcCalls - List all calls
-func (s *call) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest) (*operations.ListUcCallsResponse, error) {
+func (s *Call) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest) (*operations.ListUcCallsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/call", request, nil)
 	if err != nil {

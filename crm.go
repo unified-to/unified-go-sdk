@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type crm struct {
+type Crm struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newCrm(sdkConfig sdkConfiguration) *crm {
-	return &crm{
+func newCrm(sdkConfig sdkConfiguration) *Crm {
+	return &Crm{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateCrmCompany - Create a company
-func (s *crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrmCompanyRequest) (*operations.CreateCrmCompanyResponse, error) {
+func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrmCompanyRequest) (*operations.CreateCrmCompanyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrm
 }
 
 // CreateCrmContact - Create a contact
-func (s *crm) CreateCrmContact(ctx context.Context, request operations.CreateCrmContactRequest) (*operations.CreateCrmContactResponse, error) {
+func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrmContactRequest) (*operations.CreateCrmContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact", request, nil)
 	if err != nil {
@@ -161,7 +161,7 @@ func (s *crm) CreateCrmContact(ctx context.Context, request operations.CreateCrm
 }
 
 // CreateCrmDeal - Create a deal
-func (s *crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDealRequest) (*operations.CreateCrmDealResponse, error) {
+func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDealRequest) (*operations.CreateCrmDealResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal", request, nil)
 	if err != nil {
@@ -229,7 +229,7 @@ func (s *crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDea
 }
 
 // CreateCrmEvent - Create a event
-func (s *crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEventRequest) (*operations.CreateCrmEventResponse, error) {
+func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEventRequest) (*operations.CreateCrmEventResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event", request, nil)
 	if err != nil {
@@ -297,7 +297,7 @@ func (s *crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEv
 }
 
 // CreateCrmFile - Create a file
-func (s *crm) CreateCrmFile(ctx context.Context, request operations.CreateCrmFileRequest) (*operations.CreateCrmFileResponse, error) {
+func (s *Crm) CreateCrmFile(ctx context.Context, request operations.CreateCrmFileRequest) (*operations.CreateCrmFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file", request, nil)
 	if err != nil {
@@ -365,7 +365,7 @@ func (s *crm) CreateCrmFile(ctx context.Context, request operations.CreateCrmFil
 }
 
 // CreateCrmLead - Create a lead
-func (s *crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLeadRequest) (*operations.CreateCrmLeadResponse, error) {
+func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLeadRequest) (*operations.CreateCrmLeadResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead", request, nil)
 	if err != nil {
@@ -433,7 +433,7 @@ func (s *crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLea
 }
 
 // CreateCrmPipeline - Create a pipeline
-func (s *crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCrmPipelineRequest) (*operations.CreateCrmPipelineResponse, error) {
+func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCrmPipelineRequest) (*operations.CreateCrmPipelineResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline", request, nil)
 	if err != nil {
@@ -501,7 +501,7 @@ func (s *crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCr
 }
 
 // GetCrmCompany - Retrieve a company
-func (s *crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompanyRequest) (*operations.GetCrmCompanyResponse, error) {
+func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompanyRequest) (*operations.GetCrmCompanyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company/{id}", request, nil)
 	if err != nil {
@@ -566,7 +566,7 @@ func (s *crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompan
 }
 
 // GetCrmContact - Retrieve a contact
-func (s *crm) GetCrmContact(ctx context.Context, request operations.GetCrmContactRequest) (*operations.GetCrmContactResponse, error) {
+func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContactRequest) (*operations.GetCrmContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -631,7 +631,7 @@ func (s *crm) GetCrmContact(ctx context.Context, request operations.GetCrmContac
 }
 
 // GetCrmDeal - Retrieve a deal
-func (s *crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealRequest) (*operations.GetCrmDealResponse, error) {
+func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealRequest) (*operations.GetCrmDealResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal/{id}", request, nil)
 	if err != nil {
@@ -696,7 +696,7 @@ func (s *crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealReque
 }
 
 // GetCrmEvent - Retrieve a event
-func (s *crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventRequest) (*operations.GetCrmEventResponse, error) {
+func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventRequest) (*operations.GetCrmEventResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event/{id}", request, nil)
 	if err != nil {
@@ -761,7 +761,7 @@ func (s *crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventReq
 }
 
 // GetCrmFile - Retrieve a file
-func (s *crm) GetCrmFile(ctx context.Context, request operations.GetCrmFileRequest) (*operations.GetCrmFileResponse, error) {
+func (s *Crm) GetCrmFile(ctx context.Context, request operations.GetCrmFileRequest) (*operations.GetCrmFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file/{id}", request, nil)
 	if err != nil {
@@ -826,7 +826,7 @@ func (s *crm) GetCrmFile(ctx context.Context, request operations.GetCrmFileReque
 }
 
 // GetCrmLead - Retrieve a lead
-func (s *crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadRequest) (*operations.GetCrmLeadResponse, error) {
+func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadRequest) (*operations.GetCrmLeadResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead/{id}", request, nil)
 	if err != nil {
@@ -891,7 +891,7 @@ func (s *crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadReque
 }
 
 // GetCrmPipeline - Retrieve a pipeline
-func (s *crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipelineRequest) (*operations.GetCrmPipelineResponse, error) {
+func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipelineRequest) (*operations.GetCrmPipelineResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {
@@ -956,7 +956,7 @@ func (s *crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipel
 }
 
 // ListCrmCompanies - List all companies
-func (s *crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCompaniesRequest) (*operations.ListCrmCompaniesResponse, error) {
+func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCompaniesRequest) (*operations.ListCrmCompaniesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company", request, nil)
 	if err != nil {
@@ -1021,7 +1021,7 @@ func (s *crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCo
 }
 
 // ListCrmContacts - List all contacts
-func (s *crm) ListCrmContacts(ctx context.Context, request operations.ListCrmContactsRequest) (*operations.ListCrmContactsResponse, error) {
+func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmContactsRequest) (*operations.ListCrmContactsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact", request, nil)
 	if err != nil {
@@ -1086,7 +1086,7 @@ func (s *crm) ListCrmContacts(ctx context.Context, request operations.ListCrmCon
 }
 
 // ListCrmDeals - List all deals
-func (s *crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsRequest) (*operations.ListCrmDealsResponse, error) {
+func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsRequest) (*operations.ListCrmDealsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal", request, nil)
 	if err != nil {
@@ -1151,7 +1151,7 @@ func (s *crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsR
 }
 
 // ListCrmEvents - List all events
-func (s *crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEventsRequest) (*operations.ListCrmEventsResponse, error) {
+func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEventsRequest) (*operations.ListCrmEventsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event", request, nil)
 	if err != nil {
@@ -1216,7 +1216,7 @@ func (s *crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEvent
 }
 
 // ListCrmFiles - List all files
-func (s *crm) ListCrmFiles(ctx context.Context, request operations.ListCrmFilesRequest) (*operations.ListCrmFilesResponse, error) {
+func (s *Crm) ListCrmFiles(ctx context.Context, request operations.ListCrmFilesRequest) (*operations.ListCrmFilesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file", request, nil)
 	if err != nil {
@@ -1281,7 +1281,7 @@ func (s *crm) ListCrmFiles(ctx context.Context, request operations.ListCrmFilesR
 }
 
 // ListCrmLeads - List all leads
-func (s *crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsRequest) (*operations.ListCrmLeadsResponse, error) {
+func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsRequest) (*operations.ListCrmLeadsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead", request, nil)
 	if err != nil {
@@ -1346,7 +1346,7 @@ func (s *crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsR
 }
 
 // ListCrmPipelines - List all pipelines
-func (s *crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPipelinesRequest) (*operations.ListCrmPipelinesResponse, error) {
+func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPipelinesRequest) (*operations.ListCrmPipelinesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline", request, nil)
 	if err != nil {
@@ -1411,7 +1411,7 @@ func (s *crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPi
 }
 
 // PatchCrmCompany - Update a company
-func (s *crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCompanyRequest) (*operations.PatchCrmCompanyResponse, error) {
+func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCompanyRequest) (*operations.PatchCrmCompanyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company/{id}", request, nil)
 	if err != nil {
@@ -1479,7 +1479,7 @@ func (s *crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCo
 }
 
 // PatchCrmContact - Update a contact
-func (s *crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmContactRequest) (*operations.PatchCrmContactResponse, error) {
+func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmContactRequest) (*operations.PatchCrmContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -1547,7 +1547,7 @@ func (s *crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmCo
 }
 
 // PatchCrmDeal - Update a deal
-func (s *crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealRequest) (*operations.PatchCrmDealResponse, error) {
+func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealRequest) (*operations.PatchCrmDealResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal/{id}", request, nil)
 	if err != nil {
@@ -1615,7 +1615,7 @@ func (s *crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealR
 }
 
 // PatchCrmEvent - Update a event
-func (s *crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEventRequest) (*operations.PatchCrmEventResponse, error) {
+func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEventRequest) (*operations.PatchCrmEventResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event/{id}", request, nil)
 	if err != nil {
@@ -1683,7 +1683,7 @@ func (s *crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEven
 }
 
 // PatchCrmFile - Update a file
-func (s *crm) PatchCrmFile(ctx context.Context, request operations.PatchCrmFileRequest) (*operations.PatchCrmFileResponse, error) {
+func (s *Crm) PatchCrmFile(ctx context.Context, request operations.PatchCrmFileRequest) (*operations.PatchCrmFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file/{id}", request, nil)
 	if err != nil {
@@ -1751,7 +1751,7 @@ func (s *crm) PatchCrmFile(ctx context.Context, request operations.PatchCrmFileR
 }
 
 // PatchCrmLead - Update a lead
-func (s *crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadRequest) (*operations.PatchCrmLeadResponse, error) {
+func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadRequest) (*operations.PatchCrmLeadResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead/{id}", request, nil)
 	if err != nil {
@@ -1819,7 +1819,7 @@ func (s *crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadR
 }
 
 // PatchCrmPipeline - Update a pipeline
-func (s *crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmPipelineRequest) (*operations.PatchCrmPipelineResponse, error) {
+func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmPipelineRequest) (*operations.PatchCrmPipelineResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {
@@ -1887,7 +1887,7 @@ func (s *crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmP
 }
 
 // RemoveCrmCompany - Remove a company
-func (s *crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrmCompanyRequest) (*operations.RemoveCrmCompanyResponse, error) {
+func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrmCompanyRequest) (*operations.RemoveCrmCompanyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company/{id}", request, nil)
 	if err != nil {
@@ -1934,7 +1934,7 @@ func (s *crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrm
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmCompanyDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1944,7 +1944,7 @@ func (s *crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrm
 }
 
 // RemoveCrmContact - Remove a contact
-func (s *crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrmContactRequest) (*operations.RemoveCrmContactResponse, error) {
+func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrmContactRequest) (*operations.RemoveCrmContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -1991,7 +1991,7 @@ func (s *crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrm
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmContactDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -2001,7 +2001,7 @@ func (s *crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrm
 }
 
 // RemoveCrmDeal - Remove a deal
-func (s *crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDealRequest) (*operations.RemoveCrmDealResponse, error) {
+func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDealRequest) (*operations.RemoveCrmDealResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal/{id}", request, nil)
 	if err != nil {
@@ -2048,7 +2048,7 @@ func (s *crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmDealDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -2058,7 +2058,7 @@ func (s *crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 }
 
 // RemoveCrmEvent - Remove a event
-func (s *crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEventRequest) (*operations.RemoveCrmEventResponse, error) {
+func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEventRequest) (*operations.RemoveCrmEventResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event/{id}", request, nil)
 	if err != nil {
@@ -2105,7 +2105,7 @@ func (s *crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEv
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmEventDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -2115,7 +2115,7 @@ func (s *crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEv
 }
 
 // RemoveCrmFile - Remove a file
-func (s *crm) RemoveCrmFile(ctx context.Context, request operations.RemoveCrmFileRequest) (*operations.RemoveCrmFileResponse, error) {
+func (s *Crm) RemoveCrmFile(ctx context.Context, request operations.RemoveCrmFileRequest) (*operations.RemoveCrmFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file/{id}", request, nil)
 	if err != nil {
@@ -2162,7 +2162,7 @@ func (s *crm) RemoveCrmFile(ctx context.Context, request operations.RemoveCrmFil
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmFileDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -2172,7 +2172,7 @@ func (s *crm) RemoveCrmFile(ctx context.Context, request operations.RemoveCrmFil
 }
 
 // RemoveCrmLead - Remove a lead
-func (s *crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLeadRequest) (*operations.RemoveCrmLeadResponse, error) {
+func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLeadRequest) (*operations.RemoveCrmLeadResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead/{id}", request, nil)
 	if err != nil {
@@ -2219,7 +2219,7 @@ func (s *crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLea
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmLeadDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -2229,7 +2229,7 @@ func (s *crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLea
 }
 
 // RemoveCrmPipeline - Remove a pipeline
-func (s *crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCrmPipelineRequest) (*operations.RemoveCrmPipelineResponse, error) {
+func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCrmPipelineRequest) (*operations.RemoveCrmPipelineResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {
@@ -2276,7 +2276,7 @@ func (s *crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCr
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmPipelineDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -2286,7 +2286,7 @@ func (s *crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCr
 }
 
 // UpdateCrmCompany - Update a company
-func (s *crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrmCompanyRequest) (*operations.UpdateCrmCompanyResponse, error) {
+func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrmCompanyRequest) (*operations.UpdateCrmCompanyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company/{id}", request, nil)
 	if err != nil {
@@ -2354,7 +2354,7 @@ func (s *crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrm
 }
 
 // UpdateCrmContact - Update a contact
-func (s *crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrmContactRequest) (*operations.UpdateCrmContactResponse, error) {
+func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrmContactRequest) (*operations.UpdateCrmContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -2422,7 +2422,7 @@ func (s *crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrm
 }
 
 // UpdateCrmDeal - Update a deal
-func (s *crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDealRequest) (*operations.UpdateCrmDealResponse, error) {
+func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDealRequest) (*operations.UpdateCrmDealResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal/{id}", request, nil)
 	if err != nil {
@@ -2490,7 +2490,7 @@ func (s *crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDea
 }
 
 // UpdateCrmEvent - Update a event
-func (s *crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEventRequest) (*operations.UpdateCrmEventResponse, error) {
+func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEventRequest) (*operations.UpdateCrmEventResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event/{id}", request, nil)
 	if err != nil {
@@ -2558,7 +2558,7 @@ func (s *crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEv
 }
 
 // UpdateCrmFile - Update a file
-func (s *crm) UpdateCrmFile(ctx context.Context, request operations.UpdateCrmFileRequest) (*operations.UpdateCrmFileResponse, error) {
+func (s *Crm) UpdateCrmFile(ctx context.Context, request operations.UpdateCrmFileRequest) (*operations.UpdateCrmFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file/{id}", request, nil)
 	if err != nil {
@@ -2626,7 +2626,7 @@ func (s *crm) UpdateCrmFile(ctx context.Context, request operations.UpdateCrmFil
 }
 
 // UpdateCrmLead - Update a lead
-func (s *crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLeadRequest) (*operations.UpdateCrmLeadResponse, error) {
+func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLeadRequest) (*operations.UpdateCrmLeadResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead/{id}", request, nil)
 	if err != nil {
@@ -2694,7 +2694,7 @@ func (s *crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLea
 }
 
 // UpdateCrmPipeline - Update a pipeline
-func (s *crm) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCrmPipelineRequest) (*operations.UpdateCrmPipelineResponse, error) {
+func (s *Crm) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCrmPipelineRequest) (*operations.UpdateCrmPipelineResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {

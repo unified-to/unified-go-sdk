@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type enrich struct {
+type Enrich struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newEnrich(sdkConfig sdkConfiguration) *enrich {
-	return &enrich{
+func newEnrich(sdkConfig sdkConfiguration) *Enrich {
+	return &Enrich{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // ListEnrichCompanies - Retrieve enrichment information for a company
-func (s *enrich) ListEnrichCompanies(ctx context.Context, request operations.ListEnrichCompaniesRequest) (*operations.ListEnrichCompaniesResponse, error) {
+func (s *Enrich) ListEnrichCompanies(ctx context.Context, request operations.ListEnrichCompaniesRequest) (*operations.ListEnrichCompaniesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/company", request, nil)
 	if err != nil {
@@ -90,7 +90,7 @@ func (s *enrich) ListEnrichCompanies(ctx context.Context, request operations.Lis
 }
 
 // ListEnrichPeople - Retrieve enrichment information for a person
-func (s *enrich) ListEnrichPeople(ctx context.Context, request operations.ListEnrichPeopleRequest) (*operations.ListEnrichPeopleResponse, error) {
+func (s *Enrich) ListEnrichPeople(ctx context.Context, request operations.ListEnrichPeopleRequest) (*operations.ListEnrichPeopleResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/person", request, nil)
 	if err != nil {

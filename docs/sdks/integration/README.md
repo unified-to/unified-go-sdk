@@ -1,5 +1,5 @@
 # Integration
-(*Integration*)
+(*.Integration*)
 
 ### Available Operations
 
@@ -82,8 +82,8 @@ func main() {
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
-        Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesHrisEmployeeWrite,
+        Scopes: []operations.Scopes{
+            operations.ScopesHrisEmployeeWrite,
         },
         WorkspaceID: "string",
     })
@@ -91,7 +91,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetUnifiedIntegrationAuth200ApplicationJSONString != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -134,8 +134,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
-        Categories: []operations.ListUnifiedIntegrationWorkspacesCategories{
-            operations.ListUnifiedIntegrationWorkspacesCategoriesTicketing,
+        Categories: []operations.QueryParamCategories{
+            operations.QueryParamCategoriesTicketing,
         },
         WorkspaceID: "string",
     })
@@ -186,8 +186,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{
-        Categories: []operations.ListUnifiedIntegrationsCategories{
-            operations.ListUnifiedIntegrationsCategoriesAuth,
+        Categories: []operations.ListUnifiedIntegrationsQueryParamCategories{
+            operations.ListUnifiedIntegrationsQueryParamCategoriesAuth,
         },
     })
     if err != nil {

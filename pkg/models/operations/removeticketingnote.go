@@ -35,7 +35,7 @@ type RemoveTicketingNoteResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	RemoveTicketingNoteDefaultApplicationJSONString *string
+	Res *string
 }
 
 func (o *RemoveTicketingNoteResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveTicketingNoteResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveTicketingNoteResponse) GetRemoveTicketingNoteDefaultApplicationJSONString() *string {
+func (o *RemoveTicketingNoteResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.RemoveTicketingNoteDefaultApplicationJSONString
+	return o.Res
 }

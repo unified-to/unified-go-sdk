@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type application struct {
+type Application struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newApplication(sdkConfig sdkConfiguration) *application {
-	return &application{
+func newApplication(sdkConfig sdkConfiguration) *Application {
+	return &Application{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateAtsApplication - Create an application
-func (s *application) CreateAtsApplication(ctx context.Context, request operations.CreateAtsApplicationRequest) (*operations.CreateAtsApplicationResponse, error) {
+func (s *Application) CreateAtsApplication(ctx context.Context, request operations.CreateAtsApplicationRequest) (*operations.CreateAtsApplicationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *application) CreateAtsApplication(ctx context.Context, request operatio
 }
 
 // GetAtsApplication - Retrieve an application
-func (s *application) GetAtsApplication(ctx context.Context, request operations.GetAtsApplicationRequest) (*operations.GetAtsApplicationResponse, error) {
+func (s *Application) GetAtsApplication(ctx context.Context, request operations.GetAtsApplicationRequest) (*operations.GetAtsApplicationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *application) GetAtsApplication(ctx context.Context, request operations.
 }
 
 // ListAtsApplications - List all applications
-func (s *application) ListAtsApplications(ctx context.Context, request operations.ListAtsApplicationsRequest) (*operations.ListAtsApplicationsResponse, error) {
+func (s *Application) ListAtsApplications(ctx context.Context, request operations.ListAtsApplicationsRequest) (*operations.ListAtsApplicationsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *application) ListAtsApplications(ctx context.Context, request operation
 }
 
 // PatchAtsApplication - Update an application
-func (s *application) PatchAtsApplication(ctx context.Context, request operations.PatchAtsApplicationRequest) (*operations.PatchAtsApplicationResponse, error) {
+func (s *Application) PatchAtsApplication(ctx context.Context, request operations.PatchAtsApplicationRequest) (*operations.PatchAtsApplicationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *application) PatchAtsApplication(ctx context.Context, request operation
 }
 
 // RemoveAtsApplication - Remove an application
-func (s *application) RemoveAtsApplication(ctx context.Context, request operations.RemoveAtsApplicationRequest) (*operations.RemoveAtsApplicationResponse, error) {
+func (s *Application) RemoveAtsApplication(ctx context.Context, request operations.RemoveAtsApplicationRequest) (*operations.RemoveAtsApplicationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *application) RemoveAtsApplication(ctx context.Context, request operatio
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsApplicationDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *application) RemoveAtsApplication(ctx context.Context, request operatio
 }
 
 // UpdateAtsApplication - Update an application
-func (s *application) UpdateAtsApplication(ctx context.Context, request operations.UpdateAtsApplicationRequest) (*operations.UpdateAtsApplicationResponse, error) {
+func (s *Application) UpdateAtsApplication(ctx context.Context, request operations.UpdateAtsApplicationRequest) (*operations.UpdateAtsApplicationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/application/{id}", request, nil)
 	if err != nil {

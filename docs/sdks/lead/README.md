@@ -1,5 +1,5 @@
 # Lead
-(*Lead*)
+(*.Lead*)
 
 ### Available Operations
 

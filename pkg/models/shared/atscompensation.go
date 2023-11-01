@@ -7,23 +7,23 @@ import (
 	"fmt"
 )
 
-type AtsCompensationFrequency string
+type Frequency string
 
 const (
-	AtsCompensationFrequencyOneTime AtsCompensationFrequency = "ONE_TIME"
-	AtsCompensationFrequencyDay     AtsCompensationFrequency = "DAY"
-	AtsCompensationFrequencyQuarter AtsCompensationFrequency = "QUARTER"
-	AtsCompensationFrequencyYear    AtsCompensationFrequency = "YEAR"
-	AtsCompensationFrequencyHour    AtsCompensationFrequency = "HOUR"
-	AtsCompensationFrequencyMonth   AtsCompensationFrequency = "MONTH"
-	AtsCompensationFrequencyWeek    AtsCompensationFrequency = "WEEK"
+	FrequencyOneTime Frequency = "ONE_TIME"
+	FrequencyDay     Frequency = "DAY"
+	FrequencyQuarter Frequency = "QUARTER"
+	FrequencyYear    Frequency = "YEAR"
+	FrequencyHour    Frequency = "HOUR"
+	FrequencyMonth   Frequency = "MONTH"
+	FrequencyWeek    Frequency = "WEEK"
 )
 
-func (e AtsCompensationFrequency) ToPointer() *AtsCompensationFrequency {
+func (e Frequency) ToPointer() *Frequency {
 	return &e
 }
 
-func (e *AtsCompensationFrequency) UnmarshalJSON(data []byte) error {
+func (e *Frequency) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -42,10 +42,10 @@ func (e *AtsCompensationFrequency) UnmarshalJSON(data []byte) error {
 	case "MONTH":
 		fallthrough
 	case "WEEK":
-		*e = AtsCompensationFrequency(v)
+		*e = Frequency(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AtsCompensationFrequency: %v", v)
+		return fmt.Errorf("invalid value for Frequency: %v", v)
 	}
 }
 
@@ -86,11 +86,11 @@ func (e *AtsCompensationType) UnmarshalJSON(data []byte) error {
 }
 
 type AtsCompensation struct {
-	Currency  *string                   `json:"currency,omitempty"`
-	Frequency *AtsCompensationFrequency `json:"frequency,omitempty"`
-	Max       *float64                  `json:"max,omitempty"`
-	Min       *float64                  `json:"min,omitempty"`
-	Type      AtsCompensationType       `json:"type"`
+	Currency  *string             `json:"currency,omitempty"`
+	Frequency *Frequency          `json:"frequency,omitempty"`
+	Max       *float64            `json:"max,omitempty"`
+	Min       *float64            `json:"min,omitempty"`
+	Type      AtsCompensationType `json:"type"`
 }
 
 func (o *AtsCompensation) GetCurrency() *string {
@@ -100,7 +100,7 @@ func (o *AtsCompensation) GetCurrency() *string {
 	return o.Currency
 }
 
-func (o *AtsCompensation) GetFrequency() *AtsCompensationFrequency {
+func (o *AtsCompensation) GetFrequency() *Frequency {
 	if o == nil {
 		return nil
 	}

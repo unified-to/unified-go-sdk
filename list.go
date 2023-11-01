@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type list struct {
+type List struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newList(sdkConfig sdkConfiguration) *list {
-	return &list{
+func newList(sdkConfig sdkConfiguration) *List {
+	return &List{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateMartechList - Create a list
-func (s *list) CreateMartechList(ctx context.Context, request operations.CreateMartechListRequest) (*operations.CreateMartechListResponse, error) {
+func (s *List) CreateMartechList(ctx context.Context, request operations.CreateMartechListRequest) (*operations.CreateMartechListResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/list", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *list) CreateMartechList(ctx context.Context, request operations.CreateM
 }
 
 // GetMartechList - Retrieve a list
-func (s *list) GetMartechList(ctx context.Context, request operations.GetMartechListRequest) (*operations.GetMartechListResponse, error) {
+func (s *List) GetMartechList(ctx context.Context, request operations.GetMartechListRequest) (*operations.GetMartechListResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/list/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *list) GetMartechList(ctx context.Context, request operations.GetMartech
 }
 
 // ListMartechLists - List all lists
-func (s *list) ListMartechLists(ctx context.Context, request operations.ListMartechListsRequest) (*operations.ListMartechListsResponse, error) {
+func (s *List) ListMartechLists(ctx context.Context, request operations.ListMartechListsRequest) (*operations.ListMartechListsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/list", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *list) ListMartechLists(ctx context.Context, request operations.ListMart
 }
 
 // PatchMartechList - Update a list
-func (s *list) PatchMartechList(ctx context.Context, request operations.PatchMartechListRequest) (*operations.PatchMartechListResponse, error) {
+func (s *List) PatchMartechList(ctx context.Context, request operations.PatchMartechListRequest) (*operations.PatchMartechListResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/list/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *list) PatchMartechList(ctx context.Context, request operations.PatchMar
 }
 
 // RemoveMartechList - Remove a list
-func (s *list) RemoveMartechList(ctx context.Context, request operations.RemoveMartechListRequest) (*operations.RemoveMartechListResponse, error) {
+func (s *List) RemoveMartechList(ctx context.Context, request operations.RemoveMartechListRequest) (*operations.RemoveMartechListResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/list/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *list) RemoveMartechList(ctx context.Context, request operations.RemoveM
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveMartechListDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *list) RemoveMartechList(ctx context.Context, request operations.RemoveM
 }
 
 // UpdateMartechList - Update a list
-func (s *list) UpdateMartechList(ctx context.Context, request operations.UpdateMartechListRequest) (*operations.UpdateMartechListResponse, error) {
+func (s *List) UpdateMartechList(ctx context.Context, request operations.UpdateMartechListRequest) (*operations.UpdateMartechListResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/list/{id}", request, nil)
 	if err != nil {

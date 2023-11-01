@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type note struct {
+type Note struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newNote(sdkConfig sdkConfiguration) *note {
-	return &note{
+func newNote(sdkConfig sdkConfiguration) *Note {
+	return &Note{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateTicketingNote - Create a note
-func (s *note) CreateTicketingNote(ctx context.Context, request operations.CreateTicketingNoteRequest) (*operations.CreateTicketingNoteResponse, error) {
+func (s *Note) CreateTicketingNote(ctx context.Context, request operations.CreateTicketingNoteRequest) (*operations.CreateTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *note) CreateTicketingNote(ctx context.Context, request operations.Creat
 }
 
 // GetTicketingNote - Retrieve a note
-func (s *note) GetTicketingNote(ctx context.Context, request operations.GetTicketingNoteRequest) (*operations.GetTicketingNoteResponse, error) {
+func (s *Note) GetTicketingNote(ctx context.Context, request operations.GetTicketingNoteRequest) (*operations.GetTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *note) GetTicketingNote(ctx context.Context, request operations.GetTicke
 }
 
 // ListTicketingNotes - List all notes
-func (s *note) ListTicketingNotes(ctx context.Context, request operations.ListTicketingNotesRequest) (*operations.ListTicketingNotesResponse, error) {
+func (s *Note) ListTicketingNotes(ctx context.Context, request operations.ListTicketingNotesRequest) (*operations.ListTicketingNotesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *note) ListTicketingNotes(ctx context.Context, request operations.ListTi
 }
 
 // PatchTicketingNote - Update a note
-func (s *note) PatchTicketingNote(ctx context.Context, request operations.PatchTicketingNoteRequest) (*operations.PatchTicketingNoteResponse, error) {
+func (s *Note) PatchTicketingNote(ctx context.Context, request operations.PatchTicketingNoteRequest) (*operations.PatchTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *note) PatchTicketingNote(ctx context.Context, request operations.PatchT
 }
 
 // RemoveTicketingNote - Remove a note
-func (s *note) RemoveTicketingNote(ctx context.Context, request operations.RemoveTicketingNoteRequest) (*operations.RemoveTicketingNoteResponse, error) {
+func (s *Note) RemoveTicketingNote(ctx context.Context, request operations.RemoveTicketingNoteRequest) (*operations.RemoveTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *note) RemoveTicketingNote(ctx context.Context, request operations.Remov
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveTicketingNoteDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *note) RemoveTicketingNote(ctx context.Context, request operations.Remov
 }
 
 // UpdateTicketingNote - Update a note
-func (s *note) UpdateTicketingNote(ctx context.Context, request operations.UpdateTicketingNoteRequest) (*operations.UpdateTicketingNoteResponse, error) {
+func (s *Note) UpdateTicketingNote(ctx context.Context, request operations.UpdateTicketingNoteRequest) (*operations.UpdateTicketingNoteResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/note/{id}", request, nil)
 	if err != nil {

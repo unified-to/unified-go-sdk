@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type person struct {
+type Person struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newPerson(sdkConfig sdkConfiguration) *person {
-	return &person{
+func newPerson(sdkConfig sdkConfiguration) *Person {
+	return &Person{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // ListEnrichPeople - Retrieve enrichment information for a person
-func (s *person) ListEnrichPeople(ctx context.Context, request operations.ListEnrichPeopleRequest) (*operations.ListEnrichPeopleResponse, error) {
+func (s *Person) ListEnrichPeople(ctx context.Context, request operations.ListEnrichPeopleRequest) (*operations.ListEnrichPeopleResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/person", request, nil)
 	if err != nil {

@@ -9,18 +9,18 @@ import (
 	"time"
 )
 
-type EnrichPersonGender string
+type Gender string
 
 const (
-	EnrichPersonGenderMale   EnrichPersonGender = "MALE"
-	EnrichPersonGenderFemale EnrichPersonGender = "FEMALE"
+	GenderMale   Gender = "MALE"
+	GenderFemale Gender = "FEMALE"
 )
 
-func (e EnrichPersonGender) ToPointer() *EnrichPersonGender {
+func (e Gender) ToPointer() *Gender {
 	return &e
 }
 
-func (e *EnrichPersonGender) UnmarshalJSON(data []byte) error {
+func (e *Gender) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -29,10 +29,10 @@ func (e *EnrichPersonGender) UnmarshalJSON(data []byte) error {
 	case "MALE":
 		fallthrough
 	case "FEMALE":
-		*e = EnrichPersonGender(v)
+		*e = Gender(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnrichPersonGender: %v", v)
+		return fmt.Errorf("invalid value for Gender: %v", v)
 	}
 }
 
@@ -46,15 +46,15 @@ type EnrichPerson struct {
 	CompanyDomain *string                      `json:"company_domain,omitempty"`
 	CreatedAt     *time.Time                   `json:"created_at,omitempty"`
 	// An array of email addresses for this person
-	Emails         []EnrichEmail       `json:"emails,omitempty"`
-	FacebookURL    *string             `json:"facebook_url,omitempty"`
-	Gender         *EnrichPersonGender `json:"gender,omitempty"`
-	GithubURL      *string             `json:"github_url,omitempty"`
-	GithubUsername *string             `json:"github_username,omitempty"`
-	ID             *string             `json:"id,omitempty"`
-	ImageURL       *string             `json:"image_url,omitempty"`
-	LinkedinURL    *string             `json:"linkedin_url,omitempty"`
-	Name           *string             `json:"name,omitempty"`
+	Emails         []EnrichEmail `json:"emails,omitempty"`
+	FacebookURL    *string       `json:"facebook_url,omitempty"`
+	Gender         *Gender       `json:"gender,omitempty"`
+	GithubURL      *string       `json:"github_url,omitempty"`
+	GithubUsername *string       `json:"github_username,omitempty"`
+	ID             *string       `json:"id,omitempty"`
+	ImageURL       *string       `json:"image_url,omitempty"`
+	LinkedinURL    *string       `json:"linkedin_url,omitempty"`
+	Name           *string       `json:"name,omitempty"`
 	// The raw data returned by the integration for this person
 	Raw PropertyEnrichPersonRaw `json:"raw"`
 	// An array of telephones for this person
@@ -135,7 +135,7 @@ func (o *EnrichPerson) GetFacebookURL() *string {
 	return o.FacebookURL
 }
 
-func (o *EnrichPerson) GetGender() *EnrichPersonGender {
+func (o *EnrichPerson) GetGender() *Gender {
 	if o == nil {
 		return nil
 	}

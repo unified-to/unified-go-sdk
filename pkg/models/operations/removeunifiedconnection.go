@@ -26,7 +26,7 @@ type RemoveUnifiedConnectionResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	RemoveUnifiedConnectionDefaultApplicationJSONString *string
+	Res *string
 }
 
 func (o *RemoveUnifiedConnectionResponse) GetContentType() string {
@@ -50,9 +50,9 @@ func (o *RemoveUnifiedConnectionResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveUnifiedConnectionResponse) GetRemoveUnifiedConnectionDefaultApplicationJSONString() *string {
+func (o *RemoveUnifiedConnectionResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.RemoveUnifiedConnectionDefaultApplicationJSONString
+	return o.Res
 }

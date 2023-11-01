@@ -1,5 +1,5 @@
 # Contact
-(*Contact*)
+(*.Contact*)
 
 ### Available Operations
 

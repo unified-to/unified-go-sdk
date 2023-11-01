@@ -66,46 +66,46 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 
 // UnifiedTo - Unified.to API: One API to Rule Them All
 type UnifiedTo struct {
-	Accounting  *accounting
-	Apicall     *apicall
-	Application *application
-	Ats         *ats
-	Auth        *auth
-	Call        *call
-	Candidate   *candidate
-	Company     *company
-	Connection  *connection
-	Contact     *contact
-	Crm         *crm
-	Customer    *customer
-	Deal        *deal
-	Document    *document
-	Employee    *employee
-	Enrich      *enrich
-	Event       *event
-	File        *file
-	Group       *group
-	Hris        *hris
-	Integration *integration
-	Interview   *interview
-	Invoice     *invoice
-	Job         *job
-	Lead        *lead
-	List        *list
-	Login       *login
-	Martech     *martech
-	Member      *member
-	Note        *note
-	Passthrough *passthrough
-	Payment     *payment
-	Person      *person
-	Pipeline    *pipeline
-	Scorecard   *scorecard
-	Ticket      *ticket
-	Ticketing   *ticketing
-	Uc          *uc
-	Unified     *unified
-	Webhook     *webhook
+	Accounting  *Accounting
+	Apicall     *Apicall
+	Application *Application
+	Ats         *Ats
+	Auth        *Auth
+	Call        *Call
+	Candidate   *Candidate
+	Company     *Company
+	Connection  *Connection
+	Contact     *Contact
+	Crm         *Crm
+	Customer    *Customer
+	Deal        *Deal
+	Document    *Document
+	Employee    *Employee
+	Enrich      *Enrich
+	Event       *Event
+	File        *File
+	Group       *Group
+	Hris        *Hris
+	Integration *Integration
+	Interview   *Interview
+	Invoice     *Invoice
+	Job         *Job
+	Lead        *Lead
+	List        *List
+	Login       *Login
+	Martech     *Martech
+	Member      *Member
+	Note        *Note
+	Passthrough *Passthrough
+	Payment     *Payment
+	Person      *Person
+	Pipeline    *Pipeline
+	Scorecard   *Scorecard
+	Ticket      *Ticket
+	Ticketing   *Ticketing
+	Uc          *Uc
+	Unified     *Unified
+	Webhook     *Webhook
 
 	sdkConfiguration sdkConfiguration
 }
@@ -175,9 +175,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.6.5",
-			GenVersion:        "2.173.0",
-			UserAgent:         "speakeasy-sdk/go 0.6.5 2.173.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.7.0",
+			GenVersion:        "2.175.1",
+			UserAgent:         "speakeasy-sdk/go 0.7.0 2.175.1 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {

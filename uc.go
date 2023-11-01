@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type uc struct {
+type Uc struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newUc(sdkConfig sdkConfiguration) *uc {
-	return &uc{
+func newUc(sdkConfig sdkConfiguration) *Uc {
+	return &Uc{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateUcContact - Create a contact
-func (s *uc) CreateUcContact(ctx context.Context, request operations.CreateUcContactRequest) (*operations.CreateUcContactResponse, error) {
+func (s *Uc) CreateUcContact(ctx context.Context, request operations.CreateUcContactRequest) (*operations.CreateUcContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *uc) CreateUcContact(ctx context.Context, request operations.CreateUcCon
 }
 
 // GetUcContact - Retrieve a contact
-func (s *uc) GetUcContact(ctx context.Context, request operations.GetUcContactRequest) (*operations.GetUcContactResponse, error) {
+func (s *Uc) GetUcContact(ctx context.Context, request operations.GetUcContactRequest) (*operations.GetUcContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *uc) GetUcContact(ctx context.Context, request operations.GetUcContactRe
 }
 
 // ListUcCalls - List all calls
-func (s *uc) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest) (*operations.ListUcCallsResponse, error) {
+func (s *Uc) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest) (*operations.ListUcCallsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/call", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *uc) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequ
 }
 
 // ListUcContacts - List all contacts
-func (s *uc) ListUcContacts(ctx context.Context, request operations.ListUcContactsRequest) (*operations.ListUcContactsResponse, error) {
+func (s *Uc) ListUcContacts(ctx context.Context, request operations.ListUcContactsRequest) (*operations.ListUcContactsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact", request, nil)
 	if err != nil {
@@ -288,7 +288,7 @@ func (s *uc) ListUcContacts(ctx context.Context, request operations.ListUcContac
 }
 
 // PatchUcContact - Update a contact
-func (s *uc) PatchUcContact(ctx context.Context, request operations.PatchUcContactRequest) (*operations.PatchUcContactResponse, error) {
+func (s *Uc) PatchUcContact(ctx context.Context, request operations.PatchUcContactRequest) (*operations.PatchUcContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -356,7 +356,7 @@ func (s *uc) PatchUcContact(ctx context.Context, request operations.PatchUcConta
 }
 
 // RemoveUcContact - Remove a contact
-func (s *uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcContactRequest) (*operations.RemoveUcContactResponse, error) {
+func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcContactRequest) (*operations.RemoveUcContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -403,7 +403,7 @@ func (s *uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcCon
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveUcContactDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -413,7 +413,7 @@ func (s *uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcCon
 }
 
 // UpdateUcContact - Update a contact
-func (s *uc) UpdateUcContact(ctx context.Context, request operations.UpdateUcContactRequest) (*operations.UpdateUcContactResponse, error) {
+func (s *Uc) UpdateUcContact(ctx context.Context, request operations.UpdateUcContactRequest) (*operations.UpdateUcContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {

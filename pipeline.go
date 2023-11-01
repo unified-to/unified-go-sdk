@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type pipeline struct {
+type Pipeline struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newPipeline(sdkConfig sdkConfiguration) *pipeline {
-	return &pipeline{
+func newPipeline(sdkConfig sdkConfiguration) *Pipeline {
+	return &Pipeline{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateCrmPipeline - Create a pipeline
-func (s *pipeline) CreateCrmPipeline(ctx context.Context, request operations.CreateCrmPipelineRequest) (*operations.CreateCrmPipelineResponse, error) {
+func (s *Pipeline) CreateCrmPipeline(ctx context.Context, request operations.CreateCrmPipelineRequest) (*operations.CreateCrmPipelineResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *pipeline) CreateCrmPipeline(ctx context.Context, request operations.Cre
 }
 
 // GetCrmPipeline - Retrieve a pipeline
-func (s *pipeline) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipelineRequest) (*operations.GetCrmPipelineResponse, error) {
+func (s *Pipeline) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipelineRequest) (*operations.GetCrmPipelineResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *pipeline) GetCrmPipeline(ctx context.Context, request operations.GetCrm
 }
 
 // ListCrmPipelines - List all pipelines
-func (s *pipeline) ListCrmPipelines(ctx context.Context, request operations.ListCrmPipelinesRequest) (*operations.ListCrmPipelinesResponse, error) {
+func (s *Pipeline) ListCrmPipelines(ctx context.Context, request operations.ListCrmPipelinesRequest) (*operations.ListCrmPipelinesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *pipeline) ListCrmPipelines(ctx context.Context, request operations.List
 }
 
 // PatchCrmPipeline - Update a pipeline
-func (s *pipeline) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmPipelineRequest) (*operations.PatchCrmPipelineResponse, error) {
+func (s *Pipeline) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmPipelineRequest) (*operations.PatchCrmPipelineResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *pipeline) PatchCrmPipeline(ctx context.Context, request operations.Patc
 }
 
 // RemoveCrmPipeline - Remove a pipeline
-func (s *pipeline) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCrmPipelineRequest) (*operations.RemoveCrmPipelineResponse, error) {
+func (s *Pipeline) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCrmPipelineRequest) (*operations.RemoveCrmPipelineResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *pipeline) RemoveCrmPipeline(ctx context.Context, request operations.Rem
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmPipelineDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *pipeline) RemoveCrmPipeline(ctx context.Context, request operations.Rem
 }
 
 // UpdateCrmPipeline - Update a pipeline
-func (s *pipeline) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCrmPipelineRequest) (*operations.UpdateCrmPipelineResponse, error) {
+func (s *Pipeline) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCrmPipelineRequest) (*operations.UpdateCrmPipelineResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {

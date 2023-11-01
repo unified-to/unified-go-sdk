@@ -15,19 +15,19 @@ import (
 	"strings"
 )
 
-type webhook struct {
+type Webhook struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newWebhook(sdkConfig sdkConfiguration) *webhook {
-	return &webhook{
+func newWebhook(sdkConfig sdkConfiguration) *Webhook {
+	return &Webhook{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateUnifiedWebhook - Create webhook subscription
 // To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
-func (s *webhook) CreateUnifiedWebhook(ctx context.Context, request operations.CreateUnifiedWebhookRequest) (*operations.CreateUnifiedWebhookResponse, error) {
+func (s *Webhook) CreateUnifiedWebhook(ctx context.Context, request operations.CreateUnifiedWebhookRequest) (*operations.CreateUnifiedWebhookResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{connection_id}/{object}", request, nil)
 	if err != nil {
@@ -99,7 +99,7 @@ func (s *webhook) CreateUnifiedWebhook(ctx context.Context, request operations.C
 }
 
 // GetUnifiedWebhook - Retrieve webhook by its ID
-func (s *webhook) GetUnifiedWebhook(ctx context.Context, request operations.GetUnifiedWebhookRequest) (*operations.GetUnifiedWebhookResponse, error) {
+func (s *Webhook) GetUnifiedWebhook(ctx context.Context, request operations.GetUnifiedWebhookRequest) (*operations.GetUnifiedWebhookResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}", request, nil)
 	if err != nil {
@@ -160,7 +160,7 @@ func (s *webhook) GetUnifiedWebhook(ctx context.Context, request operations.GetU
 }
 
 // ListUnifiedWebhooks - Returns all registered webhooks
-func (s *webhook) ListUnifiedWebhooks(ctx context.Context, request operations.ListUnifiedWebhooksRequest) (*operations.ListUnifiedWebhooksResponse, error) {
+func (s *Webhook) ListUnifiedWebhooks(ctx context.Context, request operations.ListUnifiedWebhooksRequest) (*operations.ListUnifiedWebhooksResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/unified/webhook"
 
@@ -222,7 +222,7 @@ func (s *webhook) ListUnifiedWebhooks(ctx context.Context, request operations.Li
 }
 
 // RemoveUnifiedWebhook - Remove webhook subscription
-func (s *webhook) RemoveUnifiedWebhook(ctx context.Context, request operations.RemoveUnifiedWebhookRequest) (*operations.RemoveUnifiedWebhookResponse, error) {
+func (s *Webhook) RemoveUnifiedWebhook(ctx context.Context, request operations.RemoveUnifiedWebhookRequest) (*operations.RemoveUnifiedWebhookResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}", request, nil)
 	if err != nil {
@@ -269,7 +269,7 @@ func (s *webhook) RemoveUnifiedWebhook(ctx context.Context, request operations.R
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveUnifiedWebhookDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

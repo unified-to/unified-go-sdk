@@ -9,26 +9,26 @@ import (
 	"net/http"
 )
 
-type ListUnifiedIntegrationsCategories string
+type ListUnifiedIntegrationsQueryParamCategories string
 
 const (
-	ListUnifiedIntegrationsCategoriesPassthrough ListUnifiedIntegrationsCategories = "passthrough"
-	ListUnifiedIntegrationsCategoriesHris        ListUnifiedIntegrationsCategories = "hris"
-	ListUnifiedIntegrationsCategoriesAts         ListUnifiedIntegrationsCategories = "ats"
-	ListUnifiedIntegrationsCategoriesAuth        ListUnifiedIntegrationsCategories = "auth"
-	ListUnifiedIntegrationsCategoriesCrm         ListUnifiedIntegrationsCategories = "crm"
-	ListUnifiedIntegrationsCategoriesEnrich      ListUnifiedIntegrationsCategories = "enrich"
-	ListUnifiedIntegrationsCategoriesMartech     ListUnifiedIntegrationsCategories = "martech"
-	ListUnifiedIntegrationsCategoriesTicketing   ListUnifiedIntegrationsCategories = "ticketing"
-	ListUnifiedIntegrationsCategoriesUc          ListUnifiedIntegrationsCategories = "uc"
-	ListUnifiedIntegrationsCategoriesAccounting  ListUnifiedIntegrationsCategories = "accounting"
+	ListUnifiedIntegrationsQueryParamCategoriesPassthrough ListUnifiedIntegrationsQueryParamCategories = "passthrough"
+	ListUnifiedIntegrationsQueryParamCategoriesHris        ListUnifiedIntegrationsQueryParamCategories = "hris"
+	ListUnifiedIntegrationsQueryParamCategoriesAts         ListUnifiedIntegrationsQueryParamCategories = "ats"
+	ListUnifiedIntegrationsQueryParamCategoriesAuth        ListUnifiedIntegrationsQueryParamCategories = "auth"
+	ListUnifiedIntegrationsQueryParamCategoriesCrm         ListUnifiedIntegrationsQueryParamCategories = "crm"
+	ListUnifiedIntegrationsQueryParamCategoriesEnrich      ListUnifiedIntegrationsQueryParamCategories = "enrich"
+	ListUnifiedIntegrationsQueryParamCategoriesMartech     ListUnifiedIntegrationsQueryParamCategories = "martech"
+	ListUnifiedIntegrationsQueryParamCategoriesTicketing   ListUnifiedIntegrationsQueryParamCategories = "ticketing"
+	ListUnifiedIntegrationsQueryParamCategoriesUc          ListUnifiedIntegrationsQueryParamCategories = "uc"
+	ListUnifiedIntegrationsQueryParamCategoriesAccounting  ListUnifiedIntegrationsQueryParamCategories = "accounting"
 )
 
-func (e ListUnifiedIntegrationsCategories) ToPointer() *ListUnifiedIntegrationsCategories {
+func (e ListUnifiedIntegrationsQueryParamCategories) ToPointer() *ListUnifiedIntegrationsQueryParamCategories {
 	return &e
 }
 
-func (e *ListUnifiedIntegrationsCategories) UnmarshalJSON(data []byte) error {
+func (e *ListUnifiedIntegrationsQueryParamCategories) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -53,10 +53,10 @@ func (e *ListUnifiedIntegrationsCategories) UnmarshalJSON(data []byte) error {
 	case "uc":
 		fallthrough
 	case "accounting":
-		*e = ListUnifiedIntegrationsCategories(v)
+		*e = ListUnifiedIntegrationsQueryParamCategories(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListUnifiedIntegrationsCategories: %v", v)
+		return fmt.Errorf("invalid value for ListUnifiedIntegrationsQueryParamCategories: %v", v)
 	}
 }
 
@@ -64,14 +64,14 @@ type ListUnifiedIntegrationsRequest struct {
 	// Filter the results for only the workspace's active integrations
 	Active *bool `queryParam:"style=form,explode=true,name=active"`
 	// Filter the results on these categories
-	Categories []ListUnifiedIntegrationsCategories `queryParam:"style=form,explode=true,name=categories"`
-	Env        *string                             `queryParam:"style=form,explode=true,name=env"`
-	Limit      *float64                            `queryParam:"style=form,explode=true,name=limit"`
-	Offset     *float64                            `queryParam:"style=form,explode=true,name=offset"`
-	Order      *string                             `queryParam:"style=form,explode=true,name=order"`
-	Sort       *string                             `queryParam:"style=form,explode=true,name=sort"`
-	Summary    *bool                               `queryParam:"style=form,explode=true,name=summary"`
-	UpdatedGte *string                             `queryParam:"style=form,explode=true,name=updated_gte"`
+	Categories []ListUnifiedIntegrationsQueryParamCategories `queryParam:"style=form,explode=true,name=categories"`
+	Env        *string                                       `queryParam:"style=form,explode=true,name=env"`
+	Limit      *float64                                      `queryParam:"style=form,explode=true,name=limit"`
+	Offset     *float64                                      `queryParam:"style=form,explode=true,name=offset"`
+	Order      *string                                       `queryParam:"style=form,explode=true,name=order"`
+	Sort       *string                                       `queryParam:"style=form,explode=true,name=sort"`
+	Summary    *bool                                         `queryParam:"style=form,explode=true,name=summary"`
+	UpdatedGte *string                                       `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListUnifiedIntegrationsRequest) GetActive() *bool {
@@ -81,7 +81,7 @@ func (o *ListUnifiedIntegrationsRequest) GetActive() *bool {
 	return o.Active
 }
 
-func (o *ListUnifiedIntegrationsRequest) GetCategories() []ListUnifiedIntegrationsCategories {
+func (o *ListUnifiedIntegrationsRequest) GetCategories() []ListUnifiedIntegrationsQueryParamCategories {
 	if o == nil {
 		return nil
 	}

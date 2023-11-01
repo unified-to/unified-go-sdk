@@ -9,20 +9,20 @@ import (
 	"time"
 )
 
-type AtsScorecardRecommendation string
+type Recommendation string
 
 const (
-	AtsScorecardRecommendationDefinitelyNo AtsScorecardRecommendation = "DEFINITELY_NO"
-	AtsScorecardRecommendationNo           AtsScorecardRecommendation = "NO"
-	AtsScorecardRecommendationYes          AtsScorecardRecommendation = "YES"
-	AtsScorecardRecommendationStrongYes    AtsScorecardRecommendation = "STRONG_YES"
+	RecommendationDefinitelyNo Recommendation = "DEFINITELY_NO"
+	RecommendationNo           Recommendation = "NO"
+	RecommendationYes          Recommendation = "YES"
+	RecommendationStrongYes    Recommendation = "STRONG_YES"
 )
 
-func (e AtsScorecardRecommendation) ToPointer() *AtsScorecardRecommendation {
+func (e Recommendation) ToPointer() *Recommendation {
 	return &e
 }
 
-func (e *AtsScorecardRecommendation) UnmarshalJSON(data []byte) error {
+func (e *Recommendation) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -35,25 +35,25 @@ func (e *AtsScorecardRecommendation) UnmarshalJSON(data []byte) error {
 	case "YES":
 		fallthrough
 	case "STRONG_YES":
-		*e = AtsScorecardRecommendation(v)
+		*e = Recommendation(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AtsScorecardRecommendation: %v", v)
+		return fmt.Errorf("invalid value for Recommendation: %v", v)
 	}
 }
 
 type AtsScorecard struct {
-	ApplicationID  *string                     `json:"application_id,omitempty"`
-	CandidateID    *string                     `json:"candidate_id,omitempty"`
-	Comment        *string                     `json:"comment,omitempty"`
-	CreatedAt      *time.Time                  `json:"created_at,omitempty"`
-	ID             *string                     `json:"id,omitempty"`
-	InterviewID    *string                     `json:"interview_id,omitempty"`
-	InterviewerID  *string                     `json:"interviewer_id,omitempty"`
-	JobID          *string                     `json:"job_id,omitempty"`
-	Raw            PropertyAtsScorecardRaw     `json:"raw"`
-	Recommendation *AtsScorecardRecommendation `json:"recommendation,omitempty"`
-	UpdatedAt      *time.Time                  `json:"updated_at,omitempty"`
+	ApplicationID  *string                 `json:"application_id,omitempty"`
+	CandidateID    *string                 `json:"candidate_id,omitempty"`
+	Comment        *string                 `json:"comment,omitempty"`
+	CreatedAt      *time.Time              `json:"created_at,omitempty"`
+	ID             *string                 `json:"id,omitempty"`
+	InterviewID    *string                 `json:"interview_id,omitempty"`
+	InterviewerID  *string                 `json:"interviewer_id,omitempty"`
+	JobID          *string                 `json:"job_id,omitempty"`
+	Raw            PropertyAtsScorecardRaw `json:"raw"`
+	Recommendation *Recommendation         `json:"recommendation,omitempty"`
+	UpdatedAt      *time.Time              `json:"updated_at,omitempty"`
 }
 
 func (a AtsScorecard) MarshalJSON() ([]byte, error) {
@@ -130,7 +130,7 @@ func (o *AtsScorecard) GetRaw() PropertyAtsScorecardRaw {
 	return o.Raw
 }
 
-func (o *AtsScorecard) GetRecommendation() *AtsScorecardRecommendation {
+func (o *AtsScorecard) GetRecommendation() *Recommendation {
 	if o == nil {
 		return nil
 	}

@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type company struct {
+type Company struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newCompany(sdkConfig sdkConfiguration) *company {
-	return &company{
+func newCompany(sdkConfig sdkConfiguration) *Company {
+	return &Company{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateCrmCompany - Create a company
-func (s *company) CreateCrmCompany(ctx context.Context, request operations.CreateCrmCompanyRequest) (*operations.CreateCrmCompanyResponse, error) {
+func (s *Company) CreateCrmCompany(ctx context.Context, request operations.CreateCrmCompanyRequest) (*operations.CreateCrmCompanyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *company) CreateCrmCompany(ctx context.Context, request operations.Creat
 }
 
 // GetCrmCompany - Retrieve a company
-func (s *company) GetCrmCompany(ctx context.Context, request operations.GetCrmCompanyRequest) (*operations.GetCrmCompanyResponse, error) {
+func (s *Company) GetCrmCompany(ctx context.Context, request operations.GetCrmCompanyRequest) (*operations.GetCrmCompanyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *company) GetCrmCompany(ctx context.Context, request operations.GetCrmCo
 }
 
 // ListCrmCompanies - List all companies
-func (s *company) ListCrmCompanies(ctx context.Context, request operations.ListCrmCompaniesRequest) (*operations.ListCrmCompaniesResponse, error) {
+func (s *Company) ListCrmCompanies(ctx context.Context, request operations.ListCrmCompaniesRequest) (*operations.ListCrmCompaniesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *company) ListCrmCompanies(ctx context.Context, request operations.ListC
 }
 
 // ListEnrichCompanies - Retrieve enrichment information for a company
-func (s *company) ListEnrichCompanies(ctx context.Context, request operations.ListEnrichCompaniesRequest) (*operations.ListEnrichCompaniesResponse, error) {
+func (s *Company) ListEnrichCompanies(ctx context.Context, request operations.ListEnrichCompaniesRequest) (*operations.ListEnrichCompaniesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/company", request, nil)
 	if err != nil {
@@ -288,7 +288,7 @@ func (s *company) ListEnrichCompanies(ctx context.Context, request operations.Li
 }
 
 // PatchCrmCompany - Update a company
-func (s *company) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCompanyRequest) (*operations.PatchCrmCompanyResponse, error) {
+func (s *Company) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCompanyRequest) (*operations.PatchCrmCompanyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company/{id}", request, nil)
 	if err != nil {
@@ -356,7 +356,7 @@ func (s *company) PatchCrmCompany(ctx context.Context, request operations.PatchC
 }
 
 // RemoveCrmCompany - Remove a company
-func (s *company) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrmCompanyRequest) (*operations.RemoveCrmCompanyResponse, error) {
+func (s *Company) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrmCompanyRequest) (*operations.RemoveCrmCompanyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company/{id}", request, nil)
 	if err != nil {
@@ -403,7 +403,7 @@ func (s *company) RemoveCrmCompany(ctx context.Context, request operations.Remov
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmCompanyDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -413,7 +413,7 @@ func (s *company) RemoveCrmCompany(ctx context.Context, request operations.Remov
 }
 
 // UpdateCrmCompany - Update a company
-func (s *company) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrmCompanyRequest) (*operations.UpdateCrmCompanyResponse, error) {
+func (s *Company) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrmCompanyRequest) (*operations.UpdateCrmCompanyResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company/{id}", request, nil)
 	if err != nil {

@@ -1,5 +1,5 @@
 # Event
-(*Event*)
+(*.Event*)
 
 ### Available Operations
 

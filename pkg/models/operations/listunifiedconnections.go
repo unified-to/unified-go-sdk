@@ -11,26 +11,26 @@ import (
 	"time"
 )
 
-type ListUnifiedConnectionsCategories string
+type Categories string
 
 const (
-	ListUnifiedConnectionsCategoriesPassthrough ListUnifiedConnectionsCategories = "passthrough"
-	ListUnifiedConnectionsCategoriesHris        ListUnifiedConnectionsCategories = "hris"
-	ListUnifiedConnectionsCategoriesAts         ListUnifiedConnectionsCategories = "ats"
-	ListUnifiedConnectionsCategoriesAuth        ListUnifiedConnectionsCategories = "auth"
-	ListUnifiedConnectionsCategoriesCrm         ListUnifiedConnectionsCategories = "crm"
-	ListUnifiedConnectionsCategoriesEnrich      ListUnifiedConnectionsCategories = "enrich"
-	ListUnifiedConnectionsCategoriesMartech     ListUnifiedConnectionsCategories = "martech"
-	ListUnifiedConnectionsCategoriesTicketing   ListUnifiedConnectionsCategories = "ticketing"
-	ListUnifiedConnectionsCategoriesUc          ListUnifiedConnectionsCategories = "uc"
-	ListUnifiedConnectionsCategoriesAccounting  ListUnifiedConnectionsCategories = "accounting"
+	CategoriesPassthrough Categories = "passthrough"
+	CategoriesHris        Categories = "hris"
+	CategoriesAts         Categories = "ats"
+	CategoriesAuth        Categories = "auth"
+	CategoriesCrm         Categories = "crm"
+	CategoriesEnrich      Categories = "enrich"
+	CategoriesMartech     Categories = "martech"
+	CategoriesTicketing   Categories = "ticketing"
+	CategoriesUc          Categories = "uc"
+	CategoriesAccounting  Categories = "accounting"
 )
 
-func (e ListUnifiedConnectionsCategories) ToPointer() *ListUnifiedConnectionsCategories {
+func (e Categories) ToPointer() *Categories {
 	return &e
 }
 
-func (e *ListUnifiedConnectionsCategories) UnmarshalJSON(data []byte) error {
+func (e *Categories) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -55,17 +55,17 @@ func (e *ListUnifiedConnectionsCategories) UnmarshalJSON(data []byte) error {
 	case "uc":
 		fallthrough
 	case "accounting":
-		*e = ListUnifiedConnectionsCategories(v)
+		*e = Categories(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListUnifiedConnectionsCategories: %v", v)
+		return fmt.Errorf("invalid value for Categories: %v", v)
 	}
 }
 
 type ListUnifiedConnectionsRequest struct {
 	// Filter the results on these categories
-	Categories []ListUnifiedConnectionsCategories `queryParam:"style=form,explode=true,name=categories"`
-	Env        *string                            `queryParam:"style=form,explode=true,name=env"`
+	Categories []Categories `queryParam:"style=form,explode=true,name=categories"`
+	Env        *string      `queryParam:"style=form,explode=true,name=env"`
 	// Filter the results to only those integrations for your user referenced by this value
 	ExternalXref *string  `queryParam:"style=form,explode=true,name=external_xref"`
 	Limit        *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -87,7 +87,7 @@ func (l *ListUnifiedConnectionsRequest) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *ListUnifiedConnectionsRequest) GetCategories() []ListUnifiedConnectionsCategories {
+func (o *ListUnifiedConnectionsRequest) GetCategories() []Categories {
 	if o == nil {
 		return nil
 	}

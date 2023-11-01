@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type contact struct {
+type Contact struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newContact(sdkConfig sdkConfiguration) *contact {
-	return &contact{
+func newContact(sdkConfig sdkConfiguration) *Contact {
+	return &Contact{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateCrmContact - Create a contact
-func (s *contact) CreateCrmContact(ctx context.Context, request operations.CreateCrmContactRequest) (*operations.CreateCrmContactResponse, error) {
+func (s *Contact) CreateCrmContact(ctx context.Context, request operations.CreateCrmContactRequest) (*operations.CreateCrmContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *contact) CreateCrmContact(ctx context.Context, request operations.Creat
 }
 
 // CreateUcContact - Create a contact
-func (s *contact) CreateUcContact(ctx context.Context, request operations.CreateUcContactRequest) (*operations.CreateUcContactResponse, error) {
+func (s *Contact) CreateUcContact(ctx context.Context, request operations.CreateUcContactRequest) (*operations.CreateUcContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact", request, nil)
 	if err != nil {
@@ -161,7 +161,7 @@ func (s *contact) CreateUcContact(ctx context.Context, request operations.Create
 }
 
 // GetCrmContact - Retrieve a contact
-func (s *contact) GetCrmContact(ctx context.Context, request operations.GetCrmContactRequest) (*operations.GetCrmContactResponse, error) {
+func (s *Contact) GetCrmContact(ctx context.Context, request operations.GetCrmContactRequest) (*operations.GetCrmContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -226,7 +226,7 @@ func (s *contact) GetCrmContact(ctx context.Context, request operations.GetCrmCo
 }
 
 // GetUcContact - Retrieve a contact
-func (s *contact) GetUcContact(ctx context.Context, request operations.GetUcContactRequest) (*operations.GetUcContactResponse, error) {
+func (s *Contact) GetUcContact(ctx context.Context, request operations.GetUcContactRequest) (*operations.GetUcContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *contact) GetUcContact(ctx context.Context, request operations.GetUcCont
 }
 
 // ListCrmContacts - List all contacts
-func (s *contact) ListCrmContacts(ctx context.Context, request operations.ListCrmContactsRequest) (*operations.ListCrmContactsResponse, error) {
+func (s *Contact) ListCrmContacts(ctx context.Context, request operations.ListCrmContactsRequest) (*operations.ListCrmContactsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact", request, nil)
 	if err != nil {
@@ -356,7 +356,7 @@ func (s *contact) ListCrmContacts(ctx context.Context, request operations.ListCr
 }
 
 // ListUcContacts - List all contacts
-func (s *contact) ListUcContacts(ctx context.Context, request operations.ListUcContactsRequest) (*operations.ListUcContactsResponse, error) {
+func (s *Contact) ListUcContacts(ctx context.Context, request operations.ListUcContactsRequest) (*operations.ListUcContactsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact", request, nil)
 	if err != nil {
@@ -421,7 +421,7 @@ func (s *contact) ListUcContacts(ctx context.Context, request operations.ListUcC
 }
 
 // PatchCrmContact - Update a contact
-func (s *contact) PatchCrmContact(ctx context.Context, request operations.PatchCrmContactRequest) (*operations.PatchCrmContactResponse, error) {
+func (s *Contact) PatchCrmContact(ctx context.Context, request operations.PatchCrmContactRequest) (*operations.PatchCrmContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -489,7 +489,7 @@ func (s *contact) PatchCrmContact(ctx context.Context, request operations.PatchC
 }
 
 // PatchUcContact - Update a contact
-func (s *contact) PatchUcContact(ctx context.Context, request operations.PatchUcContactRequest) (*operations.PatchUcContactResponse, error) {
+func (s *Contact) PatchUcContact(ctx context.Context, request operations.PatchUcContactRequest) (*operations.PatchUcContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -557,7 +557,7 @@ func (s *contact) PatchUcContact(ctx context.Context, request operations.PatchUc
 }
 
 // RemoveCrmContact - Remove a contact
-func (s *contact) RemoveCrmContact(ctx context.Context, request operations.RemoveCrmContactRequest) (*operations.RemoveCrmContactResponse, error) {
+func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.RemoveCrmContactRequest) (*operations.RemoveCrmContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -604,7 +604,7 @@ func (s *contact) RemoveCrmContact(ctx context.Context, request operations.Remov
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmContactDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -614,7 +614,7 @@ func (s *contact) RemoveCrmContact(ctx context.Context, request operations.Remov
 }
 
 // RemoveUcContact - Remove a contact
-func (s *contact) RemoveUcContact(ctx context.Context, request operations.RemoveUcContactRequest) (*operations.RemoveUcContactResponse, error) {
+func (s *Contact) RemoveUcContact(ctx context.Context, request operations.RemoveUcContactRequest) (*operations.RemoveUcContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -661,7 +661,7 @@ func (s *contact) RemoveUcContact(ctx context.Context, request operations.Remove
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveUcContactDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -671,7 +671,7 @@ func (s *contact) RemoveUcContact(ctx context.Context, request operations.Remove
 }
 
 // UpdateCrmContact - Update a contact
-func (s *contact) UpdateCrmContact(ctx context.Context, request operations.UpdateCrmContactRequest) (*operations.UpdateCrmContactResponse, error) {
+func (s *Contact) UpdateCrmContact(ctx context.Context, request operations.UpdateCrmContactRequest) (*operations.UpdateCrmContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
@@ -739,7 +739,7 @@ func (s *contact) UpdateCrmContact(ctx context.Context, request operations.Updat
 }
 
 // UpdateUcContact - Update a contact
-func (s *contact) UpdateUcContact(ctx context.Context, request operations.UpdateUcContactRequest) (*operations.UpdateUcContactResponse, error) {
+func (s *Contact) UpdateUcContact(ctx context.Context, request operations.UpdateUcContactRequest) (*operations.UpdateUcContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {

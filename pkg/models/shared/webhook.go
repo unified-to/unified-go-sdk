@@ -9,44 +9,44 @@ import (
 	"time"
 )
 
-type WebhookObjectType string
+type ObjectType string
 
 const (
-	WebhookObjectTypeAccountingCustomer WebhookObjectType = "accounting_customer"
-	WebhookObjectTypeAccountingInvoice  WebhookObjectType = "accounting_invoice"
-	WebhookObjectTypeAccountingPayment  WebhookObjectType = "accounting_payment"
-	WebhookObjectTypeAtsApplication     WebhookObjectType = "ats_application"
-	WebhookObjectTypeAtsCandidate       WebhookObjectType = "ats_candidate"
-	WebhookObjectTypeAtsDocument        WebhookObjectType = "ats_document"
-	WebhookObjectTypeAtsInterview       WebhookObjectType = "ats_interview"
-	WebhookObjectTypeAtsJob             WebhookObjectType = "ats_job"
-	WebhookObjectTypeAtsScorecard       WebhookObjectType = "ats_scorecard"
-	WebhookObjectTypeCrmCompany         WebhookObjectType = "crm_company"
-	WebhookObjectTypeCrmContact         WebhookObjectType = "crm_contact"
-	WebhookObjectTypeCrmDeal            WebhookObjectType = "crm_deal"
-	WebhookObjectTypeCrmEvent           WebhookObjectType = "crm_event"
-	WebhookObjectTypeCrmFile            WebhookObjectType = "crm_file"
-	WebhookObjectTypeCrmLead            WebhookObjectType = "crm_lead"
-	WebhookObjectTypeCrmPipeline        WebhookObjectType = "crm_pipeline"
-	WebhookObjectTypeHrisEmployee       WebhookObjectType = "hris_employee"
-	WebhookObjectTypeHrisGroup          WebhookObjectType = "hris_group"
-	WebhookObjectTypeMartechList        WebhookObjectType = "martech_list"
-	WebhookObjectTypeMartechMember      WebhookObjectType = "martech_member"
-	WebhookObjectTypePassthrough        WebhookObjectType = "passthrough"
-	WebhookObjectTypeTicketingNote      WebhookObjectType = "ticketing_note"
-	WebhookObjectTypeTicketingTicket    WebhookObjectType = "ticketing_ticket"
-	WebhookObjectTypeTicketingCustomer  WebhookObjectType = "ticketing_customer"
-	WebhookObjectTypeUcContact          WebhookObjectType = "uc_contact"
-	WebhookObjectTypeUcCall             WebhookObjectType = "uc_call"
-	WebhookObjectTypeEnrichPerson       WebhookObjectType = "enrich_person"
-	WebhookObjectTypeEnrichCompany      WebhookObjectType = "enrich_company"
+	ObjectTypeAccountingCustomer ObjectType = "accounting_customer"
+	ObjectTypeAccountingInvoice  ObjectType = "accounting_invoice"
+	ObjectTypeAccountingPayment  ObjectType = "accounting_payment"
+	ObjectTypeAtsApplication     ObjectType = "ats_application"
+	ObjectTypeAtsCandidate       ObjectType = "ats_candidate"
+	ObjectTypeAtsDocument        ObjectType = "ats_document"
+	ObjectTypeAtsInterview       ObjectType = "ats_interview"
+	ObjectTypeAtsJob             ObjectType = "ats_job"
+	ObjectTypeAtsScorecard       ObjectType = "ats_scorecard"
+	ObjectTypeCrmCompany         ObjectType = "crm_company"
+	ObjectTypeCrmContact         ObjectType = "crm_contact"
+	ObjectTypeCrmDeal            ObjectType = "crm_deal"
+	ObjectTypeCrmEvent           ObjectType = "crm_event"
+	ObjectTypeCrmFile            ObjectType = "crm_file"
+	ObjectTypeCrmLead            ObjectType = "crm_lead"
+	ObjectTypeCrmPipeline        ObjectType = "crm_pipeline"
+	ObjectTypeHrisEmployee       ObjectType = "hris_employee"
+	ObjectTypeHrisGroup          ObjectType = "hris_group"
+	ObjectTypeMartechList        ObjectType = "martech_list"
+	ObjectTypeMartechMember      ObjectType = "martech_member"
+	ObjectTypePassthrough        ObjectType = "passthrough"
+	ObjectTypeTicketingNote      ObjectType = "ticketing_note"
+	ObjectTypeTicketingTicket    ObjectType = "ticketing_ticket"
+	ObjectTypeTicketingCustomer  ObjectType = "ticketing_customer"
+	ObjectTypeUcContact          ObjectType = "uc_contact"
+	ObjectTypeUcCall             ObjectType = "uc_call"
+	ObjectTypeEnrichPerson       ObjectType = "enrich_person"
+	ObjectTypeEnrichCompany      ObjectType = "enrich_company"
 )
 
-func (e WebhookObjectType) ToPointer() *WebhookObjectType {
+func (e ObjectType) ToPointer() *ObjectType {
 	return &e
 }
 
-func (e *WebhookObjectType) UnmarshalJSON(data []byte) error {
+func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -107,10 +107,10 @@ func (e *WebhookObjectType) UnmarshalJSON(data []byte) error {
 	case "enrich_person":
 		fallthrough
 	case "enrich_company":
-		*e = WebhookObjectType(v)
+		*e = ObjectType(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookObjectType: %v", v)
+		return fmt.Errorf("invalid value for ObjectType: %v", v)
 	}
 }
 
@@ -126,7 +126,7 @@ type Webhook struct {
 	IncludeRaw      *bool                   `json:"include_raw,omitempty"`
 	IntegrationType string                  `json:"integration_type"`
 	Interval        float64                 `json:"interval"`
-	ObjectType      WebhookObjectType       `json:"object_type"`
+	ObjectType      ObjectType              `json:"object_type"`
 	// integration-specific subscriptions IDs
 	Subscriptions []string   `json:"subscriptions,omitempty"`
 	UpdatedAt     *time.Time `json:"updated_at,omitempty"`
@@ -214,9 +214,9 @@ func (o *Webhook) GetInterval() float64 {
 	return o.Interval
 }
 
-func (o *Webhook) GetObjectType() WebhookObjectType {
+func (o *Webhook) GetObjectType() ObjectType {
 	if o == nil {
-		return WebhookObjectType("")
+		return ObjectType("")
 	}
 	return o.ObjectType
 }

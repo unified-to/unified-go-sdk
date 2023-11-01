@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type candidate struct {
+type Candidate struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newCandidate(sdkConfig sdkConfiguration) *candidate {
-	return &candidate{
+func newCandidate(sdkConfig sdkConfiguration) *Candidate {
+	return &Candidate{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateAtsCandidate - Create a candidate
-func (s *candidate) CreateAtsCandidate(ctx context.Context, request operations.CreateAtsCandidateRequest) (*operations.CreateAtsCandidateResponse, error) {
+func (s *Candidate) CreateAtsCandidate(ctx context.Context, request operations.CreateAtsCandidateRequest) (*operations.CreateAtsCandidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *candidate) CreateAtsCandidate(ctx context.Context, request operations.C
 }
 
 // GetAtsCandidate - Retrieve a candidate
-func (s *candidate) GetAtsCandidate(ctx context.Context, request operations.GetAtsCandidateRequest) (*operations.GetAtsCandidateResponse, error) {
+func (s *Candidate) GetAtsCandidate(ctx context.Context, request operations.GetAtsCandidateRequest) (*operations.GetAtsCandidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *candidate) GetAtsCandidate(ctx context.Context, request operations.GetA
 }
 
 // ListAtsCandidates - List all candidates
-func (s *candidate) ListAtsCandidates(ctx context.Context, request operations.ListAtsCandidatesRequest) (*operations.ListAtsCandidatesResponse, error) {
+func (s *Candidate) ListAtsCandidates(ctx context.Context, request operations.ListAtsCandidatesRequest) (*operations.ListAtsCandidatesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *candidate) ListAtsCandidates(ctx context.Context, request operations.Li
 }
 
 // PatchAtsCandidate - Update a candidate
-func (s *candidate) PatchAtsCandidate(ctx context.Context, request operations.PatchAtsCandidateRequest) (*operations.PatchAtsCandidateResponse, error) {
+func (s *Candidate) PatchAtsCandidate(ctx context.Context, request operations.PatchAtsCandidateRequest) (*operations.PatchAtsCandidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *candidate) PatchAtsCandidate(ctx context.Context, request operations.Pa
 }
 
 // RemoveAtsCandidate - Remove a candidate
-func (s *candidate) RemoveAtsCandidate(ctx context.Context, request operations.RemoveAtsCandidateRequest) (*operations.RemoveAtsCandidateResponse, error) {
+func (s *Candidate) RemoveAtsCandidate(ctx context.Context, request operations.RemoveAtsCandidateRequest) (*operations.RemoveAtsCandidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *candidate) RemoveAtsCandidate(ctx context.Context, request operations.R
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsCandidateDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *candidate) RemoveAtsCandidate(ctx context.Context, request operations.R
 }
 
 // UpdateAtsCandidate - Update a candidate
-func (s *candidate) UpdateAtsCandidate(ctx context.Context, request operations.UpdateAtsCandidateRequest) (*operations.UpdateAtsCandidateResponse, error) {
+func (s *Candidate) UpdateAtsCandidate(ctx context.Context, request operations.UpdateAtsCandidateRequest) (*operations.UpdateAtsCandidateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate/{id}", request, nil)
 	if err != nil {

@@ -1,5 +1,5 @@
 # Person
-(*Person*)
+(*.Person*)
 
 ### Available Operations
 

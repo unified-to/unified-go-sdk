@@ -1,5 +1,5 @@
 # List
-(*List*)
+(*.List*)
 
 ### Available Operations
 

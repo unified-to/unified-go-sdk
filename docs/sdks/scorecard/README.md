@@ -1,5 +1,5 @@
 # Scorecard
-(*Scorecard*)
+(*.Scorecard*)
 
 ### Available Operations
 

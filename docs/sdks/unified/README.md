@@ -1,5 +1,5 @@
 # Unified
-(*Unified*)
+(*.Unified*)
 
 ### Available Operations
 
@@ -115,15 +115,15 @@ func main() {
             HookURL: "string",
             IntegrationType: "string",
             Interval: 188.12,
-            ObjectType: shared.WebhookObjectTypeCrmEvent,
+            ObjectType: shared.ObjectTypeCrmEvent,
             Subscriptions: []string{
                 "string",
             },
             WorkspaceID: "string",
         },
         ConnectionID: "string",
-        Events: []operations.CreateUnifiedWebhookEvents{
-            operations.CreateUnifiedWebhookEventsCreated,
+        Events: []operations.Events{
+            operations.EventsCreated,
         },
         Object: "string",
     })
@@ -322,8 +322,8 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
-        Scopes: []operations.GetUnifiedIntegrationAuthScopes{
-            operations.GetUnifiedIntegrationAuthScopesHrisEmployeeWrite,
+        Scopes: []operations.Scopes{
+            operations.ScopesHrisEmployeeWrite,
         },
         WorkspaceID: "string",
     })
@@ -331,7 +331,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetUnifiedIntegrationAuth200ApplicationJSONString != nil {
+    if res.Res != nil {
         // handle response
     }
 }
@@ -470,8 +470,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{
-        Categories: []operations.ListUnifiedConnectionsCategories{
-            operations.ListUnifiedConnectionsCategoriesEnrich,
+        Categories: []operations.Categories{
+            operations.CategoriesEnrich,
         },
     })
     if err != nil {
@@ -521,8 +521,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
-        Categories: []operations.ListUnifiedIntegrationWorkspacesCategories{
-            operations.ListUnifiedIntegrationWorkspacesCategoriesTicketing,
+        Categories: []operations.QueryParamCategories{
+            operations.QueryParamCategoriesTicketing,
         },
         WorkspaceID: "string",
     })
@@ -573,8 +573,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{
-        Categories: []operations.ListUnifiedIntegrationsCategories{
-            operations.ListUnifiedIntegrationsCategoriesAuth,
+        Categories: []operations.ListUnifiedIntegrationsQueryParamCategories{
+            operations.ListUnifiedIntegrationsQueryParamCategoriesAuth,
         },
     })
     if err != nil {

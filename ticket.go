@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type ticket struct {
+type Ticket struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newTicket(sdkConfig sdkConfiguration) *ticket {
-	return &ticket{
+func newTicket(sdkConfig sdkConfiguration) *Ticket {
+	return &Ticket{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateTicketingTicket - Create a ticket
-func (s *ticket) CreateTicketingTicket(ctx context.Context, request operations.CreateTicketingTicketRequest) (*operations.CreateTicketingTicketResponse, error) {
+func (s *Ticket) CreateTicketingTicket(ctx context.Context, request operations.CreateTicketingTicketRequest) (*operations.CreateTicketingTicketResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/ticket", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *ticket) CreateTicketingTicket(ctx context.Context, request operations.C
 }
 
 // GetTicketingTicket - Retrieve a ticket
-func (s *ticket) GetTicketingTicket(ctx context.Context, request operations.GetTicketingTicketRequest) (*operations.GetTicketingTicketResponse, error) {
+func (s *Ticket) GetTicketingTicket(ctx context.Context, request operations.GetTicketingTicketRequest) (*operations.GetTicketingTicketResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/ticket/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *ticket) GetTicketingTicket(ctx context.Context, request operations.GetT
 }
 
 // ListTicketingTickets - List all tickets
-func (s *ticket) ListTicketingTickets(ctx context.Context, request operations.ListTicketingTicketsRequest) (*operations.ListTicketingTicketsResponse, error) {
+func (s *Ticket) ListTicketingTickets(ctx context.Context, request operations.ListTicketingTicketsRequest) (*operations.ListTicketingTicketsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/ticket", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *ticket) ListTicketingTickets(ctx context.Context, request operations.Li
 }
 
 // PatchTicketingTicket - Update a ticket
-func (s *ticket) PatchTicketingTicket(ctx context.Context, request operations.PatchTicketingTicketRequest) (*operations.PatchTicketingTicketResponse, error) {
+func (s *Ticket) PatchTicketingTicket(ctx context.Context, request operations.PatchTicketingTicketRequest) (*operations.PatchTicketingTicketResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/ticket/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *ticket) PatchTicketingTicket(ctx context.Context, request operations.Pa
 }
 
 // RemoveTicketingTicket - Remove a ticket
-func (s *ticket) RemoveTicketingTicket(ctx context.Context, request operations.RemoveTicketingTicketRequest) (*operations.RemoveTicketingTicketResponse, error) {
+func (s *Ticket) RemoveTicketingTicket(ctx context.Context, request operations.RemoveTicketingTicketRequest) (*operations.RemoveTicketingTicketResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/ticket/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *ticket) RemoveTicketingTicket(ctx context.Context, request operations.R
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveTicketingTicketDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *ticket) RemoveTicketingTicket(ctx context.Context, request operations.R
 }
 
 // UpdateTicketingTicket - Update a ticket
-func (s *ticket) UpdateTicketingTicket(ctx context.Context, request operations.UpdateTicketingTicketRequest) (*operations.UpdateTicketingTicketResponse, error) {
+func (s *Ticket) UpdateTicketingTicket(ctx context.Context, request operations.UpdateTicketingTicketRequest) (*operations.UpdateTicketingTicketResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/ticket/{id}", request, nil)
 	if err != nil {

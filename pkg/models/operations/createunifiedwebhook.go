@@ -9,18 +9,18 @@ import (
 	"net/http"
 )
 
-type CreateUnifiedWebhookEvents string
+type Events string
 
 const (
-	CreateUnifiedWebhookEventsUpdated CreateUnifiedWebhookEvents = "updated"
-	CreateUnifiedWebhookEventsCreated CreateUnifiedWebhookEvents = "created"
+	EventsUpdated Events = "updated"
+	EventsCreated Events = "created"
 )
 
-func (e CreateUnifiedWebhookEvents) ToPointer() *CreateUnifiedWebhookEvents {
+func (e Events) ToPointer() *Events {
 	return &e
 }
 
-func (e *CreateUnifiedWebhookEvents) UnmarshalJSON(data []byte) error {
+func (e *Events) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -29,10 +29,10 @@ func (e *CreateUnifiedWebhookEvents) UnmarshalJSON(data []byte) error {
 	case "updated":
 		fallthrough
 	case "created":
-		*e = CreateUnifiedWebhookEvents(v)
+		*e = Events(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateUnifiedWebhookEvents: %v", v)
+		return fmt.Errorf("invalid value for Events: %v", v)
 	}
 }
 
@@ -41,7 +41,7 @@ type CreateUnifiedWebhookRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Which events to subscribe to.
-	Events []CreateUnifiedWebhookEvents `queryParam:"style=form,explode=true,name=events"`
+	Events []Events `queryParam:"style=form,explode=true,name=events"`
 	// The object to subscribe to
 	Object string `pathParam:"style=simple,explode=false,name=object"`
 }
@@ -60,7 +60,7 @@ func (o *CreateUnifiedWebhookRequest) GetConnectionID() string {
 	return o.ConnectionID
 }
 
-func (o *CreateUnifiedWebhookRequest) GetEvents() []CreateUnifiedWebhookEvents {
+func (o *CreateUnifiedWebhookRequest) GetEvents() []Events {
 	if o == nil {
 		return nil
 	}

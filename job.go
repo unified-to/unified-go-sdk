@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type job struct {
+type Job struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newJob(sdkConfig sdkConfiguration) *job {
-	return &job{
+func newJob(sdkConfig sdkConfiguration) *Job {
+	return &Job{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateAtsJob - Create a job
-func (s *job) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobRequest) (*operations.CreateAtsJobResponse, error) {
+func (s *Job) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobRequest) (*operations.CreateAtsJobResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *job) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 }
 
 // GetAtsJob - Retrieve a job
-func (s *job) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest) (*operations.GetAtsJobResponse, error) {
+func (s *Job) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest) (*operations.GetAtsJobResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *job) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 }
 
 // ListAtsJobs - List all jobs
-func (s *job) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsRequest) (*operations.ListAtsJobsResponse, error) {
+func (s *Job) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsRequest) (*operations.ListAtsJobsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *job) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 }
 
 // PatchAtsJob - Update a job
-func (s *job) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobRequest) (*operations.PatchAtsJobResponse, error) {
+func (s *Job) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobRequest) (*operations.PatchAtsJobResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *job) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 }
 
 // RemoveAtsJob - Remove a job
-func (s *job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobRequest) (*operations.RemoveAtsJobResponse, error) {
+func (s *Job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobRequest) (*operations.RemoveAtsJobResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsJobDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 }
 
 // UpdateAtsJob - Update a job
-func (s *job) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobRequest) (*operations.UpdateAtsJobResponse, error) {
+func (s *Job) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobRequest) (*operations.UpdateAtsJobResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job/{id}", request, nil)
 	if err != nil {

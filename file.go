@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type file struct {
+type File struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newFile(sdkConfig sdkConfiguration) *file {
-	return &file{
+func newFile(sdkConfig sdkConfiguration) *File {
+	return &File{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateCrmFile - Create a file
-func (s *file) CreateCrmFile(ctx context.Context, request operations.CreateCrmFileRequest) (*operations.CreateCrmFileResponse, error) {
+func (s *File) CreateCrmFile(ctx context.Context, request operations.CreateCrmFileRequest) (*operations.CreateCrmFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *file) CreateCrmFile(ctx context.Context, request operations.CreateCrmFi
 }
 
 // GetCrmFile - Retrieve a file
-func (s *file) GetCrmFile(ctx context.Context, request operations.GetCrmFileRequest) (*operations.GetCrmFileResponse, error) {
+func (s *File) GetCrmFile(ctx context.Context, request operations.GetCrmFileRequest) (*operations.GetCrmFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *file) GetCrmFile(ctx context.Context, request operations.GetCrmFileRequ
 }
 
 // ListCrmFiles - List all files
-func (s *file) ListCrmFiles(ctx context.Context, request operations.ListCrmFilesRequest) (*operations.ListCrmFilesResponse, error) {
+func (s *File) ListCrmFiles(ctx context.Context, request operations.ListCrmFilesRequest) (*operations.ListCrmFilesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *file) ListCrmFiles(ctx context.Context, request operations.ListCrmFiles
 }
 
 // PatchCrmFile - Update a file
-func (s *file) PatchCrmFile(ctx context.Context, request operations.PatchCrmFileRequest) (*operations.PatchCrmFileResponse, error) {
+func (s *File) PatchCrmFile(ctx context.Context, request operations.PatchCrmFileRequest) (*operations.PatchCrmFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *file) PatchCrmFile(ctx context.Context, request operations.PatchCrmFile
 }
 
 // RemoveCrmFile - Remove a file
-func (s *file) RemoveCrmFile(ctx context.Context, request operations.RemoveCrmFileRequest) (*operations.RemoveCrmFileResponse, error) {
+func (s *File) RemoveCrmFile(ctx context.Context, request operations.RemoveCrmFileRequest) (*operations.RemoveCrmFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *file) RemoveCrmFile(ctx context.Context, request operations.RemoveCrmFi
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmFileDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *file) RemoveCrmFile(ctx context.Context, request operations.RemoveCrmFi
 }
 
 // UpdateCrmFile - Update a file
-func (s *file) UpdateCrmFile(ctx context.Context, request operations.UpdateCrmFileRequest) (*operations.UpdateCrmFileResponse, error) {
+func (s *File) UpdateCrmFile(ctx context.Context, request operations.UpdateCrmFileRequest) (*operations.UpdateCrmFileResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/file/{id}", request, nil)
 	if err != nil {

@@ -1,5 +1,5 @@
 # Login
-(*Login*)
+(*.Login*)
 
 ### Available Operations
 
@@ -36,7 +36,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GetUnifiedIntegrationLogin200ApplicationJSONString != nil {
+    if res.Res != nil {
         // handle response
     }
 }

@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type scorecard struct {
+type Scorecard struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newScorecard(sdkConfig sdkConfiguration) *scorecard {
-	return &scorecard{
+func newScorecard(sdkConfig sdkConfiguration) *Scorecard {
+	return &Scorecard{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateAtsScorecard - Create a scorecard
-func (s *scorecard) CreateAtsScorecard(ctx context.Context, request operations.CreateAtsScorecardRequest) (*operations.CreateAtsScorecardResponse, error) {
+func (s *Scorecard) CreateAtsScorecard(ctx context.Context, request operations.CreateAtsScorecardRequest) (*operations.CreateAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *scorecard) CreateAtsScorecard(ctx context.Context, request operations.C
 }
 
 // GetAtsScorecard - Retrieve a scorecard
-func (s *scorecard) GetAtsScorecard(ctx context.Context, request operations.GetAtsScorecardRequest) (*operations.GetAtsScorecardResponse, error) {
+func (s *Scorecard) GetAtsScorecard(ctx context.Context, request operations.GetAtsScorecardRequest) (*operations.GetAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *scorecard) GetAtsScorecard(ctx context.Context, request operations.GetA
 }
 
 // ListAtsScorecards - List all scorecards
-func (s *scorecard) ListAtsScorecards(ctx context.Context, request operations.ListAtsScorecardsRequest) (*operations.ListAtsScorecardsResponse, error) {
+func (s *Scorecard) ListAtsScorecards(ctx context.Context, request operations.ListAtsScorecardsRequest) (*operations.ListAtsScorecardsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *scorecard) ListAtsScorecards(ctx context.Context, request operations.Li
 }
 
 // PatchAtsScorecard - Update a scorecard
-func (s *scorecard) PatchAtsScorecard(ctx context.Context, request operations.PatchAtsScorecardRequest) (*operations.PatchAtsScorecardResponse, error) {
+func (s *Scorecard) PatchAtsScorecard(ctx context.Context, request operations.PatchAtsScorecardRequest) (*operations.PatchAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *scorecard) PatchAtsScorecard(ctx context.Context, request operations.Pa
 }
 
 // RemoveAtsScorecard - Remove a scorecard
-func (s *scorecard) RemoveAtsScorecard(ctx context.Context, request operations.RemoveAtsScorecardRequest) (*operations.RemoveAtsScorecardResponse, error) {
+func (s *Scorecard) RemoveAtsScorecard(ctx context.Context, request operations.RemoveAtsScorecardRequest) (*operations.RemoveAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *scorecard) RemoveAtsScorecard(ctx context.Context, request operations.R
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsScorecardDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *scorecard) RemoveAtsScorecard(ctx context.Context, request operations.R
 }
 
 // UpdateAtsScorecard - Update a scorecard
-func (s *scorecard) UpdateAtsScorecard(ctx context.Context, request operations.UpdateAtsScorecardRequest) (*operations.UpdateAtsScorecardResponse, error) {
+func (s *Scorecard) UpdateAtsScorecard(ctx context.Context, request operations.UpdateAtsScorecardRequest) (*operations.UpdateAtsScorecardResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/scorecard/{id}", request, nil)
 	if err != nil {

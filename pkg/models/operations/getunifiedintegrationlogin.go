@@ -78,7 +78,7 @@ type GetUnifiedIntegrationLoginResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	GetUnifiedIntegrationLogin200ApplicationJSONString *string
+	Res *string
 }
 
 func (o *GetUnifiedIntegrationLoginResponse) GetContentType() string {
@@ -102,9 +102,9 @@ func (o *GetUnifiedIntegrationLoginResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *GetUnifiedIntegrationLoginResponse) GetGetUnifiedIntegrationLogin200ApplicationJSONString() *string {
+func (o *GetUnifiedIntegrationLoginResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.GetUnifiedIntegrationLogin200ApplicationJSONString
+	return o.Res
 }

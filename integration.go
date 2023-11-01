@@ -15,18 +15,18 @@ import (
 	"strings"
 )
 
-type integration struct {
+type Integration struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newIntegration(sdkConfig sdkConfiguration) *integration {
-	return &integration{
+func newIntegration(sdkConfig sdkConfiguration) *Integration {
+	return &Integration{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // GetUnifiedIntegration - Retrieve an integration
-func (s *integration) GetUnifiedIntegration(ctx context.Context, request operations.GetUnifiedIntegrationRequest) (*operations.GetUnifiedIntegrationResponse, error) {
+func (s *Integration) GetUnifiedIntegration(ctx context.Context, request operations.GetUnifiedIntegrationRequest) (*operations.GetUnifiedIntegrationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/{integration_type}", request, nil)
 	if err != nil {
@@ -88,7 +88,7 @@ func (s *integration) GetUnifiedIntegration(ctx context.Context, request operati
 
 // GetUnifiedIntegrationAuth - Create connection indirectly
 // Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
-func (s *integration) GetUnifiedIntegrationAuth(ctx context.Context, request operations.GetUnifiedIntegrationAuthRequest) (*operations.GetUnifiedIntegrationAuthResponse, error) {
+func (s *Integration) GetUnifiedIntegrationAuth(ctx context.Context, request operations.GetUnifiedIntegrationAuthRequest) (*operations.GetUnifiedIntegrationAuthResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/auth/{workspace_id}/{integration_type}", request, nil)
 	if err != nil {
@@ -135,7 +135,7 @@ func (s *integration) GetUnifiedIntegrationAuth(ctx context.Context, request ope
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.GetUnifiedIntegrationAuth200ApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -150,7 +150,7 @@ func (s *integration) GetUnifiedIntegrationAuth(ctx context.Context, request ope
 
 // ListUnifiedIntegrationWorkspaces - Returns all activated integrations in a workspace
 // No authentication required as this is to be used by front-end interface
-func (s *integration) ListUnifiedIntegrationWorkspaces(ctx context.Context, request operations.ListUnifiedIntegrationWorkspacesRequest) (*operations.ListUnifiedIntegrationWorkspacesResponse, error) {
+func (s *Integration) ListUnifiedIntegrationWorkspaces(ctx context.Context, request operations.ListUnifiedIntegrationWorkspacesRequest) (*operations.ListUnifiedIntegrationWorkspacesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/workspace/{workspace_id}", request, nil)
 	if err != nil {
@@ -215,7 +215,7 @@ func (s *integration) ListUnifiedIntegrationWorkspaces(ctx context.Context, requ
 }
 
 // ListUnifiedIntegrations - Returns all integrations
-func (s *integration) ListUnifiedIntegrations(ctx context.Context, request operations.ListUnifiedIntegrationsRequest) (*operations.ListUnifiedIntegrationsResponse, error) {
+func (s *Integration) ListUnifiedIntegrations(ctx context.Context, request operations.ListUnifiedIntegrationsRequest) (*operations.ListUnifiedIntegrationsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/unified/integration"
 

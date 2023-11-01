@@ -1,5 +1,5 @@
 # Member
-(*Member*)
+(*.Member*)
 
 ### Available Operations
 

@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type deal struct {
+type Deal struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newDeal(sdkConfig sdkConfiguration) *deal {
-	return &deal{
+func newDeal(sdkConfig sdkConfiguration) *Deal {
+	return &Deal{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateCrmDeal - Create a deal
-func (s *deal) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDealRequest) (*operations.CreateCrmDealResponse, error) {
+func (s *Deal) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDealRequest) (*operations.CreateCrmDealResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *deal) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDe
 }
 
 // GetCrmDeal - Retrieve a deal
-func (s *deal) GetCrmDeal(ctx context.Context, request operations.GetCrmDealRequest) (*operations.GetCrmDealResponse, error) {
+func (s *Deal) GetCrmDeal(ctx context.Context, request operations.GetCrmDealRequest) (*operations.GetCrmDealResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *deal) GetCrmDeal(ctx context.Context, request operations.GetCrmDealRequ
 }
 
 // ListCrmDeals - List all deals
-func (s *deal) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsRequest) (*operations.ListCrmDealsResponse, error) {
+func (s *Deal) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsRequest) (*operations.ListCrmDealsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *deal) ListCrmDeals(ctx context.Context, request operations.ListCrmDeals
 }
 
 // PatchCrmDeal - Update a deal
-func (s *deal) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealRequest) (*operations.PatchCrmDealResponse, error) {
+func (s *Deal) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealRequest) (*operations.PatchCrmDealResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *deal) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDeal
 }
 
 // RemoveCrmDeal - Remove a deal
-func (s *deal) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDealRequest) (*operations.RemoveCrmDealResponse, error) {
+func (s *Deal) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDealRequest) (*operations.RemoveCrmDealResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *deal) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDe
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveCrmDealDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *deal) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDe
 }
 
 // UpdateCrmDeal - Update a deal
-func (s *deal) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDealRequest) (*operations.UpdateCrmDealResponse, error) {
+func (s *Deal) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDealRequest) (*operations.UpdateCrmDealResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal/{id}", request, nil)
 	if err != nil {

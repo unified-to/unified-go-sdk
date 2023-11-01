@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type document struct {
+type Document struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newDocument(sdkConfig sdkConfiguration) *document {
-	return &document{
+func newDocument(sdkConfig sdkConfiguration) *Document {
+	return &Document{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateAtsDocument - Create a document
-func (s *document) CreateAtsDocument(ctx context.Context, request operations.CreateAtsDocumentRequest) (*operations.CreateAtsDocumentResponse, error) {
+func (s *Document) CreateAtsDocument(ctx context.Context, request operations.CreateAtsDocumentRequest) (*operations.CreateAtsDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *document) CreateAtsDocument(ctx context.Context, request operations.Cre
 }
 
 // GetAtsDocument - Retrieve a document
-func (s *document) GetAtsDocument(ctx context.Context, request operations.GetAtsDocumentRequest) (*operations.GetAtsDocumentResponse, error) {
+func (s *Document) GetAtsDocument(ctx context.Context, request operations.GetAtsDocumentRequest) (*operations.GetAtsDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *document) GetAtsDocument(ctx context.Context, request operations.GetAts
 }
 
 // ListAtsDocuments - List all documents
-func (s *document) ListAtsDocuments(ctx context.Context, request operations.ListAtsDocumentsRequest) (*operations.ListAtsDocumentsResponse, error) {
+func (s *Document) ListAtsDocuments(ctx context.Context, request operations.ListAtsDocumentsRequest) (*operations.ListAtsDocumentsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document", request, nil)
 	if err != nil {
@@ -223,7 +223,7 @@ func (s *document) ListAtsDocuments(ctx context.Context, request operations.List
 }
 
 // PatchAtsDocument - Update a document
-func (s *document) PatchAtsDocument(ctx context.Context, request operations.PatchAtsDocumentRequest) (*operations.PatchAtsDocumentResponse, error) {
+func (s *Document) PatchAtsDocument(ctx context.Context, request operations.PatchAtsDocumentRequest) (*operations.PatchAtsDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *document) PatchAtsDocument(ctx context.Context, request operations.Patc
 }
 
 // RemoveAtsDocument - Remove a document
-func (s *document) RemoveAtsDocument(ctx context.Context, request operations.RemoveAtsDocumentRequest) (*operations.RemoveAtsDocumentResponse, error) {
+func (s *Document) RemoveAtsDocument(ctx context.Context, request operations.RemoveAtsDocumentRequest) (*operations.RemoveAtsDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
 	if err != nil {
@@ -338,7 +338,7 @@ func (s *document) RemoveAtsDocument(ctx context.Context, request operations.Rem
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAtsDocumentDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -348,7 +348,7 @@ func (s *document) RemoveAtsDocument(ctx context.Context, request operations.Rem
 }
 
 // UpdateAtsDocument - Update a document
-func (s *document) UpdateAtsDocument(ctx context.Context, request operations.UpdateAtsDocumentRequest) (*operations.UpdateAtsDocumentResponse, error) {
+func (s *Document) UpdateAtsDocument(ctx context.Context, request operations.UpdateAtsDocumentRequest) (*operations.UpdateAtsDocumentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/document/{id}", request, nil)
 	if err != nil {

@@ -15,18 +15,18 @@ import (
 	"strings"
 )
 
-type apicall struct {
+type Apicall struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newApicall(sdkConfig sdkConfiguration) *apicall {
-	return &apicall{
+func newApicall(sdkConfig sdkConfiguration) *Apicall {
+	return &Apicall{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // GetUnifiedApicall - Retrieve specific API Call by its ID
-func (s *apicall) GetUnifiedApicall(ctx context.Context, request operations.GetUnifiedApicallRequest) (*operations.GetUnifiedApicallResponse, error) {
+func (s *Apicall) GetUnifiedApicall(ctx context.Context, request operations.GetUnifiedApicallRequest) (*operations.GetUnifiedApicallResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/apicall/{id}", request, nil)
 	if err != nil {
@@ -87,7 +87,7 @@ func (s *apicall) GetUnifiedApicall(ctx context.Context, request operations.GetU
 }
 
 // ListUnifiedApicalls - Returns API Calls
-func (s *apicall) ListUnifiedApicalls(ctx context.Context, request operations.ListUnifiedApicallsRequest) (*operations.ListUnifiedApicallsResponse, error) {
+func (s *Apicall) ListUnifiedApicalls(ctx context.Context, request operations.ListUnifiedApicallsRequest) (*operations.ListUnifiedApicallsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/unified/apicall"
 

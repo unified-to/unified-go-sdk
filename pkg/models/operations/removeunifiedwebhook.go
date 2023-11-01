@@ -26,7 +26,7 @@ type RemoveUnifiedWebhookResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	RemoveUnifiedWebhookDefaultApplicationJSONString *string
+	Res *string
 }
 
 func (o *RemoveUnifiedWebhookResponse) GetContentType() string {
@@ -50,9 +50,9 @@ func (o *RemoveUnifiedWebhookResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveUnifiedWebhookResponse) GetRemoveUnifiedWebhookDefaultApplicationJSONString() *string {
+func (o *RemoveUnifiedWebhookResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}
-	return o.RemoveUnifiedWebhookDefaultApplicationJSONString
+	return o.Res
 }

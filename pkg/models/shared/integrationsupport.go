@@ -7,19 +7,19 @@ import (
 	"fmt"
 )
 
-type IntegrationSupportWebhookType string
+type WebhookType string
 
 const (
-	IntegrationSupportWebhookTypeVirtual IntegrationSupportWebhookType = "virtual"
-	IntegrationSupportWebhookTypeNone    IntegrationSupportWebhookType = "none"
-	IntegrationSupportWebhookTypeNative  IntegrationSupportWebhookType = "native"
+	WebhookTypeVirtual WebhookType = "virtual"
+	WebhookTypeNone    WebhookType = "none"
+	WebhookTypeNative  WebhookType = "native"
 )
 
-func (e IntegrationSupportWebhookType) ToPointer() *IntegrationSupportWebhookType {
+func (e WebhookType) ToPointer() *WebhookType {
 	return &e
 }
 
-func (e *IntegrationSupportWebhookType) UnmarshalJSON(data []byte) error {
+func (e *WebhookType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -30,10 +30,10 @@ func (e *IntegrationSupportWebhookType) UnmarshalJSON(data []byte) error {
 	case "none":
 		fallthrough
 	case "native":
-		*e = IntegrationSupportWebhookType(v)
+		*e = WebhookType(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegrationSupportWebhookType: %v", v)
+		return fmt.Errorf("invalid value for WebhookType: %v", v)
 	}
 }
 
@@ -64,7 +64,7 @@ type IntegrationSupport struct {
 	SearchName          *bool                                     `json:"search_name,omitempty"`
 	SearchTwitter       *bool                                     `json:"search_twitter,omitempty"`
 	WebhookEvents       []PropertyIntegrationSupportWebhookEvents `json:"webhook_events,omitempty"`
-	WebhookType         *IntegrationSupportWebhookType            `json:"webhook_type,omitempty"`
+	WebhookType         *WebhookType                              `json:"webhook_type,omitempty"`
 }
 
 func (o *IntegrationSupport) GetInboundFields() *PropertyIntegrationSupportInboundFields {
@@ -249,7 +249,7 @@ func (o *IntegrationSupport) GetWebhookEvents() []PropertyIntegrationSupportWebh
 	return o.WebhookEvents
 }
 
-func (o *IntegrationSupport) GetWebhookType() *IntegrationSupportWebhookType {
+func (o *IntegrationSupport) GetWebhookType() *WebhookType {
 	if o == nil {
 		return nil
 	}

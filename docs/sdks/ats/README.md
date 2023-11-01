@@ -1,5 +1,5 @@
 # Ats
-(*Ats*)
+(*.Ats*)
 
 ### Available Operations
 

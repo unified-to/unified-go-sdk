@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type accounting struct {
+type Accounting struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newAccounting(sdkConfig sdkConfiguration) *accounting {
-	return &accounting{
+func newAccounting(sdkConfig sdkConfiguration) *Accounting {
+	return &Accounting{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateAccountingCustomer - Create a customer
-func (s *accounting) CreateAccountingCustomer(ctx context.Context, request operations.CreateAccountingCustomerRequest) (*operations.CreateAccountingCustomerResponse, error) {
+func (s *Accounting) CreateAccountingCustomer(ctx context.Context, request operations.CreateAccountingCustomerRequest) (*operations.CreateAccountingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *accounting) CreateAccountingCustomer(ctx context.Context, request opera
 }
 
 // CreateAccountingInvoice - Create a invoice
-func (s *accounting) CreateAccountingInvoice(ctx context.Context, request operations.CreateAccountingInvoiceRequest) (*operations.CreateAccountingInvoiceResponse, error) {
+func (s *Accounting) CreateAccountingInvoice(ctx context.Context, request operations.CreateAccountingInvoiceRequest) (*operations.CreateAccountingInvoiceResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice", request, nil)
 	if err != nil {
@@ -161,7 +161,7 @@ func (s *accounting) CreateAccountingInvoice(ctx context.Context, request operat
 }
 
 // CreateAccountingPayment - Create a payment
-func (s *accounting) CreateAccountingPayment(ctx context.Context, request operations.CreateAccountingPaymentRequest) (*operations.CreateAccountingPaymentResponse, error) {
+func (s *Accounting) CreateAccountingPayment(ctx context.Context, request operations.CreateAccountingPaymentRequest) (*operations.CreateAccountingPaymentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment", request, nil)
 	if err != nil {
@@ -229,7 +229,7 @@ func (s *accounting) CreateAccountingPayment(ctx context.Context, request operat
 }
 
 // GetAccountingCustomer - Retrieve a customer
-func (s *accounting) GetAccountingCustomer(ctx context.Context, request operations.GetAccountingCustomerRequest) (*operations.GetAccountingCustomerResponse, error) {
+func (s *Accounting) GetAccountingCustomer(ctx context.Context, request operations.GetAccountingCustomerRequest) (*operations.GetAccountingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -294,7 +294,7 @@ func (s *accounting) GetAccountingCustomer(ctx context.Context, request operatio
 }
 
 // GetAccountingInvoice - Retrieve a invoice
-func (s *accounting) GetAccountingInvoice(ctx context.Context, request operations.GetAccountingInvoiceRequest) (*operations.GetAccountingInvoiceResponse, error) {
+func (s *Accounting) GetAccountingInvoice(ctx context.Context, request operations.GetAccountingInvoiceRequest) (*operations.GetAccountingInvoiceResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice/{id}", request, nil)
 	if err != nil {
@@ -359,7 +359,7 @@ func (s *accounting) GetAccountingInvoice(ctx context.Context, request operation
 }
 
 // GetAccountingPayment - Retrieve a payment
-func (s *accounting) GetAccountingPayment(ctx context.Context, request operations.GetAccountingPaymentRequest) (*operations.GetAccountingPaymentResponse, error) {
+func (s *Accounting) GetAccountingPayment(ctx context.Context, request operations.GetAccountingPaymentRequest) (*operations.GetAccountingPaymentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment/{id}", request, nil)
 	if err != nil {
@@ -424,7 +424,7 @@ func (s *accounting) GetAccountingPayment(ctx context.Context, request operation
 }
 
 // ListAccountingCustomers - List all customers
-func (s *accounting) ListAccountingCustomers(ctx context.Context, request operations.ListAccountingCustomersRequest) (*operations.ListAccountingCustomersResponse, error) {
+func (s *Accounting) ListAccountingCustomers(ctx context.Context, request operations.ListAccountingCustomersRequest) (*operations.ListAccountingCustomersResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer", request, nil)
 	if err != nil {
@@ -489,7 +489,7 @@ func (s *accounting) ListAccountingCustomers(ctx context.Context, request operat
 }
 
 // ListAccountingInvoices - List all invoices
-func (s *accounting) ListAccountingInvoices(ctx context.Context, request operations.ListAccountingInvoicesRequest) (*operations.ListAccountingInvoicesResponse, error) {
+func (s *Accounting) ListAccountingInvoices(ctx context.Context, request operations.ListAccountingInvoicesRequest) (*operations.ListAccountingInvoicesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice", request, nil)
 	if err != nil {
@@ -554,7 +554,7 @@ func (s *accounting) ListAccountingInvoices(ctx context.Context, request operati
 }
 
 // ListAccountingPayments - List all payments
-func (s *accounting) ListAccountingPayments(ctx context.Context, request operations.ListAccountingPaymentsRequest) (*operations.ListAccountingPaymentsResponse, error) {
+func (s *Accounting) ListAccountingPayments(ctx context.Context, request operations.ListAccountingPaymentsRequest) (*operations.ListAccountingPaymentsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment", request, nil)
 	if err != nil {
@@ -619,7 +619,7 @@ func (s *accounting) ListAccountingPayments(ctx context.Context, request operati
 }
 
 // PatchAccountingCustomer - Update a customer
-func (s *accounting) PatchAccountingCustomer(ctx context.Context, request operations.PatchAccountingCustomerRequest) (*operations.PatchAccountingCustomerResponse, error) {
+func (s *Accounting) PatchAccountingCustomer(ctx context.Context, request operations.PatchAccountingCustomerRequest) (*operations.PatchAccountingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -687,7 +687,7 @@ func (s *accounting) PatchAccountingCustomer(ctx context.Context, request operat
 }
 
 // PatchAccountingInvoice - Update a invoice
-func (s *accounting) PatchAccountingInvoice(ctx context.Context, request operations.PatchAccountingInvoiceRequest) (*operations.PatchAccountingInvoiceResponse, error) {
+func (s *Accounting) PatchAccountingInvoice(ctx context.Context, request operations.PatchAccountingInvoiceRequest) (*operations.PatchAccountingInvoiceResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice/{id}", request, nil)
 	if err != nil {
@@ -755,7 +755,7 @@ func (s *accounting) PatchAccountingInvoice(ctx context.Context, request operati
 }
 
 // PatchAccountingPayment - Update a payment
-func (s *accounting) PatchAccountingPayment(ctx context.Context, request operations.PatchAccountingPaymentRequest) (*operations.PatchAccountingPaymentResponse, error) {
+func (s *Accounting) PatchAccountingPayment(ctx context.Context, request operations.PatchAccountingPaymentRequest) (*operations.PatchAccountingPaymentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment/{id}", request, nil)
 	if err != nil {
@@ -823,7 +823,7 @@ func (s *accounting) PatchAccountingPayment(ctx context.Context, request operati
 }
 
 // RemoveAccountingCustomer - Remove a customer
-func (s *accounting) RemoveAccountingCustomer(ctx context.Context, request operations.RemoveAccountingCustomerRequest) (*operations.RemoveAccountingCustomerResponse, error) {
+func (s *Accounting) RemoveAccountingCustomer(ctx context.Context, request operations.RemoveAccountingCustomerRequest) (*operations.RemoveAccountingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -870,7 +870,7 @@ func (s *accounting) RemoveAccountingCustomer(ctx context.Context, request opera
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAccountingCustomerDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -880,7 +880,7 @@ func (s *accounting) RemoveAccountingCustomer(ctx context.Context, request opera
 }
 
 // RemoveAccountingInvoice - Remove a invoice
-func (s *accounting) RemoveAccountingInvoice(ctx context.Context, request operations.RemoveAccountingInvoiceRequest) (*operations.RemoveAccountingInvoiceResponse, error) {
+func (s *Accounting) RemoveAccountingInvoice(ctx context.Context, request operations.RemoveAccountingInvoiceRequest) (*operations.RemoveAccountingInvoiceResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice/{id}", request, nil)
 	if err != nil {
@@ -927,7 +927,7 @@ func (s *accounting) RemoveAccountingInvoice(ctx context.Context, request operat
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAccountingInvoiceDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -937,7 +937,7 @@ func (s *accounting) RemoveAccountingInvoice(ctx context.Context, request operat
 }
 
 // RemoveAccountingPayment - Remove a payment
-func (s *accounting) RemoveAccountingPayment(ctx context.Context, request operations.RemoveAccountingPaymentRequest) (*operations.RemoveAccountingPaymentResponse, error) {
+func (s *Accounting) RemoveAccountingPayment(ctx context.Context, request operations.RemoveAccountingPaymentRequest) (*operations.RemoveAccountingPaymentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment/{id}", request, nil)
 	if err != nil {
@@ -984,7 +984,7 @@ func (s *accounting) RemoveAccountingPayment(ctx context.Context, request operat
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAccountingPaymentDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -994,7 +994,7 @@ func (s *accounting) RemoveAccountingPayment(ctx context.Context, request operat
 }
 
 // UpdateAccountingCustomer - Update a customer
-func (s *accounting) UpdateAccountingCustomer(ctx context.Context, request operations.UpdateAccountingCustomerRequest) (*operations.UpdateAccountingCustomerResponse, error) {
+func (s *Accounting) UpdateAccountingCustomer(ctx context.Context, request operations.UpdateAccountingCustomerRequest) (*operations.UpdateAccountingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -1062,7 +1062,7 @@ func (s *accounting) UpdateAccountingCustomer(ctx context.Context, request opera
 }
 
 // UpdateAccountingInvoice - Update a invoice
-func (s *accounting) UpdateAccountingInvoice(ctx context.Context, request operations.UpdateAccountingInvoiceRequest) (*operations.UpdateAccountingInvoiceResponse, error) {
+func (s *Accounting) UpdateAccountingInvoice(ctx context.Context, request operations.UpdateAccountingInvoiceRequest) (*operations.UpdateAccountingInvoiceResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/invoice/{id}", request, nil)
 	if err != nil {
@@ -1130,7 +1130,7 @@ func (s *accounting) UpdateAccountingInvoice(ctx context.Context, request operat
 }
 
 // UpdateAccountingPayment - Update a payment
-func (s *accounting) UpdateAccountingPayment(ctx context.Context, request operations.UpdateAccountingPaymentRequest) (*operations.UpdateAccountingPaymentResponse, error) {
+func (s *Accounting) UpdateAccountingPayment(ctx context.Context, request operations.UpdateAccountingPaymentRequest) (*operations.UpdateAccountingPaymentResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment/{id}", request, nil)
 	if err != nil {

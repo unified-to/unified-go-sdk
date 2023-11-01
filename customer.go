@@ -14,18 +14,18 @@ import (
 	"net/http"
 )
 
-type customer struct {
+type Customer struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newCustomer(sdkConfig sdkConfiguration) *customer {
-	return &customer{
+func newCustomer(sdkConfig sdkConfiguration) *Customer {
+	return &Customer{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateAccountingCustomer - Create a customer
-func (s *customer) CreateAccountingCustomer(ctx context.Context, request operations.CreateAccountingCustomerRequest) (*operations.CreateAccountingCustomerResponse, error) {
+func (s *Customer) CreateAccountingCustomer(ctx context.Context, request operations.CreateAccountingCustomerRequest) (*operations.CreateAccountingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer", request, nil)
 	if err != nil {
@@ -93,7 +93,7 @@ func (s *customer) CreateAccountingCustomer(ctx context.Context, request operati
 }
 
 // CreateTicketingCustomer - Create a customer
-func (s *customer) CreateTicketingCustomer(ctx context.Context, request operations.CreateTicketingCustomerRequest) (*operations.CreateTicketingCustomerResponse, error) {
+func (s *Customer) CreateTicketingCustomer(ctx context.Context, request operations.CreateTicketingCustomerRequest) (*operations.CreateTicketingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/customer", request, nil)
 	if err != nil {
@@ -161,7 +161,7 @@ func (s *customer) CreateTicketingCustomer(ctx context.Context, request operatio
 }
 
 // GetAccountingCustomer - Retrieve a customer
-func (s *customer) GetAccountingCustomer(ctx context.Context, request operations.GetAccountingCustomerRequest) (*operations.GetAccountingCustomerResponse, error) {
+func (s *Customer) GetAccountingCustomer(ctx context.Context, request operations.GetAccountingCustomerRequest) (*operations.GetAccountingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -226,7 +226,7 @@ func (s *customer) GetAccountingCustomer(ctx context.Context, request operations
 }
 
 // GetTicketingCustomer - Retrieve a customer
-func (s *customer) GetTicketingCustomer(ctx context.Context, request operations.GetTicketingCustomerRequest) (*operations.GetTicketingCustomerResponse, error) {
+func (s *Customer) GetTicketingCustomer(ctx context.Context, request operations.GetTicketingCustomerRequest) (*operations.GetTicketingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -291,7 +291,7 @@ func (s *customer) GetTicketingCustomer(ctx context.Context, request operations.
 }
 
 // ListAccountingCustomers - List all customers
-func (s *customer) ListAccountingCustomers(ctx context.Context, request operations.ListAccountingCustomersRequest) (*operations.ListAccountingCustomersResponse, error) {
+func (s *Customer) ListAccountingCustomers(ctx context.Context, request operations.ListAccountingCustomersRequest) (*operations.ListAccountingCustomersResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer", request, nil)
 	if err != nil {
@@ -356,7 +356,7 @@ func (s *customer) ListAccountingCustomers(ctx context.Context, request operatio
 }
 
 // ListTicketingCustomers - List all customers
-func (s *customer) ListTicketingCustomers(ctx context.Context, request operations.ListTicketingCustomersRequest) (*operations.ListTicketingCustomersResponse, error) {
+func (s *Customer) ListTicketingCustomers(ctx context.Context, request operations.ListTicketingCustomersRequest) (*operations.ListTicketingCustomersResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/customer", request, nil)
 	if err != nil {
@@ -421,7 +421,7 @@ func (s *customer) ListTicketingCustomers(ctx context.Context, request operation
 }
 
 // PatchAccountingCustomer - Update a customer
-func (s *customer) PatchAccountingCustomer(ctx context.Context, request operations.PatchAccountingCustomerRequest) (*operations.PatchAccountingCustomerResponse, error) {
+func (s *Customer) PatchAccountingCustomer(ctx context.Context, request operations.PatchAccountingCustomerRequest) (*operations.PatchAccountingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -489,7 +489,7 @@ func (s *customer) PatchAccountingCustomer(ctx context.Context, request operatio
 }
 
 // PatchTicketingCustomer - Update a customer
-func (s *customer) PatchTicketingCustomer(ctx context.Context, request operations.PatchTicketingCustomerRequest) (*operations.PatchTicketingCustomerResponse, error) {
+func (s *Customer) PatchTicketingCustomer(ctx context.Context, request operations.PatchTicketingCustomerRequest) (*operations.PatchTicketingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -557,7 +557,7 @@ func (s *customer) PatchTicketingCustomer(ctx context.Context, request operation
 }
 
 // RemoveAccountingCustomer - Remove a customer
-func (s *customer) RemoveAccountingCustomer(ctx context.Context, request operations.RemoveAccountingCustomerRequest) (*operations.RemoveAccountingCustomerResponse, error) {
+func (s *Customer) RemoveAccountingCustomer(ctx context.Context, request operations.RemoveAccountingCustomerRequest) (*operations.RemoveAccountingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -604,7 +604,7 @@ func (s *customer) RemoveAccountingCustomer(ctx context.Context, request operati
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveAccountingCustomerDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -614,7 +614,7 @@ func (s *customer) RemoveAccountingCustomer(ctx context.Context, request operati
 }
 
 // RemoveTicketingCustomer - Remove a customer
-func (s *customer) RemoveTicketingCustomer(ctx context.Context, request operations.RemoveTicketingCustomerRequest) (*operations.RemoveTicketingCustomerResponse, error) {
+func (s *Customer) RemoveTicketingCustomer(ctx context.Context, request operations.RemoveTicketingCustomerRequest) (*operations.RemoveTicketingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -661,7 +661,7 @@ func (s *customer) RemoveTicketingCustomer(ctx context.Context, request operatio
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveTicketingCustomerDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -671,7 +671,7 @@ func (s *customer) RemoveTicketingCustomer(ctx context.Context, request operatio
 }
 
 // UpdateAccountingCustomer - Update a customer
-func (s *customer) UpdateAccountingCustomer(ctx context.Context, request operations.UpdateAccountingCustomerRequest) (*operations.UpdateAccountingCustomerResponse, error) {
+func (s *Customer) UpdateAccountingCustomer(ctx context.Context, request operations.UpdateAccountingCustomerRequest) (*operations.UpdateAccountingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
 	if err != nil {
@@ -739,7 +739,7 @@ func (s *customer) UpdateAccountingCustomer(ctx context.Context, request operati
 }
 
 // UpdateTicketingCustomer - Update a customer
-func (s *customer) UpdateTicketingCustomer(ctx context.Context, request operations.UpdateTicketingCustomerRequest) (*operations.UpdateTicketingCustomerResponse, error) {
+func (s *Customer) UpdateTicketingCustomer(ctx context.Context, request operations.UpdateTicketingCustomerRequest) (*operations.UpdateTicketingCustomerResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/customer/{id}", request, nil)
 	if err != nil {

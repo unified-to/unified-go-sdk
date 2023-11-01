@@ -13,19 +13,19 @@ import (
 	"net/http"
 )
 
-type auth struct {
+type Auth struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newAuth(sdkConfig sdkConfiguration) *auth {
-	return &auth{
+func newAuth(sdkConfig sdkConfiguration) *Auth {
+	return &Auth{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // GetUnifiedIntegrationAuth - Create connection indirectly
 // Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
-func (s *auth) GetUnifiedIntegrationAuth(ctx context.Context, request operations.GetUnifiedIntegrationAuthRequest) (*operations.GetUnifiedIntegrationAuthResponse, error) {
+func (s *Auth) GetUnifiedIntegrationAuth(ctx context.Context, request operations.GetUnifiedIntegrationAuthRequest) (*operations.GetUnifiedIntegrationAuthResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/auth/{workspace_id}/{integration_type}", request, nil)
 	if err != nil {
@@ -72,7 +72,7 @@ func (s *auth) GetUnifiedIntegrationAuth(ctx context.Context, request operations
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.GetUnifiedIntegrationAuth200ApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -87,7 +87,7 @@ func (s *auth) GetUnifiedIntegrationAuth(ctx context.Context, request operations
 
 // GetUnifiedIntegrationLogin - Sign in a user
 // Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and emails are returned.
-func (s *auth) GetUnifiedIntegrationLogin(ctx context.Context, request operations.GetUnifiedIntegrationLoginRequest) (*operations.GetUnifiedIntegrationLoginResponse, error) {
+func (s *Auth) GetUnifiedIntegrationLogin(ctx context.Context, request operations.GetUnifiedIntegrationLoginRequest) (*operations.GetUnifiedIntegrationLoginResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/login/{workspace_id}/{integration_type}", request, nil)
 	if err != nil {
@@ -134,7 +134,7 @@ func (s *auth) GetUnifiedIntegrationLogin(ctx context.Context, request operation
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.GetUnifiedIntegrationLogin200ApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

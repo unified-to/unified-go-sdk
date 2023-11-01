@@ -1,5 +1,5 @@
 # Candidate
-(*Candidate*)
+(*.Candidate*)
 
 ### Available Operations
 

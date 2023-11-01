@@ -1,5 +1,5 @@
 # Note
-(*Note*)
+(*.Note*)
 
 ### Available Operations
 

@@ -15,18 +15,18 @@ import (
 	"strings"
 )
 
-type unified struct {
+type Unified struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newUnified(sdkConfig sdkConfiguration) *unified {
-	return &unified{
+func newUnified(sdkConfig sdkConfiguration) *Unified {
+	return &Unified{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // CreateUnifiedConnection - Create connection
-func (s *unified) CreateUnifiedConnection(ctx context.Context, request *shared.Connection) (*operations.CreateUnifiedConnectionResponse, error) {
+func (s *Unified) CreateUnifiedConnection(ctx context.Context, request *shared.Connection) (*operations.CreateUnifiedConnectionResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/unified/connection"
 
@@ -92,7 +92,7 @@ func (s *unified) CreateUnifiedConnection(ctx context.Context, request *shared.C
 
 // CreateUnifiedWebhook - Create webhook subscription
 // To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
-func (s *unified) CreateUnifiedWebhook(ctx context.Context, request operations.CreateUnifiedWebhookRequest) (*operations.CreateUnifiedWebhookResponse, error) {
+func (s *Unified) CreateUnifiedWebhook(ctx context.Context, request operations.CreateUnifiedWebhookRequest) (*operations.CreateUnifiedWebhookResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{connection_id}/{object}", request, nil)
 	if err != nil {
@@ -164,7 +164,7 @@ func (s *unified) CreateUnifiedWebhook(ctx context.Context, request operations.C
 }
 
 // GetUnifiedApicall - Retrieve specific API Call by its ID
-func (s *unified) GetUnifiedApicall(ctx context.Context, request operations.GetUnifiedApicallRequest) (*operations.GetUnifiedApicallResponse, error) {
+func (s *Unified) GetUnifiedApicall(ctx context.Context, request operations.GetUnifiedApicallRequest) (*operations.GetUnifiedApicallResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/apicall/{id}", request, nil)
 	if err != nil {
@@ -225,7 +225,7 @@ func (s *unified) GetUnifiedApicall(ctx context.Context, request operations.GetU
 }
 
 // GetUnifiedConnection - Retrieve connection
-func (s *unified) GetUnifiedConnection(ctx context.Context, request operations.GetUnifiedConnectionRequest) (*operations.GetUnifiedConnectionResponse, error) {
+func (s *Unified) GetUnifiedConnection(ctx context.Context, request operations.GetUnifiedConnectionRequest) (*operations.GetUnifiedConnectionResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {
@@ -286,7 +286,7 @@ func (s *unified) GetUnifiedConnection(ctx context.Context, request operations.G
 }
 
 // GetUnifiedIntegration - Retrieve an integration
-func (s *unified) GetUnifiedIntegration(ctx context.Context, request operations.GetUnifiedIntegrationRequest) (*operations.GetUnifiedIntegrationResponse, error) {
+func (s *Unified) GetUnifiedIntegration(ctx context.Context, request operations.GetUnifiedIntegrationRequest) (*operations.GetUnifiedIntegrationResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/{integration_type}", request, nil)
 	if err != nil {
@@ -348,7 +348,7 @@ func (s *unified) GetUnifiedIntegration(ctx context.Context, request operations.
 
 // GetUnifiedIntegrationAuth - Create connection indirectly
 // Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
-func (s *unified) GetUnifiedIntegrationAuth(ctx context.Context, request operations.GetUnifiedIntegrationAuthRequest) (*operations.GetUnifiedIntegrationAuthResponse, error) {
+func (s *Unified) GetUnifiedIntegrationAuth(ctx context.Context, request operations.GetUnifiedIntegrationAuthRequest) (*operations.GetUnifiedIntegrationAuthResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/auth/{workspace_id}/{integration_type}", request, nil)
 	if err != nil {
@@ -395,7 +395,7 @@ func (s *unified) GetUnifiedIntegrationAuth(ctx context.Context, request operati
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.GetUnifiedIntegrationAuth200ApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -409,7 +409,7 @@ func (s *unified) GetUnifiedIntegrationAuth(ctx context.Context, request operati
 }
 
 // GetUnifiedWebhook - Retrieve webhook by its ID
-func (s *unified) GetUnifiedWebhook(ctx context.Context, request operations.GetUnifiedWebhookRequest) (*operations.GetUnifiedWebhookResponse, error) {
+func (s *Unified) GetUnifiedWebhook(ctx context.Context, request operations.GetUnifiedWebhookRequest) (*operations.GetUnifiedWebhookResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}", request, nil)
 	if err != nil {
@@ -470,7 +470,7 @@ func (s *unified) GetUnifiedWebhook(ctx context.Context, request operations.GetU
 }
 
 // ListUnifiedApicalls - Returns API Calls
-func (s *unified) ListUnifiedApicalls(ctx context.Context, request operations.ListUnifiedApicallsRequest) (*operations.ListUnifiedApicallsResponse, error) {
+func (s *Unified) ListUnifiedApicalls(ctx context.Context, request operations.ListUnifiedApicallsRequest) (*operations.ListUnifiedApicallsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/unified/apicall"
 
@@ -532,7 +532,7 @@ func (s *unified) ListUnifiedApicalls(ctx context.Context, request operations.Li
 }
 
 // ListUnifiedConnections - List all connections
-func (s *unified) ListUnifiedConnections(ctx context.Context, request operations.ListUnifiedConnectionsRequest) (*operations.ListUnifiedConnectionsResponse, error) {
+func (s *Unified) ListUnifiedConnections(ctx context.Context, request operations.ListUnifiedConnectionsRequest) (*operations.ListUnifiedConnectionsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/unified/connection"
 
@@ -595,7 +595,7 @@ func (s *unified) ListUnifiedConnections(ctx context.Context, request operations
 
 // ListUnifiedIntegrationWorkspaces - Returns all activated integrations in a workspace
 // No authentication required as this is to be used by front-end interface
-func (s *unified) ListUnifiedIntegrationWorkspaces(ctx context.Context, request operations.ListUnifiedIntegrationWorkspacesRequest) (*operations.ListUnifiedIntegrationWorkspacesResponse, error) {
+func (s *Unified) ListUnifiedIntegrationWorkspaces(ctx context.Context, request operations.ListUnifiedIntegrationWorkspacesRequest) (*operations.ListUnifiedIntegrationWorkspacesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/workspace/{workspace_id}", request, nil)
 	if err != nil {
@@ -660,7 +660,7 @@ func (s *unified) ListUnifiedIntegrationWorkspaces(ctx context.Context, request 
 }
 
 // ListUnifiedIntegrations - Returns all integrations
-func (s *unified) ListUnifiedIntegrations(ctx context.Context, request operations.ListUnifiedIntegrationsRequest) (*operations.ListUnifiedIntegrationsResponse, error) {
+func (s *Unified) ListUnifiedIntegrations(ctx context.Context, request operations.ListUnifiedIntegrationsRequest) (*operations.ListUnifiedIntegrationsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/unified/integration"
 
@@ -722,7 +722,7 @@ func (s *unified) ListUnifiedIntegrations(ctx context.Context, request operation
 }
 
 // ListUnifiedWebhooks - Returns all registered webhooks
-func (s *unified) ListUnifiedWebhooks(ctx context.Context, request operations.ListUnifiedWebhooksRequest) (*operations.ListUnifiedWebhooksResponse, error) {
+func (s *Unified) ListUnifiedWebhooks(ctx context.Context, request operations.ListUnifiedWebhooksRequest) (*operations.ListUnifiedWebhooksResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url := strings.TrimSuffix(baseURL, "/") + "/unified/webhook"
 
@@ -784,7 +784,7 @@ func (s *unified) ListUnifiedWebhooks(ctx context.Context, request operations.Li
 }
 
 // PatchUnifiedConnection - Update connection
-func (s *unified) PatchUnifiedConnection(ctx context.Context, request operations.PatchUnifiedConnectionRequest) (*operations.PatchUnifiedConnectionResponse, error) {
+func (s *Unified) PatchUnifiedConnection(ctx context.Context, request operations.PatchUnifiedConnectionRequest) (*operations.PatchUnifiedConnectionResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {
@@ -852,7 +852,7 @@ func (s *unified) PatchUnifiedConnection(ctx context.Context, request operations
 }
 
 // RemoveUnifiedConnection - Remove connection
-func (s *unified) RemoveUnifiedConnection(ctx context.Context, request operations.RemoveUnifiedConnectionRequest) (*operations.RemoveUnifiedConnectionResponse, error) {
+func (s *Unified) RemoveUnifiedConnection(ctx context.Context, request operations.RemoveUnifiedConnectionRequest) (*operations.RemoveUnifiedConnectionResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {
@@ -899,7 +899,7 @@ func (s *unified) RemoveUnifiedConnection(ctx context.Context, request operation
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveUnifiedConnectionDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -909,7 +909,7 @@ func (s *unified) RemoveUnifiedConnection(ctx context.Context, request operation
 }
 
 // RemoveUnifiedWebhook - Remove webhook subscription
-func (s *unified) RemoveUnifiedWebhook(ctx context.Context, request operations.RemoveUnifiedWebhookRequest) (*operations.RemoveUnifiedWebhookResponse, error) {
+func (s *Unified) RemoveUnifiedWebhook(ctx context.Context, request operations.RemoveUnifiedWebhookRequest) (*operations.RemoveUnifiedWebhookResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}", request, nil)
 	if err != nil {
@@ -956,7 +956,7 @@ func (s *unified) RemoveUnifiedWebhook(ctx context.Context, request operations.R
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			out := string(rawBody)
-			res.RemoveUnifiedWebhookDefaultApplicationJSONString = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -966,7 +966,7 @@ func (s *unified) RemoveUnifiedWebhook(ctx context.Context, request operations.R
 }
 
 // UpdateUnifiedConnection - Update connection
-func (s *unified) UpdateUnifiedConnection(ctx context.Context, request operations.UpdateUnifiedConnectionRequest) (*operations.UpdateUnifiedConnectionResponse, error) {
+func (s *Unified) UpdateUnifiedConnection(ctx context.Context, request operations.UpdateUnifiedConnectionRequest) (*operations.UpdateUnifiedConnectionResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {

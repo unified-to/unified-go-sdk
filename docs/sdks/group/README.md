@@ -1,5 +1,5 @@
 # Group
-(*Group*)
+(*.Group*)
 
 ### Available Operations
 

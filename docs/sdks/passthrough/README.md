@@ -1,5 +1,5 @@
 # Passthrough
-(*Passthrough*)
+(*.Passthrough*)
 
 ### Available Operations
 
