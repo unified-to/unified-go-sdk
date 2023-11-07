@@ -2,27 +2,30 @@ configVersion: 1.0.0
 management:
   docChecksum: 7b1cb43287adc82723644e87b73cba93
   docVersion: "1.0"
-  speakeasyVersion: 1.110.1
-  generationVersion: 2.175.1
+  speakeasyVersion: 1.114.1
+  generationVersion: 2.181.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  repoURL: https://github.com/unified-to/unified-go-sdk.git
+  comments: {}
   sdkClassName: Unified-to
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/unified-to/unified-go-sdk.git
 features:
   go:
     constsAndDefaults: 0.1.1
-    core: 3.0.1
+    core: 3.1.0
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.0
 go:
-  version: 0.7.0
+  version: 0.8.0
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: pkg/models/callbacks
+      errors: pkg/models/sdkerrors
+      operations: pkg/models/operations
+      shared: pkg/models/shared
+      webhooks: pkg/models/webhooks
   installationURL: https://github.com/unified-to/unified-go-sdk
   maxMethodParams: 0
   packageName: github.com/unified-to/unified-go-sdk

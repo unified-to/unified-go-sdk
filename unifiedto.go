@@ -67,44 +67,44 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 // UnifiedTo - Unified.to API: One API to Rule Them All
 type UnifiedTo struct {
 	Accounting  *Accounting
-	Apicall     *Apicall
-	Application *Application
-	Ats         *Ats
-	Auth        *Auth
-	Call        *Call
-	Candidate   *Candidate
-	Company     *Company
-	Connection  *Connection
-	Contact     *Contact
-	Crm         *Crm
 	Customer    *Customer
-	Deal        *Deal
+	Invoice     *Invoice
+	Payment     *Payment
+	Ats         *Ats
+	Application *Application
+	Candidate   *Candidate
 	Document    *Document
-	Employee    *Employee
-	Enrich      *Enrich
+	Interview   *Interview
+	Job         *Job
+	Scorecard   *Scorecard
+	Crm         *Crm
+	Company     *Company
+	Contact     *Contact
+	Deal        *Deal
 	Event       *Event
 	File        *File
-	Group       *Group
-	Hris        *Hris
-	Integration *Integration
-	Interview   *Interview
-	Invoice     *Invoice
-	Job         *Job
 	Lead        *Lead
-	List        *List
-	Login       *Login
-	Martech     *Martech
-	Member      *Member
-	Note        *Note
-	Passthrough *Passthrough
-	Payment     *Payment
-	Person      *Person
 	Pipeline    *Pipeline
-	Scorecard   *Scorecard
-	Ticket      *Ticket
+	Enrich      *Enrich
+	Person      *Person
+	Hris        *Hris
+	Employee    *Employee
+	Group       *Group
+	Martech     *Martech
+	List        *List
+	Member      *Member
+	Passthrough *Passthrough
 	Ticketing   *Ticketing
+	Note        *Note
+	Ticket      *Ticket
 	Uc          *Uc
+	Call        *Call
 	Unified     *Unified
+	Apicall     *Apicall
+	Connection  *Connection
+	Integration *Integration
+	Auth        *Auth
+	Login       *Login
 	Webhook     *Webhook
 
 	sdkConfiguration sdkConfiguration
@@ -175,9 +175,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.7.0",
-			GenVersion:        "2.175.1",
-			UserAgent:         "speakeasy-sdk/go 0.7.0 2.175.1 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.8.0",
+			GenVersion:        "2.181.1",
+			UserAgent:         "speakeasy-sdk/go 0.8.0 2.181.1 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -198,81 +198,81 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Accounting = newAccounting(sdk.sdkConfiguration)
 
-	sdk.Apicall = newApicall(sdk.sdkConfiguration)
+	sdk.Customer = newCustomer(sdk.sdkConfiguration)
 
-	sdk.Application = newApplication(sdk.sdkConfiguration)
+	sdk.Invoice = newInvoice(sdk.sdkConfiguration)
+
+	sdk.Payment = newPayment(sdk.sdkConfiguration)
 
 	sdk.Ats = newAts(sdk.sdkConfiguration)
 
-	sdk.Auth = newAuth(sdk.sdkConfiguration)
-
-	sdk.Call = newCall(sdk.sdkConfiguration)
+	sdk.Application = newApplication(sdk.sdkConfiguration)
 
 	sdk.Candidate = newCandidate(sdk.sdkConfiguration)
 
-	sdk.Company = newCompany(sdk.sdkConfiguration)
+	sdk.Document = newDocument(sdk.sdkConfiguration)
 
-	sdk.Connection = newConnection(sdk.sdkConfiguration)
+	sdk.Interview = newInterview(sdk.sdkConfiguration)
 
-	sdk.Contact = newContact(sdk.sdkConfiguration)
+	sdk.Job = newJob(sdk.sdkConfiguration)
+
+	sdk.Scorecard = newScorecard(sdk.sdkConfiguration)
 
 	sdk.Crm = newCrm(sdk.sdkConfiguration)
 
-	sdk.Customer = newCustomer(sdk.sdkConfiguration)
+	sdk.Company = newCompany(sdk.sdkConfiguration)
+
+	sdk.Contact = newContact(sdk.sdkConfiguration)
 
 	sdk.Deal = newDeal(sdk.sdkConfiguration)
-
-	sdk.Document = newDocument(sdk.sdkConfiguration)
-
-	sdk.Employee = newEmployee(sdk.sdkConfiguration)
-
-	sdk.Enrich = newEnrich(sdk.sdkConfiguration)
 
 	sdk.Event = newEvent(sdk.sdkConfiguration)
 
 	sdk.File = newFile(sdk.sdkConfiguration)
 
-	sdk.Group = newGroup(sdk.sdkConfiguration)
-
-	sdk.Hris = newHris(sdk.sdkConfiguration)
-
-	sdk.Integration = newIntegration(sdk.sdkConfiguration)
-
-	sdk.Interview = newInterview(sdk.sdkConfiguration)
-
-	sdk.Invoice = newInvoice(sdk.sdkConfiguration)
-
-	sdk.Job = newJob(sdk.sdkConfiguration)
-
 	sdk.Lead = newLead(sdk.sdkConfiguration)
-
-	sdk.List = newList(sdk.sdkConfiguration)
-
-	sdk.Login = newLogin(sdk.sdkConfiguration)
-
-	sdk.Martech = newMartech(sdk.sdkConfiguration)
-
-	sdk.Member = newMember(sdk.sdkConfiguration)
-
-	sdk.Note = newNote(sdk.sdkConfiguration)
-
-	sdk.Passthrough = newPassthrough(sdk.sdkConfiguration)
-
-	sdk.Payment = newPayment(sdk.sdkConfiguration)
-
-	sdk.Person = newPerson(sdk.sdkConfiguration)
 
 	sdk.Pipeline = newPipeline(sdk.sdkConfiguration)
 
-	sdk.Scorecard = newScorecard(sdk.sdkConfiguration)
+	sdk.Enrich = newEnrich(sdk.sdkConfiguration)
 
-	sdk.Ticket = newTicket(sdk.sdkConfiguration)
+	sdk.Person = newPerson(sdk.sdkConfiguration)
+
+	sdk.Hris = newHris(sdk.sdkConfiguration)
+
+	sdk.Employee = newEmployee(sdk.sdkConfiguration)
+
+	sdk.Group = newGroup(sdk.sdkConfiguration)
+
+	sdk.Martech = newMartech(sdk.sdkConfiguration)
+
+	sdk.List = newList(sdk.sdkConfiguration)
+
+	sdk.Member = newMember(sdk.sdkConfiguration)
+
+	sdk.Passthrough = newPassthrough(sdk.sdkConfiguration)
 
 	sdk.Ticketing = newTicketing(sdk.sdkConfiguration)
 
+	sdk.Note = newNote(sdk.sdkConfiguration)
+
+	sdk.Ticket = newTicket(sdk.sdkConfiguration)
+
 	sdk.Uc = newUc(sdk.sdkConfiguration)
 
+	sdk.Call = newCall(sdk.sdkConfiguration)
+
 	sdk.Unified = newUnified(sdk.sdkConfiguration)
+
+	sdk.Apicall = newApicall(sdk.sdkConfiguration)
+
+	sdk.Connection = newConnection(sdk.sdkConfiguration)
+
+	sdk.Integration = newIntegration(sdk.sdkConfiguration)
+
+	sdk.Auth = newAuth(sdk.sdkConfiguration)
+
+	sdk.Login = newLogin(sdk.sdkConfiguration)
 
 	sdk.Webhook = newWebhook(sdk.sdkConfiguration)
 
