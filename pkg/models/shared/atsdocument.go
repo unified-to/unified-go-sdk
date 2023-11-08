@@ -52,6 +52,7 @@ type AtsDocument struct {
 	ApplicationID *string                 `json:"application_id,omitempty"`
 	CandidateID   *string                 `json:"candidate_id,omitempty"`
 	CreatedAt     *time.Time              `json:"created_at,omitempty"`
+	DocumentData  *string                 `json:"document_data,omitempty"`
 	DocumentURL   *string                 `json:"document_url,omitempty"`
 	Filename      *string                 `json:"filename,omitempty"`
 	ID            *string                 `json:"id,omitempty"`
@@ -92,6 +93,13 @@ func (o *AtsDocument) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return o.CreatedAt
+}
+
+func (o *AtsDocument) GetDocumentData() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DocumentData
 }
 
 func (o *AtsDocument) GetDocumentURL() *string {

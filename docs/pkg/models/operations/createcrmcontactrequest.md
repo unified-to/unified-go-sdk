@@ -1,0 +1,9 @@
+# CreateCrmContactRequest
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `CrmContact`                                                                             | [*shared.CrmContact](../../../pkg/models/shared/crmcontact.md)                           | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
+| `ConnectionID`                                                                           | *string*                                                                                 | :heavy_check_mark:                                                                       | ID of the connection                                                                     |

@@ -67,7 +67,7 @@ func main() {
 ## Available Resources and Operations
 
 
-### [.Accounting](docs/sdks/accounting/README.md)
+### [Accounting](docs/sdks/accounting/README.md)
 
 * [CreateAccountingCustomer](docs/sdks/accounting/README.md#createaccountingcustomer) - Create a customer
 * [CreateAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create a invoice
@@ -88,7 +88,7 @@ func main() {
 * [UpdateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update a invoice
 * [UpdateAccountingPayment](docs/sdks/accounting/README.md#updateaccountingpayment) - Update a payment
 
-### [.Customer](docs/sdks/customer/README.md)
+### [Customer](docs/sdks/customer/README.md)
 
 * [CreateAccountingCustomer](docs/sdks/customer/README.md#createaccountingcustomer) - Create a customer
 * [CreateTicketingCustomer](docs/sdks/customer/README.md#createticketingcustomer) - Create a customer
@@ -103,7 +103,7 @@ func main() {
 * [UpdateAccountingCustomer](docs/sdks/customer/README.md#updateaccountingcustomer) - Update a customer
 * [UpdateTicketingCustomer](docs/sdks/customer/README.md#updateticketingcustomer) - Update a customer
 
-### [.Invoice](docs/sdks/invoice/README.md)
+### [Invoice](docs/sdks/invoice/README.md)
 
 * [CreateAccountingInvoice](docs/sdks/invoice/README.md#createaccountinginvoice) - Create a invoice
 * [GetAccountingInvoice](docs/sdks/invoice/README.md#getaccountinginvoice) - Retrieve a invoice
@@ -112,7 +112,7 @@ func main() {
 * [RemoveAccountingInvoice](docs/sdks/invoice/README.md#removeaccountinginvoice) - Remove a invoice
 * [UpdateAccountingInvoice](docs/sdks/invoice/README.md#updateaccountinginvoice) - Update a invoice
 
-### [.Payment](docs/sdks/payment/README.md)
+### [Payment](docs/sdks/payment/README.md)
 
 * [CreateAccountingPayment](docs/sdks/payment/README.md#createaccountingpayment) - Create a payment
 * [GetAccountingPayment](docs/sdks/payment/README.md#getaccountingpayment) - Retrieve a payment
@@ -121,7 +121,7 @@ func main() {
 * [RemoveAccountingPayment](docs/sdks/payment/README.md#removeaccountingpayment) - Remove a payment
 * [UpdateAccountingPayment](docs/sdks/payment/README.md#updateaccountingpayment) - Update a payment
 
-### [.Ats](docs/sdks/ats/README.md)
+### [Ats](docs/sdks/ats/README.md)
 
 * [CreateAtsApplication](docs/sdks/ats/README.md#createatsapplication) - Create an application
 * [CreateAtsCandidate](docs/sdks/ats/README.md#createatscandidate) - Create a candidate
@@ -160,7 +160,7 @@ func main() {
 * [UpdateAtsJob](docs/sdks/ats/README.md#updateatsjob) - Update a job
 * [UpdateAtsScorecard](docs/sdks/ats/README.md#updateatsscorecard) - Update a scorecard
 
-### [.Application](docs/sdks/application/README.md)
+### [Application](docs/sdks/application/README.md)
 
 * [CreateAtsApplication](docs/sdks/application/README.md#createatsapplication) - Create an application
 * [GetAtsApplication](docs/sdks/application/README.md#getatsapplication) - Retrieve an application
@@ -169,7 +169,7 @@ func main() {
 * [RemoveAtsApplication](docs/sdks/application/README.md#removeatsapplication) - Remove an application
 * [UpdateAtsApplication](docs/sdks/application/README.md#updateatsapplication) - Update an application
 
-### [.Candidate](docs/sdks/candidate/README.md)
+### [Candidate](docs/sdks/candidate/README.md)
 
 * [CreateAtsCandidate](docs/sdks/candidate/README.md#createatscandidate) - Create a candidate
 * [GetAtsCandidate](docs/sdks/candidate/README.md#getatscandidate) - Retrieve a candidate
@@ -178,7 +178,7 @@ func main() {
 * [RemoveAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [UpdateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
 
-### [.Document](docs/sdks/document/README.md)
+### [Document](docs/sdks/document/README.md)
 
 * [CreateAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
 * [GetAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
@@ -187,7 +187,7 @@ func main() {
 * [RemoveAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
 * [UpdateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
 
-### [.Interview](docs/sdks/interview/README.md)
+### [Interview](docs/sdks/interview/README.md)
 
 * [CreateAtsInterview](docs/sdks/interview/README.md#createatsinterview) - Create a interview
 * [GetAtsInterview](docs/sdks/interview/README.md#getatsinterview) - Retrieve a interview
@@ -196,7 +196,7 @@ func main() {
 * [RemoveAtsInterview](docs/sdks/interview/README.md#removeatsinterview) - Remove a interview
 * [UpdateAtsInterview](docs/sdks/interview/README.md#updateatsinterview) - Update a interview
 
-### [.Job](docs/sdks/job/README.md)
+### [Job](docs/sdks/job/README.md)
 
 * [CreateAtsJob](docs/sdks/job/README.md#createatsjob) - Create a job
 * [GetAtsJob](docs/sdks/job/README.md#getatsjob) - Retrieve a job
@@ -205,7 +205,7 @@ func main() {
 * [RemoveAtsJob](docs/sdks/job/README.md#removeatsjob) - Remove a job
 * [UpdateAtsJob](docs/sdks/job/README.md#updateatsjob) - Update a job
 
-### [.Scorecard](docs/sdks/scorecard/README.md)
+### [Scorecard](docs/sdks/scorecard/README.md)
 
 * [CreateAtsScorecard](docs/sdks/scorecard/README.md#createatsscorecard) - Create a scorecard
 * [GetAtsScorecard](docs/sdks/scorecard/README.md#getatsscorecard) - Retrieve a scorecard
@@ -214,7 +214,7 @@ func main() {
 * [RemoveAtsScorecard](docs/sdks/scorecard/README.md#removeatsscorecard) - Remove a scorecard
 * [UpdateAtsScorecard](docs/sdks/scorecard/README.md#updateatsscorecard) - Update a scorecard
 
-### [.Crm](docs/sdks/crm/README.md)
+### [Crm](docs/sdks/crm/README.md)
 
 * [CreateCrmCompany](docs/sdks/crm/README.md#createcrmcompany) - Create a company
 * [CreateCrmContact](docs/sdks/crm/README.md#createcrmcontact) - Create a contact
@@ -259,7 +259,7 @@ func main() {
 * [UpdateCrmLead](docs/sdks/crm/README.md#updatecrmlead) - Update a lead
 * [UpdateCrmPipeline](docs/sdks/crm/README.md#updatecrmpipeline) - Update a pipeline
 
-### [.Company](docs/sdks/company/README.md)
+### [Company](docs/sdks/company/README.md)
 
 * [CreateCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
 * [GetCrmCompany](docs/sdks/company/README.md#getcrmcompany) - Retrieve a company
@@ -269,7 +269,7 @@ func main() {
 * [RemoveCrmCompany](docs/sdks/company/README.md#removecrmcompany) - Remove a company
 * [UpdateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 
-### [.Contact](docs/sdks/contact/README.md)
+### [Contact](docs/sdks/contact/README.md)
 
 * [CreateCrmContact](docs/sdks/contact/README.md#createcrmcontact) - Create a contact
 * [CreateUcContact](docs/sdks/contact/README.md#createuccontact) - Create a contact
@@ -284,7 +284,7 @@ func main() {
 * [UpdateCrmContact](docs/sdks/contact/README.md#updatecrmcontact) - Update a contact
 * [UpdateUcContact](docs/sdks/contact/README.md#updateuccontact) - Update a contact
 
-### [.Deal](docs/sdks/deal/README.md)
+### [Deal](docs/sdks/deal/README.md)
 
 * [CreateCrmDeal](docs/sdks/deal/README.md#createcrmdeal) - Create a deal
 * [GetCrmDeal](docs/sdks/deal/README.md#getcrmdeal) - Retrieve a deal
@@ -293,7 +293,7 @@ func main() {
 * [RemoveCrmDeal](docs/sdks/deal/README.md#removecrmdeal) - Remove a deal
 * [UpdateCrmDeal](docs/sdks/deal/README.md#updatecrmdeal) - Update a deal
 
-### [.Event](docs/sdks/event/README.md)
+### [Event](docs/sdks/event/README.md)
 
 * [CreateCrmEvent](docs/sdks/event/README.md#createcrmevent) - Create a event
 * [GetCrmEvent](docs/sdks/event/README.md#getcrmevent) - Retrieve a event
@@ -302,7 +302,7 @@ func main() {
 * [RemoveCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove a event
 * [UpdateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update a event
 
-### [.File](docs/sdks/file/README.md)
+### [File](docs/sdks/file/README.md)
 
 * [CreateCrmFile](docs/sdks/file/README.md#createcrmfile) - Create a file
 * [GetCrmFile](docs/sdks/file/README.md#getcrmfile) - Retrieve a file
@@ -311,7 +311,7 @@ func main() {
 * [RemoveCrmFile](docs/sdks/file/README.md#removecrmfile) - Remove a file
 * [UpdateCrmFile](docs/sdks/file/README.md#updatecrmfile) - Update a file
 
-### [.Lead](docs/sdks/lead/README.md)
+### [Lead](docs/sdks/lead/README.md)
 
 * [CreateCrmLead](docs/sdks/lead/README.md#createcrmlead) - Create a lead
 * [GetCrmLead](docs/sdks/lead/README.md#getcrmlead) - Retrieve a lead
@@ -320,7 +320,7 @@ func main() {
 * [RemoveCrmLead](docs/sdks/lead/README.md#removecrmlead) - Remove a lead
 * [UpdateCrmLead](docs/sdks/lead/README.md#updatecrmlead) - Update a lead
 
-### [.Pipeline](docs/sdks/pipeline/README.md)
+### [Pipeline](docs/sdks/pipeline/README.md)
 
 * [CreateCrmPipeline](docs/sdks/pipeline/README.md#createcrmpipeline) - Create a pipeline
 * [GetCrmPipeline](docs/sdks/pipeline/README.md#getcrmpipeline) - Retrieve a pipeline
@@ -329,16 +329,16 @@ func main() {
 * [RemoveCrmPipeline](docs/sdks/pipeline/README.md#removecrmpipeline) - Remove a pipeline
 * [UpdateCrmPipeline](docs/sdks/pipeline/README.md#updatecrmpipeline) - Update a pipeline
 
-### [.Enrich](docs/sdks/enrich/README.md)
+### [Enrich](docs/sdks/enrich/README.md)
 
 * [ListEnrichCompanies](docs/sdks/enrich/README.md#listenrichcompanies) - Retrieve enrichment information for a company
 * [ListEnrichPeople](docs/sdks/enrich/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
-### [.Person](docs/sdks/person/README.md)
+### [Person](docs/sdks/person/README.md)
 
 * [ListEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
-### [.Hris](docs/sdks/hris/README.md)
+### [Hris](docs/sdks/hris/README.md)
 
 * [CreateHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
@@ -353,7 +353,7 @@ func main() {
 * [UpdateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 
-### [.Employee](docs/sdks/employee/README.md)
+### [Employee](docs/sdks/employee/README.md)
 
 * [CreateHrisEmployee](docs/sdks/employee/README.md#createhrisemployee) - Create an employee
 * [GetHrisEmployee](docs/sdks/employee/README.md#gethrisemployee) - Retrieve an employee
@@ -362,7 +362,7 @@ func main() {
 * [RemoveHrisEmployee](docs/sdks/employee/README.md#removehrisemployee) - Remove an employee
 * [UpdateHrisEmployee](docs/sdks/employee/README.md#updatehrisemployee) - Update an employee
 
-### [.Group](docs/sdks/group/README.md)
+### [Group](docs/sdks/group/README.md)
 
 * [CreateHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
 * [GetHrisGroup](docs/sdks/group/README.md#gethrisgroup) - Retrieve a group
@@ -371,7 +371,7 @@ func main() {
 * [RemoveHrisGroup](docs/sdks/group/README.md#removehrisgroup) - Remove a group
 * [UpdateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
 
-### [.Martech](docs/sdks/martech/README.md)
+### [Martech](docs/sdks/martech/README.md)
 
 * [CreateMartechList](docs/sdks/martech/README.md#createmartechlist) - Create a list
 * [CreateMartechMember](docs/sdks/martech/README.md#createmartechmember) - Create a member
@@ -386,7 +386,7 @@ func main() {
 * [UpdateMartechList](docs/sdks/martech/README.md#updatemartechlist) - Update a list
 * [UpdateMartechMember](docs/sdks/martech/README.md#updatemartechmember) - Update a member
 
-### [.List](docs/sdks/list/README.md)
+### [List](docs/sdks/list/README.md)
 
 * [CreateMartechList](docs/sdks/list/README.md#createmartechlist) - Create a list
 * [GetMartechList](docs/sdks/list/README.md#getmartechlist) - Retrieve a list
@@ -395,7 +395,7 @@ func main() {
 * [RemoveMartechList](docs/sdks/list/README.md#removemartechlist) - Remove a list
 * [UpdateMartechList](docs/sdks/list/README.md#updatemartechlist) - Update a list
 
-### [.Member](docs/sdks/member/README.md)
+### [Member](docs/sdks/member/README.md)
 
 * [CreateMartechMember](docs/sdks/member/README.md#createmartechmember) - Create a member
 * [GetMartechMember](docs/sdks/member/README.md#getmartechmember) - Retrieve a member
@@ -404,7 +404,7 @@ func main() {
 * [RemoveMartechMember](docs/sdks/member/README.md#removemartechmember) - Remove member
 * [UpdateMartechMember](docs/sdks/member/README.md#updatemartechmember) - Update a member
 
-### [.Passthrough](docs/sdks/passthrough/README.md)
+### [Passthrough](docs/sdks/passthrough/README.md)
 
 * [CreatePassthrough](docs/sdks/passthrough/README.md#createpassthrough) - Passthrough POST
 * [ListPassthroughs](docs/sdks/passthrough/README.md#listpassthroughs) - Passthrough GET
@@ -412,7 +412,7 @@ func main() {
 * [RemovePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
 * [UpdatePassthrough](docs/sdks/passthrough/README.md#updatepassthrough) - Passthrough PUT
 
-### [.Ticketing](docs/sdks/ticketing/README.md)
+### [Ticketing](docs/sdks/ticketing/README.md)
 
 * [CreateTicketingCustomer](docs/sdks/ticketing/README.md#createticketingcustomer) - Create a customer
 * [CreateTicketingNote](docs/sdks/ticketing/README.md#createticketingnote) - Create a note
@@ -433,7 +433,7 @@ func main() {
 * [UpdateTicketingNote](docs/sdks/ticketing/README.md#updateticketingnote) - Update a note
 * [UpdateTicketingTicket](docs/sdks/ticketing/README.md#updateticketingticket) - Update a ticket
 
-### [.Note](docs/sdks/note/README.md)
+### [Note](docs/sdks/note/README.md)
 
 * [CreateTicketingNote](docs/sdks/note/README.md#createticketingnote) - Create a note
 * [GetTicketingNote](docs/sdks/note/README.md#getticketingnote) - Retrieve a note
@@ -442,7 +442,7 @@ func main() {
 * [RemoveTicketingNote](docs/sdks/note/README.md#removeticketingnote) - Remove a note
 * [UpdateTicketingNote](docs/sdks/note/README.md#updateticketingnote) - Update a note
 
-### [.Ticket](docs/sdks/ticket/README.md)
+### [Ticket](docs/sdks/ticket/README.md)
 
 * [CreateTicketingTicket](docs/sdks/ticket/README.md#createticketingticket) - Create a ticket
 * [GetTicketingTicket](docs/sdks/ticket/README.md#getticketingticket) - Retrieve a ticket
@@ -451,7 +451,7 @@ func main() {
 * [RemoveTicketingTicket](docs/sdks/ticket/README.md#removeticketingticket) - Remove a ticket
 * [UpdateTicketingTicket](docs/sdks/ticket/README.md#updateticketingticket) - Update a ticket
 
-### [.Uc](docs/sdks/uc/README.md)
+### [Uc](docs/sdks/uc/README.md)
 
 * [CreateUcContact](docs/sdks/uc/README.md#createuccontact) - Create a contact
 * [GetUcContact](docs/sdks/uc/README.md#getuccontact) - Retrieve a contact
@@ -461,11 +461,11 @@ func main() {
 * [RemoveUcContact](docs/sdks/uc/README.md#removeuccontact) - Remove a contact
 * [UpdateUcContact](docs/sdks/uc/README.md#updateuccontact) - Update a contact
 
-### [.Call](docs/sdks/call/README.md)
+### [Call](docs/sdks/call/README.md)
 
 * [ListUcCalls](docs/sdks/call/README.md#listuccalls) - List all calls
 
-### [.Unified](docs/sdks/unified/README.md)
+### [Unified](docs/sdks/unified/README.md)
 
 * [CreateUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
 * [CreateUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
@@ -484,12 +484,12 @@ func main() {
 * [RemoveUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [UpdateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 
-### [.Apicall](docs/sdks/apicall/README.md)
+### [Apicall](docs/sdks/apicall/README.md)
 
 * [GetUnifiedApicall](docs/sdks/apicall/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [ListUnifiedApicalls](docs/sdks/apicall/README.md#listunifiedapicalls) - Returns API Calls
 
-### [.Connection](docs/sdks/connection/README.md)
+### [Connection](docs/sdks/connection/README.md)
 
 * [CreateUnifiedConnection](docs/sdks/connection/README.md#createunifiedconnection) - Create connection
 * [GetUnifiedConnection](docs/sdks/connection/README.md#getunifiedconnection) - Retrieve connection
@@ -498,23 +498,23 @@ func main() {
 * [RemoveUnifiedConnection](docs/sdks/connection/README.md#removeunifiedconnection) - Remove connection
 * [UpdateUnifiedConnection](docs/sdks/connection/README.md#updateunifiedconnection) - Update connection
 
-### [.Integration](docs/sdks/integration/README.md)
+### [Integration](docs/sdks/integration/README.md)
 
 * [GetUnifiedIntegration](docs/sdks/integration/README.md#getunifiedintegration) - Retrieve an integration
 * [GetUnifiedIntegrationAuth](docs/sdks/integration/README.md#getunifiedintegrationauth) - Create connection indirectly
 * [ListUnifiedIntegrationWorkspaces](docs/sdks/integration/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [ListUnifiedIntegrations](docs/sdks/integration/README.md#listunifiedintegrations) - Returns all integrations
 
-### [.Auth](docs/sdks/auth/README.md)
+### [Auth](docs/sdks/auth/README.md)
 
 * [GetUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Create connection indirectly
 * [GetUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
 
-### [.Login](docs/sdks/login/README.md)
+### [Login](docs/sdks/login/README.md)
 
 * [GetUnifiedIntegrationLogin](docs/sdks/login/README.md#getunifiedintegrationlogin) - Sign in a user
 
-### [.Webhook](docs/sdks/webhook/README.md)
+### [Webhook](docs/sdks/webhook/README.md)
 
 * [CreateUnifiedWebhook](docs/sdks/webhook/README.md#createunifiedwebhook) - Create webhook subscription
 * [GetUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Retrieve webhook by its ID
@@ -551,7 +551,61 @@ Here's an example of one such pagination call:
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
+
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
+
+## Example
+
+```go
+package main
+
+import (
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"log"
+)
+
+func main() {
+	s := unifiedgosdk.New(
+		unifiedgosdk.WithSecurity(""),
+	)
+
+	ctx := context.Background()
+	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
+		AccountingCustomer: &shared.AccountingCustomer{
+			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
+			Emails: []shared.AccountingEmail{
+				shared.AccountingEmail{
+					Email: "Kevon_Schultz42@gmail.com",
+				},
+			},
+			Raw:             &shared.PropertyAccountingCustomerRaw{},
+			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
+			Telephones: []shared.AccountingTelephone{
+				shared.AccountingTelephone{
+					Telephone: "string",
+				},
+			},
+		},
+		ConnectionID: "string",
+	})
+	if err != nil {
+
+		var e *sdkerrors.SDKError
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+	}
+}
+
+```
 <!-- End Error Handling -->
 
 
@@ -704,12 +758,11 @@ This can be a convenient way to configure timeouts, cookies, proxies, custom hea
 
 
 <!-- Start Authentication -->
-
 # Authentication
 
 ## Per-Client Security Schemes
 
-Your SDK supports the following security scheme globally:
+This SDK supports the following security scheme globally:
 
 | Name    | Type    | Scheme  |
 | ------- | ------- | ------- |

@@ -1,0 +1,10 @@
+# PatchCrmCompanyRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `CrmCompany`                                                                                   | [*shared.CrmCompany](../../../pkg/models/shared/crmcompany.md)                                 | :heavy_minus_sign:                                                                             | A company represents an organization that optionally is associated with a deal and/or contacts |
+| `ConnectionID`                                                                                 | *string*                                                                                       | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
+| `ID`                                                                                           | *string*                                                                                       | :heavy_check_mark:                                                                             | ID of the Company                                                                              |
