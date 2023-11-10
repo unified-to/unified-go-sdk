@@ -19,6 +19,7 @@ type CrmLead struct {
 	Name          *string                 `json:"name,omitempty"`
 	Raw           *PropertyCrmLeadRaw     `json:"raw,omitempty"`
 	Source        *string                 `json:"source,omitempty"`
+	Status        *string                 `json:"status,omitempty"`
 	Telephones    []CrmTelephone          `json:"telephones,omitempty"`
 	UpdatedAt     *time.Time              `json:"updated_at,omitempty"`
 	UserID        *string                 `json:"user_id,omitempty"`
@@ -110,6 +111,13 @@ func (o *CrmLead) GetSource() *string {
 		return nil
 	}
 	return o.Source
+}
+
+func (o *CrmLead) GetStatus() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Status
 }
 
 func (o *CrmLead) GetTelephones() []CrmTelephone {
