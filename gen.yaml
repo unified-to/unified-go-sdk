@@ -1,21 +1,17 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 971f963bb8131d7583f1525d9455db1e
+  docChecksum: 412a3fcd1dd230dc72c600e2a2aa789c
   docVersion: "1.0"
-  speakeasyVersion: 1.118.3
-  generationVersion: 2.187.7
+  speakeasyVersion: 1.119.2
+  generationVersion: 2.188.3
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  flattenGlobalSecurity: true
-  repoURL: https://github.com/unified-to/unified-python-sdk.git
+  comments: {}
   sdkClassName: Unified-to
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/unified-to/unified-go-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  baseServerURL: ""
+  flattenGlobalSecurity: true
 features:
   go:
     constsAndDefaults: 0.1.1
@@ -23,7 +19,7 @@ features:
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.0
 go:
-  version: 0.8.2
+  version: 0.8.3
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
