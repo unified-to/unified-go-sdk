@@ -14,7 +14,7 @@ type Integration struct {
 	// The categories of support solutions that this integration has
 	Categories           []PropertyIntegrationCategories `json:"categories"`
 	Color                *string                         `json:"color,omitempty"`
-	CreatedAt            *time.Time                      `json:"created_at,omitempty"`
+	CreatedAt            *string                         `json:"created_at,omitempty"`
 	FaIcon               *string                         `json:"fa_icon,omitempty"`
 	InProgress           bool                            `json:"in_progress"`
 	IsActive             *bool                           `json:"is_active,omitempty"`
@@ -27,10 +27,10 @@ type Integration struct {
 	// instructions for the user on how to find the token/key
 	TokenInstructions []string `json:"token_instructions,omitempty"`
 	// if auth_types = 'token'
-	TokenNames []string   `json:"token_names,omitempty"`
-	Type       string     `json:"type"`
-	UpdatedAt  *time.Time `json:"updated_at,omitempty"`
-	WebURL     *string    `json:"web_url,omitempty"`
+	TokenNames []string `json:"token_names,omitempty"`
+	Type       string   `json:"type"`
+	UpdatedAt  *string  `json:"updated_at,omitempty"`
+	WebURL     *string  `json:"web_url,omitempty"`
 }
 
 func (i Integration) MarshalJSON() ([]byte, error) {
@@ -72,7 +72,7 @@ func (o *Integration) GetColor() *string {
 	return o.Color
 }
 
-func (o *Integration) GetCreatedAt() *time.Time {
+func (o *Integration) GetCreatedAt() *string {
 	if o == nil {
 		return nil
 	}
@@ -163,7 +163,7 @@ func (o *Integration) GetType() string {
 	return o.Type
 }
 
-func (o *Integration) GetUpdatedAt() *time.Time {
+func (o *Integration) GetUpdatedAt() *string {
 	if o == nil {
 		return nil
 	}
