@@ -28,9 +28,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Event.CreateCrmEvent(ctx, operations.CreateCrmEventRequest{
@@ -103,9 +101,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Event.GetCrmEvent(ctx, operations.GetCrmEventRequest{
@@ -158,9 +154,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Event.ListCrmEvents(ctx, operations.ListCrmEventsRequest{
@@ -212,9 +206,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Event.PatchCrmEvent(ctx, operations.PatchCrmEventRequest{
@@ -288,9 +280,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Event.RemoveCrmEvent(ctx, operations.RemoveCrmEventRequest{
@@ -340,9 +330,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Event.UpdateCrmEvent(ctx, operations.UpdateCrmEventRequest{

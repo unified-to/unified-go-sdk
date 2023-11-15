@@ -34,9 +34,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.CreateMartechList(ctx, operations.CreateMartechListRequest{
@@ -88,9 +86,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.CreateMartechMember(ctx, operations.CreateMartechMemberRequest{
@@ -153,9 +149,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.GetMartechList(ctx, operations.GetMartechListRequest{
@@ -208,9 +202,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.GetMartechMember(ctx, operations.GetMartechMemberRequest{
@@ -263,9 +255,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.ListMartechLists(ctx, operations.ListMartechListsRequest{
@@ -317,9 +307,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
@@ -371,9 +359,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.PatchMartechList(ctx, operations.PatchMartechListRequest{
@@ -426,9 +412,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.PatchMartechMember(ctx, operations.PatchMartechMemberRequest{
@@ -492,9 +476,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.RemoveMartechList(ctx, operations.RemoveMartechListRequest{
@@ -544,9 +526,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.RemoveMartechMember(ctx, operations.RemoveMartechMemberRequest{
@@ -596,9 +576,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.UpdateMartechList(ctx, operations.UpdateMartechListRequest{
@@ -651,9 +629,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Martech.UpdateMartechMember(ctx, operations.UpdateMartechMemberRequest{

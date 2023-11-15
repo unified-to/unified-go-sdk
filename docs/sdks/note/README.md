@@ -28,14 +28,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Note.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: shared.PropertyTicketingNoteRaw{},
+            Raw: &shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "string",
     })
@@ -82,9 +80,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Note.GetTicketingNote(ctx, operations.GetTicketingNoteRequest{
@@ -137,9 +133,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Note.ListTicketingNotes(ctx, operations.ListTicketingNotesRequest{
@@ -191,14 +185,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Note.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: shared.PropertyTicketingNoteRaw{},
+            Raw: &shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -246,9 +238,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Note.RemoveTicketingNote(ctx, operations.RemoveTicketingNoteRequest{
@@ -298,14 +288,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Note.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: shared.PropertyTicketingNoteRaw{},
+            Raw: &shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "string",
         ID: "<ID>",

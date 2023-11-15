@@ -28,14 +28,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticket.CreateTicketingTicket(ctx, operations.CreateTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: shared.PropertyTicketingTicketRaw{},
+            Raw: &shared.PropertyTicketingTicketRaw{},
             Tags: []string{
                 "string",
             },
@@ -85,9 +83,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticket.GetTicketingTicket(ctx, operations.GetTicketingTicketRequest{
@@ -140,9 +136,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticket.ListTicketingTickets(ctx, operations.ListTicketingTicketsRequest{
@@ -194,14 +188,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticket.PatchTicketingTicket(ctx, operations.PatchTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: shared.PropertyTicketingTicketRaw{},
+            Raw: &shared.PropertyTicketingTicketRaw{},
             Tags: []string{
                 "string",
             },
@@ -252,9 +244,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticket.RemoveTicketingTicket(ctx, operations.RemoveTicketingTicketRequest{
@@ -304,14 +294,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticket.UpdateTicketingTicket(ctx, operations.UpdateTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: shared.PropertyTicketingTicketRaw{},
+            Raw: &shared.PropertyTicketingTicketRaw{},
             Tags: []string{
                 "string",
             },

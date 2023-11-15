@@ -24,9 +24,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Enrich.ListEnrichCompanies(ctx, operations.ListEnrichCompaniesRequest{
@@ -75,9 +73,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Enrich.ListEnrichPeople(ctx, operations.ListEnrichPeopleRequest{

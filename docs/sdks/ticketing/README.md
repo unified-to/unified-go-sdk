@@ -40,9 +40,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingCustomer(ctx, operations.CreateTicketingCustomerRequest{
@@ -52,7 +50,7 @@ func main() {
                     Email: "Guadalupe78@yahoo.com",
                 },
             },
-            Raw: shared.PropertyTicketingCustomerRaw{},
+            Raw: &shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
                 "string",
             },
@@ -107,14 +105,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: shared.PropertyTicketingNoteRaw{},
+            Raw: &shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "string",
     })
@@ -161,14 +157,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingTicket(ctx, operations.CreateTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: shared.PropertyTicketingTicketRaw{},
+            Raw: &shared.PropertyTicketingTicketRaw{},
             Tags: []string{
                 "string",
             },
@@ -218,9 +212,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingCustomer(ctx, operations.GetTicketingCustomerRequest{
@@ -273,9 +265,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingNote(ctx, operations.GetTicketingNoteRequest{
@@ -328,9 +318,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingTicket(ctx, operations.GetTicketingTicketRequest{
@@ -383,9 +371,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingCustomers(ctx, operations.ListTicketingCustomersRequest{
@@ -437,9 +423,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingNotes(ctx, operations.ListTicketingNotesRequest{
@@ -491,9 +475,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingTickets(ctx, operations.ListTicketingTicketsRequest{
@@ -545,9 +527,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingCustomer(ctx, operations.PatchTicketingCustomerRequest{
@@ -557,7 +537,7 @@ func main() {
                     Email: "Raymundo93@hotmail.com",
                 },
             },
-            Raw: shared.PropertyTicketingCustomerRaw{},
+            Raw: &shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
                 "string",
             },
@@ -613,14 +593,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: shared.PropertyTicketingNoteRaw{},
+            Raw: &shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -668,14 +646,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingTicket(ctx, operations.PatchTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: shared.PropertyTicketingTicketRaw{},
+            Raw: &shared.PropertyTicketingTicketRaw{},
             Tags: []string{
                 "string",
             },
@@ -726,9 +702,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingCustomer(ctx, operations.RemoveTicketingCustomerRequest{
@@ -778,9 +752,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingNote(ctx, operations.RemoveTicketingNoteRequest{
@@ -830,9 +802,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingTicket(ctx, operations.RemoveTicketingTicketRequest{
@@ -882,9 +852,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingCustomer(ctx, operations.UpdateTicketingCustomerRequest{
@@ -894,7 +862,7 @@ func main() {
                     Email: "Mohamed.Friesen@hotmail.com",
                 },
             },
-            Raw: shared.PropertyTicketingCustomerRaw{},
+            Raw: &shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
                 "string",
             },
@@ -950,14 +918,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: shared.PropertyTicketingNoteRaw{},
+            Raw: &shared.PropertyTicketingNoteRaw{},
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -1005,14 +971,12 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingTicket(ctx, operations.UpdateTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: shared.PropertyTicketingTicketRaw{},
+            Raw: &shared.PropertyTicketingTicketRaw{},
             Tags: []string{
                 "string",
             },

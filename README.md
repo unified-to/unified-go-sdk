@@ -30,9 +30,7 @@ import (
 )
 
 func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity(""),
-	)
+	s := unifiedgosdk.New()
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
@@ -573,9 +571,7 @@ import (
 )
 
 func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity(""),
-	)
+	s := unifiedgosdk.New()
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
@@ -639,7 +635,6 @@ import (
 func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerIndex(1),
-		unifiedgosdk.WithSecurity(""),
 	)
 
 	ctx := context.Background()
@@ -690,7 +685,6 @@ import (
 func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerURL("https://api.unified.to"),
-		unifiedgosdk.WithSecurity(""),
 	)
 
 	ctx := context.Background()

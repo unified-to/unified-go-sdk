@@ -28,9 +28,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Payment.CreateAccountingPayment(ctx, operations.CreateAccountingPaymentRequest{
@@ -85,9 +83,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Payment.GetAccountingPayment(ctx, operations.GetAccountingPaymentRequest{
@@ -140,9 +136,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Payment.ListAccountingPayments(ctx, operations.ListAccountingPaymentsRequest{
@@ -194,9 +188,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Payment.PatchAccountingPayment(ctx, operations.PatchAccountingPaymentRequest{
@@ -252,9 +244,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Payment.RemoveAccountingPayment(ctx, operations.RemoveAccountingPaymentRequest{
@@ -304,9 +294,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Payment.UpdateAccountingPayment(ctx, operations.UpdateAccountingPaymentRequest{

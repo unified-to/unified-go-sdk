@@ -34,9 +34,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
@@ -100,9 +98,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.CreateTicketingCustomer(ctx, operations.CreateTicketingCustomerRequest{
@@ -112,7 +108,7 @@ func main() {
                     Email: "Guadalupe78@yahoo.com",
                 },
             },
-            Raw: shared.PropertyTicketingCustomerRaw{},
+            Raw: &shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
                 "string",
             },
@@ -167,9 +163,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.GetAccountingCustomer(ctx, operations.GetAccountingCustomerRequest{
@@ -222,9 +216,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.GetTicketingCustomer(ctx, operations.GetTicketingCustomerRequest{
@@ -277,9 +269,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.ListAccountingCustomers(ctx, operations.ListAccountingCustomersRequest{
@@ -331,9 +321,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.ListTicketingCustomers(ctx, operations.ListTicketingCustomersRequest{
@@ -385,9 +373,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.PatchAccountingCustomer(ctx, operations.PatchAccountingCustomerRequest{
@@ -452,9 +438,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.PatchTicketingCustomer(ctx, operations.PatchTicketingCustomerRequest{
@@ -464,7 +448,7 @@ func main() {
                     Email: "Raymundo93@hotmail.com",
                 },
             },
-            Raw: shared.PropertyTicketingCustomerRaw{},
+            Raw: &shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
                 "string",
             },
@@ -520,9 +504,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.RemoveAccountingCustomer(ctx, operations.RemoveAccountingCustomerRequest{
@@ -572,9 +554,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.RemoveTicketingCustomer(ctx, operations.RemoveTicketingCustomerRequest{
@@ -624,9 +604,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.UpdateAccountingCustomer(ctx, operations.UpdateAccountingCustomerRequest{
@@ -691,9 +669,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(""),
-    )
+    s := unifiedgosdk.New()
 
     ctx := context.Background()
     res, err := s.Customer.UpdateTicketingCustomer(ctx, operations.UpdateTicketingCustomerRequest{
@@ -703,7 +679,7 @@ func main() {
                     Email: "Mohamed.Friesen@hotmail.com",
                 },
             },
-            Raw: shared.PropertyTicketingCustomerRaw{},
+            Raw: &shared.PropertyTicketingCustomerRaw{},
             Tags: []string{
                 "string",
             },
