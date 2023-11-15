@@ -18,11 +18,10 @@ Retrieve an integration
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -67,11 +66,11 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package main
 
 import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -122,11 +121,11 @@ No authentication required as this is to be used by front-end interface
 package main
 
 import(
-	"context"
-	"log"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -176,11 +175,10 @@ Returns all integrations
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {

@@ -21,11 +21,11 @@ Create a contact
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -83,11 +83,10 @@ Retrieve a contact
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -136,11 +135,10 @@ List all calls
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -188,11 +186,10 @@ List all contacts
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -240,11 +237,11 @@ Update a contact
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -303,11 +300,11 @@ Remove a contact
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -353,11 +350,11 @@ Update a contact
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {

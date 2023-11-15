@@ -32,11 +32,11 @@ Create a customer
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -97,11 +97,11 @@ Create a note
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -149,11 +149,11 @@ Create a ticket
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -204,11 +204,10 @@ Retrieve a customer
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -257,11 +256,10 @@ Retrieve a note
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -310,11 +308,10 @@ Retrieve a ticket
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -363,11 +360,10 @@ List all customers
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -415,11 +411,10 @@ List all notes
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -467,11 +462,10 @@ List all tickets
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -519,11 +513,11 @@ Update a customer
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -585,11 +579,11 @@ Update a note
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -638,11 +632,11 @@ Update a ticket
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -694,11 +688,11 @@ Remove a customer
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -744,11 +738,11 @@ Remove a note
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -794,11 +788,11 @@ Remove a ticket
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -844,11 +838,11 @@ Update a customer
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -910,11 +904,11 @@ Update a note
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -963,11 +957,11 @@ Update a ticket
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {

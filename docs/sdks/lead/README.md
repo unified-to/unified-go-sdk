@@ -20,11 +20,11 @@ Create a lead
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -81,11 +81,10 @@ Retrieve a lead
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -134,11 +133,10 @@ List all leads
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -186,11 +184,11 @@ Update a lead
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -248,11 +246,11 @@ Remove a lead
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -298,11 +296,11 @@ Update a lead
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {

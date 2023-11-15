@@ -16,11 +16,10 @@ Retrieve specific API Call by its ID
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -65,11 +64,10 @@ Returns API Calls
 package main
 
 import(
-	"context"
-	"log"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
