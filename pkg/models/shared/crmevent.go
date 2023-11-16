@@ -57,8 +57,9 @@ type CrmEvent struct {
 	// An array of deal IDs associated with this event
 	DealIds []string `json:"deal_ids,omitempty"`
 	// The email object, when type = email
-	Email *PropertyCrmEventEmail `json:"email,omitempty"`
-	ID    *string                `json:"id,omitempty"`
+	Email   *PropertyCrmEventEmail `json:"email,omitempty"`
+	ID      *string                `json:"id,omitempty"`
+	LeadIds []string               `json:"lead_ids,omitempty"`
 	// The meeting object, when type = meeting
 	Meeting *PropertyCrmEventMeeting `json:"meeting,omitempty"`
 	// The note object, when type = note
@@ -129,6 +130,13 @@ func (o *CrmEvent) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *CrmEvent) GetLeadIds() []string {
+	if o == nil {
+		return nil
+	}
+	return o.LeadIds
 }
 
 func (o *CrmEvent) GetMeeting() *PropertyCrmEventMeeting {

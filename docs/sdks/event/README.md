@@ -51,6 +51,9 @@ func main() {
                     "string",
                 },
             },
+            LeadIds: []string{
+                "string",
+            },
             Meeting: &shared.PropertyCrmEventMeeting{},
             Note: &shared.PropertyCrmEventNote{},
             Raw: &shared.PropertyCrmEventRaw{},
@@ -227,6 +230,9 @@ func main() {
                     "string",
                 },
             },
+            LeadIds: []string{
+                "string",
+            },
             Meeting: &shared.PropertyCrmEventMeeting{},
             Note: &shared.PropertyCrmEventNote{},
             Raw: &shared.PropertyCrmEventRaw{},
@@ -350,6 +356,9 @@ func main() {
                 To: []string{
                     "string",
                 },
+            },
+            LeadIds: []string{
+                "string",
             },
             Meeting: &shared.PropertyCrmEventMeeting{},
             Note: &shared.PropertyCrmEventNote{},
