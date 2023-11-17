@@ -10,8 +10,12 @@ import (
 )
 
 type ListCrmLeadsRequest struct {
+	// The company ID to filter results
+	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The contact ID to filter results
+	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -35,11 +39,25 @@ func (l *ListCrmLeadsRequest) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+func (o *ListCrmLeadsRequest) GetCompanyID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyID
+}
+
 func (o *ListCrmLeadsRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *ListCrmLeadsRequest) GetContactID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ContactID
 }
 
 func (o *ListCrmLeadsRequest) GetFields() []string {
