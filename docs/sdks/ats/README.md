@@ -50,15 +50,17 @@ Create an application
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsApplication(ctx, operations.CreateAtsApplicationRequest{
@@ -102,15 +104,17 @@ Create a candidate
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsCandidate(ctx, operations.CreateAtsCandidateRequest{
@@ -168,15 +172,17 @@ Create a document
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsDocument(ctx, operations.CreateAtsDocumentRequest{
@@ -220,15 +226,17 @@ Create a interview
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsInterview(ctx, operations.CreateAtsInterviewRequest{
@@ -275,15 +283,17 @@ Create a job
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsJob(ctx, operations.CreateAtsJobRequest{
@@ -347,15 +357,17 @@ Create a scorecard
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsScorecard(ctx, operations.CreateAtsScorecardRequest{
@@ -399,6 +411,7 @@ Retrieve an application
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -406,7 +419,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsApplication(ctx, operations.GetAtsApplicationRequest{
@@ -451,6 +466,7 @@ Retrieve a candidate
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -458,7 +474,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsCandidate(ctx, operations.GetAtsCandidateRequest{
@@ -503,6 +521,7 @@ Retrieve a document
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -510,7 +529,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsDocument(ctx, operations.GetAtsDocumentRequest{
@@ -555,6 +576,7 @@ Retrieve a interview
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -562,7 +584,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsInterview(ctx, operations.GetAtsInterviewRequest{
@@ -607,6 +631,7 @@ Retrieve a job
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -614,7 +639,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsJob(ctx, operations.GetAtsJobRequest{
@@ -659,6 +686,7 @@ Retrieve a scorecard
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -666,7 +694,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.GetAtsScorecard(ctx, operations.GetAtsScorecardRequest{
@@ -711,6 +741,7 @@ List all applications
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -718,7 +749,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsApplications(ctx, operations.ListAtsApplicationsRequest{
@@ -762,6 +795,7 @@ List all candidates
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -769,7 +803,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsCandidates(ctx, operations.ListAtsCandidatesRequest{
@@ -813,6 +849,7 @@ List all documents
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -820,7 +857,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsDocuments(ctx, operations.ListAtsDocumentsRequest{
@@ -864,6 +903,7 @@ List all interviews
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -871,7 +911,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsInterviews(ctx, operations.ListAtsInterviewsRequest{
@@ -915,6 +957,7 @@ List all jobs
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -922,7 +965,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsJobs(ctx, operations.ListAtsJobsRequest{
@@ -966,6 +1011,7 @@ List all scorecards
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -973,7 +1019,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.ListAtsScorecards(ctx, operations.ListAtsScorecardsRequest{
@@ -1017,15 +1065,17 @@ Update an application
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsApplication(ctx, operations.PatchAtsApplicationRequest{
@@ -1070,15 +1120,17 @@ Update a candidate
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsCandidate(ctx, operations.PatchAtsCandidateRequest{
@@ -1137,15 +1189,17 @@ Update a document
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsDocument(ctx, operations.PatchAtsDocumentRequest{
@@ -1190,15 +1244,17 @@ Update a interview
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsInterview(ctx, operations.PatchAtsInterviewRequest{
@@ -1246,15 +1302,17 @@ Update a job
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsJob(ctx, operations.PatchAtsJobRequest{
@@ -1319,15 +1377,17 @@ Update a scorecard
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsScorecard(ctx, operations.PatchAtsScorecardRequest{
@@ -1372,6 +1432,7 @@ Remove an application
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -1380,7 +1441,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsApplication(ctx, operations.RemoveAtsApplicationRequest{
@@ -1422,6 +1485,7 @@ Remove a candidate
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -1430,7 +1494,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsCandidate(ctx, operations.RemoveAtsCandidateRequest{
@@ -1472,6 +1538,7 @@ Remove a document
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -1480,7 +1547,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsDocument(ctx, operations.RemoveAtsDocumentRequest{
@@ -1522,6 +1591,7 @@ Remove a interview
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -1530,7 +1600,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsInterview(ctx, operations.RemoveAtsInterviewRequest{
@@ -1572,6 +1644,7 @@ Remove a job
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -1580,7 +1653,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsJob(ctx, operations.RemoveAtsJobRequest{
@@ -1622,6 +1697,7 @@ Remove a scorecard
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -1630,7 +1706,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.RemoveAtsScorecard(ctx, operations.RemoveAtsScorecardRequest{
@@ -1672,15 +1750,17 @@ Update an application
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsApplication(ctx, operations.UpdateAtsApplicationRequest{
@@ -1725,15 +1805,17 @@ Update a candidate
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsCandidate(ctx, operations.UpdateAtsCandidateRequest{
@@ -1792,15 +1874,17 @@ Update a document
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsDocument(ctx, operations.UpdateAtsDocumentRequest{
@@ -1845,15 +1929,17 @@ Update a interview
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsInterview(ctx, operations.UpdateAtsInterviewRequest{
@@ -1901,15 +1987,17 @@ Update a job
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsJob(ctx, operations.UpdateAtsJobRequest{
@@ -1974,15 +2062,17 @@ Update a scorecard
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsScorecard(ctx, operations.UpdateAtsScorecardRequest{

@@ -32,15 +32,17 @@ Create a customer
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingCustomer(ctx, operations.CreateTicketingCustomerRequest{
@@ -97,15 +99,17 @@ Create a note
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
@@ -149,15 +153,17 @@ Create a ticket
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingTicket(ctx, operations.CreateTicketingTicketRequest{
@@ -204,6 +210,7 @@ Retrieve a customer
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -211,7 +218,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingCustomer(ctx, operations.GetTicketingCustomerRequest{
@@ -256,6 +265,7 @@ Retrieve a note
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -263,7 +273,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingNote(ctx, operations.GetTicketingNoteRequest{
@@ -308,6 +320,7 @@ Retrieve a ticket
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -315,7 +328,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingTicket(ctx, operations.GetTicketingTicketRequest{
@@ -360,6 +375,7 @@ List all customers
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -367,7 +383,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingCustomers(ctx, operations.ListTicketingCustomersRequest{
@@ -411,6 +429,7 @@ List all notes
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -418,7 +437,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingNotes(ctx, operations.ListTicketingNotesRequest{
@@ -462,6 +483,7 @@ List all tickets
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -469,7 +491,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingTickets(ctx, operations.ListTicketingTicketsRequest{
@@ -513,15 +537,17 @@ Update a customer
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingCustomer(ctx, operations.PatchTicketingCustomerRequest{
@@ -579,15 +605,17 @@ Update a note
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
@@ -632,15 +660,17 @@ Update a ticket
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingTicket(ctx, operations.PatchTicketingTicketRequest{
@@ -688,6 +718,7 @@ Remove a customer
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -696,7 +727,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingCustomer(ctx, operations.RemoveTicketingCustomerRequest{
@@ -738,6 +771,7 @@ Remove a note
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -746,7 +780,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingNote(ctx, operations.RemoveTicketingNoteRequest{
@@ -788,6 +824,7 @@ Remove a ticket
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -796,7 +833,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingTicket(ctx, operations.RemoveTicketingTicketRequest{
@@ -838,15 +877,17 @@ Update a customer
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingCustomer(ctx, operations.UpdateTicketingCustomerRequest{
@@ -904,15 +945,17 @@ Update a note
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
@@ -957,15 +1000,17 @@ Update a ticket
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingTicket(ctx, operations.UpdateTicketingTicketRequest{

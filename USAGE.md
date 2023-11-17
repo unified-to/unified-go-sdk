@@ -11,7 +11,9 @@ import (
 )
 
 func main() {
-	s := unifiedgosdk.New()
+	s := unifiedgosdk.New(
+		unifiedgosdk.WithSecurity(""),
+	)
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{

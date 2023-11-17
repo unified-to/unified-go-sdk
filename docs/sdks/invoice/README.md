@@ -20,15 +20,17 @@ Create a invoice
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Invoice.CreateAccountingInvoice(ctx, operations.CreateAccountingInvoiceRequest{
@@ -77,6 +79,7 @@ Retrieve a invoice
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -84,7 +87,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Invoice.GetAccountingInvoice(ctx, operations.GetAccountingInvoiceRequest{
@@ -129,6 +134,7 @@ List all invoices
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -136,7 +142,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Invoice.ListAccountingInvoices(ctx, operations.ListAccountingInvoicesRequest{
@@ -180,15 +188,17 @@ Update a invoice
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Invoice.PatchAccountingInvoice(ctx, operations.PatchAccountingInvoiceRequest{
@@ -238,6 +248,7 @@ Remove a invoice
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -246,7 +257,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Invoice.RemoveAccountingInvoice(ctx, operations.RemoveAccountingInvoiceRequest{
@@ -288,15 +301,17 @@ Update a invoice
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Invoice.UpdateAccountingInvoice(ctx, operations.UpdateAccountingInvoiceRequest{

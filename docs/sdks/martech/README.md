@@ -26,15 +26,17 @@ Create a list
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.CreateMartechList(ctx, operations.CreateMartechListRequest{
@@ -78,15 +80,17 @@ Create a member
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.CreateMartechMember(ctx, operations.CreateMartechMemberRequest{
@@ -141,6 +145,7 @@ Retrieve a list
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -148,7 +153,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.GetMartechList(ctx, operations.GetMartechListRequest{
@@ -193,6 +200,7 @@ Retrieve a member
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -200,7 +208,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.GetMartechMember(ctx, operations.GetMartechMemberRequest{
@@ -245,6 +255,7 @@ List all lists
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -252,7 +263,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.ListMartechLists(ctx, operations.ListMartechListsRequest{
@@ -296,6 +309,7 @@ List all members
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -303,7 +317,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
@@ -347,15 +363,17 @@ Update a list
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.PatchMartechList(ctx, operations.PatchMartechListRequest{
@@ -400,15 +418,17 @@ Update a member
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.PatchMartechMember(ctx, operations.PatchMartechMemberRequest{
@@ -464,6 +484,7 @@ Remove a list
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -472,7 +493,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.RemoveMartechList(ctx, operations.RemoveMartechListRequest{
@@ -514,6 +537,7 @@ Remove member
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -522,7 +546,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.RemoveMartechMember(ctx, operations.RemoveMartechMemberRequest{
@@ -564,15 +590,17 @@ Update a list
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.UpdateMartechList(ctx, operations.UpdateMartechListRequest{
@@ -617,15 +645,17 @@ Update a member
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Martech.UpdateMartechMember(ctx, operations.UpdateMartechMemberRequest{

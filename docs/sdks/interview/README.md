@@ -20,15 +20,17 @@ Create a interview
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Interview.CreateAtsInterview(ctx, operations.CreateAtsInterviewRequest{
@@ -75,6 +77,7 @@ Retrieve a interview
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -82,7 +85,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Interview.GetAtsInterview(ctx, operations.GetAtsInterviewRequest{
@@ -127,6 +132,7 @@ List all interviews
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -134,7 +140,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Interview.ListAtsInterviews(ctx, operations.ListAtsInterviewsRequest{
@@ -178,15 +186,17 @@ Update a interview
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Interview.PatchAtsInterview(ctx, operations.PatchAtsInterviewRequest{
@@ -234,6 +244,7 @@ Remove a interview
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
@@ -242,7 +253,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Interview.RemoveAtsInterview(ctx, operations.RemoveAtsInterviewRequest{
@@ -284,15 +297,17 @@ Update a interview
 package main
 
 import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity(""),
+    )
 
     ctx := context.Background()
     res, err := s.Interview.UpdateAtsInterview(ctx, operations.UpdateAtsInterviewRequest{

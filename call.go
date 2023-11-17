@@ -43,7 +43,7 @@ func (s *Call) ListUcCalls(ctx context.Context, request operations.ListUcCallsRe
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.sdkConfiguration.DefaultClient
+	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
