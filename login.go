@@ -36,7 +36,7 @@ func (s *Login) GetUnifiedIntegrationLogin(ctx context.Context, request operatio
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-	req.Header.Set("Accept", "application/json")
+	req.Header.Set("Accept", "text/plain")
 	req.Header.Set("user-agent", s.sdkConfiguration.UserAgent)
 
 	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
@@ -70,7 +70,7 @@ func (s *Login) GetUnifiedIntegrationLogin(ctx context.Context, request operatio
 	switch {
 	case httpRes.StatusCode == 200:
 		switch {
-		case utils.MatchContentType(contentType, `application/json`):
+		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
 			res.Res = &out
 		default:

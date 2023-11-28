@@ -15,12 +15,14 @@ type AtsCandidate struct {
 	ExternalID  *string                      `json:"external_id,omitempty"`
 	ID          *string                      `json:"id,omitempty"`
 	ImageURL    *string                      `json:"image_url,omitempty"`
-	Name        *string                      `json:"name,omitempty"`
-	Raw         *PropertyAtsCandidateRaw     `json:"raw,omitempty"`
-	Tags        []string                     `json:"tags,omitempty"`
-	Telephones  []AtsTelephone               `json:"telephones,omitempty"`
-	Title       *string                      `json:"title,omitempty"`
-	UpdatedAt   *time.Time                   `json:"updated_at,omitempty"`
+	// a list of social media links associated with the candidate. eg. LinkedIn URL
+	LinkUrls   []string                 `json:"link_urls,omitempty"`
+	Name       *string                  `json:"name,omitempty"`
+	Raw        *PropertyAtsCandidateRaw `json:"raw,omitempty"`
+	Tags       []string                 `json:"tags,omitempty"`
+	Telephones []AtsTelephone           `json:"telephones,omitempty"`
+	Title      *string                  `json:"title,omitempty"`
+	UpdatedAt  *time.Time               `json:"updated_at,omitempty"`
 }
 
 func (a AtsCandidate) MarshalJSON() ([]byte, error) {
@@ -81,6 +83,13 @@ func (o *AtsCandidate) GetImageURL() *string {
 		return nil
 	}
 	return o.ImageURL
+}
+
+func (o *AtsCandidate) GetLinkUrls() []string {
+	if o == nil {
+		return nil
+	}
+	return o.LinkUrls
 }
 
 func (o *AtsCandidate) GetName() *string {

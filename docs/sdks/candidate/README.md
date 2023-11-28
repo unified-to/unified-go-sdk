@@ -41,6 +41,9 @@ func main() {
                     Email: "Robin_Feeney@hotmail.com",
                 },
             },
+            LinkUrls: []string{
+                "string",
+            },
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
                 "string",
@@ -218,6 +221,9 @@ func main() {
                     Email: "Tracy.Collins13@gmail.com",
                 },
             },
+            LinkUrls: []string{
+                "string",
+            },
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{
                 "string",
@@ -339,6 +345,9 @@ func main() {
                 shared.AtsEmail{
                     Email: "Gaetano86@hotmail.com",
                 },
+            },
+            LinkUrls: []string{
+                "string",
             },
             Raw: &shared.PropertyAtsCandidateRaw{},
             Tags: []string{

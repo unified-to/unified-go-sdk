@@ -10,6 +10,7 @@ import (
 type CrmLead struct {
 	Address       *PropertyCrmLeadAddress `json:"address,omitempty"`
 	CompanyID     *string                 `json:"company_id,omitempty"`
+	CompanyName   *string                 `json:"company_name,omitempty"`
 	ContactID     *string                 `json:"contact_id,omitempty"`
 	CreatedAt     *time.Time              `json:"created_at,omitempty"`
 	CreatorUserID *string                 `json:"creator_user_id,omitempty"`
@@ -48,6 +49,13 @@ func (o *CrmLead) GetCompanyID() *string {
 		return nil
 	}
 	return o.CompanyID
+}
+
+func (o *CrmLead) GetCompanyName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyName
 }
 
 func (o *CrmLead) GetContactID() *string {

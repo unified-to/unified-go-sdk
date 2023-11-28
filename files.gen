@@ -331,7 +331,6 @@ pkg/utils/utils.go
 /pkg/models/shared/propertyintegrationsupportinboundfields.go
 /pkg/models/shared/propertyintegrationcategories.go
 /pkg/models/shared/security.go
-USAGE.md
 docs/pkg/models/operations/createaccountingcustomerrequest.md
 docs/pkg/models/operations/createaccountingcustomerresponse.md
 docs/pkg/models/operations/createaccountinginvoicerequest.md
@@ -855,4 +854,5 @@ docs/sdks/integration/README.md
 docs/sdks/auth/README.md
 docs/sdks/login/README.md
 docs/sdks/webhook/README.md
+USAGE.md
 .gitattributes
