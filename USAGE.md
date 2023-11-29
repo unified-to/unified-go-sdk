@@ -16,21 +16,10 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
-		AccountingCustomer: &shared.AccountingCustomer{
-			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
-			Emails: []shared.AccountingEmail{
-				shared.AccountingEmail{
-					Email: "Kevon_Schultz42@gmail.com",
-				},
-			},
-			Raw:             &shared.PropertyAccountingCustomerRaw{},
-			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
-			Telephones: []shared.AccountingTelephone{
-				shared.AccountingTelephone{
-					Telephone: "string",
-				},
-			},
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		AccountingAccount: &shared.AccountingAccount{
+			Name: "string",
+			Raw:  &shared.PropertyAccountingAccountRaw{},
 		},
 		ConnectionID: "string",
 	})
@@ -38,7 +27,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if res.AccountingCustomer != nil {
+	if res.AccountingAccount != nil {
 		// handle response
 	}
 }

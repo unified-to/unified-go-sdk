@@ -36,21 +36,10 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
-		AccountingCustomer: &shared.AccountingCustomer{
-			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
-			Emails: []shared.AccountingEmail{
-				shared.AccountingEmail{
-					Email: "Kevon_Schultz42@gmail.com",
-				},
-			},
-			Raw:             &shared.PropertyAccountingCustomerRaw{},
-			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
-			Telephones: []shared.AccountingTelephone{
-				shared.AccountingTelephone{
-					Telephone: "string",
-				},
-			},
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		AccountingAccount: &shared.AccountingAccount{
+			Name: "string",
+			Raw:  &shared.PropertyAccountingAccountRaw{},
 		},
 		ConnectionID: "string",
 	})
@@ -58,7 +47,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if res.AccountingCustomer != nil {
+	if res.AccountingAccount != nil {
 		// handle response
 	}
 }
@@ -71,24 +60,45 @@ func main() {
 
 ### [Accounting](docs/sdks/accounting/README.md)
 
+* [CreateAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
 * [CreateAccountingCustomer](docs/sdks/accounting/README.md#createaccountingcustomer) - Create a customer
 * [CreateAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create a invoice
 * [CreateAccountingPayment](docs/sdks/accounting/README.md#createaccountingpayment) - Create a payment
+* [CreateAccountingTransaction](docs/sdks/accounting/README.md#createaccountingtransaction) - Create a transaction
+* [GetAccountingAccount](docs/sdks/accounting/README.md#getaccountingaccount) - Retrieve an account
 * [GetAccountingCustomer](docs/sdks/accounting/README.md#getaccountingcustomer) - Retrieve a customer
 * [GetAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve a invoice
 * [GetAccountingPayment](docs/sdks/accounting/README.md#getaccountingpayment) - Retrieve a payment
+* [GetAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
+* [ListAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
 * [ListAccountingCustomers](docs/sdks/accounting/README.md#listaccountingcustomers) - List all customers
 * [ListAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [ListAccountingPayments](docs/sdks/accounting/README.md#listaccountingpayments) - List all payments
+* [ListAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
+* [PatchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
 * [PatchAccountingCustomer](docs/sdks/accounting/README.md#patchaccountingcustomer) - Update a customer
 * [PatchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update a invoice
 * [PatchAccountingPayment](docs/sdks/accounting/README.md#patchaccountingpayment) - Update a payment
+* [PatchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
+* [RemoveAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
 * [RemoveAccountingCustomer](docs/sdks/accounting/README.md#removeaccountingcustomer) - Remove a customer
 * [RemoveAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove a invoice
 * [RemoveAccountingPayment](docs/sdks/accounting/README.md#removeaccountingpayment) - Remove a payment
+* [RemoveAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
+* [UpdateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
 * [UpdateAccountingCustomer](docs/sdks/accounting/README.md#updateaccountingcustomer) - Update a customer
 * [UpdateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update a invoice
 * [UpdateAccountingPayment](docs/sdks/accounting/README.md#updateaccountingpayment) - Update a payment
+* [UpdateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
+
+### [Account](docs/sdks/account/README.md)
+
+* [CreateAccountingAccount](docs/sdks/account/README.md#createaccountingaccount) - Create an account
+* [GetAccountingAccount](docs/sdks/account/README.md#getaccountingaccount) - Retrieve an account
+* [ListAccountingAccounts](docs/sdks/account/README.md#listaccountingaccounts) - List all accounts
+* [PatchAccountingAccount](docs/sdks/account/README.md#patchaccountingaccount) - Update an account
+* [RemoveAccountingAccount](docs/sdks/account/README.md#removeaccountingaccount) - Remove an account
+* [UpdateAccountingAccount](docs/sdks/account/README.md#updateaccountingaccount) - Update an account
 
 ### [Customer](docs/sdks/customer/README.md)
 
@@ -122,6 +132,15 @@ func main() {
 * [PatchAccountingPayment](docs/sdks/payment/README.md#patchaccountingpayment) - Update a payment
 * [RemoveAccountingPayment](docs/sdks/payment/README.md#removeaccountingpayment) - Remove a payment
 * [UpdateAccountingPayment](docs/sdks/payment/README.md#updateaccountingpayment) - Update a payment
+
+### [Transaction](docs/sdks/transaction/README.md)
+
+* [CreateAccountingTransaction](docs/sdks/transaction/README.md#createaccountingtransaction) - Create a transaction
+* [GetAccountingTransaction](docs/sdks/transaction/README.md#getaccountingtransaction) - Retrieve a transaction
+* [ListAccountingTransactions](docs/sdks/transaction/README.md#listaccountingtransactions) - List all transactions
+* [PatchAccountingTransaction](docs/sdks/transaction/README.md#patchaccountingtransaction) - Update a transaction
+* [RemoveAccountingTransaction](docs/sdks/transaction/README.md#removeaccountingtransaction) - Remove a transaction
+* [UpdateAccountingTransaction](docs/sdks/transaction/README.md#updateaccountingtransaction) - Update a transaction
 
 ### [Ats](docs/sdks/ats/README.md)
 
@@ -566,21 +585,10 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
-		AccountingCustomer: &shared.AccountingCustomer{
-			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
-			Emails: []shared.AccountingEmail{
-				shared.AccountingEmail{
-					Email: "Kevon_Schultz42@gmail.com",
-				},
-			},
-			Raw:             &shared.PropertyAccountingCustomerRaw{},
-			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
-			Telephones: []shared.AccountingTelephone{
-				shared.AccountingTelephone{
-					Telephone: "string",
-				},
-			},
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		AccountingAccount: &shared.AccountingAccount{
+			Name: "string",
+			Raw:  &shared.PropertyAccountingAccountRaw{},
 		},
 		ConnectionID: "string",
 	})
@@ -631,21 +639,10 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
-		AccountingCustomer: &shared.AccountingCustomer{
-			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
-			Emails: []shared.AccountingEmail{
-				shared.AccountingEmail{
-					Email: "Kevon_Schultz42@gmail.com",
-				},
-			},
-			Raw:             &shared.PropertyAccountingCustomerRaw{},
-			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
-			Telephones: []shared.AccountingTelephone{
-				shared.AccountingTelephone{
-					Telephone: "string",
-				},
-			},
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		AccountingAccount: &shared.AccountingAccount{
+			Name: "string",
+			Raw:  &shared.PropertyAccountingAccountRaw{},
 		},
 		ConnectionID: "string",
 	})
@@ -653,7 +650,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if res.AccountingCustomer != nil {
+	if res.AccountingAccount != nil {
 		// handle response
 	}
 }
@@ -682,21 +679,10 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
-		AccountingCustomer: &shared.AccountingCustomer{
-			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
-			Emails: []shared.AccountingEmail{
-				shared.AccountingEmail{
-					Email: "Kevon_Schultz42@gmail.com",
-				},
-			},
-			Raw:             &shared.PropertyAccountingCustomerRaw{},
-			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
-			Telephones: []shared.AccountingTelephone{
-				shared.AccountingTelephone{
-					Telephone: "string",
-				},
-			},
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		AccountingAccount: &shared.AccountingAccount{
+			Name: "string",
+			Raw:  &shared.PropertyAccountingAccountRaw{},
 		},
 		ConnectionID: "string",
 	})
@@ -704,7 +690,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if res.AccountingCustomer != nil {
+	if res.AccountingAccount != nil {
 		// handle response
 	}
 }
@@ -774,21 +760,10 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
-		AccountingCustomer: &shared.AccountingCustomer{
-			BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
-			Emails: []shared.AccountingEmail{
-				shared.AccountingEmail{
-					Email: "Kevon_Schultz42@gmail.com",
-				},
-			},
-			Raw:             &shared.PropertyAccountingCustomerRaw{},
-			ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
-			Telephones: []shared.AccountingTelephone{
-				shared.AccountingTelephone{
-					Telephone: "string",
-				},
-			},
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		AccountingAccount: &shared.AccountingAccount{
+			Name: "string",
+			Raw:  &shared.PropertyAccountingAccountRaw{},
 		},
 		ConnectionID: "string",
 	})
@@ -796,7 +771,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if res.AccountingCustomer != nil {
+	if res.AccountingAccount != nil {
 		// handle response
 	}
 }

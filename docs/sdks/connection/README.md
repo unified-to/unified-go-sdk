@@ -47,7 +47,7 @@ func main() {
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsCrmCompanyWrite,
+            shared.PropertyConnectionPermissionsAtsDocumentWrite,
         },
     })
     if err != nil {
@@ -218,7 +218,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsMartechListWrite,
+                shared.PropertyConnectionPermissionsMartechListRead,
             },
         },
         ID: "<ID>",
@@ -339,7 +339,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmDealWrite,
+                shared.PropertyConnectionPermissionsCrmDealRead,
             },
         },
         ID: "<ID>",

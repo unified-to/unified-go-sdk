@@ -7,19 +7,19 @@ import (
 	"fmt"
 )
 
-type Type string
+type AccountingEmailType string
 
 const (
-	TypeWork  Type = "WORK"
-	TypeHome  Type = "HOME"
-	TypeOther Type = "OTHER"
+	AccountingEmailTypeWork  AccountingEmailType = "WORK"
+	AccountingEmailTypeHome  AccountingEmailType = "HOME"
+	AccountingEmailTypeOther AccountingEmailType = "OTHER"
 )
 
-func (e Type) ToPointer() *Type {
+func (e AccountingEmailType) ToPointer() *AccountingEmailType {
 	return &e
 }
 
-func (e *Type) UnmarshalJSON(data []byte) error {
+func (e *AccountingEmailType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -30,16 +30,16 @@ func (e *Type) UnmarshalJSON(data []byte) error {
 	case "HOME":
 		fallthrough
 	case "OTHER":
-		*e = Type(v)
+		*e = AccountingEmailType(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Type: %v", v)
+		return fmt.Errorf("invalid value for AccountingEmailType: %v", v)
 	}
 }
 
 type AccountingEmail struct {
-	Email string `json:"email"`
-	Type  *Type  `json:"type,omitempty"`
+	Email string               `json:"email"`
+	Type  *AccountingEmailType `json:"type,omitempty"`
 }
 
 func (o *AccountingEmail) GetEmail() string {
@@ -49,7 +49,7 @@ func (o *AccountingEmail) GetEmail() string {
 	return o.Email
 }
 
-func (o *AccountingEmail) GetType() *Type {
+func (o *AccountingEmail) GetType() *AccountingEmailType {
 	if o == nil {
 		return nil
 	}

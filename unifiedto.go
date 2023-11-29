@@ -67,9 +67,11 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 // UnifiedTo - Unified.to API: One API to Rule Them All
 type UnifiedTo struct {
 	Accounting  *Accounting
+	Account     *Account
 	Customer    *Customer
 	Invoice     *Invoice
 	Payment     *Payment
+	Transaction *Transaction
 	Ats         *Ats
 	Application *Application
 	Candidate   *Candidate
@@ -175,9 +177,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.8.10",
+			SDKVersion:        "0.8.11",
 			GenVersion:        "2.202.2",
-			UserAgent:         "speakeasy-sdk/go 0.8.10 2.202.2 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:         "speakeasy-sdk/go 0.8.11 2.202.2 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -198,11 +200,15 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Accounting = newAccounting(sdk.sdkConfiguration)
 
+	sdk.Account = newAccount(sdk.sdkConfiguration)
+
 	sdk.Customer = newCustomer(sdk.sdkConfiguration)
 
 	sdk.Invoice = newInvoice(sdk.sdkConfiguration)
 
 	sdk.Payment = newPayment(sdk.sdkConfiguration)
+
+	sdk.Transaction = newTransaction(sdk.sdkConfiguration)
 
 	sdk.Ats = newAts(sdk.sdkConfiguration)
 

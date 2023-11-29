@@ -12,34 +12,36 @@ import (
 type ObjectType string
 
 const (
-	ObjectTypeAccountingCustomer ObjectType = "accounting_customer"
-	ObjectTypeAccountingInvoice  ObjectType = "accounting_invoice"
-	ObjectTypeAccountingPayment  ObjectType = "accounting_payment"
-	ObjectTypeAtsApplication     ObjectType = "ats_application"
-	ObjectTypeAtsCandidate       ObjectType = "ats_candidate"
-	ObjectTypeAtsDocument        ObjectType = "ats_document"
-	ObjectTypeAtsInterview       ObjectType = "ats_interview"
-	ObjectTypeAtsJob             ObjectType = "ats_job"
-	ObjectTypeAtsScorecard       ObjectType = "ats_scorecard"
-	ObjectTypeCrmCompany         ObjectType = "crm_company"
-	ObjectTypeCrmContact         ObjectType = "crm_contact"
-	ObjectTypeCrmDeal            ObjectType = "crm_deal"
-	ObjectTypeCrmEvent           ObjectType = "crm_event"
-	ObjectTypeCrmFile            ObjectType = "crm_file"
-	ObjectTypeCrmLead            ObjectType = "crm_lead"
-	ObjectTypeCrmPipeline        ObjectType = "crm_pipeline"
-	ObjectTypeHrisEmployee       ObjectType = "hris_employee"
-	ObjectTypeHrisGroup          ObjectType = "hris_group"
-	ObjectTypeMartechList        ObjectType = "martech_list"
-	ObjectTypeMartechMember      ObjectType = "martech_member"
-	ObjectTypePassthrough        ObjectType = "passthrough"
-	ObjectTypeTicketingNote      ObjectType = "ticketing_note"
-	ObjectTypeTicketingTicket    ObjectType = "ticketing_ticket"
-	ObjectTypeTicketingCustomer  ObjectType = "ticketing_customer"
-	ObjectTypeUcContact          ObjectType = "uc_contact"
-	ObjectTypeUcCall             ObjectType = "uc_call"
-	ObjectTypeEnrichPerson       ObjectType = "enrich_person"
-	ObjectTypeEnrichCompany      ObjectType = "enrich_company"
+	ObjectTypeAccountingAccount     ObjectType = "accounting_account"
+	ObjectTypeAccountingTransaction ObjectType = "accounting_transaction"
+	ObjectTypeAccountingCustomer    ObjectType = "accounting_customer"
+	ObjectTypeAccountingInvoice     ObjectType = "accounting_invoice"
+	ObjectTypeAccountingPayment     ObjectType = "accounting_payment"
+	ObjectTypeAtsApplication        ObjectType = "ats_application"
+	ObjectTypeAtsCandidate          ObjectType = "ats_candidate"
+	ObjectTypeAtsDocument           ObjectType = "ats_document"
+	ObjectTypeAtsInterview          ObjectType = "ats_interview"
+	ObjectTypeAtsJob                ObjectType = "ats_job"
+	ObjectTypeAtsScorecard          ObjectType = "ats_scorecard"
+	ObjectTypeCrmCompany            ObjectType = "crm_company"
+	ObjectTypeCrmContact            ObjectType = "crm_contact"
+	ObjectTypeCrmDeal               ObjectType = "crm_deal"
+	ObjectTypeCrmEvent              ObjectType = "crm_event"
+	ObjectTypeCrmFile               ObjectType = "crm_file"
+	ObjectTypeCrmLead               ObjectType = "crm_lead"
+	ObjectTypeCrmPipeline           ObjectType = "crm_pipeline"
+	ObjectTypeHrisEmployee          ObjectType = "hris_employee"
+	ObjectTypeHrisGroup             ObjectType = "hris_group"
+	ObjectTypeMartechList           ObjectType = "martech_list"
+	ObjectTypeMartechMember         ObjectType = "martech_member"
+	ObjectTypePassthrough           ObjectType = "passthrough"
+	ObjectTypeTicketingNote         ObjectType = "ticketing_note"
+	ObjectTypeTicketingTicket       ObjectType = "ticketing_ticket"
+	ObjectTypeTicketingCustomer     ObjectType = "ticketing_customer"
+	ObjectTypeUcContact             ObjectType = "uc_contact"
+	ObjectTypeUcCall                ObjectType = "uc_call"
+	ObjectTypeEnrichPerson          ObjectType = "enrich_person"
+	ObjectTypeEnrichCompany         ObjectType = "enrich_company"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -52,6 +54,10 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
+	case "accounting_account":
+		fallthrough
+	case "accounting_transaction":
+		fallthrough
 	case "accounting_customer":
 		fallthrough
 	case "accounting_invoice":

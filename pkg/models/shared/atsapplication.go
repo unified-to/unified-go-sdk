@@ -9,29 +9,29 @@ import (
 	"time"
 )
 
-type Status string
+type AtsApplicationStatus string
 
 const (
-	StatusNew             Status = "NEW"
-	StatusReviewing       Status = "REVIEWING"
-	StatusScreening       Status = "SCREENING"
-	StatusSubmitted       Status = "SUBMITTED"
-	StatusFirstInterview  Status = "FIRST_INTERVIEW"
-	StatusSecondInterview Status = "SECOND_INTERVIEW"
-	StatusThirdInterview  Status = "THIRD_INTERVIEW"
-	StatusBackgroundCheck Status = "BACKGROUND_CHECK"
-	StatusOffered         Status = "OFFERED"
-	StatusAccepted        Status = "ACCEPTED"
-	StatusHired           Status = "HIRED"
-	StatusRejected        Status = "REJECTED"
-	StatusWithdrawn       Status = "WITHDRAWN"
+	AtsApplicationStatusNew             AtsApplicationStatus = "NEW"
+	AtsApplicationStatusReviewing       AtsApplicationStatus = "REVIEWING"
+	AtsApplicationStatusScreening       AtsApplicationStatus = "SCREENING"
+	AtsApplicationStatusSubmitted       AtsApplicationStatus = "SUBMITTED"
+	AtsApplicationStatusFirstInterview  AtsApplicationStatus = "FIRST_INTERVIEW"
+	AtsApplicationStatusSecondInterview AtsApplicationStatus = "SECOND_INTERVIEW"
+	AtsApplicationStatusThirdInterview  AtsApplicationStatus = "THIRD_INTERVIEW"
+	AtsApplicationStatusBackgroundCheck AtsApplicationStatus = "BACKGROUND_CHECK"
+	AtsApplicationStatusOffered         AtsApplicationStatus = "OFFERED"
+	AtsApplicationStatusAccepted        AtsApplicationStatus = "ACCEPTED"
+	AtsApplicationStatusHired           AtsApplicationStatus = "HIRED"
+	AtsApplicationStatusRejected        AtsApplicationStatus = "REJECTED"
+	AtsApplicationStatusWithdrawn       AtsApplicationStatus = "WITHDRAWN"
 )
 
-func (e Status) ToPointer() *Status {
+func (e AtsApplicationStatus) ToPointer() *AtsApplicationStatus {
 	return &e
 }
 
-func (e *Status) UnmarshalJSON(data []byte) error {
+func (e *AtsApplicationStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -62,10 +62,10 @@ func (e *Status) UnmarshalJSON(data []byte) error {
 	case "REJECTED":
 		fallthrough
 	case "WITHDRAWN":
-		*e = Status(v)
+		*e = AtsApplicationStatus(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Status: %v", v)
+		return fmt.Errorf("invalid value for AtsApplicationStatus: %v", v)
 	}
 }
 
@@ -79,7 +79,7 @@ type AtsApplication struct {
 	RejectedAt     *time.Time                 `json:"rejected_at,omitempty"`
 	RejectedReason *string                    `json:"rejected_reason,omitempty"`
 	Source         *string                    `json:"source,omitempty"`
-	Status         *Status                    `json:"status,omitempty"`
+	Status         *AtsApplicationStatus      `json:"status,omitempty"`
 	UpdatedAt      *time.Time                 `json:"updated_at,omitempty"`
 }
 
@@ -157,7 +157,7 @@ func (o *AtsApplication) GetSource() *string {
 	return o.Source
 }
 
-func (o *AtsApplication) GetStatus() *Status {
+func (o *AtsApplication) GetStatus() *AtsApplicationStatus {
 	if o == nil {
 		return nil
 	}
