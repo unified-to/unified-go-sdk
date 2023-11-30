@@ -7,6 +7,8 @@
 | ---------------------------------- | ---------------------------------- |
 | `ScopesAuthLogin`                  | auth_login                         |
 | `ScopesAccountingAccountRead`      | accounting_account_read            |
+| `ScopesAccountingAccountWrite`     | accounting_account_write           |
+| `ScopesAccountingTransactionRead`  | accounting_transaction_read        |
 | `ScopesAccountingTransactionWrite` | accounting_transaction_write       |
 | `ScopesAccountingInvoiceRead`      | accounting_invoice_read            |
 | `ScopesAccountingInvoiceWrite`     | accounting_invoice_write           |

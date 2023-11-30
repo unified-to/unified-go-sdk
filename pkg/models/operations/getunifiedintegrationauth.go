@@ -13,6 +13,8 @@ type Scopes string
 const (
 	ScopesAuthLogin                  Scopes = "auth_login"
 	ScopesAccountingAccountRead      Scopes = "accounting_account_read"
+	ScopesAccountingAccountWrite     Scopes = "accounting_account_write"
+	ScopesAccountingTransactionRead  Scopes = "accounting_transaction_read"
 	ScopesAccountingTransactionWrite Scopes = "accounting_transaction_write"
 	ScopesAccountingInvoiceRead      Scopes = "accounting_invoice_read"
 	ScopesAccountingInvoiceWrite     Scopes = "accounting_invoice_write"
@@ -77,6 +79,10 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "auth_login":
 		fallthrough
 	case "accounting_account_read":
+		fallthrough
+	case "accounting_account_write":
+		fallthrough
+	case "accounting_transaction_read":
 		fallthrough
 	case "accounting_transaction_write":
 		fallthrough
