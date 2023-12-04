@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 48141d070052399b50fd75ba9841a3a5
   docVersion: "1.0"
-  speakeasyVersion: 1.124.0
-  generationVersion: 2.202.2
+  speakeasyVersion: 1.125.1
+  generationVersion: 2.210.3
 generation:
   comments: {}
   sdkClassName: Unified-to
@@ -14,12 +14,12 @@ generation:
   flattenGlobalSecurity: true
 features:
   go:
-    constsAndDefaults: 0.1.1
+    constsAndDefaults: 0.1.2
     core: 3.1.5
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
 go:
-  version: 0.8.12
+  version: 0.8.13
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
