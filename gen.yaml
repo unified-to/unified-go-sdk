@@ -1,13 +1,13 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 48141d070052399b50fd75ba9841a3a5
+  docChecksum: c7fba951c5401aed070e23f0715adc11
   docVersion: "1.0"
-  speakeasyVersion: 1.125.1
-  generationVersion: 2.210.3
+  speakeasyVersion: 1.125.2
+  generationVersion: 2.210.6
 generation:
   comments: {}
   sdkClassName: Unified-to
-  repoURL: https://github.com/unified-to/unified-csharp-sdk.git
+  repoURL: https://github.com/unified-to/unified-go-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
   baseServerURL: ""
@@ -19,7 +19,7 @@ features:
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
 go:
-  version: 0.8.13
+  version: 0.8.14
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:
