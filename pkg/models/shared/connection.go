@@ -15,11 +15,14 @@ type Connection struct {
 	// The Integration categories that this connection supports
 	Categories      []PropertyConnectionCategories  `json:"categories"`
 	CreatedAt       *time.Time                      `json:"created_at,omitempty"`
+	CursorsCache    []Undefined                     `json:"cursors_cache,omitempty"`
 	Environment     *string                         `default:"Production" json:"environment"`
 	ExternalXref    *string                         `json:"external_xref,omitempty"`
 	ID              *string                         `json:"id,omitempty"`
 	IntegrationType string                          `json:"integration_type"`
 	IsPaused        *bool                           `json:"is_paused,omitempty"`
+	LastHealthyAt   *time.Time                      `json:"last_healthy_at,omitempty"`
+	LastUnhealthyAt *time.Time                      `json:"last_unhealthy_at,omitempty"`
 	Permissions     []PropertyConnectionPermissions `json:"permissions"`
 	UpdatedAt       *time.Time                      `json:"updated_at,omitempty"`
 	WorkspaceID     *string                         `json:"workspace_id,omitempty"`
@@ -64,6 +67,13 @@ func (o *Connection) GetCreatedAt() *time.Time {
 	return o.CreatedAt
 }
 
+func (o *Connection) GetCursorsCache() []Undefined {
+	if o == nil {
+		return nil
+	}
+	return o.CursorsCache
+}
+
 func (o *Connection) GetEnvironment() *string {
 	if o == nil {
 		return nil
@@ -97,6 +107,20 @@ func (o *Connection) GetIsPaused() *bool {
 		return nil
 	}
 	return o.IsPaused
+}
+
+func (o *Connection) GetLastHealthyAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.LastHealthyAt
+}
+
+func (o *Connection) GetLastUnhealthyAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.LastUnhealthyAt
 }
 
 func (o *Connection) GetPermissions() []PropertyConnectionPermissions {

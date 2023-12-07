@@ -55,6 +55,9 @@ func main() {
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesAccounting,
         },
+        CursorsCache: []shared.Undefined{
+            shared.Undefined{},
+        },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
             shared.PropertyConnectionPermissionsAtsDocumentWrite,
@@ -708,6 +711,9 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesMartech,
             },
+            CursorsCache: []shared.Undefined{
+                shared.Undefined{},
+            },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
                 shared.PropertyConnectionPermissionsMartechListRead,
@@ -880,6 +886,9 @@ func main() {
             },
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesTicketing,
+            },
+            CursorsCache: []shared.Undefined{
+                shared.Undefined{},
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
