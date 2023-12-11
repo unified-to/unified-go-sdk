@@ -32,7 +32,7 @@ import (
 
 func main() {
 	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity(""),
+		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -583,7 +583,7 @@ import (
 
 func main() {
 	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity(""),
+		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -637,7 +637,7 @@ import (
 func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerIndex(1),
-		unifiedgosdk.WithSecurity(""),
+		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -677,7 +677,7 @@ import (
 func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerURL("https://api.unified.to"),
-		unifiedgosdk.WithSecurity(""),
+		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
@@ -758,7 +758,7 @@ import (
 
 func main() {
 	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity(""),
+		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
