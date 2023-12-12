@@ -73,6 +73,7 @@ type AtsApplication struct {
 	AppliedAt      *time.Time                 `json:"applied_at,omitempty"`
 	CandidateID    *string                    `json:"candidate_id,omitempty"`
 	CreatedAt      *time.Time                 `json:"created_at,omitempty"`
+	HiredAt        *time.Time                 `json:"hired_at,omitempty"`
 	ID             *string                    `json:"id,omitempty"`
 	JobID          *string                    `json:"job_id,omitempty"`
 	Raw            *PropertyAtsApplicationRaw `json:"raw,omitempty"`
@@ -113,6 +114,13 @@ func (o *AtsApplication) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return o.CreatedAt
+}
+
+func (o *AtsApplication) GetHiredAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.HiredAt
 }
 
 func (o *AtsApplication) GetID() *string {
