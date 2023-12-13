@@ -20,6 +20,7 @@
 | `PropertyConnectionPermissionsAtsScorecardWrite`          | ats_scorecard_write                                       |
 | `PropertyConnectionPermissionsAtsApplicationRead`         | ats_application_read                                      |
 | `PropertyConnectionPermissionsAtsApplicationWrite`        | ats_application_write                                     |
+| `PropertyConnectionPermissionsAtsApplicationstatusRead`   | ats_applicationstatus_read                                |
 | `PropertyConnectionPermissionsAtsCandidateRead`           | ats_candidate_read                                        |
 | `PropertyConnectionPermissionsAtsCandidateWrite`          | ats_candidate_write                                       |
 | `PropertyConnectionPermissionsAtsInterviewRead`           | ats_interview_read                                        |

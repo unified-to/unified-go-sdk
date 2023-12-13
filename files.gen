@@ -6,6 +6,7 @@ payment.go
 transaction.go
 ats.go
 application.go
+applicationstatus.go
 candidate.go
 document.go
 interview.go
@@ -109,6 +110,7 @@ pkg/utils/utils.go
 /pkg/models/operations/getatsjob.go
 /pkg/models/operations/getatsscorecard.go
 /pkg/models/operations/listatsapplications.go
+/pkg/models/operations/listatsapplicationstatuses.go
 /pkg/models/operations/listatscandidates.go
 /pkg/models/operations/listatsdocuments.go
 /pkg/models/operations/listatsinterviews.go
@@ -278,6 +280,8 @@ pkg/utils/utils.go
 /pkg/models/shared/atsaddress.go
 /pkg/models/shared/atsscorecard.go
 /pkg/models/shared/propertyatsscorecardraw.go
+/pkg/models/shared/atsstatus.go
+/pkg/models/shared/propertyatsstatusraw.go
 /pkg/models/shared/crmcompany.go
 /pkg/models/shared/crmtelephone.go
 /pkg/models/shared/propertycrmcompanyraw.go
@@ -448,6 +452,8 @@ docs/pkg/models/operations/getatsscorecardrequest.md
 docs/pkg/models/operations/getatsscorecardresponse.md
 docs/pkg/models/operations/listatsapplicationsrequest.md
 docs/pkg/models/operations/listatsapplicationsresponse.md
+docs/pkg/models/operations/listatsapplicationstatusesrequest.md
+docs/pkg/models/operations/listatsapplicationstatusesresponse.md
 docs/pkg/models/operations/listatscandidatesrequest.md
 docs/pkg/models/operations/listatscandidatesresponse.md
 docs/pkg/models/operations/listatsdocumentsrequest.md
@@ -771,6 +777,9 @@ docs/pkg/models/shared/atsaddress.md
 docs/pkg/models/shared/recommendation.md
 docs/pkg/models/shared/atsscorecard.md
 docs/pkg/models/shared/propertyatsscorecardraw.md
+docs/pkg/models/shared/atsstatusstatus.md
+docs/pkg/models/shared/atsstatus.md
+docs/pkg/models/shared/propertyatsstatusraw.md
 docs/pkg/models/shared/crmcompany.md
 docs/pkg/models/shared/crmtelephonetype.md
 docs/pkg/models/shared/crmtelephone.md
@@ -873,6 +882,7 @@ docs/sdks/payment/README.md
 docs/sdks/transaction/README.md
 docs/sdks/ats/README.md
 docs/sdks/application/README.md
+docs/sdks/applicationstatus/README.md
 docs/sdks/candidate/README.md
 docs/sdks/document/README.md
 docs/sdks/interview/README.md

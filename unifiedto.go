@@ -66,48 +66,49 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 
 // UnifiedTo - Unified.to API: One API to Rule Them All
 type UnifiedTo struct {
-	Accounting  *Accounting
-	Account     *Account
-	Customer    *Customer
-	Invoice     *Invoice
-	Payment     *Payment
-	Transaction *Transaction
-	Ats         *Ats
-	Application *Application
-	Candidate   *Candidate
-	Document    *Document
-	Interview   *Interview
-	Job         *Job
-	Scorecard   *Scorecard
-	Crm         *Crm
-	Company     *Company
-	Contact     *Contact
-	Deal        *Deal
-	Event       *Event
-	File        *File
-	Lead        *Lead
-	Pipeline    *Pipeline
-	Enrich      *Enrich
-	Person      *Person
-	Hris        *Hris
-	Employee    *Employee
-	Group       *Group
-	Martech     *Martech
-	List        *List
-	Member      *Member
-	Passthrough *Passthrough
-	Ticketing   *Ticketing
-	Note        *Note
-	Ticket      *Ticket
-	Uc          *Uc
-	Call        *Call
-	Unified     *Unified
-	Apicall     *Apicall
-	Connection  *Connection
-	Integration *Integration
-	Auth        *Auth
-	Login       *Login
-	Webhook     *Webhook
+	Accounting        *Accounting
+	Account           *Account
+	Customer          *Customer
+	Invoice           *Invoice
+	Payment           *Payment
+	Transaction       *Transaction
+	Ats               *Ats
+	Application       *Application
+	Applicationstatus *Applicationstatus
+	Candidate         *Candidate
+	Document          *Document
+	Interview         *Interview
+	Job               *Job
+	Scorecard         *Scorecard
+	Crm               *Crm
+	Company           *Company
+	Contact           *Contact
+	Deal              *Deal
+	Event             *Event
+	File              *File
+	Lead              *Lead
+	Pipeline          *Pipeline
+	Enrich            *Enrich
+	Person            *Person
+	Hris              *Hris
+	Employee          *Employee
+	Group             *Group
+	Martech           *Martech
+	List              *List
+	Member            *Member
+	Passthrough       *Passthrough
+	Ticketing         *Ticketing
+	Note              *Note
+	Ticket            *Ticket
+	Uc                *Uc
+	Call              *Call
+	Unified           *Unified
+	Apicall           *Apicall
+	Connection        *Connection
+	Integration       *Integration
+	Auth              *Auth
+	Login             *Login
+	Webhook           *Webhook
 
 	sdkConfiguration sdkConfiguration
 }
@@ -176,9 +177,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.9.1",
+			SDKVersion:        "0.9.2",
 			GenVersion:        "2.214.3",
-			UserAgent:         "speakeasy-sdk/go 0.9.1 2.214.3 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:         "speakeasy-sdk/go 0.9.2 2.214.3 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -212,6 +213,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Ats = newAts(sdk.sdkConfiguration)
 
 	sdk.Application = newApplication(sdk.sdkConfiguration)
+
+	sdk.Applicationstatus = newApplicationstatus(sdk.sdkConfiguration)
 
 	sdk.Candidate = newCandidate(sdk.sdkConfiguration)
 

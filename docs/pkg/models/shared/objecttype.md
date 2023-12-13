@@ -11,6 +11,7 @@
 | `ObjectTypeAccountingInvoice`     | accounting_invoice                |
 | `ObjectTypeAccountingPayment`     | accounting_payment                |
 | `ObjectTypeAtsApplication`        | ats_application                   |
+| `ObjectTypeAtsApplicationstatus`  | ats_applicationstatus             |
 | `ObjectTypeAtsCandidate`          | ats_candidate                     |
 | `ObjectTypeAtsDocument`           | ats_document                      |
 | `ObjectTypeAtsInterview`          | ats_interview                     |

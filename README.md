@@ -157,6 +157,7 @@ func main() {
 * [GetAtsJob](docs/sdks/ats/README.md#getatsjob) - Retrieve a job
 * [GetAtsScorecard](docs/sdks/ats/README.md#getatsscorecard) - Retrieve a scorecard
 * [ListAtsApplications](docs/sdks/ats/README.md#listatsapplications) - List all applications
+* [ListAtsApplicationstatuses](docs/sdks/ats/README.md#listatsapplicationstatuses) - List all application statuss
 * [ListAtsCandidates](docs/sdks/ats/README.md#listatscandidates) - List all candidates
 * [ListAtsDocuments](docs/sdks/ats/README.md#listatsdocuments) - List all documents
 * [ListAtsInterviews](docs/sdks/ats/README.md#listatsinterviews) - List all interviews
@@ -189,6 +190,10 @@ func main() {
 * [PatchAtsApplication](docs/sdks/application/README.md#patchatsapplication) - Update an application
 * [RemoveAtsApplication](docs/sdks/application/README.md#removeatsapplication) - Remove an application
 * [UpdateAtsApplication](docs/sdks/application/README.md#updateatsapplication) - Update an application
+
+### [Applicationstatus](docs/sdks/applicationstatus/README.md)
+
+* [ListAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all application statuss
 
 ### [Candidate](docs/sdks/candidate/README.md)
 

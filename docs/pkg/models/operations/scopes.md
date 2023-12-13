@@ -20,6 +20,7 @@
 | `ScopesAtsScorecardWrite`          | ats_scorecard_write                |
 | `ScopesAtsApplicationRead`         | ats_application_read               |
 | `ScopesAtsApplicationWrite`        | ats_application_write              |
+| `ScopesAtsApplicationstatusRead`   | ats_applicationstatus_read         |
 | `ScopesAtsCandidateRead`           | ats_candidate_read                 |
 | `ScopesAtsCandidateWrite`          | ats_candidate_write                |
 | `ScopesAtsInterviewRead`           | ats_interview_read                 |
