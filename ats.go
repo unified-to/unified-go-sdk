@@ -887,7 +887,7 @@ func (s *Ats) ListAtsApplications(ctx context.Context, request operations.ListAt
 	return res, nil
 }
 
-// ListAtsApplicationstatuses - List all application statuss
+// ListAtsApplicationstatuses - List all application statuses
 func (s *Ats) ListAtsApplicationstatuses(ctx context.Context, request operations.ListAtsApplicationstatusesRequest) (*operations.ListAtsApplicationstatusesResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/applicationstatus", request, nil)

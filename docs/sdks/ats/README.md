@@ -16,7 +16,7 @@
 * [GetAtsJob](#getatsjob) - Retrieve a job
 * [GetAtsScorecard](#getatsscorecard) - Retrieve a scorecard
 * [ListAtsApplications](#listatsapplications) - List all applications
-* [ListAtsApplicationstatuses](#listatsapplicationstatuses) - List all application statuss
+* [ListAtsApplicationstatuses](#listatsapplicationstatuses) - List all application statuses
 * [ListAtsCandidates](#listatscandidates) - List all candidates
 * [ListAtsDocuments](#listatsdocuments) - List all documents
 * [ListAtsInterviews](#listatsinterviews) - List all interviews
@@ -791,7 +791,7 @@ func main() {
 
 ## ListAtsApplicationstatuses
 
-List all application statuss
+List all application statuses
 
 ### Example Usage
 
