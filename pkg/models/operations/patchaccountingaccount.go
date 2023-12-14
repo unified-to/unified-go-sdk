@@ -8,6 +8,7 @@ import (
 )
 
 type PatchAccountingAccountRequest struct {
+	// A user's bank account
 	AccountingAccount *shared.AccountingAccount `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

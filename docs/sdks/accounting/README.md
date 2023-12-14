@@ -300,7 +300,6 @@ func main() {
             ID: "<ID>",
             LineItems: []shared.AccountingTransactionLineitem{
                 shared.AccountingTransactionLineitem{
-                    ID: "<ID>",
                     TotalAmount: 4969.62,
                 },
             },
@@ -1150,7 +1149,6 @@ func main() {
             ID: "<ID>",
             LineItems: []shared.AccountingTransactionLineitem{
                 shared.AccountingTransactionLineitem{
-                    ID: "<ID>",
                     TotalAmount: 5633.69,
                 },
             },
@@ -1721,7 +1719,6 @@ func main() {
             ID: "<ID>",
             LineItems: []shared.AccountingTransactionLineitem{
                 shared.AccountingTransactionLineitem{
-                    ID: "<ID>",
                     TotalAmount: 6498.37,
                 },
             },

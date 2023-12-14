@@ -70,7 +70,7 @@ func (e *AtsStatusStatus) UnmarshalJSON(data []byte) error {
 type AtsStatus struct {
 	Description    *string               `json:"description,omitempty"`
 	ID             *string               `json:"id,omitempty"`
-	OriginalStatus string                `json:"original_status"`
+	OriginalStatus *string               `json:"original_status,omitempty"`
 	Raw            *PropertyAtsStatusRaw `json:"raw,omitempty"`
 	Status         *AtsStatusStatus      `json:"status,omitempty"`
 }
@@ -89,9 +89,9 @@ func (o *AtsStatus) GetID() *string {
 	return o.ID
 }
 
-func (o *AtsStatus) GetOriginalStatus() string {
+func (o *AtsStatus) GetOriginalStatus() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.OriginalStatus
 }

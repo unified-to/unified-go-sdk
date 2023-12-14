@@ -5,7 +5,7 @@ package shared
 type AccountingTransactionLineitem struct {
 	CustomerID  *string  `json:"customer_id,omitempty"`
 	Description *string  `json:"description,omitempty"`
-	ID          string   `json:"id"`
+	ID          *string  `json:"id,omitempty"`
 	InvoiceID   *string  `json:"invoice_id,omitempty"`
 	PaymentID   *string  `json:"payment_id,omitempty"`
 	TaxAmount   *float64 `json:"tax_amount,omitempty"`
@@ -26,9 +26,9 @@ func (o *AccountingTransactionLineitem) GetDescription() *string {
 	return o.Description
 }
 
-func (o *AccountingTransactionLineitem) GetID() string {
+func (o *AccountingTransactionLineitem) GetID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.ID
 }
