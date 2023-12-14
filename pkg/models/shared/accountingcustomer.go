@@ -74,6 +74,7 @@ type AccountingCustomer struct {
 	Raw             *PropertyAccountingCustomerRaw             `json:"raw,omitempty"`
 	ShippingAddress *PropertyAccountingCustomerShippingAddress `json:"shipping_address,omitempty"`
 	TaxExemption    *TaxExemption                              `json:"tax_exemption,omitempty"`
+	TaxNumber       *string                                    `json:"tax_number,omitempty"`
 	Telephones      []AccountingTelephone                      `json:"telephones,omitempty"`
 	UpdatedAt       *time.Time                                 `json:"updated_at,omitempty"`
 }
@@ -157,6 +158,13 @@ func (o *AccountingCustomer) GetTaxExemption() *TaxExemption {
 		return nil
 	}
 	return o.TaxExemption
+}
+
+func (o *AccountingCustomer) GetTaxNumber() *string {
+	if o == nil {
+		return nil
+	}
+	return o.TaxNumber
 }
 
 func (o *AccountingCustomer) GetTelephones() []AccountingTelephone {
