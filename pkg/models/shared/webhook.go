@@ -9,6 +9,33 @@ import (
 	"time"
 )
 
+type Event string
+
+const (
+	EventUpdated Event = "updated"
+	EventCreated Event = "created"
+)
+
+func (e Event) ToPointer() *Event {
+	return &e
+}
+
+func (e *Event) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "updated":
+		fallthrough
+	case "created":
+		*e = Event(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for Event: %v", v)
+	}
+}
+
 type ObjectType string
 
 const (
@@ -123,23 +150,59 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type WebhookWebhookType string
+
+const (
+	WebhookWebhookTypeVirtual WebhookWebhookType = "virtual"
+	WebhookWebhookTypeNone    WebhookWebhookType = "none"
+	WebhookWebhookTypeNative  WebhookWebhookType = "native"
+)
+
+func (e WebhookWebhookType) ToPointer() *WebhookWebhookType {
+	return &e
+}
+
+func (e *WebhookWebhookType) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "virtual":
+		fallthrough
+	case "none":
+		fallthrough
+	case "native":
+		*e = WebhookWebhookType(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for WebhookWebhookType: %v", v)
+	}
+}
+
 // Webhook - A webhook is used to POST new/updated information to your server.
 type Webhook struct {
 	CheckedAt       *time.Time              `json:"checked_at,omitempty"`
-	ConnectionID    string                  `json:"connection_id"`
+	ConnectionID    *string                 `json:"connection_id,omitempty"`
 	CreatedAt       *time.Time              `json:"created_at,omitempty"`
 	Environment     *string                 `default:"Production" json:"environment"`
+	Event           Event                   `json:"event"`
 	Events          []PropertyWebhookEvents `json:"events"`
+	Fields          *string                 `json:"fields,omitempty"`
 	HookURL         string                  `json:"hook_url"`
 	ID              *string                 `json:"id,omitempty"`
 	IncludeRaw      *bool                   `json:"include_raw,omitempty"`
-	IntegrationType string                  `json:"integration_type"`
+	IntegrationType *string                 `json:"integration_type,omitempty"`
 	Interval        float64                 `json:"interval"`
+	Meta            *PropertyWebhookMeta    `json:"meta,omitempty"`
 	ObjectType      ObjectType              `json:"object_type"`
+	// An array of the most revent virtual webhook runs
+	Runs []string `json:"runs,omitempty"`
 	// integration-specific subscriptions IDs
-	Subscriptions []string   `json:"subscriptions,omitempty"`
-	UpdatedAt     *time.Time `json:"updated_at,omitempty"`
-	WorkspaceID   string     `json:"workspace_id"`
+	Subscriptions []string            `json:"subscriptions,omitempty"`
+	UpdatedAt     *time.Time          `json:"updated_at,omitempty"`
+	WebhookType   *WebhookWebhookType `json:"webhook_type,omitempty"`
+	WorkspaceID   *string             `json:"workspace_id,omitempty"`
 }
 
 func (w Webhook) MarshalJSON() ([]byte, error) {
@@ -160,9 +223,9 @@ func (o *Webhook) GetCheckedAt() *time.Time {
 	return o.CheckedAt
 }
 
-func (o *Webhook) GetConnectionID() string {
+func (o *Webhook) GetConnectionID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.ConnectionID
 }
@@ -181,11 +244,25 @@ func (o *Webhook) GetEnvironment() *string {
 	return o.Environment
 }
 
+func (o *Webhook) GetEvent() Event {
+	if o == nil {
+		return Event("")
+	}
+	return o.Event
+}
+
 func (o *Webhook) GetEvents() []PropertyWebhookEvents {
 	if o == nil {
 		return []PropertyWebhookEvents{}
 	}
 	return o.Events
+}
+
+func (o *Webhook) GetFields() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 func (o *Webhook) GetHookURL() string {
@@ -209,9 +286,9 @@ func (o *Webhook) GetIncludeRaw() *bool {
 	return o.IncludeRaw
 }
 
-func (o *Webhook) GetIntegrationType() string {
+func (o *Webhook) GetIntegrationType() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.IntegrationType
 }
@@ -223,11 +300,25 @@ func (o *Webhook) GetInterval() float64 {
 	return o.Interval
 }
 
+func (o *Webhook) GetMeta() *PropertyWebhookMeta {
+	if o == nil {
+		return nil
+	}
+	return o.Meta
+}
+
 func (o *Webhook) GetObjectType() ObjectType {
 	if o == nil {
 		return ObjectType("")
 	}
 	return o.ObjectType
+}
+
+func (o *Webhook) GetRuns() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Runs
 }
 
 func (o *Webhook) GetSubscriptions() []string {
@@ -244,9 +335,16 @@ func (o *Webhook) GetUpdatedAt() *time.Time {
 	return o.UpdatedAt
 }
 
-func (o *Webhook) GetWorkspaceID() string {
+func (o *Webhook) GetWebhookType() *WebhookWebhookType {
 	if o == nil {
-		return ""
+		return nil
+	}
+	return o.WebhookType
+}
+
+func (o *Webhook) GetWorkspaceID() *string {
+	if o == nil {
+		return nil
 	}
 	return o.WorkspaceID
 }

@@ -345,6 +345,7 @@ pkg/utils/utils.go
 /pkg/models/shared/propertyconnectionauth.go
 /pkg/models/shared/propertypropertyconnectionauthmeta.go
 /pkg/models/shared/webhook.go
+/pkg/models/shared/propertywebhookmeta.go
 /pkg/models/shared/propertywebhookevents.go
 /pkg/models/shared/apicall.go
 /pkg/models/shared/integration.go
@@ -860,8 +861,11 @@ docs/pkg/models/shared/propertyconnectionpermissions.md
 docs/pkg/models/shared/propertyconnectioncategories.md
 docs/pkg/models/shared/propertyconnectionauth.md
 docs/pkg/models/shared/propertypropertyconnectionauthmeta.md
+docs/pkg/models/shared/event.md
 docs/pkg/models/shared/objecttype.md
+docs/pkg/models/shared/webhookwebhooktype.md
 docs/pkg/models/shared/webhook.md
+docs/pkg/models/shared/propertywebhookmeta.md
 docs/pkg/models/shared/propertywebhookevents.md
 docs/pkg/models/shared/apicalltype.md
 docs/pkg/models/shared/apicall.md
