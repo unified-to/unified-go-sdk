@@ -7,31 +7,39 @@
 * [CreateAccountingCustomer](#createaccountingcustomer) - Create a customer
 * [CreateAccountingInvoice](#createaccountinginvoice) - Create a invoice
 * [CreateAccountingPayment](#createaccountingpayment) - Create a payment
+* [CreateAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
 * [CreateAccountingTransaction](#createaccountingtransaction) - Create a transaction
 * [GetAccountingAccount](#getaccountingaccount) - Retrieve an account
 * [GetAccountingCustomer](#getaccountingcustomer) - Retrieve a customer
 * [GetAccountingInvoice](#getaccountinginvoice) - Retrieve a invoice
+* [GetAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [GetAccountingPayment](#getaccountingpayment) - Retrieve a payment
+* [GetAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
 * [GetAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
 * [ListAccountingAccounts](#listaccountingaccounts) - List all accounts
 * [ListAccountingCustomers](#listaccountingcustomers) - List all customers
 * [ListAccountingInvoices](#listaccountinginvoices) - List all invoices
+* [ListAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [ListAccountingPayments](#listaccountingpayments) - List all payments
+* [ListAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
 * [ListAccountingTransactions](#listaccountingtransactions) - List all transactions
 * [PatchAccountingAccount](#patchaccountingaccount) - Update an account
 * [PatchAccountingCustomer](#patchaccountingcustomer) - Update a customer
 * [PatchAccountingInvoice](#patchaccountinginvoice) - Update a invoice
 * [PatchAccountingPayment](#patchaccountingpayment) - Update a payment
+* [PatchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
 * [PatchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
 * [RemoveAccountingAccount](#removeaccountingaccount) - Remove an account
 * [RemoveAccountingCustomer](#removeaccountingcustomer) - Remove a customer
 * [RemoveAccountingInvoice](#removeaccountinginvoice) - Remove a invoice
 * [RemoveAccountingPayment](#removeaccountingpayment) - Remove a payment
+* [RemoveAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
 * [RemoveAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
 * [UpdateAccountingAccount](#updateaccountingaccount) - Update an account
 * [UpdateAccountingCustomer](#updateaccountingcustomer) - Update a customer
 * [UpdateAccountingInvoice](#updateaccountinginvoice) - Update a invoice
 * [UpdateAccountingPayment](#updateaccountingpayment) - Update a payment
+* [UpdateAccountingTaxrate](#updateaccountingtaxrate) - Update a taxrate
 * [UpdateAccountingTransaction](#updateaccountingtransaction) - Update a transaction
 
 ## CreateAccountingAccount
@@ -271,6 +279,62 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 400-600            | */*                |
 
+## CreateAccountingTaxrate
+
+Create a taxrate
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
+        AccountingTaxrate: &shared.AccountingTaxrate{
+            Name: "string",
+            Rate: 1719.1,
+            Raw: &shared.PropertyAccountingTaxrateRaw{},
+        },
+        ConnectionID: "string",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingTaxrate != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.CreateAccountingTaxrateRequest](../../pkg/models/operations/createaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+
+### Response
+
+**[*operations.CreateAccountingTaxrateResponse](../../pkg/models/operations/createaccountingtaxrateresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
 ## CreateAccountingTransaction
 
 Create a transaction
@@ -499,6 +563,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 400-600            | */*                |
 
+## GetAccountingOrganization
+
+Retrieve an organization
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.GetAccountingOrganization(ctx, operations.GetAccountingOrganizationRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingOrganization != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.GetAccountingOrganizationRequest](../../pkg/models/operations/getaccountingorganizationrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+
+### Response
+
+**[*operations.GetAccountingOrganizationResponse](../../pkg/models/operations/getaccountingorganizationresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
 ## GetAccountingPayment
 
 Retrieve a payment
@@ -550,6 +669,61 @@ func main() {
 ### Response
 
 **[*operations.GetAccountingPaymentResponse](../../pkg/models/operations/getaccountingpaymentresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
+## GetAccountingTaxrate
+
+Retrieve a taxrate
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.GetAccountingTaxrate(ctx, operations.GetAccountingTaxrateRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingTaxrate != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetAccountingTaxrateRequest](../../pkg/models/operations/getaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+
+### Response
+
+**[*operations.GetAccountingTaxrateResponse](../../pkg/models/operations/getaccountingtaxrateresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 400-600            | */*                |
@@ -771,6 +945,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 400-600            | */*                |
 
+## ListAccountingOrganizations
+
+List all organizations
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.ListAccountingOrganizations(ctx, operations.ListAccountingOrganizationsRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingOrganizations != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.ListAccountingOrganizationsRequest](../../pkg/models/operations/listaccountingorganizationsrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+
+
+### Response
+
+**[*operations.ListAccountingOrganizationsResponse](../../pkg/models/operations/listaccountingorganizationsresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
 ## ListAccountingPayments
 
 List all payments
@@ -821,6 +1049,60 @@ func main() {
 ### Response
 
 **[*operations.ListAccountingPaymentsResponse](../../pkg/models/operations/listaccountingpaymentsresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
+## ListAccountingTaxrates
+
+List all taxrates
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.ListAccountingTaxrates(ctx, operations.ListAccountingTaxratesRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingTaxrates != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.ListAccountingTaxratesRequest](../../pkg/models/operations/listaccountingtaxratesrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+
+### Response
+
+**[*operations.ListAccountingTaxratesResponse](../../pkg/models/operations/listaccountingtaxratesresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 400-600            | */*                |
@@ -1120,6 +1402,63 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 400-600            | */*                |
 
+## PatchAccountingTaxrate
+
+Update a taxrate
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
+        AccountingTaxrate: &shared.AccountingTaxrate{
+            Name: "string",
+            Rate: 5991.47,
+            Raw: &shared.PropertyAccountingTaxrateRaw{},
+        },
+        ConnectionID: "string",
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingTaxrate != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.PatchAccountingTaxrateRequest](../../pkg/models/operations/patchaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+
+### Response
+
+**[*operations.PatchAccountingTaxrateResponse](../../pkg/models/operations/patchaccountingtaxrateresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
 ## PatchAccountingTransaction
 
 Update a transaction
@@ -1392,6 +1731,59 @@ func main() {
 ### Response
 
 **[*operations.RemoveAccountingPaymentResponse](../../pkg/models/operations/removeaccountingpaymentresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
+## RemoveAccountingTaxrate
+
+Remove a taxrate
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+	"net/http"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.RemoveAccountingTaxrate(ctx, operations.RemoveAccountingTaxrateRequest{
+        ConnectionID: "string",
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.StatusCode == http.StatusOK {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.RemoveAccountingTaxrateRequest](../../pkg/models/operations/removeaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+
+### Response
+
+**[*operations.RemoveAccountingTaxrateResponse](../../pkg/models/operations/removeaccountingtaxrateresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 400-600            | */*                |
@@ -1686,6 +2078,63 @@ func main() {
 ### Response
 
 **[*operations.UpdateAccountingPaymentResponse](../../pkg/models/operations/updateaccountingpaymentresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
+## UpdateAccountingTaxrate
+
+Update a taxrate
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
+        AccountingTaxrate: &shared.AccountingTaxrate{
+            Name: "string",
+            Rate: 3382.78,
+            Raw: &shared.PropertyAccountingTaxrateRaw{},
+        },
+        ConnectionID: "string",
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingTaxrate != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.UpdateAccountingTaxrateRequest](../../pkg/models/operations/updateaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+
+### Response
+
+**[*operations.UpdateAccountingTaxrateResponse](../../pkg/models/operations/updateaccountingtaxrateresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 400-600            | */*                |

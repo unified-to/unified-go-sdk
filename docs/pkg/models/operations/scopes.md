@@ -16,6 +16,9 @@
 | `ScopesAccountingCustomerWrite`    | accounting_customer_write          |
 | `ScopesAccountingPaymentRead`      | accounting_payment_read            |
 | `ScopesAccountingPaymentWrite`     | accounting_payment_write           |
+| `ScopesAccountingTaxrateRead`      | accounting_taxrate_read            |
+| `ScopesAccountingTaxrateWrite`     | accounting_taxrate_write           |
+| `ScopesAccountingOrganizationRead` | accounting_organization_read       |
 | `ScopesAtsScorecardRead`           | ats_scorecard_read                 |
 | `ScopesAtsScorecardWrite`          | ats_scorecard_write                |
 | `ScopesAtsApplicationRead`         | ats_application_read               |

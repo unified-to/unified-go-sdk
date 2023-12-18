@@ -40,7 +40,7 @@ func main() {
             HookURL: "string",
             Interval: 4583.16,
             Meta: &shared.PropertyWebhookMeta{},
-            ObjectType: shared.ObjectTypeHrisEmployee,
+            ObjectType: shared.ObjectTypeCrmPipeline,
             Runs: []string{
                 "string",
             },

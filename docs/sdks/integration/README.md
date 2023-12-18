@@ -85,7 +85,7 @@ func main() {
     res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
         Scopes: []operations.Scopes{
-            operations.ScopesHrisEmployeeWrite,
+            operations.ScopesHrisEmployeeRead,
         },
         WorkspaceID: "string",
     })

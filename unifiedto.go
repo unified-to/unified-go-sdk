@@ -70,7 +70,9 @@ type UnifiedTo struct {
 	Account           *Account
 	Customer          *Customer
 	Invoice           *Invoice
+	Organization      *Organization
 	Payment           *Payment
+	Taxrate           *Taxrate
 	Transaction       *Transaction
 	Ats               *Ats
 	Application       *Application
@@ -177,9 +179,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.9.6",
+			SDKVersion:        "0.9.7",
 			GenVersion:        "2.214.10",
-			UserAgent:         "speakeasy-sdk/go 0.9.6 2.214.10 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:         "speakeasy-sdk/go 0.9.7 2.214.10 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -206,7 +208,11 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Invoice = newInvoice(sdk.sdkConfiguration)
 
+	sdk.Organization = newOrganization(sdk.sdkConfiguration)
+
 	sdk.Payment = newPayment(sdk.sdkConfiguration)
+
+	sdk.Taxrate = newTaxrate(sdk.sdkConfiguration)
 
 	sdk.Transaction = newTransaction(sdk.sdkConfiguration)
 

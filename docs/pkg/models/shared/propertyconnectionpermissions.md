@@ -16,6 +16,9 @@
 | `PropertyConnectionPermissionsAccountingCustomerWrite`    | accounting_customer_write                                 |
 | `PropertyConnectionPermissionsAccountingPaymentRead`      | accounting_payment_read                                   |
 | `PropertyConnectionPermissionsAccountingPaymentWrite`     | accounting_payment_write                                  |
+| `PropertyConnectionPermissionsAccountingTaxrateRead`      | accounting_taxrate_read                                   |
+| `PropertyConnectionPermissionsAccountingTaxrateWrite`     | accounting_taxrate_write                                  |
+| `PropertyConnectionPermissionsAccountingOrganizationRead` | accounting_organization_read                              |
 | `PropertyConnectionPermissionsAtsScorecardRead`           | ats_scorecard_read                                        |
 | `PropertyConnectionPermissionsAtsScorecardWrite`          | ats_scorecard_write                                       |
 | `PropertyConnectionPermissionsAtsApplicationRead`         | ats_application_read                                      |

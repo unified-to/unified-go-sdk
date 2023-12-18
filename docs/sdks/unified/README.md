@@ -60,7 +60,7 @@ func main() {
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsDocumentRead,
+            shared.PropertyConnectionPermissionsAtsJobWrite,
         },
     })
     if err != nil {
@@ -120,7 +120,7 @@ func main() {
             HookURL: "string",
             Interval: 4583.16,
             Meta: &shared.PropertyWebhookMeta{},
-            ObjectType: shared.ObjectTypeHrisEmployee,
+            ObjectType: shared.ObjectTypeCrmPipeline,
             Runs: []string{
                 "string",
             },
@@ -338,7 +338,7 @@ func main() {
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
         Scopes: []operations.Scopes{
-            operations.ScopesHrisEmployeeWrite,
+            operations.ScopesHrisEmployeeRead,
         },
         WorkspaceID: "string",
     })
@@ -894,7 +894,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmContactWrite,
+                shared.PropertyConnectionPermissionsCrmContactRead,
             },
         },
         ID: "<ID>",
