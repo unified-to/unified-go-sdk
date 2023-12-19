@@ -200,6 +200,7 @@ type Webhook struct {
 	IncludeRaw      *bool                   `json:"include_raw,omitempty"`
 	IntegrationType *string                 `json:"integration_type,omitempty"`
 	Interval        float64                 `json:"interval"`
+	IsHealthy       *bool                   `json:"is_healthy,omitempty"`
 	Meta            *PropertyWebhookMeta    `json:"meta,omitempty"`
 	ObjectType      ObjectType              `json:"object_type"`
 	// An array of the most revent virtual webhook runs
@@ -304,6 +305,13 @@ func (o *Webhook) GetInterval() float64 {
 		return 0.0
 	}
 	return o.Interval
+}
+
+func (o *Webhook) GetIsHealthy() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsHealthy
 }
 
 func (o *Webhook) GetMeta() *PropertyWebhookMeta {

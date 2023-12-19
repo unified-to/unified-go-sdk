@@ -9,8 +9,9 @@
 | `DiscountAmount`                           | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
 | `ID`                                       | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
 | `ItemDescription`                          | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
-| `ItemIdentifier`                           | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `ItemID`                                   | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
 | `ItemName`                                 | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `ItemSku`                                  | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
 | `Notes`                                    | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
 | `RefundedAmount`                           | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
 | `RefundedAt`                               | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
