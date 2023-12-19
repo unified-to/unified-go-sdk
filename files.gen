@@ -2,6 +2,7 @@ accounting.go
 account.go
 customer.go
 invoice.go
+item.go
 organization.go
 payment.go
 taxrate.go
@@ -66,12 +67,14 @@ pkg/utils/utils.go
 /pkg/models/operations/createaccountingaccount.go
 /pkg/models/operations/createaccountingcustomer.go
 /pkg/models/operations/createaccountinginvoice.go
+/pkg/models/operations/createaccountingitem.go
 /pkg/models/operations/createaccountingpayment.go
 /pkg/models/operations/createaccountingtaxrate.go
 /pkg/models/operations/createaccountingtransaction.go
 /pkg/models/operations/getaccountingaccount.go
 /pkg/models/operations/getaccountingcustomer.go
 /pkg/models/operations/getaccountinginvoice.go
+/pkg/models/operations/getaccountingitem.go
 /pkg/models/operations/getaccountingorganization.go
 /pkg/models/operations/getaccountingpayment.go
 /pkg/models/operations/getaccountingtaxrate.go
@@ -79,6 +82,7 @@ pkg/utils/utils.go
 /pkg/models/operations/listaccountingaccounts.go
 /pkg/models/operations/listaccountingcustomers.go
 /pkg/models/operations/listaccountinginvoices.go
+/pkg/models/operations/listaccountingitems.go
 /pkg/models/operations/listaccountingorganizations.go
 /pkg/models/operations/listaccountingpayments.go
 /pkg/models/operations/listaccountingtaxrates.go
@@ -86,18 +90,21 @@ pkg/utils/utils.go
 /pkg/models/operations/patchaccountingaccount.go
 /pkg/models/operations/patchaccountingcustomer.go
 /pkg/models/operations/patchaccountinginvoice.go
+/pkg/models/operations/patchaccountingitem.go
 /pkg/models/operations/patchaccountingpayment.go
 /pkg/models/operations/patchaccountingtaxrate.go
 /pkg/models/operations/patchaccountingtransaction.go
 /pkg/models/operations/removeaccountingaccount.go
 /pkg/models/operations/removeaccountingcustomer.go
 /pkg/models/operations/removeaccountinginvoice.go
+/pkg/models/operations/removeaccountingitem.go
 /pkg/models/operations/removeaccountingpayment.go
 /pkg/models/operations/removeaccountingtaxrate.go
 /pkg/models/operations/removeaccountingtransaction.go
 /pkg/models/operations/updateaccountingaccount.go
 /pkg/models/operations/updateaccountingcustomer.go
 /pkg/models/operations/updateaccountinginvoice.go
+/pkg/models/operations/updateaccountingitem.go
 /pkg/models/operations/updateaccountingpayment.go
 /pkg/models/operations/updateaccountingtaxrate.go
 /pkg/models/operations/updateaccountingtransaction.go
@@ -264,6 +271,8 @@ pkg/utils/utils.go
 /pkg/models/shared/accountinginvoice.go
 /pkg/models/shared/propertyaccountinginvoiceraw.go
 /pkg/models/shared/accountinglineitem.go
+/pkg/models/shared/accountingitem.go
+/pkg/models/shared/propertyaccountingitemraw.go
 /pkg/models/shared/accountingpayment.go
 /pkg/models/shared/propertyaccountingpaymentraw.go
 /pkg/models/shared/accountingtaxrate.go
@@ -376,6 +385,8 @@ docs/pkg/models/operations/createaccountingcustomerrequest.md
 docs/pkg/models/operations/createaccountingcustomerresponse.md
 docs/pkg/models/operations/createaccountinginvoicerequest.md
 docs/pkg/models/operations/createaccountinginvoiceresponse.md
+docs/pkg/models/operations/createaccountingitemrequest.md
+docs/pkg/models/operations/createaccountingitemresponse.md
 docs/pkg/models/operations/createaccountingpaymentrequest.md
 docs/pkg/models/operations/createaccountingpaymentresponse.md
 docs/pkg/models/operations/createaccountingtaxraterequest.md
@@ -388,6 +399,8 @@ docs/pkg/models/operations/getaccountingcustomerrequest.md
 docs/pkg/models/operations/getaccountingcustomerresponse.md
 docs/pkg/models/operations/getaccountinginvoicerequest.md
 docs/pkg/models/operations/getaccountinginvoiceresponse.md
+docs/pkg/models/operations/getaccountingitemrequest.md
+docs/pkg/models/operations/getaccountingitemresponse.md
 docs/pkg/models/operations/getaccountingorganizationrequest.md
 docs/pkg/models/operations/getaccountingorganizationresponse.md
 docs/pkg/models/operations/getaccountingpaymentrequest.md
@@ -402,6 +415,8 @@ docs/pkg/models/operations/listaccountingcustomersrequest.md
 docs/pkg/models/operations/listaccountingcustomersresponse.md
 docs/pkg/models/operations/listaccountinginvoicesrequest.md
 docs/pkg/models/operations/listaccountinginvoicesresponse.md
+docs/pkg/models/operations/listaccountingitemsrequest.md
+docs/pkg/models/operations/listaccountingitemsresponse.md
 docs/pkg/models/operations/listaccountingorganizationsrequest.md
 docs/pkg/models/operations/listaccountingorganizationsresponse.md
 docs/pkg/models/operations/listaccountingpaymentsrequest.md
@@ -416,6 +431,8 @@ docs/pkg/models/operations/patchaccountingcustomerrequest.md
 docs/pkg/models/operations/patchaccountingcustomerresponse.md
 docs/pkg/models/operations/patchaccountinginvoicerequest.md
 docs/pkg/models/operations/patchaccountinginvoiceresponse.md
+docs/pkg/models/operations/patchaccountingitemrequest.md
+docs/pkg/models/operations/patchaccountingitemresponse.md
 docs/pkg/models/operations/patchaccountingpaymentrequest.md
 docs/pkg/models/operations/patchaccountingpaymentresponse.md
 docs/pkg/models/operations/patchaccountingtaxraterequest.md
@@ -428,6 +445,8 @@ docs/pkg/models/operations/removeaccountingcustomerrequest.md
 docs/pkg/models/operations/removeaccountingcustomerresponse.md
 docs/pkg/models/operations/removeaccountinginvoicerequest.md
 docs/pkg/models/operations/removeaccountinginvoiceresponse.md
+docs/pkg/models/operations/removeaccountingitemrequest.md
+docs/pkg/models/operations/removeaccountingitemresponse.md
 docs/pkg/models/operations/removeaccountingpaymentrequest.md
 docs/pkg/models/operations/removeaccountingpaymentresponse.md
 docs/pkg/models/operations/removeaccountingtaxraterequest.md
@@ -440,6 +459,8 @@ docs/pkg/models/operations/updateaccountingcustomerrequest.md
 docs/pkg/models/operations/updateaccountingcustomerresponse.md
 docs/pkg/models/operations/updateaccountinginvoicerequest.md
 docs/pkg/models/operations/updateaccountinginvoiceresponse.md
+docs/pkg/models/operations/updateaccountingitemrequest.md
+docs/pkg/models/operations/updateaccountingitemresponse.md
 docs/pkg/models/operations/updateaccountingpaymentrequest.md
 docs/pkg/models/operations/updateaccountingpaymentresponse.md
 docs/pkg/models/operations/updateaccountingtaxraterequest.md
@@ -770,6 +791,8 @@ docs/pkg/models/shared/propertyaccountingcustomerbillingaddress.md
 docs/pkg/models/shared/accountinginvoice.md
 docs/pkg/models/shared/propertyaccountinginvoiceraw.md
 docs/pkg/models/shared/accountinglineitem.md
+docs/pkg/models/shared/accountingitem.md
+docs/pkg/models/shared/propertyaccountingitemraw.md
 docs/pkg/models/shared/accountingpayment.md
 docs/pkg/models/shared/propertyaccountingpaymentraw.md
 docs/pkg/models/shared/accountingtaxrate.md
@@ -918,6 +941,7 @@ docs/sdks/accounting/README.md
 docs/sdks/account/README.md
 docs/sdks/customer/README.md
 docs/sdks/invoice/README.md
+docs/sdks/item/README.md
 docs/sdks/organization/README.md
 docs/sdks/payment/README.md
 docs/sdks/taxrate/README.md

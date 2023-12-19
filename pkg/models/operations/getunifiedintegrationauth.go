@@ -25,6 +25,7 @@ const (
 	ScopesAccountingTaxrateRead      Scopes = "accounting_taxrate_read"
 	ScopesAccountingTaxrateWrite     Scopes = "accounting_taxrate_write"
 	ScopesAccountingOrganizationRead Scopes = "accounting_organization_read"
+	ScopesAccountingItemRead         Scopes = "accounting_item_read"
 	ScopesAtsScorecardRead           Scopes = "ats_scorecard_read"
 	ScopesAtsScorecardWrite          Scopes = "ats_scorecard_write"
 	ScopesAtsApplicationRead         Scopes = "ats_application_read"
@@ -107,6 +108,8 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "accounting_taxrate_write":
 		fallthrough
 	case "accounting_organization_read":
+		fallthrough
+	case "accounting_item_read":
 		fallthrough
 	case "ats_scorecard_read":
 		fallthrough

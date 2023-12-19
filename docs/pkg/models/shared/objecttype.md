@@ -12,6 +12,7 @@
 | `ObjectTypeAccountingPayment`      | accounting_payment                 |
 | `ObjectTypeAccountingTaxrate`      | accounting_taxrate                 |
 | `ObjectTypeAccountingOrganization` | accounting_organization            |
+| `ObjectTypeAccountingItem`         | accounting_item                    |
 | `ObjectTypeAtsApplication`         | ats_application                    |
 | `ObjectTypeAtsApplicationstatus`   | ats_applicationstatus              |
 | `ObjectTypeAtsCandidate`           | ats_candidate                      |

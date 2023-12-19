@@ -63,12 +63,14 @@ func main() {
 * [CreateAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
 * [CreateAccountingCustomer](docs/sdks/accounting/README.md#createaccountingcustomer) - Create a customer
 * [CreateAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create a invoice
+* [CreateAccountingItem](docs/sdks/accounting/README.md#createaccountingitem) - Create an item
 * [CreateAccountingPayment](docs/sdks/accounting/README.md#createaccountingpayment) - Create a payment
 * [CreateAccountingTaxrate](docs/sdks/accounting/README.md#createaccountingtaxrate) - Create a taxrate
 * [CreateAccountingTransaction](docs/sdks/accounting/README.md#createaccountingtransaction) - Create a transaction
 * [GetAccountingAccount](docs/sdks/accounting/README.md#getaccountingaccount) - Retrieve an account
 * [GetAccountingCustomer](docs/sdks/accounting/README.md#getaccountingcustomer) - Retrieve a customer
 * [GetAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve a invoice
+* [GetAccountingItem](docs/sdks/accounting/README.md#getaccountingitem) - Retrieve an item
 * [GetAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
 * [GetAccountingPayment](docs/sdks/accounting/README.md#getaccountingpayment) - Retrieve a payment
 * [GetAccountingTaxrate](docs/sdks/accounting/README.md#getaccountingtaxrate) - Retrieve a taxrate
@@ -76,6 +78,7 @@ func main() {
 * [ListAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
 * [ListAccountingCustomers](docs/sdks/accounting/README.md#listaccountingcustomers) - List all customers
 * [ListAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
+* [ListAccountingItems](docs/sdks/accounting/README.md#listaccountingitems) - List all items
 * [ListAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
 * [ListAccountingPayments](docs/sdks/accounting/README.md#listaccountingpayments) - List all payments
 * [ListAccountingTaxrates](docs/sdks/accounting/README.md#listaccountingtaxrates) - List all taxrates
@@ -83,18 +86,21 @@ func main() {
 * [PatchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
 * [PatchAccountingCustomer](docs/sdks/accounting/README.md#patchaccountingcustomer) - Update a customer
 * [PatchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update a invoice
+* [PatchAccountingItem](docs/sdks/accounting/README.md#patchaccountingitem) - Update an item
 * [PatchAccountingPayment](docs/sdks/accounting/README.md#patchaccountingpayment) - Update a payment
 * [PatchAccountingTaxrate](docs/sdks/accounting/README.md#patchaccountingtaxrate) - Update a taxrate
 * [PatchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
 * [RemoveAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
 * [RemoveAccountingCustomer](docs/sdks/accounting/README.md#removeaccountingcustomer) - Remove a customer
 * [RemoveAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove a invoice
+* [RemoveAccountingItem](docs/sdks/accounting/README.md#removeaccountingitem) - Remove an item
 * [RemoveAccountingPayment](docs/sdks/accounting/README.md#removeaccountingpayment) - Remove a payment
 * [RemoveAccountingTaxrate](docs/sdks/accounting/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [RemoveAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
 * [UpdateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
 * [UpdateAccountingCustomer](docs/sdks/accounting/README.md#updateaccountingcustomer) - Update a customer
 * [UpdateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update a invoice
+* [UpdateAccountingItem](docs/sdks/accounting/README.md#updateaccountingitem) - Update an item
 * [UpdateAccountingPayment](docs/sdks/accounting/README.md#updateaccountingpayment) - Update a payment
 * [UpdateAccountingTaxrate](docs/sdks/accounting/README.md#updateaccountingtaxrate) - Update a taxrate
 * [UpdateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
@@ -131,6 +137,15 @@ func main() {
 * [PatchAccountingInvoice](docs/sdks/invoice/README.md#patchaccountinginvoice) - Update a invoice
 * [RemoveAccountingInvoice](docs/sdks/invoice/README.md#removeaccountinginvoice) - Remove a invoice
 * [UpdateAccountingInvoice](docs/sdks/invoice/README.md#updateaccountinginvoice) - Update a invoice
+
+### [Item](docs/sdks/item/README.md)
+
+* [CreateAccountingItem](docs/sdks/item/README.md#createaccountingitem) - Create an item
+* [GetAccountingItem](docs/sdks/item/README.md#getaccountingitem) - Retrieve an item
+* [ListAccountingItems](docs/sdks/item/README.md#listaccountingitems) - List all items
+* [PatchAccountingItem](docs/sdks/item/README.md#patchaccountingitem) - Update an item
+* [RemoveAccountingItem](docs/sdks/item/README.md#removeaccountingitem) - Remove an item
+* [UpdateAccountingItem](docs/sdks/item/README.md#updateaccountingitem) - Update an item
 
 ### [Organization](docs/sdks/organization/README.md)
 

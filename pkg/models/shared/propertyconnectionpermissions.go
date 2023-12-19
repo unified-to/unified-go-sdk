@@ -24,6 +24,7 @@ const (
 	PropertyConnectionPermissionsAccountingTaxrateRead      PropertyConnectionPermissions = "accounting_taxrate_read"
 	PropertyConnectionPermissionsAccountingTaxrateWrite     PropertyConnectionPermissions = "accounting_taxrate_write"
 	PropertyConnectionPermissionsAccountingOrganizationRead PropertyConnectionPermissions = "accounting_organization_read"
+	PropertyConnectionPermissionsAccountingItemRead         PropertyConnectionPermissions = "accounting_item_read"
 	PropertyConnectionPermissionsAtsScorecardRead           PropertyConnectionPermissions = "ats_scorecard_read"
 	PropertyConnectionPermissionsAtsScorecardWrite          PropertyConnectionPermissions = "ats_scorecard_write"
 	PropertyConnectionPermissionsAtsApplicationRead         PropertyConnectionPermissions = "ats_application_read"
@@ -106,6 +107,8 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "accounting_taxrate_write":
 		fallthrough
 	case "accounting_organization_read":
+		fallthrough
+	case "accounting_item_read":
 		fallthrough
 	case "ats_scorecard_read":
 		fallthrough

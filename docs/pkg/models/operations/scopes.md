@@ -19,6 +19,7 @@
 | `ScopesAccountingTaxrateRead`      | accounting_taxrate_read            |
 | `ScopesAccountingTaxrateWrite`     | accounting_taxrate_write           |
 | `ScopesAccountingOrganizationRead` | accounting_organization_read       |
+| `ScopesAccountingItemRead`         | accounting_item_read               |
 | `ScopesAtsScorecardRead`           | ats_scorecard_read                 |
 | `ScopesAtsScorecardWrite`          | ats_scorecard_write                |
 | `ScopesAtsApplicationRead`         | ats_application_read               |

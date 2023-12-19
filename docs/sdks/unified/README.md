@@ -60,7 +60,7 @@ func main() {
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsJobWrite,
+            shared.PropertyConnectionPermissionsAtsJobRead,
         },
     })
     if err != nil {
@@ -120,7 +120,7 @@ func main() {
             HookURL: "string",
             Interval: 4583.16,
             Meta: &shared.PropertyWebhookMeta{},
-            ObjectType: shared.ObjectTypeCrmPipeline,
+            ObjectType: shared.ObjectTypeCrmLead,
             Runs: []string{
                 "string",
             },
@@ -718,7 +718,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmPipelineWrite,
+                shared.PropertyConnectionPermissionsCrmPipelineRead,
             },
         },
         ID: "<ID>",
@@ -894,7 +894,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmContactRead,
+                shared.PropertyConnectionPermissionsCrmCompanyWrite,
             },
         },
         ID: "<ID>",
