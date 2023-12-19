@@ -2,10 +2,27 @@
 
 package shared
 
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
+)
+
 // PropertyCrmEventCall - The call object, when type = call
 type PropertyCrmEventCall struct {
-	Description *string  `json:"description,omitempty"`
-	Duration    *float64 `json:"duration,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	Duration    *float64   `json:"duration,omitempty"`
+	StartAt     *time.Time `json:"start_at,omitempty"`
+}
+
+func (p PropertyCrmEventCall) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(p, "", false)
+}
+
+func (p *PropertyCrmEventCall) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *PropertyCrmEventCall) GetDescription() *string {
@@ -20,4 +37,11 @@ func (o *PropertyCrmEventCall) GetDuration() *float64 {
 		return nil
 	}
 	return o.Duration
+}
+
+func (o *PropertyCrmEventCall) GetStartAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.StartAt
 }

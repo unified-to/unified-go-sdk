@@ -60,7 +60,7 @@ func main() {
 **[*operations.CreatePassthroughResponse](../../pkg/models/operations/createpassthroughresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## ListPassthroughs
 
@@ -112,7 +112,7 @@ func main() {
 **[*operations.ListPassthroughsResponse](../../pkg/models/operations/listpassthroughsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PatchPassthrough
 
@@ -165,7 +165,7 @@ func main() {
 **[*operations.PatchPassthroughResponse](../../pkg/models/operations/patchpassthroughresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## RemovePassthrough
 
@@ -217,7 +217,7 @@ func main() {
 **[*operations.RemovePassthroughResponse](../../pkg/models/operations/removepassthroughresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## UpdatePassthrough
 
@@ -270,4 +270,4 @@ func main() {
 **[*operations.UpdatePassthroughResponse](../../pkg/models/operations/updatepassthroughresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |

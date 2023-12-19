@@ -65,7 +65,7 @@ func main() {
 **[*operations.CreateCrmDealResponse](../../pkg/models/operations/createcrmdealresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetCrmDeal
 
@@ -120,7 +120,7 @@ func main() {
 **[*operations.GetCrmDealResponse](../../pkg/models/operations/getcrmdealresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## ListCrmDeals
 
@@ -174,7 +174,7 @@ func main() {
 **[*operations.ListCrmDealsResponse](../../pkg/models/operations/listcrmdealsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PatchCrmDeal
 
@@ -232,7 +232,7 @@ func main() {
 **[*operations.PatchCrmDealResponse](../../pkg/models/operations/patchcrmdealresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## RemoveCrmDeal
 
@@ -285,7 +285,7 @@ func main() {
 **[*operations.RemoveCrmDealResponse](../../pkg/models/operations/removecrmdealresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## UpdateCrmDeal
 
@@ -343,4 +343,4 @@ func main() {
 **[*operations.UpdateCrmDealResponse](../../pkg/models/operations/updatecrmdealresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |

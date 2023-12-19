@@ -82,7 +82,7 @@ func main() {
 **[*operations.CreateAtsJobResponse](../../pkg/models/operations/createatsjobresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetAtsJob
 
@@ -137,7 +137,7 @@ func main() {
 **[*operations.GetAtsJobResponse](../../pkg/models/operations/getatsjobresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## ListAtsJobs
 
@@ -191,7 +191,7 @@ func main() {
 **[*operations.ListAtsJobsResponse](../../pkg/models/operations/listatsjobsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PatchAtsJob
 
@@ -266,7 +266,7 @@ func main() {
 **[*operations.PatchAtsJobResponse](../../pkg/models/operations/patchatsjobresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## RemoveAtsJob
 
@@ -319,7 +319,7 @@ func main() {
 **[*operations.RemoveAtsJobResponse](../../pkg/models/operations/removeatsjobresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## UpdateAtsJob
 
@@ -394,4 +394,4 @@ func main() {
 **[*operations.UpdateAtsJobResponse](../../pkg/models/operations/updateatsjobresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |

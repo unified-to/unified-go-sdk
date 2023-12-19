@@ -2,11 +2,28 @@
 
 package shared
 
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
+)
+
 // PropertyCrmEventTask - The task object, when type = task
 type PropertyCrmEventTask struct {
-	Description *string `json:"description,omitempty"`
-	Name        *string `json:"name,omitempty"`
-	Status      *string `json:"status,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	DueAt       *time.Time `json:"due_at,omitempty"`
+	Name        *string    `json:"name,omitempty"`
+	Status      *string    `json:"status,omitempty"`
+}
+
+func (p PropertyCrmEventTask) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(p, "", false)
+}
+
+func (p *PropertyCrmEventTask) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *PropertyCrmEventTask) GetDescription() *string {
@@ -14,6 +31,13 @@ func (o *PropertyCrmEventTask) GetDescription() *string {
 		return nil
 	}
 	return o.Description
+}
+
+func (o *PropertyCrmEventTask) GetDueAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.DueAt
 }
 
 func (o *PropertyCrmEventTask) GetName() *string {

@@ -62,7 +62,7 @@ func main() {
 **[*operations.CreateCrmFileResponse](../../pkg/models/operations/createcrmfileresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetCrmFile
 
@@ -117,7 +117,7 @@ func main() {
 **[*operations.GetCrmFileResponse](../../pkg/models/operations/getcrmfileresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## ListCrmFiles
 
@@ -171,7 +171,7 @@ func main() {
 **[*operations.ListCrmFilesResponse](../../pkg/models/operations/listcrmfilesresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PatchCrmFile
 
@@ -226,7 +226,7 @@ func main() {
 **[*operations.PatchCrmFileResponse](../../pkg/models/operations/patchcrmfileresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## RemoveCrmFile
 
@@ -279,7 +279,7 @@ func main() {
 **[*operations.RemoveCrmFileResponse](../../pkg/models/operations/removecrmfileresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## UpdateCrmFile
 
@@ -334,4 +334,4 @@ func main() {
 **[*operations.UpdateCrmFileResponse](../../pkg/models/operations/updatecrmfileresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |

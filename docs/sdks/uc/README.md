@@ -73,7 +73,7 @@ func main() {
 **[*operations.CreateUcContactResponse](../../pkg/models/operations/createuccontactresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetUcContact
 
@@ -128,7 +128,7 @@ func main() {
 **[*operations.GetUcContactResponse](../../pkg/models/operations/getuccontactresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## ListUcCalls
 
@@ -182,7 +182,7 @@ func main() {
 **[*operations.ListUcCallsResponse](../../pkg/models/operations/listuccallsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## ListUcContacts
 
@@ -236,7 +236,7 @@ func main() {
 **[*operations.ListUcContactsResponse](../../pkg/models/operations/listuccontactsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PatchUcContact
 
@@ -301,7 +301,7 @@ func main() {
 **[*operations.PatchUcContactResponse](../../pkg/models/operations/patchuccontactresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## RemoveUcContact
 
@@ -354,7 +354,7 @@ func main() {
 **[*operations.RemoveUcContactResponse](../../pkg/models/operations/removeuccontactresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## UpdateUcContact
 
@@ -419,4 +419,4 @@ func main() {
 **[*operations.UpdateUcContactResponse](../../pkg/models/operations/updateuccontactresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |

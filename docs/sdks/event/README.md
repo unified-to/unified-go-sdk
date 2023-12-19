@@ -86,7 +86,7 @@ func main() {
 **[*operations.CreateCrmEventResponse](../../pkg/models/operations/createcrmeventresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetCrmEvent
 
@@ -141,7 +141,7 @@ func main() {
 **[*operations.GetCrmEventResponse](../../pkg/models/operations/getcrmeventresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## ListCrmEvents
 
@@ -195,7 +195,7 @@ func main() {
 **[*operations.ListCrmEventsResponse](../../pkg/models/operations/listcrmeventsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## PatchCrmEvent
 
@@ -274,7 +274,7 @@ func main() {
 **[*operations.PatchCrmEventResponse](../../pkg/models/operations/patchcrmeventresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## RemoveCrmEvent
 
@@ -327,7 +327,7 @@ func main() {
 **[*operations.RemoveCrmEventResponse](../../pkg/models/operations/removecrmeventresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## UpdateCrmEvent
 
@@ -406,4 +406,4 @@ func main() {
 **[*operations.UpdateCrmEventResponse](../../pkg/models/operations/updatecrmeventresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
