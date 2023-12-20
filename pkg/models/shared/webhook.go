@@ -196,7 +196,7 @@ type Webhook struct {
 	CreatedAt       *time.Time              `json:"created_at,omitempty"`
 	Environment     *string                 `default:"Production" json:"environment"`
 	Event           Event                   `json:"event"`
-	Events          []PropertyWebhookEvents `json:"events"`
+	Events          []PropertyWebhookEvents `json:"events,omitempty"`
 	Fields          *string                 `json:"fields,omitempty"`
 	HookURL         string                  `json:"hook_url"`
 	ID              *string                 `json:"id,omitempty"`
@@ -263,7 +263,7 @@ func (o *Webhook) GetEvent() Event {
 
 func (o *Webhook) GetEvents() []PropertyWebhookEvents {
 	if o == nil {
-		return []PropertyWebhookEvents{}
+		return nil
 	}
 	return o.Events
 }
