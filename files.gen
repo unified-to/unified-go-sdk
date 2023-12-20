@@ -244,7 +244,6 @@ pkg/utils/utils.go
 /pkg/models/operations/updateticketingticket.go
 /pkg/models/operations/listuccalls.go
 /pkg/models/operations/createunifiedconnection.go
-/pkg/models/operations/createunifiedwebhook.go
 /pkg/models/operations/getunifiedapicall.go
 /pkg/models/operations/getunifiedconnection.go
 /pkg/models/operations/getunifiedintegration.go
@@ -271,6 +270,7 @@ pkg/utils/utils.go
 /pkg/models/shared/accountinginvoice.go
 /pkg/models/shared/propertyaccountinginvoiceraw.go
 /pkg/models/shared/accountinglineitem.go
+/pkg/models/shared/propertyaccountinglineitemraw.go
 /pkg/models/shared/accountingitem.go
 /pkg/models/shared/propertyaccountingitemraw.go
 /pkg/models/shared/accountingpayment.go
@@ -368,9 +368,6 @@ pkg/utils/utils.go
 /pkg/models/shared/propertyconnectioncategories.go
 /pkg/models/shared/propertyconnectionauth.go
 /pkg/models/shared/propertypropertyconnectionauthmeta.go
-/pkg/models/shared/webhook.go
-/pkg/models/shared/propertywebhookmeta.go
-/pkg/models/shared/propertywebhookevents.go
 /pkg/models/shared/apicall.go
 /pkg/models/shared/integration.go
 /pkg/models/shared/integrationsupport.go
@@ -378,6 +375,9 @@ pkg/utils/utils.go
 /pkg/models/shared/propertyintegrationsupportoutboundfields.go
 /pkg/models/shared/propertyintegrationsupportinboundfields.go
 /pkg/models/shared/propertyintegrationcategories.go
+/pkg/models/shared/webhook.go
+/pkg/models/shared/propertywebhookmeta.go
+/pkg/models/shared/propertywebhookevents.go
 /pkg/models/shared/security.go
 docs/pkg/models/operations/createaccountingaccountrequest.md
 docs/pkg/models/operations/createaccountingaccountresponse.md
@@ -738,9 +738,6 @@ docs/pkg/models/operations/updateticketingticketresponse.md
 docs/pkg/models/operations/listuccallsrequest.md
 docs/pkg/models/operations/listuccallsresponse.md
 docs/pkg/models/operations/createunifiedconnectionresponse.md
-docs/pkg/models/operations/events.md
-docs/pkg/models/operations/createunifiedwebhookrequest.md
-docs/pkg/models/operations/createunifiedwebhookresponse.md
 docs/pkg/models/operations/getunifiedapicallrequest.md
 docs/pkg/models/operations/getunifiedapicallresponse.md
 docs/pkg/models/operations/getunifiedconnectionrequest.md
@@ -791,6 +788,7 @@ docs/pkg/models/shared/propertyaccountingcustomerbillingaddress.md
 docs/pkg/models/shared/accountinginvoice.md
 docs/pkg/models/shared/propertyaccountinginvoiceraw.md
 docs/pkg/models/shared/accountinglineitem.md
+docs/pkg/models/shared/propertyaccountinglineitemraw.md
 docs/pkg/models/shared/accountingitem.md
 docs/pkg/models/shared/propertyaccountingitemraw.md
 docs/pkg/models/shared/accountingpayment.md
@@ -920,12 +918,6 @@ docs/pkg/models/shared/propertyconnectionpermissions.md
 docs/pkg/models/shared/propertyconnectioncategories.md
 docs/pkg/models/shared/propertyconnectionauth.md
 docs/pkg/models/shared/propertypropertyconnectionauthmeta.md
-docs/pkg/models/shared/event.md
-docs/pkg/models/shared/objecttype.md
-docs/pkg/models/shared/webhookwebhooktype.md
-docs/pkg/models/shared/webhook.md
-docs/pkg/models/shared/propertywebhookmeta.md
-docs/pkg/models/shared/propertywebhookevents.md
 docs/pkg/models/shared/apicalltype.md
 docs/pkg/models/shared/apicall.md
 docs/pkg/models/shared/integration.md
@@ -935,6 +927,12 @@ docs/pkg/models/shared/propertyintegrationsupportwebhookevents.md
 docs/pkg/models/shared/propertyintegrationsupportoutboundfields.md
 docs/pkg/models/shared/propertyintegrationsupportinboundfields.md
 docs/pkg/models/shared/propertyintegrationcategories.md
+docs/pkg/models/shared/event.md
+docs/pkg/models/shared/objecttype.md
+docs/pkg/models/shared/webhookwebhooktype.md
+docs/pkg/models/shared/webhook.md
+docs/pkg/models/shared/propertywebhookmeta.md
+docs/pkg/models/shared/propertywebhookevents.md
 docs/pkg/models/shared/security.md
 docs/sdks/unifiedto/README.md
 docs/sdks/accounting/README.md

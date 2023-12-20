@@ -531,7 +531,6 @@ func main() {
 ### [Unified](docs/sdks/unified/README.md)
 
 * [CreateUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
-* [CreateUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
 * [GetUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [GetUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [GetUnifiedIntegration](docs/sdks/unified/README.md#getunifiedintegration) - Retrieve an integration
@@ -579,7 +578,6 @@ func main() {
 
 ### [Webhook](docs/sdks/webhook/README.md)
 
-* [CreateUnifiedWebhook](docs/sdks/webhook/README.md#createunifiedwebhook) - Create webhook subscription
 * [GetUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [ListUnifiedWebhooks](docs/sdks/webhook/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [RemoveUnifiedWebhook](docs/sdks/webhook/README.md#removeunifiedwebhook) - Remove webhook subscription

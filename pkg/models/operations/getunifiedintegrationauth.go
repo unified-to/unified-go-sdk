@@ -218,7 +218,7 @@ type GetUnifiedIntegrationAuthRequest struct {
 	// Extra state to send back to your success URL
 	State     *string `queryParam:"style=form,explode=true,name=state"`
 	Subdomain *string `queryParam:"style=form,explode=true,name=subdomain"`
-	// The URL where you want the user to be redirect to after a successful authentication.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
+	// The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
 	SuccessRedirect *string `queryParam:"style=form,explode=true,name=success_redirect"`
 	// The ID of the workspace
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`

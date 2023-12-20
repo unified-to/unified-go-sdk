@@ -86,7 +86,7 @@ func (s *Auth) GetUnifiedIntegrationAuth(ctx context.Context, request operations
 }
 
 // GetUnifiedIntegrationLogin - Sign in a user
-// Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and emails are returned.
+// Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
 func (s *Auth) GetUnifiedIntegrationLogin(ctx context.Context, request operations.GetUnifiedIntegrationLoginRequest) (*operations.GetUnifiedIntegrationLoginResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/login/{workspace_id}/{integration_type}", request, nil)

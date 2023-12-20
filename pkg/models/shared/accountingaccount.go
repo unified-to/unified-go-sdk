@@ -87,7 +87,6 @@ func (e *Type) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// AccountingAccount - A user's bank account
 type AccountingAccount struct {
 	Balance             *float64                      `json:"balance,omitempty"`
 	BankAccountNumber   *string                       `json:"bank_account_number,omitempty"`

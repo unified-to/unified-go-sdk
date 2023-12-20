@@ -15,7 +15,7 @@ type GetUnifiedIntegrationLoginRequest struct {
 	Redirect        *bool  `queryParam:"style=form,explode=true,name=redirect"`
 	// Extra state to send back to your success URL
 	State *string `queryParam:"style=form,explode=true,name=state"`
-	// The URL where you want the user to be redirect to after a successful authentication.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
+	// The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
 	SuccessRedirect *string `queryParam:"style=form,explode=true,name=success_redirect"`
 	// The ID of the workspace
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`

@@ -37,6 +37,7 @@ func main() {
         AccountingInvoice: &shared.AccountingInvoice{
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
+                    Raw: &shared.PropertyAccountingLineitemRaw{},
                     TotalAmount: 6736.06,
                 },
             },
@@ -205,6 +206,7 @@ func main() {
         AccountingInvoice: &shared.AccountingInvoice{
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
+                    Raw: &shared.PropertyAccountingLineitemRaw{},
                     TotalAmount: 7374.1,
                 },
             },
@@ -318,6 +320,7 @@ func main() {
         AccountingInvoice: &shared.AccountingInvoice{
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
+                    Raw: &shared.PropertyAccountingLineitemRaw{},
                     TotalAmount: 6974.28,
                 },
             },

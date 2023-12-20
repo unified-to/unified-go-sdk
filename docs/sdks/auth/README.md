@@ -63,7 +63,7 @@ func main() {
 
 ## GetUnifiedIntegrationLogin
 
-Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and emails are returned.
+Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
 
 ### Example Usage
 
