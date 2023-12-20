@@ -113,18 +113,13 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{
         Webhook: &shared.Webhook{
+            ConnectionID: "string",
             Event: shared.EventCreated,
-            Events: []shared.PropertyWebhookEvents{
-                shared.PropertyWebhookEventsUpdated,
-            },
             HookURL: "string",
-            Interval: 4583.16,
+            Interval: 188.12,
             Meta: &shared.PropertyWebhookMeta{},
-            ObjectType: shared.ObjectTypeCrmLead,
+            ObjectType: shared.ObjectTypeCrmCompany,
             Runs: []string{
-                "string",
-            },
-            Subscriptions: []string{
                 "string",
             },
         },

@@ -191,28 +191,24 @@ func (e *WebhookWebhookType) UnmarshalJSON(data []byte) error {
 
 // Webhook - A webhook is used to POST new/updated information to your server.
 type Webhook struct {
-	CheckedAt       *time.Time              `json:"checked_at,omitempty"`
-	ConnectionID    *string                 `json:"connection_id,omitempty"`
-	CreatedAt       *time.Time              `json:"created_at,omitempty"`
-	Environment     *string                 `default:"Production" json:"environment"`
-	Event           Event                   `json:"event"`
-	Events          []PropertyWebhookEvents `json:"events,omitempty"`
-	Fields          *string                 `json:"fields,omitempty"`
-	HookURL         string                  `json:"hook_url"`
-	ID              *string                 `json:"id,omitempty"`
-	IncludeRaw      *bool                   `json:"include_raw,omitempty"`
-	IntegrationType *string                 `json:"integration_type,omitempty"`
-	Interval        float64                 `json:"interval"`
-	IsHealthy       *bool                   `json:"is_healthy,omitempty"`
-	Meta            *PropertyWebhookMeta    `json:"meta,omitempty"`
-	ObjectType      ObjectType              `json:"object_type"`
+	CheckedAt       *time.Time           `json:"checked_at,omitempty"`
+	ConnectionID    string               `json:"connection_id"`
+	CreatedAt       *time.Time           `json:"created_at,omitempty"`
+	Environment     *string              `default:"Production" json:"environment"`
+	Event           Event                `json:"event"`
+	Fields          *string              `json:"fields,omitempty"`
+	HookURL         string               `json:"hook_url"`
+	ID              *string              `json:"id,omitempty"`
+	IntegrationType *string              `json:"integration_type,omitempty"`
+	Interval        float64              `json:"interval"`
+	IsHealthy       *bool                `json:"is_healthy,omitempty"`
+	Meta            *PropertyWebhookMeta `json:"meta,omitempty"`
+	ObjectType      ObjectType           `json:"object_type"`
 	// An array of the most revent virtual webhook runs
-	Runs []string `json:"runs,omitempty"`
-	// integration-specific subscriptions IDs
-	Subscriptions []string            `json:"subscriptions,omitempty"`
-	UpdatedAt     *time.Time          `json:"updated_at,omitempty"`
-	WebhookType   *WebhookWebhookType `json:"webhook_type,omitempty"`
-	WorkspaceID   *string             `json:"workspace_id,omitempty"`
+	Runs        []string            `json:"runs,omitempty"`
+	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
+	WebhookType *WebhookWebhookType `json:"webhook_type,omitempty"`
+	WorkspaceID *string             `json:"workspace_id,omitempty"`
 }
 
 func (w Webhook) MarshalJSON() ([]byte, error) {
@@ -233,9 +229,9 @@ func (o *Webhook) GetCheckedAt() *time.Time {
 	return o.CheckedAt
 }
 
-func (o *Webhook) GetConnectionID() *string {
+func (o *Webhook) GetConnectionID() string {
 	if o == nil {
-		return nil
+		return ""
 	}
 	return o.ConnectionID
 }
@@ -261,13 +257,6 @@ func (o *Webhook) GetEvent() Event {
 	return o.Event
 }
 
-func (o *Webhook) GetEvents() []PropertyWebhookEvents {
-	if o == nil {
-		return nil
-	}
-	return o.Events
-}
-
 func (o *Webhook) GetFields() *string {
 	if o == nil {
 		return nil
@@ -287,13 +276,6 @@ func (o *Webhook) GetID() *string {
 		return nil
 	}
 	return o.ID
-}
-
-func (o *Webhook) GetIncludeRaw() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.IncludeRaw
 }
 
 func (o *Webhook) GetIntegrationType() *string {
@@ -336,13 +318,6 @@ func (o *Webhook) GetRuns() []string {
 		return nil
 	}
 	return o.Runs
-}
-
-func (o *Webhook) GetSubscriptions() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Subscriptions
 }
 
 func (o *Webhook) GetUpdatedAt() *time.Time {
