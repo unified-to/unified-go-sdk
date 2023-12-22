@@ -15,3 +15,4 @@
 | `PropertyIntegrationCategoriesTicketing`   | ticketing                                  |
 | `PropertyIntegrationCategoriesUc`          | uc                                         |
 | `PropertyIntegrationCategoriesAccounting`  | accounting                                 |
+| `PropertyIntegrationCategoriesStorage`     | storage                                    |

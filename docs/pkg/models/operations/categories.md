@@ -15,3 +15,4 @@
 | `CategoriesTicketing`   | ticketing               |
 | `CategoriesUc`          | uc                      |
 | `CategoriesAccounting`  | accounting              |
+| `CategoriesStorage`     | storage                 |

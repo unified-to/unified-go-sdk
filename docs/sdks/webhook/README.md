@@ -38,7 +38,7 @@ func main() {
             HookURL: "string",
             Interval: 188.12,
             Meta: &shared.PropertyWebhookMeta{},
-            ObjectType: shared.ObjectTypeCrmCompany,
+            ObjectType: shared.ObjectTypeCrmContact,
             Runs: []string{
                 "string",
             },

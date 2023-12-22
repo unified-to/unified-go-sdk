@@ -15,3 +15,4 @@
 | `PropertyConnectionCategoriesTicketing`   | ticketing                                 |
 | `PropertyConnectionCategoriesUc`          | uc                                        |
 | `PropertyConnectionCategoriesAccounting`  | accounting                                |
+| `PropertyConnectionCategoriesStorage`     | storage                                   |

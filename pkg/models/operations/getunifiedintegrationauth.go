@@ -68,6 +68,8 @@ const (
 	ScopesHrisGroupRead              Scopes = "hris_group_read"
 	ScopesHrisGroupWrite             Scopes = "hris_group_write"
 	ScopesUcCallRead                 Scopes = "uc_call_read"
+	ScopesStorageFileRead            Scopes = "storage_file_read"
+	ScopesStorageFileWrite           Scopes = "storage_file_write"
 	ScopesWebhook                    Scopes = "webhook"
 )
 
@@ -194,6 +196,10 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "hris_group_write":
 		fallthrough
 	case "uc_call_read":
+		fallthrough
+	case "storage_file_read":
+		fallthrough
+	case "storage_file_write":
 		fallthrough
 	case "webhook":
 		*e = Scopes(v)

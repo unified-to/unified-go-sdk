@@ -100,6 +100,7 @@ type UnifiedTo struct {
 	List              *List
 	Member            *Member
 	Passthrough       *Passthrough
+	Storage           *Storage
 	Ticketing         *Ticketing
 	Note              *Note
 	Ticket            *Ticket
@@ -180,9 +181,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.9.14",
-			GenVersion:        "2.221.0",
-			UserAgent:         "speakeasy-sdk/go 0.9.14 2.221.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.9.15",
+			GenVersion:        "2.223.0",
+			UserAgent:         "speakeasy-sdk/go 0.9.15 2.223.0 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -268,6 +269,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Member = newMember(sdk.sdkConfiguration)
 
 	sdk.Passthrough = newPassthrough(sdk.sdkConfiguration)
+
+	sdk.Storage = newStorage(sdk.sdkConfiguration)
 
 	sdk.Ticketing = newTicketing(sdk.sdkConfiguration)
 

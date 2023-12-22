@@ -62,4 +62,6 @@
 | `PropertyConnectionPermissionsHrisGroupRead`              | hris_group_read                                           |
 | `PropertyConnectionPermissionsHrisGroupWrite`             | hris_group_write                                          |
 | `PropertyConnectionPermissionsUcCallRead`                 | uc_call_read                                              |
+| `PropertyConnectionPermissionsStorageFileRead`            | storage_file_read                                         |
+| `PropertyConnectionPermissionsStorageFileWrite`           | storage_file_write                                        |
 | `PropertyConnectionPermissionsWebhook`                    | webhook                                                   |

@@ -43,14 +43,14 @@ func main() {
             },
         },
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesAccounting,
+            shared.PropertyConnectionCategoriesStorage,
         },
         CursorsCache: []shared.Undefined{
             shared.Undefined{},
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsJobRead,
+            shared.PropertyConnectionPermissionsAtsJobWrite,
         },
     })
     if err != nil {
@@ -217,14 +217,14 @@ func main() {
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesMartech,
+                shared.PropertyConnectionCategoriesTicketing,
             },
             CursorsCache: []shared.Undefined{
                 shared.Undefined{},
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmPipelineRead,
+                shared.PropertyConnectionPermissionsMartechListRead,
             },
         },
         ID: "<ID>",
@@ -341,14 +341,14 @@ func main() {
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesTicketing,
+                shared.PropertyConnectionCategoriesUc,
             },
             CursorsCache: []shared.Undefined{
                 shared.Undefined{},
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmCompanyWrite,
+                shared.PropertyConnectionPermissionsCrmContactRead,
             },
         },
         ID: "<ID>",

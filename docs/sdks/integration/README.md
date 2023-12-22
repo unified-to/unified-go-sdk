@@ -85,7 +85,7 @@ func main() {
     res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
         Scopes: []operations.Scopes{
-            operations.ScopesHrisEmployeeRead,
+            operations.ScopesHrisGroupRead,
         },
         WorkspaceID: "string",
     })
@@ -139,7 +139,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Integration.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
         Categories: []operations.QueryParamCategories{
-            operations.QueryParamCategoriesTicketing,
+            operations.QueryParamCategoriesUc,
         },
         WorkspaceID: "string",
     })

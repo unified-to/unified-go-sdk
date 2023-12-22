@@ -15,3 +15,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesTicketing`   | ticketing                                                |
 | `ListUnifiedIntegrationsQueryParamCategoriesUc`          | uc                                                       |
 | `ListUnifiedIntegrationsQueryParamCategoriesAccounting`  | accounting                                               |
+| `ListUnifiedIntegrationsQueryParamCategoriesStorage`     | storage                                                  |

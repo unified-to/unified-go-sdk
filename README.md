@@ -368,11 +368,17 @@ func main() {
 ### [File](docs/sdks/file/README.md)
 
 * [CreateCrmFile](docs/sdks/file/README.md#createcrmfile) - Create a file
+* [CreateStorageFile](docs/sdks/file/README.md#createstoragefile) - Create a file
 * [GetCrmFile](docs/sdks/file/README.md#getcrmfile) - Retrieve a file
+* [GetStorageFile](docs/sdks/file/README.md#getstoragefile) - Retrieve a file
 * [ListCrmFiles](docs/sdks/file/README.md#listcrmfiles) - List all files
+* [ListStorageFiles](docs/sdks/file/README.md#liststoragefiles) - List all files
 * [PatchCrmFile](docs/sdks/file/README.md#patchcrmfile) - Update a file
+* [PatchStorageFile](docs/sdks/file/README.md#patchstoragefile) - Update a file
 * [RemoveCrmFile](docs/sdks/file/README.md#removecrmfile) - Remove a file
+* [RemoveStorageFile](docs/sdks/file/README.md#removestoragefile) - Remove a file
 * [UpdateCrmFile](docs/sdks/file/README.md#updatecrmfile) - Update a file
+* [UpdateStorageFile](docs/sdks/file/README.md#updatestoragefile) - Update a file
 
 ### [Lead](docs/sdks/lead/README.md)
 
@@ -474,6 +480,15 @@ func main() {
 * [PatchPassthrough](docs/sdks/passthrough/README.md#patchpassthrough) - Passthrough PUT
 * [RemovePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
 * [UpdatePassthrough](docs/sdks/passthrough/README.md#updatepassthrough) - Passthrough PUT
+
+### [Storage](docs/sdks/storage/README.md)
+
+* [CreateStorageFile](docs/sdks/storage/README.md#createstoragefile) - Create a file
+* [GetStorageFile](docs/sdks/storage/README.md#getstoragefile) - Retrieve a file
+* [ListStorageFiles](docs/sdks/storage/README.md#liststoragefiles) - List all files
+* [PatchStorageFile](docs/sdks/storage/README.md#patchstoragefile) - Update a file
+* [RemoveStorageFile](docs/sdks/storage/README.md#removestoragefile) - Remove a file
+* [UpdateStorageFile](docs/sdks/storage/README.md#updatestoragefile) - Update a file
 
 ### [Ticketing](docs/sdks/ticketing/README.md)
 

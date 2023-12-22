@@ -51,6 +51,7 @@ type IntegrationSupport struct {
 	ListLimit           *bool                                     `json:"list_limit,omitempty"`
 	ListOffset          *bool                                     `json:"list_offset,omitempty"`
 	ListOrder           *bool                                     `json:"list_order,omitempty"`
+	ListParentID        *bool                                     `json:"list_parent_id,omitempty"`
 	ListQuery           *bool                                     `json:"list_query,omitempty"`
 	ListSortByCreatedAt *bool                                     `json:"list_sort_by_created_at,omitempty"`
 	ListSortByName      *bool                                     `json:"list_sort_by_name,omitempty"`
@@ -156,6 +157,13 @@ func (o *IntegrationSupport) GetListOrder() *bool {
 		return nil
 	}
 	return o.ListOrder
+}
+
+func (o *IntegrationSupport) GetListParentID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListParentID
 }
 
 func (o *IntegrationSupport) GetListQuery() *bool {

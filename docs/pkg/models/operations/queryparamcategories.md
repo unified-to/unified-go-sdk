@@ -15,3 +15,4 @@
 | `QueryParamCategoriesTicketing`   | ticketing                         |
 | `QueryParamCategoriesUc`          | uc                                |
 | `QueryParamCategoriesAccounting`  | accounting                        |
+| `QueryParamCategoriesStorage`     | storage                           |

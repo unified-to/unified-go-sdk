@@ -73,6 +73,7 @@ const (
 	ObjectTypeUcCall                 ObjectType = "uc_call"
 	ObjectTypeEnrichPerson           ObjectType = "enrich_person"
 	ObjectTypeEnrichCompany          ObjectType = "enrich_company"
+	ObjectTypeStorageFile            ObjectType = "storage_file"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -152,6 +153,8 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "enrich_person":
 		fallthrough
 	case "enrich_company":
+		fallthrough
+	case "storage_file":
 		*e = ObjectType(v)
 		return nil
 	default:

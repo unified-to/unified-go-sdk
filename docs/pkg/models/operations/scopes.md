@@ -62,4 +62,6 @@
 | `ScopesHrisGroupRead`              | hris_group_read                    |
 | `ScopesHrisGroupWrite`             | hris_group_write                   |
 | `ScopesUcCallRead`                 | uc_call_read                       |
+| `ScopesStorageFileRead`            | storage_file_read                  |
+| `ScopesStorageFileWrite`           | storage_file_write                 |
 | `ScopesWebhook`                    | webhook                            |

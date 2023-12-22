@@ -53,14 +53,14 @@ func main() {
             },
         },
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesAccounting,
+            shared.PropertyConnectionCategoriesStorage,
         },
         CursorsCache: []shared.Undefined{
             shared.Undefined{},
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsJobRead,
+            shared.PropertyConnectionPermissionsAtsJobWrite,
         },
     })
     if err != nil {
@@ -118,7 +118,7 @@ func main() {
             HookURL: "string",
             Interval: 188.12,
             Meta: &shared.PropertyWebhookMeta{},
-            ObjectType: shared.ObjectTypeCrmCompany,
+            ObjectType: shared.ObjectTypeCrmContact,
             Runs: []string{
                 "string",
             },
@@ -328,7 +328,7 @@ func main() {
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
         Scopes: []operations.Scopes{
-            operations.ScopesHrisEmployeeRead,
+            operations.ScopesHrisGroupRead,
         },
         WorkspaceID: "string",
     })
@@ -535,7 +535,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
         Categories: []operations.QueryParamCategories{
-            operations.QueryParamCategoriesTicketing,
+            operations.QueryParamCategoriesUc,
         },
         WorkspaceID: "string",
     })
@@ -701,14 +701,14 @@ func main() {
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesMartech,
+                shared.PropertyConnectionCategoriesTicketing,
             },
             CursorsCache: []shared.Undefined{
                 shared.Undefined{},
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmPipelineRead,
+                shared.PropertyConnectionPermissionsMartechListRead,
             },
         },
         ID: "<ID>",
@@ -877,14 +877,14 @@ func main() {
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesTicketing,
+                shared.PropertyConnectionCategoriesUc,
             },
             CursorsCache: []shared.Undefined{
                 shared.Undefined{},
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmCompanyWrite,
+                shared.PropertyConnectionPermissionsCrmContactRead,
             },
         },
         ID: "<ID>",
