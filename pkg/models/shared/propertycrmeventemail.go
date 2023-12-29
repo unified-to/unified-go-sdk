@@ -15,7 +15,7 @@ type PropertyCrmEventEmail struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	From      *string    `json:"from,omitempty"`
 	Subject   *string    `json:"subject,omitempty"`
-	// The event email's to name & email (name <test@test.com>)
+	// The event email's "to" name & email (name <test@test.com>)
 	To []string `json:"to,omitempty"`
 }
 

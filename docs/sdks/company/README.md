@@ -43,6 +43,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
+            LinkUrls: []string{
+                "string",
+            },
             Raw: &shared.PropertyCrmCompanyRaw{},
             Tags: []string{
                 "string",
@@ -275,6 +278,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
+            LinkUrls: []string{
+                "string",
+            },
             Raw: &shared.PropertyCrmCompanyRaw{},
             Tags: []string{
                 "string",
@@ -400,6 +406,9 @@ func main() {
             },
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
+            },
+            LinkUrls: []string{
+                "string",
             },
             Raw: &shared.PropertyCrmCompanyRaw{},
             Tags: []string{

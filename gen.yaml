@@ -1,20 +1,20 @@
 configVersion: 1.0.0
 management:
-  docChecksum: e3b0fa817f6bbf89903e69969ea4a236
+  docChecksum: a9825a86d81034301b0f56cc9b76ba30
   docVersion: "1.0"
-  speakeasyVersion: 1.128.1
-  generationVersion: 2.223.0
+  speakeasyVersion: 1.129.1
+  generationVersion: 2.223.3
 generation:
   comments: {}
   sdkClassName: Unified-to
-  repoURL: https://github.com/unified-to/unified-typescript-sdk.git
+  repoURL: https://github.com/unified-to/unified-go-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
-  useClassNamesForArrayFields: true
+  baseServerURL: ""
   fixes:
     nameResolutionDec2023: false
-  baseServerURL: ""
   flattenGlobalSecurity: true
+  useClassNamesForArrayFields: true
 features:
   go:
     constsAndDefaults: 0.1.2
@@ -22,7 +22,7 @@ features:
     globalSecurity: 2.82.3
     globalServerURLs: 2.82.1
 go:
-  version: 0.9.15
+  version: 0.9.16
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:

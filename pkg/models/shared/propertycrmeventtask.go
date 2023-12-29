@@ -3,16 +3,51 @@
 package shared
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
+type PropertyCrmEventTaskStatus string
+
+const (
+	PropertyCrmEventTaskStatusCompleted      PropertyCrmEventTaskStatus = "COMPLETED"
+	PropertyCrmEventTaskStatusNotStarted     PropertyCrmEventTaskStatus = "NOT_STARTED"
+	PropertyCrmEventTaskStatusWorkInProgress PropertyCrmEventTaskStatus = "WORK_IN_PROGRESS"
+	PropertyCrmEventTaskStatusDeferred       PropertyCrmEventTaskStatus = "DEFERRED"
+)
+
+func (e PropertyCrmEventTaskStatus) ToPointer() *PropertyCrmEventTaskStatus {
+	return &e
+}
+
+func (e *PropertyCrmEventTaskStatus) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "COMPLETED":
+		fallthrough
+	case "NOT_STARTED":
+		fallthrough
+	case "WORK_IN_PROGRESS":
+		fallthrough
+	case "DEFERRED":
+		*e = PropertyCrmEventTaskStatus(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PropertyCrmEventTaskStatus: %v", v)
+	}
+}
+
 // PropertyCrmEventTask - The task object, when type = task
 type PropertyCrmEventTask struct {
-	Description *string    `json:"description,omitempty"`
-	DueAt       *time.Time `json:"due_at,omitempty"`
-	Name        *string    `json:"name,omitempty"`
-	Status      *string    `json:"status,omitempty"`
+	Description *string                     `json:"description,omitempty"`
+	DueAt       *time.Time                  `json:"due_at,omitempty"`
+	Name        *string                     `json:"name,omitempty"`
+	Status      *PropertyCrmEventTaskStatus `json:"status,omitempty"`
 }
 
 func (p PropertyCrmEventTask) MarshalJSON() ([]byte, error) {
@@ -47,7 +82,7 @@ func (o *PropertyCrmEventTask) GetName() *string {
 	return o.Name
 }
 
-func (o *PropertyCrmEventTask) GetStatus() *string {
+func (o *PropertyCrmEventTask) GetStatus() *PropertyCrmEventTaskStatus {
 	if o == nil {
 		return nil
 	}

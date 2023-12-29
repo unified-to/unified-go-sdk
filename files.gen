@@ -877,6 +877,7 @@ docs/pkg/models/shared/crmdeal.md
 docs/pkg/models/shared/propertycrmdealraw.md
 docs/pkg/models/shared/crmeventtype.md
 docs/pkg/models/shared/crmevent.md
+docs/pkg/models/shared/propertycrmeventtaskstatus.md
 docs/pkg/models/shared/propertycrmeventtask.md
 docs/pkg/models/shared/propertycrmeventraw.md
 docs/pkg/models/shared/propertycrmeventnote.md

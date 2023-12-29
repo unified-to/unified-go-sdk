@@ -12,15 +12,20 @@ type CrmCompany struct {
 	Address   *PropertyCrmCompanyAddress `json:"address,omitempty"`
 	CreatedAt *time.Time                 `json:"created_at,omitempty"`
 	// An array of deal IDs associated with this contact
-	DealIds  []string   `json:"deal_ids,omitempty"`
-	Emails   []CrmEmail `json:"emails,omitempty"`
-	ID       *string    `json:"id,omitempty"`
-	IsActive *bool      `json:"is_active,omitempty"`
-	Name     *string    `json:"name,omitempty"`
+	DealIds     []string   `json:"deal_ids,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	Emails      []CrmEmail `json:"emails,omitempty"`
+	Employees   *float64   `json:"employees,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	Industry    *string    `json:"industry,omitempty"`
+	IsActive    *bool      `json:"is_active,omitempty"`
+	LinkUrls    []string   `json:"link_urls,omitempty"`
+	Name        *string    `json:"name,omitempty"`
 	// The raw data returned by the integration for this company
 	Raw        *PropertyCrmCompanyRaw `json:"raw,omitempty"`
 	Tags       []string               `json:"tags,omitempty"`
 	Telephones []CrmTelephone         `json:"telephones,omitempty"`
+	Timezone   *string                `json:"timezone,omitempty"`
 	UpdatedAt  *time.Time             `json:"updated_at,omitempty"`
 	Websites   []string               `json:"websites,omitempty"`
 }
@@ -57,11 +62,25 @@ func (o *CrmCompany) GetDealIds() []string {
 	return o.DealIds
 }
 
+func (o *CrmCompany) GetDescription() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Description
+}
+
 func (o *CrmCompany) GetEmails() []CrmEmail {
 	if o == nil {
 		return nil
 	}
 	return o.Emails
+}
+
+func (o *CrmCompany) GetEmployees() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.Employees
 }
 
 func (o *CrmCompany) GetID() *string {
@@ -71,11 +90,25 @@ func (o *CrmCompany) GetID() *string {
 	return o.ID
 }
 
+func (o *CrmCompany) GetIndustry() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Industry
+}
+
 func (o *CrmCompany) GetIsActive() *bool {
 	if o == nil {
 		return nil
 	}
 	return o.IsActive
+}
+
+func (o *CrmCompany) GetLinkUrls() []string {
+	if o == nil {
+		return nil
+	}
+	return o.LinkUrls
 }
 
 func (o *CrmCompany) GetName() *string {
@@ -104,6 +137,13 @@ func (o *CrmCompany) GetTelephones() []CrmTelephone {
 		return nil
 	}
 	return o.Telephones
+}
+
+func (o *CrmCompany) GetTimezone() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Timezone
 }
 
 func (o *CrmCompany) GetUpdatedAt() *time.Time {
