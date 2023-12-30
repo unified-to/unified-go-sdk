@@ -11,7 +11,7 @@ type AccountingInvoice struct {
 	BalanceAmount  *float64                      `json:"balance_amount,omitempty"`
 	CancelledAt    *time.Time                    `json:"cancelled_at,omitempty"`
 	CreatedAt      *time.Time                    `json:"created_at,omitempty"`
-	Currency       *string                       `default:"USD" json:"currency"`
+	Currency       *string                       `json:"currency,omitempty"`
 	CustomerID     *string                       `json:"customer_id,omitempty"`
 	DiscountAmount *float64                      `json:"discount_amount,omitempty"`
 	DueAt          *time.Time                    `json:"due_at,omitempty"`
