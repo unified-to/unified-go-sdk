@@ -9,7 +9,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.9.18
+  version: 0.9.19
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:

@@ -74,7 +74,9 @@ type ListUnifiedIntegrationsRequest struct {
 	Order      *string                                       `queryParam:"style=form,explode=true,name=order"`
 	Sort       *string                                       `queryParam:"style=form,explode=true,name=sort"`
 	Summary    *bool                                         `queryParam:"style=form,explode=true,name=summary"`
-	UpdatedGte *string                                       `queryParam:"style=form,explode=true,name=updated_gte"`
+	// Filter the results for only this integration type
+	Type       *string `queryParam:"style=form,explode=true,name=type"`
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListUnifiedIntegrationsRequest) GetActive() *bool {
@@ -131,6 +133,13 @@ func (o *ListUnifiedIntegrationsRequest) GetSummary() *bool {
 		return nil
 	}
 	return o.Summary
+}
+
+func (o *ListUnifiedIntegrationsRequest) GetType() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Type
 }
 
 func (o *ListUnifiedIntegrationsRequest) GetUpdatedGte() *string {

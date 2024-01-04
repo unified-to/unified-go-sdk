@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: e3411ce3831f158718f8cc0477e33856
+  docChecksum: 56cbb60774d35fb7bb0337c12bcc7948
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.225.0
-  releaseVersion: 0.9.18
-  configChecksum: 5ab2fde524f1a53a1b7497c04575440d
+  generationVersion: 2.225.2
+  releaseVersion: 0.9.19
+  configChecksum: d3fc6685a217e1ce9ec4f7ae170686f9
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -274,7 +274,6 @@ generatedFiles:
   - /pkg/models/operations/createunifiedwebhook.go
   - /pkg/models/operations/getunifiedapicall.go
   - /pkg/models/operations/getunifiedconnection.go
-  - /pkg/models/operations/getunifiedintegration.go
   - /pkg/models/operations/getunifiedintegrationauth.go
   - /pkg/models/operations/getunifiedwebhook.go
   - /pkg/models/operations/listunifiedapicalls.go
@@ -787,8 +786,6 @@ generatedFiles:
   - docs/pkg/models/operations/getunifiedapicallresponse.md
   - docs/pkg/models/operations/getunifiedconnectionrequest.md
   - docs/pkg/models/operations/getunifiedconnectionresponse.md
-  - docs/pkg/models/operations/getunifiedintegrationrequest.md
-  - docs/pkg/models/operations/getunifiedintegrationresponse.md
   - docs/pkg/models/operations/scopes.md
   - docs/pkg/models/operations/getunifiedintegrationauthrequest.md
   - docs/pkg/models/operations/getunifiedintegrationauthresponse.md

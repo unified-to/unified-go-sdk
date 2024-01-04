@@ -3,61 +3,9 @@
 
 ### Available Operations
 
-* [GetUnifiedIntegration](#getunifiedintegration) - Retrieve an integration
 * [GetUnifiedIntegrationAuth](#getunifiedintegrationauth) - Create connection indirectly
 * [ListUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [ListUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
-
-## GetUnifiedIntegration
-
-Retrieve an integration
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Integration.GetUnifiedIntegration(ctx, operations.GetUnifiedIntegrationRequest{
-        IntegrationType: "string",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.Integration != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetUnifiedIntegrationRequest](../../pkg/models/operations/getunifiedintegrationrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-
-### Response
-
-**[*operations.GetUnifiedIntegrationResponse](../../pkg/models/operations/getunifiedintegrationresponse.md), error**
-| Error Object       | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GetUnifiedIntegrationAuth
 
