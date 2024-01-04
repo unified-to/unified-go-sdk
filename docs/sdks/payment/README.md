@@ -35,9 +35,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Payment.CreateAccountingPayment(ctx, operations.CreateAccountingPaymentRequest{
         AccountingPayment: &shared.AccountingPayment{
-            InvoiceIds: []string{
-                "string",
-            },
             Raw: &shared.PropertyAccountingPaymentRaw{},
         },
         ConnectionID: "string",
@@ -201,9 +198,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Payment.PatchAccountingPayment(ctx, operations.PatchAccountingPaymentRequest{
         AccountingPayment: &shared.AccountingPayment{
-            InvoiceIds: []string{
-                "string",
-            },
             Raw: &shared.PropertyAccountingPaymentRaw{},
         },
         ConnectionID: "string",
@@ -312,9 +306,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Payment.UpdateAccountingPayment(ctx, operations.UpdateAccountingPaymentRequest{
         AccountingPayment: &shared.AccountingPayment{
-            InvoiceIds: []string{
-                "string",
-            },
             Raw: &shared.PropertyAccountingPaymentRaw{},
         },
         ConnectionID: "string",

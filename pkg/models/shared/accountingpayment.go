@@ -12,7 +12,7 @@ type AccountingPayment struct {
 	Currency      *string                       `default:"USD" json:"currency"`
 	CustomerID    *string                       `json:"customer_id,omitempty"`
 	ID            *string                       `json:"id,omitempty"`
-	InvoiceIds    []string                      `json:"invoice_ids,omitempty"`
+	InvoiceID     *string                       `json:"invoice_id,omitempty"`
 	Notes         *string                       `json:"notes,omitempty"`
 	PaymentMethod *string                       `json:"payment_method,omitempty"`
 	Raw           *PropertyAccountingPaymentRaw `json:"raw,omitempty"`
@@ -60,11 +60,11 @@ func (o *AccountingPayment) GetID() *string {
 	return o.ID
 }
 
-func (o *AccountingPayment) GetInvoiceIds() []string {
+func (o *AccountingPayment) GetInvoiceID() *string {
 	if o == nil {
 		return nil
 	}
-	return o.InvoiceIds
+	return o.InvoiceID
 }
 
 func (o *AccountingPayment) GetNotes() *string {
