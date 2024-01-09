@@ -8,6 +8,7 @@ import (
 )
 
 type AccountingPayment struct {
+	AccountID     *string                       `json:"account_id,omitempty"`
 	CreatedAt     *time.Time                    `json:"created_at,omitempty"`
 	Currency      *string                       `default:"USD" json:"currency"`
 	CustomerID    *string                       `json:"customer_id,omitempty"`
@@ -30,6 +31,13 @@ func (a *AccountingPayment) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (o *AccountingPayment) GetAccountID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.AccountID
 }
 
 func (o *AccountingPayment) GetCreatedAt() *time.Time {
