@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 01195f78bbf8ee1be66b14db611dedcf
+  docChecksum: 950b786dbc2a674691ac70d56758142c
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.230.1
-  releaseVersion: 0.9.20
-  configChecksum: 9ca09d11661d3bd6c2ab00f6cf1b44e8
+  generationVersion: 2.230.3
+  releaseVersion: 0.9.21
+  configChecksum: 37f07fd8a76130953d7581713fef9dac
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -282,9 +282,11 @@ generatedFiles:
   - /pkg/models/operations/listunifiedintegrations.go
   - /pkg/models/operations/listunifiedwebhooks.go
   - /pkg/models/operations/patchunifiedconnection.go
+  - /pkg/models/operations/patchunifiedwebhooktrigger.go
   - /pkg/models/operations/removeunifiedconnection.go
   - /pkg/models/operations/removeunifiedwebhook.go
   - /pkg/models/operations/updateunifiedconnection.go
+  - /pkg/models/operations/updateunifiedwebhooktrigger.go
   - /pkg/models/operations/getunifiedintegrationlogin.go
   - /pkg/models/shared/accountingaccount.go
   - /pkg/models/shared/propertyaccountingaccountraw.go
@@ -806,12 +808,16 @@ generatedFiles:
   - docs/pkg/models/operations/listunifiedwebhooksresponse.md
   - docs/pkg/models/operations/patchunifiedconnectionrequest.md
   - docs/pkg/models/operations/patchunifiedconnectionresponse.md
+  - docs/pkg/models/operations/patchunifiedwebhooktriggerrequest.md
+  - docs/pkg/models/operations/patchunifiedwebhooktriggerresponse.md
   - docs/pkg/models/operations/removeunifiedconnectionrequest.md
   - docs/pkg/models/operations/removeunifiedconnectionresponse.md
   - docs/pkg/models/operations/removeunifiedwebhookrequest.md
   - docs/pkg/models/operations/removeunifiedwebhookresponse.md
   - docs/pkg/models/operations/updateunifiedconnectionrequest.md
   - docs/pkg/models/operations/updateunifiedconnectionresponse.md
+  - docs/pkg/models/operations/updateunifiedwebhooktriggerrequest.md
+  - docs/pkg/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/pkg/models/operations/getunifiedintegrationloginrequest.md
   - docs/pkg/models/operations/getunifiedintegrationloginresponse.md
   - docs/pkg/models/shared/status.md
