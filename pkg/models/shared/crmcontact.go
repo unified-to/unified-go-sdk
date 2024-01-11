@@ -26,6 +26,7 @@ type CrmContact struct {
 	Telephones []CrmTelephone `json:"telephones,omitempty"`
 	Title      *string        `json:"title,omitempty"`
 	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
+	UserID     *string        `json:"user_id,omitempty"`
 }
 
 func (c CrmContact) MarshalJSON() ([]byte, error) {
@@ -121,4 +122,11 @@ func (o *CrmContact) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *CrmContact) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }

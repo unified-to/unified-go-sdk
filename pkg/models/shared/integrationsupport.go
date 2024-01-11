@@ -39,7 +39,6 @@ func (e *WebhookType) UnmarshalJSON(data []byte) error {
 
 type IntegrationSupport struct {
 	InboundFields       *PropertyIntegrationSupportInboundFields  `json:"inbound_fields,omitempty"`
-	ListAgentID         *bool                                     `json:"list_agent_id,omitempty"`
 	ListApplicationID   *bool                                     `json:"list_application_id,omitempty"`
 	ListCandidateID     *bool                                     `json:"list_candidate_id,omitempty"`
 	ListCompanyID       *bool                                     `json:"list_company_id,omitempty"`
@@ -57,6 +56,7 @@ type IntegrationSupport struct {
 	ListSortByName      *bool                                     `json:"list_sort_by_name,omitempty"`
 	ListSortByUpdatedAt *bool                                     `json:"list_sort_by_updated_at,omitempty"`
 	ListUpdatedGte      *bool                                     `json:"list_updated_gte,omitempty"`
+	ListUserID          *bool                                     `json:"list_user_id,omitempty"`
 	Methods             map[string]bool                           `json:"methods,omitempty"`
 	OutboundFields      *PropertyIntegrationSupportOutboundFields `json:"outbound_fields,omitempty"`
 	SearchDomain        *bool                                     `json:"search_domain,omitempty"`
@@ -73,13 +73,6 @@ func (o *IntegrationSupport) GetInboundFields() *PropertyIntegrationSupportInbou
 		return nil
 	}
 	return o.InboundFields
-}
-
-func (o *IntegrationSupport) GetListAgentID() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.ListAgentID
 }
 
 func (o *IntegrationSupport) GetListApplicationID() *bool {
@@ -199,6 +192,13 @@ func (o *IntegrationSupport) GetListUpdatedGte() *bool {
 		return nil
 	}
 	return o.ListUpdatedGte
+}
+
+func (o *IntegrationSupport) GetListUserID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListUserID
 }
 
 func (o *IntegrationSupport) GetMethods() map[string]bool {

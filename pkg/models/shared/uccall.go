@@ -8,7 +8,6 @@ import (
 )
 
 type UcCall struct {
-	AgencyID  string     `json:"agency_id"`
 	ContactID *string    `json:"contact_id,omitempty"`
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	EndAt     *time.Time `json:"end_at,omitempty"`
@@ -19,6 +18,7 @@ type UcCall struct {
 	// The telephone number called
 	Telephone *PropertyUcCallTelephone `json:"telephone,omitempty"`
 	UpdatedAt *time.Time               `json:"updated_at,omitempty"`
+	UserID    *string                  `json:"user_id,omitempty"`
 }
 
 func (u UcCall) MarshalJSON() ([]byte, error) {
@@ -30,13 +30,6 @@ func (u *UcCall) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (o *UcCall) GetAgencyID() string {
-	if o == nil {
-		return ""
-	}
-	return o.AgencyID
 }
 
 func (o *UcCall) GetContactID() *string {
@@ -93,4 +86,11 @@ func (o *UcCall) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *UcCall) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }

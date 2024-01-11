@@ -26,6 +26,8 @@ type ListCrmCompaniesRequest struct {
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	// The user/owner ID to filter results
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListCrmCompaniesRequest) MarshalJSON() ([]byte, error) {
@@ -107,6 +109,13 @@ func (o *ListCrmCompaniesRequest) GetUpdatedGte() *time.Time {
 		return nil
 	}
 	return o.UpdatedGte
+}
+
+func (o *ListCrmCompaniesRequest) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }
 
 type ListCrmCompaniesResponse struct {

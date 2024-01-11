@@ -10,7 +10,6 @@ import (
 )
 
 type ListUcContactsRequest struct {
-	AgentID *string `queryParam:"style=form,explode=true,name=agent_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -23,6 +22,7 @@ type ListUcContactsRequest struct {
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListUcContactsRequest) MarshalJSON() ([]byte, error) {
@@ -34,13 +34,6 @@ func (l *ListUcContactsRequest) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (o *ListUcContactsRequest) GetAgentID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.AgentID
 }
 
 func (o *ListUcContactsRequest) GetConnectionID() string {
@@ -97,6 +90,13 @@ func (o *ListUcContactsRequest) GetUpdatedGte() *time.Time {
 		return nil
 	}
 	return o.UpdatedGte
+}
+
+func (o *ListUcContactsRequest) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }
 
 type ListUcContactsResponse struct {

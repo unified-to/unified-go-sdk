@@ -10,8 +10,6 @@ import (
 )
 
 type ListTicketingTicketsRequest struct {
-	// The agent ID to filter results
-	AgentID *string `queryParam:"style=form,explode=true,name=agent_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The customer ID to filter results
@@ -26,6 +24,8 @@ type ListTicketingTicketsRequest struct {
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	// The user/agent ID to filter results
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListTicketingTicketsRequest) MarshalJSON() ([]byte, error) {
@@ -37,13 +37,6 @@ func (l *ListTicketingTicketsRequest) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (o *ListTicketingTicketsRequest) GetAgentID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.AgentID
 }
 
 func (o *ListTicketingTicketsRequest) GetConnectionID() string {
@@ -107,6 +100,13 @@ func (o *ListTicketingTicketsRequest) GetUpdatedGte() *time.Time {
 		return nil
 	}
 	return o.UpdatedGte
+}
+
+func (o *ListTicketingTicketsRequest) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }
 
 type ListTicketingTicketsResponse struct {

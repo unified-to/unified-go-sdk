@@ -10,7 +10,6 @@ import (
 )
 
 type ListUcCallsRequest struct {
-	AgentID *string `queryParam:"style=form,explode=true,name=agent_id"`
 	// ID of the connection
 	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
 	ContactID    *string `queryParam:"style=form,explode=true,name=contact_id"`
@@ -24,6 +23,7 @@ type ListUcCallsRequest struct {
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListUcCallsRequest) MarshalJSON() ([]byte, error) {
@@ -35,13 +35,6 @@ func (l *ListUcCallsRequest) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (o *ListUcCallsRequest) GetAgentID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.AgentID
 }
 
 func (o *ListUcCallsRequest) GetConnectionID() string {
@@ -105,6 +98,13 @@ func (o *ListUcCallsRequest) GetUpdatedGte() *time.Time {
 		return nil
 	}
 	return o.UpdatedGte
+}
+
+func (o *ListUcCallsRequest) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }
 
 type ListUcCallsResponse struct {

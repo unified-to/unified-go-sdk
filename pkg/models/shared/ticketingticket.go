@@ -51,6 +51,7 @@ type TicketingTicket struct {
 	Subject     *string                     `json:"subject,omitempty"`
 	Tags        []string                    `json:"tags,omitempty"`
 	UpdatedAt   *time.Time                  `json:"updated_at,omitempty"`
+	UserID      *string                     `json:"user_id,omitempty"`
 }
 
 func (t TicketingTicket) MarshalJSON() ([]byte, error) {
@@ -160,4 +161,11 @@ func (o *TicketingTicket) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *TicketingTicket) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }

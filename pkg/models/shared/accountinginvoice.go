@@ -3,9 +3,41 @@
 package shared
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
+
+type AccountingInvoiceStatus string
+
+const (
+	AccountingInvoiceStatusDraft      AccountingInvoiceStatus = "DRAFT"
+	AccountingInvoiceStatusVoided     AccountingInvoiceStatus = "VOIDED"
+	AccountingInvoiceStatusAuthorized AccountingInvoiceStatus = "AUTHORIZED"
+)
+
+func (e AccountingInvoiceStatus) ToPointer() *AccountingInvoiceStatus {
+	return &e
+}
+
+func (e *AccountingInvoiceStatus) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "DRAFT":
+		fallthrough
+	case "VOIDED":
+		fallthrough
+	case "AUTHORIZED":
+		*e = AccountingInvoiceStatus(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for AccountingInvoiceStatus: %v", v)
+	}
+}
 
 type AccountingInvoice struct {
 	BalanceAmount  *float64                      `json:"balance_amount,omitempty"`
@@ -25,6 +57,7 @@ type AccountingInvoice struct {
 	RefundAmount   *float64                      `json:"refund_amount,omitempty"`
 	RefundReason   *string                       `json:"refund_reason,omitempty"`
 	RefundedAt     *time.Time                    `json:"refunded_at,omitempty"`
+	Status         *AccountingInvoiceStatus      `json:"status,omitempty"`
 	TaxAmount      *float64                      `json:"tax_amount,omitempty"`
 	TotalAmount    *float64                      `json:"total_amount,omitempty"`
 	UpdatedAt      *time.Time                    `json:"updated_at,omitempty"`
@@ -158,6 +191,13 @@ func (o *AccountingInvoice) GetRefundedAt() *time.Time {
 		return nil
 	}
 	return o.RefundedAt
+}
+
+func (o *AccountingInvoice) GetStatus() *AccountingInvoiceStatus {
+	if o == nil {
+		return nil
+	}
+	return o.Status
 }
 
 func (o *AccountingInvoice) GetTaxAmount() *float64 {

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 950b786dbc2a674691ac70d56758142c
+  docChecksum: 354896ac4fb0afd646aa3e018c90dfd9
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.230.3
-  releaseVersion: 0.9.21
-  configChecksum: 37f07fd8a76130953d7581713fef9dac
+  releaseVersion: 0.9.22
+  configChecksum: 9c0f3c955939799db7ba46b71de38cc1
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -833,6 +833,7 @@ generatedFiles:
   - docs/pkg/models/shared/accountingemailtype.md
   - docs/pkg/models/shared/accountingemail.md
   - docs/pkg/models/shared/propertyaccountingcustomerbillingaddress.md
+  - docs/pkg/models/shared/accountinginvoicestatus.md
   - docs/pkg/models/shared/accountinginvoice.md
   - docs/pkg/models/shared/propertyaccountinginvoiceraw.md
   - docs/pkg/models/shared/accountinglineitem.md

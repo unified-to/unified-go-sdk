@@ -24,6 +24,7 @@ type CrmDeal struct {
 	Stage     *string             `json:"stage,omitempty"`
 	Tags      []string            `json:"tags,omitempty"`
 	UpdatedAt *time.Time          `json:"updated_at,omitempty"`
+	UserID    *string             `json:"user_id,omitempty"`
 	WonReason *string             `json:"won_reason,omitempty"`
 }
 
@@ -134,6 +135,13 @@ func (o *CrmDeal) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *CrmDeal) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }
 
 func (o *CrmDeal) GetWonReason() *string {

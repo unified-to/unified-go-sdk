@@ -27,6 +27,7 @@ type CrmCompany struct {
 	Telephones []CrmTelephone         `json:"telephones,omitempty"`
 	Timezone   *string                `json:"timezone,omitempty"`
 	UpdatedAt  *time.Time             `json:"updated_at,omitempty"`
+	UserID     *string                `json:"user_id,omitempty"`
 	Websites   []string               `json:"websites,omitempty"`
 }
 
@@ -151,6 +152,13 @@ func (o *CrmCompany) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *CrmCompany) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }
 
 func (o *CrmCompany) GetWebsites() []string {

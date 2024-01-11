@@ -70,6 +70,7 @@ type CrmEvent struct {
 	Task      *PropertyCrmEventTask `json:"task,omitempty"`
 	Type      *CrmEventType         `json:"type,omitempty"`
 	UpdatedAt *time.Time            `json:"updated_at,omitempty"`
+	UserID    *string               `json:"user_id,omitempty"`
 }
 
 func (c CrmEvent) MarshalJSON() ([]byte, error) {
@@ -179,4 +180,11 @@ func (o *CrmEvent) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *CrmEvent) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }
