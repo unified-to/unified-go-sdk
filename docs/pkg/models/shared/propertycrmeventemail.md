@@ -7,6 +7,7 @@ The email object, when type = email
 
 | Field                                                      | Type                                                       | Required                                                   | Description                                                |
 | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
+| `AttachmentFileIds`                                        | []*string*                                                 | :heavy_minus_sign:                                         | N/A                                                        |
 | `Body`                                                     | **string*                                                  | :heavy_minus_sign:                                         | N/A                                                        |
 | `Cc`                                                       | []*string*                                                 | :heavy_minus_sign:                                         | The event email's cc name & email (name <test@test.com>)   |
 | `CreatedAt`                                                | [*time.Time](https://pkg.go.dev/time#Time)                 | :heavy_minus_sign:                                         | N/A                                                        |

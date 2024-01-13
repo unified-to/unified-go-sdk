@@ -8,20 +8,20 @@ import (
 )
 
 type CrmFile struct {
-	ActivityID  *string             `json:"activity_id,omitempty"`
 	CompanyID   *string             `json:"company_id,omitempty"`
 	ContactID   *string             `json:"contact_id,omitempty"`
 	CreatedAt   *time.Time          `json:"created_at,omitempty"`
 	DealID      *string             `json:"deal_id,omitempty"`
 	Description *string             `json:"description,omitempty"`
-	FileName    *string             `json:"file_name,omitempty"`
-	FileSize    *float64            `json:"file_size,omitempty"`
-	FileType    *string             `json:"file_type,omitempty"`
-	FileURL     *string             `json:"file_url,omitempty"`
+	DownloadURL *string             `json:"download_url,omitempty"`
+	EventID     *string             `json:"event_id,omitempty"`
 	ID          *string             `json:"id,omitempty"`
 	IsActive    *bool               `json:"is_active,omitempty"`
 	LeadID      *string             `json:"lead_id,omitempty"`
+	MimeType    *string             `json:"mime_type,omitempty"`
+	Name        *string             `json:"name,omitempty"`
 	Raw         *PropertyCrmFileRaw `json:"raw,omitempty"`
+	Size        *float64            `json:"size,omitempty"`
 	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
 	UserID      *string             `json:"user_id,omitempty"`
 }
@@ -35,13 +35,6 @@ func (c *CrmFile) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (o *CrmFile) GetActivityID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.ActivityID
 }
 
 func (o *CrmFile) GetCompanyID() *string {
@@ -79,32 +72,18 @@ func (o *CrmFile) GetDescription() *string {
 	return o.Description
 }
 
-func (o *CrmFile) GetFileName() *string {
+func (o *CrmFile) GetDownloadURL() *string {
 	if o == nil {
 		return nil
 	}
-	return o.FileName
+	return o.DownloadURL
 }
 
-func (o *CrmFile) GetFileSize() *float64 {
+func (o *CrmFile) GetEventID() *string {
 	if o == nil {
 		return nil
 	}
-	return o.FileSize
-}
-
-func (o *CrmFile) GetFileType() *string {
-	if o == nil {
-		return nil
-	}
-	return o.FileType
-}
-
-func (o *CrmFile) GetFileURL() *string {
-	if o == nil {
-		return nil
-	}
-	return o.FileURL
+	return o.EventID
 }
 
 func (o *CrmFile) GetID() *string {
@@ -128,11 +107,32 @@ func (o *CrmFile) GetLeadID() *string {
 	return o.LeadID
 }
 
+func (o *CrmFile) GetMimeType() *string {
+	if o == nil {
+		return nil
+	}
+	return o.MimeType
+}
+
+func (o *CrmFile) GetName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Name
+}
+
 func (o *CrmFile) GetRaw() *PropertyCrmFileRaw {
 	if o == nil {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *CrmFile) GetSize() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.Size
 }
 
 func (o *CrmFile) GetUpdatedAt() *time.Time {

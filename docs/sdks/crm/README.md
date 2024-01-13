@@ -283,6 +283,9 @@ func main() {
                 "string",
             },
             Email: &shared.PropertyCrmEventEmail{
+                AttachmentFileIds: []string{
+                    "string",
+                },
                 Cc: []string{
                     "string",
                 },
@@ -1499,6 +1502,9 @@ func main() {
                 "string",
             },
             Email: &shared.PropertyCrmEventEmail{
+                AttachmentFileIds: []string{
+                    "string",
+                },
                 Cc: []string{
                     "string",
                 },
@@ -2327,6 +2333,9 @@ func main() {
                 "string",
             },
             Email: &shared.PropertyCrmEventEmail{
+                AttachmentFileIds: []string{
+                    "string",
+                },
                 Cc: []string{
                     "string",
                 },

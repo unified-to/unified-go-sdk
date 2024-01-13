@@ -9,7 +9,8 @@ import (
 
 // PropertyCrmEventEmail - The email object, when type = email
 type PropertyCrmEventEmail struct {
-	Body *string `json:"body,omitempty"`
+	AttachmentFileIds []string `json:"attachment_file_ids,omitempty"`
+	Body              *string  `json:"body,omitempty"`
 	// The event email's cc name & email (name <test@test.com>)
 	Cc        []string   `json:"cc,omitempty"`
 	CreatedAt *time.Time `json:"created_at,omitempty"`
@@ -28,6 +29,13 @@ func (p *PropertyCrmEventEmail) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (o *PropertyCrmEventEmail) GetAttachmentFileIds() []string {
+	if o == nil {
+		return nil
+	}
+	return o.AttachmentFileIds
 }
 
 func (o *PropertyCrmEventEmail) GetBody() *string {
