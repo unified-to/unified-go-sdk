@@ -2,33 +2,16 @@
 
 package shared
 
-import (
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
-	"time"
-)
-
 // PropertyCrmEventEmail - The email object, when type = email
 type PropertyCrmEventEmail struct {
 	AttachmentFileIds []string `json:"attachment_file_ids,omitempty"`
 	Body              *string  `json:"body,omitempty"`
 	// The event email's cc name & email (name <test@test.com>)
-	Cc        []string   `json:"cc,omitempty"`
-	CreatedAt *time.Time `json:"created_at,omitempty"`
-	From      *string    `json:"from,omitempty"`
-	Subject   *string    `json:"subject,omitempty"`
+	Cc      []string `json:"cc,omitempty"`
+	From    *string  `json:"from,omitempty"`
+	Subject *string  `json:"subject,omitempty"`
 	// The event email's "to" name & email (name <test@test.com>)
 	To []string `json:"to,omitempty"`
-}
-
-func (p PropertyCrmEventEmail) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(p, "", false)
-}
-
-func (p *PropertyCrmEventEmail) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
-		return err
-	}
-	return nil
 }
 
 func (o *PropertyCrmEventEmail) GetAttachmentFileIds() []string {
@@ -50,13 +33,6 @@ func (o *PropertyCrmEventEmail) GetCc() []string {
 		return nil
 	}
 	return o.Cc
-}
-
-func (o *PropertyCrmEventEmail) GetCreatedAt() *time.Time {
-	if o == nil {
-		return nil
-	}
-	return o.CreatedAt
 }
 
 func (o *PropertyCrmEventEmail) GetFrom() *string {

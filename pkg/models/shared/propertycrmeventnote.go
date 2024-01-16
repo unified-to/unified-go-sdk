@@ -2,33 +2,9 @@
 
 package shared
 
-import (
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
-	"time"
-)
-
 // PropertyCrmEventNote - The note object, when type = note
 type PropertyCrmEventNote struct {
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Description *string    `json:"description,omitempty"`
-}
-
-func (p PropertyCrmEventNote) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(p, "", false)
-}
-
-func (p *PropertyCrmEventNote) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
-		return err
-	}
-	return nil
-}
-
-func (o *PropertyCrmEventNote) GetCreatedAt() *time.Time {
-	if o == nil {
-		return nil
-	}
-	return o.CreatedAt
+	Description *string `json:"description,omitempty"`
 }
 
 func (o *PropertyCrmEventNote) GetDescription() *string {
