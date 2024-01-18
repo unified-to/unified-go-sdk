@@ -49,8 +49,6 @@ const (
 	ScopesCrmEventWrite              Scopes = "crm_event_write"
 	ScopesCrmLeadRead                Scopes = "crm_lead_read"
 	ScopesCrmLeadWrite               Scopes = "crm_lead_write"
-	ScopesCrmFileRead                Scopes = "crm_file_read"
-	ScopesCrmFileWrite               Scopes = "crm_file_write"
 	ScopesCrmPipelineRead            Scopes = "crm_pipeline_read"
 	ScopesCrmPipelineWrite           Scopes = "crm_pipeline_write"
 	ScopesMartechListRead            Scopes = "martech_list_read"
@@ -158,10 +156,6 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "crm_lead_read":
 		fallthrough
 	case "crm_lead_write":
-		fallthrough
-	case "crm_file_read":
-		fallthrough
-	case "crm_file_write":
 		fallthrough
 	case "crm_pipeline_read":
 		fallthrough

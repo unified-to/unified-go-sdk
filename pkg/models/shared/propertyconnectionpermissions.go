@@ -48,8 +48,6 @@ const (
 	PropertyConnectionPermissionsCrmEventWrite              PropertyConnectionPermissions = "crm_event_write"
 	PropertyConnectionPermissionsCrmLeadRead                PropertyConnectionPermissions = "crm_lead_read"
 	PropertyConnectionPermissionsCrmLeadWrite               PropertyConnectionPermissions = "crm_lead_write"
-	PropertyConnectionPermissionsCrmFileRead                PropertyConnectionPermissions = "crm_file_read"
-	PropertyConnectionPermissionsCrmFileWrite               PropertyConnectionPermissions = "crm_file_write"
 	PropertyConnectionPermissionsCrmPipelineRead            PropertyConnectionPermissions = "crm_pipeline_read"
 	PropertyConnectionPermissionsCrmPipelineWrite           PropertyConnectionPermissions = "crm_pipeline_write"
 	PropertyConnectionPermissionsMartechListRead            PropertyConnectionPermissions = "martech_list_read"
@@ -157,10 +155,6 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "crm_lead_read":
 		fallthrough
 	case "crm_lead_write":
-		fallthrough
-	case "crm_file_read":
-		fallthrough
-	case "crm_file_write":
 		fallthrough
 	case "crm_pipeline_read":
 		fallthrough

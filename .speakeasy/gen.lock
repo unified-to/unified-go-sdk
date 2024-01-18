@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: fcf38ba1245f7399c1338dc1ef8df2e7
+  docChecksum: ede9055e4403162b0dc1469530be3da9
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.234.3
-  releaseVersion: 0.9.24
-  configChecksum: 3b11461bd6abf1d99b2f2a727838aa3d
+  generationVersion: 2.235.3
+  releaseVersion: 0.9.25
+  configChecksum: ae86718cfc5fb67c26493c1ab4e979ce
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -40,7 +40,6 @@ generatedFiles:
   - contact.go
   - deal.go
   - event.go
-  - file.go
   - lead.go
   - pipeline.go
   - enrich.go
@@ -53,6 +52,7 @@ generatedFiles:
   - member.go
   - passthrough.go
   - storage.go
+  - file.go
   - ticketing.go
   - note.go
   - ticket.go
@@ -176,42 +176,36 @@ generatedFiles:
   - /pkg/models/operations/createcrmcontact.go
   - /pkg/models/operations/createcrmdeal.go
   - /pkg/models/operations/createcrmevent.go
-  - /pkg/models/operations/createcrmfile.go
   - /pkg/models/operations/createcrmlead.go
   - /pkg/models/operations/createcrmpipeline.go
   - /pkg/models/operations/getcrmcompany.go
   - /pkg/models/operations/getcrmcontact.go
   - /pkg/models/operations/getcrmdeal.go
   - /pkg/models/operations/getcrmevent.go
-  - /pkg/models/operations/getcrmfile.go
   - /pkg/models/operations/getcrmlead.go
   - /pkg/models/operations/getcrmpipeline.go
   - /pkg/models/operations/listcrmcompanies.go
   - /pkg/models/operations/listcrmcontacts.go
   - /pkg/models/operations/listcrmdeals.go
   - /pkg/models/operations/listcrmevents.go
-  - /pkg/models/operations/listcrmfiles.go
   - /pkg/models/operations/listcrmleads.go
   - /pkg/models/operations/listcrmpipelines.go
   - /pkg/models/operations/patchcrmcompany.go
   - /pkg/models/operations/patchcrmcontact.go
   - /pkg/models/operations/patchcrmdeal.go
   - /pkg/models/operations/patchcrmevent.go
-  - /pkg/models/operations/patchcrmfile.go
   - /pkg/models/operations/patchcrmlead.go
   - /pkg/models/operations/patchcrmpipeline.go
   - /pkg/models/operations/removecrmcompany.go
   - /pkg/models/operations/removecrmcontact.go
   - /pkg/models/operations/removecrmdeal.go
   - /pkg/models/operations/removecrmevent.go
-  - /pkg/models/operations/removecrmfile.go
   - /pkg/models/operations/removecrmlead.go
   - /pkg/models/operations/removecrmpipeline.go
   - /pkg/models/operations/updatecrmcompany.go
   - /pkg/models/operations/updatecrmcontact.go
   - /pkg/models/operations/updatecrmdeal.go
   - /pkg/models/operations/updatecrmevent.go
-  - /pkg/models/operations/updatecrmfile.go
   - /pkg/models/operations/updatecrmlead.go
   - /pkg/models/operations/updatecrmpipeline.go
   - /pkg/models/operations/listenrichcompanies.go
@@ -221,12 +215,6 @@ generatedFiles:
   - /pkg/models/operations/patchuccontact.go
   - /pkg/models/operations/removeuccontact.go
   - /pkg/models/operations/updateuccontact.go
-  - /pkg/models/operations/createstoragefile.go
-  - /pkg/models/operations/getstoragefile.go
-  - /pkg/models/operations/liststoragefiles.go
-  - /pkg/models/operations/patchstoragefile.go
-  - /pkg/models/operations/removestoragefile.go
-  - /pkg/models/operations/updatestoragefile.go
   - /pkg/models/operations/listenrichpeople.go
   - /pkg/models/operations/createhrisemployee.go
   - /pkg/models/operations/createhrisgroup.go
@@ -257,6 +245,12 @@ generatedFiles:
   - /pkg/models/operations/patchpassthrough.go
   - /pkg/models/operations/removepassthrough.go
   - /pkg/models/operations/updatepassthrough.go
+  - /pkg/models/operations/createstoragefile.go
+  - /pkg/models/operations/getstoragefile.go
+  - /pkg/models/operations/liststoragefiles.go
+  - /pkg/models/operations/patchstoragefile.go
+  - /pkg/models/operations/removestoragefile.go
+  - /pkg/models/operations/updatestoragefile.go
   - /pkg/models/operations/createticketingnote.go
   - /pkg/models/operations/createticketingticket.go
   - /pkg/models/operations/getticketingnote.go
@@ -352,8 +346,6 @@ generatedFiles:
   - /pkg/models/shared/propertycrmeventmeeting.go
   - /pkg/models/shared/propertycrmeventemail.go
   - /pkg/models/shared/propertycrmeventcall.go
-  - /pkg/models/shared/crmfile.go
-  - /pkg/models/shared/propertycrmfileraw.go
   - /pkg/models/shared/crmlead.go
   - /pkg/models/shared/propertycrmleadraw.go
   - /pkg/models/shared/propertycrmleadaddress.go
@@ -367,10 +359,6 @@ generatedFiles:
   - /pkg/models/shared/uctelephone.go
   - /pkg/models/shared/propertyuccontactraw.go
   - /pkg/models/shared/ucemail.go
-  - /pkg/models/shared/storagefile.go
-  - /pkg/models/shared/propertystoragefileraw.go
-  - /pkg/models/shared/storagepermission.go
-  - /pkg/models/shared/propertystoragepermissionroles.go
   - /pkg/models/shared/enrichperson.go
   - /pkg/models/shared/enrichpersonworkhistory.go
   - /pkg/models/shared/propertyenrichpersonraw.go
@@ -389,6 +377,10 @@ generatedFiles:
   - /pkg/models/shared/propertymarketingmemberraw.go
   - /pkg/models/shared/marketingemail.go
   - /pkg/models/shared/undefined.go
+  - /pkg/models/shared/storagefile.go
+  - /pkg/models/shared/propertystoragefileraw.go
+  - /pkg/models/shared/storagepermission.go
+  - /pkg/models/shared/propertystoragepermissionroles.go
   - /pkg/models/shared/ticketingnote.go
   - /pkg/models/shared/propertyticketingnoteraw.go
   - /pkg/models/shared/ticketingticket.go
@@ -593,8 +585,6 @@ generatedFiles:
   - docs/pkg/models/operations/createcrmdealresponse.md
   - docs/pkg/models/operations/createcrmeventrequest.md
   - docs/pkg/models/operations/createcrmeventresponse.md
-  - docs/pkg/models/operations/createcrmfilerequest.md
-  - docs/pkg/models/operations/createcrmfileresponse.md
   - docs/pkg/models/operations/createcrmleadrequest.md
   - docs/pkg/models/operations/createcrmleadresponse.md
   - docs/pkg/models/operations/createcrmpipelinerequest.md
@@ -607,8 +597,6 @@ generatedFiles:
   - docs/pkg/models/operations/getcrmdealresponse.md
   - docs/pkg/models/operations/getcrmeventrequest.md
   - docs/pkg/models/operations/getcrmeventresponse.md
-  - docs/pkg/models/operations/getcrmfilerequest.md
-  - docs/pkg/models/operations/getcrmfileresponse.md
   - docs/pkg/models/operations/getcrmleadrequest.md
   - docs/pkg/models/operations/getcrmleadresponse.md
   - docs/pkg/models/operations/getcrmpipelinerequest.md
@@ -621,8 +609,6 @@ generatedFiles:
   - docs/pkg/models/operations/listcrmdealsresponse.md
   - docs/pkg/models/operations/listcrmeventsrequest.md
   - docs/pkg/models/operations/listcrmeventsresponse.md
-  - docs/pkg/models/operations/listcrmfilesrequest.md
-  - docs/pkg/models/operations/listcrmfilesresponse.md
   - docs/pkg/models/operations/listcrmleadsrequest.md
   - docs/pkg/models/operations/listcrmleadsresponse.md
   - docs/pkg/models/operations/listcrmpipelinesrequest.md
@@ -635,8 +621,6 @@ generatedFiles:
   - docs/pkg/models/operations/patchcrmdealresponse.md
   - docs/pkg/models/operations/patchcrmeventrequest.md
   - docs/pkg/models/operations/patchcrmeventresponse.md
-  - docs/pkg/models/operations/patchcrmfilerequest.md
-  - docs/pkg/models/operations/patchcrmfileresponse.md
   - docs/pkg/models/operations/patchcrmleadrequest.md
   - docs/pkg/models/operations/patchcrmleadresponse.md
   - docs/pkg/models/operations/patchcrmpipelinerequest.md
@@ -649,8 +633,6 @@ generatedFiles:
   - docs/pkg/models/operations/removecrmdealresponse.md
   - docs/pkg/models/operations/removecrmeventrequest.md
   - docs/pkg/models/operations/removecrmeventresponse.md
-  - docs/pkg/models/operations/removecrmfilerequest.md
-  - docs/pkg/models/operations/removecrmfileresponse.md
   - docs/pkg/models/operations/removecrmleadrequest.md
   - docs/pkg/models/operations/removecrmleadresponse.md
   - docs/pkg/models/operations/removecrmpipelinerequest.md
@@ -663,8 +645,6 @@ generatedFiles:
   - docs/pkg/models/operations/updatecrmdealresponse.md
   - docs/pkg/models/operations/updatecrmeventrequest.md
   - docs/pkg/models/operations/updatecrmeventresponse.md
-  - docs/pkg/models/operations/updatecrmfilerequest.md
-  - docs/pkg/models/operations/updatecrmfileresponse.md
   - docs/pkg/models/operations/updatecrmleadrequest.md
   - docs/pkg/models/operations/updatecrmleadresponse.md
   - docs/pkg/models/operations/updatecrmpipelinerequest.md
@@ -683,18 +663,6 @@ generatedFiles:
   - docs/pkg/models/operations/removeuccontactresponse.md
   - docs/pkg/models/operations/updateuccontactrequest.md
   - docs/pkg/models/operations/updateuccontactresponse.md
-  - docs/pkg/models/operations/createstoragefilerequest.md
-  - docs/pkg/models/operations/createstoragefileresponse.md
-  - docs/pkg/models/operations/getstoragefilerequest.md
-  - docs/pkg/models/operations/getstoragefileresponse.md
-  - docs/pkg/models/operations/liststoragefilesrequest.md
-  - docs/pkg/models/operations/liststoragefilesresponse.md
-  - docs/pkg/models/operations/patchstoragefilerequest.md
-  - docs/pkg/models/operations/patchstoragefileresponse.md
-  - docs/pkg/models/operations/removestoragefilerequest.md
-  - docs/pkg/models/operations/removestoragefileresponse.md
-  - docs/pkg/models/operations/updatestoragefilerequest.md
-  - docs/pkg/models/operations/updatestoragefileresponse.md
   - docs/pkg/models/operations/listenrichpeoplerequest.md
   - docs/pkg/models/operations/listenrichpeopleresponse.md
   - docs/pkg/models/operations/createhrisemployeerequest.md
@@ -755,6 +723,18 @@ generatedFiles:
   - docs/pkg/models/operations/removepassthroughresponse.md
   - docs/pkg/models/operations/updatepassthroughrequest.md
   - docs/pkg/models/operations/updatepassthroughresponse.md
+  - docs/pkg/models/operations/createstoragefilerequest.md
+  - docs/pkg/models/operations/createstoragefileresponse.md
+  - docs/pkg/models/operations/getstoragefilerequest.md
+  - docs/pkg/models/operations/getstoragefileresponse.md
+  - docs/pkg/models/operations/liststoragefilesrequest.md
+  - docs/pkg/models/operations/liststoragefilesresponse.md
+  - docs/pkg/models/operations/patchstoragefilerequest.md
+  - docs/pkg/models/operations/patchstoragefileresponse.md
+  - docs/pkg/models/operations/removestoragefilerequest.md
+  - docs/pkg/models/operations/removestoragefileresponse.md
+  - docs/pkg/models/operations/updatestoragefilerequest.md
+  - docs/pkg/models/operations/updatestoragefileresponse.md
   - docs/pkg/models/operations/createticketingnoterequest.md
   - docs/pkg/models/operations/createticketingnoteresponse.md
   - docs/pkg/models/operations/createticketingticketrequest.md
@@ -908,8 +888,6 @@ generatedFiles:
   - docs/pkg/models/shared/propertycrmeventmeeting.md
   - docs/pkg/models/shared/propertycrmeventemail.md
   - docs/pkg/models/shared/propertycrmeventcall.md
-  - docs/pkg/models/shared/crmfile.md
-  - docs/pkg/models/shared/propertycrmfileraw.md
   - docs/pkg/models/shared/crmlead.md
   - docs/pkg/models/shared/propertycrmleadraw.md
   - docs/pkg/models/shared/propertycrmleadaddress.md
@@ -926,11 +904,6 @@ generatedFiles:
   - docs/pkg/models/shared/propertyuccontactraw.md
   - docs/pkg/models/shared/ucemailtype.md
   - docs/pkg/models/shared/ucemail.md
-  - docs/pkg/models/shared/storagefiletype.md
-  - docs/pkg/models/shared/storagefile.md
-  - docs/pkg/models/shared/propertystoragefileraw.md
-  - docs/pkg/models/shared/storagepermission.md
-  - docs/pkg/models/shared/propertystoragepermissionroles.md
   - docs/pkg/models/shared/gender.md
   - docs/pkg/models/shared/enrichperson.md
   - docs/pkg/models/shared/enrichpersonworkhistory.md
@@ -959,6 +932,11 @@ generatedFiles:
   - docs/pkg/models/shared/marketingemailtype.md
   - docs/pkg/models/shared/marketingemail.md
   - docs/pkg/models/shared/undefined.md
+  - docs/pkg/models/shared/storagefiletype.md
+  - docs/pkg/models/shared/storagefile.md
+  - docs/pkg/models/shared/propertystoragefileraw.md
+  - docs/pkg/models/shared/storagepermission.md
+  - docs/pkg/models/shared/propertystoragepermissionroles.md
   - docs/pkg/models/shared/ticketingnote.md
   - docs/pkg/models/shared/propertyticketingnoteraw.md
   - docs/pkg/models/shared/ticketingticketstatus.md
@@ -1011,7 +989,6 @@ generatedFiles:
   - docs/sdks/contact/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
-  - docs/sdks/file/README.md
   - docs/sdks/lead/README.md
   - docs/sdks/pipeline/README.md
   - docs/sdks/enrich/README.md
@@ -1024,6 +1001,7 @@ generatedFiles:
   - docs/sdks/member/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/storage/README.md
+  - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/note/README.md
   - docs/sdks/ticket/README.md

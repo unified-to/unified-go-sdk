@@ -43,8 +43,6 @@
 | `ScopesCrmEventWrite`              | crm_event_write                    |
 | `ScopesCrmLeadRead`                | crm_lead_read                      |
 | `ScopesCrmLeadWrite`               | crm_lead_write                     |
-| `ScopesCrmFileRead`                | crm_file_read                      |
-| `ScopesCrmFileWrite`               | crm_file_write                     |
 | `ScopesCrmPipelineRead`            | crm_pipeline_read                  |
 | `ScopesCrmPipelineWrite`           | crm_pipeline_write                 |
 | `ScopesMartechListRead`            | martech_list_read                  |

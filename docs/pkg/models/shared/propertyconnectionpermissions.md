@@ -43,8 +43,6 @@
 | `PropertyConnectionPermissionsCrmEventWrite`              | crm_event_write                                           |
 | `PropertyConnectionPermissionsCrmLeadRead`                | crm_lead_read                                             |
 | `PropertyConnectionPermissionsCrmLeadWrite`               | crm_lead_write                                            |
-| `PropertyConnectionPermissionsCrmFileRead`                | crm_file_read                                             |
-| `PropertyConnectionPermissionsCrmFileWrite`               | crm_file_write                                            |
 | `PropertyConnectionPermissionsCrmPipelineRead`            | crm_pipeline_read                                         |
 | `PropertyConnectionPermissionsCrmPipelineWrite`           | crm_pipeline_write                                        |
 | `PropertyConnectionPermissionsMartechListRead`            | martech_list_read                                         |

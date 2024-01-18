@@ -88,7 +88,6 @@ type UnifiedTo struct {
 	Contact           *Contact
 	Deal              *Deal
 	Event             *Event
-	File              *File
 	Lead              *Lead
 	Pipeline          *Pipeline
 	Enrich            *Enrich
@@ -101,6 +100,7 @@ type UnifiedTo struct {
 	Member            *Member
 	Passthrough       *Passthrough
 	Storage           *Storage
+	File              *File
 	Ticketing         *Ticketing
 	Note              *Note
 	Ticket            *Ticket
@@ -181,9 +181,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.9.24",
-			GenVersion:        "2.234.3",
-			UserAgent:         "speakeasy-sdk/go 0.9.24 2.234.3 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.9.25",
+			GenVersion:        "2.235.3",
+			UserAgent:         "speakeasy-sdk/go 0.9.25 2.235.3 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -246,8 +246,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Event = newEvent(sdk.sdkConfiguration)
 
-	sdk.File = newFile(sdk.sdkConfiguration)
-
 	sdk.Lead = newLead(sdk.sdkConfiguration)
 
 	sdk.Pipeline = newPipeline(sdk.sdkConfiguration)
@@ -271,6 +269,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Passthrough = newPassthrough(sdk.sdkConfiguration)
 
 	sdk.Storage = newStorage(sdk.sdkConfiguration)
+
+	sdk.File = newFile(sdk.sdkConfiguration)
 
 	sdk.Ticketing = newTicketing(sdk.sdkConfiguration)
 
