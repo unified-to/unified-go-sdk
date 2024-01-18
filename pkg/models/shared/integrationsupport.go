@@ -39,15 +39,18 @@ func (e *WebhookType) UnmarshalJSON(data []byte) error {
 
 type IntegrationSupport struct {
 	InboundFields       *PropertyIntegrationSupportInboundFields  `json:"inbound_fields,omitempty"`
+	ListAccountID       *bool                                     `json:"list_account_id,omitempty"`
 	ListApplicationID   *bool                                     `json:"list_application_id,omitempty"`
 	ListCandidateID     *bool                                     `json:"list_candidate_id,omitempty"`
 	ListCompanyID       *bool                                     `json:"list_company_id,omitempty"`
 	ListContactID       *bool                                     `json:"list_contact_id,omitempty"`
 	ListCustomerID      *bool                                     `json:"list_customer_id,omitempty"`
 	ListDealID          *bool                                     `json:"list_deal_id,omitempty"`
+	ListInterviewID     *bool                                     `json:"list_interview_id,omitempty"`
 	ListInvoiceID       *bool                                     `json:"list_invoice_id,omitempty"`
 	ListJobID           *bool                                     `json:"list_job_id,omitempty"`
 	ListLimit           *bool                                     `json:"list_limit,omitempty"`
+	ListListID          *bool                                     `json:"list_list_id,omitempty"`
 	ListOffset          *bool                                     `json:"list_offset,omitempty"`
 	ListOrder           *bool                                     `json:"list_order,omitempty"`
 	ListParentID        *bool                                     `json:"list_parent_id,omitempty"`
@@ -73,6 +76,13 @@ func (o *IntegrationSupport) GetInboundFields() *PropertyIntegrationSupportInbou
 		return nil
 	}
 	return o.InboundFields
+}
+
+func (o *IntegrationSupport) GetListAccountID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListAccountID
 }
 
 func (o *IntegrationSupport) GetListApplicationID() *bool {
@@ -117,6 +127,13 @@ func (o *IntegrationSupport) GetListDealID() *bool {
 	return o.ListDealID
 }
 
+func (o *IntegrationSupport) GetListInterviewID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListInterviewID
+}
+
 func (o *IntegrationSupport) GetListInvoiceID() *bool {
 	if o == nil {
 		return nil
@@ -136,6 +153,13 @@ func (o *IntegrationSupport) GetListLimit() *bool {
 		return nil
 	}
 	return o.ListLimit
+}
+
+func (o *IntegrationSupport) GetListListID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListListID
 }
 
 func (o *IntegrationSupport) GetListOffset() *bool {
