@@ -58,6 +58,7 @@ type IntegrationSupport struct {
 	ListSortByCreatedAt *bool                                     `json:"list_sort_by_created_at,omitempty"`
 	ListSortByName      *bool                                     `json:"list_sort_by_name,omitempty"`
 	ListSortByUpdatedAt *bool                                     `json:"list_sort_by_updated_at,omitempty"`
+	ListTicketID        *bool                                     `json:"list_ticket_id,omitempty"`
 	ListUpdatedGte      *bool                                     `json:"list_updated_gte,omitempty"`
 	ListUserID          *bool                                     `json:"list_user_id,omitempty"`
 	Methods             map[string]bool                           `json:"methods,omitempty"`
@@ -209,6 +210,13 @@ func (o *IntegrationSupport) GetListSortByUpdatedAt() *bool {
 		return nil
 	}
 	return o.ListSortByUpdatedAt
+}
+
+func (o *IntegrationSupport) GetListTicketID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListTicketID
 }
 
 func (o *IntegrationSupport) GetListUpdatedGte() *bool {
