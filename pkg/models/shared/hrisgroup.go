@@ -54,7 +54,6 @@ func (e *HrisGroupType) UnmarshalJSON(data []byte) error {
 type HrisGroup struct {
 	CreatedAt   *time.Time            `json:"created_at,omitempty"`
 	Description *string               `json:"description,omitempty"`
-	EmployeeIds []string              `json:"employee_ids,omitempty"`
 	ID          *string               `json:"id,omitempty"`
 	IsActive    *bool                 `json:"is_active,omitempty"`
 	ManagerIds  []string              `json:"manager_ids,omitempty"`
@@ -63,6 +62,7 @@ type HrisGroup struct {
 	Raw         *PropertyHrisGroupRaw `json:"raw,omitempty"`
 	Type        *HrisGroupType        `json:"type,omitempty"`
 	UpdatedAt   *time.Time            `json:"updated_at,omitempty"`
+	UserIds     []string              `json:"user_ids,omitempty"`
 }
 
 func (h HrisGroup) MarshalJSON() ([]byte, error) {
@@ -88,13 +88,6 @@ func (o *HrisGroup) GetDescription() *string {
 		return nil
 	}
 	return o.Description
-}
-
-func (o *HrisGroup) GetEmployeeIds() []string {
-	if o == nil {
-		return nil
-	}
-	return o.EmployeeIds
 }
 
 func (o *HrisGroup) GetID() *string {
@@ -151,4 +144,11 @@ func (o *HrisGroup) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *HrisGroup) GetUserIds() []string {
+	if o == nil {
+		return nil
+	}
+	return o.UserIds
 }

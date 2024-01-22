@@ -35,16 +35,14 @@ func main() {
     ctx := context.Background()
     res, err := s.Transaction.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
         AccountingTransaction: &shared.AccountingTransaction{
-            AccountID: "string",
             ID: "<ID>",
             LineItems: []shared.AccountingTransactionLineitem{
                 shared.AccountingTransactionLineitem{
+                    AccountID: "string",
                     TotalAmount: 4969.62,
                 },
             },
             Raw: &shared.PropertyAccountingTransactionRaw{},
-            TotalAmount: 6267.93,
-            Type: shared.AccountingTransactionTypeSpend,
         },
         ConnectionID: "string",
     })
@@ -207,16 +205,14 @@ func main() {
     ctx := context.Background()
     res, err := s.Transaction.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
         AccountingTransaction: &shared.AccountingTransaction{
-            AccountID: "string",
             ID: "<ID>",
             LineItems: []shared.AccountingTransactionLineitem{
                 shared.AccountingTransactionLineitem{
+                    AccountID: "string",
                     TotalAmount: 5633.69,
                 },
             },
             Raw: &shared.PropertyAccountingTransactionRaw{},
-            TotalAmount: 4558.63,
-            Type: shared.AccountingTransactionTypeSpend,
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -324,16 +320,14 @@ func main() {
     ctx := context.Background()
     res, err := s.Transaction.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
         AccountingTransaction: &shared.AccountingTransaction{
-            AccountID: "string",
             ID: "<ID>",
             LineItems: []shared.AccountingTransactionLineitem{
                 shared.AccountingTransactionLineitem{
+                    AccountID: "string",
                     TotalAmount: 6498.37,
                 },
             },
             Raw: &shared.PropertyAccountingTransactionRaw{},
-            TotalAmount: 5659.17,
-            Type: shared.AccountingTransactionTypeSpend,
         },
         ConnectionID: "string",
         ID: "<ID>",

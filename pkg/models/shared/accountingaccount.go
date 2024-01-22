@@ -89,7 +89,6 @@ func (e *Type) UnmarshalJSON(data []byte) error {
 
 type AccountingAccount struct {
 	Balance             *float64                      `json:"balance,omitempty"`
-	BankAccountNumber   *string                       `json:"bank_account_number,omitempty"`
 	CreatedAt           *time.Time                    `json:"created_at,omitempty"`
 	Currency            *string                       `json:"currency,omitempty"`
 	CustomerDefinedCode *string                       `json:"customer_defined_code,omitempty"`
@@ -118,13 +117,6 @@ func (o *AccountingAccount) GetBalance() *float64 {
 		return nil
 	}
 	return o.Balance
-}
-
-func (o *AccountingAccount) GetBankAccountNumber() *string {
-	if o == nil {
-		return nil
-	}
-	return o.BankAccountNumber
 }
 
 func (o *AccountingAccount) GetCreatedAt() *time.Time {

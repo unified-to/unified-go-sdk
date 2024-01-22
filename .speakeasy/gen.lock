@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 87ac93817bed9842e1b2eb20030d9710
+  docChecksum: 7d5b03724fae01f8b6071020b3d073d9
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.237.2
-  releaseVersion: 0.9.27
-  configChecksum: be6269c5a75f97cf9322e2f377b8082c
+  generationVersion: 2.237.3
+  releaseVersion: 0.9.28
+  configChecksum: e928e8c4eba7054c2f1fd442a770aa08
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -823,7 +823,6 @@ generatedFiles:
   - docs/pkg/models/shared/propertyaccountingpaymentraw.md
   - docs/pkg/models/shared/accountingtaxrate.md
   - docs/pkg/models/shared/propertyaccountingtaxrateraw.md
-  - docs/pkg/models/shared/accountingtransactiontype.md
   - docs/pkg/models/shared/accountingtransaction.md
   - docs/pkg/models/shared/propertyaccountingtransactionraw.md
   - docs/pkg/models/shared/accountingtransactionlineitem.md

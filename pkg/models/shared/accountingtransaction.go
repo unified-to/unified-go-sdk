@@ -2,40 +2,7 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
-type AccountingTransactionType string
-
-const (
-	AccountingTransactionTypeReceive AccountingTransactionType = "RECEIVE"
-	AccountingTransactionTypeSpend   AccountingTransactionType = "SPEND"
-)
-
-func (e AccountingTransactionType) ToPointer() *AccountingTransactionType {
-	return &e
-}
-
-func (e *AccountingTransactionType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "RECEIVE":
-		fallthrough
-	case "SPEND":
-		*e = AccountingTransactionType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountingTransactionType: %v", v)
-	}
-}
-
 type AccountingTransaction struct {
-	AccountID   string                            `json:"account_id"`
 	CreatedAt   *string                           `json:"created_at,omitempty"`
 	Currency    *string                           `json:"currency,omitempty"`
 	Description *string                           `json:"description,omitempty"`
@@ -44,16 +11,8 @@ type AccountingTransaction struct {
 	Raw         *PropertyAccountingTransactionRaw `json:"raw,omitempty"`
 	Reference   *string                           `json:"reference,omitempty"`
 	TaxAmount   *float64                          `json:"tax_amount,omitempty"`
-	TotalAmount float64                           `json:"total_amount"`
-	Type        AccountingTransactionType         `json:"type"`
+	TaxrateID   *string                           `json:"taxrate_id,omitempty"`
 	UpdatedAt   *string                           `json:"updated_at,omitempty"`
-}
-
-func (o *AccountingTransaction) GetAccountID() string {
-	if o == nil {
-		return ""
-	}
-	return o.AccountID
 }
 
 func (o *AccountingTransaction) GetCreatedAt() *string {
@@ -112,18 +71,11 @@ func (o *AccountingTransaction) GetTaxAmount() *float64 {
 	return o.TaxAmount
 }
 
-func (o *AccountingTransaction) GetTotalAmount() float64 {
+func (o *AccountingTransaction) GetTaxrateID() *string {
 	if o == nil {
-		return 0.0
+		return nil
 	}
-	return o.TotalAmount
-}
-
-func (o *AccountingTransaction) GetType() AccountingTransactionType {
-	if o == nil {
-		return AccountingTransactionType("")
-	}
-	return o.Type
+	return o.TaxrateID
 }
 
 func (o *AccountingTransaction) GetUpdatedAt() *string {

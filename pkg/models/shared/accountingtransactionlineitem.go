@@ -3,6 +3,7 @@
 package shared
 
 type AccountingTransactionLineitem struct {
+	AccountID   string   `json:"account_id"`
 	CustomerID  *string  `json:"customer_id,omitempty"`
 	Description *string  `json:"description,omitempty"`
 	ID          *string  `json:"id,omitempty"`
@@ -10,6 +11,13 @@ type AccountingTransactionLineitem struct {
 	PaymentID   *string  `json:"payment_id,omitempty"`
 	TaxAmount   *float64 `json:"tax_amount,omitempty"`
 	TotalAmount float64  `json:"total_amount"`
+}
+
+func (o *AccountingTransactionLineitem) GetAccountID() string {
+	if o == nil {
+		return ""
+	}
+	return o.AccountID
 }
 
 func (o *AccountingTransactionLineitem) GetCustomerID() *string {

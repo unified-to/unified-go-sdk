@@ -5,6 +5,7 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
+| `AccountID`        | *string*           | :heavy_check_mark: | N/A                |
 | `CustomerID`       | **string*          | :heavy_minus_sign: | N/A                |
 | `Description`      | **string*          | :heavy_minus_sign: | N/A                |
 | `ID`               | **string*          | :heavy_minus_sign: | N/A                |

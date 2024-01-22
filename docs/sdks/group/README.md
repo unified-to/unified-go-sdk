@@ -35,13 +35,13 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.CreateHrisGroup(ctx, operations.CreateHrisGroupRequest{
         HrisGroup: &shared.HrisGroup{
-            EmployeeIds: []string{
-                "string",
-            },
             ManagerIds: []string{
                 "string",
             },
             Raw: &shared.PropertyHrisGroupRaw{},
+            UserIds: []string{
+                "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -204,13 +204,13 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.PatchHrisGroup(ctx, operations.PatchHrisGroupRequest{
         HrisGroup: &shared.HrisGroup{
-            EmployeeIds: []string{
-                "string",
-            },
             ManagerIds: []string{
                 "string",
             },
             Raw: &shared.PropertyHrisGroupRaw{},
+            UserIds: []string{
+                "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -318,13 +318,13 @@ func main() {
     ctx := context.Background()
     res, err := s.Group.UpdateHrisGroup(ctx, operations.UpdateHrisGroupRequest{
         HrisGroup: &shared.HrisGroup{
-            EmployeeIds: []string{
-                "string",
-            },
             ManagerIds: []string{
                 "string",
             },
             Raw: &shared.PropertyHrisGroupRaw{},
+            UserIds: []string{
+                "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
