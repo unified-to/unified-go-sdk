@@ -9,7 +9,7 @@ import (
 
 type CrmPipeline struct {
 	CreatedAt       *time.Time              `json:"created_at,omitempty"`
-	DealProbability *bool                   `json:"deal_probability,omitempty"`
+	DealProbability *float64                `json:"deal_probability,omitempty"`
 	DisplayOrder    *float64                `json:"display_order,omitempty"`
 	ID              *string                 `json:"id,omitempty"`
 	IsActive        *bool                   `json:"is_active,omitempty"`
@@ -36,7 +36,7 @@ func (o *CrmPipeline) GetCreatedAt() *time.Time {
 	return o.CreatedAt
 }
 
-func (o *CrmPipeline) GetDealProbability() *bool {
+func (o *CrmPipeline) GetDealProbability() *float64 {
 	if o == nil {
 		return nil
 	}
