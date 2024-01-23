@@ -9,9 +9,9 @@ import (
 
 type AccountingPayment struct {
 	AccountID     *string                       `json:"account_id,omitempty"`
+	ContactID     *string                       `json:"contact_id,omitempty"`
 	CreatedAt     *time.Time                    `json:"created_at,omitempty"`
 	Currency      *string                       `default:"USD" json:"currency"`
-	CustomerID    *string                       `json:"customer_id,omitempty"`
 	ID            *string                       `json:"id,omitempty"`
 	InvoiceID     *string                       `json:"invoice_id,omitempty"`
 	Notes         *string                       `json:"notes,omitempty"`
@@ -40,6 +40,13 @@ func (o *AccountingPayment) GetAccountID() *string {
 	return o.AccountID
 }
 
+func (o *AccountingPayment) GetContactID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ContactID
+}
+
 func (o *AccountingPayment) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
@@ -52,13 +59,6 @@ func (o *AccountingPayment) GetCurrency() *string {
 		return nil
 	}
 	return o.Currency
-}
-
-func (o *AccountingPayment) GetCustomerID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.CustomerID
 }
 
 func (o *AccountingPayment) GetID() *string {

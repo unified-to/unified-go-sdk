@@ -7,29 +7,29 @@ import (
 	"net/http"
 )
 
-type CreateAccountingCustomerRequest struct {
-	AccountingCustomer *shared.AccountingCustomer `request:"mediaType=application/json"`
+type CreateAccountingContactRequest struct {
+	AccountingContact *shared.AccountingContact `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 }
 
-func (o *CreateAccountingCustomerRequest) GetAccountingCustomer() *shared.AccountingCustomer {
+func (o *CreateAccountingContactRequest) GetAccountingContact() *shared.AccountingContact {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingCustomer
+	return o.AccountingContact
 }
 
-func (o *CreateAccountingCustomerRequest) GetConnectionID() string {
+func (o *CreateAccountingContactRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-type CreateAccountingCustomerResponse struct {
+type CreateAccountingContactResponse struct {
 	// Successful
-	AccountingCustomer *shared.AccountingCustomer
+	AccountingContact *shared.AccountingContact
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -38,28 +38,28 @@ type CreateAccountingCustomerResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingCustomerResponse) GetAccountingCustomer() *shared.AccountingCustomer {
+func (o *CreateAccountingContactResponse) GetAccountingContact() *shared.AccountingContact {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingCustomer
+	return o.AccountingContact
 }
 
-func (o *CreateAccountingCustomerResponse) GetContentType() string {
+func (o *CreateAccountingContactResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *CreateAccountingCustomerResponse) GetStatusCode() int {
+func (o *CreateAccountingContactResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *CreateAccountingCustomerResponse) GetRawResponse() *http.Response {
+func (o *CreateAccountingContactResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

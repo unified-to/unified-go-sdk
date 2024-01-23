@@ -12,8 +12,8 @@ import (
 type ListAccountingInvoicesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The customer ID to filter results
-	CustomerID *string `queryParam:"style=form,explode=true,name=customer_id"`
+	// The customer/supplier ID to filter results
+	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -44,11 +44,11 @@ func (o *ListAccountingInvoicesRequest) GetConnectionID() string {
 	return o.ConnectionID
 }
 
-func (o *ListAccountingInvoicesRequest) GetCustomerID() *string {
+func (o *ListAccountingInvoicesRequest) GetContactID() *string {
 	if o == nil {
 		return nil
 	}
-	return o.CustomerID
+	return o.ContactID
 }
 
 func (o *ListAccountingInvoicesRequest) GetFields() []string {

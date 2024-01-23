@@ -1,4 +1,4 @@
-# ListAccountingCustomersRequest
+# ListAccountingContactsRequest
 
 
 ## Fields
@@ -12,4 +12,5 @@
 | `Order`                                                                  | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
 | `Query`                                                                  | **string*                                                                | :heavy_minus_sign:                                                       | Query string to search. eg. email address or name                        |
 | `Sort`                                                                   | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `Type`                                                                   | **string*                                                                | :heavy_minus_sign:                                                       | The type of contact to filter results                                    |
 | `UpdatedGte`                                                             | [*time.Time](https://pkg.go.dev/time#Time)                               | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |

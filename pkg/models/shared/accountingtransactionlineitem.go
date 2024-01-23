@@ -4,7 +4,7 @@ package shared
 
 type AccountingTransactionLineitem struct {
 	AccountID   string   `json:"account_id"`
-	CustomerID  *string  `json:"customer_id,omitempty"`
+	ContactID   *string  `json:"contact_id,omitempty"`
 	Description *string  `json:"description,omitempty"`
 	ID          *string  `json:"id,omitempty"`
 	InvoiceID   *string  `json:"invoice_id,omitempty"`
@@ -20,11 +20,11 @@ func (o *AccountingTransactionLineitem) GetAccountID() string {
 	return o.AccountID
 }
 
-func (o *AccountingTransactionLineitem) GetCustomerID() *string {
+func (o *AccountingTransactionLineitem) GetContactID() *string {
 	if o == nil {
 		return nil
 	}
-	return o.CustomerID
+	return o.ContactID
 }
 
 func (o *AccountingTransactionLineitem) GetDescription() *string {

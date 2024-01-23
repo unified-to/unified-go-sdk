@@ -12,8 +12,8 @@
 | `ScopesAccountingTransactionWrite` | accounting_transaction_write       |
 | `ScopesAccountingInvoiceRead`      | accounting_invoice_read            |
 | `ScopesAccountingInvoiceWrite`     | accounting_invoice_write           |
-| `ScopesAccountingCustomerRead`     | accounting_customer_read           |
-| `ScopesAccountingCustomerWrite`    | accounting_customer_write          |
+| `ScopesAccountingContactRead`      | accounting_contact_read            |
+| `ScopesAccountingContactWrite`     | accounting_contact_write           |
 | `ScopesAccountingPaymentRead`      | accounting_payment_read            |
 | `ScopesAccountingPaymentWrite`     | accounting_payment_write           |
 | `ScopesAccountingTaxrateRead`      | accounting_taxrate_read            |

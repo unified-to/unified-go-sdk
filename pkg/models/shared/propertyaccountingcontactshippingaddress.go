@@ -2,7 +2,7 @@
 
 package shared
 
-type PropertyAccountingCustomerBillingAddress struct {
+type PropertyAccountingContactShippingAddress struct {
 	Address1    *string `json:"address1,omitempty"`
 	Address2    *string `json:"address2,omitempty"`
 	City        *string `json:"city,omitempty"`
@@ -13,56 +13,56 @@ type PropertyAccountingCustomerBillingAddress struct {
 	RegionCode  *string `json:"region_code,omitempty"`
 }
 
-func (o *PropertyAccountingCustomerBillingAddress) GetAddress1() *string {
+func (o *PropertyAccountingContactShippingAddress) GetAddress1() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Address1
 }
 
-func (o *PropertyAccountingCustomerBillingAddress) GetAddress2() *string {
+func (o *PropertyAccountingContactShippingAddress) GetAddress2() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Address2
 }
 
-func (o *PropertyAccountingCustomerBillingAddress) GetCity() *string {
+func (o *PropertyAccountingContactShippingAddress) GetCity() *string {
 	if o == nil {
 		return nil
 	}
 	return o.City
 }
 
-func (o *PropertyAccountingCustomerBillingAddress) GetCountry() *string {
+func (o *PropertyAccountingContactShippingAddress) GetCountry() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Country
 }
 
-func (o *PropertyAccountingCustomerBillingAddress) GetCountryCode() *string {
+func (o *PropertyAccountingContactShippingAddress) GetCountryCode() *string {
 	if o == nil {
 		return nil
 	}
 	return o.CountryCode
 }
 
-func (o *PropertyAccountingCustomerBillingAddress) GetPostalCode() *string {
+func (o *PropertyAccountingContactShippingAddress) GetPostalCode() *string {
 	if o == nil {
 		return nil
 	}
 	return o.PostalCode
 }
 
-func (o *PropertyAccountingCustomerBillingAddress) GetRegion() *string {
+func (o *PropertyAccountingContactShippingAddress) GetRegion() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Region
 }
 
-func (o *PropertyAccountingCustomerBillingAddress) GetRegionCode() *string {
+func (o *PropertyAccountingContactShippingAddress) GetRegionCode() *string {
 	if o == nil {
 		return nil
 	}

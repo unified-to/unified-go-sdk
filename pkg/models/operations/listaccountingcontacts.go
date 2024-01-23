@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-type ListAccountingCustomersRequest struct {
+type ListAccountingContactsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -20,80 +20,89 @@ type ListAccountingCustomersRequest struct {
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
+	// The type of contact to filter results
+	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (l ListAccountingCustomersRequest) MarshalJSON() ([]byte, error) {
+func (l ListAccountingContactsRequest) MarshalJSON() ([]byte, error) {
 	return utils.MarshalJSON(l, "", false)
 }
 
-func (l *ListAccountingCustomersRequest) UnmarshalJSON(data []byte) error {
+func (l *ListAccountingContactsRequest) UnmarshalJSON(data []byte) error {
 	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListAccountingCustomersRequest) GetConnectionID() string {
+func (o *ListAccountingContactsRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *ListAccountingCustomersRequest) GetFields() []string {
+func (o *ListAccountingContactsRequest) GetFields() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Fields
 }
 
-func (o *ListAccountingCustomersRequest) GetLimit() *float64 {
+func (o *ListAccountingContactsRequest) GetLimit() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Limit
 }
 
-func (o *ListAccountingCustomersRequest) GetOffset() *float64 {
+func (o *ListAccountingContactsRequest) GetOffset() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Offset
 }
 
-func (o *ListAccountingCustomersRequest) GetOrder() *string {
+func (o *ListAccountingContactsRequest) GetOrder() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Order
 }
 
-func (o *ListAccountingCustomersRequest) GetQuery() *string {
+func (o *ListAccountingContactsRequest) GetQuery() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Query
 }
 
-func (o *ListAccountingCustomersRequest) GetSort() *string {
+func (o *ListAccountingContactsRequest) GetSort() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Sort
 }
 
-func (o *ListAccountingCustomersRequest) GetUpdatedGte() *time.Time {
+func (o *ListAccountingContactsRequest) GetType() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Type
+}
+
+func (o *ListAccountingContactsRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.UpdatedGte
 }
 
-type ListAccountingCustomersResponse struct {
+type ListAccountingContactsResponse struct {
 	// Successful
-	AccountingCustomers []shared.AccountingCustomer
+	AccountingContacts []shared.AccountingContact
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -102,28 +111,28 @@ type ListAccountingCustomersResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAccountingCustomersResponse) GetAccountingCustomers() []shared.AccountingCustomer {
+func (o *ListAccountingContactsResponse) GetAccountingContacts() []shared.AccountingContact {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingCustomers
+	return o.AccountingContacts
 }
 
-func (o *ListAccountingCustomersResponse) GetContentType() string {
+func (o *ListAccountingContactsResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *ListAccountingCustomersResponse) GetStatusCode() int {
+func (o *ListAccountingContactsResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *ListAccountingCustomersResponse) GetRawResponse() *http.Response {
+func (o *ListAccountingContactsResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

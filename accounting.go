@@ -92,15 +92,15 @@ func (s *Accounting) CreateAccountingAccount(ctx context.Context, request operat
 	return res, nil
 }
 
-// CreateAccountingCustomer - Create a customer
-func (s *Accounting) CreateAccountingCustomer(ctx context.Context, request operations.CreateAccountingCustomerRequest) (*operations.CreateAccountingCustomerResponse, error) {
+// CreateAccountingContact - Create a contact
+func (s *Accounting) CreateAccountingContact(ctx context.Context, request operations.CreateAccountingContactRequest) (*operations.CreateAccountingContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/contact", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingCustomer", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -126,7 +126,7 @@ func (s *Accounting) CreateAccountingCustomer(ctx context.Context, request opera
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.CreateAccountingCustomerResponse{
+	res := &operations.CreateAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -142,12 +142,12 @@ func (s *Accounting) CreateAccountingCustomer(ctx context.Context, request opera
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AccountingCustomer
+			var out shared.AccountingContact
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingCustomer = &out
+			res.AccountingContact = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -565,10 +565,10 @@ func (s *Accounting) GetAccountingAccount(ctx context.Context, request operation
 	return res, nil
 }
 
-// GetAccountingCustomer - Retrieve a customer
-func (s *Accounting) GetAccountingCustomer(ctx context.Context, request operations.GetAccountingCustomerRequest) (*operations.GetAccountingCustomerResponse, error) {
+// GetAccountingContact - Retrieve a contact
+func (s *Accounting) GetAccountingContact(ctx context.Context, request operations.GetAccountingContactRequest) (*operations.GetAccountingContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -596,7 +596,7 @@ func (s *Accounting) GetAccountingCustomer(ctx context.Context, request operatio
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAccountingCustomerResponse{
+	res := &operations.GetAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -612,12 +612,12 @@ func (s *Accounting) GetAccountingCustomer(ctx context.Context, request operatio
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AccountingCustomer
+			var out shared.AccountingContact
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingCustomer = &out
+			res.AccountingContact = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1085,10 +1085,10 @@ func (s *Accounting) ListAccountingAccounts(ctx context.Context, request operati
 	return res, nil
 }
 
-// ListAccountingCustomers - List all customers
-func (s *Accounting) ListAccountingCustomers(ctx context.Context, request operations.ListAccountingCustomersRequest) (*operations.ListAccountingCustomersResponse, error) {
+// ListAccountingContacts - List all contacts
+func (s *Accounting) ListAccountingContacts(ctx context.Context, request operations.ListAccountingContactsRequest) (*operations.ListAccountingContactsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/contact", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -1116,7 +1116,7 @@ func (s *Accounting) ListAccountingCustomers(ctx context.Context, request operat
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.ListAccountingCustomersResponse{
+	res := &operations.ListAccountingContactsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -1132,12 +1132,12 @@ func (s *Accounting) ListAccountingCustomers(ctx context.Context, request operat
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.AccountingCustomer
+			var out []shared.AccountingContact
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingCustomers = out
+			res.AccountingContacts = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -1608,15 +1608,15 @@ func (s *Accounting) PatchAccountingAccount(ctx context.Context, request operati
 	return res, nil
 }
 
-// PatchAccountingCustomer - Update a customer
-func (s *Accounting) PatchAccountingCustomer(ctx context.Context, request operations.PatchAccountingCustomerRequest) (*operations.PatchAccountingCustomerResponse, error) {
+// PatchAccountingContact - Update a contact
+func (s *Accounting) PatchAccountingContact(ctx context.Context, request operations.PatchAccountingContactRequest) (*operations.PatchAccountingContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingCustomer", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1642,7 +1642,7 @@ func (s *Accounting) PatchAccountingCustomer(ctx context.Context, request operat
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PatchAccountingCustomerResponse{
+	res := &operations.PatchAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -1658,12 +1658,12 @@ func (s *Accounting) PatchAccountingCustomer(ctx context.Context, request operat
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AccountingCustomer
+			var out shared.AccountingContact
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingCustomer = &out
+			res.AccountingContact = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -2073,10 +2073,10 @@ func (s *Accounting) RemoveAccountingAccount(ctx context.Context, request operat
 	return res, nil
 }
 
-// RemoveAccountingCustomer - Remove a customer
-func (s *Accounting) RemoveAccountingCustomer(ctx context.Context, request operations.RemoveAccountingCustomerRequest) (*operations.RemoveAccountingCustomerResponse, error) {
+// RemoveAccountingContact - Remove a contact
+func (s *Accounting) RemoveAccountingContact(ctx context.Context, request operations.RemoveAccountingContactRequest) (*operations.RemoveAccountingContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -2100,7 +2100,7 @@ func (s *Accounting) RemoveAccountingCustomer(ctx context.Context, request opera
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.RemoveAccountingCustomerResponse{
+	res := &operations.RemoveAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -2483,15 +2483,15 @@ func (s *Accounting) UpdateAccountingAccount(ctx context.Context, request operat
 	return res, nil
 }
 
-// UpdateAccountingCustomer - Update a customer
-func (s *Accounting) UpdateAccountingCustomer(ctx context.Context, request operations.UpdateAccountingCustomerRequest) (*operations.UpdateAccountingCustomerResponse, error) {
+// UpdateAccountingContact - Update a contact
+func (s *Accounting) UpdateAccountingContact(ctx context.Context, request operations.UpdateAccountingContactRequest) (*operations.UpdateAccountingContactResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/customer/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingCustomer", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2517,7 +2517,7 @@ func (s *Accounting) UpdateAccountingCustomer(ctx context.Context, request opera
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.UpdateAccountingCustomerResponse{
+	res := &operations.UpdateAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -2533,12 +2533,12 @@ func (s *Accounting) UpdateAccountingCustomer(ctx context.Context, request opera
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AccountingCustomer
+			var out shared.AccountingContact
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingCustomer = &out
+			res.AccountingContact = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

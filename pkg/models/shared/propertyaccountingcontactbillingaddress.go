@@ -2,7 +2,7 @@
 
 package shared
 
-type PropertyAccountingCustomerShippingAddress struct {
+type PropertyAccountingContactBillingAddress struct {
 	Address1    *string `json:"address1,omitempty"`
 	Address2    *string `json:"address2,omitempty"`
 	City        *string `json:"city,omitempty"`
@@ -13,56 +13,56 @@ type PropertyAccountingCustomerShippingAddress struct {
 	RegionCode  *string `json:"region_code,omitempty"`
 }
 
-func (o *PropertyAccountingCustomerShippingAddress) GetAddress1() *string {
+func (o *PropertyAccountingContactBillingAddress) GetAddress1() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Address1
 }
 
-func (o *PropertyAccountingCustomerShippingAddress) GetAddress2() *string {
+func (o *PropertyAccountingContactBillingAddress) GetAddress2() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Address2
 }
 
-func (o *PropertyAccountingCustomerShippingAddress) GetCity() *string {
+func (o *PropertyAccountingContactBillingAddress) GetCity() *string {
 	if o == nil {
 		return nil
 	}
 	return o.City
 }
 
-func (o *PropertyAccountingCustomerShippingAddress) GetCountry() *string {
+func (o *PropertyAccountingContactBillingAddress) GetCountry() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Country
 }
 
-func (o *PropertyAccountingCustomerShippingAddress) GetCountryCode() *string {
+func (o *PropertyAccountingContactBillingAddress) GetCountryCode() *string {
 	if o == nil {
 		return nil
 	}
 	return o.CountryCode
 }
 
-func (o *PropertyAccountingCustomerShippingAddress) GetPostalCode() *string {
+func (o *PropertyAccountingContactBillingAddress) GetPostalCode() *string {
 	if o == nil {
 		return nil
 	}
 	return o.PostalCode
 }
 
-func (o *PropertyAccountingCustomerShippingAddress) GetRegion() *string {
+func (o *PropertyAccountingContactBillingAddress) GetRegion() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Region
 }
 
-func (o *PropertyAccountingCustomerShippingAddress) GetRegionCode() *string {
+func (o *PropertyAccountingContactBillingAddress) GetRegionCode() *string {
 	if o == nil {
 		return nil
 	}

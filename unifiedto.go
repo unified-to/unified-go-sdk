@@ -68,7 +68,7 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 type UnifiedTo struct {
 	Accounting        *Accounting
 	Account           *Account
-	Customer          *Customer
+	Contact           *Contact
 	Invoice           *Invoice
 	Item              *Item
 	Organization      *Organization
@@ -85,7 +85,6 @@ type UnifiedTo struct {
 	Scorecard         *Scorecard
 	Crm               *Crm
 	Company           *Company
-	Contact           *Contact
 	Deal              *Deal
 	Event             *Event
 	Lead              *Lead
@@ -102,6 +101,7 @@ type UnifiedTo struct {
 	Storage           *Storage
 	File              *File
 	Ticketing         *Ticketing
+	Customer          *Customer
 	Note              *Note
 	Ticket            *Ticket
 	Uc                *Uc
@@ -181,9 +181,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.9.29",
+			SDKVersion:        "0.9.30",
 			GenVersion:        "2.237.3",
-			UserAgent:         "speakeasy-sdk/go 0.9.29 2.237.3 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:         "speakeasy-sdk/go 0.9.30 2.237.3 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -206,7 +206,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Account = newAccount(sdk.sdkConfiguration)
 
-	sdk.Customer = newCustomer(sdk.sdkConfiguration)
+	sdk.Contact = newContact(sdk.sdkConfiguration)
 
 	sdk.Invoice = newInvoice(sdk.sdkConfiguration)
 
@@ -240,8 +240,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Company = newCompany(sdk.sdkConfiguration)
 
-	sdk.Contact = newContact(sdk.sdkConfiguration)
-
 	sdk.Deal = newDeal(sdk.sdkConfiguration)
 
 	sdk.Event = newEvent(sdk.sdkConfiguration)
@@ -273,6 +271,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.File = newFile(sdk.sdkConfiguration)
 
 	sdk.Ticketing = newTicketing(sdk.sdkConfiguration)
+
+	sdk.Customer = newCustomer(sdk.sdkConfiguration)
 
 	sdk.Note = newNote(sdk.sdkConfiguration)
 

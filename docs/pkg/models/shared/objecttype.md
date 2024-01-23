@@ -7,7 +7,7 @@
 | ---------------------------------- | ---------------------------------- |
 | `ObjectTypeAccountingAccount`      | accounting_account                 |
 | `ObjectTypeAccountingTransaction`  | accounting_transaction             |
-| `ObjectTypeAccountingCustomer`     | accounting_customer                |
+| `ObjectTypeAccountingContact`      | accounting_contact                 |
 | `ObjectTypeAccountingInvoice`      | accounting_invoice                 |
 | `ObjectTypeAccountingPayment`      | accounting_payment                 |
 | `ObjectTypeAccountingTaxrate`      | accounting_taxrate                 |

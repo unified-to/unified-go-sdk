@@ -2,5 +2,5 @@
 
 package shared
 
-type PropertyAccountingCustomerRaw struct {
+type PropertyAccountingContactRaw struct {
 }

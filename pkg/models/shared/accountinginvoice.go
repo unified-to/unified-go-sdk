@@ -42,9 +42,9 @@ func (e *AccountingInvoiceStatus) UnmarshalJSON(data []byte) error {
 type AccountingInvoice struct {
 	BalanceAmount  *float64                      `json:"balance_amount,omitempty"`
 	CancelledAt    *time.Time                    `json:"cancelled_at,omitempty"`
+	ContactID      *string                       `json:"contact_id,omitempty"`
 	CreatedAt      *time.Time                    `json:"created_at,omitempty"`
 	Currency       *string                       `json:"currency,omitempty"`
-	CustomerID     *string                       `json:"customer_id,omitempty"`
 	DiscountAmount *float64                      `json:"discount_amount,omitempty"`
 	DueAt          *time.Time                    `json:"due_at,omitempty"`
 	ID             *string                       `json:"id,omitempty"`
@@ -88,6 +88,13 @@ func (o *AccountingInvoice) GetCancelledAt() *time.Time {
 	return o.CancelledAt
 }
 
+func (o *AccountingInvoice) GetContactID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ContactID
+}
+
 func (o *AccountingInvoice) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
@@ -100,13 +107,6 @@ func (o *AccountingInvoice) GetCurrency() *string {
 		return nil
 	}
 	return o.Currency
-}
-
-func (o *AccountingInvoice) GetCustomerID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.CustomerID
 }
 
 func (o *AccountingInvoice) GetDiscountAmount() *float64 {

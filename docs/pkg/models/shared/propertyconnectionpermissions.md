@@ -12,8 +12,8 @@
 | `PropertyConnectionPermissionsAccountingTransactionWrite` | accounting_transaction_write                              |
 | `PropertyConnectionPermissionsAccountingInvoiceRead`      | accounting_invoice_read                                   |
 | `PropertyConnectionPermissionsAccountingInvoiceWrite`     | accounting_invoice_write                                  |
-| `PropertyConnectionPermissionsAccountingCustomerRead`     | accounting_customer_read                                  |
-| `PropertyConnectionPermissionsAccountingCustomerWrite`    | accounting_customer_write                                 |
+| `PropertyConnectionPermissionsAccountingContactRead`      | accounting_contact_read                                   |
+| `PropertyConnectionPermissionsAccountingContactWrite`     | accounting_contact_write                                  |
 | `PropertyConnectionPermissionsAccountingPaymentRead`      | accounting_payment_read                                   |
 | `PropertyConnectionPermissionsAccountingPaymentWrite`     | accounting_payment_write                                  |
 | `PropertyConnectionPermissionsAccountingTaxrateRead`      | accounting_taxrate_read                                   |

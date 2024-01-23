@@ -3,9 +3,50 @@
 package shared
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
+
+type Origin string
+
+const (
+	OriginAgency     Origin = "AGENCY"
+	OriginApplied    Origin = "APPLIED"
+	OriginInternal   Origin = "INTERNAL"
+	OriginReferred   Origin = "REFERRED"
+	OriginSourced    Origin = "SOURCED"
+	OriginUniversity Origin = "UNIVERSITY"
+)
+
+func (e Origin) ToPointer() *Origin {
+	return &e
+}
+
+func (e *Origin) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "AGENCY":
+		fallthrough
+	case "APPLIED":
+		fallthrough
+	case "INTERNAL":
+		fallthrough
+	case "REFERRED":
+		fallthrough
+	case "SOURCED":
+		fallthrough
+	case "UNIVERSITY":
+		*e = Origin(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for Origin: %v", v)
+	}
+}
 
 type AtsCandidate struct {
 	Address     *PropertyAtsCandidateAddress `json:"address,omitempty"`
@@ -18,6 +59,7 @@ type AtsCandidate struct {
 	// a list of social media links associated with the candidate. eg. LinkedIn URL
 	LinkUrls   []string                 `json:"link_urls,omitempty"`
 	Name       *string                  `json:"name,omitempty"`
+	Origin     *Origin                  `json:"origin,omitempty"`
 	Raw        *PropertyAtsCandidateRaw `json:"raw,omitempty"`
 	Tags       []string                 `json:"tags,omitempty"`
 	Telephones []AtsTelephone           `json:"telephones,omitempty"`
@@ -97,6 +139,13 @@ func (o *AtsCandidate) GetName() *string {
 		return nil
 	}
 	return o.Name
+}
+
+func (o *AtsCandidate) GetOrigin() *Origin {
+	if o == nil {
+		return nil
+	}
+	return o.Origin
 }
 
 func (o *AtsCandidate) GetRaw() *PropertyAtsCandidateRaw {

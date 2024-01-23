@@ -4,14 +4,14 @@
 ### Available Operations
 
 * [CreateAccountingAccount](#createaccountingaccount) - Create an account
-* [CreateAccountingCustomer](#createaccountingcustomer) - Create a customer
+* [CreateAccountingContact](#createaccountingcontact) - Create a contact
 * [CreateAccountingInvoice](#createaccountinginvoice) - Create a invoice
 * [CreateAccountingItem](#createaccountingitem) - Create an item
 * [CreateAccountingPayment](#createaccountingpayment) - Create a payment
 * [CreateAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
 * [CreateAccountingTransaction](#createaccountingtransaction) - Create a transaction
 * [GetAccountingAccount](#getaccountingaccount) - Retrieve an account
-* [GetAccountingCustomer](#getaccountingcustomer) - Retrieve a customer
+* [GetAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [GetAccountingInvoice](#getaccountinginvoice) - Retrieve a invoice
 * [GetAccountingItem](#getaccountingitem) - Retrieve an item
 * [GetAccountingOrganization](#getaccountingorganization) - Retrieve an organization
@@ -19,7 +19,7 @@
 * [GetAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
 * [GetAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
 * [ListAccountingAccounts](#listaccountingaccounts) - List all accounts
-* [ListAccountingCustomers](#listaccountingcustomers) - List all customers
+* [ListAccountingContacts](#listaccountingcontacts) - List all contacts
 * [ListAccountingInvoices](#listaccountinginvoices) - List all invoices
 * [ListAccountingItems](#listaccountingitems) - List all items
 * [ListAccountingOrganizations](#listaccountingorganizations) - List all organizations
@@ -27,21 +27,21 @@
 * [ListAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
 * [ListAccountingTransactions](#listaccountingtransactions) - List all transactions
 * [PatchAccountingAccount](#patchaccountingaccount) - Update an account
-* [PatchAccountingCustomer](#patchaccountingcustomer) - Update a customer
+* [PatchAccountingContact](#patchaccountingcontact) - Update a contact
 * [PatchAccountingInvoice](#patchaccountinginvoice) - Update a invoice
 * [PatchAccountingItem](#patchaccountingitem) - Update an item
 * [PatchAccountingPayment](#patchaccountingpayment) - Update a payment
 * [PatchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
 * [PatchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
 * [RemoveAccountingAccount](#removeaccountingaccount) - Remove an account
-* [RemoveAccountingCustomer](#removeaccountingcustomer) - Remove a customer
+* [RemoveAccountingContact](#removeaccountingcontact) - Remove a contact
 * [RemoveAccountingInvoice](#removeaccountinginvoice) - Remove a invoice
 * [RemoveAccountingItem](#removeaccountingitem) - Remove an item
 * [RemoveAccountingPayment](#removeaccountingpayment) - Remove a payment
 * [RemoveAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
 * [RemoveAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
 * [UpdateAccountingAccount](#updateaccountingaccount) - Update an account
-* [UpdateAccountingCustomer](#updateaccountingcustomer) - Update a customer
+* [UpdateAccountingContact](#updateaccountingcontact) - Update a contact
 * [UpdateAccountingInvoice](#updateaccountinginvoice) - Update a invoice
 * [UpdateAccountingItem](#updateaccountingitem) - Update an item
 * [UpdateAccountingPayment](#updateaccountingpayment) - Update a payment
@@ -103,9 +103,9 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## CreateAccountingCustomer
+## CreateAccountingContact
 
-Create a customer
+Create a contact
 
 ### Example Usage
 
@@ -126,16 +126,16 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Accounting.CreateAccountingCustomer(ctx, operations.CreateAccountingCustomerRequest{
-        AccountingCustomer: &shared.AccountingCustomer{
-            BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
+    res, err := s.Accounting.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
+        AccountingContact: &shared.AccountingContact{
+            BillingAddress: &shared.PropertyAccountingContactBillingAddress{},
             Emails: []shared.AccountingEmail{
                 shared.AccountingEmail{
-                    Email: "Kevon_Schultz42@gmail.com",
+                    Email: "Mac36@gmail.com",
                 },
             },
-            Raw: &shared.PropertyAccountingCustomerRaw{},
-            ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
+            Raw: &shared.PropertyAccountingContactRaw{},
+            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
             Telephones: []shared.AccountingTelephone{
                 shared.AccountingTelephone{
                     Telephone: "string",
@@ -148,7 +148,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingCustomer != nil {
+    if res.AccountingContact != nil {
         // handle response
     }
 }
@@ -156,15 +156,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.CreateAccountingCustomerRequest](../../pkg/models/operations/createaccountingcustomerrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.CreateAccountingContactRequest](../../pkg/models/operations/createaccountingcontactrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[*operations.CreateAccountingCustomerResponse](../../pkg/models/operations/createaccountingcustomerresponse.md), error**
+**[*operations.CreateAccountingContactResponse](../../pkg/models/operations/createaccountingcontactresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -510,9 +510,9 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## GetAccountingCustomer
+## GetAccountingContact
 
-Retrieve a customer
+Retrieve a contact
 
 ### Example Usage
 
@@ -533,7 +533,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Accounting.GetAccountingCustomer(ctx, operations.GetAccountingCustomerRequest{
+    res, err := s.Accounting.GetAccountingContact(ctx, operations.GetAccountingContactRequest{
         ConnectionID: "string",
         Fields: []string{
             "string",
@@ -544,7 +544,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingCustomer != nil {
+    if res.AccountingContact != nil {
         // handle response
     }
 }
@@ -552,15 +552,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetAccountingCustomerRequest](../../pkg/models/operations/getaccountingcustomerrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetAccountingContactRequest](../../pkg/models/operations/getaccountingcontactrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[*operations.GetAccountingCustomerResponse](../../pkg/models/operations/getaccountingcustomerresponse.md), error**
+**[*operations.GetAccountingContactResponse](../../pkg/models/operations/getaccountingcontactresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -949,9 +949,9 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## ListAccountingCustomers
+## ListAccountingContacts
 
-List all customers
+List all contacts
 
 ### Example Usage
 
@@ -972,7 +972,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Accounting.ListAccountingCustomers(ctx, operations.ListAccountingCustomersRequest{
+    res, err := s.Accounting.ListAccountingContacts(ctx, operations.ListAccountingContactsRequest{
         ConnectionID: "string",
         Fields: []string{
             "string",
@@ -982,7 +982,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingCustomers != nil {
+    if res.AccountingContacts != nil {
         // handle response
     }
 }
@@ -990,15 +990,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.ListAccountingCustomersRequest](../../pkg/models/operations/listaccountingcustomersrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.ListAccountingContactsRequest](../../pkg/models/operations/listaccountingcontactsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[*operations.ListAccountingCustomersResponse](../../pkg/models/operations/listaccountingcustomersresponse.md), error**
+**[*operations.ListAccountingContactsResponse](../../pkg/models/operations/listaccountingcontactsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -1383,9 +1383,9 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## PatchAccountingCustomer
+## PatchAccountingContact
 
-Update a customer
+Update a contact
 
 ### Example Usage
 
@@ -1406,16 +1406,16 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Accounting.PatchAccountingCustomer(ctx, operations.PatchAccountingCustomerRequest{
-        AccountingCustomer: &shared.AccountingCustomer{
-            BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
+    res, err := s.Accounting.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
+        AccountingContact: &shared.AccountingContact{
+            BillingAddress: &shared.PropertyAccountingContactBillingAddress{},
             Emails: []shared.AccountingEmail{
                 shared.AccountingEmail{
-                    Email: "Trever_Orn@hotmail.com",
+                    Email: "Sylvester.Kuhic@yahoo.com",
                 },
             },
-            Raw: &shared.PropertyAccountingCustomerRaw{},
-            ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
+            Raw: &shared.PropertyAccountingContactRaw{},
+            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
             Telephones: []shared.AccountingTelephone{
                 shared.AccountingTelephone{
                     Telephone: "string",
@@ -1429,7 +1429,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingCustomer != nil {
+    if res.AccountingContact != nil {
         // handle response
     }
 }
@@ -1437,15 +1437,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.PatchAccountingCustomerRequest](../../pkg/models/operations/patchaccountingcustomerrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.PatchAccountingContactRequest](../../pkg/models/operations/patchaccountingcontactrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[*operations.PatchAccountingCustomerResponse](../../pkg/models/operations/patchaccountingcustomerresponse.md), error**
+**[*operations.PatchAccountingContactResponse](../../pkg/models/operations/patchaccountingcontactresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -1794,9 +1794,9 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## RemoveAccountingCustomer
+## RemoveAccountingContact
 
-Remove a customer
+Remove a contact
 
 ### Example Usage
 
@@ -1818,7 +1818,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Accounting.RemoveAccountingCustomer(ctx, operations.RemoveAccountingCustomerRequest{
+    res, err := s.Accounting.RemoveAccountingContact(ctx, operations.RemoveAccountingContactRequest{
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1834,15 +1834,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.RemoveAccountingCustomerRequest](../../pkg/models/operations/removeaccountingcustomerrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.RemoveAccountingContactRequest](../../pkg/models/operations/removeaccountingcontactrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[*operations.RemoveAccountingCustomerResponse](../../pkg/models/operations/removeaccountingcustomerresponse.md), error**
+**[*operations.RemoveAccountingContactResponse](../../pkg/models/operations/removeaccountingcontactresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -2168,9 +2168,9 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## UpdateAccountingCustomer
+## UpdateAccountingContact
 
-Update a customer
+Update a contact
 
 ### Example Usage
 
@@ -2191,16 +2191,16 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Accounting.UpdateAccountingCustomer(ctx, operations.UpdateAccountingCustomerRequest{
-        AccountingCustomer: &shared.AccountingCustomer{
-            BillingAddress: &shared.PropertyAccountingCustomerBillingAddress{},
+    res, err := s.Accounting.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
+        AccountingContact: &shared.AccountingContact{
+            BillingAddress: &shared.PropertyAccountingContactBillingAddress{},
             Emails: []shared.AccountingEmail{
                 shared.AccountingEmail{
-                    Email: "Myrtice_Jacobi77@hotmail.com",
+                    Email: "Kaci_Hane@hotmail.com",
                 },
             },
-            Raw: &shared.PropertyAccountingCustomerRaw{},
-            ShippingAddress: &shared.PropertyAccountingCustomerShippingAddress{},
+            Raw: &shared.PropertyAccountingContactRaw{},
+            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
             Telephones: []shared.AccountingTelephone{
                 shared.AccountingTelephone{
                     Telephone: "string",
@@ -2214,7 +2214,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingCustomer != nil {
+    if res.AccountingContact != nil {
         // handle response
     }
 }
@@ -2222,15 +2222,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.UpdateAccountingCustomerRequest](../../pkg/models/operations/updateaccountingcustomerrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.UpdateAccountingContactRequest](../../pkg/models/operations/updateaccountingcontactrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[*operations.UpdateAccountingCustomerResponse](../../pkg/models/operations/updateaccountingcustomerresponse.md), error**
+**[*operations.UpdateAccountingContactResponse](../../pkg/models/operations/updateaccountingcontactresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

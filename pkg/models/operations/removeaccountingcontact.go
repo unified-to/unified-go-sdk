@@ -6,28 +6,28 @@ import (
 	"net/http"
 )
 
-type RemoveAccountingCustomerRequest struct {
+type RemoveAccountingContactRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// ID of the Customer
+	// ID of the Contact
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveAccountingCustomerRequest) GetConnectionID() string {
+func (o *RemoveAccountingContactRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *RemoveAccountingCustomerRequest) GetID() string {
+func (o *RemoveAccountingContactRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type RemoveAccountingCustomerResponse struct {
+type RemoveAccountingContactResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -38,28 +38,28 @@ type RemoveAccountingCustomerResponse struct {
 	Res *string
 }
 
-func (o *RemoveAccountingCustomerResponse) GetContentType() string {
+func (o *RemoveAccountingContactResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *RemoveAccountingCustomerResponse) GetStatusCode() int {
+func (o *RemoveAccountingContactResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *RemoveAccountingCustomerResponse) GetRawResponse() *http.Response {
+func (o *RemoveAccountingContactResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
 	return o.RawResponse
 }
 
-func (o *RemoveAccountingCustomerResponse) GetRes() *string {
+func (o *RemoveAccountingContactResponse) GetRes() *string {
 	if o == nil {
 		return nil
 	}

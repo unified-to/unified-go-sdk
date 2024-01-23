@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 74c9cb4660cb247c06eff86dea00135b
+  docChecksum: 981c0e1adf4c484c9cc54a29b1e6b7a6
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.237.3
-  releaseVersion: 0.9.29
-  configChecksum: 0a8976ed972c8019d1bf2b29a38e47df
+  releaseVersion: 0.9.30
+  configChecksum: d4de06465b83c546b0afc4a37176accf
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -20,7 +20,7 @@ features:
 generatedFiles:
   - accounting.go
   - account.go
-  - customer.go
+  - contact.go
   - invoice.go
   - item.go
   - organization.go
@@ -37,7 +37,6 @@ generatedFiles:
   - scorecard.go
   - crm.go
   - company.go
-  - contact.go
   - deal.go
   - event.go
   - lead.go
@@ -54,6 +53,7 @@ generatedFiles:
   - storage.go
   - file.go
   - ticketing.go
+  - customer.go
   - note.go
   - ticket.go
   - uc.go
@@ -85,14 +85,14 @@ generatedFiles:
   - pkg/utils/security.go
   - pkg/utils/utils.go
   - /pkg/models/operations/createaccountingaccount.go
-  - /pkg/models/operations/createaccountingcustomer.go
+  - /pkg/models/operations/createaccountingcontact.go
   - /pkg/models/operations/createaccountinginvoice.go
   - /pkg/models/operations/createaccountingitem.go
   - /pkg/models/operations/createaccountingpayment.go
   - /pkg/models/operations/createaccountingtaxrate.go
   - /pkg/models/operations/createaccountingtransaction.go
   - /pkg/models/operations/getaccountingaccount.go
-  - /pkg/models/operations/getaccountingcustomer.go
+  - /pkg/models/operations/getaccountingcontact.go
   - /pkg/models/operations/getaccountinginvoice.go
   - /pkg/models/operations/getaccountingitem.go
   - /pkg/models/operations/getaccountingorganization.go
@@ -100,7 +100,7 @@ generatedFiles:
   - /pkg/models/operations/getaccountingtaxrate.go
   - /pkg/models/operations/getaccountingtransaction.go
   - /pkg/models/operations/listaccountingaccounts.go
-  - /pkg/models/operations/listaccountingcustomers.go
+  - /pkg/models/operations/listaccountingcontacts.go
   - /pkg/models/operations/listaccountinginvoices.go
   - /pkg/models/operations/listaccountingitems.go
   - /pkg/models/operations/listaccountingorganizations.go
@@ -108,32 +108,38 @@ generatedFiles:
   - /pkg/models/operations/listaccountingtaxrates.go
   - /pkg/models/operations/listaccountingtransactions.go
   - /pkg/models/operations/patchaccountingaccount.go
-  - /pkg/models/operations/patchaccountingcustomer.go
+  - /pkg/models/operations/patchaccountingcontact.go
   - /pkg/models/operations/patchaccountinginvoice.go
   - /pkg/models/operations/patchaccountingitem.go
   - /pkg/models/operations/patchaccountingpayment.go
   - /pkg/models/operations/patchaccountingtaxrate.go
   - /pkg/models/operations/patchaccountingtransaction.go
   - /pkg/models/operations/removeaccountingaccount.go
-  - /pkg/models/operations/removeaccountingcustomer.go
+  - /pkg/models/operations/removeaccountingcontact.go
   - /pkg/models/operations/removeaccountinginvoice.go
   - /pkg/models/operations/removeaccountingitem.go
   - /pkg/models/operations/removeaccountingpayment.go
   - /pkg/models/operations/removeaccountingtaxrate.go
   - /pkg/models/operations/removeaccountingtransaction.go
   - /pkg/models/operations/updateaccountingaccount.go
-  - /pkg/models/operations/updateaccountingcustomer.go
+  - /pkg/models/operations/updateaccountingcontact.go
   - /pkg/models/operations/updateaccountinginvoice.go
   - /pkg/models/operations/updateaccountingitem.go
   - /pkg/models/operations/updateaccountingpayment.go
   - /pkg/models/operations/updateaccountingtaxrate.go
   - /pkg/models/operations/updateaccountingtransaction.go
-  - /pkg/models/operations/createticketingcustomer.go
-  - /pkg/models/operations/getticketingcustomer.go
-  - /pkg/models/operations/listticketingcustomers.go
-  - /pkg/models/operations/patchticketingcustomer.go
-  - /pkg/models/operations/removeticketingcustomer.go
-  - /pkg/models/operations/updateticketingcustomer.go
+  - /pkg/models/operations/createcrmcontact.go
+  - /pkg/models/operations/createuccontact.go
+  - /pkg/models/operations/getcrmcontact.go
+  - /pkg/models/operations/getuccontact.go
+  - /pkg/models/operations/listcrmcontacts.go
+  - /pkg/models/operations/listuccontacts.go
+  - /pkg/models/operations/patchcrmcontact.go
+  - /pkg/models/operations/patchuccontact.go
+  - /pkg/models/operations/removecrmcontact.go
+  - /pkg/models/operations/removeuccontact.go
+  - /pkg/models/operations/updatecrmcontact.go
+  - /pkg/models/operations/updateuccontact.go
   - /pkg/models/operations/createatsapplication.go
   - /pkg/models/operations/createatscandidate.go
   - /pkg/models/operations/createatsdocument.go
@@ -172,48 +178,36 @@ generatedFiles:
   - /pkg/models/operations/updateatsjob.go
   - /pkg/models/operations/updateatsscorecard.go
   - /pkg/models/operations/createcrmcompany.go
-  - /pkg/models/operations/createcrmcontact.go
   - /pkg/models/operations/createcrmdeal.go
   - /pkg/models/operations/createcrmevent.go
   - /pkg/models/operations/createcrmlead.go
   - /pkg/models/operations/createcrmpipeline.go
   - /pkg/models/operations/getcrmcompany.go
-  - /pkg/models/operations/getcrmcontact.go
   - /pkg/models/operations/getcrmdeal.go
   - /pkg/models/operations/getcrmevent.go
   - /pkg/models/operations/getcrmlead.go
   - /pkg/models/operations/getcrmpipeline.go
   - /pkg/models/operations/listcrmcompanies.go
-  - /pkg/models/operations/listcrmcontacts.go
   - /pkg/models/operations/listcrmdeals.go
   - /pkg/models/operations/listcrmevents.go
   - /pkg/models/operations/listcrmleads.go
   - /pkg/models/operations/listcrmpipelines.go
   - /pkg/models/operations/patchcrmcompany.go
-  - /pkg/models/operations/patchcrmcontact.go
   - /pkg/models/operations/patchcrmdeal.go
   - /pkg/models/operations/patchcrmevent.go
   - /pkg/models/operations/patchcrmlead.go
   - /pkg/models/operations/patchcrmpipeline.go
   - /pkg/models/operations/removecrmcompany.go
-  - /pkg/models/operations/removecrmcontact.go
   - /pkg/models/operations/removecrmdeal.go
   - /pkg/models/operations/removecrmevent.go
   - /pkg/models/operations/removecrmlead.go
   - /pkg/models/operations/removecrmpipeline.go
   - /pkg/models/operations/updatecrmcompany.go
-  - /pkg/models/operations/updatecrmcontact.go
   - /pkg/models/operations/updatecrmdeal.go
   - /pkg/models/operations/updatecrmevent.go
   - /pkg/models/operations/updatecrmlead.go
   - /pkg/models/operations/updatecrmpipeline.go
   - /pkg/models/operations/listenrichcompanies.go
-  - /pkg/models/operations/createuccontact.go
-  - /pkg/models/operations/getuccontact.go
-  - /pkg/models/operations/listuccontacts.go
-  - /pkg/models/operations/patchuccontact.go
-  - /pkg/models/operations/removeuccontact.go
-  - /pkg/models/operations/updateuccontact.go
   - /pkg/models/operations/listenrichpeople.go
   - /pkg/models/operations/createhrisemployee.go
   - /pkg/models/operations/createhrisgroup.go
@@ -250,16 +244,22 @@ generatedFiles:
   - /pkg/models/operations/patchstoragefile.go
   - /pkg/models/operations/removestoragefile.go
   - /pkg/models/operations/updatestoragefile.go
+  - /pkg/models/operations/createticketingcustomer.go
   - /pkg/models/operations/createticketingnote.go
   - /pkg/models/operations/createticketingticket.go
+  - /pkg/models/operations/getticketingcustomer.go
   - /pkg/models/operations/getticketingnote.go
   - /pkg/models/operations/getticketingticket.go
+  - /pkg/models/operations/listticketingcustomers.go
   - /pkg/models/operations/listticketingnotes.go
   - /pkg/models/operations/listticketingtickets.go
+  - /pkg/models/operations/patchticketingcustomer.go
   - /pkg/models/operations/patchticketingnote.go
   - /pkg/models/operations/patchticketingticket.go
+  - /pkg/models/operations/removeticketingcustomer.go
   - /pkg/models/operations/removeticketingnote.go
   - /pkg/models/operations/removeticketingticket.go
+  - /pkg/models/operations/updateticketingcustomer.go
   - /pkg/models/operations/updateticketingnote.go
   - /pkg/models/operations/updateticketingticket.go
   - /pkg/models/operations/listuccalls.go
@@ -283,12 +283,12 @@ generatedFiles:
   - /pkg/models/operations/getunifiedintegrationlogin.go
   - /pkg/models/shared/accountingaccount.go
   - /pkg/models/shared/propertyaccountingaccountraw.go
-  - /pkg/models/shared/accountingcustomer.go
+  - /pkg/models/shared/accountingcontact.go
   - /pkg/models/shared/accountingtelephone.go
-  - /pkg/models/shared/propertyaccountingcustomershippingaddress.go
-  - /pkg/models/shared/propertyaccountingcustomerraw.go
+  - /pkg/models/shared/propertyaccountingcontactshippingaddress.go
+  - /pkg/models/shared/propertyaccountingcontactraw.go
   - /pkg/models/shared/accountingemail.go
-  - /pkg/models/shared/propertyaccountingcustomerbillingaddress.go
+  - /pkg/models/shared/propertyaccountingcontactbillingaddress.go
   - /pkg/models/shared/accountinginvoice.go
   - /pkg/models/shared/propertyaccountinginvoiceraw.go
   - /pkg/models/shared/accountinglineitem.go
@@ -305,10 +305,15 @@ generatedFiles:
   - /pkg/models/shared/accountingorganization.go
   - /pkg/models/shared/propertyaccountingorganizationraw.go
   - /pkg/models/shared/propertyaccountingorganizationaddress.go
-  - /pkg/models/shared/ticketingcustomer.go
-  - /pkg/models/shared/ticketingtelephone.go
-  - /pkg/models/shared/propertyticketingcustomerraw.go
-  - /pkg/models/shared/ticketingemail.go
+  - /pkg/models/shared/crmcontact.go
+  - /pkg/models/shared/crmtelephone.go
+  - /pkg/models/shared/propertycrmcontactraw.go
+  - /pkg/models/shared/crmemail.go
+  - /pkg/models/shared/propertycrmcontactaddress.go
+  - /pkg/models/shared/uccontact.go
+  - /pkg/models/shared/uctelephone.go
+  - /pkg/models/shared/propertyuccontactraw.go
+  - /pkg/models/shared/ucemail.go
   - /pkg/models/shared/atsapplication.go
   - /pkg/models/shared/propertyatsapplicationraw.go
   - /pkg/models/shared/atscandidate.go
@@ -329,13 +334,8 @@ generatedFiles:
   - /pkg/models/shared/atsstatus.go
   - /pkg/models/shared/propertyatsstatusraw.go
   - /pkg/models/shared/crmcompany.go
-  - /pkg/models/shared/crmtelephone.go
   - /pkg/models/shared/propertycrmcompanyraw.go
-  - /pkg/models/shared/crmemail.go
   - /pkg/models/shared/propertycrmcompanyaddress.go
-  - /pkg/models/shared/crmcontact.go
-  - /pkg/models/shared/propertycrmcontactraw.go
-  - /pkg/models/shared/propertycrmcontactaddress.go
   - /pkg/models/shared/crmdeal.go
   - /pkg/models/shared/propertycrmdealraw.go
   - /pkg/models/shared/crmevent.go
@@ -354,10 +354,6 @@ generatedFiles:
   - /pkg/models/shared/enrichtelephone.go
   - /pkg/models/shared/propertyenrichcompanyraw.go
   - /pkg/models/shared/propertyenrichcompanyaddress.go
-  - /pkg/models/shared/uccontact.go
-  - /pkg/models/shared/uctelephone.go
-  - /pkg/models/shared/propertyuccontactraw.go
-  - /pkg/models/shared/ucemail.go
   - /pkg/models/shared/enrichperson.go
   - /pkg/models/shared/enrichpersonworkhistory.go
   - /pkg/models/shared/propertyenrichpersonraw.go
@@ -380,6 +376,10 @@ generatedFiles:
   - /pkg/models/shared/propertystoragefileraw.go
   - /pkg/models/shared/storagepermission.go
   - /pkg/models/shared/propertystoragepermissionroles.go
+  - /pkg/models/shared/ticketingcustomer.go
+  - /pkg/models/shared/ticketingtelephone.go
+  - /pkg/models/shared/propertyticketingcustomerraw.go
+  - /pkg/models/shared/ticketingemail.go
   - /pkg/models/shared/ticketingnote.go
   - /pkg/models/shared/propertyticketingnoteraw.go
   - /pkg/models/shared/ticketingticket.go
@@ -404,8 +404,8 @@ generatedFiles:
   - /pkg/models/shared/security.go
   - docs/pkg/models/operations/createaccountingaccountrequest.md
   - docs/pkg/models/operations/createaccountingaccountresponse.md
-  - docs/pkg/models/operations/createaccountingcustomerrequest.md
-  - docs/pkg/models/operations/createaccountingcustomerresponse.md
+  - docs/pkg/models/operations/createaccountingcontactrequest.md
+  - docs/pkg/models/operations/createaccountingcontactresponse.md
   - docs/pkg/models/operations/createaccountinginvoicerequest.md
   - docs/pkg/models/operations/createaccountinginvoiceresponse.md
   - docs/pkg/models/operations/createaccountingitemrequest.md
@@ -418,8 +418,8 @@ generatedFiles:
   - docs/pkg/models/operations/createaccountingtransactionresponse.md
   - docs/pkg/models/operations/getaccountingaccountrequest.md
   - docs/pkg/models/operations/getaccountingaccountresponse.md
-  - docs/pkg/models/operations/getaccountingcustomerrequest.md
-  - docs/pkg/models/operations/getaccountingcustomerresponse.md
+  - docs/pkg/models/operations/getaccountingcontactrequest.md
+  - docs/pkg/models/operations/getaccountingcontactresponse.md
   - docs/pkg/models/operations/getaccountinginvoicerequest.md
   - docs/pkg/models/operations/getaccountinginvoiceresponse.md
   - docs/pkg/models/operations/getaccountingitemrequest.md
@@ -434,8 +434,8 @@ generatedFiles:
   - docs/pkg/models/operations/getaccountingtransactionresponse.md
   - docs/pkg/models/operations/listaccountingaccountsrequest.md
   - docs/pkg/models/operations/listaccountingaccountsresponse.md
-  - docs/pkg/models/operations/listaccountingcustomersrequest.md
-  - docs/pkg/models/operations/listaccountingcustomersresponse.md
+  - docs/pkg/models/operations/listaccountingcontactsrequest.md
+  - docs/pkg/models/operations/listaccountingcontactsresponse.md
   - docs/pkg/models/operations/listaccountinginvoicesrequest.md
   - docs/pkg/models/operations/listaccountinginvoicesresponse.md
   - docs/pkg/models/operations/listaccountingitemsrequest.md
@@ -450,8 +450,8 @@ generatedFiles:
   - docs/pkg/models/operations/listaccountingtransactionsresponse.md
   - docs/pkg/models/operations/patchaccountingaccountrequest.md
   - docs/pkg/models/operations/patchaccountingaccountresponse.md
-  - docs/pkg/models/operations/patchaccountingcustomerrequest.md
-  - docs/pkg/models/operations/patchaccountingcustomerresponse.md
+  - docs/pkg/models/operations/patchaccountingcontactrequest.md
+  - docs/pkg/models/operations/patchaccountingcontactresponse.md
   - docs/pkg/models/operations/patchaccountinginvoicerequest.md
   - docs/pkg/models/operations/patchaccountinginvoiceresponse.md
   - docs/pkg/models/operations/patchaccountingitemrequest.md
@@ -464,8 +464,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchaccountingtransactionresponse.md
   - docs/pkg/models/operations/removeaccountingaccountrequest.md
   - docs/pkg/models/operations/removeaccountingaccountresponse.md
-  - docs/pkg/models/operations/removeaccountingcustomerrequest.md
-  - docs/pkg/models/operations/removeaccountingcustomerresponse.md
+  - docs/pkg/models/operations/removeaccountingcontactrequest.md
+  - docs/pkg/models/operations/removeaccountingcontactresponse.md
   - docs/pkg/models/operations/removeaccountinginvoicerequest.md
   - docs/pkg/models/operations/removeaccountinginvoiceresponse.md
   - docs/pkg/models/operations/removeaccountingitemrequest.md
@@ -478,8 +478,8 @@ generatedFiles:
   - docs/pkg/models/operations/removeaccountingtransactionresponse.md
   - docs/pkg/models/operations/updateaccountingaccountrequest.md
   - docs/pkg/models/operations/updateaccountingaccountresponse.md
-  - docs/pkg/models/operations/updateaccountingcustomerrequest.md
-  - docs/pkg/models/operations/updateaccountingcustomerresponse.md
+  - docs/pkg/models/operations/updateaccountingcontactrequest.md
+  - docs/pkg/models/operations/updateaccountingcontactresponse.md
   - docs/pkg/models/operations/updateaccountinginvoicerequest.md
   - docs/pkg/models/operations/updateaccountinginvoiceresponse.md
   - docs/pkg/models/operations/updateaccountingitemrequest.md
@@ -490,18 +490,30 @@ generatedFiles:
   - docs/pkg/models/operations/updateaccountingtaxrateresponse.md
   - docs/pkg/models/operations/updateaccountingtransactionrequest.md
   - docs/pkg/models/operations/updateaccountingtransactionresponse.md
-  - docs/pkg/models/operations/createticketingcustomerrequest.md
-  - docs/pkg/models/operations/createticketingcustomerresponse.md
-  - docs/pkg/models/operations/getticketingcustomerrequest.md
-  - docs/pkg/models/operations/getticketingcustomerresponse.md
-  - docs/pkg/models/operations/listticketingcustomersrequest.md
-  - docs/pkg/models/operations/listticketingcustomersresponse.md
-  - docs/pkg/models/operations/patchticketingcustomerrequest.md
-  - docs/pkg/models/operations/patchticketingcustomerresponse.md
-  - docs/pkg/models/operations/removeticketingcustomerrequest.md
-  - docs/pkg/models/operations/removeticketingcustomerresponse.md
-  - docs/pkg/models/operations/updateticketingcustomerrequest.md
-  - docs/pkg/models/operations/updateticketingcustomerresponse.md
+  - docs/pkg/models/operations/createcrmcontactrequest.md
+  - docs/pkg/models/operations/createcrmcontactresponse.md
+  - docs/pkg/models/operations/createuccontactrequest.md
+  - docs/pkg/models/operations/createuccontactresponse.md
+  - docs/pkg/models/operations/getcrmcontactrequest.md
+  - docs/pkg/models/operations/getcrmcontactresponse.md
+  - docs/pkg/models/operations/getuccontactrequest.md
+  - docs/pkg/models/operations/getuccontactresponse.md
+  - docs/pkg/models/operations/listcrmcontactsrequest.md
+  - docs/pkg/models/operations/listcrmcontactsresponse.md
+  - docs/pkg/models/operations/listuccontactsrequest.md
+  - docs/pkg/models/operations/listuccontactsresponse.md
+  - docs/pkg/models/operations/patchcrmcontactrequest.md
+  - docs/pkg/models/operations/patchcrmcontactresponse.md
+  - docs/pkg/models/operations/patchuccontactrequest.md
+  - docs/pkg/models/operations/patchuccontactresponse.md
+  - docs/pkg/models/operations/removecrmcontactrequest.md
+  - docs/pkg/models/operations/removecrmcontactresponse.md
+  - docs/pkg/models/operations/removeuccontactrequest.md
+  - docs/pkg/models/operations/removeuccontactresponse.md
+  - docs/pkg/models/operations/updatecrmcontactrequest.md
+  - docs/pkg/models/operations/updatecrmcontactresponse.md
+  - docs/pkg/models/operations/updateuccontactrequest.md
+  - docs/pkg/models/operations/updateuccontactresponse.md
   - docs/pkg/models/operations/createatsapplicationrequest.md
   - docs/pkg/models/operations/createatsapplicationresponse.md
   - docs/pkg/models/operations/createatscandidaterequest.md
@@ -578,8 +590,6 @@ generatedFiles:
   - docs/pkg/models/operations/updateatsscorecardresponse.md
   - docs/pkg/models/operations/createcrmcompanyrequest.md
   - docs/pkg/models/operations/createcrmcompanyresponse.md
-  - docs/pkg/models/operations/createcrmcontactrequest.md
-  - docs/pkg/models/operations/createcrmcontactresponse.md
   - docs/pkg/models/operations/createcrmdealrequest.md
   - docs/pkg/models/operations/createcrmdealresponse.md
   - docs/pkg/models/operations/createcrmeventrequest.md
@@ -590,8 +600,6 @@ generatedFiles:
   - docs/pkg/models/operations/createcrmpipelineresponse.md
   - docs/pkg/models/operations/getcrmcompanyrequest.md
   - docs/pkg/models/operations/getcrmcompanyresponse.md
-  - docs/pkg/models/operations/getcrmcontactrequest.md
-  - docs/pkg/models/operations/getcrmcontactresponse.md
   - docs/pkg/models/operations/getcrmdealrequest.md
   - docs/pkg/models/operations/getcrmdealresponse.md
   - docs/pkg/models/operations/getcrmeventrequest.md
@@ -602,8 +610,6 @@ generatedFiles:
   - docs/pkg/models/operations/getcrmpipelineresponse.md
   - docs/pkg/models/operations/listcrmcompaniesrequest.md
   - docs/pkg/models/operations/listcrmcompaniesresponse.md
-  - docs/pkg/models/operations/listcrmcontactsrequest.md
-  - docs/pkg/models/operations/listcrmcontactsresponse.md
   - docs/pkg/models/operations/listcrmdealsrequest.md
   - docs/pkg/models/operations/listcrmdealsresponse.md
   - docs/pkg/models/operations/listcrmeventsrequest.md
@@ -614,8 +620,6 @@ generatedFiles:
   - docs/pkg/models/operations/listcrmpipelinesresponse.md
   - docs/pkg/models/operations/patchcrmcompanyrequest.md
   - docs/pkg/models/operations/patchcrmcompanyresponse.md
-  - docs/pkg/models/operations/patchcrmcontactrequest.md
-  - docs/pkg/models/operations/patchcrmcontactresponse.md
   - docs/pkg/models/operations/patchcrmdealrequest.md
   - docs/pkg/models/operations/patchcrmdealresponse.md
   - docs/pkg/models/operations/patchcrmeventrequest.md
@@ -626,8 +630,6 @@ generatedFiles:
   - docs/pkg/models/operations/patchcrmpipelineresponse.md
   - docs/pkg/models/operations/removecrmcompanyrequest.md
   - docs/pkg/models/operations/removecrmcompanyresponse.md
-  - docs/pkg/models/operations/removecrmcontactrequest.md
-  - docs/pkg/models/operations/removecrmcontactresponse.md
   - docs/pkg/models/operations/removecrmdealrequest.md
   - docs/pkg/models/operations/removecrmdealresponse.md
   - docs/pkg/models/operations/removecrmeventrequest.md
@@ -638,8 +640,6 @@ generatedFiles:
   - docs/pkg/models/operations/removecrmpipelineresponse.md
   - docs/pkg/models/operations/updatecrmcompanyrequest.md
   - docs/pkg/models/operations/updatecrmcompanyresponse.md
-  - docs/pkg/models/operations/updatecrmcontactrequest.md
-  - docs/pkg/models/operations/updatecrmcontactresponse.md
   - docs/pkg/models/operations/updatecrmdealrequest.md
   - docs/pkg/models/operations/updatecrmdealresponse.md
   - docs/pkg/models/operations/updatecrmeventrequest.md
@@ -650,18 +650,6 @@ generatedFiles:
   - docs/pkg/models/operations/updatecrmpipelineresponse.md
   - docs/pkg/models/operations/listenrichcompaniesrequest.md
   - docs/pkg/models/operations/listenrichcompaniesresponse.md
-  - docs/pkg/models/operations/createuccontactrequest.md
-  - docs/pkg/models/operations/createuccontactresponse.md
-  - docs/pkg/models/operations/getuccontactrequest.md
-  - docs/pkg/models/operations/getuccontactresponse.md
-  - docs/pkg/models/operations/listuccontactsrequest.md
-  - docs/pkg/models/operations/listuccontactsresponse.md
-  - docs/pkg/models/operations/patchuccontactrequest.md
-  - docs/pkg/models/operations/patchuccontactresponse.md
-  - docs/pkg/models/operations/removeuccontactrequest.md
-  - docs/pkg/models/operations/removeuccontactresponse.md
-  - docs/pkg/models/operations/updateuccontactrequest.md
-  - docs/pkg/models/operations/updateuccontactresponse.md
   - docs/pkg/models/operations/listenrichpeoplerequest.md
   - docs/pkg/models/operations/listenrichpeopleresponse.md
   - docs/pkg/models/operations/createhrisemployeerequest.md
@@ -734,26 +722,38 @@ generatedFiles:
   - docs/pkg/models/operations/removestoragefileresponse.md
   - docs/pkg/models/operations/updatestoragefilerequest.md
   - docs/pkg/models/operations/updatestoragefileresponse.md
+  - docs/pkg/models/operations/createticketingcustomerrequest.md
+  - docs/pkg/models/operations/createticketingcustomerresponse.md
   - docs/pkg/models/operations/createticketingnoterequest.md
   - docs/pkg/models/operations/createticketingnoteresponse.md
   - docs/pkg/models/operations/createticketingticketrequest.md
   - docs/pkg/models/operations/createticketingticketresponse.md
+  - docs/pkg/models/operations/getticketingcustomerrequest.md
+  - docs/pkg/models/operations/getticketingcustomerresponse.md
   - docs/pkg/models/operations/getticketingnoterequest.md
   - docs/pkg/models/operations/getticketingnoteresponse.md
   - docs/pkg/models/operations/getticketingticketrequest.md
   - docs/pkg/models/operations/getticketingticketresponse.md
+  - docs/pkg/models/operations/listticketingcustomersrequest.md
+  - docs/pkg/models/operations/listticketingcustomersresponse.md
   - docs/pkg/models/operations/listticketingnotesrequest.md
   - docs/pkg/models/operations/listticketingnotesresponse.md
   - docs/pkg/models/operations/listticketingticketsrequest.md
   - docs/pkg/models/operations/listticketingticketsresponse.md
+  - docs/pkg/models/operations/patchticketingcustomerrequest.md
+  - docs/pkg/models/operations/patchticketingcustomerresponse.md
   - docs/pkg/models/operations/patchticketingnoterequest.md
   - docs/pkg/models/operations/patchticketingnoteresponse.md
   - docs/pkg/models/operations/patchticketingticketrequest.md
   - docs/pkg/models/operations/patchticketingticketresponse.md
+  - docs/pkg/models/operations/removeticketingcustomerrequest.md
+  - docs/pkg/models/operations/removeticketingcustomerresponse.md
   - docs/pkg/models/operations/removeticketingnoterequest.md
   - docs/pkg/models/operations/removeticketingnoteresponse.md
   - docs/pkg/models/operations/removeticketingticketrequest.md
   - docs/pkg/models/operations/removeticketingticketresponse.md
+  - docs/pkg/models/operations/updateticketingcustomerrequest.md
+  - docs/pkg/models/operations/updateticketingcustomerresponse.md
   - docs/pkg/models/operations/updateticketingnoterequest.md
   - docs/pkg/models/operations/updateticketingnoteresponse.md
   - docs/pkg/models/operations/updateticketingticketrequest.md
@@ -804,14 +804,14 @@ generatedFiles:
   - docs/pkg/models/shared/accountingaccount.md
   - docs/pkg/models/shared/propertyaccountingaccountraw.md
   - docs/pkg/models/shared/taxexemption.md
-  - docs/pkg/models/shared/accountingcustomer.md
+  - docs/pkg/models/shared/accountingcontact.md
   - docs/pkg/models/shared/accountingtelephonetype.md
   - docs/pkg/models/shared/accountingtelephone.md
-  - docs/pkg/models/shared/propertyaccountingcustomershippingaddress.md
-  - docs/pkg/models/shared/propertyaccountingcustomerraw.md
+  - docs/pkg/models/shared/propertyaccountingcontactshippingaddress.md
+  - docs/pkg/models/shared/propertyaccountingcontactraw.md
   - docs/pkg/models/shared/accountingemailtype.md
   - docs/pkg/models/shared/accountingemail.md
-  - docs/pkg/models/shared/propertyaccountingcustomerbillingaddress.md
+  - docs/pkg/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/pkg/models/shared/accountinginvoicestatus.md
   - docs/pkg/models/shared/accountinginvoice.md
   - docs/pkg/models/shared/propertyaccountinginvoiceraw.md
@@ -829,15 +829,23 @@ generatedFiles:
   - docs/pkg/models/shared/accountingorganization.md
   - docs/pkg/models/shared/propertyaccountingorganizationraw.md
   - docs/pkg/models/shared/propertyaccountingorganizationaddress.md
-  - docs/pkg/models/shared/ticketingcustomer.md
-  - docs/pkg/models/shared/ticketingtelephonetype.md
-  - docs/pkg/models/shared/ticketingtelephone.md
-  - docs/pkg/models/shared/propertyticketingcustomerraw.md
-  - docs/pkg/models/shared/ticketingemailtype.md
-  - docs/pkg/models/shared/ticketingemail.md
+  - docs/pkg/models/shared/crmcontact.md
+  - docs/pkg/models/shared/crmtelephonetype.md
+  - docs/pkg/models/shared/crmtelephone.md
+  - docs/pkg/models/shared/propertycrmcontactraw.md
+  - docs/pkg/models/shared/crmemailtype.md
+  - docs/pkg/models/shared/crmemail.md
+  - docs/pkg/models/shared/propertycrmcontactaddress.md
+  - docs/pkg/models/shared/uccontact.md
+  - docs/pkg/models/shared/uctelephonetype.md
+  - docs/pkg/models/shared/uctelephone.md
+  - docs/pkg/models/shared/propertyuccontactraw.md
+  - docs/pkg/models/shared/ucemailtype.md
+  - docs/pkg/models/shared/ucemail.md
   - docs/pkg/models/shared/atsapplicationstatus.md
   - docs/pkg/models/shared/atsapplication.md
   - docs/pkg/models/shared/propertyatsapplicationraw.md
+  - docs/pkg/models/shared/origin.md
   - docs/pkg/models/shared/atscandidate.md
   - docs/pkg/models/shared/atstelephonetype.md
   - docs/pkg/models/shared/atstelephone.md
@@ -866,15 +874,8 @@ generatedFiles:
   - docs/pkg/models/shared/atsstatus.md
   - docs/pkg/models/shared/propertyatsstatusraw.md
   - docs/pkg/models/shared/crmcompany.md
-  - docs/pkg/models/shared/crmtelephonetype.md
-  - docs/pkg/models/shared/crmtelephone.md
   - docs/pkg/models/shared/propertycrmcompanyraw.md
-  - docs/pkg/models/shared/crmemailtype.md
-  - docs/pkg/models/shared/crmemail.md
   - docs/pkg/models/shared/propertycrmcompanyaddress.md
-  - docs/pkg/models/shared/crmcontact.md
-  - docs/pkg/models/shared/propertycrmcontactraw.md
-  - docs/pkg/models/shared/propertycrmcontactaddress.md
   - docs/pkg/models/shared/crmdeal.md
   - docs/pkg/models/shared/propertycrmdealraw.md
   - docs/pkg/models/shared/crmeventtype.md
@@ -896,12 +897,6 @@ generatedFiles:
   - docs/pkg/models/shared/enrichtelephone.md
   - docs/pkg/models/shared/propertyenrichcompanyraw.md
   - docs/pkg/models/shared/propertyenrichcompanyaddress.md
-  - docs/pkg/models/shared/uccontact.md
-  - docs/pkg/models/shared/uctelephonetype.md
-  - docs/pkg/models/shared/uctelephone.md
-  - docs/pkg/models/shared/propertyuccontactraw.md
-  - docs/pkg/models/shared/ucemailtype.md
-  - docs/pkg/models/shared/ucemail.md
   - docs/pkg/models/shared/gender.md
   - docs/pkg/models/shared/enrichperson.md
   - docs/pkg/models/shared/enrichpersonworkhistory.md
@@ -935,6 +930,12 @@ generatedFiles:
   - docs/pkg/models/shared/propertystoragefileraw.md
   - docs/pkg/models/shared/storagepermission.md
   - docs/pkg/models/shared/propertystoragepermissionroles.md
+  - docs/pkg/models/shared/ticketingcustomer.md
+  - docs/pkg/models/shared/ticketingtelephonetype.md
+  - docs/pkg/models/shared/ticketingtelephone.md
+  - docs/pkg/models/shared/propertyticketingcustomerraw.md
+  - docs/pkg/models/shared/ticketingemailtype.md
+  - docs/pkg/models/shared/ticketingemail.md
   - docs/pkg/models/shared/ticketingnote.md
   - docs/pkg/models/shared/propertyticketingnoteraw.md
   - docs/pkg/models/shared/ticketingticketstatus.md
@@ -967,7 +968,7 @@ generatedFiles:
   - docs/sdks/unifiedto/README.md
   - docs/sdks/accounting/README.md
   - docs/sdks/account/README.md
-  - docs/sdks/customer/README.md
+  - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
   - docs/sdks/item/README.md
   - docs/sdks/organization/README.md
@@ -984,7 +985,6 @@ generatedFiles:
   - docs/sdks/scorecard/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/company/README.md
-  - docs/sdks/contact/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
   - docs/sdks/lead/README.md
@@ -1001,6 +1001,7 @@ generatedFiles:
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md
+  - docs/sdks/customer/README.md
   - docs/sdks/note/README.md
   - docs/sdks/ticket/README.md
   - docs/sdks/uc/README.md

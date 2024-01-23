@@ -17,8 +17,8 @@ const (
 	PropertyConnectionPermissionsAccountingTransactionWrite PropertyConnectionPermissions = "accounting_transaction_write"
 	PropertyConnectionPermissionsAccountingInvoiceRead      PropertyConnectionPermissions = "accounting_invoice_read"
 	PropertyConnectionPermissionsAccountingInvoiceWrite     PropertyConnectionPermissions = "accounting_invoice_write"
-	PropertyConnectionPermissionsAccountingCustomerRead     PropertyConnectionPermissions = "accounting_customer_read"
-	PropertyConnectionPermissionsAccountingCustomerWrite    PropertyConnectionPermissions = "accounting_customer_write"
+	PropertyConnectionPermissionsAccountingContactRead      PropertyConnectionPermissions = "accounting_contact_read"
+	PropertyConnectionPermissionsAccountingContactWrite     PropertyConnectionPermissions = "accounting_contact_write"
 	PropertyConnectionPermissionsAccountingPaymentRead      PropertyConnectionPermissions = "accounting_payment_read"
 	PropertyConnectionPermissionsAccountingPaymentWrite     PropertyConnectionPermissions = "accounting_payment_write"
 	PropertyConnectionPermissionsAccountingTaxrateRead      PropertyConnectionPermissions = "accounting_taxrate_read"
@@ -94,9 +94,9 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "accounting_invoice_write":
 		fallthrough
-	case "accounting_customer_read":
+	case "accounting_contact_read":
 		fallthrough
-	case "accounting_customer_write":
+	case "accounting_contact_write":
 		fallthrough
 	case "accounting_payment_read":
 		fallthrough

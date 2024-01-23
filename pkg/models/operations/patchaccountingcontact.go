@@ -7,38 +7,38 @@ import (
 	"net/http"
 )
 
-type UpdateAccountingCustomerRequest struct {
-	AccountingCustomer *shared.AccountingCustomer `request:"mediaType=application/json"`
+type PatchAccountingContactRequest struct {
+	AccountingContact *shared.AccountingContact `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// ID of the Customer
+	// ID of the Contact
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateAccountingCustomerRequest) GetAccountingCustomer() *shared.AccountingCustomer {
+func (o *PatchAccountingContactRequest) GetAccountingContact() *shared.AccountingContact {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingCustomer
+	return o.AccountingContact
 }
 
-func (o *UpdateAccountingCustomerRequest) GetConnectionID() string {
+func (o *PatchAccountingContactRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *UpdateAccountingCustomerRequest) GetID() string {
+func (o *PatchAccountingContactRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type UpdateAccountingCustomerResponse struct {
+type PatchAccountingContactResponse struct {
 	// Successful
-	AccountingCustomer *shared.AccountingCustomer
+	AccountingContact *shared.AccountingContact
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -47,28 +47,28 @@ type UpdateAccountingCustomerResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAccountingCustomerResponse) GetAccountingCustomer() *shared.AccountingCustomer {
+func (o *PatchAccountingContactResponse) GetAccountingContact() *shared.AccountingContact {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingCustomer
+	return o.AccountingContact
 }
 
-func (o *UpdateAccountingCustomerResponse) GetContentType() string {
+func (o *PatchAccountingContactResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *UpdateAccountingCustomerResponse) GetStatusCode() int {
+func (o *PatchAccountingContactResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *UpdateAccountingCustomerResponse) GetRawResponse() *http.Response {
+func (o *PatchAccountingContactResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
