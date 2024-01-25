@@ -94,6 +94,7 @@ type AccountingAccount struct {
 	CustomerDefinedCode *string                       `json:"customer_defined_code,omitempty"`
 	Description         *string                       `json:"description,omitempty"`
 	ID                  *string                       `json:"id,omitempty"`
+	IsPayable           *bool                         `json:"is_payable,omitempty"`
 	Name                string                        `json:"name"`
 	Raw                 *PropertyAccountingAccountRaw `json:"raw,omitempty"`
 	Status              *Status                       `json:"status,omitempty"`
@@ -152,6 +153,13 @@ func (o *AccountingAccount) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *AccountingAccount) GetIsPayable() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsPayable
 }
 
 func (o *AccountingAccount) GetName() string {
