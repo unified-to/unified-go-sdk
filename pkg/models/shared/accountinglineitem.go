@@ -8,24 +8,23 @@ import (
 )
 
 type AccountingLineitem struct {
-	AccountID       *string                        `json:"account_id,omitempty"`
-	CreatedAt       *time.Time                     `json:"created_at,omitempty"`
-	DiscountAmount  *float64                       `json:"discount_amount,omitempty"`
-	ID              *string                        `json:"id,omitempty"`
-	ItemDescription *string                        `json:"item_description,omitempty"`
-	ItemID          *string                        `json:"item_id,omitempty"`
-	ItemName        *string                        `json:"item_name,omitempty"`
-	ItemSku         *string                        `json:"item_sku,omitempty"`
-	Notes           *string                        `json:"notes,omitempty"`
-	Raw             *PropertyAccountingLineitemRaw `json:"raw,omitempty"`
-	RefundedAmount  *float64                       `json:"refunded_amount,omitempty"`
-	RefundedAt      *time.Time                     `json:"refunded_at,omitempty"`
-	TaxAmount       *float64                       `json:"tax_amount,omitempty"`
-	TaxrateID       *string                        `json:"taxrate_id,omitempty"`
-	TotalAmount     float64                        `json:"total_amount"`
-	UnitAmount      *float64                       `json:"unit_amount,omitempty"`
-	UnitQuantity    *float64                       `json:"unit_quantity,omitempty"`
-	UpdatedAt       *time.Time                     `json:"updated_at,omitempty"`
+	AccountID       *string    `json:"account_id,omitempty"`
+	CreatedAt       *time.Time `json:"created_at,omitempty"`
+	DiscountAmount  *float64   `json:"discount_amount,omitempty"`
+	ID              *string    `json:"id,omitempty"`
+	ItemDescription *string    `json:"item_description,omitempty"`
+	ItemID          *string    `json:"item_id,omitempty"`
+	ItemName        *string    `json:"item_name,omitempty"`
+	ItemSku         *string    `json:"item_sku,omitempty"`
+	Notes           *string    `json:"notes,omitempty"`
+	RefundedAmount  *float64   `json:"refunded_amount,omitempty"`
+	RefundedAt      *time.Time `json:"refunded_at,omitempty"`
+	TaxAmount       *float64   `json:"tax_amount,omitempty"`
+	TaxrateID       *string    `json:"taxrate_id,omitempty"`
+	TotalAmount     float64    `json:"total_amount"`
+	UnitAmount      *float64   `json:"unit_amount,omitempty"`
+	UnitQuantity    *float64   `json:"unit_quantity,omitempty"`
+	UpdatedAt       *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingLineitem) MarshalJSON() ([]byte, error) {
@@ -100,13 +99,6 @@ func (o *AccountingLineitem) GetNotes() *string {
 		return nil
 	}
 	return o.Notes
-}
-
-func (o *AccountingLineitem) GetRaw() *PropertyAccountingLineitemRaw {
-	if o == nil {
-		return nil
-	}
-	return o.Raw
 }
 
 func (o *AccountingLineitem) GetRefundedAmount() *float64 {

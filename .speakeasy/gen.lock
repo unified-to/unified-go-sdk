@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 5160b83a94b66b2e0ad89d7f5d90cf8c
+  docChecksum: e6d7bb30e178bd0903f2f07c8ad4601f
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.239.4
-  releaseVersion: 0.9.31
-  configChecksum: d6fd41b66e677b4810f2e5dcd6847506
+  releaseVersion: 0.9.32
+  configChecksum: 884ceb0a22bbb35b9a7bc386acddd0eb
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -292,7 +292,6 @@ generatedFiles:
   - /pkg/models/shared/accountinginvoice.go
   - /pkg/models/shared/propertyaccountinginvoiceraw.go
   - /pkg/models/shared/accountinglineitem.go
-  - /pkg/models/shared/propertyaccountinglineitemraw.go
   - /pkg/models/shared/accountingitem.go
   - /pkg/models/shared/propertyaccountingitemraw.go
   - /pkg/models/shared/accountingpayment.go
@@ -816,7 +815,6 @@ generatedFiles:
   - docs/pkg/models/shared/accountinginvoice.md
   - docs/pkg/models/shared/propertyaccountinginvoiceraw.md
   - docs/pkg/models/shared/accountinglineitem.md
-  - docs/pkg/models/shared/propertyaccountinglineitemraw.md
   - docs/pkg/models/shared/accountingitem.md
   - docs/pkg/models/shared/propertyaccountingitemraw.md
   - docs/pkg/models/shared/accountingpayment.md
