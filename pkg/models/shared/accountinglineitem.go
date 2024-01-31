@@ -17,6 +17,7 @@ type AccountingLineitem struct {
 	ItemName        *string    `json:"item_name,omitempty"`
 	ItemSku         *string    `json:"item_sku,omitempty"`
 	Notes           *string    `json:"notes,omitempty"`
+	RefundAmount    *float64   `json:"refund_amount,omitempty"`
 	RefundedAmount  *float64   `json:"refunded_amount,omitempty"`
 	RefundedAt      *time.Time `json:"refunded_at,omitempty"`
 	TaxAmount       *float64   `json:"tax_amount,omitempty"`
@@ -99,6 +100,13 @@ func (o *AccountingLineitem) GetNotes() *string {
 		return nil
 	}
 	return o.Notes
+}
+
+func (o *AccountingLineitem) GetRefundAmount() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.RefundAmount
 }
 
 func (o *AccountingLineitem) GetRefundedAmount() *float64 {

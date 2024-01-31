@@ -8,11 +8,13 @@ type AccountingTransaction struct {
 	Description *string                         `json:"description,omitempty"`
 	ID          string                          `json:"id"`
 	LineItems   []AccountingTransactionLineitem `json:"line_items,omitempty"`
-	Raw         map[string]interface{}          `json:"raw,omitempty"`
-	Reference   *string                         `json:"reference,omitempty"`
-	TaxAmount   *float64                        `json:"tax_amount,omitempty"`
-	TaxrateID   *string                         `json:"taxrate_id,omitempty"`
-	UpdatedAt   *string                         `json:"updated_at,omitempty"`
+	// new field name
+	Lineitems []AccountingTransactionLineitem `json:"lineitems,omitempty"`
+	Raw       map[string]interface{}          `json:"raw,omitempty"`
+	Reference *string                         `json:"reference,omitempty"`
+	TaxAmount *float64                        `json:"tax_amount,omitempty"`
+	TaxrateID *string                         `json:"taxrate_id,omitempty"`
+	UpdatedAt *string                         `json:"updated_at,omitempty"`
 }
 
 func (o *AccountingTransaction) GetCreatedAt() *string {
@@ -48,6 +50,13 @@ func (o *AccountingTransaction) GetLineItems() []AccountingTransactionLineitem {
 		return nil
 	}
 	return o.LineItems
+}
+
+func (o *AccountingTransaction) GetLineitems() []AccountingTransactionLineitem {
+	if o == nil {
+		return nil
+	}
+	return o.Lineitems
 }
 
 func (o *AccountingTransaction) GetRaw() map[string]interface{} {

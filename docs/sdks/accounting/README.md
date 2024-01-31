@@ -437,6 +437,12 @@ func main() {
                     TotalAmount: 4969.62,
                 },
             },
+            Lineitems: []shared.AccountingTransactionLineitem{
+                shared.AccountingTransactionLineitem{
+                    AccountID: "string",
+                    TotalAmount: 6267.93,
+                },
+            },
             Raw: map[string]interface{}{
                 "key": "string",
             },
@@ -1735,6 +1741,12 @@ func main() {
                     TotalAmount: 5633.69,
                 },
             },
+            Lineitems: []shared.AccountingTransactionLineitem{
+                shared.AccountingTransactionLineitem{
+                    AccountID: "string",
+                    TotalAmount: 4558.63,
+                },
+            },
             Raw: map[string]interface{}{
                 "key": "string",
             },
@@ -2531,6 +2543,12 @@ func main() {
                 shared.AccountingTransactionLineitem{
                     AccountID: "string",
                     TotalAmount: 6498.37,
+                },
+            },
+            Lineitems: []shared.AccountingTransactionLineitem{
+                shared.AccountingTransactionLineitem{
+                    AccountID: "string",
+                    TotalAmount: 5659.17,
                 },
             },
             Raw: map[string]interface{}{
