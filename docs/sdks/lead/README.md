@@ -39,7 +39,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmLeadRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -211,7 +213,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmLeadRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -328,7 +332,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmLeadRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",

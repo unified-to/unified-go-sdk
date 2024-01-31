@@ -19,13 +19,13 @@ type CrmDeal struct {
 	Pipeline    *string    `json:"pipeline,omitempty"`
 	Probability *float64   `json:"probability,omitempty"`
 	// The raw data returned by the integration for this deal
-	Raw       *PropertyCrmDealRaw `json:"raw,omitempty"`
-	Source    *string             `json:"source,omitempty"`
-	Stage     *string             `json:"stage,omitempty"`
-	Tags      []string            `json:"tags,omitempty"`
-	UpdatedAt *time.Time          `json:"updated_at,omitempty"`
-	UserID    *string             `json:"user_id,omitempty"`
-	WonReason *string             `json:"won_reason,omitempty"`
+	Raw       map[string]interface{} `json:"raw,omitempty"`
+	Source    *string                `json:"source,omitempty"`
+	Stage     *string                `json:"stage,omitempty"`
+	Tags      []string               `json:"tags,omitempty"`
+	UpdatedAt *time.Time             `json:"updated_at,omitempty"`
+	UserID    *string                `json:"user_id,omitempty"`
+	WonReason *string                `json:"won_reason,omitempty"`
 }
 
 func (c CrmDeal) MarshalJSON() ([]byte, error) {
@@ -102,7 +102,7 @@ func (o *CrmDeal) GetProbability() *float64 {
 	return o.Probability
 }
 
-func (o *CrmDeal) GetRaw() *PropertyCrmDealRaw {
+func (o *CrmDeal) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

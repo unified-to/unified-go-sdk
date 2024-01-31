@@ -48,7 +48,9 @@ func main() {
             Emails: []string{
                 "string",
             },
-            Meta: &shared.PropertyPropertyConnectionAuthMeta{},
+            Meta: map[string]interface{}{
+                "key": "string",
+            },
             OtherAuthInfo: []string{
                 "string",
             },
@@ -56,8 +58,10 @@ func main() {
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesStorage,
         },
-        CursorsCache: []shared.Undefined{
-            shared.Undefined{},
+        CursorsCache: []map[string]interface{}{
+            map[string]interface{}{
+                "key": "string",
+            },
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
@@ -118,7 +122,9 @@ func main() {
             Event: shared.EventCreated,
             HookURL: "string",
             Interval: 188.12,
-            Meta: &shared.PropertyWebhookMeta{},
+            Meta: map[string]interface{}{
+                "key": "string",
+            },
             ObjectType: shared.ObjectTypeCrmCompany,
             Runs: []string{
                 "string",
@@ -645,7 +651,9 @@ func main() {
                 Emails: []string{
                     "string",
                 },
-                Meta: &shared.PropertyPropertyConnectionAuthMeta{},
+                Meta: map[string]interface{}{
+                    "key": "string",
+                },
                 OtherAuthInfo: []string{
                     "string",
                 },
@@ -653,8 +661,10 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesTicketing,
             },
-            CursorsCache: []shared.Undefined{
-                shared.Undefined{},
+            CursorsCache: []map[string]interface{}{
+                map[string]interface{}{
+                    "key": "string",
+                },
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
@@ -873,7 +883,9 @@ func main() {
                 Emails: []string{
                     "string",
                 },
-                Meta: &shared.PropertyPropertyConnectionAuthMeta{},
+                Meta: map[string]interface{}{
+                    "key": "string",
+                },
                 OtherAuthInfo: []string{
                     "string",
                 },
@@ -881,8 +893,10 @@ func main() {
             Categories: []shared.PropertyConnectionCategories{
                 shared.PropertyConnectionCategoriesUc,
             },
-            CursorsCache: []shared.Undefined{
-                shared.Undefined{},
+            CursorsCache: []map[string]interface{}{
+                map[string]interface{}{
+                    "key": "string",
+                },
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{

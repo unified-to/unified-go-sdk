@@ -75,7 +75,9 @@ func main() {
             LinkUrls: []string{
                 "string",
             },
-            Raw: &shared.PropertyCrmCompanyRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -150,7 +152,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -209,7 +213,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
         CrmDeal: &shared.CrmDeal{
-            Raw: &shared.PropertyCrmDealRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -292,7 +298,9 @@ func main() {
             },
             Meeting: &shared.PropertyCrmEventMeeting{},
             Note: &shared.PropertyCrmEventNote{},
-            Raw: &shared.PropertyCrmEventRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "string",
@@ -351,7 +359,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmLeadRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -410,7 +420,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.CreateCrmPipeline(ctx, operations.CreateCrmPipelineRequest{
         CrmPipeline: &shared.CrmPipeline{
-            Raw: &shared.PropertyCrmPipelineRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -1128,7 +1140,9 @@ func main() {
             LinkUrls: []string{
                 "string",
             },
-            Raw: &shared.PropertyCrmCompanyRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -1204,7 +1218,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -1264,7 +1280,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
         CrmDeal: &shared.CrmDeal{
-            Raw: &shared.PropertyCrmDealRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -1348,7 +1366,9 @@ func main() {
             },
             Meeting: &shared.PropertyCrmEventMeeting{},
             Note: &shared.PropertyCrmEventNote{},
-            Raw: &shared.PropertyCrmEventRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "string",
@@ -1408,7 +1428,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmLeadRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -1468,7 +1490,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.PatchCrmPipeline(ctx, operations.PatchCrmPipelineRequest{
         CrmPipeline: &shared.CrmPipeline{
-            Raw: &shared.PropertyCrmPipelineRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -1851,7 +1875,9 @@ func main() {
             LinkUrls: []string{
                 "string",
             },
-            Raw: &shared.PropertyCrmCompanyRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -1927,7 +1953,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -1987,7 +2015,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
         CrmDeal: &shared.CrmDeal{
-            Raw: &shared.PropertyCrmDealRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -2071,7 +2101,9 @@ func main() {
             },
             Meeting: &shared.PropertyCrmEventMeeting{},
             Note: &shared.PropertyCrmEventNote{},
-            Raw: &shared.PropertyCrmEventRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "string",
@@ -2131,7 +2163,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmLeadRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -2191,7 +2225,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmPipeline(ctx, operations.UpdateCrmPipelineRequest{
         CrmPipeline: &shared.CrmPipeline{
-            Raw: &shared.PropertyCrmPipelineRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",

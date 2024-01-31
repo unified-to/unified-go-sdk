@@ -52,7 +52,9 @@ func main() {
             PublicJobUrls: []string{
                 "string",
             },
-            Raw: &shared.PropertyAtsJobRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             RecruiterIds: []string{
                 "string",
             },
@@ -235,7 +237,9 @@ func main() {
             PublicJobUrls: []string{
                 "string",
             },
-            Raw: &shared.PropertyAtsJobRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             RecruiterIds: []string{
                 "string",
             },
@@ -363,7 +367,9 @@ func main() {
             PublicJobUrls: []string{
                 "string",
             },
-            Raw: &shared.PropertyAtsJobRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             RecruiterIds: []string{
                 "string",
             },

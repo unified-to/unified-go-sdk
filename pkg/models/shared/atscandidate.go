@@ -57,14 +57,14 @@ type AtsCandidate struct {
 	ID          *string                      `json:"id,omitempty"`
 	ImageURL    *string                      `json:"image_url,omitempty"`
 	// a list of social media links associated with the candidate. eg. LinkedIn URL
-	LinkUrls   []string                 `json:"link_urls,omitempty"`
-	Name       *string                  `json:"name,omitempty"`
-	Origin     *Origin                  `json:"origin,omitempty"`
-	Raw        *PropertyAtsCandidateRaw `json:"raw,omitempty"`
-	Tags       []string                 `json:"tags,omitempty"`
-	Telephones []AtsTelephone           `json:"telephones,omitempty"`
-	Title      *string                  `json:"title,omitempty"`
-	UpdatedAt  *time.Time               `json:"updated_at,omitempty"`
+	LinkUrls   []string               `json:"link_urls,omitempty"`
+	Name       *string                `json:"name,omitempty"`
+	Origin     *Origin                `json:"origin,omitempty"`
+	Raw        map[string]interface{} `json:"raw,omitempty"`
+	Tags       []string               `json:"tags,omitempty"`
+	Telephones []AtsTelephone         `json:"telephones,omitempty"`
+	Title      *string                `json:"title,omitempty"`
+	UpdatedAt  *time.Time             `json:"updated_at,omitempty"`
 }
 
 func (a AtsCandidate) MarshalJSON() ([]byte, error) {
@@ -148,7 +148,7 @@ func (o *AtsCandidate) GetOrigin() *Origin {
 	return o.Origin
 }
 
-func (o *AtsCandidate) GetRaw() *PropertyAtsCandidateRaw {
+func (o *AtsCandidate) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

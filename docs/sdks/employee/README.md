@@ -41,7 +41,9 @@ func main() {
                     Email: "Adriel_Hansen@hotmail.com",
                 },
             },
-            Raw: &shared.PropertyHrisEmployeeRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
                     Telephone: "string",
@@ -215,7 +217,9 @@ func main() {
                     Email: "Zetta.Cassin@yahoo.com",
                 },
             },
-            Raw: &shared.PropertyHrisEmployeeRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
                     Telephone: "string",
@@ -334,7 +338,9 @@ func main() {
                     Email: "Abbie_Aufderhar@gmail.com",
                 },
             },
-            Raw: &shared.PropertyHrisEmployeeRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
                     Telephone: "string",

@@ -43,7 +43,9 @@ func main() {
             ListIds: []string{
                 "string",
             },
-            Raw: &shared.PropertyMarketingMemberRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -217,7 +219,9 @@ func main() {
             ListIds: []string{
                 "string",
             },
-            Raw: &shared.PropertyMarketingMemberRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -336,7 +340,9 @@ func main() {
             ListIds: []string{
                 "string",
             },
-            Raw: &shared.PropertyMarketingMemberRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },

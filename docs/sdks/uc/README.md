@@ -41,7 +41,9 @@ func main() {
                     Email: "Dulce_Becker30@yahoo.com",
                 },
             },
-            Raw: &shared.PropertyUcContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
                     Telephone: "string",
@@ -268,7 +270,9 @@ func main() {
                     Email: "Norene_Boehm97@hotmail.com",
                 },
             },
-            Raw: &shared.PropertyUcContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
                     Telephone: "string",
@@ -386,7 +390,9 @@ func main() {
                     Email: "Kianna.Witting90@gmail.com",
                 },
             },
-            Raw: &shared.PropertyUcContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
                     Telephone: "string",

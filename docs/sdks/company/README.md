@@ -46,7 +46,9 @@ func main() {
             LinkUrls: []string{
                 "string",
             },
-            Raw: &shared.PropertyCrmCompanyRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -281,7 +283,9 @@ func main() {
             LinkUrls: []string{
                 "string",
             },
-            Raw: &shared.PropertyCrmCompanyRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -410,7 +414,9 @@ func main() {
             LinkUrls: []string{
                 "string",
             },
-            Raw: &shared.PropertyCrmCompanyRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },

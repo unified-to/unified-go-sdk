@@ -70,19 +70,19 @@ func (e *AtsApplicationStatus) UnmarshalJSON(data []byte) error {
 }
 
 type AtsApplication struct {
-	AppliedAt      *time.Time                 `json:"applied_at,omitempty"`
-	CandidateID    *string                    `json:"candidate_id,omitempty"`
-	CreatedAt      *time.Time                 `json:"created_at,omitempty"`
-	HiredAt        *time.Time                 `json:"hired_at,omitempty"`
-	ID             *string                    `json:"id,omitempty"`
-	JobID          *string                    `json:"job_id,omitempty"`
-	OriginalStatus *string                    `json:"original_status,omitempty"`
-	Raw            *PropertyAtsApplicationRaw `json:"raw,omitempty"`
-	RejectedAt     *time.Time                 `json:"rejected_at,omitempty"`
-	RejectedReason *string                    `json:"rejected_reason,omitempty"`
-	Source         *string                    `json:"source,omitempty"`
-	Status         *AtsApplicationStatus      `json:"status,omitempty"`
-	UpdatedAt      *time.Time                 `json:"updated_at,omitempty"`
+	AppliedAt      *time.Time             `json:"applied_at,omitempty"`
+	CandidateID    *string                `json:"candidate_id,omitempty"`
+	CreatedAt      *time.Time             `json:"created_at,omitempty"`
+	HiredAt        *time.Time             `json:"hired_at,omitempty"`
+	ID             *string                `json:"id,omitempty"`
+	JobID          *string                `json:"job_id,omitempty"`
+	OriginalStatus *string                `json:"original_status,omitempty"`
+	Raw            map[string]interface{} `json:"raw,omitempty"`
+	RejectedAt     *time.Time             `json:"rejected_at,omitempty"`
+	RejectedReason *string                `json:"rejected_reason,omitempty"`
+	Source         *string                `json:"source,omitempty"`
+	Status         *AtsApplicationStatus  `json:"status,omitempty"`
+	UpdatedAt      *time.Time             `json:"updated_at,omitempty"`
 }
 
 func (a AtsApplication) MarshalJSON() ([]byte, error) {
@@ -145,7 +145,7 @@ func (o *AtsApplication) GetOriginalStatus() *string {
 	return o.OriginalStatus
 }
 
-func (o *AtsApplication) GetRaw() *PropertyAtsApplicationRaw {
+func (o *AtsApplication) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

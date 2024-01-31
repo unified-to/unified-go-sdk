@@ -9,20 +9,20 @@ import (
 
 // PropertyConnectionAuth - An authentication object that represents a specific authorized user's connection to an integration.
 type PropertyConnectionAuth struct {
-	AccessToken    *string                             `json:"access_token,omitempty"`
-	APIURL         *string                             `json:"api_url,omitempty"`
-	AppID          *string                             `json:"app_id,omitempty"`
-	AuthorizeURL   *string                             `json:"authorize_url,omitempty"`
-	ClientID       *string                             `json:"client_id,omitempty"`
-	ClientSecret   *string                             `json:"client_secret,omitempty"`
-	ConsumerKey    *string                             `json:"consumer_key,omitempty"`
-	ConsumerSecret *string                             `json:"consumer_secret,omitempty"`
-	Emails         []string                            `json:"emails,omitempty"`
-	ExpiresIn      *float64                            `json:"expires_in,omitempty"`
-	ExpiryDate     *time.Time                          `json:"expiry_date,omitempty"`
-	Key            *string                             `json:"key,omitempty"`
-	Meta           *PropertyPropertyConnectionAuthMeta `json:"meta,omitempty"`
-	Name           *string                             `json:"name,omitempty"`
+	AccessToken    *string                `json:"access_token,omitempty"`
+	APIURL         *string                `json:"api_url,omitempty"`
+	AppID          *string                `json:"app_id,omitempty"`
+	AuthorizeURL   *string                `json:"authorize_url,omitempty"`
+	ClientID       *string                `json:"client_id,omitempty"`
+	ClientSecret   *string                `json:"client_secret,omitempty"`
+	ConsumerKey    *string                `json:"consumer_key,omitempty"`
+	ConsumerSecret *string                `json:"consumer_secret,omitempty"`
+	Emails         []string               `json:"emails,omitempty"`
+	ExpiresIn      *float64               `json:"expires_in,omitempty"`
+	ExpiryDate     *time.Time             `json:"expiry_date,omitempty"`
+	Key            *string                `json:"key,omitempty"`
+	Meta           map[string]interface{} `json:"meta,omitempty"`
+	Name           *string                `json:"name,omitempty"`
 	// When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
 	OtherAuthInfo           []string   `json:"other_auth_info,omitempty"`
 	Pem                     *string    `json:"pem,omitempty"`
@@ -129,7 +129,7 @@ func (o *PropertyConnectionAuth) GetKey() *string {
 	return o.Key
 }
 
-func (o *PropertyConnectionAuth) GetMeta() *PropertyPropertyConnectionAuthMeta {
+func (o *PropertyConnectionAuth) GetMeta() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

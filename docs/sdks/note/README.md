@@ -35,7 +35,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: &shared.PropertyTicketingNoteRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -198,7 +200,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: &shared.PropertyTicketingNoteRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -306,7 +310,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Note.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: &shared.PropertyTicketingNoteRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",

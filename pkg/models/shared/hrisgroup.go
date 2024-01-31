@@ -52,17 +52,17 @@ func (e *HrisGroupType) UnmarshalJSON(data []byte) error {
 }
 
 type HrisGroup struct {
-	CreatedAt   *time.Time            `json:"created_at,omitempty"`
-	Description *string               `json:"description,omitempty"`
-	ID          *string               `json:"id,omitempty"`
-	IsActive    *bool                 `json:"is_active,omitempty"`
-	ManagerIds  []string              `json:"manager_ids,omitempty"`
-	Name        *string               `json:"name,omitempty"`
-	ParentID    *string               `json:"parent_id,omitempty"`
-	Raw         *PropertyHrisGroupRaw `json:"raw,omitempty"`
-	Type        *HrisGroupType        `json:"type,omitempty"`
-	UpdatedAt   *time.Time            `json:"updated_at,omitempty"`
-	UserIds     []string              `json:"user_ids,omitempty"`
+	CreatedAt   *time.Time             `json:"created_at,omitempty"`
+	Description *string                `json:"description,omitempty"`
+	ID          *string                `json:"id,omitempty"`
+	IsActive    *bool                  `json:"is_active,omitempty"`
+	ManagerIds  []string               `json:"manager_ids,omitempty"`
+	Name        *string                `json:"name,omitempty"`
+	ParentID    *string                `json:"parent_id,omitempty"`
+	Raw         map[string]interface{} `json:"raw,omitempty"`
+	Type        *HrisGroupType         `json:"type,omitempty"`
+	UpdatedAt   *time.Time             `json:"updated_at,omitempty"`
+	UserIds     []string               `json:"user_ids,omitempty"`
 }
 
 func (h HrisGroup) MarshalJSON() ([]byte, error) {
@@ -125,7 +125,7 @@ func (o *HrisGroup) GetParentID() *string {
 	return o.ParentID
 }
 
-func (o *HrisGroup) GetRaw() *PropertyHrisGroupRaw {
+func (o *HrisGroup) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

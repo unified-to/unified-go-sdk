@@ -17,7 +17,7 @@ type MarketingMember struct {
 	ListIds []string `json:"list_ids,omitempty"`
 	Name    *string  `json:"name,omitempty"`
 	// The raw data returned by the integration for this member
-	Raw *PropertyMarketingMemberRaw `json:"raw,omitempty"`
+	Raw map[string]interface{} `json:"raw,omitempty"`
 	// An array of tags associated with this member
 	Tags      []string   `json:"tags,omitempty"`
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
@@ -69,7 +69,7 @@ func (o *MarketingMember) GetName() *string {
 	return o.Name
 }
 
-func (o *MarketingMember) GetRaw() *PropertyMarketingMemberRaw {
+func (o *MarketingMember) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

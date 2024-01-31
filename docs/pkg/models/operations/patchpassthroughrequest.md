@@ -3,8 +3,8 @@
 
 ## Fields
 
-| Field                                                        | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `ConnectionID`                                               | *string*                                                     | :heavy_check_mark:                                           | ID of the connection                                         |
-| `Path`                                                       | *string*                                                     | :heavy_check_mark:                                           | N/A                                                          |
-| `Undefined`                                                  | [*shared.Undefined](../../../pkg/models/shared/undefined.md) | :heavy_minus_sign:                                           | integration-specific payload                                 |
+| Field                        | Type                         | Required                     | Description                  |
+| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+| `RequestBody`                | map[string]*interface{}*     | :heavy_minus_sign:           | integration-specific payload |
+| `ConnectionID`               | *string*                     | :heavy_check_mark:           | ID of the connection         |
+| `Path`                       | *string*                     | :heavy_check_mark:           | N/A                          |

@@ -40,7 +40,9 @@ func main() {
                     Email: "Guadalupe78@yahoo.com",
                 },
             },
-            Raw: &shared.PropertyTicketingCustomerRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -216,7 +218,9 @@ func main() {
                     Email: "Raymundo93@hotmail.com",
                 },
             },
-            Raw: &shared.PropertyTicketingCustomerRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -337,7 +341,9 @@ func main() {
                     Email: "Mohamed.Friesen@hotmail.com",
                 },
             },
-            Raw: &shared.PropertyTicketingCustomerRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },

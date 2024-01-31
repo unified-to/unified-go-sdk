@@ -33,9 +33,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.CreatePassthrough(ctx, operations.CreatePassthroughRequest{
+        RequestBody: map[string]interface{}{
+            "key": "string",
+        },
         ConnectionID: "string",
         Path: "/etc/periodic",
-        Undefined: &shared.Undefined{},
     })
     if err != nil {
         log.Fatal(err)
@@ -138,9 +140,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.PatchPassthrough(ctx, operations.PatchPassthroughRequest{
+        RequestBody: map[string]interface{}{
+            "key": "string",
+        },
         ConnectionID: "string",
         Path: "/mnt",
-        Undefined: &shared.Undefined{},
     })
     if err != nil {
         log.Fatal(err)
@@ -243,9 +247,11 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.UpdatePassthrough(ctx, operations.UpdatePassthroughRequest{
+        RequestBody: map[string]interface{}{
+            "key": "string",
+        },
         ConnectionID: "string",
         Path: "/dev",
-        Undefined: &shared.Undefined{},
     })
     if err != nil {
         log.Fatal(err)

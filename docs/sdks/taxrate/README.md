@@ -37,7 +37,9 @@ func main() {
         AccountingTaxrate: &shared.AccountingTaxrate{
             Name: "string",
             Rate: 1719.1,
-            Raw: &shared.PropertyAccountingTaxrateRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -202,7 +204,9 @@ func main() {
         AccountingTaxrate: &shared.AccountingTaxrate{
             Name: "string",
             Rate: 5991.47,
-            Raw: &shared.PropertyAccountingTaxrateRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -312,7 +316,9 @@ func main() {
         AccountingTaxrate: &shared.AccountingTaxrate{
             Name: "string",
             Rate: 3382.78,
-            Raw: &shared.PropertyAccountingTaxrateRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",

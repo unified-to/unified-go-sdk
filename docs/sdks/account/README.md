@@ -36,7 +36,9 @@ func main() {
     res, err := s.Account.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
         AccountingAccount: &shared.AccountingAccount{
             Name: "string",
-            Raw: &shared.PropertyAccountingAccountRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -200,7 +202,9 @@ func main() {
     res, err := s.Account.PatchAccountingAccount(ctx, operations.PatchAccountingAccountRequest{
         AccountingAccount: &shared.AccountingAccount{
             Name: "string",
-            Raw: &shared.PropertyAccountingAccountRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -309,7 +313,9 @@ func main() {
     res, err := s.Account.UpdateAccountingAccount(ctx, operations.UpdateAccountingAccountRequest{
         AccountingAccount: &shared.AccountingAccount{
             Name: "string",
-            Raw: &shared.PropertyAccountingAccountRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",

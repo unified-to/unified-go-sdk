@@ -37,19 +37,19 @@ func (e *StorageFileType) UnmarshalJSON(data []byte) error {
 }
 
 type StorageFile struct {
-	CreatedAt   *time.Time              `json:"created_at,omitempty"`
-	Description *string                 `json:"description,omitempty"`
-	DownloadURL *string                 `json:"download_url,omitempty"`
-	ID          *string                 `json:"id,omitempty"`
-	MimeType    *string                 `json:"mime_type,omitempty"`
-	Name        *string                 `json:"name,omitempty"`
-	ParentID    *string                 `json:"parent_id,omitempty"`
-	Permissions []StoragePermission     `json:"permissions,omitempty"`
-	Raw         *PropertyStorageFileRaw `json:"raw,omitempty"`
-	Size        *float64                `json:"size,omitempty"`
-	Type        *StorageFileType        `json:"type,omitempty"`
-	UpdatedAt   *time.Time              `json:"updated_at,omitempty"`
-	UserID      *string                 `json:"user_id,omitempty"`
+	CreatedAt   *time.Time             `json:"created_at,omitempty"`
+	Description *string                `json:"description,omitempty"`
+	DownloadURL *string                `json:"download_url,omitempty"`
+	ID          *string                `json:"id,omitempty"`
+	MimeType    *string                `json:"mime_type,omitempty"`
+	Name        *string                `json:"name,omitempty"`
+	ParentID    *string                `json:"parent_id,omitempty"`
+	Permissions []StoragePermission    `json:"permissions,omitempty"`
+	Raw         map[string]interface{} `json:"raw,omitempty"`
+	Size        *float64               `json:"size,omitempty"`
+	Type        *StorageFileType       `json:"type,omitempty"`
+	UpdatedAt   *time.Time             `json:"updated_at,omitempty"`
+	UserID      *string                `json:"user_id,omitempty"`
 }
 
 func (s StorageFile) MarshalJSON() ([]byte, error) {
@@ -119,7 +119,7 @@ func (o *StorageFile) GetPermissions() []StoragePermission {
 	return o.Permissions
 }
 
-func (o *StorageFile) GetRaw() *PropertyStorageFileRaw {
+func (o *StorageFile) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

@@ -8,14 +8,14 @@ import (
 )
 
 type TicketingCustomer struct {
-	CreatedAt  *time.Time                    `json:"created_at,omitempty"`
-	Emails     []TicketingEmail              `json:"emails,omitempty"`
-	ID         *string                       `json:"id,omitempty"`
-	Name       *string                       `json:"name,omitempty"`
-	Raw        *PropertyTicketingCustomerRaw `json:"raw,omitempty"`
-	Tags       []string                      `json:"tags,omitempty"`
-	Telephones []TicketingTelephone          `json:"telephones,omitempty"`
-	UpdatedAt  *time.Time                    `json:"updated_at,omitempty"`
+	CreatedAt  *time.Time             `json:"created_at,omitempty"`
+	Emails     []TicketingEmail       `json:"emails,omitempty"`
+	ID         *string                `json:"id,omitempty"`
+	Name       *string                `json:"name,omitempty"`
+	Raw        map[string]interface{} `json:"raw,omitempty"`
+	Tags       []string               `json:"tags,omitempty"`
+	Telephones []TicketingTelephone   `json:"telephones,omitempty"`
+	UpdatedAt  *time.Time             `json:"updated_at,omitempty"`
 }
 
 func (t TicketingCustomer) MarshalJSON() ([]byte, error) {
@@ -57,7 +57,7 @@ func (o *TicketingCustomer) GetName() *string {
 	return o.Name
 }
 
-func (o *TicketingCustomer) GetRaw() *PropertyTicketingCustomerRaw {
+func (o *TicketingCustomer) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

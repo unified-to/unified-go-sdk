@@ -35,7 +35,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Pipeline.CreateCrmPipeline(ctx, operations.CreateCrmPipelineRequest{
         CrmPipeline: &shared.CrmPipeline{
-            Raw: &shared.PropertyCrmPipelineRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -198,7 +200,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Pipeline.PatchCrmPipeline(ctx, operations.PatchCrmPipelineRequest{
         CrmPipeline: &shared.CrmPipeline{
-            Raw: &shared.PropertyCrmPipelineRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -306,7 +310,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Pipeline.UpdateCrmPipeline(ctx, operations.UpdateCrmPipelineRequest{
         CrmPipeline: &shared.CrmPipeline{
-            Raw: &shared.PropertyCrmPipelineRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",

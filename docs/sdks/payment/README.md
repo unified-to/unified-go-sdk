@@ -35,7 +35,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Payment.CreateAccountingPayment(ctx, operations.CreateAccountingPaymentRequest{
         AccountingPayment: &shared.AccountingPayment{
-            Raw: &shared.PropertyAccountingPaymentRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -198,7 +200,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Payment.PatchAccountingPayment(ctx, operations.PatchAccountingPaymentRequest{
         AccountingPayment: &shared.AccountingPayment{
-            Raw: &shared.PropertyAccountingPaymentRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -306,7 +310,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Payment.UpdateAccountingPayment(ctx, operations.UpdateAccountingPaymentRequest{
         AccountingPayment: &shared.AccountingPayment{
-            Raw: &shared.PropertyAccountingPaymentRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",

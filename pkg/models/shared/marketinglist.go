@@ -13,8 +13,8 @@ type MarketingList struct {
 	ID        *string `json:"id,omitempty"`
 	Name      *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this list
-	Raw       *PropertyMarketingListRaw `json:"raw,omitempty"`
-	UpdatedAt *time.Time                `json:"updated_at,omitempty"`
+	Raw       map[string]interface{} `json:"raw,omitempty"`
+	UpdatedAt *time.Time             `json:"updated_at,omitempty"`
 }
 
 func (m MarketingList) MarshalJSON() ([]byte, error) {
@@ -49,7 +49,7 @@ func (o *MarketingList) GetName() *string {
 	return o.Name
 }
 
-func (o *MarketingList) GetRaw() *PropertyMarketingListRaw {
+func (o *MarketingList) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

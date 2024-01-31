@@ -52,7 +52,9 @@ func main() {
                     Email: "Guadalupe78@yahoo.com",
                 },
             },
-            Raw: &shared.PropertyTicketingCustomerRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -114,7 +116,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: &shared.PropertyTicketingNoteRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -168,7 +172,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingTicket(ctx, operations.CreateTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: &shared.PropertyTicketingTicketRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -557,7 +563,9 @@ func main() {
                     Email: "Raymundo93@hotmail.com",
                 },
             },
-            Raw: &shared.PropertyTicketingCustomerRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -620,7 +628,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: &shared.PropertyTicketingNoteRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -675,7 +685,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingTicket(ctx, operations.PatchTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: &shared.PropertyTicketingTicketRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -897,7 +909,9 @@ func main() {
                     Email: "Mohamed.Friesen@hotmail.com",
                 },
             },
-            Raw: &shared.PropertyTicketingCustomerRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -960,7 +974,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
         TicketingNote: &shared.TicketingNote{
-            Raw: &shared.PropertyTicketingNoteRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -1015,7 +1031,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingTicket(ctx, operations.UpdateTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: &shared.PropertyTicketingTicketRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },

@@ -19,7 +19,9 @@ func main() {
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		AccountingAccount: &shared.AccountingAccount{
 			Name: "string",
-			Raw:  &shared.PropertyAccountingAccountRaw{},
+			Raw: map[string]interface{}{
+				"key": "string",
+			},
 		},
 		ConnectionID: "string",
 	})

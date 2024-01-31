@@ -42,7 +42,9 @@ func main() {
                     TotalAmount: 4969.62,
                 },
             },
-            Raw: &shared.PropertyAccountingTransactionRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -212,7 +214,9 @@ func main() {
                     TotalAmount: 5633.69,
                 },
             },
-            Raw: &shared.PropertyAccountingTransactionRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -327,7 +331,9 @@ func main() {
                     TotalAmount: 6498.37,
                 },
             },
-            Raw: &shared.PropertyAccountingTransactionRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",

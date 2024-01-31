@@ -8,18 +8,18 @@ import (
 )
 
 type AccountingPayment struct {
-	AccountID     *string                       `json:"account_id,omitempty"`
-	ContactID     *string                       `json:"contact_id,omitempty"`
-	CreatedAt     *time.Time                    `json:"created_at,omitempty"`
-	Currency      *string                       `default:"USD" json:"currency"`
-	ID            *string                       `json:"id,omitempty"`
-	InvoiceID     *string                       `json:"invoice_id,omitempty"`
-	Notes         *string                       `json:"notes,omitempty"`
-	PaymentMethod *string                       `json:"payment_method,omitempty"`
-	Raw           *PropertyAccountingPaymentRaw `json:"raw,omitempty"`
-	Reference     *string                       `json:"reference,omitempty"`
-	TotalAmount   *float64                      `json:"total_amount,omitempty"`
-	UpdatedAt     *time.Time                    `json:"updated_at,omitempty"`
+	AccountID     *string                `json:"account_id,omitempty"`
+	ContactID     *string                `json:"contact_id,omitempty"`
+	CreatedAt     *time.Time             `json:"created_at,omitempty"`
+	Currency      *string                `default:"USD" json:"currency"`
+	ID            *string                `json:"id,omitempty"`
+	InvoiceID     *string                `json:"invoice_id,omitempty"`
+	Notes         *string                `json:"notes,omitempty"`
+	PaymentMethod *string                `json:"payment_method,omitempty"`
+	Raw           map[string]interface{} `json:"raw,omitempty"`
+	Reference     *string                `json:"reference,omitempty"`
+	TotalAmount   *float64               `json:"total_amount,omitempty"`
+	UpdatedAt     *time.Time             `json:"updated_at,omitempty"`
 }
 
 func (a AccountingPayment) MarshalJSON() ([]byte, error) {
@@ -89,7 +89,7 @@ func (o *AccountingPayment) GetPaymentMethod() *string {
 	return o.PaymentMethod
 }
 
-func (o *AccountingPayment) GetRaw() *PropertyAccountingPaymentRaw {
+func (o *AccountingPayment) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

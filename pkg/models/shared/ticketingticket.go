@@ -37,21 +37,21 @@ func (e *TicketingTicketStatus) UnmarshalJSON(data []byte) error {
 }
 
 type TicketingTicket struct {
-	Category    *string                     `json:"category,omitempty"`
-	ClosedAt    *time.Time                  `json:"closed_at,omitempty"`
-	CreatedAt   *time.Time                  `json:"created_at,omitempty"`
-	CustomerID  *string                     `json:"customer_id,omitempty"`
-	Description *string                     `json:"description,omitempty"`
-	ID          *string                     `json:"id,omitempty"`
-	Priority    *string                     `json:"priority,omitempty"`
-	Raw         *PropertyTicketingTicketRaw `json:"raw,omitempty"`
-	Source      *string                     `json:"source,omitempty"`
-	SourceRef   *string                     `json:"source_ref,omitempty"`
-	Status      *TicketingTicketStatus      `json:"status,omitempty"`
-	Subject     *string                     `json:"subject,omitempty"`
-	Tags        []string                    `json:"tags,omitempty"`
-	UpdatedAt   *time.Time                  `json:"updated_at,omitempty"`
-	UserID      *string                     `json:"user_id,omitempty"`
+	Category    *string                `json:"category,omitempty"`
+	ClosedAt    *time.Time             `json:"closed_at,omitempty"`
+	CreatedAt   *time.Time             `json:"created_at,omitempty"`
+	CustomerID  *string                `json:"customer_id,omitempty"`
+	Description *string                `json:"description,omitempty"`
+	ID          *string                `json:"id,omitempty"`
+	Priority    *string                `json:"priority,omitempty"`
+	Raw         map[string]interface{} `json:"raw,omitempty"`
+	Source      *string                `json:"source,omitempty"`
+	SourceRef   *string                `json:"source_ref,omitempty"`
+	Status      *TicketingTicketStatus `json:"status,omitempty"`
+	Subject     *string                `json:"subject,omitempty"`
+	Tags        []string               `json:"tags,omitempty"`
+	UpdatedAt   *time.Time             `json:"updated_at,omitempty"`
+	UserID      *string                `json:"user_id,omitempty"`
 }
 
 func (t TicketingTicket) MarshalJSON() ([]byte, error) {
@@ -114,7 +114,7 @@ func (o *TicketingTicket) GetPriority() *string {
 	return o.Priority
 }
 
-func (o *TicketingTicket) GetRaw() *PropertyTicketingTicketRaw {
+func (o *TicketingTicket) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

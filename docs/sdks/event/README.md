@@ -61,7 +61,9 @@ func main() {
             },
             Meeting: &shared.PropertyCrmEventMeeting{},
             Note: &shared.PropertyCrmEventNote{},
-            Raw: &shared.PropertyCrmEventRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "string",
@@ -251,7 +253,9 @@ func main() {
             },
             Meeting: &shared.PropertyCrmEventMeeting{},
             Note: &shared.PropertyCrmEventNote{},
-            Raw: &shared.PropertyCrmEventRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "string",
@@ -386,7 +390,9 @@ func main() {
             },
             Meeting: &shared.PropertyCrmEventMeeting{},
             Note: &shared.PropertyCrmEventNote{},
-            Raw: &shared.PropertyCrmEventRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Task: &shared.PropertyCrmEventTask{},
         },
         ConnectionID: "string",

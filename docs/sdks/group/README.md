@@ -38,7 +38,9 @@ func main() {
             ManagerIds: []string{
                 "string",
             },
-            Raw: &shared.PropertyHrisGroupRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             UserIds: []string{
                 "string",
             },
@@ -207,7 +209,9 @@ func main() {
             ManagerIds: []string{
                 "string",
             },
-            Raw: &shared.PropertyHrisGroupRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             UserIds: []string{
                 "string",
             },
@@ -321,7 +325,9 @@ func main() {
             ManagerIds: []string{
                 "string",
             },
-            Raw: &shared.PropertyHrisGroupRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             UserIds: []string{
                 "string",
             },

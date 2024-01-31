@@ -3,7 +3,6 @@
 package operations
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
@@ -35,7 +34,7 @@ type ListPassthroughsResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	Undefined *shared.Undefined
+	Undefined map[string]interface{}
 }
 
 func (o *ListPassthroughsResponse) GetContentType() string {
@@ -59,7 +58,7 @@ func (o *ListPassthroughsResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *ListPassthroughsResponse) GetUndefined() *shared.Undefined {
+func (o *ListPassthroughsResponse) GetUndefined() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

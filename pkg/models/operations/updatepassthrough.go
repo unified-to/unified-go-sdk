@@ -3,16 +3,22 @@
 package operations
 
 import (
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
 type UpdatePassthroughRequest struct {
+	// integration-specific payload
+	RequestBody map[string]interface{} `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	Path         string `pathParam:"style=simple,explode=false,name=path"`
-	// integration-specific payload
-	Undefined *shared.Undefined `request:"mediaType=application/json"`
+}
+
+func (o *UpdatePassthroughRequest) GetRequestBody() map[string]interface{} {
+	if o == nil {
+		return nil
+	}
+	return o.RequestBody
 }
 
 func (o *UpdatePassthroughRequest) GetConnectionID() string {
@@ -29,13 +35,6 @@ func (o *UpdatePassthroughRequest) GetPath() string {
 	return o.Path
 }
 
-func (o *UpdatePassthroughRequest) GetUndefined() *shared.Undefined {
-	if o == nil {
-		return nil
-	}
-	return o.Undefined
-}
-
 type UpdatePassthroughResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
@@ -44,7 +43,7 @@ type UpdatePassthroughResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	Undefined *shared.Undefined
+	Undefined map[string]interface{}
 }
 
 func (o *UpdatePassthroughResponse) GetContentType() string {
@@ -68,7 +67,7 @@ func (o *UpdatePassthroughResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *UpdatePassthroughResponse) GetUndefined() *shared.Undefined {
+func (o *UpdatePassthroughResponse) GetUndefined() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

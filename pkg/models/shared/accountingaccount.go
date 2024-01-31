@@ -88,18 +88,18 @@ func (e *Type) UnmarshalJSON(data []byte) error {
 }
 
 type AccountingAccount struct {
-	Balance             *float64                      `json:"balance,omitempty"`
-	CreatedAt           *time.Time                    `json:"created_at,omitempty"`
-	Currency            *string                       `json:"currency,omitempty"`
-	CustomerDefinedCode *string                       `json:"customer_defined_code,omitempty"`
-	Description         *string                       `json:"description,omitempty"`
-	ID                  *string                       `json:"id,omitempty"`
-	IsPayable           *bool                         `json:"is_payable,omitempty"`
-	Name                string                        `json:"name"`
-	Raw                 *PropertyAccountingAccountRaw `json:"raw,omitempty"`
-	Status              *Status                       `json:"status,omitempty"`
-	Type                *Type                         `json:"type,omitempty"`
-	UpdatedAt           *time.Time                    `json:"updated_at,omitempty"`
+	Balance             *float64               `json:"balance,omitempty"`
+	CreatedAt           *time.Time             `json:"created_at,omitempty"`
+	Currency            *string                `json:"currency,omitempty"`
+	CustomerDefinedCode *string                `json:"customer_defined_code,omitempty"`
+	Description         *string                `json:"description,omitempty"`
+	ID                  *string                `json:"id,omitempty"`
+	IsPayable           *bool                  `json:"is_payable,omitempty"`
+	Name                string                 `json:"name"`
+	Raw                 map[string]interface{} `json:"raw,omitempty"`
+	Status              *Status                `json:"status,omitempty"`
+	Type                *Type                  `json:"type,omitempty"`
+	UpdatedAt           *time.Time             `json:"updated_at,omitempty"`
 }
 
 func (a AccountingAccount) MarshalJSON() ([]byte, error) {
@@ -169,7 +169,7 @@ func (o *AccountingAccount) GetName() string {
 	return o.Name
 }
 
-func (o *AccountingAccount) GetRaw() *PropertyAccountingAccountRaw {
+func (o *AccountingAccount) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

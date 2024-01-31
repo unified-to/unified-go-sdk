@@ -35,7 +35,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.CreateAtsInterview(ctx, operations.CreateAtsInterviewRequest{
         AtsInterview: &shared.AtsInterview{
-            Raw: &shared.PropertyAtsInterviewRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             UserIds: []string{
                 "string",
             },
@@ -201,7 +203,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.PatchAtsInterview(ctx, operations.PatchAtsInterviewRequest{
         AtsInterview: &shared.AtsInterview{
-            Raw: &shared.PropertyAtsInterviewRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             UserIds: []string{
                 "string",
             },
@@ -312,7 +316,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.UpdateAtsInterview(ctx, operations.UpdateAtsInterviewRequest{
         AtsInterview: &shared.AtsInterview{
-            Raw: &shared.PropertyAtsInterviewRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             UserIds: []string{
                 "string",
             },

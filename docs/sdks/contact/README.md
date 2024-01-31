@@ -53,7 +53,9 @@ func main() {
                     Email: "Mac36@gmail.com",
                 },
             },
-            Raw: &shared.PropertyAccountingContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
             Telephones: []shared.AccountingTelephone{
                 shared.AccountingTelephone{
@@ -123,7 +125,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -187,7 +191,9 @@ func main() {
                     Email: "Dulce_Becker30@yahoo.com",
                 },
             },
-            Raw: &shared.PropertyUcContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
                     Telephone: "string",
@@ -579,7 +585,9 @@ func main() {
                     Email: "Sylvester.Kuhic@yahoo.com",
                 },
             },
-            Raw: &shared.PropertyAccountingContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
             Telephones: []shared.AccountingTelephone{
                 shared.AccountingTelephone{
@@ -650,7 +658,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -715,7 +725,9 @@ func main() {
                     Email: "Norene_Boehm97@hotmail.com",
                 },
             },
-            Raw: &shared.PropertyUcContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
                     Telephone: "string",
@@ -940,7 +952,9 @@ func main() {
                     Email: "Kaci_Hane@hotmail.com",
                 },
             },
-            Raw: &shared.PropertyAccountingContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
             Telephones: []shared.AccountingTelephone{
                 shared.AccountingTelephone{
@@ -1011,7 +1025,9 @@ func main() {
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{},
             },
-            Raw: &shared.PropertyCrmContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
                     Telephone: "string",
@@ -1076,7 +1092,9 @@ func main() {
                     Email: "Kianna.Witting90@gmail.com",
                 },
             },
-            Raw: &shared.PropertyUcContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Telephones: []shared.UcTelephone{
                 shared.UcTelephone{
                     Telephone: "string",

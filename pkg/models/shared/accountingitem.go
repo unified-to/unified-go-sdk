@@ -9,18 +9,18 @@ import (
 
 // AccountingItem - An item or product
 type AccountingItem struct {
-	CreatedAt         *time.Time                 `json:"created_at,omitempty"`
-	Description       *string                    `json:"description,omitempty"`
-	ID                *string                    `json:"id,omitempty"`
-	IsActive          *bool                      `json:"is_active,omitempty"`
-	IsTaxable         *bool                      `json:"is_taxable,omitempty"`
-	Name              string                     `json:"name"`
-	Price             *float64                   `json:"price,omitempty"`
-	PublicDescription *string                    `json:"public_description,omitempty"`
-	QuantityOnHand    *float64                   `json:"quantity_on_hand,omitempty"`
-	Raw               *PropertyAccountingItemRaw `json:"raw,omitempty"`
-	Sku               *string                    `json:"sku,omitempty"`
-	UpdatedAt         *time.Time                 `json:"updated_at,omitempty"`
+	CreatedAt         *time.Time             `json:"created_at,omitempty"`
+	Description       *string                `json:"description,omitempty"`
+	ID                *string                `json:"id,omitempty"`
+	IsActive          *bool                  `json:"is_active,omitempty"`
+	IsTaxable         *bool                  `json:"is_taxable,omitempty"`
+	Name              string                 `json:"name"`
+	Price             *float64               `json:"price,omitempty"`
+	PublicDescription *string                `json:"public_description,omitempty"`
+	QuantityOnHand    *float64               `json:"quantity_on_hand,omitempty"`
+	Raw               map[string]interface{} `json:"raw,omitempty"`
+	Sku               *string                `json:"sku,omitempty"`
+	UpdatedAt         *time.Time             `json:"updated_at,omitempty"`
 }
 
 func (a AccountingItem) MarshalJSON() ([]byte, error) {
@@ -97,7 +97,7 @@ func (o *AccountingItem) GetQuantityOnHand() *float64 {
 	return o.QuantityOnHand
 }
 
-func (o *AccountingItem) GetRaw() *PropertyAccountingItemRaw {
+func (o *AccountingItem) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

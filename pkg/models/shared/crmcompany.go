@@ -22,7 +22,7 @@ type CrmCompany struct {
 	LinkUrls    []string   `json:"link_urls,omitempty"`
 	Name        *string    `json:"name,omitempty"`
 	// The raw data returned by the integration for this company
-	Raw        *PropertyCrmCompanyRaw `json:"raw,omitempty"`
+	Raw        map[string]interface{} `json:"raw,omitempty"`
 	Tags       []string               `json:"tags,omitempty"`
 	Telephones []CrmTelephone         `json:"telephones,omitempty"`
 	Timezone   *string                `json:"timezone,omitempty"`
@@ -119,7 +119,7 @@ func (o *CrmCompany) GetName() *string {
 	return o.Name
 }
 
-func (o *CrmCompany) GetRaw() *PropertyCrmCompanyRaw {
+func (o *CrmCompany) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

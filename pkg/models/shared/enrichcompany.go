@@ -27,10 +27,10 @@ type EnrichCompany struct {
 	NaicsCode     *float64                      `json:"naics_code,omitempty"`
 	Name          *string                       `json:"name,omitempty"`
 	// The raw data returned by the integration for this company
-	Raw     *PropertyEnrichCompanyRaw `json:"raw,omitempty"`
-	Revenue *string                   `json:"revenue,omitempty"`
-	SicCode *float64                  `json:"sic_code,omitempty"`
-	Stock   *string                   `json:"stock,omitempty"`
+	Raw     map[string]interface{} `json:"raw,omitempty"`
+	Revenue *string                `json:"revenue,omitempty"`
+	SicCode *float64               `json:"sic_code,omitempty"`
+	Stock   *string                `json:"stock,omitempty"`
 	// An array of telephones for this company
 	Telephones    []EnrichTelephone `json:"telephones,omitempty"`
 	TwitterHandle *string           `json:"twitter_handle,omitempty"`
@@ -164,7 +164,7 @@ func (o *EnrichCompany) GetName() *string {
 	return o.Name
 }
 
-func (o *EnrichCompany) GetRaw() *PropertyEnrichCompanyRaw {
+func (o *EnrichCompany) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

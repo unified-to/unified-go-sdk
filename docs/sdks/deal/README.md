@@ -35,7 +35,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Deal.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
         CrmDeal: &shared.CrmDeal{
-            Raw: &shared.PropertyCrmDealRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -201,7 +203,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Deal.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
         CrmDeal: &shared.CrmDeal{
-            Raw: &shared.PropertyCrmDealRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -312,7 +316,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Deal.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
         CrmDeal: &shared.CrmDeal{
-            Raw: &shared.PropertyCrmDealRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },

@@ -18,7 +18,7 @@ type CrmLead struct {
 	ID            *string                 `json:"id,omitempty"`
 	IsActive      *bool                   `json:"is_active,omitempty"`
 	Name          *string                 `json:"name,omitempty"`
-	Raw           *PropertyCrmLeadRaw     `json:"raw,omitempty"`
+	Raw           map[string]interface{}  `json:"raw,omitempty"`
 	Source        *string                 `json:"source,omitempty"`
 	Status        *string                 `json:"status,omitempty"`
 	Telephones    []CrmTelephone          `json:"telephones,omitempty"`
@@ -107,7 +107,7 @@ func (o *CrmLead) GetName() *string {
 	return o.Name
 }
 
-func (o *CrmLead) GetRaw() *PropertyCrmLeadRaw {
+func (o *CrmLead) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

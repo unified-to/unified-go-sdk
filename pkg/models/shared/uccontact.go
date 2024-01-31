@@ -16,7 +16,7 @@ type UcContact struct {
 	ID     *string   `json:"id,omitempty"`
 	Name   *string   `json:"name,omitempty"`
 	// The raw data returned by the integration for this contact
-	Raw *PropertyUcContactRaw `json:"raw,omitempty"`
+	Raw map[string]interface{} `json:"raw,omitempty"`
 	// An array of telephones for this contact
 	Telephones []UcTelephone `json:"telephones,omitempty"`
 	Title      *string       `json:"title,omitempty"`
@@ -69,7 +69,7 @@ func (o *UcContact) GetName() *string {
 	return o.Name
 }
 
-func (o *UcContact) GetRaw() *PropertyUcContactRaw {
+func (o *UcContact) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

@@ -35,7 +35,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticket.CreateTicketingTicket(ctx, operations.CreateTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: &shared.PropertyTicketingTicketRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -201,7 +203,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticket.PatchTicketingTicket(ctx, operations.PatchTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: &shared.PropertyTicketingTicketRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -312,7 +316,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticket.UpdateTicketingTicket(ctx, operations.UpdateTicketingTicketRequest{
         TicketingTicket: &shared.TicketingTicket{
-            Raw: &shared.PropertyTicketingTicketRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },

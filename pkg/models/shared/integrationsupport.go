@@ -38,7 +38,7 @@ func (e *WebhookType) UnmarshalJSON(data []byte) error {
 }
 
 type IntegrationSupport struct {
-	InboundFields       *PropertyIntegrationSupportInboundFields  `json:"inbound_fields,omitempty"`
+	InboundFields       map[string]interface{}                    `json:"inbound_fields,omitempty"`
 	ListAccountID       *bool                                     `json:"list_account_id,omitempty"`
 	ListApplicationID   *bool                                     `json:"list_application_id,omitempty"`
 	ListCandidateID     *bool                                     `json:"list_candidate_id,omitempty"`
@@ -62,7 +62,7 @@ type IntegrationSupport struct {
 	ListUpdatedGte      *bool                                     `json:"list_updated_gte,omitempty"`
 	ListUserID          *bool                                     `json:"list_user_id,omitempty"`
 	Methods             map[string]bool                           `json:"methods,omitempty"`
-	OutboundFields      *PropertyIntegrationSupportOutboundFields `json:"outbound_fields,omitempty"`
+	OutboundFields      map[string]interface{}                    `json:"outbound_fields,omitempty"`
 	SearchDomain        *bool                                     `json:"search_domain,omitempty"`
 	SearchEmail         *bool                                     `json:"search_email,omitempty"`
 	SearchLinkedinURL   *bool                                     `json:"search_linkedin_url,omitempty"`
@@ -72,7 +72,7 @@ type IntegrationSupport struct {
 	WebhookType         *WebhookType                              `json:"webhook_type,omitempty"`
 }
 
-func (o *IntegrationSupport) GetInboundFields() *PropertyIntegrationSupportInboundFields {
+func (o *IntegrationSupport) GetInboundFields() map[string]interface{} {
 	if o == nil {
 		return nil
 	}
@@ -240,7 +240,7 @@ func (o *IntegrationSupport) GetMethods() map[string]bool {
 	return o.Methods
 }
 
-func (o *IntegrationSupport) GetOutboundFields() *PropertyIntegrationSupportOutboundFields {
+func (o *IntegrationSupport) GetOutboundFields() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

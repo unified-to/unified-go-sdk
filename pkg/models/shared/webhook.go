@@ -191,19 +191,19 @@ func (e *WebhookWebhookType) UnmarshalJSON(data []byte) error {
 
 // Webhook - A webhook is used to POST new/updated information to your server.
 type Webhook struct {
-	CheckedAt       *time.Time           `json:"checked_at,omitempty"`
-	ConnectionID    string               `json:"connection_id"`
-	CreatedAt       *time.Time           `json:"created_at,omitempty"`
-	Environment     *string              `default:"Production" json:"environment"`
-	Event           Event                `json:"event"`
-	Fields          *string              `json:"fields,omitempty"`
-	HookURL         string               `json:"hook_url"`
-	ID              *string              `json:"id,omitempty"`
-	IntegrationType *string              `json:"integration_type,omitempty"`
-	Interval        float64              `json:"interval"`
-	IsHealthy       *bool                `json:"is_healthy,omitempty"`
-	Meta            *PropertyWebhookMeta `json:"meta,omitempty"`
-	ObjectType      ObjectType           `json:"object_type"`
+	CheckedAt       *time.Time             `json:"checked_at,omitempty"`
+	ConnectionID    string                 `json:"connection_id"`
+	CreatedAt       *time.Time             `json:"created_at,omitempty"`
+	Environment     *string                `default:"Production" json:"environment"`
+	Event           Event                  `json:"event"`
+	Fields          *string                `json:"fields,omitempty"`
+	HookURL         string                 `json:"hook_url"`
+	ID              *string                `json:"id,omitempty"`
+	IntegrationType *string                `json:"integration_type,omitempty"`
+	Interval        float64                `json:"interval"`
+	IsHealthy       *bool                  `json:"is_healthy,omitempty"`
+	Meta            map[string]interface{} `json:"meta,omitempty"`
+	ObjectType      ObjectType             `json:"object_type"`
 	// An array of the most revent virtual webhook runs
 	Runs        []string            `json:"runs,omitempty"`
 	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
@@ -299,7 +299,7 @@ func (o *Webhook) GetIsHealthy() *bool {
 	return o.IsHealthy
 }
 
-func (o *Webhook) GetMeta() *PropertyWebhookMeta {
+func (o *Webhook) GetMeta() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

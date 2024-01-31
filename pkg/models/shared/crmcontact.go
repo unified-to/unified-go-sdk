@@ -21,7 +21,7 @@ type CrmContact struct {
 	ID     *string    `json:"id,omitempty"`
 	Name   *string    `json:"name,omitempty"`
 	// The raw data returned by the integration for this contact
-	Raw *PropertyCrmContactRaw `json:"raw,omitempty"`
+	Raw map[string]interface{} `json:"raw,omitempty"`
 	// An array of telephones for this contact
 	Telephones []CrmTelephone `json:"telephones,omitempty"`
 	Title      *string        `json:"title,omitempty"`
@@ -96,7 +96,7 @@ func (o *CrmContact) GetName() *string {
 	return o.Name
 }
 
-func (o *CrmContact) GetRaw() *PropertyCrmContactRaw {
+func (o *CrmContact) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

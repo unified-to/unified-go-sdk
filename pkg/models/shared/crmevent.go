@@ -65,7 +65,7 @@ type CrmEvent struct {
 	// The note object, when type = note
 	Note *PropertyCrmEventNote `json:"note,omitempty"`
 	// The raw data returned by the integration for this event.
-	Raw *PropertyCrmEventRaw `json:"raw,omitempty"`
+	Raw map[string]interface{} `json:"raw,omitempty"`
 	// The task object, when type = task
 	Task      *PropertyCrmEventTask `json:"task,omitempty"`
 	Type      *CrmEventType         `json:"type,omitempty"`
@@ -154,7 +154,7 @@ func (o *CrmEvent) GetNote() *PropertyCrmEventNote {
 	return o.Note
 }
 
-func (o *CrmEvent) GetRaw() *PropertyCrmEventRaw {
+func (o *CrmEvent) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

@@ -41,7 +41,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Martech.CreateMartechList(ctx, operations.CreateMartechListRequest{
         MarketingList: &shared.MarketingList{
-            Raw: &shared.PropertyMarketingListRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -103,7 +105,9 @@ func main() {
             ListIds: []string{
                 "string",
             },
-            Raw: &shared.PropertyMarketingMemberRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -378,7 +382,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Martech.PatchMartechList(ctx, operations.PatchMartechListRequest{
         MarketingList: &shared.MarketingList{
-            Raw: &shared.PropertyMarketingListRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -441,7 +447,9 @@ func main() {
             ListIds: []string{
                 "string",
             },
-            Raw: &shared.PropertyMarketingMemberRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },
@@ -605,7 +613,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Martech.UpdateMartechList(ctx, operations.UpdateMartechListRequest{
         MarketingList: &shared.MarketingList{
-            Raw: &shared.PropertyMarketingListRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -668,7 +678,9 @@ func main() {
             ListIds: []string{
                 "string",
             },
-            Raw: &shared.PropertyMarketingMemberRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             Tags: []string{
                 "string",
             },

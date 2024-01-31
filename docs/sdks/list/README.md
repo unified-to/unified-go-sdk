@@ -35,7 +35,9 @@ func main() {
     ctx := context.Background()
     res, err := s.List.CreateMartechList(ctx, operations.CreateMartechListRequest{
         MarketingList: &shared.MarketingList{
-            Raw: &shared.PropertyMarketingListRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -198,7 +200,9 @@ func main() {
     ctx := context.Background()
     res, err := s.List.PatchMartechList(ctx, operations.PatchMartechListRequest{
         MarketingList: &shared.MarketingList{
-            Raw: &shared.PropertyMarketingListRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -306,7 +310,9 @@ func main() {
     ctx := context.Background()
     res, err := s.List.UpdateMartechList(ctx, operations.UpdateMartechListRequest{
         MarketingList: &shared.MarketingList{
-            Raw: &shared.PropertyMarketingListRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",

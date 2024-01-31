@@ -39,7 +39,9 @@ func main() {
             Event: shared.EventCreated,
             HookURL: "string",
             Interval: 188.12,
-            Meta: &shared.PropertyWebhookMeta{},
+            Meta: map[string]interface{}{
+                "key": "string",
+            },
             ObjectType: shared.ObjectTypeCrmCompany,
             Runs: []string{
                 "string",

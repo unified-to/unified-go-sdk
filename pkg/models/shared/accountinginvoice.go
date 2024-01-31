@@ -40,27 +40,27 @@ func (e *AccountingInvoiceStatus) UnmarshalJSON(data []byte) error {
 }
 
 type AccountingInvoice struct {
-	BalanceAmount  *float64                      `json:"balance_amount,omitempty"`
-	CancelledAt    *time.Time                    `json:"cancelled_at,omitempty"`
-	ContactID      *string                       `json:"contact_id,omitempty"`
-	CreatedAt      *time.Time                    `json:"created_at,omitempty"`
-	Currency       *string                       `json:"currency,omitempty"`
-	DiscountAmount *float64                      `json:"discount_amount,omitempty"`
-	DueAt          *time.Time                    `json:"due_at,omitempty"`
-	ID             *string                       `json:"id,omitempty"`
-	InvoiceNumber  *string                       `json:"invoice_number,omitempty"`
-	Lineitems      []AccountingLineitem          `json:"lineitems,omitempty"`
-	Notes          *string                       `json:"notes,omitempty"`
-	PaidAmount     *float64                      `json:"paid_amount,omitempty"`
-	PaidAt         *time.Time                    `json:"paid_at,omitempty"`
-	Raw            *PropertyAccountingInvoiceRaw `json:"raw,omitempty"`
-	RefundAmount   *float64                      `json:"refund_amount,omitempty"`
-	RefundReason   *string                       `json:"refund_reason,omitempty"`
-	RefundedAt     *time.Time                    `json:"refunded_at,omitempty"`
-	Status         *AccountingInvoiceStatus      `json:"status,omitempty"`
-	TaxAmount      *float64                      `json:"tax_amount,omitempty"`
-	TotalAmount    *float64                      `json:"total_amount,omitempty"`
-	UpdatedAt      *time.Time                    `json:"updated_at,omitempty"`
+	BalanceAmount  *float64                 `json:"balance_amount,omitempty"`
+	CancelledAt    *time.Time               `json:"cancelled_at,omitempty"`
+	ContactID      *string                  `json:"contact_id,omitempty"`
+	CreatedAt      *time.Time               `json:"created_at,omitempty"`
+	Currency       *string                  `json:"currency,omitempty"`
+	DiscountAmount *float64                 `json:"discount_amount,omitempty"`
+	DueAt          *time.Time               `json:"due_at,omitempty"`
+	ID             *string                  `json:"id,omitempty"`
+	InvoiceNumber  *string                  `json:"invoice_number,omitempty"`
+	Lineitems      []AccountingLineitem     `json:"lineitems,omitempty"`
+	Notes          *string                  `json:"notes,omitempty"`
+	PaidAmount     *float64                 `json:"paid_amount,omitempty"`
+	PaidAt         *time.Time               `json:"paid_at,omitempty"`
+	Raw            map[string]interface{}   `json:"raw,omitempty"`
+	RefundAmount   *float64                 `json:"refund_amount,omitempty"`
+	RefundReason   *string                  `json:"refund_reason,omitempty"`
+	RefundedAt     *time.Time               `json:"refunded_at,omitempty"`
+	Status         *AccountingInvoiceStatus `json:"status,omitempty"`
+	TaxAmount      *float64                 `json:"tax_amount,omitempty"`
+	TotalAmount    *float64                 `json:"total_amount,omitempty"`
+	UpdatedAt      *time.Time               `json:"updated_at,omitempty"`
 }
 
 func (a AccountingInvoice) MarshalJSON() ([]byte, error) {
@@ -165,7 +165,7 @@ func (o *AccountingInvoice) GetPaidAt() *time.Time {
 	return o.PaidAt
 }
 
-func (o *AccountingInvoice) GetRaw() *PropertyAccountingInvoiceRaw {
+func (o *AccountingInvoice) GetRaw() map[string]interface{} {
 	if o == nil {
 		return nil
 	}

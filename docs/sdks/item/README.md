@@ -36,7 +36,9 @@ func main() {
     res, err := s.Item.CreateAccountingItem(ctx, operations.CreateAccountingItemRequest{
         AccountingItem: &shared.AccountingItem{
             Name: "string",
-            Raw: &shared.PropertyAccountingItemRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -200,7 +202,9 @@ func main() {
     res, err := s.Item.PatchAccountingItem(ctx, operations.PatchAccountingItemRequest{
         AccountingItem: &shared.AccountingItem{
             Name: "string",
-            Raw: &shared.PropertyAccountingItemRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -309,7 +313,9 @@ func main() {
     res, err := s.Item.UpdateAccountingItem(ctx, operations.UpdateAccountingItemRequest{
         AccountingItem: &shared.AccountingItem{
             Name: "string",
-            Raw: &shared.PropertyAccountingItemRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",

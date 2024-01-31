@@ -42,7 +42,9 @@ func main() {
                     },
                 },
             },
-            Raw: &shared.PropertyStorageFileRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -212,7 +214,9 @@ func main() {
                     },
                 },
             },
-            Raw: &shared.PropertyStorageFileRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -327,7 +331,9 @@ func main() {
                     },
                 },
             },
-            Raw: &shared.PropertyStorageFileRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",

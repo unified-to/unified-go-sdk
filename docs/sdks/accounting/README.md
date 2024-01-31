@@ -74,7 +74,9 @@ func main() {
     res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
         AccountingAccount: &shared.AccountingAccount{
             Name: "string",
-            Raw: &shared.PropertyAccountingAccountRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -134,7 +136,9 @@ func main() {
                     Email: "Mac36@gmail.com",
                 },
             },
-            Raw: &shared.PropertyAccountingContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
             Telephones: []shared.AccountingTelephone{
                 shared.AccountingTelephone{
@@ -199,7 +203,9 @@ func main() {
                     TotalAmount: 6736.06,
                 },
             },
-            Raw: &shared.PropertyAccountingInvoiceRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -254,7 +260,9 @@ func main() {
     res, err := s.Accounting.CreateAccountingItem(ctx, operations.CreateAccountingItemRequest{
         AccountingItem: &shared.AccountingItem{
             Name: "string",
-            Raw: &shared.PropertyAccountingItemRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -308,7 +316,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingPayment(ctx, operations.CreateAccountingPaymentRequest{
         AccountingPayment: &shared.AccountingPayment{
-            Raw: &shared.PropertyAccountingPaymentRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -364,7 +374,9 @@ func main() {
         AccountingTaxrate: &shared.AccountingTaxrate{
             Name: "string",
             Rate: 1719.1,
-            Raw: &shared.PropertyAccountingTaxrateRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -425,7 +437,9 @@ func main() {
                     TotalAmount: 4969.62,
                 },
             },
-            Raw: &shared.PropertyAccountingTransactionRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
     })
@@ -1352,7 +1366,9 @@ func main() {
     res, err := s.Accounting.PatchAccountingAccount(ctx, operations.PatchAccountingAccountRequest{
         AccountingAccount: &shared.AccountingAccount{
             Name: "string",
-            Raw: &shared.PropertyAccountingAccountRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -1413,7 +1429,9 @@ func main() {
                     Email: "Sylvester.Kuhic@yahoo.com",
                 },
             },
-            Raw: &shared.PropertyAccountingContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
             Telephones: []shared.AccountingTelephone{
                 shared.AccountingTelephone{
@@ -1479,7 +1497,9 @@ func main() {
                     TotalAmount: 7374.1,
                 },
             },
-            Raw: &shared.PropertyAccountingInvoiceRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -1535,7 +1555,9 @@ func main() {
     res, err := s.Accounting.PatchAccountingItem(ctx, operations.PatchAccountingItemRequest{
         AccountingItem: &shared.AccountingItem{
             Name: "string",
-            Raw: &shared.PropertyAccountingItemRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -1590,7 +1612,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingPayment(ctx, operations.PatchAccountingPaymentRequest{
         AccountingPayment: &shared.AccountingPayment{
-            Raw: &shared.PropertyAccountingPaymentRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -1647,7 +1671,9 @@ func main() {
         AccountingTaxrate: &shared.AccountingTaxrate{
             Name: "string",
             Rate: 5991.47,
-            Raw: &shared.PropertyAccountingTaxrateRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -1709,7 +1735,9 @@ func main() {
                     TotalAmount: 5633.69,
                 },
             },
-            Raw: &shared.PropertyAccountingTransactionRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -2136,7 +2164,9 @@ func main() {
     res, err := s.Accounting.UpdateAccountingAccount(ctx, operations.UpdateAccountingAccountRequest{
         AccountingAccount: &shared.AccountingAccount{
             Name: "string",
-            Raw: &shared.PropertyAccountingAccountRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -2197,7 +2227,9 @@ func main() {
                     Email: "Kaci_Hane@hotmail.com",
                 },
             },
-            Raw: &shared.PropertyAccountingContactRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
             ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
             Telephones: []shared.AccountingTelephone{
                 shared.AccountingTelephone{
@@ -2263,7 +2295,9 @@ func main() {
                     TotalAmount: 6974.28,
                 },
             },
-            Raw: &shared.PropertyAccountingInvoiceRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -2319,7 +2353,9 @@ func main() {
     res, err := s.Accounting.UpdateAccountingItem(ctx, operations.UpdateAccountingItemRequest{
         AccountingItem: &shared.AccountingItem{
             Name: "string",
-            Raw: &shared.PropertyAccountingItemRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -2374,7 +2410,9 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingPayment(ctx, operations.UpdateAccountingPaymentRequest{
         AccountingPayment: &shared.AccountingPayment{
-            Raw: &shared.PropertyAccountingPaymentRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -2431,7 +2469,9 @@ func main() {
         AccountingTaxrate: &shared.AccountingTaxrate{
             Name: "string",
             Rate: 3382.78,
-            Raw: &shared.PropertyAccountingTaxrateRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
@@ -2493,7 +2533,9 @@ func main() {
                     TotalAmount: 6498.37,
                 },
             },
-            Raw: &shared.PropertyAccountingTransactionRaw{},
+            Raw: map[string]interface{}{
+                "key": "string",
+            },
         },
         ConnectionID: "string",
         ID: "<ID>",
