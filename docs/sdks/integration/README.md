@@ -87,7 +87,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Integration.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
         Categories: []operations.QueryParamCategories{
-            operations.QueryParamCategoriesUc,
+            operations.QueryParamCategoriesAccounting,
         },
         WorkspaceID: "string",
     })
@@ -141,7 +141,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Integration.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{
         Categories: []operations.ListUnifiedIntegrationsQueryParamCategories{
-            operations.ListUnifiedIntegrationsQueryParamCategoriesAuth,
+            operations.ListUnifiedIntegrationsQueryParamCategoriesCrm,
         },
     })
     if err != nil {

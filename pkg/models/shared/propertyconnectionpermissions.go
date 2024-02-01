@@ -24,7 +24,14 @@ const (
 	PropertyConnectionPermissionsAccountingTaxrateRead      PropertyConnectionPermissions = "accounting_taxrate_read"
 	PropertyConnectionPermissionsAccountingTaxrateWrite     PropertyConnectionPermissions = "accounting_taxrate_write"
 	PropertyConnectionPermissionsAccountingOrganizationRead PropertyConnectionPermissions = "accounting_organization_read"
-	PropertyConnectionPermissionsAccountingItemRead         PropertyConnectionPermissions = "accounting_item_read"
+	PropertyConnectionPermissionsCommerceItemRead           PropertyConnectionPermissions = "commerce_item_read"
+	PropertyConnectionPermissionsCommerceItemWrite          PropertyConnectionPermissions = "commerce_item_write"
+	PropertyConnectionPermissionsCommerceCollectionRead     PropertyConnectionPermissions = "commerce_collection_read"
+	PropertyConnectionPermissionsCommerceCollectionWrite    PropertyConnectionPermissions = "commerce_collection_write"
+	PropertyConnectionPermissionsCommerceInventoryRead      PropertyConnectionPermissions = "commerce_inventory_read"
+	PropertyConnectionPermissionsCommerceInventoryWrite     PropertyConnectionPermissions = "commerce_inventory_write"
+	PropertyConnectionPermissionsCommerceLocationRead       PropertyConnectionPermissions = "commerce_location_read"
+	PropertyConnectionPermissionsCommerceLocationWrite      PropertyConnectionPermissions = "commerce_location_write"
 	PropertyConnectionPermissionsAtsScorecardRead           PropertyConnectionPermissions = "ats_scorecard_read"
 	PropertyConnectionPermissionsAtsScorecardWrite          PropertyConnectionPermissions = "ats_scorecard_write"
 	PropertyConnectionPermissionsAtsApplicationRead         PropertyConnectionPermissions = "ats_application_read"
@@ -108,7 +115,21 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "accounting_organization_read":
 		fallthrough
-	case "accounting_item_read":
+	case "commerce_item_read":
+		fallthrough
+	case "commerce_item_write":
+		fallthrough
+	case "commerce_collection_read":
+		fallthrough
+	case "commerce_collection_write":
+		fallthrough
+	case "commerce_inventory_read":
+		fallthrough
+	case "commerce_inventory_write":
+		fallthrough
+	case "commerce_location_read":
+		fallthrough
+	case "commerce_location_write":
 		fallthrough
 	case "ats_scorecard_read":
 		fallthrough

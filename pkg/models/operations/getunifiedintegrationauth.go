@@ -25,7 +25,14 @@ const (
 	ScopesAccountingTaxrateRead      Scopes = "accounting_taxrate_read"
 	ScopesAccountingTaxrateWrite     Scopes = "accounting_taxrate_write"
 	ScopesAccountingOrganizationRead Scopes = "accounting_organization_read"
-	ScopesAccountingItemRead         Scopes = "accounting_item_read"
+	ScopesCommerceItemRead           Scopes = "commerce_item_read"
+	ScopesCommerceItemWrite          Scopes = "commerce_item_write"
+	ScopesCommerceCollectionRead     Scopes = "commerce_collection_read"
+	ScopesCommerceCollectionWrite    Scopes = "commerce_collection_write"
+	ScopesCommerceInventoryRead      Scopes = "commerce_inventory_read"
+	ScopesCommerceInventoryWrite     Scopes = "commerce_inventory_write"
+	ScopesCommerceLocationRead       Scopes = "commerce_location_read"
+	ScopesCommerceLocationWrite      Scopes = "commerce_location_write"
 	ScopesAtsScorecardRead           Scopes = "ats_scorecard_read"
 	ScopesAtsScorecardWrite          Scopes = "ats_scorecard_write"
 	ScopesAtsApplicationRead         Scopes = "ats_application_read"
@@ -109,7 +116,21 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "accounting_organization_read":
 		fallthrough
-	case "accounting_item_read":
+	case "commerce_item_read":
+		fallthrough
+	case "commerce_item_write":
+		fallthrough
+	case "commerce_collection_read":
+		fallthrough
+	case "commerce_collection_write":
+		fallthrough
+	case "commerce_inventory_read":
+		fallthrough
+	case "commerce_inventory_write":
+		fallthrough
+	case "commerce_location_read":
+		fallthrough
+	case "commerce_location_write":
 		fallthrough
 	case "ats_scorecard_read":
 		fallthrough

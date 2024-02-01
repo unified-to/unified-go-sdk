@@ -16,3 +16,4 @@
 | `PropertyConnectionCategoriesUc`          | uc                                        |
 | `PropertyConnectionCategoriesAccounting`  | accounting                                |
 | `PropertyConnectionCategoriesStorage`     | storage                                   |
+| `PropertyConnectionCategoriesCommerce`    | commerce                                  |

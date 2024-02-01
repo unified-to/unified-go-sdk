@@ -16,3 +16,4 @@
 | `QueryParamCategoriesUc`          | uc                                |
 | `QueryParamCategoriesAccounting`  | accounting                        |
 | `QueryParamCategoriesStorage`     | storage                           |
+| `QueryParamCategoriesCommerce`    | commerce                          |

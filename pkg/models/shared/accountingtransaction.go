@@ -3,11 +3,10 @@
 package shared
 
 type AccountingTransaction struct {
-	CreatedAt   *string                         `json:"created_at,omitempty"`
-	Currency    *string                         `json:"currency,omitempty"`
-	Description *string                         `json:"description,omitempty"`
-	ID          string                          `json:"id"`
-	LineItems   []AccountingTransactionLineitem `json:"line_items,omitempty"`
+	CreatedAt   *string `json:"created_at,omitempty"`
+	Currency    *string `json:"currency,omitempty"`
+	Description *string `json:"description,omitempty"`
+	ID          string  `json:"id"`
 	// new field name
 	Lineitems []AccountingTransactionLineitem `json:"lineitems,omitempty"`
 	Raw       map[string]interface{}          `json:"raw,omitempty"`
@@ -43,13 +42,6 @@ func (o *AccountingTransaction) GetID() string {
 		return ""
 	}
 	return o.ID
-}
-
-func (o *AccountingTransaction) GetLineItems() []AccountingTransactionLineitem {
-	if o == nil {
-		return nil
-	}
-	return o.LineItems
 }
 
 func (o *AccountingTransaction) GetLineitems() []AccountingTransactionLineitem {

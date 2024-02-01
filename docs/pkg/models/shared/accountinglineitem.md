@@ -15,7 +15,6 @@
 | `ItemSku`                                  | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
 | `Notes`                                    | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
 | `RefundAmount`                             | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
-| `RefundedAmount`                           | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
 | `RefundedAt`                               | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
 | `TaxAmount`                                | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
 | `TaxrateID`                                | **string*                                  | :heavy_minus_sign:                         | N/A                                        |

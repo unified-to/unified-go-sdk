@@ -24,15 +24,15 @@ func newItem(sdkConfig sdkConfiguration) *Item {
 	}
 }
 
-// CreateAccountingItem - Create an item
-func (s *Item) CreateAccountingItem(ctx context.Context, request operations.CreateAccountingItemRequest) (*operations.CreateAccountingItemResponse, error) {
+// CreateCommerceItem - Create an item/product
+func (s *Item) CreateCommerceItem(ctx context.Context, request operations.CreateCommerceItemRequest) (*operations.CreateCommerceItemResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/item", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingItem", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceItem", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -58,7 +58,7 @@ func (s *Item) CreateAccountingItem(ctx context.Context, request operations.Crea
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.CreateAccountingItemResponse{
+	res := &operations.CreateCommerceItemResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -74,12 +74,12 @@ func (s *Item) CreateAccountingItem(ctx context.Context, request operations.Crea
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AccountingItem
+			var out shared.CommerceItem
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingItem = &out
+			res.CommerceItem = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -92,10 +92,10 @@ func (s *Item) CreateAccountingItem(ctx context.Context, request operations.Crea
 	return res, nil
 }
 
-// GetAccountingItem - Retrieve an item
-func (s *Item) GetAccountingItem(ctx context.Context, request operations.GetAccountingItemRequest) (*operations.GetAccountingItemResponse, error) {
+// GetCommerceItem - Retrieve an item/product
+func (s *Item) GetCommerceItem(ctx context.Context, request operations.GetCommerceItemRequest) (*operations.GetCommerceItemResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/item/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -123,7 +123,7 @@ func (s *Item) GetAccountingItem(ctx context.Context, request operations.GetAcco
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAccountingItemResponse{
+	res := &operations.GetCommerceItemResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -139,12 +139,12 @@ func (s *Item) GetAccountingItem(ctx context.Context, request operations.GetAcco
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AccountingItem
+			var out shared.CommerceItem
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingItem = &out
+			res.CommerceItem = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -157,10 +157,10 @@ func (s *Item) GetAccountingItem(ctx context.Context, request operations.GetAcco
 	return res, nil
 }
 
-// ListAccountingItems - List all items
-func (s *Item) ListAccountingItems(ctx context.Context, request operations.ListAccountingItemsRequest) (*operations.ListAccountingItemsResponse, error) {
+// ListCommerceItems - List all items/products
+func (s *Item) ListCommerceItems(ctx context.Context, request operations.ListCommerceItemsRequest) (*operations.ListCommerceItemsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/item", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -188,7 +188,7 @@ func (s *Item) ListAccountingItems(ctx context.Context, request operations.ListA
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.ListAccountingItemsResponse{
+	res := &operations.ListCommerceItemsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -204,12 +204,12 @@ func (s *Item) ListAccountingItems(ctx context.Context, request operations.ListA
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.AccountingItem
+			var out []shared.CommerceItem
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingItems = out
+			res.CommerceItems = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -222,15 +222,15 @@ func (s *Item) ListAccountingItems(ctx context.Context, request operations.ListA
 	return res, nil
 }
 
-// PatchAccountingItem - Update an item
-func (s *Item) PatchAccountingItem(ctx context.Context, request operations.PatchAccountingItemRequest) (*operations.PatchAccountingItemResponse, error) {
+// PatchCommerceItem - Update an item/product
+func (s *Item) PatchCommerceItem(ctx context.Context, request operations.PatchCommerceItemRequest) (*operations.PatchCommerceItemResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/item/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingItem", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceItem", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -256,7 +256,7 @@ func (s *Item) PatchAccountingItem(ctx context.Context, request operations.Patch
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PatchAccountingItemResponse{
+	res := &operations.PatchCommerceItemResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -272,12 +272,12 @@ func (s *Item) PatchAccountingItem(ctx context.Context, request operations.Patch
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AccountingItem
+			var out shared.CommerceItem
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingItem = &out
+			res.CommerceItem = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -290,10 +290,10 @@ func (s *Item) PatchAccountingItem(ctx context.Context, request operations.Patch
 	return res, nil
 }
 
-// RemoveAccountingItem - Remove an item
-func (s *Item) RemoveAccountingItem(ctx context.Context, request operations.RemoveAccountingItemRequest) (*operations.RemoveAccountingItemResponse, error) {
+// RemoveCommerceItem - Remove an item/product
+func (s *Item) RemoveCommerceItem(ctx context.Context, request operations.RemoveCommerceItemRequest) (*operations.RemoveCommerceItemResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/item/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -317,7 +317,7 @@ func (s *Item) RemoveAccountingItem(ctx context.Context, request operations.Remo
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.RemoveAccountingItemResponse{
+	res := &operations.RemoveCommerceItemResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -347,15 +347,15 @@ func (s *Item) RemoveAccountingItem(ctx context.Context, request operations.Remo
 	return res, nil
 }
 
-// UpdateAccountingItem - Update an item
-func (s *Item) UpdateAccountingItem(ctx context.Context, request operations.UpdateAccountingItemRequest) (*operations.UpdateAccountingItemResponse, error) {
+// UpdateCommerceItem - Update an item/product
+func (s *Item) UpdateCommerceItem(ctx context.Context, request operations.UpdateCommerceItemRequest) (*operations.UpdateCommerceItemResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/item/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingItem", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceItem", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -381,7 +381,7 @@ func (s *Item) UpdateAccountingItem(ctx context.Context, request operations.Upda
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.UpdateAccountingItemResponse{
+	res := &operations.UpdateCommerceItemResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -397,12 +397,12 @@ func (s *Item) UpdateAccountingItem(ctx context.Context, request operations.Upda
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out shared.AccountingItem
+			var out shared.CommerceItem
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingItem = &out
+			res.CommerceItem = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

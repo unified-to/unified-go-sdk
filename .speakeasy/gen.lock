@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: dd7e435592a9ea6528f806cf1e9e4701
+  docChecksum: a19ba4935c486a523296da7841502792
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.245.1
-  releaseVersion: 0.9.35
-  configChecksum: 71a66671b37eb99e31700338af7c5fcf
+  generationVersion: 2.246.3
+  releaseVersion: 0.9.36
+  configChecksum: ca36167233176fbdb8f1c33b7111cba1
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -22,7 +22,6 @@ generatedFiles:
   - account.go
   - contact.go
   - invoice.go
-  - item.go
   - organization.go
   - payment.go
   - taxrate.go
@@ -35,6 +34,11 @@ generatedFiles:
   - interview.go
   - job.go
   - scorecard.go
+  - commerce.go
+  - collection.go
+  - inventory.go
+  - item.go
+  - location.go
   - crm.go
   - company.go
   - deal.go
@@ -87,14 +91,12 @@ generatedFiles:
   - /pkg/models/operations/createaccountingaccount.go
   - /pkg/models/operations/createaccountingcontact.go
   - /pkg/models/operations/createaccountinginvoice.go
-  - /pkg/models/operations/createaccountingitem.go
   - /pkg/models/operations/createaccountingpayment.go
   - /pkg/models/operations/createaccountingtaxrate.go
   - /pkg/models/operations/createaccountingtransaction.go
   - /pkg/models/operations/getaccountingaccount.go
   - /pkg/models/operations/getaccountingcontact.go
   - /pkg/models/operations/getaccountinginvoice.go
-  - /pkg/models/operations/getaccountingitem.go
   - /pkg/models/operations/getaccountingorganization.go
   - /pkg/models/operations/getaccountingpayment.go
   - /pkg/models/operations/getaccountingtaxrate.go
@@ -102,7 +104,6 @@ generatedFiles:
   - /pkg/models/operations/listaccountingaccounts.go
   - /pkg/models/operations/listaccountingcontacts.go
   - /pkg/models/operations/listaccountinginvoices.go
-  - /pkg/models/operations/listaccountingitems.go
   - /pkg/models/operations/listaccountingorganizations.go
   - /pkg/models/operations/listaccountingpayments.go
   - /pkg/models/operations/listaccountingtaxrates.go
@@ -110,21 +111,18 @@ generatedFiles:
   - /pkg/models/operations/patchaccountingaccount.go
   - /pkg/models/operations/patchaccountingcontact.go
   - /pkg/models/operations/patchaccountinginvoice.go
-  - /pkg/models/operations/patchaccountingitem.go
   - /pkg/models/operations/patchaccountingpayment.go
   - /pkg/models/operations/patchaccountingtaxrate.go
   - /pkg/models/operations/patchaccountingtransaction.go
   - /pkg/models/operations/removeaccountingaccount.go
   - /pkg/models/operations/removeaccountingcontact.go
   - /pkg/models/operations/removeaccountinginvoice.go
-  - /pkg/models/operations/removeaccountingitem.go
   - /pkg/models/operations/removeaccountingpayment.go
   - /pkg/models/operations/removeaccountingtaxrate.go
   - /pkg/models/operations/removeaccountingtransaction.go
   - /pkg/models/operations/updateaccountingaccount.go
   - /pkg/models/operations/updateaccountingcontact.go
   - /pkg/models/operations/updateaccountinginvoice.go
-  - /pkg/models/operations/updateaccountingitem.go
   - /pkg/models/operations/updateaccountingpayment.go
   - /pkg/models/operations/updateaccountingtaxrate.go
   - /pkg/models/operations/updateaccountingtransaction.go
@@ -177,6 +175,30 @@ generatedFiles:
   - /pkg/models/operations/updateatsinterview.go
   - /pkg/models/operations/updateatsjob.go
   - /pkg/models/operations/updateatsscorecard.go
+  - /pkg/models/operations/createcommercecollection.go
+  - /pkg/models/operations/createcommerceinventory.go
+  - /pkg/models/operations/createcommerceitem.go
+  - /pkg/models/operations/createcommercelocation.go
+  - /pkg/models/operations/getcommercecollection.go
+  - /pkg/models/operations/getcommerceinventory.go
+  - /pkg/models/operations/getcommerceitem.go
+  - /pkg/models/operations/getcommercelocation.go
+  - /pkg/models/operations/listcommercecollections.go
+  - /pkg/models/operations/listcommerceinventories.go
+  - /pkg/models/operations/listcommerceitems.go
+  - /pkg/models/operations/listcommercelocations.go
+  - /pkg/models/operations/patchcommercecollection.go
+  - /pkg/models/operations/patchcommerceinventory.go
+  - /pkg/models/operations/patchcommerceitem.go
+  - /pkg/models/operations/patchcommercelocation.go
+  - /pkg/models/operations/removecommercecollection.go
+  - /pkg/models/operations/removecommerceinventory.go
+  - /pkg/models/operations/removecommerceitem.go
+  - /pkg/models/operations/removecommercelocation.go
+  - /pkg/models/operations/updatecommercecollection.go
+  - /pkg/models/operations/updatecommerceinventory.go
+  - /pkg/models/operations/updatecommerceitem.go
+  - /pkg/models/operations/updatecommercelocation.go
   - /pkg/models/operations/createcrmcompany.go
   - /pkg/models/operations/createcrmdeal.go
   - /pkg/models/operations/createcrmevent.go
@@ -289,7 +311,6 @@ generatedFiles:
   - /pkg/models/shared/propertyaccountingcontactbillingaddress.go
   - /pkg/models/shared/accountinginvoice.go
   - /pkg/models/shared/accountinglineitem.go
-  - /pkg/models/shared/accountingitem.go
   - /pkg/models/shared/accountingpayment.go
   - /pkg/models/shared/accountingtaxrate.go
   - /pkg/models/shared/accountingtransaction.go
@@ -315,6 +336,15 @@ generatedFiles:
   - /pkg/models/shared/atsaddress.go
   - /pkg/models/shared/atsscorecard.go
   - /pkg/models/shared/atsstatus.go
+  - /pkg/models/shared/commercecollection.go
+  - /pkg/models/shared/commerceitemmedia.go
+  - /pkg/models/shared/commerceinventory.go
+  - /pkg/models/shared/commerceitem.go
+  - /pkg/models/shared/commerceitemvariant.go
+  - /pkg/models/shared/commerceitemprice.go
+  - /pkg/models/shared/commerceitemoption.go
+  - /pkg/models/shared/commercelocation.go
+  - /pkg/models/shared/propertycommercelocationaddress.go
   - /pkg/models/shared/crmcompany.go
   - /pkg/models/shared/propertycrmcompanyaddress.go
   - /pkg/models/shared/crmdeal.go
@@ -369,8 +399,6 @@ generatedFiles:
   - docs/pkg/models/operations/createaccountingcontactresponse.md
   - docs/pkg/models/operations/createaccountinginvoicerequest.md
   - docs/pkg/models/operations/createaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/createaccountingitemrequest.md
-  - docs/pkg/models/operations/createaccountingitemresponse.md
   - docs/pkg/models/operations/createaccountingpaymentrequest.md
   - docs/pkg/models/operations/createaccountingpaymentresponse.md
   - docs/pkg/models/operations/createaccountingtaxraterequest.md
@@ -383,8 +411,6 @@ generatedFiles:
   - docs/pkg/models/operations/getaccountingcontactresponse.md
   - docs/pkg/models/operations/getaccountinginvoicerequest.md
   - docs/pkg/models/operations/getaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/getaccountingitemrequest.md
-  - docs/pkg/models/operations/getaccountingitemresponse.md
   - docs/pkg/models/operations/getaccountingorganizationrequest.md
   - docs/pkg/models/operations/getaccountingorganizationresponse.md
   - docs/pkg/models/operations/getaccountingpaymentrequest.md
@@ -399,8 +425,6 @@ generatedFiles:
   - docs/pkg/models/operations/listaccountingcontactsresponse.md
   - docs/pkg/models/operations/listaccountinginvoicesrequest.md
   - docs/pkg/models/operations/listaccountinginvoicesresponse.md
-  - docs/pkg/models/operations/listaccountingitemsrequest.md
-  - docs/pkg/models/operations/listaccountingitemsresponse.md
   - docs/pkg/models/operations/listaccountingorganizationsrequest.md
   - docs/pkg/models/operations/listaccountingorganizationsresponse.md
   - docs/pkg/models/operations/listaccountingpaymentsrequest.md
@@ -415,8 +439,6 @@ generatedFiles:
   - docs/pkg/models/operations/patchaccountingcontactresponse.md
   - docs/pkg/models/operations/patchaccountinginvoicerequest.md
   - docs/pkg/models/operations/patchaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/patchaccountingitemrequest.md
-  - docs/pkg/models/operations/patchaccountingitemresponse.md
   - docs/pkg/models/operations/patchaccountingpaymentrequest.md
   - docs/pkg/models/operations/patchaccountingpaymentresponse.md
   - docs/pkg/models/operations/patchaccountingtaxraterequest.md
@@ -429,8 +451,6 @@ generatedFiles:
   - docs/pkg/models/operations/removeaccountingcontactresponse.md
   - docs/pkg/models/operations/removeaccountinginvoicerequest.md
   - docs/pkg/models/operations/removeaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/removeaccountingitemrequest.md
-  - docs/pkg/models/operations/removeaccountingitemresponse.md
   - docs/pkg/models/operations/removeaccountingpaymentrequest.md
   - docs/pkg/models/operations/removeaccountingpaymentresponse.md
   - docs/pkg/models/operations/removeaccountingtaxraterequest.md
@@ -443,8 +463,6 @@ generatedFiles:
   - docs/pkg/models/operations/updateaccountingcontactresponse.md
   - docs/pkg/models/operations/updateaccountinginvoicerequest.md
   - docs/pkg/models/operations/updateaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/updateaccountingitemrequest.md
-  - docs/pkg/models/operations/updateaccountingitemresponse.md
   - docs/pkg/models/operations/updateaccountingpaymentrequest.md
   - docs/pkg/models/operations/updateaccountingpaymentresponse.md
   - docs/pkg/models/operations/updateaccountingtaxraterequest.md
@@ -549,6 +567,54 @@ generatedFiles:
   - docs/pkg/models/operations/updateatsjobresponse.md
   - docs/pkg/models/operations/updateatsscorecardrequest.md
   - docs/pkg/models/operations/updateatsscorecardresponse.md
+  - docs/pkg/models/operations/createcommercecollectionrequest.md
+  - docs/pkg/models/operations/createcommercecollectionresponse.md
+  - docs/pkg/models/operations/createcommerceinventoryrequest.md
+  - docs/pkg/models/operations/createcommerceinventoryresponse.md
+  - docs/pkg/models/operations/createcommerceitemrequest.md
+  - docs/pkg/models/operations/createcommerceitemresponse.md
+  - docs/pkg/models/operations/createcommercelocationrequest.md
+  - docs/pkg/models/operations/createcommercelocationresponse.md
+  - docs/pkg/models/operations/getcommercecollectionrequest.md
+  - docs/pkg/models/operations/getcommercecollectionresponse.md
+  - docs/pkg/models/operations/getcommerceinventoryrequest.md
+  - docs/pkg/models/operations/getcommerceinventoryresponse.md
+  - docs/pkg/models/operations/getcommerceitemrequest.md
+  - docs/pkg/models/operations/getcommerceitemresponse.md
+  - docs/pkg/models/operations/getcommercelocationrequest.md
+  - docs/pkg/models/operations/getcommercelocationresponse.md
+  - docs/pkg/models/operations/listcommercecollectionsrequest.md
+  - docs/pkg/models/operations/listcommercecollectionsresponse.md
+  - docs/pkg/models/operations/listcommerceinventoriesrequest.md
+  - docs/pkg/models/operations/listcommerceinventoriesresponse.md
+  - docs/pkg/models/operations/listcommerceitemsrequest.md
+  - docs/pkg/models/operations/listcommerceitemsresponse.md
+  - docs/pkg/models/operations/listcommercelocationsrequest.md
+  - docs/pkg/models/operations/listcommercelocationsresponse.md
+  - docs/pkg/models/operations/patchcommercecollectionrequest.md
+  - docs/pkg/models/operations/patchcommercecollectionresponse.md
+  - docs/pkg/models/operations/patchcommerceinventoryrequest.md
+  - docs/pkg/models/operations/patchcommerceinventoryresponse.md
+  - docs/pkg/models/operations/patchcommerceitemrequest.md
+  - docs/pkg/models/operations/patchcommerceitemresponse.md
+  - docs/pkg/models/operations/patchcommercelocationrequest.md
+  - docs/pkg/models/operations/patchcommercelocationresponse.md
+  - docs/pkg/models/operations/removecommercecollectionrequest.md
+  - docs/pkg/models/operations/removecommercecollectionresponse.md
+  - docs/pkg/models/operations/removecommerceinventoryrequest.md
+  - docs/pkg/models/operations/removecommerceinventoryresponse.md
+  - docs/pkg/models/operations/removecommerceitemrequest.md
+  - docs/pkg/models/operations/removecommerceitemresponse.md
+  - docs/pkg/models/operations/removecommercelocationrequest.md
+  - docs/pkg/models/operations/removecommercelocationresponse.md
+  - docs/pkg/models/operations/updatecommercecollectionrequest.md
+  - docs/pkg/models/operations/updatecommercecollectionresponse.md
+  - docs/pkg/models/operations/updatecommerceinventoryrequest.md
+  - docs/pkg/models/operations/updatecommerceinventoryresponse.md
+  - docs/pkg/models/operations/updatecommerceitemrequest.md
+  - docs/pkg/models/operations/updatecommerceitemresponse.md
+  - docs/pkg/models/operations/updatecommercelocationrequest.md
+  - docs/pkg/models/operations/updatecommercelocationresponse.md
   - docs/pkg/models/operations/createcrmcompanyrequest.md
   - docs/pkg/models/operations/createcrmcompanyresponse.md
   - docs/pkg/models/operations/createcrmdealrequest.md
@@ -774,7 +840,6 @@ generatedFiles:
   - docs/pkg/models/shared/accountinginvoicestatus.md
   - docs/pkg/models/shared/accountinginvoice.md
   - docs/pkg/models/shared/accountinglineitem.md
-  - docs/pkg/models/shared/accountingitem.md
   - docs/pkg/models/shared/accountingpayment.md
   - docs/pkg/models/shared/accountingtaxrate.md
   - docs/pkg/models/shared/accountingtransaction.md
@@ -816,6 +881,18 @@ generatedFiles:
   - docs/pkg/models/shared/atsscorecard.md
   - docs/pkg/models/shared/atsstatusstatus.md
   - docs/pkg/models/shared/atsstatus.md
+  - docs/pkg/models/shared/commercecollection.md
+  - docs/pkg/models/shared/commerceitemmediatype.md
+  - docs/pkg/models/shared/commerceitemmedia.md
+  - docs/pkg/models/shared/commerceinventory.md
+  - docs/pkg/models/shared/commerceitem.md
+  - docs/pkg/models/shared/sizeunit.md
+  - docs/pkg/models/shared/weightunit.md
+  - docs/pkg/models/shared/commerceitemvariant.md
+  - docs/pkg/models/shared/commerceitemprice.md
+  - docs/pkg/models/shared/commerceitemoption.md
+  - docs/pkg/models/shared/commercelocation.md
+  - docs/pkg/models/shared/propertycommercelocationaddress.md
   - docs/pkg/models/shared/crmcompany.md
   - docs/pkg/models/shared/propertycrmcompanyaddress.md
   - docs/pkg/models/shared/crmdeal.md
@@ -892,7 +969,6 @@ generatedFiles:
   - docs/sdks/account/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
-  - docs/sdks/item/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/payment/README.md
   - docs/sdks/taxrate/README.md
@@ -905,6 +981,11 @@ generatedFiles:
   - docs/sdks/interview/README.md
   - docs/sdks/job/README.md
   - docs/sdks/scorecard/README.md
+  - docs/sdks/commerce/README.md
+  - docs/sdks/collection/README.md
+  - docs/sdks/inventory/README.md
+  - docs/sdks/item/README.md
+  - docs/sdks/location/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/company/README.md
   - docs/sdks/deal/README.md

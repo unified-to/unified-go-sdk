@@ -45,7 +45,7 @@ func main() {
             },
         },
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesStorage,
+            shared.PropertyConnectionCategoriesCommerce,
         },
         CursorsCache: []map[string]interface{}{
             map[string]interface{}{
@@ -54,7 +54,7 @@ func main() {
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsJobRead,
+            shared.PropertyConnectionPermissionsAtsCandidateRead,
         },
     })
     if err != nil {
@@ -158,7 +158,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Connection.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{
         Categories: []operations.Categories{
-            operations.CategoriesEnrich,
+            operations.CategoriesMartech,
         },
     })
     if err != nil {
@@ -232,7 +232,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsMartechListRead,
+                shared.PropertyConnectionPermissionsCrmPipelineRead,
             },
         },
         ID: "<ID>",
@@ -351,7 +351,7 @@ func main() {
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesUc,
+                shared.PropertyConnectionCategoriesAccounting,
             },
             CursorsCache: []map[string]interface{}{
                 map[string]interface{}{
@@ -360,7 +360,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmCompanyWrite,
+                shared.PropertyConnectionPermissionsAtsDocumentRead,
             },
         },
         ID: "<ID>",

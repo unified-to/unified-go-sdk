@@ -19,7 +19,14 @@
 | `ScopesAccountingTaxrateRead`      | accounting_taxrate_read            |
 | `ScopesAccountingTaxrateWrite`     | accounting_taxrate_write           |
 | `ScopesAccountingOrganizationRead` | accounting_organization_read       |
-| `ScopesAccountingItemRead`         | accounting_item_read               |
+| `ScopesCommerceItemRead`           | commerce_item_read                 |
+| `ScopesCommerceItemWrite`          | commerce_item_write                |
+| `ScopesCommerceCollectionRead`     | commerce_collection_read           |
+| `ScopesCommerceCollectionWrite`    | commerce_collection_write          |
+| `ScopesCommerceInventoryRead`      | commerce_inventory_read            |
+| `ScopesCommerceInventoryWrite`     | commerce_inventory_write           |
+| `ScopesCommerceLocationRead`       | commerce_location_read             |
+| `ScopesCommerceLocationWrite`      | commerce_location_write            |
 | `ScopesAtsScorecardRead`           | ats_scorecard_read                 |
 | `ScopesAtsScorecardWrite`          | ats_scorecard_write                |
 | `ScopesAtsApplicationRead`         | ats_application_read               |

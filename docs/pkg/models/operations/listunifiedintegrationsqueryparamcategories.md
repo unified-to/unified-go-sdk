@@ -16,3 +16,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesUc`          | uc                                                       |
 | `ListUnifiedIntegrationsQueryParamCategoriesAccounting`  | accounting                                               |
 | `ListUnifiedIntegrationsQueryParamCategoriesStorage`     | storage                                                  |
+| `ListUnifiedIntegrationsQueryParamCategoriesCommerce`    | commerce                                                 |

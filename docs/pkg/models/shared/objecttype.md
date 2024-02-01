@@ -12,7 +12,10 @@
 | `ObjectTypeAccountingPayment`      | accounting_payment                 |
 | `ObjectTypeAccountingTaxrate`      | accounting_taxrate                 |
 | `ObjectTypeAccountingOrganization` | accounting_organization            |
-| `ObjectTypeAccountingItem`         | accounting_item                    |
+| `ObjectTypeCommerceItem`           | commerce_item                      |
+| `ObjectTypeCommerceCollection`     | commerce_collection                |
+| `ObjectTypeCommerceInventory`      | commerce_inventory                 |
+| `ObjectTypeCommerceLocation`       | commerce_location                  |
 | `ObjectTypeAtsApplication`         | ats_application                    |
 | `ObjectTypeAtsApplicationstatus`   | ats_applicationstatus              |
 | `ObjectTypeAtsCandidate`           | ats_candidate                      |

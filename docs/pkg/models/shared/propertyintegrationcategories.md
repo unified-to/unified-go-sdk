@@ -16,3 +16,4 @@
 | `PropertyIntegrationCategoriesUc`          | uc                                         |
 | `PropertyIntegrationCategoriesAccounting`  | accounting                                 |
 | `PropertyIntegrationCategoriesStorage`     | storage                                    |
+| `PropertyIntegrationCategoriesCommerce`    | commerce                                   |

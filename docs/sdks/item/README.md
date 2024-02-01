@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [CreateAccountingItem](#createaccountingitem) - Create an item
-* [GetAccountingItem](#getaccountingitem) - Retrieve an item
-* [ListAccountingItems](#listaccountingitems) - List all items
-* [PatchAccountingItem](#patchaccountingitem) - Update an item
-* [RemoveAccountingItem](#removeaccountingitem) - Remove an item
-* [UpdateAccountingItem](#updateaccountingitem) - Update an item
+* [CreateCommerceItem](#createcommerceitem) - Create an item/product
+* [GetCommerceItem](#getcommerceitem) - Retrieve an item/product
+* [ListCommerceItems](#listcommerceitems) - List all items/products
+* [PatchCommerceItem](#patchcommerceitem) - Update an item/product
+* [RemoveCommerceItem](#removecommerceitem) - Remove an item/product
+* [UpdateCommerceItem](#updatecommerceitem) - Update an item/product
 
-## CreateAccountingItem
+## CreateCommerceItem
 
-Create an item
+Create an item/product
 
 ### Example Usage
 
@@ -33,11 +33,46 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Item.CreateAccountingItem(ctx, operations.CreateAccountingItemRequest{
-        AccountingItem: &shared.AccountingItem{
+    res, err := s.Item.CreateCommerceItem(ctx, operations.CreateCommerceItemRequest{
+        CommerceItem: &shared.CommerceItem{
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    URL: "http://loud-minister.name",
+                },
+            },
             Name: "string",
             Raw: map[string]interface{}{
                 "key": "string",
+            },
+            Tags: []string{
+                "string",
+            },
+            Variants: []shared.CommerceItemVariant{
+                shared.CommerceItemVariant{
+                    Media: []shared.CommerceItemMedia{
+                        shared.CommerceItemMedia{
+                            URL: "http://other-external.info",
+                        },
+                    },
+                    Name: "string",
+                    Options: []shared.CommerceItemOption{
+                        shared.CommerceItemOption{
+                            ID: "<ID>",
+                            Name: "string",
+                            Values: []string{
+                                "string",
+                            },
+                        },
+                    },
+                    Prices: []shared.CommerceItemPrice{
+                        shared.CommerceItemPrice{
+                            Price: 3330.74,
+                        },
+                    },
+                    Tags: []string{
+                        "string",
+                    },
+                },
             },
         },
         ConnectionID: "string",
@@ -46,7 +81,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingItem != nil {
+    if res.CommerceItem != nil {
         // handle response
     }
 }
@@ -54,22 +89,22 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.CreateAccountingItemRequest](../../pkg/models/operations/createaccountingitemrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.CreateCommerceItemRequest](../../pkg/models/operations/createcommerceitemrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[*operations.CreateAccountingItemResponse](../../pkg/models/operations/createaccountingitemresponse.md), error**
+**[*operations.CreateCommerceItemResponse](../../pkg/models/operations/createcommerceitemresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## GetAccountingItem
+## GetCommerceItem
 
-Retrieve an item
+Retrieve an item/product
 
 ### Example Usage
 
@@ -90,7 +125,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Item.GetAccountingItem(ctx, operations.GetAccountingItemRequest{
+    res, err := s.Item.GetCommerceItem(ctx, operations.GetCommerceItemRequest{
         ConnectionID: "string",
         Fields: []string{
             "string",
@@ -101,7 +136,61 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingItem != nil {
+    if res.CommerceItem != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.GetCommerceItemRequest](../../pkg/models/operations/getcommerceitemrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[*operations.GetCommerceItemResponse](../../pkg/models/operations/getcommerceitemresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## ListCommerceItems
+
+List all items/products
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Item.ListCommerceItems(ctx, operations.ListCommerceItemsRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.CommerceItems != nil {
         // handle response
     }
 }
@@ -112,19 +201,19 @@ func main() {
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.GetAccountingItemRequest](../../pkg/models/operations/getaccountingitemrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `request`                                                                                      | [operations.ListCommerceItemsRequest](../../pkg/models/operations/listcommerceitemsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[*operations.GetAccountingItemResponse](../../pkg/models/operations/getaccountingitemresponse.md), error**
+**[*operations.ListCommerceItemsResponse](../../pkg/models/operations/listcommerceitemsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## ListAccountingItems
+## PatchCommerceItem
 
-List all items
+Update an item/product
 
 ### Example Usage
 
@@ -145,65 +234,46 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Item.ListAccountingItems(ctx, operations.ListAccountingItemsRequest{
-        ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if res.AccountingItems != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.ListAccountingItemsRequest](../../pkg/models/operations/listaccountingitemsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-
-### Response
-
-**[*operations.ListAccountingItemsResponse](../../pkg/models/operations/listaccountingitemsresponse.md), error**
-| Error Object       | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
-
-## PatchAccountingItem
-
-Update an item
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Item.PatchAccountingItem(ctx, operations.PatchAccountingItemRequest{
-        AccountingItem: &shared.AccountingItem{
+    res, err := s.Item.PatchCommerceItem(ctx, operations.PatchCommerceItemRequest{
+        CommerceItem: &shared.CommerceItem{
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    URL: "http://frank-galley.biz",
+                },
+            },
             Name: "string",
             Raw: map[string]interface{}{
                 "key": "string",
+            },
+            Tags: []string{
+                "string",
+            },
+            Variants: []shared.CommerceItemVariant{
+                shared.CommerceItemVariant{
+                    Media: []shared.CommerceItemMedia{
+                        shared.CommerceItemMedia{
+                            URL: "http://irresponsible-reason.biz",
+                        },
+                    },
+                    Name: "string",
+                    Options: []shared.CommerceItemOption{
+                        shared.CommerceItemOption{
+                            ID: "<ID>",
+                            Name: "string",
+                            Values: []string{
+                                "string",
+                            },
+                        },
+                    },
+                    Prices: []shared.CommerceItemPrice{
+                        shared.CommerceItemPrice{
+                            Price: 4506.62,
+                        },
+                    },
+                    Tags: []string{
+                        "string",
+                    },
+                },
             },
         },
         ConnectionID: "string",
@@ -213,7 +283,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingItem != nil {
+    if res.CommerceItem != nil {
         // handle response
     }
 }
@@ -221,22 +291,22 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.PatchAccountingItemRequest](../../pkg/models/operations/patchaccountingitemrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.PatchCommerceItemRequest](../../pkg/models/operations/patchcommerceitemrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[*operations.PatchAccountingItemResponse](../../pkg/models/operations/patchaccountingitemresponse.md), error**
+**[*operations.PatchCommerceItemResponse](../../pkg/models/operations/patchcommerceitemresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## RemoveAccountingItem
+## RemoveCommerceItem
 
-Remove an item
+Remove an item/product
 
 ### Example Usage
 
@@ -258,7 +328,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Item.RemoveAccountingItem(ctx, operations.RemoveAccountingItemRequest{
+    res, err := s.Item.RemoveCommerceItem(ctx, operations.RemoveCommerceItemRequest{
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -274,22 +344,22 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.RemoveAccountingItemRequest](../../pkg/models/operations/removeaccountingitemrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.RemoveCommerceItemRequest](../../pkg/models/operations/removecommerceitemrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[*operations.RemoveAccountingItemResponse](../../pkg/models/operations/removeaccountingitemresponse.md), error**
+**[*operations.RemoveCommerceItemResponse](../../pkg/models/operations/removecommerceitemresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## UpdateAccountingItem
+## UpdateCommerceItem
 
-Update an item
+Update an item/product
 
 ### Example Usage
 
@@ -310,11 +380,46 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Item.UpdateAccountingItem(ctx, operations.UpdateAccountingItemRequest{
-        AccountingItem: &shared.AccountingItem{
+    res, err := s.Item.UpdateCommerceItem(ctx, operations.UpdateCommerceItemRequest{
+        CommerceItem: &shared.CommerceItem{
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    URL: "https://aggressive-major-league.org",
+                },
+            },
             Name: "string",
             Raw: map[string]interface{}{
                 "key": "string",
+            },
+            Tags: []string{
+                "string",
+            },
+            Variants: []shared.CommerceItemVariant{
+                shared.CommerceItemVariant{
+                    Media: []shared.CommerceItemMedia{
+                        shared.CommerceItemMedia{
+                            URL: "https://reasonable-cast.biz",
+                        },
+                    },
+                    Name: "string",
+                    Options: []shared.CommerceItemOption{
+                        shared.CommerceItemOption{
+                            ID: "<ID>",
+                            Name: "string",
+                            Values: []string{
+                                "string",
+                            },
+                        },
+                    },
+                    Prices: []shared.CommerceItemPrice{
+                        shared.CommerceItemPrice{
+                            Price: 8467.25,
+                        },
+                    },
+                    Tags: []string{
+                        "string",
+                    },
+                },
             },
         },
         ConnectionID: "string",
@@ -324,7 +429,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingItem != nil {
+    if res.CommerceItem != nil {
         // handle response
     }
 }
@@ -332,15 +437,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.UpdateAccountingItemRequest](../../pkg/models/operations/updateaccountingitemrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.UpdateCommerceItemRequest](../../pkg/models/operations/updatecommerceitemrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[*operations.UpdateAccountingItemResponse](../../pkg/models/operations/updateaccountingitemresponse.md), error**
+**[*operations.UpdateCommerceItemResponse](../../pkg/models/operations/updatecommerceitemresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

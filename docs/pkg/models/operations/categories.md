@@ -16,3 +16,4 @@
 | `CategoriesUc`          | uc                      |
 | `CategoriesAccounting`  | accounting              |
 | `CategoriesStorage`     | storage                 |
+| `CategoriesCommerce`    | commerce                |

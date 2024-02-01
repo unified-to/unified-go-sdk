@@ -36,16 +36,10 @@ func main() {
     res, err := s.Transaction.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
         AccountingTransaction: &shared.AccountingTransaction{
             ID: "<ID>",
-            LineItems: []shared.AccountingTransactionLineitem{
-                shared.AccountingTransactionLineitem{
-                    AccountID: "string",
-                    TotalAmount: 4969.62,
-                },
-            },
             Lineitems: []shared.AccountingTransactionLineitem{
                 shared.AccountingTransactionLineitem{
                     AccountID: "string",
-                    TotalAmount: 6267.93,
+                    TotalAmount: 4969.62,
                 },
             },
             Raw: map[string]interface{}{
@@ -214,16 +208,10 @@ func main() {
     res, err := s.Transaction.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
         AccountingTransaction: &shared.AccountingTransaction{
             ID: "<ID>",
-            LineItems: []shared.AccountingTransactionLineitem{
-                shared.AccountingTransactionLineitem{
-                    AccountID: "string",
-                    TotalAmount: 5633.69,
-                },
-            },
             Lineitems: []shared.AccountingTransactionLineitem{
                 shared.AccountingTransactionLineitem{
                     AccountID: "string",
-                    TotalAmount: 4558.63,
+                    TotalAmount: 5633.69,
                 },
             },
             Raw: map[string]interface{}{
@@ -337,16 +325,10 @@ func main() {
     res, err := s.Transaction.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
         AccountingTransaction: &shared.AccountingTransaction{
             ID: "<ID>",
-            LineItems: []shared.AccountingTransactionLineitem{
-                shared.AccountingTransactionLineitem{
-                    AccountID: "string",
-                    TotalAmount: 6498.37,
-                },
-            },
             Lineitems: []shared.AccountingTransactionLineitem{
                 shared.AccountingTransactionLineitem{
                     AccountID: "string",
-                    TotalAmount: 5659.17,
+                    TotalAmount: 6498.37,
                 },
             },
             Raw: map[string]interface{}{

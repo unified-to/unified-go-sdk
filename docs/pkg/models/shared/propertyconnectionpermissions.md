@@ -19,7 +19,14 @@
 | `PropertyConnectionPermissionsAccountingTaxrateRead`      | accounting_taxrate_read                                   |
 | `PropertyConnectionPermissionsAccountingTaxrateWrite`     | accounting_taxrate_write                                  |
 | `PropertyConnectionPermissionsAccountingOrganizationRead` | accounting_organization_read                              |
-| `PropertyConnectionPermissionsAccountingItemRead`         | accounting_item_read                                      |
+| `PropertyConnectionPermissionsCommerceItemRead`           | commerce_item_read                                        |
+| `PropertyConnectionPermissionsCommerceItemWrite`          | commerce_item_write                                       |
+| `PropertyConnectionPermissionsCommerceCollectionRead`     | commerce_collection_read                                  |
+| `PropertyConnectionPermissionsCommerceCollectionWrite`    | commerce_collection_write                                 |
+| `PropertyConnectionPermissionsCommerceInventoryRead`      | commerce_inventory_read                                   |
+| `PropertyConnectionPermissionsCommerceInventoryWrite`     | commerce_inventory_write                                  |
+| `PropertyConnectionPermissionsCommerceLocationRead`       | commerce_location_read                                    |
+| `PropertyConnectionPermissionsCommerceLocationWrite`      | commerce_location_write                                   |
 | `PropertyConnectionPermissionsAtsScorecardRead`           | ats_scorecard_read                                        |
 | `PropertyConnectionPermissionsAtsScorecardWrite`          | ats_scorecard_write                                       |
 | `PropertyConnectionPermissionsAtsApplicationRead`         | ats_application_read                                      |

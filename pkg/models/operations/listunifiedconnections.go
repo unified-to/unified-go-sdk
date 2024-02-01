@@ -25,6 +25,7 @@ const (
 	CategoriesUc          Categories = "uc"
 	CategoriesAccounting  Categories = "accounting"
 	CategoriesStorage     Categories = "storage"
+	CategoriesCommerce    Categories = "commerce"
 )
 
 func (e Categories) ToPointer() *Categories {
@@ -58,6 +59,8 @@ func (e *Categories) UnmarshalJSON(data []byte) error {
 	case "accounting":
 		fallthrough
 	case "storage":
+		fallthrough
+	case "commerce":
 		*e = Categories(v)
 		return nil
 	default:

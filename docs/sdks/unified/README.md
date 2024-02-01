@@ -56,7 +56,7 @@ func main() {
             },
         },
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesStorage,
+            shared.PropertyConnectionCategoriesCommerce,
         },
         CursorsCache: []map[string]interface{}{
             map[string]interface{}{
@@ -65,7 +65,7 @@ func main() {
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsJobRead,
+            shared.PropertyConnectionPermissionsAtsCandidateRead,
         },
     })
     if err != nil {
@@ -125,7 +125,7 @@ func main() {
             Meta: map[string]interface{}{
                 "key": "string",
             },
-            ObjectType: shared.ObjectTypeCrmCompany,
+            ObjectType: shared.ObjectTypeAtsJob,
             Runs: []string{
                 "string",
             },
@@ -438,7 +438,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{
         Categories: []operations.Categories{
-            operations.CategoriesEnrich,
+            operations.CategoriesMartech,
         },
     })
     if err != nil {
@@ -491,7 +491,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
         Categories: []operations.QueryParamCategories{
-            operations.QueryParamCategoriesUc,
+            operations.QueryParamCategoriesAccounting,
         },
         WorkspaceID: "string",
     })
@@ -545,7 +545,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{
         Categories: []operations.ListUnifiedIntegrationsQueryParamCategories{
-            operations.ListUnifiedIntegrationsQueryParamCategoriesAuth,
+            operations.ListUnifiedIntegrationsQueryParamCategoriesCrm,
         },
     })
     if err != nil {
@@ -668,7 +668,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsMartechListRead,
+                shared.PropertyConnectionPermissionsCrmPipelineRead,
             },
         },
         ID: "<ID>",
@@ -891,7 +891,7 @@ func main() {
                 },
             },
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesUc,
+                shared.PropertyConnectionCategoriesAccounting,
             },
             CursorsCache: []map[string]interface{}{
                 map[string]interface{}{
@@ -900,7 +900,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmCompanyWrite,
+                shared.PropertyConnectionPermissionsAtsDocumentRead,
             },
         },
         ID: "<ID>",

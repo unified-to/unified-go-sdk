@@ -70,7 +70,6 @@ type UnifiedTo struct {
 	Account           *Account
 	Contact           *Contact
 	Invoice           *Invoice
-	Item              *Item
 	Organization      *Organization
 	Payment           *Payment
 	Taxrate           *Taxrate
@@ -83,6 +82,11 @@ type UnifiedTo struct {
 	Interview         *Interview
 	Job               *Job
 	Scorecard         *Scorecard
+	Commerce          *Commerce
+	Collection        *Collection
+	Inventory         *Inventory
+	Item              *Item
+	Location          *Location
 	Crm               *Crm
 	Company           *Company
 	Deal              *Deal
@@ -190,9 +194,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.9.35",
-			GenVersion:        "2.245.1",
-			UserAgent:         "speakeasy-sdk/go 0.9.35 2.245.1 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.9.36",
+			GenVersion:        "2.246.3",
+			UserAgent:         "speakeasy-sdk/go 0.9.36 2.246.3 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -219,8 +223,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Invoice = newInvoice(sdk.sdkConfiguration)
 
-	sdk.Item = newItem(sdk.sdkConfiguration)
-
 	sdk.Organization = newOrganization(sdk.sdkConfiguration)
 
 	sdk.Payment = newPayment(sdk.sdkConfiguration)
@@ -244,6 +246,16 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Job = newJob(sdk.sdkConfiguration)
 
 	sdk.Scorecard = newScorecard(sdk.sdkConfiguration)
+
+	sdk.Commerce = newCommerce(sdk.sdkConfiguration)
+
+	sdk.Collection = newCollection(sdk.sdkConfiguration)
+
+	sdk.Inventory = newInventory(sdk.sdkConfiguration)
+
+	sdk.Item = newItem(sdk.sdkConfiguration)
+
+	sdk.Location = newLocation(sdk.sdkConfiguration)
 
 	sdk.Crm = newCrm(sdk.sdkConfiguration)
 
