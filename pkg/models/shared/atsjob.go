@@ -99,6 +99,7 @@ func (e *AtsJobStatus) UnmarshalJSON(data []byte) error {
 type AtsJob struct {
 	Addresses        []AtsAddress           `json:"addresses,omitempty"`
 	ClosedAt         *time.Time             `json:"closed_at,omitempty"`
+	CompanyID        *string                `json:"company_id,omitempty"`
 	Compensation     []AtsCompensation      `json:"compensation,omitempty"`
 	CreatedAt        *time.Time             `json:"created_at,omitempty"`
 	Departments      []string               `json:"departments,omitempty"`
@@ -140,6 +141,13 @@ func (o *AtsJob) GetClosedAt() *time.Time {
 		return nil
 	}
 	return o.ClosedAt
+}
+
+func (o *AtsJob) GetCompanyID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyID
 }
 
 func (o *AtsJob) GetCompensation() []AtsCompensation {

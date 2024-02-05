@@ -54,7 +54,7 @@ func main() {
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsCandidateRead,
+            shared.PropertyConnectionPermissionsAtsCandidateWrite,
         },
     })
     if err != nil {
@@ -360,7 +360,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsAtsDocumentRead,
+                shared.PropertyConnectionPermissionsAtsCompanyRead,
             },
         },
         ID: "<ID>",

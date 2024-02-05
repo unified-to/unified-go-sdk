@@ -65,7 +65,7 @@ func main() {
         },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsCandidateRead,
+            shared.PropertyConnectionPermissionsAtsCandidateWrite,
         },
     })
     if err != nil {
@@ -125,7 +125,7 @@ func main() {
             Meta: map[string]interface{}{
                 "key": "string",
             },
-            ObjectType: shared.ObjectTypeAtsJob,
+            ObjectType: shared.ObjectTypeAtsScorecard,
             Runs: []string{
                 "string",
             },
@@ -284,7 +284,7 @@ func main() {
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
         Scopes: []operations.Scopes{
-            operations.ScopesHrisGroupRead,
+            operations.ScopesHrisEmployeeWrite,
         },
         WorkspaceID: "string",
     })
@@ -900,7 +900,7 @@ func main() {
             },
             IntegrationType: "string",
             Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsAtsDocumentRead,
+                shared.PropertyConnectionPermissionsAtsCompanyRead,
             },
         },
         ID: "<ID>",

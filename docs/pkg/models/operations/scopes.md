@@ -38,6 +38,7 @@
 | `ScopesAtsInterviewWrite`          | ats_interview_write                |
 | `ScopesAtsJobRead`                 | ats_job_read                       |
 | `ScopesAtsJobWrite`                | ats_job_write                      |
+| `ScopesAtsCompanyRead`             | ats_company_read                   |
 | `ScopesAtsDocumentRead`            | ats_document_read                  |
 | `ScopesAtsDocumentWrite`           | ats_document_write                 |
 | `ScopesCrmCompanyRead`             | crm_company_read                   |

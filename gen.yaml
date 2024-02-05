@@ -6,10 +6,11 @@ generation:
   useClassNamesForArrayFields: true
   fixes:
     nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.9.36
+  version: 0.10.0
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:

@@ -38,6 +38,7 @@
 | `PropertyConnectionPermissionsAtsInterviewWrite`          | ats_interview_write                                       |
 | `PropertyConnectionPermissionsAtsJobRead`                 | ats_job_read                                              |
 | `PropertyConnectionPermissionsAtsJobWrite`                | ats_job_write                                             |
+| `PropertyConnectionPermissionsAtsCompanyRead`             | ats_company_read                                          |
 | `PropertyConnectionPermissionsAtsDocumentRead`            | ats_document_read                                         |
 | `PropertyConnectionPermissionsAtsDocumentWrite`           | ats_document_write                                        |
 | `PropertyConnectionPermissionsCrmCompanyRead`             | crm_company_read                                          |

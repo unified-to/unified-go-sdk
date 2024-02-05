@@ -50,6 +50,7 @@ func (e *Origin) UnmarshalJSON(data []byte) error {
 
 type AtsCandidate struct {
 	Address     *PropertyAtsCandidateAddress `json:"address,omitempty"`
+	CompanyID   *string                      `json:"company_id,omitempty"`
 	CompanyName *string                      `json:"company_name,omitempty"`
 	CreatedAt   *time.Time                   `json:"created_at,omitempty"`
 	Emails      []AtsEmail                   `json:"emails,omitempty"`
@@ -83,6 +84,13 @@ func (o *AtsCandidate) GetAddress() *PropertyAtsCandidateAddress {
 		return nil
 	}
 	return o.Address
+}
+
+func (o *AtsCandidate) GetCompanyID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyID
 }
 
 func (o *AtsCandidate) GetCompanyName() *string {

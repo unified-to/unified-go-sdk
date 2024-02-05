@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: a19ba4935c486a523296da7841502792
+  docChecksum: 18ccf953df89af94fa8ee7505288f024
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.246.3
-  releaseVersion: 0.9.36
-  configChecksum: ca36167233176fbdb8f1c33b7111cba1
+  generationVersion: 2.249.1
+  releaseVersion: 0.10.0
+  configChecksum: 5c48045fe02968f8091ccd090c309f45
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -14,8 +14,8 @@ management:
 features:
   go:
     constsAndDefaults: 0.1.2
-    core: 3.3.1
-    globalSecurity: 2.82.5
+    core: 3.3.2
+    globalSecurity: 2.82.6
     globalServerURLs: 2.82.1
 generatedFiles:
   - accounting.go
@@ -30,6 +30,7 @@ generatedFiles:
   - application.go
   - applicationstatus.go
   - candidate.go
+  - company.go
   - document.go
   - interview.go
   - job.go
@@ -40,7 +41,6 @@ generatedFiles:
   - item.go
   - location.go
   - crm.go
-  - company.go
   - deal.go
   - event.go
   - lead.go
@@ -146,6 +146,7 @@ generatedFiles:
   - /pkg/models/operations/createatsscorecard.go
   - /pkg/models/operations/getatsapplication.go
   - /pkg/models/operations/getatscandidate.go
+  - /pkg/models/operations/getatscompany.go
   - /pkg/models/operations/getatsdocument.go
   - /pkg/models/operations/getatsinterview.go
   - /pkg/models/operations/getatsjob.go
@@ -153,6 +154,7 @@ generatedFiles:
   - /pkg/models/operations/listatsapplications.go
   - /pkg/models/operations/listatsapplicationstatuses.go
   - /pkg/models/operations/listatscandidates.go
+  - /pkg/models/operations/listatscompanies.go
   - /pkg/models/operations/listatsdocuments.go
   - /pkg/models/operations/listatsinterviews.go
   - /pkg/models/operations/listatsjobs.go
@@ -175,6 +177,13 @@ generatedFiles:
   - /pkg/models/operations/updateatsinterview.go
   - /pkg/models/operations/updateatsjob.go
   - /pkg/models/operations/updateatsscorecard.go
+  - /pkg/models/operations/createcrmcompany.go
+  - /pkg/models/operations/getcrmcompany.go
+  - /pkg/models/operations/listcrmcompanies.go
+  - /pkg/models/operations/listenrichcompanies.go
+  - /pkg/models/operations/patchcrmcompany.go
+  - /pkg/models/operations/removecrmcompany.go
+  - /pkg/models/operations/updatecrmcompany.go
   - /pkg/models/operations/createcommercecollection.go
   - /pkg/models/operations/createcommerceinventory.go
   - /pkg/models/operations/createcommerceitem.go
@@ -199,37 +208,30 @@ generatedFiles:
   - /pkg/models/operations/updatecommerceinventory.go
   - /pkg/models/operations/updatecommerceitem.go
   - /pkg/models/operations/updatecommercelocation.go
-  - /pkg/models/operations/createcrmcompany.go
   - /pkg/models/operations/createcrmdeal.go
   - /pkg/models/operations/createcrmevent.go
   - /pkg/models/operations/createcrmlead.go
   - /pkg/models/operations/createcrmpipeline.go
-  - /pkg/models/operations/getcrmcompany.go
   - /pkg/models/operations/getcrmdeal.go
   - /pkg/models/operations/getcrmevent.go
   - /pkg/models/operations/getcrmlead.go
   - /pkg/models/operations/getcrmpipeline.go
-  - /pkg/models/operations/listcrmcompanies.go
   - /pkg/models/operations/listcrmdeals.go
   - /pkg/models/operations/listcrmevents.go
   - /pkg/models/operations/listcrmleads.go
   - /pkg/models/operations/listcrmpipelines.go
-  - /pkg/models/operations/patchcrmcompany.go
   - /pkg/models/operations/patchcrmdeal.go
   - /pkg/models/operations/patchcrmevent.go
   - /pkg/models/operations/patchcrmlead.go
   - /pkg/models/operations/patchcrmpipeline.go
-  - /pkg/models/operations/removecrmcompany.go
   - /pkg/models/operations/removecrmdeal.go
   - /pkg/models/operations/removecrmevent.go
   - /pkg/models/operations/removecrmlead.go
   - /pkg/models/operations/removecrmpipeline.go
-  - /pkg/models/operations/updatecrmcompany.go
   - /pkg/models/operations/updatecrmdeal.go
   - /pkg/models/operations/updatecrmevent.go
   - /pkg/models/operations/updatecrmlead.go
   - /pkg/models/operations/updatecrmpipeline.go
-  - /pkg/models/operations/listenrichcompanies.go
   - /pkg/models/operations/listenrichpeople.go
   - /pkg/models/operations/createhrisemployee.go
   - /pkg/models/operations/createhrisgroup.go
@@ -335,7 +337,14 @@ generatedFiles:
   - /pkg/models/shared/atscompensation.go
   - /pkg/models/shared/atsaddress.go
   - /pkg/models/shared/atsscorecard.go
+  - /pkg/models/shared/atscompany.go
+  - /pkg/models/shared/propertyatscompanyaddress.go
   - /pkg/models/shared/atsstatus.go
+  - /pkg/models/shared/crmcompany.go
+  - /pkg/models/shared/propertycrmcompanyaddress.go
+  - /pkg/models/shared/enrichcompany.go
+  - /pkg/models/shared/enrichtelephone.go
+  - /pkg/models/shared/propertyenrichcompanyaddress.go
   - /pkg/models/shared/commercecollection.go
   - /pkg/models/shared/commerceitemmedia.go
   - /pkg/models/shared/commerceinventory.go
@@ -345,8 +354,6 @@ generatedFiles:
   - /pkg/models/shared/commerceitemoption.go
   - /pkg/models/shared/commercelocation.go
   - /pkg/models/shared/propertycommercelocationaddress.go
-  - /pkg/models/shared/crmcompany.go
-  - /pkg/models/shared/propertycrmcompanyaddress.go
   - /pkg/models/shared/crmdeal.go
   - /pkg/models/shared/crmevent.go
   - /pkg/models/shared/propertycrmeventtask.go
@@ -357,9 +364,6 @@ generatedFiles:
   - /pkg/models/shared/crmlead.go
   - /pkg/models/shared/propertycrmleadaddress.go
   - /pkg/models/shared/crmpipeline.go
-  - /pkg/models/shared/enrichcompany.go
-  - /pkg/models/shared/enrichtelephone.go
-  - /pkg/models/shared/propertyenrichcompanyaddress.go
   - /pkg/models/shared/enrichperson.go
   - /pkg/models/shared/enrichpersonworkhistory.go
   - /pkg/models/shared/enrichemail.go
@@ -509,6 +513,8 @@ generatedFiles:
   - docs/pkg/models/operations/getatsapplicationresponse.md
   - docs/pkg/models/operations/getatscandidaterequest.md
   - docs/pkg/models/operations/getatscandidateresponse.md
+  - docs/pkg/models/operations/getatscompanyrequest.md
+  - docs/pkg/models/operations/getatscompanyresponse.md
   - docs/pkg/models/operations/getatsdocumentrequest.md
   - docs/pkg/models/operations/getatsdocumentresponse.md
   - docs/pkg/models/operations/getatsinterviewrequest.md
@@ -523,6 +529,8 @@ generatedFiles:
   - docs/pkg/models/operations/listatsapplicationstatusesresponse.md
   - docs/pkg/models/operations/listatscandidatesrequest.md
   - docs/pkg/models/operations/listatscandidatesresponse.md
+  - docs/pkg/models/operations/listatscompaniesrequest.md
+  - docs/pkg/models/operations/listatscompaniesresponse.md
   - docs/pkg/models/operations/listatsdocumentsrequest.md
   - docs/pkg/models/operations/listatsdocumentsresponse.md
   - docs/pkg/models/operations/listatsinterviewsrequest.md
@@ -567,6 +575,20 @@ generatedFiles:
   - docs/pkg/models/operations/updateatsjobresponse.md
   - docs/pkg/models/operations/updateatsscorecardrequest.md
   - docs/pkg/models/operations/updateatsscorecardresponse.md
+  - docs/pkg/models/operations/createcrmcompanyrequest.md
+  - docs/pkg/models/operations/createcrmcompanyresponse.md
+  - docs/pkg/models/operations/getcrmcompanyrequest.md
+  - docs/pkg/models/operations/getcrmcompanyresponse.md
+  - docs/pkg/models/operations/listcrmcompaniesrequest.md
+  - docs/pkg/models/operations/listcrmcompaniesresponse.md
+  - docs/pkg/models/operations/listenrichcompaniesrequest.md
+  - docs/pkg/models/operations/listenrichcompaniesresponse.md
+  - docs/pkg/models/operations/patchcrmcompanyrequest.md
+  - docs/pkg/models/operations/patchcrmcompanyresponse.md
+  - docs/pkg/models/operations/removecrmcompanyrequest.md
+  - docs/pkg/models/operations/removecrmcompanyresponse.md
+  - docs/pkg/models/operations/updatecrmcompanyrequest.md
+  - docs/pkg/models/operations/updatecrmcompanyresponse.md
   - docs/pkg/models/operations/createcommercecollectionrequest.md
   - docs/pkg/models/operations/createcommercecollectionresponse.md
   - docs/pkg/models/operations/createcommerceinventoryrequest.md
@@ -615,8 +637,6 @@ generatedFiles:
   - docs/pkg/models/operations/updatecommerceitemresponse.md
   - docs/pkg/models/operations/updatecommercelocationrequest.md
   - docs/pkg/models/operations/updatecommercelocationresponse.md
-  - docs/pkg/models/operations/createcrmcompanyrequest.md
-  - docs/pkg/models/operations/createcrmcompanyresponse.md
   - docs/pkg/models/operations/createcrmdealrequest.md
   - docs/pkg/models/operations/createcrmdealresponse.md
   - docs/pkg/models/operations/createcrmeventrequest.md
@@ -625,8 +645,6 @@ generatedFiles:
   - docs/pkg/models/operations/createcrmleadresponse.md
   - docs/pkg/models/operations/createcrmpipelinerequest.md
   - docs/pkg/models/operations/createcrmpipelineresponse.md
-  - docs/pkg/models/operations/getcrmcompanyrequest.md
-  - docs/pkg/models/operations/getcrmcompanyresponse.md
   - docs/pkg/models/operations/getcrmdealrequest.md
   - docs/pkg/models/operations/getcrmdealresponse.md
   - docs/pkg/models/operations/getcrmeventrequest.md
@@ -635,8 +653,6 @@ generatedFiles:
   - docs/pkg/models/operations/getcrmleadresponse.md
   - docs/pkg/models/operations/getcrmpipelinerequest.md
   - docs/pkg/models/operations/getcrmpipelineresponse.md
-  - docs/pkg/models/operations/listcrmcompaniesrequest.md
-  - docs/pkg/models/operations/listcrmcompaniesresponse.md
   - docs/pkg/models/operations/listcrmdealsrequest.md
   - docs/pkg/models/operations/listcrmdealsresponse.md
   - docs/pkg/models/operations/listcrmeventsrequest.md
@@ -645,8 +661,6 @@ generatedFiles:
   - docs/pkg/models/operations/listcrmleadsresponse.md
   - docs/pkg/models/operations/listcrmpipelinesrequest.md
   - docs/pkg/models/operations/listcrmpipelinesresponse.md
-  - docs/pkg/models/operations/patchcrmcompanyrequest.md
-  - docs/pkg/models/operations/patchcrmcompanyresponse.md
   - docs/pkg/models/operations/patchcrmdealrequest.md
   - docs/pkg/models/operations/patchcrmdealresponse.md
   - docs/pkg/models/operations/patchcrmeventrequest.md
@@ -655,8 +669,6 @@ generatedFiles:
   - docs/pkg/models/operations/patchcrmleadresponse.md
   - docs/pkg/models/operations/patchcrmpipelinerequest.md
   - docs/pkg/models/operations/patchcrmpipelineresponse.md
-  - docs/pkg/models/operations/removecrmcompanyrequest.md
-  - docs/pkg/models/operations/removecrmcompanyresponse.md
   - docs/pkg/models/operations/removecrmdealrequest.md
   - docs/pkg/models/operations/removecrmdealresponse.md
   - docs/pkg/models/operations/removecrmeventrequest.md
@@ -665,8 +677,6 @@ generatedFiles:
   - docs/pkg/models/operations/removecrmleadresponse.md
   - docs/pkg/models/operations/removecrmpipelinerequest.md
   - docs/pkg/models/operations/removecrmpipelineresponse.md
-  - docs/pkg/models/operations/updatecrmcompanyrequest.md
-  - docs/pkg/models/operations/updatecrmcompanyresponse.md
   - docs/pkg/models/operations/updatecrmdealrequest.md
   - docs/pkg/models/operations/updatecrmdealresponse.md
   - docs/pkg/models/operations/updatecrmeventrequest.md
@@ -675,8 +685,6 @@ generatedFiles:
   - docs/pkg/models/operations/updatecrmleadresponse.md
   - docs/pkg/models/operations/updatecrmpipelinerequest.md
   - docs/pkg/models/operations/updatecrmpipelineresponse.md
-  - docs/pkg/models/operations/listenrichcompaniesrequest.md
-  - docs/pkg/models/operations/listenrichcompaniesresponse.md
   - docs/pkg/models/operations/listenrichpeoplerequest.md
   - docs/pkg/models/operations/listenrichpeopleresponse.md
   - docs/pkg/models/operations/createhrisemployeerequest.md
@@ -879,8 +887,16 @@ generatedFiles:
   - docs/pkg/models/shared/atsaddress.md
   - docs/pkg/models/shared/recommendation.md
   - docs/pkg/models/shared/atsscorecard.md
+  - docs/pkg/models/shared/atscompany.md
+  - docs/pkg/models/shared/propertyatscompanyaddress.md
   - docs/pkg/models/shared/atsstatusstatus.md
   - docs/pkg/models/shared/atsstatus.md
+  - docs/pkg/models/shared/crmcompany.md
+  - docs/pkg/models/shared/propertycrmcompanyaddress.md
+  - docs/pkg/models/shared/enrichcompany.md
+  - docs/pkg/models/shared/enrichtelephonetype.md
+  - docs/pkg/models/shared/enrichtelephone.md
+  - docs/pkg/models/shared/propertyenrichcompanyaddress.md
   - docs/pkg/models/shared/commercecollection.md
   - docs/pkg/models/shared/commerceitemmediatype.md
   - docs/pkg/models/shared/commerceitemmedia.md
@@ -893,8 +909,6 @@ generatedFiles:
   - docs/pkg/models/shared/commerceitemoption.md
   - docs/pkg/models/shared/commercelocation.md
   - docs/pkg/models/shared/propertycommercelocationaddress.md
-  - docs/pkg/models/shared/crmcompany.md
-  - docs/pkg/models/shared/propertycrmcompanyaddress.md
   - docs/pkg/models/shared/crmdeal.md
   - docs/pkg/models/shared/crmeventtype.md
   - docs/pkg/models/shared/crmevent.md
@@ -907,10 +921,6 @@ generatedFiles:
   - docs/pkg/models/shared/crmlead.md
   - docs/pkg/models/shared/propertycrmleadaddress.md
   - docs/pkg/models/shared/crmpipeline.md
-  - docs/pkg/models/shared/enrichcompany.md
-  - docs/pkg/models/shared/enrichtelephonetype.md
-  - docs/pkg/models/shared/enrichtelephone.md
-  - docs/pkg/models/shared/propertyenrichcompanyaddress.md
   - docs/pkg/models/shared/gender.md
   - docs/pkg/models/shared/enrichperson.md
   - docs/pkg/models/shared/enrichpersonworkhistory.md
@@ -977,6 +987,7 @@ generatedFiles:
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/company/README.md
   - docs/sdks/document/README.md
   - docs/sdks/interview/README.md
   - docs/sdks/job/README.md
@@ -987,7 +998,6 @@ generatedFiles:
   - docs/sdks/item/README.md
   - docs/sdks/location/README.md
   - docs/sdks/crm/README.md
-  - docs/sdks/company/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
   - docs/sdks/lead/README.md

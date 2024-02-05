@@ -57,6 +57,7 @@ const (
 	ObjectTypeAtsInterview           ObjectType = "ats_interview"
 	ObjectTypeAtsJob                 ObjectType = "ats_job"
 	ObjectTypeAtsScorecard           ObjectType = "ats_scorecard"
+	ObjectTypeAtsCompany             ObjectType = "ats_company"
 	ObjectTypeCrmCompany             ObjectType = "crm_company"
 	ObjectTypeCrmContact             ObjectType = "crm_contact"
 	ObjectTypeCrmDeal                ObjectType = "crm_deal"
@@ -123,6 +124,8 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "ats_job":
 		fallthrough
 	case "ats_scorecard":
+		fallthrough
+	case "ats_company":
 		fallthrough
 	case "crm_company":
 		fallthrough

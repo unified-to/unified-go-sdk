@@ -42,7 +42,7 @@ func main() {
             Meta: map[string]interface{}{
                 "key": "string",
             },
-            ObjectType: shared.ObjectTypeAtsJob,
+            ObjectType: shared.ObjectTypeAtsScorecard,
             Runs: []string{
                 "string",
             },

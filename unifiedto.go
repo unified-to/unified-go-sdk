@@ -78,6 +78,7 @@ type UnifiedTo struct {
 	Application       *Application
 	Applicationstatus *Applicationstatus
 	Candidate         *Candidate
+	Company           *Company
 	Document          *Document
 	Interview         *Interview
 	Job               *Job
@@ -88,7 +89,6 @@ type UnifiedTo struct {
 	Item              *Item
 	Location          *Location
 	Crm               *Crm
-	Company           *Company
 	Deal              *Deal
 	Event             *Event
 	Lead              *Lead
@@ -194,9 +194,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.9.36",
-			GenVersion:        "2.246.3",
-			UserAgent:         "speakeasy-sdk/go 0.9.36 2.246.3 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.10.0",
+			GenVersion:        "2.249.1",
+			UserAgent:         "speakeasy-sdk/go 0.10.0 2.249.1 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -239,6 +239,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Candidate = newCandidate(sdk.sdkConfiguration)
 
+	sdk.Company = newCompany(sdk.sdkConfiguration)
+
 	sdk.Document = newDocument(sdk.sdkConfiguration)
 
 	sdk.Interview = newInterview(sdk.sdkConfiguration)
@@ -258,8 +260,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Location = newLocation(sdk.sdkConfiguration)
 
 	sdk.Crm = newCrm(sdk.sdkConfiguration)
-
-	sdk.Company = newCompany(sdk.sdkConfiguration)
 
 	sdk.Deal = newDeal(sdk.sdkConfiguration)
 

@@ -44,6 +44,7 @@ const (
 	ScopesAtsInterviewWrite          Scopes = "ats_interview_write"
 	ScopesAtsJobRead                 Scopes = "ats_job_read"
 	ScopesAtsJobWrite                Scopes = "ats_job_write"
+	ScopesAtsCompanyRead             Scopes = "ats_company_read"
 	ScopesAtsDocumentRead            Scopes = "ats_document_read"
 	ScopesAtsDocumentWrite           Scopes = "ats_document_write"
 	ScopesCrmCompanyRead             Scopes = "crm_company_read"
@@ -153,6 +154,8 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "ats_job_read":
 		fallthrough
 	case "ats_job_write":
+		fallthrough
+	case "ats_company_read":
 		fallthrough
 	case "ats_document_read":
 		fallthrough

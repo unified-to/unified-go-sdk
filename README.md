@@ -180,6 +180,7 @@ func main() {
 * [CreateAtsScorecard](docs/sdks/ats/README.md#createatsscorecard) - Create a scorecard
 * [GetAtsApplication](docs/sdks/ats/README.md#getatsapplication) - Retrieve an application
 * [GetAtsCandidate](docs/sdks/ats/README.md#getatscandidate) - Retrieve a candidate
+* [GetAtsCompany](docs/sdks/ats/README.md#getatscompany) - Retrieve a company
 * [GetAtsDocument](docs/sdks/ats/README.md#getatsdocument) - Retrieve a document
 * [GetAtsInterview](docs/sdks/ats/README.md#getatsinterview) - Retrieve a interview
 * [GetAtsJob](docs/sdks/ats/README.md#getatsjob) - Retrieve a job
@@ -187,6 +188,7 @@ func main() {
 * [ListAtsApplications](docs/sdks/ats/README.md#listatsapplications) - List all applications
 * [ListAtsApplicationstatuses](docs/sdks/ats/README.md#listatsapplicationstatuses) - List all application statuses
 * [ListAtsCandidates](docs/sdks/ats/README.md#listatscandidates) - List all candidates
+* [ListAtsCompanies](docs/sdks/ats/README.md#listatscompanies) - List all companies
 * [ListAtsDocuments](docs/sdks/ats/README.md#listatsdocuments) - List all documents
 * [ListAtsInterviews](docs/sdks/ats/README.md#listatsinterviews) - List all interviews
 * [ListAtsJobs](docs/sdks/ats/README.md#listatsjobs) - List all jobs
@@ -231,6 +233,18 @@ func main() {
 * [PatchAtsCandidate](docs/sdks/candidate/README.md#patchatscandidate) - Update a candidate
 * [RemoveAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [UpdateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
+
+### [Company](docs/sdks/company/README.md)
+
+* [CreateCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
+* [GetAtsCompany](docs/sdks/company/README.md#getatscompany) - Retrieve a company
+* [GetCrmCompany](docs/sdks/company/README.md#getcrmcompany) - Retrieve a company
+* [ListAtsCompanies](docs/sdks/company/README.md#listatscompanies) - List all companies
+* [ListCrmCompanies](docs/sdks/company/README.md#listcrmcompanies) - List all companies
+* [ListEnrichCompanies](docs/sdks/company/README.md#listenrichcompanies) - Retrieve enrichment information for a company
+* [PatchCrmCompany](docs/sdks/company/README.md#patchcrmcompany) - Update a company
+* [RemoveCrmCompany](docs/sdks/company/README.md#removecrmcompany) - Remove a company
+* [UpdateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 
 ### [Document](docs/sdks/document/README.md)
 
@@ -369,16 +383,6 @@ func main() {
 * [UpdateCrmEvent](docs/sdks/crm/README.md#updatecrmevent) - Update a event
 * [UpdateCrmLead](docs/sdks/crm/README.md#updatecrmlead) - Update a lead
 * [UpdateCrmPipeline](docs/sdks/crm/README.md#updatecrmpipeline) - Update a pipeline
-
-### [Company](docs/sdks/company/README.md)
-
-* [CreateCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
-* [GetCrmCompany](docs/sdks/company/README.md#getcrmcompany) - Retrieve a company
-* [ListCrmCompanies](docs/sdks/company/README.md#listcrmcompanies) - List all companies
-* [ListEnrichCompanies](docs/sdks/company/README.md#listenrichcompanies) - Retrieve enrichment information for a company
-* [PatchCrmCompany](docs/sdks/company/README.md#patchcrmcompany) - Update a company
-* [RemoveCrmCompany](docs/sdks/company/README.md#removecrmcompany) - Remove a company
-* [UpdateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 
 ### [Deal](docs/sdks/deal/README.md)
 

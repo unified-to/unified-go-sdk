@@ -43,6 +43,7 @@ const (
 	PropertyConnectionPermissionsAtsInterviewWrite          PropertyConnectionPermissions = "ats_interview_write"
 	PropertyConnectionPermissionsAtsJobRead                 PropertyConnectionPermissions = "ats_job_read"
 	PropertyConnectionPermissionsAtsJobWrite                PropertyConnectionPermissions = "ats_job_write"
+	PropertyConnectionPermissionsAtsCompanyRead             PropertyConnectionPermissions = "ats_company_read"
 	PropertyConnectionPermissionsAtsDocumentRead            PropertyConnectionPermissions = "ats_document_read"
 	PropertyConnectionPermissionsAtsDocumentWrite           PropertyConnectionPermissions = "ats_document_write"
 	PropertyConnectionPermissionsCrmCompanyRead             PropertyConnectionPermissions = "crm_company_read"
@@ -152,6 +153,8 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "ats_job_read":
 		fallthrough
 	case "ats_job_write":
+		fallthrough
+	case "ats_company_read":
 		fallthrough
 	case "ats_document_read":
 		fallthrough
