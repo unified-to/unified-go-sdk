@@ -78,7 +78,7 @@ func (s *Passthrough) CreatePassthrough(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.Undefined = out
+			res.Result = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -139,7 +139,7 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 				return nil, err
 			}
 
-			res.Undefined = out
+			res.Result = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -207,7 +207,7 @@ func (s *Passthrough) PatchPassthrough(ctx context.Context, request operations.P
 				return nil, err
 			}
 
-			res.Undefined = out
+			res.Result = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -268,7 +268,7 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.Undefined = out
+			res.Result = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -336,7 +336,7 @@ func (s *Passthrough) UpdatePassthrough(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.Undefined = out
+			res.Result = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

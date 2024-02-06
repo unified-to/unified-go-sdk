@@ -38,12 +38,12 @@ func (o *PatchPassthroughRequest) GetPath() string {
 type PatchPassthroughResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	// Successful
+	Result map[string]interface{}
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	Undefined map[string]interface{}
 }
 
 func (o *PatchPassthroughResponse) GetContentType() string {
@@ -51,6 +51,13 @@ func (o *PatchPassthroughResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
+}
+
+func (o *PatchPassthroughResponse) GetResult() map[string]interface{} {
+	if o == nil {
+		return nil
+	}
+	return o.Result
 }
 
 func (o *PatchPassthroughResponse) GetStatusCode() int {
@@ -65,11 +72,4 @@ func (o *PatchPassthroughResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
-}
-
-func (o *PatchPassthroughResponse) GetUndefined() map[string]interface{} {
-	if o == nil {
-		return nil
-	}
-	return o.Undefined
 }

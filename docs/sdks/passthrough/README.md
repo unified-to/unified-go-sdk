@@ -43,7 +43,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Undefined != nil {
+    if res.Result != nil {
         // handle response
     }
 }
@@ -95,7 +95,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Undefined != nil {
+    if res.Result != nil {
         // handle response
     }
 }
@@ -150,7 +150,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Undefined != nil {
+    if res.Result != nil {
         // handle response
     }
 }
@@ -202,7 +202,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Undefined != nil {
+    if res.Result != nil {
         // handle response
     }
 }
@@ -257,7 +257,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Undefined != nil {
+    if res.Result != nil {
         // handle response
     }
 }
