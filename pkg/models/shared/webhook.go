@@ -216,6 +216,7 @@ type Webhook struct {
 	IsHealthy       *bool                  `json:"is_healthy,omitempty"`
 	Meta            map[string]interface{} `json:"meta,omitempty"`
 	ObjectType      ObjectType             `json:"object_type"`
+	PageMaxLimit    *float64               `json:"page_max_limit,omitempty"`
 	// An array of the most revent virtual webhook runs
 	Runs        []string            `json:"runs,omitempty"`
 	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
@@ -323,6 +324,13 @@ func (o *Webhook) GetObjectType() ObjectType {
 		return ObjectType("")
 	}
 	return o.ObjectType
+}
+
+func (o *Webhook) GetPageMaxLimit() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.PageMaxLimit
 }
 
 func (o *Webhook) GetRuns() []string {
