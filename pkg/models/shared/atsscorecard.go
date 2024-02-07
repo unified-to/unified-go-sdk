@@ -51,6 +51,7 @@ type AtsScorecard struct {
 	InterviewID    *string                `json:"interview_id,omitempty"`
 	InterviewerID  *string                `json:"interviewer_id,omitempty"`
 	JobID          *string                `json:"job_id,omitempty"`
+	Questions      []AtsScorecardQuestion `json:"questions,omitempty"`
 	Raw            map[string]interface{} `json:"raw,omitempty"`
 	Recommendation *Recommendation        `json:"recommendation,omitempty"`
 	UpdatedAt      *time.Time             `json:"updated_at,omitempty"`
@@ -121,6 +122,13 @@ func (o *AtsScorecard) GetJobID() *string {
 		return nil
 	}
 	return o.JobID
+}
+
+func (o *AtsScorecard) GetQuestions() []AtsScorecardQuestion {
+	if o == nil {
+		return nil
+	}
+	return o.Questions
 }
 
 func (o *AtsScorecard) GetRaw() map[string]interface{} {

@@ -35,6 +35,11 @@ func main() {
     ctx := context.Background()
     res, err := s.Scorecard.CreateAtsScorecard(ctx, operations.CreateAtsScorecardRequest{
         AtsScorecard: &shared.AtsScorecard{
+            Questions: []shared.AtsScorecardQuestion{
+                shared.AtsScorecardQuestion{
+                    Text: "string",
+                },
+            },
             Raw: map[string]interface{}{
                 "key": "string",
             },
@@ -200,6 +205,11 @@ func main() {
     ctx := context.Background()
     res, err := s.Scorecard.PatchAtsScorecard(ctx, operations.PatchAtsScorecardRequest{
         AtsScorecard: &shared.AtsScorecard{
+            Questions: []shared.AtsScorecardQuestion{
+                shared.AtsScorecardQuestion{
+                    Text: "string",
+                },
+            },
             Raw: map[string]interface{}{
                 "key": "string",
             },
@@ -310,6 +320,11 @@ func main() {
     ctx := context.Background()
     res, err := s.Scorecard.UpdateAtsScorecard(ctx, operations.UpdateAtsScorecardRequest{
         AtsScorecard: &shared.AtsScorecard{
+            Questions: []shared.AtsScorecardQuestion{
+                shared.AtsScorecardQuestion{
+                    Text: "string",
+                },
+            },
             Raw: map[string]interface{}{
                 "key": "string",
             },

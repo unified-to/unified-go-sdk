@@ -194,9 +194,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.11.1",
-			GenVersion:        "2.250.12",
-			UserAgent:         "speakeasy-sdk/go 0.11.1 2.250.12 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.11.2",
+			GenVersion:        "2.250.16",
+			UserAgent:         "speakeasy-sdk/go 0.11.2 2.250.16 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {

@@ -15,6 +15,8 @@ const (
 	AtsInterviewStatusScheduled        AtsInterviewStatus = "SCHEDULED"
 	AtsInterviewStatusAwaitingFeedback AtsInterviewStatus = "AWAITING_FEEDBACK"
 	AtsInterviewStatusComplete         AtsInterviewStatus = "COMPLETE"
+	AtsInterviewStatusCanceled         AtsInterviewStatus = "CANCELED"
+	AtsInterviewStatusNeedsScheduling  AtsInterviewStatus = "NEEDS_SCHEDULING"
 )
 
 func (e AtsInterviewStatus) ToPointer() *AtsInterviewStatus {
@@ -32,6 +34,10 @@ func (e *AtsInterviewStatus) UnmarshalJSON(data []byte) error {
 	case "AWAITING_FEEDBACK":
 		fallthrough
 	case "COMPLETE":
+		fallthrough
+	case "CANCELED":
+		fallthrough
+	case "NEEDS_SCHEDULING":
 		*e = AtsInterviewStatus(v)
 		return nil
 	default:

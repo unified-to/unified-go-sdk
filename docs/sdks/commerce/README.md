@@ -5,27 +5,27 @@
 
 * [CreateCommerceCollection](#createcommercecollection) - Create a collection
 * [CreateCommerceInventory](#createcommerceinventory) - Create an inventory
-* [CreateCommerceItem](#createcommerceitem) - Create an item/product
+* [CreateCommerceItem](#createcommerceitem) - Create an item
 * [CreateCommerceLocation](#createcommercelocation) - Create a location
 * [GetCommerceCollection](#getcommercecollection) - Retrieve a collection
 * [GetCommerceInventory](#getcommerceinventory) - Retrieve an inventory
-* [GetCommerceItem](#getcommerceitem) - Retrieve an item/product
+* [GetCommerceItem](#getcommerceitem) - Retrieve an item
 * [GetCommerceLocation](#getcommercelocation) - Retrieve a location
 * [ListCommerceCollections](#listcommercecollections) - List all collections
 * [ListCommerceInventories](#listcommerceinventories) - List all inventories
-* [ListCommerceItems](#listcommerceitems) - List all items/products
+* [ListCommerceItems](#listcommerceitems) - List all items
 * [ListCommerceLocations](#listcommercelocations) - List all locations
 * [PatchCommerceCollection](#patchcommercecollection) - Update a collection
 * [PatchCommerceInventory](#patchcommerceinventory) - Update an inventory
-* [PatchCommerceItem](#patchcommerceitem) - Update an item/product
+* [PatchCommerceItem](#patchcommerceitem) - Update an item
 * [PatchCommerceLocation](#patchcommercelocation) - Update a location
 * [RemoveCommerceCollection](#removecommercecollection) - Remove a collection
 * [RemoveCommerceInventory](#removecommerceinventory) - Remove an inventory
-* [RemoveCommerceItem](#removecommerceitem) - Remove an item/product
+* [RemoveCommerceItem](#removecommerceitem) - Remove an item
 * [RemoveCommerceLocation](#removecommercelocation) - Remove a location
 * [UpdateCommerceCollection](#updatecommercecollection) - Update a collection
 * [UpdateCommerceInventory](#updatecommerceinventory) - Update an inventory
-* [UpdateCommerceItem](#updatecommerceitem) - Update an item/product
+* [UpdateCommerceItem](#updatecommerceitem) - Update an item
 * [UpdateCommerceLocation](#updatecommercelocation) - Update a location
 
 ## CreateCommerceCollection
@@ -156,7 +156,7 @@ func main() {
 
 ## CreateCommerceItem
 
-Create an item/product
+Create an item
 
 ### Example Usage
 
@@ -416,7 +416,7 @@ func main() {
 
 ## GetCommerceItem
 
-Retrieve an item/product
+Retrieve an item
 
 ### Example Usage
 
@@ -634,7 +634,7 @@ func main() {
 
 ## ListCommerceItems
 
-List all items/products
+List all items
 
 ### Example Usage
 
@@ -870,7 +870,7 @@ func main() {
 
 ## PatchCommerceItem
 
-Update an item/product
+Update an item
 
 ### Example Usage
 
@@ -1128,7 +1128,7 @@ func main() {
 
 ## RemoveCommerceItem
 
-Remove an item/product
+Remove an item
 
 ### Example Usage
 
@@ -1362,7 +1362,7 @@ func main() {
 
 ## UpdateCommerceItem
 
-Update an item/product
+Update an item
 
 ### Example Usage
 

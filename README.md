@@ -286,27 +286,27 @@ func main() {
 
 * [CreateCommerceCollection](docs/sdks/commerce/README.md#createcommercecollection) - Create a collection
 * [CreateCommerceInventory](docs/sdks/commerce/README.md#createcommerceinventory) - Create an inventory
-* [CreateCommerceItem](docs/sdks/commerce/README.md#createcommerceitem) - Create an item/product
+* [CreateCommerceItem](docs/sdks/commerce/README.md#createcommerceitem) - Create an item
 * [CreateCommerceLocation](docs/sdks/commerce/README.md#createcommercelocation) - Create a location
 * [GetCommerceCollection](docs/sdks/commerce/README.md#getcommercecollection) - Retrieve a collection
 * [GetCommerceInventory](docs/sdks/commerce/README.md#getcommerceinventory) - Retrieve an inventory
-* [GetCommerceItem](docs/sdks/commerce/README.md#getcommerceitem) - Retrieve an item/product
+* [GetCommerceItem](docs/sdks/commerce/README.md#getcommerceitem) - Retrieve an item
 * [GetCommerceLocation](docs/sdks/commerce/README.md#getcommercelocation) - Retrieve a location
 * [ListCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [ListCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
-* [ListCommerceItems](docs/sdks/commerce/README.md#listcommerceitems) - List all items/products
+* [ListCommerceItems](docs/sdks/commerce/README.md#listcommerceitems) - List all items
 * [ListCommerceLocations](docs/sdks/commerce/README.md#listcommercelocations) - List all locations
 * [PatchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
 * [PatchCommerceInventory](docs/sdks/commerce/README.md#patchcommerceinventory) - Update an inventory
-* [PatchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item/product
+* [PatchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
 * [PatchCommerceLocation](docs/sdks/commerce/README.md#patchcommercelocation) - Update a location
 * [RemoveCommerceCollection](docs/sdks/commerce/README.md#removecommercecollection) - Remove a collection
 * [RemoveCommerceInventory](docs/sdks/commerce/README.md#removecommerceinventory) - Remove an inventory
-* [RemoveCommerceItem](docs/sdks/commerce/README.md#removecommerceitem) - Remove an item/product
+* [RemoveCommerceItem](docs/sdks/commerce/README.md#removecommerceitem) - Remove an item
 * [RemoveCommerceLocation](docs/sdks/commerce/README.md#removecommercelocation) - Remove a location
 * [UpdateCommerceCollection](docs/sdks/commerce/README.md#updatecommercecollection) - Update a collection
 * [UpdateCommerceInventory](docs/sdks/commerce/README.md#updatecommerceinventory) - Update an inventory
-* [UpdateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item/product
+* [UpdateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
 * [UpdateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
 
 ### [Collection](docs/sdks/collection/README.md)
@@ -329,12 +329,12 @@ func main() {
 
 ### [Item](docs/sdks/item/README.md)
 
-* [CreateCommerceItem](docs/sdks/item/README.md#createcommerceitem) - Create an item/product
-* [GetCommerceItem](docs/sdks/item/README.md#getcommerceitem) - Retrieve an item/product
-* [ListCommerceItems](docs/sdks/item/README.md#listcommerceitems) - List all items/products
-* [PatchCommerceItem](docs/sdks/item/README.md#patchcommerceitem) - Update an item/product
-* [RemoveCommerceItem](docs/sdks/item/README.md#removecommerceitem) - Remove an item/product
-* [UpdateCommerceItem](docs/sdks/item/README.md#updatecommerceitem) - Update an item/product
+* [CreateCommerceItem](docs/sdks/item/README.md#createcommerceitem) - Create an item
+* [GetCommerceItem](docs/sdks/item/README.md#getcommerceitem) - Retrieve an item
+* [ListCommerceItems](docs/sdks/item/README.md#listcommerceitems) - List all items
+* [PatchCommerceItem](docs/sdks/item/README.md#patchcommerceitem) - Update an item
+* [RemoveCommerceItem](docs/sdks/item/README.md#removecommerceitem) - Remove an item
+* [UpdateCommerceItem](docs/sdks/item/README.md#updatecommerceitem) - Update an item
 
 ### [Location](docs/sdks/location/README.md)
 

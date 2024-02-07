@@ -160,7 +160,7 @@ func (s *Commerce) CreateCommerceInventory(ctx context.Context, request operatio
 	return res, nil
 }
 
-// CreateCommerceItem - Create an item/product
+// CreateCommerceItem - Create an item
 func (s *Commerce) CreateCommerceItem(ctx context.Context, request operations.CreateCommerceItemRequest) (*operations.CreateCommerceItemResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item", request, nil)
@@ -426,7 +426,7 @@ func (s *Commerce) GetCommerceInventory(ctx context.Context, request operations.
 	return res, nil
 }
 
-// GetCommerceItem - Retrieve an item/product
+// GetCommerceItem - Retrieve an item
 func (s *Commerce) GetCommerceItem(ctx context.Context, request operations.GetCommerceItemRequest) (*operations.GetCommerceItemResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item/{id}", request, nil)
@@ -686,7 +686,7 @@ func (s *Commerce) ListCommerceInventories(ctx context.Context, request operatio
 	return res, nil
 }
 
-// ListCommerceItems - List all items/products
+// ListCommerceItems - List all items
 func (s *Commerce) ListCommerceItems(ctx context.Context, request operations.ListCommerceItemsRequest) (*operations.ListCommerceItemsResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item", request, nil)
@@ -952,7 +952,7 @@ func (s *Commerce) PatchCommerceInventory(ctx context.Context, request operation
 	return res, nil
 }
 
-// PatchCommerceItem - Update an item/product
+// PatchCommerceItem - Update an item
 func (s *Commerce) PatchCommerceItem(ctx context.Context, request operations.PatchCommerceItemRequest) (*operations.PatchCommerceItemResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item/{id}", request, nil)
@@ -1202,7 +1202,7 @@ func (s *Commerce) RemoveCommerceInventory(ctx context.Context, request operatio
 	return res, nil
 }
 
-// RemoveCommerceItem - Remove an item/product
+// RemoveCommerceItem - Remove an item
 func (s *Commerce) RemoveCommerceItem(ctx context.Context, request operations.RemoveCommerceItemRequest) (*operations.RemoveCommerceItemResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item/{id}", request, nil)
@@ -1452,7 +1452,7 @@ func (s *Commerce) UpdateCommerceInventory(ctx context.Context, request operatio
 	return res, nil
 }
 
-// UpdateCommerceItem - Update an item/product
+// UpdateCommerceItem - Update an item
 func (s *Commerce) UpdateCommerceItem(ctx context.Context, request operations.UpdateCommerceItemRequest) (*operations.UpdateCommerceItemResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item/{id}", request, nil)

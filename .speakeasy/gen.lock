@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: e16aa34043cd80d620a23e298a14e5c0
+  docChecksum: 6de3144fa3dee858558168257bc841a5
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.250.12
-  releaseVersion: 0.11.1
-  configChecksum: 9294e325aab6b018ee98b45f2f67f660
+  generationVersion: 2.250.16
+  releaseVersion: 0.11.2
+  configChecksum: ce3f7a2db12dccbe85b060cafa4bbc73
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -337,6 +337,7 @@ generatedFiles:
   - /pkg/models/shared/atscompensation.go
   - /pkg/models/shared/atsaddress.go
   - /pkg/models/shared/atsscorecard.go
+  - /pkg/models/shared/atsscorecardquestion.go
   - /pkg/models/shared/atscompany.go
   - /pkg/models/shared/propertyatscompanyaddress.go
   - /pkg/models/shared/atsstatus.go
@@ -887,6 +888,7 @@ generatedFiles:
   - docs/pkg/models/shared/atsaddress.md
   - docs/pkg/models/shared/recommendation.md
   - docs/pkg/models/shared/atsscorecard.md
+  - docs/pkg/models/shared/atsscorecardquestion.md
   - docs/pkg/models/shared/atscompany.md
   - docs/pkg/models/shared/propertyatscompanyaddress.md
   - docs/pkg/models/shared/atsstatusstatus.md
