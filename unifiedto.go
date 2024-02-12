@@ -72,6 +72,8 @@ type UnifiedTo struct {
 	Invoice           *Invoice
 	Organization      *Organization
 	Payment           *Payment
+	Payout            *Payout
+	Refund            *Refund
 	Taxrate           *Taxrate
 	Transaction       *Transaction
 	Ats               *Ats
@@ -116,6 +118,7 @@ type UnifiedTo struct {
 	Integration       *Integration
 	Auth              *Auth
 	Login             *Login
+	Issue             *Issue
 	Webhook           *Webhook
 
 	sdkConfiguration sdkConfiguration
@@ -194,9 +197,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.11.2",
-			GenVersion:        "2.250.16",
-			UserAgent:         "speakeasy-sdk/go 0.11.2 2.250.16 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.11.3",
+			GenVersion:        "2.252.2",
+			UserAgent:         "speakeasy-sdk/go 0.11.3 2.252.2 1.0 github.com/unified-to/unified-go-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -226,6 +229,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Organization = newOrganization(sdk.sdkConfiguration)
 
 	sdk.Payment = newPayment(sdk.sdkConfiguration)
+
+	sdk.Payout = newPayout(sdk.sdkConfiguration)
+
+	sdk.Refund = newRefund(sdk.sdkConfiguration)
 
 	sdk.Taxrate = newTaxrate(sdk.sdkConfiguration)
 
@@ -314,6 +321,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Auth = newAuth(sdk.sdkConfiguration)
 
 	sdk.Login = newLogin(sdk.sdkConfiguration)
+
+	sdk.Issue = newIssue(sdk.sdkConfiguration)
 
 	sdk.Webhook = newWebhook(sdk.sdkConfiguration)
 

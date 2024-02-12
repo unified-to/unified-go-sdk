@@ -11,7 +11,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.11.2
+  version: 0.11.3
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
   imports:

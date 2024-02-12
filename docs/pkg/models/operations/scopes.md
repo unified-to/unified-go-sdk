@@ -19,6 +19,10 @@
 | `ScopesAccountingTaxrateRead`      | accounting_taxrate_read            |
 | `ScopesAccountingTaxrateWrite`     | accounting_taxrate_write           |
 | `ScopesAccountingOrganizationRead` | accounting_organization_read       |
+| `ScopesAccountingRefundRead`       | accounting_refund_read             |
+| `ScopesAccountingRefundWrite`      | accounting_refund_write            |
+| `ScopesAccountingPayoutRead`       | accounting_payout_read             |
+| `ScopesAccountingPayoutWrite`      | accounting_payout_write            |
 | `ScopesCommerceItemRead`           | commerce_item_read                 |
 | `ScopesCommerceItemWrite`          | commerce_item_write                |
 | `ScopesCommerceCollectionRead`     | commerce_collection_read           |

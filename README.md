@@ -71,6 +71,8 @@ func main() {
 * [GetAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve a invoice
 * [GetAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
 * [GetAccountingPayment](docs/sdks/accounting/README.md#getaccountingpayment) - Retrieve a payment
+* [GetAccountingPayout](docs/sdks/accounting/README.md#getaccountingpayout) - Retrieve a payout
+* [GetAccountingRefund](docs/sdks/accounting/README.md#getaccountingrefund) - Retrieve a refund
 * [GetAccountingTaxrate](docs/sdks/accounting/README.md#getaccountingtaxrate) - Retrieve a taxrate
 * [GetAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
 * [ListAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
@@ -78,6 +80,8 @@ func main() {
 * [ListAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [ListAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
 * [ListAccountingPayments](docs/sdks/accounting/README.md#listaccountingpayments) - List all payments
+* [ListAccountingPayouts](docs/sdks/accounting/README.md#listaccountingpayouts) - List all payouts
+* [ListAccountingRefunds](docs/sdks/accounting/README.md#listaccountingrefunds) - List all refunds
 * [ListAccountingTaxrates](docs/sdks/accounting/README.md#listaccountingtaxrates) - List all taxrates
 * [ListAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
 * [PatchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
@@ -151,6 +155,16 @@ func main() {
 * [PatchAccountingPayment](docs/sdks/payment/README.md#patchaccountingpayment) - Update a payment
 * [RemoveAccountingPayment](docs/sdks/payment/README.md#removeaccountingpayment) - Remove a payment
 * [UpdateAccountingPayment](docs/sdks/payment/README.md#updateaccountingpayment) - Update a payment
+
+### [Payout](docs/sdks/payout/README.md)
+
+* [GetAccountingPayout](docs/sdks/payout/README.md#getaccountingpayout) - Retrieve a payout
+* [ListAccountingPayouts](docs/sdks/payout/README.md#listaccountingpayouts) - List all payouts
+
+### [Refund](docs/sdks/refund/README.md)
+
+* [GetAccountingRefund](docs/sdks/refund/README.md#getaccountingrefund) - Retrieve a refund
+* [ListAccountingRefunds](docs/sdks/refund/README.md#listaccountingrefunds) - List all refunds
 
 ### [Taxrate](docs/sdks/taxrate/README.md)
 
@@ -595,6 +609,7 @@ func main() {
 * [ListUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
 * [ListUnifiedIntegrationWorkspaces](docs/sdks/unified/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [ListUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
+* [ListUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
 * [ListUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [PatchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [PatchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
@@ -631,6 +646,10 @@ func main() {
 ### [Login](docs/sdks/login/README.md)
 
 * [GetUnifiedIntegrationLogin](docs/sdks/login/README.md#getunifiedintegrationlogin) - Sign in a user
+
+### [Issue](docs/sdks/issue/README.md)
+
+* [ListUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
 
 ### [Webhook](docs/sdks/webhook/README.md)
 

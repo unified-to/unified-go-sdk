@@ -14,6 +14,8 @@
 * [GetAccountingInvoice](#getaccountinginvoice) - Retrieve a invoice
 * [GetAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [GetAccountingPayment](#getaccountingpayment) - Retrieve a payment
+* [GetAccountingPayout](#getaccountingpayout) - Retrieve a payout
+* [GetAccountingRefund](#getaccountingrefund) - Retrieve a refund
 * [GetAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
 * [GetAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
 * [ListAccountingAccounts](#listaccountingaccounts) - List all accounts
@@ -21,6 +23,8 @@
 * [ListAccountingInvoices](#listaccountinginvoices) - List all invoices
 * [ListAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [ListAccountingPayments](#listaccountingpayments) - List all payments
+* [ListAccountingPayouts](#listaccountingpayouts) - List all payouts
+* [ListAccountingRefunds](#listaccountingrefunds) - List all refunds
 * [ListAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
 * [ListAccountingTransactions](#listaccountingtransactions) - List all transactions
 * [PatchAccountingAccount](#patchaccountingaccount) - Update an account
@@ -680,6 +684,116 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
+## GetAccountingPayout
+
+Retrieve a payout
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.GetAccountingPayout(ctx, operations.GetAccountingPayoutRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingPayout != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.GetAccountingPayoutRequest](../../pkg/models/operations/getaccountingpayoutrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+
+### Response
+
+**[*operations.GetAccountingPayoutResponse](../../pkg/models/operations/getaccountingpayoutresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## GetAccountingRefund
+
+Retrieve a refund
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.GetAccountingRefund(ctx, operations.GetAccountingRefundRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+        ID: "<ID>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingRefund != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.GetAccountingRefundRequest](../../pkg/models/operations/getaccountingrefundrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+
+### Response
+
+**[*operations.GetAccountingRefundResponse](../../pkg/models/operations/getaccountingrefundresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
 ## GetAccountingTaxrate
 
 Retrieve a taxrate
@@ -1056,6 +1170,114 @@ func main() {
 ### Response
 
 **[*operations.ListAccountingPaymentsResponse](../../pkg/models/operations/listaccountingpaymentsresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## ListAccountingPayouts
+
+List all payouts
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.ListAccountingPayouts(ctx, operations.ListAccountingPayoutsRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingPayouts != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.ListAccountingPayoutsRequest](../../pkg/models/operations/listaccountingpayoutsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[*operations.ListAccountingPayoutsResponse](../../pkg/models/operations/listaccountingpayoutsresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## ListAccountingRefunds
+
+List all refunds
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Accounting.ListAccountingRefunds(ctx, operations.ListAccountingRefundsRequest{
+        ConnectionID: "string",
+        Fields: []string{
+            "string",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AccountingRefunds != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.ListAccountingRefundsRequest](../../pkg/models/operations/listaccountingrefundsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[*operations.ListAccountingRefundsResponse](../../pkg/models/operations/listaccountingrefundsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
