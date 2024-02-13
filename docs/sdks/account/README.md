@@ -34,12 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Account.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-        AccountingAccount: &shared.AccountingAccount{
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -92,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Account.GetAccountingAccount(ctx, operations.GetAccountingAccountRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -147,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Account.ListAccountingAccounts(ctx, operations.ListAccountingAccountsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -200,12 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Account.PatchAccountingAccount(ctx, operations.PatchAccountingAccountRequest{
-        AccountingAccount: &shared.AccountingAccount{
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -311,12 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Account.UpdateAccountingAccount(ctx, operations.UpdateAccountingAccountRequest{
-        AccountingAccount: &shared.AccountingAccount{
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

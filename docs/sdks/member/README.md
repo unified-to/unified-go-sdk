@@ -34,22 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Member.CreateMartechMember(ctx, operations.CreateMartechMemberRequest{
-        MarketingMember: &shared.MarketingMember{
-            Emails: []shared.MarketingEmail{
-                shared.MarketingEmail{
-                    Email: "Eldridge.Marvin@gmail.com",
-                },
-            },
-            ListIds: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -102,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.GetMartechMember(ctx, operations.GetMartechMemberRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -157,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Member.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -210,22 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Member.PatchMartechMember(ctx, operations.PatchMartechMemberRequest{
-        MarketingMember: &shared.MarketingMember{
-            Emails: []shared.MarketingEmail{
-                shared.MarketingEmail{
-                    Email: "Shana_Boyle@yahoo.com",
-                },
-            },
-            ListIds: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -331,22 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Member.UpdateMartechMember(ctx, operations.UpdateMartechMemberRequest{
-        MarketingMember: &shared.MarketingMember{
-            Emails: []shared.MarketingEmail{
-                shared.MarketingEmail{
-                    Email: "Antonette.Kerluke@hotmail.com",
-                },
-            },
-            ListIds: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

@@ -62,6 +62,7 @@ type AtsCandidate struct {
 	Name       *string                `json:"name,omitempty"`
 	Origin     *Origin                `json:"origin,omitempty"`
 	Raw        map[string]interface{} `json:"raw,omitempty"`
+	Sources    []string               `json:"sources,omitempty"`
 	Tags       []string               `json:"tags,omitempty"`
 	Telephones []AtsTelephone         `json:"telephones,omitempty"`
 	Title      *string                `json:"title,omitempty"`
@@ -161,6 +162,13 @@ func (o *AtsCandidate) GetRaw() map[string]interface{} {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *AtsCandidate) GetSources() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Sources
 }
 
 func (o *AtsCandidate) GetTags() []string {

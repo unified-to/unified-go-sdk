@@ -31,9 +31,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Refund.GetAccountingRefund(ctx, operations.GetAccountingRefundRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -86,9 +83,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Refund.ListAccountingRefunds(ctx, operations.ListAccountingRefundsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)

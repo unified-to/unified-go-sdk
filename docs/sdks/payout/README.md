@@ -31,9 +31,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Payout.GetAccountingPayout(ctx, operations.GetAccountingPayoutRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -86,9 +83,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Payout.ListAccountingPayouts(ctx, operations.ListAccountingPayoutsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)

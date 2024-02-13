@@ -34,14 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticket.CreateTicketingTicket(ctx, operations.CreateTicketingTicketRequest{
-        TicketingTicket: &shared.TicketingTicket{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -94,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticket.GetTicketingTicket(ctx, operations.GetTicketingTicketRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -149,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ticket.ListTicketingTickets(ctx, operations.ListTicketingTicketsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -202,14 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticket.PatchTicketingTicket(ctx, operations.PatchTicketingTicketRequest{
-        TicketingTicket: &shared.TicketingTicket{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -315,14 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticket.UpdateTicketingTicket(ctx, operations.UpdateTicketingTicketRequest{
-        TicketingTicket: &shared.TicketingTicket{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

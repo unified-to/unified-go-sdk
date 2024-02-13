@@ -34,16 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Scorecard.CreateAtsScorecard(ctx, operations.CreateAtsScorecardRequest{
-        AtsScorecard: &shared.AtsScorecard{
-            Questions: []shared.AtsScorecardQuestion{
-                shared.AtsScorecardQuestion{
-                    Text: "string",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -96,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Scorecard.GetAtsScorecard(ctx, operations.GetAtsScorecardRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -151,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Scorecard.ListAtsScorecards(ctx, operations.ListAtsScorecardsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -204,16 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Scorecard.PatchAtsScorecard(ctx, operations.PatchAtsScorecardRequest{
-        AtsScorecard: &shared.AtsScorecard{
-            Questions: []shared.AtsScorecardQuestion{
-                shared.AtsScorecardQuestion{
-                    Text: "string",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -319,16 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Scorecard.UpdateAtsScorecard(ctx, operations.UpdateAtsScorecardRequest{
-        AtsScorecard: &shared.AtsScorecard{
-            Questions: []shared.AtsScorecardQuestion{
-                shared.AtsScorecardQuestion{
-                    Text: "string",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

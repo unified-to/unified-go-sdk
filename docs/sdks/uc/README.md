@@ -35,21 +35,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.CreateUcContact(ctx, operations.CreateUcContactRequest{
-        UcContact: &shared.UcContact{
-            Emails: []shared.UcEmail{
-                shared.UcEmail{
-                    Email: "Dulce_Becker30@yahoo.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.UcTelephone{
-                shared.UcTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -102,9 +87,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Uc.GetUcContact(ctx, operations.GetUcContactRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -157,9 +139,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Uc.ListUcCalls(ctx, operations.ListUcCallsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -211,9 +190,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Uc.ListUcContacts(ctx, operations.ListUcContactsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -264,21 +240,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.PatchUcContact(ctx, operations.PatchUcContactRequest{
-        UcContact: &shared.UcContact{
-            Emails: []shared.UcEmail{
-                shared.UcEmail{
-                    Email: "Norene_Boehm97@hotmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.UcTelephone{
-                shared.UcTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -384,21 +345,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
-        UcContact: &shared.UcContact{
-            Emails: []shared.UcEmail{
-                shared.UcEmail{
-                    Email: "Kianna.Witting90@gmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.UcTelephone{
-                shared.UcTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

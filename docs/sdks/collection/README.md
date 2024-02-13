@@ -34,24 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Collection.CreateCommerceCollection(ctx, operations.CreateCommerceCollectionRequest{
-        CommerceCollection: &shared.CommerceCollection{
-            ID: "<ID>",
-            ItemIds: []string{
-                "string",
-            },
-            Media: []shared.CommerceItemMedia{
-                shared.CommerceItemMedia{
-                    URL: "http://uneven-mattress.name",
-                },
-            },
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -104,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Collection.GetCommerceCollection(ctx, operations.GetCommerceCollectionRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -159,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Collection.ListCommerceCollections(ctx, operations.ListCommerceCollectionsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -212,24 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Collection.PatchCommerceCollection(ctx, operations.PatchCommerceCollectionRequest{
-        CommerceCollection: &shared.CommerceCollection{
-            ID: "<ID>",
-            ItemIds: []string{
-                "string",
-            },
-            Media: []shared.CommerceItemMedia{
-                shared.CommerceItemMedia{
-                    URL: "http://personal-sorrow.com",
-                },
-            },
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -335,24 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Collection.UpdateCommerceCollection(ctx, operations.UpdateCommerceCollectionRequest{
-        CommerceCollection: &shared.CommerceCollection{
-            ID: "<ID>",
-            ItemIds: []string{
-                "string",
-            },
-            Media: []shared.CommerceItemMedia{
-                shared.CommerceItemMedia{
-                    URL: "https://stupid-entity.org",
-                },
-            },
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

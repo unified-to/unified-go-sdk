@@ -34,13 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Taxrate.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
-        AccountingTaxrate: &shared.AccountingTaxrate{
-            Name: "string",
-            Rate: 1719.1,
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -93,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Taxrate.GetAccountingTaxrate(ctx, operations.GetAccountingTaxrateRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -148,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Taxrate.ListAccountingTaxrates(ctx, operations.ListAccountingTaxratesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -201,13 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Taxrate.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
-        AccountingTaxrate: &shared.AccountingTaxrate{
-            Name: "string",
-            Rate: 5991.47,
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -313,13 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Taxrate.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
-        AccountingTaxrate: &shared.AccountingTaxrate{
-            Name: "string",
-            Rate: 3382.78,
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

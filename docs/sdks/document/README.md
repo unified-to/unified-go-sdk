@@ -34,11 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Document.CreateAtsDocument(ctx, operations.CreateAtsDocumentRequest{
-        AtsDocument: &shared.AtsDocument{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -91,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Document.GetAtsDocument(ctx, operations.GetAtsDocumentRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -146,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Document.ListAtsDocuments(ctx, operations.ListAtsDocumentsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -199,11 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Document.PatchAtsDocument(ctx, operations.PatchAtsDocumentRequest{
-        AtsDocument: &shared.AtsDocument{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -309,11 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Document.UpdateAtsDocument(ctx, operations.UpdateAtsDocumentRequest{
-        AtsDocument: &shared.AtsDocument{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

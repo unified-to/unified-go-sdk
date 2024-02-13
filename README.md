@@ -35,12 +35,6 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		AccountingAccount: &shared.AccountingAccount{
-			Name: "string",
-			Raw: map[string]interface{}{
-				"key": "string",
-			},
-		},
 		ConnectionID: "string",
 	})
 	if err != nil {
@@ -706,12 +700,6 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		AccountingAccount: &shared.AccountingAccount{
-			Name: "string",
-			Raw: map[string]interface{}{
-				"key": "string",
-			},
-		},
 		ConnectionID: "string",
 	})
 	if err != nil {
@@ -762,12 +750,6 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		AccountingAccount: &shared.AccountingAccount{
-			Name: "string",
-			Raw: map[string]interface{}{
-				"key": "string",
-			},
-		},
 		ConnectionID: "string",
 	})
 	if err != nil {
@@ -804,12 +786,6 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		AccountingAccount: &shared.AccountingAccount{
-			Name: "string",
-			Raw: map[string]interface{}{
-				"key": "string",
-			},
-		},
 		ConnectionID: "string",
 	})
 	if err != nil {
@@ -876,7 +852,6 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
@@ -887,12 +862,6 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		AccountingAccount: &shared.AccountingAccount{
-			Name: "string",
-			Raw: map[string]interface{}{
-				"key": "string",
-			},
-		},
 		ConnectionID: "string",
 	})
 	if err != nil {

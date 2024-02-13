@@ -67,11 +67,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsApplication(ctx, operations.CreateAtsApplicationRequest{
-        AtsApplication: &shared.AtsApplication{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -123,28 +118,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsCandidate(ctx, operations.CreateAtsCandidateRequest{
-        AtsCandidate: &shared.AtsCandidate{
-            Address: &shared.PropertyAtsCandidateAddress{},
-            Emails: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Robin_Feeney@hotmail.com",
-                },
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.AtsTelephone{
-                shared.AtsTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -196,11 +169,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsDocument(ctx, operations.CreateAtsDocumentRequest{
-        AtsDocument: &shared.AtsDocument{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -252,14 +220,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsInterview(ctx, operations.CreateAtsInterviewRequest{
-        AtsInterview: &shared.AtsInterview{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            UserIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -311,31 +271,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsJob(ctx, operations.CreateAtsJobRequest{
-        AtsJob: &shared.AtsJob{
-            Addresses: []shared.AtsAddress{
-                shared.AtsAddress{},
-            },
-            Compensation: []shared.AtsCompensation{
-                shared.AtsCompensation{
-                    Type: shared.AtsCompensationTypeSalary,
-                },
-            },
-            Departments: []string{
-                "string",
-            },
-            HiringManagerIds: []string{
-                "string",
-            },
-            PublicJobUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            RecruiterIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -387,16 +322,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.CreateAtsScorecard(ctx, operations.CreateAtsScorecardRequest{
-        AtsScorecard: &shared.AtsScorecard{
-            Questions: []shared.AtsScorecardQuestion{
-                shared.AtsScorecardQuestion{
-                    Text: "string",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -449,9 +374,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsApplication(ctx, operations.GetAtsApplicationRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -504,9 +426,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsCandidate(ctx, operations.GetAtsCandidateRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -559,9 +478,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsCompany(ctx, operations.GetAtsCompanyRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -614,9 +530,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsDocument(ctx, operations.GetAtsDocumentRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -669,9 +582,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsInterview(ctx, operations.GetAtsInterviewRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -724,9 +634,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsJob(ctx, operations.GetAtsJobRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -779,9 +686,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.GetAtsScorecard(ctx, operations.GetAtsScorecardRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -834,9 +738,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsApplications(ctx, operations.ListAtsApplicationsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -888,9 +789,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsApplicationstatuses(ctx, operations.ListAtsApplicationstatusesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -942,9 +840,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsCandidates(ctx, operations.ListAtsCandidatesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -996,9 +891,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsCompanies(ctx, operations.ListAtsCompaniesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1050,9 +942,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsDocuments(ctx, operations.ListAtsDocumentsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1104,9 +993,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsInterviews(ctx, operations.ListAtsInterviewsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1158,9 +1044,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsJobs(ctx, operations.ListAtsJobsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1212,9 +1095,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Ats.ListAtsScorecards(ctx, operations.ListAtsScorecardsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1265,11 +1145,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsApplication(ctx, operations.PatchAtsApplicationRequest{
-        AtsApplication: &shared.AtsApplication{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1322,28 +1197,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsCandidate(ctx, operations.PatchAtsCandidateRequest{
-        AtsCandidate: &shared.AtsCandidate{
-            Address: &shared.PropertyAtsCandidateAddress{},
-            Emails: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Tracy.Collins13@gmail.com",
-                },
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.AtsTelephone{
-                shared.AtsTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1396,11 +1249,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsDocument(ctx, operations.PatchAtsDocumentRequest{
-        AtsDocument: &shared.AtsDocument{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1453,14 +1301,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsInterview(ctx, operations.PatchAtsInterviewRequest{
-        AtsInterview: &shared.AtsInterview{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            UserIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1513,31 +1353,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsJob(ctx, operations.PatchAtsJobRequest{
-        AtsJob: &shared.AtsJob{
-            Addresses: []shared.AtsAddress{
-                shared.AtsAddress{},
-            },
-            Compensation: []shared.AtsCompensation{
-                shared.AtsCompensation{
-                    Type: shared.AtsCompensationTypeBonus,
-                },
-            },
-            Departments: []string{
-                "string",
-            },
-            HiringManagerIds: []string{
-                "string",
-            },
-            PublicJobUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            RecruiterIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1590,16 +1405,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.PatchAtsScorecard(ctx, operations.PatchAtsScorecardRequest{
-        AtsScorecard: &shared.AtsScorecard{
-            Questions: []shared.AtsScorecardQuestion{
-                shared.AtsScorecardQuestion{
-                    Text: "string",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1970,11 +1775,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsApplication(ctx, operations.UpdateAtsApplicationRequest{
-        AtsApplication: &shared.AtsApplication{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2027,28 +1827,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsCandidate(ctx, operations.UpdateAtsCandidateRequest{
-        AtsCandidate: &shared.AtsCandidate{
-            Address: &shared.PropertyAtsCandidateAddress{},
-            Emails: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Gaetano86@hotmail.com",
-                },
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.AtsTelephone{
-                shared.AtsTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2101,11 +1879,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsDocument(ctx, operations.UpdateAtsDocumentRequest{
-        AtsDocument: &shared.AtsDocument{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2158,14 +1931,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsInterview(ctx, operations.UpdateAtsInterviewRequest{
-        AtsInterview: &shared.AtsInterview{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            UserIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2218,31 +1983,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsJob(ctx, operations.UpdateAtsJobRequest{
-        AtsJob: &shared.AtsJob{
-            Addresses: []shared.AtsAddress{
-                shared.AtsAddress{},
-            },
-            Compensation: []shared.AtsCompensation{
-                shared.AtsCompensation{
-                    Type: shared.AtsCompensationTypeEquity,
-                },
-            },
-            Departments: []string{
-                "string",
-            },
-            HiringManagerIds: []string{
-                "string",
-            },
-            PublicJobUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            RecruiterIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2295,16 +2035,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ats.UpdateAtsScorecard(ctx, operations.UpdateAtsScorecardRequest{
-        AtsScorecard: &shared.AtsScorecard{
-            Questions: []shared.AtsScorecardQuestion{
-                shared.AtsScorecardQuestion{
-                    Text: "string",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

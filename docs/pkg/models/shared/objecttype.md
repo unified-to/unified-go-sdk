@@ -12,6 +12,8 @@
 | `ObjectTypeAccountingPayment`      | accounting_payment                 |
 | `ObjectTypeAccountingTaxrate`      | accounting_taxrate                 |
 | `ObjectTypeAccountingOrganization` | accounting_organization            |
+| `ObjectTypeAccountingPayout`       | accounting_payout                  |
+| `ObjectTypeAccountingRefund`       | accounting_refund                  |
 | `ObjectTypeCommerceItem`           | commerce_item                      |
 | `ObjectTypeCommerceCollection`     | commerce_collection                |
 | `ObjectTypeCommerceInventory`      | commerce_inventory                 |

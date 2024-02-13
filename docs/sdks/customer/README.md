@@ -34,24 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.CreateTicketingCustomer(ctx, operations.CreateTicketingCustomerRequest{
-        TicketingCustomer: &shared.TicketingCustomer{
-            Emails: []shared.TicketingEmail{
-                shared.TicketingEmail{
-                    Email: "Guadalupe78@yahoo.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.TicketingTelephone{
-                shared.TicketingTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -104,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.GetTicketingCustomer(ctx, operations.GetTicketingCustomerRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -159,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Customer.ListTicketingCustomers(ctx, operations.ListTicketingCustomersRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -212,24 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.PatchTicketingCustomer(ctx, operations.PatchTicketingCustomerRequest{
-        TicketingCustomer: &shared.TicketingCustomer{
-            Emails: []shared.TicketingEmail{
-                shared.TicketingEmail{
-                    Email: "Raymundo93@hotmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.TicketingTelephone{
-                shared.TicketingTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -335,24 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Customer.UpdateTicketingCustomer(ctx, operations.UpdateTicketingCustomerRequest{
-        TicketingCustomer: &shared.TicketingCustomer{
-            Emails: []shared.TicketingEmail{
-                shared.TicketingEmail{
-                    Email: "Mohamed.Friesen@hotmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.TicketingTelephone{
-                shared.TicketingTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

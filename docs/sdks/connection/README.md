@@ -33,28 +33,12 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.CreateUnifiedConnection(ctx, &shared.Connection{
-        Auth: &shared.PropertyConnectionAuth{
-            Emails: []string{
-                "string",
-            },
-            Meta: map[string]interface{}{
-                "key": "string",
-            },
-            OtherAuthInfo: []string{
-                "string",
-            },
-        },
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesCommerce,
         },
-        CursorsCache: []map[string]interface{}{
-            map[string]interface{}{
-                "key": "string",
-            },
-        },
         IntegrationType: "string",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsCandidateWrite,
+            shared.PropertyConnectionPermissionsAtsApplicationstatusRead,
         },
     })
     if err != nil {
@@ -156,11 +140,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Connection.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{
-        Categories: []operations.Categories{
-            operations.CategoriesMartech,
-        },
-    })
+    res, err := s.Connection.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -210,31 +190,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
-        Connection: &shared.Connection{
-            Auth: &shared.PropertyConnectionAuth{
-                Emails: []string{
-                    "string",
-                },
-                Meta: map[string]interface{}{
-                    "key": "string",
-                },
-                OtherAuthInfo: []string{
-                    "string",
-                },
-            },
-            Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesTicketing,
-            },
-            CursorsCache: []map[string]interface{}{
-                map[string]interface{}{
-                    "key": "string",
-                },
-            },
-            IntegrationType: "string",
-            Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsCrmPipelineRead,
-            },
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -338,31 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
-        Connection: &shared.Connection{
-            Auth: &shared.PropertyConnectionAuth{
-                Emails: []string{
-                    "string",
-                },
-                Meta: map[string]interface{}{
-                    "key": "string",
-                },
-                OtherAuthInfo: []string{
-                    "string",
-                },
-            },
-            Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesAccounting,
-            },
-            CursorsCache: []map[string]interface{}{
-                map[string]interface{}{
-                    "key": "string",
-                },
-            },
-            IntegrationType: "string",
-            Permissions: []shared.PropertyConnectionPermissions{
-                shared.PropertyConnectionPermissionsAtsCompanyRead,
-            },
-        },
         ID: "<ID>",
     })
     if err != nil {

@@ -34,31 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Job.CreateAtsJob(ctx, operations.CreateAtsJobRequest{
-        AtsJob: &shared.AtsJob{
-            Addresses: []shared.AtsAddress{
-                shared.AtsAddress{},
-            },
-            Compensation: []shared.AtsCompensation{
-                shared.AtsCompensation{
-                    Type: shared.AtsCompensationTypeSalary,
-                },
-            },
-            Departments: []string{
-                "string",
-            },
-            HiringManagerIds: []string{
-                "string",
-            },
-            PublicJobUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            RecruiterIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -111,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Job.GetAtsJob(ctx, operations.GetAtsJobRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -166,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Job.ListAtsJobs(ctx, operations.ListAtsJobsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -219,31 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Job.PatchAtsJob(ctx, operations.PatchAtsJobRequest{
-        AtsJob: &shared.AtsJob{
-            Addresses: []shared.AtsAddress{
-                shared.AtsAddress{},
-            },
-            Compensation: []shared.AtsCompensation{
-                shared.AtsCompensation{
-                    Type: shared.AtsCompensationTypeBonus,
-                },
-            },
-            Departments: []string{
-                "string",
-            },
-            HiringManagerIds: []string{
-                "string",
-            },
-            PublicJobUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            RecruiterIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -349,31 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Job.UpdateAtsJob(ctx, operations.UpdateAtsJobRequest{
-        AtsJob: &shared.AtsJob{
-            Addresses: []shared.AtsAddress{
-                shared.AtsAddress{},
-            },
-            Compensation: []shared.AtsCompensation{
-                shared.AtsCompensation{
-                    Type: shared.AtsCompensationTypeEquity,
-                },
-            },
-            Departments: []string{
-                "string",
-            },
-            HiringManagerIds: []string{
-                "string",
-            },
-            PublicJobUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            RecruiterIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

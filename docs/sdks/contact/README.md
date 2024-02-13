@@ -46,23 +46,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
-        AccountingContact: &shared.AccountingContact{
-            BillingAddress: &shared.PropertyAccountingContactBillingAddress{},
-            Emails: []shared.AccountingEmail{
-                shared.AccountingEmail{
-                    Email: "Mac36@gmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
-            Telephones: []shared.AccountingTelephone{
-                shared.AccountingTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -114,26 +97,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.CreateCrmContact(ctx, operations.CreateCrmContactRequest{
-        CrmContact: &shared.CrmContact{
-            Address: &shared.PropertyCrmContactAddress{},
-            CompanyIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -185,21 +148,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.CreateUcContact(ctx, operations.CreateUcContactRequest{
-        UcContact: &shared.UcContact{
-            Emails: []shared.UcEmail{
-                shared.UcEmail{
-                    Email: "Dulce_Becker30@yahoo.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.UcTelephone{
-                shared.UcTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -252,9 +200,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Contact.GetAccountingContact(ctx, operations.GetAccountingContactRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -307,9 +252,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Contact.GetCrmContact(ctx, operations.GetCrmContactRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -362,9 +304,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Contact.GetUcContact(ctx, operations.GetUcContactRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -417,9 +356,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Contact.ListAccountingContacts(ctx, operations.ListAccountingContactsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -471,9 +407,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Contact.ListCrmContacts(ctx, operations.ListCrmContactsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -525,9 +458,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Contact.ListUcContacts(ctx, operations.ListUcContactsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -578,23 +508,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
-        AccountingContact: &shared.AccountingContact{
-            BillingAddress: &shared.PropertyAccountingContactBillingAddress{},
-            Emails: []shared.AccountingEmail{
-                shared.AccountingEmail{
-                    Email: "Sylvester.Kuhic@yahoo.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
-            Telephones: []shared.AccountingTelephone{
-                shared.AccountingTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -647,26 +560,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.PatchCrmContact(ctx, operations.PatchCrmContactRequest{
-        CrmContact: &shared.CrmContact{
-            Address: &shared.PropertyCrmContactAddress{},
-            CompanyIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -719,21 +612,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.PatchUcContact(ctx, operations.PatchUcContactRequest{
-        UcContact: &shared.UcContact{
-            Emails: []shared.UcEmail{
-                shared.UcEmail{
-                    Email: "Norene_Boehm97@hotmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.UcTelephone{
-                shared.UcTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -945,23 +823,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
-        AccountingContact: &shared.AccountingContact{
-            BillingAddress: &shared.PropertyAccountingContactBillingAddress{},
-            Emails: []shared.AccountingEmail{
-                shared.AccountingEmail{
-                    Email: "Kaci_Hane@hotmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
-            Telephones: []shared.AccountingTelephone{
-                shared.AccountingTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1014,26 +875,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.UpdateCrmContact(ctx, operations.UpdateCrmContactRequest{
-        CrmContact: &shared.CrmContact{
-            Address: &shared.PropertyCrmContactAddress{},
-            CompanyIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1086,21 +927,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
-        UcContact: &shared.UcContact{
-            Emails: []shared.UcEmail{
-                shared.UcEmail{
-                    Email: "Kianna.Witting90@gmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.UcTelephone{
-                shared.UcTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

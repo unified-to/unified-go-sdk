@@ -64,32 +64,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmCompany(ctx, operations.CreateCrmCompanyRequest{
-        CrmCompany: &shared.CrmCompany{
-            Address: &shared.PropertyCrmCompanyAddress{},
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-            Websites: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -141,26 +115,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmContact(ctx, operations.CreateCrmContactRequest{
-        CrmContact: &shared.CrmContact{
-            Address: &shared.PropertyCrmContactAddress{},
-            CompanyIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -212,14 +166,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
-        CrmDeal: &shared.CrmDeal{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -271,38 +217,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmEvent(ctx, operations.CreateCrmEventRequest{
-        CrmEvent: &shared.CrmEvent{
-            Call: &shared.PropertyCrmEventCall{},
-            CompanyIds: []string{
-                "string",
-            },
-            ContactIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Email: &shared.PropertyCrmEventEmail{
-                AttachmentFileIds: []string{
-                    "string",
-                },
-                Cc: []string{
-                    "string",
-                },
-                To: []string{
-                    "string",
-                },
-            },
-            LeadIds: []string{
-                "string",
-            },
-            Meeting: &shared.PropertyCrmEventMeeting{},
-            Note: &shared.PropertyCrmEventNote{},
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Task: &shared.PropertyCrmEventTask{},
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -354,20 +268,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmLead(ctx, operations.CreateCrmLeadRequest{
-        CrmLead: &shared.CrmLead{
-            Address: &shared.PropertyCrmLeadAddress{},
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -419,11 +319,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmPipeline(ctx, operations.CreateCrmPipelineRequest{
-        CrmPipeline: &shared.CrmPipeline{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -476,9 +371,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmCompany(ctx, operations.GetCrmCompanyRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -531,9 +423,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmContact(ctx, operations.GetCrmContactRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -586,9 +475,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmDeal(ctx, operations.GetCrmDealRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -641,9 +527,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmEvent(ctx, operations.GetCrmEventRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -696,9 +579,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmLead(ctx, operations.GetCrmLeadRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -751,9 +631,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.GetCrmPipeline(ctx, operations.GetCrmPipelineRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -806,9 +683,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmCompanies(ctx, operations.ListCrmCompaniesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -860,9 +734,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmContacts(ctx, operations.ListCrmContactsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -914,9 +785,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmDeals(ctx, operations.ListCrmDealsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -968,9 +836,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmEvents(ctx, operations.ListCrmEventsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1022,9 +887,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmLeads(ctx, operations.ListCrmLeadsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1076,9 +938,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Crm.ListCrmPipelines(ctx, operations.ListCrmPipelinesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1129,32 +988,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmCompany(ctx, operations.PatchCrmCompanyRequest{
-        CrmCompany: &shared.CrmCompany{
-            Address: &shared.PropertyCrmCompanyAddress{},
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-            Websites: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1207,26 +1040,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmContact(ctx, operations.PatchCrmContactRequest{
-        CrmContact: &shared.CrmContact{
-            Address: &shared.PropertyCrmContactAddress{},
-            CompanyIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1279,14 +1092,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
-        CrmDeal: &shared.CrmDeal{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1339,38 +1144,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmEvent(ctx, operations.PatchCrmEventRequest{
-        CrmEvent: &shared.CrmEvent{
-            Call: &shared.PropertyCrmEventCall{},
-            CompanyIds: []string{
-                "string",
-            },
-            ContactIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Email: &shared.PropertyCrmEventEmail{
-                AttachmentFileIds: []string{
-                    "string",
-                },
-                Cc: []string{
-                    "string",
-                },
-                To: []string{
-                    "string",
-                },
-            },
-            LeadIds: []string{
-                "string",
-            },
-            Meeting: &shared.PropertyCrmEventMeeting{},
-            Note: &shared.PropertyCrmEventNote{},
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Task: &shared.PropertyCrmEventTask{},
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1423,20 +1196,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmLead(ctx, operations.PatchCrmLeadRequest{
-        CrmLead: &shared.CrmLead{
-            Address: &shared.PropertyCrmLeadAddress{},
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1489,11 +1248,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmPipeline(ctx, operations.PatchCrmPipelineRequest{
-        CrmPipeline: &shared.CrmPipeline{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1864,32 +1618,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmCompany(ctx, operations.UpdateCrmCompanyRequest{
-        CrmCompany: &shared.CrmCompany{
-            Address: &shared.PropertyCrmCompanyAddress{},
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-            Websites: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1942,26 +1670,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmContact(ctx, operations.UpdateCrmContactRequest{
-        CrmContact: &shared.CrmContact{
-            Address: &shared.PropertyCrmContactAddress{},
-            CompanyIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2014,14 +1722,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
-        CrmDeal: &shared.CrmDeal{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2074,38 +1774,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmEvent(ctx, operations.UpdateCrmEventRequest{
-        CrmEvent: &shared.CrmEvent{
-            Call: &shared.PropertyCrmEventCall{},
-            CompanyIds: []string{
-                "string",
-            },
-            ContactIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Email: &shared.PropertyCrmEventEmail{
-                AttachmentFileIds: []string{
-                    "string",
-                },
-                Cc: []string{
-                    "string",
-                },
-                To: []string{
-                    "string",
-                },
-            },
-            LeadIds: []string{
-                "string",
-            },
-            Meeting: &shared.PropertyCrmEventMeeting{},
-            Note: &shared.PropertyCrmEventNote{},
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Task: &shared.PropertyCrmEventTask{},
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2158,20 +1826,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmLead(ctx, operations.UpdateCrmLeadRequest{
-        CrmLead: &shared.CrmLead{
-            Address: &shared.PropertyCrmLeadAddress{},
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2224,11 +1878,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmPipeline(ctx, operations.UpdateCrmPipelineRequest{
-        CrmPipeline: &shared.CrmPipeline{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

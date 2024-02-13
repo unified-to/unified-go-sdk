@@ -32,9 +32,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
-        Scopes: []operations.Scopes{
-            operations.ScopesHrisEmployeeWrite,
-        },
         WorkspaceID: "string",
     })
     if err != nil {
@@ -86,9 +83,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Integration.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
-        Categories: []operations.QueryParamCategories{
-            operations.QueryParamCategoriesAccounting,
-        },
         WorkspaceID: "string",
     })
     if err != nil {
@@ -139,11 +133,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Integration.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{
-        Categories: []operations.ListUnifiedIntegrationsQueryParamCategories{
-            operations.ListUnifiedIntegrationsQueryParamCategoriesCrm,
-        },
-    })
+    res, err := s.Integration.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{})
     if err != nil {
         log.Fatal(err)
     }

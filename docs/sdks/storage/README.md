@@ -34,18 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Storage.CreateStorageFile(ctx, operations.CreateStorageFileRequest{
-        StorageFile: &shared.StorageFile{
-            Permissions: []shared.StoragePermission{
-                shared.StoragePermission{
-                    Roles: []shared.PropertyStoragePermissionRoles{
-                        shared.PropertyStoragePermissionRolesWrite,
-                    },
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -98,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Storage.GetStorageFile(ctx, operations.GetStorageFileRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -153,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Storage.ListStorageFiles(ctx, operations.ListStorageFilesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -206,18 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Storage.PatchStorageFile(ctx, operations.PatchStorageFileRequest{
-        StorageFile: &shared.StorageFile{
-            Permissions: []shared.StoragePermission{
-                shared.StoragePermission{
-                    Roles: []shared.PropertyStoragePermissionRoles{
-                        shared.PropertyStoragePermissionRolesOwner,
-                    },
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -323,18 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Storage.UpdateStorageFile(ctx, operations.UpdateStorageFileRequest{
-        StorageFile: &shared.StorageFile{
-            Permissions: []shared.StoragePermission{
-                shared.StoragePermission{
-                    Roles: []shared.PropertyStoragePermissionRoles{
-                        shared.PropertyStoragePermissionRolesWrite,
-                    },
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

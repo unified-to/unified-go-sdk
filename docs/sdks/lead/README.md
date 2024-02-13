@@ -34,20 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.CreateCrmLead(ctx, operations.CreateCrmLeadRequest{
-        CrmLead: &shared.CrmLead{
-            Address: &shared.PropertyCrmLeadAddress{},
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -100,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Lead.GetCrmLead(ctx, operations.GetCrmLeadRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -155,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Lead.ListCrmLeads(ctx, operations.ListCrmLeadsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -208,20 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.PatchCrmLead(ctx, operations.PatchCrmLeadRequest{
-        CrmLead: &shared.CrmLead{
-            Address: &shared.PropertyCrmLeadAddress{},
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -327,20 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Lead.UpdateCrmLead(ctx, operations.UpdateCrmLeadRequest{
-        CrmLead: &shared.CrmLead{
-            Address: &shared.PropertyCrmLeadAddress{},
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

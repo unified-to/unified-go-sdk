@@ -34,18 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Transaction.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
-        AccountingTransaction: &shared.AccountingTransaction{
-            ID: "<ID>",
-            Lineitems: []shared.AccountingTransactionLineitem{
-                shared.AccountingTransactionLineitem{
-                    AccountID: "string",
-                    TotalAmount: 4969.62,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -98,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Transaction.GetAccountingTransaction(ctx, operations.GetAccountingTransactionRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -153,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Transaction.ListAccountingTransactions(ctx, operations.ListAccountingTransactionsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -206,18 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Transaction.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
-        AccountingTransaction: &shared.AccountingTransaction{
-            ID: "<ID>",
-            Lineitems: []shared.AccountingTransactionLineitem{
-                shared.AccountingTransactionLineitem{
-                    AccountID: "string",
-                    TotalAmount: 5633.69,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -323,18 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Transaction.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
-        AccountingTransaction: &shared.AccountingTransaction{
-            ID: "<ID>",
-            Lineitems: []shared.AccountingTransactionLineitem{
-                shared.AccountingTransactionLineitem{
-                    AccountID: "string",
-                    TotalAmount: 6498.37,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

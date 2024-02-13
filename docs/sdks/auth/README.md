@@ -31,9 +31,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Auth.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "string",
-        Scopes: []operations.Scopes{
-            operations.ScopesHrisEmployeeWrite,
-        },
         WorkspaceID: "string",
     })
     if err != nil {

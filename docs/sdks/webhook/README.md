@@ -33,21 +33,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Webhook.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{
-        Webhook: &shared.Webhook{
-            ConnectionID: "string",
-            Event: shared.EventCreated,
-            HookURL: "string",
-            Interval: 188.12,
-            Meta: map[string]interface{}{
-                "key": "string",
-            },
-            ObjectType: shared.ObjectTypeAtsScorecard,
-            Runs: []string{
-                "string",
-            },
-        },
-    })
+    res, err := s.Webhook.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{})
     if err != nil {
         log.Fatal(err)
     }

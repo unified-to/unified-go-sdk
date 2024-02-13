@@ -46,6 +46,8 @@ const (
 	ObjectTypeAccountingPayment      ObjectType = "accounting_payment"
 	ObjectTypeAccountingTaxrate      ObjectType = "accounting_taxrate"
 	ObjectTypeAccountingOrganization ObjectType = "accounting_organization"
+	ObjectTypeAccountingPayout       ObjectType = "accounting_payout"
+	ObjectTypeAccountingRefund       ObjectType = "accounting_refund"
 	ObjectTypeCommerceItem           ObjectType = "commerce_item"
 	ObjectTypeCommerceCollection     ObjectType = "commerce_collection"
 	ObjectTypeCommerceInventory      ObjectType = "commerce_inventory"
@@ -102,6 +104,10 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "accounting_taxrate":
 		fallthrough
 	case "accounting_organization":
+		fallthrough
+	case "accounting_payout":
+		fallthrough
+	case "accounting_refund":
 		fallthrough
 	case "commerce_item":
 		fallthrough
@@ -212,7 +218,7 @@ type Webhook struct {
 	HookURL         string                 `json:"hook_url"`
 	ID              *string                `json:"id,omitempty"`
 	IntegrationType *string                `json:"integration_type,omitempty"`
-	Interval        float64                `json:"interval"`
+	Interval        *float64               `json:"interval,omitempty"`
 	IsHealthy       *bool                  `json:"is_healthy,omitempty"`
 	Meta            map[string]interface{} `json:"meta,omitempty"`
 	ObjectType      ObjectType             `json:"object_type"`
@@ -298,9 +304,9 @@ func (o *Webhook) GetIntegrationType() *string {
 	return o.IntegrationType
 }
 
-func (o *Webhook) GetInterval() float64 {
+func (o *Webhook) GetInterval() *float64 {
 	if o == nil {
-		return 0.0
+		return nil
 	}
 	return o.Interval
 }

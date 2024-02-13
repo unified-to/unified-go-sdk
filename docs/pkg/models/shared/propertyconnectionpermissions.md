@@ -19,6 +19,8 @@
 | `PropertyConnectionPermissionsAccountingTaxrateRead`      | accounting_taxrate_read                                   |
 | `PropertyConnectionPermissionsAccountingTaxrateWrite`     | accounting_taxrate_write                                  |
 | `PropertyConnectionPermissionsAccountingOrganizationRead` | accounting_organization_read                              |
+| `PropertyConnectionPermissionsAccountingPayoutRead`       | accounting_payout_read                                    |
+| `PropertyConnectionPermissionsAccountingRefundRead`       | accounting_refund_read                                    |
 | `PropertyConnectionPermissionsCommerceItemRead`           | commerce_item_read                                        |
 | `PropertyConnectionPermissionsCommerceItemWrite`          | commerce_item_write                                       |
 | `PropertyConnectionPermissionsCommerceCollectionRead`     | commerce_collection_read                                  |

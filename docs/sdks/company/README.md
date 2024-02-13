@@ -37,32 +37,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.CreateCrmCompany(ctx, operations.CreateCrmCompanyRequest{
-        CrmCompany: &shared.CrmCompany{
-            Address: &shared.PropertyCrmCompanyAddress{},
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-            Websites: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -115,9 +89,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.GetAtsCompany(ctx, operations.GetAtsCompanyRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -170,9 +141,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.GetCrmCompany(ctx, operations.GetCrmCompanyRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -225,9 +193,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.ListAtsCompanies(ctx, operations.ListAtsCompaniesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -279,9 +244,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Company.ListCrmCompanies(ctx, operations.ListCrmCompaniesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -383,32 +345,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.PatchCrmCompany(ctx, operations.PatchCrmCompanyRequest{
-        CrmCompany: &shared.CrmCompany{
-            Address: &shared.PropertyCrmCompanyAddress{},
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-            Websites: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -514,32 +450,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.UpdateCrmCompany(ctx, operations.UpdateCrmCompanyRequest{
-        CrmCompany: &shared.CrmCompany{
-            Address: &shared.PropertyCrmCompanyAddress{},
-            DealIds: []string{
-                "string",
-            },
-            Emails: []shared.CrmEmail{
-                shared.CrmEmail{},
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.CrmTelephone{
-                shared.CrmTelephone{
-                    Telephone: "string",
-                },
-            },
-            Websites: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

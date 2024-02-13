@@ -34,14 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Interview.CreateAtsInterview(ctx, operations.CreateAtsInterviewRequest{
-        AtsInterview: &shared.AtsInterview{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            UserIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -94,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.GetAtsInterview(ctx, operations.GetAtsInterviewRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -149,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Interview.ListAtsInterviews(ctx, operations.ListAtsInterviewsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -202,14 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Interview.PatchAtsInterview(ctx, operations.PatchAtsInterviewRequest{
-        AtsInterview: &shared.AtsInterview{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            UserIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -315,14 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Interview.UpdateAtsInterview(ctx, operations.UpdateAtsInterviewRequest{
-        AtsInterview: &shared.AtsInterview{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            UserIds: []string{
-                "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

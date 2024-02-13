@@ -17,12 +17,6 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		AccountingAccount: &shared.AccountingAccount{
-			Name: "string",
-			Raw: map[string]interface{}{
-				"key": "string",
-			},
-		},
 		ConnectionID: "string",
 	})
 	if err != nil {

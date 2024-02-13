@@ -34,13 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Location.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
-        CommerceLocation: &shared.CommerceLocation{
-            Address: &shared.PropertyCommerceLocationAddress{},
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -93,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Location.GetCommerceLocation(ctx, operations.GetCommerceLocationRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -148,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Location.ListCommerceLocations(ctx, operations.ListCommerceLocationsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -201,13 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Location.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
-        CommerceLocation: &shared.CommerceLocation{
-            Address: &shared.PropertyCommerceLocationAddress{},
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -313,13 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Location.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
-        CommerceLocation: &shared.CommerceLocation{
-            Address: &shared.PropertyCommerceLocationAddress{},
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

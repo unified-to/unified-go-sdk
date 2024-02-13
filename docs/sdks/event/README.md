@@ -34,38 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.CreateCrmEvent(ctx, operations.CreateCrmEventRequest{
-        CrmEvent: &shared.CrmEvent{
-            Call: &shared.PropertyCrmEventCall{},
-            CompanyIds: []string{
-                "string",
-            },
-            ContactIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Email: &shared.PropertyCrmEventEmail{
-                AttachmentFileIds: []string{
-                    "string",
-                },
-                Cc: []string{
-                    "string",
-                },
-                To: []string{
-                    "string",
-                },
-            },
-            LeadIds: []string{
-                "string",
-            },
-            Meeting: &shared.PropertyCrmEventMeeting{},
-            Note: &shared.PropertyCrmEventNote{},
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Task: &shared.PropertyCrmEventTask{},
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -118,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Event.GetCrmEvent(ctx, operations.GetCrmEventRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -173,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Event.ListCrmEvents(ctx, operations.ListCrmEventsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -226,38 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.PatchCrmEvent(ctx, operations.PatchCrmEventRequest{
-        CrmEvent: &shared.CrmEvent{
-            Call: &shared.PropertyCrmEventCall{},
-            CompanyIds: []string{
-                "string",
-            },
-            ContactIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Email: &shared.PropertyCrmEventEmail{
-                AttachmentFileIds: []string{
-                    "string",
-                },
-                Cc: []string{
-                    "string",
-                },
-                To: []string{
-                    "string",
-                },
-            },
-            LeadIds: []string{
-                "string",
-            },
-            Meeting: &shared.PropertyCrmEventMeeting{},
-            Note: &shared.PropertyCrmEventNote{},
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Task: &shared.PropertyCrmEventTask{},
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -363,38 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Event.UpdateCrmEvent(ctx, operations.UpdateCrmEventRequest{
-        CrmEvent: &shared.CrmEvent{
-            Call: &shared.PropertyCrmEventCall{},
-            CompanyIds: []string{
-                "string",
-            },
-            ContactIds: []string{
-                "string",
-            },
-            DealIds: []string{
-                "string",
-            },
-            Email: &shared.PropertyCrmEventEmail{
-                AttachmentFileIds: []string{
-                    "string",
-                },
-                Cc: []string{
-                    "string",
-                },
-                To: []string{
-                    "string",
-                },
-            },
-            LeadIds: []string{
-                "string",
-            },
-            Meeting: &shared.PropertyCrmEventMeeting{},
-            Note: &shared.PropertyCrmEventNote{},
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Task: &shared.PropertyCrmEventTask{},
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

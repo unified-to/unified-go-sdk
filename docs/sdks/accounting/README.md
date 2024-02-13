@@ -70,12 +70,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-        AccountingAccount: &shared.AccountingAccount{
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -127,23 +121,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
-        AccountingContact: &shared.AccountingContact{
-            BillingAddress: &shared.PropertyAccountingContactBillingAddress{},
-            Emails: []shared.AccountingEmail{
-                shared.AccountingEmail{
-                    Email: "Mac36@gmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
-            Telephones: []shared.AccountingTelephone{
-                shared.AccountingTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -195,16 +172,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingInvoice(ctx, operations.CreateAccountingInvoiceRequest{
-        AccountingInvoice: &shared.AccountingInvoice{
-            Lineitems: []shared.AccountingLineitem{
-                shared.AccountingLineitem{
-                    TotalAmount: 6736.06,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -256,11 +223,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingPayment(ctx, operations.CreateAccountingPaymentRequest{
-        AccountingPayment: &shared.AccountingPayment{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -312,13 +274,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
-        AccountingTaxrate: &shared.AccountingTaxrate{
-            Name: "string",
-            Rate: 1719.1,
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -370,18 +325,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
-        AccountingTransaction: &shared.AccountingTransaction{
-            ID: "<ID>",
-            Lineitems: []shared.AccountingTransactionLineitem{
-                shared.AccountingTransactionLineitem{
-                    AccountID: "string",
-                    TotalAmount: 4969.62,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -434,9 +377,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingAccount(ctx, operations.GetAccountingAccountRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -489,9 +429,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingContact(ctx, operations.GetAccountingContactRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -544,9 +481,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingInvoice(ctx, operations.GetAccountingInvoiceRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -599,9 +533,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingOrganization(ctx, operations.GetAccountingOrganizationRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -654,9 +585,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingPayment(ctx, operations.GetAccountingPaymentRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -709,9 +637,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingPayout(ctx, operations.GetAccountingPayoutRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -764,9 +689,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingRefund(ctx, operations.GetAccountingRefundRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -819,9 +741,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingTaxrate(ctx, operations.GetAccountingTaxrateRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -874,9 +793,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingTransaction(ctx, operations.GetAccountingTransactionRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -929,9 +845,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingAccounts(ctx, operations.ListAccountingAccountsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -983,9 +896,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingContacts(ctx, operations.ListAccountingContactsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1037,9 +947,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingInvoices(ctx, operations.ListAccountingInvoicesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1091,9 +998,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingOrganizations(ctx, operations.ListAccountingOrganizationsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1145,9 +1049,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingPayments(ctx, operations.ListAccountingPaymentsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1199,9 +1100,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingPayouts(ctx, operations.ListAccountingPayoutsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1253,9 +1151,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingRefunds(ctx, operations.ListAccountingRefundsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1307,9 +1202,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingTaxrates(ctx, operations.ListAccountingTaxratesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1361,9 +1253,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingTransactions(ctx, operations.ListAccountingTransactionsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -1414,12 +1303,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingAccount(ctx, operations.PatchAccountingAccountRequest{
-        AccountingAccount: &shared.AccountingAccount{
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1472,23 +1355,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
-        AccountingContact: &shared.AccountingContact{
-            BillingAddress: &shared.PropertyAccountingContactBillingAddress{},
-            Emails: []shared.AccountingEmail{
-                shared.AccountingEmail{
-                    Email: "Sylvester.Kuhic@yahoo.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
-            Telephones: []shared.AccountingTelephone{
-                shared.AccountingTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1541,16 +1407,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingInvoice(ctx, operations.PatchAccountingInvoiceRequest{
-        AccountingInvoice: &shared.AccountingInvoice{
-            Lineitems: []shared.AccountingLineitem{
-                shared.AccountingLineitem{
-                    TotalAmount: 7374.1,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1603,11 +1459,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingPayment(ctx, operations.PatchAccountingPaymentRequest{
-        AccountingPayment: &shared.AccountingPayment{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1660,13 +1511,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
-        AccountingTaxrate: &shared.AccountingTaxrate{
-            Name: "string",
-            Rate: 5991.47,
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -1719,18 +1563,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
-        AccountingTransaction: &shared.AccountingTransaction{
-            ID: "<ID>",
-            Lineitems: []shared.AccountingTransactionLineitem{
-                shared.AccountingTransactionLineitem{
-                    AccountID: "string",
-                    TotalAmount: 5633.69,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2101,12 +1933,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingAccount(ctx, operations.UpdateAccountingAccountRequest{
-        AccountingAccount: &shared.AccountingAccount{
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2159,23 +1985,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
-        AccountingContact: &shared.AccountingContact{
-            BillingAddress: &shared.PropertyAccountingContactBillingAddress{},
-            Emails: []shared.AccountingEmail{
-                shared.AccountingEmail{
-                    Email: "Kaci_Hane@hotmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{},
-            Telephones: []shared.AccountingTelephone{
-                shared.AccountingTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2228,16 +2037,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingInvoice(ctx, operations.UpdateAccountingInvoiceRequest{
-        AccountingInvoice: &shared.AccountingInvoice{
-            Lineitems: []shared.AccountingLineitem{
-                shared.AccountingLineitem{
-                    TotalAmount: 6974.28,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2290,11 +2089,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingPayment(ctx, operations.UpdateAccountingPaymentRequest{
-        AccountingPayment: &shared.AccountingPayment{
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2347,13 +2141,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
-        AccountingTaxrate: &shared.AccountingTaxrate{
-            Name: "string",
-            Rate: 3382.78,
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -2406,18 +2193,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
-        AccountingTransaction: &shared.AccountingTransaction{
-            ID: "<ID>",
-            Lineitems: []shared.AccountingTransactionLineitem{
-                shared.AccountingTransactionLineitem{
-                    AccountID: "string",
-                    TotalAmount: 6498.37,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

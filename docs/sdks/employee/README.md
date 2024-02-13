@@ -34,22 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.CreateHrisEmployee(ctx, operations.CreateHrisEmployeeRequest{
-        HrisEmployee: &shared.HrisEmployee{
-            Address: &shared.PropertyHrisEmployeeAddress{},
-            Emails: []shared.HrisEmail{
-                shared.HrisEmail{
-                    Email: "Adriel_Hansen@hotmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.HrisTelephone{
-                shared.HrisTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -102,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Employee.GetHrisEmployee(ctx, operations.GetHrisEmployeeRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -157,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Employee.ListHrisEmployees(ctx, operations.ListHrisEmployeesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -210,22 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.PatchHrisEmployee(ctx, operations.PatchHrisEmployeeRequest{
-        HrisEmployee: &shared.HrisEmployee{
-            Address: &shared.PropertyHrisEmployeeAddress{},
-            Emails: []shared.HrisEmail{
-                shared.HrisEmail{
-                    Email: "Zetta.Cassin@yahoo.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.HrisTelephone{
-                shared.HrisTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -331,22 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Employee.UpdateHrisEmployee(ctx, operations.UpdateHrisEmployeeRequest{
-        HrisEmployee: &shared.HrisEmployee{
-            Address: &shared.PropertyHrisEmployeeAddress{},
-            Emails: []shared.HrisEmail{
-                shared.HrisEmail{
-                    Email: "Abbie_Aufderhar@gmail.com",
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Telephones: []shared.HrisTelephone{
-                shared.HrisTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

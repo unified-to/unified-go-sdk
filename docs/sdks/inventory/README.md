@@ -34,12 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inventory.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
-        CommerceInventory: &shared.CommerceInventory{
-            Available: 5165.08,
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -92,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Inventory.GetCommerceInventory(ctx, operations.GetCommerceInventoryRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -147,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Inventory.ListCommerceInventories(ctx, operations.ListCommerceInventoriesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -200,12 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inventory.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
-        CommerceInventory: &shared.CommerceInventory{
-            Available: 615.23,
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -311,12 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Inventory.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
-        CommerceInventory: &shared.CommerceInventory{
-            Available: 9360.02,
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

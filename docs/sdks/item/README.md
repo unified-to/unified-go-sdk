@@ -34,47 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Item.CreateCommerceItem(ctx, operations.CreateCommerceItemRequest{
-        CommerceItem: &shared.CommerceItem{
-            Media: []shared.CommerceItemMedia{
-                shared.CommerceItemMedia{
-                    URL: "http://loud-minister.name",
-                },
-            },
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Variants: []shared.CommerceItemVariant{
-                shared.CommerceItemVariant{
-                    Media: []shared.CommerceItemMedia{
-                        shared.CommerceItemMedia{
-                            URL: "http://other-external.info",
-                        },
-                    },
-                    Name: "string",
-                    Options: []shared.CommerceItemOption{
-                        shared.CommerceItemOption{
-                            ID: "<ID>",
-                            Name: "string",
-                            Values: []string{
-                                "string",
-                            },
-                        },
-                    },
-                    Prices: []shared.CommerceItemPrice{
-                        shared.CommerceItemPrice{
-                            Price: 3330.74,
-                        },
-                    },
-                    Tags: []string{
-                        "string",
-                    },
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -127,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Item.GetCommerceItem(ctx, operations.GetCommerceItemRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -182,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Item.ListCommerceItems(ctx, operations.ListCommerceItemsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -235,47 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Item.PatchCommerceItem(ctx, operations.PatchCommerceItemRequest{
-        CommerceItem: &shared.CommerceItem{
-            Media: []shared.CommerceItemMedia{
-                shared.CommerceItemMedia{
-                    URL: "http://frank-galley.biz",
-                },
-            },
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Variants: []shared.CommerceItemVariant{
-                shared.CommerceItemVariant{
-                    Media: []shared.CommerceItemMedia{
-                        shared.CommerceItemMedia{
-                            URL: "http://irresponsible-reason.biz",
-                        },
-                    },
-                    Name: "string",
-                    Options: []shared.CommerceItemOption{
-                        shared.CommerceItemOption{
-                            ID: "<ID>",
-                            Name: "string",
-                            Values: []string{
-                                "string",
-                            },
-                        },
-                    },
-                    Prices: []shared.CommerceItemPrice{
-                        shared.CommerceItemPrice{
-                            Price: 4506.62,
-                        },
-                    },
-                    Tags: []string{
-                        "string",
-                    },
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -381,47 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Item.UpdateCommerceItem(ctx, operations.UpdateCommerceItemRequest{
-        CommerceItem: &shared.CommerceItem{
-            Media: []shared.CommerceItemMedia{
-                shared.CommerceItemMedia{
-                    URL: "https://aggressive-major-league.org",
-                },
-            },
-            Name: "string",
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Variants: []shared.CommerceItemVariant{
-                shared.CommerceItemVariant{
-                    Media: []shared.CommerceItemMedia{
-                        shared.CommerceItemMedia{
-                            URL: "https://reasonable-cast.biz",
-                        },
-                    },
-                    Name: "string",
-                    Options: []shared.CommerceItemOption{
-                        shared.CommerceItemOption{
-                            ID: "<ID>",
-                            Name: "string",
-                            Values: []string{
-                                "string",
-                            },
-                        },
-                    },
-                    Prices: []shared.CommerceItemPrice{
-                        shared.CommerceItemPrice{
-                            Price: 8467.25,
-                        },
-                    },
-                    Tags: []string{
-                        "string",
-                    },
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

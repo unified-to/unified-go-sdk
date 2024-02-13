@@ -34,16 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Invoice.CreateAccountingInvoice(ctx, operations.CreateAccountingInvoiceRequest{
-        AccountingInvoice: &shared.AccountingInvoice{
-            Lineitems: []shared.AccountingLineitem{
-                shared.AccountingLineitem{
-                    TotalAmount: 6736.06,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -96,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Invoice.GetAccountingInvoice(ctx, operations.GetAccountingInvoiceRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -151,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Invoice.ListAccountingInvoices(ctx, operations.ListAccountingInvoicesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -204,16 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Invoice.PatchAccountingInvoice(ctx, operations.PatchAccountingInvoiceRequest{
-        AccountingInvoice: &shared.AccountingInvoice{
-            Lineitems: []shared.AccountingLineitem{
-                shared.AccountingLineitem{
-                    TotalAmount: 7374.1,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -319,16 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Invoice.UpdateAccountingInvoice(ctx, operations.UpdateAccountingInvoiceRequest{
-        AccountingInvoice: &shared.AccountingInvoice{
-            Lineitems: []shared.AccountingLineitem{
-                shared.AccountingLineitem{
-                    TotalAmount: 6974.28,
-                },
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })

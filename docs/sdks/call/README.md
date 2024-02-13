@@ -30,9 +30,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Call.ListUcCalls(ctx, operations.ListUcCallsRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)

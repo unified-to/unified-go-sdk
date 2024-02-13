@@ -34,28 +34,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.CreateAtsCandidate(ctx, operations.CreateAtsCandidateRequest{
-        AtsCandidate: &shared.AtsCandidate{
-            Address: &shared.PropertyAtsCandidateAddress{},
-            Emails: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Robin_Feeney@hotmail.com",
-                },
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.AtsTelephone{
-                shared.AtsTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
     })
     if err != nil {
@@ -108,9 +86,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Candidate.GetAtsCandidate(ctx, operations.GetAtsCandidateRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
         ID: "<ID>",
     })
     if err != nil {
@@ -163,9 +138,6 @@ func main() {
     ctx := context.Background()
     res, err := s.Candidate.ListAtsCandidates(ctx, operations.ListAtsCandidatesRequest{
         ConnectionID: "string",
-        Fields: []string{
-            "string",
-        },
     })
     if err != nil {
         log.Fatal(err)
@@ -216,28 +188,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.PatchAtsCandidate(ctx, operations.PatchAtsCandidateRequest{
-        AtsCandidate: &shared.AtsCandidate{
-            Address: &shared.PropertyAtsCandidateAddress{},
-            Emails: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Tracy.Collins13@gmail.com",
-                },
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.AtsTelephone{
-                shared.AtsTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
@@ -343,28 +293,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.UpdateAtsCandidate(ctx, operations.UpdateAtsCandidateRequest{
-        AtsCandidate: &shared.AtsCandidate{
-            Address: &shared.PropertyAtsCandidateAddress{},
-            Emails: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Gaetano86@hotmail.com",
-                },
-            },
-            LinkUrls: []string{
-                "string",
-            },
-            Raw: map[string]interface{}{
-                "key": "string",
-            },
-            Tags: []string{
-                "string",
-            },
-            Telephones: []shared.AtsTelephone{
-                shared.AtsTelephone{
-                    Telephone: "string",
-                },
-            },
-        },
         ConnectionID: "string",
         ID: "<ID>",
     })
