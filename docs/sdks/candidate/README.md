@@ -34,7 +34,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.CreateAtsCandidate(ctx, operations.CreateAtsCandidateRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -85,8 +85,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.GetAtsCandidate(ctx, operations.GetAtsCandidateRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -137,7 +137,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.ListAtsCandidates(ctx, operations.ListAtsCandidatesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -188,8 +188,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.PatchAtsCandidate(ctx, operations.PatchAtsCandidateRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -241,8 +241,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.RemoveAtsCandidate(ctx, operations.RemoveAtsCandidateRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -293,8 +293,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Candidate.UpdateAtsCandidate(ctx, operations.UpdateAtsCandidateRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

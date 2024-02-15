@@ -34,7 +34,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Location.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -85,8 +85,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Location.GetCommerceLocation(ctx, operations.GetCommerceLocationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -137,7 +137,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Location.ListCommerceLocations(ctx, operations.ListCommerceLocationsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -188,8 +188,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Location.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -241,8 +241,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Location.RemoveCommerceLocation(ctx, operations.RemoveCommerceLocationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -293,8 +293,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Location.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

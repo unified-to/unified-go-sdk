@@ -40,7 +40,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.CreateHrisEmployee(ctx, operations.CreateHrisEmployeeRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -91,7 +91,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.CreateHrisGroup(ctx, operations.CreateHrisGroupRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -142,8 +142,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisEmployee(ctx, operations.GetHrisEmployeeRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -194,8 +194,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.GetHrisGroup(ctx, operations.GetHrisGroupRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -246,7 +246,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.ListHrisEmployees(ctx, operations.ListHrisEmployeesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -297,7 +297,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.ListHrisGroups(ctx, operations.ListHrisGroupsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -348,8 +348,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.PatchHrisEmployee(ctx, operations.PatchHrisEmployeeRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -400,8 +400,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.PatchHrisGroup(ctx, operations.PatchHrisGroupRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -453,8 +453,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.RemoveHrisEmployee(ctx, operations.RemoveHrisEmployeeRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -506,8 +506,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.RemoveHrisGroup(ctx, operations.RemoveHrisGroupRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -558,8 +558,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.UpdateHrisEmployee(ctx, operations.UpdateHrisEmployeeRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -610,8 +610,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Hris.UpdateHrisGroup(ctx, operations.UpdateHrisGroupRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

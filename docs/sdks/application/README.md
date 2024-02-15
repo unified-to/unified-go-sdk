@@ -34,7 +34,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.CreateAtsApplication(ctx, operations.CreateAtsApplicationRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -85,8 +85,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.GetAtsApplication(ctx, operations.GetAtsApplicationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -137,7 +137,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.ListAtsApplications(ctx, operations.ListAtsApplicationsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -188,8 +188,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.PatchAtsApplication(ctx, operations.PatchAtsApplicationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -241,8 +241,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.RemoveAtsApplication(ctx, operations.RemoveAtsApplicationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -293,8 +293,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Application.UpdateAtsApplication(ctx, operations.UpdateAtsApplicationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

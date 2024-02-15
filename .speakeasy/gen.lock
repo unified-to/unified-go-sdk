@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 79b2d70f67c25556653550094e92a861
+  docChecksum: 5c191fdb16f8d76a3eb09c714f56170d
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.253.0
-  releaseVersion: 0.11.5
-  configChecksum: fa1c7fdf7ecd94ded24229d73d02c99a
+  generationVersion: 2.258.0
+  releaseVersion: 0.12.0
+  configChecksum: e802d5f7d507d717d5da42ad8a27874d
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -14,7 +14,7 @@ management:
 features:
   go:
     constsAndDefaults: 0.1.3
-    core: 3.3.2
+    core: 3.4.0
     globalSecurity: 2.82.6
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -1061,3 +1061,4 @@ generatedFiles:
   - docs/sdks/webhook/README.md
   - USAGE.md
   - .gitattributes
+  - internal/hooks/hooks.go

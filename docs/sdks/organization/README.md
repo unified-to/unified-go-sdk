@@ -30,8 +30,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Organization.GetAccountingOrganization(ctx, operations.GetAccountingOrganizationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -82,7 +82,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Organization.ListAccountingOrganizations(ctx, operations.ListAccountingOrganizationsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)

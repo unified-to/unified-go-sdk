@@ -29,7 +29,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Person.ListEnrichPeople(ctx, operations.ListEnrichPeopleRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)

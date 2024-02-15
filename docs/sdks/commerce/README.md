@@ -52,7 +52,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.CreateCommerceCollection(ctx, operations.CreateCommerceCollectionRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -103,7 +103,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -154,7 +154,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.CreateCommerceItem(ctx, operations.CreateCommerceItemRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -205,7 +205,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -256,8 +256,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.GetCommerceCollection(ctx, operations.GetCommerceCollectionRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -308,8 +308,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.GetCommerceInventory(ctx, operations.GetCommerceInventoryRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -360,8 +360,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.GetCommerceItem(ctx, operations.GetCommerceItemRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -412,8 +412,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.GetCommerceLocation(ctx, operations.GetCommerceLocationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -464,7 +464,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.ListCommerceCollections(ctx, operations.ListCommerceCollectionsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -515,7 +515,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.ListCommerceInventories(ctx, operations.ListCommerceInventoriesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -566,7 +566,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.ListCommerceItems(ctx, operations.ListCommerceItemsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -617,7 +617,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.ListCommerceLocations(ctx, operations.ListCommerceLocationsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -668,8 +668,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.PatchCommerceCollection(ctx, operations.PatchCommerceCollectionRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -720,8 +720,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -772,8 +772,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.PatchCommerceItem(ctx, operations.PatchCommerceItemRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -824,8 +824,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -877,8 +877,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.RemoveCommerceCollection(ctx, operations.RemoveCommerceCollectionRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -930,8 +930,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.RemoveCommerceInventory(ctx, operations.RemoveCommerceInventoryRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -983,8 +983,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.RemoveCommerceItem(ctx, operations.RemoveCommerceItemRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1036,8 +1036,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.RemoveCommerceLocation(ctx, operations.RemoveCommerceLocationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1088,8 +1088,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.UpdateCommerceCollection(ctx, operations.UpdateCommerceCollectionRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1140,8 +1140,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1192,8 +1192,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.UpdateCommerceItem(ctx, operations.UpdateCommerceItemRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1244,8 +1244,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Commerce.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

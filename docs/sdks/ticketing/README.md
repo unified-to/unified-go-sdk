@@ -46,7 +46,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingCustomer(ctx, operations.CreateTicketingCustomerRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -97,7 +97,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -148,7 +148,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingTicket(ctx, operations.CreateTicketingTicketRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -199,8 +199,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingCustomer(ctx, operations.GetTicketingCustomerRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -251,8 +251,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingNote(ctx, operations.GetTicketingNoteRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -303,8 +303,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingTicket(ctx, operations.GetTicketingTicketRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -355,7 +355,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingCustomers(ctx, operations.ListTicketingCustomersRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -406,7 +406,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingNotes(ctx, operations.ListTicketingNotesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -457,7 +457,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingTickets(ctx, operations.ListTicketingTicketsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -508,8 +508,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingCustomer(ctx, operations.PatchTicketingCustomerRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -560,8 +560,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -612,8 +612,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingTicket(ctx, operations.PatchTicketingTicketRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -665,8 +665,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingCustomer(ctx, operations.RemoveTicketingCustomerRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -718,8 +718,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingNote(ctx, operations.RemoveTicketingNoteRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -771,8 +771,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingTicket(ctx, operations.RemoveTicketingTicketRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -823,8 +823,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingCustomer(ctx, operations.UpdateTicketingCustomerRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -875,8 +875,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -927,8 +927,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingTicket(ctx, operations.UpdateTicketingTicketRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

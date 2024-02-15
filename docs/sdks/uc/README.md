@@ -35,7 +35,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.CreateUcContact(ctx, operations.CreateUcContactRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -86,8 +86,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.GetUcContact(ctx, operations.GetUcContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -138,7 +138,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.ListUcCalls(ctx, operations.ListUcCallsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -189,7 +189,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.ListUcContacts(ctx, operations.ListUcContactsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -240,8 +240,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.PatchUcContact(ctx, operations.PatchUcContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -293,8 +293,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.RemoveUcContact(ctx, operations.RemoveUcContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -345,8 +345,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Uc.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

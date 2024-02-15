@@ -48,7 +48,7 @@ func main() {
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesCommerce,
         },
-        IntegrationType: "string",
+        IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
             shared.PropertyConnectionPermissionsAtsApplicationstatusRead,
         },
@@ -151,7 +151,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -202,7 +202,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -253,8 +253,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
-        IntegrationType: "string",
-        WorkspaceID: "string",
+        IntegrationType: "<value>",
+        WorkspaceID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -305,7 +305,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedWebhook(ctx, operations.GetUnifiedWebhookRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -454,7 +454,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
-        WorkspaceID: "string",
+        WorkspaceID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -652,7 +652,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -704,7 +704,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.PatchUnifiedWebhookTrigger(ctx, operations.PatchUnifiedWebhookTriggerRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -756,7 +756,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.RemoveUnifiedConnection(ctx, operations.RemoveUnifiedConnectionRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -808,7 +808,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.RemoveUnifiedWebhook(ctx, operations.RemoveUnifiedWebhookRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -859,7 +859,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -911,7 +911,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Unified.UpdateUnifiedWebhookTrigger(ctx, operations.UpdateUnifiedWebhookTriggerRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

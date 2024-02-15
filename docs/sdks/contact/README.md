@@ -46,7 +46,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -97,7 +97,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.CreateCrmContact(ctx, operations.CreateCrmContactRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -148,7 +148,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.CreateUcContact(ctx, operations.CreateUcContactRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -199,8 +199,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.GetAccountingContact(ctx, operations.GetAccountingContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -251,8 +251,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.GetCrmContact(ctx, operations.GetCrmContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -303,8 +303,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.GetUcContact(ctx, operations.GetUcContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -355,7 +355,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.ListAccountingContacts(ctx, operations.ListAccountingContactsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -406,7 +406,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.ListCrmContacts(ctx, operations.ListCrmContactsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -457,7 +457,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.ListUcContacts(ctx, operations.ListUcContactsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -508,8 +508,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -560,8 +560,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.PatchCrmContact(ctx, operations.PatchCrmContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -612,8 +612,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.PatchUcContact(ctx, operations.PatchUcContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -665,8 +665,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.RemoveAccountingContact(ctx, operations.RemoveAccountingContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -718,8 +718,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.RemoveCrmContact(ctx, operations.RemoveCrmContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -771,8 +771,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.RemoveUcContact(ctx, operations.RemoveUcContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -823,8 +823,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -875,8 +875,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.UpdateCrmContact(ctx, operations.UpdateCrmContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -927,8 +927,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Contact.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

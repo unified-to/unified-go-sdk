@@ -30,7 +30,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

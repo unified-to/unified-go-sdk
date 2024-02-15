@@ -83,7 +83,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Webhook.GetUnifiedWebhook(ctx, operations.GetUnifiedWebhookRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -184,7 +184,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Webhook.PatchUnifiedWebhookTrigger(ctx, operations.PatchUnifiedWebhookTriggerRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -236,7 +236,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Webhook.RemoveUnifiedWebhook(ctx, operations.RemoveUnifiedWebhookRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -288,7 +288,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Webhook.UpdateUnifiedWebhookTrigger(ctx, operations.UpdateUnifiedWebhookTriggerRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

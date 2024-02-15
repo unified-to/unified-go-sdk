@@ -37,7 +37,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.CreateCrmCompany(ctx, operations.CreateCrmCompanyRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -88,8 +88,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.GetAtsCompany(ctx, operations.GetAtsCompanyRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -140,8 +140,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.GetCrmCompany(ctx, operations.GetCrmCompanyRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -192,7 +192,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.ListAtsCompanies(ctx, operations.ListAtsCompaniesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -243,7 +243,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.ListCrmCompanies(ctx, operations.ListCrmCompaniesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -294,7 +294,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.ListEnrichCompanies(ctx, operations.ListEnrichCompaniesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -345,8 +345,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.PatchCrmCompany(ctx, operations.PatchCrmCompanyRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -398,8 +398,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.RemoveCrmCompany(ctx, operations.RemoveCrmCompanyRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -450,8 +450,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Company.UpdateCrmCompany(ctx, operations.UpdateCrmCompanyRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

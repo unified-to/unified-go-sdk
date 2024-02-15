@@ -70,7 +70,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -121,7 +121,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -172,7 +172,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingInvoice(ctx, operations.CreateAccountingInvoiceRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -223,7 +223,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingPayment(ctx, operations.CreateAccountingPaymentRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -274,7 +274,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -325,7 +325,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -376,8 +376,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingAccount(ctx, operations.GetAccountingAccountRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -428,8 +428,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingContact(ctx, operations.GetAccountingContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -480,8 +480,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingInvoice(ctx, operations.GetAccountingInvoiceRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -532,8 +532,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingOrganization(ctx, operations.GetAccountingOrganizationRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -584,8 +584,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingPayment(ctx, operations.GetAccountingPaymentRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -636,8 +636,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingPayout(ctx, operations.GetAccountingPayoutRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -688,8 +688,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingRefund(ctx, operations.GetAccountingRefundRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -740,8 +740,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingTaxrate(ctx, operations.GetAccountingTaxrateRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -792,8 +792,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingTransaction(ctx, operations.GetAccountingTransactionRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -844,7 +844,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingAccounts(ctx, operations.ListAccountingAccountsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -895,7 +895,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingContacts(ctx, operations.ListAccountingContactsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -946,7 +946,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingInvoices(ctx, operations.ListAccountingInvoicesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -997,7 +997,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingOrganizations(ctx, operations.ListAccountingOrganizationsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1048,7 +1048,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingPayments(ctx, operations.ListAccountingPaymentsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1099,7 +1099,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingPayouts(ctx, operations.ListAccountingPayoutsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1150,7 +1150,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingRefunds(ctx, operations.ListAccountingRefundsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1201,7 +1201,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingTaxrates(ctx, operations.ListAccountingTaxratesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1252,7 +1252,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingTransactions(ctx, operations.ListAccountingTransactionsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1303,8 +1303,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingAccount(ctx, operations.PatchAccountingAccountRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1355,8 +1355,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1407,8 +1407,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingInvoice(ctx, operations.PatchAccountingInvoiceRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1459,8 +1459,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingPayment(ctx, operations.PatchAccountingPaymentRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1511,8 +1511,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1563,8 +1563,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1616,8 +1616,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingAccount(ctx, operations.RemoveAccountingAccountRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1669,8 +1669,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingContact(ctx, operations.RemoveAccountingContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1722,8 +1722,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingInvoice(ctx, operations.RemoveAccountingInvoiceRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1775,8 +1775,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingPayment(ctx, operations.RemoveAccountingPaymentRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1828,8 +1828,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingTaxrate(ctx, operations.RemoveAccountingTaxrateRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1881,8 +1881,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingTransaction(ctx, operations.RemoveAccountingTransactionRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1933,8 +1933,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingAccount(ctx, operations.UpdateAccountingAccountRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1985,8 +1985,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -2037,8 +2037,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingInvoice(ctx, operations.UpdateAccountingInvoiceRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -2089,8 +2089,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingPayment(ctx, operations.UpdateAccountingPaymentRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -2141,8 +2141,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -2193,8 +2193,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

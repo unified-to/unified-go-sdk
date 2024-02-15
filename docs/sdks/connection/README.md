@@ -36,7 +36,7 @@ func main() {
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesCommerce,
         },
-        IntegrationType: "string",
+        IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
             shared.PropertyConnectionPermissionsAtsApplicationstatusRead,
         },
@@ -90,7 +90,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -190,7 +190,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -242,7 +242,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.RemoveUnifiedConnection(ctx, operations.RemoveUnifiedConnectionRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -293,7 +293,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Connection.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
-        ID: "<ID>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

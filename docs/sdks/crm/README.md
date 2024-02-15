@@ -64,7 +64,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmCompany(ctx, operations.CreateCrmCompanyRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -115,7 +115,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmContact(ctx, operations.CreateCrmContactRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -166,7 +166,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -217,7 +217,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmEvent(ctx, operations.CreateCrmEventRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -268,7 +268,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmLead(ctx, operations.CreateCrmLeadRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -319,7 +319,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.CreateCrmPipeline(ctx, operations.CreateCrmPipelineRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -370,8 +370,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.GetCrmCompany(ctx, operations.GetCrmCompanyRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -422,8 +422,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.GetCrmContact(ctx, operations.GetCrmContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -474,8 +474,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.GetCrmDeal(ctx, operations.GetCrmDealRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -526,8 +526,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.GetCrmEvent(ctx, operations.GetCrmEventRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -578,8 +578,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.GetCrmLead(ctx, operations.GetCrmLeadRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -630,8 +630,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.GetCrmPipeline(ctx, operations.GetCrmPipelineRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -682,7 +682,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.ListCrmCompanies(ctx, operations.ListCrmCompaniesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -733,7 +733,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.ListCrmContacts(ctx, operations.ListCrmContactsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -784,7 +784,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.ListCrmDeals(ctx, operations.ListCrmDealsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -835,7 +835,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.ListCrmEvents(ctx, operations.ListCrmEventsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -886,7 +886,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.ListCrmLeads(ctx, operations.ListCrmLeadsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -937,7 +937,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.ListCrmPipelines(ctx, operations.ListCrmPipelinesRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
@@ -988,8 +988,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmCompany(ctx, operations.PatchCrmCompanyRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1040,8 +1040,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmContact(ctx, operations.PatchCrmContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1092,8 +1092,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1144,8 +1144,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmEvent(ctx, operations.PatchCrmEventRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1196,8 +1196,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmLead(ctx, operations.PatchCrmLeadRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1248,8 +1248,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.PatchCrmPipeline(ctx, operations.PatchCrmPipelineRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1301,8 +1301,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.RemoveCrmCompany(ctx, operations.RemoveCrmCompanyRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1354,8 +1354,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.RemoveCrmContact(ctx, operations.RemoveCrmContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1407,8 +1407,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.RemoveCrmDeal(ctx, operations.RemoveCrmDealRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1460,8 +1460,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.RemoveCrmEvent(ctx, operations.RemoveCrmEventRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1513,8 +1513,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.RemoveCrmLead(ctx, operations.RemoveCrmLeadRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1566,8 +1566,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.RemoveCrmPipeline(ctx, operations.RemoveCrmPipelineRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1618,8 +1618,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmCompany(ctx, operations.UpdateCrmCompanyRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1670,8 +1670,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmContact(ctx, operations.UpdateCrmContactRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1722,8 +1722,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1774,8 +1774,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmEvent(ctx, operations.UpdateCrmEventRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1826,8 +1826,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmLead(ctx, operations.UpdateCrmLeadRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1878,8 +1878,8 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Crm.UpdateCrmPipeline(ctx, operations.UpdateCrmPipelineRequest{
-        ConnectionID: "string",
-        ID: "<ID>",
+        ConnectionID: "<value>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

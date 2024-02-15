@@ -33,7 +33,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.CreatePassthrough(ctx, operations.CreatePassthroughRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
         Path: "/etc/periodic",
     })
     if err != nil {
@@ -85,7 +85,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.ListPassthroughs(ctx, operations.ListPassthroughsRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
         Path: "/selinux",
     })
     if err != nil {
@@ -137,7 +137,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.PatchPassthrough(ctx, operations.PatchPassthroughRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
         Path: "/mnt",
     })
     if err != nil {
@@ -189,7 +189,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.RemovePassthrough(ctx, operations.RemovePassthroughRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
         Path: "/Applications",
     })
     if err != nil {
@@ -241,7 +241,7 @@ func main() {
 
     ctx := context.Background()
     res, err := s.Passthrough.UpdatePassthrough(ctx, operations.UpdatePassthroughRequest{
-        ConnectionID: "string",
+        ConnectionID: "<value>",
         Path: "/dev",
     })
     if err != nil {

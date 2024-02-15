@@ -35,7 +35,7 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "string",
+		ConnectionID: "<value>",
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -700,7 +700,7 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "string",
+		ConnectionID: "<value>",
 	})
 	if err != nil {
 
@@ -750,7 +750,7 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "string",
+		ConnectionID: "<value>",
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -786,7 +786,7 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "string",
+		ConnectionID: "<value>",
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -862,7 +862,7 @@ func main() {
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "string",
+		ConnectionID: "<value>",
 	})
 	if err != nil {
 		log.Fatal(err)

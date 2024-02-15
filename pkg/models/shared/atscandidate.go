@@ -53,6 +53,7 @@ type AtsCandidate struct {
 	CompanyID   *string                      `json:"company_id,omitempty"`
 	CompanyName *string                      `json:"company_name,omitempty"`
 	CreatedAt   *time.Time                   `json:"created_at,omitempty"`
+	DateOfBirth *time.Time                   `json:"date_of_birth,omitempty"`
 	Emails      []AtsEmail                   `json:"emails,omitempty"`
 	ExternalID  *string                      `json:"external_id,omitempty"`
 	ID          *string                      `json:"id,omitempty"`
@@ -106,6 +107,13 @@ func (o *AtsCandidate) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return o.CreatedAt
+}
+
+func (o *AtsCandidate) GetDateOfBirth() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.DateOfBirth
 }
 
 func (o *AtsCandidate) GetEmails() []AtsEmail {
