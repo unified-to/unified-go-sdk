@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 5c191fdb16f8d76a3eb09c714f56170d
+  docChecksum: 119b9584a5fe294470614e38361fae09
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 0.12.0
-  configChecksum: e802d5f7d507d717d5da42ad8a27874d
+  generationVersion: 2.259.1
+  releaseVersion: 0.12.1
+  configChecksum: 9489305a809b79edb66569258210bbb1
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -337,6 +337,7 @@ generatedFiles:
   - /pkg/models/shared/uctelephone.go
   - /pkg/models/shared/ucemail.go
   - /pkg/models/shared/atsapplication.go
+  - /pkg/models/shared/atsapplicationanswer.go
   - /pkg/models/shared/atscandidate.go
   - /pkg/models/shared/atstelephone.go
   - /pkg/models/shared/atsemail.go
@@ -344,6 +345,7 @@ generatedFiles:
   - /pkg/models/shared/atsdocument.go
   - /pkg/models/shared/atsinterview.go
   - /pkg/models/shared/atsjob.go
+  - /pkg/models/shared/atsjobquestion.go
   - /pkg/models/shared/atscompensation.go
   - /pkg/models/shared/atsaddress.go
   - /pkg/models/shared/atsscorecard.go
@@ -893,6 +895,7 @@ generatedFiles:
   - docs/pkg/models/shared/ucemail.md
   - docs/pkg/models/shared/atsapplicationstatus.md
   - docs/pkg/models/shared/atsapplication.md
+  - docs/pkg/models/shared/atsapplicationanswer.md
   - docs/pkg/models/shared/origin.md
   - docs/pkg/models/shared/atscandidate.md
   - docs/pkg/models/shared/atstelephonetype.md
@@ -907,6 +910,8 @@ generatedFiles:
   - docs/pkg/models/shared/employmenttype.md
   - docs/pkg/models/shared/atsjobstatus.md
   - docs/pkg/models/shared/atsjob.md
+  - docs/pkg/models/shared/atsjobquestiontype.md
+  - docs/pkg/models/shared/atsjobquestion.md
   - docs/pkg/models/shared/frequency.md
   - docs/pkg/models/shared/atscompensationtype.md
   - docs/pkg/models/shared/atscompensation.md

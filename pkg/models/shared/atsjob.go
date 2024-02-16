@@ -111,6 +111,7 @@ type AtsJob struct {
 	Name             *string                `json:"name,omitempty"`
 	NumberOfOpenings *float64               `json:"number_of_openings,omitempty"`
 	PublicJobUrls    []string               `json:"public_job_urls,omitempty"`
+	Questions        []AtsJobQuestion       `json:"questions,omitempty"`
 	Raw              map[string]interface{} `json:"raw,omitempty"`
 	RecruiterIds     []string               `json:"recruiter_ids,omitempty"`
 	Remote           *bool                  `json:"remote,omitempty"`
@@ -225,6 +226,13 @@ func (o *AtsJob) GetPublicJobUrls() []string {
 		return nil
 	}
 	return o.PublicJobUrls
+}
+
+func (o *AtsJob) GetQuestions() []AtsJobQuestion {
+	if o == nil {
+		return nil
+	}
+	return o.Questions
 }
 
 func (o *AtsJob) GetRaw() map[string]interface{} {

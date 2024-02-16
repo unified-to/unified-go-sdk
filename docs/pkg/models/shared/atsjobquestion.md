@@ -1,0 +1,14 @@
+# AtsJobQuestion
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `Description`                                                                 | **string*                                                                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `ID`                                                                          | **string*                                                                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Options`                                                                     | []*string*                                                                    | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Prompt`                                                                      | **string*                                                                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Question`                                                                    | *string*                                                                      | :heavy_check_mark:                                                            | N/A                                                                           |
+| `Required`                                                                    | **bool*                                                                       | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Type`                                                                        | [shared.AtsJobQuestionType](../../../pkg/models/shared/atsjobquestiontype.md) | :heavy_check_mark:                                                            | N/A                                                                           |

@@ -70,6 +70,7 @@ func (e *AtsApplicationStatus) UnmarshalJSON(data []byte) error {
 }
 
 type AtsApplication struct {
+	Answers        []AtsApplicationAnswer `json:"answers,omitempty"`
 	AppliedAt      *time.Time             `json:"applied_at,omitempty"`
 	CandidateID    *string                `json:"candidate_id,omitempty"`
 	CreatedAt      *time.Time             `json:"created_at,omitempty"`
@@ -94,6 +95,13 @@ func (a *AtsApplication) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (o *AtsApplication) GetAnswers() []AtsApplicationAnswer {
+	if o == nil {
+		return nil
+	}
+	return o.Answers
 }
 
 func (o *AtsApplication) GetAppliedAt() *time.Time {
