@@ -4,9 +4,9 @@ management:
   docChecksum: 119b9584a5fe294470614e38361fae09
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.259.1
-  releaseVersion: 0.12.1
-  configChecksum: 9489305a809b79edb66569258210bbb1
+  generationVersion: 2.263.3
+  releaseVersion: 0.12.2
+  configChecksum: 53d28871d4e85b43e743087b13c8f87a
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -14,7 +14,7 @@ management:
 features:
   go:
     constsAndDefaults: 0.1.3
-    core: 3.4.0
+    core: 3.4.1
     globalSecurity: 2.82.6
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -74,7 +74,6 @@ generatedFiles:
   - webhook.go
   - unifiedto.go
   - go.mod
-  - go.sum
   - pkg/models/sdkerrors/sdkerror.go
   - pkg/types/bigint.go
   - pkg/types/date.go
