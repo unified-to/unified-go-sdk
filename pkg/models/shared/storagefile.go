@@ -40,6 +40,7 @@ type StorageFile struct {
 	CreatedAt   *time.Time             `json:"created_at,omitempty"`
 	Description *string                `json:"description,omitempty"`
 	DownloadURL *string                `json:"download_url,omitempty"`
+	Hash        *string                `json:"hash,omitempty"`
 	ID          *string                `json:"id,omitempty"`
 	MimeType    *string                `json:"mime_type,omitempty"`
 	Name        *string                `json:"name,omitempty"`
@@ -82,6 +83,13 @@ func (o *StorageFile) GetDownloadURL() *string {
 		return nil
 	}
 	return o.DownloadURL
+}
+
+func (o *StorageFile) GetHash() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Hash
 }
 
 func (o *StorageFile) GetID() *string {
