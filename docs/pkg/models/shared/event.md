@@ -7,3 +7,4 @@
 | -------------- | -------------- |
 | `EventUpdated` | updated        |
 | `EventCreated` | created        |
+| `EventDeleted` | deleted        |

@@ -12,6 +12,7 @@ type PropertyIntegrationSupportWebhookEvents string
 const (
 	PropertyIntegrationSupportWebhookEventsUpdated PropertyIntegrationSupportWebhookEvents = "updated"
 	PropertyIntegrationSupportWebhookEventsCreated PropertyIntegrationSupportWebhookEvents = "created"
+	PropertyIntegrationSupportWebhookEventsDeleted PropertyIntegrationSupportWebhookEvents = "deleted"
 )
 
 func (e PropertyIntegrationSupportWebhookEvents) ToPointer() *PropertyIntegrationSupportWebhookEvents {
@@ -27,6 +28,8 @@ func (e *PropertyIntegrationSupportWebhookEvents) UnmarshalJSON(data []byte) err
 	case "updated":
 		fallthrough
 	case "created":
+		fallthrough
+	case "deleted":
 		*e = PropertyIntegrationSupportWebhookEvents(v)
 		return nil
 	default:

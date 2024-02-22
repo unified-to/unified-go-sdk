@@ -14,6 +14,7 @@ type Event string
 const (
 	EventUpdated Event = "updated"
 	EventCreated Event = "created"
+	EventDeleted Event = "deleted"
 )
 
 func (e Event) ToPointer() *Event {
@@ -29,6 +30,8 @@ func (e *Event) UnmarshalJSON(data []byte) error {
 	case "updated":
 		fallthrough
 	case "created":
+		fallthrough
+	case "deleted":
 		*e = Event(v)
 		return nil
 	default:

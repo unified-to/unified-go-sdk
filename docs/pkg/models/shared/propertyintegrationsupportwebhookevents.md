@@ -7,3 +7,4 @@
 | ------------------------------------------------ | ------------------------------------------------ |
 | `PropertyIntegrationSupportWebhookEventsUpdated` | updated                                          |
 | `PropertyIntegrationSupportWebhookEventsCreated` | created                                          |
+| `PropertyIntegrationSupportWebhookEventsDeleted` | deleted                                          |
