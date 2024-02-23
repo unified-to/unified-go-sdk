@@ -38,7 +38,7 @@ func main() {
         },
         IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsApplicationstatusRead,
+            shared.PropertyConnectionPermissionsAtsCandidateRead,
         },
     })
     if err != nil {

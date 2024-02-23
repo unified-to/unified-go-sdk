@@ -9,13 +9,19 @@ import (
 	"time"
 )
 
-type ListAtsApplicationsRequest struct {
+type ListAtsActivitiesRequest struct {
+	// The application ID to filter results
+	ApplicationID *string `queryParam:"style=form,explode=true,name=application_id"`
 	// The candidate ID to filter results
 	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The document ID to filter results
+	DocumentID *string `queryParam:"style=form,explode=true,name=document_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	// The interview ID to filter results
+	InterviewID *string `queryParam:"style=form,explode=true,name=interview_id"`
 	// The job ID to filter results
 	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -26,92 +32,122 @@ type ListAtsApplicationsRequest struct {
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	// The user ID to filter results
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (l ListAtsApplicationsRequest) MarshalJSON() ([]byte, error) {
+func (l ListAtsActivitiesRequest) MarshalJSON() ([]byte, error) {
 	return utils.MarshalJSON(l, "", false)
 }
 
-func (l *ListAtsApplicationsRequest) UnmarshalJSON(data []byte) error {
+func (l *ListAtsActivitiesRequest) UnmarshalJSON(data []byte) error {
 	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListAtsApplicationsRequest) GetCandidateID() *string {
+func (o *ListAtsActivitiesRequest) GetApplicationID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ApplicationID
+}
+
+func (o *ListAtsActivitiesRequest) GetCandidateID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.CandidateID
 }
 
-func (o *ListAtsApplicationsRequest) GetConnectionID() string {
+func (o *ListAtsActivitiesRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *ListAtsApplicationsRequest) GetFields() []string {
+func (o *ListAtsActivitiesRequest) GetDocumentID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DocumentID
+}
+
+func (o *ListAtsActivitiesRequest) GetFields() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Fields
 }
 
-func (o *ListAtsApplicationsRequest) GetJobID() *string {
+func (o *ListAtsActivitiesRequest) GetInterviewID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.InterviewID
+}
+
+func (o *ListAtsActivitiesRequest) GetJobID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.JobID
 }
 
-func (o *ListAtsApplicationsRequest) GetLimit() *float64 {
+func (o *ListAtsActivitiesRequest) GetLimit() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Limit
 }
 
-func (o *ListAtsApplicationsRequest) GetOffset() *float64 {
+func (o *ListAtsActivitiesRequest) GetOffset() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Offset
 }
 
-func (o *ListAtsApplicationsRequest) GetOrder() *string {
+func (o *ListAtsActivitiesRequest) GetOrder() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Order
 }
 
-func (o *ListAtsApplicationsRequest) GetQuery() *string {
+func (o *ListAtsActivitiesRequest) GetQuery() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Query
 }
 
-func (o *ListAtsApplicationsRequest) GetSort() *string {
+func (o *ListAtsActivitiesRequest) GetSort() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Sort
 }
 
-func (o *ListAtsApplicationsRequest) GetUpdatedGte() *time.Time {
+func (o *ListAtsActivitiesRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.UpdatedGte
 }
 
-type ListAtsApplicationsResponse struct {
+func (o *ListAtsActivitiesRequest) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
+}
+
+type ListAtsActivitiesResponse struct {
 	// Successful
-	AtsApplications []shared.AtsApplication
+	AtsActivities []shared.AtsActivity
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -120,28 +156,28 @@ type ListAtsApplicationsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAtsApplicationsResponse) GetAtsApplications() []shared.AtsApplication {
+func (o *ListAtsActivitiesResponse) GetAtsActivities() []shared.AtsActivity {
 	if o == nil {
 		return nil
 	}
-	return o.AtsApplications
+	return o.AtsActivities
 }
 
-func (o *ListAtsApplicationsResponse) GetContentType() string {
+func (o *ListAtsActivitiesResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *ListAtsApplicationsResponse) GetStatusCode() int {
+func (o *ListAtsActivitiesResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *ListAtsApplicationsResponse) GetRawResponse() *http.Response {
+func (o *ListAtsActivitiesResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

@@ -1,4 +1,4 @@
-# ListAtsScorecardsRequest
+# ListAtsActivitiesRequest
 
 
 ## Fields
@@ -8,6 +8,7 @@
 | `ApplicationID`                                                          | **string*                                                                | :heavy_minus_sign:                                                       | The application ID to filter results                                     |
 | `CandidateID`                                                            | **string*                                                                | :heavy_minus_sign:                                                       | The candidate ID to filter results                                       |
 | `ConnectionID`                                                           | *string*                                                                 | :heavy_check_mark:                                                       | ID of the connection                                                     |
+| `DocumentID`                                                             | **string*                                                                | :heavy_minus_sign:                                                       | The document ID to filter results                                        |
 | `Fields`                                                                 | []*string*                                                               | :heavy_minus_sign:                                                       | Comma-delimited fields to return                                         |
 | `InterviewID`                                                            | **string*                                                                | :heavy_minus_sign:                                                       | The interview ID to filter results                                       |
 | `JobID`                                                                  | **string*                                                                | :heavy_minus_sign:                                                       | The job ID to filter results                                             |
@@ -17,3 +18,4 @@
 | `Query`                                                                  | **string*                                                                | :heavy_minus_sign:                                                       | Query string to search. eg. email address or name                        |
 | `Sort`                                                                   | **string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      |
 | `UpdatedGte`                                                             | [*time.Time](https://pkg.go.dev/time#Time)                               | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |
+| `UserID`                                                                 | **string*                                                                | :heavy_minus_sign:                                                       | The user ID to filter results                                            |

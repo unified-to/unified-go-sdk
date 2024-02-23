@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 540edc51c35db4343817668bdfafdaa0
+  docChecksum: 7bd6e19ec36f960e56c7d65cda36a422
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.269.0
-  releaseVersion: 0.12.5
-  configChecksum: 9a0cc0b10811eeb931fb0e62a1430b7c
+  releaseVersion: 0.12.6
+  configChecksum: e4d675a7bb400da30ef3fe8d448ee75d
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -29,6 +29,7 @@ generatedFiles:
   - taxrate.go
   - transaction.go
   - ats.go
+  - activity.go
   - application.go
   - applicationstatus.go
   - candidate.go
@@ -144,12 +145,14 @@ generatedFiles:
   - /pkg/models/operations/removeuccontact.go
   - /pkg/models/operations/updatecrmcontact.go
   - /pkg/models/operations/updateuccontact.go
+  - /pkg/models/operations/createatsactivity.go
   - /pkg/models/operations/createatsapplication.go
   - /pkg/models/operations/createatscandidate.go
   - /pkg/models/operations/createatsdocument.go
   - /pkg/models/operations/createatsinterview.go
   - /pkg/models/operations/createatsjob.go
   - /pkg/models/operations/createatsscorecard.go
+  - /pkg/models/operations/getatsactivity.go
   - /pkg/models/operations/getatsapplication.go
   - /pkg/models/operations/getatscandidate.go
   - /pkg/models/operations/getatscompany.go
@@ -157,6 +160,7 @@ generatedFiles:
   - /pkg/models/operations/getatsinterview.go
   - /pkg/models/operations/getatsjob.go
   - /pkg/models/operations/getatsscorecard.go
+  - /pkg/models/operations/listatsactivities.go
   - /pkg/models/operations/listatsapplications.go
   - /pkg/models/operations/listatsapplicationstatuses.go
   - /pkg/models/operations/listatscandidates.go
@@ -165,18 +169,21 @@ generatedFiles:
   - /pkg/models/operations/listatsinterviews.go
   - /pkg/models/operations/listatsjobs.go
   - /pkg/models/operations/listatsscorecards.go
+  - /pkg/models/operations/patchatsactivity.go
   - /pkg/models/operations/patchatsapplication.go
   - /pkg/models/operations/patchatscandidate.go
   - /pkg/models/operations/patchatsdocument.go
   - /pkg/models/operations/patchatsinterview.go
   - /pkg/models/operations/patchatsjob.go
   - /pkg/models/operations/patchatsscorecard.go
+  - /pkg/models/operations/removeatsactivity.go
   - /pkg/models/operations/removeatsapplication.go
   - /pkg/models/operations/removeatscandidate.go
   - /pkg/models/operations/removeatsdocument.go
   - /pkg/models/operations/removeatsinterview.go
   - /pkg/models/operations/removeatsjob.go
   - /pkg/models/operations/removeatsscorecard.go
+  - /pkg/models/operations/updateatsactivity.go
   - /pkg/models/operations/updateatsapplication.go
   - /pkg/models/operations/updateatscandidate.go
   - /pkg/models/operations/updateatsdocument.go
@@ -335,6 +342,7 @@ generatedFiles:
   - /pkg/models/shared/uccontact.go
   - /pkg/models/shared/uctelephone.go
   - /pkg/models/shared/ucemail.go
+  - /pkg/models/shared/atsactivity.go
   - /pkg/models/shared/atsapplication.go
   - /pkg/models/shared/atsapplicationanswer.go
   - /pkg/models/shared/atscandidate.go
@@ -518,6 +526,8 @@ generatedFiles:
   - docs/pkg/models/operations/updatecrmcontactresponse.md
   - docs/pkg/models/operations/updateuccontactrequest.md
   - docs/pkg/models/operations/updateuccontactresponse.md
+  - docs/pkg/models/operations/createatsactivityrequest.md
+  - docs/pkg/models/operations/createatsactivityresponse.md
   - docs/pkg/models/operations/createatsapplicationrequest.md
   - docs/pkg/models/operations/createatsapplicationresponse.md
   - docs/pkg/models/operations/createatscandidaterequest.md
@@ -530,6 +540,8 @@ generatedFiles:
   - docs/pkg/models/operations/createatsjobresponse.md
   - docs/pkg/models/operations/createatsscorecardrequest.md
   - docs/pkg/models/operations/createatsscorecardresponse.md
+  - docs/pkg/models/operations/getatsactivityrequest.md
+  - docs/pkg/models/operations/getatsactivityresponse.md
   - docs/pkg/models/operations/getatsapplicationrequest.md
   - docs/pkg/models/operations/getatsapplicationresponse.md
   - docs/pkg/models/operations/getatscandidaterequest.md
@@ -544,6 +556,8 @@ generatedFiles:
   - docs/pkg/models/operations/getatsjobresponse.md
   - docs/pkg/models/operations/getatsscorecardrequest.md
   - docs/pkg/models/operations/getatsscorecardresponse.md
+  - docs/pkg/models/operations/listatsactivitiesrequest.md
+  - docs/pkg/models/operations/listatsactivitiesresponse.md
   - docs/pkg/models/operations/listatsapplicationsrequest.md
   - docs/pkg/models/operations/listatsapplicationsresponse.md
   - docs/pkg/models/operations/listatsapplicationstatusesrequest.md
@@ -560,6 +574,8 @@ generatedFiles:
   - docs/pkg/models/operations/listatsjobsresponse.md
   - docs/pkg/models/operations/listatsscorecardsrequest.md
   - docs/pkg/models/operations/listatsscorecardsresponse.md
+  - docs/pkg/models/operations/patchatsactivityrequest.md
+  - docs/pkg/models/operations/patchatsactivityresponse.md
   - docs/pkg/models/operations/patchatsapplicationrequest.md
   - docs/pkg/models/operations/patchatsapplicationresponse.md
   - docs/pkg/models/operations/patchatscandidaterequest.md
@@ -572,6 +588,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchatsjobresponse.md
   - docs/pkg/models/operations/patchatsscorecardrequest.md
   - docs/pkg/models/operations/patchatsscorecardresponse.md
+  - docs/pkg/models/operations/removeatsactivityrequest.md
+  - docs/pkg/models/operations/removeatsactivityresponse.md
   - docs/pkg/models/operations/removeatsapplicationrequest.md
   - docs/pkg/models/operations/removeatsapplicationresponse.md
   - docs/pkg/models/operations/removeatscandidaterequest.md
@@ -584,6 +602,8 @@ generatedFiles:
   - docs/pkg/models/operations/removeatsjobresponse.md
   - docs/pkg/models/operations/removeatsscorecardrequest.md
   - docs/pkg/models/operations/removeatsscorecardresponse.md
+  - docs/pkg/models/operations/updateatsactivityrequest.md
+  - docs/pkg/models/operations/updateatsactivityresponse.md
   - docs/pkg/models/operations/updateatsapplicationrequest.md
   - docs/pkg/models/operations/updateatsapplicationresponse.md
   - docs/pkg/models/operations/updateatscandidaterequest.md
@@ -892,6 +912,8 @@ generatedFiles:
   - docs/pkg/models/shared/uctelephone.md
   - docs/pkg/models/shared/ucemailtype.md
   - docs/pkg/models/shared/ucemail.md
+  - docs/pkg/models/shared/atsactivitytype.md
+  - docs/pkg/models/shared/atsactivity.md
   - docs/pkg/models/shared/atsapplicationstatus.md
   - docs/pkg/models/shared/atsapplication.md
   - docs/pkg/models/shared/atsapplicationanswer.md
@@ -1020,6 +1042,7 @@ generatedFiles:
   - docs/sdks/taxrate/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
+  - docs/sdks/activity/README.md
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/candidate/README.md

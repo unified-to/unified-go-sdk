@@ -20,7 +20,7 @@ type ListAtsScorecardsRequest struct {
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// The interview ID to filter results
 	InterviewID *string `queryParam:"style=form,explode=true,name=interview_id"`
-	// The job ID
+	// The job ID to filter results
 	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`

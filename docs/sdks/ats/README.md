@@ -3,12 +3,14 @@
 
 ### Available Operations
 
+* [CreateAtsActivity](#createatsactivity) - Create an activity
 * [CreateAtsApplication](#createatsapplication) - Create an application
 * [CreateAtsCandidate](#createatscandidate) - Create a candidate
 * [CreateAtsDocument](#createatsdocument) - Create a document
 * [CreateAtsInterview](#createatsinterview) - Create a interview
 * [CreateAtsJob](#createatsjob) - Create a job
 * [CreateAtsScorecard](#createatsscorecard) - Create a scorecard
+* [GetAtsActivity](#getatsactivity) - Retrieve an activity
 * [GetAtsApplication](#getatsapplication) - Retrieve an application
 * [GetAtsCandidate](#getatscandidate) - Retrieve a candidate
 * [GetAtsCompany](#getatscompany) - Retrieve a company
@@ -16,6 +18,7 @@
 * [GetAtsInterview](#getatsinterview) - Retrieve a interview
 * [GetAtsJob](#getatsjob) - Retrieve a job
 * [GetAtsScorecard](#getatsscorecard) - Retrieve a scorecard
+* [ListAtsActivities](#listatsactivities) - List all activities
 * [ListAtsApplications](#listatsapplications) - List all applications
 * [ListAtsApplicationstatuses](#listatsapplicationstatuses) - List all application statuses
 * [ListAtsCandidates](#listatscandidates) - List all candidates
@@ -24,24 +27,78 @@
 * [ListAtsInterviews](#listatsinterviews) - List all interviews
 * [ListAtsJobs](#listatsjobs) - List all jobs
 * [ListAtsScorecards](#listatsscorecards) - List all scorecards
+* [PatchAtsActivity](#patchatsactivity) - Update an activity
 * [PatchAtsApplication](#patchatsapplication) - Update an application
 * [PatchAtsCandidate](#patchatscandidate) - Update a candidate
 * [PatchAtsDocument](#patchatsdocument) - Update a document
 * [PatchAtsInterview](#patchatsinterview) - Update a interview
 * [PatchAtsJob](#patchatsjob) - Update a job
 * [PatchAtsScorecard](#patchatsscorecard) - Update a scorecard
+* [RemoveAtsActivity](#removeatsactivity) - Remove an activity
 * [RemoveAtsApplication](#removeatsapplication) - Remove an application
 * [RemoveAtsCandidate](#removeatscandidate) - Remove a candidate
 * [RemoveAtsDocument](#removeatsdocument) - Remove a document
 * [RemoveAtsInterview](#removeatsinterview) - Remove a interview
 * [RemoveAtsJob](#removeatsjob) - Remove a job
 * [RemoveAtsScorecard](#removeatsscorecard) - Remove a scorecard
+* [UpdateAtsActivity](#updateatsactivity) - Update an activity
 * [UpdateAtsApplication](#updateatsapplication) - Update an application
 * [UpdateAtsCandidate](#updateatscandidate) - Update a candidate
 * [UpdateAtsDocument](#updateatsdocument) - Update a document
 * [UpdateAtsInterview](#updateatsinterview) - Update a interview
 * [UpdateAtsJob](#updateatsjob) - Update a job
 * [UpdateAtsScorecard](#updateatsscorecard) - Update a scorecard
+
+## CreateAtsActivity
+
+Create an activity
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.CreateAtsActivity(ctx, operations.CreateAtsActivityRequest{
+        ConnectionID: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsActivity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateAtsActivityRequest](../../pkg/models/operations/createatsactivityrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[*operations.CreateAtsActivityResponse](../../pkg/models/operations/createatsactivityresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## CreateAtsApplication
 
@@ -345,6 +402,58 @@ func main() {
 ### Response
 
 **[*operations.CreateAtsScorecardResponse](../../pkg/models/operations/createatsscorecardresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## GetAtsActivity
+
+Retrieve an activity
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.GetAtsActivity(ctx, operations.GetAtsActivityRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsActivity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetAtsActivityRequest](../../pkg/models/operations/getatsactivityrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[*operations.GetAtsActivityResponse](../../pkg/models/operations/getatsactivityresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -709,6 +818,57 @@ func main() {
 ### Response
 
 **[*operations.GetAtsScorecardResponse](../../pkg/models/operations/getatsscorecardresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## ListAtsActivities
+
+List all activities
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.ListAtsActivities(ctx, operations.ListAtsActivitiesRequest{
+        ConnectionID: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsActivities != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListAtsActivitiesRequest](../../pkg/models/operations/listatsactivitiesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[*operations.ListAtsActivitiesResponse](../../pkg/models/operations/listatsactivitiesresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -1121,6 +1281,58 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
+## PatchAtsActivity
+
+Update an activity
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.PatchAtsActivity(ctx, operations.PatchAtsActivityRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsActivity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchAtsActivityRequest](../../pkg/models/operations/patchatsactivityrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[*operations.PatchAtsActivityResponse](../../pkg/models/operations/patchatsactivityresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
 ## PatchAtsApplication
 
 Update an application
@@ -1429,6 +1641,59 @@ func main() {
 ### Response
 
 **[*operations.PatchAtsScorecardResponse](../../pkg/models/operations/patchatsscorecardresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## RemoveAtsActivity
+
+Remove an activity
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+	"net/http"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.RemoveAtsActivity(ctx, operations.RemoveAtsActivityRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.StatusCode == http.StatusOK {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveAtsActivityRequest](../../pkg/models/operations/removeatsactivityrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[*operations.RemoveAtsActivityResponse](../../pkg/models/operations/removeatsactivityresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -1747,6 +2012,58 @@ func main() {
 ### Response
 
 **[*operations.RemoveAtsScorecardResponse](../../pkg/models/operations/removeatsscorecardresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## UpdateAtsActivity
+
+Update an activity
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Ats.UpdateAtsActivity(ctx, operations.UpdateAtsActivityRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AtsActivity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.UpdateAtsActivityRequest](../../pkg/models/operations/updateatsactivityrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[*operations.UpdateAtsActivityResponse](../../pkg/models/operations/updateatsactivityresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

@@ -29,8 +29,8 @@
 | `PropertyConnectionPermissionsCommerceInventoryWrite`     | commerce_inventory_write                                  |
 | `PropertyConnectionPermissionsCommerceLocationRead`       | commerce_location_read                                    |
 | `PropertyConnectionPermissionsCommerceLocationWrite`      | commerce_location_write                                   |
-| `PropertyConnectionPermissionsAtsScorecardRead`           | ats_scorecard_read                                        |
-| `PropertyConnectionPermissionsAtsScorecardWrite`          | ats_scorecard_write                                       |
+| `PropertyConnectionPermissionsAtsActivityRead`            | ats_activity_read                                         |
+| `PropertyConnectionPermissionsAtsActivityWrite`           | ats_activity_write                                        |
 | `PropertyConnectionPermissionsAtsApplicationRead`         | ats_application_read                                      |
 | `PropertyConnectionPermissionsAtsApplicationWrite`        | ats_application_write                                     |
 | `PropertyConnectionPermissionsAtsApplicationstatusRead`   | ats_applicationstatus_read                                |
@@ -43,6 +43,8 @@
 | `PropertyConnectionPermissionsAtsCompanyRead`             | ats_company_read                                          |
 | `PropertyConnectionPermissionsAtsDocumentRead`            | ats_document_read                                         |
 | `PropertyConnectionPermissionsAtsDocumentWrite`           | ats_document_write                                        |
+| `PropertyConnectionPermissionsAtsScorecardRead`           | ats_scorecard_read                                        |
+| `PropertyConnectionPermissionsAtsScorecardWrite`          | ats_scorecard_write                                       |
 | `PropertyConnectionPermissionsCrmCompanyRead`             | crm_company_read                                          |
 | `PropertyConnectionPermissionsCrmCompanyWrite`            | crm_company_write                                         |
 | `PropertyConnectionPermissionsCrmContactRead`             | crm_contact_read                                          |

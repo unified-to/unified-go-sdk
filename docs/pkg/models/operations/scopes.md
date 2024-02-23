@@ -29,8 +29,8 @@
 | `ScopesCommerceInventoryWrite`     | commerce_inventory_write           |
 | `ScopesCommerceLocationRead`       | commerce_location_read             |
 | `ScopesCommerceLocationWrite`      | commerce_location_write            |
-| `ScopesAtsScorecardRead`           | ats_scorecard_read                 |
-| `ScopesAtsScorecardWrite`          | ats_scorecard_write                |
+| `ScopesAtsActivityRead`            | ats_activity_read                  |
+| `ScopesAtsActivityWrite`           | ats_activity_write                 |
 | `ScopesAtsApplicationRead`         | ats_application_read               |
 | `ScopesAtsApplicationWrite`        | ats_application_write              |
 | `ScopesAtsApplicationstatusRead`   | ats_applicationstatus_read         |
@@ -43,6 +43,8 @@
 | `ScopesAtsCompanyRead`             | ats_company_read                   |
 | `ScopesAtsDocumentRead`            | ats_document_read                  |
 | `ScopesAtsDocumentWrite`           | ats_document_write                 |
+| `ScopesAtsScorecardRead`           | ats_scorecard_read                 |
+| `ScopesAtsScorecardWrite`          | ats_scorecard_write                |
 | `ScopesCrmCompanyRead`             | crm_company_read                   |
 | `ScopesCrmCompanyWrite`            | crm_company_write                  |
 | `ScopesCrmContactRead`             | crm_contact_read                   |

@@ -34,8 +34,8 @@ const (
 	PropertyConnectionPermissionsCommerceInventoryWrite     PropertyConnectionPermissions = "commerce_inventory_write"
 	PropertyConnectionPermissionsCommerceLocationRead       PropertyConnectionPermissions = "commerce_location_read"
 	PropertyConnectionPermissionsCommerceLocationWrite      PropertyConnectionPermissions = "commerce_location_write"
-	PropertyConnectionPermissionsAtsScorecardRead           PropertyConnectionPermissions = "ats_scorecard_read"
-	PropertyConnectionPermissionsAtsScorecardWrite          PropertyConnectionPermissions = "ats_scorecard_write"
+	PropertyConnectionPermissionsAtsActivityRead            PropertyConnectionPermissions = "ats_activity_read"
+	PropertyConnectionPermissionsAtsActivityWrite           PropertyConnectionPermissions = "ats_activity_write"
 	PropertyConnectionPermissionsAtsApplicationRead         PropertyConnectionPermissions = "ats_application_read"
 	PropertyConnectionPermissionsAtsApplicationWrite        PropertyConnectionPermissions = "ats_application_write"
 	PropertyConnectionPermissionsAtsApplicationstatusRead   PropertyConnectionPermissions = "ats_applicationstatus_read"
@@ -48,6 +48,8 @@ const (
 	PropertyConnectionPermissionsAtsCompanyRead             PropertyConnectionPermissions = "ats_company_read"
 	PropertyConnectionPermissionsAtsDocumentRead            PropertyConnectionPermissions = "ats_document_read"
 	PropertyConnectionPermissionsAtsDocumentWrite           PropertyConnectionPermissions = "ats_document_write"
+	PropertyConnectionPermissionsAtsScorecardRead           PropertyConnectionPermissions = "ats_scorecard_read"
+	PropertyConnectionPermissionsAtsScorecardWrite          PropertyConnectionPermissions = "ats_scorecard_write"
 	PropertyConnectionPermissionsCrmCompanyRead             PropertyConnectionPermissions = "crm_company_read"
 	PropertyConnectionPermissionsCrmCompanyWrite            PropertyConnectionPermissions = "crm_company_write"
 	PropertyConnectionPermissionsCrmContactRead             PropertyConnectionPermissions = "crm_contact_read"
@@ -138,9 +140,9 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "commerce_location_write":
 		fallthrough
-	case "ats_scorecard_read":
+	case "ats_activity_read":
 		fallthrough
-	case "ats_scorecard_write":
+	case "ats_activity_write":
 		fallthrough
 	case "ats_application_read":
 		fallthrough
@@ -165,6 +167,10 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "ats_document_read":
 		fallthrough
 	case "ats_document_write":
+		fallthrough
+	case "ats_scorecard_read":
+		fallthrough
+	case "ats_scorecard_write":
 		fallthrough
 	case "crm_company_read":
 		fallthrough

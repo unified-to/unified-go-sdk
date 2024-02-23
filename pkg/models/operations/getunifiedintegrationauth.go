@@ -35,8 +35,8 @@ const (
 	ScopesCommerceInventoryWrite     Scopes = "commerce_inventory_write"
 	ScopesCommerceLocationRead       Scopes = "commerce_location_read"
 	ScopesCommerceLocationWrite      Scopes = "commerce_location_write"
-	ScopesAtsScorecardRead           Scopes = "ats_scorecard_read"
-	ScopesAtsScorecardWrite          Scopes = "ats_scorecard_write"
+	ScopesAtsActivityRead            Scopes = "ats_activity_read"
+	ScopesAtsActivityWrite           Scopes = "ats_activity_write"
 	ScopesAtsApplicationRead         Scopes = "ats_application_read"
 	ScopesAtsApplicationWrite        Scopes = "ats_application_write"
 	ScopesAtsApplicationstatusRead   Scopes = "ats_applicationstatus_read"
@@ -49,6 +49,8 @@ const (
 	ScopesAtsCompanyRead             Scopes = "ats_company_read"
 	ScopesAtsDocumentRead            Scopes = "ats_document_read"
 	ScopesAtsDocumentWrite           Scopes = "ats_document_write"
+	ScopesAtsScorecardRead           Scopes = "ats_scorecard_read"
+	ScopesAtsScorecardWrite          Scopes = "ats_scorecard_write"
 	ScopesCrmCompanyRead             Scopes = "crm_company_read"
 	ScopesCrmCompanyWrite            Scopes = "crm_company_write"
 	ScopesCrmContactRead             Scopes = "crm_contact_read"
@@ -139,9 +141,9 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "commerce_location_write":
 		fallthrough
-	case "ats_scorecard_read":
+	case "ats_activity_read":
 		fallthrough
-	case "ats_scorecard_write":
+	case "ats_activity_write":
 		fallthrough
 	case "ats_application_read":
 		fallthrough
@@ -166,6 +168,10 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "ats_document_read":
 		fallthrough
 	case "ats_document_write":
+		fallthrough
+	case "ats_scorecard_read":
+		fallthrough
+	case "ats_scorecard_write":
 		fallthrough
 	case "crm_company_read":
 		fallthrough
