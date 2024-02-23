@@ -17,6 +17,7 @@ type PropertyConnectionAuth struct {
 	ClientSecret   *string                `json:"client_secret,omitempty"`
 	ConsumerKey    *string                `json:"consumer_key,omitempty"`
 	ConsumerSecret *string                `json:"consumer_secret,omitempty"`
+	DevAPIKey      *string                `json:"dev_api_key,omitempty"`
 	Emails         []string               `json:"emails,omitempty"`
 	ExpiresIn      *float64               `json:"expires_in,omitempty"`
 	ExpiryDate     *time.Time             `json:"expiry_date,omitempty"`
@@ -99,6 +100,13 @@ func (o *PropertyConnectionAuth) GetConsumerSecret() *string {
 		return nil
 	}
 	return o.ConsumerSecret
+}
+
+func (o *PropertyConnectionAuth) GetDevAPIKey() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DevAPIKey
 }
 
 func (o *PropertyConnectionAuth) GetEmails() []string {
