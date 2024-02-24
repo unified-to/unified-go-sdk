@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type GetAccountingTaxrateSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *GetAccountingTaxrateSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type GetAccountingTaxrateRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

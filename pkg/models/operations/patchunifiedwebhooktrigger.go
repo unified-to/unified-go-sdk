@@ -6,6 +6,17 @@ import (
 	"net/http"
 )
 
+type PatchUnifiedWebhookTriggerSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *PatchUnifiedWebhookTriggerSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type PatchUnifiedWebhookTriggerRequest struct {
 	// ID of the Webhook
 	ID string `pathParam:"style=simple,explode=false,name=id"`

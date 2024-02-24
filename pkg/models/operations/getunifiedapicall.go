@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type GetUnifiedApicallSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *GetUnifiedApicallSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type GetUnifiedApicallRequest struct {
 	// ID of the Apicall
 	ID string `pathParam:"style=simple,explode=false,name=id"`

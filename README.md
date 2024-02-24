@@ -24,19 +24,20 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
 func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-	)
+	s := unifiedgosdk.New()
+
+	operationSecurity := operations.CreateAccountingAccountSecurity{
+		Jwt: "<YOUR_API_KEY_HERE>",
+	}
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
-	})
+	}, operationSecurity)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -704,19 +705,20 @@ import (
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/models/sdkerrors"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
 func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-	)
+	s := unifiedgosdk.New()
+
+	operationSecurity := operations.CreateAccountingAccountSecurity{
+		Jwt: "<YOUR_API_KEY_HERE>",
+	}
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
-	})
+	}, operationSecurity)
 	if err != nil {
 
 		var e *sdkerrors.SDKError
@@ -753,20 +755,22 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
 func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerIndex(1),
-		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
+
+	operationSecurity := operations.CreateAccountingAccountSecurity{
+		Jwt: "<YOUR_API_KEY_HERE>",
+	}
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
-	})
+	}, operationSecurity)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -789,20 +793,22 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
 func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerURL("https://api.unified.to"),
-		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
+
+	operationSecurity := operations.CreateAccountingAccountSecurity{
+		Jwt: "<YOUR_API_KEY_HERE>",
+	}
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
-	})
+	}, operationSecurity)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -847,49 +853,6 @@ This can be a convenient way to configure timeouts, cookies, proxies, custom hea
 <!-- End Custom HTTP Client [http-client] -->
 
 
-
-<!-- Start Authentication [security] -->
-## Authentication
-
-### Per-Client Security Schemes
-
-This SDK supports the following security scheme globally:
-
-| Name    | Type    | Scheme  |
-| ------- | ------- | ------- |
-| `Jwt`   | apiKey  | API key |
-
-You can configure it using the `WithSecurity` option when initializing the SDK client instance. For example:
-```go
-package main
-
-import (
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-	)
-
-	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "<value>",
-	})
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	if res.AccountingAccount != nil {
-		// handle response
-	}
-}
-
-```
-<!-- End Authentication [security] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

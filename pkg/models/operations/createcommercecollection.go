@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type CreateCommerceCollectionSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *CreateCommerceCollectionSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type CreateCommerceCollectionRequest struct {
 	// A collection of items/products/services
 	CommerceCollection *shared.CommerceCollection `request:"mediaType=application/json"`

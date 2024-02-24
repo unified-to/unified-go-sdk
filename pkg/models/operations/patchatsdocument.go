@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type PatchAtsDocumentSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *PatchAtsDocumentSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type PatchAtsDocumentRequest struct {
 	AtsDocument *shared.AtsDocument `request:"mediaType=application/json"`
 	// ID of the connection
