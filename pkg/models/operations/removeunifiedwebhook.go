@@ -6,6 +6,17 @@ import (
 	"net/http"
 )
 
+type RemoveUnifiedWebhookSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *RemoveUnifiedWebhookSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type RemoveUnifiedWebhookRequest struct {
 	// ID of the Webhook
 	ID string `pathParam:"style=simple,explode=false,name=id"`

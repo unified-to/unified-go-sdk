@@ -9,6 +9,17 @@ import (
 	"time"
 )
 
+type ListUnifiedWebhooksSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *ListUnifiedWebhooksSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type ListUnifiedWebhooksRequest struct {
 	Env   *string  `queryParam:"style=form,explode=true,name=env"`
 	Limit *float64 `queryParam:"style=form,explode=true,name=limit"`

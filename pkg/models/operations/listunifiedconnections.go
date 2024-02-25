@@ -11,6 +11,17 @@ import (
 	"time"
 )
 
+type ListUnifiedConnectionsSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *ListUnifiedConnectionsSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type Categories string
 
 const (

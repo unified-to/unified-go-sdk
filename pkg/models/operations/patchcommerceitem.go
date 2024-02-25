@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type PatchCommerceItemSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *PatchCommerceItemSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type PatchCommerceItemRequest struct {
 	CommerceItem *shared.CommerceItem `request:"mediaType=application/json"`
 	// ID of the connection

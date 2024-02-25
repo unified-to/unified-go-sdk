@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type CreateUnifiedWebhookSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *CreateUnifiedWebhookSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type CreateUnifiedWebhookRequest struct {
 	Webhook *shared.Webhook `request:"mediaType=application/json"`
 	// When set, all of the existing data will sent back to your server.

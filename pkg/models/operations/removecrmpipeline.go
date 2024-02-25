@@ -6,6 +6,17 @@ import (
 	"net/http"
 )
 
+type RemoveCrmPipelineSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *RemoveCrmPipelineSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type RemoveCrmPipelineRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

@@ -9,6 +9,17 @@ import (
 	"time"
 )
 
+type ListCrmDealsSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *ListCrmDealsSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type ListCrmDealsRequest struct {
 	// The company ID to filter results
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`

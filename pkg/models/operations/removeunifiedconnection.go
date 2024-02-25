@@ -6,6 +6,17 @@ import (
 	"net/http"
 )
 
+type RemoveUnifiedConnectionSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *RemoveUnifiedConnectionSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type RemoveUnifiedConnectionRequest struct {
 	// ID of the Connection
 	ID string `pathParam:"style=simple,explode=false,name=id"`

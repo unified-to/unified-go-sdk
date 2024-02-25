@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type PatchCrmCompanySecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *PatchCrmCompanySecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type PatchCrmCompanyRequest struct {
 	// A company represents an organization that optionally is associated with a deal and/or contacts
 	CrmCompany *shared.CrmCompany `request:"mediaType=application/json"`

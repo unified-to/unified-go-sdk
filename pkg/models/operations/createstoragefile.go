@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type CreateStorageFileSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *CreateStorageFileSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type CreateStorageFileRequest struct {
 	StorageFile *shared.StorageFile `request:"mediaType=application/json"`
 	// ID of the connection
