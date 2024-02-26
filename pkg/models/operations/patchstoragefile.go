@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type PatchStorageFileSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *PatchStorageFileSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type PatchStorageFileRequest struct {
 	StorageFile *shared.StorageFile `request:"mediaType=application/json"`
 	// ID of the connection

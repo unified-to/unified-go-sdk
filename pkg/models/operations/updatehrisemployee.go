@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type UpdateHrisEmployeeSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *UpdateHrisEmployeeSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type UpdateHrisEmployeeRequest struct {
 	HrisEmployee *shared.HrisEmployee `request:"mediaType=application/json"`
 	// ID of the connection

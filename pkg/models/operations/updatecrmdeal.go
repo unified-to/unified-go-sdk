@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type UpdateCrmDealSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *UpdateCrmDealSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type UpdateCrmDealRequest struct {
 	// A deal represents an opportunity with companies and/or contacts
 	CrmDeal *shared.CrmDeal `request:"mediaType=application/json"`

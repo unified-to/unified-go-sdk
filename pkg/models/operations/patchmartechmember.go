@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type PatchMartechMemberSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *PatchMartechMemberSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type PatchMartechMemberRequest struct {
 	// A member represents a person
 	MarketingMember *shared.MarketingMember `request:"mediaType=application/json"`

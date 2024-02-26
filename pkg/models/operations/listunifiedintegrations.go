@@ -9,6 +9,17 @@ import (
 	"net/http"
 )
 
+type ListUnifiedIntegrationsSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *ListUnifiedIntegrationsSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type ListUnifiedIntegrationsQueryParamCategories string
 
 const (
