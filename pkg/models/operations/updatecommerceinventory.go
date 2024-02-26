@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type UpdateCommerceInventorySecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *UpdateCommerceInventorySecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type UpdateCommerceInventoryRequest struct {
 	CommerceInventory *shared.CommerceInventory `request:"mediaType=application/json"`
 	// ID of the connection

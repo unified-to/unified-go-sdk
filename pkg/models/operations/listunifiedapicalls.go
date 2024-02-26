@@ -9,6 +9,17 @@ import (
 	"time"
 )
 
+type ListUnifiedApicallsSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *ListUnifiedApicallsSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type ListUnifiedApicallsRequest struct {
 	// Filter the results to just this integration's API calls
 	ConnectionID *string `queryParam:"style=form,explode=true,name=connection_id"`

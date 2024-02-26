@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 7bd6e19ec36f960e56c7d65cda36a422
+  docChecksum: 7b981c3199081a2591af224351cdfba2
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.269.0
-  releaseVersion: 0.12.6
-  configChecksum: e4d675a7bb400da30ef3fe8d448ee75d
+  generationVersion: 2.272.4
+  releaseVersion: 0.13.0
+  configChecksum: 024fb06893d650e5fab1b34f73bf2a23
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -14,9 +14,10 @@ management:
 features:
   go:
     constsAndDefaults: 0.1.3
-    core: 3.4.1
-    globalSecurity: 2.82.6
+    core: 3.4.3
+    globalSecurity: 2.82.7
     globalServerURLs: 2.82.1
+    methodSecurity: 2.82.2
 generatedFiles:
   - accounting.go
   - account.go
@@ -417,462 +418,686 @@ generatedFiles:
   - /pkg/models/shared/propertyintegrationsupportwebhookevents.go
   - /pkg/models/shared/propertyintegrationcategories.go
   - /pkg/models/shared/issue.go
-  - /pkg/models/shared/security.go
+  - docs/pkg/models/operations/createaccountingaccountsecurity.md
   - docs/pkg/models/operations/createaccountingaccountrequest.md
   - docs/pkg/models/operations/createaccountingaccountresponse.md
+  - docs/pkg/models/operations/createaccountingcontactsecurity.md
   - docs/pkg/models/operations/createaccountingcontactrequest.md
   - docs/pkg/models/operations/createaccountingcontactresponse.md
+  - docs/pkg/models/operations/createaccountinginvoicesecurity.md
   - docs/pkg/models/operations/createaccountinginvoicerequest.md
   - docs/pkg/models/operations/createaccountinginvoiceresponse.md
+  - docs/pkg/models/operations/createaccountingpaymentsecurity.md
   - docs/pkg/models/operations/createaccountingpaymentrequest.md
   - docs/pkg/models/operations/createaccountingpaymentresponse.md
+  - docs/pkg/models/operations/createaccountingtaxratesecurity.md
   - docs/pkg/models/operations/createaccountingtaxraterequest.md
   - docs/pkg/models/operations/createaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/createaccountingtransactionsecurity.md
   - docs/pkg/models/operations/createaccountingtransactionrequest.md
   - docs/pkg/models/operations/createaccountingtransactionresponse.md
+  - docs/pkg/models/operations/getaccountingaccountsecurity.md
   - docs/pkg/models/operations/getaccountingaccountrequest.md
   - docs/pkg/models/operations/getaccountingaccountresponse.md
+  - docs/pkg/models/operations/getaccountingcontactsecurity.md
   - docs/pkg/models/operations/getaccountingcontactrequest.md
   - docs/pkg/models/operations/getaccountingcontactresponse.md
+  - docs/pkg/models/operations/getaccountinginvoicesecurity.md
   - docs/pkg/models/operations/getaccountinginvoicerequest.md
   - docs/pkg/models/operations/getaccountinginvoiceresponse.md
+  - docs/pkg/models/operations/getaccountingorganizationsecurity.md
   - docs/pkg/models/operations/getaccountingorganizationrequest.md
   - docs/pkg/models/operations/getaccountingorganizationresponse.md
+  - docs/pkg/models/operations/getaccountingpaymentsecurity.md
   - docs/pkg/models/operations/getaccountingpaymentrequest.md
   - docs/pkg/models/operations/getaccountingpaymentresponse.md
+  - docs/pkg/models/operations/getaccountingpayoutsecurity.md
   - docs/pkg/models/operations/getaccountingpayoutrequest.md
   - docs/pkg/models/operations/getaccountingpayoutresponse.md
+  - docs/pkg/models/operations/getaccountingrefundsecurity.md
   - docs/pkg/models/operations/getaccountingrefundrequest.md
   - docs/pkg/models/operations/getaccountingrefundresponse.md
+  - docs/pkg/models/operations/getaccountingtaxratesecurity.md
   - docs/pkg/models/operations/getaccountingtaxraterequest.md
   - docs/pkg/models/operations/getaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/getaccountingtransactionsecurity.md
   - docs/pkg/models/operations/getaccountingtransactionrequest.md
   - docs/pkg/models/operations/getaccountingtransactionresponse.md
+  - docs/pkg/models/operations/listaccountingaccountssecurity.md
   - docs/pkg/models/operations/listaccountingaccountsrequest.md
   - docs/pkg/models/operations/listaccountingaccountsresponse.md
+  - docs/pkg/models/operations/listaccountingcontactssecurity.md
   - docs/pkg/models/operations/listaccountingcontactsrequest.md
   - docs/pkg/models/operations/listaccountingcontactsresponse.md
+  - docs/pkg/models/operations/listaccountinginvoicessecurity.md
   - docs/pkg/models/operations/listaccountinginvoicesrequest.md
   - docs/pkg/models/operations/listaccountinginvoicesresponse.md
+  - docs/pkg/models/operations/listaccountingorganizationssecurity.md
   - docs/pkg/models/operations/listaccountingorganizationsrequest.md
   - docs/pkg/models/operations/listaccountingorganizationsresponse.md
+  - docs/pkg/models/operations/listaccountingpaymentssecurity.md
   - docs/pkg/models/operations/listaccountingpaymentsrequest.md
   - docs/pkg/models/operations/listaccountingpaymentsresponse.md
+  - docs/pkg/models/operations/listaccountingpayoutssecurity.md
   - docs/pkg/models/operations/listaccountingpayoutsrequest.md
   - docs/pkg/models/operations/listaccountingpayoutsresponse.md
+  - docs/pkg/models/operations/listaccountingrefundssecurity.md
   - docs/pkg/models/operations/listaccountingrefundsrequest.md
   - docs/pkg/models/operations/listaccountingrefundsresponse.md
+  - docs/pkg/models/operations/listaccountingtaxratessecurity.md
   - docs/pkg/models/operations/listaccountingtaxratesrequest.md
   - docs/pkg/models/operations/listaccountingtaxratesresponse.md
+  - docs/pkg/models/operations/listaccountingtransactionssecurity.md
   - docs/pkg/models/operations/listaccountingtransactionsrequest.md
   - docs/pkg/models/operations/listaccountingtransactionsresponse.md
+  - docs/pkg/models/operations/patchaccountingaccountsecurity.md
   - docs/pkg/models/operations/patchaccountingaccountrequest.md
   - docs/pkg/models/operations/patchaccountingaccountresponse.md
+  - docs/pkg/models/operations/patchaccountingcontactsecurity.md
   - docs/pkg/models/operations/patchaccountingcontactrequest.md
   - docs/pkg/models/operations/patchaccountingcontactresponse.md
+  - docs/pkg/models/operations/patchaccountinginvoicesecurity.md
   - docs/pkg/models/operations/patchaccountinginvoicerequest.md
   - docs/pkg/models/operations/patchaccountinginvoiceresponse.md
+  - docs/pkg/models/operations/patchaccountingpaymentsecurity.md
   - docs/pkg/models/operations/patchaccountingpaymentrequest.md
   - docs/pkg/models/operations/patchaccountingpaymentresponse.md
+  - docs/pkg/models/operations/patchaccountingtaxratesecurity.md
   - docs/pkg/models/operations/patchaccountingtaxraterequest.md
   - docs/pkg/models/operations/patchaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/patchaccountingtransactionsecurity.md
   - docs/pkg/models/operations/patchaccountingtransactionrequest.md
   - docs/pkg/models/operations/patchaccountingtransactionresponse.md
+  - docs/pkg/models/operations/removeaccountingaccountsecurity.md
   - docs/pkg/models/operations/removeaccountingaccountrequest.md
   - docs/pkg/models/operations/removeaccountingaccountresponse.md
+  - docs/pkg/models/operations/removeaccountingcontactsecurity.md
   - docs/pkg/models/operations/removeaccountingcontactrequest.md
   - docs/pkg/models/operations/removeaccountingcontactresponse.md
+  - docs/pkg/models/operations/removeaccountinginvoicesecurity.md
   - docs/pkg/models/operations/removeaccountinginvoicerequest.md
   - docs/pkg/models/operations/removeaccountinginvoiceresponse.md
+  - docs/pkg/models/operations/removeaccountingpaymentsecurity.md
   - docs/pkg/models/operations/removeaccountingpaymentrequest.md
   - docs/pkg/models/operations/removeaccountingpaymentresponse.md
+  - docs/pkg/models/operations/removeaccountingtaxratesecurity.md
   - docs/pkg/models/operations/removeaccountingtaxraterequest.md
   - docs/pkg/models/operations/removeaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/removeaccountingtransactionsecurity.md
   - docs/pkg/models/operations/removeaccountingtransactionrequest.md
   - docs/pkg/models/operations/removeaccountingtransactionresponse.md
+  - docs/pkg/models/operations/updateaccountingaccountsecurity.md
   - docs/pkg/models/operations/updateaccountingaccountrequest.md
   - docs/pkg/models/operations/updateaccountingaccountresponse.md
+  - docs/pkg/models/operations/updateaccountingcontactsecurity.md
   - docs/pkg/models/operations/updateaccountingcontactrequest.md
   - docs/pkg/models/operations/updateaccountingcontactresponse.md
+  - docs/pkg/models/operations/updateaccountinginvoicesecurity.md
   - docs/pkg/models/operations/updateaccountinginvoicerequest.md
   - docs/pkg/models/operations/updateaccountinginvoiceresponse.md
+  - docs/pkg/models/operations/updateaccountingpaymentsecurity.md
   - docs/pkg/models/operations/updateaccountingpaymentrequest.md
   - docs/pkg/models/operations/updateaccountingpaymentresponse.md
+  - docs/pkg/models/operations/updateaccountingtaxratesecurity.md
   - docs/pkg/models/operations/updateaccountingtaxraterequest.md
   - docs/pkg/models/operations/updateaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/updateaccountingtransactionsecurity.md
   - docs/pkg/models/operations/updateaccountingtransactionrequest.md
   - docs/pkg/models/operations/updateaccountingtransactionresponse.md
+  - docs/pkg/models/operations/createcrmcontactsecurity.md
   - docs/pkg/models/operations/createcrmcontactrequest.md
   - docs/pkg/models/operations/createcrmcontactresponse.md
+  - docs/pkg/models/operations/createuccontactsecurity.md
   - docs/pkg/models/operations/createuccontactrequest.md
   - docs/pkg/models/operations/createuccontactresponse.md
+  - docs/pkg/models/operations/getcrmcontactsecurity.md
   - docs/pkg/models/operations/getcrmcontactrequest.md
   - docs/pkg/models/operations/getcrmcontactresponse.md
+  - docs/pkg/models/operations/getuccontactsecurity.md
   - docs/pkg/models/operations/getuccontactrequest.md
   - docs/pkg/models/operations/getuccontactresponse.md
+  - docs/pkg/models/operations/listcrmcontactssecurity.md
   - docs/pkg/models/operations/listcrmcontactsrequest.md
   - docs/pkg/models/operations/listcrmcontactsresponse.md
+  - docs/pkg/models/operations/listuccontactssecurity.md
   - docs/pkg/models/operations/listuccontactsrequest.md
   - docs/pkg/models/operations/listuccontactsresponse.md
+  - docs/pkg/models/operations/patchcrmcontactsecurity.md
   - docs/pkg/models/operations/patchcrmcontactrequest.md
   - docs/pkg/models/operations/patchcrmcontactresponse.md
+  - docs/pkg/models/operations/patchuccontactsecurity.md
   - docs/pkg/models/operations/patchuccontactrequest.md
   - docs/pkg/models/operations/patchuccontactresponse.md
+  - docs/pkg/models/operations/removecrmcontactsecurity.md
   - docs/pkg/models/operations/removecrmcontactrequest.md
   - docs/pkg/models/operations/removecrmcontactresponse.md
+  - docs/pkg/models/operations/removeuccontactsecurity.md
   - docs/pkg/models/operations/removeuccontactrequest.md
   - docs/pkg/models/operations/removeuccontactresponse.md
+  - docs/pkg/models/operations/updatecrmcontactsecurity.md
   - docs/pkg/models/operations/updatecrmcontactrequest.md
   - docs/pkg/models/operations/updatecrmcontactresponse.md
+  - docs/pkg/models/operations/updateuccontactsecurity.md
   - docs/pkg/models/operations/updateuccontactrequest.md
   - docs/pkg/models/operations/updateuccontactresponse.md
+  - docs/pkg/models/operations/createatsactivitysecurity.md
   - docs/pkg/models/operations/createatsactivityrequest.md
   - docs/pkg/models/operations/createatsactivityresponse.md
+  - docs/pkg/models/operations/createatsapplicationsecurity.md
   - docs/pkg/models/operations/createatsapplicationrequest.md
   - docs/pkg/models/operations/createatsapplicationresponse.md
+  - docs/pkg/models/operations/createatscandidatesecurity.md
   - docs/pkg/models/operations/createatscandidaterequest.md
   - docs/pkg/models/operations/createatscandidateresponse.md
+  - docs/pkg/models/operations/createatsdocumentsecurity.md
   - docs/pkg/models/operations/createatsdocumentrequest.md
   - docs/pkg/models/operations/createatsdocumentresponse.md
+  - docs/pkg/models/operations/createatsinterviewsecurity.md
   - docs/pkg/models/operations/createatsinterviewrequest.md
   - docs/pkg/models/operations/createatsinterviewresponse.md
+  - docs/pkg/models/operations/createatsjobsecurity.md
   - docs/pkg/models/operations/createatsjobrequest.md
   - docs/pkg/models/operations/createatsjobresponse.md
+  - docs/pkg/models/operations/createatsscorecardsecurity.md
   - docs/pkg/models/operations/createatsscorecardrequest.md
   - docs/pkg/models/operations/createatsscorecardresponse.md
+  - docs/pkg/models/operations/getatsactivitysecurity.md
   - docs/pkg/models/operations/getatsactivityrequest.md
   - docs/pkg/models/operations/getatsactivityresponse.md
+  - docs/pkg/models/operations/getatsapplicationsecurity.md
   - docs/pkg/models/operations/getatsapplicationrequest.md
   - docs/pkg/models/operations/getatsapplicationresponse.md
+  - docs/pkg/models/operations/getatscandidatesecurity.md
   - docs/pkg/models/operations/getatscandidaterequest.md
   - docs/pkg/models/operations/getatscandidateresponse.md
+  - docs/pkg/models/operations/getatscompanysecurity.md
   - docs/pkg/models/operations/getatscompanyrequest.md
   - docs/pkg/models/operations/getatscompanyresponse.md
+  - docs/pkg/models/operations/getatsdocumentsecurity.md
   - docs/pkg/models/operations/getatsdocumentrequest.md
   - docs/pkg/models/operations/getatsdocumentresponse.md
+  - docs/pkg/models/operations/getatsinterviewsecurity.md
   - docs/pkg/models/operations/getatsinterviewrequest.md
   - docs/pkg/models/operations/getatsinterviewresponse.md
+  - docs/pkg/models/operations/getatsjobsecurity.md
   - docs/pkg/models/operations/getatsjobrequest.md
   - docs/pkg/models/operations/getatsjobresponse.md
+  - docs/pkg/models/operations/getatsscorecardsecurity.md
   - docs/pkg/models/operations/getatsscorecardrequest.md
   - docs/pkg/models/operations/getatsscorecardresponse.md
+  - docs/pkg/models/operations/listatsactivitiessecurity.md
   - docs/pkg/models/operations/listatsactivitiesrequest.md
   - docs/pkg/models/operations/listatsactivitiesresponse.md
+  - docs/pkg/models/operations/listatsapplicationssecurity.md
   - docs/pkg/models/operations/listatsapplicationsrequest.md
   - docs/pkg/models/operations/listatsapplicationsresponse.md
+  - docs/pkg/models/operations/listatsapplicationstatusessecurity.md
   - docs/pkg/models/operations/listatsapplicationstatusesrequest.md
   - docs/pkg/models/operations/listatsapplicationstatusesresponse.md
+  - docs/pkg/models/operations/listatscandidatessecurity.md
   - docs/pkg/models/operations/listatscandidatesrequest.md
   - docs/pkg/models/operations/listatscandidatesresponse.md
+  - docs/pkg/models/operations/listatscompaniessecurity.md
   - docs/pkg/models/operations/listatscompaniesrequest.md
   - docs/pkg/models/operations/listatscompaniesresponse.md
+  - docs/pkg/models/operations/listatsdocumentssecurity.md
   - docs/pkg/models/operations/listatsdocumentsrequest.md
   - docs/pkg/models/operations/listatsdocumentsresponse.md
+  - docs/pkg/models/operations/listatsinterviewssecurity.md
   - docs/pkg/models/operations/listatsinterviewsrequest.md
   - docs/pkg/models/operations/listatsinterviewsresponse.md
+  - docs/pkg/models/operations/listatsjobssecurity.md
   - docs/pkg/models/operations/listatsjobsrequest.md
   - docs/pkg/models/operations/listatsjobsresponse.md
+  - docs/pkg/models/operations/listatsscorecardssecurity.md
   - docs/pkg/models/operations/listatsscorecardsrequest.md
   - docs/pkg/models/operations/listatsscorecardsresponse.md
+  - docs/pkg/models/operations/patchatsactivitysecurity.md
   - docs/pkg/models/operations/patchatsactivityrequest.md
   - docs/pkg/models/operations/patchatsactivityresponse.md
+  - docs/pkg/models/operations/patchatsapplicationsecurity.md
   - docs/pkg/models/operations/patchatsapplicationrequest.md
   - docs/pkg/models/operations/patchatsapplicationresponse.md
+  - docs/pkg/models/operations/patchatscandidatesecurity.md
   - docs/pkg/models/operations/patchatscandidaterequest.md
   - docs/pkg/models/operations/patchatscandidateresponse.md
+  - docs/pkg/models/operations/patchatsdocumentsecurity.md
   - docs/pkg/models/operations/patchatsdocumentrequest.md
   - docs/pkg/models/operations/patchatsdocumentresponse.md
+  - docs/pkg/models/operations/patchatsinterviewsecurity.md
   - docs/pkg/models/operations/patchatsinterviewrequest.md
   - docs/pkg/models/operations/patchatsinterviewresponse.md
+  - docs/pkg/models/operations/patchatsjobsecurity.md
   - docs/pkg/models/operations/patchatsjobrequest.md
   - docs/pkg/models/operations/patchatsjobresponse.md
+  - docs/pkg/models/operations/patchatsscorecardsecurity.md
   - docs/pkg/models/operations/patchatsscorecardrequest.md
   - docs/pkg/models/operations/patchatsscorecardresponse.md
+  - docs/pkg/models/operations/removeatsactivitysecurity.md
   - docs/pkg/models/operations/removeatsactivityrequest.md
   - docs/pkg/models/operations/removeatsactivityresponse.md
+  - docs/pkg/models/operations/removeatsapplicationsecurity.md
   - docs/pkg/models/operations/removeatsapplicationrequest.md
   - docs/pkg/models/operations/removeatsapplicationresponse.md
+  - docs/pkg/models/operations/removeatscandidatesecurity.md
   - docs/pkg/models/operations/removeatscandidaterequest.md
   - docs/pkg/models/operations/removeatscandidateresponse.md
+  - docs/pkg/models/operations/removeatsdocumentsecurity.md
   - docs/pkg/models/operations/removeatsdocumentrequest.md
   - docs/pkg/models/operations/removeatsdocumentresponse.md
+  - docs/pkg/models/operations/removeatsinterviewsecurity.md
   - docs/pkg/models/operations/removeatsinterviewrequest.md
   - docs/pkg/models/operations/removeatsinterviewresponse.md
+  - docs/pkg/models/operations/removeatsjobsecurity.md
   - docs/pkg/models/operations/removeatsjobrequest.md
   - docs/pkg/models/operations/removeatsjobresponse.md
+  - docs/pkg/models/operations/removeatsscorecardsecurity.md
   - docs/pkg/models/operations/removeatsscorecardrequest.md
   - docs/pkg/models/operations/removeatsscorecardresponse.md
+  - docs/pkg/models/operations/updateatsactivitysecurity.md
   - docs/pkg/models/operations/updateatsactivityrequest.md
   - docs/pkg/models/operations/updateatsactivityresponse.md
+  - docs/pkg/models/operations/updateatsapplicationsecurity.md
   - docs/pkg/models/operations/updateatsapplicationrequest.md
   - docs/pkg/models/operations/updateatsapplicationresponse.md
+  - docs/pkg/models/operations/updateatscandidatesecurity.md
   - docs/pkg/models/operations/updateatscandidaterequest.md
   - docs/pkg/models/operations/updateatscandidateresponse.md
+  - docs/pkg/models/operations/updateatsdocumentsecurity.md
   - docs/pkg/models/operations/updateatsdocumentrequest.md
   - docs/pkg/models/operations/updateatsdocumentresponse.md
+  - docs/pkg/models/operations/updateatsinterviewsecurity.md
   - docs/pkg/models/operations/updateatsinterviewrequest.md
   - docs/pkg/models/operations/updateatsinterviewresponse.md
+  - docs/pkg/models/operations/updateatsjobsecurity.md
   - docs/pkg/models/operations/updateatsjobrequest.md
   - docs/pkg/models/operations/updateatsjobresponse.md
+  - docs/pkg/models/operations/updateatsscorecardsecurity.md
   - docs/pkg/models/operations/updateatsscorecardrequest.md
   - docs/pkg/models/operations/updateatsscorecardresponse.md
+  - docs/pkg/models/operations/createcrmcompanysecurity.md
   - docs/pkg/models/operations/createcrmcompanyrequest.md
   - docs/pkg/models/operations/createcrmcompanyresponse.md
+  - docs/pkg/models/operations/getcrmcompanysecurity.md
   - docs/pkg/models/operations/getcrmcompanyrequest.md
   - docs/pkg/models/operations/getcrmcompanyresponse.md
+  - docs/pkg/models/operations/listcrmcompaniessecurity.md
   - docs/pkg/models/operations/listcrmcompaniesrequest.md
   - docs/pkg/models/operations/listcrmcompaniesresponse.md
+  - docs/pkg/models/operations/listenrichcompaniessecurity.md
   - docs/pkg/models/operations/listenrichcompaniesrequest.md
   - docs/pkg/models/operations/listenrichcompaniesresponse.md
+  - docs/pkg/models/operations/patchcrmcompanysecurity.md
   - docs/pkg/models/operations/patchcrmcompanyrequest.md
   - docs/pkg/models/operations/patchcrmcompanyresponse.md
+  - docs/pkg/models/operations/removecrmcompanysecurity.md
   - docs/pkg/models/operations/removecrmcompanyrequest.md
   - docs/pkg/models/operations/removecrmcompanyresponse.md
+  - docs/pkg/models/operations/updatecrmcompanysecurity.md
   - docs/pkg/models/operations/updatecrmcompanyrequest.md
   - docs/pkg/models/operations/updatecrmcompanyresponse.md
+  - docs/pkg/models/operations/createcommercecollectionsecurity.md
   - docs/pkg/models/operations/createcommercecollectionrequest.md
   - docs/pkg/models/operations/createcommercecollectionresponse.md
+  - docs/pkg/models/operations/createcommerceinventorysecurity.md
   - docs/pkg/models/operations/createcommerceinventoryrequest.md
   - docs/pkg/models/operations/createcommerceinventoryresponse.md
+  - docs/pkg/models/operations/createcommerceitemsecurity.md
   - docs/pkg/models/operations/createcommerceitemrequest.md
   - docs/pkg/models/operations/createcommerceitemresponse.md
+  - docs/pkg/models/operations/createcommercelocationsecurity.md
   - docs/pkg/models/operations/createcommercelocationrequest.md
   - docs/pkg/models/operations/createcommercelocationresponse.md
+  - docs/pkg/models/operations/getcommercecollectionsecurity.md
   - docs/pkg/models/operations/getcommercecollectionrequest.md
   - docs/pkg/models/operations/getcommercecollectionresponse.md
+  - docs/pkg/models/operations/getcommerceinventorysecurity.md
   - docs/pkg/models/operations/getcommerceinventoryrequest.md
   - docs/pkg/models/operations/getcommerceinventoryresponse.md
+  - docs/pkg/models/operations/getcommerceitemsecurity.md
   - docs/pkg/models/operations/getcommerceitemrequest.md
   - docs/pkg/models/operations/getcommerceitemresponse.md
+  - docs/pkg/models/operations/getcommercelocationsecurity.md
   - docs/pkg/models/operations/getcommercelocationrequest.md
   - docs/pkg/models/operations/getcommercelocationresponse.md
+  - docs/pkg/models/operations/listcommercecollectionssecurity.md
   - docs/pkg/models/operations/listcommercecollectionsrequest.md
   - docs/pkg/models/operations/listcommercecollectionsresponse.md
+  - docs/pkg/models/operations/listcommerceinventoriessecurity.md
   - docs/pkg/models/operations/listcommerceinventoriesrequest.md
   - docs/pkg/models/operations/listcommerceinventoriesresponse.md
+  - docs/pkg/models/operations/listcommerceitemssecurity.md
   - docs/pkg/models/operations/listcommerceitemsrequest.md
   - docs/pkg/models/operations/listcommerceitemsresponse.md
+  - docs/pkg/models/operations/listcommercelocationssecurity.md
   - docs/pkg/models/operations/listcommercelocationsrequest.md
   - docs/pkg/models/operations/listcommercelocationsresponse.md
+  - docs/pkg/models/operations/patchcommercecollectionsecurity.md
   - docs/pkg/models/operations/patchcommercecollectionrequest.md
   - docs/pkg/models/operations/patchcommercecollectionresponse.md
+  - docs/pkg/models/operations/patchcommerceinventorysecurity.md
   - docs/pkg/models/operations/patchcommerceinventoryrequest.md
   - docs/pkg/models/operations/patchcommerceinventoryresponse.md
+  - docs/pkg/models/operations/patchcommerceitemsecurity.md
   - docs/pkg/models/operations/patchcommerceitemrequest.md
   - docs/pkg/models/operations/patchcommerceitemresponse.md
+  - docs/pkg/models/operations/patchcommercelocationsecurity.md
   - docs/pkg/models/operations/patchcommercelocationrequest.md
   - docs/pkg/models/operations/patchcommercelocationresponse.md
+  - docs/pkg/models/operations/removecommercecollectionsecurity.md
   - docs/pkg/models/operations/removecommercecollectionrequest.md
   - docs/pkg/models/operations/removecommercecollectionresponse.md
+  - docs/pkg/models/operations/removecommerceinventorysecurity.md
   - docs/pkg/models/operations/removecommerceinventoryrequest.md
   - docs/pkg/models/operations/removecommerceinventoryresponse.md
+  - docs/pkg/models/operations/removecommerceitemsecurity.md
   - docs/pkg/models/operations/removecommerceitemrequest.md
   - docs/pkg/models/operations/removecommerceitemresponse.md
+  - docs/pkg/models/operations/removecommercelocationsecurity.md
   - docs/pkg/models/operations/removecommercelocationrequest.md
   - docs/pkg/models/operations/removecommercelocationresponse.md
+  - docs/pkg/models/operations/updatecommercecollectionsecurity.md
   - docs/pkg/models/operations/updatecommercecollectionrequest.md
   - docs/pkg/models/operations/updatecommercecollectionresponse.md
+  - docs/pkg/models/operations/updatecommerceinventorysecurity.md
   - docs/pkg/models/operations/updatecommerceinventoryrequest.md
   - docs/pkg/models/operations/updatecommerceinventoryresponse.md
+  - docs/pkg/models/operations/updatecommerceitemsecurity.md
   - docs/pkg/models/operations/updatecommerceitemrequest.md
   - docs/pkg/models/operations/updatecommerceitemresponse.md
+  - docs/pkg/models/operations/updatecommercelocationsecurity.md
   - docs/pkg/models/operations/updatecommercelocationrequest.md
   - docs/pkg/models/operations/updatecommercelocationresponse.md
+  - docs/pkg/models/operations/createcrmdealsecurity.md
   - docs/pkg/models/operations/createcrmdealrequest.md
   - docs/pkg/models/operations/createcrmdealresponse.md
+  - docs/pkg/models/operations/createcrmeventsecurity.md
   - docs/pkg/models/operations/createcrmeventrequest.md
   - docs/pkg/models/operations/createcrmeventresponse.md
+  - docs/pkg/models/operations/createcrmleadsecurity.md
   - docs/pkg/models/operations/createcrmleadrequest.md
   - docs/pkg/models/operations/createcrmleadresponse.md
+  - docs/pkg/models/operations/createcrmpipelinesecurity.md
   - docs/pkg/models/operations/createcrmpipelinerequest.md
   - docs/pkg/models/operations/createcrmpipelineresponse.md
+  - docs/pkg/models/operations/getcrmdealsecurity.md
   - docs/pkg/models/operations/getcrmdealrequest.md
   - docs/pkg/models/operations/getcrmdealresponse.md
+  - docs/pkg/models/operations/getcrmeventsecurity.md
   - docs/pkg/models/operations/getcrmeventrequest.md
   - docs/pkg/models/operations/getcrmeventresponse.md
+  - docs/pkg/models/operations/getcrmleadsecurity.md
   - docs/pkg/models/operations/getcrmleadrequest.md
   - docs/pkg/models/operations/getcrmleadresponse.md
+  - docs/pkg/models/operations/getcrmpipelinesecurity.md
   - docs/pkg/models/operations/getcrmpipelinerequest.md
   - docs/pkg/models/operations/getcrmpipelineresponse.md
+  - docs/pkg/models/operations/listcrmdealssecurity.md
   - docs/pkg/models/operations/listcrmdealsrequest.md
   - docs/pkg/models/operations/listcrmdealsresponse.md
+  - docs/pkg/models/operations/listcrmeventssecurity.md
   - docs/pkg/models/operations/listcrmeventsrequest.md
   - docs/pkg/models/operations/listcrmeventsresponse.md
+  - docs/pkg/models/operations/listcrmleadssecurity.md
   - docs/pkg/models/operations/listcrmleadsrequest.md
   - docs/pkg/models/operations/listcrmleadsresponse.md
+  - docs/pkg/models/operations/listcrmpipelinessecurity.md
   - docs/pkg/models/operations/listcrmpipelinesrequest.md
   - docs/pkg/models/operations/listcrmpipelinesresponse.md
+  - docs/pkg/models/operations/patchcrmdealsecurity.md
   - docs/pkg/models/operations/patchcrmdealrequest.md
   - docs/pkg/models/operations/patchcrmdealresponse.md
+  - docs/pkg/models/operations/patchcrmeventsecurity.md
   - docs/pkg/models/operations/patchcrmeventrequest.md
   - docs/pkg/models/operations/patchcrmeventresponse.md
+  - docs/pkg/models/operations/patchcrmleadsecurity.md
   - docs/pkg/models/operations/patchcrmleadrequest.md
   - docs/pkg/models/operations/patchcrmleadresponse.md
+  - docs/pkg/models/operations/patchcrmpipelinesecurity.md
   - docs/pkg/models/operations/patchcrmpipelinerequest.md
   - docs/pkg/models/operations/patchcrmpipelineresponse.md
+  - docs/pkg/models/operations/removecrmdealsecurity.md
   - docs/pkg/models/operations/removecrmdealrequest.md
   - docs/pkg/models/operations/removecrmdealresponse.md
+  - docs/pkg/models/operations/removecrmeventsecurity.md
   - docs/pkg/models/operations/removecrmeventrequest.md
   - docs/pkg/models/operations/removecrmeventresponse.md
+  - docs/pkg/models/operations/removecrmleadsecurity.md
   - docs/pkg/models/operations/removecrmleadrequest.md
   - docs/pkg/models/operations/removecrmleadresponse.md
+  - docs/pkg/models/operations/removecrmpipelinesecurity.md
   - docs/pkg/models/operations/removecrmpipelinerequest.md
   - docs/pkg/models/operations/removecrmpipelineresponse.md
+  - docs/pkg/models/operations/updatecrmdealsecurity.md
   - docs/pkg/models/operations/updatecrmdealrequest.md
   - docs/pkg/models/operations/updatecrmdealresponse.md
+  - docs/pkg/models/operations/updatecrmeventsecurity.md
   - docs/pkg/models/operations/updatecrmeventrequest.md
   - docs/pkg/models/operations/updatecrmeventresponse.md
+  - docs/pkg/models/operations/updatecrmleadsecurity.md
   - docs/pkg/models/operations/updatecrmleadrequest.md
   - docs/pkg/models/operations/updatecrmleadresponse.md
+  - docs/pkg/models/operations/updatecrmpipelinesecurity.md
   - docs/pkg/models/operations/updatecrmpipelinerequest.md
   - docs/pkg/models/operations/updatecrmpipelineresponse.md
+  - docs/pkg/models/operations/listenrichpeoplesecurity.md
   - docs/pkg/models/operations/listenrichpeoplerequest.md
   - docs/pkg/models/operations/listenrichpeopleresponse.md
+  - docs/pkg/models/operations/createhrisemployeesecurity.md
   - docs/pkg/models/operations/createhrisemployeerequest.md
   - docs/pkg/models/operations/createhrisemployeeresponse.md
+  - docs/pkg/models/operations/createhrisgroupsecurity.md
   - docs/pkg/models/operations/createhrisgrouprequest.md
   - docs/pkg/models/operations/createhrisgroupresponse.md
+  - docs/pkg/models/operations/gethrisemployeesecurity.md
   - docs/pkg/models/operations/gethrisemployeerequest.md
   - docs/pkg/models/operations/gethrisemployeeresponse.md
+  - docs/pkg/models/operations/gethrisgroupsecurity.md
   - docs/pkg/models/operations/gethrisgrouprequest.md
   - docs/pkg/models/operations/gethrisgroupresponse.md
+  - docs/pkg/models/operations/listhrisemployeessecurity.md
   - docs/pkg/models/operations/listhrisemployeesrequest.md
   - docs/pkg/models/operations/listhrisemployeesresponse.md
+  - docs/pkg/models/operations/listhrisgroupssecurity.md
   - docs/pkg/models/operations/listhrisgroupsrequest.md
   - docs/pkg/models/operations/listhrisgroupsresponse.md
+  - docs/pkg/models/operations/patchhrisemployeesecurity.md
   - docs/pkg/models/operations/patchhrisemployeerequest.md
   - docs/pkg/models/operations/patchhrisemployeeresponse.md
+  - docs/pkg/models/operations/patchhrisgroupsecurity.md
   - docs/pkg/models/operations/patchhrisgrouprequest.md
   - docs/pkg/models/operations/patchhrisgroupresponse.md
+  - docs/pkg/models/operations/removehrisemployeesecurity.md
   - docs/pkg/models/operations/removehrisemployeerequest.md
   - docs/pkg/models/operations/removehrisemployeeresponse.md
+  - docs/pkg/models/operations/removehrisgroupsecurity.md
   - docs/pkg/models/operations/removehrisgrouprequest.md
   - docs/pkg/models/operations/removehrisgroupresponse.md
+  - docs/pkg/models/operations/updatehrisemployeesecurity.md
   - docs/pkg/models/operations/updatehrisemployeerequest.md
   - docs/pkg/models/operations/updatehrisemployeeresponse.md
+  - docs/pkg/models/operations/updatehrisgroupsecurity.md
   - docs/pkg/models/operations/updatehrisgrouprequest.md
   - docs/pkg/models/operations/updatehrisgroupresponse.md
+  - docs/pkg/models/operations/createmartechlistsecurity.md
   - docs/pkg/models/operations/createmartechlistrequest.md
   - docs/pkg/models/operations/createmartechlistresponse.md
+  - docs/pkg/models/operations/createmartechmembersecurity.md
   - docs/pkg/models/operations/createmartechmemberrequest.md
   - docs/pkg/models/operations/createmartechmemberresponse.md
+  - docs/pkg/models/operations/getmartechlistsecurity.md
   - docs/pkg/models/operations/getmartechlistrequest.md
   - docs/pkg/models/operations/getmartechlistresponse.md
+  - docs/pkg/models/operations/getmartechmembersecurity.md
   - docs/pkg/models/operations/getmartechmemberrequest.md
   - docs/pkg/models/operations/getmartechmemberresponse.md
+  - docs/pkg/models/operations/listmartechlistssecurity.md
   - docs/pkg/models/operations/listmartechlistsrequest.md
   - docs/pkg/models/operations/listmartechlistsresponse.md
+  - docs/pkg/models/operations/listmartechmemberssecurity.md
   - docs/pkg/models/operations/listmartechmembersrequest.md
   - docs/pkg/models/operations/listmartechmembersresponse.md
+  - docs/pkg/models/operations/patchmartechlistsecurity.md
   - docs/pkg/models/operations/patchmartechlistrequest.md
   - docs/pkg/models/operations/patchmartechlistresponse.md
+  - docs/pkg/models/operations/patchmartechmembersecurity.md
   - docs/pkg/models/operations/patchmartechmemberrequest.md
   - docs/pkg/models/operations/patchmartechmemberresponse.md
+  - docs/pkg/models/operations/removemartechlistsecurity.md
   - docs/pkg/models/operations/removemartechlistrequest.md
   - docs/pkg/models/operations/removemartechlistresponse.md
+  - docs/pkg/models/operations/removemartechmembersecurity.md
   - docs/pkg/models/operations/removemartechmemberrequest.md
   - docs/pkg/models/operations/removemartechmemberresponse.md
+  - docs/pkg/models/operations/updatemartechlistsecurity.md
   - docs/pkg/models/operations/updatemartechlistrequest.md
   - docs/pkg/models/operations/updatemartechlistresponse.md
+  - docs/pkg/models/operations/updatemartechmembersecurity.md
   - docs/pkg/models/operations/updatemartechmemberrequest.md
   - docs/pkg/models/operations/updatemartechmemberresponse.md
+  - docs/pkg/models/operations/createpassthroughsecurity.md
   - docs/pkg/models/operations/createpassthroughrequest.md
   - docs/pkg/models/operations/createpassthroughresponse.md
+  - docs/pkg/models/operations/listpassthroughssecurity.md
   - docs/pkg/models/operations/listpassthroughsrequest.md
   - docs/pkg/models/operations/listpassthroughsresponse.md
+  - docs/pkg/models/operations/patchpassthroughsecurity.md
   - docs/pkg/models/operations/patchpassthroughrequest.md
   - docs/pkg/models/operations/patchpassthroughresponse.md
+  - docs/pkg/models/operations/removepassthroughsecurity.md
   - docs/pkg/models/operations/removepassthroughrequest.md
   - docs/pkg/models/operations/removepassthroughresponse.md
+  - docs/pkg/models/operations/updatepassthroughsecurity.md
   - docs/pkg/models/operations/updatepassthroughrequest.md
   - docs/pkg/models/operations/updatepassthroughresponse.md
+  - docs/pkg/models/operations/createstoragefilesecurity.md
   - docs/pkg/models/operations/createstoragefilerequest.md
   - docs/pkg/models/operations/createstoragefileresponse.md
+  - docs/pkg/models/operations/getstoragefilesecurity.md
   - docs/pkg/models/operations/getstoragefilerequest.md
   - docs/pkg/models/operations/getstoragefileresponse.md
+  - docs/pkg/models/operations/liststoragefilessecurity.md
   - docs/pkg/models/operations/liststoragefilesrequest.md
   - docs/pkg/models/operations/liststoragefilesresponse.md
+  - docs/pkg/models/operations/patchstoragefilesecurity.md
   - docs/pkg/models/operations/patchstoragefilerequest.md
   - docs/pkg/models/operations/patchstoragefileresponse.md
+  - docs/pkg/models/operations/removestoragefilesecurity.md
   - docs/pkg/models/operations/removestoragefilerequest.md
   - docs/pkg/models/operations/removestoragefileresponse.md
+  - docs/pkg/models/operations/updatestoragefilesecurity.md
   - docs/pkg/models/operations/updatestoragefilerequest.md
   - docs/pkg/models/operations/updatestoragefileresponse.md
+  - docs/pkg/models/operations/createticketingcustomersecurity.md
   - docs/pkg/models/operations/createticketingcustomerrequest.md
   - docs/pkg/models/operations/createticketingcustomerresponse.md
+  - docs/pkg/models/operations/createticketingnotesecurity.md
   - docs/pkg/models/operations/createticketingnoterequest.md
   - docs/pkg/models/operations/createticketingnoteresponse.md
+  - docs/pkg/models/operations/createticketingticketsecurity.md
   - docs/pkg/models/operations/createticketingticketrequest.md
   - docs/pkg/models/operations/createticketingticketresponse.md
+  - docs/pkg/models/operations/getticketingcustomersecurity.md
   - docs/pkg/models/operations/getticketingcustomerrequest.md
   - docs/pkg/models/operations/getticketingcustomerresponse.md
+  - docs/pkg/models/operations/getticketingnotesecurity.md
   - docs/pkg/models/operations/getticketingnoterequest.md
   - docs/pkg/models/operations/getticketingnoteresponse.md
+  - docs/pkg/models/operations/getticketingticketsecurity.md
   - docs/pkg/models/operations/getticketingticketrequest.md
   - docs/pkg/models/operations/getticketingticketresponse.md
+  - docs/pkg/models/operations/listticketingcustomerssecurity.md
   - docs/pkg/models/operations/listticketingcustomersrequest.md
   - docs/pkg/models/operations/listticketingcustomersresponse.md
+  - docs/pkg/models/operations/listticketingnotessecurity.md
   - docs/pkg/models/operations/listticketingnotesrequest.md
   - docs/pkg/models/operations/listticketingnotesresponse.md
+  - docs/pkg/models/operations/listticketingticketssecurity.md
   - docs/pkg/models/operations/listticketingticketsrequest.md
   - docs/pkg/models/operations/listticketingticketsresponse.md
+  - docs/pkg/models/operations/patchticketingcustomersecurity.md
   - docs/pkg/models/operations/patchticketingcustomerrequest.md
   - docs/pkg/models/operations/patchticketingcustomerresponse.md
+  - docs/pkg/models/operations/patchticketingnotesecurity.md
   - docs/pkg/models/operations/patchticketingnoterequest.md
   - docs/pkg/models/operations/patchticketingnoteresponse.md
+  - docs/pkg/models/operations/patchticketingticketsecurity.md
   - docs/pkg/models/operations/patchticketingticketrequest.md
   - docs/pkg/models/operations/patchticketingticketresponse.md
+  - docs/pkg/models/operations/removeticketingcustomersecurity.md
   - docs/pkg/models/operations/removeticketingcustomerrequest.md
   - docs/pkg/models/operations/removeticketingcustomerresponse.md
+  - docs/pkg/models/operations/removeticketingnotesecurity.md
   - docs/pkg/models/operations/removeticketingnoterequest.md
   - docs/pkg/models/operations/removeticketingnoteresponse.md
+  - docs/pkg/models/operations/removeticketingticketsecurity.md
   - docs/pkg/models/operations/removeticketingticketrequest.md
   - docs/pkg/models/operations/removeticketingticketresponse.md
+  - docs/pkg/models/operations/updateticketingcustomersecurity.md
   - docs/pkg/models/operations/updateticketingcustomerrequest.md
   - docs/pkg/models/operations/updateticketingcustomerresponse.md
+  - docs/pkg/models/operations/updateticketingnotesecurity.md
   - docs/pkg/models/operations/updateticketingnoterequest.md
   - docs/pkg/models/operations/updateticketingnoteresponse.md
+  - docs/pkg/models/operations/updateticketingticketsecurity.md
   - docs/pkg/models/operations/updateticketingticketrequest.md
   - docs/pkg/models/operations/updateticketingticketresponse.md
+  - docs/pkg/models/operations/listuccallssecurity.md
   - docs/pkg/models/operations/listuccallsrequest.md
   - docs/pkg/models/operations/listuccallsresponse.md
+  - docs/pkg/models/operations/createunifiedconnectionsecurity.md
   - docs/pkg/models/operations/createunifiedconnectionresponse.md
+  - docs/pkg/models/operations/createunifiedwebhooksecurity.md
   - docs/pkg/models/operations/createunifiedwebhookrequest.md
   - docs/pkg/models/operations/createunifiedwebhookresponse.md
+  - docs/pkg/models/operations/getunifiedapicallsecurity.md
   - docs/pkg/models/operations/getunifiedapicallrequest.md
   - docs/pkg/models/operations/getunifiedapicallresponse.md
+  - docs/pkg/models/operations/getunifiedconnectionsecurity.md
   - docs/pkg/models/operations/getunifiedconnectionrequest.md
   - docs/pkg/models/operations/getunifiedconnectionresponse.md
   - docs/pkg/models/operations/scopes.md
   - docs/pkg/models/operations/getunifiedintegrationauthrequest.md
   - docs/pkg/models/operations/getunifiedintegrationauthresponse.md
+  - docs/pkg/models/operations/getunifiedwebhooksecurity.md
   - docs/pkg/models/operations/getunifiedwebhookrequest.md
   - docs/pkg/models/operations/getunifiedwebhookresponse.md
+  - docs/pkg/models/operations/listunifiedapicallssecurity.md
   - docs/pkg/models/operations/listunifiedapicallsrequest.md
   - docs/pkg/models/operations/listunifiedapicallsresponse.md
+  - docs/pkg/models/operations/listunifiedconnectionssecurity.md
   - docs/pkg/models/operations/categories.md
   - docs/pkg/models/operations/listunifiedconnectionsrequest.md
   - docs/pkg/models/operations/listunifiedconnectionsresponse.md
   - docs/pkg/models/operations/queryparamcategories.md
   - docs/pkg/models/operations/listunifiedintegrationworkspacesrequest.md
   - docs/pkg/models/operations/listunifiedintegrationworkspacesresponse.md
+  - docs/pkg/models/operations/listunifiedintegrationssecurity.md
   - docs/pkg/models/operations/listunifiedintegrationsqueryparamcategories.md
   - docs/pkg/models/operations/listunifiedintegrationsrequest.md
   - docs/pkg/models/operations/listunifiedintegrationsresponse.md
+  - docs/pkg/models/operations/listunifiedissuessecurity.md
   - docs/pkg/models/operations/listunifiedissuesrequest.md
   - docs/pkg/models/operations/listunifiedissuesresponse.md
+  - docs/pkg/models/operations/listunifiedwebhookssecurity.md
   - docs/pkg/models/operations/listunifiedwebhooksrequest.md
   - docs/pkg/models/operations/listunifiedwebhooksresponse.md
+  - docs/pkg/models/operations/patchunifiedconnectionsecurity.md
   - docs/pkg/models/operations/patchunifiedconnectionrequest.md
   - docs/pkg/models/operations/patchunifiedconnectionresponse.md
+  - docs/pkg/models/operations/patchunifiedwebhooktriggersecurity.md
   - docs/pkg/models/operations/patchunifiedwebhooktriggerrequest.md
   - docs/pkg/models/operations/patchunifiedwebhooktriggerresponse.md
+  - docs/pkg/models/operations/removeunifiedconnectionsecurity.md
   - docs/pkg/models/operations/removeunifiedconnectionrequest.md
   - docs/pkg/models/operations/removeunifiedconnectionresponse.md
+  - docs/pkg/models/operations/removeunifiedwebhooksecurity.md
   - docs/pkg/models/operations/removeunifiedwebhookrequest.md
   - docs/pkg/models/operations/removeunifiedwebhookresponse.md
+  - docs/pkg/models/operations/updateunifiedconnectionsecurity.md
   - docs/pkg/models/operations/updateunifiedconnectionrequest.md
   - docs/pkg/models/operations/updateunifiedconnectionresponse.md
+  - docs/pkg/models/operations/updateunifiedwebhooktriggersecurity.md
   - docs/pkg/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/pkg/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/pkg/models/operations/getunifiedintegrationloginrequest.md
@@ -1029,7 +1254,6 @@ generatedFiles:
   - docs/pkg/models/shared/issuestatus.md
   - docs/pkg/models/shared/issuetype.md
   - docs/pkg/models/shared/issue.md
-  - docs/pkg/models/shared/security.md
   - docs/sdks/unifiedto/README.md
   - docs/sdks/accounting/README.md
   - docs/sdks/account/README.md

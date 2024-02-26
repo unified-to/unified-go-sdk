@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type CreateAccountingInvoiceSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *CreateAccountingInvoiceSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type CreateAccountingInvoiceRequest struct {
 	AccountingInvoice *shared.AccountingInvoice `request:"mediaType=application/json"`
 	// ID of the connection

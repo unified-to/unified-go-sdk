@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type CreateCrmPipelineSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *CreateCrmPipelineSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type CreateCrmPipelineRequest struct {
 	CrmPipeline *shared.CrmPipeline `request:"mediaType=application/json"`
 	// ID of the connection

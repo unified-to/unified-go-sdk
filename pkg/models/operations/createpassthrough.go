@@ -6,6 +6,17 @@ import (
 	"net/http"
 )
 
+type CreatePassthroughSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *CreatePassthroughSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type CreatePassthroughRequest struct {
 	// integration-specific payload
 	RequestBody map[string]interface{} `request:"mediaType=application/json"`

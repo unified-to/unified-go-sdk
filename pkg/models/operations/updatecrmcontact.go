@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type UpdateCrmContactSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *UpdateCrmContactSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type UpdateCrmContactRequest struct {
 	// A contact represents a person that optionally is associated with a deal and/or a company
 	CrmContact *shared.CrmContact `request:"mediaType=application/json"`
