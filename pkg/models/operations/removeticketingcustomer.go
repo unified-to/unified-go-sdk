@@ -6,6 +6,17 @@ import (
 	"net/http"
 )
 
+type RemoveTicketingCustomerSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *RemoveTicketingCustomerSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type RemoveTicketingCustomerRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

@@ -20,22 +20,24 @@ Create a group
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.CreateHrisGroupSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Group.CreateHrisGroup(ctx, operations.CreateHrisGroupRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,10 +50,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.CreateHrisGroupRequest](../../pkg/models/operations/createhrisgrouprequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.CreateHrisGroupRequest](../../pkg/models/operations/createhrisgrouprequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `security`                                                                                   | [operations.CreateHrisGroupSecurity](../../pkg/models/operations/createhrisgroupsecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
 
 
 ### Response
@@ -71,23 +74,25 @@ Retrieve a group
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetHrisGroupSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Group.GetHrisGroup(ctx, operations.GetHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -100,10 +105,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetHrisGroupRequest](../../pkg/models/operations/gethrisgrouprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.GetHrisGroupRequest](../../pkg/models/operations/gethrisgrouprequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `security`                                                                             | [operations.GetHrisGroupSecurity](../../pkg/models/operations/gethrisgroupsecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
 
 
 ### Response
@@ -123,22 +129,24 @@ List all groups
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListHrisGroupsSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Group.ListHrisGroups(ctx, operations.ListHrisGroupsRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -151,10 +159,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.ListHrisGroupsRequest](../../pkg/models/operations/listhrisgroupsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.ListHrisGroupsRequest](../../pkg/models/operations/listhrisgroupsrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.ListHrisGroupsSecurity](../../pkg/models/operations/listhrisgroupssecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -174,23 +183,25 @@ Update a group
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.PatchHrisGroupSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Group.PatchHrisGroup(ctx, operations.PatchHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -203,10 +214,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.PatchHrisGroupRequest](../../pkg/models/operations/patchhrisgrouprequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.PatchHrisGroupRequest](../../pkg/models/operations/patchhrisgrouprequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.PatchHrisGroupSecurity](../../pkg/models/operations/patchhrisgroupsecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -226,24 +238,26 @@ Remove a group
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 	"net/http"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.RemoveHrisGroupSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Group.RemoveHrisGroup(ctx, operations.RemoveHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -256,10 +270,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.RemoveHrisGroupRequest](../../pkg/models/operations/removehrisgrouprequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.RemoveHrisGroupRequest](../../pkg/models/operations/removehrisgrouprequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `security`                                                                                   | [operations.RemoveHrisGroupSecurity](../../pkg/models/operations/removehrisgroupsecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
 
 
 ### Response
@@ -279,23 +294,25 @@ Update a group
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.UpdateHrisGroupSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Group.UpdateHrisGroup(ctx, operations.UpdateHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -308,10 +325,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.UpdateHrisGroupRequest](../../pkg/models/operations/updatehrisgrouprequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.UpdateHrisGroupRequest](../../pkg/models/operations/updatehrisgrouprequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `security`                                                                                   | [operations.UpdateHrisGroupSecurity](../../pkg/models/operations/updatehrisgroupsecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
 
 
 ### Response

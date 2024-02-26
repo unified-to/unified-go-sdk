@@ -26,8 +26,12 @@ func newInventory(sdkConfig sdkConfiguration) *Inventory {
 }
 
 // CreateCommerceInventory - Create an inventory
-func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operations.CreateCommerceInventoryRequest) (*operations.CreateCommerceInventoryResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "createCommerceInventory"}
+func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operations.CreateCommerceInventoryRequest, security operations.CreateCommerceInventorySecurity) (*operations.CreateCommerceInventoryResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "createCommerceInventory",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/inventory", request, nil)
@@ -48,12 +52,12 @@ func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operati
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -63,15 +67,15 @@ func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operati
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -114,8 +118,12 @@ func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operati
 }
 
 // GetCommerceInventory - Retrieve an inventory
-func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations.GetCommerceInventoryRequest) (*operations.GetCommerceInventoryResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "getCommerceInventory"}
+func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations.GetCommerceInventoryRequest, security operations.GetCommerceInventorySecurity) (*operations.GetCommerceInventoryResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "getCommerceInventory",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/inventory/{id}", request, nil)
@@ -134,12 +142,12 @@ func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -149,15 +157,15 @@ func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -200,8 +208,12 @@ func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations
 }
 
 // ListCommerceInventories - List all inventories
-func (s *Inventory) ListCommerceInventories(ctx context.Context, request operations.ListCommerceInventoriesRequest) (*operations.ListCommerceInventoriesResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "listCommerceInventories"}
+func (s *Inventory) ListCommerceInventories(ctx context.Context, request operations.ListCommerceInventoriesRequest, security operations.ListCommerceInventoriesSecurity) (*operations.ListCommerceInventoriesResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "listCommerceInventories",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/inventory", request, nil)
@@ -220,12 +232,12 @@ func (s *Inventory) ListCommerceInventories(ctx context.Context, request operati
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -235,15 +247,15 @@ func (s *Inventory) ListCommerceInventories(ctx context.Context, request operati
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -286,8 +298,12 @@ func (s *Inventory) ListCommerceInventories(ctx context.Context, request operati
 }
 
 // PatchCommerceInventory - Update an inventory
-func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operations.PatchCommerceInventoryRequest) (*operations.PatchCommerceInventoryResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "patchCommerceInventory"}
+func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operations.PatchCommerceInventoryRequest, security operations.PatchCommerceInventorySecurity) (*operations.PatchCommerceInventoryResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "patchCommerceInventory",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/inventory/{id}", request, nil)
@@ -308,12 +324,12 @@ func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operatio
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -323,15 +339,15 @@ func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operatio
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -374,8 +390,12 @@ func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operatio
 }
 
 // RemoveCommerceInventory - Remove an inventory
-func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operations.RemoveCommerceInventoryRequest) (*operations.RemoveCommerceInventoryResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "removeCommerceInventory"}
+func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operations.RemoveCommerceInventoryRequest, security operations.RemoveCommerceInventorySecurity) (*operations.RemoveCommerceInventoryResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "removeCommerceInventory",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/inventory/{id}", request, nil)
@@ -390,12 +410,12 @@ func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operati
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -405,15 +425,15 @@ func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operati
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -452,8 +472,12 @@ func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operati
 }
 
 // UpdateCommerceInventory - Update an inventory
-func (s *Inventory) UpdateCommerceInventory(ctx context.Context, request operations.UpdateCommerceInventoryRequest) (*operations.UpdateCommerceInventoryResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "updateCommerceInventory"}
+func (s *Inventory) UpdateCommerceInventory(ctx context.Context, request operations.UpdateCommerceInventoryRequest, security operations.UpdateCommerceInventorySecurity) (*operations.UpdateCommerceInventoryResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "updateCommerceInventory",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/inventory/{id}", request, nil)
@@ -474,12 +498,12 @@ func (s *Inventory) UpdateCommerceInventory(ctx context.Context, request operati
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -489,15 +513,15 @@ func (s *Inventory) UpdateCommerceInventory(ctx context.Context, request operati
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}

@@ -6,19 +6,20 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
 func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-	)
+	s := unifiedgosdk.New()
+
+	operationSecurity := operations.CreateAccountingAccountSecurity{
+		Jwt: "<YOUR_API_KEY_HERE>",
+	}
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
-	})
+	}, operationSecurity)
 	if err != nil {
 		log.Fatal(err)
 	}

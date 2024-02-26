@@ -20,22 +20,24 @@ Create a pipeline
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.CreateCrmPipelineSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Pipeline.CreateCrmPipeline(ctx, operations.CreateCrmPipelineRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,10 +50,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.CreateCrmPipelineRequest](../../pkg/models/operations/createcrmpipelinerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.CreateCrmPipelineRequest](../../pkg/models/operations/createcrmpipelinerequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `security`                                                                                       | [operations.CreateCrmPipelineSecurity](../../pkg/models/operations/createcrmpipelinesecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
 
 
 ### Response
@@ -71,23 +74,25 @@ Retrieve a pipeline
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetCrmPipelineSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Pipeline.GetCrmPipeline(ctx, operations.GetCrmPipelineRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -100,10 +105,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.GetCrmPipelineRequest](../../pkg/models/operations/getcrmpipelinerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.GetCrmPipelineRequest](../../pkg/models/operations/getcrmpipelinerequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.GetCrmPipelineSecurity](../../pkg/models/operations/getcrmpipelinesecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -123,22 +129,24 @@ List all pipelines
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListCrmPipelinesSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Pipeline.ListCrmPipelines(ctx, operations.ListCrmPipelinesRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -151,10 +159,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.ListCrmPipelinesRequest](../../pkg/models/operations/listcrmpipelinesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListCrmPipelinesRequest](../../pkg/models/operations/listcrmpipelinesrequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `security`                                                                                     | [operations.ListCrmPipelinesSecurity](../../pkg/models/operations/listcrmpipelinessecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
 
 
 ### Response
@@ -174,23 +183,25 @@ Update a pipeline
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.PatchCrmPipelineSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Pipeline.PatchCrmPipeline(ctx, operations.PatchCrmPipelineRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -203,10 +214,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.PatchCrmPipelineRequest](../../pkg/models/operations/patchcrmpipelinerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.PatchCrmPipelineRequest](../../pkg/models/operations/patchcrmpipelinerequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `security`                                                                                     | [operations.PatchCrmPipelineSecurity](../../pkg/models/operations/patchcrmpipelinesecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
 
 
 ### Response
@@ -226,24 +238,26 @@ Remove a pipeline
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 	"net/http"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.RemoveCrmPipelineSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Pipeline.RemoveCrmPipeline(ctx, operations.RemoveCrmPipelineRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -256,10 +270,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.RemoveCrmPipelineRequest](../../pkg/models/operations/removecrmpipelinerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.RemoveCrmPipelineRequest](../../pkg/models/operations/removecrmpipelinerequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `security`                                                                                       | [operations.RemoveCrmPipelineSecurity](../../pkg/models/operations/removecrmpipelinesecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
 
 
 ### Response
@@ -279,23 +294,25 @@ Update a pipeline
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.UpdateCrmPipelineSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Pipeline.UpdateCrmPipeline(ctx, operations.UpdateCrmPipelineRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -308,10 +325,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.UpdateCrmPipelineRequest](../../pkg/models/operations/updatecrmpipelinerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.UpdateCrmPipelineRequest](../../pkg/models/operations/updatecrmpipelinerequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `security`                                                                                       | [operations.UpdateCrmPipelineSecurity](../../pkg/models/operations/updatecrmpipelinesecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
 
 
 ### Response

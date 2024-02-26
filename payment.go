@@ -26,8 +26,12 @@ func newPayment(sdkConfig sdkConfiguration) *Payment {
 }
 
 // CreateAccountingPayment - Create a payment
-func (s *Payment) CreateAccountingPayment(ctx context.Context, request operations.CreateAccountingPaymentRequest) (*operations.CreateAccountingPaymentResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "createAccountingPayment"}
+func (s *Payment) CreateAccountingPayment(ctx context.Context, request operations.CreateAccountingPaymentRequest, security operations.CreateAccountingPaymentSecurity) (*operations.CreateAccountingPaymentResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "createAccountingPayment",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment", request, nil)
@@ -48,12 +52,12 @@ func (s *Payment) CreateAccountingPayment(ctx context.Context, request operation
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -63,15 +67,15 @@ func (s *Payment) CreateAccountingPayment(ctx context.Context, request operation
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -114,8 +118,12 @@ func (s *Payment) CreateAccountingPayment(ctx context.Context, request operation
 }
 
 // GetAccountingPayment - Retrieve a payment
-func (s *Payment) GetAccountingPayment(ctx context.Context, request operations.GetAccountingPaymentRequest) (*operations.GetAccountingPaymentResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "getAccountingPayment"}
+func (s *Payment) GetAccountingPayment(ctx context.Context, request operations.GetAccountingPaymentRequest, security operations.GetAccountingPaymentSecurity) (*operations.GetAccountingPaymentResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "getAccountingPayment",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment/{id}", request, nil)
@@ -134,12 +142,12 @@ func (s *Payment) GetAccountingPayment(ctx context.Context, request operations.G
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -149,15 +157,15 @@ func (s *Payment) GetAccountingPayment(ctx context.Context, request operations.G
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -200,8 +208,12 @@ func (s *Payment) GetAccountingPayment(ctx context.Context, request operations.G
 }
 
 // ListAccountingPayments - List all payments
-func (s *Payment) ListAccountingPayments(ctx context.Context, request operations.ListAccountingPaymentsRequest) (*operations.ListAccountingPaymentsResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "listAccountingPayments"}
+func (s *Payment) ListAccountingPayments(ctx context.Context, request operations.ListAccountingPaymentsRequest, security operations.ListAccountingPaymentsSecurity) (*operations.ListAccountingPaymentsResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "listAccountingPayments",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment", request, nil)
@@ -220,12 +232,12 @@ func (s *Payment) ListAccountingPayments(ctx context.Context, request operations
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -235,15 +247,15 @@ func (s *Payment) ListAccountingPayments(ctx context.Context, request operations
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -286,8 +298,12 @@ func (s *Payment) ListAccountingPayments(ctx context.Context, request operations
 }
 
 // PatchAccountingPayment - Update a payment
-func (s *Payment) PatchAccountingPayment(ctx context.Context, request operations.PatchAccountingPaymentRequest) (*operations.PatchAccountingPaymentResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "patchAccountingPayment"}
+func (s *Payment) PatchAccountingPayment(ctx context.Context, request operations.PatchAccountingPaymentRequest, security operations.PatchAccountingPaymentSecurity) (*operations.PatchAccountingPaymentResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "patchAccountingPayment",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment/{id}", request, nil)
@@ -308,12 +324,12 @@ func (s *Payment) PatchAccountingPayment(ctx context.Context, request operations
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -323,15 +339,15 @@ func (s *Payment) PatchAccountingPayment(ctx context.Context, request operations
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -374,8 +390,12 @@ func (s *Payment) PatchAccountingPayment(ctx context.Context, request operations
 }
 
 // RemoveAccountingPayment - Remove a payment
-func (s *Payment) RemoveAccountingPayment(ctx context.Context, request operations.RemoveAccountingPaymentRequest) (*operations.RemoveAccountingPaymentResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "removeAccountingPayment"}
+func (s *Payment) RemoveAccountingPayment(ctx context.Context, request operations.RemoveAccountingPaymentRequest, security operations.RemoveAccountingPaymentSecurity) (*operations.RemoveAccountingPaymentResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "removeAccountingPayment",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment/{id}", request, nil)
@@ -390,12 +410,12 @@ func (s *Payment) RemoveAccountingPayment(ctx context.Context, request operation
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -405,15 +425,15 @@ func (s *Payment) RemoveAccountingPayment(ctx context.Context, request operation
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}
@@ -452,8 +472,12 @@ func (s *Payment) RemoveAccountingPayment(ctx context.Context, request operation
 }
 
 // UpdateAccountingPayment - Update a payment
-func (s *Payment) UpdateAccountingPayment(ctx context.Context, request operations.UpdateAccountingPaymentRequest) (*operations.UpdateAccountingPaymentResponse, error) {
-	hookCtx := hooks.HookContext{OperationID: "updateAccountingPayment"}
+func (s *Payment) UpdateAccountingPayment(ctx context.Context, request operations.UpdateAccountingPaymentRequest, security operations.UpdateAccountingPaymentSecurity) (*operations.UpdateAccountingPaymentResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "updateAccountingPayment",
+		SecuritySource: withSecurity(security),
+	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/payment/{id}", request, nil)
@@ -474,12 +498,12 @@ func (s *Payment) UpdateAccountingPayment(ctx context.Context, request operation
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 	req.Header.Set("Content-Type", reqContentType)
 
-	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{hookCtx}, req)
+	client := utils.ConfigureSecurityClient(s.sdkConfiguration.DefaultClient, withSecurity(security))
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 	if err != nil {
 		return nil, err
 	}
-
-	client := s.sdkConfiguration.SecurityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil || httpRes == nil {
@@ -489,15 +513,15 @@ func (s *Payment) UpdateAccountingPayment(ctx context.Context, request operation
 			err = fmt.Errorf("error sending request: no response")
 		}
 
-		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, nil, err)
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 		return nil, err
 	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{hookCtx}, httpRes, nil)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{hookCtx}, httpRes)
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
 		if err != nil {
 			return nil, err
 		}

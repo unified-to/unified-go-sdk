@@ -20,22 +20,24 @@ Create a job
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.CreateAtsJobSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Job.CreateAtsJob(ctx, operations.CreateAtsJobRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,10 +50,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.CreateAtsJobRequest](../../pkg/models/operations/createatsjobrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.CreateAtsJobRequest](../../pkg/models/operations/createatsjobrequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `security`                                                                             | [operations.CreateAtsJobSecurity](../../pkg/models/operations/createatsjobsecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
 
 
 ### Response
@@ -71,23 +74,25 @@ Retrieve a job
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAtsJobSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Job.GetAtsJob(ctx, operations.GetAtsJobRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -100,10 +105,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.GetAtsJobRequest](../../pkg/models/operations/getatsjobrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
+| `request`                                                                        | [operations.GetAtsJobRequest](../../pkg/models/operations/getatsjobrequest.md)   | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `security`                                                                       | [operations.GetAtsJobSecurity](../../pkg/models/operations/getatsjobsecurity.md) | :heavy_check_mark:                                                               | The security requirements to use for the request.                                |
 
 
 ### Response
@@ -123,22 +129,24 @@ List all jobs
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAtsJobsSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Job.ListAtsJobs(ctx, operations.ListAtsJobsRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -151,10 +159,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.ListAtsJobsRequest](../../pkg/models/operations/listatsjobsrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.ListAtsJobsRequest](../../pkg/models/operations/listatsjobsrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.ListAtsJobsSecurity](../../pkg/models/operations/listatsjobssecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -174,23 +183,25 @@ Update a job
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.PatchAtsJobSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Job.PatchAtsJob(ctx, operations.PatchAtsJobRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -203,10 +214,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.PatchAtsJobRequest](../../pkg/models/operations/patchatsjobrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.PatchAtsJobRequest](../../pkg/models/operations/patchatsjobrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.PatchAtsJobSecurity](../../pkg/models/operations/patchatsjobsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -226,24 +238,26 @@ Remove a job
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 	"net/http"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.RemoveAtsJobSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Job.RemoveAtsJob(ctx, operations.RemoveAtsJobRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -256,10 +270,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.RemoveAtsJobRequest](../../pkg/models/operations/removeatsjobrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.RemoveAtsJobRequest](../../pkg/models/operations/removeatsjobrequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `security`                                                                             | [operations.RemoveAtsJobSecurity](../../pkg/models/operations/removeatsjobsecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
 
 
 ### Response
@@ -279,23 +294,25 @@ Update a job
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.UpdateAtsJobSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Job.UpdateAtsJob(ctx, operations.UpdateAtsJobRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -308,10 +325,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.UpdateAtsJobRequest](../../pkg/models/operations/updateatsjobrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.UpdateAtsJobRequest](../../pkg/models/operations/updateatsjobrequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `security`                                                                             | [operations.UpdateAtsJobSecurity](../../pkg/models/operations/updateatsjobsecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
 
 
 ### Response

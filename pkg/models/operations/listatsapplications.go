@@ -9,6 +9,17 @@ import (
 	"time"
 )
 
+type ListAtsApplicationsSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *ListAtsApplicationsSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type ListAtsApplicationsRequest struct {
 	// The candidate ID to filter results
 	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`

@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type UpdateCommerceLocationSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *UpdateCommerceLocationSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type UpdateCommerceLocationRequest struct {
 	CommerceLocation *shared.CommerceLocation `request:"mediaType=application/json"`
 	// ID of the connection

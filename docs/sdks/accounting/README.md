@@ -56,22 +56,24 @@ Create an account
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.CreateAccountingAccountSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -84,10 +86,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.CreateAccountingAccountRequest](../../pkg/models/operations/createaccountingaccountrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.CreateAccountingAccountRequest](../../pkg/models/operations/createaccountingaccountrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.CreateAccountingAccountSecurity](../../pkg/models/operations/createaccountingaccountsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -107,22 +110,24 @@ Create a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.CreateAccountingContactSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -135,10 +140,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.CreateAccountingContactRequest](../../pkg/models/operations/createaccountingcontactrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.CreateAccountingContactRequest](../../pkg/models/operations/createaccountingcontactrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.CreateAccountingContactSecurity](../../pkg/models/operations/createaccountingcontactsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -158,22 +164,24 @@ Create a invoice
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.CreateAccountingInvoiceSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingInvoice(ctx, operations.CreateAccountingInvoiceRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -186,10 +194,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.CreateAccountingInvoiceRequest](../../pkg/models/operations/createaccountinginvoicerequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.CreateAccountingInvoiceRequest](../../pkg/models/operations/createaccountinginvoicerequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.CreateAccountingInvoiceSecurity](../../pkg/models/operations/createaccountinginvoicesecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -209,22 +218,24 @@ Create a payment
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.CreateAccountingPaymentSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingPayment(ctx, operations.CreateAccountingPaymentRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -237,10 +248,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.CreateAccountingPaymentRequest](../../pkg/models/operations/createaccountingpaymentrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.CreateAccountingPaymentRequest](../../pkg/models/operations/createaccountingpaymentrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.CreateAccountingPaymentSecurity](../../pkg/models/operations/createaccountingpaymentsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -260,22 +272,24 @@ Create a taxrate
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.CreateAccountingTaxrateSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -288,10 +302,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.CreateAccountingTaxrateRequest](../../pkg/models/operations/createaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.CreateAccountingTaxrateRequest](../../pkg/models/operations/createaccountingtaxraterequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.CreateAccountingTaxrateSecurity](../../pkg/models/operations/createaccountingtaxratesecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -311,22 +326,24 @@ Create a transaction
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.CreateAccountingTransactionSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -339,10 +356,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.CreateAccountingTransactionRequest](../../pkg/models/operations/createaccountingtransactionrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.CreateAccountingTransactionRequest](../../pkg/models/operations/createaccountingtransactionrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `security`                                                                                                           | [operations.CreateAccountingTransactionSecurity](../../pkg/models/operations/createaccountingtransactionsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
 
 
 ### Response
@@ -362,23 +380,25 @@ Retrieve an account
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAccountingAccountSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingAccount(ctx, operations.GetAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -391,10 +411,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetAccountingAccountRequest](../../pkg/models/operations/getaccountingaccountrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetAccountingAccountRequest](../../pkg/models/operations/getaccountingaccountrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `security`                                                                                             | [operations.GetAccountingAccountSecurity](../../pkg/models/operations/getaccountingaccountsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
 
 
 ### Response
@@ -414,23 +435,25 @@ Retrieve a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAccountingContactSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingContact(ctx, operations.GetAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -443,10 +466,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetAccountingContactRequest](../../pkg/models/operations/getaccountingcontactrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetAccountingContactRequest](../../pkg/models/operations/getaccountingcontactrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `security`                                                                                             | [operations.GetAccountingContactSecurity](../../pkg/models/operations/getaccountingcontactsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
 
 
 ### Response
@@ -466,23 +490,25 @@ Retrieve a invoice
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAccountingInvoiceSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingInvoice(ctx, operations.GetAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -495,10 +521,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetAccountingInvoiceRequest](../../pkg/models/operations/getaccountinginvoicerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetAccountingInvoiceRequest](../../pkg/models/operations/getaccountinginvoicerequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `security`                                                                                             | [operations.GetAccountingInvoiceSecurity](../../pkg/models/operations/getaccountinginvoicesecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
 
 
 ### Response
@@ -518,23 +545,25 @@ Retrieve an organization
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAccountingOrganizationSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingOrganization(ctx, operations.GetAccountingOrganizationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -547,10 +576,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.GetAccountingOrganizationRequest](../../pkg/models/operations/getaccountingorganizationrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.GetAccountingOrganizationRequest](../../pkg/models/operations/getaccountingorganizationrequest.md)   | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `security`                                                                                                       | [operations.GetAccountingOrganizationSecurity](../../pkg/models/operations/getaccountingorganizationsecurity.md) | :heavy_check_mark:                                                                                               | The security requirements to use for the request.                                                                |
 
 
 ### Response
@@ -570,23 +600,25 @@ Retrieve a payment
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAccountingPaymentSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingPayment(ctx, operations.GetAccountingPaymentRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -599,10 +631,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetAccountingPaymentRequest](../../pkg/models/operations/getaccountingpaymentrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetAccountingPaymentRequest](../../pkg/models/operations/getaccountingpaymentrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `security`                                                                                             | [operations.GetAccountingPaymentSecurity](../../pkg/models/operations/getaccountingpaymentsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
 
 
 ### Response
@@ -622,23 +655,25 @@ Retrieve a payout
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAccountingPayoutSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingPayout(ctx, operations.GetAccountingPayoutRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -651,10 +686,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetAccountingPayoutRequest](../../pkg/models/operations/getaccountingpayoutrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetAccountingPayoutRequest](../../pkg/models/operations/getaccountingpayoutrequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `security`                                                                                           | [operations.GetAccountingPayoutSecurity](../../pkg/models/operations/getaccountingpayoutsecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
 
 
 ### Response
@@ -674,23 +710,25 @@ Retrieve a refund
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAccountingRefundSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingRefund(ctx, operations.GetAccountingRefundRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -703,10 +741,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetAccountingRefundRequest](../../pkg/models/operations/getaccountingrefundrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetAccountingRefundRequest](../../pkg/models/operations/getaccountingrefundrequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `security`                                                                                           | [operations.GetAccountingRefundSecurity](../../pkg/models/operations/getaccountingrefundsecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
 
 
 ### Response
@@ -726,23 +765,25 @@ Retrieve a taxrate
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAccountingTaxrateSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingTaxrate(ctx, operations.GetAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -755,10 +796,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetAccountingTaxrateRequest](../../pkg/models/operations/getaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetAccountingTaxrateRequest](../../pkg/models/operations/getaccountingtaxraterequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `security`                                                                                             | [operations.GetAccountingTaxrateSecurity](../../pkg/models/operations/getaccountingtaxratesecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
 
 
 ### Response
@@ -778,23 +820,25 @@ Retrieve a transaction
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAccountingTransactionSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingTransaction(ctx, operations.GetAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -807,10 +851,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.GetAccountingTransactionRequest](../../pkg/models/operations/getaccountingtransactionrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.GetAccountingTransactionRequest](../../pkg/models/operations/getaccountingtransactionrequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `security`                                                                                                     | [operations.GetAccountingTransactionSecurity](../../pkg/models/operations/getaccountingtransactionsecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
 
 
 ### Response
@@ -830,22 +875,24 @@ List all accounts
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAccountingAccountsSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingAccounts(ctx, operations.ListAccountingAccountsRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -858,10 +905,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListAccountingAccountsRequest](../../pkg/models/operations/listaccountingaccountsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListAccountingAccountsRequest](../../pkg/models/operations/listaccountingaccountsrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.ListAccountingAccountsSecurity](../../pkg/models/operations/listaccountingaccountssecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
 
 
 ### Response
@@ -881,22 +929,24 @@ List all contacts
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAccountingContactsSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingContacts(ctx, operations.ListAccountingContactsRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -909,10 +959,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListAccountingContactsRequest](../../pkg/models/operations/listaccountingcontactsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListAccountingContactsRequest](../../pkg/models/operations/listaccountingcontactsrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.ListAccountingContactsSecurity](../../pkg/models/operations/listaccountingcontactssecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
 
 
 ### Response
@@ -932,22 +983,24 @@ List all invoices
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAccountingInvoicesSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingInvoices(ctx, operations.ListAccountingInvoicesRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -960,10 +1013,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListAccountingInvoicesRequest](../../pkg/models/operations/listaccountinginvoicesrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListAccountingInvoicesRequest](../../pkg/models/operations/listaccountinginvoicesrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.ListAccountingInvoicesSecurity](../../pkg/models/operations/listaccountinginvoicessecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
 
 
 ### Response
@@ -983,22 +1037,24 @@ List all organizations
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAccountingOrganizationsSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingOrganizations(ctx, operations.ListAccountingOrganizationsRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1011,10 +1067,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.ListAccountingOrganizationsRequest](../../pkg/models/operations/listaccountingorganizationsrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.ListAccountingOrganizationsRequest](../../pkg/models/operations/listaccountingorganizationsrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `security`                                                                                                           | [operations.ListAccountingOrganizationsSecurity](../../pkg/models/operations/listaccountingorganizationssecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
 
 
 ### Response
@@ -1034,22 +1091,24 @@ List all payments
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAccountingPaymentsSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingPayments(ctx, operations.ListAccountingPaymentsRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1062,10 +1121,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListAccountingPaymentsRequest](../../pkg/models/operations/listaccountingpaymentsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListAccountingPaymentsRequest](../../pkg/models/operations/listaccountingpaymentsrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.ListAccountingPaymentsSecurity](../../pkg/models/operations/listaccountingpaymentssecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
 
 
 ### Response
@@ -1085,22 +1145,24 @@ List all payouts
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAccountingPayoutsSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingPayouts(ctx, operations.ListAccountingPayoutsRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1113,10 +1175,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.ListAccountingPayoutsRequest](../../pkg/models/operations/listaccountingpayoutsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.ListAccountingPayoutsRequest](../../pkg/models/operations/listaccountingpayoutsrequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `security`                                                                                               | [operations.ListAccountingPayoutsSecurity](../../pkg/models/operations/listaccountingpayoutssecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
 
 
 ### Response
@@ -1136,22 +1199,24 @@ List all refunds
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAccountingRefundsSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingRefunds(ctx, operations.ListAccountingRefundsRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1164,10 +1229,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.ListAccountingRefundsRequest](../../pkg/models/operations/listaccountingrefundsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.ListAccountingRefundsRequest](../../pkg/models/operations/listaccountingrefundsrequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `security`                                                                                               | [operations.ListAccountingRefundsSecurity](../../pkg/models/operations/listaccountingrefundssecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
 
 
 ### Response
@@ -1187,22 +1253,24 @@ List all taxrates
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAccountingTaxratesSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingTaxrates(ctx, operations.ListAccountingTaxratesRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1215,10 +1283,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListAccountingTaxratesRequest](../../pkg/models/operations/listaccountingtaxratesrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListAccountingTaxratesRequest](../../pkg/models/operations/listaccountingtaxratesrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.ListAccountingTaxratesSecurity](../../pkg/models/operations/listaccountingtaxratessecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
 
 
 ### Response
@@ -1238,22 +1307,24 @@ List all transactions
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAccountingTransactionsSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingTransactions(ctx, operations.ListAccountingTransactionsRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1266,10 +1337,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.ListAccountingTransactionsRequest](../../pkg/models/operations/listaccountingtransactionsrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.ListAccountingTransactionsRequest](../../pkg/models/operations/listaccountingtransactionsrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `security`                                                                                                         | [operations.ListAccountingTransactionsSecurity](../../pkg/models/operations/listaccountingtransactionssecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
 
 
 ### Response
@@ -1289,23 +1361,25 @@ Update an account
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.PatchAccountingAccountSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingAccount(ctx, operations.PatchAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1318,10 +1392,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PatchAccountingAccountRequest](../../pkg/models/operations/patchaccountingaccountrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.PatchAccountingAccountRequest](../../pkg/models/operations/patchaccountingaccountrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.PatchAccountingAccountSecurity](../../pkg/models/operations/patchaccountingaccountsecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
 
 
 ### Response
@@ -1341,23 +1416,25 @@ Update a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.PatchAccountingContactSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1370,10 +1447,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PatchAccountingContactRequest](../../pkg/models/operations/patchaccountingcontactrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.PatchAccountingContactRequest](../../pkg/models/operations/patchaccountingcontactrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.PatchAccountingContactSecurity](../../pkg/models/operations/patchaccountingcontactsecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
 
 
 ### Response
@@ -1393,23 +1471,25 @@ Update a invoice
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.PatchAccountingInvoiceSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingInvoice(ctx, operations.PatchAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1422,10 +1502,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PatchAccountingInvoiceRequest](../../pkg/models/operations/patchaccountinginvoicerequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.PatchAccountingInvoiceRequest](../../pkg/models/operations/patchaccountinginvoicerequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.PatchAccountingInvoiceSecurity](../../pkg/models/operations/patchaccountinginvoicesecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
 
 
 ### Response
@@ -1445,23 +1526,25 @@ Update a payment
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.PatchAccountingPaymentSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingPayment(ctx, operations.PatchAccountingPaymentRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1474,10 +1557,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PatchAccountingPaymentRequest](../../pkg/models/operations/patchaccountingpaymentrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.PatchAccountingPaymentRequest](../../pkg/models/operations/patchaccountingpaymentrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.PatchAccountingPaymentSecurity](../../pkg/models/operations/patchaccountingpaymentsecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
 
 
 ### Response
@@ -1497,23 +1581,25 @@ Update a taxrate
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.PatchAccountingTaxrateSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1526,10 +1612,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PatchAccountingTaxrateRequest](../../pkg/models/operations/patchaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.PatchAccountingTaxrateRequest](../../pkg/models/operations/patchaccountingtaxraterequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `security`                                                                                                 | [operations.PatchAccountingTaxrateSecurity](../../pkg/models/operations/patchaccountingtaxratesecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
 
 
 ### Response
@@ -1549,23 +1636,25 @@ Update a transaction
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.PatchAccountingTransactionSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1578,10 +1667,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.PatchAccountingTransactionRequest](../../pkg/models/operations/patchaccountingtransactionrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.PatchAccountingTransactionRequest](../../pkg/models/operations/patchaccountingtransactionrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `security`                                                                                                         | [operations.PatchAccountingTransactionSecurity](../../pkg/models/operations/patchaccountingtransactionsecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
 
 
 ### Response
@@ -1601,24 +1691,26 @@ Remove an account
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 	"net/http"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.RemoveAccountingAccountSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingAccount(ctx, operations.RemoveAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1631,10 +1723,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.RemoveAccountingAccountRequest](../../pkg/models/operations/removeaccountingaccountrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.RemoveAccountingAccountRequest](../../pkg/models/operations/removeaccountingaccountrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.RemoveAccountingAccountSecurity](../../pkg/models/operations/removeaccountingaccountsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -1654,24 +1747,26 @@ Remove a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 	"net/http"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.RemoveAccountingContactSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingContact(ctx, operations.RemoveAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1684,10 +1779,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.RemoveAccountingContactRequest](../../pkg/models/operations/removeaccountingcontactrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.RemoveAccountingContactRequest](../../pkg/models/operations/removeaccountingcontactrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.RemoveAccountingContactSecurity](../../pkg/models/operations/removeaccountingcontactsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -1707,24 +1803,26 @@ Remove a invoice
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 	"net/http"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.RemoveAccountingInvoiceSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingInvoice(ctx, operations.RemoveAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1737,10 +1835,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.RemoveAccountingInvoiceRequest](../../pkg/models/operations/removeaccountinginvoicerequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.RemoveAccountingInvoiceRequest](../../pkg/models/operations/removeaccountinginvoicerequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.RemoveAccountingInvoiceSecurity](../../pkg/models/operations/removeaccountinginvoicesecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -1760,24 +1859,26 @@ Remove a payment
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 	"net/http"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.RemoveAccountingPaymentSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingPayment(ctx, operations.RemoveAccountingPaymentRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1790,10 +1891,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.RemoveAccountingPaymentRequest](../../pkg/models/operations/removeaccountingpaymentrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.RemoveAccountingPaymentRequest](../../pkg/models/operations/removeaccountingpaymentrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.RemoveAccountingPaymentSecurity](../../pkg/models/operations/removeaccountingpaymentsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -1813,24 +1915,26 @@ Remove a taxrate
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 	"net/http"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.RemoveAccountingTaxrateSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingTaxrate(ctx, operations.RemoveAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1843,10 +1947,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.RemoveAccountingTaxrateRequest](../../pkg/models/operations/removeaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.RemoveAccountingTaxrateRequest](../../pkg/models/operations/removeaccountingtaxraterequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.RemoveAccountingTaxrateSecurity](../../pkg/models/operations/removeaccountingtaxratesecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -1866,24 +1971,26 @@ Remove a transaction
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 	"net/http"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.RemoveAccountingTransactionSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingTransaction(ctx, operations.RemoveAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1896,10 +2003,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.RemoveAccountingTransactionRequest](../../pkg/models/operations/removeaccountingtransactionrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.RemoveAccountingTransactionRequest](../../pkg/models/operations/removeaccountingtransactionrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `security`                                                                                                           | [operations.RemoveAccountingTransactionSecurity](../../pkg/models/operations/removeaccountingtransactionsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
 
 
 ### Response
@@ -1919,23 +2027,25 @@ Update an account
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.UpdateAccountingAccountSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingAccount(ctx, operations.UpdateAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -1948,10 +2058,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdateAccountingAccountRequest](../../pkg/models/operations/updateaccountingaccountrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.UpdateAccountingAccountRequest](../../pkg/models/operations/updateaccountingaccountrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.UpdateAccountingAccountSecurity](../../pkg/models/operations/updateaccountingaccountsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -1971,23 +2082,25 @@ Update a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.UpdateAccountingContactSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -2000,10 +2113,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdateAccountingContactRequest](../../pkg/models/operations/updateaccountingcontactrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.UpdateAccountingContactRequest](../../pkg/models/operations/updateaccountingcontactrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.UpdateAccountingContactSecurity](../../pkg/models/operations/updateaccountingcontactsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -2023,23 +2137,25 @@ Update a invoice
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.UpdateAccountingInvoiceSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingInvoice(ctx, operations.UpdateAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -2052,10 +2168,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdateAccountingInvoiceRequest](../../pkg/models/operations/updateaccountinginvoicerequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.UpdateAccountingInvoiceRequest](../../pkg/models/operations/updateaccountinginvoicerequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.UpdateAccountingInvoiceSecurity](../../pkg/models/operations/updateaccountinginvoicesecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -2075,23 +2192,25 @@ Update a payment
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.UpdateAccountingPaymentSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingPayment(ctx, operations.UpdateAccountingPaymentRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -2104,10 +2223,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdateAccountingPaymentRequest](../../pkg/models/operations/updateaccountingpaymentrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.UpdateAccountingPaymentRequest](../../pkg/models/operations/updateaccountingpaymentrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.UpdateAccountingPaymentSecurity](../../pkg/models/operations/updateaccountingpaymentsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -2127,23 +2247,25 @@ Update a taxrate
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.UpdateAccountingTaxrateSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -2156,10 +2278,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdateAccountingTaxrateRequest](../../pkg/models/operations/updateaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.UpdateAccountingTaxrateRequest](../../pkg/models/operations/updateaccountingtaxraterequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [operations.UpdateAccountingTaxrateSecurity](../../pkg/models/operations/updateaccountingtaxratesecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
 
 
 ### Response
@@ -2179,23 +2302,25 @@ Update a transaction
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.UpdateAccountingTransactionSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -2208,10 +2333,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.UpdateAccountingTransactionRequest](../../pkg/models/operations/updateaccountingtransactionrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.UpdateAccountingTransactionRequest](../../pkg/models/operations/updateaccountingtransactionrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `security`                                                                                                           | [operations.UpdateAccountingTransactionSecurity](../../pkg/models/operations/updateaccountingtransactionsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
 
 
 ### Response

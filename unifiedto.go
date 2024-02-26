@@ -3,10 +3,8 @@
 package unifiedgosdk
 
 import (
-	"context"
 	"fmt"
 	"github.com/unified-to/unified-go-sdk/internal/hooks"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
 	"time"
@@ -44,9 +42,9 @@ func Float32(f float32) *float32 { return &f }
 func Float64(f float64) *float64 { return &f }
 
 type sdkConfiguration struct {
-	DefaultClient     HTTPClient
-	SecurityClient    HTTPClient
-	Security          func(context.Context) (interface{}, error)
+	DefaultClient  HTTPClient
+	SecurityClient HTTPClient
+
 	ServerURL         string
 	ServerIndex       int
 	Language          string
@@ -165,29 +163,6 @@ func WithClient(client HTTPClient) SDKOption {
 	}
 }
 
-func withSecurity(security interface{}) func(context.Context) (interface{}, error) {
-	return func(context.Context) (interface{}, error) {
-		return &security, nil
-	}
-}
-
-// WithSecurity configures the SDK to use the provided security details
-func WithSecurity(jwt string) SDKOption {
-	return func(sdk *UnifiedTo) {
-		security := shared.Security{Jwt: &jwt}
-		sdk.sdkConfiguration.Security = withSecurity(&security)
-	}
-}
-
-// WithSecuritySource configures the SDK to invoke the Security Source function on each method call to determine authentication
-func WithSecuritySource(security func(context.Context) (shared.Security, error)) SDKOption {
-	return func(sdk *UnifiedTo) {
-		sdk.sdkConfiguration.Security = func(ctx context.Context) (interface{}, error) {
-			return security(ctx)
-		}
-	}
-}
-
 func WithRetryConfig(retryConfig utils.RetryConfig) SDKOption {
 	return func(sdk *UnifiedTo) {
 		sdk.sdkConfiguration.RetryConfig = &retryConfig
@@ -200,9 +175,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.12.6",
-			GenVersion:        "2.269.0",
-			UserAgent:         "speakeasy-sdk/go 0.12.6 2.269.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.13.0",
+			GenVersion:        "2.272.4",
+			UserAgent:         "speakeasy-sdk/go 0.13.0 2.272.4 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -210,18 +185,20 @@ func New(opts ...SDKOption) *UnifiedTo {
 		opt(sdk)
 	}
 
-	sdk.sdkConfiguration.DefaultClient = sdk.sdkConfiguration.Hooks.ClientInit(sdk.sdkConfiguration.DefaultClient)
-
 	// Use WithClient to override the default client if you would like to customize the timeout
 	if sdk.sdkConfiguration.DefaultClient == nil {
 		sdk.sdkConfiguration.DefaultClient = &http.Client{Timeout: 60 * time.Second}
 	}
+
+	currentServerURL, _ := sdk.sdkConfiguration.GetServerDetails()
+	serverURL := currentServerURL
+	serverURL, sdk.sdkConfiguration.DefaultClient = sdk.sdkConfiguration.Hooks.SDKInit(currentServerURL, sdk.sdkConfiguration.DefaultClient)
+	if serverURL != currentServerURL {
+		sdk.sdkConfiguration.ServerURL = serverURL
+	}
+
 	if sdk.sdkConfiguration.SecurityClient == nil {
-		if sdk.sdkConfiguration.Security != nil {
-			sdk.sdkConfiguration.SecurityClient = utils.ConfigureSecurityClient(sdk.sdkConfiguration.DefaultClient, sdk.sdkConfiguration.Security)
-		} else {
-			sdk.sdkConfiguration.SecurityClient = sdk.sdkConfiguration.DefaultClient
-		}
+		sdk.sdkConfiguration.SecurityClient = sdk.sdkConfiguration.DefaultClient
 	}
 
 	sdk.Accounting = newAccounting(sdk.sdkConfiguration)

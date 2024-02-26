@@ -20,22 +20,24 @@ Create a interview
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.CreateAtsInterviewSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Interview.CreateAtsInterview(ctx, operations.CreateAtsInterviewRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,10 +50,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.CreateAtsInterviewRequest](../../pkg/models/operations/createatsinterviewrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.CreateAtsInterviewRequest](../../pkg/models/operations/createatsinterviewrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `security`                                                                                         | [operations.CreateAtsInterviewSecurity](../../pkg/models/operations/createatsinterviewsecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
 
 
 ### Response
@@ -71,23 +74,25 @@ Retrieve a interview
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.GetAtsInterviewSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Interview.GetAtsInterview(ctx, operations.GetAtsInterviewRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -100,10 +105,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetAtsInterviewRequest](../../pkg/models/operations/getatsinterviewrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetAtsInterviewRequest](../../pkg/models/operations/getatsinterviewrequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `security`                                                                                   | [operations.GetAtsInterviewSecurity](../../pkg/models/operations/getatsinterviewsecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
 
 
 ### Response
@@ -123,22 +129,24 @@ List all interviews
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.ListAtsInterviewsSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Interview.ListAtsInterviews(ctx, operations.ListAtsInterviewsRequest{
         ConnectionID: "<value>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -151,10 +159,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListAtsInterviewsRequest](../../pkg/models/operations/listatsinterviewsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListAtsInterviewsRequest](../../pkg/models/operations/listatsinterviewsrequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `security`                                                                                       | [operations.ListAtsInterviewsSecurity](../../pkg/models/operations/listatsinterviewssecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
 
 
 ### Response
@@ -174,23 +183,25 @@ Update a interview
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.PatchAtsInterviewSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Interview.PatchAtsInterview(ctx, operations.PatchAtsInterviewRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -203,10 +214,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.PatchAtsInterviewRequest](../../pkg/models/operations/patchatsinterviewrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.PatchAtsInterviewRequest](../../pkg/models/operations/patchatsinterviewrequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `security`                                                                                       | [operations.PatchAtsInterviewSecurity](../../pkg/models/operations/patchatsinterviewsecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
 
 
 ### Response
@@ -226,24 +238,26 @@ Remove a interview
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 	"net/http"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.RemoveAtsInterviewSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Interview.RemoveAtsInterview(ctx, operations.RemoveAtsInterviewRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -256,10 +270,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.RemoveAtsInterviewRequest](../../pkg/models/operations/removeatsinterviewrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.RemoveAtsInterviewRequest](../../pkg/models/operations/removeatsinterviewrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `security`                                                                                         | [operations.RemoveAtsInterviewSecurity](../../pkg/models/operations/removeatsinterviewsecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
 
 
 ### Response
@@ -279,23 +294,25 @@ Update a interview
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+    s := unifiedgosdk.New()
+
+
+    operationSecurity := operations.UpdateAtsInterviewSecurity{
+            Jwt: "<YOUR_API_KEY_HERE>",
+        }
 
     ctx := context.Background()
     res, err := s.Interview.UpdateAtsInterview(ctx, operations.UpdateAtsInterviewRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }, operationSecurity)
     if err != nil {
         log.Fatal(err)
     }
@@ -308,10 +325,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateAtsInterviewRequest](../../pkg/models/operations/updateatsinterviewrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.UpdateAtsInterviewRequest](../../pkg/models/operations/updateatsinterviewrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `security`                                                                                         | [operations.UpdateAtsInterviewSecurity](../../pkg/models/operations/updateatsinterviewsecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
 
 
 ### Response

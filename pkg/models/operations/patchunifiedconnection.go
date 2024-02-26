@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+type PatchUnifiedConnectionSecurity struct {
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+}
+
+func (o *PatchUnifiedConnectionSecurity) GetJwt() string {
+	if o == nil {
+		return ""
+	}
+	return o.Jwt
+}
+
 type PatchUnifiedConnectionRequest struct {
 	// A connection represents a specific authentication of an integration.
 	Connection *shared.Connection `request:"mediaType=application/json"`
