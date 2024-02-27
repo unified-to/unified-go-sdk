@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [GetAccountingPayout](#getaccountingpayout) - Retrieve a payout
-* [ListAccountingPayouts](#listaccountingpayouts) - List all payouts
+* [GetPaymentPayout](#getpaymentpayout) - Retrieve a payout
+* [ListPaymentPayouts](#listpaymentpayouts) - List all payouts
 
-## GetAccountingPayout
+## GetPaymentPayout
 
 Retrieve a payout
 
@@ -29,7 +29,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Payout.GetAccountingPayout(ctx, operations.GetAccountingPayoutRequest{
+    res, err := s.Payout.GetPaymentPayout(ctx, operations.GetPaymentPayoutRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     })
@@ -37,7 +37,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingPayout != nil {
+    if res.PaymentPayout != nil {
         // handle response
     }
 }
@@ -45,20 +45,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetAccountingPayoutRequest](../../pkg/models/operations/getaccountingpayoutrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetPaymentPayoutRequest](../../pkg/models/operations/getpaymentpayoutrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[*operations.GetAccountingPayoutResponse](../../pkg/models/operations/getaccountingpayoutresponse.md), error**
+**[*operations.GetPaymentPayoutResponse](../../pkg/models/operations/getpaymentpayoutresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## ListAccountingPayouts
+## ListPaymentPayouts
 
 List all payouts
 
@@ -81,14 +81,14 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Payout.ListAccountingPayouts(ctx, operations.ListAccountingPayoutsRequest{
+    res, err := s.Payout.ListPaymentPayouts(ctx, operations.ListPaymentPayoutsRequest{
         ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AccountingPayouts != nil {
+    if res.PaymentPayouts != nil {
         // handle response
     }
 }
@@ -96,15 +96,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.ListAccountingPayoutsRequest](../../pkg/models/operations/listaccountingpayoutsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListPaymentPayoutsRequest](../../pkg/models/operations/listpaymentpayoutsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[*operations.ListAccountingPayoutsResponse](../../pkg/models/operations/listaccountingpayoutsresponse.md), error**
+**[*operations.ListPaymentPayoutsResponse](../../pkg/models/operations/listpaymentpayoutsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

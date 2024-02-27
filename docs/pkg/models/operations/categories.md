@@ -17,3 +17,4 @@
 | `CategoriesAccounting`  | accounting              |
 | `CategoriesStorage`     | storage                 |
 | `CategoriesCommerce`    | commerce                |
+| `CategoriesPayment`     | payment                 |

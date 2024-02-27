@@ -17,3 +17,4 @@
 | `QueryParamCategoriesAccounting`  | accounting                        |
 | `QueryParamCategoriesStorage`     | storage                           |
 | `QueryParamCategoriesCommerce`    | commerce                          |
+| `QueryParamCategoriesPayment`     | payment                           |

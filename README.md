@@ -57,43 +57,33 @@ func main() {
 * [CreateAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
 * [CreateAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
 * [CreateAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create a invoice
-* [CreateAccountingPayment](docs/sdks/accounting/README.md#createaccountingpayment) - Create a payment
 * [CreateAccountingTaxrate](docs/sdks/accounting/README.md#createaccountingtaxrate) - Create a taxrate
 * [CreateAccountingTransaction](docs/sdks/accounting/README.md#createaccountingtransaction) - Create a transaction
 * [GetAccountingAccount](docs/sdks/accounting/README.md#getaccountingaccount) - Retrieve an account
 * [GetAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [GetAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve a invoice
 * [GetAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
-* [GetAccountingPayment](docs/sdks/accounting/README.md#getaccountingpayment) - Retrieve a payment
-* [GetAccountingPayout](docs/sdks/accounting/README.md#getaccountingpayout) - Retrieve a payout
-* [GetAccountingRefund](docs/sdks/accounting/README.md#getaccountingrefund) - Retrieve a refund
 * [GetAccountingTaxrate](docs/sdks/accounting/README.md#getaccountingtaxrate) - Retrieve a taxrate
 * [GetAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
 * [ListAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
 * [ListAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [ListAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [ListAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
-* [ListAccountingPayments](docs/sdks/accounting/README.md#listaccountingpayments) - List all payments
-* [ListAccountingPayouts](docs/sdks/accounting/README.md#listaccountingpayouts) - List all payouts
-* [ListAccountingRefunds](docs/sdks/accounting/README.md#listaccountingrefunds) - List all refunds
 * [ListAccountingTaxrates](docs/sdks/accounting/README.md#listaccountingtaxrates) - List all taxrates
 * [ListAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
 * [PatchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
 * [PatchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
 * [PatchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update a invoice
-* [PatchAccountingPayment](docs/sdks/accounting/README.md#patchaccountingpayment) - Update a payment
 * [PatchAccountingTaxrate](docs/sdks/accounting/README.md#patchaccountingtaxrate) - Update a taxrate
 * [PatchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
 * [RemoveAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
 * [RemoveAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
 * [RemoveAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove a invoice
-* [RemoveAccountingPayment](docs/sdks/accounting/README.md#removeaccountingpayment) - Remove a payment
 * [RemoveAccountingTaxrate](docs/sdks/accounting/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [RemoveAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
 * [UpdateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
 * [UpdateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
 * [UpdateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update a invoice
-* [UpdateAccountingPayment](docs/sdks/accounting/README.md#updateaccountingpayment) - Update a payment
 * [UpdateAccountingTaxrate](docs/sdks/accounting/README.md#updateaccountingtaxrate) - Update a taxrate
 * [UpdateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
 
@@ -140,25 +130,6 @@ func main() {
 
 * [GetAccountingOrganization](docs/sdks/organization/README.md#getaccountingorganization) - Retrieve an organization
 * [ListAccountingOrganizations](docs/sdks/organization/README.md#listaccountingorganizations) - List all organizations
-
-### [Payment](docs/sdks/payment/README.md)
-
-* [CreateAccountingPayment](docs/sdks/payment/README.md#createaccountingpayment) - Create a payment
-* [GetAccountingPayment](docs/sdks/payment/README.md#getaccountingpayment) - Retrieve a payment
-* [ListAccountingPayments](docs/sdks/payment/README.md#listaccountingpayments) - List all payments
-* [PatchAccountingPayment](docs/sdks/payment/README.md#patchaccountingpayment) - Update a payment
-* [RemoveAccountingPayment](docs/sdks/payment/README.md#removeaccountingpayment) - Remove a payment
-* [UpdateAccountingPayment](docs/sdks/payment/README.md#updateaccountingpayment) - Update a payment
-
-### [Payout](docs/sdks/payout/README.md)
-
-* [GetAccountingPayout](docs/sdks/payout/README.md#getaccountingpayout) - Retrieve a payout
-* [ListAccountingPayouts](docs/sdks/payout/README.md#listaccountingpayouts) - List all payouts
-
-### [Refund](docs/sdks/refund/README.md)
-
-* [GetAccountingRefund](docs/sdks/refund/README.md#getaccountingrefund) - Retrieve a refund
-* [ListAccountingRefunds](docs/sdks/refund/README.md#listaccountingrefunds) - List all refunds
 
 ### [Taxrate](docs/sdks/taxrate/README.md)
 
@@ -525,6 +496,44 @@ func main() {
 * [PatchPassthrough](docs/sdks/passthrough/README.md#patchpassthrough) - Passthrough PUT
 * [RemovePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
 * [UpdatePassthrough](docs/sdks/passthrough/README.md#updatepassthrough) - Passthrough PUT
+
+### [Payment](docs/sdks/payment/README.md)
+
+* [CreatePaymentLink](docs/sdks/payment/README.md#createpaymentlink) - Create a payment link
+* [CreatePaymentPayment](docs/sdks/payment/README.md#createpaymentpayment) - Create a payment
+* [GetPaymentLink](docs/sdks/payment/README.md#getpaymentlink) - Retrieve a payment link
+* [GetPaymentPayment](docs/sdks/payment/README.md#getpaymentpayment) - Retrieve a payment
+* [GetPaymentPayout](docs/sdks/payment/README.md#getpaymentpayout) - Retrieve a payout
+* [GetPaymentRefund](docs/sdks/payment/README.md#getpaymentrefund) - Retrieve a refund
+* [ListPaymentLinks](docs/sdks/payment/README.md#listpaymentlinks) - List all payment links
+* [ListPaymentPayments](docs/sdks/payment/README.md#listpaymentpayments) - List all payments
+* [ListPaymentPayouts](docs/sdks/payment/README.md#listpaymentpayouts) - List all payouts
+* [ListPaymentRefunds](docs/sdks/payment/README.md#listpaymentrefunds) - List all refunds
+* [PatchPaymentLink](docs/sdks/payment/README.md#patchpaymentlink) - Update a payment link
+* [PatchPaymentPayment](docs/sdks/payment/README.md#patchpaymentpayment) - Update a payment
+* [RemovePaymentLink](docs/sdks/payment/README.md#removepaymentlink) - Remove a payment link
+* [RemovePaymentPayment](docs/sdks/payment/README.md#removepaymentpayment) - Remove a payment
+* [UpdatePaymentLink](docs/sdks/payment/README.md#updatepaymentlink) - Update a payment link
+* [UpdatePaymentPayment](docs/sdks/payment/README.md#updatepaymentpayment) - Update a payment
+
+### [Link](docs/sdks/link/README.md)
+
+* [CreatePaymentLink](docs/sdks/link/README.md#createpaymentlink) - Create a payment link
+* [GetPaymentLink](docs/sdks/link/README.md#getpaymentlink) - Retrieve a payment link
+* [ListPaymentLinks](docs/sdks/link/README.md#listpaymentlinks) - List all payment links
+* [PatchPaymentLink](docs/sdks/link/README.md#patchpaymentlink) - Update a payment link
+* [RemovePaymentLink](docs/sdks/link/README.md#removepaymentlink) - Remove a payment link
+* [UpdatePaymentLink](docs/sdks/link/README.md#updatepaymentlink) - Update a payment link
+
+### [Payout](docs/sdks/payout/README.md)
+
+* [GetPaymentPayout](docs/sdks/payout/README.md#getpaymentpayout) - Retrieve a payout
+* [ListPaymentPayouts](docs/sdks/payout/README.md#listpaymentpayouts) - List all payouts
+
+### [Refund](docs/sdks/refund/README.md)
+
+* [GetPaymentRefund](docs/sdks/refund/README.md#getpaymentrefund) - Retrieve a refund
+* [ListPaymentRefunds](docs/sdks/refund/README.md#listpaymentrefunds) - List all refunds
 
 ### [Storage](docs/sdks/storage/README.md)
 

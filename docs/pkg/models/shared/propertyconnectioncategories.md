@@ -17,3 +17,4 @@
 | `PropertyConnectionCategoriesAccounting`  | accounting                                |
 | `PropertyConnectionCategoriesStorage`     | storage                                   |
 | `PropertyConnectionCategoriesCommerce`    | commerce                                  |
+| `PropertyConnectionCategoriesPayment`     | payment                                   |

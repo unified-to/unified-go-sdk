@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [GetAccountingRefund](#getaccountingrefund) - Retrieve a refund
-* [ListAccountingRefunds](#listaccountingrefunds) - List all refunds
+* [GetPaymentRefund](#getpaymentrefund) - Retrieve a refund
+* [ListPaymentRefunds](#listpaymentrefunds) - List all refunds
 
-## GetAccountingRefund
+## GetPaymentRefund
 
 Retrieve a refund
 
@@ -29,7 +29,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Refund.GetAccountingRefund(ctx, operations.GetAccountingRefundRequest{
+    res, err := s.Refund.GetPaymentRefund(ctx, operations.GetPaymentRefundRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     })
@@ -37,7 +37,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountingRefund != nil {
+    if res.PaymentRefund != nil {
         // handle response
     }
 }
@@ -45,20 +45,20 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetAccountingRefundRequest](../../pkg/models/operations/getaccountingrefundrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetPaymentRefundRequest](../../pkg/models/operations/getpaymentrefundrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[*operations.GetAccountingRefundResponse](../../pkg/models/operations/getaccountingrefundresponse.md), error**
+**[*operations.GetPaymentRefundResponse](../../pkg/models/operations/getpaymentrefundresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## ListAccountingRefunds
+## ListPaymentRefunds
 
 List all refunds
 
@@ -81,14 +81,14 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Refund.ListAccountingRefunds(ctx, operations.ListAccountingRefundsRequest{
+    res, err := s.Refund.ListPaymentRefunds(ctx, operations.ListPaymentRefundsRequest{
         ConnectionID: "<value>",
     })
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AccountingRefunds != nil {
+    if res.PaymentRefunds != nil {
         // handle response
     }
 }
@@ -96,15 +96,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.ListAccountingRefundsRequest](../../pkg/models/operations/listaccountingrefundsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListPaymentRefundsRequest](../../pkg/models/operations/listpaymentrefundsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[*operations.ListAccountingRefundsResponse](../../pkg/models/operations/listaccountingrefundsresponse.md), error**
+**[*operations.ListPaymentRefundsResponse](../../pkg/models/operations/listpaymentrefundsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

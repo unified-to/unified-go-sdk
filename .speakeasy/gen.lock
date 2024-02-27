@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 7bd6e19ec36f960e56c7d65cda36a422
+  docChecksum: 035d8051316127eb4999660b4f25f88a
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.269.0
-  releaseVersion: 0.12.6
-  configChecksum: e4d675a7bb400da30ef3fe8d448ee75d
+  generationVersion: 2.272.7
+  releaseVersion: 0.12.7
+  configChecksum: e05fddc3115b4705c2e4fe733d9c35ea
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -14,8 +14,8 @@ management:
 features:
   go:
     constsAndDefaults: 0.1.3
-    core: 3.4.1
-    globalSecurity: 2.82.6
+    core: 3.4.3
+    globalSecurity: 2.82.8
     globalServerURLs: 2.82.1
 generatedFiles:
   - accounting.go
@@ -23,9 +23,6 @@ generatedFiles:
   - contact.go
   - invoice.go
   - organization.go
-  - payment.go
-  - payout.go
-  - refund.go
   - taxrate.go
   - transaction.go
   - ats.go
@@ -57,6 +54,10 @@ generatedFiles:
   - list.go
   - member.go
   - passthrough.go
+  - payment.go
+  - link.go
+  - payout.go
+  - refund.go
   - storage.go
   - file.go
   - ticketing.go
@@ -94,43 +95,33 @@ generatedFiles:
   - /pkg/models/operations/createaccountingaccount.go
   - /pkg/models/operations/createaccountingcontact.go
   - /pkg/models/operations/createaccountinginvoice.go
-  - /pkg/models/operations/createaccountingpayment.go
   - /pkg/models/operations/createaccountingtaxrate.go
   - /pkg/models/operations/createaccountingtransaction.go
   - /pkg/models/operations/getaccountingaccount.go
   - /pkg/models/operations/getaccountingcontact.go
   - /pkg/models/operations/getaccountinginvoice.go
   - /pkg/models/operations/getaccountingorganization.go
-  - /pkg/models/operations/getaccountingpayment.go
-  - /pkg/models/operations/getaccountingpayout.go
-  - /pkg/models/operations/getaccountingrefund.go
   - /pkg/models/operations/getaccountingtaxrate.go
   - /pkg/models/operations/getaccountingtransaction.go
   - /pkg/models/operations/listaccountingaccounts.go
   - /pkg/models/operations/listaccountingcontacts.go
   - /pkg/models/operations/listaccountinginvoices.go
   - /pkg/models/operations/listaccountingorganizations.go
-  - /pkg/models/operations/listaccountingpayments.go
-  - /pkg/models/operations/listaccountingpayouts.go
-  - /pkg/models/operations/listaccountingrefunds.go
   - /pkg/models/operations/listaccountingtaxrates.go
   - /pkg/models/operations/listaccountingtransactions.go
   - /pkg/models/operations/patchaccountingaccount.go
   - /pkg/models/operations/patchaccountingcontact.go
   - /pkg/models/operations/patchaccountinginvoice.go
-  - /pkg/models/operations/patchaccountingpayment.go
   - /pkg/models/operations/patchaccountingtaxrate.go
   - /pkg/models/operations/patchaccountingtransaction.go
   - /pkg/models/operations/removeaccountingaccount.go
   - /pkg/models/operations/removeaccountingcontact.go
   - /pkg/models/operations/removeaccountinginvoice.go
-  - /pkg/models/operations/removeaccountingpayment.go
   - /pkg/models/operations/removeaccountingtaxrate.go
   - /pkg/models/operations/removeaccountingtransaction.go
   - /pkg/models/operations/updateaccountingaccount.go
   - /pkg/models/operations/updateaccountingcontact.go
   - /pkg/models/operations/updateaccountinginvoice.go
-  - /pkg/models/operations/updateaccountingpayment.go
   - /pkg/models/operations/updateaccountingtaxrate.go
   - /pkg/models/operations/updateaccountingtransaction.go
   - /pkg/models/operations/createcrmcontact.go
@@ -275,6 +266,22 @@ generatedFiles:
   - /pkg/models/operations/patchpassthrough.go
   - /pkg/models/operations/removepassthrough.go
   - /pkg/models/operations/updatepassthrough.go
+  - /pkg/models/operations/createpaymentlink.go
+  - /pkg/models/operations/createpaymentpayment.go
+  - /pkg/models/operations/getpaymentlink.go
+  - /pkg/models/operations/getpaymentpayment.go
+  - /pkg/models/operations/getpaymentpayout.go
+  - /pkg/models/operations/getpaymentrefund.go
+  - /pkg/models/operations/listpaymentlinks.go
+  - /pkg/models/operations/listpaymentpayments.go
+  - /pkg/models/operations/listpaymentpayouts.go
+  - /pkg/models/operations/listpaymentrefunds.go
+  - /pkg/models/operations/patchpaymentlink.go
+  - /pkg/models/operations/patchpaymentpayment.go
+  - /pkg/models/operations/removepaymentlink.go
+  - /pkg/models/operations/removepaymentpayment.go
+  - /pkg/models/operations/updatepaymentlink.go
+  - /pkg/models/operations/updatepaymentpayment.go
   - /pkg/models/operations/createstoragefile.go
   - /pkg/models/operations/getstoragefile.go
   - /pkg/models/operations/liststoragefiles.go
@@ -327,14 +334,11 @@ generatedFiles:
   - /pkg/models/shared/propertyaccountingcontactbillingaddress.go
   - /pkg/models/shared/accountinginvoice.go
   - /pkg/models/shared/accountinglineitem.go
-  - /pkg/models/shared/accountingpayment.go
   - /pkg/models/shared/accountingtaxrate.go
   - /pkg/models/shared/accountingtransaction.go
   - /pkg/models/shared/accountingtransactionlineitem.go
   - /pkg/models/shared/accountingorganization.go
   - /pkg/models/shared/propertyaccountingorganizationaddress.go
-  - /pkg/models/shared/accountingpayout.go
-  - /pkg/models/shared/accountingrefund.go
   - /pkg/models/shared/crmcontact.go
   - /pkg/models/shared/crmtelephone.go
   - /pkg/models/shared/crmemail.go
@@ -396,6 +400,11 @@ generatedFiles:
   - /pkg/models/shared/marketinglist.go
   - /pkg/models/shared/marketingmember.go
   - /pkg/models/shared/marketingemail.go
+  - /pkg/models/shared/paymentlink.go
+  - /pkg/models/shared/paymenntlinklineitem.go
+  - /pkg/models/shared/paymentpayment.go
+  - /pkg/models/shared/paymentpayout.go
+  - /pkg/models/shared/paymentrefund.go
   - /pkg/models/shared/storagefile.go
   - /pkg/models/shared/storagepermission.go
   - /pkg/models/shared/propertystoragepermissionroles.go
@@ -424,8 +433,6 @@ generatedFiles:
   - docs/pkg/models/operations/createaccountingcontactresponse.md
   - docs/pkg/models/operations/createaccountinginvoicerequest.md
   - docs/pkg/models/operations/createaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/createaccountingpaymentrequest.md
-  - docs/pkg/models/operations/createaccountingpaymentresponse.md
   - docs/pkg/models/operations/createaccountingtaxraterequest.md
   - docs/pkg/models/operations/createaccountingtaxrateresponse.md
   - docs/pkg/models/operations/createaccountingtransactionrequest.md
@@ -438,12 +445,6 @@ generatedFiles:
   - docs/pkg/models/operations/getaccountinginvoiceresponse.md
   - docs/pkg/models/operations/getaccountingorganizationrequest.md
   - docs/pkg/models/operations/getaccountingorganizationresponse.md
-  - docs/pkg/models/operations/getaccountingpaymentrequest.md
-  - docs/pkg/models/operations/getaccountingpaymentresponse.md
-  - docs/pkg/models/operations/getaccountingpayoutrequest.md
-  - docs/pkg/models/operations/getaccountingpayoutresponse.md
-  - docs/pkg/models/operations/getaccountingrefundrequest.md
-  - docs/pkg/models/operations/getaccountingrefundresponse.md
   - docs/pkg/models/operations/getaccountingtaxraterequest.md
   - docs/pkg/models/operations/getaccountingtaxrateresponse.md
   - docs/pkg/models/operations/getaccountingtransactionrequest.md
@@ -456,12 +457,6 @@ generatedFiles:
   - docs/pkg/models/operations/listaccountinginvoicesresponse.md
   - docs/pkg/models/operations/listaccountingorganizationsrequest.md
   - docs/pkg/models/operations/listaccountingorganizationsresponse.md
-  - docs/pkg/models/operations/listaccountingpaymentsrequest.md
-  - docs/pkg/models/operations/listaccountingpaymentsresponse.md
-  - docs/pkg/models/operations/listaccountingpayoutsrequest.md
-  - docs/pkg/models/operations/listaccountingpayoutsresponse.md
-  - docs/pkg/models/operations/listaccountingrefundsrequest.md
-  - docs/pkg/models/operations/listaccountingrefundsresponse.md
   - docs/pkg/models/operations/listaccountingtaxratesrequest.md
   - docs/pkg/models/operations/listaccountingtaxratesresponse.md
   - docs/pkg/models/operations/listaccountingtransactionsrequest.md
@@ -472,8 +467,6 @@ generatedFiles:
   - docs/pkg/models/operations/patchaccountingcontactresponse.md
   - docs/pkg/models/operations/patchaccountinginvoicerequest.md
   - docs/pkg/models/operations/patchaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/patchaccountingpaymentrequest.md
-  - docs/pkg/models/operations/patchaccountingpaymentresponse.md
   - docs/pkg/models/operations/patchaccountingtaxraterequest.md
   - docs/pkg/models/operations/patchaccountingtaxrateresponse.md
   - docs/pkg/models/operations/patchaccountingtransactionrequest.md
@@ -484,8 +477,6 @@ generatedFiles:
   - docs/pkg/models/operations/removeaccountingcontactresponse.md
   - docs/pkg/models/operations/removeaccountinginvoicerequest.md
   - docs/pkg/models/operations/removeaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/removeaccountingpaymentrequest.md
-  - docs/pkg/models/operations/removeaccountingpaymentresponse.md
   - docs/pkg/models/operations/removeaccountingtaxraterequest.md
   - docs/pkg/models/operations/removeaccountingtaxrateresponse.md
   - docs/pkg/models/operations/removeaccountingtransactionrequest.md
@@ -496,8 +487,6 @@ generatedFiles:
   - docs/pkg/models/operations/updateaccountingcontactresponse.md
   - docs/pkg/models/operations/updateaccountinginvoicerequest.md
   - docs/pkg/models/operations/updateaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/updateaccountingpaymentrequest.md
-  - docs/pkg/models/operations/updateaccountingpaymentresponse.md
   - docs/pkg/models/operations/updateaccountingtaxraterequest.md
   - docs/pkg/models/operations/updateaccountingtaxrateresponse.md
   - docs/pkg/models/operations/updateaccountingtransactionrequest.md
@@ -786,6 +775,38 @@ generatedFiles:
   - docs/pkg/models/operations/removepassthroughresponse.md
   - docs/pkg/models/operations/updatepassthroughrequest.md
   - docs/pkg/models/operations/updatepassthroughresponse.md
+  - docs/pkg/models/operations/createpaymentlinkrequest.md
+  - docs/pkg/models/operations/createpaymentlinkresponse.md
+  - docs/pkg/models/operations/createpaymentpaymentrequest.md
+  - docs/pkg/models/operations/createpaymentpaymentresponse.md
+  - docs/pkg/models/operations/getpaymentlinkrequest.md
+  - docs/pkg/models/operations/getpaymentlinkresponse.md
+  - docs/pkg/models/operations/getpaymentpaymentrequest.md
+  - docs/pkg/models/operations/getpaymentpaymentresponse.md
+  - docs/pkg/models/operations/getpaymentpayoutrequest.md
+  - docs/pkg/models/operations/getpaymentpayoutresponse.md
+  - docs/pkg/models/operations/getpaymentrefundrequest.md
+  - docs/pkg/models/operations/getpaymentrefundresponse.md
+  - docs/pkg/models/operations/listpaymentlinksrequest.md
+  - docs/pkg/models/operations/listpaymentlinksresponse.md
+  - docs/pkg/models/operations/listpaymentpaymentsrequest.md
+  - docs/pkg/models/operations/listpaymentpaymentsresponse.md
+  - docs/pkg/models/operations/listpaymentpayoutsrequest.md
+  - docs/pkg/models/operations/listpaymentpayoutsresponse.md
+  - docs/pkg/models/operations/listpaymentrefundsrequest.md
+  - docs/pkg/models/operations/listpaymentrefundsresponse.md
+  - docs/pkg/models/operations/patchpaymentlinkrequest.md
+  - docs/pkg/models/operations/patchpaymentlinkresponse.md
+  - docs/pkg/models/operations/patchpaymentpaymentrequest.md
+  - docs/pkg/models/operations/patchpaymentpaymentresponse.md
+  - docs/pkg/models/operations/removepaymentlinkrequest.md
+  - docs/pkg/models/operations/removepaymentlinkresponse.md
+  - docs/pkg/models/operations/removepaymentpaymentrequest.md
+  - docs/pkg/models/operations/removepaymentpaymentresponse.md
+  - docs/pkg/models/operations/updatepaymentlinkrequest.md
+  - docs/pkg/models/operations/updatepaymentlinkresponse.md
+  - docs/pkg/models/operations/updatepaymentpaymentrequest.md
+  - docs/pkg/models/operations/updatepaymentpaymentresponse.md
   - docs/pkg/models/operations/createstoragefilerequest.md
   - docs/pkg/models/operations/createstoragefileresponse.md
   - docs/pkg/models/operations/getstoragefilerequest.md
@@ -891,16 +912,11 @@ generatedFiles:
   - docs/pkg/models/shared/accountinginvoicestatus.md
   - docs/pkg/models/shared/accountinginvoice.md
   - docs/pkg/models/shared/accountinglineitem.md
-  - docs/pkg/models/shared/accountingpayment.md
   - docs/pkg/models/shared/accountingtaxrate.md
   - docs/pkg/models/shared/accountingtransaction.md
   - docs/pkg/models/shared/accountingtransactionlineitem.md
   - docs/pkg/models/shared/accountingorganization.md
   - docs/pkg/models/shared/propertyaccountingorganizationaddress.md
-  - docs/pkg/models/shared/accountingpayoutstatus.md
-  - docs/pkg/models/shared/accountingpayout.md
-  - docs/pkg/models/shared/accountingrefundstatus.md
-  - docs/pkg/models/shared/accountingrefund.md
   - docs/pkg/models/shared/crmcontact.md
   - docs/pkg/models/shared/crmtelephonetype.md
   - docs/pkg/models/shared/crmtelephone.md
@@ -996,6 +1012,13 @@ generatedFiles:
   - docs/pkg/models/shared/marketingmember.md
   - docs/pkg/models/shared/marketingemailtype.md
   - docs/pkg/models/shared/marketingemail.md
+  - docs/pkg/models/shared/paymentlink.md
+  - docs/pkg/models/shared/paymenntlinklineitem.md
+  - docs/pkg/models/shared/paymentpayment.md
+  - docs/pkg/models/shared/paymentpayoutstatus.md
+  - docs/pkg/models/shared/paymentpayout.md
+  - docs/pkg/models/shared/paymentrefundstatus.md
+  - docs/pkg/models/shared/paymentrefund.md
   - docs/pkg/models/shared/storagefiletype.md
   - docs/pkg/models/shared/storagefile.md
   - docs/pkg/models/shared/storagepermission.md
@@ -1036,9 +1059,6 @@ generatedFiles:
   - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
   - docs/sdks/organization/README.md
-  - docs/sdks/payment/README.md
-  - docs/sdks/payout/README.md
-  - docs/sdks/refund/README.md
   - docs/sdks/taxrate/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
@@ -1070,6 +1090,10 @@ generatedFiles:
   - docs/sdks/list/README.md
   - docs/sdks/member/README.md
   - docs/sdks/passthrough/README.md
+  - docs/sdks/payment/README.md
+  - docs/sdks/link/README.md
+  - docs/sdks/payout/README.md
+  - docs/sdks/refund/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md

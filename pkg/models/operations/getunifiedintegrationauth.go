@@ -20,13 +20,15 @@ const (
 	ScopesAccountingInvoiceWrite     Scopes = "accounting_invoice_write"
 	ScopesAccountingContactRead      Scopes = "accounting_contact_read"
 	ScopesAccountingContactWrite     Scopes = "accounting_contact_write"
-	ScopesAccountingPaymentRead      Scopes = "accounting_payment_read"
-	ScopesAccountingPaymentWrite     Scopes = "accounting_payment_write"
 	ScopesAccountingTaxrateRead      Scopes = "accounting_taxrate_read"
 	ScopesAccountingTaxrateWrite     Scopes = "accounting_taxrate_write"
 	ScopesAccountingOrganizationRead Scopes = "accounting_organization_read"
-	ScopesAccountingPayoutRead       Scopes = "accounting_payout_read"
-	ScopesAccountingRefundRead       Scopes = "accounting_refund_read"
+	ScopesPaymentPaymentRead         Scopes = "payment_payment_read"
+	ScopesPaymentPaymentWrite        Scopes = "payment_payment_write"
+	ScopesPaymentPayoutRead          Scopes = "payment_payout_read"
+	ScopesPaymentRefundRead          Scopes = "payment_refund_read"
+	ScopesPaymentLinkRead            Scopes = "payment_link_read"
+	ScopesPaymentLinkWrite           Scopes = "payment_link_write"
 	ScopesCommerceItemRead           Scopes = "commerce_item_read"
 	ScopesCommerceItemWrite          Scopes = "commerce_item_write"
 	ScopesCommerceCollectionRead     Scopes = "commerce_collection_read"
@@ -111,19 +113,23 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "accounting_contact_write":
 		fallthrough
-	case "accounting_payment_read":
-		fallthrough
-	case "accounting_payment_write":
-		fallthrough
 	case "accounting_taxrate_read":
 		fallthrough
 	case "accounting_taxrate_write":
 		fallthrough
 	case "accounting_organization_read":
 		fallthrough
-	case "accounting_payout_read":
+	case "payment_payment_read":
 		fallthrough
-	case "accounting_refund_read":
+	case "payment_payment_write":
+		fallthrough
+	case "payment_payout_read":
+		fallthrough
+	case "payment_refund_read":
+		fallthrough
+	case "payment_link_read":
+		fallthrough
+	case "payment_link_write":
 		fallthrough
 	case "commerce_item_read":
 		fallthrough

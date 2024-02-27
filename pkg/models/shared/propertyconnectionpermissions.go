@@ -19,13 +19,15 @@ const (
 	PropertyConnectionPermissionsAccountingInvoiceWrite     PropertyConnectionPermissions = "accounting_invoice_write"
 	PropertyConnectionPermissionsAccountingContactRead      PropertyConnectionPermissions = "accounting_contact_read"
 	PropertyConnectionPermissionsAccountingContactWrite     PropertyConnectionPermissions = "accounting_contact_write"
-	PropertyConnectionPermissionsAccountingPaymentRead      PropertyConnectionPermissions = "accounting_payment_read"
-	PropertyConnectionPermissionsAccountingPaymentWrite     PropertyConnectionPermissions = "accounting_payment_write"
 	PropertyConnectionPermissionsAccountingTaxrateRead      PropertyConnectionPermissions = "accounting_taxrate_read"
 	PropertyConnectionPermissionsAccountingTaxrateWrite     PropertyConnectionPermissions = "accounting_taxrate_write"
 	PropertyConnectionPermissionsAccountingOrganizationRead PropertyConnectionPermissions = "accounting_organization_read"
-	PropertyConnectionPermissionsAccountingPayoutRead       PropertyConnectionPermissions = "accounting_payout_read"
-	PropertyConnectionPermissionsAccountingRefundRead       PropertyConnectionPermissions = "accounting_refund_read"
+	PropertyConnectionPermissionsPaymentPaymentRead         PropertyConnectionPermissions = "payment_payment_read"
+	PropertyConnectionPermissionsPaymentPaymentWrite        PropertyConnectionPermissions = "payment_payment_write"
+	PropertyConnectionPermissionsPaymentPayoutRead          PropertyConnectionPermissions = "payment_payout_read"
+	PropertyConnectionPermissionsPaymentRefundRead          PropertyConnectionPermissions = "payment_refund_read"
+	PropertyConnectionPermissionsPaymentLinkRead            PropertyConnectionPermissions = "payment_link_read"
+	PropertyConnectionPermissionsPaymentLinkWrite           PropertyConnectionPermissions = "payment_link_write"
 	PropertyConnectionPermissionsCommerceItemRead           PropertyConnectionPermissions = "commerce_item_read"
 	PropertyConnectionPermissionsCommerceItemWrite          PropertyConnectionPermissions = "commerce_item_write"
 	PropertyConnectionPermissionsCommerceCollectionRead     PropertyConnectionPermissions = "commerce_collection_read"
@@ -110,19 +112,23 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "accounting_contact_write":
 		fallthrough
-	case "accounting_payment_read":
-		fallthrough
-	case "accounting_payment_write":
-		fallthrough
 	case "accounting_taxrate_read":
 		fallthrough
 	case "accounting_taxrate_write":
 		fallthrough
 	case "accounting_organization_read":
 		fallthrough
-	case "accounting_payout_read":
+	case "payment_payment_read":
 		fallthrough
-	case "accounting_refund_read":
+	case "payment_payment_write":
+		fallthrough
+	case "payment_payout_read":
+		fallthrough
+	case "payment_refund_read":
+		fallthrough
+	case "payment_link_read":
+		fallthrough
+	case "payment_link_write":
 		fallthrough
 	case "commerce_item_read":
 		fallthrough

@@ -17,3 +17,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesAccounting`  | accounting                                               |
 | `ListUnifiedIntegrationsQueryParamCategoriesStorage`     | storage                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesCommerce`    | commerce                                                 |
+| `ListUnifiedIntegrationsQueryParamCategoriesPayment`     | payment                                                  |

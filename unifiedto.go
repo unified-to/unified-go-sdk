@@ -73,9 +73,6 @@ type UnifiedTo struct {
 	Contact           *Contact
 	Invoice           *Invoice
 	Organization      *Organization
-	Payment           *Payment
-	Payout            *Payout
-	Refund            *Refund
 	Taxrate           *Taxrate
 	Transaction       *Transaction
 	Ats               *Ats
@@ -107,6 +104,10 @@ type UnifiedTo struct {
 	List              *List
 	Member            *Member
 	Passthrough       *Passthrough
+	Payment           *Payment
+	Link              *Link
+	Payout            *Payout
+	Refund            *Refund
 	Storage           *Storage
 	File              *File
 	Ticketing         *Ticketing
@@ -167,7 +168,7 @@ func WithClient(client HTTPClient) SDKOption {
 
 func withSecurity(security interface{}) func(context.Context) (interface{}, error) {
 	return func(context.Context) (interface{}, error) {
-		return &security, nil
+		return security, nil
 	}
 }
 
@@ -200,9 +201,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.12.6",
-			GenVersion:        "2.269.0",
-			UserAgent:         "speakeasy-sdk/go 0.12.6 2.269.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.12.7",
+			GenVersion:        "2.272.7",
+			UserAgent:         "speakeasy-sdk/go 0.12.7 2.272.7 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -210,12 +211,18 @@ func New(opts ...SDKOption) *UnifiedTo {
 		opt(sdk)
 	}
 
-	sdk.sdkConfiguration.DefaultClient = sdk.sdkConfiguration.Hooks.ClientInit(sdk.sdkConfiguration.DefaultClient)
-
 	// Use WithClient to override the default client if you would like to customize the timeout
 	if sdk.sdkConfiguration.DefaultClient == nil {
 		sdk.sdkConfiguration.DefaultClient = &http.Client{Timeout: 60 * time.Second}
 	}
+
+	currentServerURL, _ := sdk.sdkConfiguration.GetServerDetails()
+	serverURL := currentServerURL
+	serverURL, sdk.sdkConfiguration.DefaultClient = sdk.sdkConfiguration.Hooks.SDKInit(currentServerURL, sdk.sdkConfiguration.DefaultClient)
+	if serverURL != currentServerURL {
+		sdk.sdkConfiguration.ServerURL = serverURL
+	}
+
 	if sdk.sdkConfiguration.SecurityClient == nil {
 		if sdk.sdkConfiguration.Security != nil {
 			sdk.sdkConfiguration.SecurityClient = utils.ConfigureSecurityClient(sdk.sdkConfiguration.DefaultClient, sdk.sdkConfiguration.Security)
@@ -233,12 +240,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Invoice = newInvoice(sdk.sdkConfiguration)
 
 	sdk.Organization = newOrganization(sdk.sdkConfiguration)
-
-	sdk.Payment = newPayment(sdk.sdkConfiguration)
-
-	sdk.Payout = newPayout(sdk.sdkConfiguration)
-
-	sdk.Refund = newRefund(sdk.sdkConfiguration)
 
 	sdk.Taxrate = newTaxrate(sdk.sdkConfiguration)
 
@@ -301,6 +302,14 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Member = newMember(sdk.sdkConfiguration)
 
 	sdk.Passthrough = newPassthrough(sdk.sdkConfiguration)
+
+	sdk.Payment = newPayment(sdk.sdkConfiguration)
+
+	sdk.Link = newLink(sdk.sdkConfiguration)
+
+	sdk.Payout = newPayout(sdk.sdkConfiguration)
+
+	sdk.Refund = newRefund(sdk.sdkConfiguration)
 
 	sdk.Storage = newStorage(sdk.sdkConfiguration)
 
