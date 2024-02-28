@@ -61,6 +61,7 @@ type AccountingInvoice struct {
 	TaxAmount      *float64                 `json:"tax_amount,omitempty"`
 	TotalAmount    *float64                 `json:"total_amount,omitempty"`
 	UpdatedAt      *time.Time               `json:"updated_at,omitempty"`
+	URL            *string                  `json:"url,omitempty"`
 }
 
 func (a AccountingInvoice) MarshalJSON() ([]byte, error) {
@@ -219,4 +220,11 @@ func (o *AccountingInvoice) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *AccountingInvoice) GetURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.URL
 }
