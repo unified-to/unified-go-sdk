@@ -186,19 +186,18 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type WebhookWebhookType string
+type WebhookType string
 
 const (
-	WebhookWebhookTypeVirtual WebhookWebhookType = "virtual"
-	WebhookWebhookTypeNone    WebhookWebhookType = "none"
-	WebhookWebhookTypeNative  WebhookWebhookType = "native"
+	WebhookTypeVirtual WebhookType = "virtual"
+	WebhookTypeNative  WebhookType = "native"
 )
 
-func (e WebhookWebhookType) ToPointer() *WebhookWebhookType {
+func (e WebhookType) ToPointer() *WebhookType {
 	return &e
 }
 
-func (e *WebhookWebhookType) UnmarshalJSON(data []byte) error {
+func (e *WebhookType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -206,13 +205,11 @@ func (e *WebhookWebhookType) UnmarshalJSON(data []byte) error {
 	switch v {
 	case "virtual":
 		fallthrough
-	case "none":
-		fallthrough
 	case "native":
-		*e = WebhookWebhookType(v)
+		*e = WebhookType(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookWebhookType: %v", v)
+		return fmt.Errorf("invalid value for WebhookType: %v", v)
 	}
 }
 
@@ -233,10 +230,10 @@ type Webhook struct {
 	ObjectType      ObjectType             `json:"object_type"`
 	PageMaxLimit    *float64               `json:"page_max_limit,omitempty"`
 	// An array of the most revent virtual webhook runs
-	Runs        []string            `json:"runs,omitempty"`
-	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
-	WebhookType *WebhookWebhookType `json:"webhook_type,omitempty"`
-	WorkspaceID *string             `json:"workspace_id,omitempty"`
+	Runs        []string     `json:"runs,omitempty"`
+	UpdatedAt   *time.Time   `json:"updated_at,omitempty"`
+	WebhookType *WebhookType `json:"webhook_type,omitempty"`
+	WorkspaceID *string      `json:"workspace_id,omitempty"`
 }
 
 func (w Webhook) MarshalJSON() ([]byte, error) {
@@ -362,7 +359,7 @@ func (o *Webhook) GetUpdatedAt() *time.Time {
 	return o.UpdatedAt
 }
 
-func (o *Webhook) GetWebhookType() *WebhookWebhookType {
+func (o *Webhook) GetWebhookType() *WebhookType {
 	if o == nil {
 		return nil
 	}

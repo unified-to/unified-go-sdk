@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 48060151324f197510525fbcfe544edc
+  docChecksum: 0793d7d9d65b0d606620076f43596338
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.272.7
-  releaseVersion: 0.12.8
-  configChecksum: b18a83449b7062a91df5011d296b302f
+  generationVersion: 2.277.0
+  releaseVersion: 0.12.9
+  configChecksum: 242a79e6c412fb153bd9cdac183755b8
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 features:
   go:
-    constsAndDefaults: 0.1.3
+    constsAndDefaults: 0.1.4
     core: 3.4.3
     globalSecurity: 2.82.8
     globalServerURLs: 2.82.1
@@ -424,6 +424,9 @@ generatedFiles:
   - /pkg/models/shared/integration.go
   - /pkg/models/shared/integrationsupport.go
   - /pkg/models/shared/propertyintegrationsupportwebhookevents.go
+  - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.go
+  - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.go
+  - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventscreated.go
   - /pkg/models/shared/propertyintegrationcategories.go
   - /pkg/models/shared/issue.go
   - /pkg/models/shared/security.go
@@ -909,6 +912,7 @@ generatedFiles:
   - docs/pkg/models/shared/accountingemailtype.md
   - docs/pkg/models/shared/accountingemail.md
   - docs/pkg/models/shared/propertyaccountingcontactbillingaddress.md
+  - docs/pkg/models/shared/paymentcollectionmethod.md
   - docs/pkg/models/shared/accountinginvoicestatus.md
   - docs/pkg/models/shared/accountinginvoice.md
   - docs/pkg/models/shared/accountinglineitem.md
@@ -1040,14 +1044,16 @@ generatedFiles:
   - docs/pkg/models/shared/propertyconnectionauth.md
   - docs/pkg/models/shared/event.md
   - docs/pkg/models/shared/objecttype.md
-  - docs/pkg/models/shared/webhookwebhooktype.md
+  - docs/pkg/models/shared/webhooktype.md
   - docs/pkg/models/shared/webhook.md
   - docs/pkg/models/shared/apicalltype.md
   - docs/pkg/models/shared/apicall.md
   - docs/pkg/models/shared/integration.md
-  - docs/pkg/models/shared/webhooktype.md
   - docs/pkg/models/shared/integrationsupport.md
   - docs/pkg/models/shared/propertyintegrationsupportwebhookevents.md
+  - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.md
+  - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.md
+  - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventscreated.md
   - docs/pkg/models/shared/propertyintegrationcategories.md
   - docs/pkg/models/shared/issuestatus.md
   - docs/pkg/models/shared/issuetype.md

@@ -2,37 +2,29 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
-type PropertyIntegrationSupportWebhookEvents string
-
-const (
-	PropertyIntegrationSupportWebhookEventsUpdated PropertyIntegrationSupportWebhookEvents = "updated"
-	PropertyIntegrationSupportWebhookEventsCreated PropertyIntegrationSupportWebhookEvents = "created"
-	PropertyIntegrationSupportWebhookEventsDeleted PropertyIntegrationSupportWebhookEvents = "deleted"
-)
-
-func (e PropertyIntegrationSupportWebhookEvents) ToPointer() *PropertyIntegrationSupportWebhookEvents {
-	return &e
+type PropertyIntegrationSupportWebhookEvents struct {
+	Created []PropertyPropertyIntegrationSupportWebhookEventsCreated `json:"created,omitempty"`
+	Deleted []PropertyPropertyIntegrationSupportWebhookEventsDeleted `json:"deleted,omitempty"`
+	Updated []PropertyPropertyIntegrationSupportWebhookEventsUpdated `json:"updated,omitempty"`
 }
 
-func (e *PropertyIntegrationSupportWebhookEvents) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "updated":
-		fallthrough
-	case "created":
-		fallthrough
-	case "deleted":
-		*e = PropertyIntegrationSupportWebhookEvents(v)
+func (o *PropertyIntegrationSupportWebhookEvents) GetCreated() []PropertyPropertyIntegrationSupportWebhookEventsCreated {
+	if o == nil {
 		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyIntegrationSupportWebhookEvents: %v", v)
 	}
+	return o.Created
+}
+
+func (o *PropertyIntegrationSupportWebhookEvents) GetDeleted() []PropertyPropertyIntegrationSupportWebhookEventsDeleted {
+	if o == nil {
+		return nil
+	}
+	return o.Deleted
+}
+
+func (o *PropertyIntegrationSupportWebhookEvents) GetUpdated() []PropertyPropertyIntegrationSupportWebhookEventsUpdated {
+	if o == nil {
+		return nil
+	}
+	return o.Updated
 }

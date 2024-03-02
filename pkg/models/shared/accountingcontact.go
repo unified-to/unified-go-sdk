@@ -73,6 +73,7 @@ type AccountingContact struct {
 	IsCustomer      *bool                                     `json:"is_customer,omitempty"`
 	IsSupplier      *bool                                     `json:"is_supplier,omitempty"`
 	Name            *string                                   `json:"name,omitempty"`
+	PortalURL       *string                                   `json:"portal_url,omitempty"`
 	Raw             map[string]interface{}                    `json:"raw,omitempty"`
 	ShippingAddress *PropertyAccountingContactShippingAddress `json:"shipping_address,omitempty"`
 	TaxExemption    *TaxExemption                             `json:"tax_exemption,omitempty"`
@@ -153,6 +154,13 @@ func (o *AccountingContact) GetName() *string {
 		return nil
 	}
 	return o.Name
+}
+
+func (o *AccountingContact) GetPortalURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.PortalURL
 }
 
 func (o *AccountingContact) GetRaw() map[string]interface{} {
