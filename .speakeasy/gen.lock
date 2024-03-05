@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 0793d7d9d65b0d606620076f43596338
+  docChecksum: 1982f00b1c8ae9709c4c51c2b473ab66
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.277.0
-  releaseVersion: 0.12.9
-  configChecksum: 242a79e6c412fb153bd9cdac183755b8
+  releaseVersion: 0.12.10
+  configChecksum: d7bbcaae1094a19c7bc0acd0f69841b4
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -330,6 +330,7 @@ generatedFiles:
   - /pkg/models/shared/accountingcontact.go
   - /pkg/models/shared/accountingtelephone.go
   - /pkg/models/shared/propertyaccountingcontactshippingaddress.go
+  - /pkg/models/shared/accountingcontactpaymentmethod.go
   - /pkg/models/shared/accountingemail.go
   - /pkg/models/shared/propertyaccountingcontactbillingaddress.go
   - /pkg/models/shared/accountinginvoice.go
@@ -909,6 +910,8 @@ generatedFiles:
   - docs/pkg/models/shared/accountingtelephonetype.md
   - docs/pkg/models/shared/accountingtelephone.md
   - docs/pkg/models/shared/propertyaccountingcontactshippingaddress.md
+  - docs/pkg/models/shared/accountingcontactpaymentmethodtype.md
+  - docs/pkg/models/shared/accountingcontactpaymentmethod.md
   - docs/pkg/models/shared/accountingemailtype.md
   - docs/pkg/models/shared/accountingemail.md
   - docs/pkg/models/shared/propertyaccountingcontactbillingaddress.md
