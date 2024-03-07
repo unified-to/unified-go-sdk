@@ -36,7 +36,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentRefund != nil {
         // handle response
     }
@@ -87,7 +86,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentRefunds != nil {
         // handle response
     }

@@ -26,7 +26,7 @@ type UpdateUnifiedWebhookTriggerResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	Res *string
+	String *string
 }
 
 func (o *UpdateUnifiedWebhookTriggerResponse) GetContentType() string {
@@ -50,9 +50,9 @@ func (o *UpdateUnifiedWebhookTriggerResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *UpdateUnifiedWebhookTriggerResponse) GetRes() *string {
+func (o *UpdateUnifiedWebhookTriggerResponse) GetString() *string {
 	if o == nil {
 		return nil
 	}
-	return o.Res
+	return o.String
 }

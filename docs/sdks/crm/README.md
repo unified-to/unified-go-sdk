@@ -69,7 +69,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmCompany != nil {
         // handle response
     }
@@ -120,7 +119,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmContact != nil {
         // handle response
     }
@@ -171,7 +169,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmDeal != nil {
         // handle response
     }
@@ -222,7 +219,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmEvent != nil {
         // handle response
     }
@@ -273,7 +269,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmLead != nil {
         // handle response
     }
@@ -324,7 +319,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmPipeline != nil {
         // handle response
     }
@@ -376,7 +370,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmCompany != nil {
         // handle response
     }
@@ -428,7 +421,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmContact != nil {
         // handle response
     }
@@ -480,7 +472,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmDeal != nil {
         // handle response
     }
@@ -532,7 +523,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmEvent != nil {
         // handle response
     }
@@ -584,7 +574,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmLead != nil {
         // handle response
     }
@@ -636,7 +625,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmPipeline != nil {
         // handle response
     }
@@ -687,7 +675,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmCompanies != nil {
         // handle response
     }
@@ -738,7 +725,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmContacts != nil {
         // handle response
     }
@@ -789,7 +775,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmDeals != nil {
         // handle response
     }
@@ -840,7 +825,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmEvents != nil {
         // handle response
     }
@@ -891,7 +875,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmLeads != nil {
         // handle response
     }
@@ -942,7 +925,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmPipelines != nil {
         // handle response
     }
@@ -994,7 +976,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmCompany != nil {
         // handle response
     }
@@ -1046,7 +1027,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmContact != nil {
         // handle response
     }
@@ -1098,7 +1078,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmDeal != nil {
         // handle response
     }
@@ -1150,7 +1129,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmEvent != nil {
         // handle response
     }
@@ -1202,7 +1180,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmLead != nil {
         // handle response
     }
@@ -1254,7 +1231,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmPipeline != nil {
         // handle response
     }
@@ -1291,7 +1267,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1307,8 +1282,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1344,7 +1318,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1360,8 +1333,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1397,7 +1369,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1413,8 +1384,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1450,7 +1420,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1466,8 +1435,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1503,7 +1471,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1519,8 +1486,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1556,7 +1522,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1572,8 +1537,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1624,7 +1588,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmCompany != nil {
         // handle response
     }
@@ -1676,7 +1639,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmContact != nil {
         // handle response
     }
@@ -1728,7 +1690,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmDeal != nil {
         // handle response
     }
@@ -1780,7 +1741,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmEvent != nil {
         // handle response
     }
@@ -1832,7 +1792,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmLead != nil {
         // handle response
     }
@@ -1884,7 +1843,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmPipeline != nil {
         // handle response
     }

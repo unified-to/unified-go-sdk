@@ -35,7 +35,7 @@ type RemoveAccountingAccountResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	Res *string
+	String *string
 }
 
 func (o *RemoveAccountingAccountResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveAccountingAccountResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveAccountingAccountResponse) GetRes() *string {
+func (o *RemoveAccountingAccountResponse) GetString() *string {
 	if o == nil {
 		return nil
 	}
-	return o.Res
+	return o.String
 }

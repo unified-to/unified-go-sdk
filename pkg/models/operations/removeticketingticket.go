@@ -35,7 +35,7 @@ type RemoveTicketingTicketResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	Res *string
+	String *string
 }
 
 func (o *RemoveTicketingTicketResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveTicketingTicketResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveTicketingTicketResponse) GetRes() *string {
+func (o *RemoveTicketingTicketResponse) GetString() *string {
 	if o == nil {
 		return nil
 	}
-	return o.Res
+	return o.String
 }

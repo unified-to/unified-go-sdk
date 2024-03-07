@@ -49,7 +49,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentLink != nil {
         // handle response
     }
@@ -100,7 +99,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentPayment != nil {
         // handle response
     }
@@ -152,7 +150,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentLink != nil {
         // handle response
     }
@@ -204,7 +201,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentPayment != nil {
         // handle response
     }
@@ -256,7 +252,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentPayout != nil {
         // handle response
     }
@@ -308,7 +303,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentRefund != nil {
         // handle response
     }
@@ -359,7 +353,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentLinks != nil {
         // handle response
     }
@@ -410,7 +403,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentPayments != nil {
         // handle response
     }
@@ -461,7 +453,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentPayouts != nil {
         // handle response
     }
@@ -512,7 +503,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentRefunds != nil {
         // handle response
     }
@@ -564,7 +554,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentLink != nil {
         // handle response
     }
@@ -616,7 +605,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentPayment != nil {
         // handle response
     }
@@ -653,7 +641,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -669,8 +656,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -706,7 +692,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -722,8 +707,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -774,7 +758,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentLink != nil {
         // handle response
     }
@@ -826,7 +809,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.PaymentPayment != nil {
         // handle response
     }

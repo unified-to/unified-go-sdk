@@ -78,7 +78,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsActivity != nil {
         // handle response
     }
@@ -129,7 +128,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsApplication != nil {
         // handle response
     }
@@ -180,7 +178,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsCandidate != nil {
         // handle response
     }
@@ -231,7 +228,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsDocument != nil {
         // handle response
     }
@@ -282,7 +278,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsInterview != nil {
         // handle response
     }
@@ -333,7 +328,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsJob != nil {
         // handle response
     }
@@ -384,7 +378,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsScorecard != nil {
         // handle response
     }
@@ -436,7 +429,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsActivity != nil {
         // handle response
     }
@@ -488,7 +480,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsApplication != nil {
         // handle response
     }
@@ -540,7 +531,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsCandidate != nil {
         // handle response
     }
@@ -592,7 +582,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsCompany != nil {
         // handle response
     }
@@ -644,7 +633,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsDocument != nil {
         // handle response
     }
@@ -696,7 +684,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsInterview != nil {
         // handle response
     }
@@ -748,7 +735,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsJob != nil {
         // handle response
     }
@@ -800,7 +786,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsScorecard != nil {
         // handle response
     }
@@ -851,7 +836,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsActivities != nil {
         // handle response
     }
@@ -902,7 +886,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsApplications != nil {
         // handle response
     }
@@ -953,7 +936,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsStatuses != nil {
         // handle response
     }
@@ -1004,7 +986,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsCandidates != nil {
         // handle response
     }
@@ -1055,7 +1036,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsCompanies != nil {
         // handle response
     }
@@ -1106,7 +1086,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsDocuments != nil {
         // handle response
     }
@@ -1157,7 +1136,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsInterviews != nil {
         // handle response
     }
@@ -1208,7 +1186,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsJobs != nil {
         // handle response
     }
@@ -1259,7 +1236,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsScorecards != nil {
         // handle response
     }
@@ -1311,7 +1287,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsActivity != nil {
         // handle response
     }
@@ -1363,7 +1338,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsApplication != nil {
         // handle response
     }
@@ -1415,7 +1389,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsCandidate != nil {
         // handle response
     }
@@ -1467,7 +1440,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsDocument != nil {
         // handle response
     }
@@ -1519,7 +1491,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsInterview != nil {
         // handle response
     }
@@ -1571,7 +1542,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsJob != nil {
         // handle response
     }
@@ -1623,7 +1593,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsScorecard != nil {
         // handle response
     }
@@ -1660,7 +1629,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1676,8 +1644,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1713,7 +1680,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1729,8 +1695,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1766,7 +1731,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1782,8 +1746,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1819,7 +1782,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1835,8 +1797,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1872,7 +1833,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1888,8 +1848,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1925,7 +1884,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1941,8 +1899,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1978,7 +1935,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1994,8 +1950,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -2046,7 +2001,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsActivity != nil {
         // handle response
     }
@@ -2098,7 +2052,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsApplication != nil {
         // handle response
     }
@@ -2150,7 +2103,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsCandidate != nil {
         // handle response
     }
@@ -2202,7 +2154,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsDocument != nil {
         // handle response
     }
@@ -2254,7 +2205,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsInterview != nil {
         // handle response
     }
@@ -2306,7 +2256,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsJob != nil {
         // handle response
     }
@@ -2358,7 +2307,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsScorecard != nil {
         // handle response
     }

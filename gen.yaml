@@ -13,7 +13,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.12.10
+  version: 0.13.0
   additionalDependencies: {}
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
@@ -29,3 +29,4 @@ go:
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: github.com/unified-to/unified-go-sdk
+  responseFormat: envelope

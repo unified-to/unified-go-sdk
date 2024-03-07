@@ -35,7 +35,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.APICall != nil {
         // handle response
     }
@@ -84,7 +83,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.APICalls != nil {
         // handle response
     }

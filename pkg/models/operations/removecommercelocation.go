@@ -35,7 +35,7 @@ type RemoveCommerceLocationResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	Res *string
+	String *string
 }
 
 func (o *RemoveCommerceLocationResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveCommerceLocationResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveCommerceLocationResponse) GetRes() *string {
+func (o *RemoveCommerceLocationResponse) GetString() *string {
 	if o == nil {
 		return nil
 	}
-	return o.Res
+	return o.String
 }

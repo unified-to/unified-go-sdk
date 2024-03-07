@@ -35,7 +35,7 @@ type RemoveCrmCompanyResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	Res *string
+	String *string
 }
 
 func (o *RemoveCrmCompanyResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveCrmCompanyResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveCrmCompanyResponse) GetRes() *string {
+func (o *RemoveCrmCompanyResponse) GetString() *string {
 	if o == nil {
 		return nil
 	}
-	return o.Res
+	return o.String
 }

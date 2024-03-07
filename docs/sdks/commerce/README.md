@@ -57,7 +57,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceCollection != nil {
         // handle response
     }
@@ -108,7 +107,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceInventory != nil {
         // handle response
     }
@@ -159,7 +157,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceItem != nil {
         // handle response
     }
@@ -210,7 +207,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceLocation != nil {
         // handle response
     }
@@ -262,7 +258,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceCollection != nil {
         // handle response
     }
@@ -314,7 +309,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceInventory != nil {
         // handle response
     }
@@ -366,7 +360,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceItem != nil {
         // handle response
     }
@@ -418,7 +411,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceLocation != nil {
         // handle response
     }
@@ -469,7 +461,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceCollections != nil {
         // handle response
     }
@@ -520,7 +511,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceInventories != nil {
         // handle response
     }
@@ -571,7 +561,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceItems != nil {
         // handle response
     }
@@ -622,7 +611,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceLocations != nil {
         // handle response
     }
@@ -674,7 +662,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceCollection != nil {
         // handle response
     }
@@ -726,7 +713,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceInventory != nil {
         // handle response
     }
@@ -778,7 +764,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceItem != nil {
         // handle response
     }
@@ -830,7 +815,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceLocation != nil {
         // handle response
     }
@@ -867,7 +851,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -883,8 +866,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -920,7 +902,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -936,8 +917,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -973,7 +953,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -989,8 +968,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1026,7 +1004,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -1042,8 +1019,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -1094,7 +1070,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceCollection != nil {
         // handle response
     }
@@ -1146,7 +1121,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceInventory != nil {
         // handle response
     }
@@ -1198,7 +1172,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceItem != nil {
         // handle response
     }
@@ -1250,7 +1223,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CommerceLocation != nil {
         // handle response
     }

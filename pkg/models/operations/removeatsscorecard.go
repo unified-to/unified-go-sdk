@@ -35,7 +35,7 @@ type RemoveAtsScorecardResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Successful
-	Res *string
+	String *string
 }
 
 func (o *RemoveAtsScorecardResponse) GetContentType() string {
@@ -59,9 +59,9 @@ func (o *RemoveAtsScorecardResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *RemoveAtsScorecardResponse) GetRes() *string {
+func (o *RemoveAtsScorecardResponse) GetString() *string {
 	if o == nil {
 		return nil
 	}
-	return o.Res
+	return o.String
 }

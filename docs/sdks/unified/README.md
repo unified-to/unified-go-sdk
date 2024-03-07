@@ -56,7 +56,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Connection != nil {
         // handle response
     }
@@ -105,7 +104,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Webhook != nil {
         // handle response
     }
@@ -156,7 +154,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.APICall != nil {
         // handle response
     }
@@ -207,7 +204,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Connection != nil {
         // handle response
     }
@@ -259,7 +255,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Res != nil {
         // handle response
     }
@@ -310,7 +305,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Webhook != nil {
         // handle response
     }
@@ -359,7 +353,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.APICalls != nil {
         // handle response
     }
@@ -408,7 +401,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Connections != nil {
         // handle response
     }
@@ -459,7 +451,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Integrations != nil {
         // handle response
     }
@@ -508,7 +499,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Integrations != nil {
         // handle response
     }
@@ -557,7 +547,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Issues != nil {
         // handle response
     }
@@ -606,7 +595,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Webhooks != nil {
         // handle response
     }
@@ -657,7 +645,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Connection != nil {
         // handle response
     }
@@ -694,7 +681,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -709,8 +695,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -746,7 +731,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -761,8 +745,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -798,7 +781,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -813,8 +795,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -864,7 +845,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.Connection != nil {
         // handle response
     }
@@ -901,7 +881,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -916,8 +895,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }

@@ -40,7 +40,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.UcContact != nil {
         // handle response
     }
@@ -92,7 +91,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.UcContact != nil {
         // handle response
     }
@@ -143,7 +141,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.UcCalls != nil {
         // handle response
     }
@@ -194,7 +191,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.UcContacts != nil {
         // handle response
     }
@@ -246,7 +242,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.UcContact != nil {
         // handle response
     }
@@ -283,7 +278,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -299,8 +293,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -351,7 +344,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.UcContact != nil {
         // handle response
     }

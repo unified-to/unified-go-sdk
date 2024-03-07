@@ -42,7 +42,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmCompany != nil {
         // handle response
     }
@@ -94,7 +93,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsCompany != nil {
         // handle response
     }
@@ -146,7 +144,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmCompany != nil {
         // handle response
     }
@@ -197,7 +194,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.AtsCompanies != nil {
         // handle response
     }
@@ -248,7 +244,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmCompanies != nil {
         // handle response
     }
@@ -299,7 +294,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.EnrichCompany != nil {
         // handle response
     }
@@ -351,7 +345,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmCompany != nil {
         // handle response
     }
@@ -388,7 +381,6 @@ import(
 	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -404,8 +396,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
-    if res.StatusCode == http.StatusOK {
+    if res != nil {
         // handle response
     }
 }
@@ -456,7 +447,6 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-
     if res.CrmCompany != nil {
         // handle response
     }
