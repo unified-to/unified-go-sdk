@@ -5,6 +5,7 @@ package shared
 // PropertyCrmEventNote - The note object, when type = note
 type PropertyCrmEventNote struct {
 	Description *string `json:"description,omitempty"`
+	Title       *string `json:"title,omitempty"`
 }
 
 func (o *PropertyCrmEventNote) GetDescription() *string {
@@ -12,4 +13,11 @@ func (o *PropertyCrmEventNote) GetDescription() *string {
 		return nil
 	}
 	return o.Description
+}
+
+func (o *PropertyCrmEventNote) GetTitle() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Title
 }
