@@ -38,8 +38,9 @@ func (e *EnrichEmailType) UnmarshalJSON(data []byte) error {
 }
 
 type EnrichEmail struct {
-	Email string           `json:"email"`
-	Type  *EnrichEmailType `json:"type,omitempty"`
+	Email      string           `json:"email"`
+	IsVerified *bool            `json:"is_verified,omitempty"`
+	Type       *EnrichEmailType `json:"type,omitempty"`
 }
 
 func (o *EnrichEmail) GetEmail() string {
@@ -47,6 +48,13 @@ func (o *EnrichEmail) GetEmail() string {
 		return ""
 	}
 	return o.Email
+}
+
+func (o *EnrichEmail) GetIsVerified() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsVerified
 }
 
 func (o *EnrichEmail) GetType() *EnrichEmailType {
