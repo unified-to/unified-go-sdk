@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: b5ccecd8b5925543c5229bd68d6cacb3
+  docChecksum: 9969df7d3e03cdc2a49e94cb47ce90ff
   docVersion: "1.0"
-  speakeasyVersion: 1.227.0
-  generationVersion: 2.291.0
-  releaseVersion: 0.13.5
-  configChecksum: df048a66395e8bbb6939f8ae1777efbd
+  speakeasyVersion: 1.228.1
+  generationVersion: 2.292.0
+  releaseVersion: 0.13.6
+  configChecksum: 5ed7d29a00c5e3a31b85259e5548af43
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -403,7 +403,7 @@ generatedFiles:
   - /pkg/models/shared/marketingmember.go
   - /pkg/models/shared/marketingemail.go
   - /pkg/models/shared/paymentlink.go
-  - /pkg/models/shared/paymenntlinklineitem.go
+  - /pkg/models/shared/paymentlinklineitem.go
   - /pkg/models/shared/paymentpayment.go
   - /pkg/models/shared/paymentpayout.go
   - /pkg/models/shared/paymentrefund.go
@@ -1021,7 +1021,7 @@ generatedFiles:
   - docs/pkg/models/shared/marketingemailtype.md
   - docs/pkg/models/shared/marketingemail.md
   - docs/pkg/models/shared/paymentlink.md
-  - docs/pkg/models/shared/paymenntlinklineitem.md
+  - docs/pkg/models/shared/paymentlinklineitem.md
   - docs/pkg/models/shared/paymentpayment.md
   - docs/pkg/models/shared/paymentpayoutstatus.md
   - docs/pkg/models/shared/paymentpayout.md

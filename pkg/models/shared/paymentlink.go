@@ -8,17 +8,17 @@ import (
 )
 
 type PaymentLink struct {
-	Amount    *float64               `json:"amount,omitempty"`
+	Amount    float64                `json:"amount"`
 	ContactID *string                `json:"contact_id,omitempty"`
 	CreatedAt *time.Time             `json:"created_at,omitempty"`
 	Currency  *string                `json:"currency,omitempty"`
 	ID        *string                `json:"id,omitempty"`
-	IsActive  bool                   `json:"is_active"`
-	Lineitems []PaymenntLinkLineitem `json:"lineitems"`
+	IsActive  *bool                  `json:"is_active,omitempty"`
+	Lineitems []PaymentLinkLineitem  `json:"lineitems"`
 	PaymentID *string                `json:"payment_id,omitempty"`
 	Raw       map[string]interface{} `json:"raw,omitempty"`
 	UpdatedAt *time.Time             `json:"updated_at,omitempty"`
-	URL       string                 `json:"url"`
+	URL       *string                `json:"url,omitempty"`
 }
 
 func (p PaymentLink) MarshalJSON() ([]byte, error) {
@@ -32,9 +32,9 @@ func (p *PaymentLink) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PaymentLink) GetAmount() *float64 {
+func (o *PaymentLink) GetAmount() float64 {
 	if o == nil {
-		return nil
+		return 0.0
 	}
 	return o.Amount
 }
@@ -67,16 +67,16 @@ func (o *PaymentLink) GetID() *string {
 	return o.ID
 }
 
-func (o *PaymentLink) GetIsActive() bool {
+func (o *PaymentLink) GetIsActive() *bool {
 	if o == nil {
-		return false
+		return nil
 	}
 	return o.IsActive
 }
 
-func (o *PaymentLink) GetLineitems() []PaymenntLinkLineitem {
+func (o *PaymentLink) GetLineitems() []PaymentLinkLineitem {
 	if o == nil {
-		return []PaymenntLinkLineitem{}
+		return []PaymentLinkLineitem{}
 	}
 	return o.Lineitems
 }
@@ -102,9 +102,9 @@ func (o *PaymentLink) GetUpdatedAt() *time.Time {
 	return o.UpdatedAt
 }
 
-func (o *PaymentLink) GetURL() string {
+func (o *PaymentLink) GetURL() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.URL
 }
