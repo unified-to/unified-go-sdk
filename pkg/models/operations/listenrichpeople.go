@@ -8,6 +8,8 @@ import (
 )
 
 type ListEnrichPeopleRequest struct {
+	// The name of the company the person is associated with.  Not valid by itself.
+	CompanyName *string `queryParam:"style=form,explode=true,name=company_name"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The email of the person to search
@@ -18,6 +20,13 @@ type ListEnrichPeopleRequest struct {
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 	// The twitter handle of the person to search
 	Twitter *string `queryParam:"style=form,explode=true,name=twitter"`
+}
+
+func (o *ListEnrichPeopleRequest) GetCompanyName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyName
 }
 
 func (o *ListEnrichPeopleRequest) GetConnectionID() string {
