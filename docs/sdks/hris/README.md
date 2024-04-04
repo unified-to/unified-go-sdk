@@ -7,8 +7,12 @@
 * [CreateHrisGroup](#createhrisgroup) - Create a group
 * [GetHrisEmployee](#gethrisemployee) - Retrieve an employee
 * [GetHrisGroup](#gethrisgroup) - Retrieve a group
+* [GetHrisPayslip](#gethrispayslip) - Retrieve a payslip
+* [GetHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [ListHrisEmployees](#listhrisemployees) - List all employees
 * [ListHrisGroups](#listhrisgroups) - List all groups
+* [ListHrisPayslips](#listhrispayslips) - List all payslip
+* [ListHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [PatchHrisEmployee](#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](#patchhrisgroup) - Update a group
 * [RemoveHrisEmployee](#removehrisemployee) - Remove an employee
@@ -218,6 +222,108 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
+## GetHrisPayslip
+
+Retrieve a payslip
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Hris.GetHrisPayslip(ctx, operations.GetHrisPayslipRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisPayslip != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetHrisPayslipRequest](../../pkg/models/operations/gethrispaysliprequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[*operations.GetHrisPayslipResponse](../../pkg/models/operations/gethrispayslipresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## GetHrisTimeoff
+
+Retrieve a timeoff
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Hris.GetHrisTimeoff(ctx, operations.GetHrisTimeoffRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisTimeoff != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetHrisTimeoffRequest](../../pkg/models/operations/gethristimeoffrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[*operations.GetHrisTimeoffResponse](../../pkg/models/operations/gethristimeoffresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
 ## ListHrisEmployees
 
 List all employees
@@ -314,6 +420,106 @@ func main() {
 ### Response
 
 **[*operations.ListHrisGroupsResponse](../../pkg/models/operations/listhrisgroupsresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## ListHrisPayslips
+
+List all payslip
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Hris.ListHrisPayslips(ctx, operations.ListHrisPayslipsRequest{
+        ConnectionID: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisPayslips != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListHrisPayslipsRequest](../../pkg/models/operations/listhrispayslipsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[*operations.ListHrisPayslipsResponse](../../pkg/models/operations/listhrispayslipsresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## ListHrisTimeoffs
+
+List all timeoffs
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Hris.ListHrisTimeoffs(ctx, operations.ListHrisTimeoffsRequest{
+        ConnectionID: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisTimeoffs != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListHrisTimeoffsRequest](../../pkg/models/operations/listhristimeoffsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[*operations.ListHrisTimeoffsResponse](../../pkg/models/operations/listhristimeoffsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

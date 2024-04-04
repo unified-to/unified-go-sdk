@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: c0feefab18e1757955e61afa41102a4c
+  docChecksum: 2d9519a9ae45cc997b9772dfea3b96f5
   docVersion: "1.0"
-  speakeasyVersion: 1.228.1
-  generationVersion: 2.292.0
-  releaseVersion: 0.13.7
-  configChecksum: 08f8f12fa762b27772ecb7b4887aa14f
+  speakeasyVersion: 1.235.2
+  generationVersion: 2.298.2
+  releaseVersion: 0.13.8
+  configChecksum: 5d0ee9d628f11d854e34d06a7a1fbd92
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -51,6 +51,8 @@ generatedFiles:
   - hris.go
   - employee.go
   - group.go
+  - payslip.go
+  - timeoff.go
   - martech.go
   - list.go
   - member.go
@@ -242,8 +244,12 @@ generatedFiles:
   - /pkg/models/operations/createhrisgroup.go
   - /pkg/models/operations/gethrisemployee.go
   - /pkg/models/operations/gethrisgroup.go
+  - /pkg/models/operations/gethrispayslip.go
+  - /pkg/models/operations/gethristimeoff.go
   - /pkg/models/operations/listhrisemployees.go
   - /pkg/models/operations/listhrisgroups.go
+  - /pkg/models/operations/listhrispayslips.go
+  - /pkg/models/operations/listhristimeoffs.go
   - /pkg/models/operations/patchhrisemployee.go
   - /pkg/models/operations/patchhrisgroup.go
   - /pkg/models/operations/removehrisemployee.go
@@ -399,6 +405,9 @@ generatedFiles:
   - /pkg/models/shared/hrisemail.go
   - /pkg/models/shared/propertyhrisemployeeaddress.go
   - /pkg/models/shared/hrisgroup.go
+  - /pkg/models/shared/hrispayslip.go
+  - /pkg/models/shared/hrispayslipdetail.go
+  - /pkg/models/shared/hristimeoff.go
   - /pkg/models/shared/marketinglist.go
   - /pkg/models/shared/marketingmember.go
   - /pkg/models/shared/marketingemail.go
@@ -730,10 +739,18 @@ generatedFiles:
   - docs/pkg/models/operations/gethrisemployeeresponse.md
   - docs/pkg/models/operations/gethrisgrouprequest.md
   - docs/pkg/models/operations/gethrisgroupresponse.md
+  - docs/pkg/models/operations/gethrispaysliprequest.md
+  - docs/pkg/models/operations/gethrispayslipresponse.md
+  - docs/pkg/models/operations/gethristimeoffrequest.md
+  - docs/pkg/models/operations/gethristimeoffresponse.md
   - docs/pkg/models/operations/listhrisemployeesrequest.md
   - docs/pkg/models/operations/listhrisemployeesresponse.md
   - docs/pkg/models/operations/listhrisgroupsrequest.md
   - docs/pkg/models/operations/listhrisgroupsresponse.md
+  - docs/pkg/models/operations/listhrispayslipsrequest.md
+  - docs/pkg/models/operations/listhrispayslipsresponse.md
+  - docs/pkg/models/operations/listhristimeoffsrequest.md
+  - docs/pkg/models/operations/listhristimeoffsresponse.md
   - docs/pkg/models/operations/patchhrisemployeerequest.md
   - docs/pkg/models/operations/patchhrisemployeeresponse.md
   - docs/pkg/models/operations/patchhrisgrouprequest.md
@@ -1016,6 +1033,13 @@ generatedFiles:
   - docs/pkg/models/shared/propertyhrisemployeeaddress.md
   - docs/pkg/models/shared/hrisgrouptype.md
   - docs/pkg/models/shared/hrisgroup.md
+  - docs/pkg/models/shared/paymenttype.md
+  - docs/pkg/models/shared/hrispayslip.md
+  - docs/pkg/models/shared/hrispayslipdetailtype.md
+  - docs/pkg/models/shared/hrispayslipdetail.md
+  - docs/pkg/models/shared/hristimeoffstatus.md
+  - docs/pkg/models/shared/hristimeofftype.md
+  - docs/pkg/models/shared/hristimeoff.md
   - docs/pkg/models/shared/marketinglist.md
   - docs/pkg/models/shared/marketingmember.md
   - docs/pkg/models/shared/marketingemailtype.md
@@ -1096,6 +1120,8 @@ generatedFiles:
   - docs/sdks/hris/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/group/README.md
+  - docs/sdks/payslip/README.md
+  - docs/sdks/timeoff/README.md
   - docs/sdks/martech/README.md
   - docs/sdks/list/README.md
   - docs/sdks/member/README.md

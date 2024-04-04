@@ -73,6 +73,10 @@
 | `PropertyConnectionPermissionsHrisEmployeeWrite`          | hris_employee_write                                       |
 | `PropertyConnectionPermissionsHrisGroupRead`              | hris_group_read                                           |
 | `PropertyConnectionPermissionsHrisGroupWrite`             | hris_group_write                                          |
+| `PropertyConnectionPermissionsHrisPayslipRead`            | hris_payslip_read                                         |
+| `PropertyConnectionPermissionsHrisPayslipWrite`           | hris_payslip_write                                        |
+| `PropertyConnectionPermissionsHrisTimeoffRead`            | hris_timeoff_read                                         |
+| `PropertyConnectionPermissionsHrisTimeoffWrite`           | hris_timeoff_write                                        |
 | `PropertyConnectionPermissionsUcCallRead`                 | uc_call_read                                              |
 | `PropertyConnectionPermissionsStorageFileRead`            | storage_file_read                                         |
 | `PropertyConnectionPermissionsStorageFileWrite`           | storage_file_write                                        |

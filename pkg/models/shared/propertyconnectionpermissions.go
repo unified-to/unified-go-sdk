@@ -78,6 +78,10 @@ const (
 	PropertyConnectionPermissionsHrisEmployeeWrite          PropertyConnectionPermissions = "hris_employee_write"
 	PropertyConnectionPermissionsHrisGroupRead              PropertyConnectionPermissions = "hris_group_read"
 	PropertyConnectionPermissionsHrisGroupWrite             PropertyConnectionPermissions = "hris_group_write"
+	PropertyConnectionPermissionsHrisPayslipRead            PropertyConnectionPermissions = "hris_payslip_read"
+	PropertyConnectionPermissionsHrisPayslipWrite           PropertyConnectionPermissions = "hris_payslip_write"
+	PropertyConnectionPermissionsHrisTimeoffRead            PropertyConnectionPermissions = "hris_timeoff_read"
+	PropertyConnectionPermissionsHrisTimeoffWrite           PropertyConnectionPermissions = "hris_timeoff_write"
 	PropertyConnectionPermissionsUcCallRead                 PropertyConnectionPermissions = "uc_call_read"
 	PropertyConnectionPermissionsStorageFileRead            PropertyConnectionPermissions = "storage_file_read"
 	PropertyConnectionPermissionsStorageFileWrite           PropertyConnectionPermissions = "storage_file_write"
@@ -229,6 +233,14 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "hris_group_read":
 		fallthrough
 	case "hris_group_write":
+		fallthrough
+	case "hris_payslip_read":
+		fallthrough
+	case "hris_payslip_write":
+		fallthrough
+	case "hris_timeoff_read":
+		fallthrough
+	case "hris_timeoff_write":
 		fallthrough
 	case "uc_call_read":
 		fallthrough

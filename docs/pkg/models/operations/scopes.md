@@ -73,6 +73,10 @@
 | `ScopesHrisEmployeeWrite`          | hris_employee_write                |
 | `ScopesHrisGroupRead`              | hris_group_read                    |
 | `ScopesHrisGroupWrite`             | hris_group_write                   |
+| `ScopesHrisPayslipRead`            | hris_payslip_read                  |
+| `ScopesHrisPayslipWrite`           | hris_payslip_write                 |
+| `ScopesHrisTimeoffRead`            | hris_timeoff_read                  |
+| `ScopesHrisTimeoffWrite`           | hris_timeoff_write                 |
 | `ScopesUcCallRead`                 | uc_call_read                       |
 | `ScopesStorageFileRead`            | storage_file_read                  |
 | `ScopesStorageFileWrite`           | storage_file_write                 |

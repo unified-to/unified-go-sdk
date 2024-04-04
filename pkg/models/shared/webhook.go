@@ -73,6 +73,8 @@ const (
 	ObjectTypeCrmPipeline            ObjectType = "crm_pipeline"
 	ObjectTypeHrisEmployee           ObjectType = "hris_employee"
 	ObjectTypeHrisGroup              ObjectType = "hris_group"
+	ObjectTypeHrisPayslip            ObjectType = "hris_payslip"
+	ObjectTypeHrisTimeoff            ObjectType = "hris_timeoff"
 	ObjectTypeMartechList            ObjectType = "martech_list"
 	ObjectTypeMartechMember          ObjectType = "martech_member"
 	ObjectTypePassthrough            ObjectType = "passthrough"
@@ -157,6 +159,10 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "hris_employee":
 		fallthrough
 	case "hris_group":
+		fallthrough
+	case "hris_payslip":
+		fallthrough
+	case "hris_timeoff":
 		fallthrough
 	case "martech_list":
 		fallthrough

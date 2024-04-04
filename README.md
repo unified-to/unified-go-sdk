@@ -428,8 +428,12 @@ func main() {
 * [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [GetHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [GetHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
+* [GetHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
+* [GetHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [ListHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [ListHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
+* [ListHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslip
+* [ListHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [PatchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [RemoveHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
@@ -454,6 +458,16 @@ func main() {
 * [PatchHrisGroup](docs/sdks/group/README.md#patchhrisgroup) - Update a group
 * [RemoveHrisGroup](docs/sdks/group/README.md#removehrisgroup) - Remove a group
 * [UpdateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
+
+### [Payslip](docs/sdks/payslip/README.md)
+
+* [GetHrisPayslip](docs/sdks/payslip/README.md#gethrispayslip) - Retrieve a payslip
+* [ListHrisPayslips](docs/sdks/payslip/README.md#listhrispayslips) - List all payslip
+
+### [Timeoff](docs/sdks/timeoff/README.md)
+
+* [GetHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
+* [ListHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
 
 ### [Martech](docs/sdks/martech/README.md)
 

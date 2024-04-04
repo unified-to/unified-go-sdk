@@ -99,6 +99,8 @@ type UnifiedTo struct {
 	Hris              *Hris
 	Employee          *Employee
 	Group             *Group
+	Payslip           *Payslip
+	Timeoff           *Timeoff
 	Martech           *Martech
 	List              *List
 	Member            *Member
@@ -200,9 +202,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.13.7",
-			GenVersion:        "2.292.0",
-			UserAgent:         "speakeasy-sdk/go 0.13.7 2.292.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.13.8",
+			GenVersion:        "2.298.2",
+			UserAgent:         "speakeasy-sdk/go 0.13.8 2.298.2 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -285,6 +287,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Employee = newEmployee(sdk.sdkConfiguration)
 
 	sdk.Group = newGroup(sdk.sdkConfiguration)
+
+	sdk.Payslip = newPayslip(sdk.sdkConfiguration)
+
+	sdk.Timeoff = newTimeoff(sdk.sdkConfiguration)
 
 	sdk.Martech = newMartech(sdk.sdkConfiguration)
 

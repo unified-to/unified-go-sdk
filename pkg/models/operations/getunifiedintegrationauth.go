@@ -79,6 +79,10 @@ const (
 	ScopesHrisEmployeeWrite          Scopes = "hris_employee_write"
 	ScopesHrisGroupRead              Scopes = "hris_group_read"
 	ScopesHrisGroupWrite             Scopes = "hris_group_write"
+	ScopesHrisPayslipRead            Scopes = "hris_payslip_read"
+	ScopesHrisPayslipWrite           Scopes = "hris_payslip_write"
+	ScopesHrisTimeoffRead            Scopes = "hris_timeoff_read"
+	ScopesHrisTimeoffWrite           Scopes = "hris_timeoff_write"
 	ScopesUcCallRead                 Scopes = "uc_call_read"
 	ScopesStorageFileRead            Scopes = "storage_file_read"
 	ScopesStorageFileWrite           Scopes = "storage_file_write"
@@ -230,6 +234,14 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "hris_group_read":
 		fallthrough
 	case "hris_group_write":
+		fallthrough
+	case "hris_payslip_read":
+		fallthrough
+	case "hris_payslip_write":
+		fallthrough
+	case "hris_timeoff_read":
+		fallthrough
+	case "hris_timeoff_write":
 		fallthrough
 	case "uc_call_read":
 		fallthrough
