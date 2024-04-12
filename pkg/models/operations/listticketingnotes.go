@@ -18,9 +18,8 @@ type ListTicketingNotesRequest struct {
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
-	Query *string `queryParam:"style=form,explode=true,name=query"`
-	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
-	// Usually required
+	Query    *string `queryParam:"style=form,explode=true,name=query"`
+	Sort     *string `queryParam:"style=form,explode=true,name=sort"`
 	TicketID *string `queryParam:"style=form,explode=true,name=ticket_id"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`

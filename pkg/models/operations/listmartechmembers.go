@@ -15,7 +15,6 @@ type ListMartechMembersRequest struct {
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	// Usually required
 	ListID *string  `queryParam:"style=form,explode=true,name=list_id"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`

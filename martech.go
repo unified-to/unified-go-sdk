@@ -865,7 +865,7 @@ func (s *Martech) RemoveMartechList(ctx context.Context, request operations.Remo
 	return res, nil
 }
 
-// RemoveMartechMember - Remove member
+// RemoveMartechMember - Remove a member
 func (s *Martech) RemoveMartechMember(ctx context.Context, request operations.RemoveMartechMemberRequest) (*operations.RemoveMartechMemberResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,

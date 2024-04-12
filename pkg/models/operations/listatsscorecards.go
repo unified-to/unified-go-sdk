@@ -10,21 +10,17 @@ import (
 )
 
 type ListAtsScorecardsRequest struct {
-	// The application ID to filter results
 	ApplicationID *string `queryParam:"style=form,explode=true,name=application_id"`
-	// The candidate ID to filter results
-	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`
+	CandidateID   *string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	// The interview ID to filter results
-	InterviewID *string `queryParam:"style=form,explode=true,name=interview_id"`
-	// The job ID to filter results
-	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields      []string `queryParam:"style=form,explode=true,name=fields"`
+	InterviewID *string  `queryParam:"style=form,explode=true,name=interview_id"`
+	JobID       *string  `queryParam:"style=form,explode=true,name=job_id"`
+	Limit       *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset      *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order       *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`

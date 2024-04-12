@@ -22,8 +22,7 @@ type ListHrisPayslipsRequest struct {
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-	// Employee ID
-	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
+	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListHrisPayslipsRequest) MarshalJSON() ([]byte, error) {

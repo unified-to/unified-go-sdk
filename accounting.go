@@ -215,7 +215,7 @@ func (s *Accounting) CreateAccountingContact(ctx context.Context, request operat
 	return res, nil
 }
 
-// CreateAccountingInvoice - Create a invoice
+// CreateAccountingInvoice - Create an invoice
 func (s *Accounting) CreateAccountingInvoice(ctx context.Context, request operations.CreateAccountingInvoiceRequest) (*operations.CreateAccountingInvoiceResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -686,7 +686,7 @@ func (s *Accounting) GetAccountingContact(ctx context.Context, request operation
 	return res, nil
 }
 
-// GetAccountingInvoice - Retrieve a invoice
+// GetAccountingInvoice - Retrieve an invoice
 func (s *Accounting) GetAccountingInvoice(ctx context.Context, request operations.GetAccountingInvoiceRequest) (*operations.GetAccountingInvoiceResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -1806,7 +1806,7 @@ func (s *Accounting) PatchAccountingContact(ctx context.Context, request operati
 	return res, nil
 }
 
-// PatchAccountingInvoice - Update a invoice
+// PatchAccountingInvoice - Update an invoice
 func (s *Accounting) PatchAccountingInvoice(ctx context.Context, request operations.PatchAccountingInvoiceRequest) (*operations.PatchAccountingInvoiceResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -2267,7 +2267,7 @@ func (s *Accounting) RemoveAccountingContact(ctx context.Context, request operat
 	return res, nil
 }
 
-// RemoveAccountingInvoice - Remove a invoice
+// RemoveAccountingInvoice - Remove an invoice
 func (s *Accounting) RemoveAccountingInvoice(ctx context.Context, request operations.RemoveAccountingInvoiceRequest) (*operations.RemoveAccountingInvoiceResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -2721,7 +2721,7 @@ func (s *Accounting) UpdateAccountingContact(ctx context.Context, request operat
 	return res, nil
 }
 
-// UpdateAccountingInvoice - Update a invoice
+// UpdateAccountingInvoice - Update an invoice
 func (s *Accounting) UpdateAccountingInvoice(ctx context.Context, request operations.UpdateAccountingInvoiceRequest) (*operations.UpdateAccountingInvoiceResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,

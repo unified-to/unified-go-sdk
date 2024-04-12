@@ -4,7 +4,7 @@
 ### Available Operations
 
 * [GetHrisPayslip](#gethrispayslip) - Retrieve a payslip
-* [ListHrisPayslips](#listhrispayslips) - List all payslip
+* [ListHrisPayslips](#listhrispayslips) - List all payslips
 
 ## GetHrisPayslip
 
@@ -59,7 +59,7 @@ func main() {
 
 ## ListHrisPayslips
 
-List all payslip
+List all payslips
 
 ### Example Usage
 

@@ -11,9 +11,8 @@ import (
 
 type ListAccountingInvoicesRequest struct {
 	// ID of the connection
-	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The customer/supplier ID to filter results
-	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
+	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
+	ContactID    *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`

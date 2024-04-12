@@ -405,7 +405,7 @@ func (s *Ats) CreateAtsDocument(ctx context.Context, request operations.CreateAt
 	return res, nil
 }
 
-// CreateAtsInterview - Create a interview
+// CreateAtsInterview - Create an interview
 func (s *Ats) CreateAtsInterview(ctx context.Context, request operations.CreateAtsInterviewRequest) (*operations.CreateAtsInterviewResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -1155,7 +1155,7 @@ func (s *Ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocum
 	return res, nil
 }
 
-// GetAtsInterview - Retrieve a interview
+// GetAtsInterview - Retrieve an interview
 func (s *Ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInterviewRequest) (*operations.GetAtsInterviewResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -1620,7 +1620,7 @@ func (s *Ats) ListAtsApplications(ctx context.Context, request operations.ListAt
 	return res, nil
 }
 
-// ListAtsApplicationstatuses - List all application statuses
+// ListAtsApplicationstatuses - List all applicationstatuses
 func (s *Ats) ListAtsApplicationstatuses(ctx context.Context, request operations.ListAtsApplicationstatusesRequest) (*operations.ListAtsApplicationstatusesResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -2651,7 +2651,7 @@ func (s *Ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsD
 	return res, nil
 }
 
-// PatchAtsInterview - Update a interview
+// PatchAtsInterview - Update an interview
 func (s *Ats) PatchAtsInterview(ctx context.Context, request operations.PatchAtsInterviewRequest) (*operations.PatchAtsInterviewResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -3288,7 +3288,7 @@ func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAt
 	return res, nil
 }
 
-// RemoveAtsInterview - Remove a interview
+// RemoveAtsInterview - Remove an interview
 func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveAtsInterviewRequest) (*operations.RemoveAtsInterviewResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -3932,7 +3932,7 @@ func (s *Ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAt
 	return res, nil
 }
 
-// UpdateAtsInterview - Update a interview
+// UpdateAtsInterview - Update an interview
 func (s *Ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateAtsInterviewRequest) (*operations.UpdateAtsInterviewResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,

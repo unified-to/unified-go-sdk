@@ -3,26 +3,26 @@
 
 ### Available Operations
 
-* [CreatePaymentLink](#createpaymentlink) - Create a payment link
+* [CreatePaymentLink](#createpaymentlink) - Create a link
 * [CreatePaymentPayment](#createpaymentpayment) - Create a payment
-* [GetPaymentLink](#getpaymentlink) - Retrieve a payment link
+* [GetPaymentLink](#getpaymentlink) - Retrieve a link
 * [GetPaymentPayment](#getpaymentpayment) - Retrieve a payment
 * [GetPaymentPayout](#getpaymentpayout) - Retrieve a payout
 * [GetPaymentRefund](#getpaymentrefund) - Retrieve a refund
-* [ListPaymentLinks](#listpaymentlinks) - List all payment links
+* [ListPaymentLinks](#listpaymentlinks) - List all links
 * [ListPaymentPayments](#listpaymentpayments) - List all payments
 * [ListPaymentPayouts](#listpaymentpayouts) - List all payouts
 * [ListPaymentRefunds](#listpaymentrefunds) - List all refunds
-* [PatchPaymentLink](#patchpaymentlink) - Update a payment link
+* [PatchPaymentLink](#patchpaymentlink) - Update a link
 * [PatchPaymentPayment](#patchpaymentpayment) - Update a payment
-* [RemovePaymentLink](#removepaymentlink) - Remove a payment link
+* [RemovePaymentLink](#removepaymentlink) - Remove a link
 * [RemovePaymentPayment](#removepaymentpayment) - Remove a payment
-* [UpdatePaymentLink](#updatepaymentlink) - Update a payment link
+* [UpdatePaymentLink](#updatepaymentlink) - Update a link
 * [UpdatePaymentPayment](#updatepaymentpayment) - Update a payment
 
 ## CreatePaymentLink
 
-Create a payment link
+Create a link
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ func main() {
 
 ## GetPaymentLink
 
-Retrieve a payment link
+Retrieve a link
 
 ### Example Usage
 
@@ -326,7 +326,7 @@ func main() {
 
 ## ListPaymentLinks
 
-List all payment links
+List all links
 
 ### Example Usage
 
@@ -526,7 +526,7 @@ func main() {
 
 ## PatchPaymentLink
 
-Update a payment link
+Update a link
 
 ### Example Usage
 
@@ -628,7 +628,7 @@ func main() {
 
 ## RemovePaymentLink
 
-Remove a payment link
+Remove a link
 
 ### Example Usage
 
@@ -730,7 +730,7 @@ func main() {
 
 ## UpdatePaymentLink
 
-Update a payment link
+Update a link
 
 ### Example Usage
 

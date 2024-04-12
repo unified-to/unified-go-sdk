@@ -10,7 +10,6 @@ import (
 )
 
 type ListAtsDocumentsRequest struct {
-	// The application ID to filter results
 	ApplicationID *string `queryParam:"style=form,explode=true,name=application_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

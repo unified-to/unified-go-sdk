@@ -401,7 +401,7 @@ func (s *Member) PatchMartechMember(ctx context.Context, request operations.Patc
 	return res, nil
 }
 
-// RemoveMartechMember - Remove member
+// RemoveMartechMember - Remove a member
 func (s *Member) RemoveMartechMember(ctx context.Context, request operations.RemoveMartechMemberRequest) (*operations.RemoveMartechMemberResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,

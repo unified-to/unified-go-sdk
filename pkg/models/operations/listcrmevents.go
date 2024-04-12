@@ -10,14 +10,11 @@ import (
 )
 
 type ListCrmEventsRequest struct {
-	// The company ID to filter results
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
-	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter results
-	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// The deal ID to filter results
-	DealID *string `queryParam:"style=form,explode=true,name=deal_id"`
+	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
+	ContactID    *string `queryParam:"style=form,explode=true,name=contact_id"`
+	DealID       *string `queryParam:"style=form,explode=true,name=deal_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -29,8 +26,7 @@ type ListCrmEventsRequest struct {
 	Type  *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/owner ID to filter results
-	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
+	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListCrmEventsRequest) MarshalJSON() ([]byte, error) {

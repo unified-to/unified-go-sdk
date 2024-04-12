@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [CreatePaymentLink](#createpaymentlink) - Create a payment link
-* [GetPaymentLink](#getpaymentlink) - Retrieve a payment link
-* [ListPaymentLinks](#listpaymentlinks) - List all payment links
-* [PatchPaymentLink](#patchpaymentlink) - Update a payment link
-* [RemovePaymentLink](#removepaymentlink) - Remove a payment link
-* [UpdatePaymentLink](#updatepaymentlink) - Update a payment link
+* [CreatePaymentLink](#createpaymentlink) - Create a link
+* [GetPaymentLink](#getpaymentlink) - Retrieve a link
+* [ListPaymentLinks](#listpaymentlinks) - List all links
+* [PatchPaymentLink](#patchpaymentlink) - Update a link
+* [RemovePaymentLink](#removepaymentlink) - Remove a link
+* [UpdatePaymentLink](#updatepaymentlink) - Update a link
 
 ## CreatePaymentLink
 
-Create a payment link
+Create a link
 
 ### Example Usage
 
@@ -62,7 +62,7 @@ func main() {
 
 ## GetPaymentLink
 
-Retrieve a payment link
+Retrieve a link
 
 ### Example Usage
 
@@ -113,7 +113,7 @@ func main() {
 
 ## ListPaymentLinks
 
-List all payment links
+List all links
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ func main() {
 
 ## PatchPaymentLink
 
-Update a payment link
+Update a link
 
 ### Example Usage
 
@@ -214,7 +214,7 @@ func main() {
 
 ## RemovePaymentLink
 
-Remove a payment link
+Remove a link
 
 ### Example Usage
 
@@ -265,7 +265,7 @@ func main() {
 
 ## UpdatePaymentLink
 
-Update a payment link
+Update a link
 
 ### Example Usage
 

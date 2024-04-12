@@ -118,7 +118,7 @@ func (s *Payslip) GetHrisPayslip(ctx context.Context, request operations.GetHris
 	return res, nil
 }
 
-// ListHrisPayslips - List all payslip
+// ListHrisPayslips - List all payslips
 func (s *Payslip) ListHrisPayslips(ctx context.Context, request operations.ListHrisPayslipsRequest) (*operations.ListHrisPayslipsResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,

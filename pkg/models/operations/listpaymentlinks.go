@@ -11,16 +11,14 @@ import (
 
 type ListPaymentLinksRequest struct {
 	// ID of the connection
-	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The customer/supplier ID to filter results
-	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
+	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
+	ContactID    *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The payment ID to filter results
-	PaymentID *string `queryParam:"style=form,explode=true,name=payment_id"`
+	Fields    []string `queryParam:"style=form,explode=true,name=fields"`
+	Limit     *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset    *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order     *string  `queryParam:"style=form,explode=true,name=order"`
+	PaymentID *string  `queryParam:"style=form,explode=true,name=payment_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`

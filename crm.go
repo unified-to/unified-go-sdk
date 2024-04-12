@@ -310,7 +310,7 @@ func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDea
 	return res, nil
 }
 
-// CreateCrmEvent - Create a event
+// CreateCrmEvent - Create an event
 func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEventRequest) (*operations.CreateCrmEventResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -874,7 +874,7 @@ func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealReque
 	return res, nil
 }
 
-// GetCrmEvent - Retrieve a event
+// GetCrmEvent - Retrieve an event
 func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventRequest) (*operations.GetCrmEventResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -1996,7 +1996,7 @@ func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealR
 	return res, nil
 }
 
-// PatchCrmEvent - Update a event
+// PatchCrmEvent - Update an event
 func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEventRequest) (*operations.PatchCrmEventResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -2545,7 +2545,7 @@ func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 	return res, nil
 }
 
-// RemoveCrmEvent - Remove a event
+// RemoveCrmEvent - Remove an event
 func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEventRequest) (*operations.RemoveCrmEventResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -3094,7 +3094,7 @@ func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDea
 	return res, nil
 }
 
-// UpdateCrmEvent - Update a event
+// UpdateCrmEvent - Update an event
 func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEventRequest) (*operations.UpdateCrmEventResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,

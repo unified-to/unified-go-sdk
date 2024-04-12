@@ -3,26 +3,58 @@
 package shared
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
+type CommerceCollectionType string
+
+const (
+	CommerceCollectionTypeCollection  CommerceCollectionType = "COLLECTION"
+	CommerceCollectionTypeSavedSearch CommerceCollectionType = "SAVED_SEARCH"
+	CommerceCollectionTypeCategory    CommerceCollectionType = "CATEGORY"
+)
+
+func (e CommerceCollectionType) ToPointer() *CommerceCollectionType {
+	return &e
+}
+
+func (e *CommerceCollectionType) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "COLLECTION":
+		fallthrough
+	case "SAVED_SEARCH":
+		fallthrough
+	case "CATEGORY":
+		*e = CommerceCollectionType(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CommerceCollectionType: %v", v)
+	}
+}
+
 // CommerceCollection - A collection of items/products/services
 type CommerceCollection struct {
-	CreatedAt         *time.Time             `json:"created_at,omitempty"`
-	Description       *string                `json:"description,omitempty"`
-	ID                string                 `json:"id"`
-	IsActive          *bool                  `json:"is_active,omitempty"`
-	IsFeatured        *bool                  `json:"is_featured,omitempty"`
-	IsVisible         *bool                  `json:"is_visible,omitempty"`
-	ItemIds           []string               `json:"item_ids,omitempty"`
-	Media             []CommerceItemMedia    `json:"media,omitempty"`
-	Name              string                 `json:"name"`
-	PublicDescription *string                `json:"public_description,omitempty"`
-	PublicName        *string                `json:"public_name,omitempty"`
-	Raw               map[string]interface{} `json:"raw,omitempty"`
-	Tags              []string               `json:"tags,omitempty"`
-	UpdatedAt         *time.Time             `json:"updated_at,omitempty"`
+	CreatedAt         *time.Time              `json:"created_at,omitempty"`
+	Description       *string                 `json:"description,omitempty"`
+	ID                string                  `json:"id"`
+	IsActive          *bool                   `json:"is_active,omitempty"`
+	IsFeatured        *bool                   `json:"is_featured,omitempty"`
+	IsVisible         *bool                   `json:"is_visible,omitempty"`
+	Media             []CommerceItemMedia     `json:"media,omitempty"`
+	Name              string                  `json:"name"`
+	PublicDescription *string                 `json:"public_description,omitempty"`
+	PublicName        *string                 `json:"public_name,omitempty"`
+	Raw               map[string]interface{}  `json:"raw,omitempty"`
+	Tags              []string                `json:"tags,omitempty"`
+	Type              *CommerceCollectionType `json:"type,omitempty"`
+	UpdatedAt         *time.Time              `json:"updated_at,omitempty"`
 }
 
 func (c CommerceCollection) MarshalJSON() ([]byte, error) {
@@ -78,13 +110,6 @@ func (o *CommerceCollection) GetIsVisible() *bool {
 	return o.IsVisible
 }
 
-func (o *CommerceCollection) GetItemIds() []string {
-	if o == nil {
-		return nil
-	}
-	return o.ItemIds
-}
-
 func (o *CommerceCollection) GetMedia() []CommerceItemMedia {
 	if o == nil {
 		return nil
@@ -125,6 +150,13 @@ func (o *CommerceCollection) GetTags() []string {
 		return nil
 	}
 	return o.Tags
+}
+
+func (o *CommerceCollection) GetType() *CommerceCollectionType {
+	if o == nil {
+		return nil
+	}
+	return o.Type
 }
 
 func (o *CommerceCollection) GetUpdatedAt() *time.Time {

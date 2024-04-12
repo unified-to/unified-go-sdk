@@ -25,7 +25,7 @@ func newApplicationstatus(sdkConfig sdkConfiguration) *Applicationstatus {
 	}
 }
 
-// ListAtsApplicationstatuses - List all application statuses
+// ListAtsApplicationstatuses - List all applicationstatuses
 func (s *Applicationstatus) ListAtsApplicationstatuses(ctx context.Context, request operations.ListAtsApplicationstatusesRequest) (*operations.ListAtsApplicationstatusesResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,

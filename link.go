@@ -25,7 +25,7 @@ func newLink(sdkConfig sdkConfiguration) *Link {
 	}
 }
 
-// CreatePaymentLink - Create a payment link
+// CreatePaymentLink - Create a link
 func (s *Link) CreatePaymentLink(ctx context.Context, request operations.CreatePaymentLinkRequest) (*operations.CreatePaymentLinkResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -120,7 +120,7 @@ func (s *Link) CreatePaymentLink(ctx context.Context, request operations.CreateP
 	return res, nil
 }
 
-// GetPaymentLink - Retrieve a payment link
+// GetPaymentLink - Retrieve a link
 func (s *Link) GetPaymentLink(ctx context.Context, request operations.GetPaymentLinkRequest) (*operations.GetPaymentLinkResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -213,7 +213,7 @@ func (s *Link) GetPaymentLink(ctx context.Context, request operations.GetPayment
 	return res, nil
 }
 
-// ListPaymentLinks - List all payment links
+// ListPaymentLinks - List all links
 func (s *Link) ListPaymentLinks(ctx context.Context, request operations.ListPaymentLinksRequest) (*operations.ListPaymentLinksResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -306,7 +306,7 @@ func (s *Link) ListPaymentLinks(ctx context.Context, request operations.ListPaym
 	return res, nil
 }
 
-// PatchPaymentLink - Update a payment link
+// PatchPaymentLink - Update a link
 func (s *Link) PatchPaymentLink(ctx context.Context, request operations.PatchPaymentLinkRequest) (*operations.PatchPaymentLinkResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -401,7 +401,7 @@ func (s *Link) PatchPaymentLink(ctx context.Context, request operations.PatchPay
 	return res, nil
 }
 
-// RemovePaymentLink - Remove a payment link
+// RemovePaymentLink - Remove a link
 func (s *Link) RemovePaymentLink(ctx context.Context, request operations.RemovePaymentLinkRequest) (*operations.RemovePaymentLinkResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
@@ -489,7 +489,7 @@ func (s *Link) RemovePaymentLink(ctx context.Context, request operations.RemoveP
 	return res, nil
 }
 
-// UpdatePaymentLink - Update a payment link
+// UpdatePaymentLink - Update a link
 func (s *Link) UpdatePaymentLink(ctx context.Context, request operations.UpdatePaymentLinkRequest) (*operations.UpdatePaymentLinkResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,

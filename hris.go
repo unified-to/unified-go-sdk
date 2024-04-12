@@ -773,7 +773,7 @@ func (s *Hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGr
 	return res, nil
 }
 
-// ListHrisPayslips - List all payslip
+// ListHrisPayslips - List all payslips
 func (s *Hris) ListHrisPayslips(ctx context.Context, request operations.ListHrisPayslipsRequest) (*operations.ListHrisPayslipsResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,

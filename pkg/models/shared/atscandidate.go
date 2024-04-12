@@ -49,15 +49,15 @@ func (e *Origin) UnmarshalJSON(data []byte) error {
 }
 
 type AtsCandidate struct {
-	Address     *PropertyAtsCandidateAddress `json:"address,omitempty"`
-	CompanyID   *string                      `json:"company_id,omitempty"`
-	CompanyName *string                      `json:"company_name,omitempty"`
-	CreatedAt   *time.Time                   `json:"created_at,omitempty"`
-	DateOfBirth *time.Time                   `json:"date_of_birth,omitempty"`
-	Emails      []AtsEmail                   `json:"emails,omitempty"`
-	ExternalID  *string                      `json:"external_id,omitempty"`
-	ID          *string                      `json:"id,omitempty"`
-	ImageURL    *string                      `json:"image_url,omitempty"`
+	Address            *PropertyAtsCandidateAddress `json:"address,omitempty"`
+	CompanyID          *string                      `json:"company_id,omitempty"`
+	CompanyName        *string                      `json:"company_name,omitempty"`
+	CreatedAt          *time.Time                   `json:"created_at,omitempty"`
+	DateOfBirth        *time.Time                   `json:"date_of_birth,omitempty"`
+	Emails             []AtsEmail                   `json:"emails,omitempty"`
+	ExternalIdentifier *string                      `json:"external_identifier,omitempty"`
+	ID                 *string                      `json:"id,omitempty"`
+	ImageURL           *string                      `json:"image_url,omitempty"`
 	// a list of social media links associated with the candidate. eg. LinkedIn URL
 	LinkUrls   []string               `json:"link_urls,omitempty"`
 	Name       *string                `json:"name,omitempty"`
@@ -68,6 +68,7 @@ type AtsCandidate struct {
 	Telephones []AtsTelephone         `json:"telephones,omitempty"`
 	Title      *string                `json:"title,omitempty"`
 	UpdatedAt  *time.Time             `json:"updated_at,omitempty"`
+	UserID     *string                `json:"user_id,omitempty"`
 }
 
 func (a AtsCandidate) MarshalJSON() ([]byte, error) {
@@ -123,11 +124,11 @@ func (o *AtsCandidate) GetEmails() []AtsEmail {
 	return o.Emails
 }
 
-func (o *AtsCandidate) GetExternalID() *string {
+func (o *AtsCandidate) GetExternalIdentifier() *string {
 	if o == nil {
 		return nil
 	}
-	return o.ExternalID
+	return o.ExternalIdentifier
 }
 
 func (o *AtsCandidate) GetID() *string {
@@ -205,4 +206,11 @@ func (o *AtsCandidate) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *AtsCandidate) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }

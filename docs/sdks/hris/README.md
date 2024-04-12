@@ -11,7 +11,7 @@
 * [GetHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [ListHrisEmployees](#listhrisemployees) - List all employees
 * [ListHrisGroups](#listhrisgroups) - List all groups
-* [ListHrisPayslips](#listhrispayslips) - List all payslip
+* [ListHrisPayslips](#listhrispayslips) - List all payslips
 * [ListHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [PatchHrisEmployee](#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](#patchhrisgroup) - Update a group
@@ -426,7 +426,7 @@ func main() {
 
 ## ListHrisPayslips
 
-List all payslip
+List all payslips
 
 ### Example Usage
 

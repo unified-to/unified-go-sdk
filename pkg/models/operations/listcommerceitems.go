@@ -10,6 +10,7 @@ import (
 )
 
 type ListCommerceItemsRequest struct {
+	CollectionID *string `queryParam:"style=form,explode=true,name=collection_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -33,6 +34,13 @@ func (l *ListCommerceItemsRequest) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (o *ListCommerceItemsRequest) GetCollectionID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CollectionID
 }
 
 func (o *ListCommerceItemsRequest) GetConnectionID() string {

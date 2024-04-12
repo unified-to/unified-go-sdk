@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 2d9519a9ae45cc997b9772dfea3b96f5
+  docChecksum: 42509dc22478b1eda57f88512a90e005
   docVersion: "1.0"
-  speakeasyVersion: 1.244.0
-  generationVersion: 2.301.0
-  releaseVersion: 0.13.9
-  configChecksum: 4612314e3c01408863a5d0caf7965416
+  speakeasyVersion: 1.250.0
+  generationVersion: 2.304.1
+  releaseVersion: 0.13.10
+  configChecksum: 5471634ac35a8fdf56de9f2cdcc827b6
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -991,6 +991,7 @@ generatedFiles:
   - docs/pkg/models/shared/enrichtelephonetype.md
   - docs/pkg/models/shared/enrichtelephone.md
   - docs/pkg/models/shared/propertyenrichcompanyaddress.md
+  - docs/pkg/models/shared/commercecollectiontype.md
   - docs/pkg/models/shared/commercecollection.md
   - docs/pkg/models/shared/commerceitemmediatype.md
   - docs/pkg/models/shared/commerceitemmedia.md

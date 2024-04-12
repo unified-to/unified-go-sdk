@@ -7,15 +7,18 @@ type IntegrationSupport struct {
 	ListAccountID       *bool                                    `json:"list_account_id,omitempty"`
 	ListApplicationID   *bool                                    `json:"list_application_id,omitempty"`
 	ListCandidateID     *bool                                    `json:"list_candidate_id,omitempty"`
+	ListCollectionID    *bool                                    `json:"list_collection_id,omitempty"`
 	ListCompanyID       *bool                                    `json:"list_company_id,omitempty"`
 	ListContactID       *bool                                    `json:"list_contact_id,omitempty"`
 	ListCustomerID      *bool                                    `json:"list_customer_id,omitempty"`
 	ListDealID          *bool                                    `json:"list_deal_id,omitempty"`
 	ListInterviewID     *bool                                    `json:"list_interview_id,omitempty"`
 	ListInvoiceID       *bool                                    `json:"list_invoice_id,omitempty"`
+	ListItemID          *bool                                    `json:"list_item_id,omitempty"`
 	ListJobID           *bool                                    `json:"list_job_id,omitempty"`
 	ListLimit           *bool                                    `json:"list_limit,omitempty"`
 	ListListID          *bool                                    `json:"list_list_id,omitempty"`
+	ListLocationID      *bool                                    `json:"list_location_id,omitempty"`
 	ListOffset          *bool                                    `json:"list_offset,omitempty"`
 	ListOrder           *bool                                    `json:"list_order,omitempty"`
 	ListParentID        *bool                                    `json:"list_parent_id,omitempty"`
@@ -64,6 +67,13 @@ func (o *IntegrationSupport) GetListCandidateID() *bool {
 	return o.ListCandidateID
 }
 
+func (o *IntegrationSupport) GetListCollectionID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListCollectionID
+}
+
 func (o *IntegrationSupport) GetListCompanyID() *bool {
 	if o == nil {
 		return nil
@@ -106,6 +116,13 @@ func (o *IntegrationSupport) GetListInvoiceID() *bool {
 	return o.ListInvoiceID
 }
 
+func (o *IntegrationSupport) GetListItemID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListItemID
+}
+
 func (o *IntegrationSupport) GetListJobID() *bool {
 	if o == nil {
 		return nil
@@ -125,6 +142,13 @@ func (o *IntegrationSupport) GetListListID() *bool {
 		return nil
 	}
 	return o.ListListID
+}
+
+func (o *IntegrationSupport) GetListLocationID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListLocationID
 }
 
 func (o *IntegrationSupport) GetListOffset() *bool {

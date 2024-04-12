@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [CreateCrmEvent](#createcrmevent) - Create a event
-* [GetCrmEvent](#getcrmevent) - Retrieve a event
+* [CreateCrmEvent](#createcrmevent) - Create an event
+* [GetCrmEvent](#getcrmevent) - Retrieve an event
 * [ListCrmEvents](#listcrmevents) - List all events
-* [PatchCrmEvent](#patchcrmevent) - Update a event
-* [RemoveCrmEvent](#removecrmevent) - Remove a event
-* [UpdateCrmEvent](#updatecrmevent) - Update a event
+* [PatchCrmEvent](#patchcrmevent) - Update an event
+* [RemoveCrmEvent](#removecrmevent) - Remove an event
+* [UpdateCrmEvent](#updatecrmevent) - Update an event
 
 ## CreateCrmEvent
 
-Create a event
+Create an event
 
 ### Example Usage
 
@@ -62,7 +62,7 @@ func main() {
 
 ## GetCrmEvent
 
-Retrieve a event
+Retrieve an event
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ func main() {
 
 ## PatchCrmEvent
 
-Update a event
+Update an event
 
 ### Example Usage
 
@@ -214,7 +214,7 @@ func main() {
 
 ## RemoveCrmEvent
 
-Remove a event
+Remove an event
 
 ### Example Usage
 
@@ -265,7 +265,7 @@ func main() {
 
 ## UpdateCrmEvent
 
-Update a event
+Update an event
 
 ### Example Usage
 

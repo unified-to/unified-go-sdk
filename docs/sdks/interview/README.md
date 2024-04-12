@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [CreateAtsInterview](#createatsinterview) - Create a interview
-* [GetAtsInterview](#getatsinterview) - Retrieve a interview
+* [CreateAtsInterview](#createatsinterview) - Create an interview
+* [GetAtsInterview](#getatsinterview) - Retrieve an interview
 * [ListAtsInterviews](#listatsinterviews) - List all interviews
-* [PatchAtsInterview](#patchatsinterview) - Update a interview
-* [RemoveAtsInterview](#removeatsinterview) - Remove a interview
-* [UpdateAtsInterview](#updateatsinterview) - Update a interview
+* [PatchAtsInterview](#patchatsinterview) - Update an interview
+* [RemoveAtsInterview](#removeatsinterview) - Remove an interview
+* [UpdateAtsInterview](#updateatsinterview) - Update an interview
 
 ## CreateAtsInterview
 
-Create a interview
+Create an interview
 
 ### Example Usage
 
@@ -62,7 +62,7 @@ func main() {
 
 ## GetAtsInterview
 
-Retrieve a interview
+Retrieve an interview
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ func main() {
 
 ## PatchAtsInterview
 
-Update a interview
+Update an interview
 
 ### Example Usage
 
@@ -214,7 +214,7 @@ func main() {
 
 ## RemoveAtsInterview
 
-Remove a interview
+Remove an interview
 
 ### Example Usage
 
@@ -265,7 +265,7 @@ func main() {
 
 ## UpdateAtsInterview
 
-Update a interview
+Update an interview
 
 ### Example Usage
 
