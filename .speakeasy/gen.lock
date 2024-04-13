@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 42509dc22478b1eda57f88512a90e005
+  docChecksum: befc5e4546349064e32bd6f1b8d5d55b
   docVersion: "1.0"
-  speakeasyVersion: 1.250.0
-  generationVersion: 2.304.1
-  releaseVersion: 0.13.10
-  configChecksum: 5471634ac35a8fdf56de9f2cdcc827b6
+  speakeasyVersion: 1.252.0
+  generationVersion: 2.306.0
+  releaseVersion: 0.13.11
+  configChecksum: 85cc3d29c16f57e20dda25c6e4c936fe
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -325,6 +325,7 @@ generatedFiles:
   - /pkg/models/operations/listunifiedintegrationworkspaces.go
   - /pkg/models/operations/listunifiedintegrations.go
   - /pkg/models/operations/listunifiedissues.go
+  - /pkg/models/operations/listunifiedsupports.go
   - /pkg/models/operations/listunifiedwebhooks.go
   - /pkg/models/operations/patchunifiedconnection.go
   - /pkg/models/operations/patchunifiedwebhooktrigger.go
@@ -428,6 +429,7 @@ generatedFiles:
   - /pkg/models/shared/propertyuccalltelephone.go
   - /pkg/models/shared/connection.go
   - /pkg/models/shared/propertyconnectionpermissions.go
+  - /pkg/models/shared/undefined.go
   - /pkg/models/shared/propertyconnectioncategories.go
   - /pkg/models/shared/propertyconnectionauth.go
   - /pkg/models/shared/webhook.go
@@ -904,6 +906,7 @@ generatedFiles:
   - docs/pkg/models/operations/listunifiedintegrationsresponse.md
   - docs/pkg/models/operations/listunifiedissuesrequest.md
   - docs/pkg/models/operations/listunifiedissuesresponse.md
+  - docs/pkg/models/operations/listunifiedsupportsresponse.md
   - docs/pkg/models/operations/listunifiedwebhooksrequest.md
   - docs/pkg/models/operations/listunifiedwebhooksresponse.md
   - docs/pkg/models/operations/patchunifiedconnectionrequest.md
@@ -1069,6 +1072,7 @@ generatedFiles:
   - docs/pkg/models/shared/propertyuccalltelephone.md
   - docs/pkg/models/shared/connection.md
   - docs/pkg/models/shared/propertyconnectionpermissions.md
+  - docs/pkg/models/shared/undefined.md
   - docs/pkg/models/shared/propertyconnectioncategories.md
   - docs/pkg/models/shared/propertyconnectionauth.md
   - docs/pkg/models/shared/event.md

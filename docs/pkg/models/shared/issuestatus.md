@@ -5,9 +5,10 @@
 
 | Name                    | Value                   |
 | ----------------------- | ----------------------- |
-| `IssueStatusOnHold`     | ON_HOLD                 |
+| `IssueStatusCompleted`  | COMPLETED               |
 | `IssueStatusNew`        | NEW                     |
+| `IssueStatusRoadmap`    | ROADMAP                 |
 | `IssueStatusInProgress` | IN_PROGRESS             |
+| `IssueStatusOnHold`     | ON_HOLD                 |
 | `IssueStatusValidating` | VALIDATING              |
-| `IssueStatusComplete`   | COMPLETE                |
 | `IssueStatusRejected`   | REJECTED                |

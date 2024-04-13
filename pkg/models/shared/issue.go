@@ -10,11 +10,12 @@ import (
 type IssueStatus string
 
 const (
-	IssueStatusOnHold     IssueStatus = "ON_HOLD"
+	IssueStatusCompleted  IssueStatus = "COMPLETED"
 	IssueStatusNew        IssueStatus = "NEW"
+	IssueStatusRoadmap    IssueStatus = "ROADMAP"
 	IssueStatusInProgress IssueStatus = "IN_PROGRESS"
+	IssueStatusOnHold     IssueStatus = "ON_HOLD"
 	IssueStatusValidating IssueStatus = "VALIDATING"
-	IssueStatusComplete   IssueStatus = "COMPLETE"
 	IssueStatusRejected   IssueStatus = "REJECTED"
 )
 
@@ -28,15 +29,17 @@ func (e *IssueStatus) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "ON_HOLD":
+	case "COMPLETED":
 		fallthrough
 	case "NEW":
 		fallthrough
+	case "ROADMAP":
+		fallthrough
 	case "IN_PROGRESS":
 		fallthrough
-	case "VALIDATING":
+	case "ON_HOLD":
 		fallthrough
-	case "COMPLETE":
+	case "VALIDATING":
 		fallthrough
 	case "REJECTED":
 		*e = IssueStatus(v)
