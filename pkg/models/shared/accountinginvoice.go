@@ -39,9 +39,13 @@ func (e *PaymentCollectionMethod) UnmarshalJSON(data []byte) error {
 type AccountingInvoiceStatus string
 
 const (
-	AccountingInvoiceStatusDraft      AccountingInvoiceStatus = "DRAFT"
-	AccountingInvoiceStatusVoided     AccountingInvoiceStatus = "VOIDED"
-	AccountingInvoiceStatusAuthorized AccountingInvoiceStatus = "AUTHORIZED"
+	AccountingInvoiceStatusDraft             AccountingInvoiceStatus = "DRAFT"
+	AccountingInvoiceStatusVoided            AccountingInvoiceStatus = "VOIDED"
+	AccountingInvoiceStatusAuthorized        AccountingInvoiceStatus = "AUTHORIZED"
+	AccountingInvoiceStatusPaid              AccountingInvoiceStatus = "PAID"
+	AccountingInvoiceStatusPartiallyPaid     AccountingInvoiceStatus = "PARTIALLY_PAID"
+	AccountingInvoiceStatusPartiallyRefunded AccountingInvoiceStatus = "PARTIALLY_REFUNDED"
+	AccountingInvoiceStatusRefunded          AccountingInvoiceStatus = "REFUNDED"
 )
 
 func (e AccountingInvoiceStatus) ToPointer() *AccountingInvoiceStatus {
@@ -59,6 +63,14 @@ func (e *AccountingInvoiceStatus) UnmarshalJSON(data []byte) error {
 	case "VOIDED":
 		fallthrough
 	case "AUTHORIZED":
+		fallthrough
+	case "PAID":
+		fallthrough
+	case "PARTIALLY_PAID":
+		fallthrough
+	case "PARTIALLY_REFUNDED":
+		fallthrough
+	case "REFUNDED":
 		*e = AccountingInvoiceStatus(v)
 		return nil
 	default:
