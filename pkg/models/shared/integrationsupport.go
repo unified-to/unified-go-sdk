@@ -34,7 +34,7 @@ type IntegrationSupport struct {
 	OutboundFields      map[string]interface{}                   `json:"outbound_fields,omitempty"`
 	SearchDomain        *bool                                    `json:"search_domain,omitempty"`
 	SearchEmail         *bool                                    `json:"search_email,omitempty"`
-	SearchLinkedinURL   *bool                                    `json:"search_linkedin_url,omitempty"`
+	SearchLinkedinurl   *bool                                    `json:"search_linkedinurl,omitempty"`
 	SearchName          *bool                                    `json:"search_name,omitempty"`
 	SearchTwitter       *bool                                    `json:"search_twitter,omitempty"`
 	WebhookEvents       *PropertyIntegrationSupportWebhookEvents `json:"webhook_events,omitempty"`
@@ -257,11 +257,11 @@ func (o *IntegrationSupport) GetSearchEmail() *bool {
 	return o.SearchEmail
 }
 
-func (o *IntegrationSupport) GetSearchLinkedinURL() *bool {
+func (o *IntegrationSupport) GetSearchLinkedinurl() *bool {
 	if o == nil {
 		return nil
 	}
-	return o.SearchLinkedinURL
+	return o.SearchLinkedinurl
 }
 
 func (o *IntegrationSupport) GetSearchName() *bool {
