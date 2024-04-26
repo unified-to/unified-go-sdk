@@ -227,6 +227,7 @@ type Webhook struct {
 	Environment     *string                `default:"Production" json:"environment"`
 	Event           Event                  `json:"event"`
 	Fields          *string                `json:"fields,omitempty"`
+	Filters         map[string]string      `json:"filters,omitempty"`
 	HookURL         string                 `json:"hook_url"`
 	ID              *string                `json:"id,omitempty"`
 	IntegrationType *string                `json:"integration_type,omitempty"`
@@ -293,6 +294,13 @@ func (o *Webhook) GetFields() *string {
 		return nil
 	}
 	return o.Fields
+}
+
+func (o *Webhook) GetFilters() map[string]string {
+	if o == nil {
+		return nil
+	}
+	return o.Filters
 }
 
 func (o *Webhook) GetHookURL() string {
