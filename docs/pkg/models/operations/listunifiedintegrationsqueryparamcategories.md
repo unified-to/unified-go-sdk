@@ -18,3 +18,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesStorage`     | storage                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesCommerce`    | commerce                                                 |
 | `ListUnifiedIntegrationsQueryParamCategoriesPayment`     | payment                                                  |
+| `ListUnifiedIntegrationsQueryParamCategoriesGenai`       | genai                                                    |

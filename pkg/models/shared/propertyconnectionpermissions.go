@@ -86,6 +86,9 @@ const (
 	PropertyConnectionPermissionsStorageFileRead            PropertyConnectionPermissions = "storage_file_read"
 	PropertyConnectionPermissionsStorageFileWrite           PropertyConnectionPermissions = "storage_file_write"
 	PropertyConnectionPermissionsWebhook                    PropertyConnectionPermissions = "webhook"
+	PropertyConnectionPermissionsGenaiModelRead             PropertyConnectionPermissions = "genai_model_read"
+	PropertyConnectionPermissionsGenaiPromptRead            PropertyConnectionPermissions = "genai_prompt_read"
+	PropertyConnectionPermissionsGenaiPromptWrite           PropertyConnectionPermissions = "genai_prompt_write"
 )
 
 func (e PropertyConnectionPermissions) ToPointer() *PropertyConnectionPermissions {
@@ -249,6 +252,12 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "storage_file_write":
 		fallthrough
 	case "webhook":
+		fallthrough
+	case "genai_model_read":
+		fallthrough
+	case "genai_prompt_read":
+		fallthrough
+	case "genai_prompt_write":
 		*e = PropertyConnectionPermissions(v)
 		return nil
 	default:

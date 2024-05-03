@@ -18,3 +18,4 @@
 | `CategoriesStorage`     | storage                 |
 | `CategoriesCommerce`    | commerce                |
 | `CategoriesPayment`     | payment                 |
+| `CategoriesGenai`       | genai                   |

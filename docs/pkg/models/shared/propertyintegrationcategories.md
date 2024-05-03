@@ -18,3 +18,4 @@
 | `PropertyIntegrationCategoriesStorage`     | storage                                    |
 | `PropertyIntegrationCategoriesCommerce`    | commerce                                   |
 | `PropertyIntegrationCategoriesPayment`     | payment                                    |
+| `PropertyIntegrationCategoriesGenai`       | genai                                      |

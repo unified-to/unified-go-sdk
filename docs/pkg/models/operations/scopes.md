@@ -81,3 +81,6 @@
 | `ScopesStorageFileRead`            | storage_file_read                  |
 | `ScopesStorageFileWrite`           | storage_file_write                 |
 | `ScopesWebhook`                    | webhook                            |
+| `ScopesGenaiModelRead`             | genai_model_read                   |
+| `ScopesGenaiPromptRead`            | genai_prompt_read                  |
+| `ScopesGenaiPromptWrite`           | genai_prompt_write                 |

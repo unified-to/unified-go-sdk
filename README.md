@@ -422,6 +422,19 @@ func main() {
 
 * [ListEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
+### [Genai](docs/sdks/genai/README.md)
+
+* [CreateGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
+* [ListGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
+
+### [Model](docs/sdks/model/README.md)
+
+* [ListGenaiModels](docs/sdks/model/README.md#listgenaimodels) - List all models
+
+### [Prompt](docs/sdks/prompt/README.md)
+
+* [CreateGenaiPrompt](docs/sdks/prompt/README.md#creategenaiprompt) - Create a prompt
+
 ### [Hris](docs/sdks/hris/README.md)
 
 * [CreateHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee

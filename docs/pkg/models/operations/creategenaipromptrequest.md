@@ -1,0 +1,9 @@
+# CreateGenaiPromptRequest
+
+
+## Fields
+
+| Field                                                            | Type                                                             | Required                                                         | Description                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `GenaiPrompt`                                                    | [*shared.GenaiPrompt](../../../pkg/models/shared/genaiprompt.md) | :heavy_minus_sign:                                               | N/A                                                              |
+| `ConnectionID`                                                   | *string*                                                         | :heavy_check_mark:                                               | ID of the connection                                             |

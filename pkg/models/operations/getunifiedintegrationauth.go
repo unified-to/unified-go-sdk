@@ -87,6 +87,9 @@ const (
 	ScopesStorageFileRead            Scopes = "storage_file_read"
 	ScopesStorageFileWrite           Scopes = "storage_file_write"
 	ScopesWebhook                    Scopes = "webhook"
+	ScopesGenaiModelRead             Scopes = "genai_model_read"
+	ScopesGenaiPromptRead            Scopes = "genai_prompt_read"
+	ScopesGenaiPromptWrite           Scopes = "genai_prompt_write"
 )
 
 func (e Scopes) ToPointer() *Scopes {
@@ -250,6 +253,12 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "storage_file_write":
 		fallthrough
 	case "webhook":
+		fallthrough
+	case "genai_model_read":
+		fallthrough
+	case "genai_prompt_read":
+		fallthrough
+	case "genai_prompt_write":
 		*e = Scopes(v)
 		return nil
 	default:

@@ -81,3 +81,6 @@
 | `PropertyConnectionPermissionsStorageFileRead`            | storage_file_read                                         |
 | `PropertyConnectionPermissionsStorageFileWrite`           | storage_file_write                                        |
 | `PropertyConnectionPermissionsWebhook`                    | webhook                                                   |
+| `PropertyConnectionPermissionsGenaiModelRead`             | genai_model_read                                          |
+| `PropertyConnectionPermissionsGenaiPromptRead`            | genai_prompt_read                                         |
+| `PropertyConnectionPermissionsGenaiPromptWrite`           | genai_prompt_write                                        |

@@ -1,0 +1,56 @@
+# Model
+(*Model*)
+
+### Available Operations
+
+* [ListGenaiModels](#listgenaimodels) - List all models
+
+## ListGenaiModels
+
+List all models
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Model.ListGenaiModels(ctx, operations.ListGenaiModelsRequest{
+        ConnectionID: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiModels != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.ListGenaiModelsRequest](../../pkg/models/operations/listgenaimodelsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[*operations.ListGenaiModelsResponse](../../pkg/models/operations/listgenaimodelsresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |

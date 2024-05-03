@@ -96,6 +96,9 @@ type UnifiedTo struct {
 	Pipeline          *Pipeline
 	Enrich            *Enrich
 	Person            *Person
+	Genai             *Genai
+	Model             *Model
+	Prompt            *Prompt
 	Hris              *Hris
 	Employee          *Employee
 	Group             *Group
@@ -202,9 +205,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.13.15",
-			GenVersion:        "2.319.7",
-			UserAgent:         "speakeasy-sdk/go 0.13.15 2.319.7 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.13.16",
+			GenVersion:        "2.319.10",
+			UserAgent:         "speakeasy-sdk/go 0.13.16 2.319.10 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -281,6 +284,12 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Enrich = newEnrich(sdk.sdkConfiguration)
 
 	sdk.Person = newPerson(sdk.sdkConfiguration)
+
+	sdk.Genai = newGenai(sdk.sdkConfiguration)
+
+	sdk.Model = newModel(sdk.sdkConfiguration)
+
+	sdk.Prompt = newPrompt(sdk.sdkConfiguration)
 
 	sdk.Hris = newHris(sdk.sdkConfiguration)
 

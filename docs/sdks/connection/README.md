@@ -34,11 +34,11 @@ func main() {
     ctx := context.Background()
     res, err := s.Connection.CreateUnifiedConnection(ctx, &shared.Connection{
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesCommerce,
+            shared.PropertyConnectionCategoriesPayment,
         },
         IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsCandidateWrite,
+            shared.PropertyConnectionPermissionsAtsInterviewRead,
         },
     })
     if err != nil {

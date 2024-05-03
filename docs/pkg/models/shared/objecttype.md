@@ -49,3 +49,5 @@
 | `ObjectTypeEnrichPerson`           | enrich_person                      |
 | `ObjectTypeEnrichCompany`          | enrich_company                     |
 | `ObjectTypeStorageFile`            | storage_file                       |
+| `ObjectTypeGenaiModel`             | genai_model                        |
+| `ObjectTypeGenaiPrompt`            | genai_prompt                       |

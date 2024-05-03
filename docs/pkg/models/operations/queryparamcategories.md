@@ -18,3 +18,4 @@
 | `QueryParamCategoriesStorage`     | storage                           |
 | `QueryParamCategoriesCommerce`    | commerce                          |
 | `QueryParamCategoriesPayment`     | payment                           |
+| `QueryParamCategoriesGenai`       | genai                             |

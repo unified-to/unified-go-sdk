@@ -86,6 +86,8 @@ const (
 	ObjectTypeEnrichPerson           ObjectType = "enrich_person"
 	ObjectTypeEnrichCompany          ObjectType = "enrich_company"
 	ObjectTypeStorageFile            ObjectType = "storage_file"
+	ObjectTypeGenaiModel             ObjectType = "genai_model"
+	ObjectTypeGenaiPrompt            ObjectType = "genai_prompt"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -185,6 +187,10 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "enrich_company":
 		fallthrough
 	case "storage_file":
+		fallthrough
+	case "genai_model":
+		fallthrough
+	case "genai_prompt":
 		*e = ObjectType(v)
 		return nil
 	default:
