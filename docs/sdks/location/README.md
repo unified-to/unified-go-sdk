@@ -22,8 +22,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -32,10 +32,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Location.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
+    request := operations.CreateCommerceLocationRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Location.CreateCommerceLocation(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -72,8 +74,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -82,11 +84,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Location.GetCommerceLocation(ctx, operations.GetCommerceLocationRequest{
+    request := operations.GetCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Location.GetCommerceLocation(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -123,8 +127,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -133,10 +137,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Location.ListCommerceLocations(ctx, operations.ListCommerceLocationsRequest{
+    request := operations.ListCommerceLocationsRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Location.ListCommerceLocations(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -173,8 +179,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -183,11 +189,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Location.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
+    request := operations.PatchCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Location.PatchCommerceLocation(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -224,8 +232,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -234,11 +242,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Location.RemoveCommerceLocation(ctx, operations.RemoveCommerceLocationRequest{
+    request := operations.RemoveCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Location.RemoveCommerceLocation(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -275,8 +285,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -285,11 +295,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Location.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
+    request := operations.UpdateCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Location.UpdateCommerceLocation(ctx, request)
     if err != nil {
         log.Fatal(err)
     }

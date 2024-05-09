@@ -22,8 +22,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -32,10 +32,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Note.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
+    request := operations.CreateTicketingNoteRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Note.CreateTicketingNote(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -72,8 +74,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -82,11 +84,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Note.GetTicketingNote(ctx, operations.GetTicketingNoteRequest{
+    request := operations.GetTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Note.GetTicketingNote(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -123,8 +127,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -133,10 +137,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Note.ListTicketingNotes(ctx, operations.ListTicketingNotesRequest{
+    request := operations.ListTicketingNotesRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Note.ListTicketingNotes(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -173,8 +179,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -183,11 +189,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Note.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
+    request := operations.PatchTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Note.PatchTicketingNote(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -224,8 +232,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -234,11 +242,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Note.RemoveTicketingNote(ctx, operations.RemoveTicketingNoteRequest{
+    request := operations.RemoveTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Note.RemoveTicketingNote(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -275,8 +285,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -285,11 +295,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Note.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
+    request := operations.UpdateTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Note.UpdateTicketingNote(ctx, request)
     if err != nil {
         log.Fatal(err)
     }

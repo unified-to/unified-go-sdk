@@ -22,8 +22,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -32,10 +32,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Event.CreateCrmEvent(ctx, operations.CreateCrmEventRequest{
+    request := operations.CreateCrmEventRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Event.CreateCrmEvent(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -72,8 +74,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -82,11 +84,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Event.GetCrmEvent(ctx, operations.GetCrmEventRequest{
+    request := operations.GetCrmEventRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Event.GetCrmEvent(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -123,8 +127,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -133,10 +137,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Event.ListCrmEvents(ctx, operations.ListCrmEventsRequest{
+    request := operations.ListCrmEventsRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Event.ListCrmEvents(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -173,8 +179,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -183,11 +189,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Event.PatchCrmEvent(ctx, operations.PatchCrmEventRequest{
+    request := operations.PatchCrmEventRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Event.PatchCrmEvent(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -224,8 +232,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -234,11 +242,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Event.RemoveCrmEvent(ctx, operations.RemoveCrmEventRequest{
+    request := operations.RemoveCrmEventRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Event.RemoveCrmEvent(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -275,8 +285,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -285,11 +295,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Event.UpdateCrmEvent(ctx, operations.UpdateCrmEventRequest{
+    request := operations.UpdateCrmEventRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Event.UpdateCrmEvent(ctx, request)
     if err != nil {
         log.Fatal(err)
     }

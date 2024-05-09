@@ -31,8 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Connection.CreateUnifiedConnection(ctx, &shared.Connection{
+    var request *shared.Connection = &shared.Connection{
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesPayment,
         },
@@ -40,7 +39,10 @@ func main() {
         Permissions: []shared.PropertyConnectionPermissions{
             shared.PropertyConnectionPermissionsAtsInterviewRead,
         },
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Connection.CreateUnifiedConnection(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -77,8 +79,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -87,10 +89,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Connection.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
+    request := operations.GetUnifiedConnectionRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Connection.GetUnifiedConnection(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -127,8 +131,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -137,8 +141,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
+    request := operations.ListUnifiedConnectionsRequest{}
+    
     ctx := context.Background()
-    res, err := s.Connection.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{})
+    res, err := s.Connection.ListUnifiedConnections(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -175,8 +181,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -185,10 +191,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Connection.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
+    request := operations.PatchUnifiedConnectionRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Connection.PatchUnifiedConnection(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -225,8 +233,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -235,10 +243,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Connection.RemoveUnifiedConnection(ctx, operations.RemoveUnifiedConnectionRequest{
+    request := operations.RemoveUnifiedConnectionRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Connection.RemoveUnifiedConnection(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -275,8 +285,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -285,10 +295,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Connection.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
+    request := operations.UpdateUnifiedConnectionRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Connection.UpdateUnifiedConnection(ctx, request)
     if err != nil {
         log.Fatal(err)
     }

@@ -44,8 +44,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.CreateUnifiedConnection(ctx, &shared.Connection{
+    var request *shared.Connection = &shared.Connection{
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesPayment,
         },
@@ -53,7 +52,10 @@ func main() {
         Permissions: []shared.PropertyConnectionPermissions{
             shared.PropertyConnectionPermissionsAtsInterviewRead,
         },
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.CreateUnifiedConnection(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -90,8 +92,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -100,8 +102,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
+    request := operations.CreateUnifiedWebhookRequest{}
+    
     ctx := context.Background()
-    res, err := s.Unified.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{})
+    res, err := s.Unified.CreateUnifiedWebhook(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -138,8 +142,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -148,10 +152,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
+    request := operations.GetUnifiedApicallRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.GetUnifiedApicall(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -188,8 +194,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -198,10 +204,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
+    request := operations.GetUnifiedConnectionRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.GetUnifiedConnection(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -238,8 +246,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -248,11 +256,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
+    request := operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -289,8 +299,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -299,10 +309,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.GetUnifiedWebhook(ctx, operations.GetUnifiedWebhookRequest{
+    request := operations.GetUnifiedWebhookRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.GetUnifiedWebhook(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -339,8 +351,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -349,8 +361,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
+    request := operations.ListUnifiedApicallsRequest{}
+    
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedApicalls(ctx, operations.ListUnifiedApicallsRequest{})
+    res, err := s.Unified.ListUnifiedApicalls(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -387,8 +401,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -397,8 +411,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
+    request := operations.ListUnifiedConnectionsRequest{}
+    
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{})
+    res, err := s.Unified.ListUnifiedConnections(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -435,8 +451,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -445,10 +461,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
+    request := operations.ListUnifiedIntegrationWorkspacesRequest{
         WorkspaceID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -485,8 +503,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -495,8 +513,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
+    request := operations.ListUnifiedIntegrationsRequest{}
+    
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{})
+    res, err := s.Unified.ListUnifiedIntegrations(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -533,8 +553,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -543,8 +563,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
+    request := operations.ListUnifiedIssuesRequest{}
+    
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedIssues(ctx, operations.ListUnifiedIssuesRequest{})
+    res, err := s.Unified.ListUnifiedIssues(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -590,6 +612,8 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
+
+    
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedSupports(ctx)
     if err != nil {
@@ -627,8 +651,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -637,8 +661,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
+    request := operations.ListUnifiedWebhooksRequest{}
+    
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedWebhooks(ctx, operations.ListUnifiedWebhooksRequest{})
+    res, err := s.Unified.ListUnifiedWebhooks(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -675,8 +701,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -685,10 +711,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
+    request := operations.PatchUnifiedConnectionRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.PatchUnifiedConnection(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -725,8 +753,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -735,10 +763,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.PatchUnifiedWebhookTrigger(ctx, operations.PatchUnifiedWebhookTriggerRequest{
+    request := operations.PatchUnifiedWebhookTriggerRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.PatchUnifiedWebhookTrigger(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -775,8 +805,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -785,10 +815,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.RemoveUnifiedConnection(ctx, operations.RemoveUnifiedConnectionRequest{
+    request := operations.RemoveUnifiedConnectionRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.RemoveUnifiedConnection(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -825,8 +857,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -835,10 +867,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.RemoveUnifiedWebhook(ctx, operations.RemoveUnifiedWebhookRequest{
+    request := operations.RemoveUnifiedWebhookRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.RemoveUnifiedWebhook(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -875,8 +909,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -885,10 +919,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
+    request := operations.UpdateUnifiedConnectionRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.UpdateUnifiedConnection(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -925,8 +961,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -935,10 +971,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Unified.UpdateUnifiedWebhookTrigger(ctx, operations.UpdateUnifiedWebhookTriggerRequest{
+    request := operations.UpdateUnifiedWebhookTriggerRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Unified.UpdateUnifiedWebhookTrigger(ctx, request)
     if err != nil {
         log.Fatal(err)
     }

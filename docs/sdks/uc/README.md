@@ -23,8 +23,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -33,10 +33,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Uc.CreateUcContact(ctx, operations.CreateUcContactRequest{
+    request := operations.CreateUcContactRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Uc.CreateUcContact(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -73,8 +75,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -83,11 +85,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Uc.GetUcContact(ctx, operations.GetUcContactRequest{
+    request := operations.GetUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Uc.GetUcContact(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -124,8 +128,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -134,10 +138,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Uc.ListUcCalls(ctx, operations.ListUcCallsRequest{
+    request := operations.ListUcCallsRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Uc.ListUcCalls(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -174,8 +180,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -184,10 +190,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Uc.ListUcContacts(ctx, operations.ListUcContactsRequest{
+    request := operations.ListUcContactsRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Uc.ListUcContacts(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -224,8 +232,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -234,11 +242,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Uc.PatchUcContact(ctx, operations.PatchUcContactRequest{
+    request := operations.PatchUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Uc.PatchUcContact(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -275,8 +285,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -285,11 +295,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Uc.RemoveUcContact(ctx, operations.RemoveUcContactRequest{
+    request := operations.RemoveUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Uc.RemoveUcContact(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -326,8 +338,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -336,11 +348,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Uc.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
+    request := operations.UpdateUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Uc.UpdateUcContact(ctx, request)
     if err != nil {
         log.Fatal(err)
     }

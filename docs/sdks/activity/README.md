@@ -22,8 +22,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -32,10 +32,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Activity.CreateAtsActivity(ctx, operations.CreateAtsActivityRequest{
+    request := operations.CreateAtsActivityRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Activity.CreateAtsActivity(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -72,8 +74,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -82,11 +84,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Activity.GetAtsActivity(ctx, operations.GetAtsActivityRequest{
+    request := operations.GetAtsActivityRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Activity.GetAtsActivity(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -123,8 +127,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -133,10 +137,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Activity.ListAtsActivities(ctx, operations.ListAtsActivitiesRequest{
+    request := operations.ListAtsActivitiesRequest{
         ConnectionID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Activity.ListAtsActivities(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -173,8 +179,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -183,11 +189,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Activity.PatchAtsActivity(ctx, operations.PatchAtsActivityRequest{
+    request := operations.PatchAtsActivityRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Activity.PatchAtsActivity(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -224,8 +232,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -234,11 +242,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Activity.RemoveAtsActivity(ctx, operations.RemoveAtsActivityRequest{
+    request := operations.RemoveAtsActivityRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Activity.RemoveAtsActivity(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -275,8 +285,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -285,11 +295,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Activity.UpdateAtsActivity(ctx, operations.UpdateAtsActivityRequest{
+    request := operations.UpdateAtsActivityRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Activity.UpdateAtsActivity(ctx, request)
     if err != nil {
         log.Fatal(err)
     }

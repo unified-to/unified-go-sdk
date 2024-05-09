@@ -18,8 +18,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -28,10 +28,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
+    request := operations.GetUnifiedApicallRequest{
         ID: "<id>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Apicall.GetUnifiedApicall(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -68,8 +70,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -78,8 +80,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
+    request := operations.ListUnifiedApicallsRequest{}
+    
     ctx := context.Background()
-    res, err := s.Apicall.ListUnifiedApicalls(ctx, operations.ListUnifiedApicallsRequest{})
+    res, err := s.Apicall.ListUnifiedApicalls(ctx, request)
     if err != nil {
         log.Fatal(err)
     }

@@ -33,10 +33,12 @@ func main() {
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
-	})
+	}
+
+	ctx := context.Background()
+	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -750,10 +752,12 @@ func main() {
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
-	})
+	}
+
+	ctx := context.Background()
+	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {
 
 		var e *sdkerrors.SDKError
@@ -800,10 +804,12 @@ func main() {
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
-	})
+	}
+
+	ctx := context.Background()
+	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -835,10 +841,12 @@ func main() {
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
-	})
+	}
+
+	ctx := context.Background()
+	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -910,10 +918,12 @@ func main() {
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
-	})
+	}
+
+	ctx := context.Background()
+	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {
 		log.Fatal(err)
 	}

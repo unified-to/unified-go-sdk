@@ -19,8 +19,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -29,11 +29,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
+    request := operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -70,8 +72,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -80,10 +82,12 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
-    res, err := s.Integration.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
+    request := operations.ListUnifiedIntegrationWorkspacesRequest{
         WorkspaceID: "<value>",
-    })
+    }
+    
+    ctx := context.Background()
+    res, err := s.Integration.ListUnifiedIntegrationWorkspaces(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -120,8 +124,8 @@ package main
 import(
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"context"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
 	"log"
 )
 
@@ -130,8 +134,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
+    request := operations.ListUnifiedIntegrationsRequest{}
+    
     ctx := context.Background()
-    res, err := s.Integration.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{})
+    res, err := s.Integration.ListUnifiedIntegrations(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
