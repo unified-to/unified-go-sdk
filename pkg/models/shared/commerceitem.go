@@ -14,7 +14,7 @@ type CommerceItem struct {
 	IsActive          *bool                  `json:"is_active,omitempty"`
 	IsTaxable         *bool                  `json:"is_taxable,omitempty"`
 	Media             []CommerceItemMedia    `json:"media,omitempty"`
-	Name              string                 `json:"name"`
+	Name              *string                `json:"name,omitempty"`
 	PublicDescription *string                `json:"public_description,omitempty"`
 	PublicName        *string                `json:"public_name,omitempty"`
 	Raw               map[string]interface{} `json:"raw,omitempty"`
@@ -79,9 +79,9 @@ func (o *CommerceItem) GetMedia() []CommerceItemMedia {
 	return o.Media
 }
 
-func (o *CommerceItem) GetName() string {
+func (o *CommerceItem) GetName() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Name
 }

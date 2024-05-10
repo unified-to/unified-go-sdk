@@ -8,13 +8,14 @@ import (
 )
 
 type CommerceLocation struct {
-	Address   *PropertyCommerceLocationAddress `json:"address,omitempty"`
-	CreatedAt *time.Time                       `json:"created_at,omitempty"`
-	ID        *string                          `json:"id,omitempty"`
-	IsActive  *bool                            `json:"is_active,omitempty"`
-	Name      string                           `json:"name"`
-	Raw       map[string]interface{}           `json:"raw,omitempty"`
-	UpdatedAt *time.Time                       `json:"updated_at,omitempty"`
+	Address     *PropertyCommerceLocationAddress `json:"address,omitempty"`
+	CreatedAt   *time.Time                       `json:"created_at,omitempty"`
+	Description *string                          `json:"description,omitempty"`
+	ID          *string                          `json:"id,omitempty"`
+	IsActive    *bool                            `json:"is_active,omitempty"`
+	Name        string                           `json:"name"`
+	Raw         map[string]interface{}           `json:"raw,omitempty"`
+	UpdatedAt   *time.Time                       `json:"updated_at,omitempty"`
 }
 
 func (c CommerceLocation) MarshalJSON() ([]byte, error) {
@@ -40,6 +41,13 @@ func (o *CommerceLocation) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return o.CreatedAt
+}
+
+func (o *CommerceLocation) GetDescription() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Description
 }
 
 func (o *CommerceLocation) GetID() *string {

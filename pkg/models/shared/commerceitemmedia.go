@@ -37,6 +37,7 @@ func (e *CommerceItemMediaType) UnmarshalJSON(data []byte) error {
 type CommerceItemMedia struct {
 	Alt      *string                `json:"alt,omitempty"`
 	Height   *float64               `json:"height,omitempty"`
+	ID       *string                `json:"id,omitempty"`
 	Position *float64               `json:"position,omitempty"`
 	Type     *CommerceItemMediaType `json:"type,omitempty"`
 	URL      string                 `json:"url"`
@@ -55,6 +56,13 @@ func (o *CommerceItemMedia) GetHeight() *float64 {
 		return nil
 	}
 	return o.Height
+}
+
+func (o *CommerceItemMedia) GetID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ID
 }
 
 func (o *CommerceItemMedia) GetPosition() *float64 {
