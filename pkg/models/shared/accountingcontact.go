@@ -75,7 +75,7 @@ type AccountingContact struct {
 	Name            *string                                   `json:"name,omitempty"`
 	PaymentMethods  []AccountingContactPaymentMethod          `json:"payment_methods,omitempty"`
 	PortalURL       *string                                   `json:"portal_url,omitempty"`
-	Raw             map[string]interface{}                    `json:"raw,omitempty"`
+	Raw             map[string]any                            `json:"raw,omitempty"`
 	ShippingAddress *PropertyAccountingContactShippingAddress `json:"shipping_address,omitempty"`
 	TaxExemption    *TaxExemption                             `json:"tax_exemption,omitempty"`
 	TaxNumber       *string                                   `json:"tax_number,omitempty"`
@@ -171,7 +171,7 @@ func (o *AccountingContact) GetPortalURL() *string {
 	return o.PortalURL
 }
 
-func (o *AccountingContact) GetRaw() map[string]interface{} {
+func (o *AccountingContact) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

@@ -8,19 +8,19 @@ import (
 )
 
 type CommerceItem struct {
-	CreatedAt         *time.Time             `json:"created_at,omitempty"`
-	Description       *string                `json:"description,omitempty"`
-	ID                *string                `json:"id,omitempty"`
-	IsActive          *bool                  `json:"is_active,omitempty"`
-	IsTaxable         *bool                  `json:"is_taxable,omitempty"`
-	Media             []CommerceItemMedia    `json:"media,omitempty"`
-	Name              *string                `json:"name,omitempty"`
-	PublicDescription *string                `json:"public_description,omitempty"`
-	PublicName        *string                `json:"public_name,omitempty"`
-	Raw               map[string]interface{} `json:"raw,omitempty"`
-	Tags              []string               `json:"tags,omitempty"`
-	Type              *string                `json:"type,omitempty"`
-	UpdatedAt         *time.Time             `json:"updated_at,omitempty"`
+	CreatedAt         *time.Time          `json:"created_at,omitempty"`
+	Description       *string             `json:"description,omitempty"`
+	ID                *string             `json:"id,omitempty"`
+	IsActive          *bool               `json:"is_active,omitempty"`
+	IsTaxable         *bool               `json:"is_taxable,omitempty"`
+	Media             []CommerceItemMedia `json:"media,omitempty"`
+	Name              *string             `json:"name,omitempty"`
+	PublicDescription *string             `json:"public_description,omitempty"`
+	PublicName        *string             `json:"public_name,omitempty"`
+	Raw               map[string]any      `json:"raw,omitempty"`
+	Tags              []string            `json:"tags,omitempty"`
+	Type              *string             `json:"type,omitempty"`
+	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
 	// first variant is the default variant
 	Variants   []CommerceItemVariant `json:"variants,omitempty"`
 	VendorName *string               `json:"vendor_name,omitempty"`
@@ -100,7 +100,7 @@ func (o *CommerceItem) GetPublicName() *string {
 	return o.PublicName
 }
 
-func (o *CommerceItem) GetRaw() map[string]interface{} {
+func (o *CommerceItem) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

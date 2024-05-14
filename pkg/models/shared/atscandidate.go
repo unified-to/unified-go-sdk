@@ -59,16 +59,16 @@ type AtsCandidate struct {
 	ID                 *string                      `json:"id,omitempty"`
 	ImageURL           *string                      `json:"image_url,omitempty"`
 	// a list of social media links associated with the candidate. eg. LinkedIn URL
-	LinkUrls   []string               `json:"link_urls,omitempty"`
-	Name       *string                `json:"name,omitempty"`
-	Origin     *Origin                `json:"origin,omitempty"`
-	Raw        map[string]interface{} `json:"raw,omitempty"`
-	Sources    []string               `json:"sources,omitempty"`
-	Tags       []string               `json:"tags,omitempty"`
-	Telephones []AtsTelephone         `json:"telephones,omitempty"`
-	Title      *string                `json:"title,omitempty"`
-	UpdatedAt  *time.Time             `json:"updated_at,omitempty"`
-	UserID     *string                `json:"user_id,omitempty"`
+	LinkUrls   []string       `json:"link_urls,omitempty"`
+	Name       *string        `json:"name,omitempty"`
+	Origin     *Origin        `json:"origin,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	Sources    []string       `json:"sources,omitempty"`
+	Tags       []string       `json:"tags,omitempty"`
+	Telephones []AtsTelephone `json:"telephones,omitempty"`
+	Title      *string        `json:"title,omitempty"`
+	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
+	UserID     *string        `json:"user_id,omitempty"`
 }
 
 func (a AtsCandidate) MarshalJSON() ([]byte, error) {
@@ -166,7 +166,7 @@ func (o *AtsCandidate) GetOrigin() *Origin {
 	return o.Origin
 }
 
-func (o *AtsCandidate) GetRaw() map[string]interface{} {
+func (o *AtsCandidate) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

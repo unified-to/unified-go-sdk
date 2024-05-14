@@ -14,7 +14,7 @@ type AtsCompany struct {
 	Name         string                     `json:"name"`
 	ParentID     *string                    `json:"parent_id,omitempty"`
 	Phone        *string                    `json:"phone,omitempty"`
-	Raw          map[string]interface{}     `json:"raw,omitempty"`
+	Raw          map[string]any             `json:"raw,omitempty"`
 	RecruiterIds []string                   `json:"recruiter_ids,omitempty"`
 	UpdatedAt    *time.Time                 `json:"updated_at,omitempty"`
 	WebsiteURL   *string                    `json:"website_url,omitempty"`
@@ -73,7 +73,7 @@ func (o *AtsCompany) GetPhone() *string {
 	return o.Phone
 }
 
-func (o *AtsCompany) GetRaw() map[string]interface{} {
+func (o *AtsCompany) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

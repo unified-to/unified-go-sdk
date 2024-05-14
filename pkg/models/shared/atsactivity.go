@@ -37,20 +37,20 @@ func (e *AtsActivityType) UnmarshalJSON(data []byte) error {
 }
 
 type AtsActivity struct {
-	ApplicationID *string                `json:"application_id,omitempty"`
-	CandidateID   *string                `json:"candidate_id,omitempty"`
-	CreatedAt     *time.Time             `json:"created_at,omitempty"`
-	Description   *string                `json:"description,omitempty"`
-	DocumentID    *string                `json:"document_id,omitempty"`
-	ID            *string                `json:"id,omitempty"`
-	InterviewID   *string                `json:"interview_id,omitempty"`
-	IsPrivate     *bool                  `json:"is_private,omitempty"`
-	JobID         *string                `json:"job_id,omitempty"`
-	Raw           map[string]interface{} `json:"raw,omitempty"`
-	Title         string                 `json:"title"`
-	Type          *AtsActivityType       `json:"type,omitempty"`
-	UpdatedAt     *time.Time             `json:"updated_at,omitempty"`
-	UserIds       []string               `json:"user_ids,omitempty"`
+	ApplicationID *string          `json:"application_id,omitempty"`
+	CandidateID   *string          `json:"candidate_id,omitempty"`
+	CreatedAt     *time.Time       `json:"created_at,omitempty"`
+	Description   *string          `json:"description,omitempty"`
+	DocumentID    *string          `json:"document_id,omitempty"`
+	ID            *string          `json:"id,omitempty"`
+	InterviewID   *string          `json:"interview_id,omitempty"`
+	IsPrivate     *bool            `json:"is_private,omitempty"`
+	JobID         *string          `json:"job_id,omitempty"`
+	Raw           map[string]any   `json:"raw,omitempty"`
+	Title         string           `json:"title"`
+	Type          *AtsActivityType `json:"type,omitempty"`
+	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
+	UserIds       []string         `json:"user_ids,omitempty"`
 }
 
 func (a AtsActivity) MarshalJSON() ([]byte, error) {
@@ -127,7 +127,7 @@ func (o *AtsActivity) GetJobID() *string {
 	return o.JobID
 }
 
-func (o *AtsActivity) GetRaw() map[string]interface{} {
+func (o *AtsActivity) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

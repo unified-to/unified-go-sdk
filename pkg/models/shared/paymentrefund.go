@@ -41,16 +41,16 @@ func (e *PaymentRefundStatus) UnmarshalJSON(data []byte) error {
 }
 
 type PaymentRefund struct {
-	CreatedAt   *string                `json:"created_at,omitempty"`
-	Currency    *string                `json:"currency,omitempty"`
-	ID          *string                `json:"id,omitempty"`
-	Notes       *string                `json:"notes,omitempty"`
-	PaymentID   string                 `json:"payment_id"`
-	Raw         map[string]interface{} `json:"raw,omitempty"`
-	Reference   *string                `json:"reference,omitempty"`
-	Status      *PaymentRefundStatus   `json:"status,omitempty"`
-	TotalAmount float64                `json:"total_amount"`
-	UpdatedAt   *string                `json:"updated_at,omitempty"`
+	CreatedAt   *string              `json:"created_at,omitempty"`
+	Currency    *string              `json:"currency,omitempty"`
+	ID          *string              `json:"id,omitempty"`
+	Notes       *string              `json:"notes,omitempty"`
+	PaymentID   string               `json:"payment_id"`
+	Raw         map[string]any       `json:"raw,omitempty"`
+	Reference   *string              `json:"reference,omitempty"`
+	Status      *PaymentRefundStatus `json:"status,omitempty"`
+	TotalAmount float64              `json:"total_amount"`
+	UpdatedAt   *string              `json:"updated_at,omitempty"`
 }
 
 func (o *PaymentRefund) GetCreatedAt() *string {
@@ -88,7 +88,7 @@ func (o *PaymentRefund) GetPaymentID() string {
 	return o.PaymentID
 }
 
-func (o *PaymentRefund) GetRaw() map[string]interface{} {
+func (o *PaymentRefund) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

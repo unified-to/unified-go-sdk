@@ -46,19 +46,19 @@ func (e *AtsInterviewStatus) UnmarshalJSON(data []byte) error {
 }
 
 type AtsInterview struct {
-	ApplicationID     *string                `json:"application_id,omitempty"`
-	CandidateID       *string                `json:"candidate_id,omitempty"`
-	CreatedAt         *time.Time             `json:"created_at,omitempty"`
-	EndAt             *time.Time             `json:"end_at,omitempty"`
-	ExternalEventXref *string                `json:"external_event_xref,omitempty"`
-	ID                *string                `json:"id,omitempty"`
-	JobID             *string                `json:"job_id,omitempty"`
-	Location          *string                `json:"location,omitempty"`
-	Raw               map[string]interface{} `json:"raw,omitempty"`
-	StartAt           *time.Time             `json:"start_at,omitempty"`
-	Status            *AtsInterviewStatus    `json:"status,omitempty"`
-	UpdatedAt         *time.Time             `json:"updated_at,omitempty"`
-	UserIds           []string               `json:"user_ids,omitempty"`
+	ApplicationID     *string             `json:"application_id,omitempty"`
+	CandidateID       *string             `json:"candidate_id,omitempty"`
+	CreatedAt         *time.Time          `json:"created_at,omitempty"`
+	EndAt             *time.Time          `json:"end_at,omitempty"`
+	ExternalEventXref *string             `json:"external_event_xref,omitempty"`
+	ID                *string             `json:"id,omitempty"`
+	JobID             *string             `json:"job_id,omitempty"`
+	Location          *string             `json:"location,omitempty"`
+	Raw               map[string]any      `json:"raw,omitempty"`
+	StartAt           *time.Time          `json:"start_at,omitempty"`
+	Status            *AtsInterviewStatus `json:"status,omitempty"`
+	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
+	UserIds           []string            `json:"user_ids,omitempty"`
 }
 
 func (a AtsInterview) MarshalJSON() ([]byte, error) {
@@ -128,7 +128,7 @@ func (o *AtsInterview) GetLocation() *string {
 	return o.Location
 }
 
-func (o *AtsInterview) GetRaw() map[string]interface{} {
+func (o *AtsInterview) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

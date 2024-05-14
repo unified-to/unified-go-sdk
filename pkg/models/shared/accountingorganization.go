@@ -15,7 +15,7 @@ type AccountingOrganization struct {
 	ID                 *string                                `json:"id,omitempty"`
 	LegalName          *string                                `json:"legal_name,omitempty"`
 	Name               string                                 `json:"name"`
-	Raw                map[string]interface{}                 `json:"raw,omitempty"`
+	Raw                map[string]any                         `json:"raw,omitempty"`
 	TaxNumber          *string                                `json:"tax_number,omitempty"`
 	Timezone           *string                                `json:"timezone,omitempty"`
 	UpdatedAt          *time.Time                             `json:"updated_at,omitempty"`
@@ -82,7 +82,7 @@ func (o *AccountingOrganization) GetName() string {
 	return o.Name
 }
 
-func (o *AccountingOrganization) GetRaw() map[string]interface{} {
+func (o *AccountingOrganization) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

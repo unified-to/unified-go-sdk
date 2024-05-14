@@ -170,7 +170,7 @@ type HrisEmployee struct {
 	ManagerID        *string                      `json:"manager_id,omitempty"`
 	MaritalStatus    *MaritalStatus               `json:"marital_status,omitempty"`
 	Name             *string                      `json:"name,omitempty"`
-	Raw              map[string]interface{}       `json:"raw,omitempty"`
+	Raw              map[string]any               `json:"raw,omitempty"`
 	Telephones       []HrisTelephone              `json:"telephones,omitempty"`
 	TerminatedAt     *time.Time                   `json:"terminated_at,omitempty"`
 	Timezone         *string                      `json:"timezone,omitempty"`
@@ -322,7 +322,7 @@ func (o *HrisEmployee) GetName() *string {
 	return o.Name
 }
 
-func (o *HrisEmployee) GetRaw() map[string]interface{} {
+func (o *HrisEmployee) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

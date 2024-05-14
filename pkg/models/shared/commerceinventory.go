@@ -8,14 +8,14 @@ import (
 )
 
 type CommerceInventory struct {
-	Available     float64                `json:"available"`
-	ID            *string                `json:"id,omitempty"`
-	ItemID        *string                `json:"item_id,omitempty"`
-	ItemOptionID  *string                `json:"item_option_id,omitempty"`
-	ItemVariantID *string                `json:"item_variant_id,omitempty"`
-	LocationID    *string                `json:"location_id,omitempty"`
-	Raw           map[string]interface{} `json:"raw,omitempty"`
-	UpdatedAt     *time.Time             `json:"updated_at,omitempty"`
+	Available     float64        `json:"available"`
+	ID            *string        `json:"id,omitempty"`
+	ItemID        *string        `json:"item_id,omitempty"`
+	ItemOptionID  *string        `json:"item_option_id,omitempty"`
+	ItemVariantID *string        `json:"item_variant_id,omitempty"`
+	LocationID    *string        `json:"location_id,omitempty"`
+	Raw           map[string]any `json:"raw,omitempty"`
+	UpdatedAt     *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (c CommerceInventory) MarshalJSON() ([]byte, error) {
@@ -71,7 +71,7 @@ func (o *CommerceInventory) GetLocationID() *string {
 	return o.LocationID
 }
 
-func (o *CommerceInventory) GetRaw() map[string]interface{} {
+func (o *CommerceInventory) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

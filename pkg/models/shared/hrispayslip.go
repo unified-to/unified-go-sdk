@@ -40,19 +40,19 @@ func (e *PaymentType) UnmarshalJSON(data []byte) error {
 }
 
 type HrisPayslip struct {
-	CreatedAt   *time.Time             `json:"created_at,omitempty"`
-	Currency    *string                `json:"currency,omitempty"`
-	Details     []HrisPayslipDetail    `json:"details,omitempty"`
-	EndAt       *time.Time             `json:"end_at,omitempty"`
-	GrossAmount *float64               `json:"gross_amount,omitempty"`
-	ID          *string                `json:"id,omitempty"`
-	NetAmount   *float64               `json:"net_amount,omitempty"`
-	PaidAt      *time.Time             `json:"paid_at,omitempty"`
-	PaymentType *PaymentType           `json:"payment_type,omitempty"`
-	Raw         map[string]interface{} `json:"raw"`
-	StartAt     *time.Time             `json:"start_at,omitempty"`
-	UpdatedAt   *time.Time             `json:"updated_at,omitempty"`
-	UserID      string                 `json:"user_id"`
+	CreatedAt   *time.Time          `json:"created_at,omitempty"`
+	Currency    *string             `json:"currency,omitempty"`
+	Details     []HrisPayslipDetail `json:"details,omitempty"`
+	EndAt       *time.Time          `json:"end_at,omitempty"`
+	GrossAmount *float64            `json:"gross_amount,omitempty"`
+	ID          *string             `json:"id,omitempty"`
+	NetAmount   *float64            `json:"net_amount,omitempty"`
+	PaidAt      *time.Time          `json:"paid_at,omitempty"`
+	PaymentType *PaymentType        `json:"payment_type,omitempty"`
+	Raw         map[string]any      `json:"raw"`
+	StartAt     *time.Time          `json:"start_at,omitempty"`
+	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
+	UserID      string              `json:"user_id"`
 }
 
 func (h HrisPayslip) MarshalJSON() ([]byte, error) {
@@ -129,9 +129,9 @@ func (o *HrisPayslip) GetPaymentType() *PaymentType {
 	return o.PaymentType
 }
 
-func (o *HrisPayslip) GetRaw() map[string]interface{} {
+func (o *HrisPayslip) GetRaw() map[string]any {
 	if o == nil {
-		return map[string]interface{}{}
+		return map[string]any{}
 	}
 	return o.Raw
 }

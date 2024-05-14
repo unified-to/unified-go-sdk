@@ -78,7 +78,7 @@ type AtsApplication struct {
 	ID             *string                `json:"id,omitempty"`
 	JobID          *string                `json:"job_id,omitempty"`
 	OriginalStatus *string                `json:"original_status,omitempty"`
-	Raw            map[string]interface{} `json:"raw,omitempty"`
+	Raw            map[string]any         `json:"raw,omitempty"`
 	RejectedAt     *time.Time             `json:"rejected_at,omitempty"`
 	RejectedReason *string                `json:"rejected_reason,omitempty"`
 	Source         *string                `json:"source,omitempty"`
@@ -153,7 +153,7 @@ func (o *AtsApplication) GetOriginalStatus() *string {
 	return o.OriginalStatus
 }
 
-func (o *AtsApplication) GetRaw() map[string]interface{} {
+func (o *AtsApplication) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

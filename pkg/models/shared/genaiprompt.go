@@ -3,12 +3,12 @@
 package shared
 
 type GenaiPrompt struct {
-	MaxTokens   *float64               `json:"max_tokens,omitempty"`
-	Messages    []GenaiContent         `json:"messages,omitempty"`
-	ModelID     *string                `json:"model_id,omitempty"`
-	Raw         map[string]interface{} `json:"raw,omitempty"`
-	Responses   []string               `json:"responses,omitempty"`
-	Temperature *float64               `json:"temperature,omitempty"`
+	MaxTokens   *float64       `json:"max_tokens,omitempty"`
+	Messages    []GenaiContent `json:"messages,omitempty"`
+	ModelID     *string        `json:"model_id,omitempty"`
+	Raw         map[string]any `json:"raw,omitempty"`
+	Responses   []string       `json:"responses,omitempty"`
+	Temperature *float64       `json:"temperature,omitempty"`
 }
 
 func (o *GenaiPrompt) GetMaxTokens() *float64 {
@@ -32,7 +32,7 @@ func (o *GenaiPrompt) GetModelID() *string {
 	return o.ModelID
 }
 
-func (o *GenaiPrompt) GetRaw() map[string]interface{} {
+func (o *GenaiPrompt) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

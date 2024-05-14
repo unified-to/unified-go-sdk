@@ -3,10 +3,10 @@ id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
   docChecksum: 902b970f6ea17ef9a8dfd2f897ee1bcf
   docVersion: "1.0"
-  speakeasyVersion: 1.285.4
-  generationVersion: 2.326.3
-  releaseVersion: 0.14.1
-  configChecksum: 3faee9555abffcf0a9f0dfa00de4baa9
+  speakeasyVersion: 1.286.3
+  generationVersion: 2.329.0
+  releaseVersion: 0.14.2
+  configChecksum: c3acd58c9d9c9afc133c5cce6f28cc3b
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -15,7 +15,7 @@ features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.4
-    core: 3.4.7
+    core: 3.4.8
     globalSecurity: 2.82.9
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0

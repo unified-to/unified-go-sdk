@@ -51,7 +51,7 @@ type CommerceCollection struct {
 	Name              string                  `json:"name"`
 	PublicDescription *string                 `json:"public_description,omitempty"`
 	PublicName        *string                 `json:"public_name,omitempty"`
-	Raw               map[string]interface{}  `json:"raw,omitempty"`
+	Raw               map[string]any          `json:"raw,omitempty"`
 	Tags              []string                `json:"tags,omitempty"`
 	Type              *CommerceCollectionType `json:"type,omitempty"`
 	UpdatedAt         *time.Time              `json:"updated_at,omitempty"`
@@ -138,7 +138,7 @@ func (o *CommerceCollection) GetPublicName() *string {
 	return o.PublicName
 }
 
-func (o *CommerceCollection) GetRaw() map[string]interface{} {
+func (o *CommerceCollection) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

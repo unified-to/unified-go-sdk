@@ -9,7 +9,7 @@ type AccountingTransaction struct {
 	ID          string  `json:"id"`
 	// new field name
 	Lineitems []AccountingTransactionLineitem `json:"lineitems,omitempty"`
-	Raw       map[string]interface{}          `json:"raw,omitempty"`
+	Raw       map[string]any                  `json:"raw,omitempty"`
 	Reference *string                         `json:"reference,omitempty"`
 	TaxAmount *float64                        `json:"tax_amount,omitempty"`
 	TaxrateID *string                         `json:"taxrate_id,omitempty"`
@@ -51,7 +51,7 @@ func (o *AccountingTransaction) GetLineitems() []AccountingTransactionLineitem {
 	return o.Lineitems
 }
 
-func (o *AccountingTransaction) GetRaw() map[string]interface{} {
+func (o *AccountingTransaction) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

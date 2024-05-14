@@ -8,18 +8,18 @@ import (
 )
 
 type PaymentPayment struct {
-	AccountID     *string                `json:"account_id,omitempty"`
-	ContactID     *string                `json:"contact_id,omitempty"`
-	CreatedAt     *time.Time             `json:"created_at,omitempty"`
-	Currency      *string                `default:"USD" json:"currency"`
-	ID            *string                `json:"id,omitempty"`
-	InvoiceID     *string                `json:"invoice_id,omitempty"`
-	Notes         *string                `json:"notes,omitempty"`
-	PaymentMethod *string                `json:"payment_method,omitempty"`
-	Raw           map[string]interface{} `json:"raw,omitempty"`
-	Reference     *string                `json:"reference,omitempty"`
-	TotalAmount   *float64               `json:"total_amount,omitempty"`
-	UpdatedAt     *time.Time             `json:"updated_at,omitempty"`
+	AccountID     *string        `json:"account_id,omitempty"`
+	ContactID     *string        `json:"contact_id,omitempty"`
+	CreatedAt     *time.Time     `json:"created_at,omitempty"`
+	Currency      *string        `default:"USD" json:"currency"`
+	ID            *string        `json:"id,omitempty"`
+	InvoiceID     *string        `json:"invoice_id,omitempty"`
+	Notes         *string        `json:"notes,omitempty"`
+	PaymentMethod *string        `json:"payment_method,omitempty"`
+	Raw           map[string]any `json:"raw,omitempty"`
+	Reference     *string        `json:"reference,omitempty"`
+	TotalAmount   *float64       `json:"total_amount,omitempty"`
+	UpdatedAt     *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (p PaymentPayment) MarshalJSON() ([]byte, error) {
@@ -89,7 +89,7 @@ func (o *PaymentPayment) GetPaymentMethod() *string {
 	return o.PaymentMethod
 }
 
-func (o *PaymentPayment) GetRaw() map[string]interface{} {
+func (o *PaymentPayment) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

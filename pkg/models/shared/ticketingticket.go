@@ -44,7 +44,7 @@ type TicketingTicket struct {
 	Description *string                `json:"description,omitempty"`
 	ID          *string                `json:"id,omitempty"`
 	Priority    *string                `json:"priority,omitempty"`
-	Raw         map[string]interface{} `json:"raw,omitempty"`
+	Raw         map[string]any         `json:"raw,omitempty"`
 	Source      *string                `json:"source,omitempty"`
 	SourceRef   *string                `json:"source_ref,omitempty"`
 	Status      *TicketingTicketStatus `json:"status,omitempty"`
@@ -114,7 +114,7 @@ func (o *TicketingTicket) GetPriority() *string {
 	return o.Priority
 }
 
-func (o *TicketingTicket) GetRaw() map[string]interface{} {
+func (o *TicketingTicket) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

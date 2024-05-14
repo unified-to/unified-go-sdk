@@ -41,14 +41,14 @@ func (e *PaymentPayoutStatus) UnmarshalJSON(data []byte) error {
 }
 
 type PaymentPayout struct {
-	CreatedAt   *string                `json:"created_at,omitempty"`
-	Currency    *string                `json:"currency,omitempty"`
-	ID          *string                `json:"id,omitempty"`
-	Notes       *string                `json:"notes,omitempty"`
-	Raw         map[string]interface{} `json:"raw,omitempty"`
-	Status      *PaymentPayoutStatus   `json:"status,omitempty"`
-	TotalAmount float64                `json:"total_amount"`
-	UpdatedAt   *string                `json:"updated_at,omitempty"`
+	CreatedAt   *string              `json:"created_at,omitempty"`
+	Currency    *string              `json:"currency,omitempty"`
+	ID          *string              `json:"id,omitempty"`
+	Notes       *string              `json:"notes,omitempty"`
+	Raw         map[string]any       `json:"raw,omitempty"`
+	Status      *PaymentPayoutStatus `json:"status,omitempty"`
+	TotalAmount float64              `json:"total_amount"`
+	UpdatedAt   *string              `json:"updated_at,omitempty"`
 }
 
 func (o *PaymentPayout) GetCreatedAt() *string {
@@ -79,7 +79,7 @@ func (o *PaymentPayout) GetNotes() *string {
 	return o.Notes
 }
 
-func (o *PaymentPayout) GetRaw() map[string]interface{} {
+func (o *PaymentPayout) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

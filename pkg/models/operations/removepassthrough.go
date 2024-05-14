@@ -30,7 +30,7 @@ type RemovePassthroughResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	Result map[string]interface{}
+	Result map[string]any
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -44,7 +44,7 @@ func (o *RemovePassthroughResponse) GetContentType() string {
 	return o.ContentType
 }
 
-func (o *RemovePassthroughResponse) GetResult() map[string]interface{} {
+func (o *RemovePassthroughResponse) GetResult() map[string]any {
 	if o == nil {
 		return nil
 	}

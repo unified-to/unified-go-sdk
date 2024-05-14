@@ -22,13 +22,13 @@ type CrmCompany struct {
 	LinkUrls    []string   `json:"link_urls,omitempty"`
 	Name        *string    `json:"name,omitempty"`
 	// The raw data returned by the integration for this company
-	Raw        map[string]interface{} `json:"raw,omitempty"`
-	Tags       []string               `json:"tags,omitempty"`
-	Telephones []CrmTelephone         `json:"telephones,omitempty"`
-	Timezone   *string                `json:"timezone,omitempty"`
-	UpdatedAt  *time.Time             `json:"updated_at,omitempty"`
-	UserID     *string                `json:"user_id,omitempty"`
-	Websites   []string               `json:"websites,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	Tags       []string       `json:"tags,omitempty"`
+	Telephones []CrmTelephone `json:"telephones,omitempty"`
+	Timezone   *string        `json:"timezone,omitempty"`
+	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
+	UserID     *string        `json:"user_id,omitempty"`
+	Websites   []string       `json:"websites,omitempty"`
 }
 
 func (c CrmCompany) MarshalJSON() ([]byte, error) {
@@ -119,7 +119,7 @@ func (o *CrmCompany) GetName() *string {
 	return o.Name
 }
 
-func (o *CrmCompany) GetRaw() map[string]interface{} {
+func (o *CrmCompany) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

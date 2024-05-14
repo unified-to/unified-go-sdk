@@ -8,13 +8,13 @@ import (
 
 type PatchPassthroughRequest struct {
 	// integration-specific payload
-	RequestBody map[string]interface{} `request:"mediaType=application/json"`
+	RequestBody map[string]any `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	Path         string `pathParam:"style=simple,explode=false,name=path"`
 }
 
-func (o *PatchPassthroughRequest) GetRequestBody() map[string]interface{} {
+func (o *PatchPassthroughRequest) GetRequestBody() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -39,7 +39,7 @@ type PatchPassthroughResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	Result map[string]interface{}
+	Result map[string]any
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -53,7 +53,7 @@ func (o *PatchPassthroughResponse) GetContentType() string {
 	return o.ContentType
 }
 
-func (o *PatchPassthroughResponse) GetResult() map[string]interface{} {
+func (o *PatchPassthroughResponse) GetResult() map[string]any {
 	if o == nil {
 		return nil
 	}

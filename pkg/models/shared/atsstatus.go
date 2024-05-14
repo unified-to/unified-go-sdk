@@ -68,11 +68,11 @@ func (e *AtsStatusStatus) UnmarshalJSON(data []byte) error {
 }
 
 type AtsStatus struct {
-	Description    *string                `json:"description,omitempty"`
-	ID             *string                `json:"id,omitempty"`
-	OriginalStatus *string                `json:"original_status,omitempty"`
-	Raw            map[string]interface{} `json:"raw,omitempty"`
-	Status         *AtsStatusStatus       `json:"status,omitempty"`
+	Description    *string          `json:"description,omitempty"`
+	ID             *string          `json:"id,omitempty"`
+	OriginalStatus *string          `json:"original_status,omitempty"`
+	Raw            map[string]any   `json:"raw,omitempty"`
+	Status         *AtsStatusStatus `json:"status,omitempty"`
 }
 
 func (o *AtsStatus) GetDescription() *string {
@@ -96,7 +96,7 @@ func (o *AtsStatus) GetOriginalStatus() *string {
 	return o.OriginalStatus
 }
 
-func (o *AtsStatus) GetRaw() map[string]interface{} {
+func (o *AtsStatus) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

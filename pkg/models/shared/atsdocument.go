@@ -49,18 +49,18 @@ func (e *AtsDocumentType) UnmarshalJSON(data []byte) error {
 }
 
 type AtsDocument struct {
-	ApplicationID *string                `json:"application_id,omitempty"`
-	CandidateID   *string                `json:"candidate_id,omitempty"`
-	CreatedAt     *time.Time             `json:"created_at,omitempty"`
-	DocumentData  *string                `json:"document_data,omitempty"`
-	DocumentURL   *string                `json:"document_url,omitempty"`
-	Filename      *string                `json:"filename,omitempty"`
-	ID            *string                `json:"id,omitempty"`
-	JobID         *string                `json:"job_id,omitempty"`
-	Raw           map[string]interface{} `json:"raw,omitempty"`
-	Type          *AtsDocumentType       `json:"type,omitempty"`
-	UpdatedAt     *time.Time             `json:"updated_at,omitempty"`
-	UserID        *string                `json:"user_id,omitempty"`
+	ApplicationID *string          `json:"application_id,omitempty"`
+	CandidateID   *string          `json:"candidate_id,omitempty"`
+	CreatedAt     *time.Time       `json:"created_at,omitempty"`
+	DocumentData  *string          `json:"document_data,omitempty"`
+	DocumentURL   *string          `json:"document_url,omitempty"`
+	Filename      *string          `json:"filename,omitempty"`
+	ID            *string          `json:"id,omitempty"`
+	JobID         *string          `json:"job_id,omitempty"`
+	Raw           map[string]any   `json:"raw,omitempty"`
+	Type          *AtsDocumentType `json:"type,omitempty"`
+	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
+	UserID        *string          `json:"user_id,omitempty"`
 }
 
 func (a AtsDocument) MarshalJSON() ([]byte, error) {
@@ -130,7 +130,7 @@ func (o *AtsDocument) GetJobID() *string {
 	return o.JobID
 }
 
-func (o *AtsDocument) GetRaw() map[string]interface{} {
+func (o *AtsDocument) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

@@ -67,18 +67,18 @@ func (e *HrisTimeoffType) UnmarshalJSON(data []byte) error {
 }
 
 type HrisTimeoff struct {
-	ApprovedAt     *time.Time             `json:"approved_at,omitempty"`
-	ApproverUserID *string                `json:"approver_user_id,omitempty"`
-	Comments       *string                `json:"comments,omitempty"`
-	CreatedAt      *time.Time             `json:"created_at,omitempty"`
-	EndAt          *time.Time             `json:"end_at,omitempty"`
-	ID             *string                `json:"id,omitempty"`
-	Raw            map[string]interface{} `json:"raw,omitempty"`
-	StartAt        time.Time              `json:"start_at"`
-	Status         *HrisTimeoffStatus     `json:"status,omitempty"`
-	Type           *HrisTimeoffType       `json:"type,omitempty"`
-	UpdatedAt      *time.Time             `json:"updated_at,omitempty"`
-	UserID         string                 `json:"user_id"`
+	ApprovedAt     *time.Time         `json:"approved_at,omitempty"`
+	ApproverUserID *string            `json:"approver_user_id,omitempty"`
+	Comments       *string            `json:"comments,omitempty"`
+	CreatedAt      *time.Time         `json:"created_at,omitempty"`
+	EndAt          *time.Time         `json:"end_at,omitempty"`
+	ID             *string            `json:"id,omitempty"`
+	Raw            map[string]any     `json:"raw,omitempty"`
+	StartAt        time.Time          `json:"start_at"`
+	Status         *HrisTimeoffStatus `json:"status,omitempty"`
+	Type           *HrisTimeoffType   `json:"type,omitempty"`
+	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
+	UserID         string             `json:"user_id"`
 }
 
 func (h HrisTimeoff) MarshalJSON() ([]byte, error) {
@@ -134,7 +134,7 @@ func (o *HrisTimeoff) GetID() *string {
 	return o.ID
 }
 
-func (o *HrisTimeoff) GetRaw() map[string]interface{} {
+func (o *HrisTimeoff) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

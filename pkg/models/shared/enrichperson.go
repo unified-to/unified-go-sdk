@@ -56,7 +56,7 @@ type EnrichPerson struct {
 	LinkedinURL    *string       `json:"linkedin_url,omitempty"`
 	Name           *string       `json:"name,omitempty"`
 	// The raw data returned by the integration for this person
-	Raw map[string]interface{} `json:"raw,omitempty"`
+	Raw map[string]any `json:"raw,omitempty"`
 	// An array of telephones for this person
 	Telephones    []EnrichTelephone         `json:"telephones,omitempty"`
 	Timezone      *string                   `json:"timezone,omitempty"`
@@ -184,7 +184,7 @@ func (o *EnrichPerson) GetName() *string {
 	return o.Name
 }
 
-func (o *EnrichPerson) GetRaw() map[string]interface{} {
+func (o *EnrichPerson) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

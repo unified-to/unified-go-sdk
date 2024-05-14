@@ -8,17 +8,17 @@ import (
 )
 
 type PaymentLink struct {
-	Amount    float64                `json:"amount"`
-	ContactID *string                `json:"contact_id,omitempty"`
-	CreatedAt *time.Time             `json:"created_at,omitempty"`
-	Currency  *string                `json:"currency,omitempty"`
-	ID        *string                `json:"id,omitempty"`
-	IsActive  *bool                  `json:"is_active,omitempty"`
-	Lineitems []PaymentLinkLineitem  `json:"lineitems"`
-	PaymentID *string                `json:"payment_id,omitempty"`
-	Raw       map[string]interface{} `json:"raw,omitempty"`
-	UpdatedAt *time.Time             `json:"updated_at,omitempty"`
-	URL       *string                `json:"url,omitempty"`
+	Amount    float64               `json:"amount"`
+	ContactID *string               `json:"contact_id,omitempty"`
+	CreatedAt *time.Time            `json:"created_at,omitempty"`
+	Currency  *string               `json:"currency,omitempty"`
+	ID        *string               `json:"id,omitempty"`
+	IsActive  *bool                 `json:"is_active,omitempty"`
+	Lineitems []PaymentLinkLineitem `json:"lineitems"`
+	PaymentID *string               `json:"payment_id,omitempty"`
+	Raw       map[string]any        `json:"raw,omitempty"`
+	UpdatedAt *time.Time            `json:"updated_at,omitempty"`
+	URL       *string               `json:"url,omitempty"`
 }
 
 func (p PaymentLink) MarshalJSON() ([]byte, error) {
@@ -88,7 +88,7 @@ func (o *PaymentLink) GetPaymentID() *string {
 	return o.PaymentID
 }
 
-func (o *PaymentLink) GetRaw() map[string]interface{} {
+func (o *PaymentLink) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}
