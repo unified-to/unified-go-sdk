@@ -20,7 +20,6 @@ const (
 func (e Event) ToPointer() *Event {
 	return &e
 }
-
 func (e *Event) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -93,7 +92,6 @@ const (
 func (e ObjectType) ToPointer() *ObjectType {
 	return &e
 }
-
 func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -208,7 +206,6 @@ const (
 func (e WebhookType) ToPointer() *WebhookType {
 	return &e
 }
-
 func (e *WebhookType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

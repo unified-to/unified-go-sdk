@@ -22,7 +22,6 @@ const (
 func (e IssueStatus) ToPointer() *IssueStatus {
 	return &e
 }
-
 func (e *IssueStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -60,7 +59,6 @@ const (
 func (e IssueType) ToPointer() *IssueType {
 	return &e
 }
-
 func (e *IssueType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -26,7 +26,6 @@ Create a list
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -78,7 +77,6 @@ Create a member
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -130,7 +128,6 @@ Retrieve a list
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -183,7 +180,6 @@ Retrieve a member
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -236,7 +232,6 @@ List all lists
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -288,7 +283,6 @@ List all members
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -340,7 +334,6 @@ Update a list
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -393,7 +386,6 @@ Update a member
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -446,7 +438,6 @@ Remove a list
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -499,7 +490,6 @@ Remove a member
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -552,7 +542,6 @@ Update a list
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -605,7 +594,6 @@ Update a member
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"

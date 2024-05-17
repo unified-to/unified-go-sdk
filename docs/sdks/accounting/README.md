@@ -46,7 +46,6 @@ Create an account
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -98,7 +97,6 @@ Create a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -150,7 +148,6 @@ Create an invoice
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -202,7 +199,6 @@ Create a taxrate
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -254,7 +250,6 @@ Create a transaction
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -306,7 +301,6 @@ Retrieve an account
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -359,7 +353,6 @@ Retrieve a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -412,7 +405,6 @@ Retrieve an invoice
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -465,7 +457,6 @@ Retrieve an organization
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -518,7 +509,6 @@ Retrieve a taxrate
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -571,7 +561,6 @@ Retrieve a transaction
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -624,7 +613,6 @@ List all accounts
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -676,7 +664,6 @@ List all contacts
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -728,7 +715,6 @@ List all invoices
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -780,7 +766,6 @@ List all organizations
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -832,7 +817,6 @@ List all taxrates
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -884,7 +868,6 @@ List all transactions
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -936,7 +919,6 @@ Update an account
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -989,7 +971,6 @@ Update a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1042,7 +1023,6 @@ Update an invoice
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1095,7 +1075,6 @@ Update a taxrate
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1148,7 +1127,6 @@ Update a transaction
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1201,7 +1179,6 @@ Remove an account
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1254,7 +1231,6 @@ Remove a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1307,7 +1283,6 @@ Remove an invoice
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1360,7 +1335,6 @@ Remove a taxrate
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1413,7 +1387,6 @@ Remove a transaction
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1466,7 +1439,6 @@ Update an account
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1519,7 +1491,6 @@ Update a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1572,7 +1543,6 @@ Update an invoice
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1625,7 +1595,6 @@ Update a taxrate
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1678,7 +1647,6 @@ Update a transaction
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"

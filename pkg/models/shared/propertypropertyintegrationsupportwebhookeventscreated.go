@@ -17,7 +17,6 @@ const (
 func (e PropertyPropertyIntegrationSupportWebhookEventsCreated) ToPointer() *PropertyPropertyIntegrationSupportWebhookEventsCreated {
 	return &e
 }
-
 func (e *PropertyPropertyIntegrationSupportWebhookEventsCreated) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

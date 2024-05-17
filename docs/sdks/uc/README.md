@@ -21,7 +21,6 @@ Create a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -73,7 +72,6 @@ Retrieve a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -126,7 +124,6 @@ List all calls
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -178,7 +175,6 @@ List all contacts
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -230,7 +226,6 @@ Update a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -283,7 +278,6 @@ Remove a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -336,7 +330,6 @@ Update a contact
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"

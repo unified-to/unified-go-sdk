@@ -94,7 +94,6 @@ const (
 func (e PropertyConnectionPermissions) ToPointer() *PropertyConnectionPermissions {
 	return &e
 }
-
 func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

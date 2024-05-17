@@ -19,7 +19,6 @@ const (
 func (e EmploymentStatus) ToPointer() *EmploymentStatus {
 	return &e
 }
-
 func (e *EmploymentStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -54,7 +53,6 @@ const (
 func (e HrisEmployeeEmploymentType) ToPointer() *HrisEmployeeEmploymentType {
 	return &e
 }
-
 func (e *HrisEmployeeEmploymentType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -100,7 +98,6 @@ const (
 func (e HrisEmployeeGender) ToPointer() *HrisEmployeeGender {
 	return &e
 }
-
 func (e *HrisEmployeeGender) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -133,7 +130,6 @@ const (
 func (e MaritalStatus) ToPointer() *MaritalStatus {
 	return &e
 }
-
 func (e *MaritalStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

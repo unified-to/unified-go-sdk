@@ -16,7 +16,6 @@ Retrieve specific API Call by its ID
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -68,7 +67,6 @@ Returns API Calls
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"

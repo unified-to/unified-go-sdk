@@ -22,7 +22,6 @@ const (
 func (e Frequency) ToPointer() *Frequency {
 	return &e
 }
-
 func (e *Frequency) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -62,7 +61,6 @@ const (
 func (e AtsCompensationType) ToPointer() *AtsCompensationType {
 	return &e
 }
-
 func (e *AtsCompensationType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

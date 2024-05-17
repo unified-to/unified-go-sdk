@@ -17,7 +17,6 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -70,7 +69,6 @@ No authentication required as this is to be used by front-end interface
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -122,7 +120,6 @@ Returns all integrations
 package main
 
 import(
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"

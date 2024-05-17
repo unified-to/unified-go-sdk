@@ -22,7 +22,6 @@ const (
 func (e AccountingContactPaymentMethodType) ToPointer() *AccountingContactPaymentMethodType {
 	return &e
 }
-
 func (e *AccountingContactPaymentMethodType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

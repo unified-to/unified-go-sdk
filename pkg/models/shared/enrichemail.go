@@ -18,7 +18,6 @@ const (
 func (e EnrichEmailType) ToPointer() *EnrichEmailType {
 	return &e
 }
-
 func (e *EnrichEmailType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

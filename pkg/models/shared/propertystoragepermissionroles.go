@@ -18,7 +18,6 @@ const (
 func (e PropertyStoragePermissionRoles) ToPointer() *PropertyStoragePermissionRoles {
 	return &e
 }
-
 func (e *PropertyStoragePermissionRoles) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

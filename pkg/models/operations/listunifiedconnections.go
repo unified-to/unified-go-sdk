@@ -33,7 +33,6 @@ const (
 func (e Categories) ToPointer() *Categories {
 	return &e
 }
-
 func (e *Categories) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

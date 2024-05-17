@@ -18,7 +18,6 @@ const (
 func (e TicketingEmailType) ToPointer() *TicketingEmailType {
 	return &e
 }
-
 func (e *TicketingEmailType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

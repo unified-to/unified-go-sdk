@@ -19,7 +19,6 @@ const (
 func (e PaymentRefundStatus) ToPointer() *PaymentRefundStatus {
 	return &e
 }
-
 func (e *PaymentRefundStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

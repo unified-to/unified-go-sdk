@@ -19,7 +19,6 @@ const (
 func (e AtsActivityType) ToPointer() *AtsActivityType {
 	return &e
 }
-
 func (e *AtsActivityType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -20,7 +20,6 @@ const (
 func (e HrisTimeoffStatus) ToPointer() *HrisTimeoffStatus {
 	return &e
 }
-
 func (e *HrisTimeoffStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -49,7 +48,6 @@ const (
 func (e HrisTimeoffType) ToPointer() *HrisTimeoffType {
 	return &e
 }
-
 func (e *HrisTimeoffType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

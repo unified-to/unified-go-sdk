@@ -18,7 +18,6 @@ const (
 func (e HrisEmailType) ToPointer() *HrisEmailType {
 	return &e
 }
-
 func (e *HrisEmailType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

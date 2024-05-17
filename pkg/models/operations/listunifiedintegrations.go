@@ -31,7 +31,6 @@ const (
 func (e ListUnifiedIntegrationsQueryParamCategories) ToPointer() *ListUnifiedIntegrationsQueryParamCategories {
 	return &e
 }
-
 func (e *ListUnifiedIntegrationsQueryParamCategories) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

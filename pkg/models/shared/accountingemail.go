@@ -18,7 +18,6 @@ const (
 func (e AccountingEmailType) ToPointer() *AccountingEmailType {
 	return &e
 }
-
 func (e *AccountingEmailType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

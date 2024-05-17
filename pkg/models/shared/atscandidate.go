@@ -23,7 +23,6 @@ const (
 func (e Origin) ToPointer() *Origin {
 	return &e
 }
-
 func (e *Origin) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

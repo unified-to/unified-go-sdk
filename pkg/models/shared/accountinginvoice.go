@@ -19,7 +19,6 @@ const (
 func (e PaymentCollectionMethod) ToPointer() *PaymentCollectionMethod {
 	return &e
 }
-
 func (e *PaymentCollectionMethod) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -51,7 +50,6 @@ const (
 func (e AccountingInvoiceStatus) ToPointer() *AccountingInvoiceStatus {
 	return &e
 }
-
 func (e *AccountingInvoiceStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -19,7 +19,6 @@ const (
 func (e SizeUnit) ToPointer() *SizeUnit {
 	return &e
 }
-
 func (e *SizeUnit) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -48,7 +47,6 @@ const (
 func (e WeightUnit) ToPointer() *WeightUnit {
 	return &e
 }
-
 func (e *WeightUnit) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

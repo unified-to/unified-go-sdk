@@ -20,7 +20,6 @@ const (
 func (e UcTelephoneType) ToPointer() *UcTelephoneType {
 	return &e
 }
-
 func (e *UcTelephoneType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

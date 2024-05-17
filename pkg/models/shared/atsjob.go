@@ -27,7 +27,6 @@ const (
 func (e EmploymentType) ToPointer() *EmploymentType {
 	return &e
 }
-
 func (e *EmploymentType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -73,7 +72,6 @@ const (
 func (e AtsJobStatus) ToPointer() *AtsJobStatus {
 	return &e
 }
-
 func (e *AtsJobStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

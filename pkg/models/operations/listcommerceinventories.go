@@ -13,12 +13,12 @@ type ListCommerceInventoriesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields     []string `queryParam:"style=form,explode=true,name=fields"`
-	ItemID     *string  `queryParam:"style=form,explode=true,name=item_id"`
-	Limit      *float64 `queryParam:"style=form,explode=true,name=limit"`
-	LocationID *string  `queryParam:"style=form,explode=true,name=location_id"`
-	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order      *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields        []string `queryParam:"style=form,explode=true,name=fields"`
+	ItemVariantID *string  `queryParam:"style=form,explode=true,name=item_variant_id"`
+	Limit         *float64 `queryParam:"style=form,explode=true,name=limit"`
+	LocationID    *string  `queryParam:"style=form,explode=true,name=location_id"`
+	Offset        *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order         *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
@@ -51,11 +51,11 @@ func (o *ListCommerceInventoriesRequest) GetFields() []string {
 	return o.Fields
 }
 
-func (o *ListCommerceInventoriesRequest) GetItemID() *string {
+func (o *ListCommerceInventoriesRequest) GetItemVariantID() *string {
 	if o == nil {
 		return nil
 	}
-	return o.ItemID
+	return o.ItemVariantID
 }
 
 func (o *ListCommerceInventoriesRequest) GetLimit() *float64 {

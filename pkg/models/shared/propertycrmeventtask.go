@@ -21,7 +21,6 @@ const (
 func (e PropertyCrmEventTaskStatus) ToPointer() *PropertyCrmEventTaskStatus {
 	return &e
 }
-
 func (e *PropertyCrmEventTaskStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
