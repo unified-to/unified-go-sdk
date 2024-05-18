@@ -3,19 +3,19 @@
 package shared
 
 type AccountingTransactionLineitem struct {
-	AccountID   string   `json:"account_id"`
+	AccountID   *string  `json:"account_id,omitempty"`
 	ContactID   *string  `json:"contact_id,omitempty"`
 	Description *string  `json:"description,omitempty"`
 	ID          *string  `json:"id,omitempty"`
 	InvoiceID   *string  `json:"invoice_id,omitempty"`
 	PaymentID   *string  `json:"payment_id,omitempty"`
 	TaxAmount   *float64 `json:"tax_amount,omitempty"`
-	TotalAmount float64  `json:"total_amount"`
+	TotalAmount *float64 `json:"total_amount,omitempty"`
 }
 
-func (o *AccountingTransactionLineitem) GetAccountID() string {
+func (o *AccountingTransactionLineitem) GetAccountID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.AccountID
 }
@@ -62,9 +62,9 @@ func (o *AccountingTransactionLineitem) GetTaxAmount() *float64 {
 	return o.TaxAmount
 }
 
-func (o *AccountingTransactionLineitem) GetTotalAmount() float64 {
+func (o *AccountingTransactionLineitem) GetTotalAmount() *float64 {
 	if o == nil {
-		return 0.0
+		return nil
 	}
 	return o.TotalAmount
 }

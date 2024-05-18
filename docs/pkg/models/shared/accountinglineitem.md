@@ -18,7 +18,7 @@
 | `RefundedAt`                               | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
 | `TaxAmount`                                | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
 | `TaxrateID`                                | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
-| `TotalAmount`                              | *float64*                                  | :heavy_check_mark:                         | N/A                                        |
+| `TotalAmount`                              | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
 | `UnitAmount`                               | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
 | `UnitQuantity`                             | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
 | `UpdatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |

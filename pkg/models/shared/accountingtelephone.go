@@ -43,13 +43,13 @@ func (e *AccountingTelephoneType) UnmarshalJSON(data []byte) error {
 }
 
 type AccountingTelephone struct {
-	Telephone string                   `json:"telephone"`
+	Telephone *string                  `json:"telephone,omitempty"`
 	Type      *AccountingTelephoneType `json:"type,omitempty"`
 }
 
-func (o *AccountingTelephone) GetTelephone() string {
+func (o *AccountingTelephone) GetTelephone() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Telephone
 }

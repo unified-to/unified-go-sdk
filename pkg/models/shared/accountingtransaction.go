@@ -6,7 +6,7 @@ type AccountingTransaction struct {
 	CreatedAt   *string `json:"created_at,omitempty"`
 	Currency    *string `json:"currency,omitempty"`
 	Description *string `json:"description,omitempty"`
-	ID          string  `json:"id"`
+	ID          *string `json:"id,omitempty"`
 	// new field name
 	Lineitems []AccountingTransactionLineitem `json:"lineitems,omitempty"`
 	Raw       map[string]any                  `json:"raw,omitempty"`
@@ -37,9 +37,9 @@ func (o *AccountingTransaction) GetDescription() *string {
 	return o.Description
 }
 
-func (o *AccountingTransaction) GetID() string {
+func (o *AccountingTransaction) GetID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.ID
 }

@@ -37,13 +37,13 @@ func (e *AccountingEmailType) UnmarshalJSON(data []byte) error {
 }
 
 type AccountingEmail struct {
-	Email string               `json:"email"`
+	Email *string              `json:"email,omitempty"`
 	Type  *AccountingEmailType `json:"type,omitempty"`
 }
 
-func (o *AccountingEmail) GetEmail() string {
+func (o *AccountingEmail) GetEmail() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Email
 }

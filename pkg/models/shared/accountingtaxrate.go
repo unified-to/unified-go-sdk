@@ -12,8 +12,8 @@ type AccountingTaxrate struct {
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
 	IsActive    *bool          `json:"is_active,omitempty"`
-	Name        string         `json:"name"`
-	Rate        float64        `json:"rate"`
+	Name        *string        `json:"name,omitempty"`
+	Rate        *float64       `json:"rate,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
 }
@@ -57,16 +57,16 @@ func (o *AccountingTaxrate) GetIsActive() *bool {
 	return o.IsActive
 }
 
-func (o *AccountingTaxrate) GetName() string {
+func (o *AccountingTaxrate) GetName() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Name
 }
 
-func (o *AccountingTaxrate) GetRate() float64 {
+func (o *AccountingTaxrate) GetRate() *float64 {
 	if o == nil {
-		return 0.0
+		return nil
 	}
 	return o.Rate
 }
