@@ -11,7 +11,8 @@ import (
 
 type ListTicketingNotesRequest struct {
 	// ID of the connection
-	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
+	CustomerID   *string `queryParam:"style=form,explode=true,name=customer_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -41,6 +42,13 @@ func (o *ListTicketingNotesRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *ListTicketingNotesRequest) GetCustomerID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CustomerID
 }
 
 func (o *ListTicketingNotesRequest) GetFields() []string {

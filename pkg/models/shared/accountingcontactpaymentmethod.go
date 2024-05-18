@@ -17,6 +17,7 @@ const (
 	AccountingContactPaymentMethodTypeIdeal   AccountingContactPaymentMethodType = "IDEAL"
 	AccountingContactPaymentMethodTypeOther   AccountingContactPaymentMethodType = "OTHER"
 	AccountingContactPaymentMethodTypePaypal  AccountingContactPaymentMethodType = "PAYPAL"
+	AccountingContactPaymentMethodTypeUnknown AccountingContactPaymentMethodType = ""
 )
 
 func (e AccountingContactPaymentMethodType) ToPointer() *AccountingContactPaymentMethodType {
@@ -41,6 +42,8 @@ func (e *AccountingContactPaymentMethodType) UnmarshalJSON(data []byte) error {
 	case "OTHER":
 		fallthrough
 	case "PAYPAL":
+		fallthrough
+	case "":
 		*e = AccountingContactPaymentMethodType(v)
 		return nil
 	default:
@@ -49,8 +52,8 @@ func (e *AccountingContactPaymentMethodType) UnmarshalJSON(data []byte) error {
 }
 
 type AccountingContactPaymentMethod struct {
-	Name *string                            `json:"name,omitempty"`
-	Type AccountingContactPaymentMethodType `json:"type"`
+	Name *string                             `json:"name,omitempty"`
+	Type *AccountingContactPaymentMethodType `json:"type,omitempty"`
 }
 
 func (o *AccountingContactPaymentMethod) GetName() *string {
@@ -60,9 +63,9 @@ func (o *AccountingContactPaymentMethod) GetName() *string {
 	return o.Name
 }
 
-func (o *AccountingContactPaymentMethod) GetType() AccountingContactPaymentMethodType {
+func (o *AccountingContactPaymentMethod) GetType() *AccountingContactPaymentMethodType {
 	if o == nil {
-		return AccountingContactPaymentMethodType("")
+		return nil
 	}
 	return o.Type
 }
