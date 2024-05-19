@@ -14,7 +14,7 @@ type AccountingOrganization struct {
 	FiscalYearEndMonth *float64                               `json:"fiscal_year_end_month,omitempty"`
 	ID                 *string                                `json:"id,omitempty"`
 	LegalName          *string                                `json:"legal_name,omitempty"`
-	Name               *string                                `json:"name,omitempty"`
+	Name               string                                 `json:"name"`
 	Raw                map[string]any                         `json:"raw,omitempty"`
 	TaxNumber          *string                                `json:"tax_number,omitempty"`
 	Timezone           *string                                `json:"timezone,omitempty"`
@@ -75,9 +75,9 @@ func (o *AccountingOrganization) GetLegalName() *string {
 	return o.LegalName
 }
 
-func (o *AccountingOrganization) GetName() *string {
+func (o *AccountingOrganization) GetName() string {
 	if o == nil {
-		return nil
+		return ""
 	}
 	return o.Name
 }

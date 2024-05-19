@@ -85,6 +85,7 @@ func (e *Type) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// AccountingAccount - Chart of accounts
 type AccountingAccount struct {
 	Balance             *float64       `json:"balance,omitempty"`
 	CreatedAt           *time.Time     `json:"created_at,omitempty"`

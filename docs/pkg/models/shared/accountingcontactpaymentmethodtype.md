@@ -12,4 +12,3 @@
 | `AccountingContactPaymentMethodTypeIdeal`   | IDEAL                                       |
 | `AccountingContactPaymentMethodTypeOther`   | OTHER                                       |
 | `AccountingContactPaymentMethodTypePaypal`  | PAYPAL                                      |
-| `AccountingContactPaymentMethodTypeUnknown` |                                             |
