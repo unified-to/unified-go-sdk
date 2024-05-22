@@ -84,3 +84,12 @@
 | `PropertyConnectionPermissionsGenaiModelRead`             | genai_model_read                                          |
 | `PropertyConnectionPermissionsGenaiPromptRead`            | genai_prompt_read                                         |
 | `PropertyConnectionPermissionsGenaiPromptWrite`           | genai_prompt_write                                        |
+| `PropertyConnectionPermissionsMessagingMessageRead`       | messaging_message_read                                    |
+| `PropertyConnectionPermissionsMessagingMessageWrite`      | messaging_message_write                                   |
+| `PropertyConnectionPermissionsMessagingChannelRead`       | messaging_channel_read                                    |
+| `PropertyConnectionPermissionsKmsSpaceRead`               | kms_space_read                                            |
+| `PropertyConnectionPermissionsKmsSpaceWrite`              | kms_space_write                                           |
+| `PropertyConnectionPermissionsKmsPageRead`                | kms_page_read                                             |
+| `PropertyConnectionPermissionsKmsPageWrite`               | kms_page_write                                            |
+| `PropertyConnectionPermissionsKmsCommentRead`             | kms_comment_read                                          |
+| `PropertyConnectionPermissionsKmsCommentWrite`            | kms_comment_write                                         |

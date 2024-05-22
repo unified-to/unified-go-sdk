@@ -19,3 +19,5 @@
 | `QueryParamCategoriesCommerce`    | commerce                          |
 | `QueryParamCategoriesPayment`     | payment                           |
 | `QueryParamCategoriesGenai`       | genai                             |
+| `QueryParamCategoriesMessaging`   | messaging                         |
+| `QueryParamCategoriesKms`         | kms                               |

@@ -46,11 +46,11 @@ func main() {
 
     var request *shared.Connection = &shared.Connection{
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesPayment,
+            shared.PropertyConnectionCategoriesMessaging,
         },
         IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsInterviewRead,
+            shared.PropertyConnectionPermissionsAtsCompanyRead,
         },
     }
     

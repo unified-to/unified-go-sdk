@@ -1,0 +1,18 @@
+# KmsPage
+
+
+## Fields
+
+| Field                                                           | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `CreatedAt`                                                     | [*time.Time](https://pkg.go.dev/time#Time)                      | :heavy_minus_sign:                                              | N/A                                                             |
+| `DownloadURL`                                                   | *string*                                                        | :heavy_check_mark:                                              | N/A                                                             |
+| `ID`                                                            | *string*                                                        | :heavy_check_mark:                                              | N/A                                                             |
+| `IsActive`                                                      | **bool*                                                         | :heavy_minus_sign:                                              | N/A                                                             |
+| `ParentPageID`                                                  | **string*                                                       | :heavy_minus_sign:                                              | N/A                                                             |
+| `Raw`                                                           | map[string]*any*                                                | :heavy_minus_sign:                                              | N/A                                                             |
+| `SpaceID`                                                       | *string*                                                        | :heavy_check_mark:                                              | N/A                                                             |
+| `Title`                                                         | *string*                                                        | :heavy_check_mark:                                              | N/A                                                             |
+| `Type`                                                          | [shared.KmsPageType](../../../pkg/models/shared/kmspagetype.md) | :heavy_check_mark:                                              | N/A                                                             |
+| `UpdatedAt`                                                     | [*time.Time](https://pkg.go.dev/time#Time)                      | :heavy_minus_sign:                                              | N/A                                                             |
+| `UserID`                                                        | **string*                                                       | :heavy_minus_sign:                                              | N/A                                                             |

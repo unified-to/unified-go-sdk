@@ -51,3 +51,7 @@
 | `ObjectTypeStorageFile`            | storage_file                       |
 | `ObjectTypeGenaiModel`             | genai_model                        |
 | `ObjectTypeGenaiPrompt`            | genai_prompt                       |
+| `ObjectTypeMessagingMessage`       | messaging_message                  |
+| `ObjectTypeMessagingChannel`       | messaging_channel                  |
+| `ObjectTypeKmsSpace`               | kms_space                          |
+| `ObjectTypeKmsPage`                | kms_page                           |

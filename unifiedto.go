@@ -104,9 +104,15 @@ type UnifiedTo struct {
 	Group             *Group
 	Payslip           *Payslip
 	Timeoff           *Timeoff
+	Kms               *Kms
+	Page              *Page
+	Space             *Space
 	Martech           *Martech
 	List              *List
 	Member            *Member
+	Messaging         *Messaging
+	Channel           *Channel
+	Message           *Message
 	Passthrough       *Passthrough
 	Payment           *Payment
 	Link              *Link
@@ -205,9 +211,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.14.6",
+			SDKVersion:        "0.14.7",
 			GenVersion:        "2.333.3",
-			UserAgent:         "speakeasy-sdk/go 0.14.6 2.333.3 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:         "speakeasy-sdk/go 0.14.7 2.333.3 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -301,11 +307,23 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Timeoff = newTimeoff(sdk.sdkConfiguration)
 
+	sdk.Kms = newKms(sdk.sdkConfiguration)
+
+	sdk.Page = newPage(sdk.sdkConfiguration)
+
+	sdk.Space = newSpace(sdk.sdkConfiguration)
+
 	sdk.Martech = newMartech(sdk.sdkConfiguration)
 
 	sdk.List = newList(sdk.sdkConfiguration)
 
 	sdk.Member = newMember(sdk.sdkConfiguration)
+
+	sdk.Messaging = newMessaging(sdk.sdkConfiguration)
+
+	sdk.Channel = newChannel(sdk.sdkConfiguration)
+
+	sdk.Message = newMessage(sdk.sdkConfiguration)
 
 	sdk.Passthrough = newPassthrough(sdk.sdkConfiguration)
 

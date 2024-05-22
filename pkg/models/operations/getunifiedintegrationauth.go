@@ -90,6 +90,15 @@ const (
 	ScopesGenaiModelRead             Scopes = "genai_model_read"
 	ScopesGenaiPromptRead            Scopes = "genai_prompt_read"
 	ScopesGenaiPromptWrite           Scopes = "genai_prompt_write"
+	ScopesMessagingMessageRead       Scopes = "messaging_message_read"
+	ScopesMessagingMessageWrite      Scopes = "messaging_message_write"
+	ScopesMessagingChannelRead       Scopes = "messaging_channel_read"
+	ScopesKmsSpaceRead               Scopes = "kms_space_read"
+	ScopesKmsSpaceWrite              Scopes = "kms_space_write"
+	ScopesKmsPageRead                Scopes = "kms_page_read"
+	ScopesKmsPageWrite               Scopes = "kms_page_write"
+	ScopesKmsCommentRead             Scopes = "kms_comment_read"
+	ScopesKmsCommentWrite            Scopes = "kms_comment_write"
 )
 
 func (e Scopes) ToPointer() *Scopes {
@@ -258,6 +267,24 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "genai_prompt_read":
 		fallthrough
 	case "genai_prompt_write":
+		fallthrough
+	case "messaging_message_read":
+		fallthrough
+	case "messaging_message_write":
+		fallthrough
+	case "messaging_channel_read":
+		fallthrough
+	case "kms_space_read":
+		fallthrough
+	case "kms_space_write":
+		fallthrough
+	case "kms_page_read":
+		fallthrough
+	case "kms_page_write":
+		fallthrough
+	case "kms_comment_read":
+		fallthrough
+	case "kms_comment_write":
 		*e = Scopes(v)
 		return nil
 	default:

@@ -7,6 +7,7 @@ type IntegrationSupport struct {
 	ListAccountID       *bool                                    `json:"list_account_id,omitempty"`
 	ListApplicationID   *bool                                    `json:"list_application_id,omitempty"`
 	ListCandidateID     *bool                                    `json:"list_candidate_id,omitempty"`
+	ListChannelID       *bool                                    `json:"list_channel_id,omitempty"`
 	ListCollectionID    *bool                                    `json:"list_collection_id,omitempty"`
 	ListCompanyID       *bool                                    `json:"list_company_id,omitempty"`
 	ListContactID       *bool                                    `json:"list_contact_id,omitempty"`
@@ -26,6 +27,7 @@ type IntegrationSupport struct {
 	ListSortByCreatedAt *bool                                    `json:"list_sort_by_created_at,omitempty"`
 	ListSortByName      *bool                                    `json:"list_sort_by_name,omitempty"`
 	ListSortByUpdatedAt *bool                                    `json:"list_sort_by_updated_at,omitempty"`
+	ListSpaceID         *bool                                    `json:"list_space_id,omitempty"`
 	ListTicketID        *bool                                    `json:"list_ticket_id,omitempty"`
 	ListType            *bool                                    `json:"list_type,omitempty"`
 	ListUpdatedGte      *bool                                    `json:"list_updated_gte,omitempty"`
@@ -66,6 +68,13 @@ func (o *IntegrationSupport) GetListCandidateID() *bool {
 		return nil
 	}
 	return o.ListCandidateID
+}
+
+func (o *IntegrationSupport) GetListChannelID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListChannelID
 }
 
 func (o *IntegrationSupport) GetListCollectionID() *bool {
@@ -199,6 +208,13 @@ func (o *IntegrationSupport) GetListSortByUpdatedAt() *bool {
 		return nil
 	}
 	return o.ListSortByUpdatedAt
+}
+
+func (o *IntegrationSupport) GetListSpaceID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListSpaceID
 }
 
 func (o *IntegrationSupport) GetListTicketID() *bool {

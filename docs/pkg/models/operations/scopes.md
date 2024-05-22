@@ -84,3 +84,12 @@
 | `ScopesGenaiModelRead`             | genai_model_read                   |
 | `ScopesGenaiPromptRead`            | genai_prompt_read                  |
 | `ScopesGenaiPromptWrite`           | genai_prompt_write                 |
+| `ScopesMessagingMessageRead`       | messaging_message_read             |
+| `ScopesMessagingMessageWrite`      | messaging_message_write            |
+| `ScopesMessagingChannelRead`       | messaging_channel_read             |
+| `ScopesKmsSpaceRead`               | kms_space_read                     |
+| `ScopesKmsSpaceWrite`              | kms_space_write                    |
+| `ScopesKmsPageRead`                | kms_page_read                      |
+| `ScopesKmsPageWrite`               | kms_page_write                     |
+| `ScopesKmsCommentRead`             | kms_comment_read                   |
+| `ScopesKmsCommentWrite`            | kms_comment_write                  |

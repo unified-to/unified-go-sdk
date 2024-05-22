@@ -19,3 +19,5 @@
 | `CategoriesCommerce`    | commerce                |
 | `CategoriesPayment`     | payment                 |
 | `CategoriesGenai`       | genai                   |
+| `CategoriesMessaging`   | messaging               |
+| `CategoriesKms`         | kms                     |

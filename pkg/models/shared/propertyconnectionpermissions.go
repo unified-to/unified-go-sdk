@@ -89,6 +89,15 @@ const (
 	PropertyConnectionPermissionsGenaiModelRead             PropertyConnectionPermissions = "genai_model_read"
 	PropertyConnectionPermissionsGenaiPromptRead            PropertyConnectionPermissions = "genai_prompt_read"
 	PropertyConnectionPermissionsGenaiPromptWrite           PropertyConnectionPermissions = "genai_prompt_write"
+	PropertyConnectionPermissionsMessagingMessageRead       PropertyConnectionPermissions = "messaging_message_read"
+	PropertyConnectionPermissionsMessagingMessageWrite      PropertyConnectionPermissions = "messaging_message_write"
+	PropertyConnectionPermissionsMessagingChannelRead       PropertyConnectionPermissions = "messaging_channel_read"
+	PropertyConnectionPermissionsKmsSpaceRead               PropertyConnectionPermissions = "kms_space_read"
+	PropertyConnectionPermissionsKmsSpaceWrite              PropertyConnectionPermissions = "kms_space_write"
+	PropertyConnectionPermissionsKmsPageRead                PropertyConnectionPermissions = "kms_page_read"
+	PropertyConnectionPermissionsKmsPageWrite               PropertyConnectionPermissions = "kms_page_write"
+	PropertyConnectionPermissionsKmsCommentRead             PropertyConnectionPermissions = "kms_comment_read"
+	PropertyConnectionPermissionsKmsCommentWrite            PropertyConnectionPermissions = "kms_comment_write"
 )
 
 func (e PropertyConnectionPermissions) ToPointer() *PropertyConnectionPermissions {
@@ -257,6 +266,24 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "genai_prompt_read":
 		fallthrough
 	case "genai_prompt_write":
+		fallthrough
+	case "messaging_message_read":
+		fallthrough
+	case "messaging_message_write":
+		fallthrough
+	case "messaging_channel_read":
+		fallthrough
+	case "kms_space_read":
+		fallthrough
+	case "kms_space_write":
+		fallthrough
+	case "kms_page_read":
+		fallthrough
+	case "kms_page_write":
+		fallthrough
+	case "kms_comment_read":
+		fallthrough
+	case "kms_comment_write":
 		*e = PropertyConnectionPermissions(v)
 		return nil
 	default:

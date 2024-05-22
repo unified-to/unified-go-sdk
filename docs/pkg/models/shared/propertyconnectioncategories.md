@@ -19,3 +19,5 @@
 | `PropertyConnectionCategoriesCommerce`    | commerce                                  |
 | `PropertyConnectionCategoriesPayment`     | payment                                   |
 | `PropertyConnectionCategoriesGenai`       | genai                                     |
+| `PropertyConnectionCategoriesMessaging`   | messaging                                 |
+| `PropertyConnectionCategoriesKms`         | kms                                       |

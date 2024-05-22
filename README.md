@@ -483,6 +483,39 @@ func main() {
 * [GetHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
 * [ListHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
 
+### [Kms](docs/sdks/kms/README.md)
+
+* [CreateKmsPage](docs/sdks/kms/README.md#createkmspage) - Create a page
+* [CreateKmsSpace](docs/sdks/kms/README.md#createkmsspace) - Create a space
+* [GetKmsPage](docs/sdks/kms/README.md#getkmspage) - Retrieve a page
+* [GetKmsSpace](docs/sdks/kms/README.md#getkmsspace) - Retrieve a space
+* [ListKmsPages](docs/sdks/kms/README.md#listkmspages) - List all pages
+* [ListKmsSpaces](docs/sdks/kms/README.md#listkmsspaces) - List all spaces
+* [PatchKmsPage](docs/sdks/kms/README.md#patchkmspage) - Update a page
+* [PatchKmsSpace](docs/sdks/kms/README.md#patchkmsspace) - Update a space
+* [RemoveKmsPage](docs/sdks/kms/README.md#removekmspage) - Remove a page
+* [RemoveKmsSpace](docs/sdks/kms/README.md#removekmsspace) - Remove a space
+* [UpdateKmsPage](docs/sdks/kms/README.md#updatekmspage) - Update a page
+* [UpdateKmsSpace](docs/sdks/kms/README.md#updatekmsspace) - Update a space
+
+### [Page](docs/sdks/page/README.md)
+
+* [CreateKmsPage](docs/sdks/page/README.md#createkmspage) - Create a page
+* [GetKmsPage](docs/sdks/page/README.md#getkmspage) - Retrieve a page
+* [ListKmsPages](docs/sdks/page/README.md#listkmspages) - List all pages
+* [PatchKmsPage](docs/sdks/page/README.md#patchkmspage) - Update a page
+* [RemoveKmsPage](docs/sdks/page/README.md#removekmspage) - Remove a page
+* [UpdateKmsPage](docs/sdks/page/README.md#updatekmspage) - Update a page
+
+### [Space](docs/sdks/space/README.md)
+
+* [CreateKmsSpace](docs/sdks/space/README.md#createkmsspace) - Create a space
+* [GetKmsSpace](docs/sdks/space/README.md#getkmsspace) - Retrieve a space
+* [ListKmsSpaces](docs/sdks/space/README.md#listkmsspaces) - List all spaces
+* [PatchKmsSpace](docs/sdks/space/README.md#patchkmsspace) - Update a space
+* [RemoveKmsSpace](docs/sdks/space/README.md#removekmsspace) - Remove a space
+* [UpdateKmsSpace](docs/sdks/space/README.md#updatekmsspace) - Update a space
+
 ### [Martech](docs/sdks/martech/README.md)
 
 * [CreateMartechList](docs/sdks/martech/README.md#createmartechlist) - Create a list
@@ -515,6 +548,31 @@ func main() {
 * [PatchMartechMember](docs/sdks/member/README.md#patchmartechmember) - Update a member
 * [RemoveMartechMember](docs/sdks/member/README.md#removemartechmember) - Remove a member
 * [UpdateMartechMember](docs/sdks/member/README.md#updatemartechmember) - Update a member
+
+### [Messaging](docs/sdks/messaging/README.md)
+
+* [CreateMessagingMessage](docs/sdks/messaging/README.md#createmessagingmessage) - Create a message
+* [GetMessagingChannel](docs/sdks/messaging/README.md#getmessagingchannel) - Retrieve a channel
+* [GetMessagingMessage](docs/sdks/messaging/README.md#getmessagingmessage) - Retrieve a message
+* [ListMessagingChannels](docs/sdks/messaging/README.md#listmessagingchannels) - List all channels
+* [ListMessagingMessages](docs/sdks/messaging/README.md#listmessagingmessages) - List all messages
+* [PatchMessagingMessage](docs/sdks/messaging/README.md#patchmessagingmessage) - Update a message
+* [RemoveMessagingMessage](docs/sdks/messaging/README.md#removemessagingmessage) - Remove a message
+* [UpdateMessagingMessage](docs/sdks/messaging/README.md#updatemessagingmessage) - Update a message
+
+### [Channel](docs/sdks/channel/README.md)
+
+* [GetMessagingChannel](docs/sdks/channel/README.md#getmessagingchannel) - Retrieve a channel
+* [ListMessagingChannels](docs/sdks/channel/README.md#listmessagingchannels) - List all channels
+
+### [Message](docs/sdks/message/README.md)
+
+* [CreateMessagingMessage](docs/sdks/message/README.md#createmessagingmessage) - Create a message
+* [GetMessagingMessage](docs/sdks/message/README.md#getmessagingmessage) - Retrieve a message
+* [ListMessagingMessages](docs/sdks/message/README.md#listmessagingmessages) - List all messages
+* [PatchMessagingMessage](docs/sdks/message/README.md#patchmessagingmessage) - Update a message
+* [RemoveMessagingMessage](docs/sdks/message/README.md#removemessagingmessage) - Remove a message
+* [UpdateMessagingMessage](docs/sdks/message/README.md#updatemessagingmessage) - Update a message
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
 

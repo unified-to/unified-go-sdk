@@ -87,6 +87,10 @@ const (
 	ObjectTypeStorageFile            ObjectType = "storage_file"
 	ObjectTypeGenaiModel             ObjectType = "genai_model"
 	ObjectTypeGenaiPrompt            ObjectType = "genai_prompt"
+	ObjectTypeMessagingMessage       ObjectType = "messaging_message"
+	ObjectTypeMessagingChannel       ObjectType = "messaging_channel"
+	ObjectTypeKmsSpace               ObjectType = "kms_space"
+	ObjectTypeKmsPage                ObjectType = "kms_page"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -189,6 +193,14 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "genai_model":
 		fallthrough
 	case "genai_prompt":
+		fallthrough
+	case "messaging_message":
+		fallthrough
+	case "messaging_channel":
+		fallthrough
+	case "kms_space":
+		fallthrough
+	case "kms_page":
 		*e = ObjectType(v)
 		return nil
 	default:
