@@ -42,11 +42,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateAccountingContactRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.CreateAccountingContact(ctx, request)
     if err != nil {
@@ -93,11 +91,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateCrmContactRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.CreateCrmContact(ctx, request)
     if err != nil {
@@ -144,11 +140,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateUcContactRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.CreateUcContact(ctx, request)
     if err != nil {
@@ -195,12 +189,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.GetAccountingContact(ctx, request)
     if err != nil {
@@ -247,12 +239,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetCrmContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.GetCrmContact(ctx, request)
     if err != nil {
@@ -299,12 +289,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.GetUcContact(ctx, request)
     if err != nil {
@@ -351,11 +339,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListAccountingContactsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.ListAccountingContacts(ctx, request)
     if err != nil {
@@ -402,11 +388,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListCrmContactsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.ListCrmContacts(ctx, request)
     if err != nil {
@@ -453,11 +437,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUcContactsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.ListUcContacts(ctx, request)
     if err != nil {
@@ -504,12 +486,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.PatchAccountingContact(ctx, request)
     if err != nil {
@@ -556,12 +536,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchCrmContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.PatchCrmContact(ctx, request)
     if err != nil {
@@ -608,12 +586,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.PatchUcContact(ctx, request)
     if err != nil {
@@ -660,12 +636,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.RemoveAccountingContact(ctx, request)
     if err != nil {
@@ -712,12 +686,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveCrmContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.RemoveCrmContact(ctx, request)
     if err != nil {
@@ -764,12 +736,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.RemoveUcContact(ctx, request)
     if err != nil {
@@ -816,12 +786,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.UpdateAccountingContact(ctx, request)
     if err != nil {
@@ -868,12 +836,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateCrmContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.UpdateCrmContact(ctx, request)
     if err != nil {
@@ -920,12 +886,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Contact.UpdateUcContact(ctx, request)
     if err != nil {

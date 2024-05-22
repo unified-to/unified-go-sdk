@@ -119,6 +119,7 @@ func (s *Issue) ListUnifiedIssues(ctx context.Context, request operations.ListUn
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedSupports - Get support info
@@ -210,4 +211,5 @@ func (s *Issue) ListUnifiedSupports(ctx context.Context) (*operations.ListUnifie
 	}
 
 	return res, nil
+
 }

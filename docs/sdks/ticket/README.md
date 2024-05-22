@@ -30,11 +30,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateTicketingTicketRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticket.CreateTicketingTicket(ctx, request)
     if err != nil {
@@ -81,12 +79,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticket.GetTicketingTicket(ctx, request)
     if err != nil {
@@ -133,11 +129,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListTicketingTicketsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticket.ListTicketingTickets(ctx, request)
     if err != nil {
@@ -184,12 +178,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticket.PatchTicketingTicket(ctx, request)
     if err != nil {
@@ -236,12 +228,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticket.RemoveTicketingTicket(ctx, request)
     if err != nil {
@@ -288,12 +278,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticket.UpdateTicketingTicket(ctx, request)
     if err != nil {

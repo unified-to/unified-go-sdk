@@ -30,11 +30,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateStorageFileRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.File.CreateStorageFile(ctx, request)
     if err != nil {
@@ -81,12 +79,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetStorageFileRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.File.GetStorageFile(ctx, request)
     if err != nil {
@@ -133,11 +129,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListStorageFilesRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.File.ListStorageFiles(ctx, request)
     if err != nil {
@@ -184,12 +178,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchStorageFileRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.File.PatchStorageFile(ctx, request)
     if err != nil {
@@ -236,12 +228,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveStorageFileRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.File.RemoveStorageFile(ctx, request)
     if err != nil {
@@ -288,12 +278,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateStorageFileRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.File.UpdateStorageFile(ctx, request)
     if err != nil {

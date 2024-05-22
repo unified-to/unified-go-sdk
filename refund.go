@@ -118,6 +118,7 @@ func (s *Refund) GetPaymentRefund(ctx context.Context, request operations.GetPay
 	}
 
 	return res, nil
+
 }
 
 // ListPaymentRefunds - List all refunds
@@ -213,4 +214,5 @@ func (s *Refund) ListPaymentRefunds(ctx context.Context, request operations.List
 	}
 
 	return res, nil
+
 }

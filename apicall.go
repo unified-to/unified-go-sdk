@@ -115,6 +115,7 @@ func (s *Apicall) GetUnifiedApicall(ctx context.Context, request operations.GetU
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedApicalls - Returns API Calls
@@ -210,4 +211,5 @@ func (s *Apicall) ListUnifiedApicalls(ctx context.Context, request operations.Li
 	}
 
 	return res, nil
+
 }

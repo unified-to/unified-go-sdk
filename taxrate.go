@@ -120,6 +120,7 @@ func (s *Taxrate) CreateAccountingTaxrate(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingTaxrate - Retrieve a taxrate
@@ -215,6 +216,7 @@ func (s *Taxrate) GetAccountingTaxrate(ctx context.Context, request operations.G
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingTaxrates - List all taxrates
@@ -310,6 +312,7 @@ func (s *Taxrate) ListAccountingTaxrates(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // PatchAccountingTaxrate - Update a taxrate
@@ -407,6 +410,7 @@ func (s *Taxrate) PatchAccountingTaxrate(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // RemoveAccountingTaxrate - Remove a taxrate
@@ -497,6 +501,7 @@ func (s *Taxrate) RemoveAccountingTaxrate(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // UpdateAccountingTaxrate - Update a taxrate
@@ -594,4 +599,5 @@ func (s *Taxrate) UpdateAccountingTaxrate(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }

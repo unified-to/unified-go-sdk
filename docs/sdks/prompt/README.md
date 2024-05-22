@@ -25,11 +25,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateGenaiPromptRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Prompt.CreateGenaiPrompt(ctx, request)
     if err != nil {

@@ -31,11 +31,9 @@ func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
-
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
-
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {
@@ -807,11 +805,9 @@ func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
-
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
-
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {
@@ -858,11 +854,9 @@ func main() {
 		unifiedgosdk.WithServerIndex(1),
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
-
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
-
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {
@@ -894,11 +888,9 @@ func main() {
 		unifiedgosdk.WithServerURL("https://api.unified.to"),
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
-
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
-
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {
@@ -971,11 +963,9 @@ func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
-
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
-
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {

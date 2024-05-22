@@ -176,17 +176,11 @@ func WithClient(client HTTPClient) SDKOption {
 	}
 }
 
-func withSecurity(security interface{}) func(context.Context) (interface{}, error) {
-	return func(context.Context) (interface{}, error) {
-		return security, nil
-	}
-}
-
 // WithSecurity configures the SDK to use the provided security details
 func WithSecurity(jwt string) SDKOption {
 	return func(sdk *UnifiedTo) {
 		security := shared.Security{Jwt: &jwt}
-		sdk.sdkConfiguration.Security = withSecurity(&security)
+		sdk.sdkConfiguration.Security = utils.AsSecuritySource(&security)
 	}
 }
 
@@ -211,9 +205,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.14.7",
-			GenVersion:        "2.333.3",
-			UserAgent:         "speakeasy-sdk/go 0.14.7 2.333.3 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.14.8",
+			GenVersion:        "2.335.5",
+			UserAgent:         "speakeasy-sdk/go 0.14.8 2.335.5 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}

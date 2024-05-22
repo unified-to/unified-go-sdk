@@ -30,11 +30,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateMessagingMessageRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Message.CreateMessagingMessage(ctx, request)
     if err != nil {
@@ -81,12 +79,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Message.GetMessagingMessage(ctx, request)
     if err != nil {
@@ -133,11 +129,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListMessagingMessagesRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Message.ListMessagingMessages(ctx, request)
     if err != nil {
@@ -184,12 +178,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Message.PatchMessagingMessage(ctx, request)
     if err != nil {
@@ -236,12 +228,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Message.RemoveMessagingMessage(ctx, request)
     if err != nil {
@@ -288,12 +278,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Message.UpdateMessagingMessage(ctx, request)
     if err != nil {

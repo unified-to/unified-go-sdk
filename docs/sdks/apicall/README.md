@@ -26,11 +26,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetUnifiedApicallRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Apicall.GetUnifiedApicall(ctx, request)
     if err != nil {
@@ -77,9 +75,7 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedApicallsRequest{}
-    
     ctx := context.Background()
     res, err := s.Apicall.ListUnifiedApicalls(ctx, request)
     if err != nil {

@@ -30,11 +30,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateCommerceCollectionRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Collection.CreateCommerceCollection(ctx, request)
     if err != nil {
@@ -81,12 +79,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetCommerceCollectionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Collection.GetCommerceCollection(ctx, request)
     if err != nil {
@@ -133,11 +129,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListCommerceCollectionsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Collection.ListCommerceCollections(ctx, request)
     if err != nil {
@@ -184,12 +178,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchCommerceCollectionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Collection.PatchCommerceCollection(ctx, request)
     if err != nil {
@@ -236,12 +228,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveCommerceCollectionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Collection.RemoveCommerceCollection(ctx, request)
     if err != nil {
@@ -288,12 +278,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateCommerceCollectionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Collection.UpdateCommerceCollection(ctx, request)
     if err != nil {

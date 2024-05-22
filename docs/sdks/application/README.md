@@ -30,11 +30,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateAtsApplicationRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Application.CreateAtsApplication(ctx, request)
     if err != nil {
@@ -81,12 +79,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetAtsApplicationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Application.GetAtsApplication(ctx, request)
     if err != nil {
@@ -133,11 +129,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListAtsApplicationsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Application.ListAtsApplications(ctx, request)
     if err != nil {
@@ -184,12 +178,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchAtsApplicationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Application.PatchAtsApplication(ctx, request)
     if err != nil {
@@ -236,12 +228,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveAtsApplicationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Application.RemoveAtsApplication(ctx, request)
     if err != nil {
@@ -288,12 +278,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateAtsApplicationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Application.UpdateAtsApplication(ctx, request)
     if err != nil {

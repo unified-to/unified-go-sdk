@@ -118,6 +118,7 @@ func (s *Enrich) ListEnrichCompanies(ctx context.Context, request operations.Lis
 	}
 
 	return res, nil
+
 }
 
 // ListEnrichPeople - Retrieve enrichment information for a person
@@ -213,4 +214,5 @@ func (s *Enrich) ListEnrichPeople(ctx context.Context, request operations.ListEn
 	}
 
 	return res, nil
+
 }

@@ -120,6 +120,7 @@ func (s *Contact) CreateAccountingContact(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // CreateCrmContact - Create a contact
@@ -217,6 +218,7 @@ func (s *Contact) CreateCrmContact(ctx context.Context, request operations.Creat
 	}
 
 	return res, nil
+
 }
 
 // CreateUcContact - Create a contact
@@ -314,6 +316,7 @@ func (s *Contact) CreateUcContact(ctx context.Context, request operations.Create
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingContact - Retrieve a contact
@@ -409,6 +412,7 @@ func (s *Contact) GetAccountingContact(ctx context.Context, request operations.G
 	}
 
 	return res, nil
+
 }
 
 // GetCrmContact - Retrieve a contact
@@ -504,6 +508,7 @@ func (s *Contact) GetCrmContact(ctx context.Context, request operations.GetCrmCo
 	}
 
 	return res, nil
+
 }
 
 // GetUcContact - Retrieve a contact
@@ -599,6 +604,7 @@ func (s *Contact) GetUcContact(ctx context.Context, request operations.GetUcCont
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingContacts - List all contacts
@@ -694,6 +700,7 @@ func (s *Contact) ListAccountingContacts(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // ListCrmContacts - List all contacts
@@ -789,6 +796,7 @@ func (s *Contact) ListCrmContacts(ctx context.Context, request operations.ListCr
 	}
 
 	return res, nil
+
 }
 
 // ListUcContacts - List all contacts
@@ -884,6 +892,7 @@ func (s *Contact) ListUcContacts(ctx context.Context, request operations.ListUcC
 	}
 
 	return res, nil
+
 }
 
 // PatchAccountingContact - Update a contact
@@ -981,6 +990,7 @@ func (s *Contact) PatchAccountingContact(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmContact - Update a contact
@@ -1078,6 +1088,7 @@ func (s *Contact) PatchCrmContact(ctx context.Context, request operations.PatchC
 	}
 
 	return res, nil
+
 }
 
 // PatchUcContact - Update a contact
@@ -1175,6 +1186,7 @@ func (s *Contact) PatchUcContact(ctx context.Context, request operations.PatchUc
 	}
 
 	return res, nil
+
 }
 
 // RemoveAccountingContact - Remove a contact
@@ -1265,6 +1277,7 @@ func (s *Contact) RemoveAccountingContact(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmContact - Remove a contact
@@ -1355,6 +1368,7 @@ func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.Remov
 	}
 
 	return res, nil
+
 }
 
 // RemoveUcContact - Remove a contact
@@ -1445,6 +1459,7 @@ func (s *Contact) RemoveUcContact(ctx context.Context, request operations.Remove
 	}
 
 	return res, nil
+
 }
 
 // UpdateAccountingContact - Update a contact
@@ -1542,6 +1557,7 @@ func (s *Contact) UpdateAccountingContact(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmContact - Update a contact
@@ -1639,6 +1655,7 @@ func (s *Contact) UpdateCrmContact(ctx context.Context, request operations.Updat
 	}
 
 	return res, nil
+
 }
 
 // UpdateUcContact - Update a contact
@@ -1736,4 +1753,5 @@ func (s *Contact) UpdateUcContact(ctx context.Context, request operations.Update
 	}
 
 	return res, nil
+
 }

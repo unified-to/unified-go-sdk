@@ -40,11 +40,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreatePaymentLinkRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.CreatePaymentLink(ctx, request)
     if err != nil {
@@ -91,11 +89,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreatePaymentPaymentRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.CreatePaymentPayment(ctx, request)
     if err != nil {
@@ -142,12 +138,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetPaymentLinkRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.GetPaymentLink(ctx, request)
     if err != nil {
@@ -194,12 +188,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetPaymentPaymentRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.GetPaymentPayment(ctx, request)
     if err != nil {
@@ -246,12 +238,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetPaymentPayoutRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.GetPaymentPayout(ctx, request)
     if err != nil {
@@ -298,12 +288,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetPaymentRefundRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.GetPaymentRefund(ctx, request)
     if err != nil {
@@ -350,11 +338,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListPaymentLinksRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.ListPaymentLinks(ctx, request)
     if err != nil {
@@ -401,11 +387,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListPaymentPaymentsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.ListPaymentPayments(ctx, request)
     if err != nil {
@@ -452,11 +436,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListPaymentPayoutsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.ListPaymentPayouts(ctx, request)
     if err != nil {
@@ -503,11 +485,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListPaymentRefundsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.ListPaymentRefunds(ctx, request)
     if err != nil {
@@ -554,12 +534,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchPaymentLinkRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.PatchPaymentLink(ctx, request)
     if err != nil {
@@ -606,12 +584,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchPaymentPaymentRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.PatchPaymentPayment(ctx, request)
     if err != nil {
@@ -658,12 +634,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemovePaymentLinkRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.RemovePaymentLink(ctx, request)
     if err != nil {
@@ -710,12 +684,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemovePaymentPaymentRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.RemovePaymentPayment(ctx, request)
     if err != nil {
@@ -762,12 +734,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdatePaymentLinkRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.UpdatePaymentLink(ctx, request)
     if err != nil {
@@ -814,12 +784,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdatePaymentPaymentRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Payment.UpdatePaymentPayment(ctx, request)
     if err != nil {

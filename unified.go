@@ -121,6 +121,7 @@ func (s *Unified) CreateUnifiedConnection(ctx context.Context, request *shared.C
 	}
 
 	return res, nil
+
 }
 
 // CreateUnifiedWebhook - Create webhook subscription
@@ -223,6 +224,7 @@ func (s *Unified) CreateUnifiedWebhook(ctx context.Context, request operations.C
 	}
 
 	return res, nil
+
 }
 
 // GetUnifiedApicall - Retrieve specific API Call by its ID
@@ -314,6 +316,7 @@ func (s *Unified) GetUnifiedApicall(ctx context.Context, request operations.GetU
 	}
 
 	return res, nil
+
 }
 
 // GetUnifiedConnection - Retrieve connection
@@ -405,6 +408,7 @@ func (s *Unified) GetUnifiedConnection(ctx context.Context, request operations.G
 	}
 
 	return res, nil
+
 }
 
 // GetUnifiedIntegrationAuth - Create connection indirectly
@@ -498,6 +502,7 @@ func (s *Unified) GetUnifiedIntegrationAuth(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // GetUnifiedWebhook - Retrieve webhook by its ID
@@ -589,6 +594,7 @@ func (s *Unified) GetUnifiedWebhook(ctx context.Context, request operations.GetU
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedApicalls - Returns API Calls
@@ -684,6 +690,7 @@ func (s *Unified) ListUnifiedApicalls(ctx context.Context, request operations.Li
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedConnections - List all connections
@@ -779,6 +786,7 @@ func (s *Unified) ListUnifiedConnections(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedIntegrationWorkspaces - Returns all activated integrations in a workspace
@@ -875,6 +883,7 @@ func (s *Unified) ListUnifiedIntegrationWorkspaces(ctx context.Context, request 
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedIntegrations - Returns all integrations
@@ -970,6 +979,7 @@ func (s *Unified) ListUnifiedIntegrations(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedIssues - List support issues
@@ -1065,6 +1075,7 @@ func (s *Unified) ListUnifiedIssues(ctx context.Context, request operations.List
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedSupports - Get support info
@@ -1156,6 +1167,7 @@ func (s *Unified) ListUnifiedSupports(ctx context.Context) (*operations.ListUnif
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedWebhooks - Returns all registered webhooks
@@ -1251,6 +1263,7 @@ func (s *Unified) ListUnifiedWebhooks(ctx context.Context, request operations.Li
 	}
 
 	return res, nil
+
 }
 
 // PatchUnifiedConnection - Update connection
@@ -1348,6 +1361,7 @@ func (s *Unified) PatchUnifiedConnection(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // PatchUnifiedWebhookTrigger - Trigger webhook
@@ -1438,6 +1452,7 @@ func (s *Unified) PatchUnifiedWebhookTrigger(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // RemoveUnifiedConnection - Remove connection
@@ -1528,6 +1543,7 @@ func (s *Unified) RemoveUnifiedConnection(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // RemoveUnifiedWebhook - Remove webhook subscription
@@ -1618,6 +1634,7 @@ func (s *Unified) RemoveUnifiedWebhook(ctx context.Context, request operations.R
 	}
 
 	return res, nil
+
 }
 
 // UpdateUnifiedConnection - Update connection
@@ -1715,6 +1732,7 @@ func (s *Unified) UpdateUnifiedConnection(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // UpdateUnifiedWebhookTrigger - Trigger webhook
@@ -1805,4 +1823,5 @@ func (s *Unified) UpdateUnifiedWebhookTrigger(ctx context.Context, request opera
 	}
 
 	return res, nil
+
 }

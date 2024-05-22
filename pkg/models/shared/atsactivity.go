@@ -49,7 +49,8 @@ type AtsActivity struct {
 	Title         string           `json:"title"`
 	Type          *AtsActivityType `json:"type,omitempty"`
 	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
-	UserIds       []string         `json:"user_ids,omitempty"`
+	// id values of the recruiters associated with the activity.
+	UserIds []string `json:"user_ids,omitempty"`
 }
 
 func (a AtsActivity) MarshalJSON() ([]byte, error) {

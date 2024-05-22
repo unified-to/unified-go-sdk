@@ -26,11 +26,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListEnrichCompaniesRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Enrich.ListEnrichCompanies(ctx, request)
     if err != nil {
@@ -77,11 +75,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListEnrichPeopleRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Enrich.ListEnrichPeople(ctx, request)
     if err != nil {

@@ -118,4 +118,5 @@ func (s *Applicationstatus) ListAtsApplicationstatuses(ctx context.Context, requ
 	}
 
 	return res, nil
+
 }

@@ -117,6 +117,7 @@ func (s *Integration) GetUnifiedIntegrationAuth(ctx context.Context, request ope
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedIntegrationWorkspaces - Returns all activated integrations in a workspace
@@ -213,6 +214,7 @@ func (s *Integration) ListUnifiedIntegrationWorkspaces(ctx context.Context, requ
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedIntegrations - Returns all integrations
@@ -308,4 +310,5 @@ func (s *Integration) ListUnifiedIntegrations(ctx context.Context, request opera
 	}
 
 	return res, nil
+
 }

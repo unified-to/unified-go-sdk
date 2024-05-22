@@ -120,6 +120,7 @@ func (s *Kms) CreateKmsPage(ctx context.Context, request operations.CreateKmsPag
 	}
 
 	return res, nil
+
 }
 
 // CreateKmsSpace - Create a space
@@ -217,6 +218,7 @@ func (s *Kms) CreateKmsSpace(ctx context.Context, request operations.CreateKmsSp
 	}
 
 	return res, nil
+
 }
 
 // GetKmsPage - Retrieve a page
@@ -312,6 +314,7 @@ func (s *Kms) GetKmsPage(ctx context.Context, request operations.GetKmsPageReque
 	}
 
 	return res, nil
+
 }
 
 // GetKmsSpace - Retrieve a space
@@ -407,6 +410,7 @@ func (s *Kms) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceReq
 	}
 
 	return res, nil
+
 }
 
 // ListKmsPages - List all pages
@@ -502,6 +506,7 @@ func (s *Kms) ListKmsPages(ctx context.Context, request operations.ListKmsPagesR
 	}
 
 	return res, nil
+
 }
 
 // ListKmsSpaces - List all spaces
@@ -597,6 +602,7 @@ func (s *Kms) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpace
 	}
 
 	return res, nil
+
 }
 
 // PatchKmsPage - Update a page
@@ -694,6 +700,7 @@ func (s *Kms) PatchKmsPage(ctx context.Context, request operations.PatchKmsPageR
 	}
 
 	return res, nil
+
 }
 
 // PatchKmsSpace - Update a space
@@ -791,6 +798,7 @@ func (s *Kms) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSpac
 	}
 
 	return res, nil
+
 }
 
 // RemoveKmsPage - Remove a page
@@ -881,6 +889,7 @@ func (s *Kms) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPag
 	}
 
 	return res, nil
+
 }
 
 // RemoveKmsSpace - Remove a space
@@ -971,6 +980,7 @@ func (s *Kms) RemoveKmsSpace(ctx context.Context, request operations.RemoveKmsSp
 	}
 
 	return res, nil
+
 }
 
 // UpdateKmsPage - Update a page
@@ -1068,6 +1078,7 @@ func (s *Kms) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPag
 	}
 
 	return res, nil
+
 }
 
 // UpdateKmsSpace - Update a space
@@ -1165,4 +1176,5 @@ func (s *Kms) UpdateKmsSpace(ctx context.Context, request operations.UpdateKmsSp
 	}
 
 	return res, nil
+
 }

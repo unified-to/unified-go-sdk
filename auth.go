@@ -115,6 +115,7 @@ func (s *Auth) GetUnifiedIntegrationAuth(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // GetUnifiedIntegrationLogin - Sign in a user
@@ -208,4 +209,5 @@ func (s *Auth) GetUnifiedIntegrationLogin(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }

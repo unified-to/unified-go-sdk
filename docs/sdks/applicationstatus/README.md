@@ -25,11 +25,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListAtsApplicationstatusesRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Applicationstatus.ListAtsApplicationstatuses(ctx, request)
     if err != nil {

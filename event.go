@@ -120,6 +120,7 @@ func (s *Event) CreateCrmEvent(ctx context.Context, request operations.CreateCrm
 	}
 
 	return res, nil
+
 }
 
 // GetCrmEvent - Retrieve an event
@@ -215,6 +216,7 @@ func (s *Event) GetCrmEvent(ctx context.Context, request operations.GetCrmEventR
 	}
 
 	return res, nil
+
 }
 
 // ListCrmEvents - List all events
@@ -310,6 +312,7 @@ func (s *Event) ListCrmEvents(ctx context.Context, request operations.ListCrmEve
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmEvent - Update an event
@@ -407,6 +410,7 @@ func (s *Event) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEv
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmEvent - Remove an event
@@ -497,6 +501,7 @@ func (s *Event) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrm
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmEvent - Update an event
@@ -594,4 +599,5 @@ func (s *Event) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrm
 	}
 
 	return res, nil
+
 }

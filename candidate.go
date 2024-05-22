@@ -120,6 +120,7 @@ func (s *Candidate) CreateAtsCandidate(ctx context.Context, request operations.C
 	}
 
 	return res, nil
+
 }
 
 // GetAtsCandidate - Retrieve a candidate
@@ -215,6 +216,7 @@ func (s *Candidate) GetAtsCandidate(ctx context.Context, request operations.GetA
 	}
 
 	return res, nil
+
 }
 
 // ListAtsCandidates - List all candidates
@@ -310,6 +312,7 @@ func (s *Candidate) ListAtsCandidates(ctx context.Context, request operations.Li
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsCandidate - Update a candidate
@@ -407,6 +410,7 @@ func (s *Candidate) PatchAtsCandidate(ctx context.Context, request operations.Pa
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsCandidate - Remove a candidate
@@ -497,6 +501,7 @@ func (s *Candidate) RemoveAtsCandidate(ctx context.Context, request operations.R
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsCandidate - Update a candidate
@@ -594,4 +599,5 @@ func (s *Candidate) UpdateAtsCandidate(ctx context.Context, request operations.U
 	}
 
 	return res, nil
+
 }

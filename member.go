@@ -120,6 +120,7 @@ func (s *Member) CreateMartechMember(ctx context.Context, request operations.Cre
 	}
 
 	return res, nil
+
 }
 
 // GetMartechMember - Retrieve a member
@@ -215,6 +216,7 @@ func (s *Member) GetMartechMember(ctx context.Context, request operations.GetMar
 	}
 
 	return res, nil
+
 }
 
 // ListMartechMembers - List all members
@@ -310,6 +312,7 @@ func (s *Member) ListMartechMembers(ctx context.Context, request operations.List
 	}
 
 	return res, nil
+
 }
 
 // PatchMartechMember - Update a member
@@ -407,6 +410,7 @@ func (s *Member) PatchMartechMember(ctx context.Context, request operations.Patc
 	}
 
 	return res, nil
+
 }
 
 // RemoveMartechMember - Remove a member
@@ -497,6 +501,7 @@ func (s *Member) RemoveMartechMember(ctx context.Context, request operations.Rem
 	}
 
 	return res, nil
+
 }
 
 // UpdateMartechMember - Update a member
@@ -594,4 +599,5 @@ func (s *Member) UpdateMartechMember(ctx context.Context, request operations.Upd
 	}
 
 	return res, nil
+
 }

@@ -120,6 +120,7 @@ func (s *Application) CreateAtsApplication(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // GetAtsApplication - Retrieve an application
@@ -215,6 +216,7 @@ func (s *Application) GetAtsApplication(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }
 
 // ListAtsApplications - List all applications
@@ -310,6 +312,7 @@ func (s *Application) ListAtsApplications(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsApplication - Update an application
@@ -407,6 +410,7 @@ func (s *Application) PatchAtsApplication(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsApplication - Remove an application
@@ -497,6 +501,7 @@ func (s *Application) RemoveAtsApplication(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsApplication - Update an application
@@ -594,4 +599,5 @@ func (s *Application) UpdateAtsApplication(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }

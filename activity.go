@@ -120,6 +120,7 @@ func (s *Activity) CreateAtsActivity(ctx context.Context, request operations.Cre
 	}
 
 	return res, nil
+
 }
 
 // GetAtsActivity - Retrieve an activity
@@ -215,6 +216,7 @@ func (s *Activity) GetAtsActivity(ctx context.Context, request operations.GetAts
 	}
 
 	return res, nil
+
 }
 
 // ListAtsActivities - List all activities
@@ -310,6 +312,7 @@ func (s *Activity) ListAtsActivities(ctx context.Context, request operations.Lis
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsActivity - Update an activity
@@ -407,6 +410,7 @@ func (s *Activity) PatchAtsActivity(ctx context.Context, request operations.Patc
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsActivity - Remove an activity
@@ -497,6 +501,7 @@ func (s *Activity) RemoveAtsActivity(ctx context.Context, request operations.Rem
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsActivity - Update an activity
@@ -594,4 +599,5 @@ func (s *Activity) UpdateAtsActivity(ctx context.Context, request operations.Upd
 	}
 
 	return res, nil
+
 }

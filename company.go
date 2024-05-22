@@ -120,6 +120,7 @@ func (s *Company) CreateCrmCompany(ctx context.Context, request operations.Creat
 	}
 
 	return res, nil
+
 }
 
 // GetAtsCompany - Retrieve a company
@@ -215,6 +216,7 @@ func (s *Company) GetAtsCompany(ctx context.Context, request operations.GetAtsCo
 	}
 
 	return res, nil
+
 }
 
 // GetCrmCompany - Retrieve a company
@@ -310,6 +312,7 @@ func (s *Company) GetCrmCompany(ctx context.Context, request operations.GetCrmCo
 	}
 
 	return res, nil
+
 }
 
 // ListAtsCompanies - List all companies
@@ -405,6 +408,7 @@ func (s *Company) ListAtsCompanies(ctx context.Context, request operations.ListA
 	}
 
 	return res, nil
+
 }
 
 // ListCrmCompanies - List all companies
@@ -500,6 +504,7 @@ func (s *Company) ListCrmCompanies(ctx context.Context, request operations.ListC
 	}
 
 	return res, nil
+
 }
 
 // ListEnrichCompanies - Retrieve enrichment information for a company
@@ -595,6 +600,7 @@ func (s *Company) ListEnrichCompanies(ctx context.Context, request operations.Li
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmCompany - Update a company
@@ -692,6 +698,7 @@ func (s *Company) PatchCrmCompany(ctx context.Context, request operations.PatchC
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmCompany - Remove a company
@@ -782,6 +789,7 @@ func (s *Company) RemoveCrmCompany(ctx context.Context, request operations.Remov
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmCompany - Update a company
@@ -879,4 +887,5 @@ func (s *Company) UpdateCrmCompany(ctx context.Context, request operations.Updat
 	}
 
 	return res, nil
+
 }

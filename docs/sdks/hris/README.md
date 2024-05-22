@@ -40,11 +40,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateHrisEmployeeRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.CreateHrisEmployee(ctx, request)
     if err != nil {
@@ -91,11 +89,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateHrisGroupRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.CreateHrisGroup(ctx, request)
     if err != nil {
@@ -142,12 +138,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetHrisEmployeeRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.GetHrisEmployee(ctx, request)
     if err != nil {
@@ -194,12 +188,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.GetHrisGroup(ctx, request)
     if err != nil {
@@ -246,12 +238,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetHrisPayslipRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.GetHrisPayslip(ctx, request)
     if err != nil {
@@ -298,12 +288,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetHrisTimeoffRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.GetHrisTimeoff(ctx, request)
     if err != nil {
@@ -350,11 +338,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListHrisEmployeesRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.ListHrisEmployees(ctx, request)
     if err != nil {
@@ -401,11 +387,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListHrisGroupsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.ListHrisGroups(ctx, request)
     if err != nil {
@@ -452,11 +436,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListHrisPayslipsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.ListHrisPayslips(ctx, request)
     if err != nil {
@@ -503,11 +485,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListHrisTimeoffsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.ListHrisTimeoffs(ctx, request)
     if err != nil {
@@ -554,12 +534,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchHrisEmployeeRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.PatchHrisEmployee(ctx, request)
     if err != nil {
@@ -606,12 +584,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.PatchHrisGroup(ctx, request)
     if err != nil {
@@ -658,12 +634,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveHrisEmployeeRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.RemoveHrisEmployee(ctx, request)
     if err != nil {
@@ -710,12 +684,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.RemoveHrisGroup(ctx, request)
     if err != nil {
@@ -762,12 +734,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateHrisEmployeeRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.UpdateHrisEmployee(ctx, request)
     if err != nil {
@@ -814,12 +784,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Hris.UpdateHrisGroup(ctx, request)
     if err != nil {

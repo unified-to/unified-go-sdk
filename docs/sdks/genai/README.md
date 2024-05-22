@@ -26,11 +26,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateGenaiPromptRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Genai.CreateGenaiPrompt(ctx, request)
     if err != nil {
@@ -77,11 +75,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListGenaiModelsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Genai.ListGenaiModels(ctx, request)
     if err != nil {

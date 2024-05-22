@@ -118,4 +118,5 @@ func (s *Model) ListGenaiModels(ctx context.Context, request operations.ListGena
 	}
 
 	return res, nil
+
 }

@@ -121,6 +121,7 @@ func (s *Connection) CreateUnifiedConnection(ctx context.Context, request *share
 	}
 
 	return res, nil
+
 }
 
 // GetUnifiedConnection - Retrieve connection
@@ -212,6 +213,7 @@ func (s *Connection) GetUnifiedConnection(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedConnections - List all connections
@@ -307,6 +309,7 @@ func (s *Connection) ListUnifiedConnections(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // PatchUnifiedConnection - Update connection
@@ -404,6 +407,7 @@ func (s *Connection) PatchUnifiedConnection(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // RemoveUnifiedConnection - Remove connection
@@ -494,6 +498,7 @@ func (s *Connection) RemoveUnifiedConnection(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // UpdateUnifiedConnection - Update connection
@@ -591,4 +596,5 @@ func (s *Connection) UpdateUnifiedConnection(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }

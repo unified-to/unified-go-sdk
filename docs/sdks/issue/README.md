@@ -26,9 +26,7 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedIssuesRequest{}
-    
     ctx := context.Background()
     res, err := s.Issue.ListUnifiedIssues(ctx, request)
     if err != nil {
@@ -75,8 +73,6 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-
-    
     ctx := context.Background()
     res, err := s.Issue.ListUnifiedSupports(ctx)
     if err != nil {

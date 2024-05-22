@@ -120,6 +120,7 @@ func (s *Space) CreateKmsSpace(ctx context.Context, request operations.CreateKms
 	}
 
 	return res, nil
+
 }
 
 // GetKmsSpace - Retrieve a space
@@ -215,6 +216,7 @@ func (s *Space) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceR
 	}
 
 	return res, nil
+
 }
 
 // ListKmsSpaces - List all spaces
@@ -310,6 +312,7 @@ func (s *Space) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpa
 	}
 
 	return res, nil
+
 }
 
 // PatchKmsSpace - Update a space
@@ -407,6 +410,7 @@ func (s *Space) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSp
 	}
 
 	return res, nil
+
 }
 
 // RemoveKmsSpace - Remove a space
@@ -497,6 +501,7 @@ func (s *Space) RemoveKmsSpace(ctx context.Context, request operations.RemoveKms
 	}
 
 	return res, nil
+
 }
 
 // UpdateKmsSpace - Update a space
@@ -594,4 +599,5 @@ func (s *Space) UpdateKmsSpace(ctx context.Context, request operations.UpdateKms
 	}
 
 	return res, nil
+
 }

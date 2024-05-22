@@ -120,6 +120,7 @@ func (s *Ats) CreateAtsActivity(ctx context.Context, request operations.CreateAt
 	}
 
 	return res, nil
+
 }
 
 // CreateAtsApplication - Create an application
@@ -217,6 +218,7 @@ func (s *Ats) CreateAtsApplication(ctx context.Context, request operations.Creat
 	}
 
 	return res, nil
+
 }
 
 // CreateAtsCandidate - Create a candidate
@@ -314,6 +316,7 @@ func (s *Ats) CreateAtsCandidate(ctx context.Context, request operations.CreateA
 	}
 
 	return res, nil
+
 }
 
 // CreateAtsDocument - Create a document
@@ -411,6 +414,7 @@ func (s *Ats) CreateAtsDocument(ctx context.Context, request operations.CreateAt
 	}
 
 	return res, nil
+
 }
 
 // CreateAtsInterview - Create an interview
@@ -508,6 +512,7 @@ func (s *Ats) CreateAtsInterview(ctx context.Context, request operations.CreateA
 	}
 
 	return res, nil
+
 }
 
 // CreateAtsJob - Create a job
@@ -605,6 +610,7 @@ func (s *Ats) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 	}
 
 	return res, nil
+
 }
 
 // CreateAtsScorecard - Create a scorecard
@@ -702,6 +708,7 @@ func (s *Ats) CreateAtsScorecard(ctx context.Context, request operations.CreateA
 	}
 
 	return res, nil
+
 }
 
 // GetAtsActivity - Retrieve an activity
@@ -797,6 +804,7 @@ func (s *Ats) GetAtsActivity(ctx context.Context, request operations.GetAtsActiv
 	}
 
 	return res, nil
+
 }
 
 // GetAtsApplication - Retrieve an application
@@ -892,6 +900,7 @@ func (s *Ats) GetAtsApplication(ctx context.Context, request operations.GetAtsAp
 	}
 
 	return res, nil
+
 }
 
 // GetAtsCandidate - Retrieve a candidate
@@ -987,6 +996,7 @@ func (s *Ats) GetAtsCandidate(ctx context.Context, request operations.GetAtsCand
 	}
 
 	return res, nil
+
 }
 
 // GetAtsCompany - Retrieve a company
@@ -1082,6 +1092,7 @@ func (s *Ats) GetAtsCompany(ctx context.Context, request operations.GetAtsCompan
 	}
 
 	return res, nil
+
 }
 
 // GetAtsDocument - Retrieve a document
@@ -1177,6 +1188,7 @@ func (s *Ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocum
 	}
 
 	return res, nil
+
 }
 
 // GetAtsInterview - Retrieve an interview
@@ -1272,6 +1284,7 @@ func (s *Ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInte
 	}
 
 	return res, nil
+
 }
 
 // GetAtsJob - Retrieve a job
@@ -1367,6 +1380,7 @@ func (s *Ats) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 	}
 
 	return res, nil
+
 }
 
 // GetAtsScorecard - Retrieve a scorecard
@@ -1462,6 +1476,7 @@ func (s *Ats) GetAtsScorecard(ctx context.Context, request operations.GetAtsScor
 	}
 
 	return res, nil
+
 }
 
 // ListAtsActivities - List all activities
@@ -1557,6 +1572,7 @@ func (s *Ats) ListAtsActivities(ctx context.Context, request operations.ListAtsA
 	}
 
 	return res, nil
+
 }
 
 // ListAtsApplications - List all applications
@@ -1652,6 +1668,7 @@ func (s *Ats) ListAtsApplications(ctx context.Context, request operations.ListAt
 	}
 
 	return res, nil
+
 }
 
 // ListAtsApplicationstatuses - List all applicationstatuses
@@ -1747,6 +1764,7 @@ func (s *Ats) ListAtsApplicationstatuses(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // ListAtsCandidates - List all candidates
@@ -1842,6 +1860,7 @@ func (s *Ats) ListAtsCandidates(ctx context.Context, request operations.ListAtsC
 	}
 
 	return res, nil
+
 }
 
 // ListAtsCompanies - List all companies
@@ -1937,6 +1956,7 @@ func (s *Ats) ListAtsCompanies(ctx context.Context, request operations.ListAtsCo
 	}
 
 	return res, nil
+
 }
 
 // ListAtsDocuments - List all documents
@@ -2032,6 +2052,7 @@ func (s *Ats) ListAtsDocuments(ctx context.Context, request operations.ListAtsDo
 	}
 
 	return res, nil
+
 }
 
 // ListAtsInterviews - List all interviews
@@ -2127,6 +2148,7 @@ func (s *Ats) ListAtsInterviews(ctx context.Context, request operations.ListAtsI
 	}
 
 	return res, nil
+
 }
 
 // ListAtsJobs - List all jobs
@@ -2222,6 +2244,7 @@ func (s *Ats) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 	}
 
 	return res, nil
+
 }
 
 // ListAtsScorecards - List all scorecards
@@ -2317,6 +2340,7 @@ func (s *Ats) ListAtsScorecards(ctx context.Context, request operations.ListAtsS
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsActivity - Update an activity
@@ -2414,6 +2438,7 @@ func (s *Ats) PatchAtsActivity(ctx context.Context, request operations.PatchAtsA
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsApplication - Update an application
@@ -2511,6 +2536,7 @@ func (s *Ats) PatchAtsApplication(ctx context.Context, request operations.PatchA
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsCandidate - Update a candidate
@@ -2608,6 +2634,7 @@ func (s *Ats) PatchAtsCandidate(ctx context.Context, request operations.PatchAts
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsDocument - Update a document
@@ -2705,6 +2732,7 @@ func (s *Ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsD
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsInterview - Update an interview
@@ -2802,6 +2830,7 @@ func (s *Ats) PatchAtsInterview(ctx context.Context, request operations.PatchAts
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsJob - Update a job
@@ -2899,6 +2928,7 @@ func (s *Ats) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsScorecard - Update a scorecard
@@ -2996,6 +3026,7 @@ func (s *Ats) PatchAtsScorecard(ctx context.Context, request operations.PatchAts
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsActivity - Remove an activity
@@ -3086,6 +3117,7 @@ func (s *Ats) RemoveAtsActivity(ctx context.Context, request operations.RemoveAt
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsApplication - Remove an application
@@ -3176,6 +3208,7 @@ func (s *Ats) RemoveAtsApplication(ctx context.Context, request operations.Remov
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsCandidate - Remove a candidate
@@ -3266,6 +3299,7 @@ func (s *Ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveA
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsDocument - Remove a document
@@ -3356,6 +3390,7 @@ func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAt
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsInterview - Remove an interview
@@ -3446,6 +3481,7 @@ func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveA
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsJob - Remove a job
@@ -3536,6 +3572,7 @@ func (s *Ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsScorecard - Remove a scorecard
@@ -3626,6 +3663,7 @@ func (s *Ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveA
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsActivity - Update an activity
@@ -3723,6 +3761,7 @@ func (s *Ats) UpdateAtsActivity(ctx context.Context, request operations.UpdateAt
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsApplication - Update an application
@@ -3820,6 +3859,7 @@ func (s *Ats) UpdateAtsApplication(ctx context.Context, request operations.Updat
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsCandidate - Update a candidate
@@ -3917,6 +3957,7 @@ func (s *Ats) UpdateAtsCandidate(ctx context.Context, request operations.UpdateA
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsDocument - Update a document
@@ -4014,6 +4055,7 @@ func (s *Ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAt
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsInterview - Update an interview
@@ -4111,6 +4153,7 @@ func (s *Ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateA
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsJob - Update a job
@@ -4208,6 +4251,7 @@ func (s *Ats) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobR
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsScorecard - Update a scorecard
@@ -4305,4 +4349,5 @@ func (s *Ats) UpdateAtsScorecard(ctx context.Context, request operations.UpdateA
 	}
 
 	return res, nil
+
 }

@@ -120,6 +120,7 @@ func (s *File) CreateStorageFile(ctx context.Context, request operations.CreateS
 	}
 
 	return res, nil
+
 }
 
 // GetStorageFile - Retrieve a file
@@ -215,6 +216,7 @@ func (s *File) GetStorageFile(ctx context.Context, request operations.GetStorage
 	}
 
 	return res, nil
+
 }
 
 // ListStorageFiles - List all files
@@ -310,6 +312,7 @@ func (s *File) ListStorageFiles(ctx context.Context, request operations.ListStor
 	}
 
 	return res, nil
+
 }
 
 // PatchStorageFile - Update a file
@@ -407,6 +410,7 @@ func (s *File) PatchStorageFile(ctx context.Context, request operations.PatchSto
 	}
 
 	return res, nil
+
 }
 
 // RemoveStorageFile - Remove a file
@@ -497,6 +501,7 @@ func (s *File) RemoveStorageFile(ctx context.Context, request operations.RemoveS
 	}
 
 	return res, nil
+
 }
 
 // UpdateStorageFile - Update a file
@@ -594,4 +599,5 @@ func (s *File) UpdateStorageFile(ctx context.Context, request operations.UpdateS
 	}
 
 	return res, nil
+
 }

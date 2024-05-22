@@ -120,6 +120,7 @@ func (s *Link) CreatePaymentLink(ctx context.Context, request operations.CreateP
 	}
 
 	return res, nil
+
 }
 
 // GetPaymentLink - Retrieve a link
@@ -215,6 +216,7 @@ func (s *Link) GetPaymentLink(ctx context.Context, request operations.GetPayment
 	}
 
 	return res, nil
+
 }
 
 // ListPaymentLinks - List all links
@@ -310,6 +312,7 @@ func (s *Link) ListPaymentLinks(ctx context.Context, request operations.ListPaym
 	}
 
 	return res, nil
+
 }
 
 // PatchPaymentLink - Update a link
@@ -407,6 +410,7 @@ func (s *Link) PatchPaymentLink(ctx context.Context, request operations.PatchPay
 	}
 
 	return res, nil
+
 }
 
 // RemovePaymentLink - Remove a link
@@ -497,6 +501,7 @@ func (s *Link) RemovePaymentLink(ctx context.Context, request operations.RemoveP
 	}
 
 	return res, nil
+
 }
 
 // UpdatePaymentLink - Update a link
@@ -594,4 +599,5 @@ func (s *Link) UpdatePaymentLink(ctx context.Context, request operations.UpdateP
 	}
 
 	return res, nil
+
 }

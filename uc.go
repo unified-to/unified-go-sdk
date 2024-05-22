@@ -120,6 +120,7 @@ func (s *Uc) CreateUcContact(ctx context.Context, request operations.CreateUcCon
 	}
 
 	return res, nil
+
 }
 
 // GetUcContact - Retrieve a contact
@@ -215,6 +216,7 @@ func (s *Uc) GetUcContact(ctx context.Context, request operations.GetUcContactRe
 	}
 
 	return res, nil
+
 }
 
 // ListUcCalls - List all calls
@@ -310,6 +312,7 @@ func (s *Uc) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequ
 	}
 
 	return res, nil
+
 }
 
 // ListUcContacts - List all contacts
@@ -405,6 +408,7 @@ func (s *Uc) ListUcContacts(ctx context.Context, request operations.ListUcContac
 	}
 
 	return res, nil
+
 }
 
 // PatchUcContact - Update a contact
@@ -502,6 +506,7 @@ func (s *Uc) PatchUcContact(ctx context.Context, request operations.PatchUcConta
 	}
 
 	return res, nil
+
 }
 
 // RemoveUcContact - Remove a contact
@@ -592,6 +597,7 @@ func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcCon
 	}
 
 	return res, nil
+
 }
 
 // UpdateUcContact - Update a contact
@@ -689,4 +695,5 @@ func (s *Uc) UpdateUcContact(ctx context.Context, request operations.UpdateUcCon
 	}
 
 	return res, nil
+
 }

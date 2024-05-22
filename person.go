@@ -118,4 +118,5 @@ func (s *Person) ListEnrichPeople(ctx context.Context, request operations.ListEn
 	}
 
 	return res, nil
+
 }

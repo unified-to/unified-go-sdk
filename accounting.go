@@ -120,6 +120,7 @@ func (s *Accounting) CreateAccountingAccount(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // CreateAccountingContact - Create a contact
@@ -217,6 +218,7 @@ func (s *Accounting) CreateAccountingContact(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // CreateAccountingInvoice - Create an invoice
@@ -314,6 +316,7 @@ func (s *Accounting) CreateAccountingInvoice(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // CreateAccountingTaxrate - Create a taxrate
@@ -411,6 +414,7 @@ func (s *Accounting) CreateAccountingTaxrate(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // CreateAccountingTransaction - Create a transaction
@@ -508,6 +512,7 @@ func (s *Accounting) CreateAccountingTransaction(ctx context.Context, request op
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingAccount - Retrieve an account
@@ -603,6 +608,7 @@ func (s *Accounting) GetAccountingAccount(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingContact - Retrieve a contact
@@ -698,6 +704,7 @@ func (s *Accounting) GetAccountingContact(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingInvoice - Retrieve an invoice
@@ -793,6 +800,7 @@ func (s *Accounting) GetAccountingInvoice(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingOrganization - Retrieve an organization
@@ -888,6 +896,7 @@ func (s *Accounting) GetAccountingOrganization(ctx context.Context, request oper
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingTaxrate - Retrieve a taxrate
@@ -983,6 +992,7 @@ func (s *Accounting) GetAccountingTaxrate(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingTransaction - Retrieve a transaction
@@ -1078,6 +1088,7 @@ func (s *Accounting) GetAccountingTransaction(ctx context.Context, request opera
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingAccounts - List all accounts
@@ -1173,6 +1184,7 @@ func (s *Accounting) ListAccountingAccounts(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingContacts - List all contacts
@@ -1268,6 +1280,7 @@ func (s *Accounting) ListAccountingContacts(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingInvoices - List all invoices
@@ -1363,6 +1376,7 @@ func (s *Accounting) ListAccountingInvoices(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingOrganizations - List all organizations
@@ -1458,6 +1472,7 @@ func (s *Accounting) ListAccountingOrganizations(ctx context.Context, request op
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingTaxrates - List all taxrates
@@ -1553,6 +1568,7 @@ func (s *Accounting) ListAccountingTaxrates(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingTransactions - List all transactions
@@ -1648,6 +1664,7 @@ func (s *Accounting) ListAccountingTransactions(ctx context.Context, request ope
 	}
 
 	return res, nil
+
 }
 
 // PatchAccountingAccount - Update an account
@@ -1745,6 +1762,7 @@ func (s *Accounting) PatchAccountingAccount(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // PatchAccountingContact - Update a contact
@@ -1842,6 +1860,7 @@ func (s *Accounting) PatchAccountingContact(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // PatchAccountingInvoice - Update an invoice
@@ -1939,6 +1958,7 @@ func (s *Accounting) PatchAccountingInvoice(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // PatchAccountingTaxrate - Update a taxrate
@@ -2036,6 +2056,7 @@ func (s *Accounting) PatchAccountingTaxrate(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // PatchAccountingTransaction - Update a transaction
@@ -2133,6 +2154,7 @@ func (s *Accounting) PatchAccountingTransaction(ctx context.Context, request ope
 	}
 
 	return res, nil
+
 }
 
 // RemoveAccountingAccount - Remove an account
@@ -2223,6 +2245,7 @@ func (s *Accounting) RemoveAccountingAccount(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // RemoveAccountingContact - Remove a contact
@@ -2313,6 +2336,7 @@ func (s *Accounting) RemoveAccountingContact(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // RemoveAccountingInvoice - Remove an invoice
@@ -2403,6 +2427,7 @@ func (s *Accounting) RemoveAccountingInvoice(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // RemoveAccountingTaxrate - Remove a taxrate
@@ -2493,6 +2518,7 @@ func (s *Accounting) RemoveAccountingTaxrate(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // RemoveAccountingTransaction - Remove a transaction
@@ -2583,6 +2609,7 @@ func (s *Accounting) RemoveAccountingTransaction(ctx context.Context, request op
 	}
 
 	return res, nil
+
 }
 
 // UpdateAccountingAccount - Update an account
@@ -2680,6 +2707,7 @@ func (s *Accounting) UpdateAccountingAccount(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // UpdateAccountingContact - Update a contact
@@ -2777,6 +2805,7 @@ func (s *Accounting) UpdateAccountingContact(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // UpdateAccountingInvoice - Update an invoice
@@ -2874,6 +2903,7 @@ func (s *Accounting) UpdateAccountingInvoice(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // UpdateAccountingTaxrate - Update a taxrate
@@ -2971,6 +3001,7 @@ func (s *Accounting) UpdateAccountingTaxrate(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // UpdateAccountingTransaction - Update a transaction
@@ -3068,4 +3099,5 @@ func (s *Accounting) UpdateAccountingTransaction(ctx context.Context, request op
 	}
 
 	return res, nil
+
 }

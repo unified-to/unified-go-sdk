@@ -56,11 +56,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateAccountingAccountRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingAccount(ctx, request)
     if err != nil {
@@ -107,11 +105,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateAccountingContactRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingContact(ctx, request)
     if err != nil {
@@ -158,11 +154,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateAccountingInvoiceRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingInvoice(ctx, request)
     if err != nil {
@@ -209,11 +203,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateAccountingTaxrateRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingTaxrate(ctx, request)
     if err != nil {
@@ -260,11 +252,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateAccountingTransactionRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.CreateAccountingTransaction(ctx, request)
     if err != nil {
@@ -311,12 +301,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingAccount(ctx, request)
     if err != nil {
@@ -363,12 +351,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingContact(ctx, request)
     if err != nil {
@@ -415,12 +401,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingInvoice(ctx, request)
     if err != nil {
@@ -467,12 +451,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetAccountingOrganizationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingOrganization(ctx, request)
     if err != nil {
@@ -519,12 +501,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingTaxrate(ctx, request)
     if err != nil {
@@ -571,12 +551,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.GetAccountingTransaction(ctx, request)
     if err != nil {
@@ -623,11 +601,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListAccountingAccountsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingAccounts(ctx, request)
     if err != nil {
@@ -674,11 +650,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListAccountingContactsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingContacts(ctx, request)
     if err != nil {
@@ -725,11 +699,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListAccountingInvoicesRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingInvoices(ctx, request)
     if err != nil {
@@ -776,11 +748,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListAccountingOrganizationsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingOrganizations(ctx, request)
     if err != nil {
@@ -827,11 +797,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListAccountingTaxratesRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingTaxrates(ctx, request)
     if err != nil {
@@ -878,11 +846,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListAccountingTransactionsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.ListAccountingTransactions(ctx, request)
     if err != nil {
@@ -929,12 +895,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingAccount(ctx, request)
     if err != nil {
@@ -981,12 +945,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingContact(ctx, request)
     if err != nil {
@@ -1033,12 +995,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingInvoice(ctx, request)
     if err != nil {
@@ -1085,12 +1045,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingTaxrate(ctx, request)
     if err != nil {
@@ -1137,12 +1095,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.PatchAccountingTransaction(ctx, request)
     if err != nil {
@@ -1189,12 +1145,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingAccount(ctx, request)
     if err != nil {
@@ -1241,12 +1195,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingContact(ctx, request)
     if err != nil {
@@ -1293,12 +1245,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingInvoice(ctx, request)
     if err != nil {
@@ -1345,12 +1295,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingTaxrate(ctx, request)
     if err != nil {
@@ -1397,12 +1345,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingTransaction(ctx, request)
     if err != nil {
@@ -1449,12 +1395,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingAccount(ctx, request)
     if err != nil {
@@ -1501,12 +1445,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingContact(ctx, request)
     if err != nil {
@@ -1553,12 +1495,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingInvoice(ctx, request)
     if err != nil {
@@ -1605,12 +1545,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingTaxrate(ctx, request)
     if err != nil {
@@ -1657,12 +1595,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingTransaction(ctx, request)
     if err != nil {

@@ -118,4 +118,5 @@ func (s *Call) ListUcCalls(ctx context.Context, request operations.ListUcCallsRe
 	}
 
 	return res, nil
+
 }

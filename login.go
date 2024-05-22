@@ -115,4 +115,5 @@ func (s *Login) GetUnifiedIntegrationLogin(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }

@@ -118,6 +118,7 @@ func (s *Payout) GetPaymentPayout(ctx context.Context, request operations.GetPay
 	}
 
 	return res, nil
+
 }
 
 // ListPaymentPayouts - List all payouts
@@ -213,4 +214,5 @@ func (s *Payout) ListPaymentPayouts(ctx context.Context, request operations.List
 	}
 
 	return res, nil
+
 }

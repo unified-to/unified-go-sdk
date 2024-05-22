@@ -120,6 +120,7 @@ func (s *Group) CreateHrisGroup(ctx context.Context, request operations.CreateHr
 	}
 
 	return res, nil
+
 }
 
 // GetHrisGroup - Retrieve a group
@@ -215,6 +216,7 @@ func (s *Group) GetHrisGroup(ctx context.Context, request operations.GetHrisGrou
 	}
 
 	return res, nil
+
 }
 
 // ListHrisGroups - List all groups
@@ -310,6 +312,7 @@ func (s *Group) ListHrisGroups(ctx context.Context, request operations.ListHrisG
 	}
 
 	return res, nil
+
 }
 
 // PatchHrisGroup - Update a group
@@ -407,6 +410,7 @@ func (s *Group) PatchHrisGroup(ctx context.Context, request operations.PatchHris
 	}
 
 	return res, nil
+
 }
 
 // RemoveHrisGroup - Remove a group
@@ -497,6 +501,7 @@ func (s *Group) RemoveHrisGroup(ctx context.Context, request operations.RemoveHr
 	}
 
 	return res, nil
+
 }
 
 // UpdateHrisGroup - Update a group
@@ -594,4 +599,5 @@ func (s *Group) UpdateHrisGroup(ctx context.Context, request operations.UpdateHr
 	}
 
 	return res, nil
+
 }

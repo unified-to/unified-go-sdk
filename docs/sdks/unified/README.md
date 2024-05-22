@@ -43,7 +43,6 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     var request *shared.Connection = &shared.Connection{
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesMessaging,
@@ -53,7 +52,6 @@ func main() {
             shared.PropertyConnectionPermissionsAtsCompanyRead,
         },
     }
-    
     ctx := context.Background()
     res, err := s.Unified.CreateUnifiedConnection(ctx, request)
     if err != nil {
@@ -100,9 +98,7 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateUnifiedWebhookRequest{}
-    
     ctx := context.Background()
     res, err := s.Unified.CreateUnifiedWebhook(ctx, request)
     if err != nil {
@@ -149,11 +145,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetUnifiedApicallRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedApicall(ctx, request)
     if err != nil {
@@ -200,11 +194,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetUnifiedConnectionRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedConnection(ctx, request)
     if err != nil {
@@ -251,12 +243,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, request)
     if err != nil {
@@ -303,11 +293,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetUnifiedWebhookRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.GetUnifiedWebhook(ctx, request)
     if err != nil {
@@ -354,9 +342,7 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedApicallsRequest{}
-    
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedApicalls(ctx, request)
     if err != nil {
@@ -403,9 +389,7 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedConnectionsRequest{}
-    
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedConnections(ctx, request)
     if err != nil {
@@ -452,11 +436,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedIntegrationWorkspacesRequest{
         WorkspaceID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, request)
     if err != nil {
@@ -503,9 +485,7 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedIntegrationsRequest{}
-    
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrations(ctx, request)
     if err != nil {
@@ -552,9 +532,7 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedIssuesRequest{}
-    
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIssues(ctx, request)
     if err != nil {
@@ -601,8 +579,6 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-
-    
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedSupports(ctx)
     if err != nil {
@@ -648,9 +624,7 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedWebhooksRequest{}
-    
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedWebhooks(ctx, request)
     if err != nil {
@@ -697,11 +671,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchUnifiedConnectionRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.PatchUnifiedConnection(ctx, request)
     if err != nil {
@@ -748,11 +720,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchUnifiedWebhookTriggerRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.PatchUnifiedWebhookTrigger(ctx, request)
     if err != nil {
@@ -799,11 +769,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveUnifiedConnectionRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.RemoveUnifiedConnection(ctx, request)
     if err != nil {
@@ -850,11 +818,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveUnifiedWebhookRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.RemoveUnifiedWebhook(ctx, request)
     if err != nil {
@@ -901,11 +867,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateUnifiedConnectionRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.UpdateUnifiedConnection(ctx, request)
     if err != nil {
@@ -952,11 +916,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateUnifiedWebhookTriggerRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Unified.UpdateUnifiedWebhookTrigger(ctx, request)
     if err != nil {

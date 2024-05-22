@@ -120,6 +120,7 @@ func (s *Employee) CreateHrisEmployee(ctx context.Context, request operations.Cr
 	}
 
 	return res, nil
+
 }
 
 // GetHrisEmployee - Retrieve an employee
@@ -215,6 +216,7 @@ func (s *Employee) GetHrisEmployee(ctx context.Context, request operations.GetHr
 	}
 
 	return res, nil
+
 }
 
 // ListHrisEmployees - List all employees
@@ -310,6 +312,7 @@ func (s *Employee) ListHrisEmployees(ctx context.Context, request operations.Lis
 	}
 
 	return res, nil
+
 }
 
 // PatchHrisEmployee - Update an employee
@@ -407,6 +410,7 @@ func (s *Employee) PatchHrisEmployee(ctx context.Context, request operations.Pat
 	}
 
 	return res, nil
+
 }
 
 // RemoveHrisEmployee - Remove an employee
@@ -497,6 +501,7 @@ func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.Re
 	}
 
 	return res, nil
+
 }
 
 // UpdateHrisEmployee - Update an employee
@@ -594,4 +599,5 @@ func (s *Employee) UpdateHrisEmployee(ctx context.Context, request operations.Up
 	}
 
 	return res, nil
+
 }

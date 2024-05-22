@@ -120,6 +120,7 @@ func (s *Job) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 	}
 
 	return res, nil
+
 }
 
 // GetAtsJob - Retrieve a job
@@ -215,6 +216,7 @@ func (s *Job) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 	}
 
 	return res, nil
+
 }
 
 // ListAtsJobs - List all jobs
@@ -310,6 +312,7 @@ func (s *Job) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsJob - Update a job
@@ -407,6 +410,7 @@ func (s *Job) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsJob - Remove a job
@@ -497,6 +501,7 @@ func (s *Job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsJob - Update a job
@@ -594,4 +599,5 @@ func (s *Job) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobR
 	}
 
 	return res, nil
+
 }

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 06471d8199180f3f0c4d0f6efbb9b3a0
+  docChecksum: 2e2c7c454bfe6fc3d2738e2f2da91408
   docVersion: "1.0"
-  speakeasyVersion: 1.295.0
-  generationVersion: 2.333.3
-  releaseVersion: 0.14.7
-  configChecksum: 86324bbf7d540da78a5971405b99f404
+  speakeasyVersion: 1.295.1
+  generationVersion: 2.335.5
+  releaseVersion: 0.14.8
+  configChecksum: cd1092635adcdd45407b41ed090d1df7
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -15,13 +15,13 @@ features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.4
-    core: 3.4.8
+    core: 3.4.10
     globalSecurity: 2.82.9
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.2
     intellisenseMarkdownSupport: 0.1.0
-    responseFormat: 0.1.1
+    responseFormat: 0.1.2
     sdkHooks: 0.1.0
 generatedFiles:
   - accounting.go

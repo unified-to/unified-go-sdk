@@ -27,12 +27,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, request)
     if err != nil {
@@ -79,11 +77,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedIntegrationWorkspacesRequest{
         WorkspaceID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Integration.ListUnifiedIntegrationWorkspaces(ctx, request)
     if err != nil {
@@ -130,9 +126,7 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedIntegrationsRequest{}
-    
     ctx := context.Background()
     res, err := s.Integration.ListUnifiedIntegrations(ctx, request)
     if err != nil {

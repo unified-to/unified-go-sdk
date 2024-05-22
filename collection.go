@@ -120,6 +120,7 @@ func (s *Collection) CreateCommerceCollection(ctx context.Context, request opera
 	}
 
 	return res, nil
+
 }
 
 // GetCommerceCollection - Retrieve a collection
@@ -215,6 +216,7 @@ func (s *Collection) GetCommerceCollection(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // ListCommerceCollections - List all collections
@@ -310,6 +312,7 @@ func (s *Collection) ListCommerceCollections(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // PatchCommerceCollection - Update a collection
@@ -407,6 +410,7 @@ func (s *Collection) PatchCommerceCollection(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // RemoveCommerceCollection - Remove a collection
@@ -497,6 +501,7 @@ func (s *Collection) RemoveCommerceCollection(ctx context.Context, request opera
 	}
 
 	return res, nil
+
 }
 
 // UpdateCommerceCollection - Update a collection
@@ -594,4 +599,5 @@ func (s *Collection) UpdateCommerceCollection(ctx context.Context, request opera
 	}
 
 	return res, nil
+
 }

@@ -118,6 +118,7 @@ func (s *Payslip) GetHrisPayslip(ctx context.Context, request operations.GetHris
 	}
 
 	return res, nil
+
 }
 
 // ListHrisPayslips - List all payslips
@@ -213,4 +214,5 @@ func (s *Payslip) ListHrisPayslips(ctx context.Context, request operations.ListH
 	}
 
 	return res, nil
+
 }

@@ -120,6 +120,7 @@ func (s *Account) CreateAccountingAccount(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingAccount - Retrieve an account
@@ -215,6 +216,7 @@ func (s *Account) GetAccountingAccount(ctx context.Context, request operations.G
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingAccounts - List all accounts
@@ -310,6 +312,7 @@ func (s *Account) ListAccountingAccounts(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // PatchAccountingAccount - Update an account
@@ -407,6 +410,7 @@ func (s *Account) PatchAccountingAccount(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // RemoveAccountingAccount - Remove an account
@@ -497,6 +501,7 @@ func (s *Account) RemoveAccountingAccount(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // UpdateAccountingAccount - Update an account
@@ -594,4 +599,5 @@ func (s *Account) UpdateAccountingAccount(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }

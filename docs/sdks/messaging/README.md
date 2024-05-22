@@ -32,11 +32,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateMessagingMessageRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Messaging.CreateMessagingMessage(ctx, request)
     if err != nil {
@@ -83,12 +81,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetMessagingChannelRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Messaging.GetMessagingChannel(ctx, request)
     if err != nil {
@@ -135,12 +131,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Messaging.GetMessagingMessage(ctx, request)
     if err != nil {
@@ -187,11 +181,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListMessagingChannelsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Messaging.ListMessagingChannels(ctx, request)
     if err != nil {
@@ -238,11 +230,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListMessagingMessagesRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Messaging.ListMessagingMessages(ctx, request)
     if err != nil {
@@ -289,12 +279,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Messaging.PatchMessagingMessage(ctx, request)
     if err != nil {
@@ -341,12 +329,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Messaging.RemoveMessagingMessage(ctx, request)
     if err != nil {
@@ -393,12 +379,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Messaging.UpdateMessagingMessage(ctx, request)
     if err != nil {

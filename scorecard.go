@@ -120,6 +120,7 @@ func (s *Scorecard) CreateAtsScorecard(ctx context.Context, request operations.C
 	}
 
 	return res, nil
+
 }
 
 // GetAtsScorecard - Retrieve a scorecard
@@ -215,6 +216,7 @@ func (s *Scorecard) GetAtsScorecard(ctx context.Context, request operations.GetA
 	}
 
 	return res, nil
+
 }
 
 // ListAtsScorecards - List all scorecards
@@ -310,6 +312,7 @@ func (s *Scorecard) ListAtsScorecards(ctx context.Context, request operations.Li
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsScorecard - Update a scorecard
@@ -407,6 +410,7 @@ func (s *Scorecard) PatchAtsScorecard(ctx context.Context, request operations.Pa
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsScorecard - Remove a scorecard
@@ -497,6 +501,7 @@ func (s *Scorecard) RemoveAtsScorecard(ctx context.Context, request operations.R
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsScorecard - Update a scorecard
@@ -594,4 +599,5 @@ func (s *Scorecard) UpdateAtsScorecard(ctx context.Context, request operations.U
 	}
 
 	return res, nil
+
 }

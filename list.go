@@ -120,6 +120,7 @@ func (s *List) CreateMartechList(ctx context.Context, request operations.CreateM
 	}
 
 	return res, nil
+
 }
 
 // GetMartechList - Retrieve a list
@@ -215,6 +216,7 @@ func (s *List) GetMartechList(ctx context.Context, request operations.GetMartech
 	}
 
 	return res, nil
+
 }
 
 // ListMartechLists - List all lists
@@ -310,6 +312,7 @@ func (s *List) ListMartechLists(ctx context.Context, request operations.ListMart
 	}
 
 	return res, nil
+
 }
 
 // PatchMartechList - Update a list
@@ -407,6 +410,7 @@ func (s *List) PatchMartechList(ctx context.Context, request operations.PatchMar
 	}
 
 	return res, nil
+
 }
 
 // RemoveMartechList - Remove a list
@@ -497,6 +501,7 @@ func (s *List) RemoveMartechList(ctx context.Context, request operations.RemoveM
 	}
 
 	return res, nil
+
 }
 
 // UpdateMartechList - Update a list
@@ -594,4 +599,5 @@ func (s *List) UpdateMartechList(ctx context.Context, request operations.UpdateM
 	}
 
 	return res, nil
+
 }

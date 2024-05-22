@@ -120,4 +120,5 @@ func (s *Prompt) CreateGenaiPrompt(ctx context.Context, request operations.Creat
 	}
 
 	return res, nil
+
 }

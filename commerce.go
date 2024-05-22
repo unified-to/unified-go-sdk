@@ -120,6 +120,7 @@ func (s *Commerce) CreateCommerceCollection(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // CreateCommerceInventory - Create an inventory
@@ -217,6 +218,7 @@ func (s *Commerce) CreateCommerceInventory(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // CreateCommerceItem - Create an item
@@ -314,6 +316,7 @@ func (s *Commerce) CreateCommerceItem(ctx context.Context, request operations.Cr
 	}
 
 	return res, nil
+
 }
 
 // CreateCommerceLocation - Create a location
@@ -411,6 +414,7 @@ func (s *Commerce) CreateCommerceLocation(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // GetCommerceCollection - Retrieve a collection
@@ -506,6 +510,7 @@ func (s *Commerce) GetCommerceCollection(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // GetCommerceInventory - Retrieve an inventory
@@ -601,6 +606,7 @@ func (s *Commerce) GetCommerceInventory(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }
 
 // GetCommerceItem - Retrieve an item
@@ -696,6 +702,7 @@ func (s *Commerce) GetCommerceItem(ctx context.Context, request operations.GetCo
 	}
 
 	return res, nil
+
 }
 
 // GetCommerceLocation - Retrieve a location
@@ -791,6 +798,7 @@ func (s *Commerce) GetCommerceLocation(ctx context.Context, request operations.G
 	}
 
 	return res, nil
+
 }
 
 // ListCommerceCollections - List all collections
@@ -886,6 +894,7 @@ func (s *Commerce) ListCommerceCollections(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // ListCommerceInventories - List all inventories
@@ -981,6 +990,7 @@ func (s *Commerce) ListCommerceInventories(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // ListCommerceItems - List all items
@@ -1076,6 +1086,7 @@ func (s *Commerce) ListCommerceItems(ctx context.Context, request operations.Lis
 	}
 
 	return res, nil
+
 }
 
 // ListCommerceLocations - List all locations
@@ -1171,6 +1182,7 @@ func (s *Commerce) ListCommerceLocations(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // PatchCommerceCollection - Update a collection
@@ -1268,6 +1280,7 @@ func (s *Commerce) PatchCommerceCollection(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // PatchCommerceInventory - Update an inventory
@@ -1365,6 +1378,7 @@ func (s *Commerce) PatchCommerceInventory(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // PatchCommerceItem - Update an item
@@ -1462,6 +1476,7 @@ func (s *Commerce) PatchCommerceItem(ctx context.Context, request operations.Pat
 	}
 
 	return res, nil
+
 }
 
 // PatchCommerceLocation - Update a location
@@ -1559,6 +1574,7 @@ func (s *Commerce) PatchCommerceLocation(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // RemoveCommerceCollection - Remove a collection
@@ -1649,6 +1665,7 @@ func (s *Commerce) RemoveCommerceCollection(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // RemoveCommerceInventory - Remove an inventory
@@ -1739,6 +1756,7 @@ func (s *Commerce) RemoveCommerceInventory(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // RemoveCommerceItem - Remove an item
@@ -1829,6 +1847,7 @@ func (s *Commerce) RemoveCommerceItem(ctx context.Context, request operations.Re
 	}
 
 	return res, nil
+
 }
 
 // RemoveCommerceLocation - Remove a location
@@ -1919,6 +1938,7 @@ func (s *Commerce) RemoveCommerceLocation(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // UpdateCommerceCollection - Update a collection
@@ -2016,6 +2036,7 @@ func (s *Commerce) UpdateCommerceCollection(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // UpdateCommerceInventory - Update an inventory
@@ -2113,6 +2134,7 @@ func (s *Commerce) UpdateCommerceInventory(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // UpdateCommerceItem - Update an item
@@ -2210,6 +2232,7 @@ func (s *Commerce) UpdateCommerceItem(ctx context.Context, request operations.Up
 	}
 
 	return res, nil
+
 }
 
 // UpdateCommerceLocation - Update a location
@@ -2307,4 +2330,5 @@ func (s *Commerce) UpdateCommerceLocation(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }

@@ -120,6 +120,7 @@ func (s *Note) CreateTicketingNote(ctx context.Context, request operations.Creat
 	}
 
 	return res, nil
+
 }
 
 // GetTicketingNote - Retrieve a note
@@ -215,6 +216,7 @@ func (s *Note) GetTicketingNote(ctx context.Context, request operations.GetTicke
 	}
 
 	return res, nil
+
 }
 
 // ListTicketingNotes - List all notes
@@ -310,6 +312,7 @@ func (s *Note) ListTicketingNotes(ctx context.Context, request operations.ListTi
 	}
 
 	return res, nil
+
 }
 
 // PatchTicketingNote - Update a note
@@ -407,6 +410,7 @@ func (s *Note) PatchTicketingNote(ctx context.Context, request operations.PatchT
 	}
 
 	return res, nil
+
 }
 
 // RemoveTicketingNote - Remove a note
@@ -497,6 +501,7 @@ func (s *Note) RemoveTicketingNote(ctx context.Context, request operations.Remov
 	}
 
 	return res, nil
+
 }
 
 // UpdateTicketingNote - Update a note
@@ -594,4 +599,5 @@ func (s *Note) UpdateTicketingNote(ctx context.Context, request operations.Updat
 	}
 
 	return res, nil
+
 }

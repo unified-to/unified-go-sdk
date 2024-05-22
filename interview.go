@@ -120,6 +120,7 @@ func (s *Interview) CreateAtsInterview(ctx context.Context, request operations.C
 	}
 
 	return res, nil
+
 }
 
 // GetAtsInterview - Retrieve an interview
@@ -215,6 +216,7 @@ func (s *Interview) GetAtsInterview(ctx context.Context, request operations.GetA
 	}
 
 	return res, nil
+
 }
 
 // ListAtsInterviews - List all interviews
@@ -310,6 +312,7 @@ func (s *Interview) ListAtsInterviews(ctx context.Context, request operations.Li
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsInterview - Update an interview
@@ -407,6 +410,7 @@ func (s *Interview) PatchAtsInterview(ctx context.Context, request operations.Pa
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsInterview - Remove an interview
@@ -497,6 +501,7 @@ func (s *Interview) RemoveAtsInterview(ctx context.Context, request operations.R
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsInterview - Update an interview
@@ -594,4 +599,5 @@ func (s *Interview) UpdateAtsInterview(ctx context.Context, request operations.U
 	}
 
 	return res, nil
+
 }

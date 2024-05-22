@@ -18,6 +18,7 @@ type IntegrationSupport struct {
 	ListItemID          *bool                                    `json:"list_item_id,omitempty"`
 	ListJobID           *bool                                    `json:"list_job_id,omitempty"`
 	ListLimit           *bool                                    `json:"list_limit,omitempty"`
+	ListLinkID          *bool                                    `json:"list_link_id,omitempty"`
 	ListListID          *bool                                    `json:"list_list_id,omitempty"`
 	ListLocationID      *bool                                    `json:"list_location_id,omitempty"`
 	ListOffset          *bool                                    `json:"list_offset,omitempty"`
@@ -145,6 +146,13 @@ func (o *IntegrationSupport) GetListLimit() *bool {
 		return nil
 	}
 	return o.ListLimit
+}
+
+func (o *IntegrationSupport) GetListLinkID() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.ListLinkID
 }
 
 func (o *IntegrationSupport) GetListListID() *bool {

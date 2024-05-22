@@ -36,11 +36,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateMartechListRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.CreateMartechList(ctx, request)
     if err != nil {
@@ -87,11 +85,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateMartechMemberRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.CreateMartechMember(ctx, request)
     if err != nil {
@@ -138,12 +134,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetMartechListRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.GetMartechList(ctx, request)
     if err != nil {
@@ -190,12 +184,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetMartechMemberRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.GetMartechMember(ctx, request)
     if err != nil {
@@ -242,11 +234,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListMartechListsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.ListMartechLists(ctx, request)
     if err != nil {
@@ -293,11 +283,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListMartechMembersRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.ListMartechMembers(ctx, request)
     if err != nil {
@@ -344,12 +332,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchMartechListRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.PatchMartechList(ctx, request)
     if err != nil {
@@ -396,12 +382,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchMartechMemberRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.PatchMartechMember(ctx, request)
     if err != nil {
@@ -448,12 +432,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveMartechListRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.RemoveMartechList(ctx, request)
     if err != nil {
@@ -500,12 +482,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveMartechMemberRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.RemoveMartechMember(ctx, request)
     if err != nil {
@@ -552,12 +532,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateMartechListRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.UpdateMartechList(ctx, request)
     if err != nil {
@@ -604,12 +582,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateMartechMemberRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Martech.UpdateMartechMember(ctx, request)
     if err != nil {

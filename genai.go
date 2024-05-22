@@ -120,6 +120,7 @@ func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.Create
 	}
 
 	return res, nil
+
 }
 
 // ListGenaiModels - List all models
@@ -215,4 +216,5 @@ func (s *Genai) ListGenaiModels(ctx context.Context, request operations.ListGena
 	}
 
 	return res, nil
+
 }

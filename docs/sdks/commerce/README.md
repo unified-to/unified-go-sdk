@@ -48,11 +48,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateCommerceCollectionRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.CreateCommerceCollection(ctx, request)
     if err != nil {
@@ -99,11 +97,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateCommerceInventoryRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.CreateCommerceInventory(ctx, request)
     if err != nil {
@@ -150,11 +146,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateCommerceItemRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.CreateCommerceItem(ctx, request)
     if err != nil {
@@ -201,11 +195,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateCommerceLocationRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.CreateCommerceLocation(ctx, request)
     if err != nil {
@@ -252,12 +244,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetCommerceCollectionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.GetCommerceCollection(ctx, request)
     if err != nil {
@@ -304,12 +294,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetCommerceInventoryRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.GetCommerceInventory(ctx, request)
     if err != nil {
@@ -356,12 +344,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetCommerceItemRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.GetCommerceItem(ctx, request)
     if err != nil {
@@ -408,12 +394,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.GetCommerceLocation(ctx, request)
     if err != nil {
@@ -460,11 +444,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListCommerceCollectionsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.ListCommerceCollections(ctx, request)
     if err != nil {
@@ -511,11 +493,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListCommerceInventoriesRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.ListCommerceInventories(ctx, request)
     if err != nil {
@@ -562,11 +542,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListCommerceItemsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.ListCommerceItems(ctx, request)
     if err != nil {
@@ -613,11 +591,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListCommerceLocationsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.ListCommerceLocations(ctx, request)
     if err != nil {
@@ -664,12 +640,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchCommerceCollectionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.PatchCommerceCollection(ctx, request)
     if err != nil {
@@ -716,12 +690,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchCommerceInventoryRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.PatchCommerceInventory(ctx, request)
     if err != nil {
@@ -768,12 +740,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchCommerceItemRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.PatchCommerceItem(ctx, request)
     if err != nil {
@@ -820,12 +790,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.PatchCommerceLocation(ctx, request)
     if err != nil {
@@ -872,12 +840,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveCommerceCollectionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.RemoveCommerceCollection(ctx, request)
     if err != nil {
@@ -924,12 +890,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveCommerceInventoryRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.RemoveCommerceInventory(ctx, request)
     if err != nil {
@@ -976,12 +940,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveCommerceItemRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.RemoveCommerceItem(ctx, request)
     if err != nil {
@@ -1028,12 +990,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.RemoveCommerceLocation(ctx, request)
     if err != nil {
@@ -1080,12 +1040,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateCommerceCollectionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.UpdateCommerceCollection(ctx, request)
     if err != nil {
@@ -1132,12 +1090,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateCommerceInventoryRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.UpdateCommerceInventory(ctx, request)
     if err != nil {
@@ -1184,12 +1140,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateCommerceItemRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.UpdateCommerceItem(ctx, request)
     if err != nil {
@@ -1236,12 +1190,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Commerce.UpdateCommerceLocation(ctx, request)
     if err != nil {

@@ -119,6 +119,7 @@ func (s *Passthrough) CreatePassthrough(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }
 
 // ListPassthroughs - Passthrough GET
@@ -210,6 +211,7 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 	}
 
 	return res, nil
+
 }
 
 // PatchPassthrough - Passthrough PUT
@@ -307,6 +309,7 @@ func (s *Passthrough) PatchPassthrough(ctx context.Context, request operations.P
 	}
 
 	return res, nil
+
 }
 
 // RemovePassthrough - Passthrough DELETE
@@ -398,6 +401,7 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }
 
 // UpdatePassthrough - Passthrough PUT
@@ -495,4 +499,5 @@ func (s *Passthrough) UpdatePassthrough(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }

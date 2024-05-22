@@ -118,6 +118,7 @@ func (s *Channel) GetMessagingChannel(ctx context.Context, request operations.Ge
 	}
 
 	return res, nil
+
 }
 
 // ListMessagingChannels - List all channels
@@ -213,4 +214,5 @@ func (s *Channel) ListMessagingChannels(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }

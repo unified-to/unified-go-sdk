@@ -120,6 +120,7 @@ func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request o
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingTransaction - Retrieve a transaction
@@ -215,6 +216,7 @@ func (s *Transaction) GetAccountingTransaction(ctx context.Context, request oper
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingTransactions - List all transactions
@@ -310,6 +312,7 @@ func (s *Transaction) ListAccountingTransactions(ctx context.Context, request op
 	}
 
 	return res, nil
+
 }
 
 // PatchAccountingTransaction - Update a transaction
@@ -407,6 +410,7 @@ func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request op
 	}
 
 	return res, nil
+
 }
 
 // RemoveAccountingTransaction - Remove a transaction
@@ -497,6 +501,7 @@ func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request o
 	}
 
 	return res, nil
+
 }
 
 // UpdateAccountingTransaction - Update a transaction
@@ -594,4 +599,5 @@ func (s *Transaction) UpdateAccountingTransaction(ctx context.Context, request o
 	}
 
 	return res, nil
+
 }

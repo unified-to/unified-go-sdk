@@ -120,6 +120,7 @@ func (s *Deal) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDe
 	}
 
 	return res, nil
+
 }
 
 // GetCrmDeal - Retrieve a deal
@@ -215,6 +216,7 @@ func (s *Deal) GetCrmDeal(ctx context.Context, request operations.GetCrmDealRequ
 	}
 
 	return res, nil
+
 }
 
 // ListCrmDeals - List all deals
@@ -310,6 +312,7 @@ func (s *Deal) ListCrmDeals(ctx context.Context, request operations.ListCrmDeals
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmDeal - Update a deal
@@ -407,6 +410,7 @@ func (s *Deal) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDeal
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmDeal - Remove a deal
@@ -497,6 +501,7 @@ func (s *Deal) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDe
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmDeal - Update a deal
@@ -594,4 +599,5 @@ func (s *Deal) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDe
 	}
 
 	return res, nil
+
 }

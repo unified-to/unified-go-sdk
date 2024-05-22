@@ -120,6 +120,7 @@ func (s *Pipeline) CreateCrmPipeline(ctx context.Context, request operations.Cre
 	}
 
 	return res, nil
+
 }
 
 // GetCrmPipeline - Retrieve a pipeline
@@ -215,6 +216,7 @@ func (s *Pipeline) GetCrmPipeline(ctx context.Context, request operations.GetCrm
 	}
 
 	return res, nil
+
 }
 
 // ListCrmPipelines - List all pipelines
@@ -310,6 +312,7 @@ func (s *Pipeline) ListCrmPipelines(ctx context.Context, request operations.List
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmPipeline - Update a pipeline
@@ -407,6 +410,7 @@ func (s *Pipeline) PatchCrmPipeline(ctx context.Context, request operations.Patc
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmPipeline - Remove a pipeline
@@ -497,6 +501,7 @@ func (s *Pipeline) RemoveCrmPipeline(ctx context.Context, request operations.Rem
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmPipeline - Update a pipeline
@@ -594,4 +599,5 @@ func (s *Pipeline) UpdateCrmPipeline(ctx context.Context, request operations.Upd
 	}
 
 	return res, nil
+
 }

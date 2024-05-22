@@ -120,6 +120,7 @@ func (s *Document) CreateAtsDocument(ctx context.Context, request operations.Cre
 	}
 
 	return res, nil
+
 }
 
 // GetAtsDocument - Retrieve a document
@@ -215,6 +216,7 @@ func (s *Document) GetAtsDocument(ctx context.Context, request operations.GetAts
 	}
 
 	return res, nil
+
 }
 
 // ListAtsDocuments - List all documents
@@ -310,6 +312,7 @@ func (s *Document) ListAtsDocuments(ctx context.Context, request operations.List
 	}
 
 	return res, nil
+
 }
 
 // PatchAtsDocument - Update a document
@@ -407,6 +410,7 @@ func (s *Document) PatchAtsDocument(ctx context.Context, request operations.Patc
 	}
 
 	return res, nil
+
 }
 
 // RemoveAtsDocument - Remove a document
@@ -497,6 +501,7 @@ func (s *Document) RemoveAtsDocument(ctx context.Context, request operations.Rem
 	}
 
 	return res, nil
+
 }
 
 // UpdateAtsDocument - Update a document
@@ -594,4 +599,5 @@ func (s *Document) UpdateAtsDocument(ctx context.Context, request operations.Upd
 	}
 
 	return res, nil
+
 }

@@ -42,11 +42,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateTicketingCustomerRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingCustomer(ctx, request)
     if err != nil {
@@ -93,11 +91,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateTicketingNoteRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingNote(ctx, request)
     if err != nil {
@@ -144,11 +140,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreateTicketingTicketRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.CreateTicketingTicket(ctx, request)
     if err != nil {
@@ -195,12 +189,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetTicketingCustomerRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingCustomer(ctx, request)
     if err != nil {
@@ -247,12 +239,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingNote(ctx, request)
     if err != nil {
@@ -299,12 +289,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.GetTicketingTicket(ctx, request)
     if err != nil {
@@ -351,11 +339,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListTicketingCustomersRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingCustomers(ctx, request)
     if err != nil {
@@ -402,11 +388,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListTicketingNotesRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingNotes(ctx, request)
     if err != nil {
@@ -453,11 +437,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListTicketingTicketsRequest{
         ConnectionID: "<value>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.ListTicketingTickets(ctx, request)
     if err != nil {
@@ -504,12 +486,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchTicketingCustomerRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingCustomer(ctx, request)
     if err != nil {
@@ -556,12 +536,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingNote(ctx, request)
     if err != nil {
@@ -608,12 +586,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.PatchTicketingTicket(ctx, request)
     if err != nil {
@@ -660,12 +636,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveTicketingCustomerRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingCustomer(ctx, request)
     if err != nil {
@@ -712,12 +686,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingNote(ctx, request)
     if err != nil {
@@ -764,12 +736,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.RemoveTicketingTicket(ctx, request)
     if err != nil {
@@ -816,12 +786,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateTicketingCustomerRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingCustomer(ctx, request)
     if err != nil {
@@ -868,12 +836,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingNote(ctx, request)
     if err != nil {
@@ -920,12 +886,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Ticketing.UpdateTicketingTicket(ctx, request)
     if err != nil {

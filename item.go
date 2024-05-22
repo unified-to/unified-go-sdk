@@ -120,6 +120,7 @@ func (s *Item) CreateCommerceItem(ctx context.Context, request operations.Create
 	}
 
 	return res, nil
+
 }
 
 // GetCommerceItem - Retrieve an item
@@ -215,6 +216,7 @@ func (s *Item) GetCommerceItem(ctx context.Context, request operations.GetCommer
 	}
 
 	return res, nil
+
 }
 
 // ListCommerceItems - List all items
@@ -310,6 +312,7 @@ func (s *Item) ListCommerceItems(ctx context.Context, request operations.ListCom
 	}
 
 	return res, nil
+
 }
 
 // PatchCommerceItem - Update an item
@@ -407,6 +410,7 @@ func (s *Item) PatchCommerceItem(ctx context.Context, request operations.PatchCo
 	}
 
 	return res, nil
+
 }
 
 // RemoveCommerceItem - Remove an item
@@ -497,6 +501,7 @@ func (s *Item) RemoveCommerceItem(ctx context.Context, request operations.Remove
 	}
 
 	return res, nil
+
 }
 
 // UpdateCommerceItem - Update an item
@@ -594,4 +599,5 @@ func (s *Item) UpdateCommerceItem(ctx context.Context, request operations.Update
 	}
 
 	return res, nil
+
 }

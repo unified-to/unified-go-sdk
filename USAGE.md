@@ -13,11 +13,9 @@ func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
-
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
-
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
 	if err != nil {

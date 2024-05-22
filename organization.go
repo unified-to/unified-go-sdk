@@ -118,6 +118,7 @@ func (s *Organization) GetAccountingOrganization(ctx context.Context, request op
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingOrganizations - List all organizations
@@ -213,4 +214,5 @@ func (s *Organization) ListAccountingOrganizations(ctx context.Context, request 
 	}
 
 	return res, nil
+
 }

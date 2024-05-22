@@ -120,6 +120,7 @@ func (s *Lead) CreateCrmLead(ctx context.Context, request operations.CreateCrmLe
 	}
 
 	return res, nil
+
 }
 
 // GetCrmLead - Retrieve a lead
@@ -215,6 +216,7 @@ func (s *Lead) GetCrmLead(ctx context.Context, request operations.GetCrmLeadRequ
 	}
 
 	return res, nil
+
 }
 
 // ListCrmLeads - List all leads
@@ -310,6 +312,7 @@ func (s *Lead) ListCrmLeads(ctx context.Context, request operations.ListCrmLeads
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmLead - Update a lead
@@ -407,6 +410,7 @@ func (s *Lead) PatchCrmLead(ctx context.Context, request operations.PatchCrmLead
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmLead - Remove a lead
@@ -497,6 +501,7 @@ func (s *Lead) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLe
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmLead - Update a lead
@@ -594,4 +599,5 @@ func (s *Lead) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLe
 	}
 
 	return res, nil
+
 }

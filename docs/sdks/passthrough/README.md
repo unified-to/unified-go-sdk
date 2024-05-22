@@ -29,12 +29,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.CreatePassthroughRequest{
         ConnectionID: "<value>",
         Path: "/etc/periodic",
     }
-    
     ctx := context.Background()
     res, err := s.Passthrough.CreatePassthrough(ctx, request)
     if err != nil {
@@ -81,12 +79,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListPassthroughsRequest{
         ConnectionID: "<value>",
         Path: "/selinux",
     }
-    
     ctx := context.Background()
     res, err := s.Passthrough.ListPassthroughs(ctx, request)
     if err != nil {
@@ -133,12 +129,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchPassthroughRequest{
         ConnectionID: "<value>",
         Path: "/mnt",
     }
-    
     ctx := context.Background()
     res, err := s.Passthrough.PatchPassthrough(ctx, request)
     if err != nil {
@@ -185,12 +179,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemovePassthroughRequest{
         ConnectionID: "<value>",
         Path: "/Applications",
     }
-    
     ctx := context.Background()
     res, err := s.Passthrough.RemovePassthrough(ctx, request)
     if err != nil {
@@ -237,12 +229,10 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdatePassthroughRequest{
         ConnectionID: "<value>",
         Path: "/dev",
     }
-    
     ctx := context.Background()
     res, err := s.Passthrough.UpdatePassthrough(ctx, request)
     if err != nil {

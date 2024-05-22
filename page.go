@@ -120,6 +120,7 @@ func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPa
 	}
 
 	return res, nil
+
 }
 
 // GetKmsPage - Retrieve a page
@@ -215,6 +216,7 @@ func (s *Page) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequ
 	}
 
 	return res, nil
+
 }
 
 // ListKmsPages - List all pages
@@ -310,6 +312,7 @@ func (s *Page) ListKmsPages(ctx context.Context, request operations.ListKmsPages
 	}
 
 	return res, nil
+
 }
 
 // PatchKmsPage - Update a page
@@ -407,6 +410,7 @@ func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPage
 	}
 
 	return res, nil
+
 }
 
 // RemoveKmsPage - Remove a page
@@ -497,6 +501,7 @@ func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPa
 	}
 
 	return res, nil
+
 }
 
 // UpdateKmsPage - Update a page
@@ -594,4 +599,5 @@ func (s *Page) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPa
 	}
 
 	return res, nil
+
 }

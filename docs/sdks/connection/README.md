@@ -30,7 +30,6 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     var request *shared.Connection = &shared.Connection{
         Categories: []shared.PropertyConnectionCategories{
             shared.PropertyConnectionCategoriesMessaging,
@@ -40,7 +39,6 @@ func main() {
             shared.PropertyConnectionPermissionsAtsCompanyRead,
         },
     }
-    
     ctx := context.Background()
     res, err := s.Connection.CreateUnifiedConnection(ctx, request)
     if err != nil {
@@ -87,11 +85,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.GetUnifiedConnectionRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Connection.GetUnifiedConnection(ctx, request)
     if err != nil {
@@ -138,9 +134,7 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.ListUnifiedConnectionsRequest{}
-    
     ctx := context.Background()
     res, err := s.Connection.ListUnifiedConnections(ctx, request)
     if err != nil {
@@ -187,11 +181,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.PatchUnifiedConnectionRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Connection.PatchUnifiedConnection(ctx, request)
     if err != nil {
@@ -238,11 +230,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.RemoveUnifiedConnectionRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Connection.RemoveUnifiedConnection(ctx, request)
     if err != nil {
@@ -289,11 +279,9 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-
     request := operations.UpdateUnifiedConnectionRequest{
         ID: "<id>",
     }
-    
     ctx := context.Background()
     res, err := s.Connection.UpdateUnifiedConnection(ctx, request)
     if err != nil {

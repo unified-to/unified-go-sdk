@@ -120,6 +120,7 @@ func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrm
 	}
 
 	return res, nil
+
 }
 
 // CreateCrmContact - Create a contact
@@ -217,6 +218,7 @@ func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrm
 	}
 
 	return res, nil
+
 }
 
 // CreateCrmDeal - Create a deal
@@ -314,6 +316,7 @@ func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDea
 	}
 
 	return res, nil
+
 }
 
 // CreateCrmEvent - Create an event
@@ -411,6 +414,7 @@ func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEv
 	}
 
 	return res, nil
+
 }
 
 // CreateCrmLead - Create a lead
@@ -508,6 +512,7 @@ func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLea
 	}
 
 	return res, nil
+
 }
 
 // CreateCrmPipeline - Create a pipeline
@@ -605,6 +610,7 @@ func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCr
 	}
 
 	return res, nil
+
 }
 
 // GetCrmCompany - Retrieve a company
@@ -700,6 +706,7 @@ func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompan
 	}
 
 	return res, nil
+
 }
 
 // GetCrmContact - Retrieve a contact
@@ -795,6 +802,7 @@ func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContac
 	}
 
 	return res, nil
+
 }
 
 // GetCrmDeal - Retrieve a deal
@@ -890,6 +898,7 @@ func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealReque
 	}
 
 	return res, nil
+
 }
 
 // GetCrmEvent - Retrieve an event
@@ -985,6 +994,7 @@ func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventReq
 	}
 
 	return res, nil
+
 }
 
 // GetCrmLead - Retrieve a lead
@@ -1080,6 +1090,7 @@ func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadReque
 	}
 
 	return res, nil
+
 }
 
 // GetCrmPipeline - Retrieve a pipeline
@@ -1175,6 +1186,7 @@ func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipel
 	}
 
 	return res, nil
+
 }
 
 // ListCrmCompanies - List all companies
@@ -1270,6 +1282,7 @@ func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCo
 	}
 
 	return res, nil
+
 }
 
 // ListCrmContacts - List all contacts
@@ -1365,6 +1378,7 @@ func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmCon
 	}
 
 	return res, nil
+
 }
 
 // ListCrmDeals - List all deals
@@ -1460,6 +1474,7 @@ func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsR
 	}
 
 	return res, nil
+
 }
 
 // ListCrmEvents - List all events
@@ -1555,6 +1570,7 @@ func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEvent
 	}
 
 	return res, nil
+
 }
 
 // ListCrmLeads - List all leads
@@ -1650,6 +1666,7 @@ func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsR
 	}
 
 	return res, nil
+
 }
 
 // ListCrmPipelines - List all pipelines
@@ -1745,6 +1762,7 @@ func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPi
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmCompany - Update a company
@@ -1842,6 +1860,7 @@ func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCo
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmContact - Update a contact
@@ -1939,6 +1958,7 @@ func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmCo
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmDeal - Update a deal
@@ -2036,6 +2056,7 @@ func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealR
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmEvent - Update an event
@@ -2133,6 +2154,7 @@ func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEven
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmLead - Update a lead
@@ -2230,6 +2252,7 @@ func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadR
 	}
 
 	return res, nil
+
 }
 
 // PatchCrmPipeline - Update a pipeline
@@ -2327,6 +2350,7 @@ func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmP
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmCompany - Remove a company
@@ -2417,6 +2441,7 @@ func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrm
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmContact - Remove a contact
@@ -2507,6 +2532,7 @@ func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrm
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmDeal - Remove a deal
@@ -2597,6 +2623,7 @@ func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmEvent - Remove an event
@@ -2687,6 +2714,7 @@ func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEv
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmLead - Remove a lead
@@ -2777,6 +2805,7 @@ func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLea
 	}
 
 	return res, nil
+
 }
 
 // RemoveCrmPipeline - Remove a pipeline
@@ -2867,6 +2896,7 @@ func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCr
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmCompany - Update a company
@@ -2964,6 +2994,7 @@ func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrm
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmContact - Update a contact
@@ -3061,6 +3092,7 @@ func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrm
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmDeal - Update a deal
@@ -3158,6 +3190,7 @@ func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDea
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmEvent - Update an event
@@ -3255,6 +3288,7 @@ func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEv
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmLead - Update a lead
@@ -3352,6 +3386,7 @@ func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLea
 	}
 
 	return res, nil
+
 }
 
 // UpdateCrmPipeline - Update a pipeline
@@ -3449,4 +3484,5 @@ func (s *Crm) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCr
 	}
 
 	return res, nil
+
 }

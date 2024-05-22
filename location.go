@@ -120,6 +120,7 @@ func (s *Location) CreateCommerceLocation(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // GetCommerceLocation - Retrieve a location
@@ -215,6 +216,7 @@ func (s *Location) GetCommerceLocation(ctx context.Context, request operations.G
 	}
 
 	return res, nil
+
 }
 
 // ListCommerceLocations - List all locations
@@ -310,6 +312,7 @@ func (s *Location) ListCommerceLocations(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // PatchCommerceLocation - Update a location
@@ -407,6 +410,7 @@ func (s *Location) PatchCommerceLocation(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // RemoveCommerceLocation - Remove a location
@@ -497,6 +501,7 @@ func (s *Location) RemoveCommerceLocation(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // UpdateCommerceLocation - Update a location
@@ -594,4 +599,5 @@ func (s *Location) UpdateCommerceLocation(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }

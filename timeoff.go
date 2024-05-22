@@ -118,6 +118,7 @@ func (s *Timeoff) GetHrisTimeoff(ctx context.Context, request operations.GetHris
 	}
 
 	return res, nil
+
 }
 
 // ListHrisTimeoffs - List all timeoffs
@@ -213,4 +214,5 @@ func (s *Timeoff) ListHrisTimeoffs(ctx context.Context, request operations.ListH
 	}
 
 	return res, nil
+
 }

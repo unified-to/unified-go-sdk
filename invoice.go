@@ -120,6 +120,7 @@ func (s *Invoice) CreateAccountingInvoice(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // GetAccountingInvoice - Retrieve an invoice
@@ -215,6 +216,7 @@ func (s *Invoice) GetAccountingInvoice(ctx context.Context, request operations.G
 	}
 
 	return res, nil
+
 }
 
 // ListAccountingInvoices - List all invoices
@@ -310,6 +312,7 @@ func (s *Invoice) ListAccountingInvoices(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // PatchAccountingInvoice - Update an invoice
@@ -407,6 +410,7 @@ func (s *Invoice) PatchAccountingInvoice(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // RemoveAccountingInvoice - Remove an invoice
@@ -497,6 +501,7 @@ func (s *Invoice) RemoveAccountingInvoice(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // UpdateAccountingInvoice - Update an invoice
@@ -594,4 +599,5 @@ func (s *Invoice) UpdateAccountingInvoice(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }

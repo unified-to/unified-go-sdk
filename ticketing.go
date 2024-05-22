@@ -120,6 +120,7 @@ func (s *Ticketing) CreateTicketingCustomer(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // CreateTicketingNote - Create a note
@@ -217,6 +218,7 @@ func (s *Ticketing) CreateTicketingNote(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }
 
 // CreateTicketingTicket - Create a ticket
@@ -314,6 +316,7 @@ func (s *Ticketing) CreateTicketingTicket(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // GetTicketingCustomer - Retrieve a customer
@@ -409,6 +412,7 @@ func (s *Ticketing) GetTicketingCustomer(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // GetTicketingNote - Retrieve a note
@@ -504,6 +508,7 @@ func (s *Ticketing) GetTicketingNote(ctx context.Context, request operations.Get
 	}
 
 	return res, nil
+
 }
 
 // GetTicketingTicket - Retrieve a ticket
@@ -599,6 +604,7 @@ func (s *Ticketing) GetTicketingTicket(ctx context.Context, request operations.G
 	}
 
 	return res, nil
+
 }
 
 // ListTicketingCustomers - List all customers
@@ -694,6 +700,7 @@ func (s *Ticketing) ListTicketingCustomers(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // ListTicketingNotes - List all notes
@@ -789,6 +796,7 @@ func (s *Ticketing) ListTicketingNotes(ctx context.Context, request operations.L
 	}
 
 	return res, nil
+
 }
 
 // ListTicketingTickets - List all tickets
@@ -884,6 +892,7 @@ func (s *Ticketing) ListTicketingTickets(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // PatchTicketingCustomer - Update a customer
@@ -981,6 +990,7 @@ func (s *Ticketing) PatchTicketingCustomer(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // PatchTicketingNote - Update a note
@@ -1078,6 +1088,7 @@ func (s *Ticketing) PatchTicketingNote(ctx context.Context, request operations.P
 	}
 
 	return res, nil
+
 }
 
 // PatchTicketingTicket - Update a ticket
@@ -1175,6 +1186,7 @@ func (s *Ticketing) PatchTicketingTicket(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // RemoveTicketingCustomer - Remove a customer
@@ -1265,6 +1277,7 @@ func (s *Ticketing) RemoveTicketingCustomer(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // RemoveTicketingNote - Remove a note
@@ -1355,6 +1368,7 @@ func (s *Ticketing) RemoveTicketingNote(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }
 
 // RemoveTicketingTicket - Remove a ticket
@@ -1445,6 +1459,7 @@ func (s *Ticketing) RemoveTicketingTicket(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // UpdateTicketingCustomer - Update a customer
@@ -1542,6 +1557,7 @@ func (s *Ticketing) UpdateTicketingCustomer(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // UpdateTicketingNote - Update a note
@@ -1639,6 +1655,7 @@ func (s *Ticketing) UpdateTicketingNote(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }
 
 // UpdateTicketingTicket - Update a ticket
@@ -1736,4 +1753,5 @@ func (s *Ticketing) UpdateTicketingTicket(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }

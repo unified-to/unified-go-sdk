@@ -120,6 +120,7 @@ func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.Create
 	}
 
 	return res, nil
+
 }
 
 // CreateHrisGroup - Create a group
@@ -217,6 +218,7 @@ func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHri
 	}
 
 	return res, nil
+
 }
 
 // GetHrisEmployee - Retrieve an employee
@@ -312,6 +314,7 @@ func (s *Hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEm
 	}
 
 	return res, nil
+
 }
 
 // GetHrisGroup - Retrieve a group
@@ -407,6 +410,7 @@ func (s *Hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroup
 	}
 
 	return res, nil
+
 }
 
 // GetHrisPayslip - Retrieve a payslip
@@ -502,6 +506,7 @@ func (s *Hris) GetHrisPayslip(ctx context.Context, request operations.GetHrisPay
 	}
 
 	return res, nil
+
 }
 
 // GetHrisTimeoff - Retrieve a timeoff
@@ -597,6 +602,7 @@ func (s *Hris) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTim
 	}
 
 	return res, nil
+
 }
 
 // ListHrisEmployees - List all employees
@@ -692,6 +698,7 @@ func (s *Hris) ListHrisEmployees(ctx context.Context, request operations.ListHri
 	}
 
 	return res, nil
+
 }
 
 // ListHrisGroups - List all groups
@@ -787,6 +794,7 @@ func (s *Hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGr
 	}
 
 	return res, nil
+
 }
 
 // ListHrisPayslips - List all payslips
@@ -882,6 +890,7 @@ func (s *Hris) ListHrisPayslips(ctx context.Context, request operations.ListHris
 	}
 
 	return res, nil
+
 }
 
 // ListHrisTimeoffs - List all timeoffs
@@ -977,6 +986,7 @@ func (s *Hris) ListHrisTimeoffs(ctx context.Context, request operations.ListHris
 	}
 
 	return res, nil
+
 }
 
 // PatchHrisEmployee - Update an employee
@@ -1074,6 +1084,7 @@ func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHr
 	}
 
 	return res, nil
+
 }
 
 // PatchHrisGroup - Update a group
@@ -1171,6 +1182,7 @@ func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisG
 	}
 
 	return res, nil
+
 }
 
 // RemoveHrisEmployee - Remove an employee
@@ -1261,6 +1273,7 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 	}
 
 	return res, nil
+
 }
 
 // RemoveHrisGroup - Remove a group
@@ -1351,6 +1364,7 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 	}
 
 	return res, nil
+
 }
 
 // UpdateHrisEmployee - Update an employee
@@ -1448,6 +1462,7 @@ func (s *Hris) UpdateHrisEmployee(ctx context.Context, request operations.Update
 	}
 
 	return res, nil
+
 }
 
 // UpdateHrisGroup - Update a group
@@ -1545,4 +1560,5 @@ func (s *Hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHri
 	}
 
 	return res, nil
+
 }

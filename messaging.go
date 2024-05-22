@@ -120,6 +120,7 @@ func (s *Messaging) CreateMessagingMessage(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // GetMessagingChannel - Retrieve a channel
@@ -215,6 +216,7 @@ func (s *Messaging) GetMessagingChannel(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }
 
 // GetMessagingMessage - Retrieve a message
@@ -310,6 +312,7 @@ func (s *Messaging) GetMessagingMessage(ctx context.Context, request operations.
 	}
 
 	return res, nil
+
 }
 
 // ListMessagingChannels - List all channels
@@ -405,6 +408,7 @@ func (s *Messaging) ListMessagingChannels(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // ListMessagingMessages - List all messages
@@ -500,6 +504,7 @@ func (s *Messaging) ListMessagingMessages(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // PatchMessagingMessage - Update a message
@@ -597,6 +602,7 @@ func (s *Messaging) PatchMessagingMessage(ctx context.Context, request operation
 	}
 
 	return res, nil
+
 }
 
 // RemoveMessagingMessage - Remove a message
@@ -687,6 +693,7 @@ func (s *Messaging) RemoveMessagingMessage(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // UpdateMessagingMessage - Update a message
@@ -784,4 +791,5 @@ func (s *Messaging) UpdateMessagingMessage(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }

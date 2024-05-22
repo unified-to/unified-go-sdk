@@ -126,6 +126,7 @@ func (s *Webhook) CreateUnifiedWebhook(ctx context.Context, request operations.C
 	}
 
 	return res, nil
+
 }
 
 // GetUnifiedWebhook - Retrieve webhook by its ID
@@ -217,6 +218,7 @@ func (s *Webhook) GetUnifiedWebhook(ctx context.Context, request operations.GetU
 	}
 
 	return res, nil
+
 }
 
 // ListUnifiedWebhooks - Returns all registered webhooks
@@ -312,6 +314,7 @@ func (s *Webhook) ListUnifiedWebhooks(ctx context.Context, request operations.Li
 	}
 
 	return res, nil
+
 }
 
 // PatchUnifiedWebhookTrigger - Trigger webhook
@@ -402,6 +405,7 @@ func (s *Webhook) PatchUnifiedWebhookTrigger(ctx context.Context, request operat
 	}
 
 	return res, nil
+
 }
 
 // RemoveUnifiedWebhook - Remove webhook subscription
@@ -492,6 +496,7 @@ func (s *Webhook) RemoveUnifiedWebhook(ctx context.Context, request operations.R
 	}
 
 	return res, nil
+
 }
 
 // UpdateUnifiedWebhookTrigger - Trigger webhook
@@ -582,4 +587,5 @@ func (s *Webhook) UpdateUnifiedWebhookTrigger(ctx context.Context, request opera
 	}
 
 	return res, nil
+
 }

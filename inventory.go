@@ -120,6 +120,7 @@ func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // GetCommerceInventory - Retrieve an inventory
@@ -215,6 +216,7 @@ func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations
 	}
 
 	return res, nil
+
 }
 
 // ListCommerceInventories - List all inventories
@@ -310,6 +312,7 @@ func (s *Inventory) ListCommerceInventories(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // PatchCommerceInventory - Update an inventory
@@ -407,6 +410,7 @@ func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operatio
 	}
 
 	return res, nil
+
 }
 
 // RemoveCommerceInventory - Remove an inventory
@@ -497,6 +501,7 @@ func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
 
 // UpdateCommerceInventory - Update an inventory
@@ -594,4 +599,5 @@ func (s *Inventory) UpdateCommerceInventory(ctx context.Context, request operati
 	}
 
 	return res, nil
+
 }
