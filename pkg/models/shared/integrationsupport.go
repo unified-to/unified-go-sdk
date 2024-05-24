@@ -3,44 +3,46 @@
 package shared
 
 type IntegrationSupport struct {
-	InboundFields       map[string]any                           `json:"inbound_fields,omitempty"`
-	ListAccountID       *bool                                    `json:"list_account_id,omitempty"`
-	ListApplicationID   *bool                                    `json:"list_application_id,omitempty"`
-	ListCandidateID     *bool                                    `json:"list_candidate_id,omitempty"`
-	ListChannelID       *bool                                    `json:"list_channel_id,omitempty"`
-	ListCollectionID    *bool                                    `json:"list_collection_id,omitempty"`
-	ListCompanyID       *bool                                    `json:"list_company_id,omitempty"`
-	ListContactID       *bool                                    `json:"list_contact_id,omitempty"`
-	ListCustomerID      *bool                                    `json:"list_customer_id,omitempty"`
-	ListDealID          *bool                                    `json:"list_deal_id,omitempty"`
-	ListInterviewID     *bool                                    `json:"list_interview_id,omitempty"`
-	ListInvoiceID       *bool                                    `json:"list_invoice_id,omitempty"`
-	ListItemID          *bool                                    `json:"list_item_id,omitempty"`
-	ListJobID           *bool                                    `json:"list_job_id,omitempty"`
-	ListLimit           *bool                                    `json:"list_limit,omitempty"`
-	ListLinkID          *bool                                    `json:"list_link_id,omitempty"`
-	ListListID          *bool                                    `json:"list_list_id,omitempty"`
-	ListLocationID      *bool                                    `json:"list_location_id,omitempty"`
-	ListOffset          *bool                                    `json:"list_offset,omitempty"`
-	ListOrder           *bool                                    `json:"list_order,omitempty"`
-	ListParentID        *bool                                    `json:"list_parent_id,omitempty"`
-	ListQuery           *bool                                    `json:"list_query,omitempty"`
-	ListSortByCreatedAt *bool                                    `json:"list_sort_by_created_at,omitempty"`
-	ListSortByName      *bool                                    `json:"list_sort_by_name,omitempty"`
-	ListSortByUpdatedAt *bool                                    `json:"list_sort_by_updated_at,omitempty"`
-	ListSpaceID         *bool                                    `json:"list_space_id,omitempty"`
-	ListTicketID        *bool                                    `json:"list_ticket_id,omitempty"`
-	ListType            *bool                                    `json:"list_type,omitempty"`
-	ListUpdatedGte      *bool                                    `json:"list_updated_gte,omitempty"`
-	ListUserID          *bool                                    `json:"list_user_id,omitempty"`
-	Methods             map[string]bool                          `json:"methods,omitempty"`
-	OutboundFields      map[string]any                           `json:"outbound_fields,omitempty"`
-	SearchDomain        *bool                                    `json:"search_domain,omitempty"`
-	SearchEmail         *bool                                    `json:"search_email,omitempty"`
-	SearchLinkedinurl   *bool                                    `json:"search_linkedinurl,omitempty"`
-	SearchName          *bool                                    `json:"search_name,omitempty"`
-	SearchTwitter       *bool                                    `json:"search_twitter,omitempty"`
-	WebhookEvents       *PropertyIntegrationSupportWebhookEvents `json:"webhook_events,omitempty"`
+	InboundFields       map[string]any  `json:"inbound_fields,omitempty"`
+	ListAccountID       *bool           `json:"list_account_id,omitempty"`
+	ListApplicationID   *bool           `json:"list_application_id,omitempty"`
+	ListCandidateID     *bool           `json:"list_candidate_id,omitempty"`
+	ListChannelID       *bool           `json:"list_channel_id,omitempty"`
+	ListCollectionID    *bool           `json:"list_collection_id,omitempty"`
+	ListCompanyID       *bool           `json:"list_company_id,omitempty"`
+	ListContactID       *bool           `json:"list_contact_id,omitempty"`
+	ListCustomerID      *bool           `json:"list_customer_id,omitempty"`
+	ListDealID          *bool           `json:"list_deal_id,omitempty"`
+	ListInterviewID     *bool           `json:"list_interview_id,omitempty"`
+	ListInvoiceID       *bool           `json:"list_invoice_id,omitempty"`
+	ListItemID          *bool           `json:"list_item_id,omitempty"`
+	ListJobID           *bool           `json:"list_job_id,omitempty"`
+	ListLimit           *bool           `json:"list_limit,omitempty"`
+	ListLinkID          *bool           `json:"list_link_id,omitempty"`
+	ListListID          *bool           `json:"list_list_id,omitempty"`
+	ListLocationID      *bool           `json:"list_location_id,omitempty"`
+	ListOffset          *bool           `json:"list_offset,omitempty"`
+	ListOrder           *bool           `json:"list_order,omitempty"`
+	ListParentID        *bool           `json:"list_parent_id,omitempty"`
+	ListQuery           *bool           `json:"list_query,omitempty"`
+	ListSortByCreatedAt *bool           `json:"list_sort_by_created_at,omitempty"`
+	ListSortByName      *bool           `json:"list_sort_by_name,omitempty"`
+	ListSortByUpdatedAt *bool           `json:"list_sort_by_updated_at,omitempty"`
+	ListSpaceID         *bool           `json:"list_space_id,omitempty"`
+	ListTicketID        *bool           `json:"list_ticket_id,omitempty"`
+	ListType            *bool           `json:"list_type,omitempty"`
+	ListUpdatedGte      *bool           `json:"list_updated_gte,omitempty"`
+	ListUserID          *bool           `json:"list_user_id,omitempty"`
+	Methods             map[string]bool `json:"methods,omitempty"`
+	OutboundFields      map[string]any  `json:"outbound_fields,omitempty"`
+	// objects that we map from in the integration
+	RawObjects        []string                                 `json:"raw_objects,omitempty"`
+	SearchDomain      *bool                                    `json:"search_domain,omitempty"`
+	SearchEmail       *bool                                    `json:"search_email,omitempty"`
+	SearchLinkedinurl *bool                                    `json:"search_linkedinurl,omitempty"`
+	SearchName        *bool                                    `json:"search_name,omitempty"`
+	SearchTwitter     *bool                                    `json:"search_twitter,omitempty"`
+	WebhookEvents     *PropertyIntegrationSupportWebhookEvents `json:"webhook_events,omitempty"`
 }
 
 func (o *IntegrationSupport) GetInboundFields() map[string]any {
@@ -265,6 +267,13 @@ func (o *IntegrationSupport) GetOutboundFields() map[string]any {
 		return nil
 	}
 	return o.OutboundFields
+}
+
+func (o *IntegrationSupport) GetRawObjects() []string {
+	if o == nil {
+		return nil
+	}
+	return o.RawObjects
 }
 
 func (o *IntegrationSupport) GetSearchDomain() *bool {
