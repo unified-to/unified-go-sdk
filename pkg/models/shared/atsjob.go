@@ -108,13 +108,14 @@ type AtsJob struct {
 	LanguageLocale   *string           `json:"language_locale,omitempty"`
 	Name             *string           `json:"name,omitempty"`
 	NumberOfOpenings *float64          `json:"number_of_openings,omitempty"`
-	PublicJobUrls    []string          `json:"public_job_urls,omitempty"`
-	Questions        []AtsJobQuestion  `json:"questions,omitempty"`
-	Raw              map[string]any    `json:"raw,omitempty"`
-	RecruiterIds     []string          `json:"recruiter_ids,omitempty"`
-	Remote           *bool             `json:"remote,omitempty"`
-	Status           *AtsJobStatus     `json:"status,omitempty"`
-	UpdatedAt        *time.Time        `json:"updated_at,omitempty"`
+	// URLs for pages containing public listings for the job
+	PublicJobUrls []string         `json:"public_job_urls,omitempty"`
+	Questions     []AtsJobQuestion `json:"questions,omitempty"`
+	Raw           map[string]any   `json:"raw,omitempty"`
+	RecruiterIds  []string         `json:"recruiter_ids,omitempty"`
+	Remote        *bool            `json:"remote,omitempty"`
+	Status        *AtsJobStatus    `json:"status,omitempty"`
+	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
 }
 
 func (a AtsJob) MarshalJSON() ([]byte, error) {

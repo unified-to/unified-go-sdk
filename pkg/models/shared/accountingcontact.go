@@ -64,10 +64,12 @@ func (e *TaxExemption) UnmarshalJSON(data []byte) error {
 
 type AccountingContact struct {
 	BillingAddress  *PropertyAccountingContactBillingAddress  `json:"billing_address,omitempty"`
+	CompanyName     *string                                   `json:"company_name,omitempty"`
 	CreatedAt       *time.Time                                `json:"created_at,omitempty"`
 	Currency        *string                                   `default:"USD" json:"currency"`
 	Emails          []AccountingEmail                         `json:"emails,omitempty"`
 	ID              *string                                   `json:"id,omitempty"`
+	Identification  *string                                   `json:"identification,omitempty"`
 	IsActive        *bool                                     `json:"is_active,omitempty"`
 	IsCustomer      *bool                                     `json:"is_customer,omitempty"`
 	IsSupplier      *bool                                     `json:"is_supplier,omitempty"`
@@ -100,6 +102,13 @@ func (o *AccountingContact) GetBillingAddress() *PropertyAccountingContactBillin
 	return o.BillingAddress
 }
 
+func (o *AccountingContact) GetCompanyName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyName
+}
+
 func (o *AccountingContact) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
@@ -126,6 +135,13 @@ func (o *AccountingContact) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *AccountingContact) GetIdentification() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Identification
 }
 
 func (o *AccountingContact) GetIsActive() *bool {

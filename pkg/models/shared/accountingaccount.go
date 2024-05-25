@@ -87,19 +87,20 @@ func (e *Type) UnmarshalJSON(data []byte) error {
 
 // AccountingAccount - Chart of accounts
 type AccountingAccount struct {
-	Balance             *float64       `json:"balance,omitempty"`
-	CreatedAt           *time.Time     `json:"created_at,omitempty"`
-	Currency            *string        `json:"currency,omitempty"`
-	CustomerDefinedCode *string        `json:"customer_defined_code,omitempty"`
-	Description         *string        `json:"description,omitempty"`
-	ID                  *string        `json:"id,omitempty"`
-	IsPayable           *bool          `json:"is_payable,omitempty"`
-	Name                *string        `json:"name,omitempty"`
-	ParentAccountID     *string        `json:"parent_account_id,omitempty"`
-	Raw                 map[string]any `json:"raw,omitempty"`
-	Status              *Status        `json:"status,omitempty"`
-	Type                *Type          `json:"type,omitempty"`
-	UpdatedAt           *time.Time     `json:"updated_at,omitempty"`
+	Balance             *float64   `json:"balance,omitempty"`
+	CreatedAt           *time.Time `json:"created_at,omitempty"`
+	Currency            *string    `json:"currency,omitempty"`
+	CustomerDefinedCode *string    `json:"customer_defined_code,omitempty"`
+	Description         *string    `json:"description,omitempty"`
+	ID                  *string    `json:"id,omitempty"`
+	IsPayable           *bool      `json:"is_payable,omitempty"`
+	Name                *string    `json:"name,omitempty"`
+	ParentAccountID     *string    `json:"parent_account_id,omitempty"`
+	// The original data from the integration's API
+	Raw       map[string]any `json:"raw,omitempty"`
+	Status    *Status        `json:"status,omitempty"`
+	Type      *Type          `json:"type,omitempty"`
+	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (a AccountingAccount) MarshalJSON() ([]byte, error) {

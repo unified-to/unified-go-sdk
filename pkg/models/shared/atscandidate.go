@@ -57,7 +57,7 @@ type AtsCandidate struct {
 	ExternalIdentifier *string                      `json:"external_identifier,omitempty"`
 	ID                 *string                      `json:"id,omitempty"`
 	ImageURL           *string                      `json:"image_url,omitempty"`
-	// a list of social media links associated with the candidate. eg. LinkedIn URL
+	// URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
 	LinkUrls   []string       `json:"link_urls,omitempty"`
 	Name       *string        `json:"name,omitempty"`
 	Origin     *Origin        `json:"origin,omitempty"`
