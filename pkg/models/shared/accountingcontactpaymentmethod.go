@@ -49,9 +49,17 @@ func (e *AccountingContactPaymentMethodType) UnmarshalJSON(data []byte) error {
 }
 
 type AccountingContactPaymentMethod struct {
-	ID   *string                            `json:"id,omitempty"`
-	Name *string                            `json:"name,omitempty"`
-	Type AccountingContactPaymentMethodType `json:"type"`
+	Default *bool                              `json:"default,omitempty"`
+	ID      *string                            `json:"id,omitempty"`
+	Name    *string                            `json:"name,omitempty"`
+	Type    AccountingContactPaymentMethodType `json:"type"`
+}
+
+func (o *AccountingContactPaymentMethod) GetDefault() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.Default
 }
 
 func (o *AccountingContactPaymentMethod) GetID() *string {
