@@ -84,11 +84,11 @@ func (e *AtsCompensationType) UnmarshalJSON(data []byte) error {
 }
 
 type AtsCompensation struct {
-	Currency  *string             `json:"currency,omitempty"`
-	Frequency *Frequency          `json:"frequency,omitempty"`
-	Max       *float64            `json:"max,omitempty"`
-	Min       *float64            `json:"min,omitempty"`
-	Type      AtsCompensationType `json:"type"`
+	Currency  *string              `json:"currency,omitempty"`
+	Frequency *Frequency           `json:"frequency,omitempty"`
+	Max       *float64             `json:"max,omitempty"`
+	Min       *float64             `json:"min,omitempty"`
+	Type      *AtsCompensationType `json:"type,omitempty"`
 }
 
 func (o *AtsCompensation) GetCurrency() *string {
@@ -119,9 +119,9 @@ func (o *AtsCompensation) GetMin() *float64 {
 	return o.Min
 }
 
-func (o *AtsCompensation) GetType() AtsCompensationType {
+func (o *AtsCompensation) GetType() *AtsCompensationType {
 	if o == nil {
-		return AtsCompensationType("")
+		return nil
 	}
 	return o.Type
 }
