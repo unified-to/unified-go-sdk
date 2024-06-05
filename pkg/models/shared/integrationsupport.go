@@ -2,47 +2,1075 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+type FromWebhook string
+
+const (
+	FromWebhookSupportedRequired FromWebhook = "supported-required"
+	FromWebhookSupported         FromWebhook = "supported"
+	FromWebhookNotSupported      FromWebhook = "not-supported"
+)
+
+func (e FromWebhook) ToPointer() *FromWebhook {
+	return &e
+}
+func (e *FromWebhook) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = FromWebhook(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for FromWebhook: %v", v)
+	}
+}
+
+type ListAccountID string
+
+const (
+	ListAccountIDSupportedRequired ListAccountID = "supported-required"
+	ListAccountIDSupported         ListAccountID = "supported"
+	ListAccountIDNotSupported      ListAccountID = "not-supported"
+)
+
+func (e ListAccountID) ToPointer() *ListAccountID {
+	return &e
+}
+func (e *ListAccountID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListAccountID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountID: %v", v)
+	}
+}
+
+type ListApplicationID string
+
+const (
+	ListApplicationIDSupportedRequired ListApplicationID = "supported-required"
+	ListApplicationIDSupported         ListApplicationID = "supported"
+	ListApplicationIDNotSupported      ListApplicationID = "not-supported"
+)
+
+func (e ListApplicationID) ToPointer() *ListApplicationID {
+	return &e
+}
+func (e *ListApplicationID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListApplicationID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListApplicationID: %v", v)
+	}
+}
+
+type ListCandidateID string
+
+const (
+	ListCandidateIDSupportedRequired ListCandidateID = "supported-required"
+	ListCandidateIDSupported         ListCandidateID = "supported"
+	ListCandidateIDNotSupported      ListCandidateID = "not-supported"
+)
+
+func (e ListCandidateID) ToPointer() *ListCandidateID {
+	return &e
+}
+func (e *ListCandidateID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListCandidateID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCandidateID: %v", v)
+	}
+}
+
+type ListChannelID string
+
+const (
+	ListChannelIDSupportedRequired ListChannelID = "supported-required"
+	ListChannelIDSupported         ListChannelID = "supported"
+	ListChannelIDNotSupported      ListChannelID = "not-supported"
+)
+
+func (e ListChannelID) ToPointer() *ListChannelID {
+	return &e
+}
+func (e *ListChannelID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListChannelID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListChannelID: %v", v)
+	}
+}
+
+type ListCollectionID string
+
+const (
+	ListCollectionIDSupportedRequired ListCollectionID = "supported-required"
+	ListCollectionIDSupported         ListCollectionID = "supported"
+	ListCollectionIDNotSupported      ListCollectionID = "not-supported"
+)
+
+func (e ListCollectionID) ToPointer() *ListCollectionID {
+	return &e
+}
+func (e *ListCollectionID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListCollectionID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCollectionID: %v", v)
+	}
+}
+
+type ListCompanyID string
+
+const (
+	ListCompanyIDSupportedRequired ListCompanyID = "supported-required"
+	ListCompanyIDSupported         ListCompanyID = "supported"
+	ListCompanyIDNotSupported      ListCompanyID = "not-supported"
+)
+
+func (e ListCompanyID) ToPointer() *ListCompanyID {
+	return &e
+}
+func (e *ListCompanyID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListCompanyID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCompanyID: %v", v)
+	}
+}
+
+type ListContactID string
+
+const (
+	ListContactIDSupportedRequired ListContactID = "supported-required"
+	ListContactIDSupported         ListContactID = "supported"
+	ListContactIDNotSupported      ListContactID = "not-supported"
+)
+
+func (e ListContactID) ToPointer() *ListContactID {
+	return &e
+}
+func (e *ListContactID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListContactID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListContactID: %v", v)
+	}
+}
+
+type ListCustomerID string
+
+const (
+	ListCustomerIDSupportedRequired ListCustomerID = "supported-required"
+	ListCustomerIDSupported         ListCustomerID = "supported"
+	ListCustomerIDNotSupported      ListCustomerID = "not-supported"
+)
+
+func (e ListCustomerID) ToPointer() *ListCustomerID {
+	return &e
+}
+func (e *ListCustomerID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListCustomerID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCustomerID: %v", v)
+	}
+}
+
+type ListDealID string
+
+const (
+	ListDealIDSupportedRequired ListDealID = "supported-required"
+	ListDealIDSupported         ListDealID = "supported"
+	ListDealIDNotSupported      ListDealID = "not-supported"
+)
+
+func (e ListDealID) ToPointer() *ListDealID {
+	return &e
+}
+func (e *ListDealID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListDealID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListDealID: %v", v)
+	}
+}
+
+type ListInterviewID string
+
+const (
+	ListInterviewIDSupportedRequired ListInterviewID = "supported-required"
+	ListInterviewIDSupported         ListInterviewID = "supported"
+	ListInterviewIDNotSupported      ListInterviewID = "not-supported"
+)
+
+func (e ListInterviewID) ToPointer() *ListInterviewID {
+	return &e
+}
+func (e *ListInterviewID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListInterviewID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListInterviewID: %v", v)
+	}
+}
+
+type ListInvoiceID string
+
+const (
+	ListInvoiceIDSupportedRequired ListInvoiceID = "supported-required"
+	ListInvoiceIDSupported         ListInvoiceID = "supported"
+	ListInvoiceIDNotSupported      ListInvoiceID = "not-supported"
+)
+
+func (e ListInvoiceID) ToPointer() *ListInvoiceID {
+	return &e
+}
+func (e *ListInvoiceID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListInvoiceID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListInvoiceID: %v", v)
+	}
+}
+
+type ListItemID string
+
+const (
+	ListItemIDSupportedRequired ListItemID = "supported-required"
+	ListItemIDSupported         ListItemID = "supported"
+	ListItemIDNotSupported      ListItemID = "not-supported"
+)
+
+func (e ListItemID) ToPointer() *ListItemID {
+	return &e
+}
+func (e *ListItemID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListItemID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListItemID: %v", v)
+	}
+}
+
+type ListJobID string
+
+const (
+	ListJobIDSupportedRequired ListJobID = "supported-required"
+	ListJobIDSupported         ListJobID = "supported"
+	ListJobIDNotSupported      ListJobID = "not-supported"
+)
+
+func (e ListJobID) ToPointer() *ListJobID {
+	return &e
+}
+func (e *ListJobID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListJobID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListJobID: %v", v)
+	}
+}
+
+type ListLimit string
+
+const (
+	ListLimitSupportedRequired ListLimit = "supported-required"
+	ListLimitSupported         ListLimit = "supported"
+	ListLimitNotSupported      ListLimit = "not-supported"
+)
+
+func (e ListLimit) ToPointer() *ListLimit {
+	return &e
+}
+func (e *ListLimit) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListLimit(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListLimit: %v", v)
+	}
+}
+
+type ListLinkID string
+
+const (
+	ListLinkIDSupportedRequired ListLinkID = "supported-required"
+	ListLinkIDSupported         ListLinkID = "supported"
+	ListLinkIDNotSupported      ListLinkID = "not-supported"
+)
+
+func (e ListLinkID) ToPointer() *ListLinkID {
+	return &e
+}
+func (e *ListLinkID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListLinkID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListLinkID: %v", v)
+	}
+}
+
+type ListListID string
+
+const (
+	ListListIDSupportedRequired ListListID = "supported-required"
+	ListListIDSupported         ListListID = "supported"
+	ListListIDNotSupported      ListListID = "not-supported"
+)
+
+func (e ListListID) ToPointer() *ListListID {
+	return &e
+}
+func (e *ListListID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListListID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListListID: %v", v)
+	}
+}
+
+type ListLocationID string
+
+const (
+	ListLocationIDSupportedRequired ListLocationID = "supported-required"
+	ListLocationIDSupported         ListLocationID = "supported"
+	ListLocationIDNotSupported      ListLocationID = "not-supported"
+)
+
+func (e ListLocationID) ToPointer() *ListLocationID {
+	return &e
+}
+func (e *ListLocationID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListLocationID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListLocationID: %v", v)
+	}
+}
+
+type ListOffset string
+
+const (
+	ListOffsetSupportedRequired ListOffset = "supported-required"
+	ListOffsetSupported         ListOffset = "supported"
+	ListOffsetNotSupported      ListOffset = "not-supported"
+)
+
+func (e ListOffset) ToPointer() *ListOffset {
+	return &e
+}
+func (e *ListOffset) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListOffset(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListOffset: %v", v)
+	}
+}
+
+type ListOrder string
+
+const (
+	ListOrderSupportedRequired ListOrder = "supported-required"
+	ListOrderSupported         ListOrder = "supported"
+	ListOrderNotSupported      ListOrder = "not-supported"
+)
+
+func (e ListOrder) ToPointer() *ListOrder {
+	return &e
+}
+func (e *ListOrder) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListOrder(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListOrder: %v", v)
+	}
+}
+
+type ListParentID string
+
+const (
+	ListParentIDSupportedRequired ListParentID = "supported-required"
+	ListParentIDSupported         ListParentID = "supported"
+	ListParentIDNotSupported      ListParentID = "not-supported"
+)
+
+func (e ListParentID) ToPointer() *ListParentID {
+	return &e
+}
+func (e *ListParentID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListParentID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListParentID: %v", v)
+	}
+}
+
+type ListQuery string
+
+const (
+	ListQuerySupportedRequired ListQuery = "supported-required"
+	ListQuerySupported         ListQuery = "supported"
+	ListQueryNotSupported      ListQuery = "not-supported"
+)
+
+func (e ListQuery) ToPointer() *ListQuery {
+	return &e
+}
+func (e *ListQuery) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListQuery(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListQuery: %v", v)
+	}
+}
+
+type ListSortByCreatedAt string
+
+const (
+	ListSortByCreatedAtSupportedRequired ListSortByCreatedAt = "supported-required"
+	ListSortByCreatedAtSupported         ListSortByCreatedAt = "supported"
+	ListSortByCreatedAtNotSupported      ListSortByCreatedAt = "not-supported"
+)
+
+func (e ListSortByCreatedAt) ToPointer() *ListSortByCreatedAt {
+	return &e
+}
+func (e *ListSortByCreatedAt) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListSortByCreatedAt(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListSortByCreatedAt: %v", v)
+	}
+}
+
+type ListSortByName string
+
+const (
+	ListSortByNameSupportedRequired ListSortByName = "supported-required"
+	ListSortByNameSupported         ListSortByName = "supported"
+	ListSortByNameNotSupported      ListSortByName = "not-supported"
+)
+
+func (e ListSortByName) ToPointer() *ListSortByName {
+	return &e
+}
+func (e *ListSortByName) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListSortByName(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListSortByName: %v", v)
+	}
+}
+
+type ListSortByUpdatedAt string
+
+const (
+	ListSortByUpdatedAtSupportedRequired ListSortByUpdatedAt = "supported-required"
+	ListSortByUpdatedAtSupported         ListSortByUpdatedAt = "supported"
+	ListSortByUpdatedAtNotSupported      ListSortByUpdatedAt = "not-supported"
+)
+
+func (e ListSortByUpdatedAt) ToPointer() *ListSortByUpdatedAt {
+	return &e
+}
+func (e *ListSortByUpdatedAt) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListSortByUpdatedAt(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListSortByUpdatedAt: %v", v)
+	}
+}
+
+type ListSpaceID string
+
+const (
+	ListSpaceIDSupportedRequired ListSpaceID = "supported-required"
+	ListSpaceIDSupported         ListSpaceID = "supported"
+	ListSpaceIDNotSupported      ListSpaceID = "not-supported"
+)
+
+func (e ListSpaceID) ToPointer() *ListSpaceID {
+	return &e
+}
+func (e *ListSpaceID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListSpaceID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListSpaceID: %v", v)
+	}
+}
+
+type ListTicketID string
+
+const (
+	ListTicketIDSupportedRequired ListTicketID = "supported-required"
+	ListTicketIDSupported         ListTicketID = "supported"
+	ListTicketIDNotSupported      ListTicketID = "not-supported"
+)
+
+func (e ListTicketID) ToPointer() *ListTicketID {
+	return &e
+}
+func (e *ListTicketID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListTicketID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListTicketID: %v", v)
+	}
+}
+
+type ListType string
+
+const (
+	ListTypeSupportedRequired ListType = "supported-required"
+	ListTypeSupported         ListType = "supported"
+	ListTypeNotSupported      ListType = "not-supported"
+)
+
+func (e ListType) ToPointer() *ListType {
+	return &e
+}
+func (e *ListType) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListType(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListType: %v", v)
+	}
+}
+
+type ListUpdatedGte string
+
+const (
+	ListUpdatedGteSupportedRequired ListUpdatedGte = "supported-required"
+	ListUpdatedGteSupported         ListUpdatedGte = "supported"
+	ListUpdatedGteNotSupported      ListUpdatedGte = "not-supported"
+)
+
+func (e ListUpdatedGte) ToPointer() *ListUpdatedGte {
+	return &e
+}
+func (e *ListUpdatedGte) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListUpdatedGte(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListUpdatedGte: %v", v)
+	}
+}
+
+type ListUserID string
+
+const (
+	ListUserIDSupportedRequired ListUserID = "supported-required"
+	ListUserIDSupported         ListUserID = "supported"
+	ListUserIDNotSupported      ListUserID = "not-supported"
+)
+
+func (e ListUserID) ToPointer() *ListUserID {
+	return &e
+}
+func (e *ListUserID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListUserID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListUserID: %v", v)
+	}
+}
+
+type SearchDomain string
+
+const (
+	SearchDomainSupportedRequired SearchDomain = "supported-required"
+	SearchDomainSupported         SearchDomain = "supported"
+	SearchDomainNotSupported      SearchDomain = "not-supported"
+)
+
+func (e SearchDomain) ToPointer() *SearchDomain {
+	return &e
+}
+func (e *SearchDomain) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = SearchDomain(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SearchDomain: %v", v)
+	}
+}
+
+type SearchEmail string
+
+const (
+	SearchEmailSupportedRequired SearchEmail = "supported-required"
+	SearchEmailSupported         SearchEmail = "supported"
+	SearchEmailNotSupported      SearchEmail = "not-supported"
+)
+
+func (e SearchEmail) ToPointer() *SearchEmail {
+	return &e
+}
+func (e *SearchEmail) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = SearchEmail(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SearchEmail: %v", v)
+	}
+}
+
+type SearchLinkedinurl string
+
+const (
+	SearchLinkedinurlSupportedRequired SearchLinkedinurl = "supported-required"
+	SearchLinkedinurlSupported         SearchLinkedinurl = "supported"
+	SearchLinkedinurlNotSupported      SearchLinkedinurl = "not-supported"
+)
+
+func (e SearchLinkedinurl) ToPointer() *SearchLinkedinurl {
+	return &e
+}
+func (e *SearchLinkedinurl) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = SearchLinkedinurl(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SearchLinkedinurl: %v", v)
+	}
+}
+
+type SearchName string
+
+const (
+	SearchNameSupportedRequired SearchName = "supported-required"
+	SearchNameSupported         SearchName = "supported"
+	SearchNameNotSupported      SearchName = "not-supported"
+)
+
+func (e SearchName) ToPointer() *SearchName {
+	return &e
+}
+func (e *SearchName) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = SearchName(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SearchName: %v", v)
+	}
+}
+
+type SearchTwitter string
+
+const (
+	SearchTwitterSupportedRequired SearchTwitter = "supported-required"
+	SearchTwitterSupported         SearchTwitter = "supported"
+	SearchTwitterNotSupported      SearchTwitter = "not-supported"
+)
+
+func (e SearchTwitter) ToPointer() *SearchTwitter {
+	return &e
+}
+func (e *SearchTwitter) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = SearchTwitter(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SearchTwitter: %v", v)
+	}
+}
+
 type IntegrationSupport struct {
-	InboundFields       map[string]any  `json:"inbound_fields,omitempty"`
-	ListAccountID       *bool           `json:"list_account_id,omitempty"`
-	ListApplicationID   *bool           `json:"list_application_id,omitempty"`
-	ListCandidateID     *bool           `json:"list_candidate_id,omitempty"`
-	ListChannelID       *bool           `json:"list_channel_id,omitempty"`
-	ListCollectionID    *bool           `json:"list_collection_id,omitempty"`
-	ListCompanyID       *bool           `json:"list_company_id,omitempty"`
-	ListContactID       *bool           `json:"list_contact_id,omitempty"`
-	ListCustomerID      *bool           `json:"list_customer_id,omitempty"`
-	ListDealID          *bool           `json:"list_deal_id,omitempty"`
-	ListInterviewID     *bool           `json:"list_interview_id,omitempty"`
-	ListInvoiceID       *bool           `json:"list_invoice_id,omitempty"`
-	ListItemID          *bool           `json:"list_item_id,omitempty"`
-	ListJobID           *bool           `json:"list_job_id,omitempty"`
-	ListLimit           *bool           `json:"list_limit,omitempty"`
-	ListLinkID          *bool           `json:"list_link_id,omitempty"`
-	ListListID          *bool           `json:"list_list_id,omitempty"`
-	ListLocationID      *bool           `json:"list_location_id,omitempty"`
-	ListOffset          *bool           `json:"list_offset,omitempty"`
-	ListOrder           *bool           `json:"list_order,omitempty"`
-	ListParentID        *bool           `json:"list_parent_id,omitempty"`
-	ListQuery           *bool           `json:"list_query,omitempty"`
-	ListSortByCreatedAt *bool           `json:"list_sort_by_created_at,omitempty"`
-	ListSortByName      *bool           `json:"list_sort_by_name,omitempty"`
-	ListSortByUpdatedAt *bool           `json:"list_sort_by_updated_at,omitempty"`
-	ListSpaceID         *bool           `json:"list_space_id,omitempty"`
-	ListTicketID        *bool           `json:"list_ticket_id,omitempty"`
-	ListType            *bool           `json:"list_type,omitempty"`
-	ListUpdatedGte      *bool           `json:"list_updated_gte,omitempty"`
-	ListUserID          *bool           `json:"list_user_id,omitempty"`
-	Methods             map[string]bool `json:"methods,omitempty"`
-	OutboundFields      map[string]any  `json:"outbound_fields,omitempty"`
+	FromWebhook         *FromWebhook         `json:"from_webhook,omitempty"`
+	InboundFields       map[string]any       `json:"inbound_fields,omitempty"`
+	ListAccountID       *ListAccountID       `json:"list_account_id,omitempty"`
+	ListApplicationID   *ListApplicationID   `json:"list_application_id,omitempty"`
+	ListCandidateID     *ListCandidateID     `json:"list_candidate_id,omitempty"`
+	ListChannelID       *ListChannelID       `json:"list_channel_id,omitempty"`
+	ListCollectionID    *ListCollectionID    `json:"list_collection_id,omitempty"`
+	ListCompanyID       *ListCompanyID       `json:"list_company_id,omitempty"`
+	ListContactID       *ListContactID       `json:"list_contact_id,omitempty"`
+	ListCustomerID      *ListCustomerID      `json:"list_customer_id,omitempty"`
+	ListDealID          *ListDealID          `json:"list_deal_id,omitempty"`
+	ListInterviewID     *ListInterviewID     `json:"list_interview_id,omitempty"`
+	ListInvoiceID       *ListInvoiceID       `json:"list_invoice_id,omitempty"`
+	ListItemID          *ListItemID          `json:"list_item_id,omitempty"`
+	ListJobID           *ListJobID           `json:"list_job_id,omitempty"`
+	ListLimit           *ListLimit           `json:"list_limit,omitempty"`
+	ListLinkID          *ListLinkID          `json:"list_link_id,omitempty"`
+	ListListID          *ListListID          `json:"list_list_id,omitempty"`
+	ListLocationID      *ListLocationID      `json:"list_location_id,omitempty"`
+	ListOffset          *ListOffset          `json:"list_offset,omitempty"`
+	ListOrder           *ListOrder           `json:"list_order,omitempty"`
+	ListParentID        *ListParentID        `json:"list_parent_id,omitempty"`
+	ListQuery           *ListQuery           `json:"list_query,omitempty"`
+	ListSortByCreatedAt *ListSortByCreatedAt `json:"list_sort_by_created_at,omitempty"`
+	ListSortByName      *ListSortByName      `json:"list_sort_by_name,omitempty"`
+	ListSortByUpdatedAt *ListSortByUpdatedAt `json:"list_sort_by_updated_at,omitempty"`
+	ListSpaceID         *ListSpaceID         `json:"list_space_id,omitempty"`
+	ListTicketID        *ListTicketID        `json:"list_ticket_id,omitempty"`
+	ListType            *ListType            `json:"list_type,omitempty"`
+	ListUpdatedGte      *ListUpdatedGte      `json:"list_updated_gte,omitempty"`
+	ListUserID          *ListUserID          `json:"list_user_id,omitempty"`
+	Methods             map[string]bool      `json:"methods,omitempty"`
+	OutboundFields      map[string]any       `json:"outbound_fields,omitempty"`
 	// objects that we map from in the integration
 	RawObjects        []string                                 `json:"raw_objects,omitempty"`
-	SearchDomain      *bool                                    `json:"search_domain,omitempty"`
-	SearchEmail       *bool                                    `json:"search_email,omitempty"`
-	SearchLinkedinurl *bool                                    `json:"search_linkedinurl,omitempty"`
-	SearchName        *bool                                    `json:"search_name,omitempty"`
-	SearchTwitter     *bool                                    `json:"search_twitter,omitempty"`
+	SearchDomain      *SearchDomain                            `json:"search_domain,omitempty"`
+	SearchEmail       *SearchEmail                             `json:"search_email,omitempty"`
+	SearchLinkedinurl *SearchLinkedinurl                       `json:"search_linkedinurl,omitempty"`
+	SearchName        *SearchName                              `json:"search_name,omitempty"`
+	SearchTwitter     *SearchTwitter                           `json:"search_twitter,omitempty"`
 	WebhookEvents     *PropertyIntegrationSupportWebhookEvents `json:"webhook_events,omitempty"`
+}
+
+func (o *IntegrationSupport) GetFromWebhook() *FromWebhook {
+	if o == nil {
+		return nil
+	}
+	return o.FromWebhook
 }
 
 func (o *IntegrationSupport) GetInboundFields() map[string]any {
@@ -52,203 +1080,203 @@ func (o *IntegrationSupport) GetInboundFields() map[string]any {
 	return o.InboundFields
 }
 
-func (o *IntegrationSupport) GetListAccountID() *bool {
+func (o *IntegrationSupport) GetListAccountID() *ListAccountID {
 	if o == nil {
 		return nil
 	}
 	return o.ListAccountID
 }
 
-func (o *IntegrationSupport) GetListApplicationID() *bool {
+func (o *IntegrationSupport) GetListApplicationID() *ListApplicationID {
 	if o == nil {
 		return nil
 	}
 	return o.ListApplicationID
 }
 
-func (o *IntegrationSupport) GetListCandidateID() *bool {
+func (o *IntegrationSupport) GetListCandidateID() *ListCandidateID {
 	if o == nil {
 		return nil
 	}
 	return o.ListCandidateID
 }
 
-func (o *IntegrationSupport) GetListChannelID() *bool {
+func (o *IntegrationSupport) GetListChannelID() *ListChannelID {
 	if o == nil {
 		return nil
 	}
 	return o.ListChannelID
 }
 
-func (o *IntegrationSupport) GetListCollectionID() *bool {
+func (o *IntegrationSupport) GetListCollectionID() *ListCollectionID {
 	if o == nil {
 		return nil
 	}
 	return o.ListCollectionID
 }
 
-func (o *IntegrationSupport) GetListCompanyID() *bool {
+func (o *IntegrationSupport) GetListCompanyID() *ListCompanyID {
 	if o == nil {
 		return nil
 	}
 	return o.ListCompanyID
 }
 
-func (o *IntegrationSupport) GetListContactID() *bool {
+func (o *IntegrationSupport) GetListContactID() *ListContactID {
 	if o == nil {
 		return nil
 	}
 	return o.ListContactID
 }
 
-func (o *IntegrationSupport) GetListCustomerID() *bool {
+func (o *IntegrationSupport) GetListCustomerID() *ListCustomerID {
 	if o == nil {
 		return nil
 	}
 	return o.ListCustomerID
 }
 
-func (o *IntegrationSupport) GetListDealID() *bool {
+func (o *IntegrationSupport) GetListDealID() *ListDealID {
 	if o == nil {
 		return nil
 	}
 	return o.ListDealID
 }
 
-func (o *IntegrationSupport) GetListInterviewID() *bool {
+func (o *IntegrationSupport) GetListInterviewID() *ListInterviewID {
 	if o == nil {
 		return nil
 	}
 	return o.ListInterviewID
 }
 
-func (o *IntegrationSupport) GetListInvoiceID() *bool {
+func (o *IntegrationSupport) GetListInvoiceID() *ListInvoiceID {
 	if o == nil {
 		return nil
 	}
 	return o.ListInvoiceID
 }
 
-func (o *IntegrationSupport) GetListItemID() *bool {
+func (o *IntegrationSupport) GetListItemID() *ListItemID {
 	if o == nil {
 		return nil
 	}
 	return o.ListItemID
 }
 
-func (o *IntegrationSupport) GetListJobID() *bool {
+func (o *IntegrationSupport) GetListJobID() *ListJobID {
 	if o == nil {
 		return nil
 	}
 	return o.ListJobID
 }
 
-func (o *IntegrationSupport) GetListLimit() *bool {
+func (o *IntegrationSupport) GetListLimit() *ListLimit {
 	if o == nil {
 		return nil
 	}
 	return o.ListLimit
 }
 
-func (o *IntegrationSupport) GetListLinkID() *bool {
+func (o *IntegrationSupport) GetListLinkID() *ListLinkID {
 	if o == nil {
 		return nil
 	}
 	return o.ListLinkID
 }
 
-func (o *IntegrationSupport) GetListListID() *bool {
+func (o *IntegrationSupport) GetListListID() *ListListID {
 	if o == nil {
 		return nil
 	}
 	return o.ListListID
 }
 
-func (o *IntegrationSupport) GetListLocationID() *bool {
+func (o *IntegrationSupport) GetListLocationID() *ListLocationID {
 	if o == nil {
 		return nil
 	}
 	return o.ListLocationID
 }
 
-func (o *IntegrationSupport) GetListOffset() *bool {
+func (o *IntegrationSupport) GetListOffset() *ListOffset {
 	if o == nil {
 		return nil
 	}
 	return o.ListOffset
 }
 
-func (o *IntegrationSupport) GetListOrder() *bool {
+func (o *IntegrationSupport) GetListOrder() *ListOrder {
 	if o == nil {
 		return nil
 	}
 	return o.ListOrder
 }
 
-func (o *IntegrationSupport) GetListParentID() *bool {
+func (o *IntegrationSupport) GetListParentID() *ListParentID {
 	if o == nil {
 		return nil
 	}
 	return o.ListParentID
 }
 
-func (o *IntegrationSupport) GetListQuery() *bool {
+func (o *IntegrationSupport) GetListQuery() *ListQuery {
 	if o == nil {
 		return nil
 	}
 	return o.ListQuery
 }
 
-func (o *IntegrationSupport) GetListSortByCreatedAt() *bool {
+func (o *IntegrationSupport) GetListSortByCreatedAt() *ListSortByCreatedAt {
 	if o == nil {
 		return nil
 	}
 	return o.ListSortByCreatedAt
 }
 
-func (o *IntegrationSupport) GetListSortByName() *bool {
+func (o *IntegrationSupport) GetListSortByName() *ListSortByName {
 	if o == nil {
 		return nil
 	}
 	return o.ListSortByName
 }
 
-func (o *IntegrationSupport) GetListSortByUpdatedAt() *bool {
+func (o *IntegrationSupport) GetListSortByUpdatedAt() *ListSortByUpdatedAt {
 	if o == nil {
 		return nil
 	}
 	return o.ListSortByUpdatedAt
 }
 
-func (o *IntegrationSupport) GetListSpaceID() *bool {
+func (o *IntegrationSupport) GetListSpaceID() *ListSpaceID {
 	if o == nil {
 		return nil
 	}
 	return o.ListSpaceID
 }
 
-func (o *IntegrationSupport) GetListTicketID() *bool {
+func (o *IntegrationSupport) GetListTicketID() *ListTicketID {
 	if o == nil {
 		return nil
 	}
 	return o.ListTicketID
 }
 
-func (o *IntegrationSupport) GetListType() *bool {
+func (o *IntegrationSupport) GetListType() *ListType {
 	if o == nil {
 		return nil
 	}
 	return o.ListType
 }
 
-func (o *IntegrationSupport) GetListUpdatedGte() *bool {
+func (o *IntegrationSupport) GetListUpdatedGte() *ListUpdatedGte {
 	if o == nil {
 		return nil
 	}
 	return o.ListUpdatedGte
 }
 
-func (o *IntegrationSupport) GetListUserID() *bool {
+func (o *IntegrationSupport) GetListUserID() *ListUserID {
 	if o == nil {
 		return nil
 	}
@@ -276,35 +1304,35 @@ func (o *IntegrationSupport) GetRawObjects() []string {
 	return o.RawObjects
 }
 
-func (o *IntegrationSupport) GetSearchDomain() *bool {
+func (o *IntegrationSupport) GetSearchDomain() *SearchDomain {
 	if o == nil {
 		return nil
 	}
 	return o.SearchDomain
 }
 
-func (o *IntegrationSupport) GetSearchEmail() *bool {
+func (o *IntegrationSupport) GetSearchEmail() *SearchEmail {
 	if o == nil {
 		return nil
 	}
 	return o.SearchEmail
 }
 
-func (o *IntegrationSupport) GetSearchLinkedinurl() *bool {
+func (o *IntegrationSupport) GetSearchLinkedinurl() *SearchLinkedinurl {
 	if o == nil {
 		return nil
 	}
 	return o.SearchLinkedinurl
 }
 
-func (o *IntegrationSupport) GetSearchName() *bool {
+func (o *IntegrationSupport) GetSearchName() *SearchName {
 	if o == nil {
 		return nil
 	}
 	return o.SearchName
 }
 
-func (o *IntegrationSupport) GetSearchTwitter() *bool {
+func (o *IntegrationSupport) GetSearchTwitter() *SearchTwitter {
 	if o == nil {
 		return nil
 	}
