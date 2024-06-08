@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 9a5990618c970a819b6235d1b48f2259
+  docChecksum: 34d8e45448aaadab7271416cea77fcaf
   docVersion: "1.0"
-  speakeasyVersion: 1.299.7
-  generationVersion: 2.338.12
-  releaseVersion: 0.14.16
-  configChecksum: 0fe944b703a6d5775195d4b072c43de4
+  speakeasyVersion: 1.300.1
+  generationVersion: 2.339.1
+  releaseVersion: 0.14.17
+  configChecksum: 84d3ce61c77a05035f7bc07dbc95f73e
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -77,6 +77,8 @@ generatedFiles:
   - refund.go
   - storage.go
   - file.go
+  - task.go
+  - project.go
   - ticketing.go
   - customer.go
   - note.go
@@ -331,6 +333,18 @@ generatedFiles:
   - /pkg/models/operations/patchstoragefile.go
   - /pkg/models/operations/removestoragefile.go
   - /pkg/models/operations/updatestoragefile.go
+  - /pkg/models/operations/createtaskproject.go
+  - /pkg/models/operations/createtasktask.go
+  - /pkg/models/operations/gettaskproject.go
+  - /pkg/models/operations/gettasktask.go
+  - /pkg/models/operations/listtaskprojects.go
+  - /pkg/models/operations/listtasktasks.go
+  - /pkg/models/operations/patchtaskproject.go
+  - /pkg/models/operations/patchtasktask.go
+  - /pkg/models/operations/removetaskproject.go
+  - /pkg/models/operations/removetasktask.go
+  - /pkg/models/operations/updatetaskproject.go
+  - /pkg/models/operations/updatetasktask.go
   - /pkg/models/operations/createticketingcustomer.go
   - /pkg/models/operations/createticketingnote.go
   - /pkg/models/operations/createticketingticket.go
@@ -433,6 +447,7 @@ generatedFiles:
   - /pkg/models/shared/crmlead.go
   - /pkg/models/shared/propertycrmleadaddress.go
   - /pkg/models/shared/crmpipeline.go
+  - /pkg/models/shared/crmstage.go
   - /pkg/models/shared/enrichperson.go
   - /pkg/models/shared/enrichpersonworkhistory.go
   - /pkg/models/shared/enrichemail.go
@@ -465,6 +480,8 @@ generatedFiles:
   - /pkg/models/shared/storagefile.go
   - /pkg/models/shared/storagepermission.go
   - /pkg/models/shared/propertystoragepermissionroles.go
+  - /pkg/models/shared/taskproject.go
+  - /pkg/models/shared/tasktask.go
   - /pkg/models/shared/ticketingcustomer.go
   - /pkg/models/shared/ticketingtelephone.go
   - /pkg/models/shared/ticketingemail.go
@@ -932,6 +949,30 @@ generatedFiles:
   - docs/pkg/models/operations/removestoragefileresponse.md
   - docs/pkg/models/operations/updatestoragefilerequest.md
   - docs/pkg/models/operations/updatestoragefileresponse.md
+  - docs/pkg/models/operations/createtaskprojectrequest.md
+  - docs/pkg/models/operations/createtaskprojectresponse.md
+  - docs/pkg/models/operations/createtasktaskrequest.md
+  - docs/pkg/models/operations/createtasktaskresponse.md
+  - docs/pkg/models/operations/gettaskprojectrequest.md
+  - docs/pkg/models/operations/gettaskprojectresponse.md
+  - docs/pkg/models/operations/gettasktaskrequest.md
+  - docs/pkg/models/operations/gettasktaskresponse.md
+  - docs/pkg/models/operations/listtaskprojectsrequest.md
+  - docs/pkg/models/operations/listtaskprojectsresponse.md
+  - docs/pkg/models/operations/listtasktasksrequest.md
+  - docs/pkg/models/operations/listtasktasksresponse.md
+  - docs/pkg/models/operations/patchtaskprojectrequest.md
+  - docs/pkg/models/operations/patchtaskprojectresponse.md
+  - docs/pkg/models/operations/patchtasktaskrequest.md
+  - docs/pkg/models/operations/patchtasktaskresponse.md
+  - docs/pkg/models/operations/removetaskprojectrequest.md
+  - docs/pkg/models/operations/removetaskprojectresponse.md
+  - docs/pkg/models/operations/removetasktaskrequest.md
+  - docs/pkg/models/operations/removetasktaskresponse.md
+  - docs/pkg/models/operations/updatetaskprojectrequest.md
+  - docs/pkg/models/operations/updatetaskprojectresponse.md
+  - docs/pkg/models/operations/updatetasktaskrequest.md
+  - docs/pkg/models/operations/updatetasktaskresponse.md
   - docs/pkg/models/operations/createticketingcustomerrequest.md
   - docs/pkg/models/operations/createticketingcustomerresponse.md
   - docs/pkg/models/operations/createticketingnoterequest.md
@@ -1108,6 +1149,7 @@ generatedFiles:
   - docs/pkg/models/shared/crmlead.md
   - docs/pkg/models/shared/propertycrmleadaddress.md
   - docs/pkg/models/shared/crmpipeline.md
+  - docs/pkg/models/shared/crmstage.md
   - docs/pkg/models/shared/gender.md
   - docs/pkg/models/shared/enrichperson.md
   - docs/pkg/models/shared/enrichpersonworkhistory.md
@@ -1159,6 +1201,9 @@ generatedFiles:
   - docs/pkg/models/shared/storagefile.md
   - docs/pkg/models/shared/storagepermission.md
   - docs/pkg/models/shared/propertystoragepermissionroles.md
+  - docs/pkg/models/shared/taskproject.md
+  - docs/pkg/models/shared/tasktaskstatus.md
+  - docs/pkg/models/shared/tasktask.md
   - docs/pkg/models/shared/ticketingcustomer.md
   - docs/pkg/models/shared/ticketingtelephonetype.md
   - docs/pkg/models/shared/ticketingtelephone.md
@@ -1203,6 +1248,7 @@ generatedFiles:
   - docs/pkg/models/shared/listoffset.md
   - docs/pkg/models/shared/listorder.md
   - docs/pkg/models/shared/listparentid.md
+  - docs/pkg/models/shared/listprojectid.md
   - docs/pkg/models/shared/listquery.md
   - docs/pkg/models/shared/listsortbycreatedat.md
   - docs/pkg/models/shared/listsortbyname.md
@@ -1281,6 +1327,8 @@ generatedFiles:
   - docs/sdks/refund/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
+  - docs/sdks/task/README.md
+  - docs/sdks/project/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/note/README.md

@@ -3,12 +3,13 @@
 package shared
 
 type GenaiModel struct {
-	Description    *string  `json:"description,omitempty"`
-	HasTemperature *bool    `json:"has_temperature,omitempty"`
-	ID             *string  `json:"id,omitempty"`
-	MaxTokens      *float64 `json:"max_tokens,omitempty"`
-	Name           *string  `json:"name,omitempty"`
-	WebURL         *string  `json:"web_url,omitempty"`
+	Description    *string        `json:"description,omitempty"`
+	HasTemperature *bool          `json:"has_temperature,omitempty"`
+	ID             *string        `json:"id,omitempty"`
+	MaxTokens      *float64       `json:"max_tokens,omitempty"`
+	Name           *string        `json:"name,omitempty"`
+	Raw            map[string]any `json:"raw,omitempty"`
+	WebURL         *string        `json:"web_url,omitempty"`
 }
 
 func (o *GenaiModel) GetDescription() *string {
@@ -44,6 +45,13 @@ func (o *GenaiModel) GetName() *string {
 		return nil
 	}
 	return o.Name
+}
+
+func (o *GenaiModel) GetRaw() map[string]any {
+	if o == nil {
+		return nil
+	}
+	return o.Raw
 }
 
 func (o *GenaiModel) GetWebURL() *string {

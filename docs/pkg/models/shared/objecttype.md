@@ -55,3 +55,5 @@
 | `ObjectTypeMessagingChannel`       | messaging_channel                  |
 | `ObjectTypeKmsSpace`               | kms_space                          |
 | `ObjectTypeKmsPage`                | kms_page                           |
+| `ObjectTypeTaskProject`            | task_project                       |
+| `ObjectTypeTaskTask`               | task_task                          |

@@ -636,6 +636,30 @@ func main() {
 * [RemoveStorageFile](docs/sdks/file/README.md#removestoragefile) - Remove a file
 * [UpdateStorageFile](docs/sdks/file/README.md#updatestoragefile) - Update a file
 
+### [Task](docs/sdks/task/README.md)
+
+* [CreateTaskProject](docs/sdks/task/README.md#createtaskproject) - Create a project
+* [CreateTaskTask](docs/sdks/task/README.md#createtasktask) - Create a task
+* [GetTaskProject](docs/sdks/task/README.md#gettaskproject) - Retrieve a project
+* [GetTaskTask](docs/sdks/task/README.md#gettasktask) - Retrieve a task
+* [ListTaskProjects](docs/sdks/task/README.md#listtaskprojects) - List all projects
+* [ListTaskTasks](docs/sdks/task/README.md#listtasktasks) - List all tasks
+* [PatchTaskProject](docs/sdks/task/README.md#patchtaskproject) - Update a project
+* [PatchTaskTask](docs/sdks/task/README.md#patchtasktask) - Update a task
+* [RemoveTaskProject](docs/sdks/task/README.md#removetaskproject) - Remove a project
+* [RemoveTaskTask](docs/sdks/task/README.md#removetasktask) - Remove a task
+* [UpdateTaskProject](docs/sdks/task/README.md#updatetaskproject) - Update a project
+* [UpdateTaskTask](docs/sdks/task/README.md#updatetasktask) - Update a task
+
+### [Project](docs/sdks/project/README.md)
+
+* [CreateTaskProject](docs/sdks/project/README.md#createtaskproject) - Create a project
+* [GetTaskProject](docs/sdks/project/README.md#gettaskproject) - Retrieve a project
+* [ListTaskProjects](docs/sdks/project/README.md#listtaskprojects) - List all projects
+* [PatchTaskProject](docs/sdks/project/README.md#patchtaskproject) - Update a project
+* [RemoveTaskProject](docs/sdks/project/README.md#removetaskproject) - Remove a project
+* [UpdateTaskProject](docs/sdks/project/README.md#updatetaskproject) - Update a project
+
 ### [Ticketing](docs/sdks/ticketing/README.md)
 
 * [CreateTicketingCustomer](docs/sdks/ticketing/README.md#createticketingcustomer) - Create a customer

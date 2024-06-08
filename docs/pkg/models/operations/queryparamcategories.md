@@ -21,3 +21,4 @@
 | `QueryParamCategoriesGenai`       | genai                             |
 | `QueryParamCategoriesMessaging`   | messaging                         |
 | `QueryParamCategoriesKms`         | kms                               |
+| `QueryParamCategoriesTask`        | task                              |

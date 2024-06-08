@@ -10,8 +10,8 @@ import (
 type Role string
 
 const (
-	RoleSystem Role = "system"
-	RoleUser   Role = "user"
+	RoleSystem Role = "SYSTEM"
+	RoleUser   Role = "USER"
 )
 
 func (e Role) ToPointer() *Role {
@@ -23,9 +23,9 @@ func (e *Role) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "system":
+	case "SYSTEM":
 		fallthrough
-	case "user":
+	case "USER":
 		*e = Role(v)
 		return nil
 	default:

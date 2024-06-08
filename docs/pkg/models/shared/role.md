@@ -5,5 +5,5 @@
 
 | Name         | Value        |
 | ------------ | ------------ |
-| `RoleSystem` | system       |
-| `RoleUser`   | user         |
+| `RoleSystem` | SYSTEM       |
+| `RoleUser`   | USER         |

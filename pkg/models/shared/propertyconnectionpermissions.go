@@ -98,6 +98,10 @@ const (
 	PropertyConnectionPermissionsKmsPageWrite               PropertyConnectionPermissions = "kms_page_write"
 	PropertyConnectionPermissionsKmsCommentRead             PropertyConnectionPermissions = "kms_comment_read"
 	PropertyConnectionPermissionsKmsCommentWrite            PropertyConnectionPermissions = "kms_comment_write"
+	PropertyConnectionPermissionsTaskProjectRead            PropertyConnectionPermissions = "task_project_read"
+	PropertyConnectionPermissionsTaskProjectWrite           PropertyConnectionPermissions = "task_project_write"
+	PropertyConnectionPermissionsTaskTaskRead               PropertyConnectionPermissions = "task_task_read"
+	PropertyConnectionPermissionsTaskTaskWrite              PropertyConnectionPermissions = "task_task_write"
 )
 
 func (e PropertyConnectionPermissions) ToPointer() *PropertyConnectionPermissions {
@@ -284,6 +288,14 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "kms_comment_read":
 		fallthrough
 	case "kms_comment_write":
+		fallthrough
+	case "task_project_read":
+		fallthrough
+	case "task_project_write":
+		fallthrough
+	case "task_task_read":
+		fallthrough
+	case "task_task_write":
 		*e = PropertyConnectionPermissions(v)
 		return nil
 	default:

@@ -10,4 +10,5 @@
 | `ID`               | **string*          | :heavy_minus_sign: | N/A                |
 | `MaxTokens`        | **float64*         | :heavy_minus_sign: | N/A                |
 | `Name`             | **string*          | :heavy_minus_sign: | N/A                |
+| `Raw`              | map[string]*any*   | :heavy_minus_sign: | N/A                |
 | `WebURL`           | **string*          | :heavy_minus_sign: | N/A                |

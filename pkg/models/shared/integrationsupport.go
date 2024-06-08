@@ -616,6 +616,35 @@ func (e *ListParentID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListProjectID string
+
+const (
+	ListProjectIDSupportedRequired ListProjectID = "supported-required"
+	ListProjectIDSupported         ListProjectID = "supported"
+	ListProjectIDNotSupported      ListProjectID = "not-supported"
+)
+
+func (e ListProjectID) ToPointer() *ListProjectID {
+	return &e
+}
+func (e *ListProjectID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListProjectID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListProjectID: %v", v)
+	}
+}
+
 type ListQuery string
 
 const (
@@ -1045,6 +1074,7 @@ type IntegrationSupport struct {
 	ListOffset          *ListOffset          `json:"list_offset,omitempty"`
 	ListOrder           *ListOrder           `json:"list_order,omitempty"`
 	ListParentID        *ListParentID        `json:"list_parent_id,omitempty"`
+	ListProjectID       *ListProjectID       `json:"list_project_id,omitempty"`
 	ListQuery           *ListQuery           `json:"list_query,omitempty"`
 	ListSortByCreatedAt *ListSortByCreatedAt `json:"list_sort_by_created_at,omitempty"`
 	ListSortByName      *ListSortByName      `json:"list_sort_by_name,omitempty"`
@@ -1218,6 +1248,13 @@ func (o *IntegrationSupport) GetListParentID() *ListParentID {
 		return nil
 	}
 	return o.ListParentID
+}
+
+func (o *IntegrationSupport) GetListProjectID() *ListProjectID {
+	if o == nil {
+		return nil
+	}
+	return o.ListProjectID
 }
 
 func (o *IntegrationSupport) GetListQuery() *ListQuery {

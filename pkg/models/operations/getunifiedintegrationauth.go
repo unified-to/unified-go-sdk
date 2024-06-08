@@ -99,6 +99,10 @@ const (
 	ScopesKmsPageWrite               Scopes = "kms_page_write"
 	ScopesKmsCommentRead             Scopes = "kms_comment_read"
 	ScopesKmsCommentWrite            Scopes = "kms_comment_write"
+	ScopesTaskProjectRead            Scopes = "task_project_read"
+	ScopesTaskProjectWrite           Scopes = "task_project_write"
+	ScopesTaskTaskRead               Scopes = "task_task_read"
+	ScopesTaskTaskWrite              Scopes = "task_task_write"
 )
 
 func (e Scopes) ToPointer() *Scopes {
@@ -285,6 +289,14 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "kms_comment_read":
 		fallthrough
 	case "kms_comment_write":
+		fallthrough
+	case "task_project_read":
+		fallthrough
+	case "task_project_write":
+		fallthrough
+	case "task_task_read":
+		fallthrough
+	case "task_task_write":
 		*e = Scopes(v)
 		return nil
 	default:

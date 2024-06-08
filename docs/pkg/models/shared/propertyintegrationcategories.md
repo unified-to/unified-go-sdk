@@ -21,3 +21,4 @@
 | `PropertyIntegrationCategoriesGenai`       | genai                                      |
 | `PropertyIntegrationCategoriesMessaging`   | messaging                                  |
 | `PropertyIntegrationCategoriesKms`         | kms                                        |
+| `PropertyIntegrationCategoriesTask`        | task                                       |

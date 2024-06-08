@@ -93,3 +93,7 @@
 | `PropertyConnectionPermissionsKmsPageWrite`               | kms_page_write                                            |
 | `PropertyConnectionPermissionsKmsCommentRead`             | kms_comment_read                                          |
 | `PropertyConnectionPermissionsKmsCommentWrite`            | kms_comment_write                                         |
+| `PropertyConnectionPermissionsTaskProjectRead`            | task_project_read                                         |
+| `PropertyConnectionPermissionsTaskProjectWrite`           | task_project_write                                        |
+| `PropertyConnectionPermissionsTaskTaskRead`               | task_task_read                                            |
+| `PropertyConnectionPermissionsTaskTaskWrite`              | task_task_write                                           |

@@ -21,3 +21,4 @@
 | `CategoriesGenai`       | genai                   |
 | `CategoriesMessaging`   | messaging               |
 | `CategoriesKms`         | kms                     |
+| `CategoriesTask`        | task                    |

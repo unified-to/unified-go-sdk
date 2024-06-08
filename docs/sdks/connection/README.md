@@ -32,11 +32,11 @@ func main() {
     )
     var request *shared.Connection = &shared.Connection{
         Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesMessaging,
+            shared.PropertyConnectionCategoriesKms,
         },
         IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsCompanyRead,
+            shared.PropertyConnectionPermissionsAtsDocumentWrite,
         },
     }
     ctx := context.Background()

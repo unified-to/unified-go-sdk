@@ -21,3 +21,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesGenai`       | genai                                                    |
 | `ListUnifiedIntegrationsQueryParamCategoriesMessaging`   | messaging                                                |
 | `ListUnifiedIntegrationsQueryParamCategoriesKms`         | kms                                                      |
+| `ListUnifiedIntegrationsQueryParamCategoriesTask`        | task                                                     |

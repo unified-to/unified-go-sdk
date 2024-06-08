@@ -93,3 +93,7 @@
 | `ScopesKmsPageWrite`               | kms_page_write                     |
 | `ScopesKmsCommentRead`             | kms_comment_read                   |
 | `ScopesKmsCommentWrite`            | kms_comment_write                  |
+| `ScopesTaskProjectRead`            | task_project_read                  |
+| `ScopesTaskProjectWrite`           | task_project_write                 |
+| `ScopesTaskTaskRead`               | task_task_read                     |
+| `ScopesTaskTaskWrite`              | task_task_write                    |

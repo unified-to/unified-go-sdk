@@ -91,6 +91,8 @@ const (
 	ObjectTypeMessagingChannel       ObjectType = "messaging_channel"
 	ObjectTypeKmsSpace               ObjectType = "kms_space"
 	ObjectTypeKmsPage                ObjectType = "kms_page"
+	ObjectTypeTaskProject            ObjectType = "task_project"
+	ObjectTypeTaskTask               ObjectType = "task_task"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -201,6 +203,10 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "kms_space":
 		fallthrough
 	case "kms_page":
+		fallthrough
+	case "task_project":
+		fallthrough
+	case "task_task":
 		*e = ObjectType(v)
 		return nil
 	default:

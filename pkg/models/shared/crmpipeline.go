@@ -15,6 +15,7 @@ type CrmPipeline struct {
 	IsActive        *bool          `json:"is_active,omitempty"`
 	Name            *string        `json:"name,omitempty"`
 	Raw             map[string]any `json:"raw,omitempty"`
+	Stages          []CrmStage     `json:"stages,omitempty"`
 	UpdatedAt       *time.Time     `json:"updated_at,omitempty"`
 }
 
@@ -76,6 +77,13 @@ func (o *CrmPipeline) GetRaw() map[string]any {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *CrmPipeline) GetStages() []CrmStage {
+	if o == nil {
+		return nil
+	}
+	return o.Stages
 }
 
 func (o *CrmPipeline) GetUpdatedAt() *time.Time {

@@ -17,11 +17,13 @@ type CrmDeal struct {
 	LostReason  *string    `json:"lost_reason,omitempty"`
 	Name        *string    `json:"name,omitempty"`
 	Pipeline    *string    `json:"pipeline,omitempty"`
+	PipelineID  *string    `json:"pipeline_id,omitempty"`
 	Probability *float64   `json:"probability,omitempty"`
 	// The raw data returned by the integration for this deal
 	Raw       map[string]any `json:"raw,omitempty"`
 	Source    *string        `json:"source,omitempty"`
 	Stage     *string        `json:"stage,omitempty"`
+	StageID   *string        `json:"stage_id,omitempty"`
 	Tags      []string       `json:"tags,omitempty"`
 	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
 	UserID    *string        `json:"user_id,omitempty"`
@@ -95,6 +97,13 @@ func (o *CrmDeal) GetPipeline() *string {
 	return o.Pipeline
 }
 
+func (o *CrmDeal) GetPipelineID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.PipelineID
+}
+
 func (o *CrmDeal) GetProbability() *float64 {
 	if o == nil {
 		return nil
@@ -121,6 +130,13 @@ func (o *CrmDeal) GetStage() *string {
 		return nil
 	}
 	return o.Stage
+}
+
+func (o *CrmDeal) GetStageID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.StageID
 }
 
 func (o *CrmDeal) GetTags() []string {
