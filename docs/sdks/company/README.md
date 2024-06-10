@@ -4,14 +4,20 @@
 ### Available Operations
 
 * [CreateCrmCompany](#createcrmcompany) - Create a company
+* [CreateHrisCompany](#createhriscompany) - Create a company
 * [GetAtsCompany](#getatscompany) - Retrieve a company
 * [GetCrmCompany](#getcrmcompany) - Retrieve a company
+* [GetHrisCompany](#gethriscompany) - Retrieve a company
 * [ListAtsCompanies](#listatscompanies) - List all companies
 * [ListCrmCompanies](#listcrmcompanies) - List all companies
 * [ListEnrichCompanies](#listenrichcompanies) - Retrieve enrichment information for a company
+* [ListHrisCompanies](#listhriscompanies) - List all companies
 * [PatchCrmCompany](#patchcrmcompany) - Update a company
+* [PatchHrisCompany](#patchhriscompany) - Update a company
 * [RemoveCrmCompany](#removecrmcompany) - Remove a company
+* [RemoveHrisCompany](#removehriscompany) - Remove a company
 * [UpdateCrmCompany](#updatecrmcompany) - Update a company
+* [UpdateHrisCompany](#updatehriscompany) - Update a company
 
 ## CreateCrmCompany
 
@@ -58,6 +64,55 @@ func main() {
 ### Response
 
 **[*operations.CreateCrmCompanyResponse](../../pkg/models/operations/createcrmcompanyresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## CreateHrisCompany
+
+Create a company
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+    request := operations.CreateHrisCompanyRequest{
+        ConnectionID: "<value>",
+    }
+    ctx := context.Background()
+    res, err := s.Company.CreateHrisCompany(ctx, request)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisCompany != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateHrisCompanyRequest](../../pkg/models/operations/createhriscompanyrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[*operations.CreateHrisCompanyResponse](../../pkg/models/operations/createhriscompanyresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -158,6 +213,56 @@ func main() {
 ### Response
 
 **[*operations.GetCrmCompanyResponse](../../pkg/models/operations/getcrmcompanyresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## GetHrisCompany
+
+Retrieve a company
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+    request := operations.GetHrisCompanyRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    }
+    ctx := context.Background()
+    res, err := s.Company.GetHrisCompany(ctx, request)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisCompany != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetHrisCompanyRequest](../../pkg/models/operations/gethriscompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[*operations.GetHrisCompanyResponse](../../pkg/models/operations/gethriscompanyresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -309,6 +414,55 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
+## ListHrisCompanies
+
+List all companies
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+    request := operations.ListHrisCompaniesRequest{
+        ConnectionID: "<value>",
+    }
+    ctx := context.Background()
+    res, err := s.Company.ListHrisCompanies(ctx, request)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisCompanies != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListHrisCompaniesRequest](../../pkg/models/operations/listhriscompaniesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[*operations.ListHrisCompaniesResponse](../../pkg/models/operations/listhriscompaniesresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
 ## PatchCrmCompany
 
 Update a company
@@ -355,6 +509,56 @@ func main() {
 ### Response
 
 **[*operations.PatchCrmCompanyResponse](../../pkg/models/operations/patchcrmcompanyresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## PatchHrisCompany
+
+Update a company
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+    request := operations.PatchHrisCompanyRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    }
+    ctx := context.Background()
+    res, err := s.Company.PatchHrisCompany(ctx, request)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisCompany != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchHrisCompanyRequest](../../pkg/models/operations/patchhriscompanyrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[*operations.PatchHrisCompanyResponse](../../pkg/models/operations/patchhriscompanyresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
@@ -409,6 +613,56 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
+## RemoveHrisCompany
+
+Remove a company
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+    request := operations.RemoveHrisCompanyRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    }
+    ctx := context.Background()
+    res, err := s.Company.RemoveHrisCompany(ctx, request)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveHrisCompanyRequest](../../pkg/models/operations/removehriscompanyrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[*operations.RemoveHrisCompanyResponse](../../pkg/models/operations/removehriscompanyresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
 ## UpdateCrmCompany
 
 Update a company
@@ -455,6 +709,56 @@ func main() {
 ### Response
 
 **[*operations.UpdateCrmCompanyResponse](../../pkg/models/operations/updatecrmcompanyresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## UpdateHrisCompany
+
+Update a company
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+    request := operations.UpdateHrisCompanyRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    }
+    ctx := context.Background()
+    res, err := s.Company.UpdateHrisCompany(ctx, request)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisCompany != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.UpdateHrisCompanyRequest](../../pkg/models/operations/updatehriscompanyrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[*operations.UpdateHrisCompanyResponse](../../pkg/models/operations/updatehriscompanyresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

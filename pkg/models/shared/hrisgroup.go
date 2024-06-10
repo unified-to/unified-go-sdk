@@ -51,6 +51,7 @@ func (e *HrisGroupType) UnmarshalJSON(data []byte) error {
 }
 
 type HrisGroup struct {
+	CompanyID   *string        `json:"company_id,omitempty"`
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
@@ -73,6 +74,13 @@ func (h *HrisGroup) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (o *HrisGroup) GetCompanyID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyID
 }
 
 func (o *HrisGroup) GetCreatedAt() *time.Time {

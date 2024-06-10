@@ -148,6 +148,7 @@ func (e *MaritalStatus) UnmarshalJSON(data []byte) error {
 
 type HrisEmployee struct {
 	Address          *PropertyHrisEmployeeAddress `json:"address,omitempty"`
+	CompanyID        *string                      `json:"company_id,omitempty"`
 	CreatedAt        *time.Time                   `json:"created_at,omitempty"`
 	Currency         *string                      `json:"currency,omitempty"`
 	DateOfBirth      *time.Time                   `json:"date_of_birth,omitempty"`
@@ -190,6 +191,13 @@ func (o *HrisEmployee) GetAddress() *PropertyHrisEmployeeAddress {
 		return nil
 	}
 	return o.Address
+}
+
+func (o *HrisEmployee) GetCompanyID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyID
 }
 
 func (o *HrisEmployee) GetCreatedAt() *time.Time {

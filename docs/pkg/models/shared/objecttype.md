@@ -38,6 +38,7 @@
 | `ObjectTypeHrisGroup`              | hris_group                         |
 | `ObjectTypeHrisPayslip`            | hris_payslip                       |
 | `ObjectTypeHrisTimeoff`            | hris_timeoff                       |
+| `ObjectTypeHrisCompany`            | hris_company                       |
 | `ObjectTypeMartechList`            | martech_list                       |
 | `ObjectTypeMartechMember`          | martech_member                     |
 | `ObjectTypePassthrough`            | passthrough                        |

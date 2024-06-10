@@ -9,8 +9,7 @@ import (
 	"time"
 )
 
-type ListHrisGroupsRequest struct {
-	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
+type ListHrisCompaniesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -25,113 +24,106 @@ type ListHrisGroupsRequest struct {
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (l ListHrisGroupsRequest) MarshalJSON() ([]byte, error) {
+func (l ListHrisCompaniesRequest) MarshalJSON() ([]byte, error) {
 	return utils.MarshalJSON(l, "", false)
 }
 
-func (l *ListHrisGroupsRequest) UnmarshalJSON(data []byte) error {
+func (l *ListHrisCompaniesRequest) UnmarshalJSON(data []byte) error {
 	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListHrisGroupsRequest) GetCompanyID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.CompanyID
-}
-
-func (o *ListHrisGroupsRequest) GetConnectionID() string {
+func (o *ListHrisCompaniesRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *ListHrisGroupsRequest) GetFields() []string {
+func (o *ListHrisCompaniesRequest) GetFields() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Fields
 }
 
-func (o *ListHrisGroupsRequest) GetLimit() *float64 {
+func (o *ListHrisCompaniesRequest) GetLimit() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Limit
 }
 
-func (o *ListHrisGroupsRequest) GetOffset() *float64 {
+func (o *ListHrisCompaniesRequest) GetOffset() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Offset
 }
 
-func (o *ListHrisGroupsRequest) GetOrder() *string {
+func (o *ListHrisCompaniesRequest) GetOrder() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Order
 }
 
-func (o *ListHrisGroupsRequest) GetQuery() *string {
+func (o *ListHrisCompaniesRequest) GetQuery() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Query
 }
 
-func (o *ListHrisGroupsRequest) GetSort() *string {
+func (o *ListHrisCompaniesRequest) GetSort() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Sort
 }
 
-func (o *ListHrisGroupsRequest) GetUpdatedGte() *time.Time {
+func (o *ListHrisCompaniesRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.UpdatedGte
 }
 
-type ListHrisGroupsResponse struct {
+type ListHrisCompaniesResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	HrisGroups []shared.HrisGroup
+	HrisCompanies []shared.HrisCompany
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 
-func (o *ListHrisGroupsResponse) GetContentType() string {
+func (o *ListHrisCompaniesResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *ListHrisGroupsResponse) GetHrisGroups() []shared.HrisGroup {
+func (o *ListHrisCompaniesResponse) GetHrisCompanies() []shared.HrisCompany {
 	if o == nil {
 		return nil
 	}
-	return o.HrisGroups
+	return o.HrisCompanies
 }
 
-func (o *ListHrisGroupsResponse) GetStatusCode() int {
+func (o *ListHrisCompaniesResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *ListHrisGroupsResponse) GetRawResponse() *http.Response {
+func (o *ListHrisCompaniesResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

@@ -229,14 +229,20 @@ func main() {
 ### [Company](docs/sdks/company/README.md)
 
 * [CreateCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
+* [CreateHrisCompany](docs/sdks/company/README.md#createhriscompany) - Create a company
 * [GetAtsCompany](docs/sdks/company/README.md#getatscompany) - Retrieve a company
 * [GetCrmCompany](docs/sdks/company/README.md#getcrmcompany) - Retrieve a company
+* [GetHrisCompany](docs/sdks/company/README.md#gethriscompany) - Retrieve a company
 * [ListAtsCompanies](docs/sdks/company/README.md#listatscompanies) - List all companies
 * [ListCrmCompanies](docs/sdks/company/README.md#listcrmcompanies) - List all companies
 * [ListEnrichCompanies](docs/sdks/company/README.md#listenrichcompanies) - Retrieve enrichment information for a company
+* [ListHrisCompanies](docs/sdks/company/README.md#listhriscompanies) - List all companies
 * [PatchCrmCompany](docs/sdks/company/README.md#patchcrmcompany) - Update a company
+* [PatchHrisCompany](docs/sdks/company/README.md#patchhriscompany) - Update a company
 * [RemoveCrmCompany](docs/sdks/company/README.md#removecrmcompany) - Remove a company
+* [RemoveHrisCompany](docs/sdks/company/README.md#removehriscompany) - Remove a company
 * [UpdateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
+* [UpdateHrisCompany](docs/sdks/company/README.md#updatehriscompany) - Update a company
 
 ### [Document](docs/sdks/document/README.md)
 
@@ -436,20 +442,26 @@ func main() {
 
 ### [Hris](docs/sdks/hris/README.md)
 
+* [CreateHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
 * [CreateHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
+* [GetHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
 * [GetHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [GetHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
 * [GetHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [GetHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
+* [ListHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
 * [ListHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [ListHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
 * [ListHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [ListHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
+* [PatchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
 * [PatchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
+* [RemoveHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
 * [RemoveHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [RemoveHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
+* [UpdateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
 * [UpdateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 34d8e45448aaadab7271416cea77fcaf
+  docChecksum: b5e06f8290f506984cde8a37b4ebd06e
   docVersion: "1.0"
   speakeasyVersion: 1.300.1
   generationVersion: 2.339.1
-  releaseVersion: 0.14.17
-  configChecksum: 84d3ce61c77a05035f7bc07dbc95f73e
+  releaseVersion: 0.14.18
+  configChecksum: 2709b6da6e755a9b28ef42004e33bad9
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -201,12 +201,18 @@ generatedFiles:
   - /pkg/models/operations/updateatsjob.go
   - /pkg/models/operations/updateatsscorecard.go
   - /pkg/models/operations/createcrmcompany.go
+  - /pkg/models/operations/createhriscompany.go
   - /pkg/models/operations/getcrmcompany.go
+  - /pkg/models/operations/gethriscompany.go
   - /pkg/models/operations/listcrmcompanies.go
   - /pkg/models/operations/listenrichcompanies.go
+  - /pkg/models/operations/listhriscompanies.go
   - /pkg/models/operations/patchcrmcompany.go
+  - /pkg/models/operations/patchhriscompany.go
   - /pkg/models/operations/removecrmcompany.go
+  - /pkg/models/operations/removehriscompany.go
   - /pkg/models/operations/updatecrmcompany.go
+  - /pkg/models/operations/updatehriscompany.go
   - /pkg/models/operations/createcommercecollection.go
   - /pkg/models/operations/createcommerceinventory.go
   - /pkg/models/operations/createcommerceitem.go
@@ -425,6 +431,8 @@ generatedFiles:
   - /pkg/models/shared/atsstatus.go
   - /pkg/models/shared/crmcompany.go
   - /pkg/models/shared/propertycrmcompanyaddress.go
+  - /pkg/models/shared/hriscompany.go
+  - /pkg/models/shared/propertyhriscompanyaddress.go
   - /pkg/models/shared/enrichcompany.go
   - /pkg/models/shared/enrichtelephone.go
   - /pkg/models/shared/propertyenrichcompanyaddress.go
@@ -685,18 +693,30 @@ generatedFiles:
   - docs/pkg/models/operations/updateatsscorecardresponse.md
   - docs/pkg/models/operations/createcrmcompanyrequest.md
   - docs/pkg/models/operations/createcrmcompanyresponse.md
+  - docs/pkg/models/operations/createhriscompanyrequest.md
+  - docs/pkg/models/operations/createhriscompanyresponse.md
   - docs/pkg/models/operations/getcrmcompanyrequest.md
   - docs/pkg/models/operations/getcrmcompanyresponse.md
+  - docs/pkg/models/operations/gethriscompanyrequest.md
+  - docs/pkg/models/operations/gethriscompanyresponse.md
   - docs/pkg/models/operations/listcrmcompaniesrequest.md
   - docs/pkg/models/operations/listcrmcompaniesresponse.md
   - docs/pkg/models/operations/listenrichcompaniesrequest.md
   - docs/pkg/models/operations/listenrichcompaniesresponse.md
+  - docs/pkg/models/operations/listhriscompaniesrequest.md
+  - docs/pkg/models/operations/listhriscompaniesresponse.md
   - docs/pkg/models/operations/patchcrmcompanyrequest.md
   - docs/pkg/models/operations/patchcrmcompanyresponse.md
+  - docs/pkg/models/operations/patchhriscompanyrequest.md
+  - docs/pkg/models/operations/patchhriscompanyresponse.md
   - docs/pkg/models/operations/removecrmcompanyrequest.md
   - docs/pkg/models/operations/removecrmcompanyresponse.md
+  - docs/pkg/models/operations/removehriscompanyrequest.md
+  - docs/pkg/models/operations/removehriscompanyresponse.md
   - docs/pkg/models/operations/updatecrmcompanyrequest.md
   - docs/pkg/models/operations/updatecrmcompanyresponse.md
+  - docs/pkg/models/operations/updatehriscompanyrequest.md
+  - docs/pkg/models/operations/updatehriscompanyresponse.md
   - docs/pkg/models/operations/createcommercecollectionrequest.md
   - docs/pkg/models/operations/createcommercecollectionresponse.md
   - docs/pkg/models/operations/createcommerceinventoryrequest.md
@@ -1120,6 +1140,8 @@ generatedFiles:
   - docs/pkg/models/shared/atsstatus.md
   - docs/pkg/models/shared/crmcompany.md
   - docs/pkg/models/shared/propertycrmcompanyaddress.md
+  - docs/pkg/models/shared/hriscompany.md
+  - docs/pkg/models/shared/propertyhriscompanyaddress.md
   - docs/pkg/models/shared/enrichcompany.md
   - docs/pkg/models/shared/enrichtelephonetype.md
   - docs/pkg/models/shared/enrichtelephone.md

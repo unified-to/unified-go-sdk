@@ -77,6 +77,8 @@
 | `ScopesHrisPayslipWrite`           | hris_payslip_write                 |
 | `ScopesHrisTimeoffRead`            | hris_timeoff_read                  |
 | `ScopesHrisTimeoffWrite`           | hris_timeoff_write                 |
+| `ScopesHrisCompanyRead`            | hris_company_read                  |
+| `ScopesHrisCompanyWrite`           | hris_company_write                 |
 | `ScopesUcCallRead`                 | uc_call_read                       |
 | `ScopesStorageFileRead`            | storage_file_read                  |
 | `ScopesStorageFileWrite`           | storage_file_write                 |

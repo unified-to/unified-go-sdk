@@ -25,6 +25,104 @@ func newHris(sdkConfig sdkConfiguration) *Hris {
 	}
 }
 
+// CreateHrisCompany - Create a company
+func (s *Hris) CreateHrisCompany(ctx context.Context, request operations.CreateHrisCompanyRequest) (*operations.CreateHrisCompanyResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "createHrisCompany",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
+
+	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/company", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisCompany", "json", `request:"mediaType=application/json"`)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", opURL, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+	if err != nil {
+		return nil, err
+	}
+
+	httpRes, err := s.sdkConfiguration.Client.Do(req)
+	if err != nil || httpRes == nil {
+		if err != nil {
+			err = fmt.Errorf("error sending request: %w", err)
+		} else {
+			err = fmt.Errorf("error sending request: no response")
+		}
+
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+		return nil, err
+	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+		_httpRes, err := s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+		if err != nil {
+			return nil, err
+		} else if _httpRes != nil {
+			httpRes = _httpRes
+		}
+	} else {
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	res := &operations.CreateHrisCompanyResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
+
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			var out shared.HrisCompany
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.HrisCompany = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+
+}
+
 // CreateHrisEmployee - Create an employee
 func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.CreateHrisEmployeeRequest) (*operations.CreateHrisEmployeeResponse, error) {
 	hookCtx := hooks.HookContext{
@@ -206,6 +304,102 @@ func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHri
 			}
 
 			res.HrisGroup = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+
+}
+
+// GetHrisCompany - Retrieve a company
+func (s *Hris) GetHrisCompany(ctx context.Context, request operations.GetHrisCompanyRequest) (*operations.GetHrisCompanyResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "getHrisCompany",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
+
+	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/company/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", opURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+	if err != nil {
+		return nil, err
+	}
+
+	httpRes, err := s.sdkConfiguration.Client.Do(req)
+	if err != nil || httpRes == nil {
+		if err != nil {
+			err = fmt.Errorf("error sending request: %w", err)
+		} else {
+			err = fmt.Errorf("error sending request: no response")
+		}
+
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+		return nil, err
+	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+		_httpRes, err := s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+		if err != nil {
+			return nil, err
+		} else if _httpRes != nil {
+			httpRes = _httpRes
+		}
+	} else {
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	res := &operations.GetHrisCompanyResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
+
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			var out shared.HrisCompany
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.HrisCompany = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -605,6 +799,102 @@ func (s *Hris) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTim
 
 }
 
+// ListHrisCompanies - List all companies
+func (s *Hris) ListHrisCompanies(ctx context.Context, request operations.ListHrisCompaniesRequest) (*operations.ListHrisCompaniesResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "listHrisCompanies",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
+
+	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/company", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", opURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+	if err != nil {
+		return nil, err
+	}
+
+	httpRes, err := s.sdkConfiguration.Client.Do(req)
+	if err != nil || httpRes == nil {
+		if err != nil {
+			err = fmt.Errorf("error sending request: %w", err)
+		} else {
+			err = fmt.Errorf("error sending request: no response")
+		}
+
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+		return nil, err
+	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+		_httpRes, err := s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+		if err != nil {
+			return nil, err
+		} else if _httpRes != nil {
+			httpRes = _httpRes
+		}
+	} else {
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	res := &operations.ListHrisCompaniesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
+
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			var out []shared.HrisCompany
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.HrisCompanies = out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+
+}
+
 // ListHrisEmployees - List all employees
 func (s *Hris) ListHrisEmployees(ctx context.Context, request operations.ListHrisEmployeesRequest) (*operations.ListHrisEmployeesResponse, error) {
 	hookCtx := hooks.HookContext{
@@ -989,6 +1279,104 @@ func (s *Hris) ListHrisTimeoffs(ctx context.Context, request operations.ListHris
 
 }
 
+// PatchHrisCompany - Update a company
+func (s *Hris) PatchHrisCompany(ctx context.Context, request operations.PatchHrisCompanyRequest) (*operations.PatchHrisCompanyResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "patchHrisCompany",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
+
+	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/company/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisCompany", "json", `request:"mediaType=application/json"`)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", opURL, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+	if err != nil {
+		return nil, err
+	}
+
+	httpRes, err := s.sdkConfiguration.Client.Do(req)
+	if err != nil || httpRes == nil {
+		if err != nil {
+			err = fmt.Errorf("error sending request: %w", err)
+		} else {
+			err = fmt.Errorf("error sending request: no response")
+		}
+
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+		return nil, err
+	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+		_httpRes, err := s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+		if err != nil {
+			return nil, err
+		} else if _httpRes != nil {
+			httpRes = _httpRes
+		}
+	} else {
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	res := &operations.PatchHrisCompanyResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
+
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			var out shared.HrisCompany
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.HrisCompany = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+
+}
+
 // PatchHrisEmployee - Update an employee
 func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHrisEmployeeRequest) (*operations.PatchHrisEmployeeResponse, error) {
 	hookCtx := hooks.HookContext{
@@ -1185,6 +1573,97 @@ func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisG
 
 }
 
+// RemoveHrisCompany - Remove a company
+func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveHrisCompanyRequest) (*operations.RemoveHrisCompanyResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "removeHrisCompany",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
+
+	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/company/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", opURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+	if err != nil {
+		return nil, err
+	}
+
+	httpRes, err := s.sdkConfiguration.Client.Do(req)
+	if err != nil || httpRes == nil {
+		if err != nil {
+			err = fmt.Errorf("error sending request: %w", err)
+		} else {
+			err = fmt.Errorf("error sending request: no response")
+		}
+
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+		return nil, err
+	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+		_httpRes, err := s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+		if err != nil {
+			return nil, err
+		} else if _httpRes != nil {
+			httpRes = _httpRes
+		}
+	} else {
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	res := &operations.RemoveHrisCompanyResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
+
+	switch {
+	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			var out string
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.String = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	}
+
+	return res, nil
+
+}
+
 // RemoveHrisEmployee - Remove an employee
 func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.RemoveHrisEmployeeRequest) (*operations.RemoveHrisEmployeeResponse, error) {
 	hookCtx := hooks.HookContext{
@@ -1361,6 +1840,104 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
+	}
+
+	return res, nil
+
+}
+
+// UpdateHrisCompany - Update a company
+func (s *Hris) UpdateHrisCompany(ctx context.Context, request operations.UpdateHrisCompanyRequest) (*operations.UpdateHrisCompanyResponse, error) {
+	hookCtx := hooks.HookContext{
+		Context:        ctx,
+		OperationID:    "updateHrisCompany",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
+
+	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/company/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisCompany", "json", `request:"mediaType=application/json"`)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", opURL, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+	if err != nil {
+		return nil, err
+	}
+
+	httpRes, err := s.sdkConfiguration.Client.Do(req)
+	if err != nil || httpRes == nil {
+		if err != nil {
+			err = fmt.Errorf("error sending request: %w", err)
+		} else {
+			err = fmt.Errorf("error sending request: no response")
+		}
+
+		_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+		return nil, err
+	} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+		_httpRes, err := s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+		if err != nil {
+			return nil, err
+		} else if _httpRes != nil {
+			httpRes = _httpRes
+		}
+	} else {
+		httpRes, err = s.sdkConfiguration.Hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	res := &operations.UpdateHrisCompanyResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
+
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			var out shared.HrisCompany
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.HrisCompany = &out
+		default:
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
