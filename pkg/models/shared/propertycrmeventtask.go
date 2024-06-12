@@ -9,6 +9,35 @@ import (
 	"time"
 )
 
+type Priority string
+
+const (
+	PriorityHigh   Priority = "HIGH"
+	PriorityMedium Priority = "MEDIUM"
+	PriorityLow    Priority = "LOW"
+)
+
+func (e Priority) ToPointer() *Priority {
+	return &e
+}
+func (e *Priority) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "HIGH":
+		fallthrough
+	case "MEDIUM":
+		fallthrough
+	case "LOW":
+		*e = Priority(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for Priority: %v", v)
+	}
+}
+
 type PropertyCrmEventTaskStatus string
 
 const (
@@ -46,6 +75,7 @@ type PropertyCrmEventTask struct {
 	Description *string                     `json:"description,omitempty"`
 	DueAt       *time.Time                  `json:"due_at,omitempty"`
 	Name        *string                     `json:"name,omitempty"`
+	Priority    *Priority                   `json:"priority,omitempty"`
 	Status      *PropertyCrmEventTaskStatus `json:"status,omitempty"`
 }
 
@@ -79,6 +109,13 @@ func (o *PropertyCrmEventTask) GetName() *string {
 		return nil
 	}
 	return o.Name
+}
+
+func (o *PropertyCrmEventTask) GetPriority() *Priority {
+	if o == nil {
+		return nil
+	}
+	return o.Priority
 }
 
 func (o *PropertyCrmEventTask) GetStatus() *PropertyCrmEventTaskStatus {
