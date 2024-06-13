@@ -7,38 +7,38 @@ import (
 	"net/http"
 )
 
-type PatchAccountingTransactionRequest struct {
-	AccountingTransaction *shared.AccountingTransaction `request:"mediaType=application/json"`
+type UpdateAccountingJournalRequest struct {
+	AccountingJournal *shared.AccountingJournal `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// ID of the Transaction
+	// ID of the Journal
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchAccountingTransactionRequest) GetAccountingTransaction() *shared.AccountingTransaction {
+func (o *UpdateAccountingJournalRequest) GetAccountingJournal() *shared.AccountingJournal {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingTransaction
+	return o.AccountingJournal
 }
 
-func (o *PatchAccountingTransactionRequest) GetConnectionID() string {
+func (o *UpdateAccountingJournalRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *PatchAccountingTransactionRequest) GetID() string {
+func (o *UpdateAccountingJournalRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type PatchAccountingTransactionResponse struct {
+type UpdateAccountingJournalResponse struct {
 	// Successful
-	AccountingTransaction *shared.AccountingTransaction
+	AccountingJournal *shared.AccountingJournal
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -47,28 +47,28 @@ type PatchAccountingTransactionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAccountingTransactionResponse) GetAccountingTransaction() *shared.AccountingTransaction {
+func (o *UpdateAccountingJournalResponse) GetAccountingJournal() *shared.AccountingJournal {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingTransaction
+	return o.AccountingJournal
 }
 
-func (o *PatchAccountingTransactionResponse) GetContentType() string {
+func (o *UpdateAccountingJournalResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *PatchAccountingTransactionResponse) GetStatusCode() int {
+func (o *UpdateAccountingJournalResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *PatchAccountingTransactionResponse) GetRawResponse() *http.Response {
+func (o *UpdateAccountingJournalResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

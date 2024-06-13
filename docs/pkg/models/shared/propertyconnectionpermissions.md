@@ -10,6 +10,8 @@
 | `PropertyConnectionPermissionsAccountingAccountWrite`     | accounting_account_write                                  |
 | `PropertyConnectionPermissionsAccountingTransactionRead`  | accounting_transaction_read                               |
 | `PropertyConnectionPermissionsAccountingTransactionWrite` | accounting_transaction_write                              |
+| `PropertyConnectionPermissionsAccountingJournalRead`      | accounting_journal_read                                   |
+| `PropertyConnectionPermissionsAccountingJournalWrite`     | accounting_journal_write                                  |
 | `PropertyConnectionPermissionsAccountingInvoiceRead`      | accounting_invoice_read                                   |
 | `PropertyConnectionPermissionsAccountingInvoiceWrite`     | accounting_invoice_write                                  |
 | `PropertyConnectionPermissionsAccountingContactRead`      | accounting_contact_read                                   |

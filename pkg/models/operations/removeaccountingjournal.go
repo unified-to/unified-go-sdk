@@ -6,28 +6,28 @@ import (
 	"net/http"
 )
 
-type RemoveAccountingTransactionRequest struct {
+type RemoveAccountingJournalRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// ID of the Transaction
+	// ID of the Journal
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveAccountingTransactionRequest) GetConnectionID() string {
+func (o *RemoveAccountingJournalRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *RemoveAccountingTransactionRequest) GetID() string {
+func (o *RemoveAccountingJournalRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type RemoveAccountingTransactionResponse struct {
+type RemoveAccountingJournalResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -38,28 +38,28 @@ type RemoveAccountingTransactionResponse struct {
 	String *string
 }
 
-func (o *RemoveAccountingTransactionResponse) GetContentType() string {
+func (o *RemoveAccountingJournalResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *RemoveAccountingTransactionResponse) GetStatusCode() int {
+func (o *RemoveAccountingJournalResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *RemoveAccountingTransactionResponse) GetRawResponse() *http.Response {
+func (o *RemoveAccountingJournalResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
 	return o.RawResponse
 }
 
-func (o *RemoveAccountingTransactionResponse) GetString() *string {
+func (o *RemoveAccountingJournalResponse) GetString() *string {
 	if o == nil {
 		return nil
 	}

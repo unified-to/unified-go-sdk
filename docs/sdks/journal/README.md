@@ -1,73 +1,18 @@
-# Connection
-(*Connection*)
+# Journal
+(*Journal*)
 
 ### Available Operations
 
-* [CreateUnifiedConnection](#createunifiedconnection) - Create connection
-* [GetUnifiedConnection](#getunifiedconnection) - Retrieve connection
-* [ListUnifiedConnections](#listunifiedconnections) - List all connections
-* [PatchUnifiedConnection](#patchunifiedconnection) - Update connection
-* [RemoveUnifiedConnection](#removeunifiedconnection) - Remove connection
-* [UpdateUnifiedConnection](#updateunifiedconnection) - Update connection
+* [CreateAccountingJournal](#createaccountingjournal) - Create a journal
+* [GetAccountingJournal](#getaccountingjournal) - Retrieve a journal
+* [ListAccountingJournals](#listaccountingjournals) - List all journals
+* [PatchAccountingJournal](#patchaccountingjournal) - Update a journal
+* [RemoveAccountingJournal](#removeaccountingjournal) - Remove a journal
+* [UpdateAccountingJournal](#updateaccountingjournal) - Update a journal
 
-## CreateUnifiedConnection
+## CreateAccountingJournal
 
-Create connection
-
-### Example Usage
-
-```go
-package main
-
-import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"context"
-	"log"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-    var request *shared.Connection = &shared.Connection{
-        Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesKms,
-        },
-        IntegrationType: "<value>",
-        Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsDocumentRead,
-        },
-    }
-    ctx := context.Background()
-    res, err := s.Connection.CreateUnifiedConnection(ctx, request)
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.Connection != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                  | Type                                                       | Required                                                   | Description                                                |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| `ctx`                                                      | [context.Context](https://pkg.go.dev/context#Context)      | :heavy_check_mark:                                         | The context to use for the request.                        |
-| `request`                                                  | [shared.Connection](../../pkg/models/shared/connection.md) | :heavy_check_mark:                                         | The request object to use for the request.                 |
-
-
-### Response
-
-**[*operations.CreateUnifiedConnectionResponse](../../pkg/models/operations/createunifiedconnectionresponse.md), error**
-| Error Object       | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
-
-## GetUnifiedConnection
-
-Retrieve connection
+Create a journal
 
 ### Example Usage
 
@@ -85,15 +30,65 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-    request := operations.GetUnifiedConnectionRequest{
-        ID: "<id>",
+    request := operations.CreateAccountingJournalRequest{
+        ConnectionID: "<value>",
     }
     ctx := context.Background()
-    res, err := s.Connection.GetUnifiedConnection(ctx, request)
+    res, err := s.Journal.CreateAccountingJournal(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
-    if res.Connection != nil {
+    if res.AccountingJournal != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.CreateAccountingJournalRequest](../../pkg/models/operations/createaccountingjournalrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+
+### Response
+
+**[*operations.CreateAccountingJournalResponse](../../pkg/models/operations/createaccountingjournalresponse.md), error**
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+## GetAccountingJournal
+
+Retrieve a journal
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"context"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+    request := operations.GetAccountingJournalRequest{
+        ConnectionID: "<value>",
+        ID: "<id>",
+    }
+    ctx := context.Background()
+    res, err := s.Journal.GetAccountingJournal(ctx, request)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingJournal != nil {
         // handle response
     }
 }
@@ -104,19 +99,19 @@ func main() {
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetUnifiedConnectionRequest](../../pkg/models/operations/getunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.GetAccountingJournalRequest](../../pkg/models/operations/getaccountingjournalrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[*operations.GetUnifiedConnectionResponse](../../pkg/models/operations/getunifiedconnectionresponse.md), error**
+**[*operations.GetAccountingJournalResponse](../../pkg/models/operations/getaccountingjournalresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## ListUnifiedConnections
+## ListAccountingJournals
 
-List all connections
+List all journals
 
 ### Example Usage
 
@@ -134,13 +129,15 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-    request := operations.ListUnifiedConnectionsRequest{}
+    request := operations.ListAccountingJournalsRequest{
+        ConnectionID: "<value>",
+    }
     ctx := context.Background()
-    res, err := s.Connection.ListUnifiedConnections(ctx, request)
+    res, err := s.Journal.ListAccountingJournals(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
-    if res.Connections != nil {
+    if res.AccountingJournals != nil {
         // handle response
     }
 }
@@ -151,19 +148,19 @@ func main() {
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListUnifiedConnectionsRequest](../../pkg/models/operations/listunifiedconnectionsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `request`                                                                                                | [operations.ListAccountingJournalsRequest](../../pkg/models/operations/listaccountingjournalsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[*operations.ListUnifiedConnectionsResponse](../../pkg/models/operations/listunifiedconnectionsresponse.md), error**
+**[*operations.ListAccountingJournalsResponse](../../pkg/models/operations/listaccountingjournalsresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## PatchUnifiedConnection
+## PatchAccountingJournal
 
-Update connection
+Update a journal
 
 ### Example Usage
 
@@ -181,15 +178,16 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-    request := operations.PatchUnifiedConnectionRequest{
+    request := operations.PatchAccountingJournalRequest{
+        ConnectionID: "<value>",
         ID: "<id>",
     }
     ctx := context.Background()
-    res, err := s.Connection.PatchUnifiedConnection(ctx, request)
+    res, err := s.Journal.PatchAccountingJournal(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
-    if res.Connection != nil {
+    if res.AccountingJournal != nil {
         // handle response
     }
 }
@@ -200,19 +198,19 @@ func main() {
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PatchUnifiedConnectionRequest](../../pkg/models/operations/patchunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `request`                                                                                                | [operations.PatchAccountingJournalRequest](../../pkg/models/operations/patchaccountingjournalrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[*operations.PatchUnifiedConnectionResponse](../../pkg/models/operations/patchunifiedconnectionresponse.md), error**
+**[*operations.PatchAccountingJournalResponse](../../pkg/models/operations/patchaccountingjournalresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## RemoveUnifiedConnection
+## RemoveAccountingJournal
 
-Remove connection
+Remove a journal
 
 ### Example Usage
 
@@ -230,11 +228,12 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-    request := operations.RemoveUnifiedConnectionRequest{
+    request := operations.RemoveAccountingJournalRequest{
+        ConnectionID: "<value>",
         ID: "<id>",
     }
     ctx := context.Background()
-    res, err := s.Connection.RemoveUnifiedConnection(ctx, request)
+    res, err := s.Journal.RemoveAccountingJournal(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
@@ -249,19 +248,19 @@ func main() {
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.RemoveUnifiedConnectionRequest](../../pkg/models/operations/removeunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `request`                                                                                                  | [operations.RemoveAccountingJournalRequest](../../pkg/models/operations/removeaccountingjournalrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[*operations.RemoveUnifiedConnectionResponse](../../pkg/models/operations/removeunifiedconnectionresponse.md), error**
+**[*operations.RemoveAccountingJournalResponse](../../pkg/models/operations/removeaccountingjournalresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
-## UpdateUnifiedConnection
+## UpdateAccountingJournal
 
-Update connection
+Update a journal
 
 ### Example Usage
 
@@ -279,15 +278,16 @@ func main() {
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
-    request := operations.UpdateUnifiedConnectionRequest{
+    request := operations.UpdateAccountingJournalRequest{
+        ConnectionID: "<value>",
         ID: "<id>",
     }
     ctx := context.Background()
-    res, err := s.Connection.UpdateUnifiedConnection(ctx, request)
+    res, err := s.Journal.UpdateAccountingJournal(ctx, request)
     if err != nil {
         log.Fatal(err)
     }
-    if res.Connection != nil {
+    if res.AccountingJournal != nil {
         // handle response
     }
 }
@@ -298,12 +298,12 @@ func main() {
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdateUnifiedConnectionRequest](../../pkg/models/operations/updateunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `request`                                                                                                  | [operations.UpdateAccountingJournalRequest](../../pkg/models/operations/updateaccountingjournalrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[*operations.UpdateUnifiedConnectionResponse](../../pkg/models/operations/updateunifiedconnectionresponse.md), error**
+**[*operations.UpdateAccountingJournalResponse](../../pkg/models/operations/updateaccountingjournalresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

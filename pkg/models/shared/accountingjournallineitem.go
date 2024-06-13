@@ -2,7 +2,7 @@
 
 package shared
 
-type AccountingTransactionLineitem struct {
+type AccountingJournalLineitem struct {
 	AccountID   *string  `json:"account_id,omitempty"`
 	ContactID   *string  `json:"contact_id,omitempty"`
 	Description *string  `json:"description,omitempty"`
@@ -13,56 +13,56 @@ type AccountingTransactionLineitem struct {
 	TotalAmount *float64 `json:"total_amount,omitempty"`
 }
 
-func (o *AccountingTransactionLineitem) GetAccountID() *string {
+func (o *AccountingJournalLineitem) GetAccountID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.AccountID
 }
 
-func (o *AccountingTransactionLineitem) GetContactID() *string {
+func (o *AccountingJournalLineitem) GetContactID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ContactID
 }
 
-func (o *AccountingTransactionLineitem) GetDescription() *string {
+func (o *AccountingJournalLineitem) GetDescription() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Description
 }
 
-func (o *AccountingTransactionLineitem) GetID() *string {
+func (o *AccountingJournalLineitem) GetID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ID
 }
 
-func (o *AccountingTransactionLineitem) GetInvoiceID() *string {
+func (o *AccountingJournalLineitem) GetInvoiceID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.InvoiceID
 }
 
-func (o *AccountingTransactionLineitem) GetPaymentID() *string {
+func (o *AccountingJournalLineitem) GetPaymentID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.PaymentID
 }
 
-func (o *AccountingTransactionLineitem) GetTaxAmount() *float64 {
+func (o *AccountingJournalLineitem) GetTaxAmount() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.TaxAmount
 }
 
-func (o *AccountingTransactionLineitem) GetTotalAmount() *float64 {
+func (o *AccountingJournalLineitem) GetTotalAmount() *float64 {
 	if o == nil {
 		return nil
 	}

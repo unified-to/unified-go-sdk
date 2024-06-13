@@ -7,29 +7,29 @@ import (
 	"net/http"
 )
 
-type CreateAccountingTransactionRequest struct {
-	AccountingTransaction *shared.AccountingTransaction `request:"mediaType=application/json"`
+type CreateAccountingJournalRequest struct {
+	AccountingJournal *shared.AccountingJournal `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 }
 
-func (o *CreateAccountingTransactionRequest) GetAccountingTransaction() *shared.AccountingTransaction {
+func (o *CreateAccountingJournalRequest) GetAccountingJournal() *shared.AccountingJournal {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingTransaction
+	return o.AccountingJournal
 }
 
-func (o *CreateAccountingTransactionRequest) GetConnectionID() string {
+func (o *CreateAccountingJournalRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-type CreateAccountingTransactionResponse struct {
+type CreateAccountingJournalResponse struct {
 	// Successful
-	AccountingTransaction *shared.AccountingTransaction
+	AccountingJournal *shared.AccountingJournal
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -38,28 +38,28 @@ type CreateAccountingTransactionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingTransactionResponse) GetAccountingTransaction() *shared.AccountingTransaction {
+func (o *CreateAccountingJournalResponse) GetAccountingJournal() *shared.AccountingJournal {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingTransaction
+	return o.AccountingJournal
 }
 
-func (o *CreateAccountingTransactionResponse) GetContentType() string {
+func (o *CreateAccountingJournalResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *CreateAccountingTransactionResponse) GetStatusCode() int {
+func (o *CreateAccountingJournalResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *CreateAccountingTransactionResponse) GetRawResponse() *http.Response {
+func (o *CreateAccountingJournalResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

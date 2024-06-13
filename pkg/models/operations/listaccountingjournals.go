@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-type ListAccountingTransactionsRequest struct {
+type ListAccountingJournalsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -24,76 +24,76 @@ type ListAccountingTransactionsRequest struct {
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (l ListAccountingTransactionsRequest) MarshalJSON() ([]byte, error) {
+func (l ListAccountingJournalsRequest) MarshalJSON() ([]byte, error) {
 	return utils.MarshalJSON(l, "", false)
 }
 
-func (l *ListAccountingTransactionsRequest) UnmarshalJSON(data []byte) error {
+func (l *ListAccountingJournalsRequest) UnmarshalJSON(data []byte) error {
 	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListAccountingTransactionsRequest) GetConnectionID() string {
+func (o *ListAccountingJournalsRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *ListAccountingTransactionsRequest) GetFields() []string {
+func (o *ListAccountingJournalsRequest) GetFields() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Fields
 }
 
-func (o *ListAccountingTransactionsRequest) GetLimit() *float64 {
+func (o *ListAccountingJournalsRequest) GetLimit() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Limit
 }
 
-func (o *ListAccountingTransactionsRequest) GetOffset() *float64 {
+func (o *ListAccountingJournalsRequest) GetOffset() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Offset
 }
 
-func (o *ListAccountingTransactionsRequest) GetOrder() *string {
+func (o *ListAccountingJournalsRequest) GetOrder() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Order
 }
 
-func (o *ListAccountingTransactionsRequest) GetQuery() *string {
+func (o *ListAccountingJournalsRequest) GetQuery() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Query
 }
 
-func (o *ListAccountingTransactionsRequest) GetSort() *string {
+func (o *ListAccountingJournalsRequest) GetSort() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Sort
 }
 
-func (o *ListAccountingTransactionsRequest) GetUpdatedGte() *time.Time {
+func (o *ListAccountingJournalsRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.UpdatedGte
 }
 
-type ListAccountingTransactionsResponse struct {
+type ListAccountingJournalsResponse struct {
 	// Successful
-	AccountingTransactions []shared.AccountingTransaction
+	AccountingJournals []shared.AccountingJournal
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -102,28 +102,28 @@ type ListAccountingTransactionsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAccountingTransactionsResponse) GetAccountingTransactions() []shared.AccountingTransaction {
+func (o *ListAccountingJournalsResponse) GetAccountingJournals() []shared.AccountingJournal {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingTransactions
+	return o.AccountingJournals
 }
 
-func (o *ListAccountingTransactionsResponse) GetContentType() string {
+func (o *ListAccountingJournalsResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *ListAccountingTransactionsResponse) GetStatusCode() int {
+func (o *ListAccountingJournalsResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *ListAccountingTransactionsResponse) GetRawResponse() *http.Response {
+func (o *ListAccountingJournalsResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

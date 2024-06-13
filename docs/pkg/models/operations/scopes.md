@@ -10,6 +10,8 @@
 | `ScopesAccountingAccountWrite`     | accounting_account_write           |
 | `ScopesAccountingTransactionRead`  | accounting_transaction_read        |
 | `ScopesAccountingTransactionWrite` | accounting_transaction_write       |
+| `ScopesAccountingJournalRead`      | accounting_journal_read            |
+| `ScopesAccountingJournalWrite`     | accounting_journal_write           |
 | `ScopesAccountingInvoiceRead`      | accounting_invoice_read            |
 | `ScopesAccountingInvoiceWrite`     | accounting_invoice_write           |
 | `ScopesAccountingContactRead`      | accounting_contact_read            |

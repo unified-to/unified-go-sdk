@@ -15,31 +15,31 @@ import (
 	"net/http"
 )
 
-type Transaction struct {
+type Journal struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newTransaction(sdkConfig sdkConfiguration) *Transaction {
-	return &Transaction{
+func newJournal(sdkConfig sdkConfiguration) *Journal {
+	return &Journal{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
-// CreateAccountingTransaction - Create a transaction
-func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request operations.CreateAccountingTransactionRequest) (*operations.CreateAccountingTransactionResponse, error) {
+// CreateAccountingJournal - Create a journal
+func (s *Journal) CreateAccountingJournal(ctx context.Context, request operations.CreateAccountingJournalRequest) (*operations.CreateAccountingJournalResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "createAccountingTransaction",
+		OperationID:    "createAccountingJournal",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/transaction", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/journal", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingJournal", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -85,7 +85,7 @@ func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.CreateAccountingTransactionResponse{
+	res := &operations.CreateAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -102,12 +102,12 @@ func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request o
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			var out shared.AccountingTransaction
+			var out shared.AccountingJournal
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingTransaction = &out
+			res.AccountingJournal = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -123,16 +123,16 @@ func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request o
 
 }
 
-// GetAccountingTransaction - Retrieve a transaction
-func (s *Transaction) GetAccountingTransaction(ctx context.Context, request operations.GetAccountingTransactionRequest) (*operations.GetAccountingTransactionResponse, error) {
+// GetAccountingJournal - Retrieve a journal
+func (s *Journal) GetAccountingJournal(ctx context.Context, request operations.GetAccountingJournalRequest) (*operations.GetAccountingJournalResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "getAccountingTransaction",
+		OperationID:    "getAccountingJournal",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/transaction/{id}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/journal/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -181,7 +181,7 @@ func (s *Transaction) GetAccountingTransaction(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.GetAccountingTransactionResponse{
+	res := &operations.GetAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -198,12 +198,12 @@ func (s *Transaction) GetAccountingTransaction(ctx context.Context, request oper
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			var out shared.AccountingTransaction
+			var out shared.AccountingJournal
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingTransaction = &out
+			res.AccountingJournal = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -219,16 +219,16 @@ func (s *Transaction) GetAccountingTransaction(ctx context.Context, request oper
 
 }
 
-// ListAccountingTransactions - List all transactions
-func (s *Transaction) ListAccountingTransactions(ctx context.Context, request operations.ListAccountingTransactionsRequest) (*operations.ListAccountingTransactionsResponse, error) {
+// ListAccountingJournals - List all journals
+func (s *Journal) ListAccountingJournals(ctx context.Context, request operations.ListAccountingJournalsRequest) (*operations.ListAccountingJournalsResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "listAccountingTransactions",
+		OperationID:    "listAccountingJournals",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/transaction", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/journal", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -277,7 +277,7 @@ func (s *Transaction) ListAccountingTransactions(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.ListAccountingTransactionsResponse{
+	res := &operations.ListAccountingJournalsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -294,12 +294,12 @@ func (s *Transaction) ListAccountingTransactions(ctx context.Context, request op
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			var out []shared.AccountingTransaction
+			var out []shared.AccountingJournal
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingTransactions = out
+			res.AccountingJournals = out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -315,21 +315,21 @@ func (s *Transaction) ListAccountingTransactions(ctx context.Context, request op
 
 }
 
-// PatchAccountingTransaction - Update a transaction
-func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request operations.PatchAccountingTransactionRequest) (*operations.PatchAccountingTransactionResponse, error) {
+// PatchAccountingJournal - Update a journal
+func (s *Journal) PatchAccountingJournal(ctx context.Context, request operations.PatchAccountingJournalRequest) (*operations.PatchAccountingJournalResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "patchAccountingTransaction",
+		OperationID:    "patchAccountingJournal",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/transaction/{id}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/journal/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingJournal", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -375,7 +375,7 @@ func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.PatchAccountingTransactionResponse{
+	res := &operations.PatchAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -392,12 +392,12 @@ func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request op
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			var out shared.AccountingTransaction
+			var out shared.AccountingJournal
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingTransaction = &out
+			res.AccountingJournal = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -413,16 +413,16 @@ func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request op
 
 }
 
-// RemoveAccountingTransaction - Remove a transaction
-func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request operations.RemoveAccountingTransactionRequest) (*operations.RemoveAccountingTransactionResponse, error) {
+// RemoveAccountingJournal - Remove a journal
+func (s *Journal) RemoveAccountingJournal(ctx context.Context, request operations.RemoveAccountingJournalRequest) (*operations.RemoveAccountingJournalResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "removeAccountingTransaction",
+		OperationID:    "removeAccountingJournal",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/transaction/{id}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/journal/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -467,7 +467,7 @@ func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.RemoveAccountingTransactionResponse{
+	res := &operations.RemoveAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -504,21 +504,21 @@ func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request o
 
 }
 
-// UpdateAccountingTransaction - Update a transaction
-func (s *Transaction) UpdateAccountingTransaction(ctx context.Context, request operations.UpdateAccountingTransactionRequest) (*operations.UpdateAccountingTransactionResponse, error) {
+// UpdateAccountingJournal - Update a journal
+func (s *Journal) UpdateAccountingJournal(ctx context.Context, request operations.UpdateAccountingJournalRequest) (*operations.UpdateAccountingJournalResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "updateAccountingTransaction",
+		OperationID:    "updateAccountingJournal",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/transaction/{id}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/journal/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingJournal", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -564,7 +564,7 @@ func (s *Transaction) UpdateAccountingTransaction(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.UpdateAccountingTransactionResponse{
+	res := &operations.UpdateAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -581,12 +581,12 @@ func (s *Transaction) UpdateAccountingTransaction(ctx context.Context, request o
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			var out shared.AccountingTransaction
+			var out shared.AccountingJournal
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountingTransaction = &out
+			res.AccountingJournal = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}

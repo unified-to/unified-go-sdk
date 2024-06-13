@@ -7,39 +7,39 @@ import (
 	"net/http"
 )
 
-type GetAccountingTransactionRequest struct {
+type GetAccountingJournalRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	// ID of the Transaction
+	// ID of the Journal
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *GetAccountingTransactionRequest) GetConnectionID() string {
+func (o *GetAccountingJournalRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *GetAccountingTransactionRequest) GetFields() []string {
+func (o *GetAccountingJournalRequest) GetFields() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Fields
 }
 
-func (o *GetAccountingTransactionRequest) GetID() string {
+func (o *GetAccountingJournalRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type GetAccountingTransactionResponse struct {
+type GetAccountingJournalResponse struct {
 	// Successful
-	AccountingTransaction *shared.AccountingTransaction
+	AccountingJournal *shared.AccountingJournal
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -48,28 +48,28 @@ type GetAccountingTransactionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAccountingTransactionResponse) GetAccountingTransaction() *shared.AccountingTransaction {
+func (o *GetAccountingJournalResponse) GetAccountingJournal() *shared.AccountingJournal {
 	if o == nil {
 		return nil
 	}
-	return o.AccountingTransaction
+	return o.AccountingJournal
 }
 
-func (o *GetAccountingTransactionResponse) GetContentType() string {
+func (o *GetAccountingJournalResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *GetAccountingTransactionResponse) GetStatusCode() int {
+func (o *GetAccountingJournalResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *GetAccountingTransactionResponse) GetRawResponse() *http.Response {
+func (o *GetAccountingJournalResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
