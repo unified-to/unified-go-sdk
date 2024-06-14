@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 5644d053fad87c74eb97f4e8f727fa1d
+  docChecksum: beb5ec210d7103d860c8cfde440f2674
   docVersion: "1.0"
-  speakeasyVersion: 1.306.0
-  generationVersion: 2.340.3
-  releaseVersion: 0.14.20
-  configChecksum: 91527c3f80de5955b302215aa3e7e2ab
+  speakeasyVersion: 1.308.0
+  generationVersion: 2.342.2
+  releaseVersion: 0.14.21
+  configChecksum: 941f5bd7c8165eeff4c19a8883ea39f6
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -31,6 +31,7 @@ generatedFiles:
   - journal.go
   - organization.go
   - taxrate.go
+  - transaction.go
   - ats.go
   - activity.go
   - application.go
@@ -116,33 +117,39 @@ generatedFiles:
   - /pkg/models/operations/createaccountinginvoice.go
   - /pkg/models/operations/createaccountingjournal.go
   - /pkg/models/operations/createaccountingtaxrate.go
+  - /pkg/models/operations/createaccountingtransaction.go
   - /pkg/models/operations/getaccountingaccount.go
   - /pkg/models/operations/getaccountingcontact.go
   - /pkg/models/operations/getaccountinginvoice.go
   - /pkg/models/operations/getaccountingjournal.go
   - /pkg/models/operations/getaccountingorganization.go
   - /pkg/models/operations/getaccountingtaxrate.go
+  - /pkg/models/operations/getaccountingtransaction.go
   - /pkg/models/operations/listaccountingaccounts.go
   - /pkg/models/operations/listaccountingcontacts.go
   - /pkg/models/operations/listaccountinginvoices.go
   - /pkg/models/operations/listaccountingjournals.go
   - /pkg/models/operations/listaccountingorganizations.go
   - /pkg/models/operations/listaccountingtaxrates.go
+  - /pkg/models/operations/listaccountingtransactions.go
   - /pkg/models/operations/patchaccountingaccount.go
   - /pkg/models/operations/patchaccountingcontact.go
   - /pkg/models/operations/patchaccountinginvoice.go
   - /pkg/models/operations/patchaccountingjournal.go
   - /pkg/models/operations/patchaccountingtaxrate.go
+  - /pkg/models/operations/patchaccountingtransaction.go
   - /pkg/models/operations/removeaccountingaccount.go
   - /pkg/models/operations/removeaccountingcontact.go
   - /pkg/models/operations/removeaccountinginvoice.go
   - /pkg/models/operations/removeaccountingjournal.go
   - /pkg/models/operations/removeaccountingtaxrate.go
+  - /pkg/models/operations/removeaccountingtransaction.go
   - /pkg/models/operations/updateaccountingaccount.go
   - /pkg/models/operations/updateaccountingcontact.go
   - /pkg/models/operations/updateaccountinginvoice.go
   - /pkg/models/operations/updateaccountingjournal.go
   - /pkg/models/operations/updateaccountingtaxrate.go
+  - /pkg/models/operations/updateaccountingtransaction.go
   - /pkg/models/operations/createcrmcontact.go
   - /pkg/models/operations/createuccontact.go
   - /pkg/models/operations/getcrmcontact.go
@@ -402,6 +409,7 @@ generatedFiles:
   - /pkg/models/shared/accountingjournal.go
   - /pkg/models/shared/accountingjournallineitem.go
   - /pkg/models/shared/accountingtaxrate.go
+  - /pkg/models/shared/accountingtransaction.go
   - /pkg/models/shared/accountingorganization.go
   - /pkg/models/shared/propertyaccountingorganizationaddress.go
   - /pkg/models/shared/crmcontact.go
@@ -523,6 +531,8 @@ generatedFiles:
   - docs/pkg/models/operations/createaccountingjournalresponse.md
   - docs/pkg/models/operations/createaccountingtaxraterequest.md
   - docs/pkg/models/operations/createaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/createaccountingtransactionrequest.md
+  - docs/pkg/models/operations/createaccountingtransactionresponse.md
   - docs/pkg/models/operations/getaccountingaccountrequest.md
   - docs/pkg/models/operations/getaccountingaccountresponse.md
   - docs/pkg/models/operations/getaccountingcontactrequest.md
@@ -535,6 +545,8 @@ generatedFiles:
   - docs/pkg/models/operations/getaccountingorganizationresponse.md
   - docs/pkg/models/operations/getaccountingtaxraterequest.md
   - docs/pkg/models/operations/getaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/getaccountingtransactionrequest.md
+  - docs/pkg/models/operations/getaccountingtransactionresponse.md
   - docs/pkg/models/operations/listaccountingaccountsrequest.md
   - docs/pkg/models/operations/listaccountingaccountsresponse.md
   - docs/pkg/models/operations/listaccountingcontactsrequest.md
@@ -547,6 +559,8 @@ generatedFiles:
   - docs/pkg/models/operations/listaccountingorganizationsresponse.md
   - docs/pkg/models/operations/listaccountingtaxratesrequest.md
   - docs/pkg/models/operations/listaccountingtaxratesresponse.md
+  - docs/pkg/models/operations/listaccountingtransactionsrequest.md
+  - docs/pkg/models/operations/listaccountingtransactionsresponse.md
   - docs/pkg/models/operations/patchaccountingaccountrequest.md
   - docs/pkg/models/operations/patchaccountingaccountresponse.md
   - docs/pkg/models/operations/patchaccountingcontactrequest.md
@@ -557,6 +571,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchaccountingjournalresponse.md
   - docs/pkg/models/operations/patchaccountingtaxraterequest.md
   - docs/pkg/models/operations/patchaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/patchaccountingtransactionrequest.md
+  - docs/pkg/models/operations/patchaccountingtransactionresponse.md
   - docs/pkg/models/operations/removeaccountingaccountrequest.md
   - docs/pkg/models/operations/removeaccountingaccountresponse.md
   - docs/pkg/models/operations/removeaccountingcontactrequest.md
@@ -567,6 +583,8 @@ generatedFiles:
   - docs/pkg/models/operations/removeaccountingjournalresponse.md
   - docs/pkg/models/operations/removeaccountingtaxraterequest.md
   - docs/pkg/models/operations/removeaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/removeaccountingtransactionrequest.md
+  - docs/pkg/models/operations/removeaccountingtransactionresponse.md
   - docs/pkg/models/operations/updateaccountingaccountrequest.md
   - docs/pkg/models/operations/updateaccountingaccountresponse.md
   - docs/pkg/models/operations/updateaccountingcontactrequest.md
@@ -577,6 +595,8 @@ generatedFiles:
   - docs/pkg/models/operations/updateaccountingjournalresponse.md
   - docs/pkg/models/operations/updateaccountingtaxraterequest.md
   - docs/pkg/models/operations/updateaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/updateaccountingtransactionrequest.md
+  - docs/pkg/models/operations/updateaccountingtransactionresponse.md
   - docs/pkg/models/operations/createcrmcontactrequest.md
   - docs/pkg/models/operations/createcrmcontactresponse.md
   - docs/pkg/models/operations/createuccontactrequest.md
@@ -1093,6 +1113,7 @@ generatedFiles:
   - docs/pkg/models/shared/accountingjournal.md
   - docs/pkg/models/shared/accountingjournallineitem.md
   - docs/pkg/models/shared/accountingtaxrate.md
+  - docs/pkg/models/shared/accountingtransaction.md
   - docs/pkg/models/shared/accountingorganization.md
   - docs/pkg/models/shared/propertyaccountingorganizationaddress.md
   - docs/pkg/models/shared/crmcontact.md
@@ -1304,6 +1325,7 @@ generatedFiles:
   - docs/sdks/journal/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/taxrate/README.md
+  - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/activity/README.md
   - docs/sdks/application/README.md

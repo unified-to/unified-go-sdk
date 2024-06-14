@@ -1,0 +1,24 @@
+# AccountingTransaction
+
+
+## Fields
+
+| Field                                      | Type                                       | Required                                   | Description                                |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| `AccountID`                                | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `ContactID`                                | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `CreatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
+| `Currency`                                 | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `CustomerMessage`                          | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `ID`                                       | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `Memo`                                     | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `PaymentMethod`                            | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `PaymentTerms`                             | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `Raw`                                      | map[string]*any*                           | :heavy_minus_sign:                         | N/A                                        |
+| `Reference`                                | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `SplitAccountID`                           | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `SubTotalAmount`                           | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
+| `TaxAmount`                                | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
+| `TotalAmount`                              | *float64*                                  | :heavy_check_mark:                         | N/A                                        |
+| `Type`                                     | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `UpdatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
