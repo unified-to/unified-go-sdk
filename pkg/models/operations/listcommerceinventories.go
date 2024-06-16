@@ -14,7 +14,6 @@ type ListCommerceInventoriesRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields        []string `queryParam:"style=form,explode=true,name=fields"`
-	ItemID        *string  `queryParam:"style=form,explode=true,name=item_id"`
 	ItemVariantID *string  `queryParam:"style=form,explode=true,name=item_variant_id"`
 	Limit         *float64 `queryParam:"style=form,explode=true,name=limit"`
 	LocationID    *string  `queryParam:"style=form,explode=true,name=location_id"`
@@ -50,13 +49,6 @@ func (o *ListCommerceInventoriesRequest) GetFields() []string {
 		return nil
 	}
 	return o.Fields
-}
-
-func (o *ListCommerceInventoriesRequest) GetItemID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.ItemID
 }
 
 func (o *ListCommerceInventoriesRequest) GetItemVariantID() *string {

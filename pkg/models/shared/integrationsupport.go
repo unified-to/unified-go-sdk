@@ -384,6 +384,32 @@ func (e *ListItemID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListItemVariantID string
+
+const (
+	ListItemVariantIDSupported    ListItemVariantID = "supported"
+	ListItemVariantIDNotSupported ListItemVariantID = "not-supported"
+)
+
+func (e ListItemVariantID) ToPointer() *ListItemVariantID {
+	return &e
+}
+func (e *ListItemVariantID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListItemVariantID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListItemVariantID: %v", v)
+	}
+}
+
 type ListJobID string
 
 const (
@@ -1066,6 +1092,7 @@ type IntegrationSupport struct {
 	ListInterviewID     *ListInterviewID     `json:"list_interview_id,omitempty"`
 	ListInvoiceID       *ListInvoiceID       `json:"list_invoice_id,omitempty"`
 	ListItemID          *ListItemID          `json:"list_item_id,omitempty"`
+	ListItemVariantID   *ListItemVariantID   `json:"list_item_variant_id,omitempty"`
 	ListJobID           *ListJobID           `json:"list_job_id,omitempty"`
 	ListLimit           *ListLimit           `json:"list_limit,omitempty"`
 	ListLinkID          *ListLinkID          `json:"list_link_id,omitempty"`
@@ -1192,6 +1219,13 @@ func (o *IntegrationSupport) GetListItemID() *ListItemID {
 		return nil
 	}
 	return o.ListItemID
+}
+
+func (o *IntegrationSupport) GetListItemVariantID() *ListItemVariantID {
+	if o == nil {
+		return nil
+	}
+	return o.ListItemVariantID
 }
 
 func (o *IntegrationSupport) GetListJobID() *ListJobID {
