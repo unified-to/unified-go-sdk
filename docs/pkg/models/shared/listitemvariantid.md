@@ -3,7 +3,8 @@
 
 ## Values
 
-| Name                            | Value                           |
-| ------------------------------- | ------------------------------- |
-| `ListItemVariantIDSupported`    | supported                       |
-| `ListItemVariantIDNotSupported` | not-supported                   |
+| Name                                 | Value                                |
+| ------------------------------------ | ------------------------------------ |
+| `ListItemVariantIDSupportedRequired` | supported-required                   |
+| `ListItemVariantIDSupported`         | supported                            |
+| `ListItemVariantIDNotSupported`      | not-supported                        |

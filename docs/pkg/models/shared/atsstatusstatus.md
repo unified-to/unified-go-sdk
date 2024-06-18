@@ -17,4 +17,5 @@
 | `AtsStatusStatusAccepted`        | ACCEPTED                         |
 | `AtsStatusStatusHired`           | HIRED                            |
 | `AtsStatusStatusRejected`        | REJECTED                         |
+| `AtsStatusStatusDeclined`        | DECLINED                         |
 | `AtsStatusStatusWithdrawn`       | WITHDRAWN                        |

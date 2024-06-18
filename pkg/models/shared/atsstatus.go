@@ -22,6 +22,7 @@ const (
 	AtsStatusStatusAccepted        AtsStatusStatus = "ACCEPTED"
 	AtsStatusStatusHired           AtsStatusStatus = "HIRED"
 	AtsStatusStatusRejected        AtsStatusStatus = "REJECTED"
+	AtsStatusStatusDeclined        AtsStatusStatus = "DECLINED"
 	AtsStatusStatusWithdrawn       AtsStatusStatus = "WITHDRAWN"
 )
 
@@ -57,6 +58,8 @@ func (e *AtsStatusStatus) UnmarshalJSON(data []byte) error {
 	case "HIRED":
 		fallthrough
 	case "REJECTED":
+		fallthrough
+	case "DECLINED":
 		fallthrough
 	case "WITHDRAWN":
 		*e = AtsStatusStatus(v)

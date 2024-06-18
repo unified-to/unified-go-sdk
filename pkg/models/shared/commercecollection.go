@@ -48,6 +48,7 @@ type CommerceCollection struct {
 	IsVisible         *bool                   `json:"is_visible,omitempty"`
 	Media             []CommerceItemMedia     `json:"media,omitempty"`
 	Name              string                  `json:"name"`
+	ParentID          *string                 `json:"parent_id,omitempty"`
 	PublicDescription *string                 `json:"public_description,omitempty"`
 	PublicName        *string                 `json:"public_name,omitempty"`
 	Raw               map[string]any          `json:"raw,omitempty"`
@@ -121,6 +122,13 @@ func (o *CommerceCollection) GetName() string {
 		return ""
 	}
 	return o.Name
+}
+
+func (o *CommerceCollection) GetParentID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ParentID
 }
 
 func (o *CommerceCollection) GetPublicDescription() *string {

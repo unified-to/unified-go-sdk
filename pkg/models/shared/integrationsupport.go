@@ -387,8 +387,9 @@ func (e *ListItemID) UnmarshalJSON(data []byte) error {
 type ListItemVariantID string
 
 const (
-	ListItemVariantIDSupported    ListItemVariantID = "supported"
-	ListItemVariantIDNotSupported ListItemVariantID = "not-supported"
+	ListItemVariantIDSupportedRequired ListItemVariantID = "supported-required"
+	ListItemVariantIDSupported         ListItemVariantID = "supported"
+	ListItemVariantIDNotSupported      ListItemVariantID = "not-supported"
 )
 
 func (e ListItemVariantID) ToPointer() *ListItemVariantID {
@@ -400,6 +401,8 @@ func (e *ListItemVariantID) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
+	case "supported-required":
+		fallthrough
 	case "supported":
 		fallthrough
 	case "not-supported":
