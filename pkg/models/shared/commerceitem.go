@@ -18,6 +18,7 @@ type CommerceItem struct {
 	PublicDescription *string             `json:"public_description,omitempty"`
 	PublicName        *string             `json:"public_name,omitempty"`
 	Raw               map[string]any      `json:"raw,omitempty"`
+	Slug              *string             `json:"slug,omitempty"`
 	Tags              []string            `json:"tags,omitempty"`
 	Type              *string             `json:"type,omitempty"`
 	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
@@ -105,6 +106,13 @@ func (o *CommerceItem) GetRaw() map[string]any {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *CommerceItem) GetSlug() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Slug
 }
 
 func (o *CommerceItem) GetTags() []string {
