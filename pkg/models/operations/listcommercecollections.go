@@ -13,10 +13,11 @@ type ListCommerceCollectionsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields   []string `queryParam:"style=form,explode=true,name=fields"`
+	Limit    *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset   *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order    *string  `queryParam:"style=form,explode=true,name=order"`
+	ParentID *string  `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
@@ -69,6 +70,13 @@ func (o *ListCommerceCollectionsRequest) GetOrder() *string {
 		return nil
 	}
 	return o.Order
+}
+
+func (o *ListCommerceCollectionsRequest) GetParentID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ParentID
 }
 
 func (o *ListCommerceCollectionsRequest) GetQuery() *string {
