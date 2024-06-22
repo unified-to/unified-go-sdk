@@ -762,7 +762,6 @@ func main() {
 * [ListUnifiedIntegrationWorkspaces](docs/sdks/unified/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [ListUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [ListUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
-* [ListUnifiedSupports](docs/sdks/unified/README.md#listunifiedsupports) - Get support info
 * [ListUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [PatchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [PatchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
@@ -803,7 +802,6 @@ func main() {
 ### [Issue](docs/sdks/issue/README.md)
 
 * [ListUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
-* [ListUnifiedSupports](docs/sdks/issue/README.md#listunifiedsupports) - Get support info
 
 ### [Webhook](docs/sdks/webhook/README.md)
 
