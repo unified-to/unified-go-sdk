@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 8cd5f0b8f9ac7da8e963b9b8716b4f9a
+  docChecksum: d30cc8ed3fe26eee9d880fe9074cfb0b
   docVersion: "1.0"
-  speakeasyVersion: 1.314.2
-  generationVersion: 2.349.6
-  releaseVersion: 0.14.28
-  configChecksum: 691a32f7066fd51afe72fabddfea12d9
+  speakeasyVersion: 1.321.0
+  generationVersion: 2.354.2
+  releaseVersion: 0.14.29
+  configChecksum: a83b252b6e054a3a5a6ccc28da1b7c5e
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -1311,7 +1311,6 @@ generatedFiles:
   - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventscreated.md
   - docs/pkg/models/shared/propertyintegrationcategories.md
   - docs/pkg/models/shared/issuestatus.md
-  - docs/pkg/models/shared/issuetype.md
   - docs/pkg/models/shared/issue.md
   - docs/pkg/models/shared/security.md
   - docs/sdks/unifiedto/README.md

@@ -48,42 +48,14 @@ func (e *IssueStatus) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type IssueType string
-
-const (
-	IssueTypeBug            IssueType = "BUG"
-	IssueTypeFeatureRequest IssueType = "FEATURE_REQUEST"
-	IssueTypeInquiry        IssueType = "INQUIRY"
-)
-
-func (e IssueType) ToPointer() *IssueType {
-	return &e
-}
-func (e *IssueType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "BUG":
-		fallthrough
-	case "FEATURE_REQUEST":
-		fallthrough
-	case "INQUIRY":
-		*e = IssueType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for IssueType: %v", v)
-	}
-}
-
 type Issue struct {
 	CreatedAt      *string     `json:"created_at,omitempty"`
 	ID             *string     `json:"id,omitempty"`
 	ResolutionTime *float64    `json:"resolution_time,omitempty"`
 	Status         IssueStatus `json:"status"`
+	TicketRef      string      `json:"ticket_ref"`
 	Title          string      `json:"title"`
-	Type           IssueType   `json:"type"`
+	Type           []string    `json:"type,omitempty"`
 	UpdatedAt      *string     `json:"updated_at,omitempty"`
 	URL            *string     `json:"url,omitempty"`
 	WorkspaceID    string      `json:"workspace_id"`
@@ -117,6 +89,13 @@ func (o *Issue) GetStatus() IssueStatus {
 	return o.Status
 }
 
+func (o *Issue) GetTicketRef() string {
+	if o == nil {
+		return ""
+	}
+	return o.TicketRef
+}
+
 func (o *Issue) GetTitle() string {
 	if o == nil {
 		return ""
@@ -124,9 +103,9 @@ func (o *Issue) GetTitle() string {
 	return o.Title
 }
 
-func (o *Issue) GetType() IssueType {
+func (o *Issue) GetType() []string {
 	if o == nil {
-		return IssueType("")
+		return nil
 	}
 	return o.Type
 }
