@@ -3,24 +3,25 @@
 package shared
 
 type MessagingMessage struct {
-	AuthorMember       PropertyMessagingMessageAuthorMember `json:"author_member"`
-	ChannelID          *string                              `json:"channel_id,omitempty"`
-	CreatedAt          *string                              `json:"created_at,omitempty"`
-	DestinationMembers []MessagingMember                    `json:"destination_members,omitempty"`
-	HiddenMembers      []MessagingMember                    `json:"hidden_members,omitempty"`
-	ID                 *string                              `json:"id,omitempty"`
-	MentionedMembers   []MessagingMember                    `json:"mentioned_members,omitempty"`
-	Message            string                               `json:"message"`
-	ParentMessageID    *string                              `json:"parent_message_id,omitempty"`
-	Raw                map[string]any                       `json:"raw,omitempty"`
-	Subject            *string                              `json:"subject,omitempty"`
-	UpdatedAt          *string                              `json:"updated_at,omitempty"`
-	WebURL             *string                              `json:"web_url,omitempty"`
+	AuthorMember       *PropertyMessagingMessageAuthorMember `json:"author_member,omitempty"`
+	ChannelID          *string                               `json:"channel_id,omitempty"`
+	CreatedAt          *string                               `json:"created_at,omitempty"`
+	DestinationMembers []MessagingMember                     `json:"destination_members,omitempty"`
+	HiddenMembers      []MessagingMember                     `json:"hidden_members,omitempty"`
+	ID                 *string                               `json:"id,omitempty"`
+	MentionedMembers   []MessagingMember                     `json:"mentioned_members,omitempty"`
+	Message            string                                `json:"message"`
+	MessageHTML        *string                               `json:"message_html,omitempty"`
+	ParentMessageID    *string                               `json:"parent_message_id,omitempty"`
+	Raw                map[string]any                        `json:"raw,omitempty"`
+	Subject            *string                               `json:"subject,omitempty"`
+	UpdatedAt          *string                               `json:"updated_at,omitempty"`
+	WebURL             *string                               `json:"web_url,omitempty"`
 }
 
-func (o *MessagingMessage) GetAuthorMember() PropertyMessagingMessageAuthorMember {
+func (o *MessagingMessage) GetAuthorMember() *PropertyMessagingMessageAuthorMember {
 	if o == nil {
-		return PropertyMessagingMessageAuthorMember{}
+		return nil
 	}
 	return o.AuthorMember
 }
@@ -72,6 +73,13 @@ func (o *MessagingMessage) GetMessage() string {
 		return ""
 	}
 	return o.Message
+}
+
+func (o *MessagingMessage) GetMessageHTML() *string {
+	if o == nil {
+		return nil
+	}
+	return o.MessageHTML
 }
 
 func (o *MessagingMessage) GetParentMessageID() *string {
