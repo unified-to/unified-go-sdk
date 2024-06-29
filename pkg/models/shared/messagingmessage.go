@@ -3,6 +3,7 @@
 package shared
 
 type MessagingMessage struct {
+	Attachments        []MessagingAttachment                 `json:"attachments,omitempty"`
 	AuthorMember       *PropertyMessagingMessageAuthorMember `json:"author_member,omitempty"`
 	ChannelID          *string                               `json:"channel_id,omitempty"`
 	CreatedAt          *string                               `json:"created_at,omitempty"`
@@ -10,13 +11,20 @@ type MessagingMessage struct {
 	HiddenMembers      []MessagingMember                     `json:"hidden_members,omitempty"`
 	ID                 *string                               `json:"id,omitempty"`
 	MentionedMembers   []MessagingMember                     `json:"mentioned_members,omitempty"`
-	Message            string                                `json:"message"`
+	Message            *string                               `json:"message,omitempty"`
 	MessageHTML        *string                               `json:"message_html,omitempty"`
 	ParentMessageID    *string                               `json:"parent_message_id,omitempty"`
 	Raw                map[string]any                        `json:"raw,omitempty"`
 	Subject            *string                               `json:"subject,omitempty"`
 	UpdatedAt          *string                               `json:"updated_at,omitempty"`
 	WebURL             *string                               `json:"web_url,omitempty"`
+}
+
+func (o *MessagingMessage) GetAttachments() []MessagingAttachment {
+	if o == nil {
+		return nil
+	}
+	return o.Attachments
 }
 
 func (o *MessagingMessage) GetAuthorMember() *PropertyMessagingMessageAuthorMember {
@@ -68,9 +76,9 @@ func (o *MessagingMessage) GetMentionedMembers() []MessagingMember {
 	return o.MentionedMembers
 }
 
-func (o *MessagingMessage) GetMessage() string {
+func (o *MessagingMessage) GetMessage() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Message
 }

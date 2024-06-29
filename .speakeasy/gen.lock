@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: bdc716c1ec699c0df9357438a35e33f6
+  docChecksum: 47c3e061b14a46be0740453c7c5f67d6
   docVersion: "1.0"
-  speakeasyVersion: 1.322.1
+  speakeasyVersion: 1.322.3
   generationVersion: 2.354.2
-  releaseVersion: 0.14.30
-  configChecksum: 409661b3b7e932321c78807f88902223
+  releaseVersion: 0.14.31
+  configChecksum: fc5bb085f25ce672335304cd93bbc5af
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -486,6 +486,7 @@ generatedFiles:
   - /pkg/models/shared/messagingmessage.go
   - /pkg/models/shared/messagingmember.go
   - /pkg/models/shared/propertymessagingmessageauthormember.go
+  - /pkg/models/shared/messagingattachment.go
   - /pkg/models/shared/messagingchannel.go
   - /pkg/models/shared/paymentlink.go
   - /pkg/models/shared/paymentlinklineitem.go
@@ -1230,6 +1231,7 @@ generatedFiles:
   - docs/pkg/models/shared/messagingmessage.md
   - docs/pkg/models/shared/messagingmember.md
   - docs/pkg/models/shared/propertymessagingmessageauthormember.md
+  - docs/pkg/models/shared/messagingattachment.md
   - docs/pkg/models/shared/messagingchannel.md
   - docs/pkg/models/shared/paymentlink.md
   - docs/pkg/models/shared/paymentlinklineitem.md
