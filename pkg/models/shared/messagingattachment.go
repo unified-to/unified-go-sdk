@@ -3,4 +3,44 @@
 package shared
 
 type MessagingAttachment struct {
+	ContentType *string  `json:"content_type,omitempty"`
+	DownloadURL *string  `json:"download_url,omitempty"`
+	Filename    *string  `json:"filename,omitempty"`
+	MessageID   *string  `json:"message_id,omitempty"`
+	Size        *float64 `json:"size,omitempty"`
+}
+
+func (o *MessagingAttachment) GetContentType() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ContentType
+}
+
+func (o *MessagingAttachment) GetDownloadURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DownloadURL
+}
+
+func (o *MessagingAttachment) GetFilename() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Filename
+}
+
+func (o *MessagingAttachment) GetMessageID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.MessageID
+}
+
+func (o *MessagingAttachment) GetSize() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.Size
 }

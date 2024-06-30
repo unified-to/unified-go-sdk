@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 47c3e061b14a46be0740453c7c5f67d6
+  docChecksum: ae2ed3981ced9c41a08d5e707d7c8c86
   docVersion: "1.0"
   speakeasyVersion: 1.322.3
   generationVersion: 2.354.2
-  releaseVersion: 0.14.31
-  configChecksum: fc5bb085f25ce672335304cd93bbc5af
+  releaseVersion: 0.14.32
+  configChecksum: 8200b8df567cef03157dfccdd1e47b25
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -472,7 +472,9 @@ generatedFiles:
   - /pkg/models/shared/genaimodel.go
   - /pkg/models/shared/hrisemployee.go
   - /pkg/models/shared/hristelephone.go
+  - /pkg/models/shared/propertyhrisemployeeemployeeroles.go
   - /pkg/models/shared/hrisemail.go
+  - /pkg/models/shared/hriscompensation.go
   - /pkg/models/shared/propertyhrisemployeeaddress.go
   - /pkg/models/shared/hrisgroup.go
   - /pkg/models/shared/hrispayslip.go
@@ -1209,8 +1211,10 @@ generatedFiles:
   - docs/pkg/models/shared/hrisemployee.md
   - docs/pkg/models/shared/hristelephonetype.md
   - docs/pkg/models/shared/hristelephone.md
+  - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/pkg/models/shared/hrisemailtype.md
   - docs/pkg/models/shared/hrisemail.md
+  - docs/pkg/models/shared/hriscompensation.md
   - docs/pkg/models/shared/propertyhrisemployeeaddress.md
   - docs/pkg/models/shared/hrisgrouptype.md
   - docs/pkg/models/shared/hrisgroup.md
