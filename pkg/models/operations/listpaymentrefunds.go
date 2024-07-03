@@ -16,11 +16,9 @@ type ListPaymentRefundsRequest struct {
 	Fields    []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit     *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset    *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order     *string  `queryParam:"style=form,explode=true,name=order"`
 	PaymentID *string  `queryParam:"style=form,explode=true,name=payment_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -64,13 +62,6 @@ func (o *ListPaymentRefundsRequest) GetOffset() *float64 {
 	return o.Offset
 }
 
-func (o *ListPaymentRefundsRequest) GetOrder() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Order
-}
-
 func (o *ListPaymentRefundsRequest) GetPaymentID() *string {
 	if o == nil {
 		return nil
@@ -83,13 +74,6 @@ func (o *ListPaymentRefundsRequest) GetQuery() *string {
 		return nil
 	}
 	return o.Query
-}
-
-func (o *ListPaymentRefundsRequest) GetSort() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Sort
 }
 
 func (o *ListPaymentRefundsRequest) GetUpdatedGte() *time.Time {

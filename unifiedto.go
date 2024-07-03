@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"github.com/unified-to/unified-go-sdk/internal/hooks"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/retry"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
 	"time"
@@ -53,7 +54,7 @@ type sdkConfiguration struct {
 	SDKVersion        string
 	GenVersion        string
 	UserAgent         string
-	RetryConfig       *utils.RetryConfig
+	RetryConfig       *retry.Config
 	Hooks             *hooks.Hooks
 }
 
@@ -196,7 +197,7 @@ func WithSecuritySource(security func(context.Context) (shared.Security, error))
 	}
 }
 
-func WithRetryConfig(retryConfig utils.RetryConfig) SDKOption {
+func WithRetryConfig(retryConfig retry.Config) SDKOption {
 	return func(sdk *UnifiedTo) {
 		sdk.sdkConfiguration.RetryConfig = &retryConfig
 	}
@@ -208,9 +209,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.14.32",
-			GenVersion:        "2.354.2",
-			UserAgent:         "speakeasy-sdk/go 0.14.32 2.354.2 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.14.33",
+			GenVersion:        "2.359.0",
+			UserAgent:         "speakeasy-sdk/go 0.14.33 2.359.0 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}

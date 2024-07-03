@@ -15,8 +15,6 @@ type ListUnifiedWebhooksRequest struct {
 	// Filter the results for webhooks for only this object
 	Object *string  `queryParam:"style=form,explode=true,name=object"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	Sort   *string  `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -58,20 +56,6 @@ func (o *ListUnifiedWebhooksRequest) GetOffset() *float64 {
 		return nil
 	}
 	return o.Offset
-}
-
-func (o *ListUnifiedWebhooksRequest) GetOrder() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Order
-}
-
-func (o *ListUnifiedWebhooksRequest) GetSort() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Sort
 }
 
 func (o *ListUnifiedWebhooksRequest) GetUpdatedGte() *time.Time {

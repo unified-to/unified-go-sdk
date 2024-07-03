@@ -16,12 +16,10 @@ type ListTaskTasksRequest struct {
 	Fields    []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit     *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset    *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order     *string  `queryParam:"style=form,explode=true,name=order"`
 	ParentID  *string  `queryParam:"style=form,explode=true,name=parent_id"`
 	ProjectID *string  `queryParam:"style=form,explode=true,name=project_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -65,13 +63,6 @@ func (o *ListTaskTasksRequest) GetOffset() *float64 {
 	return o.Offset
 }
 
-func (o *ListTaskTasksRequest) GetOrder() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Order
-}
-
 func (o *ListTaskTasksRequest) GetParentID() *string {
 	if o == nil {
 		return nil
@@ -91,13 +82,6 @@ func (o *ListTaskTasksRequest) GetQuery() *string {
 		return nil
 	}
 	return o.Query
-}
-
-func (o *ListTaskTasksRequest) GetSort() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Sort
 }
 
 func (o *ListTaskTasksRequest) GetUpdatedGte() *time.Time {

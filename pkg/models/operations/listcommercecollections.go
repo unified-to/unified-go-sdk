@@ -16,11 +16,9 @@ type ListCommerceCollectionsRequest struct {
 	Fields   []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit    *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset   *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order    *string  `queryParam:"style=form,explode=true,name=order"`
 	ParentID *string  `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	Type  *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
@@ -65,13 +63,6 @@ func (o *ListCommerceCollectionsRequest) GetOffset() *float64 {
 	return o.Offset
 }
 
-func (o *ListCommerceCollectionsRequest) GetOrder() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Order
-}
-
 func (o *ListCommerceCollectionsRequest) GetParentID() *string {
 	if o == nil {
 		return nil
@@ -84,13 +75,6 @@ func (o *ListCommerceCollectionsRequest) GetQuery() *string {
 		return nil
 	}
 	return o.Query
-}
-
-func (o *ListCommerceCollectionsRequest) GetSort() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Sort
 }
 
 func (o *ListCommerceCollectionsRequest) GetType() *string {

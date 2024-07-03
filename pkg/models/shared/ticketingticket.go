@@ -50,6 +50,7 @@ type TicketingTicket struct {
 	Subject     *string                `json:"subject,omitempty"`
 	Tags        []string               `json:"tags,omitempty"`
 	UpdatedAt   *time.Time             `json:"updated_at,omitempty"`
+	URL         *string                `json:"url,omitempty"`
 	UserID      *string                `json:"user_id,omitempty"`
 }
 
@@ -160,6 +161,13 @@ func (o *TicketingTicket) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *TicketingTicket) GetURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.URL
 }
 
 func (o *TicketingTicket) GetUserID() *string {

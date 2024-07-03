@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: ae2ed3981ced9c41a08d5e707d7c8c86
+  docChecksum: 1c9d25d2726d323697b110e342adfad9
   docVersion: "1.0"
-  speakeasyVersion: 1.322.3
-  generationVersion: 2.354.2
-  releaseVersion: 0.14.32
-  configChecksum: 8200b8df567cef03157dfccdd1e47b25
+  speakeasyVersion: 1.326.0
+  generationVersion: 2.359.0
+  releaseVersion: 0.14.33
+  configChecksum: 6b48d95a9425eff1572e5a32004844f9
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -97,6 +97,7 @@ generatedFiles:
   - unifiedto.go
   - go.mod
   - pkg/models/sdkerrors/sdkerror.go
+  - pkg/retry/config.go
   - pkg/types/bigint.go
   - pkg/types/date.go
   - pkg/types/datetime.go
