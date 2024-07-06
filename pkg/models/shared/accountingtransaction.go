@@ -22,7 +22,7 @@ type AccountingTransaction struct {
 	SplitAccountID  *string        `json:"split_account_id,omitempty"`
 	SubTotalAmount  *float64       `json:"sub_total_amount,omitempty"`
 	TaxAmount       *float64       `json:"tax_amount,omitempty"`
-	TotalAmount     float64        `json:"total_amount"`
+	TotalAmount     *float64       `json:"total_amount,omitempty"`
 	Type            *string        `json:"type,omitempty"`
 	UpdatedAt       *time.Time     `json:"updated_at,omitempty"`
 }
@@ -136,9 +136,9 @@ func (o *AccountingTransaction) GetTaxAmount() *float64 {
 	return o.TaxAmount
 }
 
-func (o *AccountingTransaction) GetTotalAmount() float64 {
+func (o *AccountingTransaction) GetTotalAmount() *float64 {
 	if o == nil {
-		return 0.0
+		return nil
 	}
 	return o.TotalAmount
 }

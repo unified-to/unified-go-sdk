@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 1c9d25d2726d323697b110e342adfad9
+  docChecksum: d253907302f74e2e6dae86e85664363c
   docVersion: "1.0"
-  speakeasyVersion: 1.326.0
-  generationVersion: 2.359.0
-  releaseVersion: 0.14.33
-  configChecksum: 6b48d95a9425eff1572e5a32004844f9
+  speakeasyVersion: 1.326.3
+  generationVersion: 2.359.6
+  releaseVersion: 0.14.34
+  configChecksum: fd07cc86667c3f75f7ec3e7d620644c9
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -1215,6 +1215,8 @@ generatedFiles:
   - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/pkg/models/shared/hrisemailtype.md
   - docs/pkg/models/shared/hrisemail.md
+  - docs/pkg/models/shared/hriscompensationfrequency.md
+  - docs/pkg/models/shared/hriscompensationtype.md
   - docs/pkg/models/shared/hriscompensation.md
   - docs/pkg/models/shared/propertyhrisemployeeaddress.md
   - docs/pkg/models/shared/hrisgrouptype.md
