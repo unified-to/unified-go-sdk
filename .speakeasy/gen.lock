@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: d253907302f74e2e6dae86e85664363c
+  docChecksum: 7bf909f436b97f608497de22ab18b6f5
   docVersion: "1.0"
-  speakeasyVersion: 1.326.3
-  generationVersion: 2.359.6
-  releaseVersion: 0.14.34
-  configChecksum: fd07cc86667c3f75f7ec3e7d620644c9
+  speakeasyVersion: 1.330.0
+  generationVersion: 2.361.10
+  releaseVersion: 0.14.35
+  configChecksum: 9bce09f125db6ca6b9540d59988d2d3f
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk

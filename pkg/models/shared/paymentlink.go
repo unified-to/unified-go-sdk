@@ -8,13 +8,13 @@ import (
 )
 
 type PaymentLink struct {
-	Amount    float64               `json:"amount"`
+	Amount    *float64              `json:"amount,omitempty"`
 	ContactID *string               `json:"contact_id,omitempty"`
 	CreatedAt *time.Time            `json:"created_at,omitempty"`
 	Currency  *string               `json:"currency,omitempty"`
 	ID        *string               `json:"id,omitempty"`
 	IsActive  *bool                 `json:"is_active,omitempty"`
-	Lineitems []PaymentLinkLineitem `json:"lineitems"`
+	Lineitems []PaymentLinkLineitem `json:"lineitems,omitempty"`
 	PaymentID *string               `json:"payment_id,omitempty"`
 	Raw       map[string]any        `json:"raw,omitempty"`
 	UpdatedAt *time.Time            `json:"updated_at,omitempty"`
@@ -32,9 +32,9 @@ func (p *PaymentLink) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PaymentLink) GetAmount() float64 {
+func (o *PaymentLink) GetAmount() *float64 {
 	if o == nil {
-		return 0.0
+		return nil
 	}
 	return o.Amount
 }
@@ -76,7 +76,7 @@ func (o *PaymentLink) GetIsActive() *bool {
 
 func (o *PaymentLink) GetLineitems() []PaymentLinkLineitem {
 	if o == nil {
-		return []PaymentLinkLineitem{}
+		return nil
 	}
 	return o.Lineitems
 }
