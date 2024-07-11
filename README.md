@@ -1028,6 +1028,96 @@ func main() {
 ```
 <!-- End Authentication [security] -->
 
+<!-- Start Retries [retries] -->
+## Retries
+
+Some of the endpoints in this SDK support retries. If you use the SDK without any configuration, it will fall back to the default retry strategy provided by the API. However, the default retry strategy can be overridden on a per-operation basis, or across the entire SDK.
+
+To change the default retry strategy for a single API call, simply provide a `retry.Config` object to the call by using the `WithRetries` option:
+```go
+package main
+
+import (
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"github.com/unified-to/unified-go-sdk/pkg/retry"
+	"log"
+	"pkg/models/operations"
+)
+
+func main() {
+	s := unifiedgosdk.New(
+		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
+	request := operations.CreateAccountingAccountRequest{
+		ConnectionID: "<value>",
+	}
+	ctx := context.Background()
+	res, err := s.Accounting.CreateAccountingAccount(ctx, request, operations.WithRetries(
+		retry.Config{
+			Strategy: "backoff",
+			Backoff: &retry.BackoffStrategy{
+				InitialInterval: 1,
+				MaxInterval:     50,
+				Exponent:        1.1,
+				MaxElapsedTime:  100,
+			},
+			RetryConnectionErrors: false,
+		}))
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.AccountingAccount != nil {
+		// handle response
+	}
+}
+
+```
+
+If you'd like to override the default retry strategy for all operations that support retries, you can use the `WithRetryConfig` option at SDK initialization:
+```go
+package main
+
+import (
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"github.com/unified-to/unified-go-sdk/pkg/retry"
+	"log"
+)
+
+func main() {
+	s := unifiedgosdk.New(
+		unifiedgosdk.WithRetryConfig(
+			retry.Config{
+				Strategy: "backoff",
+				Backoff: &retry.BackoffStrategy{
+					InitialInterval: 1,
+					MaxInterval:     50,
+					Exponent:        1.1,
+					MaxElapsedTime:  100,
+				},
+				RetryConnectionErrors: false,
+			}),
+		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
+	request := operations.CreateAccountingAccountRequest{
+		ConnectionID: "<value>",
+	}
+	ctx := context.Background()
+	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.AccountingAccount != nil {
+		// handle response
+	}
+}
+
+```
+<!-- End Retries [retries] -->
+
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 
 

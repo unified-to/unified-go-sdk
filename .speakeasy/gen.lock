@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 7bf909f436b97f608497de22ab18b6f5
+  docChecksum: b7d66c91464d8c38db3b3054c9cc94b2
   docVersion: "1.0"
-  speakeasyVersion: 1.330.0
-  generationVersion: 2.361.10
-  releaseVersion: 0.14.35
-  configChecksum: 9bce09f125db6ca6b9540d59988d2d3f
+  speakeasyVersion: 1.331.0
+  generationVersion: 2.365.0
+  releaseVersion: 0.15.0
+  configChecksum: 741a38040aee33959f42dc644ed61f1c
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -15,13 +15,15 @@ features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.4
-    core: 3.4.14
+    core: 3.4.15
+    defaultEnabledRetries: 0.2.0
     globalSecurity: 2.82.9
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.2
     intellisenseMarkdownSupport: 0.1.0
     responseFormat: 0.1.2
+    retries: 2.83.0
     sdkHooks: 0.1.0
 generatedFiles:
   - accounting.go
@@ -1323,6 +1325,7 @@ generatedFiles:
   - docs/pkg/models/shared/issue.md
   - docs/pkg/models/shared/security.md
   - docs/sdks/unifiedto/README.md
+  - docs/pkg/models/operations/option.md
   - docs/sdks/accounting/README.md
   - docs/sdks/account/README.md
   - docs/sdks/contact/README.md
@@ -1394,5 +1397,6 @@ generatedFiles:
   - docs/sdks/issue/README.md
   - docs/sdks/webhook/README.md
   - USAGE.md
+  - pkg/models/operations/options.go
   - .gitattributes
   - internal/hooks/hooks.go

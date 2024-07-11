@@ -19,6 +19,8 @@ type AccountingTransaction struct {
 	PaymentTerms    *string        `json:"payment_terms,omitempty"`
 	Raw             map[string]any `json:"raw,omitempty"`
 	Reference       *string        `json:"reference,omitempty"`
+	// This is a unified object that this transaction references
+	ReferenceObject map[string]any `json:"reference_object,omitempty"`
 	SplitAccountID  *string        `json:"split_account_id,omitempty"`
 	SubTotalAmount  *float64       `json:"sub_total_amount,omitempty"`
 	TaxAmount       *float64       `json:"tax_amount,omitempty"`
@@ -113,6 +115,13 @@ func (o *AccountingTransaction) GetReference() *string {
 		return nil
 	}
 	return o.Reference
+}
+
+func (o *AccountingTransaction) GetReferenceObject() map[string]any {
+	if o == nil {
+		return nil
+	}
+	return o.ReferenceObject
 }
 
 func (o *AccountingTransaction) GetSplitAccountID() *string {
