@@ -11,6 +11,7 @@ import (
 
 type ListAtsDocumentsRequest struct {
 	ApplicationID *string `queryParam:"style=form,explode=true,name=application_id"`
+	CandidateID   *string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -39,6 +40,13 @@ func (o *ListAtsDocumentsRequest) GetApplicationID() *string {
 		return nil
 	}
 	return o.ApplicationID
+}
+
+func (o *ListAtsDocumentsRequest) GetCandidateID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CandidateID
 }
 
 func (o *ListAtsDocumentsRequest) GetConnectionID() string {
