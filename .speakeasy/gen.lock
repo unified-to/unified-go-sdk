@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: baed20d00770c3529ab25ff351c386de
+  docChecksum: 447f3fb120945ec501fc264fcc573697
   docVersion: "1.0"
   speakeasyVersion: 1.335.0
   generationVersion: 2.370.2
-  releaseVersion: 0.15.1
-  configChecksum: 515f309a3abb79bb1b8759b59b5091dc
+  releaseVersion: 0.15.2
+  configChecksum: c223177dfcdefaa1d4b069183266e6b5
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -412,6 +412,7 @@ generatedFiles:
   - /pkg/models/shared/accountingjournallineitem.go
   - /pkg/models/shared/accountingtaxrate.go
   - /pkg/models/shared/accountingtransaction.go
+  - /pkg/models/shared/accountingtransactionlineitem.go
   - /pkg/models/shared/accountingorganization.go
   - /pkg/models/shared/propertyaccountingorganizationaddress.go
   - /pkg/models/shared/crmcontact.go
@@ -1117,6 +1118,7 @@ generatedFiles:
   - docs/pkg/models/shared/accountingjournallineitem.md
   - docs/pkg/models/shared/accountingtaxrate.md
   - docs/pkg/models/shared/accountingtransaction.md
+  - docs/pkg/models/shared/accountingtransactionlineitem.md
   - docs/pkg/models/shared/accountingorganization.md
   - docs/pkg/models/shared/propertyaccountingorganizationaddress.md
   - docs/pkg/models/shared/crmcontact.md

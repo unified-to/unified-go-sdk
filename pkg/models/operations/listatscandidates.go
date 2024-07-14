@@ -14,6 +14,7 @@ type ListAtsCandidatesRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	// Query string to search. eg. email address or name
@@ -45,6 +46,13 @@ func (o *ListAtsCandidatesRequest) GetFields() []string {
 		return nil
 	}
 	return o.Fields
+}
+
+func (o *ListAtsCandidatesRequest) GetJobID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.JobID
 }
 
 func (o *ListAtsCandidatesRequest) GetLimit() *float64 {

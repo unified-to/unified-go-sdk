@@ -8,25 +8,24 @@ import (
 )
 
 type AccountingTransaction struct {
-	AccountID       *string        `json:"account_id,omitempty"`
-	ContactID       *string        `json:"contact_id,omitempty"`
-	CreatedAt       *time.Time     `json:"created_at,omitempty"`
-	Currency        *string        `json:"currency,omitempty"`
-	CustomerMessage *string        `json:"customer_message,omitempty"`
-	ID              *string        `json:"id,omitempty"`
-	Memo            *string        `json:"memo,omitempty"`
-	PaymentMethod   *string        `json:"payment_method,omitempty"`
-	PaymentTerms    *string        `json:"payment_terms,omitempty"`
-	Raw             map[string]any `json:"raw,omitempty"`
-	Reference       *string        `json:"reference,omitempty"`
-	// This is a unified object that this transaction references
-	ReferenceObject map[string]any `json:"reference_object,omitempty"`
-	SplitAccountID  *string        `json:"split_account_id,omitempty"`
-	SubTotalAmount  *float64       `json:"sub_total_amount,omitempty"`
-	TaxAmount       *float64       `json:"tax_amount,omitempty"`
-	TotalAmount     *float64       `json:"total_amount,omitempty"`
-	Type            *string        `json:"type,omitempty"`
-	UpdatedAt       *time.Time     `json:"updated_at,omitempty"`
+	AccountID       *string                         `json:"account_id,omitempty"`
+	ContactID       *string                         `json:"contact_id,omitempty"`
+	CreatedAt       *time.Time                      `json:"created_at,omitempty"`
+	Currency        *string                         `json:"currency,omitempty"`
+	CustomerMessage *string                         `json:"customer_message,omitempty"`
+	ID              *string                         `json:"id,omitempty"`
+	Lineitems       []AccountingTransactionLineItem `json:"lineitems,omitempty"`
+	Memo            *string                         `json:"memo,omitempty"`
+	PaymentMethod   *string                         `json:"payment_method,omitempty"`
+	PaymentTerms    *string                         `json:"payment_terms,omitempty"`
+	Raw             map[string]any                  `json:"raw,omitempty"`
+	Reference       *string                         `json:"reference,omitempty"`
+	SplitAccountID  *string                         `json:"split_account_id,omitempty"`
+	SubTotalAmount  *float64                        `json:"sub_total_amount,omitempty"`
+	TaxAmount       *float64                        `json:"tax_amount,omitempty"`
+	TotalAmount     *float64                        `json:"total_amount,omitempty"`
+	Type            *string                         `json:"type,omitempty"`
+	UpdatedAt       *time.Time                      `json:"updated_at,omitempty"`
 }
 
 func (a AccountingTransaction) MarshalJSON() ([]byte, error) {
@@ -82,6 +81,13 @@ func (o *AccountingTransaction) GetID() *string {
 	return o.ID
 }
 
+func (o *AccountingTransaction) GetLineitems() []AccountingTransactionLineItem {
+	if o == nil {
+		return nil
+	}
+	return o.Lineitems
+}
+
 func (o *AccountingTransaction) GetMemo() *string {
 	if o == nil {
 		return nil
@@ -115,13 +121,6 @@ func (o *AccountingTransaction) GetReference() *string {
 		return nil
 	}
 	return o.Reference
-}
-
-func (o *AccountingTransaction) GetReferenceObject() map[string]any {
-	if o == nil {
-		return nil
-	}
-	return o.ReferenceObject
 }
 
 func (o *AccountingTransaction) GetSplitAccountID() *string {
