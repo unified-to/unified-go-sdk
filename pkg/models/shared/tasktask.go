@@ -46,7 +46,7 @@ type TaskTask struct {
 	DueAt           *time.Time      `json:"due_at,omitempty"`
 	FollowerUserIds []string        `json:"follower_user_ids,omitempty"`
 	ID              *string         `json:"id,omitempty"`
-	Name            string          `json:"name"`
+	Name            *string         `json:"name,omitempty"`
 	Notes           *string         `json:"notes,omitempty"`
 	ParentID        *string         `json:"parent_id,omitempty"`
 	Priority        *string         `json:"priority,omitempty"`
@@ -118,9 +118,9 @@ func (o *TaskTask) GetID() *string {
 	return o.ID
 }
 
-func (o *TaskTask) GetName() string {
+func (o *TaskTask) GetName() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Name
 }
