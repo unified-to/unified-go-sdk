@@ -21,7 +21,7 @@ type PaymentLinkLineitem struct {
 	RefundedAt      *time.Time `json:"refunded_at,omitempty"`
 	TaxAmount       *float64   `json:"tax_amount,omitempty"`
 	TaxrateID       *string    `json:"taxrate_id,omitempty"`
-	TotalAmount     float64    `json:"total_amount"`
+	TotalAmount     *float64   `json:"total_amount,omitempty"`
 	UnitAmount      *float64   `json:"unit_amount,omitempty"`
 	UnitQuantity    *float64   `json:"unit_quantity,omitempty"`
 	UpdatedAt       *time.Time `json:"updated_at,omitempty"`
@@ -129,9 +129,9 @@ func (o *PaymentLinkLineitem) GetTaxrateID() *string {
 	return o.TaxrateID
 }
 
-func (o *PaymentLinkLineitem) GetTotalAmount() float64 {
+func (o *PaymentLinkLineitem) GetTotalAmount() *float64 {
 	if o == nil {
-		return 0.0
+		return nil
 	}
 	return o.TotalAmount
 }
