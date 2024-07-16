@@ -36,6 +36,7 @@ Create a company
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -44,7 +45,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.CreateHrisCompanyRequest{
         ConnectionID: "<value>",
@@ -86,6 +87,7 @@ Create an employee
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -94,7 +96,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.CreateHrisEmployeeRequest{
         ConnectionID: "<value>",
@@ -136,6 +138,7 @@ Create a group
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -144,7 +147,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.CreateHrisGroupRequest{
         ConnectionID: "<value>",
@@ -186,6 +189,7 @@ Retrieve a company
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -194,7 +198,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetHrisCompanyRequest{
         ConnectionID: "<value>",
@@ -237,6 +241,7 @@ Retrieve an employee
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -245,7 +250,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetHrisEmployeeRequest{
         ConnectionID: "<value>",
@@ -288,6 +293,7 @@ Retrieve a group
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -296,7 +302,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetHrisGroupRequest{
         ConnectionID: "<value>",
@@ -339,6 +345,7 @@ Retrieve a payslip
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -347,7 +354,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetHrisPayslipRequest{
         ConnectionID: "<value>",
@@ -390,6 +397,7 @@ Retrieve a timeoff
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -398,7 +406,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetHrisTimeoffRequest{
         ConnectionID: "<value>",
@@ -441,6 +449,7 @@ List all companies
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -449,7 +458,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListHrisCompaniesRequest{
         ConnectionID: "<value>",
@@ -491,6 +500,7 @@ List all employees
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -499,7 +509,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListHrisEmployeesRequest{
         ConnectionID: "<value>",
@@ -541,6 +551,7 @@ List all groups
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -549,7 +560,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListHrisGroupsRequest{
         ConnectionID: "<value>",
@@ -591,6 +602,7 @@ List all payslips
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -599,7 +611,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListHrisPayslipsRequest{
         ConnectionID: "<value>",
@@ -641,6 +653,7 @@ List all timeoffs
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -649,7 +662,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListHrisTimeoffsRequest{
         ConnectionID: "<value>",
@@ -691,6 +704,7 @@ Update a company
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -699,7 +713,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.PatchHrisCompanyRequest{
         ConnectionID: "<value>",
@@ -742,6 +756,7 @@ Update an employee
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -750,7 +765,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.PatchHrisEmployeeRequest{
         ConnectionID: "<value>",
@@ -793,6 +808,7 @@ Update a group
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -801,7 +817,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.PatchHrisGroupRequest{
         ConnectionID: "<value>",
@@ -844,6 +860,7 @@ Remove a company
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -852,7 +869,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.RemoveHrisCompanyRequest{
         ConnectionID: "<value>",
@@ -895,6 +912,7 @@ Remove an employee
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -903,7 +921,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.RemoveHrisEmployeeRequest{
         ConnectionID: "<value>",
@@ -946,6 +964,7 @@ Remove a group
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -954,7 +973,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.RemoveHrisGroupRequest{
         ConnectionID: "<value>",
@@ -997,6 +1016,7 @@ Update a company
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1005,7 +1025,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.UpdateHrisCompanyRequest{
         ConnectionID: "<value>",
@@ -1048,6 +1068,7 @@ Update an employee
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1056,7 +1077,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.UpdateHrisEmployeeRequest{
         ConnectionID: "<value>",
@@ -1099,6 +1120,7 @@ Update a group
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -1107,7 +1129,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.UpdateHrisGroupRequest{
         ConnectionID: "<value>",

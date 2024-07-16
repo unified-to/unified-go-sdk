@@ -30,6 +30,7 @@ Create a link
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -38,7 +39,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.CreatePaymentLinkRequest{
         ConnectionID: "<value>",
@@ -80,6 +81,7 @@ Create a payment
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -88,7 +90,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.CreatePaymentPaymentRequest{
         ConnectionID: "<value>",
@@ -130,6 +132,7 @@ Retrieve a link
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -138,7 +141,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetPaymentLinkRequest{
         ConnectionID: "<value>",
@@ -181,6 +184,7 @@ Retrieve a payment
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -189,7 +193,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetPaymentPaymentRequest{
         ConnectionID: "<value>",
@@ -232,6 +236,7 @@ Retrieve a payout
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -240,7 +245,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetPaymentPayoutRequest{
         ConnectionID: "<value>",
@@ -283,6 +288,7 @@ Retrieve a refund
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -291,7 +297,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetPaymentRefundRequest{
         ConnectionID: "<value>",
@@ -334,6 +340,7 @@ List all links
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -342,7 +349,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListPaymentLinksRequest{
         ConnectionID: "<value>",
@@ -384,6 +391,7 @@ List all payments
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -392,7 +400,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListPaymentPaymentsRequest{
         ConnectionID: "<value>",
@@ -434,6 +442,7 @@ List all payouts
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -442,7 +451,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListPaymentPayoutsRequest{
         ConnectionID: "<value>",
@@ -484,6 +493,7 @@ List all refunds
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -492,7 +502,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListPaymentRefundsRequest{
         ConnectionID: "<value>",
@@ -534,6 +544,7 @@ Update a link
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -542,7 +553,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.PatchPaymentLinkRequest{
         ConnectionID: "<value>",
@@ -585,6 +596,7 @@ Update a payment
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -593,7 +605,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.PatchPaymentPaymentRequest{
         ConnectionID: "<value>",
@@ -636,6 +648,7 @@ Remove a link
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -644,7 +657,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.RemovePaymentLinkRequest{
         ConnectionID: "<value>",
@@ -687,6 +700,7 @@ Remove a payment
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -695,7 +709,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.RemovePaymentPaymentRequest{
         ConnectionID: "<value>",
@@ -738,6 +752,7 @@ Update a link
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -746,7 +761,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.UpdatePaymentLinkRequest{
         ConnectionID: "<value>",
@@ -789,6 +804,7 @@ Update a payment
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -797,7 +813,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.UpdatePaymentPaymentRequest{
         ConnectionID: "<value>",

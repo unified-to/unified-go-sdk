@@ -20,6 +20,7 @@ Create an interview
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -28,7 +29,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.CreateAtsInterviewRequest{
         ConnectionID: "<value>",
@@ -70,6 +71,7 @@ Retrieve an interview
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -78,7 +80,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetAtsInterviewRequest{
         ConnectionID: "<value>",
@@ -121,6 +123,7 @@ List all interviews
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -129,7 +132,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListAtsInterviewsRequest{
         ConnectionID: "<value>",
@@ -171,6 +174,7 @@ Update an interview
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -179,7 +183,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.PatchAtsInterviewRequest{
         ConnectionID: "<value>",
@@ -222,6 +226,7 @@ Remove an interview
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -230,7 +235,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.RemoveAtsInterviewRequest{
         ConnectionID: "<value>",
@@ -273,6 +278,7 @@ Update an interview
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -281,7 +287,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.UpdateAtsInterviewRequest{
         ConnectionID: "<value>",

@@ -26,6 +26,7 @@ Create a list
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -34,7 +35,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.CreateMartechListRequest{
         ConnectionID: "<value>",
@@ -76,6 +77,7 @@ Create a member
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -84,7 +86,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.CreateMartechMemberRequest{
         ConnectionID: "<value>",
@@ -126,6 +128,7 @@ Retrieve a list
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -134,7 +137,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetMartechListRequest{
         ConnectionID: "<value>",
@@ -177,6 +180,7 @@ Retrieve a member
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -185,7 +189,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.GetMartechMemberRequest{
         ConnectionID: "<value>",
@@ -228,6 +232,7 @@ List all lists
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -236,7 +241,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListMartechListsRequest{
         ConnectionID: "<value>",
@@ -278,6 +283,7 @@ List all members
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -286,7 +292,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.ListMartechMembersRequest{
         ConnectionID: "<value>",
@@ -328,6 +334,7 @@ Update a list
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -336,7 +343,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.PatchMartechListRequest{
         ConnectionID: "<value>",
@@ -379,6 +386,7 @@ Update a member
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -387,7 +395,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.PatchMartechMemberRequest{
         ConnectionID: "<value>",
@@ -430,6 +438,7 @@ Remove a list
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -438,7 +447,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.RemoveMartechListRequest{
         ConnectionID: "<value>",
@@ -481,6 +490,7 @@ Remove a member
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -489,7 +499,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.RemoveMartechMemberRequest{
         ConnectionID: "<value>",
@@ -532,6 +542,7 @@ Update a list
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -540,7 +551,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.UpdateMartechListRequest{
         ConnectionID: "<value>",
@@ -583,6 +594,7 @@ Update a member
 package main
 
 import(
+	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -591,7 +603,7 @@ import(
 
 func main() {
     s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
     )
     request := operations.UpdateMartechMemberRequest{
         ConnectionID: "<value>",

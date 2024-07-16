@@ -9,19 +9,24 @@ import (
 
 // Integration - Informational object for supported integrations.
 type Integration struct {
-	APIDocsURL *string `json:"api_docs_url,omitempty"`
-	Beta       *bool   `json:"beta,omitempty"`
+	ActiveHealthyConnections *float64       `json:"active_healthy_connections,omitempty"`
+	API                      map[string]any `json:"api,omitempty"`
+	APIDocsURL               *string        `json:"api_docs_url,omitempty"`
+	Beta                     *bool          `json:"beta,omitempty"`
 	// The categories of support solutions that this integration has
 	Categories           []PropertyIntegrationCategories `json:"categories"`
 	Color                *string                         `json:"color,omitempty"`
 	CreatedAt            *string                         `json:"created_at,omitempty"`
+	Description          *string                         `json:"description,omitempty"`
 	FaIcon               *string                         `json:"fa_icon,omitempty"`
+	Featured             *bool                           `json:"featured,omitempty"`
 	InProgress           bool                            `json:"in_progress"`
 	IsActive             *bool                           `json:"is_active,omitempty"`
 	LogoURL              *string                         `json:"logo_url,omitempty"`
 	Name                 string                          `json:"name"`
+	Popularity           *float64                        `json:"popularity,omitempty"`
 	RateLimitDescription *string                         `json:"rate_limit_description,omitempty"`
-	Support              map[string]IntegrationSupport   `json:"support"`
+	Support              map[string]IntegrationSupport   `json:"support,omitempty"`
 	TestedAt             *time.Time                      `json:"tested_at,omitempty"`
 	TextColor            *string                         `json:"text_color,omitempty"`
 	// instructions for the user on how to find the token/key
@@ -42,6 +47,20 @@ func (i *Integration) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (o *Integration) GetActiveHealthyConnections() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.ActiveHealthyConnections
+}
+
+func (o *Integration) GetAPI() map[string]any {
+	if o == nil {
+		return nil
+	}
+	return o.API
 }
 
 func (o *Integration) GetAPIDocsURL() *string {
@@ -79,11 +98,25 @@ func (o *Integration) GetCreatedAt() *string {
 	return o.CreatedAt
 }
 
+func (o *Integration) GetDescription() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Description
+}
+
 func (o *Integration) GetFaIcon() *string {
 	if o == nil {
 		return nil
 	}
 	return o.FaIcon
+}
+
+func (o *Integration) GetFeatured() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.Featured
 }
 
 func (o *Integration) GetInProgress() bool {
@@ -114,6 +147,13 @@ func (o *Integration) GetName() string {
 	return o.Name
 }
 
+func (o *Integration) GetPopularity() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.Popularity
+}
+
 func (o *Integration) GetRateLimitDescription() *string {
 	if o == nil {
 		return nil
@@ -123,7 +163,7 @@ func (o *Integration) GetRateLimitDescription() *string {
 
 func (o *Integration) GetSupport() map[string]IntegrationSupport {
 	if o == nil {
-		return map[string]IntegrationSupport{}
+		return nil
 	}
 	return o.Support
 }
