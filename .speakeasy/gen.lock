@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: b51483e0ba5da702b0a6782d1c3502c1
+  docChecksum: 398329e502d5c762a74ed9d5f4600441
   docVersion: "1.0"
-  speakeasyVersion: 1.346.0
-  generationVersion: 2.379.3
-  releaseVersion: 0.17.3
-  configChecksum: df4b50ebc0bd7df52cd685881dd273fb
+  speakeasyVersion: 1.346.3
+  generationVersion: 2.379.6
+  releaseVersion: 0.17.4
+  configChecksum: aac9ca8ef6f9a672ff9d4017f030853e
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -1082,6 +1082,8 @@ generatedFiles:
   - docs/pkg/models/operations/listunifiedintegrationsresponse.md
   - docs/pkg/models/operations/listunifiedissuesrequest.md
   - docs/pkg/models/operations/listunifiedissuesresponse.md
+  - docs/pkg/models/operations/connectionid.md
+  - docs/pkg/models/operations/integrationtype.md
   - docs/pkg/models/operations/listunifiedwebhooksrequest.md
   - docs/pkg/models/operations/listunifiedwebhooksresponse.md
   - docs/pkg/models/operations/patchunifiedconnectionrequest.md
