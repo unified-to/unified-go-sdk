@@ -13,7 +13,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.17.4
+  version: 0.17.5
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   clientServerStatusCodesAsErrors: true
