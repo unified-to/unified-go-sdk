@@ -15,6 +15,7 @@ type AccountingOrganization struct {
 	ID                 *string                                `json:"id,omitempty"`
 	LegalName          *string                                `json:"legal_name,omitempty"`
 	Name               string                                 `json:"name"`
+	OrganizationCode   *string                                `json:"organization_code,omitempty"`
 	Raw                map[string]any                         `json:"raw,omitempty"`
 	TaxNumber          *string                                `json:"tax_number,omitempty"`
 	Timezone           *string                                `json:"timezone,omitempty"`
@@ -80,6 +81,13 @@ func (o *AccountingOrganization) GetName() string {
 		return ""
 	}
 	return o.Name
+}
+
+func (o *AccountingOrganization) GetOrganizationCode() *string {
+	if o == nil {
+		return nil
+	}
+	return o.OrganizationCode
 }
 
 func (o *AccountingOrganization) GetRaw() map[string]any {
