@@ -81,6 +81,8 @@
 | `ScopesHrisTimeoffWrite`           | hris_timeoff_write                 |
 | `ScopesHrisCompanyRead`            | hris_company_read                  |
 | `ScopesHrisCompanyWrite`           | hris_company_write                 |
+| `ScopesHrisLocationRead`           | hris_location_read                 |
+| `ScopesHrisLocationWrite`          | hris_location_write                |
 | `ScopesUcCallRead`                 | uc_call_read                       |
 | `ScopesStorageFileRead`            | storage_file_read                  |
 | `ScopesStorageFileWrite`           | storage_file_write                 |

@@ -81,6 +81,8 @@
 | `PropertyConnectionPermissionsHrisTimeoffWrite`           | hris_timeoff_write                                        |
 | `PropertyConnectionPermissionsHrisCompanyRead`            | hris_company_read                                         |
 | `PropertyConnectionPermissionsHrisCompanyWrite`           | hris_company_write                                        |
+| `PropertyConnectionPermissionsHrisLocationRead`           | hris_location_read                                        |
+| `PropertyConnectionPermissionsHrisLocationWrite`          | hris_location_write                                       |
 | `PropertyConnectionPermissionsUcCallRead`                 | uc_call_read                                              |
 | `PropertyConnectionPermissionsStorageFileRead`            | storage_file_read                                         |
 | `PropertyConnectionPermissionsStorageFileWrite`           | storage_file_write                                        |

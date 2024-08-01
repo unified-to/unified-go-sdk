@@ -353,11 +353,17 @@ func main() {
 ### [Location](docs/sdks/location/README.md)
 
 * [CreateCommerceLocation](docs/sdks/location/README.md#createcommercelocation) - Create a location
+* [CreateHrisLocation](docs/sdks/location/README.md#createhrislocation) - Create a location
 * [GetCommerceLocation](docs/sdks/location/README.md#getcommercelocation) - Retrieve a location
+* [GetHrisLocation](docs/sdks/location/README.md#gethrislocation) - Retrieve a location
 * [ListCommerceLocations](docs/sdks/location/README.md#listcommercelocations) - List all locations
+* [ListHrisLocations](docs/sdks/location/README.md#listhrislocations) - List all locations
 * [PatchCommerceLocation](docs/sdks/location/README.md#patchcommercelocation) - Update a location
+* [PatchHrisLocation](docs/sdks/location/README.md#patchhrislocation) - Update a location
 * [RemoveCommerceLocation](docs/sdks/location/README.md#removecommercelocation) - Remove a location
+* [RemoveHrisLocation](docs/sdks/location/README.md#removehrislocation) - Remove a location
 * [UpdateCommerceLocation](docs/sdks/location/README.md#updatecommercelocation) - Update a location
+* [UpdateHrisLocation](docs/sdks/location/README.md#updatehrislocation) - Update a location
 
 ### [Crm](docs/sdks/crm/README.md)
 
@@ -461,25 +467,31 @@ func main() {
 * [CreateHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
 * [CreateHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
+* [CreateHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [GetHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
 * [GetHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [GetHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
+* [GetHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
 * [GetHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [GetHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [ListHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
 * [ListHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [ListHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
+* [ListHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
 * [ListHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [ListHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [PatchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
 * [PatchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
+* [PatchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [RemoveHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
 * [RemoveHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [RemoveHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
+* [RemoveHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [UpdateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
 * [UpdateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
+* [UpdateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
 
 ### [Employee](docs/sdks/employee/README.md)
 

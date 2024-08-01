@@ -37,7 +37,7 @@ func main() {
         },
         IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsDocumentRead,
+            shared.PropertyConnectionPermissionsAtsDocumentWrite,
         },
     }
     ctx := context.Background()

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 939256dd6599a9b1968cce234d1549cc
+  docChecksum: e746fd806f5907d68d5ba126113c72ae
   docVersion: "1.0"
-  speakeasyVersion: 1.348.1
-  generationVersion: 2.380.1
-  releaseVersion: 0.17.6
-  configChecksum: 2fea73143fdb84089dd92f9909ce2c6d
+  speakeasyVersion: 1.349.2
+  generationVersion: 2.382.2
+  releaseVersion: 0.17.7
+  configChecksum: 116ad4fe78d25f952de2c4cc3a3a2fac
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -248,6 +248,12 @@ generatedFiles:
   - /pkg/models/operations/updatecommerceinventory.go
   - /pkg/models/operations/updatecommerceitem.go
   - /pkg/models/operations/updatecommercelocation.go
+  - /pkg/models/operations/createhrislocation.go
+  - /pkg/models/operations/gethrislocation.go
+  - /pkg/models/operations/listhrislocations.go
+  - /pkg/models/operations/patchhrislocation.go
+  - /pkg/models/operations/removehrislocation.go
+  - /pkg/models/operations/updatehrislocation.go
   - /pkg/models/operations/createcrmdeal.go
   - /pkg/models/operations/createcrmevent.go
   - /pkg/models/operations/createcrmlead.go
@@ -457,6 +463,9 @@ generatedFiles:
   - /pkg/models/shared/commerceitemoption.go
   - /pkg/models/shared/commercelocation.go
   - /pkg/models/shared/propertycommercelocationaddress.go
+  - /pkg/models/shared/hrislocation.go
+  - /pkg/models/shared/hristelephone.go
+  - /pkg/models/shared/propertyhrislocationaddress.go
   - /pkg/models/shared/crmdeal.go
   - /pkg/models/shared/crmevent.go
   - /pkg/models/shared/propertycrmeventtask.go
@@ -476,12 +485,11 @@ generatedFiles:
   - /pkg/models/shared/genaicontent.go
   - /pkg/models/shared/genaimodel.go
   - /pkg/models/shared/hrisemployee.go
-  - /pkg/models/shared/hristelephone.go
+  - /pkg/models/shared/hrisgroup.go
   - /pkg/models/shared/propertyhrisemployeeemployeeroles.go
   - /pkg/models/shared/hrisemail.go
   - /pkg/models/shared/hriscompensation.go
   - /pkg/models/shared/propertyhrisemployeeaddress.go
-  - /pkg/models/shared/hrisgroup.go
   - /pkg/models/shared/hrispayslip.go
   - /pkg/models/shared/hrispayslipdetail.go
   - /pkg/models/shared/hristimeoff.go
@@ -791,6 +799,18 @@ generatedFiles:
   - docs/pkg/models/operations/updatecommerceitemresponse.md
   - docs/pkg/models/operations/updatecommercelocationrequest.md
   - docs/pkg/models/operations/updatecommercelocationresponse.md
+  - docs/pkg/models/operations/createhrislocationrequest.md
+  - docs/pkg/models/operations/createhrislocationresponse.md
+  - docs/pkg/models/operations/gethrislocationrequest.md
+  - docs/pkg/models/operations/gethrislocationresponse.md
+  - docs/pkg/models/operations/listhrislocationsrequest.md
+  - docs/pkg/models/operations/listhrislocationsresponse.md
+  - docs/pkg/models/operations/patchhrislocationrequest.md
+  - docs/pkg/models/operations/patchhrislocationresponse.md
+  - docs/pkg/models/operations/removehrislocationrequest.md
+  - docs/pkg/models/operations/removehrislocationresponse.md
+  - docs/pkg/models/operations/updatehrislocationrequest.md
+  - docs/pkg/models/operations/updatehrislocationresponse.md
   - docs/pkg/models/operations/createcrmdealrequest.md
   - docs/pkg/models/operations/createcrmdealresponse.md
   - docs/pkg/models/operations/createcrmeventrequest.md
@@ -1188,6 +1208,10 @@ generatedFiles:
   - docs/pkg/models/shared/commerceitemoption.md
   - docs/pkg/models/shared/commercelocation.md
   - docs/pkg/models/shared/propertycommercelocationaddress.md
+  - docs/pkg/models/shared/hrislocation.md
+  - docs/pkg/models/shared/hristelephonetype.md
+  - docs/pkg/models/shared/hristelephone.md
+  - docs/pkg/models/shared/propertyhrislocationaddress.md
   - docs/pkg/models/shared/crmdeal.md
   - docs/pkg/models/shared/crmeventtype.md
   - docs/pkg/models/shared/crmevent.md
@@ -1217,8 +1241,8 @@ generatedFiles:
   - docs/pkg/models/shared/hrisemployeegender.md
   - docs/pkg/models/shared/maritalstatus.md
   - docs/pkg/models/shared/hrisemployee.md
-  - docs/pkg/models/shared/hristelephonetype.md
-  - docs/pkg/models/shared/hristelephone.md
+  - docs/pkg/models/shared/hrisgrouptype.md
+  - docs/pkg/models/shared/hrisgroup.md
   - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/pkg/models/shared/hrisemailtype.md
   - docs/pkg/models/shared/hrisemail.md
@@ -1226,8 +1250,6 @@ generatedFiles:
   - docs/pkg/models/shared/hriscompensationtype.md
   - docs/pkg/models/shared/hriscompensation.md
   - docs/pkg/models/shared/propertyhrisemployeeaddress.md
-  - docs/pkg/models/shared/hrisgrouptype.md
-  - docs/pkg/models/shared/hrisgroup.md
   - docs/pkg/models/shared/paymenttype.md
   - docs/pkg/models/shared/hrispayslip.md
   - docs/pkg/models/shared/hrispayslipdetailtype.md
