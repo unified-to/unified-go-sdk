@@ -20,7 +20,6 @@ Create a scorecard
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -28,9 +27,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.CreateAtsScorecardRequest{
         ConnectionID: "<value>",
     }
@@ -71,7 +68,6 @@ Retrieve a scorecard
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -79,9 +75,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.GetAtsScorecardRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -123,7 +117,6 @@ List all scorecards
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -131,9 +124,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListAtsScorecardsRequest{
         ConnectionID: "<value>",
     }
@@ -174,7 +165,6 @@ Update a scorecard
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -182,9 +172,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.PatchAtsScorecardRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -226,7 +214,6 @@ Remove a scorecard
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -234,9 +221,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.RemoveAtsScorecardRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -278,7 +263,6 @@ Update a scorecard
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -286,9 +270,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.UpdateAtsScorecardRequest{
         ConnectionID: "<value>",
         ID: "<id>",

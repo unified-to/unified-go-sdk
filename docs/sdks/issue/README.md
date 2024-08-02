@@ -15,7 +15,6 @@ List support issues
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -23,9 +22,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListUnifiedIssuesRequest{}
     ctx := context.Background()
     res, err := s.Issue.ListUnifiedIssues(ctx, request)

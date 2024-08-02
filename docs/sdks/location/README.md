@@ -26,7 +26,6 @@ Create a location
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -34,9 +33,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.CreateCommerceLocationRequest{
         ConnectionID: "<value>",
     }
@@ -77,7 +74,6 @@ Create a location
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -85,9 +81,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.CreateHrisLocationRequest{
         ConnectionID: "<value>",
     }
@@ -128,7 +122,6 @@ Retrieve a location
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -136,9 +129,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.GetCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -180,7 +171,6 @@ Retrieve a location
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -188,9 +178,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.GetHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -232,7 +220,6 @@ List all locations
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -240,9 +227,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListCommerceLocationsRequest{
         ConnectionID: "<value>",
     }
@@ -283,7 +268,6 @@ List all locations
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -291,9 +275,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListHrisLocationsRequest{
         ConnectionID: "<value>",
     }
@@ -334,7 +316,6 @@ Update a location
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -342,9 +323,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.PatchCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -386,7 +365,6 @@ Update a location
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -394,9 +372,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.PatchHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -438,7 +414,6 @@ Remove a location
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -446,9 +421,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.RemoveCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -490,7 +463,6 @@ Remove a location
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -498,9 +470,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.RemoveHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -542,7 +512,6 @@ Update a location
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -550,9 +519,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.UpdateCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -594,7 +561,6 @@ Update a location
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -602,9 +568,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.UpdateHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",

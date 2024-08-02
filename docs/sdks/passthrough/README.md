@@ -19,7 +19,6 @@ Passthrough POST
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -27,9 +26,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.CreatePassthroughRequest{
         ConnectionID: "<value>",
         Path: "/etc/periodic",
@@ -71,7 +68,6 @@ Passthrough GET
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -79,9 +75,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListPassthroughsRequest{
         ConnectionID: "<value>",
         Path: "/selinux",
@@ -123,7 +117,6 @@ Passthrough PUT
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -131,9 +124,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.PatchPassthroughRequest{
         ConnectionID: "<value>",
         Path: "/mnt",
@@ -175,7 +166,6 @@ Passthrough DELETE
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -183,9 +173,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.RemovePassthroughRequest{
         ConnectionID: "<value>",
         Path: "/Applications",
@@ -227,7 +215,6 @@ Passthrough PUT
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -235,9 +222,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.UpdatePassthroughRequest{
         ConnectionID: "<value>",
         Path: "/dev",

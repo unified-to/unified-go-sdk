@@ -25,13 +25,10 @@ import (
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"os"
 )
 
 func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-	)
+	s := unifiedgosdk.New()
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
@@ -861,13 +858,10 @@ import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/models/sdkerrors"
 	"log"
-	"os"
 )
 
 func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-	)
+	s := unifiedgosdk.New()
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
@@ -910,13 +904,11 @@ import (
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"os"
 )
 
 func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerIndex(1),
-		unifiedgosdk.WithSecurity(os.Getenv("JWT")),
 	)
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
@@ -945,13 +937,11 @@ import (
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"os"
 )
 
 func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerURL("https://api.unified.to"),
-		unifiedgosdk.WithSecurity(os.Getenv("JWT")),
 	)
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
@@ -1022,13 +1012,10 @@ import (
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"os"
 )
 
 func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-	)
+	s := unifiedgosdk.New()
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
@@ -1060,14 +1047,11 @@ import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/retry"
 	"log"
-	"os"
 	"pkg/models/operations"
 )
 
 func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-	)
+	s := unifiedgosdk.New()
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
@@ -1103,7 +1087,6 @@ import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/retry"
 	"log"
-	"os"
 )
 
 func main() {
@@ -1119,7 +1102,6 @@ func main() {
 				},
 				RetryConnectionErrors: false,
 			}),
-		unifiedgosdk.WithSecurity(os.Getenv("JWT")),
 	)
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",

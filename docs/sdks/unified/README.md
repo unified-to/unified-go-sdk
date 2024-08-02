@@ -32,7 +32,6 @@ Create connection
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"context"
@@ -40,20 +39,10 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
-    var request *shared.Connection = &shared.Connection{
-        Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesKms,
-        },
-        IntegrationType: "<value>",
-        Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsDocumentWrite,
-        },
-    }
+    s := unifiedgosdk.New()
+
     ctx := context.Background()
-    res, err := s.Unified.CreateUnifiedConnection(ctx, request)
+    res, err := s.Unified.CreateUnifiedConnection(ctx, nil)
     if err != nil {
         log.Fatal(err)
     }
@@ -89,7 +78,6 @@ The data payload received by your server is described at https://docs.unified.to
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -97,9 +85,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.CreateUnifiedWebhookRequest{}
     ctx := context.Background()
     res, err := s.Unified.CreateUnifiedWebhook(ctx, request)
@@ -138,7 +124,6 @@ Retrieve specific API Call by its ID
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -146,9 +131,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.GetUnifiedApicallRequest{
         ID: "<id>",
     }
@@ -189,7 +172,6 @@ Retrieve connection
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -197,9 +179,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.GetUnifiedConnectionRequest{
         ID: "<id>",
     }
@@ -240,7 +220,6 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -248,9 +227,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",
@@ -292,7 +269,6 @@ Retrieve webhook by its ID
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -300,9 +276,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.GetUnifiedWebhookRequest{
         ID: "<id>",
     }
@@ -343,7 +317,6 @@ Returns API Calls
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -351,9 +324,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListUnifiedApicallsRequest{}
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedApicalls(ctx, request)
@@ -392,7 +363,6 @@ List all connections
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -400,9 +370,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListUnifiedConnectionsRequest{}
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedConnections(ctx, request)
@@ -441,7 +409,6 @@ No authentication required as this is to be used by front-end interface
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -449,9 +416,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListUnifiedIntegrationWorkspacesRequest{
         WorkspaceID: "<value>",
     }
@@ -492,7 +457,6 @@ Returns all integrations
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -500,9 +464,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListUnifiedIntegrationsRequest{}
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrations(ctx, request)
@@ -541,7 +503,6 @@ List support issues
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -549,9 +510,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListUnifiedIssuesRequest{}
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedIssues(ctx, request)
@@ -590,7 +549,6 @@ Returns all registered webhooks
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -598,9 +556,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListUnifiedWebhooksRequest{}
     ctx := context.Background()
     res, err := s.Unified.ListUnifiedWebhooks(ctx, request)
@@ -639,7 +595,6 @@ Update connection
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -647,9 +602,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.PatchUnifiedConnectionRequest{
         ID: "<id>",
     }
@@ -690,7 +643,6 @@ Trigger webhook
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -698,9 +650,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.PatchUnifiedWebhookTriggerRequest{
         ID: "<id>",
     }
@@ -741,7 +691,6 @@ Remove connection
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -749,9 +698,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.RemoveUnifiedConnectionRequest{
         ID: "<id>",
     }
@@ -792,7 +739,6 @@ Remove webhook subscription
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -800,9 +746,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.RemoveUnifiedWebhookRequest{
         ID: "<id>",
     }
@@ -843,7 +787,6 @@ Update connection
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -851,9 +794,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.UpdateUnifiedConnectionRequest{
         ID: "<id>",
     }
@@ -894,7 +835,6 @@ Trigger webhook
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -902,9 +842,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.UpdateUnifiedWebhookTriggerRequest{
         ID: "<id>",
     }

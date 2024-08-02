@@ -7,13 +7,10 @@ import (
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
-	"os"
 )
 
 func main() {
-	s := unifiedgosdk.New(
-		unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-	)
+	s := unifiedgosdk.New()
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}

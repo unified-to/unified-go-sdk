@@ -20,7 +20,6 @@ Create connection
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"context"
@@ -28,20 +27,10 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
-    var request *shared.Connection = &shared.Connection{
-        Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesKms,
-        },
-        IntegrationType: "<value>",
-        Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsAtsDocumentWrite,
-        },
-    }
+    s := unifiedgosdk.New()
+
     ctx := context.Background()
-    res, err := s.Connection.CreateUnifiedConnection(ctx, request)
+    res, err := s.Connection.CreateUnifiedConnection(ctx, nil)
     if err != nil {
         log.Fatal(err)
     }
@@ -77,7 +66,6 @@ Retrieve connection
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -85,9 +73,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.GetUnifiedConnectionRequest{
         ID: "<id>",
     }
@@ -128,7 +114,6 @@ List all connections
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -136,9 +121,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListUnifiedConnectionsRequest{}
     ctx := context.Background()
     res, err := s.Connection.ListUnifiedConnections(ctx, request)
@@ -177,7 +160,6 @@ Update connection
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -185,9 +167,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.PatchUnifiedConnectionRequest{
         ID: "<id>",
     }
@@ -228,7 +208,6 @@ Remove connection
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -236,9 +215,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.RemoveUnifiedConnectionRequest{
         ID: "<id>",
     }
@@ -279,7 +256,6 @@ Update connection
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -287,9 +263,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.UpdateUnifiedConnectionRequest{
         ID: "<id>",
     }

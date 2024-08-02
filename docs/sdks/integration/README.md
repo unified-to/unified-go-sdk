@@ -17,7 +17,6 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -25,9 +24,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",
@@ -69,7 +66,6 @@ No authentication required as this is to be used by front-end interface
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -77,9 +73,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListUnifiedIntegrationWorkspacesRequest{
         WorkspaceID: "<value>",
     }
@@ -120,7 +114,6 @@ Returns all integrations
 package main
 
 import(
-	"os"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
@@ -128,9 +121,7 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity(os.Getenv("JWT")),
-    )
+    s := unifiedgosdk.New()
     request := operations.ListUnifiedIntegrationsRequest{}
     ctx := context.Background()
     res, err := s.Integration.ListUnifiedIntegrations(ctx, request)
