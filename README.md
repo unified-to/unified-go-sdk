@@ -1015,7 +1015,9 @@ import (
 )
 
 func main() {
-	s := unifiedgosdk.New()
+	s := unifiedgosdk.New(
+		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
 	request := operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}
