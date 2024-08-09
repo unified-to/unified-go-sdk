@@ -45,6 +45,7 @@ type TaskTask struct {
 	CreatorUserID   *string         `json:"creator_user_id,omitempty"`
 	DueAt           *time.Time      `json:"due_at,omitempty"`
 	FollowerUserIds []string        `json:"follower_user_ids,omitempty"`
+	GroupIds        []string        `json:"group_ids,omitempty"`
 	ID              *string         `json:"id,omitempty"`
 	Name            *string         `json:"name,omitempty"`
 	Notes           *string         `json:"notes,omitempty"`
@@ -109,6 +110,13 @@ func (o *TaskTask) GetFollowerUserIds() []string {
 		return nil
 	}
 	return o.FollowerUserIds
+}
+
+func (o *TaskTask) GetGroupIds() []string {
+	if o == nil {
+		return nil
+	}
+	return o.GroupIds
 }
 
 func (o *TaskTask) GetID() *string {

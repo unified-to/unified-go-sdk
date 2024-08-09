@@ -34,8 +34,6 @@ type RemoveAtsCandidateResponse struct {
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	String *string
 }
 
 func (o *RemoveAtsCandidateResponse) GetContentType() string {
@@ -57,11 +55,4 @@ func (o *RemoveAtsCandidateResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
-}
-
-func (o *RemoveAtsCandidateResponse) GetString() *string {
-	if o == nil {
-		return nil
-	}
-	return o.String
 }

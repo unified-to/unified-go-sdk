@@ -25,8 +25,6 @@ type RemoveUnifiedConnectionResponse struct {
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	String *string
 }
 
 func (o *RemoveUnifiedConnectionResponse) GetContentType() string {
@@ -48,11 +46,4 @@ func (o *RemoveUnifiedConnectionResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
-}
-
-func (o *RemoveUnifiedConnectionResponse) GetString() *string {
-	if o == nil {
-		return nil
-	}
-	return o.String
 }

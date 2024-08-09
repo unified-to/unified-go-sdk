@@ -25,8 +25,6 @@ type RemoveUnifiedWebhookResponse struct {
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	String *string
 }
 
 func (o *RemoveUnifiedWebhookResponse) GetContentType() string {
@@ -48,11 +46,4 @@ func (o *RemoveUnifiedWebhookResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
-}
-
-func (o *RemoveUnifiedWebhookResponse) GetString() *string {
-	if o == nil {
-		return nil
-	}
-	return o.String
 }

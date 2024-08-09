@@ -34,8 +34,6 @@ type RemoveStorageFileResponse struct {
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	String *string
 }
 
 func (o *RemoveStorageFileResponse) GetContentType() string {
@@ -57,11 +55,4 @@ func (o *RemoveStorageFileResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
-}
-
-func (o *RemoveStorageFileResponse) GetString() *string {
-	if o == nil {
-		return nil
-	}
-	return o.String
 }

@@ -34,8 +34,6 @@ type RemovePaymentLinkResponse struct {
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	String *string
 }
 
 func (o *RemovePaymentLinkResponse) GetContentType() string {
@@ -57,11 +55,4 @@ func (o *RemovePaymentLinkResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
-}
-
-func (o *RemovePaymentLinkResponse) GetString() *string {
-	if o == nil {
-		return nil
-	}
-	return o.String
 }
