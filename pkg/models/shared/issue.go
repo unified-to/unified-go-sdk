@@ -17,6 +17,7 @@ const (
 	IssueStatusOnHold     IssueStatus = "ON_HOLD"
 	IssueStatusValidating IssueStatus = "VALIDATING"
 	IssueStatusRejected   IssueStatus = "REJECTED"
+	IssueStatusUpNext     IssueStatus = "UP_NEXT"
 )
 
 func (e IssueStatus) ToPointer() *IssueStatus {
@@ -41,6 +42,8 @@ func (e *IssueStatus) UnmarshalJSON(data []byte) error {
 	case "VALIDATING":
 		fallthrough
 	case "REJECTED":
+		fallthrough
+	case "UP_NEXT":
 		*e = IssueStatus(v)
 		return nil
 	default:
@@ -51,7 +54,9 @@ func (e *IssueStatus) UnmarshalJSON(data []byte) error {
 type Issue struct {
 	CreatedAt      *string     `json:"created_at,omitempty"`
 	ID             *string     `json:"id,omitempty"`
+	Importance     *float64    `json:"importance,omitempty"`
 	ResolutionTime *float64    `json:"resolution_time,omitempty"`
+	Size           *float64    `json:"size,omitempty"`
 	Status         IssueStatus `json:"status"`
 	TicketRef      string      `json:"ticket_ref"`
 	Title          string      `json:"title"`
@@ -75,11 +80,25 @@ func (o *Issue) GetID() *string {
 	return o.ID
 }
 
+func (o *Issue) GetImportance() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.Importance
+}
+
 func (o *Issue) GetResolutionTime() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.ResolutionTime
+}
+
+func (o *Issue) GetSize() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.Size
 }
 
 func (o *Issue) GetStatus() IssueStatus {

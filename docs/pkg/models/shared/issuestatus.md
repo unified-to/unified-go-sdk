@@ -12,3 +12,4 @@
 | `IssueStatusOnHold`     | ON_HOLD                 |
 | `IssueStatusValidating` | VALIDATING              |
 | `IssueStatusRejected`   | REJECTED                |
+| `IssueStatusUpNext`     | UP_NEXT                 |
