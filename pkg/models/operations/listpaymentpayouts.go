@@ -16,8 +16,10 @@ type ListPaymentPayoutsRequest struct {
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
+	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -61,11 +63,25 @@ func (o *ListPaymentPayoutsRequest) GetOffset() *float64 {
 	return o.Offset
 }
 
+func (o *ListPaymentPayoutsRequest) GetOrder() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Order
+}
+
 func (o *ListPaymentPayoutsRequest) GetQuery() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Query
+}
+
+func (o *ListPaymentPayoutsRequest) GetSort() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Sort
 }
 
 func (o *ListPaymentPayoutsRequest) GetUpdatedGte() *time.Time {

@@ -17,8 +17,10 @@ type ListMartechMembersRequest struct {
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	ListID *string  `queryParam:"style=form,explode=true,name=list_id"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
+	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -69,11 +71,25 @@ func (o *ListMartechMembersRequest) GetOffset() *float64 {
 	return o.Offset
 }
 
+func (o *ListMartechMembersRequest) GetOrder() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Order
+}
+
 func (o *ListMartechMembersRequest) GetQuery() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Query
+}
+
+func (o *ListMartechMembersRequest) GetSort() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Sort
 }
 
 func (o *ListMartechMembersRequest) GetUpdatedGte() *time.Time {

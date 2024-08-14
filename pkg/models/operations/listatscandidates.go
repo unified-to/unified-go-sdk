@@ -17,8 +17,10 @@ type ListAtsCandidatesRequest struct {
 	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
+	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -69,11 +71,25 @@ func (o *ListAtsCandidatesRequest) GetOffset() *float64 {
 	return o.Offset
 }
 
+func (o *ListAtsCandidatesRequest) GetOrder() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Order
+}
+
 func (o *ListAtsCandidatesRequest) GetQuery() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Query
+}
+
+func (o *ListAtsCandidatesRequest) GetSort() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Sort
 }
 
 func (o *ListAtsCandidatesRequest) GetUpdatedGte() *time.Time {

@@ -88,8 +88,6 @@ type ListUnifiedIntegrationsRequest struct {
 	Env        *string                                       `queryParam:"style=form,explode=true,name=env"`
 	Limit      *float64                                      `queryParam:"style=form,explode=true,name=limit"`
 	Offset     *float64                                      `queryParam:"style=form,explode=true,name=offset"`
-	Order      *string                                       `queryParam:"style=form,explode=true,name=order"`
-	Sort       *string                                       `queryParam:"style=form,explode=true,name=sort"`
 	Summary    *bool                                         `queryParam:"style=form,explode=true,name=summary"`
 	// Filter the results for only this integration type
 	Type       *string `queryParam:"style=form,explode=true,name=type"`
@@ -129,20 +127,6 @@ func (o *ListUnifiedIntegrationsRequest) GetOffset() *float64 {
 		return nil
 	}
 	return o.Offset
-}
-
-func (o *ListUnifiedIntegrationsRequest) GetOrder() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Order
-}
-
-func (o *ListUnifiedIntegrationsRequest) GetSort() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Sort
 }
 
 func (o *ListUnifiedIntegrationsRequest) GetSummary() *bool {
