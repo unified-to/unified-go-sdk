@@ -3,7 +3,8 @@
 
 ## Values
 
-| Name                  | Value                 |
-| --------------------- | --------------------- |
-| `AtsActivityTypeNote` | NOTE                  |
-| `AtsActivityTypeTask` | TASK                  |
+| Name                   | Value                  |
+| ---------------------- | ---------------------- |
+| `AtsActivityTypeNote`  | NOTE                   |
+| `AtsActivityTypeTask`  | TASK                   |
+| `AtsActivityTypeEmail` | EMAIL                  |

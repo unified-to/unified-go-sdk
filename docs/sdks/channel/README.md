@@ -1,6 +1,8 @@
 # Channel
 (*Channel*)
 
+## Overview
+
 ### Available Operations
 
 * [GetMessagingChannel](#getmessagingchannel) - Retrieve a channel
@@ -39,8 +41,6 @@ func main() {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
@@ -49,13 +49,16 @@ func main() {
 | `request`                                                                                          | [operations.GetMessagingChannelRequest](../../pkg/models/operations/getmessagingchannelrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 | `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
-
 ### Response
 
 **[*operations.GetMessagingChannelResponse](../../pkg/models/operations/getmessagingchannelresponse.md), error**
+
+### Errors
+
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
+
 
 ## ListMessagingChannels
 
@@ -89,8 +92,6 @@ func main() {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -99,10 +100,12 @@ func main() {
 | `request`                                                                                              | [operations.ListMessagingChannelsRequest](../../pkg/models/operations/listmessagingchannelsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 | `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
-
 ### Response
 
 **[*operations.ListMessagingChannelsResponse](../../pkg/models/operations/listmessagingchannelsresponse.md), error**
+
+### Errors
+
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

@@ -1,6 +1,8 @@
 # Issue
 (*Issue*)
 
+## Overview
+
 ### Available Operations
 
 * [ListUnifiedIssues](#listunifiedissues) - List support issues
@@ -35,8 +37,6 @@ func main() {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
@@ -45,10 +45,12 @@ func main() {
 | `request`                                                                                      | [operations.ListUnifiedIssuesRequest](../../pkg/models/operations/listunifiedissuesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 | `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
-
 ### Response
 
 **[*operations.ListUnifiedIssuesResponse](../../pkg/models/operations/listunifiedissuesresponse.md), error**
+
+### Errors
+
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

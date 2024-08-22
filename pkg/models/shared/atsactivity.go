@@ -12,8 +12,9 @@ import (
 type AtsActivityType string
 
 const (
-	AtsActivityTypeNote AtsActivityType = "NOTE"
-	AtsActivityTypeTask AtsActivityType = "TASK"
+	AtsActivityTypeNote  AtsActivityType = "NOTE"
+	AtsActivityTypeTask  AtsActivityType = "TASK"
+	AtsActivityTypeEmail AtsActivityType = "EMAIL"
 )
 
 func (e AtsActivityType) ToPointer() *AtsActivityType {
@@ -28,6 +29,8 @@ func (e *AtsActivityType) UnmarshalJSON(data []byte) error {
 	case "NOTE":
 		fallthrough
 	case "TASK":
+		fallthrough
+	case "EMAIL":
 		*e = AtsActivityType(v)
 		return nil
 	default:
@@ -36,19 +39,23 @@ func (e *AtsActivityType) UnmarshalJSON(data []byte) error {
 }
 
 type AtsActivity struct {
-	ApplicationID *string          `json:"application_id,omitempty"`
-	CandidateID   *string          `json:"candidate_id,omitempty"`
-	CreatedAt     *time.Time       `json:"created_at,omitempty"`
-	Description   *string          `json:"description,omitempty"`
-	DocumentID    *string          `json:"document_id,omitempty"`
-	ID            *string          `json:"id,omitempty"`
-	InterviewID   *string          `json:"interview_id,omitempty"`
-	IsPrivate     *bool            `json:"is_private,omitempty"`
-	JobID         *string          `json:"job_id,omitempty"`
-	Raw           map[string]any   `json:"raw,omitempty"`
-	Title         string           `json:"title"`
-	Type          *AtsActivityType `json:"type,omitempty"`
-	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
+	ApplicationID *string                  `json:"application_id,omitempty"`
+	Bcc           []AtsEmail               `json:"bcc,omitempty"`
+	CandidateID   *string                  `json:"candidate_id,omitempty"`
+	Cc            []AtsEmail               `json:"cc,omitempty"`
+	CreatedAt     *time.Time               `json:"created_at,omitempty"`
+	Description   *string                  `json:"description,omitempty"`
+	DocumentID    *string                  `json:"document_id,omitempty"`
+	From          *PropertyAtsActivityFrom `json:"from,omitempty"`
+	ID            *string                  `json:"id,omitempty"`
+	InterviewID   *string                  `json:"interview_id,omitempty"`
+	IsPrivate     *bool                    `json:"is_private,omitempty"`
+	JobID         *string                  `json:"job_id,omitempty"`
+	Raw           map[string]any           `json:"raw,omitempty"`
+	Title         string                   `json:"title"`
+	To            []AtsEmail               `json:"to,omitempty"`
+	Type          *AtsActivityType         `json:"type,omitempty"`
+	UpdatedAt     *time.Time               `json:"updated_at,omitempty"`
 	// id values of the recruiters associated with the activity.
 	UserIds []string `json:"user_ids,omitempty"`
 }
@@ -71,11 +78,25 @@ func (o *AtsActivity) GetApplicationID() *string {
 	return o.ApplicationID
 }
 
+func (o *AtsActivity) GetBcc() []AtsEmail {
+	if o == nil {
+		return nil
+	}
+	return o.Bcc
+}
+
 func (o *AtsActivity) GetCandidateID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.CandidateID
+}
+
+func (o *AtsActivity) GetCc() []AtsEmail {
+	if o == nil {
+		return nil
+	}
+	return o.Cc
 }
 
 func (o *AtsActivity) GetCreatedAt() *time.Time {
@@ -97,6 +118,13 @@ func (o *AtsActivity) GetDocumentID() *string {
 		return nil
 	}
 	return o.DocumentID
+}
+
+func (o *AtsActivity) GetFrom() *PropertyAtsActivityFrom {
+	if o == nil {
+		return nil
+	}
+	return o.From
 }
 
 func (o *AtsActivity) GetID() *string {
@@ -139,6 +167,13 @@ func (o *AtsActivity) GetTitle() string {
 		return ""
 	}
 	return o.Title
+}
+
+func (o *AtsActivity) GetTo() []AtsEmail {
+	if o == nil {
+		return nil
+	}
+	return o.To
 }
 
 func (o *AtsActivity) GetType() *AtsActivityType {

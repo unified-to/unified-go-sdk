@@ -1,6 +1,8 @@
 # Apicall
 (*Apicall*)
 
+## Overview
+
 ### Available Operations
 
 * [GetUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
@@ -38,8 +40,6 @@ func main() {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
@@ -48,13 +48,16 @@ func main() {
 | `request`                                                                                      | [operations.GetUnifiedApicallRequest](../../pkg/models/operations/getunifiedapicallrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 | `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
-
 ### Response
 
 **[*operations.GetUnifiedApicallResponse](../../pkg/models/operations/getunifiedapicallresponse.md), error**
+
+### Errors
+
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
+
 
 ## ListUnifiedApicalls
 
@@ -86,8 +89,6 @@ func main() {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
@@ -96,10 +97,12 @@ func main() {
 | `request`                                                                                          | [operations.ListUnifiedApicallsRequest](../../pkg/models/operations/listunifiedapicallsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 | `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
-
 ### Response
 
 **[*operations.ListUnifiedApicallsResponse](../../pkg/models/operations/listunifiedapicallsresponse.md), error**
+
+### Errors
+
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4xx-5xx            | */*                |

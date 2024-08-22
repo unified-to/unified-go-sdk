@@ -38,6 +38,7 @@ func (e *AtsEmailType) UnmarshalJSON(data []byte) error {
 
 type AtsEmail struct {
 	Email string        `json:"email"`
+	Name  *string       `json:"name,omitempty"`
 	Type  *AtsEmailType `json:"type,omitempty"`
 }
 
@@ -46,6 +47,13 @@ func (o *AtsEmail) GetEmail() string {
 		return ""
 	}
 	return o.Email
+}
+
+func (o *AtsEmail) GetName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Name
 }
 
 func (o *AtsEmail) GetType() *AtsEmailType {
