@@ -20,7 +20,7 @@ type Integration struct {
 	Description          *string                         `json:"description,omitempty"`
 	FaIcon               *string                         `json:"fa_icon,omitempty"`
 	Featured             *bool                           `json:"featured,omitempty"`
-	InProgress           bool                            `json:"in_progress"`
+	InProgress           *bool                           `json:"in_progress,omitempty"`
 	IsActive             *bool                           `json:"is_active,omitempty"`
 	LogoURL              *string                         `json:"logo_url,omitempty"`
 	Name                 string                          `json:"name"`
@@ -119,9 +119,9 @@ func (o *Integration) GetFeatured() *bool {
 	return o.Featured
 }
 
-func (o *Integration) GetInProgress() bool {
+func (o *Integration) GetInProgress() *bool {
 	if o == nil {
-		return false
+		return nil
 	}
 	return o.InProgress
 }
