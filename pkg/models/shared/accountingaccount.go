@@ -92,15 +92,19 @@ type AccountingAccount struct {
 	Currency            *string    `json:"currency,omitempty"`
 	CustomerDefinedCode *string    `json:"customer_defined_code,omitempty"`
 	Description         *string    `json:"description,omitempty"`
+	Group               *string    `json:"group,omitempty"`
 	ID                  *string    `json:"id,omitempty"`
 	IsPayable           *bool      `json:"is_payable,omitempty"`
 	Name                *string    `json:"name,omitempty"`
 	ParentAccountID     *string    `json:"parent_account_id,omitempty"`
 	// The original data from the integration's API
-	Raw       map[string]any `json:"raw,omitempty"`
-	Status    *Status        `json:"status,omitempty"`
-	Type      *Type          `json:"type,omitempty"`
-	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	Section    *string        `json:"section,omitempty"`
+	Status     *Status        `json:"status,omitempty"`
+	Subgroup   *string        `json:"subgroup,omitempty"`
+	Subsection *string        `json:"subsection,omitempty"`
+	Type       *Type          `json:"type,omitempty"`
+	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (a AccountingAccount) MarshalJSON() ([]byte, error) {
@@ -149,6 +153,13 @@ func (o *AccountingAccount) GetDescription() *string {
 	return o.Description
 }
 
+func (o *AccountingAccount) GetGroup() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Group
+}
+
 func (o *AccountingAccount) GetID() *string {
 	if o == nil {
 		return nil
@@ -184,11 +195,32 @@ func (o *AccountingAccount) GetRaw() map[string]any {
 	return o.Raw
 }
 
+func (o *AccountingAccount) GetSection() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Section
+}
+
 func (o *AccountingAccount) GetStatus() *Status {
 	if o == nil {
 		return nil
 	}
 	return o.Status
+}
+
+func (o *AccountingAccount) GetSubgroup() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Subgroup
+}
+
+func (o *AccountingAccount) GetSubsection() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Subsection
 }
 
 func (o *AccountingAccount) GetType() *Type {
