@@ -53,7 +53,7 @@ type APICall struct {
 	Size            *float64    `json:"size,omitempty"`
 	Status          string      `json:"status"`
 	Type            APICallType `json:"type"`
-	WorkspaceID     string      `json:"workspace_id"`
+	WorkspaceID     *string     `json:"workspace_id,omitempty"`
 }
 
 func (a APICall) MarshalJSON() ([]byte, error) {
@@ -165,9 +165,9 @@ func (o *APICall) GetType() APICallType {
 	return o.Type
 }
 
-func (o *APICall) GetWorkspaceID() string {
+func (o *APICall) GetWorkspaceID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.WorkspaceID
 }

@@ -24,6 +24,7 @@ type ListTaskTasksRequest struct {
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListTaskTasksRequest) MarshalJSON() ([]byte, error) {
@@ -105,6 +106,13 @@ func (o *ListTaskTasksRequest) GetUpdatedGte() *time.Time {
 		return nil
 	}
 	return o.UpdatedGte
+}
+
+func (o *ListTaskTasksRequest) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }
 
 type ListTaskTasksResponse struct {
