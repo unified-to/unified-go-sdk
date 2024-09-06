@@ -11,11 +11,11 @@ import (
 
 func main() {
 	s := unifiedgosdk.New()
-	request := operations.CreateAccountingAccountRequest{
-		ConnectionID: "<value>",
-	}
+
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		ConnectionID: "<value>",
+	})
 	if err != nil {
 		log.Fatal(err)
 	}

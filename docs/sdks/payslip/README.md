@@ -19,19 +19,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetHrisPayslipRequest{
+
+    ctx := context.Background()
+    res, err := s.Payslip.GetHrisPayslip(ctx, operations.GetHrisPayslipRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Payslip.GetHrisPayslip(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -71,18 +71,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListHrisPayslipsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Payslip.ListHrisPayslips(ctx, request)
+    res, err := s.Payslip.ListHrisPayslips(ctx, operations.ListHrisPayslipsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -23,18 +23,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateAccountingInvoiceRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Invoice.CreateAccountingInvoice(ctx, request)
+    res, err := s.Invoice.CreateAccountingInvoice(ctx, operations.CreateAccountingInvoiceRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -74,19 +74,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetAccountingInvoiceRequest{
+
+    ctx := context.Background()
+    res, err := s.Invoice.GetAccountingInvoice(ctx, operations.GetAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Invoice.GetAccountingInvoice(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -126,18 +126,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListAccountingInvoicesRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Invoice.ListAccountingInvoices(ctx, request)
+    res, err := s.Invoice.ListAccountingInvoices(ctx, operations.ListAccountingInvoicesRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -177,19 +177,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchAccountingInvoiceRequest{
+
+    ctx := context.Background()
+    res, err := s.Invoice.PatchAccountingInvoice(ctx, operations.PatchAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Invoice.PatchAccountingInvoice(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -229,19 +229,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveAccountingInvoiceRequest{
+
+    ctx := context.Background()
+    res, err := s.Invoice.RemoveAccountingInvoice(ctx, operations.RemoveAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Invoice.RemoveAccountingInvoice(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -281,19 +281,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateAccountingInvoiceRequest{
+
+    ctx := context.Background()
+    res, err := s.Invoice.UpdateAccountingInvoice(ctx, operations.UpdateAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Invoice.UpdateAccountingInvoice(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

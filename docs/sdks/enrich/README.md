@@ -19,18 +19,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListEnrichCompaniesRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Enrich.ListEnrichCompanies(ctx, request)
+    res, err := s.Enrich.ListEnrichCompanies(ctx, operations.ListEnrichCompaniesRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -70,18 +70,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListEnrichPeopleRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Enrich.ListEnrichPeople(ctx, request)
+    res, err := s.Enrich.ListEnrichPeople(ctx, operations.ListEnrichPeopleRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }

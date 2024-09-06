@@ -18,18 +18,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateGenaiPromptRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Prompt.CreateGenaiPrompt(ctx, request)
+    res, err := s.Prompt.CreateGenaiPrompt(ctx, operations.CreateGenaiPromptRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }

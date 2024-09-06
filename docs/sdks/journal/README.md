@@ -23,18 +23,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateAccountingJournalRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Journal.CreateAccountingJournal(ctx, request)
+    res, err := s.Journal.CreateAccountingJournal(ctx, operations.CreateAccountingJournalRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -74,19 +74,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetAccountingJournalRequest{
+
+    ctx := context.Background()
+    res, err := s.Journal.GetAccountingJournal(ctx, operations.GetAccountingJournalRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Journal.GetAccountingJournal(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -126,18 +126,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListAccountingJournalsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Journal.ListAccountingJournals(ctx, request)
+    res, err := s.Journal.ListAccountingJournals(ctx, operations.ListAccountingJournalsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -177,19 +177,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchAccountingJournalRequest{
+
+    ctx := context.Background()
+    res, err := s.Journal.PatchAccountingJournal(ctx, operations.PatchAccountingJournalRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Journal.PatchAccountingJournal(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -229,19 +229,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveAccountingJournalRequest{
+
+    ctx := context.Background()
+    res, err := s.Journal.RemoveAccountingJournal(ctx, operations.RemoveAccountingJournalRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Journal.RemoveAccountingJournal(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -281,19 +281,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateAccountingJournalRequest{
+
+    ctx := context.Background()
+    res, err := s.Journal.UpdateAccountingJournal(ctx, operations.UpdateAccountingJournalRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Journal.UpdateAccountingJournal(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

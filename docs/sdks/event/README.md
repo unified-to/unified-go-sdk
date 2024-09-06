@@ -23,18 +23,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateCrmEventRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Event.CreateCrmEvent(ctx, request)
+    res, err := s.Event.CreateCrmEvent(ctx, operations.CreateCrmEventRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -74,19 +74,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetCrmEventRequest{
+
+    ctx := context.Background()
+    res, err := s.Event.GetCrmEvent(ctx, operations.GetCrmEventRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Event.GetCrmEvent(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -126,18 +126,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListCrmEventsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Event.ListCrmEvents(ctx, request)
+    res, err := s.Event.ListCrmEvents(ctx, operations.ListCrmEventsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -177,19 +177,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchCrmEventRequest{
+
+    ctx := context.Background()
+    res, err := s.Event.PatchCrmEvent(ctx, operations.PatchCrmEventRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Event.PatchCrmEvent(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -229,19 +229,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveCrmEventRequest{
+
+    ctx := context.Background()
+    res, err := s.Event.RemoveCrmEvent(ctx, operations.RemoveCrmEventRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Event.RemoveCrmEvent(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -281,19 +281,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateCrmEventRequest{
+
+    ctx := context.Background()
+    res, err := s.Event.UpdateCrmEvent(ctx, operations.UpdateCrmEventRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Event.UpdateCrmEvent(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

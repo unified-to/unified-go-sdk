@@ -29,18 +29,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateKmsPageRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Kms.CreateKmsPage(ctx, request)
+    res, err := s.Kms.CreateKmsPage(ctx, operations.CreateKmsPageRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -80,18 +80,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateKmsSpaceRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Kms.CreateKmsSpace(ctx, request)
+    res, err := s.Kms.CreateKmsSpace(ctx, operations.CreateKmsSpaceRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -131,19 +131,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetKmsPageRequest{
+
+    ctx := context.Background()
+    res, err := s.Kms.GetKmsPage(ctx, operations.GetKmsPageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Kms.GetKmsPage(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -183,19 +183,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetKmsSpaceRequest{
+
+    ctx := context.Background()
+    res, err := s.Kms.GetKmsSpace(ctx, operations.GetKmsSpaceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Kms.GetKmsSpace(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -235,18 +235,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListKmsPagesRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Kms.ListKmsPages(ctx, request)
+    res, err := s.Kms.ListKmsPages(ctx, operations.ListKmsPagesRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -286,18 +286,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListKmsSpacesRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Kms.ListKmsSpaces(ctx, request)
+    res, err := s.Kms.ListKmsSpaces(ctx, operations.ListKmsSpacesRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -337,19 +337,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchKmsPageRequest{
+
+    ctx := context.Background()
+    res, err := s.Kms.PatchKmsPage(ctx, operations.PatchKmsPageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Kms.PatchKmsPage(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -389,19 +389,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchKmsSpaceRequest{
+
+    ctx := context.Background()
+    res, err := s.Kms.PatchKmsSpace(ctx, operations.PatchKmsSpaceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Kms.PatchKmsSpace(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -441,19 +441,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveKmsPageRequest{
+
+    ctx := context.Background()
+    res, err := s.Kms.RemoveKmsPage(ctx, operations.RemoveKmsPageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Kms.RemoveKmsPage(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -493,19 +493,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveKmsSpaceRequest{
+
+    ctx := context.Background()
+    res, err := s.Kms.RemoveKmsSpace(ctx, operations.RemoveKmsSpaceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Kms.RemoveKmsSpace(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -545,19 +545,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateKmsPageRequest{
+
+    ctx := context.Background()
+    res, err := s.Kms.UpdateKmsPage(ctx, operations.UpdateKmsPageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Kms.UpdateKmsPage(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -597,19 +597,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateKmsSpaceRequest{
+
+    ctx := context.Background()
+    res, err := s.Kms.UpdateKmsSpace(ctx, operations.UpdateKmsSpaceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Kms.UpdateKmsSpace(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

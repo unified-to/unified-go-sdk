@@ -19,19 +19,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetPaymentPayoutRequest{
+
+    ctx := context.Background()
+    res, err := s.Payout.GetPaymentPayout(ctx, operations.GetPaymentPayoutRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Payout.GetPaymentPayout(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -71,18 +71,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListPaymentPayoutsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Payout.ListPaymentPayouts(ctx, request)
+    res, err := s.Payout.ListPaymentPayouts(ctx, operations.ListPaymentPayoutsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }

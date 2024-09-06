@@ -18,19 +18,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetUnifiedIntegrationLoginRequest{
+
+    ctx := context.Background()
+    res, err := s.Login.GetUnifiedIntegrationLogin(ctx, operations.GetUnifiedIntegrationLoginRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",
-    }
-    ctx := context.Background()
-    res, err := s.Login.GetUnifiedIntegrationLogin(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

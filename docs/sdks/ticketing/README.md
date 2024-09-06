@@ -35,18 +35,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateTicketingCustomerRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Ticketing.CreateTicketingCustomer(ctx, request)
+    res, err := s.Ticketing.CreateTicketingCustomer(ctx, operations.CreateTicketingCustomerRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -86,18 +86,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateTicketingNoteRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Ticketing.CreateTicketingNote(ctx, request)
+    res, err := s.Ticketing.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -137,18 +137,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateTicketingTicketRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Ticketing.CreateTicketingTicket(ctx, request)
+    res, err := s.Ticketing.CreateTicketingTicket(ctx, operations.CreateTicketingTicketRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -188,19 +188,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetTicketingCustomerRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.GetTicketingCustomer(ctx, operations.GetTicketingCustomerRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.GetTicketingCustomer(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -240,19 +240,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetTicketingNoteRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.GetTicketingNote(ctx, operations.GetTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.GetTicketingNote(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -292,19 +292,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetTicketingTicketRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.GetTicketingTicket(ctx, operations.GetTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.GetTicketingTicket(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -344,18 +344,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListTicketingCustomersRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Ticketing.ListTicketingCustomers(ctx, request)
+    res, err := s.Ticketing.ListTicketingCustomers(ctx, operations.ListTicketingCustomersRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -395,18 +395,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListTicketingNotesRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Ticketing.ListTicketingNotes(ctx, request)
+    res, err := s.Ticketing.ListTicketingNotes(ctx, operations.ListTicketingNotesRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -446,18 +446,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListTicketingTicketsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Ticketing.ListTicketingTickets(ctx, request)
+    res, err := s.Ticketing.ListTicketingTickets(ctx, operations.ListTicketingTicketsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -497,19 +497,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchTicketingCustomerRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.PatchTicketingCustomer(ctx, operations.PatchTicketingCustomerRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.PatchTicketingCustomer(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -549,19 +549,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchTicketingNoteRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.PatchTicketingNote(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -601,19 +601,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchTicketingTicketRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.PatchTicketingTicket(ctx, operations.PatchTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.PatchTicketingTicket(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -653,19 +653,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveTicketingCustomerRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.RemoveTicketingCustomer(ctx, operations.RemoveTicketingCustomerRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.RemoveTicketingCustomer(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -705,19 +705,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveTicketingNoteRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.RemoveTicketingNote(ctx, operations.RemoveTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.RemoveTicketingNote(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -757,19 +757,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveTicketingTicketRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.RemoveTicketingTicket(ctx, operations.RemoveTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.RemoveTicketingTicket(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -809,19 +809,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateTicketingCustomerRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.UpdateTicketingCustomer(ctx, operations.UpdateTicketingCustomerRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.UpdateTicketingCustomer(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -861,19 +861,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateTicketingNoteRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.UpdateTicketingNote(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -913,19 +913,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateTicketingTicketRequest{
+
+    ctx := context.Background()
+    res, err := s.Ticketing.UpdateTicketingTicket(ctx, operations.UpdateTicketingTicketRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Ticketing.UpdateTicketingTicket(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

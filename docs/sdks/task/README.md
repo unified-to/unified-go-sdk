@@ -29,18 +29,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateTaskProjectRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Task.CreateTaskProject(ctx, request)
+    res, err := s.Task.CreateTaskProject(ctx, operations.CreateTaskProjectRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -80,18 +80,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateTaskTaskRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Task.CreateTaskTask(ctx, request)
+    res, err := s.Task.CreateTaskTask(ctx, operations.CreateTaskTaskRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -131,19 +131,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetTaskProjectRequest{
+
+    ctx := context.Background()
+    res, err := s.Task.GetTaskProject(ctx, operations.GetTaskProjectRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Task.GetTaskProject(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -183,19 +183,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetTaskTaskRequest{
+
+    ctx := context.Background()
+    res, err := s.Task.GetTaskTask(ctx, operations.GetTaskTaskRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Task.GetTaskTask(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -235,18 +235,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListTaskProjectsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Task.ListTaskProjects(ctx, request)
+    res, err := s.Task.ListTaskProjects(ctx, operations.ListTaskProjectsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -286,18 +286,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListTaskTasksRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Task.ListTaskTasks(ctx, request)
+    res, err := s.Task.ListTaskTasks(ctx, operations.ListTaskTasksRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -337,19 +337,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchTaskProjectRequest{
+
+    ctx := context.Background()
+    res, err := s.Task.PatchTaskProject(ctx, operations.PatchTaskProjectRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Task.PatchTaskProject(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -389,19 +389,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchTaskTaskRequest{
+
+    ctx := context.Background()
+    res, err := s.Task.PatchTaskTask(ctx, operations.PatchTaskTaskRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Task.PatchTaskTask(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -441,19 +441,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveTaskProjectRequest{
+
+    ctx := context.Background()
+    res, err := s.Task.RemoveTaskProject(ctx, operations.RemoveTaskProjectRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Task.RemoveTaskProject(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -493,19 +493,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveTaskTaskRequest{
+
+    ctx := context.Background()
+    res, err := s.Task.RemoveTaskTask(ctx, operations.RemoveTaskTaskRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Task.RemoveTaskTask(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -545,19 +545,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateTaskProjectRequest{
+
+    ctx := context.Background()
+    res, err := s.Task.UpdateTaskProject(ctx, operations.UpdateTaskProjectRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Task.UpdateTaskProject(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -597,19 +597,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateTaskTaskRequest{
+
+    ctx := context.Background()
+    res, err := s.Task.UpdateTaskTask(ctx, operations.UpdateTaskTaskRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Task.UpdateTaskTask(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

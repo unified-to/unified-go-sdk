@@ -19,19 +19,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetHrisTimeoffRequest{
+
+    ctx := context.Background()
+    res, err := s.Timeoff.GetHrisTimeoff(ctx, operations.GetHrisTimeoffRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Timeoff.GetHrisTimeoff(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -71,18 +71,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListHrisTimeoffsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Timeoff.ListHrisTimeoffs(ctx, request)
+    res, err := s.Timeoff.ListHrisTimeoffs(ctx, operations.ListHrisTimeoffsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -29,18 +29,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateCommerceLocationRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Location.CreateCommerceLocation(ctx, request)
+    res, err := s.Location.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -80,18 +80,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateHrisLocationRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Location.CreateHrisLocation(ctx, request)
+    res, err := s.Location.CreateHrisLocation(ctx, operations.CreateHrisLocationRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -131,19 +131,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetCommerceLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Location.GetCommerceLocation(ctx, operations.GetCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Location.GetCommerceLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -183,19 +183,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetHrisLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Location.GetHrisLocation(ctx, operations.GetHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Location.GetHrisLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -235,18 +235,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListCommerceLocationsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Location.ListCommerceLocations(ctx, request)
+    res, err := s.Location.ListCommerceLocations(ctx, operations.ListCommerceLocationsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -286,18 +286,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListHrisLocationsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Location.ListHrisLocations(ctx, request)
+    res, err := s.Location.ListHrisLocations(ctx, operations.ListHrisLocationsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -337,19 +337,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchCommerceLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Location.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Location.PatchCommerceLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -389,19 +389,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchHrisLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Location.PatchHrisLocation(ctx, operations.PatchHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Location.PatchHrisLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -441,19 +441,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveCommerceLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Location.RemoveCommerceLocation(ctx, operations.RemoveCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Location.RemoveCommerceLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -493,19 +493,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveHrisLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Location.RemoveHrisLocation(ctx, operations.RemoveHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Location.RemoveHrisLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -545,19 +545,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateCommerceLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Location.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Location.UpdateCommerceLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -597,19 +597,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateHrisLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Location.UpdateHrisLocation(ctx, operations.UpdateHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Location.UpdateHrisLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

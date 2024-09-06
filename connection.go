@@ -28,6 +28,7 @@ func newConnection(sdkConfig sdkConfiguration) *Connection {
 }
 
 // CreateUnifiedConnection - Create connection
+// Used only to import existing customer credentials; use "Create connection indirectly" instead
 func (s *Connection) CreateUnifiedConnection(ctx context.Context, request *shared.Connection, opts ...operations.Option) (*operations.CreateUnifiedConnectionResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,

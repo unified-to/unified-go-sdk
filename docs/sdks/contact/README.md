@@ -35,18 +35,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateAccountingContactRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Contact.CreateAccountingContact(ctx, request)
+    res, err := s.Contact.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -86,18 +86,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateCrmContactRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Contact.CreateCrmContact(ctx, request)
+    res, err := s.Contact.CreateCrmContact(ctx, operations.CreateCrmContactRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -137,18 +137,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateUcContactRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Contact.CreateUcContact(ctx, request)
+    res, err := s.Contact.CreateUcContact(ctx, operations.CreateUcContactRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -188,19 +188,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetAccountingContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.GetAccountingContact(ctx, operations.GetAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.GetAccountingContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -240,19 +240,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetCrmContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.GetCrmContact(ctx, operations.GetCrmContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.GetCrmContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -292,19 +292,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetUcContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.GetUcContact(ctx, operations.GetUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.GetUcContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -344,18 +344,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListAccountingContactsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Contact.ListAccountingContacts(ctx, request)
+    res, err := s.Contact.ListAccountingContacts(ctx, operations.ListAccountingContactsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -395,18 +395,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListCrmContactsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Contact.ListCrmContacts(ctx, request)
+    res, err := s.Contact.ListCrmContacts(ctx, operations.ListCrmContactsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -446,18 +446,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListUcContactsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Contact.ListUcContacts(ctx, request)
+    res, err := s.Contact.ListUcContacts(ctx, operations.ListUcContactsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -497,19 +497,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchAccountingContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.PatchAccountingContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -549,19 +549,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchCrmContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.PatchCrmContact(ctx, operations.PatchCrmContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.PatchCrmContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -601,19 +601,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchUcContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.PatchUcContact(ctx, operations.PatchUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.PatchUcContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -653,19 +653,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveAccountingContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.RemoveAccountingContact(ctx, operations.RemoveAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.RemoveAccountingContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -705,19 +705,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveCrmContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.RemoveCrmContact(ctx, operations.RemoveCrmContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.RemoveCrmContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -757,19 +757,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveUcContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.RemoveUcContact(ctx, operations.RemoveUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.RemoveUcContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -809,19 +809,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateAccountingContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.UpdateAccountingContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -861,19 +861,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateCrmContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.UpdateCrmContact(ctx, operations.UpdateCrmContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.UpdateCrmContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -913,19 +913,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateUcContactRequest{
+
+    ctx := context.Background()
+    res, err := s.Contact.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Contact.UpdateUcContact(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

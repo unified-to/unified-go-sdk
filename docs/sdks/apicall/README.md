@@ -19,18 +19,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetUnifiedApicallRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Apicall.GetUnifiedApicall(ctx, request)
+    res, err := s.Apicall.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -70,16 +70,16 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListUnifiedApicallsRequest{}
+
     ctx := context.Background()
-    res, err := s.Apicall.ListUnifiedApicalls(ctx, request)
+    res, err := s.Apicall.ListUnifiedApicalls(ctx, operations.ListUnifiedApicallsRequest{})
     if err != nil {
         log.Fatal(err)
     }

@@ -20,19 +20,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetUnifiedIntegrationAuthRequest{
+
+    ctx := context.Background()
+    res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",
-    }
-    ctx := context.Background()
-    res, err := s.Integration.GetUnifiedIntegrationAuth(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -72,18 +72,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListUnifiedIntegrationWorkspacesRequest{
-        WorkspaceID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Integration.ListUnifiedIntegrationWorkspaces(ctx, request)
+    res, err := s.Integration.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
+        WorkspaceID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -123,16 +123,16 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListUnifiedIntegrationsRequest{}
+
     ctx := context.Background()
-    res, err := s.Integration.ListUnifiedIntegrations(ctx, request)
+    res, err := s.Integration.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{})
     if err != nil {
         log.Fatal(err)
     }

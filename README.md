@@ -50,11 +50,11 @@ import (
 
 func main() {
 	s := unifiedgosdk.New()
-	request := operations.CreateAccountingAccountRequest{
-		ConnectionID: "<value>",
-	}
+
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		ConnectionID: "<value>",
+	})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -887,11 +887,11 @@ import (
 
 func main() {
 	s := unifiedgosdk.New()
-	request := operations.CreateAccountingAccountRequest{
-		ConnectionID: "<value>",
-	}
+
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		ConnectionID: "<value>",
+	})
 	if err != nil {
 
 		var e *sdkerrors.SDKError
@@ -935,11 +935,11 @@ func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerIndex(1),
 	)
-	request := operations.CreateAccountingAccountRequest{
-		ConnectionID: "<value>",
-	}
+
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		ConnectionID: "<value>",
+	})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -968,11 +968,11 @@ func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerURL("https://api.unified.to"),
 	)
-	request := operations.CreateAccountingAccountRequest{
-		ConnectionID: "<value>",
-	}
+
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		ConnectionID: "<value>",
+	})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1043,11 +1043,11 @@ func main() {
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
-	request := operations.CreateAccountingAccountRequest{
-		ConnectionID: "<value>",
-	}
+
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		ConnectionID: "<value>",
+	})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -1079,11 +1079,11 @@ import (
 
 func main() {
 	s := unifiedgosdk.New()
-	request := operations.CreateAccountingAccountRequest{
-		ConnectionID: "<value>",
-	}
+
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, request, operations.WithRetries(
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		ConnectionID: "<value>",
+	}, operations.WithRetries(
 		retry.Config{
 			Strategy: "backoff",
 			Backoff: &retry.BackoffStrategy{
@@ -1130,11 +1130,11 @@ func main() {
 				RetryConnectionErrors: false,
 			}),
 	)
-	request := operations.CreateAccountingAccountRequest{
-		ConnectionID: "<value>",
-	}
+
 	ctx := context.Background()
-	res, err := s.Accounting.CreateAccountingAccount(ctx, request)
+	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+		ConnectionID: "<value>",
+	})
 	if err != nil {
 		log.Fatal(err)
 	}

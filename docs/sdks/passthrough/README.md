@@ -22,19 +22,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreatePassthroughRequest{
+
+    ctx := context.Background()
+    res, err := s.Passthrough.CreatePassthrough(ctx, operations.CreatePassthroughRequest{
         ConnectionID: "<value>",
         Path: "/etc/periodic",
-    }
-    ctx := context.Background()
-    res, err := s.Passthrough.CreatePassthrough(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -74,19 +74,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListPassthroughsRequest{
+
+    ctx := context.Background()
+    res, err := s.Passthrough.ListPassthroughs(ctx, operations.ListPassthroughsRequest{
         ConnectionID: "<value>",
         Path: "/selinux",
-    }
-    ctx := context.Background()
-    res, err := s.Passthrough.ListPassthroughs(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -126,19 +126,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchPassthroughRequest{
+
+    ctx := context.Background()
+    res, err := s.Passthrough.PatchPassthrough(ctx, operations.PatchPassthroughRequest{
         ConnectionID: "<value>",
         Path: "/mnt",
-    }
-    ctx := context.Background()
-    res, err := s.Passthrough.PatchPassthrough(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -178,19 +178,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemovePassthroughRequest{
+
+    ctx := context.Background()
+    res, err := s.Passthrough.RemovePassthrough(ctx, operations.RemovePassthroughRequest{
         ConnectionID: "<value>",
         Path: "/Applications",
-    }
-    ctx := context.Background()
-    res, err := s.Passthrough.RemovePassthrough(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -230,19 +230,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdatePassthroughRequest{
+
+    ctx := context.Background()
+    res, err := s.Passthrough.UpdatePassthrough(ctx, operations.UpdatePassthroughRequest{
         ConnectionID: "<value>",
         Path: "/dev",
-    }
-    ctx := context.Background()
-    res, err := s.Passthrough.UpdatePassthrough(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

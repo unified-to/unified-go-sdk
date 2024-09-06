@@ -25,18 +25,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateMessagingMessageRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Messaging.CreateMessagingMessage(ctx, request)
+    res, err := s.Messaging.CreateMessagingMessage(ctx, operations.CreateMessagingMessageRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -76,19 +76,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetMessagingChannelRequest{
+
+    ctx := context.Background()
+    res, err := s.Messaging.GetMessagingChannel(ctx, operations.GetMessagingChannelRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Messaging.GetMessagingChannel(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -128,19 +128,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetMessagingMessageRequest{
+
+    ctx := context.Background()
+    res, err := s.Messaging.GetMessagingMessage(ctx, operations.GetMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Messaging.GetMessagingMessage(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -180,18 +180,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListMessagingChannelsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Messaging.ListMessagingChannels(ctx, request)
+    res, err := s.Messaging.ListMessagingChannels(ctx, operations.ListMessagingChannelsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -231,18 +231,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListMessagingMessagesRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Messaging.ListMessagingMessages(ctx, request)
+    res, err := s.Messaging.ListMessagingMessages(ctx, operations.ListMessagingMessagesRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -282,19 +282,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchMessagingMessageRequest{
+
+    ctx := context.Background()
+    res, err := s.Messaging.PatchMessagingMessage(ctx, operations.PatchMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Messaging.PatchMessagingMessage(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -334,19 +334,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveMessagingMessageRequest{
+
+    ctx := context.Background()
+    res, err := s.Messaging.RemoveMessagingMessage(ctx, operations.RemoveMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Messaging.RemoveMessagingMessage(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -386,19 +386,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateMessagingMessageRequest{
+
+    ctx := context.Background()
+    res, err := s.Messaging.UpdateMessagingMessage(ctx, operations.UpdateMessagingMessageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Messaging.UpdateMessagingMessage(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

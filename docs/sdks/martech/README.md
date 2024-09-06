@@ -29,18 +29,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateMartechListRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Martech.CreateMartechList(ctx, request)
+    res, err := s.Martech.CreateMartechList(ctx, operations.CreateMartechListRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -80,18 +80,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateMartechMemberRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Martech.CreateMartechMember(ctx, request)
+    res, err := s.Martech.CreateMartechMember(ctx, operations.CreateMartechMemberRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -131,19 +131,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetMartechListRequest{
+
+    ctx := context.Background()
+    res, err := s.Martech.GetMartechList(ctx, operations.GetMartechListRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Martech.GetMartechList(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -183,19 +183,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetMartechMemberRequest{
+
+    ctx := context.Background()
+    res, err := s.Martech.GetMartechMember(ctx, operations.GetMartechMemberRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Martech.GetMartechMember(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -235,18 +235,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListMartechListsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Martech.ListMartechLists(ctx, request)
+    res, err := s.Martech.ListMartechLists(ctx, operations.ListMartechListsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -286,18 +286,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListMartechMembersRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Martech.ListMartechMembers(ctx, request)
+    res, err := s.Martech.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -337,19 +337,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchMartechListRequest{
+
+    ctx := context.Background()
+    res, err := s.Martech.PatchMartechList(ctx, operations.PatchMartechListRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Martech.PatchMartechList(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -389,19 +389,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchMartechMemberRequest{
+
+    ctx := context.Background()
+    res, err := s.Martech.PatchMartechMember(ctx, operations.PatchMartechMemberRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Martech.PatchMartechMember(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -441,19 +441,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveMartechListRequest{
+
+    ctx := context.Background()
+    res, err := s.Martech.RemoveMartechList(ctx, operations.RemoveMartechListRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Martech.RemoveMartechList(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -493,19 +493,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveMartechMemberRequest{
+
+    ctx := context.Background()
+    res, err := s.Martech.RemoveMartechMember(ctx, operations.RemoveMartechMemberRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Martech.RemoveMartechMember(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -545,19 +545,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateMartechListRequest{
+
+    ctx := context.Background()
+    res, err := s.Martech.UpdateMartechList(ctx, operations.UpdateMartechListRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Martech.UpdateMartechList(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -597,19 +597,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateMartechMemberRequest{
+
+    ctx := context.Background()
+    res, err := s.Martech.UpdateMartechMember(ctx, operations.UpdateMartechMemberRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Martech.UpdateMartechMember(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

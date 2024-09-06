@@ -45,18 +45,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateHrisCompanyRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Hris.CreateHrisCompany(ctx, request)
+    res, err := s.Hris.CreateHrisCompany(ctx, operations.CreateHrisCompanyRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -96,18 +96,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateHrisEmployeeRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Hris.CreateHrisEmployee(ctx, request)
+    res, err := s.Hris.CreateHrisEmployee(ctx, operations.CreateHrisEmployeeRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -147,18 +147,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateHrisGroupRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Hris.CreateHrisGroup(ctx, request)
+    res, err := s.Hris.CreateHrisGroup(ctx, operations.CreateHrisGroupRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -198,18 +198,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateHrisLocationRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Hris.CreateHrisLocation(ctx, request)
+    res, err := s.Hris.CreateHrisLocation(ctx, operations.CreateHrisLocationRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -249,19 +249,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetHrisCompanyRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.GetHrisCompany(ctx, operations.GetHrisCompanyRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.GetHrisCompany(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -301,19 +301,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetHrisEmployeeRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.GetHrisEmployee(ctx, operations.GetHrisEmployeeRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.GetHrisEmployee(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -353,19 +353,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetHrisGroupRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.GetHrisGroup(ctx, operations.GetHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.GetHrisGroup(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -405,19 +405,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetHrisLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.GetHrisLocation(ctx, operations.GetHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.GetHrisLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -457,19 +457,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetHrisPayslipRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.GetHrisPayslip(ctx, operations.GetHrisPayslipRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.GetHrisPayslip(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -509,19 +509,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetHrisTimeoffRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.GetHrisTimeoff(ctx, operations.GetHrisTimeoffRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.GetHrisTimeoff(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -561,18 +561,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListHrisCompaniesRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Hris.ListHrisCompanies(ctx, request)
+    res, err := s.Hris.ListHrisCompanies(ctx, operations.ListHrisCompaniesRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -612,18 +612,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListHrisEmployeesRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Hris.ListHrisEmployees(ctx, request)
+    res, err := s.Hris.ListHrisEmployees(ctx, operations.ListHrisEmployeesRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -663,18 +663,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListHrisGroupsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Hris.ListHrisGroups(ctx, request)
+    res, err := s.Hris.ListHrisGroups(ctx, operations.ListHrisGroupsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -714,18 +714,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListHrisLocationsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Hris.ListHrisLocations(ctx, request)
+    res, err := s.Hris.ListHrisLocations(ctx, operations.ListHrisLocationsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -765,18 +765,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListHrisPayslipsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Hris.ListHrisPayslips(ctx, request)
+    res, err := s.Hris.ListHrisPayslips(ctx, operations.ListHrisPayslipsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -816,18 +816,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListHrisTimeoffsRequest{
-        ConnectionID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Hris.ListHrisTimeoffs(ctx, request)
+    res, err := s.Hris.ListHrisTimeoffs(ctx, operations.ListHrisTimeoffsRequest{
+        ConnectionID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -867,19 +867,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchHrisCompanyRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.PatchHrisCompany(ctx, operations.PatchHrisCompanyRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.PatchHrisCompany(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -919,19 +919,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchHrisEmployeeRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.PatchHrisEmployee(ctx, operations.PatchHrisEmployeeRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.PatchHrisEmployee(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -971,19 +971,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchHrisGroupRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.PatchHrisGroup(ctx, operations.PatchHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.PatchHrisGroup(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1023,19 +1023,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchHrisLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.PatchHrisLocation(ctx, operations.PatchHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.PatchHrisLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1075,19 +1075,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveHrisCompanyRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.RemoveHrisCompany(ctx, operations.RemoveHrisCompanyRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.RemoveHrisCompany(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1127,19 +1127,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveHrisEmployeeRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.RemoveHrisEmployee(ctx, operations.RemoveHrisEmployeeRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.RemoveHrisEmployee(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1179,19 +1179,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveHrisGroupRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.RemoveHrisGroup(ctx, operations.RemoveHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.RemoveHrisGroup(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1231,19 +1231,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveHrisLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.RemoveHrisLocation(ctx, operations.RemoveHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.RemoveHrisLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1283,19 +1283,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateHrisCompanyRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.UpdateHrisCompany(ctx, operations.UpdateHrisCompanyRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.UpdateHrisCompany(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1335,19 +1335,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateHrisEmployeeRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.UpdateHrisEmployee(ctx, operations.UpdateHrisEmployeeRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.UpdateHrisEmployee(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1387,19 +1387,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateHrisGroupRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.UpdateHrisGroup(ctx, operations.UpdateHrisGroupRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.UpdateHrisGroup(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1439,19 +1439,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateHrisLocationRequest{
+
+    ctx := context.Background()
+    res, err := s.Hris.UpdateHrisLocation(ctx, operations.UpdateHrisLocationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
-    }
-    ctx := context.Background()
-    res, err := s.Hris.UpdateHrisLocation(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -28,7 +28,7 @@
 
 ## CreateUnifiedConnection
 
-Create connection
+Used only to import existing customer credentials; use "Create connection indirectly" instead
 
 ### Example Usage
 
@@ -37,7 +37,6 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"context"
 	"log"
 )
@@ -86,16 +85,16 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.CreateUnifiedWebhookRequest{}
+
     ctx := context.Background()
-    res, err := s.Unified.CreateUnifiedWebhook(ctx, request)
+    res, err := s.Unified.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -135,18 +134,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetUnifiedApicallRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.GetUnifiedApicall(ctx, request)
+    res, err := s.Unified.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -186,18 +185,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetUnifiedConnectionRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.GetUnifiedConnection(ctx, request)
+    res, err := s.Unified.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -237,19 +236,19 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetUnifiedIntegrationAuthRequest{
+
+    ctx := context.Background()
+    res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",
-    }
-    ctx := context.Background()
-    res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, request)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -289,18 +288,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.GetUnifiedWebhookRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.GetUnifiedWebhook(ctx, request)
+    res, err := s.Unified.GetUnifiedWebhook(ctx, operations.GetUnifiedWebhookRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -340,16 +339,16 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListUnifiedApicallsRequest{}
+
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedApicalls(ctx, request)
+    res, err := s.Unified.ListUnifiedApicalls(ctx, operations.ListUnifiedApicallsRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -389,16 +388,16 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListUnifiedConnectionsRequest{}
+
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedConnections(ctx, request)
+    res, err := s.Unified.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -438,18 +437,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListUnifiedIntegrationWorkspacesRequest{
-        WorkspaceID: "<value>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, request)
+    res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
+        WorkspaceID: "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -489,16 +488,16 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListUnifiedIntegrationsRequest{}
+
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedIntegrations(ctx, request)
+    res, err := s.Unified.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -538,16 +537,16 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListUnifiedIssuesRequest{}
+
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedIssues(ctx, request)
+    res, err := s.Unified.ListUnifiedIssues(ctx, operations.ListUnifiedIssuesRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -587,16 +586,16 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.ListUnifiedWebhooksRequest{}
+
     ctx := context.Background()
-    res, err := s.Unified.ListUnifiedWebhooks(ctx, request)
+    res, err := s.Unified.ListUnifiedWebhooks(ctx, operations.ListUnifiedWebhooksRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -636,18 +635,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchUnifiedConnectionRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.PatchUnifiedConnection(ctx, request)
+    res, err := s.Unified.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -687,18 +686,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchUnifiedWebhookRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.PatchUnifiedWebhook(ctx, request)
+    res, err := s.Unified.PatchUnifiedWebhook(ctx, operations.PatchUnifiedWebhookRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -738,18 +737,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.PatchUnifiedWebhookTriggerRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.PatchUnifiedWebhookTrigger(ctx, request)
+    res, err := s.Unified.PatchUnifiedWebhookTrigger(ctx, operations.PatchUnifiedWebhookTriggerRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -789,18 +788,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveUnifiedConnectionRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.RemoveUnifiedConnection(ctx, request)
+    res, err := s.Unified.RemoveUnifiedConnection(ctx, operations.RemoveUnifiedConnectionRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -840,18 +839,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.RemoveUnifiedWebhookRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.RemoveUnifiedWebhook(ctx, request)
+    res, err := s.Unified.RemoveUnifiedWebhook(ctx, operations.RemoveUnifiedWebhookRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -891,18 +890,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateUnifiedConnectionRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.UpdateUnifiedConnection(ctx, request)
+    res, err := s.Unified.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -942,18 +941,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateUnifiedWebhookRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.UpdateUnifiedWebhook(ctx, request)
+    res, err := s.Unified.UpdateUnifiedWebhook(ctx, operations.UpdateUnifiedWebhookRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -993,18 +992,18 @@ package main
 
 import(
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
     s := unifiedgosdk.New()
-    request := operations.UpdateUnifiedWebhookTriggerRequest{
-        ID: "<id>",
-    }
+
     ctx := context.Background()
-    res, err := s.Unified.UpdateUnifiedWebhookTrigger(ctx, request)
+    res, err := s.Unified.UpdateUnifiedWebhookTrigger(ctx, operations.UpdateUnifiedWebhookTriggerRequest{
+        ID: "<id>",
+    })
     if err != nil {
         log.Fatal(err)
     }
