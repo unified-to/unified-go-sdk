@@ -217,9 +217,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.18.12",
-			GenVersion:        "2.409.8",
-			UserAgent:         "speakeasy-sdk/go 0.18.12 2.409.8 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.18.13",
+			GenVersion:        "2.411.9",
+			UserAgent:         "speakeasy-sdk/go 0.18.13 2.411.9 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}

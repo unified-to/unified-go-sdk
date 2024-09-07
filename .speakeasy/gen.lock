@@ -3,10 +3,10 @@ id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
   docChecksum: d76c4e4fafacbab4333385b19ff0e709
   docVersion: "1.0"
-  speakeasyVersion: 1.390.7
-  generationVersion: 2.409.8
-  releaseVersion: 0.18.12
-  configChecksum: df9d70902e23f0bff5a20342ccc40727
+  speakeasyVersion: 1.392.1
+  generationVersion: 2.411.9
+  releaseVersion: 0.18.13
+  configChecksum: ab550cdbea1cd1b3d36712e6a02d2de3
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -15,7 +15,7 @@ features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.6
-    core: 3.5.5
+    core: 3.5.6
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.1
     globalSecurity: 2.82.10
@@ -27,145 +27,13 @@ features:
     retries: 2.83.0
     sdkHooks: 0.1.0
 generatedFiles:
-  - accounting.go
-  - account.go
-  - contact.go
-  - invoice.go
-  - journal.go
-  - organization.go
-  - taxrate.go
-  - transaction.go
-  - ats.go
-  - activity.go
-  - application.go
-  - applicationstatus.go
-  - candidate.go
-  - company.go
-  - document.go
-  - interview.go
-  - job.go
-  - scorecard.go
-  - commerce.go
-  - collection.go
-  - inventory.go
-  - item.go
-  - location.go
-  - crm.go
-  - deal.go
-  - event.go
-  - lead.go
-  - pipeline.go
-  - enrich.go
-  - person.go
-  - genai.go
-  - model.go
-  - prompt.go
-  - hris.go
-  - employee.go
-  - group.go
-  - payslip.go
-  - timeoff.go
-  - kms.go
-  - page.go
-  - space.go
-  - martech.go
-  - list.go
-  - member.go
-  - messaging.go
-  - channel.go
-  - message.go
-  - passthrough.go
-  - payment.go
-  - link.go
-  - payout.go
-  - refund.go
-  - storage.go
-  - file.go
-  - task.go
-  - project.go
-  - ticketing.go
-  - customer.go
-  - note.go
-  - ticket.go
-  - uc.go
-  - call.go
-  - unified.go
-  - apicall.go
-  - connection.go
-  - integration.go
-  - auth.go
-  - login.go
-  - issue.go
-  - webhook.go
-  - unifiedto.go
-  - go.mod
-  - pkg/models/sdkerrors/sdkerror.go
-  - pkg/retry/config.go
-  - pkg/types/bigint.go
-  - pkg/types/date.go
-  - pkg/types/datetime.go
-  - pkg/types/decimal.go
-  - pkg/types/pointers.go
-  - pkg/utils/contenttype.go
-  - pkg/utils/form.go
-  - pkg/utils/headers.go
-  - pkg/utils/json.go
-  - pkg/utils/pathparams.go
-  - pkg/utils/queryparams.go
-  - pkg/utils/requestbody.go
-  - pkg/utils/retries.go
-  - pkg/utils/security.go
-  - pkg/utils/utils.go
+  - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
   - /pkg/models/operations/createaccountingcontact.go
   - /pkg/models/operations/createaccountinginvoice.go
   - /pkg/models/operations/createaccountingjournal.go
   - /pkg/models/operations/createaccountingtaxrate.go
   - /pkg/models/operations/createaccountingtransaction.go
-  - /pkg/models/operations/getaccountingaccount.go
-  - /pkg/models/operations/getaccountingcontact.go
-  - /pkg/models/operations/getaccountinginvoice.go
-  - /pkg/models/operations/getaccountingjournal.go
-  - /pkg/models/operations/getaccountingorganization.go
-  - /pkg/models/operations/getaccountingtaxrate.go
-  - /pkg/models/operations/getaccountingtransaction.go
-  - /pkg/models/operations/listaccountingaccounts.go
-  - /pkg/models/operations/listaccountingcontacts.go
-  - /pkg/models/operations/listaccountinginvoices.go
-  - /pkg/models/operations/listaccountingjournals.go
-  - /pkg/models/operations/listaccountingorganizations.go
-  - /pkg/models/operations/listaccountingtaxrates.go
-  - /pkg/models/operations/listaccountingtransactions.go
-  - /pkg/models/operations/patchaccountingaccount.go
-  - /pkg/models/operations/patchaccountingcontact.go
-  - /pkg/models/operations/patchaccountinginvoice.go
-  - /pkg/models/operations/patchaccountingjournal.go
-  - /pkg/models/operations/patchaccountingtaxrate.go
-  - /pkg/models/operations/patchaccountingtransaction.go
-  - /pkg/models/operations/removeaccountingaccount.go
-  - /pkg/models/operations/removeaccountingcontact.go
-  - /pkg/models/operations/removeaccountinginvoice.go
-  - /pkg/models/operations/removeaccountingjournal.go
-  - /pkg/models/operations/removeaccountingtaxrate.go
-  - /pkg/models/operations/removeaccountingtransaction.go
-  - /pkg/models/operations/updateaccountingaccount.go
-  - /pkg/models/operations/updateaccountingcontact.go
-  - /pkg/models/operations/updateaccountinginvoice.go
-  - /pkg/models/operations/updateaccountingjournal.go
-  - /pkg/models/operations/updateaccountingtaxrate.go
-  - /pkg/models/operations/updateaccountingtransaction.go
-  - /pkg/models/operations/createcrmcontact.go
-  - /pkg/models/operations/createuccontact.go
-  - /pkg/models/operations/getcrmcontact.go
-  - /pkg/models/operations/getuccontact.go
-  - /pkg/models/operations/listcrmcontacts.go
-  - /pkg/models/operations/listuccontacts.go
-  - /pkg/models/operations/patchcrmcontact.go
-  - /pkg/models/operations/patchuccontact.go
-  - /pkg/models/operations/removecrmcontact.go
-  - /pkg/models/operations/removeuccontact.go
-  - /pkg/models/operations/updatecrmcontact.go
-  - /pkg/models/operations/updateuccontact.go
   - /pkg/models/operations/createatsactivity.go
   - /pkg/models/operations/createatsapplication.go
   - /pkg/models/operations/createatscandidate.go
@@ -173,6 +41,45 @@ generatedFiles:
   - /pkg/models/operations/createatsinterview.go
   - /pkg/models/operations/createatsjob.go
   - /pkg/models/operations/createatsscorecard.go
+  - /pkg/models/operations/createcommercecollection.go
+  - /pkg/models/operations/createcommerceinventory.go
+  - /pkg/models/operations/createcommerceitem.go
+  - /pkg/models/operations/createcommercelocation.go
+  - /pkg/models/operations/createcrmcompany.go
+  - /pkg/models/operations/createcrmcontact.go
+  - /pkg/models/operations/createcrmdeal.go
+  - /pkg/models/operations/createcrmevent.go
+  - /pkg/models/operations/createcrmlead.go
+  - /pkg/models/operations/createcrmpipeline.go
+  - /pkg/models/operations/creategenaiprompt.go
+  - /pkg/models/operations/createhriscompany.go
+  - /pkg/models/operations/createhrisemployee.go
+  - /pkg/models/operations/createhrisgroup.go
+  - /pkg/models/operations/createhrislocation.go
+  - /pkg/models/operations/createkmspage.go
+  - /pkg/models/operations/createkmsspace.go
+  - /pkg/models/operations/createmartechlist.go
+  - /pkg/models/operations/createmartechmember.go
+  - /pkg/models/operations/createmessagingmessage.go
+  - /pkg/models/operations/createpassthrough.go
+  - /pkg/models/operations/createpaymentlink.go
+  - /pkg/models/operations/createpaymentpayment.go
+  - /pkg/models/operations/createstoragefile.go
+  - /pkg/models/operations/createtaskproject.go
+  - /pkg/models/operations/createtasktask.go
+  - /pkg/models/operations/createticketingcustomer.go
+  - /pkg/models/operations/createticketingnote.go
+  - /pkg/models/operations/createticketingticket.go
+  - /pkg/models/operations/createuccontact.go
+  - /pkg/models/operations/createunifiedconnection.go
+  - /pkg/models/operations/createunifiedwebhook.go
+  - /pkg/models/operations/getaccountingaccount.go
+  - /pkg/models/operations/getaccountingcontact.go
+  - /pkg/models/operations/getaccountinginvoice.go
+  - /pkg/models/operations/getaccountingjournal.go
+  - /pkg/models/operations/getaccountingorganization.go
+  - /pkg/models/operations/getaccountingtaxrate.go
+  - /pkg/models/operations/getaccountingtransaction.go
   - /pkg/models/operations/getatsactivity.go
   - /pkg/models/operations/getatsapplication.go
   - /pkg/models/operations/getatscandidate.go
@@ -181,6 +88,51 @@ generatedFiles:
   - /pkg/models/operations/getatsinterview.go
   - /pkg/models/operations/getatsjob.go
   - /pkg/models/operations/getatsscorecard.go
+  - /pkg/models/operations/getcommercecollection.go
+  - /pkg/models/operations/getcommerceinventory.go
+  - /pkg/models/operations/getcommerceitem.go
+  - /pkg/models/operations/getcommercelocation.go
+  - /pkg/models/operations/getcrmcompany.go
+  - /pkg/models/operations/getcrmcontact.go
+  - /pkg/models/operations/getcrmdeal.go
+  - /pkg/models/operations/getcrmevent.go
+  - /pkg/models/operations/getcrmlead.go
+  - /pkg/models/operations/getcrmpipeline.go
+  - /pkg/models/operations/gethriscompany.go
+  - /pkg/models/operations/gethrisemployee.go
+  - /pkg/models/operations/gethrisgroup.go
+  - /pkg/models/operations/gethrislocation.go
+  - /pkg/models/operations/gethrispayslip.go
+  - /pkg/models/operations/gethristimeoff.go
+  - /pkg/models/operations/getkmspage.go
+  - /pkg/models/operations/getkmsspace.go
+  - /pkg/models/operations/getmartechlist.go
+  - /pkg/models/operations/getmartechmember.go
+  - /pkg/models/operations/getmessagingchannel.go
+  - /pkg/models/operations/getmessagingmessage.go
+  - /pkg/models/operations/getpaymentlink.go
+  - /pkg/models/operations/getpaymentpayment.go
+  - /pkg/models/operations/getpaymentpayout.go
+  - /pkg/models/operations/getpaymentrefund.go
+  - /pkg/models/operations/getstoragefile.go
+  - /pkg/models/operations/gettaskproject.go
+  - /pkg/models/operations/gettasktask.go
+  - /pkg/models/operations/getticketingcustomer.go
+  - /pkg/models/operations/getticketingnote.go
+  - /pkg/models/operations/getticketingticket.go
+  - /pkg/models/operations/getuccontact.go
+  - /pkg/models/operations/getunifiedapicall.go
+  - /pkg/models/operations/getunifiedconnection.go
+  - /pkg/models/operations/getunifiedintegrationauth.go
+  - /pkg/models/operations/getunifiedintegrationlogin.go
+  - /pkg/models/operations/getunifiedwebhook.go
+  - /pkg/models/operations/listaccountingaccounts.go
+  - /pkg/models/operations/listaccountingcontacts.go
+  - /pkg/models/operations/listaccountinginvoices.go
+  - /pkg/models/operations/listaccountingjournals.go
+  - /pkg/models/operations/listaccountingorganizations.go
+  - /pkg/models/operations/listaccountingtaxrates.go
+  - /pkg/models/operations/listaccountingtransactions.go
   - /pkg/models/operations/listatsactivities.go
   - /pkg/models/operations/listatsapplications.go
   - /pkg/models/operations/listatsapplicationstatuses.go
@@ -190,6 +142,56 @@ generatedFiles:
   - /pkg/models/operations/listatsinterviews.go
   - /pkg/models/operations/listatsjobs.go
   - /pkg/models/operations/listatsscorecards.go
+  - /pkg/models/operations/listcommercecollections.go
+  - /pkg/models/operations/listcommerceinventories.go
+  - /pkg/models/operations/listcommerceitems.go
+  - /pkg/models/operations/listcommercelocations.go
+  - /pkg/models/operations/listcrmcompanies.go
+  - /pkg/models/operations/listcrmcontacts.go
+  - /pkg/models/operations/listcrmdeals.go
+  - /pkg/models/operations/listcrmevents.go
+  - /pkg/models/operations/listcrmleads.go
+  - /pkg/models/operations/listcrmpipelines.go
+  - /pkg/models/operations/listenrichcompanies.go
+  - /pkg/models/operations/listenrichpeople.go
+  - /pkg/models/operations/listgenaimodels.go
+  - /pkg/models/operations/listhriscompanies.go
+  - /pkg/models/operations/listhrisemployees.go
+  - /pkg/models/operations/listhrisgroups.go
+  - /pkg/models/operations/listhrislocations.go
+  - /pkg/models/operations/listhrispayslips.go
+  - /pkg/models/operations/listhristimeoffs.go
+  - /pkg/models/operations/listkmspages.go
+  - /pkg/models/operations/listkmsspaces.go
+  - /pkg/models/operations/listmartechlists.go
+  - /pkg/models/operations/listmartechmembers.go
+  - /pkg/models/operations/listmessagingchannels.go
+  - /pkg/models/operations/listmessagingmessages.go
+  - /pkg/models/operations/listpassthroughs.go
+  - /pkg/models/operations/listpaymentlinks.go
+  - /pkg/models/operations/listpaymentpayments.go
+  - /pkg/models/operations/listpaymentpayouts.go
+  - /pkg/models/operations/listpaymentrefunds.go
+  - /pkg/models/operations/liststoragefiles.go
+  - /pkg/models/operations/listtaskprojects.go
+  - /pkg/models/operations/listtasktasks.go
+  - /pkg/models/operations/listticketingcustomers.go
+  - /pkg/models/operations/listticketingnotes.go
+  - /pkg/models/operations/listticketingtickets.go
+  - /pkg/models/operations/listuccalls.go
+  - /pkg/models/operations/listuccontacts.go
+  - /pkg/models/operations/listunifiedapicalls.go
+  - /pkg/models/operations/listunifiedconnections.go
+  - /pkg/models/operations/listunifiedintegrations.go
+  - /pkg/models/operations/listunifiedintegrationworkspaces.go
+  - /pkg/models/operations/listunifiedissues.go
+  - /pkg/models/operations/listunifiedwebhooks.go
+  - /pkg/models/operations/patchaccountingaccount.go
+  - /pkg/models/operations/patchaccountingcontact.go
+  - /pkg/models/operations/patchaccountinginvoice.go
+  - /pkg/models/operations/patchaccountingjournal.go
+  - /pkg/models/operations/patchaccountingtaxrate.go
+  - /pkg/models/operations/patchaccountingtransaction.go
   - /pkg/models/operations/patchatsactivity.go
   - /pkg/models/operations/patchatsapplication.go
   - /pkg/models/operations/patchatscandidate.go
@@ -197,6 +199,44 @@ generatedFiles:
   - /pkg/models/operations/patchatsinterview.go
   - /pkg/models/operations/patchatsjob.go
   - /pkg/models/operations/patchatsscorecard.go
+  - /pkg/models/operations/patchcommercecollection.go
+  - /pkg/models/operations/patchcommerceinventory.go
+  - /pkg/models/operations/patchcommerceitem.go
+  - /pkg/models/operations/patchcommercelocation.go
+  - /pkg/models/operations/patchcrmcompany.go
+  - /pkg/models/operations/patchcrmcontact.go
+  - /pkg/models/operations/patchcrmdeal.go
+  - /pkg/models/operations/patchcrmevent.go
+  - /pkg/models/operations/patchcrmlead.go
+  - /pkg/models/operations/patchcrmpipeline.go
+  - /pkg/models/operations/patchhriscompany.go
+  - /pkg/models/operations/patchhrisemployee.go
+  - /pkg/models/operations/patchhrisgroup.go
+  - /pkg/models/operations/patchhrislocation.go
+  - /pkg/models/operations/patchkmspage.go
+  - /pkg/models/operations/patchkmsspace.go
+  - /pkg/models/operations/patchmartechlist.go
+  - /pkg/models/operations/patchmartechmember.go
+  - /pkg/models/operations/patchmessagingmessage.go
+  - /pkg/models/operations/patchpassthrough.go
+  - /pkg/models/operations/patchpaymentlink.go
+  - /pkg/models/operations/patchpaymentpayment.go
+  - /pkg/models/operations/patchstoragefile.go
+  - /pkg/models/operations/patchtaskproject.go
+  - /pkg/models/operations/patchtasktask.go
+  - /pkg/models/operations/patchticketingcustomer.go
+  - /pkg/models/operations/patchticketingnote.go
+  - /pkg/models/operations/patchticketingticket.go
+  - /pkg/models/operations/patchuccontact.go
+  - /pkg/models/operations/patchunifiedconnection.go
+  - /pkg/models/operations/patchunifiedwebhook.go
+  - /pkg/models/operations/patchunifiedwebhooktrigger.go
+  - /pkg/models/operations/removeaccountingaccount.go
+  - /pkg/models/operations/removeaccountingcontact.go
+  - /pkg/models/operations/removeaccountinginvoice.go
+  - /pkg/models/operations/removeaccountingjournal.go
+  - /pkg/models/operations/removeaccountingtaxrate.go
+  - /pkg/models/operations/removeaccountingtransaction.go
   - /pkg/models/operations/removeatsactivity.go
   - /pkg/models/operations/removeatsapplication.go
   - /pkg/models/operations/removeatscandidate.go
@@ -204,6 +244,43 @@ generatedFiles:
   - /pkg/models/operations/removeatsinterview.go
   - /pkg/models/operations/removeatsjob.go
   - /pkg/models/operations/removeatsscorecard.go
+  - /pkg/models/operations/removecommercecollection.go
+  - /pkg/models/operations/removecommerceinventory.go
+  - /pkg/models/operations/removecommerceitem.go
+  - /pkg/models/operations/removecommercelocation.go
+  - /pkg/models/operations/removecrmcompany.go
+  - /pkg/models/operations/removecrmcontact.go
+  - /pkg/models/operations/removecrmdeal.go
+  - /pkg/models/operations/removecrmevent.go
+  - /pkg/models/operations/removecrmlead.go
+  - /pkg/models/operations/removecrmpipeline.go
+  - /pkg/models/operations/removehriscompany.go
+  - /pkg/models/operations/removehrisemployee.go
+  - /pkg/models/operations/removehrisgroup.go
+  - /pkg/models/operations/removehrislocation.go
+  - /pkg/models/operations/removekmspage.go
+  - /pkg/models/operations/removekmsspace.go
+  - /pkg/models/operations/removemartechlist.go
+  - /pkg/models/operations/removemartechmember.go
+  - /pkg/models/operations/removemessagingmessage.go
+  - /pkg/models/operations/removepassthrough.go
+  - /pkg/models/operations/removepaymentlink.go
+  - /pkg/models/operations/removepaymentpayment.go
+  - /pkg/models/operations/removestoragefile.go
+  - /pkg/models/operations/removetaskproject.go
+  - /pkg/models/operations/removetasktask.go
+  - /pkg/models/operations/removeticketingcustomer.go
+  - /pkg/models/operations/removeticketingnote.go
+  - /pkg/models/operations/removeticketingticket.go
+  - /pkg/models/operations/removeuccontact.go
+  - /pkg/models/operations/removeunifiedconnection.go
+  - /pkg/models/operations/removeunifiedwebhook.go
+  - /pkg/models/operations/updateaccountingaccount.go
+  - /pkg/models/operations/updateaccountingcontact.go
+  - /pkg/models/operations/updateaccountinginvoice.go
+  - /pkg/models/operations/updateaccountingjournal.go
+  - /pkg/models/operations/updateaccountingtaxrate.go
+  - /pkg/models/operations/updateaccountingtransaction.go
   - /pkg/models/operations/updateatsactivity.go
   - /pkg/models/operations/updateatsapplication.go
   - /pkg/models/operations/updateatscandidate.go
@@ -211,333 +288,191 @@ generatedFiles:
   - /pkg/models/operations/updateatsinterview.go
   - /pkg/models/operations/updateatsjob.go
   - /pkg/models/operations/updateatsscorecard.go
-  - /pkg/models/operations/createcrmcompany.go
-  - /pkg/models/operations/createhriscompany.go
-  - /pkg/models/operations/getcrmcompany.go
-  - /pkg/models/operations/gethriscompany.go
-  - /pkg/models/operations/listcrmcompanies.go
-  - /pkg/models/operations/listenrichcompanies.go
-  - /pkg/models/operations/listhriscompanies.go
-  - /pkg/models/operations/patchcrmcompany.go
-  - /pkg/models/operations/patchhriscompany.go
-  - /pkg/models/operations/removecrmcompany.go
-  - /pkg/models/operations/removehriscompany.go
-  - /pkg/models/operations/updatecrmcompany.go
-  - /pkg/models/operations/updatehriscompany.go
-  - /pkg/models/operations/createcommercecollection.go
-  - /pkg/models/operations/createcommerceinventory.go
-  - /pkg/models/operations/createcommerceitem.go
-  - /pkg/models/operations/createcommercelocation.go
-  - /pkg/models/operations/getcommercecollection.go
-  - /pkg/models/operations/getcommerceinventory.go
-  - /pkg/models/operations/getcommerceitem.go
-  - /pkg/models/operations/getcommercelocation.go
-  - /pkg/models/operations/listcommercecollections.go
-  - /pkg/models/operations/listcommerceinventories.go
-  - /pkg/models/operations/listcommerceitems.go
-  - /pkg/models/operations/listcommercelocations.go
-  - /pkg/models/operations/patchcommercecollection.go
-  - /pkg/models/operations/patchcommerceinventory.go
-  - /pkg/models/operations/patchcommerceitem.go
-  - /pkg/models/operations/patchcommercelocation.go
-  - /pkg/models/operations/removecommercecollection.go
-  - /pkg/models/operations/removecommerceinventory.go
-  - /pkg/models/operations/removecommerceitem.go
-  - /pkg/models/operations/removecommercelocation.go
   - /pkg/models/operations/updatecommercecollection.go
   - /pkg/models/operations/updatecommerceinventory.go
   - /pkg/models/operations/updatecommerceitem.go
   - /pkg/models/operations/updatecommercelocation.go
-  - /pkg/models/operations/createhrislocation.go
-  - /pkg/models/operations/gethrislocation.go
-  - /pkg/models/operations/listhrislocations.go
-  - /pkg/models/operations/patchhrislocation.go
-  - /pkg/models/operations/removehrislocation.go
-  - /pkg/models/operations/updatehrislocation.go
-  - /pkg/models/operations/createcrmdeal.go
-  - /pkg/models/operations/createcrmevent.go
-  - /pkg/models/operations/createcrmlead.go
-  - /pkg/models/operations/createcrmpipeline.go
-  - /pkg/models/operations/getcrmdeal.go
-  - /pkg/models/operations/getcrmevent.go
-  - /pkg/models/operations/getcrmlead.go
-  - /pkg/models/operations/getcrmpipeline.go
-  - /pkg/models/operations/listcrmdeals.go
-  - /pkg/models/operations/listcrmevents.go
-  - /pkg/models/operations/listcrmleads.go
-  - /pkg/models/operations/listcrmpipelines.go
-  - /pkg/models/operations/patchcrmdeal.go
-  - /pkg/models/operations/patchcrmevent.go
-  - /pkg/models/operations/patchcrmlead.go
-  - /pkg/models/operations/patchcrmpipeline.go
-  - /pkg/models/operations/removecrmdeal.go
-  - /pkg/models/operations/removecrmevent.go
-  - /pkg/models/operations/removecrmlead.go
-  - /pkg/models/operations/removecrmpipeline.go
+  - /pkg/models/operations/updatecrmcompany.go
+  - /pkg/models/operations/updatecrmcontact.go
   - /pkg/models/operations/updatecrmdeal.go
   - /pkg/models/operations/updatecrmevent.go
   - /pkg/models/operations/updatecrmlead.go
   - /pkg/models/operations/updatecrmpipeline.go
-  - /pkg/models/operations/listenrichpeople.go
-  - /pkg/models/operations/creategenaiprompt.go
-  - /pkg/models/operations/listgenaimodels.go
-  - /pkg/models/operations/createhrisemployee.go
-  - /pkg/models/operations/createhrisgroup.go
-  - /pkg/models/operations/gethrisemployee.go
-  - /pkg/models/operations/gethrisgroup.go
-  - /pkg/models/operations/gethrispayslip.go
-  - /pkg/models/operations/gethristimeoff.go
-  - /pkg/models/operations/listhrisemployees.go
-  - /pkg/models/operations/listhrisgroups.go
-  - /pkg/models/operations/listhrispayslips.go
-  - /pkg/models/operations/listhristimeoffs.go
-  - /pkg/models/operations/patchhrisemployee.go
-  - /pkg/models/operations/patchhrisgroup.go
-  - /pkg/models/operations/removehrisemployee.go
-  - /pkg/models/operations/removehrisgroup.go
+  - /pkg/models/operations/updatehriscompany.go
   - /pkg/models/operations/updatehrisemployee.go
   - /pkg/models/operations/updatehrisgroup.go
-  - /pkg/models/operations/createkmspage.go
-  - /pkg/models/operations/createkmsspace.go
-  - /pkg/models/operations/getkmspage.go
-  - /pkg/models/operations/getkmsspace.go
-  - /pkg/models/operations/listkmspages.go
-  - /pkg/models/operations/listkmsspaces.go
-  - /pkg/models/operations/patchkmspage.go
-  - /pkg/models/operations/patchkmsspace.go
-  - /pkg/models/operations/removekmspage.go
-  - /pkg/models/operations/removekmsspace.go
+  - /pkg/models/operations/updatehrislocation.go
   - /pkg/models/operations/updatekmspage.go
   - /pkg/models/operations/updatekmsspace.go
-  - /pkg/models/operations/createmartechlist.go
-  - /pkg/models/operations/createmartechmember.go
-  - /pkg/models/operations/getmartechlist.go
-  - /pkg/models/operations/getmartechmember.go
-  - /pkg/models/operations/listmartechlists.go
-  - /pkg/models/operations/listmartechmembers.go
-  - /pkg/models/operations/patchmartechlist.go
-  - /pkg/models/operations/patchmartechmember.go
-  - /pkg/models/operations/removemartechlist.go
-  - /pkg/models/operations/removemartechmember.go
   - /pkg/models/operations/updatemartechlist.go
   - /pkg/models/operations/updatemartechmember.go
-  - /pkg/models/operations/createmessagingmessage.go
-  - /pkg/models/operations/getmessagingchannel.go
-  - /pkg/models/operations/getmessagingmessage.go
-  - /pkg/models/operations/listmessagingchannels.go
-  - /pkg/models/operations/listmessagingmessages.go
-  - /pkg/models/operations/patchmessagingmessage.go
-  - /pkg/models/operations/removemessagingmessage.go
   - /pkg/models/operations/updatemessagingmessage.go
-  - /pkg/models/operations/createpassthrough.go
-  - /pkg/models/operations/listpassthroughs.go
-  - /pkg/models/operations/patchpassthrough.go
-  - /pkg/models/operations/removepassthrough.go
   - /pkg/models/operations/updatepassthrough.go
-  - /pkg/models/operations/createpaymentlink.go
-  - /pkg/models/operations/createpaymentpayment.go
-  - /pkg/models/operations/getpaymentlink.go
-  - /pkg/models/operations/getpaymentpayment.go
-  - /pkg/models/operations/getpaymentpayout.go
-  - /pkg/models/operations/getpaymentrefund.go
-  - /pkg/models/operations/listpaymentlinks.go
-  - /pkg/models/operations/listpaymentpayments.go
-  - /pkg/models/operations/listpaymentpayouts.go
-  - /pkg/models/operations/listpaymentrefunds.go
-  - /pkg/models/operations/patchpaymentlink.go
-  - /pkg/models/operations/patchpaymentpayment.go
-  - /pkg/models/operations/removepaymentlink.go
-  - /pkg/models/operations/removepaymentpayment.go
   - /pkg/models/operations/updatepaymentlink.go
   - /pkg/models/operations/updatepaymentpayment.go
-  - /pkg/models/operations/createstoragefile.go
-  - /pkg/models/operations/getstoragefile.go
-  - /pkg/models/operations/liststoragefiles.go
-  - /pkg/models/operations/patchstoragefile.go
-  - /pkg/models/operations/removestoragefile.go
   - /pkg/models/operations/updatestoragefile.go
-  - /pkg/models/operations/createtaskproject.go
-  - /pkg/models/operations/createtasktask.go
-  - /pkg/models/operations/gettaskproject.go
-  - /pkg/models/operations/gettasktask.go
-  - /pkg/models/operations/listtaskprojects.go
-  - /pkg/models/operations/listtasktasks.go
-  - /pkg/models/operations/patchtaskproject.go
-  - /pkg/models/operations/patchtasktask.go
-  - /pkg/models/operations/removetaskproject.go
-  - /pkg/models/operations/removetasktask.go
   - /pkg/models/operations/updatetaskproject.go
   - /pkg/models/operations/updatetasktask.go
-  - /pkg/models/operations/createticketingcustomer.go
-  - /pkg/models/operations/createticketingnote.go
-  - /pkg/models/operations/createticketingticket.go
-  - /pkg/models/operations/getticketingcustomer.go
-  - /pkg/models/operations/getticketingnote.go
-  - /pkg/models/operations/getticketingticket.go
-  - /pkg/models/operations/listticketingcustomers.go
-  - /pkg/models/operations/listticketingnotes.go
-  - /pkg/models/operations/listticketingtickets.go
-  - /pkg/models/operations/patchticketingcustomer.go
-  - /pkg/models/operations/patchticketingnote.go
-  - /pkg/models/operations/patchticketingticket.go
-  - /pkg/models/operations/removeticketingcustomer.go
-  - /pkg/models/operations/removeticketingnote.go
-  - /pkg/models/operations/removeticketingticket.go
   - /pkg/models/operations/updateticketingcustomer.go
   - /pkg/models/operations/updateticketingnote.go
   - /pkg/models/operations/updateticketingticket.go
-  - /pkg/models/operations/listuccalls.go
-  - /pkg/models/operations/createunifiedconnection.go
-  - /pkg/models/operations/createunifiedwebhook.go
-  - /pkg/models/operations/getunifiedapicall.go
-  - /pkg/models/operations/getunifiedconnection.go
-  - /pkg/models/operations/getunifiedintegrationauth.go
-  - /pkg/models/operations/getunifiedwebhook.go
-  - /pkg/models/operations/listunifiedapicalls.go
-  - /pkg/models/operations/listunifiedconnections.go
-  - /pkg/models/operations/listunifiedintegrationworkspaces.go
-  - /pkg/models/operations/listunifiedintegrations.go
-  - /pkg/models/operations/listunifiedissues.go
-  - /pkg/models/operations/listunifiedwebhooks.go
-  - /pkg/models/operations/patchunifiedconnection.go
-  - /pkg/models/operations/patchunifiedwebhook.go
-  - /pkg/models/operations/patchunifiedwebhooktrigger.go
-  - /pkg/models/operations/removeunifiedconnection.go
-  - /pkg/models/operations/removeunifiedwebhook.go
+  - /pkg/models/operations/updateuccontact.go
   - /pkg/models/operations/updateunifiedconnection.go
   - /pkg/models/operations/updateunifiedwebhook.go
   - /pkg/models/operations/updateunifiedwebhooktrigger.go
-  - /pkg/models/operations/getunifiedintegrationlogin.go
   - /pkg/models/shared/accountingaccount.go
   - /pkg/models/shared/accountingcontact.go
-  - /pkg/models/shared/accountingtelephone.go
-  - /pkg/models/shared/propertyaccountingcontactshippingaddress.go
   - /pkg/models/shared/accountingcontactpaymentmethod.go
   - /pkg/models/shared/accountingemail.go
-  - /pkg/models/shared/propertyaccountingcontactbillingaddress.go
   - /pkg/models/shared/accountinginvoice.go
-  - /pkg/models/shared/accountinglineitem.go
   - /pkg/models/shared/accountingjournal.go
   - /pkg/models/shared/accountingjournallineitem.go
+  - /pkg/models/shared/accountinglineitem.go
+  - /pkg/models/shared/accountingorganization.go
   - /pkg/models/shared/accountingtaxrate.go
+  - /pkg/models/shared/accountingtelephone.go
   - /pkg/models/shared/accountingtransaction.go
   - /pkg/models/shared/accountingtransactionlineitem.go
-  - /pkg/models/shared/accountingorganization.go
-  - /pkg/models/shared/propertyaccountingorganizationaddress.go
-  - /pkg/models/shared/crmcontact.go
-  - /pkg/models/shared/crmtelephone.go
-  - /pkg/models/shared/crmemail.go
-  - /pkg/models/shared/propertycrmcontactaddress.go
-  - /pkg/models/shared/uccontact.go
-  - /pkg/models/shared/uctelephone.go
-  - /pkg/models/shared/ucemail.go
+  - /pkg/models/shared/apicall.go
   - /pkg/models/shared/atsactivity.go
-  - /pkg/models/shared/atsemail.go
-  - /pkg/models/shared/propertyatsactivityfrom.go
+  - /pkg/models/shared/atsaddress.go
   - /pkg/models/shared/atsapplication.go
   - /pkg/models/shared/atsapplicationanswer.go
   - /pkg/models/shared/atscandidate.go
-  - /pkg/models/shared/atstelephone.go
-  - /pkg/models/shared/propertyatscandidateaddress.go
+  - /pkg/models/shared/atscompany.go
+  - /pkg/models/shared/atscompensation.go
   - /pkg/models/shared/atsdocument.go
+  - /pkg/models/shared/atsemail.go
   - /pkg/models/shared/atsinterview.go
   - /pkg/models/shared/atsjob.go
   - /pkg/models/shared/atsjobquestion.go
-  - /pkg/models/shared/atscompensation.go
-  - /pkg/models/shared/atsaddress.go
   - /pkg/models/shared/atsscorecard.go
   - /pkg/models/shared/atsscorecardquestion.go
-  - /pkg/models/shared/atscompany.go
-  - /pkg/models/shared/propertyatscompanyaddress.go
   - /pkg/models/shared/atsstatus.go
-  - /pkg/models/shared/crmcompany.go
-  - /pkg/models/shared/propertycrmcompanyaddress.go
-  - /pkg/models/shared/hriscompany.go
-  - /pkg/models/shared/propertyhriscompanyaddress.go
-  - /pkg/models/shared/enrichcompany.go
-  - /pkg/models/shared/enrichtelephone.go
-  - /pkg/models/shared/propertyenrichcompanyaddress.go
+  - /pkg/models/shared/atstelephone.go
   - /pkg/models/shared/commercecollection.go
-  - /pkg/models/shared/commerceitemmedia.go
   - /pkg/models/shared/commerceinventory.go
   - /pkg/models/shared/commerceitem.go
-  - /pkg/models/shared/commerceitemvariant.go
-  - /pkg/models/shared/commerceitemprice.go
+  - /pkg/models/shared/commerceitemmedia.go
   - /pkg/models/shared/commerceitemoption.go
+  - /pkg/models/shared/commerceitemprice.go
+  - /pkg/models/shared/commerceitemvariant.go
   - /pkg/models/shared/commercelocation.go
-  - /pkg/models/shared/propertycommercelocationaddress.go
-  - /pkg/models/shared/hrislocation.go
-  - /pkg/models/shared/hristelephone.go
-  - /pkg/models/shared/propertyhrislocationaddress.go
+  - /pkg/models/shared/connection.go
+  - /pkg/models/shared/crmcompany.go
+  - /pkg/models/shared/crmcontact.go
   - /pkg/models/shared/crmdeal.go
+  - /pkg/models/shared/crmemail.go
   - /pkg/models/shared/crmevent.go
-  - /pkg/models/shared/propertycrmeventtask.go
-  - /pkg/models/shared/propertycrmeventnote.go
-  - /pkg/models/shared/propertycrmeventmeeting.go
-  - /pkg/models/shared/propertycrmeventemail.go
-  - /pkg/models/shared/propertycrmeventcall.go
   - /pkg/models/shared/crmlead.go
-  - /pkg/models/shared/propertycrmleadaddress.go
   - /pkg/models/shared/crmpipeline.go
   - /pkg/models/shared/crmstage.go
+  - /pkg/models/shared/crmtelephone.go
+  - /pkg/models/shared/enrichcompany.go
+  - /pkg/models/shared/enrichemail.go
   - /pkg/models/shared/enrichperson.go
   - /pkg/models/shared/enrichpersonworkhistory.go
-  - /pkg/models/shared/enrichemail.go
-  - /pkg/models/shared/propertyenrichpersonaddress.go
-  - /pkg/models/shared/genaiprompt.go
+  - /pkg/models/shared/enrichtelephone.go
   - /pkg/models/shared/genaicontent.go
   - /pkg/models/shared/genaimodel.go
+  - /pkg/models/shared/genaiprompt.go
+  - /pkg/models/shared/hriscompany.go
+  - /pkg/models/shared/hriscompensation.go
+  - /pkg/models/shared/hrisemail.go
   - /pkg/models/shared/hrisemployee.go
   - /pkg/models/shared/hrisgroup.go
-  - /pkg/models/shared/propertyhrisemployeeemployeeroles.go
-  - /pkg/models/shared/hrisemail.go
-  - /pkg/models/shared/hriscompensation.go
-  - /pkg/models/shared/propertyhrisemployeeaddress.go
+  - /pkg/models/shared/hrislocation.go
   - /pkg/models/shared/hrispayslip.go
   - /pkg/models/shared/hrispayslipdetail.go
+  - /pkg/models/shared/hristelephone.go
   - /pkg/models/shared/hristimeoff.go
+  - /pkg/models/shared/integration.go
+  - /pkg/models/shared/integrationsupport.go
+  - /pkg/models/shared/issue.go
   - /pkg/models/shared/kmspage.go
   - /pkg/models/shared/kmsspace.go
+  - /pkg/models/shared/marketingemail.go
   - /pkg/models/shared/marketinglist.go
   - /pkg/models/shared/marketingmember.go
-  - /pkg/models/shared/marketingemail.go
-  - /pkg/models/shared/messagingmessage.go
-  - /pkg/models/shared/messagingmember.go
-  - /pkg/models/shared/propertymessagingmessageauthormember.go
   - /pkg/models/shared/messagingattachment.go
   - /pkg/models/shared/messagingchannel.go
+  - /pkg/models/shared/messagingmember.go
+  - /pkg/models/shared/messagingmessage.go
   - /pkg/models/shared/paymentlink.go
   - /pkg/models/shared/paymentlinklineitem.go
   - /pkg/models/shared/paymentpayment.go
   - /pkg/models/shared/paymentpayout.go
   - /pkg/models/shared/paymentrefund.go
+  - /pkg/models/shared/propertyaccountingcontactbillingaddress.go
+  - /pkg/models/shared/propertyaccountingcontactshippingaddress.go
+  - /pkg/models/shared/propertyaccountingorganizationaddress.go
+  - /pkg/models/shared/propertyatsactivityfrom.go
+  - /pkg/models/shared/propertyatscandidateaddress.go
+  - /pkg/models/shared/propertyatscompanyaddress.go
+  - /pkg/models/shared/propertycommercelocationaddress.go
+  - /pkg/models/shared/propertyconnectionauth.go
+  - /pkg/models/shared/propertyconnectioncategories.go
+  - /pkg/models/shared/propertyconnectionpermissions.go
+  - /pkg/models/shared/propertycrmcompanyaddress.go
+  - /pkg/models/shared/propertycrmcontactaddress.go
+  - /pkg/models/shared/propertycrmeventcall.go
+  - /pkg/models/shared/propertycrmeventemail.go
+  - /pkg/models/shared/propertycrmeventmeeting.go
+  - /pkg/models/shared/propertycrmeventnote.go
+  - /pkg/models/shared/propertycrmeventtask.go
+  - /pkg/models/shared/propertycrmleadaddress.go
+  - /pkg/models/shared/propertyenrichcompanyaddress.go
+  - /pkg/models/shared/propertyenrichpersonaddress.go
+  - /pkg/models/shared/propertyhriscompanyaddress.go
+  - /pkg/models/shared/propertyhrisemployeeaddress.go
+  - /pkg/models/shared/propertyhrisemployeeemployeeroles.go
+  - /pkg/models/shared/propertyhrislocationaddress.go
+  - /pkg/models/shared/propertyintegrationcategories.go
+  - /pkg/models/shared/propertyintegrationsupportwebhookevents.go
+  - /pkg/models/shared/propertymessagingmessageauthormember.go
+  - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventscreated.go
+  - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.go
+  - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.go
+  - /pkg/models/shared/propertystoragepermissionroles.go
+  - /pkg/models/shared/propertyuccalltelephone.go
+  - /pkg/models/shared/security.go
   - /pkg/models/shared/storagefile.go
   - /pkg/models/shared/storagepermission.go
-  - /pkg/models/shared/propertystoragepermissionroles.go
   - /pkg/models/shared/taskproject.go
   - /pkg/models/shared/tasktask.go
   - /pkg/models/shared/ticketingcustomer.go
-  - /pkg/models/shared/ticketingtelephone.go
   - /pkg/models/shared/ticketingemail.go
   - /pkg/models/shared/ticketingnote.go
+  - /pkg/models/shared/ticketingtelephone.go
   - /pkg/models/shared/ticketingticket.go
   - /pkg/models/shared/uccall.go
-  - /pkg/models/shared/propertyuccalltelephone.go
-  - /pkg/models/shared/connection.go
-  - /pkg/models/shared/propertyconnectionpermissions.go
-  - /pkg/models/shared/propertyconnectioncategories.go
-  - /pkg/models/shared/propertyconnectionauth.go
+  - /pkg/models/shared/uccontact.go
+  - /pkg/models/shared/ucemail.go
+  - /pkg/models/shared/uctelephone.go
   - /pkg/models/shared/webhook.go
-  - /pkg/models/shared/apicall.go
-  - /pkg/models/shared/integration.go
-  - /pkg/models/shared/integrationsupport.go
-  - /pkg/models/shared/propertyintegrationsupportwebhookevents.go
-  - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.go
-  - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.go
-  - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventscreated.go
-  - /pkg/models/shared/propertyintegrationcategories.go
-  - /pkg/models/shared/issue.go
-  - /pkg/models/shared/security.go
+  - CONTRIBUTING.md
+  - USAGE.md
+  - account.go
+  - accounting.go
+  - activity.go
+  - apicall.go
+  - application.go
+  - applicationstatus.go
+  - ats.go
+  - auth.go
+  - call.go
+  - candidate.go
+  - channel.go
+  - collection.go
+  - commerce.go
+  - company.go
+  - connection.go
+  - contact.go
+  - crm.go
+  - customer.go
+  - deal.go
+  - docs/pkg/models/operations/categories.md
+  - docs/pkg/models/operations/connectionid.md
   - docs/pkg/models/operations/createaccountingaccountrequest.md
   - docs/pkg/models/operations/createaccountingaccountresponse.md
   - docs/pkg/models/operations/createaccountingcontactrequest.md
@@ -550,94 +485,6 @@ generatedFiles:
   - docs/pkg/models/operations/createaccountingtaxrateresponse.md
   - docs/pkg/models/operations/createaccountingtransactionrequest.md
   - docs/pkg/models/operations/createaccountingtransactionresponse.md
-  - docs/pkg/models/operations/getaccountingaccountrequest.md
-  - docs/pkg/models/operations/getaccountingaccountresponse.md
-  - docs/pkg/models/operations/getaccountingcontactrequest.md
-  - docs/pkg/models/operations/getaccountingcontactresponse.md
-  - docs/pkg/models/operations/getaccountinginvoicerequest.md
-  - docs/pkg/models/operations/getaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/getaccountingjournalrequest.md
-  - docs/pkg/models/operations/getaccountingjournalresponse.md
-  - docs/pkg/models/operations/getaccountingorganizationrequest.md
-  - docs/pkg/models/operations/getaccountingorganizationresponse.md
-  - docs/pkg/models/operations/getaccountingtaxraterequest.md
-  - docs/pkg/models/operations/getaccountingtaxrateresponse.md
-  - docs/pkg/models/operations/getaccountingtransactionrequest.md
-  - docs/pkg/models/operations/getaccountingtransactionresponse.md
-  - docs/pkg/models/operations/listaccountingaccountsrequest.md
-  - docs/pkg/models/operations/listaccountingaccountsresponse.md
-  - docs/pkg/models/operations/listaccountingcontactsrequest.md
-  - docs/pkg/models/operations/listaccountingcontactsresponse.md
-  - docs/pkg/models/operations/listaccountinginvoicesrequest.md
-  - docs/pkg/models/operations/listaccountinginvoicesresponse.md
-  - docs/pkg/models/operations/listaccountingjournalsrequest.md
-  - docs/pkg/models/operations/listaccountingjournalsresponse.md
-  - docs/pkg/models/operations/listaccountingorganizationsrequest.md
-  - docs/pkg/models/operations/listaccountingorganizationsresponse.md
-  - docs/pkg/models/operations/listaccountingtaxratesrequest.md
-  - docs/pkg/models/operations/listaccountingtaxratesresponse.md
-  - docs/pkg/models/operations/listaccountingtransactionsrequest.md
-  - docs/pkg/models/operations/listaccountingtransactionsresponse.md
-  - docs/pkg/models/operations/patchaccountingaccountrequest.md
-  - docs/pkg/models/operations/patchaccountingaccountresponse.md
-  - docs/pkg/models/operations/patchaccountingcontactrequest.md
-  - docs/pkg/models/operations/patchaccountingcontactresponse.md
-  - docs/pkg/models/operations/patchaccountinginvoicerequest.md
-  - docs/pkg/models/operations/patchaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/patchaccountingjournalrequest.md
-  - docs/pkg/models/operations/patchaccountingjournalresponse.md
-  - docs/pkg/models/operations/patchaccountingtaxraterequest.md
-  - docs/pkg/models/operations/patchaccountingtaxrateresponse.md
-  - docs/pkg/models/operations/patchaccountingtransactionrequest.md
-  - docs/pkg/models/operations/patchaccountingtransactionresponse.md
-  - docs/pkg/models/operations/removeaccountingaccountrequest.md
-  - docs/pkg/models/operations/removeaccountingaccountresponse.md
-  - docs/pkg/models/operations/removeaccountingcontactrequest.md
-  - docs/pkg/models/operations/removeaccountingcontactresponse.md
-  - docs/pkg/models/operations/removeaccountinginvoicerequest.md
-  - docs/pkg/models/operations/removeaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/removeaccountingjournalrequest.md
-  - docs/pkg/models/operations/removeaccountingjournalresponse.md
-  - docs/pkg/models/operations/removeaccountingtaxraterequest.md
-  - docs/pkg/models/operations/removeaccountingtaxrateresponse.md
-  - docs/pkg/models/operations/removeaccountingtransactionrequest.md
-  - docs/pkg/models/operations/removeaccountingtransactionresponse.md
-  - docs/pkg/models/operations/updateaccountingaccountrequest.md
-  - docs/pkg/models/operations/updateaccountingaccountresponse.md
-  - docs/pkg/models/operations/updateaccountingcontactrequest.md
-  - docs/pkg/models/operations/updateaccountingcontactresponse.md
-  - docs/pkg/models/operations/updateaccountinginvoicerequest.md
-  - docs/pkg/models/operations/updateaccountinginvoiceresponse.md
-  - docs/pkg/models/operations/updateaccountingjournalrequest.md
-  - docs/pkg/models/operations/updateaccountingjournalresponse.md
-  - docs/pkg/models/operations/updateaccountingtaxraterequest.md
-  - docs/pkg/models/operations/updateaccountingtaxrateresponse.md
-  - docs/pkg/models/operations/updateaccountingtransactionrequest.md
-  - docs/pkg/models/operations/updateaccountingtransactionresponse.md
-  - docs/pkg/models/operations/createcrmcontactrequest.md
-  - docs/pkg/models/operations/createcrmcontactresponse.md
-  - docs/pkg/models/operations/createuccontactrequest.md
-  - docs/pkg/models/operations/createuccontactresponse.md
-  - docs/pkg/models/operations/getcrmcontactrequest.md
-  - docs/pkg/models/operations/getcrmcontactresponse.md
-  - docs/pkg/models/operations/getuccontactrequest.md
-  - docs/pkg/models/operations/getuccontactresponse.md
-  - docs/pkg/models/operations/listcrmcontactsrequest.md
-  - docs/pkg/models/operations/listcrmcontactsresponse.md
-  - docs/pkg/models/operations/listuccontactsrequest.md
-  - docs/pkg/models/operations/listuccontactsresponse.md
-  - docs/pkg/models/operations/patchcrmcontactrequest.md
-  - docs/pkg/models/operations/patchcrmcontactresponse.md
-  - docs/pkg/models/operations/patchuccontactrequest.md
-  - docs/pkg/models/operations/patchuccontactresponse.md
-  - docs/pkg/models/operations/removecrmcontactrequest.md
-  - docs/pkg/models/operations/removecrmcontactresponse.md
-  - docs/pkg/models/operations/removeuccontactrequest.md
-  - docs/pkg/models/operations/removeuccontactresponse.md
-  - docs/pkg/models/operations/updatecrmcontactrequest.md
-  - docs/pkg/models/operations/updatecrmcontactresponse.md
-  - docs/pkg/models/operations/updateuccontactrequest.md
-  - docs/pkg/models/operations/updateuccontactresponse.md
   - docs/pkg/models/operations/createatsactivityrequest.md
   - docs/pkg/models/operations/createatsactivityresponse.md
   - docs/pkg/models/operations/createatsapplicationrequest.md
@@ -652,6 +499,83 @@ generatedFiles:
   - docs/pkg/models/operations/createatsjobresponse.md
   - docs/pkg/models/operations/createatsscorecardrequest.md
   - docs/pkg/models/operations/createatsscorecardresponse.md
+  - docs/pkg/models/operations/createcommercecollectionrequest.md
+  - docs/pkg/models/operations/createcommercecollectionresponse.md
+  - docs/pkg/models/operations/createcommerceinventoryrequest.md
+  - docs/pkg/models/operations/createcommerceinventoryresponse.md
+  - docs/pkg/models/operations/createcommerceitemrequest.md
+  - docs/pkg/models/operations/createcommerceitemresponse.md
+  - docs/pkg/models/operations/createcommercelocationrequest.md
+  - docs/pkg/models/operations/createcommercelocationresponse.md
+  - docs/pkg/models/operations/createcrmcompanyrequest.md
+  - docs/pkg/models/operations/createcrmcompanyresponse.md
+  - docs/pkg/models/operations/createcrmcontactrequest.md
+  - docs/pkg/models/operations/createcrmcontactresponse.md
+  - docs/pkg/models/operations/createcrmdealrequest.md
+  - docs/pkg/models/operations/createcrmdealresponse.md
+  - docs/pkg/models/operations/createcrmeventrequest.md
+  - docs/pkg/models/operations/createcrmeventresponse.md
+  - docs/pkg/models/operations/createcrmleadrequest.md
+  - docs/pkg/models/operations/createcrmleadresponse.md
+  - docs/pkg/models/operations/createcrmpipelinerequest.md
+  - docs/pkg/models/operations/createcrmpipelineresponse.md
+  - docs/pkg/models/operations/creategenaipromptrequest.md
+  - docs/pkg/models/operations/creategenaipromptresponse.md
+  - docs/pkg/models/operations/createhriscompanyrequest.md
+  - docs/pkg/models/operations/createhriscompanyresponse.md
+  - docs/pkg/models/operations/createhrisemployeerequest.md
+  - docs/pkg/models/operations/createhrisemployeeresponse.md
+  - docs/pkg/models/operations/createhrisgrouprequest.md
+  - docs/pkg/models/operations/createhrisgroupresponse.md
+  - docs/pkg/models/operations/createhrislocationrequest.md
+  - docs/pkg/models/operations/createhrislocationresponse.md
+  - docs/pkg/models/operations/createkmspagerequest.md
+  - docs/pkg/models/operations/createkmspageresponse.md
+  - docs/pkg/models/operations/createkmsspacerequest.md
+  - docs/pkg/models/operations/createkmsspaceresponse.md
+  - docs/pkg/models/operations/createmartechlistrequest.md
+  - docs/pkg/models/operations/createmartechlistresponse.md
+  - docs/pkg/models/operations/createmartechmemberrequest.md
+  - docs/pkg/models/operations/createmartechmemberresponse.md
+  - docs/pkg/models/operations/createmessagingmessagerequest.md
+  - docs/pkg/models/operations/createmessagingmessageresponse.md
+  - docs/pkg/models/operations/createpassthroughrequest.md
+  - docs/pkg/models/operations/createpassthroughresponse.md
+  - docs/pkg/models/operations/createpaymentlinkrequest.md
+  - docs/pkg/models/operations/createpaymentlinkresponse.md
+  - docs/pkg/models/operations/createpaymentpaymentrequest.md
+  - docs/pkg/models/operations/createpaymentpaymentresponse.md
+  - docs/pkg/models/operations/createstoragefilerequest.md
+  - docs/pkg/models/operations/createstoragefileresponse.md
+  - docs/pkg/models/operations/createtaskprojectrequest.md
+  - docs/pkg/models/operations/createtaskprojectresponse.md
+  - docs/pkg/models/operations/createtasktaskrequest.md
+  - docs/pkg/models/operations/createtasktaskresponse.md
+  - docs/pkg/models/operations/createticketingcustomerrequest.md
+  - docs/pkg/models/operations/createticketingcustomerresponse.md
+  - docs/pkg/models/operations/createticketingnoterequest.md
+  - docs/pkg/models/operations/createticketingnoteresponse.md
+  - docs/pkg/models/operations/createticketingticketrequest.md
+  - docs/pkg/models/operations/createticketingticketresponse.md
+  - docs/pkg/models/operations/createuccontactrequest.md
+  - docs/pkg/models/operations/createuccontactresponse.md
+  - docs/pkg/models/operations/createunifiedconnectionresponse.md
+  - docs/pkg/models/operations/createunifiedwebhookrequest.md
+  - docs/pkg/models/operations/createunifiedwebhookresponse.md
+  - docs/pkg/models/operations/getaccountingaccountrequest.md
+  - docs/pkg/models/operations/getaccountingaccountresponse.md
+  - docs/pkg/models/operations/getaccountingcontactrequest.md
+  - docs/pkg/models/operations/getaccountingcontactresponse.md
+  - docs/pkg/models/operations/getaccountinginvoicerequest.md
+  - docs/pkg/models/operations/getaccountinginvoiceresponse.md
+  - docs/pkg/models/operations/getaccountingjournalrequest.md
+  - docs/pkg/models/operations/getaccountingjournalresponse.md
+  - docs/pkg/models/operations/getaccountingorganizationrequest.md
+  - docs/pkg/models/operations/getaccountingorganizationresponse.md
+  - docs/pkg/models/operations/getaccountingtaxraterequest.md
+  - docs/pkg/models/operations/getaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/getaccountingtransactionrequest.md
+  - docs/pkg/models/operations/getaccountingtransactionresponse.md
   - docs/pkg/models/operations/getatsactivityrequest.md
   - docs/pkg/models/operations/getatsactivityresponse.md
   - docs/pkg/models/operations/getatsapplicationrequest.md
@@ -668,6 +592,97 @@ generatedFiles:
   - docs/pkg/models/operations/getatsjobresponse.md
   - docs/pkg/models/operations/getatsscorecardrequest.md
   - docs/pkg/models/operations/getatsscorecardresponse.md
+  - docs/pkg/models/operations/getcommercecollectionrequest.md
+  - docs/pkg/models/operations/getcommercecollectionresponse.md
+  - docs/pkg/models/operations/getcommerceinventoryrequest.md
+  - docs/pkg/models/operations/getcommerceinventoryresponse.md
+  - docs/pkg/models/operations/getcommerceitemrequest.md
+  - docs/pkg/models/operations/getcommerceitemresponse.md
+  - docs/pkg/models/operations/getcommercelocationrequest.md
+  - docs/pkg/models/operations/getcommercelocationresponse.md
+  - docs/pkg/models/operations/getcrmcompanyrequest.md
+  - docs/pkg/models/operations/getcrmcompanyresponse.md
+  - docs/pkg/models/operations/getcrmcontactrequest.md
+  - docs/pkg/models/operations/getcrmcontactresponse.md
+  - docs/pkg/models/operations/getcrmdealrequest.md
+  - docs/pkg/models/operations/getcrmdealresponse.md
+  - docs/pkg/models/operations/getcrmeventrequest.md
+  - docs/pkg/models/operations/getcrmeventresponse.md
+  - docs/pkg/models/operations/getcrmleadrequest.md
+  - docs/pkg/models/operations/getcrmleadresponse.md
+  - docs/pkg/models/operations/getcrmpipelinerequest.md
+  - docs/pkg/models/operations/getcrmpipelineresponse.md
+  - docs/pkg/models/operations/gethriscompanyrequest.md
+  - docs/pkg/models/operations/gethriscompanyresponse.md
+  - docs/pkg/models/operations/gethrisemployeerequest.md
+  - docs/pkg/models/operations/gethrisemployeeresponse.md
+  - docs/pkg/models/operations/gethrisgrouprequest.md
+  - docs/pkg/models/operations/gethrisgroupresponse.md
+  - docs/pkg/models/operations/gethrislocationrequest.md
+  - docs/pkg/models/operations/gethrislocationresponse.md
+  - docs/pkg/models/operations/gethrispaysliprequest.md
+  - docs/pkg/models/operations/gethrispayslipresponse.md
+  - docs/pkg/models/operations/gethristimeoffrequest.md
+  - docs/pkg/models/operations/gethristimeoffresponse.md
+  - docs/pkg/models/operations/getkmspagerequest.md
+  - docs/pkg/models/operations/getkmspageresponse.md
+  - docs/pkg/models/operations/getkmsspacerequest.md
+  - docs/pkg/models/operations/getkmsspaceresponse.md
+  - docs/pkg/models/operations/getmartechlistrequest.md
+  - docs/pkg/models/operations/getmartechlistresponse.md
+  - docs/pkg/models/operations/getmartechmemberrequest.md
+  - docs/pkg/models/operations/getmartechmemberresponse.md
+  - docs/pkg/models/operations/getmessagingchannelrequest.md
+  - docs/pkg/models/operations/getmessagingchannelresponse.md
+  - docs/pkg/models/operations/getmessagingmessagerequest.md
+  - docs/pkg/models/operations/getmessagingmessageresponse.md
+  - docs/pkg/models/operations/getpaymentlinkrequest.md
+  - docs/pkg/models/operations/getpaymentlinkresponse.md
+  - docs/pkg/models/operations/getpaymentpaymentrequest.md
+  - docs/pkg/models/operations/getpaymentpaymentresponse.md
+  - docs/pkg/models/operations/getpaymentpayoutrequest.md
+  - docs/pkg/models/operations/getpaymentpayoutresponse.md
+  - docs/pkg/models/operations/getpaymentrefundrequest.md
+  - docs/pkg/models/operations/getpaymentrefundresponse.md
+  - docs/pkg/models/operations/getstoragefilerequest.md
+  - docs/pkg/models/operations/getstoragefileresponse.md
+  - docs/pkg/models/operations/gettaskprojectrequest.md
+  - docs/pkg/models/operations/gettaskprojectresponse.md
+  - docs/pkg/models/operations/gettasktaskrequest.md
+  - docs/pkg/models/operations/gettasktaskresponse.md
+  - docs/pkg/models/operations/getticketingcustomerrequest.md
+  - docs/pkg/models/operations/getticketingcustomerresponse.md
+  - docs/pkg/models/operations/getticketingnoterequest.md
+  - docs/pkg/models/operations/getticketingnoteresponse.md
+  - docs/pkg/models/operations/getticketingticketrequest.md
+  - docs/pkg/models/operations/getticketingticketresponse.md
+  - docs/pkg/models/operations/getuccontactrequest.md
+  - docs/pkg/models/operations/getuccontactresponse.md
+  - docs/pkg/models/operations/getunifiedapicallrequest.md
+  - docs/pkg/models/operations/getunifiedapicallresponse.md
+  - docs/pkg/models/operations/getunifiedconnectionrequest.md
+  - docs/pkg/models/operations/getunifiedconnectionresponse.md
+  - docs/pkg/models/operations/getunifiedintegrationauthrequest.md
+  - docs/pkg/models/operations/getunifiedintegrationauthresponse.md
+  - docs/pkg/models/operations/getunifiedintegrationloginrequest.md
+  - docs/pkg/models/operations/getunifiedintegrationloginresponse.md
+  - docs/pkg/models/operations/getunifiedwebhookrequest.md
+  - docs/pkg/models/operations/getunifiedwebhookresponse.md
+  - docs/pkg/models/operations/integrationtype.md
+  - docs/pkg/models/operations/listaccountingaccountsrequest.md
+  - docs/pkg/models/operations/listaccountingaccountsresponse.md
+  - docs/pkg/models/operations/listaccountingcontactsrequest.md
+  - docs/pkg/models/operations/listaccountingcontactsresponse.md
+  - docs/pkg/models/operations/listaccountinginvoicesrequest.md
+  - docs/pkg/models/operations/listaccountinginvoicesresponse.md
+  - docs/pkg/models/operations/listaccountingjournalsrequest.md
+  - docs/pkg/models/operations/listaccountingjournalsresponse.md
+  - docs/pkg/models/operations/listaccountingorganizationsrequest.md
+  - docs/pkg/models/operations/listaccountingorganizationsresponse.md
+  - docs/pkg/models/operations/listaccountingtaxratesrequest.md
+  - docs/pkg/models/operations/listaccountingtaxratesresponse.md
+  - docs/pkg/models/operations/listaccountingtransactionsrequest.md
+  - docs/pkg/models/operations/listaccountingtransactionsresponse.md
   - docs/pkg/models/operations/listatsactivitiesrequest.md
   - docs/pkg/models/operations/listatsactivitiesresponse.md
   - docs/pkg/models/operations/listatsapplicationsrequest.md
@@ -686,6 +701,108 @@ generatedFiles:
   - docs/pkg/models/operations/listatsjobsresponse.md
   - docs/pkg/models/operations/listatsscorecardsrequest.md
   - docs/pkg/models/operations/listatsscorecardsresponse.md
+  - docs/pkg/models/operations/listcommercecollectionsrequest.md
+  - docs/pkg/models/operations/listcommercecollectionsresponse.md
+  - docs/pkg/models/operations/listcommerceinventoriesrequest.md
+  - docs/pkg/models/operations/listcommerceinventoriesresponse.md
+  - docs/pkg/models/operations/listcommerceitemsrequest.md
+  - docs/pkg/models/operations/listcommerceitemsresponse.md
+  - docs/pkg/models/operations/listcommercelocationsrequest.md
+  - docs/pkg/models/operations/listcommercelocationsresponse.md
+  - docs/pkg/models/operations/listcrmcompaniesrequest.md
+  - docs/pkg/models/operations/listcrmcompaniesresponse.md
+  - docs/pkg/models/operations/listcrmcontactsrequest.md
+  - docs/pkg/models/operations/listcrmcontactsresponse.md
+  - docs/pkg/models/operations/listcrmdealsrequest.md
+  - docs/pkg/models/operations/listcrmdealsresponse.md
+  - docs/pkg/models/operations/listcrmeventsrequest.md
+  - docs/pkg/models/operations/listcrmeventsresponse.md
+  - docs/pkg/models/operations/listcrmleadsrequest.md
+  - docs/pkg/models/operations/listcrmleadsresponse.md
+  - docs/pkg/models/operations/listcrmpipelinesrequest.md
+  - docs/pkg/models/operations/listcrmpipelinesresponse.md
+  - docs/pkg/models/operations/listenrichcompaniesrequest.md
+  - docs/pkg/models/operations/listenrichcompaniesresponse.md
+  - docs/pkg/models/operations/listenrichpeoplerequest.md
+  - docs/pkg/models/operations/listenrichpeopleresponse.md
+  - docs/pkg/models/operations/listgenaimodelsrequest.md
+  - docs/pkg/models/operations/listgenaimodelsresponse.md
+  - docs/pkg/models/operations/listhriscompaniesrequest.md
+  - docs/pkg/models/operations/listhriscompaniesresponse.md
+  - docs/pkg/models/operations/listhrisemployeesrequest.md
+  - docs/pkg/models/operations/listhrisemployeesresponse.md
+  - docs/pkg/models/operations/listhrisgroupsrequest.md
+  - docs/pkg/models/operations/listhrisgroupsresponse.md
+  - docs/pkg/models/operations/listhrislocationsrequest.md
+  - docs/pkg/models/operations/listhrislocationsresponse.md
+  - docs/pkg/models/operations/listhrispayslipsrequest.md
+  - docs/pkg/models/operations/listhrispayslipsresponse.md
+  - docs/pkg/models/operations/listhristimeoffsrequest.md
+  - docs/pkg/models/operations/listhristimeoffsresponse.md
+  - docs/pkg/models/operations/listkmspagesrequest.md
+  - docs/pkg/models/operations/listkmspagesresponse.md
+  - docs/pkg/models/operations/listkmsspacesrequest.md
+  - docs/pkg/models/operations/listkmsspacesresponse.md
+  - docs/pkg/models/operations/listmartechlistsrequest.md
+  - docs/pkg/models/operations/listmartechlistsresponse.md
+  - docs/pkg/models/operations/listmartechmembersrequest.md
+  - docs/pkg/models/operations/listmartechmembersresponse.md
+  - docs/pkg/models/operations/listmessagingchannelsrequest.md
+  - docs/pkg/models/operations/listmessagingchannelsresponse.md
+  - docs/pkg/models/operations/listmessagingmessagesrequest.md
+  - docs/pkg/models/operations/listmessagingmessagesresponse.md
+  - docs/pkg/models/operations/listpassthroughsrequest.md
+  - docs/pkg/models/operations/listpassthroughsresponse.md
+  - docs/pkg/models/operations/listpaymentlinksrequest.md
+  - docs/pkg/models/operations/listpaymentlinksresponse.md
+  - docs/pkg/models/operations/listpaymentpaymentsrequest.md
+  - docs/pkg/models/operations/listpaymentpaymentsresponse.md
+  - docs/pkg/models/operations/listpaymentpayoutsrequest.md
+  - docs/pkg/models/operations/listpaymentpayoutsresponse.md
+  - docs/pkg/models/operations/listpaymentrefundsrequest.md
+  - docs/pkg/models/operations/listpaymentrefundsresponse.md
+  - docs/pkg/models/operations/liststoragefilesrequest.md
+  - docs/pkg/models/operations/liststoragefilesresponse.md
+  - docs/pkg/models/operations/listtaskprojectsrequest.md
+  - docs/pkg/models/operations/listtaskprojectsresponse.md
+  - docs/pkg/models/operations/listtasktasksrequest.md
+  - docs/pkg/models/operations/listtasktasksresponse.md
+  - docs/pkg/models/operations/listticketingcustomersrequest.md
+  - docs/pkg/models/operations/listticketingcustomersresponse.md
+  - docs/pkg/models/operations/listticketingnotesrequest.md
+  - docs/pkg/models/operations/listticketingnotesresponse.md
+  - docs/pkg/models/operations/listticketingticketsrequest.md
+  - docs/pkg/models/operations/listticketingticketsresponse.md
+  - docs/pkg/models/operations/listuccallsrequest.md
+  - docs/pkg/models/operations/listuccallsresponse.md
+  - docs/pkg/models/operations/listuccontactsrequest.md
+  - docs/pkg/models/operations/listuccontactsresponse.md
+  - docs/pkg/models/operations/listunifiedapicallsrequest.md
+  - docs/pkg/models/operations/listunifiedapicallsresponse.md
+  - docs/pkg/models/operations/listunifiedconnectionsrequest.md
+  - docs/pkg/models/operations/listunifiedconnectionsresponse.md
+  - docs/pkg/models/operations/listunifiedintegrationsqueryparamcategories.md
+  - docs/pkg/models/operations/listunifiedintegrationsrequest.md
+  - docs/pkg/models/operations/listunifiedintegrationsresponse.md
+  - docs/pkg/models/operations/listunifiedintegrationworkspacesrequest.md
+  - docs/pkg/models/operations/listunifiedintegrationworkspacesresponse.md
+  - docs/pkg/models/operations/listunifiedissuesrequest.md
+  - docs/pkg/models/operations/listunifiedissuesresponse.md
+  - docs/pkg/models/operations/listunifiedwebhooksrequest.md
+  - docs/pkg/models/operations/listunifiedwebhooksresponse.md
+  - docs/pkg/models/operations/option.md
+  - docs/pkg/models/operations/patchaccountingaccountrequest.md
+  - docs/pkg/models/operations/patchaccountingaccountresponse.md
+  - docs/pkg/models/operations/patchaccountingcontactrequest.md
+  - docs/pkg/models/operations/patchaccountingcontactresponse.md
+  - docs/pkg/models/operations/patchaccountinginvoicerequest.md
+  - docs/pkg/models/operations/patchaccountinginvoiceresponse.md
+  - docs/pkg/models/operations/patchaccountingjournalrequest.md
+  - docs/pkg/models/operations/patchaccountingjournalresponse.md
+  - docs/pkg/models/operations/patchaccountingtaxraterequest.md
+  - docs/pkg/models/operations/patchaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/patchaccountingtransactionrequest.md
+  - docs/pkg/models/operations/patchaccountingtransactionresponse.md
   - docs/pkg/models/operations/patchatsactivityrequest.md
   - docs/pkg/models/operations/patchatsactivityresponse.md
   - docs/pkg/models/operations/patchatsapplicationrequest.md
@@ -700,6 +817,83 @@ generatedFiles:
   - docs/pkg/models/operations/patchatsjobresponse.md
   - docs/pkg/models/operations/patchatsscorecardrequest.md
   - docs/pkg/models/operations/patchatsscorecardresponse.md
+  - docs/pkg/models/operations/patchcommercecollectionrequest.md
+  - docs/pkg/models/operations/patchcommercecollectionresponse.md
+  - docs/pkg/models/operations/patchcommerceinventoryrequest.md
+  - docs/pkg/models/operations/patchcommerceinventoryresponse.md
+  - docs/pkg/models/operations/patchcommerceitemrequest.md
+  - docs/pkg/models/operations/patchcommerceitemresponse.md
+  - docs/pkg/models/operations/patchcommercelocationrequest.md
+  - docs/pkg/models/operations/patchcommercelocationresponse.md
+  - docs/pkg/models/operations/patchcrmcompanyrequest.md
+  - docs/pkg/models/operations/patchcrmcompanyresponse.md
+  - docs/pkg/models/operations/patchcrmcontactrequest.md
+  - docs/pkg/models/operations/patchcrmcontactresponse.md
+  - docs/pkg/models/operations/patchcrmdealrequest.md
+  - docs/pkg/models/operations/patchcrmdealresponse.md
+  - docs/pkg/models/operations/patchcrmeventrequest.md
+  - docs/pkg/models/operations/patchcrmeventresponse.md
+  - docs/pkg/models/operations/patchcrmleadrequest.md
+  - docs/pkg/models/operations/patchcrmleadresponse.md
+  - docs/pkg/models/operations/patchcrmpipelinerequest.md
+  - docs/pkg/models/operations/patchcrmpipelineresponse.md
+  - docs/pkg/models/operations/patchhriscompanyrequest.md
+  - docs/pkg/models/operations/patchhriscompanyresponse.md
+  - docs/pkg/models/operations/patchhrisemployeerequest.md
+  - docs/pkg/models/operations/patchhrisemployeeresponse.md
+  - docs/pkg/models/operations/patchhrisgrouprequest.md
+  - docs/pkg/models/operations/patchhrisgroupresponse.md
+  - docs/pkg/models/operations/patchhrislocationrequest.md
+  - docs/pkg/models/operations/patchhrislocationresponse.md
+  - docs/pkg/models/operations/patchkmspagerequest.md
+  - docs/pkg/models/operations/patchkmspageresponse.md
+  - docs/pkg/models/operations/patchkmsspacerequest.md
+  - docs/pkg/models/operations/patchkmsspaceresponse.md
+  - docs/pkg/models/operations/patchmartechlistrequest.md
+  - docs/pkg/models/operations/patchmartechlistresponse.md
+  - docs/pkg/models/operations/patchmartechmemberrequest.md
+  - docs/pkg/models/operations/patchmartechmemberresponse.md
+  - docs/pkg/models/operations/patchmessagingmessagerequest.md
+  - docs/pkg/models/operations/patchmessagingmessageresponse.md
+  - docs/pkg/models/operations/patchpassthroughrequest.md
+  - docs/pkg/models/operations/patchpassthroughresponse.md
+  - docs/pkg/models/operations/patchpaymentlinkrequest.md
+  - docs/pkg/models/operations/patchpaymentlinkresponse.md
+  - docs/pkg/models/operations/patchpaymentpaymentrequest.md
+  - docs/pkg/models/operations/patchpaymentpaymentresponse.md
+  - docs/pkg/models/operations/patchstoragefilerequest.md
+  - docs/pkg/models/operations/patchstoragefileresponse.md
+  - docs/pkg/models/operations/patchtaskprojectrequest.md
+  - docs/pkg/models/operations/patchtaskprojectresponse.md
+  - docs/pkg/models/operations/patchtasktaskrequest.md
+  - docs/pkg/models/operations/patchtasktaskresponse.md
+  - docs/pkg/models/operations/patchticketingcustomerrequest.md
+  - docs/pkg/models/operations/patchticketingcustomerresponse.md
+  - docs/pkg/models/operations/patchticketingnoterequest.md
+  - docs/pkg/models/operations/patchticketingnoteresponse.md
+  - docs/pkg/models/operations/patchticketingticketrequest.md
+  - docs/pkg/models/operations/patchticketingticketresponse.md
+  - docs/pkg/models/operations/patchuccontactrequest.md
+  - docs/pkg/models/operations/patchuccontactresponse.md
+  - docs/pkg/models/operations/patchunifiedconnectionrequest.md
+  - docs/pkg/models/operations/patchunifiedconnectionresponse.md
+  - docs/pkg/models/operations/patchunifiedwebhookrequest.md
+  - docs/pkg/models/operations/patchunifiedwebhookresponse.md
+  - docs/pkg/models/operations/patchunifiedwebhooktriggerrequest.md
+  - docs/pkg/models/operations/patchunifiedwebhooktriggerresponse.md
+  - docs/pkg/models/operations/queryparamcategories.md
+  - docs/pkg/models/operations/removeaccountingaccountrequest.md
+  - docs/pkg/models/operations/removeaccountingaccountresponse.md
+  - docs/pkg/models/operations/removeaccountingcontactrequest.md
+  - docs/pkg/models/operations/removeaccountingcontactresponse.md
+  - docs/pkg/models/operations/removeaccountinginvoicerequest.md
+  - docs/pkg/models/operations/removeaccountinginvoiceresponse.md
+  - docs/pkg/models/operations/removeaccountingjournalrequest.md
+  - docs/pkg/models/operations/removeaccountingjournalresponse.md
+  - docs/pkg/models/operations/removeaccountingtaxraterequest.md
+  - docs/pkg/models/operations/removeaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/removeaccountingtransactionrequest.md
+  - docs/pkg/models/operations/removeaccountingtransactionresponse.md
   - docs/pkg/models/operations/removeatsactivityrequest.md
   - docs/pkg/models/operations/removeatsactivityresponse.md
   - docs/pkg/models/operations/removeatsapplicationrequest.md
@@ -714,6 +908,81 @@ generatedFiles:
   - docs/pkg/models/operations/removeatsjobresponse.md
   - docs/pkg/models/operations/removeatsscorecardrequest.md
   - docs/pkg/models/operations/removeatsscorecardresponse.md
+  - docs/pkg/models/operations/removecommercecollectionrequest.md
+  - docs/pkg/models/operations/removecommercecollectionresponse.md
+  - docs/pkg/models/operations/removecommerceinventoryrequest.md
+  - docs/pkg/models/operations/removecommerceinventoryresponse.md
+  - docs/pkg/models/operations/removecommerceitemrequest.md
+  - docs/pkg/models/operations/removecommerceitemresponse.md
+  - docs/pkg/models/operations/removecommercelocationrequest.md
+  - docs/pkg/models/operations/removecommercelocationresponse.md
+  - docs/pkg/models/operations/removecrmcompanyrequest.md
+  - docs/pkg/models/operations/removecrmcompanyresponse.md
+  - docs/pkg/models/operations/removecrmcontactrequest.md
+  - docs/pkg/models/operations/removecrmcontactresponse.md
+  - docs/pkg/models/operations/removecrmdealrequest.md
+  - docs/pkg/models/operations/removecrmdealresponse.md
+  - docs/pkg/models/operations/removecrmeventrequest.md
+  - docs/pkg/models/operations/removecrmeventresponse.md
+  - docs/pkg/models/operations/removecrmleadrequest.md
+  - docs/pkg/models/operations/removecrmleadresponse.md
+  - docs/pkg/models/operations/removecrmpipelinerequest.md
+  - docs/pkg/models/operations/removecrmpipelineresponse.md
+  - docs/pkg/models/operations/removehriscompanyrequest.md
+  - docs/pkg/models/operations/removehriscompanyresponse.md
+  - docs/pkg/models/operations/removehrisemployeerequest.md
+  - docs/pkg/models/operations/removehrisemployeeresponse.md
+  - docs/pkg/models/operations/removehrisgrouprequest.md
+  - docs/pkg/models/operations/removehrisgroupresponse.md
+  - docs/pkg/models/operations/removehrislocationrequest.md
+  - docs/pkg/models/operations/removehrislocationresponse.md
+  - docs/pkg/models/operations/removekmspagerequest.md
+  - docs/pkg/models/operations/removekmspageresponse.md
+  - docs/pkg/models/operations/removekmsspacerequest.md
+  - docs/pkg/models/operations/removekmsspaceresponse.md
+  - docs/pkg/models/operations/removemartechlistrequest.md
+  - docs/pkg/models/operations/removemartechlistresponse.md
+  - docs/pkg/models/operations/removemartechmemberrequest.md
+  - docs/pkg/models/operations/removemartechmemberresponse.md
+  - docs/pkg/models/operations/removemessagingmessagerequest.md
+  - docs/pkg/models/operations/removemessagingmessageresponse.md
+  - docs/pkg/models/operations/removepassthroughrequest.md
+  - docs/pkg/models/operations/removepassthroughresponse.md
+  - docs/pkg/models/operations/removepaymentlinkrequest.md
+  - docs/pkg/models/operations/removepaymentlinkresponse.md
+  - docs/pkg/models/operations/removepaymentpaymentrequest.md
+  - docs/pkg/models/operations/removepaymentpaymentresponse.md
+  - docs/pkg/models/operations/removestoragefilerequest.md
+  - docs/pkg/models/operations/removestoragefileresponse.md
+  - docs/pkg/models/operations/removetaskprojectrequest.md
+  - docs/pkg/models/operations/removetaskprojectresponse.md
+  - docs/pkg/models/operations/removetasktaskrequest.md
+  - docs/pkg/models/operations/removetasktaskresponse.md
+  - docs/pkg/models/operations/removeticketingcustomerrequest.md
+  - docs/pkg/models/operations/removeticketingcustomerresponse.md
+  - docs/pkg/models/operations/removeticketingnoterequest.md
+  - docs/pkg/models/operations/removeticketingnoteresponse.md
+  - docs/pkg/models/operations/removeticketingticketrequest.md
+  - docs/pkg/models/operations/removeticketingticketresponse.md
+  - docs/pkg/models/operations/removeuccontactrequest.md
+  - docs/pkg/models/operations/removeuccontactresponse.md
+  - docs/pkg/models/operations/removeunifiedconnectionrequest.md
+  - docs/pkg/models/operations/removeunifiedconnectionresponse.md
+  - docs/pkg/models/operations/removeunifiedwebhookrequest.md
+  - docs/pkg/models/operations/removeunifiedwebhookresponse.md
+  - docs/pkg/models/operations/scopes.md
+  - docs/pkg/models/operations/updateaccountingaccountrequest.md
+  - docs/pkg/models/operations/updateaccountingaccountresponse.md
+  - docs/pkg/models/operations/updateaccountingcontactrequest.md
+  - docs/pkg/models/operations/updateaccountingcontactresponse.md
+  - docs/pkg/models/operations/updateaccountinginvoicerequest.md
+  - docs/pkg/models/operations/updateaccountinginvoiceresponse.md
+  - docs/pkg/models/operations/updateaccountingjournalrequest.md
+  - docs/pkg/models/operations/updateaccountingjournalresponse.md
+  - docs/pkg/models/operations/updateaccountingtaxraterequest.md
+  - docs/pkg/models/operations/updateaccountingtaxrateresponse.md
+  - docs/pkg/models/operations/updateaccountingtransactionrequest.md
+  - docs/pkg/models/operations/updateaccountingtransactionresponse.md
   - docs/pkg/models/operations/updateatsactivityrequest.md
   - docs/pkg/models/operations/updateatsactivityresponse.md
   - docs/pkg/models/operations/updateatsapplicationrequest.md
@@ -728,72 +997,6 @@ generatedFiles:
   - docs/pkg/models/operations/updateatsjobresponse.md
   - docs/pkg/models/operations/updateatsscorecardrequest.md
   - docs/pkg/models/operations/updateatsscorecardresponse.md
-  - docs/pkg/models/operations/createcrmcompanyrequest.md
-  - docs/pkg/models/operations/createcrmcompanyresponse.md
-  - docs/pkg/models/operations/createhriscompanyrequest.md
-  - docs/pkg/models/operations/createhriscompanyresponse.md
-  - docs/pkg/models/operations/getcrmcompanyrequest.md
-  - docs/pkg/models/operations/getcrmcompanyresponse.md
-  - docs/pkg/models/operations/gethriscompanyrequest.md
-  - docs/pkg/models/operations/gethriscompanyresponse.md
-  - docs/pkg/models/operations/listcrmcompaniesrequest.md
-  - docs/pkg/models/operations/listcrmcompaniesresponse.md
-  - docs/pkg/models/operations/listenrichcompaniesrequest.md
-  - docs/pkg/models/operations/listenrichcompaniesresponse.md
-  - docs/pkg/models/operations/listhriscompaniesrequest.md
-  - docs/pkg/models/operations/listhriscompaniesresponse.md
-  - docs/pkg/models/operations/patchcrmcompanyrequest.md
-  - docs/pkg/models/operations/patchcrmcompanyresponse.md
-  - docs/pkg/models/operations/patchhriscompanyrequest.md
-  - docs/pkg/models/operations/patchhriscompanyresponse.md
-  - docs/pkg/models/operations/removecrmcompanyrequest.md
-  - docs/pkg/models/operations/removecrmcompanyresponse.md
-  - docs/pkg/models/operations/removehriscompanyrequest.md
-  - docs/pkg/models/operations/removehriscompanyresponse.md
-  - docs/pkg/models/operations/updatecrmcompanyrequest.md
-  - docs/pkg/models/operations/updatecrmcompanyresponse.md
-  - docs/pkg/models/operations/updatehriscompanyrequest.md
-  - docs/pkg/models/operations/updatehriscompanyresponse.md
-  - docs/pkg/models/operations/createcommercecollectionrequest.md
-  - docs/pkg/models/operations/createcommercecollectionresponse.md
-  - docs/pkg/models/operations/createcommerceinventoryrequest.md
-  - docs/pkg/models/operations/createcommerceinventoryresponse.md
-  - docs/pkg/models/operations/createcommerceitemrequest.md
-  - docs/pkg/models/operations/createcommerceitemresponse.md
-  - docs/pkg/models/operations/createcommercelocationrequest.md
-  - docs/pkg/models/operations/createcommercelocationresponse.md
-  - docs/pkg/models/operations/getcommercecollectionrequest.md
-  - docs/pkg/models/operations/getcommercecollectionresponse.md
-  - docs/pkg/models/operations/getcommerceinventoryrequest.md
-  - docs/pkg/models/operations/getcommerceinventoryresponse.md
-  - docs/pkg/models/operations/getcommerceitemrequest.md
-  - docs/pkg/models/operations/getcommerceitemresponse.md
-  - docs/pkg/models/operations/getcommercelocationrequest.md
-  - docs/pkg/models/operations/getcommercelocationresponse.md
-  - docs/pkg/models/operations/listcommercecollectionsrequest.md
-  - docs/pkg/models/operations/listcommercecollectionsresponse.md
-  - docs/pkg/models/operations/listcommerceinventoriesrequest.md
-  - docs/pkg/models/operations/listcommerceinventoriesresponse.md
-  - docs/pkg/models/operations/listcommerceitemsrequest.md
-  - docs/pkg/models/operations/listcommerceitemsresponse.md
-  - docs/pkg/models/operations/listcommercelocationsrequest.md
-  - docs/pkg/models/operations/listcommercelocationsresponse.md
-  - docs/pkg/models/operations/patchcommercecollectionrequest.md
-  - docs/pkg/models/operations/patchcommercecollectionresponse.md
-  - docs/pkg/models/operations/patchcommerceinventoryrequest.md
-  - docs/pkg/models/operations/patchcommerceinventoryresponse.md
-  - docs/pkg/models/operations/patchcommerceitemrequest.md
-  - docs/pkg/models/operations/patchcommerceitemresponse.md
-  - docs/pkg/models/operations/patchcommercelocationrequest.md
-  - docs/pkg/models/operations/patchcommercelocationresponse.md
-  - docs/pkg/models/operations/removecommercecollectionrequest.md
-  - docs/pkg/models/operations/removecommercecollectionresponse.md
-  - docs/pkg/models/operations/removecommerceinventoryrequest.md
-  - docs/pkg/models/operations/removecommerceinventoryresponse.md
-  - docs/pkg/models/operations/removecommerceitemrequest.md
-  - docs/pkg/models/operations/removecommerceitemresponse.md
-  - docs/pkg/models/operations/removecommercelocationrequest.md
-  - docs/pkg/models/operations/removecommercelocationresponse.md
   - docs/pkg/models/operations/updatecommercecollectionrequest.md
   - docs/pkg/models/operations/updatecommercecollectionresponse.md
   - docs/pkg/models/operations/updatecommerceinventoryrequest.md
@@ -802,58 +1005,10 @@ generatedFiles:
   - docs/pkg/models/operations/updatecommerceitemresponse.md
   - docs/pkg/models/operations/updatecommercelocationrequest.md
   - docs/pkg/models/operations/updatecommercelocationresponse.md
-  - docs/pkg/models/operations/createhrislocationrequest.md
-  - docs/pkg/models/operations/createhrislocationresponse.md
-  - docs/pkg/models/operations/gethrislocationrequest.md
-  - docs/pkg/models/operations/gethrislocationresponse.md
-  - docs/pkg/models/operations/listhrislocationsrequest.md
-  - docs/pkg/models/operations/listhrislocationsresponse.md
-  - docs/pkg/models/operations/patchhrislocationrequest.md
-  - docs/pkg/models/operations/patchhrislocationresponse.md
-  - docs/pkg/models/operations/removehrislocationrequest.md
-  - docs/pkg/models/operations/removehrislocationresponse.md
-  - docs/pkg/models/operations/updatehrislocationrequest.md
-  - docs/pkg/models/operations/updatehrislocationresponse.md
-  - docs/pkg/models/operations/createcrmdealrequest.md
-  - docs/pkg/models/operations/createcrmdealresponse.md
-  - docs/pkg/models/operations/createcrmeventrequest.md
-  - docs/pkg/models/operations/createcrmeventresponse.md
-  - docs/pkg/models/operations/createcrmleadrequest.md
-  - docs/pkg/models/operations/createcrmleadresponse.md
-  - docs/pkg/models/operations/createcrmpipelinerequest.md
-  - docs/pkg/models/operations/createcrmpipelineresponse.md
-  - docs/pkg/models/operations/getcrmdealrequest.md
-  - docs/pkg/models/operations/getcrmdealresponse.md
-  - docs/pkg/models/operations/getcrmeventrequest.md
-  - docs/pkg/models/operations/getcrmeventresponse.md
-  - docs/pkg/models/operations/getcrmleadrequest.md
-  - docs/pkg/models/operations/getcrmleadresponse.md
-  - docs/pkg/models/operations/getcrmpipelinerequest.md
-  - docs/pkg/models/operations/getcrmpipelineresponse.md
-  - docs/pkg/models/operations/listcrmdealsrequest.md
-  - docs/pkg/models/operations/listcrmdealsresponse.md
-  - docs/pkg/models/operations/listcrmeventsrequest.md
-  - docs/pkg/models/operations/listcrmeventsresponse.md
-  - docs/pkg/models/operations/listcrmleadsrequest.md
-  - docs/pkg/models/operations/listcrmleadsresponse.md
-  - docs/pkg/models/operations/listcrmpipelinesrequest.md
-  - docs/pkg/models/operations/listcrmpipelinesresponse.md
-  - docs/pkg/models/operations/patchcrmdealrequest.md
-  - docs/pkg/models/operations/patchcrmdealresponse.md
-  - docs/pkg/models/operations/patchcrmeventrequest.md
-  - docs/pkg/models/operations/patchcrmeventresponse.md
-  - docs/pkg/models/operations/patchcrmleadrequest.md
-  - docs/pkg/models/operations/patchcrmleadresponse.md
-  - docs/pkg/models/operations/patchcrmpipelinerequest.md
-  - docs/pkg/models/operations/patchcrmpipelineresponse.md
-  - docs/pkg/models/operations/removecrmdealrequest.md
-  - docs/pkg/models/operations/removecrmdealresponse.md
-  - docs/pkg/models/operations/removecrmeventrequest.md
-  - docs/pkg/models/operations/removecrmeventresponse.md
-  - docs/pkg/models/operations/removecrmleadrequest.md
-  - docs/pkg/models/operations/removecrmleadresponse.md
-  - docs/pkg/models/operations/removecrmpipelinerequest.md
-  - docs/pkg/models/operations/removecrmpipelineresponse.md
+  - docs/pkg/models/operations/updatecrmcompanyrequest.md
+  - docs/pkg/models/operations/updatecrmcompanyresponse.md
+  - docs/pkg/models/operations/updatecrmcontactrequest.md
+  - docs/pkg/models/operations/updatecrmcontactresponse.md
   - docs/pkg/models/operations/updatecrmdealrequest.md
   - docs/pkg/models/operations/updatecrmdealresponse.md
   - docs/pkg/models/operations/updatecrmeventrequest.md
@@ -862,459 +1017,161 @@ generatedFiles:
   - docs/pkg/models/operations/updatecrmleadresponse.md
   - docs/pkg/models/operations/updatecrmpipelinerequest.md
   - docs/pkg/models/operations/updatecrmpipelineresponse.md
-  - docs/pkg/models/operations/listenrichpeoplerequest.md
-  - docs/pkg/models/operations/listenrichpeopleresponse.md
-  - docs/pkg/models/operations/creategenaipromptrequest.md
-  - docs/pkg/models/operations/creategenaipromptresponse.md
-  - docs/pkg/models/operations/listgenaimodelsrequest.md
-  - docs/pkg/models/operations/listgenaimodelsresponse.md
-  - docs/pkg/models/operations/createhrisemployeerequest.md
-  - docs/pkg/models/operations/createhrisemployeeresponse.md
-  - docs/pkg/models/operations/createhrisgrouprequest.md
-  - docs/pkg/models/operations/createhrisgroupresponse.md
-  - docs/pkg/models/operations/gethrisemployeerequest.md
-  - docs/pkg/models/operations/gethrisemployeeresponse.md
-  - docs/pkg/models/operations/gethrisgrouprequest.md
-  - docs/pkg/models/operations/gethrisgroupresponse.md
-  - docs/pkg/models/operations/gethrispaysliprequest.md
-  - docs/pkg/models/operations/gethrispayslipresponse.md
-  - docs/pkg/models/operations/gethristimeoffrequest.md
-  - docs/pkg/models/operations/gethristimeoffresponse.md
-  - docs/pkg/models/operations/listhrisemployeesrequest.md
-  - docs/pkg/models/operations/listhrisemployeesresponse.md
-  - docs/pkg/models/operations/listhrisgroupsrequest.md
-  - docs/pkg/models/operations/listhrisgroupsresponse.md
-  - docs/pkg/models/operations/listhrispayslipsrequest.md
-  - docs/pkg/models/operations/listhrispayslipsresponse.md
-  - docs/pkg/models/operations/listhristimeoffsrequest.md
-  - docs/pkg/models/operations/listhristimeoffsresponse.md
-  - docs/pkg/models/operations/patchhrisemployeerequest.md
-  - docs/pkg/models/operations/patchhrisemployeeresponse.md
-  - docs/pkg/models/operations/patchhrisgrouprequest.md
-  - docs/pkg/models/operations/patchhrisgroupresponse.md
-  - docs/pkg/models/operations/removehrisemployeerequest.md
-  - docs/pkg/models/operations/removehrisemployeeresponse.md
-  - docs/pkg/models/operations/removehrisgrouprequest.md
-  - docs/pkg/models/operations/removehrisgroupresponse.md
+  - docs/pkg/models/operations/updatehriscompanyrequest.md
+  - docs/pkg/models/operations/updatehriscompanyresponse.md
   - docs/pkg/models/operations/updatehrisemployeerequest.md
   - docs/pkg/models/operations/updatehrisemployeeresponse.md
   - docs/pkg/models/operations/updatehrisgrouprequest.md
   - docs/pkg/models/operations/updatehrisgroupresponse.md
-  - docs/pkg/models/operations/createkmspagerequest.md
-  - docs/pkg/models/operations/createkmspageresponse.md
-  - docs/pkg/models/operations/createkmsspacerequest.md
-  - docs/pkg/models/operations/createkmsspaceresponse.md
-  - docs/pkg/models/operations/getkmspagerequest.md
-  - docs/pkg/models/operations/getkmspageresponse.md
-  - docs/pkg/models/operations/getkmsspacerequest.md
-  - docs/pkg/models/operations/getkmsspaceresponse.md
-  - docs/pkg/models/operations/listkmspagesrequest.md
-  - docs/pkg/models/operations/listkmspagesresponse.md
-  - docs/pkg/models/operations/listkmsspacesrequest.md
-  - docs/pkg/models/operations/listkmsspacesresponse.md
-  - docs/pkg/models/operations/patchkmspagerequest.md
-  - docs/pkg/models/operations/patchkmspageresponse.md
-  - docs/pkg/models/operations/patchkmsspacerequest.md
-  - docs/pkg/models/operations/patchkmsspaceresponse.md
-  - docs/pkg/models/operations/removekmspagerequest.md
-  - docs/pkg/models/operations/removekmspageresponse.md
-  - docs/pkg/models/operations/removekmsspacerequest.md
-  - docs/pkg/models/operations/removekmsspaceresponse.md
+  - docs/pkg/models/operations/updatehrislocationrequest.md
+  - docs/pkg/models/operations/updatehrislocationresponse.md
   - docs/pkg/models/operations/updatekmspagerequest.md
   - docs/pkg/models/operations/updatekmspageresponse.md
   - docs/pkg/models/operations/updatekmsspacerequest.md
   - docs/pkg/models/operations/updatekmsspaceresponse.md
-  - docs/pkg/models/operations/createmartechlistrequest.md
-  - docs/pkg/models/operations/createmartechlistresponse.md
-  - docs/pkg/models/operations/createmartechmemberrequest.md
-  - docs/pkg/models/operations/createmartechmemberresponse.md
-  - docs/pkg/models/operations/getmartechlistrequest.md
-  - docs/pkg/models/operations/getmartechlistresponse.md
-  - docs/pkg/models/operations/getmartechmemberrequest.md
-  - docs/pkg/models/operations/getmartechmemberresponse.md
-  - docs/pkg/models/operations/listmartechlistsrequest.md
-  - docs/pkg/models/operations/listmartechlistsresponse.md
-  - docs/pkg/models/operations/listmartechmembersrequest.md
-  - docs/pkg/models/operations/listmartechmembersresponse.md
-  - docs/pkg/models/operations/patchmartechlistrequest.md
-  - docs/pkg/models/operations/patchmartechlistresponse.md
-  - docs/pkg/models/operations/patchmartechmemberrequest.md
-  - docs/pkg/models/operations/patchmartechmemberresponse.md
-  - docs/pkg/models/operations/removemartechlistrequest.md
-  - docs/pkg/models/operations/removemartechlistresponse.md
-  - docs/pkg/models/operations/removemartechmemberrequest.md
-  - docs/pkg/models/operations/removemartechmemberresponse.md
   - docs/pkg/models/operations/updatemartechlistrequest.md
   - docs/pkg/models/operations/updatemartechlistresponse.md
   - docs/pkg/models/operations/updatemartechmemberrequest.md
   - docs/pkg/models/operations/updatemartechmemberresponse.md
-  - docs/pkg/models/operations/createmessagingmessagerequest.md
-  - docs/pkg/models/operations/createmessagingmessageresponse.md
-  - docs/pkg/models/operations/getmessagingchannelrequest.md
-  - docs/pkg/models/operations/getmessagingchannelresponse.md
-  - docs/pkg/models/operations/getmessagingmessagerequest.md
-  - docs/pkg/models/operations/getmessagingmessageresponse.md
-  - docs/pkg/models/operations/listmessagingchannelsrequest.md
-  - docs/pkg/models/operations/listmessagingchannelsresponse.md
-  - docs/pkg/models/operations/listmessagingmessagesrequest.md
-  - docs/pkg/models/operations/listmessagingmessagesresponse.md
-  - docs/pkg/models/operations/patchmessagingmessagerequest.md
-  - docs/pkg/models/operations/patchmessagingmessageresponse.md
-  - docs/pkg/models/operations/removemessagingmessagerequest.md
-  - docs/pkg/models/operations/removemessagingmessageresponse.md
   - docs/pkg/models/operations/updatemessagingmessagerequest.md
   - docs/pkg/models/operations/updatemessagingmessageresponse.md
-  - docs/pkg/models/operations/createpassthroughrequest.md
-  - docs/pkg/models/operations/createpassthroughresponse.md
-  - docs/pkg/models/operations/listpassthroughsrequest.md
-  - docs/pkg/models/operations/listpassthroughsresponse.md
-  - docs/pkg/models/operations/patchpassthroughrequest.md
-  - docs/pkg/models/operations/patchpassthroughresponse.md
-  - docs/pkg/models/operations/removepassthroughrequest.md
-  - docs/pkg/models/operations/removepassthroughresponse.md
   - docs/pkg/models/operations/updatepassthroughrequest.md
   - docs/pkg/models/operations/updatepassthroughresponse.md
-  - docs/pkg/models/operations/createpaymentlinkrequest.md
-  - docs/pkg/models/operations/createpaymentlinkresponse.md
-  - docs/pkg/models/operations/createpaymentpaymentrequest.md
-  - docs/pkg/models/operations/createpaymentpaymentresponse.md
-  - docs/pkg/models/operations/getpaymentlinkrequest.md
-  - docs/pkg/models/operations/getpaymentlinkresponse.md
-  - docs/pkg/models/operations/getpaymentpaymentrequest.md
-  - docs/pkg/models/operations/getpaymentpaymentresponse.md
-  - docs/pkg/models/operations/getpaymentpayoutrequest.md
-  - docs/pkg/models/operations/getpaymentpayoutresponse.md
-  - docs/pkg/models/operations/getpaymentrefundrequest.md
-  - docs/pkg/models/operations/getpaymentrefundresponse.md
-  - docs/pkg/models/operations/listpaymentlinksrequest.md
-  - docs/pkg/models/operations/listpaymentlinksresponse.md
-  - docs/pkg/models/operations/listpaymentpaymentsrequest.md
-  - docs/pkg/models/operations/listpaymentpaymentsresponse.md
-  - docs/pkg/models/operations/listpaymentpayoutsrequest.md
-  - docs/pkg/models/operations/listpaymentpayoutsresponse.md
-  - docs/pkg/models/operations/listpaymentrefundsrequest.md
-  - docs/pkg/models/operations/listpaymentrefundsresponse.md
-  - docs/pkg/models/operations/patchpaymentlinkrequest.md
-  - docs/pkg/models/operations/patchpaymentlinkresponse.md
-  - docs/pkg/models/operations/patchpaymentpaymentrequest.md
-  - docs/pkg/models/operations/patchpaymentpaymentresponse.md
-  - docs/pkg/models/operations/removepaymentlinkrequest.md
-  - docs/pkg/models/operations/removepaymentlinkresponse.md
-  - docs/pkg/models/operations/removepaymentpaymentrequest.md
-  - docs/pkg/models/operations/removepaymentpaymentresponse.md
   - docs/pkg/models/operations/updatepaymentlinkrequest.md
   - docs/pkg/models/operations/updatepaymentlinkresponse.md
   - docs/pkg/models/operations/updatepaymentpaymentrequest.md
   - docs/pkg/models/operations/updatepaymentpaymentresponse.md
-  - docs/pkg/models/operations/createstoragefilerequest.md
-  - docs/pkg/models/operations/createstoragefileresponse.md
-  - docs/pkg/models/operations/getstoragefilerequest.md
-  - docs/pkg/models/operations/getstoragefileresponse.md
-  - docs/pkg/models/operations/liststoragefilesrequest.md
-  - docs/pkg/models/operations/liststoragefilesresponse.md
-  - docs/pkg/models/operations/patchstoragefilerequest.md
-  - docs/pkg/models/operations/patchstoragefileresponse.md
-  - docs/pkg/models/operations/removestoragefilerequest.md
-  - docs/pkg/models/operations/removestoragefileresponse.md
   - docs/pkg/models/operations/updatestoragefilerequest.md
   - docs/pkg/models/operations/updatestoragefileresponse.md
-  - docs/pkg/models/operations/createtaskprojectrequest.md
-  - docs/pkg/models/operations/createtaskprojectresponse.md
-  - docs/pkg/models/operations/createtasktaskrequest.md
-  - docs/pkg/models/operations/createtasktaskresponse.md
-  - docs/pkg/models/operations/gettaskprojectrequest.md
-  - docs/pkg/models/operations/gettaskprojectresponse.md
-  - docs/pkg/models/operations/gettasktaskrequest.md
-  - docs/pkg/models/operations/gettasktaskresponse.md
-  - docs/pkg/models/operations/listtaskprojectsrequest.md
-  - docs/pkg/models/operations/listtaskprojectsresponse.md
-  - docs/pkg/models/operations/listtasktasksrequest.md
-  - docs/pkg/models/operations/listtasktasksresponse.md
-  - docs/pkg/models/operations/patchtaskprojectrequest.md
-  - docs/pkg/models/operations/patchtaskprojectresponse.md
-  - docs/pkg/models/operations/patchtasktaskrequest.md
-  - docs/pkg/models/operations/patchtasktaskresponse.md
-  - docs/pkg/models/operations/removetaskprojectrequest.md
-  - docs/pkg/models/operations/removetaskprojectresponse.md
-  - docs/pkg/models/operations/removetasktaskrequest.md
-  - docs/pkg/models/operations/removetasktaskresponse.md
   - docs/pkg/models/operations/updatetaskprojectrequest.md
   - docs/pkg/models/operations/updatetaskprojectresponse.md
   - docs/pkg/models/operations/updatetasktaskrequest.md
   - docs/pkg/models/operations/updatetasktaskresponse.md
-  - docs/pkg/models/operations/createticketingcustomerrequest.md
-  - docs/pkg/models/operations/createticketingcustomerresponse.md
-  - docs/pkg/models/operations/createticketingnoterequest.md
-  - docs/pkg/models/operations/createticketingnoteresponse.md
-  - docs/pkg/models/operations/createticketingticketrequest.md
-  - docs/pkg/models/operations/createticketingticketresponse.md
-  - docs/pkg/models/operations/getticketingcustomerrequest.md
-  - docs/pkg/models/operations/getticketingcustomerresponse.md
-  - docs/pkg/models/operations/getticketingnoterequest.md
-  - docs/pkg/models/operations/getticketingnoteresponse.md
-  - docs/pkg/models/operations/getticketingticketrequest.md
-  - docs/pkg/models/operations/getticketingticketresponse.md
-  - docs/pkg/models/operations/listticketingcustomersrequest.md
-  - docs/pkg/models/operations/listticketingcustomersresponse.md
-  - docs/pkg/models/operations/listticketingnotesrequest.md
-  - docs/pkg/models/operations/listticketingnotesresponse.md
-  - docs/pkg/models/operations/listticketingticketsrequest.md
-  - docs/pkg/models/operations/listticketingticketsresponse.md
-  - docs/pkg/models/operations/patchticketingcustomerrequest.md
-  - docs/pkg/models/operations/patchticketingcustomerresponse.md
-  - docs/pkg/models/operations/patchticketingnoterequest.md
-  - docs/pkg/models/operations/patchticketingnoteresponse.md
-  - docs/pkg/models/operations/patchticketingticketrequest.md
-  - docs/pkg/models/operations/patchticketingticketresponse.md
-  - docs/pkg/models/operations/removeticketingcustomerrequest.md
-  - docs/pkg/models/operations/removeticketingcustomerresponse.md
-  - docs/pkg/models/operations/removeticketingnoterequest.md
-  - docs/pkg/models/operations/removeticketingnoteresponse.md
-  - docs/pkg/models/operations/removeticketingticketrequest.md
-  - docs/pkg/models/operations/removeticketingticketresponse.md
   - docs/pkg/models/operations/updateticketingcustomerrequest.md
   - docs/pkg/models/operations/updateticketingcustomerresponse.md
   - docs/pkg/models/operations/updateticketingnoterequest.md
   - docs/pkg/models/operations/updateticketingnoteresponse.md
   - docs/pkg/models/operations/updateticketingticketrequest.md
   - docs/pkg/models/operations/updateticketingticketresponse.md
-  - docs/pkg/models/operations/listuccallsrequest.md
-  - docs/pkg/models/operations/listuccallsresponse.md
-  - docs/pkg/models/operations/createunifiedconnectionresponse.md
-  - docs/pkg/models/operations/createunifiedwebhookrequest.md
-  - docs/pkg/models/operations/createunifiedwebhookresponse.md
-  - docs/pkg/models/operations/getunifiedapicallrequest.md
-  - docs/pkg/models/operations/getunifiedapicallresponse.md
-  - docs/pkg/models/operations/getunifiedconnectionrequest.md
-  - docs/pkg/models/operations/getunifiedconnectionresponse.md
-  - docs/pkg/models/operations/scopes.md
-  - docs/pkg/models/operations/getunifiedintegrationauthrequest.md
-  - docs/pkg/models/operations/getunifiedintegrationauthresponse.md
-  - docs/pkg/models/operations/getunifiedwebhookrequest.md
-  - docs/pkg/models/operations/getunifiedwebhookresponse.md
-  - docs/pkg/models/operations/listunifiedapicallsrequest.md
-  - docs/pkg/models/operations/listunifiedapicallsresponse.md
-  - docs/pkg/models/operations/categories.md
-  - docs/pkg/models/operations/listunifiedconnectionsrequest.md
-  - docs/pkg/models/operations/listunifiedconnectionsresponse.md
-  - docs/pkg/models/operations/queryparamcategories.md
-  - docs/pkg/models/operations/listunifiedintegrationworkspacesrequest.md
-  - docs/pkg/models/operations/listunifiedintegrationworkspacesresponse.md
-  - docs/pkg/models/operations/listunifiedintegrationsqueryparamcategories.md
-  - docs/pkg/models/operations/listunifiedintegrationsrequest.md
-  - docs/pkg/models/operations/listunifiedintegrationsresponse.md
-  - docs/pkg/models/operations/listunifiedissuesrequest.md
-  - docs/pkg/models/operations/listunifiedissuesresponse.md
-  - docs/pkg/models/operations/connectionid.md
-  - docs/pkg/models/operations/integrationtype.md
-  - docs/pkg/models/operations/listunifiedwebhooksrequest.md
-  - docs/pkg/models/operations/listunifiedwebhooksresponse.md
-  - docs/pkg/models/operations/patchunifiedconnectionrequest.md
-  - docs/pkg/models/operations/patchunifiedconnectionresponse.md
-  - docs/pkg/models/operations/patchunifiedwebhookrequest.md
-  - docs/pkg/models/operations/patchunifiedwebhookresponse.md
-  - docs/pkg/models/operations/patchunifiedwebhooktriggerrequest.md
-  - docs/pkg/models/operations/patchunifiedwebhooktriggerresponse.md
-  - docs/pkg/models/operations/removeunifiedconnectionrequest.md
-  - docs/pkg/models/operations/removeunifiedconnectionresponse.md
-  - docs/pkg/models/operations/removeunifiedwebhookrequest.md
-  - docs/pkg/models/operations/removeunifiedwebhookresponse.md
+  - docs/pkg/models/operations/updateuccontactrequest.md
+  - docs/pkg/models/operations/updateuccontactresponse.md
   - docs/pkg/models/operations/updateunifiedconnectionrequest.md
   - docs/pkg/models/operations/updateunifiedconnectionresponse.md
   - docs/pkg/models/operations/updateunifiedwebhookrequest.md
   - docs/pkg/models/operations/updateunifiedwebhookresponse.md
   - docs/pkg/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/pkg/models/operations/updateunifiedwebhooktriggerresponse.md
-  - docs/pkg/models/operations/getunifiedintegrationloginrequest.md
-  - docs/pkg/models/operations/getunifiedintegrationloginresponse.md
-  - docs/pkg/models/shared/status.md
-  - docs/pkg/models/shared/type.md
   - docs/pkg/models/shared/accountingaccount.md
-  - docs/pkg/models/shared/taxexemption.md
   - docs/pkg/models/shared/accountingcontact.md
-  - docs/pkg/models/shared/accountingtelephonetype.md
-  - docs/pkg/models/shared/accountingtelephone.md
-  - docs/pkg/models/shared/propertyaccountingcontactshippingaddress.md
-  - docs/pkg/models/shared/accountingcontactpaymentmethodtype.md
   - docs/pkg/models/shared/accountingcontactpaymentmethod.md
-  - docs/pkg/models/shared/accountingemailtype.md
+  - docs/pkg/models/shared/accountingcontactpaymentmethodtype.md
   - docs/pkg/models/shared/accountingemail.md
-  - docs/pkg/models/shared/propertyaccountingcontactbillingaddress.md
-  - docs/pkg/models/shared/paymentcollectionmethod.md
-  - docs/pkg/models/shared/accountinginvoicestatus.md
+  - docs/pkg/models/shared/accountingemailtype.md
   - docs/pkg/models/shared/accountinginvoice.md
-  - docs/pkg/models/shared/accountinglineitem.md
+  - docs/pkg/models/shared/accountinginvoicestatus.md
   - docs/pkg/models/shared/accountingjournal.md
   - docs/pkg/models/shared/accountingjournallineitem.md
+  - docs/pkg/models/shared/accountinglineitem.md
+  - docs/pkg/models/shared/accountingorganization.md
   - docs/pkg/models/shared/accountingtaxrate.md
+  - docs/pkg/models/shared/accountingtelephone.md
+  - docs/pkg/models/shared/accountingtelephonetype.md
   - docs/pkg/models/shared/accountingtransaction.md
   - docs/pkg/models/shared/accountingtransactionlineitem.md
-  - docs/pkg/models/shared/accountingorganization.md
-  - docs/pkg/models/shared/propertyaccountingorganizationaddress.md
-  - docs/pkg/models/shared/crmcontact.md
-  - docs/pkg/models/shared/crmtelephonetype.md
-  - docs/pkg/models/shared/crmtelephone.md
-  - docs/pkg/models/shared/crmemailtype.md
-  - docs/pkg/models/shared/crmemail.md
-  - docs/pkg/models/shared/propertycrmcontactaddress.md
-  - docs/pkg/models/shared/uccontact.md
-  - docs/pkg/models/shared/uctelephonetype.md
-  - docs/pkg/models/shared/uctelephone.md
-  - docs/pkg/models/shared/ucemailtype.md
-  - docs/pkg/models/shared/ucemail.md
-  - docs/pkg/models/shared/atsactivitytype.md
+  - docs/pkg/models/shared/apicall.md
+  - docs/pkg/models/shared/apicalltype.md
   - docs/pkg/models/shared/atsactivity.md
-  - docs/pkg/models/shared/atsemailtype.md
-  - docs/pkg/models/shared/atsemail.md
-  - docs/pkg/models/shared/propertyatsactivityfromtype.md
-  - docs/pkg/models/shared/propertyatsactivityfrom.md
-  - docs/pkg/models/shared/atsapplicationstatus.md
+  - docs/pkg/models/shared/atsactivitytype.md
+  - docs/pkg/models/shared/atsaddress.md
   - docs/pkg/models/shared/atsapplication.md
   - docs/pkg/models/shared/atsapplicationanswer.md
-  - docs/pkg/models/shared/origin.md
+  - docs/pkg/models/shared/atsapplicationstatus.md
   - docs/pkg/models/shared/atscandidate.md
-  - docs/pkg/models/shared/atstelephonetype.md
-  - docs/pkg/models/shared/atstelephone.md
-  - docs/pkg/models/shared/propertyatscandidateaddress.md
-  - docs/pkg/models/shared/atsdocumenttype.md
-  - docs/pkg/models/shared/atsdocument.md
-  - docs/pkg/models/shared/atsinterviewstatus.md
-  - docs/pkg/models/shared/atsinterview.md
-  - docs/pkg/models/shared/employmenttype.md
-  - docs/pkg/models/shared/atsjobstatus.md
-  - docs/pkg/models/shared/atsjob.md
-  - docs/pkg/models/shared/atsjobquestiontype.md
-  - docs/pkg/models/shared/atsjobquestion.md
-  - docs/pkg/models/shared/frequency.md
-  - docs/pkg/models/shared/atscompensationtype.md
+  - docs/pkg/models/shared/atscompany.md
   - docs/pkg/models/shared/atscompensation.md
-  - docs/pkg/models/shared/atsaddress.md
-  - docs/pkg/models/shared/recommendation.md
+  - docs/pkg/models/shared/atscompensationtype.md
+  - docs/pkg/models/shared/atsdocument.md
+  - docs/pkg/models/shared/atsdocumenttype.md
+  - docs/pkg/models/shared/atsemail.md
+  - docs/pkg/models/shared/atsemailtype.md
+  - docs/pkg/models/shared/atsinterview.md
+  - docs/pkg/models/shared/atsinterviewstatus.md
+  - docs/pkg/models/shared/atsjob.md
+  - docs/pkg/models/shared/atsjobquestion.md
+  - docs/pkg/models/shared/atsjobquestiontype.md
+  - docs/pkg/models/shared/atsjobstatus.md
   - docs/pkg/models/shared/atsscorecard.md
   - docs/pkg/models/shared/atsscorecardquestion.md
-  - docs/pkg/models/shared/atscompany.md
-  - docs/pkg/models/shared/propertyatscompanyaddress.md
-  - docs/pkg/models/shared/atsstatusstatus.md
   - docs/pkg/models/shared/atsstatus.md
-  - docs/pkg/models/shared/crmcompany.md
-  - docs/pkg/models/shared/propertycrmcompanyaddress.md
-  - docs/pkg/models/shared/hriscompany.md
-  - docs/pkg/models/shared/propertyhriscompanyaddress.md
-  - docs/pkg/models/shared/enrichcompany.md
-  - docs/pkg/models/shared/enrichtelephonetype.md
-  - docs/pkg/models/shared/enrichtelephone.md
-  - docs/pkg/models/shared/propertyenrichcompanyaddress.md
-  - docs/pkg/models/shared/commercecollectiontype.md
+  - docs/pkg/models/shared/atsstatusstatus.md
+  - docs/pkg/models/shared/atstelephone.md
+  - docs/pkg/models/shared/atstelephonetype.md
   - docs/pkg/models/shared/commercecollection.md
-  - docs/pkg/models/shared/commerceitemmediatype.md
-  - docs/pkg/models/shared/commerceitemmedia.md
+  - docs/pkg/models/shared/commercecollectiontype.md
   - docs/pkg/models/shared/commerceinventory.md
   - docs/pkg/models/shared/commerceitem.md
-  - docs/pkg/models/shared/sizeunit.md
-  - docs/pkg/models/shared/weightunit.md
-  - docs/pkg/models/shared/commerceitemvariant.md
-  - docs/pkg/models/shared/commerceitemprice.md
+  - docs/pkg/models/shared/commerceitemmedia.md
+  - docs/pkg/models/shared/commerceitemmediatype.md
   - docs/pkg/models/shared/commerceitemoption.md
+  - docs/pkg/models/shared/commerceitemprice.md
+  - docs/pkg/models/shared/commerceitemvariant.md
   - docs/pkg/models/shared/commercelocation.md
-  - docs/pkg/models/shared/propertycommercelocationaddress.md
-  - docs/pkg/models/shared/hrislocation.md
-  - docs/pkg/models/shared/hristelephonetype.md
-  - docs/pkg/models/shared/hristelephone.md
-  - docs/pkg/models/shared/propertyhrislocationaddress.md
+  - docs/pkg/models/shared/connection.md
+  - docs/pkg/models/shared/crmcompany.md
+  - docs/pkg/models/shared/crmcontact.md
   - docs/pkg/models/shared/crmdeal.md
-  - docs/pkg/models/shared/crmeventtype.md
+  - docs/pkg/models/shared/crmemail.md
+  - docs/pkg/models/shared/crmemailtype.md
   - docs/pkg/models/shared/crmevent.md
-  - docs/pkg/models/shared/priority.md
-  - docs/pkg/models/shared/propertycrmeventtaskstatus.md
-  - docs/pkg/models/shared/propertycrmeventtask.md
-  - docs/pkg/models/shared/propertycrmeventnote.md
-  - docs/pkg/models/shared/propertycrmeventmeeting.md
-  - docs/pkg/models/shared/propertycrmeventemail.md
-  - docs/pkg/models/shared/propertycrmeventcall.md
+  - docs/pkg/models/shared/crmeventtype.md
   - docs/pkg/models/shared/crmlead.md
-  - docs/pkg/models/shared/propertycrmleadaddress.md
   - docs/pkg/models/shared/crmpipeline.md
   - docs/pkg/models/shared/crmstage.md
-  - docs/pkg/models/shared/gender.md
+  - docs/pkg/models/shared/crmtelephone.md
+  - docs/pkg/models/shared/crmtelephonetype.md
+  - docs/pkg/models/shared/employmentstatus.md
+  - docs/pkg/models/shared/employmenttype.md
+  - docs/pkg/models/shared/enrichcompany.md
+  - docs/pkg/models/shared/enrichemail.md
+  - docs/pkg/models/shared/enrichemailtype.md
   - docs/pkg/models/shared/enrichperson.md
   - docs/pkg/models/shared/enrichpersonworkhistory.md
-  - docs/pkg/models/shared/enrichemailtype.md
-  - docs/pkg/models/shared/enrichemail.md
-  - docs/pkg/models/shared/propertyenrichpersonaddress.md
-  - docs/pkg/models/shared/genaiprompt.md
-  - docs/pkg/models/shared/role.md
+  - docs/pkg/models/shared/enrichtelephone.md
+  - docs/pkg/models/shared/enrichtelephonetype.md
+  - docs/pkg/models/shared/event.md
+  - docs/pkg/models/shared/frequency.md
+  - docs/pkg/models/shared/fromwebhook.md
   - docs/pkg/models/shared/genaicontent.md
   - docs/pkg/models/shared/genaimodel.md
-  - docs/pkg/models/shared/employmentstatus.md
-  - docs/pkg/models/shared/hrisemployeeemploymenttype.md
-  - docs/pkg/models/shared/hrisemployeegender.md
-  - docs/pkg/models/shared/maritalstatus.md
-  - docs/pkg/models/shared/hrisemployee.md
-  - docs/pkg/models/shared/hrisgrouptype.md
-  - docs/pkg/models/shared/hrisgroup.md
-  - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
-  - docs/pkg/models/shared/hrisemailtype.md
-  - docs/pkg/models/shared/hrisemail.md
+  - docs/pkg/models/shared/genaiprompt.md
+  - docs/pkg/models/shared/gender.md
+  - docs/pkg/models/shared/hriscompany.md
+  - docs/pkg/models/shared/hriscompensation.md
   - docs/pkg/models/shared/hriscompensationfrequency.md
   - docs/pkg/models/shared/hriscompensationtype.md
-  - docs/pkg/models/shared/hriscompensation.md
-  - docs/pkg/models/shared/propertyhrisemployeeaddress.md
-  - docs/pkg/models/shared/paymenttype.md
+  - docs/pkg/models/shared/hrisemail.md
+  - docs/pkg/models/shared/hrisemailtype.md
+  - docs/pkg/models/shared/hrisemployee.md
+  - docs/pkg/models/shared/hrisemployeeemploymenttype.md
+  - docs/pkg/models/shared/hrisemployeegender.md
+  - docs/pkg/models/shared/hrisgroup.md
+  - docs/pkg/models/shared/hrisgrouptype.md
+  - docs/pkg/models/shared/hrislocation.md
   - docs/pkg/models/shared/hrispayslip.md
-  - docs/pkg/models/shared/hrispayslipdetailtype.md
   - docs/pkg/models/shared/hrispayslipdetail.md
+  - docs/pkg/models/shared/hrispayslipdetailtype.md
+  - docs/pkg/models/shared/hristelephone.md
+  - docs/pkg/models/shared/hristelephonetype.md
+  - docs/pkg/models/shared/hristimeoff.md
   - docs/pkg/models/shared/hristimeoffstatus.md
   - docs/pkg/models/shared/hristimeofftype.md
-  - docs/pkg/models/shared/hristimeoff.md
-  - docs/pkg/models/shared/kmspagetype.md
-  - docs/pkg/models/shared/kmspage.md
-  - docs/pkg/models/shared/kmsspace.md
-  - docs/pkg/models/shared/marketinglist.md
-  - docs/pkg/models/shared/marketingmember.md
-  - docs/pkg/models/shared/marketingemailtype.md
-  - docs/pkg/models/shared/marketingemail.md
-  - docs/pkg/models/shared/messagingmessage.md
-  - docs/pkg/models/shared/messagingmember.md
-  - docs/pkg/models/shared/propertymessagingmessageauthormember.md
-  - docs/pkg/models/shared/messagingattachment.md
-  - docs/pkg/models/shared/messagingchannel.md
-  - docs/pkg/models/shared/paymentlink.md
-  - docs/pkg/models/shared/paymentlinklineitem.md
-  - docs/pkg/models/shared/paymentpayment.md
-  - docs/pkg/models/shared/paymentpayoutstatus.md
-  - docs/pkg/models/shared/paymentpayout.md
-  - docs/pkg/models/shared/paymentrefundstatus.md
-  - docs/pkg/models/shared/paymentrefund.md
-  - docs/pkg/models/shared/storagefiletype.md
-  - docs/pkg/models/shared/storagefile.md
-  - docs/pkg/models/shared/storagepermission.md
-  - docs/pkg/models/shared/propertystoragepermissionroles.md
-  - docs/pkg/models/shared/taskproject.md
-  - docs/pkg/models/shared/tasktaskstatus.md
-  - docs/pkg/models/shared/tasktask.md
-  - docs/pkg/models/shared/ticketingcustomer.md
-  - docs/pkg/models/shared/ticketingtelephonetype.md
-  - docs/pkg/models/shared/ticketingtelephone.md
-  - docs/pkg/models/shared/ticketingemailtype.md
-  - docs/pkg/models/shared/ticketingemail.md
-  - docs/pkg/models/shared/ticketingnote.md
-  - docs/pkg/models/shared/ticketingticketstatus.md
-  - docs/pkg/models/shared/ticketingticket.md
-  - docs/pkg/models/shared/uccall.md
-  - docs/pkg/models/shared/propertyuccalltelephonetype.md
-  - docs/pkg/models/shared/propertyuccalltelephone.md
-  - docs/pkg/models/shared/connection.md
-  - docs/pkg/models/shared/propertyconnectionpermissions.md
-  - docs/pkg/models/shared/propertyconnectioncategories.md
-  - docs/pkg/models/shared/propertyconnectionauth.md
-  - docs/pkg/models/shared/event.md
-  - docs/pkg/models/shared/objecttype.md
-  - docs/pkg/models/shared/webhooktype.md
-  - docs/pkg/models/shared/webhook.md
-  - docs/pkg/models/shared/apicalltype.md
-  - docs/pkg/models/shared/apicall.md
   - docs/pkg/models/shared/integration.md
-  - docs/pkg/models/shared/fromwebhook.md
+  - docs/pkg/models/shared/integrationsupport.md
+  - docs/pkg/models/shared/issue.md
+  - docs/pkg/models/shared/issuestatus.md
+  - docs/pkg/models/shared/kmspage.md
+  - docs/pkg/models/shared/kmspagetype.md
+  - docs/pkg/models/shared/kmsspace.md
   - docs/pkg/models/shared/listaccountid.md
   - docs/pkg/models/shared/listapplicationid.md
   - docs/pkg/models/shared/listcandidateid.md
@@ -1346,94 +1203,1959 @@ generatedFiles:
   - docs/pkg/models/shared/listtype.md
   - docs/pkg/models/shared/listupdatedgte.md
   - docs/pkg/models/shared/listuserid.md
+  - docs/pkg/models/shared/maritalstatus.md
+  - docs/pkg/models/shared/marketingemail.md
+  - docs/pkg/models/shared/marketingemailtype.md
+  - docs/pkg/models/shared/marketinglist.md
+  - docs/pkg/models/shared/marketingmember.md
+  - docs/pkg/models/shared/messagingattachment.md
+  - docs/pkg/models/shared/messagingchannel.md
+  - docs/pkg/models/shared/messagingmember.md
+  - docs/pkg/models/shared/messagingmessage.md
+  - docs/pkg/models/shared/objecttype.md
+  - docs/pkg/models/shared/origin.md
+  - docs/pkg/models/shared/paymentcollectionmethod.md
+  - docs/pkg/models/shared/paymentlink.md
+  - docs/pkg/models/shared/paymentlinklineitem.md
+  - docs/pkg/models/shared/paymentpayment.md
+  - docs/pkg/models/shared/paymentpayout.md
+  - docs/pkg/models/shared/paymentpayoutstatus.md
+  - docs/pkg/models/shared/paymentrefund.md
+  - docs/pkg/models/shared/paymentrefundstatus.md
+  - docs/pkg/models/shared/paymenttype.md
+  - docs/pkg/models/shared/priority.md
+  - docs/pkg/models/shared/propertyaccountingcontactbillingaddress.md
+  - docs/pkg/models/shared/propertyaccountingcontactshippingaddress.md
+  - docs/pkg/models/shared/propertyaccountingorganizationaddress.md
+  - docs/pkg/models/shared/propertyatsactivityfrom.md
+  - docs/pkg/models/shared/propertyatsactivityfromtype.md
+  - docs/pkg/models/shared/propertyatscandidateaddress.md
+  - docs/pkg/models/shared/propertyatscompanyaddress.md
+  - docs/pkg/models/shared/propertycommercelocationaddress.md
+  - docs/pkg/models/shared/propertyconnectionauth.md
+  - docs/pkg/models/shared/propertyconnectioncategories.md
+  - docs/pkg/models/shared/propertyconnectionpermissions.md
+  - docs/pkg/models/shared/propertycrmcompanyaddress.md
+  - docs/pkg/models/shared/propertycrmcontactaddress.md
+  - docs/pkg/models/shared/propertycrmeventcall.md
+  - docs/pkg/models/shared/propertycrmeventemail.md
+  - docs/pkg/models/shared/propertycrmeventmeeting.md
+  - docs/pkg/models/shared/propertycrmeventnote.md
+  - docs/pkg/models/shared/propertycrmeventtask.md
+  - docs/pkg/models/shared/propertycrmeventtaskstatus.md
+  - docs/pkg/models/shared/propertycrmleadaddress.md
+  - docs/pkg/models/shared/propertyenrichcompanyaddress.md
+  - docs/pkg/models/shared/propertyenrichpersonaddress.md
+  - docs/pkg/models/shared/propertyhriscompanyaddress.md
+  - docs/pkg/models/shared/propertyhrisemployeeaddress.md
+  - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
+  - docs/pkg/models/shared/propertyhrislocationaddress.md
+  - docs/pkg/models/shared/propertyintegrationcategories.md
+  - docs/pkg/models/shared/propertyintegrationsupportwebhookevents.md
+  - docs/pkg/models/shared/propertymessagingmessageauthormember.md
+  - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventscreated.md
+  - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.md
+  - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.md
+  - docs/pkg/models/shared/propertystoragepermissionroles.md
+  - docs/pkg/models/shared/propertyuccalltelephone.md
+  - docs/pkg/models/shared/propertyuccalltelephonetype.md
+  - docs/pkg/models/shared/recommendation.md
+  - docs/pkg/models/shared/role.md
   - docs/pkg/models/shared/searchdomain.md
   - docs/pkg/models/shared/searchemail.md
   - docs/pkg/models/shared/searchlinkedinurl.md
   - docs/pkg/models/shared/searchname.md
   - docs/pkg/models/shared/searchtwitter.md
-  - docs/pkg/models/shared/integrationsupport.md
-  - docs/pkg/models/shared/propertyintegrationsupportwebhookevents.md
-  - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.md
-  - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.md
-  - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventscreated.md
-  - docs/pkg/models/shared/propertyintegrationcategories.md
-  - docs/pkg/models/shared/issuestatus.md
-  - docs/pkg/models/shared/issue.md
   - docs/pkg/models/shared/security.md
-  - docs/sdks/unifiedto/README.md
-  - docs/pkg/models/operations/option.md
-  - docs/sdks/accounting/README.md
+  - docs/pkg/models/shared/sizeunit.md
+  - docs/pkg/models/shared/status.md
+  - docs/pkg/models/shared/storagefile.md
+  - docs/pkg/models/shared/storagefiletype.md
+  - docs/pkg/models/shared/storagepermission.md
+  - docs/pkg/models/shared/taskproject.md
+  - docs/pkg/models/shared/tasktask.md
+  - docs/pkg/models/shared/tasktaskstatus.md
+  - docs/pkg/models/shared/taxexemption.md
+  - docs/pkg/models/shared/ticketingcustomer.md
+  - docs/pkg/models/shared/ticketingemail.md
+  - docs/pkg/models/shared/ticketingemailtype.md
+  - docs/pkg/models/shared/ticketingnote.md
+  - docs/pkg/models/shared/ticketingtelephone.md
+  - docs/pkg/models/shared/ticketingtelephonetype.md
+  - docs/pkg/models/shared/ticketingticket.md
+  - docs/pkg/models/shared/ticketingticketstatus.md
+  - docs/pkg/models/shared/type.md
+  - docs/pkg/models/shared/uccall.md
+  - docs/pkg/models/shared/uccontact.md
+  - docs/pkg/models/shared/ucemail.md
+  - docs/pkg/models/shared/ucemailtype.md
+  - docs/pkg/models/shared/uctelephone.md
+  - docs/pkg/models/shared/uctelephonetype.md
+  - docs/pkg/models/shared/webhook.md
+  - docs/pkg/models/shared/webhooktype.md
+  - docs/pkg/models/shared/weightunit.md
   - docs/sdks/account/README.md
-  - docs/sdks/contact/README.md
-  - docs/sdks/invoice/README.md
-  - docs/sdks/journal/README.md
-  - docs/sdks/organization/README.md
-  - docs/sdks/taxrate/README.md
-  - docs/sdks/transaction/README.md
-  - docs/sdks/ats/README.md
+  - docs/sdks/accounting/README.md
   - docs/sdks/activity/README.md
+  - docs/sdks/apicall/README.md
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
+  - docs/sdks/ats/README.md
+  - docs/sdks/auth/README.md
+  - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
-  - docs/sdks/company/README.md
-  - docs/sdks/document/README.md
-  - docs/sdks/interview/README.md
-  - docs/sdks/job/README.md
-  - docs/sdks/scorecard/README.md
-  - docs/sdks/commerce/README.md
-  - docs/sdks/collection/README.md
-  - docs/sdks/inventory/README.md
-  - docs/sdks/item/README.md
-  - docs/sdks/location/README.md
-  - docs/sdks/crm/README.md
-  - docs/sdks/deal/README.md
-  - docs/sdks/event/README.md
-  - docs/sdks/lead/README.md
-  - docs/sdks/pipeline/README.md
-  - docs/sdks/enrich/README.md
-  - docs/sdks/person/README.md
-  - docs/sdks/genai/README.md
-  - docs/sdks/model/README.md
-  - docs/sdks/prompt/README.md
-  - docs/sdks/hris/README.md
-  - docs/sdks/employee/README.md
-  - docs/sdks/group/README.md
-  - docs/sdks/payslip/README.md
-  - docs/sdks/timeoff/README.md
-  - docs/sdks/kms/README.md
-  - docs/sdks/page/README.md
-  - docs/sdks/space/README.md
-  - docs/sdks/martech/README.md
-  - docs/sdks/list/README.md
-  - docs/sdks/member/README.md
-  - docs/sdks/messaging/README.md
   - docs/sdks/channel/README.md
+  - docs/sdks/collection/README.md
+  - docs/sdks/commerce/README.md
+  - docs/sdks/company/README.md
+  - docs/sdks/connection/README.md
+  - docs/sdks/contact/README.md
+  - docs/sdks/crm/README.md
+  - docs/sdks/customer/README.md
+  - docs/sdks/deal/README.md
+  - docs/sdks/document/README.md
+  - docs/sdks/employee/README.md
+  - docs/sdks/enrich/README.md
+  - docs/sdks/event/README.md
+  - docs/sdks/file/README.md
+  - docs/sdks/genai/README.md
+  - docs/sdks/group/README.md
+  - docs/sdks/hris/README.md
+  - docs/sdks/integration/README.md
+  - docs/sdks/interview/README.md
+  - docs/sdks/inventory/README.md
+  - docs/sdks/invoice/README.md
+  - docs/sdks/issue/README.md
+  - docs/sdks/item/README.md
+  - docs/sdks/job/README.md
+  - docs/sdks/journal/README.md
+  - docs/sdks/kms/README.md
+  - docs/sdks/lead/README.md
+  - docs/sdks/link/README.md
+  - docs/sdks/list/README.md
+  - docs/sdks/location/README.md
+  - docs/sdks/login/README.md
+  - docs/sdks/martech/README.md
+  - docs/sdks/member/README.md
   - docs/sdks/message/README.md
+  - docs/sdks/messaging/README.md
+  - docs/sdks/model/README.md
+  - docs/sdks/note/README.md
+  - docs/sdks/organization/README.md
+  - docs/sdks/page/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/payment/README.md
-  - docs/sdks/link/README.md
   - docs/sdks/payout/README.md
-  - docs/sdks/refund/README.md
-  - docs/sdks/storage/README.md
-  - docs/sdks/file/README.md
-  - docs/sdks/task/README.md
+  - docs/sdks/payslip/README.md
+  - docs/sdks/person/README.md
+  - docs/sdks/pipeline/README.md
   - docs/sdks/project/README.md
-  - docs/sdks/ticketing/README.md
-  - docs/sdks/customer/README.md
-  - docs/sdks/note/README.md
+  - docs/sdks/prompt/README.md
+  - docs/sdks/refund/README.md
+  - docs/sdks/scorecard/README.md
+  - docs/sdks/space/README.md
+  - docs/sdks/storage/README.md
+  - docs/sdks/task/README.md
+  - docs/sdks/taxrate/README.md
   - docs/sdks/ticket/README.md
+  - docs/sdks/ticketing/README.md
+  - docs/sdks/timeoff/README.md
+  - docs/sdks/transaction/README.md
   - docs/sdks/uc/README.md
-  - docs/sdks/call/README.md
   - docs/sdks/unified/README.md
-  - docs/sdks/apicall/README.md
-  - docs/sdks/connection/README.md
-  - docs/sdks/integration/README.md
-  - docs/sdks/auth/README.md
-  - docs/sdks/login/README.md
-  - docs/sdks/issue/README.md
+  - docs/sdks/unifiedto/README.md
   - docs/sdks/webhook/README.md
-  - USAGE.md
-  - pkg/models/operations/options.go
-  - .gitattributes
+  - document.go
+  - employee.go
+  - enrich.go
+  - event.go
+  - file.go
+  - genai.go
+  - go.mod
+  - group.go
+  - hris.go
+  - integration.go
   - internal/hooks/hooks.go
-  - CONTRIBUTING.md
+  - interview.go
+  - inventory.go
+  - invoice.go
+  - issue.go
+  - item.go
+  - job.go
+  - journal.go
+  - kms.go
+  - lead.go
+  - link.go
+  - list.go
+  - location.go
+  - login.go
+  - martech.go
+  - member.go
+  - message.go
+  - messaging.go
+  - model.go
+  - note.go
+  - organization.go
+  - page.go
+  - passthrough.go
+  - payment.go
+  - payout.go
+  - payslip.go
+  - person.go
+  - pipeline.go
+  - pkg/models/operations/options.go
+  - pkg/models/sdkerrors/sdkerror.go
+  - pkg/retry/config.go
+  - pkg/types/bigint.go
+  - pkg/types/date.go
+  - pkg/types/datetime.go
+  - pkg/types/decimal.go
+  - pkg/types/pointers.go
+  - pkg/utils/contenttype.go
+  - pkg/utils/form.go
+  - pkg/utils/headers.go
+  - pkg/utils/json.go
+  - pkg/utils/pathparams.go
+  - pkg/utils/queryparams.go
+  - pkg/utils/requestbody.go
+  - pkg/utils/retries.go
+  - pkg/utils/security.go
+  - pkg/utils/utils.go
+  - project.go
+  - prompt.go
+  - refund.go
+  - scorecard.go
+  - space.go
+  - storage.go
+  - task.go
+  - taxrate.go
+  - ticket.go
+  - ticketing.go
+  - timeoff.go
+  - transaction.go
+  - uc.go
+  - unified.go
+  - unifiedto.go
+  - webhook.go
+examples:
+  createAccountingAccount:
+    speakeasy-default-create-accounting-account:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAccountingContact:
+    speakeasy-default-create-accounting-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAccountingInvoice:
+    speakeasy-default-create-accounting-invoice:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAccountingJournal:
+    speakeasy-default-create-accounting-journal:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAccountingTaxrate:
+    speakeasy-default-create-accounting-taxrate:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAccountingTransaction:
+    speakeasy-default-create-accounting-transaction:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getAccountingAccount:
+    speakeasy-default-get-accounting-account:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAccountingContact:
+    speakeasy-default-get-accounting-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAccountingInvoice:
+    speakeasy-default-get-accounting-invoice:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAccountingJournal:
+    speakeasy-default-get-accounting-journal:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAccountingOrganization:
+    speakeasy-default-get-accounting-organization:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAccountingTaxrate:
+    speakeasy-default-get-accounting-taxrate:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAccountingTransaction:
+    speakeasy-default-get-accounting-transaction:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listAccountingAccounts:
+    speakeasy-default-list-accounting-accounts:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAccountingContacts:
+    speakeasy-default-list-accounting-contacts:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAccountingInvoices:
+    speakeasy-default-list-accounting-invoices:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAccountingJournals:
+    speakeasy-default-list-accounting-journals:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAccountingOrganizations:
+    speakeasy-default-list-accounting-organizations:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAccountingTaxrates:
+    speakeasy-default-list-accounting-taxrates:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAccountingTransactions:
+    speakeasy-default-list-accounting-transactions:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchAccountingAccount:
+    speakeasy-default-patch-accounting-account:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAccountingContact:
+    speakeasy-default-patch-accounting-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAccountingInvoice:
+    speakeasy-default-patch-accounting-invoice:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAccountingJournal:
+    speakeasy-default-patch-accounting-journal:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAccountingTaxrate:
+    speakeasy-default-patch-accounting-taxrate:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAccountingTransaction:
+    speakeasy-default-patch-accounting-transaction:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAccountingAccount:
+    speakeasy-default-remove-accounting-account:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAccountingContact:
+    speakeasy-default-remove-accounting-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAccountingInvoice:
+    speakeasy-default-remove-accounting-invoice:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAccountingJournal:
+    speakeasy-default-remove-accounting-journal:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAccountingTaxrate:
+    speakeasy-default-remove-accounting-taxrate:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAccountingTransaction:
+    speakeasy-default-remove-accounting-transaction:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAccountingAccount:
+    speakeasy-default-update-accounting-account:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAccountingContact:
+    speakeasy-default-update-accounting-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAccountingInvoice:
+    speakeasy-default-update-accounting-invoice:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAccountingJournal:
+    speakeasy-default-update-accounting-journal:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAccountingTaxrate:
+    speakeasy-default-update-accounting-taxrate:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAccountingTransaction:
+    speakeasy-default-update-accounting-transaction:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createCrmContact:
+    speakeasy-default-create-crm-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createUcContact:
+    speakeasy-default-create-uc-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getCrmContact:
+    speakeasy-default-get-crm-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getUcContact:
+    speakeasy-default-get-uc-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listCrmContacts:
+    speakeasy-default-list-crm-contacts:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listUcContacts:
+    speakeasy-default-list-uc-contacts:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchCrmContact:
+    speakeasy-default-patch-crm-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchUcContact:
+    speakeasy-default-patch-uc-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeCrmContact:
+    speakeasy-default-remove-crm-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeUcContact:
+    speakeasy-default-remove-uc-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateCrmContact:
+    speakeasy-default-update-crm-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateUcContact:
+    speakeasy-default-update-uc-contact:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createAtsActivity:
+    speakeasy-default-create-ats-activity:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAtsApplication:
+    speakeasy-default-create-ats-application:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAtsCandidate:
+    speakeasy-default-create-ats-candidate:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAtsDocument:
+    speakeasy-default-create-ats-document:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAtsInterview:
+    speakeasy-default-create-ats-interview:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAtsJob:
+    speakeasy-default-create-ats-job:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createAtsScorecard:
+    speakeasy-default-create-ats-scorecard:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getAtsActivity:
+    speakeasy-default-get-ats-activity:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAtsApplication:
+    speakeasy-default-get-ats-application:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAtsCandidate:
+    speakeasy-default-get-ats-candidate:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAtsCompany:
+    speakeasy-default-get-ats-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAtsDocument:
+    speakeasy-default-get-ats-document:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAtsInterview:
+    speakeasy-default-get-ats-interview:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAtsJob:
+    speakeasy-default-get-ats-job:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getAtsScorecard:
+    speakeasy-default-get-ats-scorecard:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listAtsActivities:
+    speakeasy-default-list-ats-activities:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAtsApplications:
+    speakeasy-default-list-ats-applications:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAtsApplicationstatuses:
+    speakeasy-default-list-ats-applicationstatuses:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAtsCandidates:
+    speakeasy-default-list-ats-candidates:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAtsCompanies:
+    speakeasy-default-list-ats-companies:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAtsDocuments:
+    speakeasy-default-list-ats-documents:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAtsInterviews:
+    speakeasy-default-list-ats-interviews:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAtsJobs:
+    speakeasy-default-list-ats-jobs:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listAtsScorecards:
+    speakeasy-default-list-ats-scorecards:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchAtsActivity:
+    speakeasy-default-patch-ats-activity:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAtsApplication:
+    speakeasy-default-patch-ats-application:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAtsCandidate:
+    speakeasy-default-patch-ats-candidate:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAtsDocument:
+    speakeasy-default-patch-ats-document:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAtsInterview:
+    speakeasy-default-patch-ats-interview:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAtsJob:
+    speakeasy-default-patch-ats-job:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchAtsScorecard:
+    speakeasy-default-patch-ats-scorecard:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAtsActivity:
+    speakeasy-default-remove-ats-activity:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAtsApplication:
+    speakeasy-default-remove-ats-application:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAtsCandidate:
+    speakeasy-default-remove-ats-candidate:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAtsDocument:
+    speakeasy-default-remove-ats-document:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAtsInterview:
+    speakeasy-default-remove-ats-interview:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAtsJob:
+    speakeasy-default-remove-ats-job:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeAtsScorecard:
+    speakeasy-default-remove-ats-scorecard:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAtsActivity:
+    speakeasy-default-update-ats-activity:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAtsApplication:
+    speakeasy-default-update-ats-application:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAtsCandidate:
+    speakeasy-default-update-ats-candidate:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAtsDocument:
+    speakeasy-default-update-ats-document:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAtsInterview:
+    speakeasy-default-update-ats-interview:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAtsJob:
+    speakeasy-default-update-ats-job:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateAtsScorecard:
+    speakeasy-default-update-ats-scorecard:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createCrmCompany:
+    speakeasy-default-create-crm-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createHrisCompany:
+    speakeasy-default-create-hris-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getCrmCompany:
+    speakeasy-default-get-crm-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getHrisCompany:
+    speakeasy-default-get-hris-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listCrmCompanies:
+    speakeasy-default-list-crm-companies:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listEnrichCompanies:
+    speakeasy-default-list-enrich-companies:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listHrisCompanies:
+    speakeasy-default-list-hris-companies:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchCrmCompany:
+    speakeasy-default-patch-crm-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchHrisCompany:
+    speakeasy-default-patch-hris-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeCrmCompany:
+    speakeasy-default-remove-crm-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeHrisCompany:
+    speakeasy-default-remove-hris-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateCrmCompany:
+    speakeasy-default-update-crm-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateHrisCompany:
+    speakeasy-default-update-hris-company:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createCommerceCollection:
+    speakeasy-default-create-commerce-collection:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createCommerceInventory:
+    speakeasy-default-create-commerce-inventory:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createCommerceItem:
+    speakeasy-default-create-commerce-item:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createCommerceLocation:
+    speakeasy-default-create-commerce-location:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getCommerceCollection:
+    speakeasy-default-get-commerce-collection:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getCommerceInventory:
+    speakeasy-default-get-commerce-inventory:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getCommerceItem:
+    speakeasy-default-get-commerce-item:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getCommerceLocation:
+    speakeasy-default-get-commerce-location:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listCommerceCollections:
+    speakeasy-default-list-commerce-collections:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listCommerceInventories:
+    speakeasy-default-list-commerce-inventories:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listCommerceItems:
+    speakeasy-default-list-commerce-items:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listCommerceLocations:
+    speakeasy-default-list-commerce-locations:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchCommerceCollection:
+    speakeasy-default-patch-commerce-collection:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchCommerceInventory:
+    speakeasy-default-patch-commerce-inventory:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchCommerceItem:
+    speakeasy-default-patch-commerce-item:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchCommerceLocation:
+    speakeasy-default-patch-commerce-location:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeCommerceCollection:
+    speakeasy-default-remove-commerce-collection:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeCommerceInventory:
+    speakeasy-default-remove-commerce-inventory:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeCommerceItem:
+    speakeasy-default-remove-commerce-item:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeCommerceLocation:
+    speakeasy-default-remove-commerce-location:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateCommerceCollection:
+    speakeasy-default-update-commerce-collection:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateCommerceInventory:
+    speakeasy-default-update-commerce-inventory:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateCommerceItem:
+    speakeasy-default-update-commerce-item:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateCommerceLocation:
+    speakeasy-default-update-commerce-location:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createHrisLocation:
+    speakeasy-default-create-hris-location:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getHrisLocation:
+    speakeasy-default-get-hris-location:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listHrisLocations:
+    speakeasy-default-list-hris-locations:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchHrisLocation:
+    speakeasy-default-patch-hris-location:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeHrisLocation:
+    speakeasy-default-remove-hris-location:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateHrisLocation:
+    speakeasy-default-update-hris-location:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createCrmDeal:
+    speakeasy-default-create-crm-deal:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createCrmEvent:
+    speakeasy-default-create-crm-event:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createCrmLead:
+    speakeasy-default-create-crm-lead:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createCrmPipeline:
+    speakeasy-default-create-crm-pipeline:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getCrmDeal:
+    speakeasy-default-get-crm-deal:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getCrmEvent:
+    speakeasy-default-get-crm-event:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getCrmLead:
+    speakeasy-default-get-crm-lead:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getCrmPipeline:
+    speakeasy-default-get-crm-pipeline:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listCrmDeals:
+    speakeasy-default-list-crm-deals:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listCrmEvents:
+    speakeasy-default-list-crm-events:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listCrmLeads:
+    speakeasy-default-list-crm-leads:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listCrmPipelines:
+    speakeasy-default-list-crm-pipelines:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchCrmDeal:
+    speakeasy-default-patch-crm-deal:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchCrmEvent:
+    speakeasy-default-patch-crm-event:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchCrmLead:
+    speakeasy-default-patch-crm-lead:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchCrmPipeline:
+    speakeasy-default-patch-crm-pipeline:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeCrmDeal:
+    speakeasy-default-remove-crm-deal:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeCrmEvent:
+    speakeasy-default-remove-crm-event:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeCrmLead:
+    speakeasy-default-remove-crm-lead:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeCrmPipeline:
+    speakeasy-default-remove-crm-pipeline:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateCrmDeal:
+    speakeasy-default-update-crm-deal:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateCrmEvent:
+    speakeasy-default-update-crm-event:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateCrmLead:
+    speakeasy-default-update-crm-lead:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateCrmPipeline:
+    speakeasy-default-update-crm-pipeline:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  listEnrichPeople:
+    speakeasy-default-list-enrich-people:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  createGenaiPrompt:
+    speakeasy-default-create-genai-prompt:
+      parameters:
+        path:
+          connection_id: "<value>"
+  listGenaiModels:
+    speakeasy-default-list-genai-models:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  createHrisEmployee:
+    speakeasy-default-create-hris-employee:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createHrisGroup:
+    speakeasy-default-create-hris-group:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getHrisEmployee:
+    speakeasy-default-get-hris-employee:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getHrisGroup:
+    speakeasy-default-get-hris-group:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getHrisPayslip:
+    speakeasy-default-get-hris-payslip:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getHrisTimeoff:
+    speakeasy-default-get-hris-timeoff:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listHrisEmployees:
+    speakeasy-default-list-hris-employees:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listHrisGroups:
+    speakeasy-default-list-hris-groups:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listHrisPayslips:
+    speakeasy-default-list-hris-payslips:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listHrisTimeoffs:
+    speakeasy-default-list-hris-timeoffs:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchHrisEmployee:
+    speakeasy-default-patch-hris-employee:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchHrisGroup:
+    speakeasy-default-patch-hris-group:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeHrisEmployee:
+    speakeasy-default-remove-hris-employee:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeHrisGroup:
+    speakeasy-default-remove-hris-group:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateHrisEmployee:
+    speakeasy-default-update-hris-employee:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateHrisGroup:
+    speakeasy-default-update-hris-group:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createKmsPage:
+    speakeasy-default-create-kms-page:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createKmsSpace:
+    speakeasy-default-create-kms-space:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getKmsPage:
+    speakeasy-default-get-kms-page:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getKmsSpace:
+    speakeasy-default-get-kms-space:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listKmsPages:
+    speakeasy-default-list-kms-pages:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listKmsSpaces:
+    speakeasy-default-list-kms-spaces:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchKmsPage:
+    speakeasy-default-patch-kms-page:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchKmsSpace:
+    speakeasy-default-patch-kms-space:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeKmsPage:
+    speakeasy-default-remove-kms-page:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeKmsSpace:
+    speakeasy-default-remove-kms-space:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateKmsPage:
+    speakeasy-default-update-kms-page:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateKmsSpace:
+    speakeasy-default-update-kms-space:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createMartechList:
+    speakeasy-default-create-martech-list:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createMartechMember:
+    speakeasy-default-create-martech-member:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getMartechList:
+    speakeasy-default-get-martech-list:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getMartechMember:
+    speakeasy-default-get-martech-member:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listMartechLists:
+    speakeasy-default-list-martech-lists:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listMartechMembers:
+    speakeasy-default-list-martech-members:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchMartechList:
+    speakeasy-default-patch-martech-list:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchMartechMember:
+    speakeasy-default-patch-martech-member:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeMartechList:
+    speakeasy-default-remove-martech-list:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeMartechMember:
+    speakeasy-default-remove-martech-member:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateMartechList:
+    speakeasy-default-update-martech-list:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateMartechMember:
+    speakeasy-default-update-martech-member:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createMessagingMessage:
+    speakeasy-default-create-messaging-message:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getMessagingChannel:
+    speakeasy-default-get-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getMessagingMessage:
+    speakeasy-default-get-messaging-message:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listMessagingChannels:
+    speakeasy-default-list-messaging-channels:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listMessagingMessages:
+    speakeasy-default-list-messaging-messages:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchMessagingMessage:
+    speakeasy-default-patch-messaging-message:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeMessagingMessage:
+    speakeasy-default-remove-messaging-message:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateMessagingMessage:
+    speakeasy-default-update-messaging-message:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createPassthrough:
+    speakeasy-default-create-passthrough:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/etc/periodic"
+  listPassthroughs:
+    speakeasy-default-list-passthroughs:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/selinux"
+  patchPassthrough:
+    speakeasy-default-patch-passthrough:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/mnt"
+  removePassthrough:
+    speakeasy-default-remove-passthrough:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/Applications"
+  updatePassthrough:
+    speakeasy-default-update-passthrough:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/dev"
+  createPaymentLink:
+    speakeasy-default-create-payment-link:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createPaymentPayment:
+    speakeasy-default-create-payment-payment:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getPaymentLink:
+    speakeasy-default-get-payment-link:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getPaymentPayment:
+    speakeasy-default-get-payment-payment:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getPaymentPayout:
+    speakeasy-default-get-payment-payout:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getPaymentRefund:
+    speakeasy-default-get-payment-refund:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listPaymentLinks:
+    speakeasy-default-list-payment-links:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listPaymentPayments:
+    speakeasy-default-list-payment-payments:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listPaymentPayouts:
+    speakeasy-default-list-payment-payouts:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listPaymentRefunds:
+    speakeasy-default-list-payment-refunds:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchPaymentLink:
+    speakeasy-default-patch-payment-link:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchPaymentPayment:
+    speakeasy-default-patch-payment-payment:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removePaymentLink:
+    speakeasy-default-remove-payment-link:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removePaymentPayment:
+    speakeasy-default-remove-payment-payment:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updatePaymentLink:
+    speakeasy-default-update-payment-link:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updatePaymentPayment:
+    speakeasy-default-update-payment-payment:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createStorageFile:
+    speakeasy-default-create-storage-file:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getStorageFile:
+    speakeasy-default-get-storage-file:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listStorageFiles:
+    speakeasy-default-list-storage-files:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchStorageFile:
+    speakeasy-default-patch-storage-file:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeStorageFile:
+    speakeasy-default-remove-storage-file:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateStorageFile:
+    speakeasy-default-update-storage-file:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createTaskProject:
+    speakeasy-default-create-task-project:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createTaskTask:
+    speakeasy-default-create-task-task:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getTaskProject:
+    speakeasy-default-get-task-project:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getTaskTask:
+    speakeasy-default-get-task-task:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listTaskProjects:
+    speakeasy-default-list-task-projects:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listTaskTasks:
+    speakeasy-default-list-task-tasks:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchTaskProject:
+    speakeasy-default-patch-task-project:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchTaskTask:
+    speakeasy-default-patch-task-task:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeTaskProject:
+    speakeasy-default-remove-task-project:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeTaskTask:
+    speakeasy-default-remove-task-task:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateTaskProject:
+    speakeasy-default-update-task-project:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateTaskTask:
+    speakeasy-default-update-task-task:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  createTicketingCustomer:
+    speakeasy-default-create-ticketing-customer:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createTicketingNote:
+    speakeasy-default-create-ticketing-note:
+      parameters:
+        path:
+          connection_id: "<value>"
+  createTicketingTicket:
+    speakeasy-default-create-ticketing-ticket:
+      parameters:
+        path:
+          connection_id: "<value>"
+  getTicketingCustomer:
+    speakeasy-default-get-ticketing-customer:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getTicketingNote:
+    speakeasy-default-get-ticketing-note:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  getTicketingTicket:
+    speakeasy-default-get-ticketing-ticket:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+        query: {}
+  listTicketingCustomers:
+    speakeasy-default-list-ticketing-customers:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listTicketingNotes:
+    speakeasy-default-list-ticketing-notes:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  listTicketingTickets:
+    speakeasy-default-list-ticketing-tickets:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  patchTicketingCustomer:
+    speakeasy-default-patch-ticketing-customer:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchTicketingNote:
+    speakeasy-default-patch-ticketing-note:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  patchTicketingTicket:
+    speakeasy-default-patch-ticketing-ticket:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeTicketingCustomer:
+    speakeasy-default-remove-ticketing-customer:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeTicketingNote:
+    speakeasy-default-remove-ticketing-note:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  removeTicketingTicket:
+    speakeasy-default-remove-ticketing-ticket:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateTicketingCustomer:
+    speakeasy-default-update-ticketing-customer:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateTicketingNote:
+    speakeasy-default-update-ticketing-note:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  updateTicketingTicket:
+    speakeasy-default-update-ticketing-ticket:
+      parameters:
+        path:
+          connection_id: "<value>"
+          id: "<id>"
+  listUcCalls:
+    speakeasy-default-list-uc-calls:
+      parameters:
+        path:
+          connection_id: "<value>"
+        query: {}
+  createUnifiedConnection:
+    speakeasy-default-create-unified-connection: {}
+  createUnifiedWebhook:
+    speakeasy-default-create-unified-webhook: {}
+  getUnifiedApicall:
+    speakeasy-default-get-unified-apicall:
+      parameters:
+        path:
+          id: "<id>"
+  getUnifiedConnection:
+    speakeasy-default-get-unified-connection:
+      parameters:
+        path:
+          id: "<id>"
+  getUnifiedIntegrationAuth:
+    speakeasy-default-get-unified-integration-auth:
+      parameters:
+        path:
+          workspace_id: "<value>"
+          integration_type: "<value>"
+        query: {}
+  getUnifiedWebhook:
+    speakeasy-default-get-unified-webhook:
+      parameters:
+        path:
+          id: "<id>"
+  listUnifiedApicalls:
+    speakeasy-default-list-unified-apicalls: {}
+  listUnifiedConnections:
+    speakeasy-default-list-unified-connections: {}
+  listUnifiedIntegrationWorkspaces:
+    speakeasy-default-list-unified-integration-workspaces:
+      parameters:
+        path:
+          workspace_id: "<value>"
+        query: {}
+  listUnifiedIntegrations:
+    speakeasy-default-list-unified-integrations: {}
+  listUnifiedIssues:
+    speakeasy-default-list-unified-issues: {}
+  listUnifiedWebhooks:
+    speakeasy-default-list-unified-webhooks: {}
+  patchUnifiedConnection:
+    speakeasy-default-patch-unified-connection:
+      parameters:
+        path:
+          id: "<id>"
+  patchUnifiedWebhook:
+    speakeasy-default-patch-unified-webhook:
+      parameters:
+        path:
+          id: "<id>"
+  patchUnifiedWebhookTrigger:
+    speakeasy-default-patch-unified-webhook-trigger:
+      parameters:
+        path:
+          id: "<id>"
+  removeUnifiedConnection:
+    speakeasy-default-remove-unified-connection:
+      parameters:
+        path:
+          id: "<id>"
+  removeUnifiedWebhook:
+    speakeasy-default-remove-unified-webhook:
+      parameters:
+        path:
+          id: "<id>"
+  updateUnifiedConnection:
+    speakeasy-default-update-unified-connection:
+      parameters:
+        path:
+          id: "<id>"
+  updateUnifiedWebhook:
+    speakeasy-default-update-unified-webhook:
+      parameters:
+        path:
+          id: "<id>"
+  updateUnifiedWebhookTrigger:
+    speakeasy-default-update-unified-webhook-trigger:
+      parameters:
+        path:
+          id: "<id>"
+  getUnifiedIntegrationLogin:
+    speakeasy-default-get-unified-integration-login:
+      parameters:
+        path:
+          workspace_id: "<value>"
+          integration_type: "<value>"
+        query: {}
