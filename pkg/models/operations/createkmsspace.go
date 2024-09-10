@@ -11,6 +11,8 @@ type CreateKmsSpaceRequest struct {
 	KmsSpace *shared.KmsSpace `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateKmsSpaceRequest) GetKmsSpace() *shared.KmsSpace {
@@ -25,6 +27,13 @@ func (o *CreateKmsSpaceRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateKmsSpaceRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateKmsSpaceResponse struct {

@@ -12,6 +12,8 @@ type CreateAccountingAccountRequest struct {
 	AccountingAccount *shared.AccountingAccount `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateAccountingAccountRequest) GetAccountingAccount() *shared.AccountingAccount {
@@ -26,6 +28,13 @@ func (o *CreateAccountingAccountRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateAccountingAccountRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateAccountingAccountResponse struct {

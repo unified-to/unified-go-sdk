@@ -11,6 +11,8 @@ type CreatePaymentPaymentRequest struct {
 	PaymentPayment *shared.PaymentPayment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreatePaymentPaymentRequest) GetPaymentPayment() *shared.PaymentPayment {
@@ -25,6 +27,13 @@ func (o *CreatePaymentPaymentRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreatePaymentPaymentRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreatePaymentPaymentResponse struct {

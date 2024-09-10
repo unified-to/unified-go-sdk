@@ -11,6 +11,8 @@ type PatchAtsDocumentRequest struct {
 	AtsDocument *shared.AtsDocument `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
@@ -27,6 +29,13 @@ func (o *PatchAtsDocumentRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *PatchAtsDocumentRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 func (o *PatchAtsDocumentRequest) GetID() string {

@@ -11,6 +11,8 @@ type PatchAccountingContactRequest struct {
 	AccountingContact *shared.AccountingContact `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Contact
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
@@ -27,6 +29,13 @@ func (o *PatchAccountingContactRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *PatchAccountingContactRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 func (o *PatchAccountingContactRequest) GetID() string {

@@ -11,6 +11,8 @@ type CreateHrisLocationRequest struct {
 	HrisLocation *shared.HrisLocation `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateHrisLocationRequest) GetHrisLocation() *shared.HrisLocation {
@@ -25,6 +27,13 @@ func (o *CreateHrisLocationRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateHrisLocationRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateHrisLocationResponse struct {

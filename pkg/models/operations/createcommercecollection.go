@@ -12,6 +12,8 @@ type CreateCommerceCollectionRequest struct {
 	CommerceCollection *shared.CommerceCollection `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateCommerceCollectionRequest) GetCommerceCollection() *shared.CommerceCollection {
@@ -26,6 +28,13 @@ func (o *CreateCommerceCollectionRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateCommerceCollectionRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateCommerceCollectionResponse struct {

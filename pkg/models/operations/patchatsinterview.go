@@ -11,6 +11,8 @@ type PatchAtsInterviewRequest struct {
 	AtsInterview *shared.AtsInterview `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Interview
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
@@ -27,6 +29,13 @@ func (o *PatchAtsInterviewRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *PatchAtsInterviewRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 func (o *PatchAtsInterviewRequest) GetID() string {

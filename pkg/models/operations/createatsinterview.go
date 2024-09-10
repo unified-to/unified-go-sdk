@@ -11,6 +11,8 @@ type CreateAtsInterviewRequest struct {
 	AtsInterview *shared.AtsInterview `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateAtsInterviewRequest) GetAtsInterview() *shared.AtsInterview {
@@ -25,6 +27,13 @@ func (o *CreateAtsInterviewRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateAtsInterviewRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateAtsInterviewResponse struct {

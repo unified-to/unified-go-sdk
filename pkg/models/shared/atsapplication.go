@@ -79,6 +79,7 @@ type AtsApplication struct {
 	HiredAt        *time.Time             `json:"hired_at,omitempty"`
 	ID             *string                `json:"id,omitempty"`
 	JobID          *string                `json:"job_id,omitempty"`
+	Offers         []AtsOffer             `json:"offers,omitempty"`
 	OriginalStatus *string                `json:"original_status,omitempty"`
 	Raw            map[string]any         `json:"raw,omitempty"`
 	RejectedAt     *time.Time             `json:"rejected_at,omitempty"`
@@ -146,6 +147,13 @@ func (o *AtsApplication) GetJobID() *string {
 		return nil
 	}
 	return o.JobID
+}
+
+func (o *AtsApplication) GetOffers() []AtsOffer {
+	if o == nil {
+		return nil
+	}
+	return o.Offers
 }
 
 func (o *AtsApplication) GetOriginalStatus() *string {

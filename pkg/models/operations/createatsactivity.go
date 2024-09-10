@@ -11,6 +11,8 @@ type CreateAtsActivityRequest struct {
 	AtsActivity *shared.AtsActivity `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateAtsActivityRequest) GetAtsActivity() *shared.AtsActivity {
@@ -25,6 +27,13 @@ func (o *CreateAtsActivityRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateAtsActivityRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateAtsActivityResponse struct {

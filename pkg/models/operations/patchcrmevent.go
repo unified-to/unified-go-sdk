@@ -12,6 +12,8 @@ type PatchCrmEventRequest struct {
 	CrmEvent *shared.CrmEvent `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Event
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
@@ -28,6 +30,13 @@ func (o *PatchCrmEventRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *PatchCrmEventRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 func (o *PatchCrmEventRequest) GetID() string {

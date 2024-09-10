@@ -703,6 +703,35 @@ func (e *ListQuery) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListRawFields string
+
+const (
+	ListRawFieldsSupportedRequired ListRawFields = "supported-required"
+	ListRawFieldsSupported         ListRawFields = "supported"
+	ListRawFieldsNotSupported      ListRawFields = "not-supported"
+)
+
+func (e ListRawFields) ToPointer() *ListRawFields {
+	return &e
+}
+func (e *ListRawFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListRawFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListRawFields: %v", v)
+	}
+}
+
 type ListSortByCreatedAt string
 
 const (
@@ -1106,6 +1135,7 @@ type IntegrationSupport struct {
 	ListParentID        *ListParentID        `json:"list_parent_id,omitempty"`
 	ListProjectID       *ListProjectID       `json:"list_project_id,omitempty"`
 	ListQuery           *ListQuery           `json:"list_query,omitempty"`
+	ListRawFields       *ListRawFields       `json:"list_raw_fields,omitempty"`
 	ListSortByCreatedAt *ListSortByCreatedAt `json:"list_sort_by_created_at,omitempty"`
 	ListSortByName      *ListSortByName      `json:"list_sort_by_name,omitempty"`
 	ListSortByUpdatedAt *ListSortByUpdatedAt `json:"list_sort_by_updated_at,omitempty"`
@@ -1299,6 +1329,13 @@ func (o *IntegrationSupport) GetListQuery() *ListQuery {
 		return nil
 	}
 	return o.ListQuery
+}
+
+func (o *IntegrationSupport) GetListRawFields() *ListRawFields {
+	if o == nil {
+		return nil
+	}
+	return o.ListRawFields
 }
 
 func (o *IntegrationSupport) GetListSortByCreatedAt() *ListSortByCreatedAt {

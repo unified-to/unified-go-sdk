@@ -11,6 +11,8 @@ type CreateCommerceLocationRequest struct {
 	CommerceLocation *shared.CommerceLocation `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateCommerceLocationRequest) GetCommerceLocation() *shared.CommerceLocation {
@@ -25,6 +27,13 @@ func (o *CreateCommerceLocationRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateCommerceLocationRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateCommerceLocationResponse struct {

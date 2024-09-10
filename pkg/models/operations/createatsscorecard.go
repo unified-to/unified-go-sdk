@@ -11,6 +11,8 @@ type CreateAtsScorecardRequest struct {
 	AtsScorecard *shared.AtsScorecard `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Comma-delimited fields to return
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
 func (o *CreateAtsScorecardRequest) GetAtsScorecard() *shared.AtsScorecard {
@@ -25,6 +27,13 @@ func (o *CreateAtsScorecardRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *CreateAtsScorecardRequest) GetFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Fields
 }
 
 type CreateAtsScorecardResponse struct {
