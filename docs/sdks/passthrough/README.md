@@ -5,13 +5,16 @@
 
 ### Available Operations
 
-* [CreatePassthrough](#createpassthrough) - Passthrough POST
+* [CreatePassthroughJSON](#createpassthroughjson) - Passthrough POST
+* [CreatePassthroughRaw](#createpassthroughraw) - Passthrough POST
 * [ListPassthroughs](#listpassthroughs) - Passthrough GET
-* [PatchPassthrough](#patchpassthrough) - Passthrough PUT
+* [PatchPassthroughJSON](#patchpassthroughjson) - Passthrough PUT
+* [PatchPassthroughRaw](#patchpassthroughraw) - Passthrough PUT
 * [RemovePassthrough](#removepassthrough) - Passthrough DELETE
-* [UpdatePassthrough](#updatepassthrough) - Passthrough PUT
+* [UpdatePassthroughJSON](#updatepassthroughjson) - Passthrough PUT
+* [UpdatePassthroughRaw](#updatepassthroughraw) - Passthrough PUT
 
-## CreatePassthrough
+## CreatePassthroughJSON
 
 Passthrough POST
 
@@ -31,14 +34,14 @@ func main() {
     s := unifiedgosdk.New()
 
     ctx := context.Background()
-    res, err := s.Passthrough.CreatePassthrough(ctx, operations.CreatePassthroughRequest{
+    res, err := s.Passthrough.CreatePassthroughJSON(ctx, operations.CreatePassthroughJSONRequest{
         ConnectionID: "<value>",
-        Path: "/etc/periodic",
+        Path: "/opt/lib",
     })
     if err != nil {
         log.Fatal(err)
     }
-    if res.Result != nil {
+    if res.Body != nil {
         // handle response
     }
 }
@@ -46,15 +49,67 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.CreatePassthroughRequest](../../pkg/models/operations/createpassthroughrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.CreatePassthroughJSONRequest](../../pkg/models/operations/createpassthroughjsonrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.CreatePassthroughResponse](../../pkg/models/operations/createpassthroughresponse.md), error**
+**[*operations.CreatePassthroughJSONResponse](../../pkg/models/operations/createpassthroughjsonresponse.md), error**
+
+### Errors
+
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+
+## CreatePassthroughRaw
+
+Passthrough POST
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New()
+
+    ctx := context.Background()
+    res, err := s.Passthrough.CreatePassthroughRaw(ctx, operations.CreatePassthroughRawRequest{
+        ConnectionID: "<value>",
+        Path: "/etc/namedb",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Body != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.CreatePassthroughRawRequest](../../pkg/models/operations/createpassthroughrawrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.CreatePassthroughRawResponse](../../pkg/models/operations/createpassthroughrawresponse.md), error**
 
 ### Errors
 
@@ -90,7 +145,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.Result != nil {
+    if res.Body != nil {
         // handle response
     }
 }
@@ -115,7 +170,7 @@ func main() {
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 
-## PatchPassthrough
+## PatchPassthroughJSON
 
 Passthrough PUT
 
@@ -135,14 +190,14 @@ func main() {
     s := unifiedgosdk.New()
 
     ctx := context.Background()
-    res, err := s.Passthrough.PatchPassthrough(ctx, operations.PatchPassthroughRequest{
+    res, err := s.Passthrough.PatchPassthroughJSON(ctx, operations.PatchPassthroughJSONRequest{
         ConnectionID: "<value>",
-        Path: "/mnt",
+        Path: "/home/user",
     })
     if err != nil {
         log.Fatal(err)
     }
-    if res.Result != nil {
+    if res.Body != nil {
         // handle response
     }
 }
@@ -150,15 +205,67 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.PatchPassthroughRequest](../../pkg/models/operations/patchpassthroughrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.PatchPassthroughJSONRequest](../../pkg/models/operations/patchpassthroughjsonrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.PatchPassthroughResponse](../../pkg/models/operations/patchpassthroughresponse.md), error**
+**[*operations.PatchPassthroughJSONResponse](../../pkg/models/operations/patchpassthroughjsonresponse.md), error**
+
+### Errors
+
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+
+## PatchPassthroughRaw
+
+Passthrough PUT
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New()
+
+    ctx := context.Background()
+    res, err := s.Passthrough.PatchPassthroughRaw(ctx, operations.PatchPassthroughRawRequest{
+        ConnectionID: "<value>",
+        Path: "/etc/mail",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Body != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.PatchPassthroughRawRequest](../../pkg/models/operations/patchpassthroughrawrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.PatchPassthroughRawResponse](../../pkg/models/operations/patchpassthroughrawresponse.md), error**
 
 ### Errors
 
@@ -194,7 +301,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.Result != nil {
+    if res.Body != nil {
         // handle response
     }
 }
@@ -219,7 +326,7 @@ func main() {
 | sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 
-## UpdatePassthrough
+## UpdatePassthroughJSON
 
 Passthrough PUT
 
@@ -239,14 +346,14 @@ func main() {
     s := unifiedgosdk.New()
 
     ctx := context.Background()
-    res, err := s.Passthrough.UpdatePassthrough(ctx, operations.UpdatePassthroughRequest{
+    res, err := s.Passthrough.UpdatePassthroughJSON(ctx, operations.UpdatePassthroughJSONRequest{
         ConnectionID: "<value>",
-        Path: "/dev",
+        Path: "/etc/namedb",
     })
     if err != nil {
         log.Fatal(err)
     }
-    if res.Result != nil {
+    if res.Body != nil {
         // handle response
     }
 }
@@ -254,15 +361,67 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.UpdatePassthroughRequest](../../pkg/models/operations/updatepassthroughrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.UpdatePassthroughJSONRequest](../../pkg/models/operations/updatepassthroughjsonrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.UpdatePassthroughResponse](../../pkg/models/operations/updatepassthroughresponse.md), error**
+**[*operations.UpdatePassthroughJSONResponse](../../pkg/models/operations/updatepassthroughjsonresponse.md), error**
+
+### Errors
+
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
+
+
+## UpdatePassthroughRaw
+
+Passthrough PUT
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New()
+
+    ctx := context.Background()
+    res, err := s.Passthrough.UpdatePassthroughRaw(ctx, operations.UpdatePassthroughRawRequest{
+        ConnectionID: "<value>",
+        Path: "/System",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Body != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.UpdatePassthroughRawRequest](../../pkg/models/operations/updatepassthroughrawrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.UpdatePassthroughRawResponse](../../pkg/models/operations/updatepassthroughrawresponse.md), error**
 
 ### Errors
 

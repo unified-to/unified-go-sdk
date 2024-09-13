@@ -1,21 +1,22 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: cf72c39f8e74a269aab0cb250423c99a
+  docChecksum: 0d6e24164cc3d7a1033d4f9883eb8f98
   docVersion: "1.0"
-  speakeasyVersion: 1.395.0
-  generationVersion: 2.415.0
-  releaseVersion: 0.18.14
-  configChecksum: 860ce16b1f3f0548f0abeba6bcd29759
+  speakeasyVersion: 1.396.6
+  generationVersion: 2.415.6
+  releaseVersion: 0.19.0
+  configChecksum: b797190dfb5c6761fce85eac9f068a21
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 features:
   go:
+    acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.6
-    core: 3.5.6
+    core: 3.5.8
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.1
     globalSecurity: 2.82.10
@@ -61,7 +62,8 @@ generatedFiles:
   - /pkg/models/operations/createmartechlist.go
   - /pkg/models/operations/createmartechmember.go
   - /pkg/models/operations/createmessagingmessage.go
-  - /pkg/models/operations/createpassthrough.go
+  - /pkg/models/operations/createpassthroughjson.go
+  - /pkg/models/operations/createpassthroughraw.go
   - /pkg/models/operations/createpaymentlink.go
   - /pkg/models/operations/createpaymentpayment.go
   - /pkg/models/operations/createstoragefile.go
@@ -218,7 +220,8 @@ generatedFiles:
   - /pkg/models/operations/patchmartechlist.go
   - /pkg/models/operations/patchmartechmember.go
   - /pkg/models/operations/patchmessagingmessage.go
-  - /pkg/models/operations/patchpassthrough.go
+  - /pkg/models/operations/patchpassthroughjson.go
+  - /pkg/models/operations/patchpassthroughraw.go
   - /pkg/models/operations/patchpaymentlink.go
   - /pkg/models/operations/patchpaymentpayment.go
   - /pkg/models/operations/patchstoragefile.go
@@ -307,7 +310,8 @@ generatedFiles:
   - /pkg/models/operations/updatemartechlist.go
   - /pkg/models/operations/updatemartechmember.go
   - /pkg/models/operations/updatemessagingmessage.go
-  - /pkg/models/operations/updatepassthrough.go
+  - /pkg/models/operations/updatepassthroughjson.go
+  - /pkg/models/operations/updatepassthroughraw.go
   - /pkg/models/operations/updatepaymentlink.go
   - /pkg/models/operations/updatepaymentpayment.go
   - /pkg/models/operations/updatestoragefile.go
@@ -540,8 +544,10 @@ generatedFiles:
   - docs/pkg/models/operations/createmartechmemberresponse.md
   - docs/pkg/models/operations/createmessagingmessagerequest.md
   - docs/pkg/models/operations/createmessagingmessageresponse.md
-  - docs/pkg/models/operations/createpassthroughrequest.md
-  - docs/pkg/models/operations/createpassthroughresponse.md
+  - docs/pkg/models/operations/createpassthroughjsonrequest.md
+  - docs/pkg/models/operations/createpassthroughjsonresponse.md
+  - docs/pkg/models/operations/createpassthroughrawrequest.md
+  - docs/pkg/models/operations/createpassthroughrawresponse.md
   - docs/pkg/models/operations/createpaymentlinkrequest.md
   - docs/pkg/models/operations/createpaymentlinkresponse.md
   - docs/pkg/models/operations/createpaymentpaymentrequest.md
@@ -856,8 +862,10 @@ generatedFiles:
   - docs/pkg/models/operations/patchmartechmemberresponse.md
   - docs/pkg/models/operations/patchmessagingmessagerequest.md
   - docs/pkg/models/operations/patchmessagingmessageresponse.md
-  - docs/pkg/models/operations/patchpassthroughrequest.md
-  - docs/pkg/models/operations/patchpassthroughresponse.md
+  - docs/pkg/models/operations/patchpassthroughjsonrequest.md
+  - docs/pkg/models/operations/patchpassthroughjsonresponse.md
+  - docs/pkg/models/operations/patchpassthroughrawrequest.md
+  - docs/pkg/models/operations/patchpassthroughrawresponse.md
   - docs/pkg/models/operations/patchpaymentlinkrequest.md
   - docs/pkg/models/operations/patchpaymentlinkresponse.md
   - docs/pkg/models/operations/patchpaymentpaymentrequest.md
@@ -1036,8 +1044,10 @@ generatedFiles:
   - docs/pkg/models/operations/updatemartechmemberresponse.md
   - docs/pkg/models/operations/updatemessagingmessagerequest.md
   - docs/pkg/models/operations/updatemessagingmessageresponse.md
-  - docs/pkg/models/operations/updatepassthroughrequest.md
-  - docs/pkg/models/operations/updatepassthroughresponse.md
+  - docs/pkg/models/operations/updatepassthroughjsonrequest.md
+  - docs/pkg/models/operations/updatepassthroughjsonresponse.md
+  - docs/pkg/models/operations/updatepassthroughrawrequest.md
+  - docs/pkg/models/operations/updatepassthroughrawresponse.md
   - docs/pkg/models/operations/updatepaymentlinkrequest.md
   - docs/pkg/models/operations/updatepaymentlinkresponse.md
   - docs/pkg/models/operations/updatepaymentpaymentrequest.md
@@ -3039,6 +3049,26 @@ examples:
       responses:
         2XX:
           application/json: {}
+    speakeasy-default-create-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/opt/lib"
+      responses:
+        2XX:
+          '*/*': "0x3CbcA7c7be"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-create-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/etc/namedb"
+      responses:
+        2XX:
+          '*/*': "0x34ABa9b31D"
+          application/json: "<value>"
+          text/plain: "<value>"
   listPassthroughs:
     speakeasy-default-list-passthroughs:
       parameters:
@@ -3048,6 +3078,8 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>", "key1": "<value>"}
+          '*/*': "0xc838beeAd7"
+          text/plain: "<value>"
   patchPassthrough:
     speakeasy-default-patch-passthrough:
       parameters:
@@ -3057,6 +3089,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+    speakeasy-default-patch-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/home/user"
+      responses:
+        2XX:
+          '*/*': "0x4fb8209099"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-patch-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/etc/mail"
+      responses:
+        2XX:
+          '*/*': "0x7CEb8f75C6"
+          application/json: "<value>"
+          text/plain: "<value>"
   removePassthrough:
     speakeasy-default-remove-passthrough:
       parameters:
@@ -3066,6 +3118,8 @@ examples:
       responses:
         2XX:
           application/json: {}
+          '*/*': "0x0280cc8bc1"
+          text/plain: "<value>"
   updatePassthrough:
     speakeasy-default-update-passthrough:
       parameters:
@@ -3075,6 +3129,26 @@ examples:
       responses:
         2XX:
           application/json: {}
+    speakeasy-default-update-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/etc/namedb"
+      responses:
+        2XX:
+          '*/*': "0xDa7dcaB8ab"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-update-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/System"
+      responses:
+        2XX:
+          '*/*': "0x5587B3b9f8"
+          application/json: "<value>"
+          text/plain: "<value>"
   createPaymentLink:
     speakeasy-default-create-payment-link:
       parameters:

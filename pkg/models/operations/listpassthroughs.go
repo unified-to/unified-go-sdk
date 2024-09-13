@@ -27,14 +27,39 @@ func (o *ListPassthroughsRequest) GetPath() string {
 }
 
 type ListPassthroughsResponse struct {
+	// Successful
+	TwoXXApplicationJSONAny any
+	// Successful
+	TwoXXTextPlainRes *string
+	Body              []byte
 	// HTTP response content type for this operation
 	ContentType string
-	// Successful
-	Result map[string]any
+	Headers     map[string][]string
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
+}
+
+func (o *ListPassthroughsResponse) GetTwoXXApplicationJSONAny() any {
+	if o == nil {
+		return nil
+	}
+	return o.TwoXXApplicationJSONAny
+}
+
+func (o *ListPassthroughsResponse) GetTwoXXTextPlainRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.TwoXXTextPlainRes
+}
+
+func (o *ListPassthroughsResponse) GetBody() []byte {
+	if o == nil {
+		return nil
+	}
+	return o.Body
 }
 
 func (o *ListPassthroughsResponse) GetContentType() string {
@@ -44,11 +69,11 @@ func (o *ListPassthroughsResponse) GetContentType() string {
 	return o.ContentType
 }
 
-func (o *ListPassthroughsResponse) GetResult() map[string]any {
+func (o *ListPassthroughsResponse) GetHeaders() map[string][]string {
 	if o == nil {
-		return nil
+		return map[string][]string{}
 	}
-	return o.Result
+	return o.Headers
 }
 
 func (o *ListPassthroughsResponse) GetStatusCode() int {

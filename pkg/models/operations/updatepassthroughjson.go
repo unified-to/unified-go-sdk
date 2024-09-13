@@ -6,27 +6,36 @@ import (
 	"net/http"
 )
 
-type RemovePassthroughRequest struct {
+type UpdatePassthroughJSONRequest struct {
+	// integration-specific payload
+	RequestBody any `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	Path         string `pathParam:"style=simple,explode=false,name=path"`
 }
 
-func (o *RemovePassthroughRequest) GetConnectionID() string {
+func (o *UpdatePassthroughJSONRequest) GetRequestBody() any {
+	if o == nil {
+		return nil
+	}
+	return o.RequestBody
+}
+
+func (o *UpdatePassthroughJSONRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *RemovePassthroughRequest) GetPath() string {
+func (o *UpdatePassthroughJSONRequest) GetPath() string {
 	if o == nil {
 		return ""
 	}
 	return o.Path
 }
 
-type RemovePassthroughResponse struct {
+type UpdatePassthroughJSONResponse struct {
 	// Successful
 	TwoXXApplicationJSONAny any
 	// Successful
@@ -41,49 +50,49 @@ type RemovePassthroughResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemovePassthroughResponse) GetTwoXXApplicationJSONAny() any {
+func (o *UpdatePassthroughJSONResponse) GetTwoXXApplicationJSONAny() any {
 	if o == nil {
 		return nil
 	}
 	return o.TwoXXApplicationJSONAny
 }
 
-func (o *RemovePassthroughResponse) GetTwoXXTextPlainRes() *string {
+func (o *UpdatePassthroughJSONResponse) GetTwoXXTextPlainRes() *string {
 	if o == nil {
 		return nil
 	}
 	return o.TwoXXTextPlainRes
 }
 
-func (o *RemovePassthroughResponse) GetBody() []byte {
+func (o *UpdatePassthroughJSONResponse) GetBody() []byte {
 	if o == nil {
 		return nil
 	}
 	return o.Body
 }
 
-func (o *RemovePassthroughResponse) GetContentType() string {
+func (o *UpdatePassthroughJSONResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *RemovePassthroughResponse) GetHeaders() map[string][]string {
+func (o *UpdatePassthroughJSONResponse) GetHeaders() map[string][]string {
 	if o == nil {
 		return map[string][]string{}
 	}
 	return o.Headers
 }
 
-func (o *RemovePassthroughResponse) GetStatusCode() int {
+func (o *UpdatePassthroughJSONResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *RemovePassthroughResponse) GetRawResponse() *http.Response {
+func (o *UpdatePassthroughJSONResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

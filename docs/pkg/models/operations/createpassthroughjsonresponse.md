@@ -1,4 +1,4 @@
-# ListPassthroughsResponse
+# CreatePassthroughJSONResponse
 
 
 ## Fields

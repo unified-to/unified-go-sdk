@@ -6,27 +6,37 @@ import (
 	"net/http"
 )
 
-type RemovePassthroughRequest struct {
+type UpdatePassthroughRawRequest struct {
+	// integration-specific payload
+	// This field accepts []byte data or io.Reader implementations, such as *os.File.
+	RequestBody *any `request:"mediaType=text/plain"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	Path         string `pathParam:"style=simple,explode=false,name=path"`
 }
 
-func (o *RemovePassthroughRequest) GetConnectionID() string {
+func (o *UpdatePassthroughRawRequest) GetRequestBody() *any {
+	if o == nil {
+		return nil
+	}
+	return o.RequestBody
+}
+
+func (o *UpdatePassthroughRawRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *RemovePassthroughRequest) GetPath() string {
+func (o *UpdatePassthroughRawRequest) GetPath() string {
 	if o == nil {
 		return ""
 	}
 	return o.Path
 }
 
-type RemovePassthroughResponse struct {
+type UpdatePassthroughRawResponse struct {
 	// Successful
 	TwoXXApplicationJSONAny any
 	// Successful
@@ -41,49 +51,49 @@ type RemovePassthroughResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemovePassthroughResponse) GetTwoXXApplicationJSONAny() any {
+func (o *UpdatePassthroughRawResponse) GetTwoXXApplicationJSONAny() any {
 	if o == nil {
 		return nil
 	}
 	return o.TwoXXApplicationJSONAny
 }
 
-func (o *RemovePassthroughResponse) GetTwoXXTextPlainRes() *string {
+func (o *UpdatePassthroughRawResponse) GetTwoXXTextPlainRes() *string {
 	if o == nil {
 		return nil
 	}
 	return o.TwoXXTextPlainRes
 }
 
-func (o *RemovePassthroughResponse) GetBody() []byte {
+func (o *UpdatePassthroughRawResponse) GetBody() []byte {
 	if o == nil {
 		return nil
 	}
 	return o.Body
 }
 
-func (o *RemovePassthroughResponse) GetContentType() string {
+func (o *UpdatePassthroughRawResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *RemovePassthroughResponse) GetHeaders() map[string][]string {
+func (o *UpdatePassthroughRawResponse) GetHeaders() map[string][]string {
 	if o == nil {
 		return map[string][]string{}
 	}
 	return o.Headers
 }
 
-func (o *RemovePassthroughResponse) GetStatusCode() int {
+func (o *UpdatePassthroughRawResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *RemovePassthroughResponse) GetRawResponse() *http.Response {
+func (o *UpdatePassthroughRawResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
