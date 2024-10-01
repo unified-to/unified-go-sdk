@@ -78,6 +78,7 @@ type CommerceItemVariant struct {
 	IsVisible         *bool                `json:"is_visible,omitempty"`
 	Length            *float64             `json:"length,omitempty"`
 	Media             []CommerceItemMedia  `json:"media,omitempty"`
+	Metadata          []CommerceMetadata   `json:"metadata,omitempty"`
 	Name              *string              `json:"name,omitempty"`
 	Options           []CommerceItemOption `json:"options,omitempty"`
 	Prices            []CommerceItemPrice  `json:"prices,omitempty"`
@@ -172,6 +173,13 @@ func (o *CommerceItemVariant) GetMedia() []CommerceItemMedia {
 		return nil
 	}
 	return o.Media
+}
+
+func (o *CommerceItemVariant) GetMetadata() []CommerceMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *CommerceItemVariant) GetName() *string {

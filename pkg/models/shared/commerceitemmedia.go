@@ -37,6 +37,7 @@ type CommerceItemMedia struct {
 	Alt      *string                `json:"alt,omitempty"`
 	Height   *float64               `json:"height,omitempty"`
 	ID       *string                `json:"id,omitempty"`
+	Metadata []CommerceMetadata     `json:"metadata,omitempty"`
 	Position *float64               `json:"position,omitempty"`
 	Type     *CommerceItemMediaType `json:"type,omitempty"`
 	URL      string                 `json:"url"`
@@ -62,6 +63,13 @@ func (o *CommerceItemMedia) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *CommerceItemMedia) GetMetadata() []CommerceMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *CommerceItemMedia) GetPosition() *float64 {

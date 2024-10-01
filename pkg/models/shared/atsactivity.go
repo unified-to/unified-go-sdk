@@ -52,7 +52,7 @@ type AtsActivity struct {
 	IsPrivate     *bool                    `json:"is_private,omitempty"`
 	JobID         *string                  `json:"job_id,omitempty"`
 	Raw           map[string]any           `json:"raw,omitempty"`
-	Title         string                   `json:"title"`
+	Title         *string                  `json:"title,omitempty"`
 	To            []AtsEmail               `json:"to,omitempty"`
 	Type          *AtsActivityType         `json:"type,omitempty"`
 	UpdatedAt     *time.Time               `json:"updated_at,omitempty"`
@@ -162,9 +162,9 @@ func (o *AtsActivity) GetRaw() map[string]any {
 	return o.Raw
 }
 
-func (o *AtsActivity) GetTitle() string {
+func (o *AtsActivity) GetTitle() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Title
 }

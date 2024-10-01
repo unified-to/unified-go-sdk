@@ -36,7 +36,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Passthrough.CreatePassthroughJSON(ctx, operations.CreatePassthroughJSONRequest{
         ConnectionID: "<value>",
-        Path: "/opt/lib",
+        Path: "/etc/periodic",
     })
     if err != nil {
         log.Fatal(err)
@@ -61,10 +61,9 @@ func main() {
 
 ### Errors
 
-| Error Object       | Status Code        | Content Type       |
+| Error Type         | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
-
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## CreatePassthroughRaw
 
@@ -88,7 +87,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Passthrough.CreatePassthroughRaw(ctx, operations.CreatePassthroughRawRequest{
         ConnectionID: "<value>",
-        Path: "/etc/namedb",
+        Path: "/etc/periodic",
     })
     if err != nil {
         log.Fatal(err)
@@ -113,10 +112,9 @@ func main() {
 
 ### Errors
 
-| Error Object       | Status Code        | Content Type       |
+| Error Type         | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
-
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## ListPassthroughs
 
@@ -165,10 +163,9 @@ func main() {
 
 ### Errors
 
-| Error Object       | Status Code        | Content Type       |
+| Error Type         | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
-
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## PatchPassthroughJSON
 
@@ -192,7 +189,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Passthrough.PatchPassthroughJSON(ctx, operations.PatchPassthroughJSONRequest{
         ConnectionID: "<value>",
-        Path: "/home/user",
+        Path: "/mnt",
     })
     if err != nil {
         log.Fatal(err)
@@ -217,10 +214,9 @@ func main() {
 
 ### Errors
 
-| Error Object       | Status Code        | Content Type       |
+| Error Type         | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
-
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## PatchPassthroughRaw
 
@@ -244,7 +240,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Passthrough.PatchPassthroughRaw(ctx, operations.PatchPassthroughRawRequest{
         ConnectionID: "<value>",
-        Path: "/etc/mail",
+        Path: "/mnt",
     })
     if err != nil {
         log.Fatal(err)
@@ -269,10 +265,9 @@ func main() {
 
 ### Errors
 
-| Error Object       | Status Code        | Content Type       |
+| Error Type         | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
-
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## RemovePassthrough
 
@@ -321,10 +316,9 @@ func main() {
 
 ### Errors
 
-| Error Object       | Status Code        | Content Type       |
+| Error Type         | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
-
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## UpdatePassthroughJSON
 
@@ -348,7 +342,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Passthrough.UpdatePassthroughJSON(ctx, operations.UpdatePassthroughJSONRequest{
         ConnectionID: "<value>",
-        Path: "/etc/namedb",
+        Path: "/dev",
     })
     if err != nil {
         log.Fatal(err)
@@ -373,10 +367,9 @@ func main() {
 
 ### Errors
 
-| Error Object       | Status Code        | Content Type       |
+| Error Type         | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
-
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## UpdatePassthroughRaw
 
@@ -400,7 +393,7 @@ func main() {
     ctx := context.Background()
     res, err := s.Passthrough.UpdatePassthroughRaw(ctx, operations.UpdatePassthroughRawRequest{
         ConnectionID: "<value>",
-        Path: "/System",
+        Path: "/dev",
     })
     if err != nil {
         log.Fatal(err)
@@ -425,6 +418,6 @@ func main() {
 
 ### Errors
 
-| Error Object       | Status Code        | Content Type       |
+| Error Type         | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4xx-5xx            | */*                |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |

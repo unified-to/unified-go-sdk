@@ -15,6 +15,7 @@ type CommerceItem struct {
 	IsActive          *bool               `json:"is_active,omitempty"`
 	IsTaxable         *bool               `json:"is_taxable,omitempty"`
 	Media             []CommerceItemMedia `json:"media,omitempty"`
+	Metadata          []CommerceMetadata  `json:"metadata,omitempty"`
 	Name              *string             `json:"name,omitempty"`
 	PublicDescription *string             `json:"public_description,omitempty"`
 	PublicName        *string             `json:"public_name,omitempty"`
@@ -86,6 +87,13 @@ func (o *CommerceItem) GetMedia() []CommerceItemMedia {
 		return nil
 	}
 	return o.Media
+}
+
+func (o *CommerceItem) GetMetadata() []CommerceMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *CommerceItem) GetName() *string {

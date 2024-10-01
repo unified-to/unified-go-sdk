@@ -47,12 +47,14 @@ type APICall struct {
 	ID              *string     `json:"id,omitempty"`
 	IntegrationType string      `json:"integration_type"`
 	IPAddress       *string     `json:"ip_address,omitempty"`
+	IsBillable      *bool       `json:"is_billable,omitempty"`
 	Method          string      `json:"method"`
 	Name            string      `json:"name"`
 	Path            string      `json:"path"`
 	Size            *float64    `json:"size,omitempty"`
 	Status          string      `json:"status"`
 	Type            APICallType `json:"type"`
+	WebhookID       *string     `json:"webhook_id,omitempty"`
 	WorkspaceID     *string     `json:"workspace_id,omitempty"`
 }
 
@@ -123,6 +125,13 @@ func (o *APICall) GetIPAddress() *string {
 	return o.IPAddress
 }
 
+func (o *APICall) GetIsBillable() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsBillable
+}
+
 func (o *APICall) GetMethod() string {
 	if o == nil {
 		return ""
@@ -163,6 +172,13 @@ func (o *APICall) GetType() APICallType {
 		return APICallType("")
 	}
 	return o.Type
+}
+
+func (o *APICall) GetWebhookID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.WebhookID
 }
 
 func (o *APICall) GetWorkspaceID() *string {
