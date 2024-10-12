@@ -60,3 +60,5 @@
 | `ObjectTypeKmsPage`                | kms_page                           |
 | `ObjectTypeTaskProject`            | task_project                       |
 | `ObjectTypeTaskTask`               | task_task                          |
+| `ObjectTypeScimUsers`              | scim_users                         |
+| `ObjectTypeScimGroups`             | scim_groups                        |

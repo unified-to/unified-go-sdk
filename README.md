@@ -410,11 +410,16 @@ func main() {
 ### [Group](docs/sdks/group/README.md)
 
 * [CreateHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
+* [CreateScimGroups](docs/sdks/group/README.md#createscimgroups) - Create group
 * [GetHrisGroup](docs/sdks/group/README.md#gethrisgroup) - Retrieve a group
 * [ListHrisGroups](docs/sdks/group/README.md#listhrisgroups) - List all groups
+* [ListScimGroups](docs/sdks/group/README.md#listscimgroups) - List groups
 * [PatchHrisGroup](docs/sdks/group/README.md#patchhrisgroup) - Update a group
+* [PatchScimGroups](docs/sdks/group/README.md#patchscimgroups) - Update group
 * [RemoveHrisGroup](docs/sdks/group/README.md#removehrisgroup) - Remove a group
+* [RemoveScimGroups](docs/sdks/group/README.md#removescimgroups) - Delete group
 * [UpdateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
+* [UpdateScimGroups](docs/sdks/group/README.md#updatescimgroups) - Update group
 
 ### [Hris](docs/sdks/hris/README.md)
 
@@ -714,6 +719,20 @@ func main() {
 * [GetPaymentRefund](docs/sdks/refund/README.md#getpaymentrefund) - Retrieve a refund
 * [ListPaymentRefunds](docs/sdks/refund/README.md#listpaymentrefunds) - List all refunds
 
+### [Scim](docs/sdks/scim/README.md)
+
+* [CreateScimGroups](docs/sdks/scim/README.md#createscimgroups) - Create group
+* [CreateScimUsers](docs/sdks/scim/README.md#createscimusers) - Create user
+* [GetScimUsers](docs/sdks/scim/README.md#getscimusers) - Get user
+* [ListScimGroups](docs/sdks/scim/README.md#listscimgroups) - List groups
+* [ListScimUsers](docs/sdks/scim/README.md#listscimusers) - List users
+* [PatchScimGroups](docs/sdks/scim/README.md#patchscimgroups) - Update group
+* [PatchScimUsers](docs/sdks/scim/README.md#patchscimusers) - Update user
+* [RemoveScimGroups](docs/sdks/scim/README.md#removescimgroups) - Delete group
+* [RemoveScimUsers](docs/sdks/scim/README.md#removescimusers) - Delete user
+* [UpdateScimGroups](docs/sdks/scim/README.md#updatescimgroups) - Update group
+* [UpdateScimUsers](docs/sdks/scim/README.md#updatescimusers) - Update user
+
 ### [Scorecard](docs/sdks/scorecard/README.md)
 
 * [CreateAtsScorecard](docs/sdks/scorecard/README.md#createatsscorecard) - Create a scorecard
@@ -842,6 +861,15 @@ func main() {
 * [UpdateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
+
+### [User](docs/sdks/user/README.md)
+
+* [CreateScimUsers](docs/sdks/user/README.md#createscimusers) - Create user
+* [GetScimUsers](docs/sdks/user/README.md#getscimusers) - Get user
+* [ListScimUsers](docs/sdks/user/README.md#listscimusers) - List users
+* [PatchScimUsers](docs/sdks/user/README.md#patchscimusers) - Update user
+* [RemoveScimUsers](docs/sdks/user/README.md#removescimusers) - Delete user
+* [UpdateScimUsers](docs/sdks/user/README.md#updatescimusers) - Update user
 
 ### [Webhook](docs/sdks/webhook/README.md)
 

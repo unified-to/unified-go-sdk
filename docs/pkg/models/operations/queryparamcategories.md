@@ -22,3 +22,4 @@
 | `QueryParamCategoriesMessaging`   | messaging                         |
 | `QueryParamCategoriesKms`         | kms                               |
 | `QueryParamCategoriesTask`        | task                              |
+| `QueryParamCategoriesScim`        | scim                              |

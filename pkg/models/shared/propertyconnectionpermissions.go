@@ -108,6 +108,10 @@ const (
 	PropertyConnectionPermissionsTaskProjectWrite           PropertyConnectionPermissions = "task_project_write"
 	PropertyConnectionPermissionsTaskTaskRead               PropertyConnectionPermissions = "task_task_read"
 	PropertyConnectionPermissionsTaskTaskWrite              PropertyConnectionPermissions = "task_task_write"
+	PropertyConnectionPermissionsScimUsersRead              PropertyConnectionPermissions = "scim_users_read"
+	PropertyConnectionPermissionsScimUsersWrite             PropertyConnectionPermissions = "scim_users_write"
+	PropertyConnectionPermissionsScimGroupsRead             PropertyConnectionPermissions = "scim_groups_read"
+	PropertyConnectionPermissionsScimGroupsWrite            PropertyConnectionPermissions = "scim_groups_write"
 )
 
 func (e PropertyConnectionPermissions) ToPointer() *PropertyConnectionPermissions {
@@ -314,6 +318,14 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "task_task_read":
 		fallthrough
 	case "task_task_write":
+		fallthrough
+	case "scim_users_read":
+		fallthrough
+	case "scim_users_write":
+		fallthrough
+	case "scim_groups_read":
+		fallthrough
+	case "scim_groups_write":
 		*e = PropertyConnectionPermissions(v)
 		return nil
 	default:

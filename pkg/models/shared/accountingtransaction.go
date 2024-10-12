@@ -10,6 +10,7 @@ import (
 type AccountingTransaction struct {
 	AccountID       *string                         `json:"account_id,omitempty"`
 	ContactID       *string                         `json:"contact_id,omitempty"`
+	Contacts        []AccountingTransactionContact  `json:"contacts,omitempty"`
 	CreatedAt       *time.Time                      `json:"created_at,omitempty"`
 	Currency        *string                         `json:"currency,omitempty"`
 	CustomerMessage *string                         `json:"customer_message,omitempty"`
@@ -51,6 +52,13 @@ func (o *AccountingTransaction) GetContactID() *string {
 		return nil
 	}
 	return o.ContactID
+}
+
+func (o *AccountingTransaction) GetContacts() []AccountingTransactionContact {
+	if o == nil {
+		return nil
+	}
+	return o.Contacts
 }
 
 func (o *AccountingTransaction) GetCreatedAt() *time.Time {

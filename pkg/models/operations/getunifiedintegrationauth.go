@@ -109,6 +109,10 @@ const (
 	ScopesTaskProjectWrite           Scopes = "task_project_write"
 	ScopesTaskTaskRead               Scopes = "task_task_read"
 	ScopesTaskTaskWrite              Scopes = "task_task_write"
+	ScopesScimUsersRead              Scopes = "scim_users_read"
+	ScopesScimUsersWrite             Scopes = "scim_users_write"
+	ScopesScimGroupsRead             Scopes = "scim_groups_read"
+	ScopesScimGroupsWrite            Scopes = "scim_groups_write"
 )
 
 func (e Scopes) ToPointer() *Scopes {
@@ -315,6 +319,14 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "task_task_read":
 		fallthrough
 	case "task_task_write":
+		fallthrough
+	case "scim_users_read":
+		fallthrough
+	case "scim_users_write":
+		fallthrough
+	case "scim_groups_read":
+		fallthrough
+	case "scim_groups_write":
 		*e = Scopes(v)
 		return nil
 	default:

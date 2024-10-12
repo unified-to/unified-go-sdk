@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 3c4e8a5e234e6444307aef536fd547bd
+  docChecksum: 2f8b1ad907e9f06fa5885ee0f6d0b4ad
   docVersion: "1.0"
-  speakeasyVersion: 1.405.6
-  generationVersion: 2.428.1
-  releaseVersion: 0.19.1
-  configChecksum: 6f1240980e98595932dc2124480664c1
+  speakeasyVersion: 1.418.1
+  generationVersion: 2.438.3
+  releaseVersion: 0.19.2
+  configChecksum: 66613aab32c90bf75a3e5f9d5405a0d7
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.6
-    core: 3.5.12
+    core: 3.5.13
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.1
     globalSecurity: 2.82.10
@@ -66,6 +66,8 @@ generatedFiles:
   - /pkg/models/operations/createpassthroughraw.go
   - /pkg/models/operations/createpaymentlink.go
   - /pkg/models/operations/createpaymentpayment.go
+  - /pkg/models/operations/createscimgroups.go
+  - /pkg/models/operations/createscimusers.go
   - /pkg/models/operations/createstoragefile.go
   - /pkg/models/operations/createtaskproject.go
   - /pkg/models/operations/createtasktask.go
@@ -116,6 +118,7 @@ generatedFiles:
   - /pkg/models/operations/getpaymentpayment.go
   - /pkg/models/operations/getpaymentpayout.go
   - /pkg/models/operations/getpaymentrefund.go
+  - /pkg/models/operations/getscimusers.go
   - /pkg/models/operations/getstoragefile.go
   - /pkg/models/operations/gettaskproject.go
   - /pkg/models/operations/gettasktask.go
@@ -174,6 +177,8 @@ generatedFiles:
   - /pkg/models/operations/listpaymentpayments.go
   - /pkg/models/operations/listpaymentpayouts.go
   - /pkg/models/operations/listpaymentrefunds.go
+  - /pkg/models/operations/listscimgroups.go
+  - /pkg/models/operations/listscimusers.go
   - /pkg/models/operations/liststoragefiles.go
   - /pkg/models/operations/listtaskprojects.go
   - /pkg/models/operations/listtasktasks.go
@@ -224,6 +229,8 @@ generatedFiles:
   - /pkg/models/operations/patchpassthroughraw.go
   - /pkg/models/operations/patchpaymentlink.go
   - /pkg/models/operations/patchpaymentpayment.go
+  - /pkg/models/operations/patchscimgroups.go
+  - /pkg/models/operations/patchscimusers.go
   - /pkg/models/operations/patchstoragefile.go
   - /pkg/models/operations/patchtaskproject.go
   - /pkg/models/operations/patchtasktask.go
@@ -269,6 +276,8 @@ generatedFiles:
   - /pkg/models/operations/removepassthrough.go
   - /pkg/models/operations/removepaymentlink.go
   - /pkg/models/operations/removepaymentpayment.go
+  - /pkg/models/operations/removescimgroups.go
+  - /pkg/models/operations/removescimusers.go
   - /pkg/models/operations/removestoragefile.go
   - /pkg/models/operations/removetaskproject.go
   - /pkg/models/operations/removetasktask.go
@@ -314,6 +323,8 @@ generatedFiles:
   - /pkg/models/operations/updatepassthroughraw.go
   - /pkg/models/operations/updatepaymentlink.go
   - /pkg/models/operations/updatepaymentpayment.go
+  - /pkg/models/operations/updatescimgroups.go
+  - /pkg/models/operations/updatescimusers.go
   - /pkg/models/operations/updatestoragefile.go
   - /pkg/models/operations/updatetaskproject.go
   - /pkg/models/operations/updatetasktask.go
@@ -336,6 +347,7 @@ generatedFiles:
   - /pkg/models/shared/accountingtaxrate.go
   - /pkg/models/shared/accountingtelephone.go
   - /pkg/models/shared/accountingtransaction.go
+  - /pkg/models/shared/accountingtransactioncontact.go
   - /pkg/models/shared/accountingtransactionlineitem.go
   - /pkg/models/shared/apicall.go
   - /pkg/models/shared/atsactivity.go
@@ -382,6 +394,7 @@ generatedFiles:
   - /pkg/models/shared/genaicontent.go
   - /pkg/models/shared/genaimodel.go
   - /pkg/models/shared/genaiprompt.go
+  - /pkg/models/shared/group.go
   - /pkg/models/shared/hriscompany.go
   - /pkg/models/shared/hriscompensation.go
   - /pkg/models/shared/hrisemail.go
@@ -429,6 +442,8 @@ generatedFiles:
   - /pkg/models/shared/propertycrmleadaddress.go
   - /pkg/models/shared/propertyenrichcompanyaddress.go
   - /pkg/models/shared/propertyenrichpersonaddress.go
+  - /pkg/models/shared/propertygroupmeta.go
+  - /pkg/models/shared/propertygroupschemas.go
   - /pkg/models/shared/propertyhriscompanyaddress.go
   - /pkg/models/shared/propertyhrisemployeeaddress.go
   - /pkg/models/shared/propertyhrisemployeeemployeeroles.go
@@ -439,8 +454,15 @@ generatedFiles:
   - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventscreated.go
   - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.go
   - /pkg/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.go
+  - /pkg/models/shared/propertypropertyuserurnietfparamsscimschemasextensionenterprise20usermanager.go
   - /pkg/models/shared/propertystoragepermissionroles.go
   - /pkg/models/shared/propertyuccalltelephone.go
+  - /pkg/models/shared/propertyusermeta.go
+  - /pkg/models/shared/propertyusername.go
+  - /pkg/models/shared/propertyuserschemas.go
+  - /pkg/models/shared/propertyuserurnietfparamsscimschemasextensionenterprise20user.go
+  - /pkg/models/shared/propertyuserurnietfparamsscimschemasextensionlatticeattributes10user.go
+  - /pkg/models/shared/propertyuserurnietfparamsscimschemasextensionpeakon20user.go
   - /pkg/models/shared/security.go
   - /pkg/models/shared/storagefile.go
   - /pkg/models/shared/storagepermission.go
@@ -455,6 +477,8 @@ generatedFiles:
   - /pkg/models/shared/uccontact.go
   - /pkg/models/shared/ucemail.go
   - /pkg/models/shared/uctelephone.go
+  - /pkg/models/shared/undefined.go
+  - /pkg/models/shared/user.go
   - /pkg/models/shared/webhook.go
   - CONTRIBUTING.md
   - USAGE.md
@@ -553,6 +577,10 @@ generatedFiles:
   - docs/pkg/models/operations/createpaymentlinkresponse.md
   - docs/pkg/models/operations/createpaymentpaymentrequest.md
   - docs/pkg/models/operations/createpaymentpaymentresponse.md
+  - docs/pkg/models/operations/createscimgroupsrequest.md
+  - docs/pkg/models/operations/createscimgroupsresponse.md
+  - docs/pkg/models/operations/createscimusersrequest.md
+  - docs/pkg/models/operations/createscimusersresponse.md
   - docs/pkg/models/operations/createstoragefilerequest.md
   - docs/pkg/models/operations/createstoragefileresponse.md
   - docs/pkg/models/operations/createtaskprojectrequest.md
@@ -652,6 +680,8 @@ generatedFiles:
   - docs/pkg/models/operations/getpaymentpayoutresponse.md
   - docs/pkg/models/operations/getpaymentrefundrequest.md
   - docs/pkg/models/operations/getpaymentrefundresponse.md
+  - docs/pkg/models/operations/getscimusersrequest.md
+  - docs/pkg/models/operations/getscimusersresponse.md
   - docs/pkg/models/operations/getstoragefilerequest.md
   - docs/pkg/models/operations/getstoragefileresponse.md
   - docs/pkg/models/operations/gettaskprojectrequest.md
@@ -769,6 +799,10 @@ generatedFiles:
   - docs/pkg/models/operations/listpaymentpayoutsresponse.md
   - docs/pkg/models/operations/listpaymentrefundsrequest.md
   - docs/pkg/models/operations/listpaymentrefundsresponse.md
+  - docs/pkg/models/operations/listscimgroupsrequest.md
+  - docs/pkg/models/operations/listscimgroupsresponse.md
+  - docs/pkg/models/operations/listscimusersrequest.md
+  - docs/pkg/models/operations/listscimusersresponse.md
   - docs/pkg/models/operations/liststoragefilesrequest.md
   - docs/pkg/models/operations/liststoragefilesresponse.md
   - docs/pkg/models/operations/listtaskprojectsrequest.md
@@ -871,6 +905,10 @@ generatedFiles:
   - docs/pkg/models/operations/patchpaymentlinkresponse.md
   - docs/pkg/models/operations/patchpaymentpaymentrequest.md
   - docs/pkg/models/operations/patchpaymentpaymentresponse.md
+  - docs/pkg/models/operations/patchscimgroupsrequest.md
+  - docs/pkg/models/operations/patchscimgroupsresponse.md
+  - docs/pkg/models/operations/patchscimusersrequest.md
+  - docs/pkg/models/operations/patchscimusersresponse.md
   - docs/pkg/models/operations/patchstoragefilerequest.md
   - docs/pkg/models/operations/patchstoragefileresponse.md
   - docs/pkg/models/operations/patchtaskprojectrequest.md
@@ -962,6 +1000,10 @@ generatedFiles:
   - docs/pkg/models/operations/removepaymentlinkresponse.md
   - docs/pkg/models/operations/removepaymentpaymentrequest.md
   - docs/pkg/models/operations/removepaymentpaymentresponse.md
+  - docs/pkg/models/operations/removescimgroupsrequest.md
+  - docs/pkg/models/operations/removescimgroupsresponse.md
+  - docs/pkg/models/operations/removescimusersrequest.md
+  - docs/pkg/models/operations/removescimusersresponse.md
   - docs/pkg/models/operations/removestoragefilerequest.md
   - docs/pkg/models/operations/removestoragefileresponse.md
   - docs/pkg/models/operations/removetaskprojectrequest.md
@@ -1053,6 +1095,10 @@ generatedFiles:
   - docs/pkg/models/operations/updatepaymentlinkresponse.md
   - docs/pkg/models/operations/updatepaymentpaymentrequest.md
   - docs/pkg/models/operations/updatepaymentpaymentresponse.md
+  - docs/pkg/models/operations/updatescimgroupsrequest.md
+  - docs/pkg/models/operations/updatescimgroupsresponse.md
+  - docs/pkg/models/operations/updatescimusersrequest.md
+  - docs/pkg/models/operations/updatescimusersresponse.md
   - docs/pkg/models/operations/updatestoragefilerequest.md
   - docs/pkg/models/operations/updatestoragefileresponse.md
   - docs/pkg/models/operations/updatetaskprojectrequest.md
@@ -1089,6 +1135,7 @@ generatedFiles:
   - docs/pkg/models/shared/accountingtelephone.md
   - docs/pkg/models/shared/accountingtelephonetype.md
   - docs/pkg/models/shared/accountingtransaction.md
+  - docs/pkg/models/shared/accountingtransactioncontact.md
   - docs/pkg/models/shared/accountingtransactionlineitem.md
   - docs/pkg/models/shared/apicall.md
   - docs/pkg/models/shared/apicalltype.md
@@ -1152,6 +1199,7 @@ generatedFiles:
   - docs/pkg/models/shared/enrichpersonworkhistory.md
   - docs/pkg/models/shared/enrichtelephone.md
   - docs/pkg/models/shared/enrichtelephonetype.md
+  - docs/pkg/models/shared/ethnicity.md
   - docs/pkg/models/shared/event.md
   - docs/pkg/models/shared/frequency.md
   - docs/pkg/models/shared/fromwebhook.md
@@ -1159,6 +1207,7 @@ generatedFiles:
   - docs/pkg/models/shared/genaimodel.md
   - docs/pkg/models/shared/genaiprompt.md
   - docs/pkg/models/shared/gender.md
+  - docs/pkg/models/shared/group.md
   - docs/pkg/models/shared/hriscompany.md
   - docs/pkg/models/shared/hriscompensation.md
   - docs/pkg/models/shared/hriscompensationfrequency.md
@@ -1186,6 +1235,7 @@ generatedFiles:
   - docs/pkg/models/shared/kmspage.md
   - docs/pkg/models/shared/kmspagetype.md
   - docs/pkg/models/shared/kmsspace.md
+  - docs/pkg/models/shared/level.md
   - docs/pkg/models/shared/listaccountid.md
   - docs/pkg/models/shared/listapplicationid.md
   - docs/pkg/models/shared/listcandidateid.md
@@ -1228,6 +1278,7 @@ generatedFiles:
   - docs/pkg/models/shared/messagingmember.md
   - docs/pkg/models/shared/messagingmessage.md
   - docs/pkg/models/shared/objecttype.md
+  - docs/pkg/models/shared/operation.md
   - docs/pkg/models/shared/origin.md
   - docs/pkg/models/shared/paymentcollectionmethod.md
   - docs/pkg/models/shared/paymentlink.md
@@ -1261,6 +1312,8 @@ generatedFiles:
   - docs/pkg/models/shared/propertycrmleadaddress.md
   - docs/pkg/models/shared/propertyenrichcompanyaddress.md
   - docs/pkg/models/shared/propertyenrichpersonaddress.md
+  - docs/pkg/models/shared/propertygroupmeta.md
+  - docs/pkg/models/shared/propertygroupschemas.md
   - docs/pkg/models/shared/propertyhriscompanyaddress.md
   - docs/pkg/models/shared/propertyhrisemployeeaddress.md
   - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
@@ -1271,10 +1324,23 @@ generatedFiles:
   - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventscreated.md
   - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.md
   - docs/pkg/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.md
+  - docs/pkg/models/shared/propertypropertyuserurnietfparamsscimschemasextensionenterprise20usermanager.md
+  - docs/pkg/models/shared/propertypropertyuserurnietfparamsscimschemasextensionenterprise20usermanagertype.md
   - docs/pkg/models/shared/propertystoragepermissionroles.md
   - docs/pkg/models/shared/propertyuccalltelephone.md
   - docs/pkg/models/shared/propertyuccalltelephonetype.md
+  - docs/pkg/models/shared/propertyusermeta.md
+  - docs/pkg/models/shared/propertyusermetaresourcetype.md
+  - docs/pkg/models/shared/propertyusername.md
+  - docs/pkg/models/shared/propertyuserschemas.md
+  - docs/pkg/models/shared/propertyuserurnietfparamsscimschemasextensionenterprise20user.md
+  - docs/pkg/models/shared/propertyuserurnietfparamsscimschemasextensionenterprise20usergender.md
+  - docs/pkg/models/shared/propertyuserurnietfparamsscimschemasextensionlatticeattributes10user.md
+  - docs/pkg/models/shared/propertyuserurnietfparamsscimschemasextensionlatticeattributes10usergender.md
+  - docs/pkg/models/shared/propertyuserurnietfparamsscimschemasextensionpeakon20user.md
+  - docs/pkg/models/shared/propertyuserurnietfparamsscimschemasextensionpeakon20usergender.md
   - docs/pkg/models/shared/recommendation.md
+  - docs/pkg/models/shared/resourcetype.md
   - docs/pkg/models/shared/role.md
   - docs/pkg/models/shared/searchdomain.md
   - docs/pkg/models/shared/searchemail.md
@@ -1282,6 +1348,7 @@ generatedFiles:
   - docs/pkg/models/shared/searchname.md
   - docs/pkg/models/shared/searchtwitter.md
   - docs/pkg/models/shared/security.md
+  - docs/pkg/models/shared/sexualorientation.md
   - docs/pkg/models/shared/sizeunit.md
   - docs/pkg/models/shared/status.md
   - docs/pkg/models/shared/storagefile.md
@@ -1306,6 +1373,9 @@ generatedFiles:
   - docs/pkg/models/shared/ucemailtype.md
   - docs/pkg/models/shared/uctelephone.md
   - docs/pkg/models/shared/uctelephonetype.md
+  - docs/pkg/models/shared/undefined.md
+  - docs/pkg/models/shared/undefinedtype.md
+  - docs/pkg/models/shared/user.md
   - docs/pkg/models/shared/webhook.md
   - docs/pkg/models/shared/webhooktype.md
   - docs/pkg/models/shared/weightunit.md
@@ -1367,6 +1437,7 @@ generatedFiles:
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/refund/README.md
+  - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
@@ -1379,6 +1450,7 @@ generatedFiles:
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
+  - docs/sdks/user/README.md
   - docs/sdks/webhook/README.md
   - document.go
   - employee.go
@@ -1439,6 +1511,7 @@ generatedFiles:
   - project.go
   - prompt.go
   - refund.go
+  - scim.go
   - scorecard.go
   - space.go
   - storage.go
@@ -1451,6 +1524,7 @@ generatedFiles:
   - uc.go
   - unified.go
   - unifiedto.go
+  - user.go
   - webhook.go
 examples:
   createAccountingAccount:
@@ -3674,3 +3748,68 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createScimGroups:
+    speakeasy-default-create-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+  listScimGroups:
+    speakeasy-default-list-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchScimGroups:
+    speakeasy-default-patch-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeScimGroups:
+    speakeasy-default-remove-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateScimGroups:
+    speakeasy-default-update-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  createScimUsers:
+    speakeasy-default-create-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  getScimUsers:
+    speakeasy-default-get-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  listScimUsers:
+    speakeasy-default-list-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchScimUsers:
+    speakeasy-default-patch-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeScimUsers:
+    speakeasy-default-remove-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateScimUsers:
+    speakeasy-default-update-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"

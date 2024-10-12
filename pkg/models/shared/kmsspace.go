@@ -10,7 +10,7 @@ import (
 type KmsSpace struct {
 	CreatedAt     *time.Time     `json:"created_at,omitempty"`
 	Description   *string        `json:"description,omitempty"`
-	ID            string         `json:"id"`
+	ID            *string        `json:"id,omitempty"`
 	IsActive      *bool          `json:"is_active,omitempty"`
 	Name          string         `json:"name"`
 	ParentSpaceID *string        `default:"sp" json:"parent_space_id"`
@@ -44,9 +44,9 @@ func (o *KmsSpace) GetDescription() *string {
 	return o.Description
 }
 
-func (o *KmsSpace) GetID() string {
+func (o *KmsSpace) GetID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.ID
 }

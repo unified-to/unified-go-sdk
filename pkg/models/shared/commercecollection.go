@@ -42,7 +42,7 @@ func (e *CommerceCollectionType) UnmarshalJSON(data []byte) error {
 type CommerceCollection struct {
 	CreatedAt         *time.Time              `json:"created_at,omitempty"`
 	Description       *string                 `json:"description,omitempty"`
-	ID                string                  `json:"id"`
+	ID                *string                 `json:"id,omitempty"`
 	IsActive          *bool                   `json:"is_active,omitempty"`
 	IsFeatured        *bool                   `json:"is_featured,omitempty"`
 	IsVisible         *bool                   `json:"is_visible,omitempty"`
@@ -83,9 +83,9 @@ func (o *CommerceCollection) GetDescription() *string {
 	return o.Description
 }
 
-func (o *CommerceCollection) GetID() string {
+func (o *CommerceCollection) GetID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.ID
 }

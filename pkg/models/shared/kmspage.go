@@ -41,7 +41,7 @@ func (e *KmsPageType) UnmarshalJSON(data []byte) error {
 type KmsPage struct {
 	CreatedAt    *time.Time     `json:"created_at,omitempty"`
 	DownloadURL  string         `json:"download_url"`
-	ID           string         `json:"id"`
+	ID           *string        `json:"id,omitempty"`
 	IsActive     *bool          `json:"is_active,omitempty"`
 	ParentPageID *string        `json:"parent_page_id,omitempty"`
 	Raw          map[string]any `json:"raw,omitempty"`
@@ -77,9 +77,9 @@ func (o *KmsPage) GetDownloadURL() string {
 	return o.DownloadURL
 }
 
-func (o *KmsPage) GetID() string {
+func (o *KmsPage) GetID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.ID
 }

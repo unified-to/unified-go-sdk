@@ -29,6 +29,7 @@ const (
 	QueryParamCategoriesMessaging   QueryParamCategories = "messaging"
 	QueryParamCategoriesKms         QueryParamCategories = "kms"
 	QueryParamCategoriesTask        QueryParamCategories = "task"
+	QueryParamCategoriesScim        QueryParamCategories = "scim"
 )
 
 func (e QueryParamCategories) ToPointer() *QueryParamCategories {
@@ -73,6 +74,8 @@ func (e *QueryParamCategories) UnmarshalJSON(data []byte) error {
 	case "kms":
 		fallthrough
 	case "task":
+		fallthrough
+	case "scim":
 		*e = QueryParamCategories(v)
 		return nil
 	default:

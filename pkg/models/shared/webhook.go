@@ -96,6 +96,8 @@ const (
 	ObjectTypeKmsPage                ObjectType = "kms_page"
 	ObjectTypeTaskProject            ObjectType = "task_project"
 	ObjectTypeTaskTask               ObjectType = "task_task"
+	ObjectTypeScimUsers              ObjectType = "scim_users"
+	ObjectTypeScimGroups             ObjectType = "scim_groups"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -216,6 +218,10 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "task_project":
 		fallthrough
 	case "task_task":
+		fallthrough
+	case "scim_users":
+		fallthrough
+	case "scim_groups":
 		*e = ObjectType(v)
 		return nil
 	default:

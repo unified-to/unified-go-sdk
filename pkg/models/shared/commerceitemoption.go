@@ -3,15 +3,15 @@
 package shared
 
 type CommerceItemOption struct {
-	ID       string   `json:"id"`
+	ID       *string  `json:"id,omitempty"`
 	Name     string   `json:"name"`
 	Position *float64 `json:"position,omitempty"`
 	Values   []string `json:"values"`
 }
 
-func (o *CommerceItemOption) GetID() string {
+func (o *CommerceItemOption) GetID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.ID
 }

@@ -15,7 +15,7 @@ type Connection struct {
 	// The Integration categories that this connection supports
 	Categories      []PropertyConnectionCategories  `json:"categories"`
 	CreatedAt       *time.Time                      `json:"created_at,omitempty"`
-	CursorsCache    []map[string]any                `json:"cursors_cache,omitempty"`
+	CursorsCache    []Undefined                     `json:"cursors_cache,omitempty"`
 	Environment     *string                         `default:"Production" json:"environment"`
 	ExternalXref    *string                         `json:"external_xref,omitempty"`
 	ID              *string                         `json:"id,omitempty"`
@@ -67,7 +67,7 @@ func (o *Connection) GetCreatedAt() *time.Time {
 	return o.CreatedAt
 }
 
-func (o *Connection) GetCursorsCache() []map[string]any {
+func (o *Connection) GetCursorsCache() []Undefined {
 	if o == nil {
 		return nil
 	}

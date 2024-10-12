@@ -27,6 +27,7 @@ const (
 	PropertyConnectionCategoriesMessaging   PropertyConnectionCategories = "messaging"
 	PropertyConnectionCategoriesKms         PropertyConnectionCategories = "kms"
 	PropertyConnectionCategoriesTask        PropertyConnectionCategories = "task"
+	PropertyConnectionCategoriesScim        PropertyConnectionCategories = "scim"
 )
 
 func (e PropertyConnectionCategories) ToPointer() *PropertyConnectionCategories {
@@ -71,6 +72,8 @@ func (e *PropertyConnectionCategories) UnmarshalJSON(data []byte) error {
 	case "kms":
 		fallthrough
 	case "task":
+		fallthrough
+	case "scim":
 		*e = PropertyConnectionCategories(v)
 		return nil
 	default:

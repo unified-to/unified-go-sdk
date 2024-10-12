@@ -22,3 +22,4 @@
 | `CategoriesMessaging`   | messaging               |
 | `CategoriesKms`         | kms                     |
 | `CategoriesTask`        | task                    |
+| `CategoriesScim`        | scim                    |

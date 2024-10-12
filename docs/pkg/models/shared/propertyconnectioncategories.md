@@ -22,3 +22,4 @@
 | `PropertyConnectionCategoriesMessaging`   | messaging                                 |
 | `PropertyConnectionCategoriesKms`         | kms                                       |
 | `PropertyConnectionCategoriesTask`        | task                                      |
+| `PropertyConnectionCategoriesScim`        | scim                                      |

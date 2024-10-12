@@ -124,6 +124,8 @@ type UnifiedTo struct {
 	Link              *Link
 	Payout            *Payout
 	Refund            *Refund
+	Scim              *Scim
+	User              *User
 	Storage           *Storage
 	File              *File
 	Task              *Task
@@ -220,9 +222,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.19.1",
-			GenVersion:        "2.428.1",
-			UserAgent:         "speakeasy-sdk/go 0.19.1 2.428.1 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.19.2",
+			GenVersion:        "2.438.3",
+			UserAgent:         "speakeasy-sdk/go 0.19.2 2.438.3 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -345,6 +347,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Payout = newPayout(sdk.sdkConfiguration)
 
 	sdk.Refund = newRefund(sdk.sdkConfiguration)
+
+	sdk.Scim = newScim(sdk.sdkConfiguration)
+
+	sdk.User = newUser(sdk.sdkConfiguration)
 
 	sdk.Storage = newStorage(sdk.sdkConfiguration)
 

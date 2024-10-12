@@ -103,3 +103,7 @@
 | `ScopesTaskProjectWrite`           | task_project_write                 |
 | `ScopesTaskTaskRead`               | task_task_read                     |
 | `ScopesTaskTaskWrite`              | task_task_write                    |
+| `ScopesScimUsersRead`              | scim_users_read                    |
+| `ScopesScimUsersWrite`             | scim_users_write                   |
+| `ScopesScimGroupsRead`             | scim_groups_read                   |
+| `ScopesScimGroupsWrite`            | scim_groups_write                  |

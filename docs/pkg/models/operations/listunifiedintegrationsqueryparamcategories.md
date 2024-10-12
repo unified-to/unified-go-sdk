@@ -22,3 +22,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesMessaging`   | messaging                                                |
 | `ListUnifiedIntegrationsQueryParamCategoriesKms`         | kms                                                      |
 | `ListUnifiedIntegrationsQueryParamCategoriesTask`        | task                                                     |
+| `ListUnifiedIntegrationsQueryParamCategoriesScim`        | scim                                                     |

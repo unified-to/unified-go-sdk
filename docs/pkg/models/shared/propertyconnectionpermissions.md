@@ -103,3 +103,7 @@
 | `PropertyConnectionPermissionsTaskProjectWrite`           | task_project_write                                        |
 | `PropertyConnectionPermissionsTaskTaskRead`               | task_task_read                                            |
 | `PropertyConnectionPermissionsTaskTaskWrite`              | task_task_write                                           |
+| `PropertyConnectionPermissionsScimUsersRead`              | scim_users_read                                           |
+| `PropertyConnectionPermissionsScimUsersWrite`             | scim_users_write                                          |
+| `PropertyConnectionPermissionsScimGroupsRead`             | scim_groups_read                                          |
+| `PropertyConnectionPermissionsScimGroupsWrite`            | scim_groups_write                                         |
