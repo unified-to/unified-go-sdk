@@ -52,6 +52,7 @@ type AtsActivity struct {
 	IsPrivate     *bool                    `json:"is_private,omitempty"`
 	JobID         *string                  `json:"job_id,omitempty"`
 	Raw           map[string]any           `json:"raw,omitempty"`
+	SubType       *string                  `json:"sub_type,omitempty"`
 	Title         *string                  `json:"title,omitempty"`
 	To            []AtsEmail               `json:"to,omitempty"`
 	Type          *AtsActivityType         `json:"type,omitempty"`
@@ -160,6 +161,13 @@ func (o *AtsActivity) GetRaw() map[string]any {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *AtsActivity) GetSubType() *string {
+	if o == nil {
+		return nil
+	}
+	return o.SubType
 }
 
 func (o *AtsActivity) GetTitle() *string {
