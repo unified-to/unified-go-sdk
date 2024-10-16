@@ -37,6 +37,7 @@ func (e *StorageFileType) UnmarshalJSON(data []byte) error {
 
 type StorageFile struct {
 	CreatedAt   *time.Time          `json:"created_at,omitempty"`
+	Data        *string             `json:"data,omitempty"`
 	Description *string             `json:"description,omitempty"`
 	DownloadURL *string             `json:"download_url,omitempty"`
 	Hash        *string             `json:"hash,omitempty"`
@@ -68,6 +69,13 @@ func (o *StorageFile) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return o.CreatedAt
+}
+
+func (o *StorageFile) GetData() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Data
 }
 
 func (o *StorageFile) GetDescription() *string {

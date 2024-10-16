@@ -8,6 +8,7 @@ import (
 )
 
 type CommerceItem struct {
+	AccountID         *string             `json:"account_id,omitempty"`
 	CollectionIds     []string            `json:"collection_ids,omitempty"`
 	CreatedAt         *time.Time          `json:"created_at,omitempty"`
 	Description       *string             `json:"description,omitempty"`
@@ -38,6 +39,13 @@ func (c *CommerceItem) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (o *CommerceItem) GetAccountID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.AccountID
 }
 
 func (o *CommerceItem) GetCollectionIds() []string {
