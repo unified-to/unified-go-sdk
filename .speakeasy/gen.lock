@@ -3,10 +3,10 @@ id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
   docChecksum: 93cdcc39dcda25b2b2e4aa38187b5d21
   docVersion: "1.0"
-  speakeasyVersion: 1.418.4
-  generationVersion: 2.438.3
-  releaseVersion: 0.19.4
-  configChecksum: 6a2f520e8e8adce293b6f27108458ef0
+  speakeasyVersion: 1.419.2
+  generationVersion: 2.438.15
+  releaseVersion: 0.20.0
+  configChecksum: 77a53d2362ad8c2922892dc49cdb2d60
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -27,6 +27,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.83.0
     sdkHooks: 0.1.0
+    uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
