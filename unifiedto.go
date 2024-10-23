@@ -77,6 +77,7 @@ type UnifiedTo struct {
 	Contact           *Contact
 	Invoice           *Invoice
 	Journal           *Journal
+	Order             *Order
 	Organization      *Organization
 	Taxrate           *Taxrate
 	Transaction       *Transaction
@@ -222,9 +223,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.20.0",
+			SDKVersion:        "0.20.1",
 			GenVersion:        "2.438.15",
-			UserAgent:         "speakeasy-sdk/go 0.20.0 2.438.15 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:         "speakeasy-sdk/go 0.20.1 2.438.15 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -253,6 +254,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Invoice = newInvoice(sdk.sdkConfiguration)
 
 	sdk.Journal = newJournal(sdk.sdkConfiguration)
+
+	sdk.Order = newOrder(sdk.sdkConfiguration)
 
 	sdk.Organization = newOrganization(sdk.sdkConfiguration)
 

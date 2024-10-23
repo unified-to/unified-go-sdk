@@ -19,6 +19,8 @@
 | `ScopesAccountingTaxrateRead`      | accounting_taxrate_read            |
 | `ScopesAccountingTaxrateWrite`     | accounting_taxrate_write           |
 | `ScopesAccountingOrganizationRead` | accounting_organization_read       |
+| `ScopesAccountingOrderRead`        | accounting_order_read              |
+| `ScopesAccountingOrderWrite`       | accounting_order_write             |
 | `ScopesPaymentPaymentRead`         | payment_payment_read               |
 | `ScopesPaymentPaymentWrite`        | payment_payment_write              |
 | `ScopesPaymentPayoutRead`          | payment_payout_read                |

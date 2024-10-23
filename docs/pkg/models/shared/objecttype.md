@@ -12,6 +12,7 @@
 | `ObjectTypeAccountingInvoice`      | accounting_invoice                 |
 | `ObjectTypeAccountingTaxrate`      | accounting_taxrate                 |
 | `ObjectTypeAccountingOrganization` | accounting_organization            |
+| `ObjectTypeAccountingOrder`        | accounting_order                   |
 | `ObjectTypePaymentPayment`         | payment_payment                    |
 | `ObjectTypePaymentLink`            | payment_link                       |
 | `ObjectTypePaymentPayout`          | payment_payout                     |

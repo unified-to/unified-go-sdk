@@ -48,6 +48,7 @@ const (
 	ObjectTypeAccountingInvoice      ObjectType = "accounting_invoice"
 	ObjectTypeAccountingTaxrate      ObjectType = "accounting_taxrate"
 	ObjectTypeAccountingOrganization ObjectType = "accounting_organization"
+	ObjectTypeAccountingOrder        ObjectType = "accounting_order"
 	ObjectTypePaymentPayment         ObjectType = "payment_payment"
 	ObjectTypePaymentLink            ObjectType = "payment_link"
 	ObjectTypePaymentPayout          ObjectType = "payment_payout"
@@ -122,6 +123,8 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "accounting_taxrate":
 		fallthrough
 	case "accounting_organization":
+		fallthrough
+	case "accounting_order":
 		fallthrough
 	case "payment_payment":
 		fallthrough

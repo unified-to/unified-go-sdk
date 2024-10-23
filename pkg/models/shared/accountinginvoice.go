@@ -76,6 +76,32 @@ func (e *AccountingInvoiceStatus) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type AccountingInvoiceType string
+
+const (
+	AccountingInvoiceTypeBill    AccountingInvoiceType = "BILL"
+	AccountingInvoiceTypeInvoice AccountingInvoiceType = "INVOICE"
+)
+
+func (e AccountingInvoiceType) ToPointer() *AccountingInvoiceType {
+	return &e
+}
+func (e *AccountingInvoiceType) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "BILL":
+		fallthrough
+	case "INVOICE":
+		*e = AccountingInvoiceType(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for AccountingInvoiceType: %v", v)
+	}
+}
+
 type AccountingInvoice struct {
 	BalanceAmount           *float64                 `json:"balance_amount,omitempty"`
 	CancelledAt             *time.Time               `json:"cancelled_at,omitempty"`
@@ -85,6 +111,7 @@ type AccountingInvoice struct {
 	DiscountAmount          *float64                 `json:"discount_amount,omitempty"`
 	DueAt                   *time.Time               `json:"due_at,omitempty"`
 	ID                      *string                  `json:"id,omitempty"`
+	InvoiceAt               *time.Time               `json:"invoice_at,omitempty"`
 	InvoiceNumber           *string                  `json:"invoice_number,omitempty"`
 	Lineitems               []AccountingLineitem     `json:"lineitems,omitempty"`
 	Notes                   *string                  `json:"notes,omitempty"`
@@ -98,6 +125,7 @@ type AccountingInvoice struct {
 	Status                  *AccountingInvoiceStatus `json:"status,omitempty"`
 	TaxAmount               *float64                 `json:"tax_amount,omitempty"`
 	TotalAmount             *float64                 `json:"total_amount,omitempty"`
+	Type                    *AccountingInvoiceType   `json:"type,omitempty"`
 	UpdatedAt               *time.Time               `json:"updated_at,omitempty"`
 	URL                     *string                  `json:"url,omitempty"`
 }
@@ -167,6 +195,13 @@ func (o *AccountingInvoice) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *AccountingInvoice) GetInvoiceAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.InvoiceAt
 }
 
 func (o *AccountingInvoice) GetInvoiceNumber() *string {
@@ -258,6 +293,13 @@ func (o *AccountingInvoice) GetTotalAmount() *float64 {
 		return nil
 	}
 	return o.TotalAmount
+}
+
+func (o *AccountingInvoice) GetType() *AccountingInvoiceType {
+	if o == nil {
+		return nil
+	}
+	return o.Type
 }
 
 func (o *AccountingInvoice) GetUpdatedAt() *time.Time {
