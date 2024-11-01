@@ -18,6 +18,7 @@ type PaymentLink struct {
 	Lineitems       []PaymentLinkLineitem `json:"lineitems,omitempty"`
 	PaymentID       *string               `json:"payment_id,omitempty"`
 	Raw             map[string]any        `json:"raw,omitempty"`
+	SuccessURL      *string               `json:"success_url,omitempty"`
 	UpdatedAt       *time.Time            `json:"updated_at,omitempty"`
 	URL             *string               `json:"url,omitempty"`
 }
@@ -101,6 +102,13 @@ func (o *PaymentLink) GetRaw() map[string]any {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *PaymentLink) GetSuccessURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.SuccessURL
 }
 
 func (o *PaymentLink) GetUpdatedAt() *time.Time {
