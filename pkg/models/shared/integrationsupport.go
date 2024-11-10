@@ -152,6 +152,35 @@ func (e *ListChannelID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListClassID string
+
+const (
+	ListClassIDSupportedRequired ListClassID = "supported-required"
+	ListClassIDSupported         ListClassID = "supported"
+	ListClassIDNotSupported      ListClassID = "not-supported"
+)
+
+func (e ListClassID) ToPointer() *ListClassID {
+	return &e
+}
+func (e *ListClassID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListClassID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListClassID: %v", v)
+	}
+}
+
 type ListCollectionID string
 
 const (
@@ -239,6 +268,35 @@ func (e *ListContactID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListCourseID string
+
+const (
+	ListCourseIDSupportedRequired ListCourseID = "supported-required"
+	ListCourseIDSupported         ListCourseID = "supported"
+	ListCourseIDNotSupported      ListCourseID = "not-supported"
+)
+
+func (e ListCourseID) ToPointer() *ListCourseID {
+	return &e
+}
+func (e *ListCourseID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListCourseID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCourseID: %v", v)
+	}
+}
+
 type ListCustomerID string
 
 const (
@@ -294,6 +352,35 @@ func (e *ListDealID) UnmarshalJSON(data []byte) error {
 		return nil
 	default:
 		return fmt.Errorf("invalid value for ListDealID: %v", v)
+	}
+}
+
+type ListInstructorID string
+
+const (
+	ListInstructorIDSupportedRequired ListInstructorID = "supported-required"
+	ListInstructorIDSupported         ListInstructorID = "supported"
+	ListInstructorIDNotSupported      ListInstructorID = "not-supported"
+)
+
+func (e ListInstructorID) ToPointer() *ListInstructorID {
+	return &e
+}
+func (e *ListInstructorID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListInstructorID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListInstructorID: %v", v)
 	}
 }
 
@@ -848,6 +935,35 @@ func (e *ListSpaceID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListStudentID string
+
+const (
+	ListStudentIDSupportedRequired ListStudentID = "supported-required"
+	ListStudentIDSupported         ListStudentID = "supported"
+	ListStudentIDNotSupported      ListStudentID = "not-supported"
+)
+
+func (e ListStudentID) ToPointer() *ListStudentID {
+	return &e
+}
+func (e *ListStudentID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListStudentID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListStudentID: %v", v)
+	}
+}
+
 type ListTicketID string
 
 const (
@@ -1116,11 +1232,14 @@ type IntegrationSupport struct {
 	ListApplicationID   *ListApplicationID   `json:"list_application_id,omitempty"`
 	ListCandidateID     *ListCandidateID     `json:"list_candidate_id,omitempty"`
 	ListChannelID       *ListChannelID       `json:"list_channel_id,omitempty"`
+	ListClassID         *ListClassID         `json:"list_class_id,omitempty"`
 	ListCollectionID    *ListCollectionID    `json:"list_collection_id,omitempty"`
 	ListCompanyID       *ListCompanyID       `json:"list_company_id,omitempty"`
 	ListContactID       *ListContactID       `json:"list_contact_id,omitempty"`
+	ListCourseID        *ListCourseID        `json:"list_course_id,omitempty"`
 	ListCustomerID      *ListCustomerID      `json:"list_customer_id,omitempty"`
 	ListDealID          *ListDealID          `json:"list_deal_id,omitempty"`
+	ListInstructorID    *ListInstructorID    `json:"list_instructor_id,omitempty"`
 	ListInterviewID     *ListInterviewID     `json:"list_interview_id,omitempty"`
 	ListInvoiceID       *ListInvoiceID       `json:"list_invoice_id,omitempty"`
 	ListItemID          *ListItemID          `json:"list_item_id,omitempty"`
@@ -1140,6 +1259,7 @@ type IntegrationSupport struct {
 	ListSortByName      *ListSortByName      `json:"list_sort_by_name,omitempty"`
 	ListSortByUpdatedAt *ListSortByUpdatedAt `json:"list_sort_by_updated_at,omitempty"`
 	ListSpaceID         *ListSpaceID         `json:"list_space_id,omitempty"`
+	ListStudentID       *ListStudentID       `json:"list_student_id,omitempty"`
 	ListTicketID        *ListTicketID        `json:"list_ticket_id,omitempty"`
 	ListType            *ListType            `json:"list_type,omitempty"`
 	ListUpdatedGte      *ListUpdatedGte      `json:"list_updated_gte,omitempty"`
@@ -1198,6 +1318,13 @@ func (o *IntegrationSupport) GetListChannelID() *ListChannelID {
 	return o.ListChannelID
 }
 
+func (o *IntegrationSupport) GetListClassID() *ListClassID {
+	if o == nil {
+		return nil
+	}
+	return o.ListClassID
+}
+
 func (o *IntegrationSupport) GetListCollectionID() *ListCollectionID {
 	if o == nil {
 		return nil
@@ -1219,6 +1346,13 @@ func (o *IntegrationSupport) GetListContactID() *ListContactID {
 	return o.ListContactID
 }
 
+func (o *IntegrationSupport) GetListCourseID() *ListCourseID {
+	if o == nil {
+		return nil
+	}
+	return o.ListCourseID
+}
+
 func (o *IntegrationSupport) GetListCustomerID() *ListCustomerID {
 	if o == nil {
 		return nil
@@ -1231,6 +1365,13 @@ func (o *IntegrationSupport) GetListDealID() *ListDealID {
 		return nil
 	}
 	return o.ListDealID
+}
+
+func (o *IntegrationSupport) GetListInstructorID() *ListInstructorID {
+	if o == nil {
+		return nil
+	}
+	return o.ListInstructorID
 }
 
 func (o *IntegrationSupport) GetListInterviewID() *ListInterviewID {
@@ -1364,6 +1505,13 @@ func (o *IntegrationSupport) GetListSpaceID() *ListSpaceID {
 		return nil
 	}
 	return o.ListSpaceID
+}
+
+func (o *IntegrationSupport) GetListStudentID() *ListStudentID {
+	if o == nil {
+		return nil
+	}
+	return o.ListStudentID
 }
 
 func (o *IntegrationSupport) GetListTicketID() *ListTicketID {

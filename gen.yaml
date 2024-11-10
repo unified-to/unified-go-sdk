@@ -14,10 +14,11 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.20.15
+  version: 0.20.16
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   clientServerStatusCodesAsErrors: true
+  defaultErrorName: SDKError
   flattenGlobalSecurity: true
   imports:
     option: openapi

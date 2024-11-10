@@ -115,6 +115,24 @@ const (
 	ScopesScimUsersWrite             Scopes = "scim_users_write"
 	ScopesScimGroupsRead             Scopes = "scim_groups_read"
 	ScopesScimGroupsWrite            Scopes = "scim_groups_write"
+	ScopesLmsCourseRead              Scopes = "lms_course_read"
+	ScopesLmsCourseWrite             Scopes = "lms_course_write"
+	ScopesLmsClassRead               Scopes = "lms_class_read"
+	ScopesLmsClassWrite              Scopes = "lms_class_write"
+	ScopesLmsStudentRead             Scopes = "lms_student_read"
+	ScopesLmsStudentWrite            Scopes = "lms_student_write"
+	ScopesLmsInstructorRead          Scopes = "lms_instructor_read"
+	ScopesLmsInstructorWrite         Scopes = "lms_instructor_write"
+	ScopesRepoOrganizationRead       Scopes = "repo_organization_read"
+	ScopesRepoOrganizationWrite      Scopes = "repo_organization_write"
+	ScopesRepoRepositoryRead         Scopes = "repo_repository_read"
+	ScopesRepoRepositoryWrite        Scopes = "repo_repository_write"
+	ScopesRepoBranchRead             Scopes = "repo_branch_read"
+	ScopesRepoBranchWrite            Scopes = "repo_branch_write"
+	ScopesRepoCommitRead             Scopes = "repo_commit_read"
+	ScopesRepoCommitWrite            Scopes = "repo_commit_write"
+	ScopesRepoPullrequestRead        Scopes = "repo_pullrequest_read"
+	ScopesRepoPullrequestWrite       Scopes = "repo_pullrequest_write"
 )
 
 func (e Scopes) ToPointer() *Scopes {
@@ -333,6 +351,42 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "scim_groups_read":
 		fallthrough
 	case "scim_groups_write":
+		fallthrough
+	case "lms_course_read":
+		fallthrough
+	case "lms_course_write":
+		fallthrough
+	case "lms_class_read":
+		fallthrough
+	case "lms_class_write":
+		fallthrough
+	case "lms_student_read":
+		fallthrough
+	case "lms_student_write":
+		fallthrough
+	case "lms_instructor_read":
+		fallthrough
+	case "lms_instructor_write":
+		fallthrough
+	case "repo_organization_read":
+		fallthrough
+	case "repo_organization_write":
+		fallthrough
+	case "repo_repository_read":
+		fallthrough
+	case "repo_repository_write":
+		fallthrough
+	case "repo_branch_read":
+		fallthrough
+	case "repo_branch_write":
+		fallthrough
+	case "repo_commit_read":
+		fallthrough
+	case "repo_commit_write":
+		fallthrough
+	case "repo_pullrequest_read":
+		fallthrough
+	case "repo_pullrequest_write":
 		*e = Scopes(v)
 		return nil
 	default:

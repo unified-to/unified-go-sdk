@@ -1,0 +1,12 @@
+# ScimGroupMember
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `DollarRef`                                                                      | **string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Display`                                                                        | **string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Operation`                                                                      | [*shared.Operation](../../../pkg/models/shared/operation.md)                     | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Type`                                                                           | [*shared.ScimGroupMemberType](../../../pkg/models/shared/scimgroupmembertype.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Value`                                                                          | *string*                                                                         | :heavy_check_mark:                                                               | N/A                                                                              |

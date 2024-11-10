@@ -8,6 +8,7 @@
 * [CreateHrisGroup](#createhrisgroup) - Create a group
 * [CreateScimGroups](#createscimgroups) - Create group
 * [GetHrisGroup](#gethrisgroup) - Retrieve a group
+* [GetScimGroups](#getscimgroups) - Get group
 * [ListHrisGroups](#listhrisgroups) - List all groups
 * [ListScimGroups](#listscimgroups) - List groups
 * [PatchHrisGroup](#patchhrisgroup) - Update a group
@@ -93,7 +94,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.Group != nil {
+    if res.ScimGroup != nil {
         // handle response
     }
 }
@@ -161,6 +162,57 @@ func main() {
 ### Response
 
 **[*operations.GetHrisGroupResponse](../../pkg/models/operations/gethrisgroupresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetScimGroups
+
+Get group
+
+### Example Usage
+
+```go
+package main
+
+import(
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"context"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    s := unifiedgosdk.New()
+
+    ctx := context.Background()
+    res, err := s.Group.GetScimGroups(ctx, operations.GetScimGroupsRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ScimGroup != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.GetScimGroupsRequest](../../pkg/models/operations/getscimgroupsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.GetScimGroupsResponse](../../pkg/models/operations/getscimgroupsresponse.md), error**
 
 ### Errors
 
@@ -244,7 +296,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.Groups != nil {
+    if res.ScimGroups != nil {
         // handle response
     }
 }
@@ -346,7 +398,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.Group != nil {
+    if res.ScimGroup != nil {
         // handle response
     }
 }
@@ -550,7 +602,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.Group != nil {
+    if res.ScimGroup != nil {
         // handle response
     }
 }

@@ -31,12 +31,12 @@ func (o *GetScimUsersRequest) GetID() string {
 type GetScimUsersResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	// Successful
+	ScimUser *shared.ScimUser
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	User *shared.User
 }
 
 func (o *GetScimUsersResponse) GetContentType() string {
@@ -44,6 +44,13 @@ func (o *GetScimUsersResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
+}
+
+func (o *GetScimUsersResponse) GetScimUser() *shared.ScimUser {
+	if o == nil {
+		return nil
+	}
+	return o.ScimUser
 }
 
 func (o *GetScimUsersResponse) GetStatusCode() int {
@@ -58,11 +65,4 @@ func (o *GetScimUsersResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
-}
-
-func (o *GetScimUsersResponse) GetUser() *shared.User {
-	if o == nil {
-		return nil
-	}
-	return o.User
 }

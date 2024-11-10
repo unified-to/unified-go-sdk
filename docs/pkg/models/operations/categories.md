@@ -23,3 +23,5 @@
 | `CategoriesKms`         | kms                     |
 | `CategoriesTask`        | task                    |
 | `CategoriesScim`        | scim                    |
+| `CategoriesLms`         | lms                     |
+| `CategoriesRepo`        | repo                    |

@@ -114,6 +114,11 @@ type UnifiedTo struct {
 	Kms               *Kms
 	Page              *Page
 	Space             *Space
+	Lms               *Lms
+	Class             *Class
+	Course            *Course
+	Instructor        *Instructor
+	Student           *Student
 	Martech           *Martech
 	List              *List
 	Member            *Member
@@ -125,6 +130,11 @@ type UnifiedTo struct {
 	Link              *Link
 	Payout            *Payout
 	Refund            *Refund
+	Repo              *Repo
+	Branch            *Branch
+	Commit            *Commit
+	Pullrequest       *Pullrequest
+	Repository        *Repository
 	Scim              *Scim
 	User              *User
 	Storage           *Storage
@@ -223,9 +233,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.20.15",
-			GenVersion:        "2.452.0",
-			UserAgent:         "speakeasy-sdk/go 0.20.15 2.452.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.20.16",
+			GenVersion:        "2.455.2",
+			UserAgent:         "speakeasy-sdk/go 0.20.16 2.455.2 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -329,6 +339,16 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Space = newSpace(sdk.sdkConfiguration)
 
+	sdk.Lms = newLms(sdk.sdkConfiguration)
+
+	sdk.Class = newClass(sdk.sdkConfiguration)
+
+	sdk.Course = newCourse(sdk.sdkConfiguration)
+
+	sdk.Instructor = newInstructor(sdk.sdkConfiguration)
+
+	sdk.Student = newStudent(sdk.sdkConfiguration)
+
 	sdk.Martech = newMartech(sdk.sdkConfiguration)
 
 	sdk.List = newList(sdk.sdkConfiguration)
@@ -350,6 +370,16 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Payout = newPayout(sdk.sdkConfiguration)
 
 	sdk.Refund = newRefund(sdk.sdkConfiguration)
+
+	sdk.Repo = newRepo(sdk.sdkConfiguration)
+
+	sdk.Branch = newBranch(sdk.sdkConfiguration)
+
+	sdk.Commit = newCommit(sdk.sdkConfiguration)
+
+	sdk.Pullrequest = newPullrequest(sdk.sdkConfiguration)
+
+	sdk.Repository = newRepository(sdk.sdkConfiguration)
 
 	sdk.Scim = newScim(sdk.sdkConfiguration)
 

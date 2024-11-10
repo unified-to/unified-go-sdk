@@ -114,6 +114,24 @@ const (
 	PropertyConnectionPermissionsScimUsersWrite             PropertyConnectionPermissions = "scim_users_write"
 	PropertyConnectionPermissionsScimGroupsRead             PropertyConnectionPermissions = "scim_groups_read"
 	PropertyConnectionPermissionsScimGroupsWrite            PropertyConnectionPermissions = "scim_groups_write"
+	PropertyConnectionPermissionsLmsCourseRead              PropertyConnectionPermissions = "lms_course_read"
+	PropertyConnectionPermissionsLmsCourseWrite             PropertyConnectionPermissions = "lms_course_write"
+	PropertyConnectionPermissionsLmsClassRead               PropertyConnectionPermissions = "lms_class_read"
+	PropertyConnectionPermissionsLmsClassWrite              PropertyConnectionPermissions = "lms_class_write"
+	PropertyConnectionPermissionsLmsStudentRead             PropertyConnectionPermissions = "lms_student_read"
+	PropertyConnectionPermissionsLmsStudentWrite            PropertyConnectionPermissions = "lms_student_write"
+	PropertyConnectionPermissionsLmsInstructorRead          PropertyConnectionPermissions = "lms_instructor_read"
+	PropertyConnectionPermissionsLmsInstructorWrite         PropertyConnectionPermissions = "lms_instructor_write"
+	PropertyConnectionPermissionsRepoOrganizationRead       PropertyConnectionPermissions = "repo_organization_read"
+	PropertyConnectionPermissionsRepoOrganizationWrite      PropertyConnectionPermissions = "repo_organization_write"
+	PropertyConnectionPermissionsRepoRepositoryRead         PropertyConnectionPermissions = "repo_repository_read"
+	PropertyConnectionPermissionsRepoRepositoryWrite        PropertyConnectionPermissions = "repo_repository_write"
+	PropertyConnectionPermissionsRepoBranchRead             PropertyConnectionPermissions = "repo_branch_read"
+	PropertyConnectionPermissionsRepoBranchWrite            PropertyConnectionPermissions = "repo_branch_write"
+	PropertyConnectionPermissionsRepoCommitRead             PropertyConnectionPermissions = "repo_commit_read"
+	PropertyConnectionPermissionsRepoCommitWrite            PropertyConnectionPermissions = "repo_commit_write"
+	PropertyConnectionPermissionsRepoPullrequestRead        PropertyConnectionPermissions = "repo_pullrequest_read"
+	PropertyConnectionPermissionsRepoPullrequestWrite       PropertyConnectionPermissions = "repo_pullrequest_write"
 )
 
 func (e PropertyConnectionPermissions) ToPointer() *PropertyConnectionPermissions {
@@ -332,6 +350,42 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "scim_groups_read":
 		fallthrough
 	case "scim_groups_write":
+		fallthrough
+	case "lms_course_read":
+		fallthrough
+	case "lms_course_write":
+		fallthrough
+	case "lms_class_read":
+		fallthrough
+	case "lms_class_write":
+		fallthrough
+	case "lms_student_read":
+		fallthrough
+	case "lms_student_write":
+		fallthrough
+	case "lms_instructor_read":
+		fallthrough
+	case "lms_instructor_write":
+		fallthrough
+	case "repo_organization_read":
+		fallthrough
+	case "repo_organization_write":
+		fallthrough
+	case "repo_repository_read":
+		fallthrough
+	case "repo_repository_write":
+		fallthrough
+	case "repo_branch_read":
+		fallthrough
+	case "repo_branch_write":
+		fallthrough
+	case "repo_commit_read":
+		fallthrough
+	case "repo_commit_write":
+		fallthrough
+	case "repo_pullrequest_read":
+		fallthrough
+	case "repo_pullrequest_write":
 		*e = PropertyConnectionPermissions(v)
 		return nil
 	default:

@@ -99,6 +99,15 @@ const (
 	ObjectTypeTaskTask               ObjectType = "task_task"
 	ObjectTypeScimUsers              ObjectType = "scim_users"
 	ObjectTypeScimGroups             ObjectType = "scim_groups"
+	ObjectTypeLmsCourse              ObjectType = "lms_course"
+	ObjectTypeLmsClass               ObjectType = "lms_class"
+	ObjectTypeLmsStudent             ObjectType = "lms_student"
+	ObjectTypeLmsInstructor          ObjectType = "lms_instructor"
+	ObjectTypeRepoOrganization       ObjectType = "repo_organization"
+	ObjectTypeRepoRepository         ObjectType = "repo_repository"
+	ObjectTypeRepoBranch             ObjectType = "repo_branch"
+	ObjectTypeRepoCommit             ObjectType = "repo_commit"
+	ObjectTypeRepoPullrequest        ObjectType = "repo_pullrequest"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -225,6 +234,24 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "scim_users":
 		fallthrough
 	case "scim_groups":
+		fallthrough
+	case "lms_course":
+		fallthrough
+	case "lms_class":
+		fallthrough
+	case "lms_student":
+		fallthrough
+	case "lms_instructor":
+		fallthrough
+	case "repo_organization":
+		fallthrough
+	case "repo_repository":
+		fallthrough
+	case "repo_branch":
+		fallthrough
+	case "repo_commit":
+		fallthrough
+	case "repo_pullrequest":
 		*e = ObjectType(v)
 		return nil
 	default:

@@ -8,16 +8,16 @@ import (
 )
 
 type CreateScimGroupsRequest struct {
-	Group *shared.Group `request:"mediaType=application/json"`
+	ScimGroup *shared.ScimGroup `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 }
 
-func (o *CreateScimGroupsRequest) GetGroup() *shared.Group {
+func (o *CreateScimGroupsRequest) GetScimGroup() *shared.ScimGroup {
 	if o == nil {
 		return nil
 	}
-	return o.Group
+	return o.ScimGroup
 }
 
 func (o *CreateScimGroupsRequest) GetConnectionID() string {
@@ -31,7 +31,7 @@ type CreateScimGroupsResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	Group *shared.Group
+	ScimGroup *shared.ScimGroup
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -45,11 +45,11 @@ func (o *CreateScimGroupsResponse) GetContentType() string {
 	return o.ContentType
 }
 
-func (o *CreateScimGroupsResponse) GetGroup() *shared.Group {
+func (o *CreateScimGroupsResponse) GetScimGroup() *shared.ScimGroup {
 	if o == nil {
 		return nil
 	}
-	return o.Group
+	return o.ScimGroup
 }
 
 func (o *CreateScimGroupsResponse) GetStatusCode() int {

@@ -23,3 +23,5 @@
 | `QueryParamCategoriesKms`         | kms                               |
 | `QueryParamCategoriesTask`        | task                              |
 | `QueryParamCategoriesScim`        | scim                              |
+| `QueryParamCategoriesLms`         | lms                               |
+| `QueryParamCategoriesRepo`        | repo                              |

@@ -8,18 +8,18 @@ import (
 )
 
 type PatchScimUsersRequest struct {
-	User *shared.User `request:"mediaType=application/json"`
+	ScimUser *shared.ScimUser `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// ID of the User
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchScimUsersRequest) GetUser() *shared.User {
+func (o *PatchScimUsersRequest) GetScimUser() *shared.ScimUser {
 	if o == nil {
 		return nil
 	}
-	return o.User
+	return o.ScimUser
 }
 
 func (o *PatchScimUsersRequest) GetConnectionID() string {
@@ -39,12 +39,12 @@ func (o *PatchScimUsersRequest) GetID() string {
 type PatchScimUsersResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	// Successful
+	ScimUser *shared.ScimUser
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	User *shared.User
 }
 
 func (o *PatchScimUsersResponse) GetContentType() string {
@@ -52,6 +52,13 @@ func (o *PatchScimUsersResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
+}
+
+func (o *PatchScimUsersResponse) GetScimUser() *shared.ScimUser {
+	if o == nil {
+		return nil
+	}
+	return o.ScimUser
 }
 
 func (o *PatchScimUsersResponse) GetStatusCode() int {
@@ -66,11 +73,4 @@ func (o *PatchScimUsersResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
-}
-
-func (o *PatchScimUsersResponse) GetUser() *shared.User {
-	if o == nil {
-		return nil
-	}
-	return o.User
 }

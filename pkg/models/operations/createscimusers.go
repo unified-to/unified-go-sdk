@@ -8,7 +8,7 @@ import (
 )
 
 type CreateScimUsersRequest struct {
-	User *shared.User `request:"mediaType=application/json"`
+	ScimUser *shared.ScimUser `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string   `pathParam:"style=simple,explode=false,name=connection_id"`
 	Count        *float64 `queryParam:"style=form,explode=true,name=count"`
@@ -18,11 +18,11 @@ type CreateScimUsersRequest struct {
 	StartIndex   *float64 `queryParam:"style=form,explode=true,name=startIndex"`
 }
 
-func (o *CreateScimUsersRequest) GetUser() *shared.User {
+func (o *CreateScimUsersRequest) GetScimUser() *shared.ScimUser {
 	if o == nil {
 		return nil
 	}
-	return o.User
+	return o.ScimUser
 }
 
 func (o *CreateScimUsersRequest) GetConnectionID() string {
@@ -70,12 +70,12 @@ func (o *CreateScimUsersRequest) GetStartIndex() *float64 {
 type CreateScimUsersResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	// Successful
+	ScimUser *shared.ScimUser
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	User *shared.User
 }
 
 func (o *CreateScimUsersResponse) GetContentType() string {
@@ -83,6 +83,13 @@ func (o *CreateScimUsersResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
+}
+
+func (o *CreateScimUsersResponse) GetScimUser() *shared.ScimUser {
+	if o == nil {
+		return nil
+	}
+	return o.ScimUser
 }
 
 func (o *CreateScimUsersResponse) GetStatusCode() int {
@@ -97,11 +104,4 @@ func (o *CreateScimUsersResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
-}
-
-func (o *CreateScimUsersResponse) GetUser() *shared.User {
-	if o == nil {
-		return nil
-	}
-	return o.User
 }

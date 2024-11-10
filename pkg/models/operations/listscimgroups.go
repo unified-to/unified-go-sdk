@@ -63,7 +63,7 @@ type ListScimGroupsResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	Groups []shared.Group
+	ScimGroups []shared.ScimGroup
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -77,11 +77,11 @@ func (o *ListScimGroupsResponse) GetContentType() string {
 	return o.ContentType
 }
 
-func (o *ListScimGroupsResponse) GetGroups() []shared.Group {
+func (o *ListScimGroupsResponse) GetScimGroups() []shared.ScimGroup {
 	if o == nil {
 		return nil
 	}
-	return o.Groups
+	return o.ScimGroups
 }
 
 func (o *ListScimGroupsResponse) GetStatusCode() int {

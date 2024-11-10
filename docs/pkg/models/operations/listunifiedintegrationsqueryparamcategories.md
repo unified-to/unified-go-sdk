@@ -23,3 +23,5 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesKms`         | kms                                                      |
 | `ListUnifiedIntegrationsQueryParamCategoriesTask`        | task                                                     |
 | `ListUnifiedIntegrationsQueryParamCategoriesScim`        | scim                                                     |
+| `ListUnifiedIntegrationsQueryParamCategoriesLms`         | lms                                                      |
+| `ListUnifiedIntegrationsQueryParamCategoriesRepo`        | repo                                                     |

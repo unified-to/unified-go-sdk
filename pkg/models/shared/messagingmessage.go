@@ -15,6 +15,7 @@ type MessagingMessage struct {
 	MessageHTML        *string                               `json:"message_html,omitempty"`
 	ParentMessageID    *string                               `json:"parent_message_id,omitempty"`
 	Raw                map[string]any                        `json:"raw,omitempty"`
+	Reference          *string                               `json:"reference,omitempty"`
 	Subject            *string                               `json:"subject,omitempty"`
 	UpdatedAt          *string                               `json:"updated_at,omitempty"`
 	WebURL             *string                               `json:"web_url,omitempty"`
@@ -102,6 +103,13 @@ func (o *MessagingMessage) GetRaw() map[string]any {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *MessagingMessage) GetReference() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Reference
 }
 
 func (o *MessagingMessage) GetSubject() *string {

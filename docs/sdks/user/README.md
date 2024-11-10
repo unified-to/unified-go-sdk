@@ -38,7 +38,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.User != nil {
+    if res.ScimUser != nil {
         // handle response
     }
 }
@@ -89,7 +89,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.User != nil {
+    if res.ScimUser != nil {
         // handle response
     }
 }
@@ -139,7 +139,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.Users != nil {
+    if res.ScimUsers != nil {
         // handle response
     }
 }
@@ -190,7 +190,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.User != nil {
+    if res.ScimUser != nil {
         // handle response
     }
 }
@@ -292,7 +292,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.User != nil {
+    if res.ScimUser != nil {
         // handle response
     }
 }

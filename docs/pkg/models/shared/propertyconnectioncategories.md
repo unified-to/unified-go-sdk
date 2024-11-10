@@ -23,3 +23,5 @@
 | `PropertyConnectionCategoriesKms`         | kms                                       |
 | `PropertyConnectionCategoriesTask`        | task                                      |
 | `PropertyConnectionCategoriesScim`        | scim                                      |
+| `PropertyConnectionCategoriesLms`         | lms                                       |
+| `PropertyConnectionCategoriesRepo`        | repo                                      |

@@ -63,3 +63,12 @@
 | `ObjectTypeTaskTask`               | task_task                          |
 | `ObjectTypeScimUsers`              | scim_users                         |
 | `ObjectTypeScimGroups`             | scim_groups                        |
+| `ObjectTypeLmsCourse`              | lms_course                         |
+| `ObjectTypeLmsClass`               | lms_class                          |
+| `ObjectTypeLmsStudent`             | lms_student                        |
+| `ObjectTypeLmsInstructor`          | lms_instructor                     |
+| `ObjectTypeRepoOrganization`       | repo_organization                  |
+| `ObjectTypeRepoRepository`         | repo_repository                    |
+| `ObjectTypeRepoBranch`             | repo_branch                        |
+| `ObjectTypeRepoCommit`             | repo_commit                        |
+| `ObjectTypeRepoPullrequest`        | repo_pullrequest                   |

@@ -51,7 +51,7 @@ func (s *User) CreateScimUsers(ctx context.Context, request operations.CreateSci
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "User", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimUser", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -183,12 +183,12 @@ func (s *User) CreateScimUsers(ctx context.Context, request operations.CreateSci
 				return nil, err
 			}
 
-			var out shared.User
+			var out shared.ScimUser
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.User = &out
+			res.ScimUser = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -364,12 +364,12 @@ func (s *User) GetScimUsers(ctx context.Context, request operations.GetScimUsers
 				return nil, err
 			}
 
-			var out shared.User
+			var out shared.ScimUser
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.User = &out
+			res.ScimUser = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -549,12 +549,12 @@ func (s *User) ListScimUsers(ctx context.Context, request operations.ListScimUse
 				return nil, err
 			}
 
-			var out []shared.User
+			var out []shared.ScimUser
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.Users = out
+			res.ScimUsers = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -608,7 +608,7 @@ func (s *User) PatchScimUsers(ctx context.Context, request operations.PatchScimU
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "User", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimUser", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -736,12 +736,12 @@ func (s *User) PatchScimUsers(ctx context.Context, request operations.PatchScimU
 				return nil, err
 			}
 
-			var out shared.User
+			var out shared.ScimUser
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.User = &out
+			res.ScimUser = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -952,7 +952,7 @@ func (s *User) UpdateScimUsers(ctx context.Context, request operations.UpdateSci
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "User", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimUser", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1080,12 +1080,12 @@ func (s *User) UpdateScimUsers(ctx context.Context, request operations.UpdateSci
 				return nil, err
 			}
 
-			var out shared.User
+			var out shared.ScimUser
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.User = &out
+			res.ScimUser = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {

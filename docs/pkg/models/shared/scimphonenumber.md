@@ -1,0 +1,11 @@
+# ScimPhoneNumber
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `Display`                                                                        | **string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Primary`                                                                        | **bool*                                                                          | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Type`                                                                           | [*shared.ScimPhoneNumberType](../../../pkg/models/shared/scimphonenumbertype.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Value`                                                                          | **string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |

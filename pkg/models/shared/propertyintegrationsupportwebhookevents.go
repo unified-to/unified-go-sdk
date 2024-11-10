@@ -3,26 +3,26 @@
 package shared
 
 type PropertyIntegrationSupportWebhookEvents struct {
-	Created []PropertyPropertyIntegrationSupportWebhookEventsCreated `json:"created,omitempty"`
-	Deleted []PropertyPropertyIntegrationSupportWebhookEventsDeleted `json:"deleted,omitempty"`
-	Updated []PropertyPropertyIntegrationSupportWebhookEventsUpdated `json:"updated,omitempty"`
+	Created []PropertyIntegrationSupportWebhookEventsCreated `json:"created,omitempty"`
+	Deleted []PropertyIntegrationSupportWebhookEventsDeleted `json:"deleted,omitempty"`
+	Updated []PropertyIntegrationSupportWebhookEventsUpdated `json:"updated,omitempty"`
 }
 
-func (o *PropertyIntegrationSupportWebhookEvents) GetCreated() []PropertyPropertyIntegrationSupportWebhookEventsCreated {
+func (o *PropertyIntegrationSupportWebhookEvents) GetCreated() []PropertyIntegrationSupportWebhookEventsCreated {
 	if o == nil {
 		return nil
 	}
 	return o.Created
 }
 
-func (o *PropertyIntegrationSupportWebhookEvents) GetDeleted() []PropertyPropertyIntegrationSupportWebhookEventsDeleted {
+func (o *PropertyIntegrationSupportWebhookEvents) GetDeleted() []PropertyIntegrationSupportWebhookEventsDeleted {
 	if o == nil {
 		return nil
 	}
 	return o.Deleted
 }
 
-func (o *PropertyIntegrationSupportWebhookEvents) GetUpdated() []PropertyPropertyIntegrationSupportWebhookEventsUpdated {
+func (o *PropertyIntegrationSupportWebhookEvents) GetUpdated() []PropertyIntegrationSupportWebhookEventsUpdated {
 	if o == nil {
 		return nil
 	}
