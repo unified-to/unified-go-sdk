@@ -6,7 +6,7 @@ type ScimGroup struct {
 	DisplayName string  `json:"displayName"`
 	ExternalID  *string `json:"externalId,omitempty"`
 	GroupType   *string `json:"groupType,omitempty"`
-	ID          string  `json:"id"`
+	ID          *string `json:"id,omitempty"`
 	// An array of members
 	Members []ScimGroupMember      `json:"members,omitempty"`
 	Meta    *PropertyScimGroupMeta `json:"meta,omitempty"`
@@ -35,9 +35,9 @@ func (o *ScimGroup) GetGroupType() *string {
 	return o.GroupType
 }
 
-func (o *ScimGroup) GetID() string {
+func (o *ScimGroup) GetID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.ID
 }
