@@ -3173,6 +3173,7 @@ func (s *Lms) RemoveLmsClass(ctx context.Context, request operations.RemoveLmsCl
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -3181,9 +3182,9 @@ func (s *Lms) RemoveLmsClass(ctx context.Context, request operations.RemoveLmsCl
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -3330,6 +3331,7 @@ func (s *Lms) RemoveLmsCourse(ctx context.Context, request operations.RemoveLmsC
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -3338,9 +3340,9 @@ func (s *Lms) RemoveLmsCourse(ctx context.Context, request operations.RemoveLmsC
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -3487,6 +3489,7 @@ func (s *Lms) RemoveLmsInstructor(ctx context.Context, request operations.Remove
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -3495,9 +3498,9 @@ func (s *Lms) RemoveLmsInstructor(ctx context.Context, request operations.Remove
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -3644,6 +3647,7 @@ func (s *Lms) RemoveLmsStudent(ctx context.Context, request operations.RemoveLms
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -3652,9 +3656,9 @@ func (s *Lms) RemoveLmsStudent(ctx context.Context, request operations.RemoveLms
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil

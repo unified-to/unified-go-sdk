@@ -95,19 +95,20 @@ func (e *AtsJobStatus) UnmarshalJSON(data []byte) error {
 }
 
 type AtsJob struct {
-	Addresses        []AtsAddress      `json:"addresses,omitempty"`
-	ClosedAt         *time.Time        `json:"closed_at,omitempty"`
-	CompanyID        *string           `json:"company_id,omitempty"`
-	Compensation     []AtsCompensation `json:"compensation,omitempty"`
-	CreatedAt        *time.Time        `json:"created_at,omitempty"`
-	Departments      []string          `json:"departments,omitempty"`
-	Description      *string           `json:"description,omitempty"`
-	EmploymentType   *EmploymentType   `json:"employment_type,omitempty"`
-	HiringManagerIds []string          `json:"hiring_manager_ids,omitempty"`
-	ID               *string           `json:"id,omitempty"`
-	LanguageLocale   *string           `json:"language_locale,omitempty"`
-	Name             *string           `json:"name,omitempty"`
-	NumberOfOpenings *float64          `json:"number_of_openings,omitempty"`
+	Addresses    []AtsAddress      `json:"addresses,omitempty"`
+	ClosedAt     *time.Time        `json:"closed_at,omitempty"`
+	CompanyID    *string           `json:"company_id,omitempty"`
+	Compensation []AtsCompensation `json:"compensation,omitempty"`
+	CreatedAt    *time.Time        `json:"created_at,omitempty"`
+	// The names of the departments/divisions that this job belongs to
+	Departments      []string        `json:"departments,omitempty"`
+	Description      *string         `json:"description,omitempty"`
+	EmploymentType   *EmploymentType `json:"employment_type,omitempty"`
+	HiringManagerIds []string        `json:"hiring_manager_ids,omitempty"`
+	ID               *string         `json:"id,omitempty"`
+	LanguageLocale   *string         `json:"language_locale,omitempty"`
+	Name             *string         `json:"name,omitempty"`
+	NumberOfOpenings *float64        `json:"number_of_openings,omitempty"`
 	// URLs for pages containing public listings for the job
 	PublicJobUrls []string         `json:"public_job_urls,omitempty"`
 	Questions     []AtsJobQuestion `json:"questions,omitempty"`

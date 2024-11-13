@@ -5984,6 +5984,7 @@ func (s *Ats) RemoveAtsActivity(ctx context.Context, request operations.RemoveAt
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -5992,9 +5993,9 @@ func (s *Ats) RemoveAtsActivity(ctx context.Context, request operations.RemoveAt
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -6141,6 +6142,7 @@ func (s *Ats) RemoveAtsApplication(ctx context.Context, request operations.Remov
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -6149,9 +6151,9 @@ func (s *Ats) RemoveAtsApplication(ctx context.Context, request operations.Remov
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -6298,6 +6300,7 @@ func (s *Ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveA
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -6306,9 +6309,9 @@ func (s *Ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveA
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -6455,6 +6458,7 @@ func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAt
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -6463,9 +6467,9 @@ func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAt
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -6612,6 +6616,7 @@ func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveA
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -6620,9 +6625,9 @@ func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveA
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -6769,6 +6774,7 @@ func (s *Ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -6777,9 +6783,9 @@ func (s *Ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -6926,6 +6932,7 @@ func (s *Ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveA
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -6934,9 +6941,9 @@ func (s *Ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveA
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil

@@ -74,7 +74,7 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 	if o.AcceptHeaderOverride != nil {
 		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
 	} else {
-		req.Header.Set("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+		req.Header.Set("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
 	}
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
@@ -183,15 +183,22 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
-	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
-			res.Body = rawBody
+			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -203,7 +210,23 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.TwoXXApplicationJSONAny = out
+			res.DefaultApplicationJSONAny = out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/xml`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultApplicationXMLRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/csv`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultTextCsvRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/plain`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -211,7 +234,7 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 			}
 
 			out := string(rawBody)
-			res.TwoXXTextPlainRes = &out
+			res.DefaultTextPlainRes = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -219,20 +242,6 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 			}
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
@@ -289,7 +298,7 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 	if o.AcceptHeaderOverride != nil {
 		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
 	} else {
-		req.Header.Set("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+		req.Header.Set("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
 	}
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
@@ -398,15 +407,22 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
-	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
-			res.Body = rawBody
+			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -418,7 +434,23 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.TwoXXApplicationJSONAny = out
+			res.DefaultApplicationJSONAny = out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/xml`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultApplicationXMLRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/csv`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultTextCsvRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/plain`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -426,7 +458,7 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 			}
 
 			out := string(rawBody)
-			res.TwoXXTextPlainRes = &out
+			res.DefaultTextPlainRes = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -434,20 +466,6 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 			}
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
@@ -499,7 +517,7 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 	if o.AcceptHeaderOverride != nil {
 		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
 	} else {
-		req.Header.Set("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+		req.Header.Set("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
 	}
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
@@ -607,15 +625,22 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
-	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
-			res.Body = rawBody
+			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -627,7 +652,23 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 				return nil, err
 			}
 
-			res.TwoXXApplicationJSONAny = out
+			res.DefaultApplicationJSONAny = out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/xml`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultApplicationXMLRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/csv`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultTextCsvRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/plain`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -635,7 +676,7 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 			}
 
 			out := string(rawBody)
-			res.TwoXXTextPlainRes = &out
+			res.DefaultTextPlainRes = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -643,20 +684,6 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 			}
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
@@ -713,7 +740,7 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 	if o.AcceptHeaderOverride != nil {
 		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
 	} else {
-		req.Header.Set("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+		req.Header.Set("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
 	}
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
@@ -822,15 +849,22 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
-	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
-			res.Body = rawBody
+			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -842,7 +876,23 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.TwoXXApplicationJSONAny = out
+			res.DefaultApplicationJSONAny = out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/xml`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultApplicationXMLRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/csv`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultTextCsvRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/plain`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -850,7 +900,7 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 			}
 
 			out := string(rawBody)
-			res.TwoXXTextPlainRes = &out
+			res.DefaultTextPlainRes = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -858,20 +908,6 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 			}
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
@@ -928,7 +964,7 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 	if o.AcceptHeaderOverride != nil {
 		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
 	} else {
-		req.Header.Set("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+		req.Header.Set("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
 	}
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
@@ -1037,15 +1073,22 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
-	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
-			res.Body = rawBody
+			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1057,7 +1100,23 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.TwoXXApplicationJSONAny = out
+			res.DefaultApplicationJSONAny = out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/xml`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultApplicationXMLRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/csv`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultTextCsvRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/plain`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1065,7 +1124,7 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 			}
 
 			out := string(rawBody)
-			res.TwoXXTextPlainRes = &out
+			res.DefaultTextPlainRes = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1073,20 +1132,6 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 			}
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
@@ -1138,7 +1183,7 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 	if o.AcceptHeaderOverride != nil {
 		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
 	} else {
-		req.Header.Set("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+		req.Header.Set("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
 	}
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
@@ -1246,15 +1291,22 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
-	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
-			res.Body = rawBody
+			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1266,7 +1318,23 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 				return nil, err
 			}
 
-			res.TwoXXApplicationJSONAny = out
+			res.DefaultApplicationJSONAny = out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/xml`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultApplicationXMLRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/csv`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultTextCsvRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/plain`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1274,7 +1342,7 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 			}
 
 			out := string(rawBody)
-			res.TwoXXTextPlainRes = &out
+			res.DefaultTextPlainRes = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1282,20 +1350,6 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 			}
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
@@ -1352,7 +1406,7 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 	if o.AcceptHeaderOverride != nil {
 		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
 	} else {
-		req.Header.Set("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+		req.Header.Set("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
 	}
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
@@ -1461,15 +1515,22 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
-	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
-			res.Body = rawBody
+			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1481,7 +1542,23 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.TwoXXApplicationJSONAny = out
+			res.DefaultApplicationJSONAny = out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/xml`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultApplicationXMLRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/csv`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultTextCsvRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/plain`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1489,7 +1566,7 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 			}
 
 			out := string(rawBody)
-			res.TwoXXTextPlainRes = &out
+			res.DefaultTextPlainRes = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1497,20 +1574,6 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 			}
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil
@@ -1567,7 +1630,7 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 	if o.AcceptHeaderOverride != nil {
 		req.Header.Set("Accept", string(*o.AcceptHeaderOverride))
 	} else {
-		req.Header.Set("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+		req.Header.Set("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
 	}
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
@@ -1676,15 +1739,22 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
-	case httpRes.StatusCode >= 200 && httpRes.StatusCode < 300:
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
-			res.Body = rawBody
+			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1696,7 +1766,23 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.TwoXXApplicationJSONAny = out
+			res.DefaultApplicationJSONAny = out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/xml`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultApplicationXMLRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/csv`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			out := string(rawBody)
+			res.DefaultTextCsvRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `text/plain`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1704,7 +1790,7 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 			}
 
 			out := string(rawBody)
-			res.TwoXXTextPlainRes = &out
+			res.DefaultTextPlainRes = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1712,20 +1798,6 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 			}
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
 	}
 
 	return res, nil

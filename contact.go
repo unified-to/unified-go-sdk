@@ -2421,6 +2421,7 @@ func (s *Contact) RemoveAccountingContact(ctx context.Context, request operation
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -2429,9 +2430,9 @@ func (s *Contact) RemoveAccountingContact(ctx context.Context, request operation
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -2578,6 +2579,7 @@ func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.Remov
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -2586,9 +2588,9 @@ func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.Remov
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -2735,6 +2737,7 @@ func (s *Contact) RemoveUcContact(ctx context.Context, request operations.Remove
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -2743,9 +2746,9 @@ func (s *Contact) RemoveUcContact(ctx context.Context, request operations.Remove
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil

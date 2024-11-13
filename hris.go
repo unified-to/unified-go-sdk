@@ -3913,6 +3913,7 @@ func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveH
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -3921,9 +3922,9 @@ func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveH
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -4070,6 +4071,7 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -4078,9 +4080,9 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -4227,6 +4229,7 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -4235,9 +4238,9 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -4384,6 +4387,7 @@ func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.Remove
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -4392,9 +4396,9 @@ func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.Remove
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil

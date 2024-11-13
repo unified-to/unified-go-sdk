@@ -1657,6 +1657,7 @@ func (s *Group) RemoveHrisGroup(ctx context.Context, request operations.RemoveHr
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -1665,9 +1666,9 @@ func (s *Group) RemoveHrisGroup(ctx context.Context, request operations.RemoveHr
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil
@@ -1814,6 +1815,7 @@ func (s *Group) RemoveScimGroups(ctx context.Context, request operations.RemoveS
 	}
 
 	switch {
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -1822,9 +1824,9 @@ func (s *Group) RemoveScimGroups(ctx context.Context, request operations.RemoveS
 			return nil, err
 		}
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode == 200:
-		fallthrough
 	default:
+		res.Headers = httpRes.Header
+
 	}
 
 	return res, nil

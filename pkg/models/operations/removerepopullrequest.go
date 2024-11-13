@@ -30,6 +30,7 @@ func (o *RemoveRepoPullrequestRequest) GetID() string {
 type RemoveRepoPullrequestResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	Headers     map[string][]string
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -41,6 +42,13 @@ func (o *RemoveRepoPullrequestResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
+}
+
+func (o *RemoveRepoPullrequestResponse) GetHeaders() map[string][]string {
+	if o == nil {
+		return map[string][]string{}
+	}
+	return o.Headers
 }
 
 func (o *RemoveRepoPullrequestResponse) GetStatusCode() int {

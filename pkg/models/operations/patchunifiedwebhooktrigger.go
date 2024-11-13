@@ -21,6 +21,7 @@ func (o *PatchUnifiedWebhookTriggerRequest) GetID() string {
 type PatchUnifiedWebhookTriggerResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	Headers     map[string][]string
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
@@ -32,6 +33,13 @@ func (o *PatchUnifiedWebhookTriggerResponse) GetContentType() string {
 		return ""
 	}
 	return o.ContentType
+}
+
+func (o *PatchUnifiedWebhookTriggerResponse) GetHeaders() map[string][]string {
+	if o == nil {
+		return map[string][]string{}
+	}
+	return o.Headers
 }
 
 func (o *PatchUnifiedWebhookTriggerResponse) GetStatusCode() int {

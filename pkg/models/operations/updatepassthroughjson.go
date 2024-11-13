@@ -3,6 +3,7 @@
 package operations
 
 import (
+	"io"
 	"net/http"
 )
 
@@ -36,11 +37,6 @@ func (o *UpdatePassthroughJSONRequest) GetPath() string {
 }
 
 type UpdatePassthroughJSONResponse struct {
-	// Successful
-	TwoXXApplicationJSONAny any
-	// Successful
-	TwoXXTextPlainRes *string
-	Body              []byte
 	// HTTP response content type for this operation
 	ContentType string
 	Headers     map[string][]string
@@ -48,27 +44,17 @@ type UpdatePassthroughJSONResponse struct {
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-}
-
-func (o *UpdatePassthroughJSONResponse) GetTwoXXApplicationJSONAny() any {
-	if o == nil {
-		return nil
-	}
-	return o.TwoXXApplicationJSONAny
-}
-
-func (o *UpdatePassthroughJSONResponse) GetTwoXXTextPlainRes() *string {
-	if o == nil {
-		return nil
-	}
-	return o.TwoXXTextPlainRes
-}
-
-func (o *UpdatePassthroughJSONResponse) GetBody() []byte {
-	if o == nil {
-		return nil
-	}
-	return o.Body
+	// Successful
+	// The Close method must be called on this field, even if it is not used, to prevent resource leaks.
+	DefaultWildcardWildcardResponseStream io.ReadCloser
+	// Successful
+	DefaultApplicationJSONAny any
+	// Successful
+	DefaultApplicationXMLRes *string
+	// Successful
+	DefaultTextCsvRes *string
+	// Successful
+	DefaultTextPlainRes *string
 }
 
 func (o *UpdatePassthroughJSONResponse) GetContentType() string {
@@ -97,4 +83,39 @@ func (o *UpdatePassthroughJSONResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *UpdatePassthroughJSONResponse) GetDefaultWildcardWildcardResponseStream() io.ReadCloser {
+	if o == nil {
+		return nil
+	}
+	return o.DefaultWildcardWildcardResponseStream
+}
+
+func (o *UpdatePassthroughJSONResponse) GetDefaultApplicationJSONAny() any {
+	if o == nil {
+		return nil
+	}
+	return o.DefaultApplicationJSONAny
+}
+
+func (o *UpdatePassthroughJSONResponse) GetDefaultApplicationXMLRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DefaultApplicationXMLRes
+}
+
+func (o *UpdatePassthroughJSONResponse) GetDefaultTextCsvRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DefaultTextCsvRes
+}
+
+func (o *UpdatePassthroughJSONResponse) GetDefaultTextPlainRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DefaultTextPlainRes
 }

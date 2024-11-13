@@ -3,6 +3,7 @@
 package operations
 
 import (
+	"io"
 	"net/http"
 )
 
@@ -27,11 +28,6 @@ func (o *RemovePassthroughRequest) GetPath() string {
 }
 
 type RemovePassthroughResponse struct {
-	// Successful
-	TwoXXApplicationJSONAny any
-	// Successful
-	TwoXXTextPlainRes *string
-	Body              []byte
 	// HTTP response content type for this operation
 	ContentType string
 	Headers     map[string][]string
@@ -39,27 +35,17 @@ type RemovePassthroughResponse struct {
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-}
-
-func (o *RemovePassthroughResponse) GetTwoXXApplicationJSONAny() any {
-	if o == nil {
-		return nil
-	}
-	return o.TwoXXApplicationJSONAny
-}
-
-func (o *RemovePassthroughResponse) GetTwoXXTextPlainRes() *string {
-	if o == nil {
-		return nil
-	}
-	return o.TwoXXTextPlainRes
-}
-
-func (o *RemovePassthroughResponse) GetBody() []byte {
-	if o == nil {
-		return nil
-	}
-	return o.Body
+	// Successful
+	// The Close method must be called on this field, even if it is not used, to prevent resource leaks.
+	DefaultWildcardWildcardResponseStream io.ReadCloser
+	// Successful
+	DefaultApplicationJSONAny any
+	// Successful
+	DefaultApplicationXMLRes *string
+	// Successful
+	DefaultTextCsvRes *string
+	// Successful
+	DefaultTextPlainRes *string
 }
 
 func (o *RemovePassthroughResponse) GetContentType() string {
@@ -88,4 +74,39 @@ func (o *RemovePassthroughResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return o.RawResponse
+}
+
+func (o *RemovePassthroughResponse) GetDefaultWildcardWildcardResponseStream() io.ReadCloser {
+	if o == nil {
+		return nil
+	}
+	return o.DefaultWildcardWildcardResponseStream
+}
+
+func (o *RemovePassthroughResponse) GetDefaultApplicationJSONAny() any {
+	if o == nil {
+		return nil
+	}
+	return o.DefaultApplicationJSONAny
+}
+
+func (o *RemovePassthroughResponse) GetDefaultApplicationXMLRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DefaultApplicationXMLRes
+}
+
+func (o *RemovePassthroughResponse) GetDefaultTextCsvRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DefaultTextCsvRes
+}
+
+func (o *RemovePassthroughResponse) GetDefaultTextPlainRes() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DefaultTextPlainRes
 }
