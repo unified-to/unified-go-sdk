@@ -11,6 +11,7 @@ type TaskProject struct {
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	GroupIds    []string       `json:"group_ids,omitempty"`
+	HasTasks    *bool          `json:"has_tasks,omitempty"`
 	ID          *string        `json:"id,omitempty"`
 	Name        *string        `json:"name,omitempty"`
 	ParentID    *string        `json:"parent_id,omitempty"`
@@ -49,6 +50,13 @@ func (o *TaskProject) GetGroupIds() []string {
 		return nil
 	}
 	return o.GroupIds
+}
+
+func (o *TaskProject) GetHasTasks() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.HasTasks
 }
 
 func (o *TaskProject) GetID() *string {

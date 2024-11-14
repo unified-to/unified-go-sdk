@@ -195,10 +195,6 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 		res.Headers = httpRes.Header
 
 		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			res.DefaultWildcardWildcardResponseStream = httpRes.Body
-
-			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -235,6 +231,10 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
+
+			return res, nil
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -419,10 +419,6 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 		res.Headers = httpRes.Header
 
 		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			res.DefaultWildcardWildcardResponseStream = httpRes.Body
-
-			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -459,6 +455,10 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
+
+			return res, nil
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -637,10 +637,6 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 		res.Headers = httpRes.Header
 
 		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			res.DefaultWildcardWildcardResponseStream = httpRes.Body
-
-			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -677,6 +673,10 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
+
+			return res, nil
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -861,10 +861,6 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 		res.Headers = httpRes.Header
 
 		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			res.DefaultWildcardWildcardResponseStream = httpRes.Body
-
-			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -901,6 +897,10 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
+
+			return res, nil
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1085,10 +1085,6 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 		res.Headers = httpRes.Header
 
 		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			res.DefaultWildcardWildcardResponseStream = httpRes.Body
-
-			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1125,6 +1121,10 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
+
+			return res, nil
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1303,10 +1303,6 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 		res.Headers = httpRes.Header
 
 		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			res.DefaultWildcardWildcardResponseStream = httpRes.Body
-
-			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1343,6 +1339,10 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
+
+			return res, nil
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1527,10 +1527,6 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 		res.Headers = httpRes.Header
 
 		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			res.DefaultWildcardWildcardResponseStream = httpRes.Body
-
-			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1567,6 +1563,10 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
+
+			return res, nil
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1751,10 +1751,6 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 		res.Headers = httpRes.Header
 
 		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
-			res.DefaultWildcardWildcardResponseStream = httpRes.Body
-
-			return res, nil
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1791,6 +1787,10 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			res.DefaultWildcardWildcardResponseStream = httpRes.Body
+
+			return res, nil
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
