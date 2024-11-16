@@ -18,7 +18,7 @@ type MessagingChannel struct {
 	Name            string            `json:"name"`
 	ParentChannelID *string           `json:"parent_channel_id,omitempty"`
 	Raw             map[string]any    `json:"raw,omitempty"`
-	UpdatedAt       *string           `json:"updated_at,omitempty"`
+	UpdatedAt       *time.Time        `json:"updated_at,omitempty"`
 	WebURL          *string           `json:"web_url,omitempty"`
 }
 
@@ -103,7 +103,7 @@ func (o *MessagingChannel) GetRaw() map[string]any {
 	return o.Raw
 }
 
-func (o *MessagingChannel) GetUpdatedAt() *string {
+func (o *MessagingChannel) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

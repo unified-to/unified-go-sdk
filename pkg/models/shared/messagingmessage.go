@@ -2,11 +2,16 @@
 
 package shared
 
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
+)
+
 type MessagingMessage struct {
 	Attachments        []MessagingAttachment                 `json:"attachments,omitempty"`
 	AuthorMember       *PropertyMessagingMessageAuthorMember `json:"author_member,omitempty"`
 	ChannelID          *string                               `json:"channel_id,omitempty"`
-	CreatedAt          *string                               `json:"created_at,omitempty"`
+	CreatedAt          *time.Time                            `json:"created_at,omitempty"`
 	DestinationMembers []MessagingMember                     `json:"destination_members,omitempty"`
 	HiddenMembers      []MessagingMember                     `json:"hidden_members,omitempty"`
 	ID                 *string                               `json:"id,omitempty"`
@@ -17,8 +22,19 @@ type MessagingMessage struct {
 	Raw                map[string]any                        `json:"raw,omitempty"`
 	Reference          *string                               `json:"reference,omitempty"`
 	Subject            *string                               `json:"subject,omitempty"`
-	UpdatedAt          *string                               `json:"updated_at,omitempty"`
+	UpdatedAt          *time.Time                            `json:"updated_at,omitempty"`
 	WebURL             *string                               `json:"web_url,omitempty"`
+}
+
+func (m MessagingMessage) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(m, "", false)
+}
+
+func (m *MessagingMessage) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &m, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *MessagingMessage) GetAttachments() []MessagingAttachment {
@@ -42,7 +58,7 @@ func (o *MessagingMessage) GetChannelID() *string {
 	return o.ChannelID
 }
 
-func (o *MessagingMessage) GetCreatedAt() *string {
+func (o *MessagingMessage) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -119,7 +135,7 @@ func (o *MessagingMessage) GetSubject() *string {
 	return o.Subject
 }
 
-func (o *MessagingMessage) GetUpdatedAt() *string {
+func (o *MessagingMessage) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
