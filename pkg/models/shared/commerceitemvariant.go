@@ -68,30 +68,30 @@ func (e *WeightUnit) UnmarshalJSON(data []byte) error {
 }
 
 type CommerceItemVariant struct {
-	AvailableAt       *time.Time           `json:"available_at,omitempty"`
-	Description       *string              `json:"description,omitempty"`
-	Height            *float64             `json:"height,omitempty"`
-	ID                *string              `json:"id,omitempty"`
-	InventoryID       *string              `json:"inventory_id,omitempty"`
-	IsActive          *bool                `json:"is_active,omitempty"`
-	IsFeatured        *bool                `json:"is_featured,omitempty"`
-	IsVisible         *bool                `json:"is_visible,omitempty"`
-	Length            *float64             `json:"length,omitempty"`
-	Media             []CommerceItemMedia  `json:"media,omitempty"`
-	Metadata          []CommerceMetadata   `json:"metadata,omitempty"`
-	Name              *string              `json:"name,omitempty"`
-	Options           []CommerceItemOption `json:"options,omitempty"`
-	Prices            []CommerceItemPrice  `json:"prices,omitempty"`
-	PublicDescription *string              `json:"public_description,omitempty"`
-	PublicName        *string              `json:"public_name,omitempty"`
-	RequiresShipping  *bool                `json:"requires_shipping,omitempty"`
-	SizeUnit          *SizeUnit            `json:"size_unit,omitempty"`
-	Sku               *string              `json:"sku,omitempty"`
-	Tags              []string             `json:"tags,omitempty"`
-	TotalStock        *float64             `json:"total_stock,omitempty"`
-	Weight            *float64             `json:"weight,omitempty"`
-	WeightUnit        *WeightUnit          `json:"weight_unit,omitempty"`
-	Width             *float64             `json:"width,omitempty"`
+	AvailableAt       *time.Time             `json:"available_at,omitempty"`
+	Description       *string                `json:"description,omitempty"`
+	Height            *float64               `json:"height,omitempty"`
+	ID                *string                `json:"id,omitempty"`
+	InventoryID       *string                `json:"inventory_id,omitempty"`
+	IsActive          *bool                  `json:"is_active,omitempty"`
+	IsFeatured        *bool                  `json:"is_featured,omitempty"`
+	IsVisible         *bool                  `json:"is_visible,omitempty"`
+	Length            *float64               `json:"length,omitempty"`
+	Media             []CommerceItemMedia    `json:"media,omitempty"`
+	Metadata          []CommerceItemMetadata `json:"metadata,omitempty"`
+	Name              *string                `json:"name,omitempty"`
+	Options           []CommerceItemOption   `json:"options,omitempty"`
+	Prices            []CommerceItemPrice    `json:"prices,omitempty"`
+	PublicDescription *string                `json:"public_description,omitempty"`
+	PublicName        *string                `json:"public_name,omitempty"`
+	RequiresShipping  *bool                  `json:"requires_shipping,omitempty"`
+	SizeUnit          *SizeUnit              `json:"size_unit,omitempty"`
+	Sku               *string                `json:"sku,omitempty"`
+	Tags              []string               `json:"tags,omitempty"`
+	TotalStock        *float64               `json:"total_stock,omitempty"`
+	Weight            *float64               `json:"weight,omitempty"`
+	WeightUnit        *WeightUnit            `json:"weight_unit,omitempty"`
+	Width             *float64               `json:"width,omitempty"`
 }
 
 func (c CommerceItemVariant) MarshalJSON() ([]byte, error) {
@@ -175,7 +175,7 @@ func (o *CommerceItemVariant) GetMedia() []CommerceItemMedia {
 	return o.Media
 }
 
-func (o *CommerceItemVariant) GetMetadata() []CommerceMetadata {
+func (o *CommerceItemVariant) GetMetadata() []CommerceItemMetadata {
 	if o == nil {
 		return nil
 	}

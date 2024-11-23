@@ -1080,6 +1080,64 @@ func (e *ListUserID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type NativeWebhookParentID string
+
+const (
+	NativeWebhookParentIDSupportedRequired NativeWebhookParentID = "supported-required"
+	NativeWebhookParentIDSupported         NativeWebhookParentID = "supported"
+	NativeWebhookParentIDNotSupported      NativeWebhookParentID = "not-supported"
+)
+
+func (e NativeWebhookParentID) ToPointer() *NativeWebhookParentID {
+	return &e
+}
+func (e *NativeWebhookParentID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = NativeWebhookParentID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for NativeWebhookParentID: %v", v)
+	}
+}
+
+type NativeWebhookProjectID string
+
+const (
+	NativeWebhookProjectIDSupportedRequired NativeWebhookProjectID = "supported-required"
+	NativeWebhookProjectIDSupported         NativeWebhookProjectID = "supported"
+	NativeWebhookProjectIDNotSupported      NativeWebhookProjectID = "not-supported"
+)
+
+func (e NativeWebhookProjectID) ToPointer() *NativeWebhookProjectID {
+	return &e
+}
+func (e *NativeWebhookProjectID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = NativeWebhookProjectID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for NativeWebhookProjectID: %v", v)
+	}
+}
+
 type SearchDomain string
 
 const (
@@ -1225,55 +1283,357 @@ func (e *SearchTwitter) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type VirtualWebhookChannelID string
+
+const (
+	VirtualWebhookChannelIDSupportedRequired VirtualWebhookChannelID = "supported-required"
+	VirtualWebhookChannelIDSupported         VirtualWebhookChannelID = "supported"
+	VirtualWebhookChannelIDNotSupported      VirtualWebhookChannelID = "not-supported"
+)
+
+func (e VirtualWebhookChannelID) ToPointer() *VirtualWebhookChannelID {
+	return &e
+}
+func (e *VirtualWebhookChannelID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookChannelID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookChannelID: %v", v)
+	}
+}
+
+type VirtualWebhookCompanyID string
+
+const (
+	VirtualWebhookCompanyIDSupportedRequired VirtualWebhookCompanyID = "supported-required"
+	VirtualWebhookCompanyIDSupported         VirtualWebhookCompanyID = "supported"
+	VirtualWebhookCompanyIDNotSupported      VirtualWebhookCompanyID = "not-supported"
+)
+
+func (e VirtualWebhookCompanyID) ToPointer() *VirtualWebhookCompanyID {
+	return &e
+}
+func (e *VirtualWebhookCompanyID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookCompanyID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookCompanyID: %v", v)
+	}
+}
+
+type VirtualWebhookContactID string
+
+const (
+	VirtualWebhookContactIDSupportedRequired VirtualWebhookContactID = "supported-required"
+	VirtualWebhookContactIDSupported         VirtualWebhookContactID = "supported"
+	VirtualWebhookContactIDNotSupported      VirtualWebhookContactID = "not-supported"
+)
+
+func (e VirtualWebhookContactID) ToPointer() *VirtualWebhookContactID {
+	return &e
+}
+func (e *VirtualWebhookContactID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookContactID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookContactID: %v", v)
+	}
+}
+
+type VirtualWebhookDealID string
+
+const (
+	VirtualWebhookDealIDSupportedRequired VirtualWebhookDealID = "supported-required"
+	VirtualWebhookDealIDSupported         VirtualWebhookDealID = "supported"
+	VirtualWebhookDealIDNotSupported      VirtualWebhookDealID = "not-supported"
+)
+
+func (e VirtualWebhookDealID) ToPointer() *VirtualWebhookDealID {
+	return &e
+}
+func (e *VirtualWebhookDealID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookDealID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookDealID: %v", v)
+	}
+}
+
+type VirtualWebhookLimit string
+
+const (
+	VirtualWebhookLimitSupportedRequired VirtualWebhookLimit = "supported-required"
+	VirtualWebhookLimitSupported         VirtualWebhookLimit = "supported"
+	VirtualWebhookLimitNotSupported      VirtualWebhookLimit = "not-supported"
+)
+
+func (e VirtualWebhookLimit) ToPointer() *VirtualWebhookLimit {
+	return &e
+}
+func (e *VirtualWebhookLimit) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookLimit(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookLimit: %v", v)
+	}
+}
+
+type VirtualWebhookParentID string
+
+const (
+	VirtualWebhookParentIDSupportedRequired VirtualWebhookParentID = "supported-required"
+	VirtualWebhookParentIDSupported         VirtualWebhookParentID = "supported"
+	VirtualWebhookParentIDNotSupported      VirtualWebhookParentID = "not-supported"
+)
+
+func (e VirtualWebhookParentID) ToPointer() *VirtualWebhookParentID {
+	return &e
+}
+func (e *VirtualWebhookParentID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookParentID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookParentID: %v", v)
+	}
+}
+
+type VirtualWebhookTicketID string
+
+const (
+	VirtualWebhookTicketIDSupportedRequired VirtualWebhookTicketID = "supported-required"
+	VirtualWebhookTicketIDSupported         VirtualWebhookTicketID = "supported"
+	VirtualWebhookTicketIDNotSupported      VirtualWebhookTicketID = "not-supported"
+)
+
+func (e VirtualWebhookTicketID) ToPointer() *VirtualWebhookTicketID {
+	return &e
+}
+func (e *VirtualWebhookTicketID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookTicketID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookTicketID: %v", v)
+	}
+}
+
+type VirtualWebhookType string
+
+const (
+	VirtualWebhookTypeSupportedRequired VirtualWebhookType = "supported-required"
+	VirtualWebhookTypeSupported         VirtualWebhookType = "supported"
+	VirtualWebhookTypeNotSupported      VirtualWebhookType = "not-supported"
+)
+
+func (e VirtualWebhookType) ToPointer() *VirtualWebhookType {
+	return &e
+}
+func (e *VirtualWebhookType) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookType(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookType: %v", v)
+	}
+}
+
+type VirtualWebhookUpdatedGte string
+
+const (
+	VirtualWebhookUpdatedGteSupportedRequired VirtualWebhookUpdatedGte = "supported-required"
+	VirtualWebhookUpdatedGteSupported         VirtualWebhookUpdatedGte = "supported"
+	VirtualWebhookUpdatedGteNotSupported      VirtualWebhookUpdatedGte = "not-supported"
+)
+
+func (e VirtualWebhookUpdatedGte) ToPointer() *VirtualWebhookUpdatedGte {
+	return &e
+}
+func (e *VirtualWebhookUpdatedGte) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookUpdatedGte(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookUpdatedGte: %v", v)
+	}
+}
+
+type VirtualWebhookUserID string
+
+const (
+	VirtualWebhookUserIDSupportedRequired VirtualWebhookUserID = "supported-required"
+	VirtualWebhookUserIDSupported         VirtualWebhookUserID = "supported"
+	VirtualWebhookUserIDNotSupported      VirtualWebhookUserID = "not-supported"
+)
+
+func (e VirtualWebhookUserID) ToPointer() *VirtualWebhookUserID {
+	return &e
+}
+func (e *VirtualWebhookUserID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookUserID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookUserID: %v", v)
+	}
+}
+
 type IntegrationSupport struct {
-	FromWebhook         *FromWebhook         `json:"from_webhook,omitempty"`
-	InboundFields       map[string]any       `json:"inbound_fields,omitempty"`
-	ListAccountID       *ListAccountID       `json:"list_account_id,omitempty"`
-	ListApplicationID   *ListApplicationID   `json:"list_application_id,omitempty"`
-	ListCandidateID     *ListCandidateID     `json:"list_candidate_id,omitempty"`
-	ListChannelID       *ListChannelID       `json:"list_channel_id,omitempty"`
-	ListClassID         *ListClassID         `json:"list_class_id,omitempty"`
-	ListCollectionID    *ListCollectionID    `json:"list_collection_id,omitempty"`
-	ListCompanyID       *ListCompanyID       `json:"list_company_id,omitempty"`
-	ListContactID       *ListContactID       `json:"list_contact_id,omitempty"`
-	ListCourseID        *ListCourseID        `json:"list_course_id,omitempty"`
-	ListCustomerID      *ListCustomerID      `json:"list_customer_id,omitempty"`
-	ListDealID          *ListDealID          `json:"list_deal_id,omitempty"`
-	ListInstructorID    *ListInstructorID    `json:"list_instructor_id,omitempty"`
-	ListInterviewID     *ListInterviewID     `json:"list_interview_id,omitempty"`
-	ListInvoiceID       *ListInvoiceID       `json:"list_invoice_id,omitempty"`
-	ListItemID          *ListItemID          `json:"list_item_id,omitempty"`
-	ListItemVariantID   *ListItemVariantID   `json:"list_item_variant_id,omitempty"`
-	ListJobID           *ListJobID           `json:"list_job_id,omitempty"`
-	ListLimit           *ListLimit           `json:"list_limit,omitempty"`
-	ListLinkID          *ListLinkID          `json:"list_link_id,omitempty"`
-	ListListID          *ListListID          `json:"list_list_id,omitempty"`
-	ListLocationID      *ListLocationID      `json:"list_location_id,omitempty"`
-	ListOffset          *ListOffset          `json:"list_offset,omitempty"`
-	ListOrder           *ListOrder           `json:"list_order,omitempty"`
-	ListParentID        *ListParentID        `json:"list_parent_id,omitempty"`
-	ListProjectID       *ListProjectID       `json:"list_project_id,omitempty"`
-	ListQuery           *ListQuery           `json:"list_query,omitempty"`
-	ListRawFields       *ListRawFields       `json:"list_raw_fields,omitempty"`
-	ListSortByCreatedAt *ListSortByCreatedAt `json:"list_sort_by_created_at,omitempty"`
-	ListSortByName      *ListSortByName      `json:"list_sort_by_name,omitempty"`
-	ListSortByUpdatedAt *ListSortByUpdatedAt `json:"list_sort_by_updated_at,omitempty"`
-	ListSpaceID         *ListSpaceID         `json:"list_space_id,omitempty"`
-	ListStudentID       *ListStudentID       `json:"list_student_id,omitempty"`
-	ListTicketID        *ListTicketID        `json:"list_ticket_id,omitempty"`
-	ListType            *ListType            `json:"list_type,omitempty"`
-	ListUpdatedGte      *ListUpdatedGte      `json:"list_updated_gte,omitempty"`
-	ListUserID          *ListUserID          `json:"list_user_id,omitempty"`
-	Methods             map[string]bool      `json:"methods,omitempty"`
-	OutboundFields      map[string]any       `json:"outbound_fields,omitempty"`
+	FromWebhook            *FromWebhook            `json:"from_webhook,omitempty"`
+	InboundFields          map[string]any          `json:"inbound_fields,omitempty"`
+	ListAccountID          *ListAccountID          `json:"list_account_id,omitempty"`
+	ListApplicationID      *ListApplicationID      `json:"list_application_id,omitempty"`
+	ListCandidateID        *ListCandidateID        `json:"list_candidate_id,omitempty"`
+	ListChannelID          *ListChannelID          `json:"list_channel_id,omitempty"`
+	ListClassID            *ListClassID            `json:"list_class_id,omitempty"`
+	ListCollectionID       *ListCollectionID       `json:"list_collection_id,omitempty"`
+	ListCompanyID          *ListCompanyID          `json:"list_company_id,omitempty"`
+	ListContactID          *ListContactID          `json:"list_contact_id,omitempty"`
+	ListCourseID           *ListCourseID           `json:"list_course_id,omitempty"`
+	ListCustomerID         *ListCustomerID         `json:"list_customer_id,omitempty"`
+	ListDealID             *ListDealID             `json:"list_deal_id,omitempty"`
+	ListInstructorID       *ListInstructorID       `json:"list_instructor_id,omitempty"`
+	ListInterviewID        *ListInterviewID        `json:"list_interview_id,omitempty"`
+	ListInvoiceID          *ListInvoiceID          `json:"list_invoice_id,omitempty"`
+	ListItemID             *ListItemID             `json:"list_item_id,omitempty"`
+	ListItemVariantID      *ListItemVariantID      `json:"list_item_variant_id,omitempty"`
+	ListJobID              *ListJobID              `json:"list_job_id,omitempty"`
+	ListLimit              *ListLimit              `json:"list_limit,omitempty"`
+	ListLinkID             *ListLinkID             `json:"list_link_id,omitempty"`
+	ListListID             *ListListID             `json:"list_list_id,omitempty"`
+	ListLocationID         *ListLocationID         `json:"list_location_id,omitempty"`
+	ListOffset             *ListOffset             `json:"list_offset,omitempty"`
+	ListOrder              *ListOrder              `json:"list_order,omitempty"`
+	ListParentID           *ListParentID           `json:"list_parent_id,omitempty"`
+	ListProjectID          *ListProjectID          `json:"list_project_id,omitempty"`
+	ListQuery              *ListQuery              `json:"list_query,omitempty"`
+	ListRawFields          *ListRawFields          `json:"list_raw_fields,omitempty"`
+	ListSortByCreatedAt    *ListSortByCreatedAt    `json:"list_sort_by_created_at,omitempty"`
+	ListSortByName         *ListSortByName         `json:"list_sort_by_name,omitempty"`
+	ListSortByUpdatedAt    *ListSortByUpdatedAt    `json:"list_sort_by_updated_at,omitempty"`
+	ListSpaceID            *ListSpaceID            `json:"list_space_id,omitempty"`
+	ListStudentID          *ListStudentID          `json:"list_student_id,omitempty"`
+	ListTicketID           *ListTicketID           `json:"list_ticket_id,omitempty"`
+	ListType               *ListType               `json:"list_type,omitempty"`
+	ListUpdatedGte         *ListUpdatedGte         `json:"list_updated_gte,omitempty"`
+	ListUserID             *ListUserID             `json:"list_user_id,omitempty"`
+	Methods                map[string]bool         `json:"methods,omitempty"`
+	NativeWebhookParentID  *NativeWebhookParentID  `json:"native_webhook_parent_id,omitempty"`
+	NativeWebhookProjectID *NativeWebhookProjectID `json:"native_webhook_project_id,omitempty"`
+	OutboundFields         map[string]any          `json:"outbound_fields,omitempty"`
 	// objects that we map from in the integration
-	RawObjects        []string                                 `json:"raw_objects,omitempty"`
-	SearchDomain      *SearchDomain                            `json:"search_domain,omitempty"`
-	SearchEmail       *SearchEmail                             `json:"search_email,omitempty"`
-	SearchLinkedinurl *SearchLinkedinurl                       `json:"search_linkedinurl,omitempty"`
-	SearchName        *SearchName                              `json:"search_name,omitempty"`
-	SearchTwitter     *SearchTwitter                           `json:"search_twitter,omitempty"`
-	WebhookEvents     *PropertyIntegrationSupportWebhookEvents `json:"webhook_events,omitempty"`
+	RawObjects               []string                                 `json:"raw_objects,omitempty"`
+	SearchDomain             *SearchDomain                            `json:"search_domain,omitempty"`
+	SearchEmail              *SearchEmail                             `json:"search_email,omitempty"`
+	SearchLinkedinurl        *SearchLinkedinurl                       `json:"search_linkedinurl,omitempty"`
+	SearchName               *SearchName                              `json:"search_name,omitempty"`
+	SearchTwitter            *SearchTwitter                           `json:"search_twitter,omitempty"`
+	VirtualWebhookChannelID  *VirtualWebhookChannelID                 `json:"virtual_webhook_channel_id,omitempty"`
+	VirtualWebhookCompanyID  *VirtualWebhookCompanyID                 `json:"virtual_webhook_company_id,omitempty"`
+	VirtualWebhookContactID  *VirtualWebhookContactID                 `json:"virtual_webhook_contact_id,omitempty"`
+	VirtualWebhookDealID     *VirtualWebhookDealID                    `json:"virtual_webhook_deal_id,omitempty"`
+	VirtualWebhookLimit      *VirtualWebhookLimit                     `json:"virtual_webhook_limit,omitempty"`
+	VirtualWebhookParentID   *VirtualWebhookParentID                  `json:"virtual_webhook_parent_id,omitempty"`
+	VirtualWebhookTicketID   *VirtualWebhookTicketID                  `json:"virtual_webhook_ticket_id,omitempty"`
+	VirtualWebhookType       *VirtualWebhookType                      `json:"virtual_webhook_type,omitempty"`
+	VirtualWebhookUpdatedGte *VirtualWebhookUpdatedGte                `json:"virtual_webhook_updated_gte,omitempty"`
+	VirtualWebhookUserID     *VirtualWebhookUserID                    `json:"virtual_webhook_user_id,omitempty"`
+	WebhookEvents            *PropertyIntegrationSupportWebhookEvents `json:"webhook_events,omitempty"`
 }
 
 func (o *IntegrationSupport) GetFromWebhook() *FromWebhook {
@@ -1549,6 +1909,20 @@ func (o *IntegrationSupport) GetMethods() map[string]bool {
 	return o.Methods
 }
 
+func (o *IntegrationSupport) GetNativeWebhookParentID() *NativeWebhookParentID {
+	if o == nil {
+		return nil
+	}
+	return o.NativeWebhookParentID
+}
+
+func (o *IntegrationSupport) GetNativeWebhookProjectID() *NativeWebhookProjectID {
+	if o == nil {
+		return nil
+	}
+	return o.NativeWebhookProjectID
+}
+
 func (o *IntegrationSupport) GetOutboundFields() map[string]any {
 	if o == nil {
 		return nil
@@ -1596,6 +1970,76 @@ func (o *IntegrationSupport) GetSearchTwitter() *SearchTwitter {
 		return nil
 	}
 	return o.SearchTwitter
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookChannelID() *VirtualWebhookChannelID {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookChannelID
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookCompanyID() *VirtualWebhookCompanyID {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookCompanyID
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookContactID() *VirtualWebhookContactID {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookContactID
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookDealID() *VirtualWebhookDealID {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookDealID
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookLimit() *VirtualWebhookLimit {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookLimit
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookParentID() *VirtualWebhookParentID {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookParentID
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookTicketID() *VirtualWebhookTicketID {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookTicketID
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookType() *VirtualWebhookType {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookType
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookUpdatedGte() *VirtualWebhookUpdatedGte {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookUpdatedGte
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookUserID() *VirtualWebhookUserID {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookUserID
 }
 
 func (o *IntegrationSupport) GetWebhookEvents() *PropertyIntegrationSupportWebhookEvents {

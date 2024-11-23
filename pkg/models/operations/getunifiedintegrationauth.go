@@ -41,6 +41,8 @@ const (
 	ScopesCommerceInventoryWrite     Scopes = "commerce_inventory_write"
 	ScopesCommerceLocationRead       Scopes = "commerce_location_read"
 	ScopesCommerceLocationWrite      Scopes = "commerce_location_write"
+	ScopesCommerceMetadataRead       Scopes = "commerce_metadata_read"
+	ScopesCommerceMetadataWrite      Scopes = "commerce_metadata_write"
 	ScopesAtsActivityRead            Scopes = "ats_activity_read"
 	ScopesAtsActivityWrite           Scopes = "ats_activity_write"
 	ScopesAtsApplicationRead         Scopes = "ats_application_read"
@@ -203,6 +205,10 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "commerce_location_read":
 		fallthrough
 	case "commerce_location_write":
+		fallthrough
+	case "commerce_metadata_read":
+		fallthrough
+	case "commerce_metadata_write":
 		fallthrough
 	case "ats_activity_read":
 		fallthrough

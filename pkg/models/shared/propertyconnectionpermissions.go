@@ -40,6 +40,8 @@ const (
 	PropertyConnectionPermissionsCommerceInventoryWrite     PropertyConnectionPermissions = "commerce_inventory_write"
 	PropertyConnectionPermissionsCommerceLocationRead       PropertyConnectionPermissions = "commerce_location_read"
 	PropertyConnectionPermissionsCommerceLocationWrite      PropertyConnectionPermissions = "commerce_location_write"
+	PropertyConnectionPermissionsCommerceMetadataRead       PropertyConnectionPermissions = "commerce_metadata_read"
+	PropertyConnectionPermissionsCommerceMetadataWrite      PropertyConnectionPermissions = "commerce_metadata_write"
 	PropertyConnectionPermissionsAtsActivityRead            PropertyConnectionPermissions = "ats_activity_read"
 	PropertyConnectionPermissionsAtsActivityWrite           PropertyConnectionPermissions = "ats_activity_write"
 	PropertyConnectionPermissionsAtsApplicationRead         PropertyConnectionPermissions = "ats_application_read"
@@ -202,6 +204,10 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "commerce_location_read":
 		fallthrough
 	case "commerce_location_write":
+		fallthrough
+	case "commerce_metadata_read":
+		fallthrough
+	case "commerce_metadata_write":
 		fallthrough
 	case "ats_activity_read":
 		fallthrough

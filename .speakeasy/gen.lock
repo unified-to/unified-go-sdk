@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: dbb26a77c5273b6a4bfbeec2d8a7c22d
+  docChecksum: a69d016e113a8d9eb83404e95207c9eb
   docVersion: "1.0"
-  speakeasyVersion: 1.443.0
+  speakeasyVersion: 1.444.1
   generationVersion: 2.461.4
-  releaseVersion: 0.21.9
-  configChecksum: 65b5aa9f3ed71107b3e50d710fd0b143
+  releaseVersion: 0.21.10
+  configChecksum: 838ceadebc4d1d70c4e0dc9a71cea1a7
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -49,6 +49,7 @@ generatedFiles:
   - /pkg/models/operations/createcommerceinventory.go
   - /pkg/models/operations/createcommerceitem.go
   - /pkg/models/operations/createcommercelocation.go
+  - /pkg/models/operations/createcommercemetadata.go
   - /pkg/models/operations/createcrmcompany.go
   - /pkg/models/operations/createcrmcontact.go
   - /pkg/models/operations/createcrmdeal.go
@@ -109,6 +110,7 @@ generatedFiles:
   - /pkg/models/operations/getcommerceinventory.go
   - /pkg/models/operations/getcommerceitem.go
   - /pkg/models/operations/getcommercelocation.go
+  - /pkg/models/operations/getcommercemetadata.go
   - /pkg/models/operations/getcrmcompany.go
   - /pkg/models/operations/getcrmcontact.go
   - /pkg/models/operations/getcrmdeal.go
@@ -175,6 +177,7 @@ generatedFiles:
   - /pkg/models/operations/listcommerceinventories.go
   - /pkg/models/operations/listcommerceitems.go
   - /pkg/models/operations/listcommercelocations.go
+  - /pkg/models/operations/listcommercemetadatas.go
   - /pkg/models/operations/listcrmcompanies.go
   - /pkg/models/operations/listcrmcontacts.go
   - /pkg/models/operations/listcrmdeals.go
@@ -244,6 +247,7 @@ generatedFiles:
   - /pkg/models/operations/patchcommerceinventory.go
   - /pkg/models/operations/patchcommerceitem.go
   - /pkg/models/operations/patchcommercelocation.go
+  - /pkg/models/operations/patchcommercemetadata.go
   - /pkg/models/operations/patchcrmcompany.go
   - /pkg/models/operations/patchcrmcontact.go
   - /pkg/models/operations/patchcrmdeal.go
@@ -302,6 +306,7 @@ generatedFiles:
   - /pkg/models/operations/removecommerceinventory.go
   - /pkg/models/operations/removecommerceitem.go
   - /pkg/models/operations/removecommercelocation.go
+  - /pkg/models/operations/removecommercemetadata.go
   - /pkg/models/operations/removecrmcompany.go
   - /pkg/models/operations/removecrmcontact.go
   - /pkg/models/operations/removecrmdeal.go
@@ -358,6 +363,7 @@ generatedFiles:
   - /pkg/models/operations/updatecommerceinventory.go
   - /pkg/models/operations/updatecommerceitem.go
   - /pkg/models/operations/updatecommercelocation.go
+  - /pkg/models/operations/updatecommercemetadata.go
   - /pkg/models/operations/updatecrmcompany.go
   - /pkg/models/operations/updatecrmcontact.go
   - /pkg/models/operations/updatecrmdeal.go
@@ -435,6 +441,7 @@ generatedFiles:
   - /pkg/models/shared/commerceinventory.go
   - /pkg/models/shared/commerceitem.go
   - /pkg/models/shared/commerceitemmedia.go
+  - /pkg/models/shared/commerceitemmetadata.go
   - /pkg/models/shared/commerceitemoption.go
   - /pkg/models/shared/commerceitemprice.go
   - /pkg/models/shared/commerceitemvariant.go
@@ -631,6 +638,8 @@ generatedFiles:
   - docs/pkg/models/operations/createcommerceitemresponse.md
   - docs/pkg/models/operations/createcommercelocationrequest.md
   - docs/pkg/models/operations/createcommercelocationresponse.md
+  - docs/pkg/models/operations/createcommercemetadatarequest.md
+  - docs/pkg/models/operations/createcommercemetadataresponse.md
   - docs/pkg/models/operations/createcrmcompanyrequest.md
   - docs/pkg/models/operations/createcrmcompanyresponse.md
   - docs/pkg/models/operations/createcrmcontactrequest.md
@@ -750,6 +759,8 @@ generatedFiles:
   - docs/pkg/models/operations/getcommerceitemresponse.md
   - docs/pkg/models/operations/getcommercelocationrequest.md
   - docs/pkg/models/operations/getcommercelocationresponse.md
+  - docs/pkg/models/operations/getcommercemetadatarequest.md
+  - docs/pkg/models/operations/getcommercemetadataresponse.md
   - docs/pkg/models/operations/getcrmcompanyrequest.md
   - docs/pkg/models/operations/getcrmcompanyresponse.md
   - docs/pkg/models/operations/getcrmcontactrequest.md
@@ -883,6 +894,8 @@ generatedFiles:
   - docs/pkg/models/operations/listcommerceitemsresponse.md
   - docs/pkg/models/operations/listcommercelocationsrequest.md
   - docs/pkg/models/operations/listcommercelocationsresponse.md
+  - docs/pkg/models/operations/listcommercemetadatasrequest.md
+  - docs/pkg/models/operations/listcommercemetadatasresponse.md
   - docs/pkg/models/operations/listcrmcompaniesrequest.md
   - docs/pkg/models/operations/listcrmcompaniesresponse.md
   - docs/pkg/models/operations/listcrmcontactsrequest.md
@@ -1023,6 +1036,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchcommerceitemresponse.md
   - docs/pkg/models/operations/patchcommercelocationrequest.md
   - docs/pkg/models/operations/patchcommercelocationresponse.md
+  - docs/pkg/models/operations/patchcommercemetadatarequest.md
+  - docs/pkg/models/operations/patchcommercemetadataresponse.md
   - docs/pkg/models/operations/patchcrmcompanyrequest.md
   - docs/pkg/models/operations/patchcrmcompanyresponse.md
   - docs/pkg/models/operations/patchcrmcontactrequest.md
@@ -1140,6 +1155,8 @@ generatedFiles:
   - docs/pkg/models/operations/removecommerceitemresponse.md
   - docs/pkg/models/operations/removecommercelocationrequest.md
   - docs/pkg/models/operations/removecommercelocationresponse.md
+  - docs/pkg/models/operations/removecommercemetadatarequest.md
+  - docs/pkg/models/operations/removecommercemetadataresponse.md
   - docs/pkg/models/operations/removecrmcompanyrequest.md
   - docs/pkg/models/operations/removecrmcompanyresponse.md
   - docs/pkg/models/operations/removecrmcontactrequest.md
@@ -1253,6 +1270,8 @@ generatedFiles:
   - docs/pkg/models/operations/updatecommerceitemresponse.md
   - docs/pkg/models/operations/updatecommercelocationrequest.md
   - docs/pkg/models/operations/updatecommercelocationresponse.md
+  - docs/pkg/models/operations/updatecommercemetadatarequest.md
+  - docs/pkg/models/operations/updatecommercemetadataresponse.md
   - docs/pkg/models/operations/updatecrmcompanyrequest.md
   - docs/pkg/models/operations/updatecrmcompanyresponse.md
   - docs/pkg/models/operations/updatecrmcontactrequest.md
@@ -1390,6 +1409,7 @@ generatedFiles:
   - docs/pkg/models/shared/commerceitem.md
   - docs/pkg/models/shared/commerceitemmedia.md
   - docs/pkg/models/shared/commerceitemmediatype.md
+  - docs/pkg/models/shared/commerceitemmetadata.md
   - docs/pkg/models/shared/commerceitemoption.md
   - docs/pkg/models/shared/commerceitemprice.md
   - docs/pkg/models/shared/commerceitemvariant.md
@@ -1506,6 +1526,8 @@ generatedFiles:
   - docs/pkg/models/shared/messagingchannel.md
   - docs/pkg/models/shared/messagingmember.md
   - docs/pkg/models/shared/messagingmessage.md
+  - docs/pkg/models/shared/nativewebhookparentid.md
+  - docs/pkg/models/shared/nativewebhookprojectid.md
   - docs/pkg/models/shared/objecttype.md
   - docs/pkg/models/shared/operation.md
   - docs/pkg/models/shared/origin.md
@@ -1631,6 +1653,16 @@ generatedFiles:
   - docs/pkg/models/shared/ucemailtype.md
   - docs/pkg/models/shared/uctelephone.md
   - docs/pkg/models/shared/uctelephonetype.md
+  - docs/pkg/models/shared/virtualwebhookchannelid.md
+  - docs/pkg/models/shared/virtualwebhookcompanyid.md
+  - docs/pkg/models/shared/virtualwebhookcontactid.md
+  - docs/pkg/models/shared/virtualwebhookdealid.md
+  - docs/pkg/models/shared/virtualwebhooklimit.md
+  - docs/pkg/models/shared/virtualwebhookparentid.md
+  - docs/pkg/models/shared/virtualwebhookticketid.md
+  - docs/pkg/models/shared/virtualwebhooktype.md
+  - docs/pkg/models/shared/virtualwebhookupdatedgte.md
+  - docs/pkg/models/shared/virtualwebhookuserid.md
   - docs/pkg/models/shared/webhook.md
   - docs/pkg/models/shared/webhooktype.md
   - docs/pkg/models/shared/weightunit.md
@@ -1685,6 +1717,7 @@ generatedFiles:
   - docs/sdks/member/README.md
   - docs/sdks/message/README.md
   - docs/sdks/messaging/README.md
+  - docs/sdks/metadata/README.md
   - docs/sdks/model/README.md
   - docs/sdks/note/README.md
   - docs/sdks/order/README.md
@@ -1748,6 +1781,7 @@ generatedFiles:
   - member.go
   - message.go
   - messaging.go
+  - metadata.go
   - model.go
   - note.go
   - order.go
@@ -4627,3 +4661,45 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createCommerceMetadata:
+    speakeasy-default-create-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  getCommerceMetadata:
+    speakeasy-default-get-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  listCommerceMetadatas:
+    speakeasy-default-list-commerce-metadatas:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchCommerceMetadata:
+    speakeasy-default-patch-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  removeCommerceMetadata:
+    speakeasy-default-remove-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceMetadata:
+    speakeasy-default-update-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}

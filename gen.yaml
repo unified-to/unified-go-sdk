@@ -14,7 +14,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.21.9
+  version: 0.21.10
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   clientServerStatusCodesAsErrors: true
