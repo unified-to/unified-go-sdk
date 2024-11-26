@@ -3,10 +3,10 @@ id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
   docChecksum: a69d016e113a8d9eb83404e95207c9eb
   docVersion: "1.0"
-  speakeasyVersion: 1.444.3
-  generationVersion: 2.461.4
-  releaseVersion: 0.21.12
-  configChecksum: c69c3b7f38ea7fbab92370abd19474ae
+  speakeasyVersion: 1.447.2
+  generationVersion: 2.463.1
+  releaseVersion: 0.21.13
+  configChecksum: 30374661b46e06e0657a721c216fb7c6
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.6
-    core: 3.5.16
+    core: 3.5.17
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -1802,6 +1802,7 @@ generatedFiles:
   - pkg/types/decimal.go
   - pkg/types/pointers.go
   - pkg/utils/contenttype.go
+  - pkg/utils/env.go
   - pkg/utils/form.go
   - pkg/utils/headers.go
   - pkg/utils/json.go
@@ -4703,3 +4704,4 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+generatedTests: {}

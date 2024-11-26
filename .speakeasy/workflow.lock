@@ -1,0 +1,29 @@
+speakeasyVersion: 1.447.2
+sources:
+    my-source:
+        sourceNamespace: my-source
+        sourceRevisionDigest: sha256:3c9dbeee3de64e0080701b9704f9263504a5c6b951b41f363b82c37a94bd7195
+        sourceBlobDigest: sha256:67c147e8682542de89705a35a12d9c69f682f4604d302953b820e9ff08abeffd
+        tags:
+            - latest
+            - "1.0"
+targets:
+    go-terget:
+        source: my-source
+        sourceNamespace: my-source
+        sourceRevisionDigest: sha256:3c9dbeee3de64e0080701b9704f9263504a5c6b951b41f363b82c37a94bd7195
+        sourceBlobDigest: sha256:67c147e8682542de89705a35a12d9c69f682f4604d302953b820e9ff08abeffd
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        my-source:
+            inputs:
+                - location: https://api.unified.to/openapi.json
+                  authSecret: $openapi_doc_auth_token
+            registry:
+                location: registry.speakeasyapi.dev/unified/unified/my-source
+    targets:
+        go-terget:
+            target: go
+            source: my-source
