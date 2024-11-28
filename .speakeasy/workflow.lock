@@ -1,18 +1,21 @@
-speakeasyVersion: 1.447.2
+speakeasyVersion: 1.448.2
 sources:
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:3c9dbeee3de64e0080701b9704f9263504a5c6b951b41f363b82c37a94bd7195
+        sourceRevisionDigest: sha256:741e915d3439eee0485ef774e60ecee916fe9fad015035754591a51c541345b1
         sourceBlobDigest: sha256:67c147e8682542de89705a35a12d9c69f682f4604d302953b820e9ff08abeffd
         tags:
             - latest
+            - speakeasy-sdk-regen-1732808867
             - "1.0"
 targets:
     go-terget:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:3c9dbeee3de64e0080701b9704f9263504a5c6b951b41f363b82c37a94bd7195
+        sourceRevisionDigest: sha256:741e915d3439eee0485ef774e60ecee916fe9fad015035754591a51c541345b1
         sourceBlobDigest: sha256:67c147e8682542de89705a35a12d9c69f682f4604d302953b820e9ff08abeffd
+        codeSamplesNamespace: my-source-go-code-samples
+        codeSamplesRevisionDigest: sha256:266467152621288cf3e57f759a7c3f7b911b3154e6a2360dddbf2a2353f1bae8
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -27,3 +30,7 @@ workflow:
         go-terget:
             target: go
             source: my-source
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/unified/unified/my-source-go-code-samples
+                blocking: false

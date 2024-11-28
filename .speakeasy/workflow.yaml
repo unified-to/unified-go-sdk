@@ -11,3 +11,7 @@ targets:
     go-terget:
         target: go
         source: my-source
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/unified/unified/my-source-go-code-samples
+            blocking: false
