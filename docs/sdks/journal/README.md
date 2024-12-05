@@ -29,7 +29,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Journal.CreateAccountingJournal(ctx, operations.CreateAccountingJournalRequest{
@@ -79,7 +81,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Journal.GetAccountingJournal(ctx, operations.GetAccountingJournalRequest{
@@ -130,7 +134,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Journal.ListAccountingJournals(ctx, operations.ListAccountingJournalsRequest{
@@ -180,7 +186,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Journal.PatchAccountingJournal(ctx, operations.PatchAccountingJournalRequest{
@@ -231,7 +239,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Journal.RemoveAccountingJournal(ctx, operations.RemoveAccountingJournalRequest{
@@ -282,7 +292,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Journal.UpdateAccountingJournal(ctx, operations.UpdateAccountingJournalRequest{

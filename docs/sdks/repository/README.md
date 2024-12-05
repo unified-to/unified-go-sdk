@@ -29,7 +29,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Repository.CreateRepoRepository(ctx, operations.CreateRepoRepositoryRequest{
@@ -79,7 +81,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Repository.GetRepoRepository(ctx, operations.GetRepoRepositoryRequest{
@@ -130,7 +134,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Repository.ListRepoRepositories(ctx, operations.ListRepoRepositoriesRequest{
@@ -180,7 +186,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Repository.PatchRepoRepository(ctx, operations.PatchRepoRepositoryRequest{
@@ -231,7 +239,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Repository.RemoveRepoRepository(ctx, operations.RemoveRepoRepositoryRequest{
@@ -282,7 +292,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Repository.UpdateRepoRepository(ctx, operations.UpdateRepoRepositoryRequest{

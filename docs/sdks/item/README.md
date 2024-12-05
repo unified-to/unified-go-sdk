@@ -29,7 +29,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Item.CreateCommerceItem(ctx, operations.CreateCommerceItemRequest{
@@ -79,7 +81,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Item.GetCommerceItem(ctx, operations.GetCommerceItemRequest{
@@ -130,7 +134,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Item.ListCommerceItems(ctx, operations.ListCommerceItemsRequest{
@@ -180,7 +186,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Item.PatchCommerceItem(ctx, operations.PatchCommerceItemRequest{
@@ -231,7 +239,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Item.RemoveCommerceItem(ctx, operations.RemoveCommerceItemRequest{
@@ -282,7 +292,9 @@ import(
 )
 
 func main() {
-    s := unifiedgosdk.New()
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
 
     ctx := context.Background()
     res, err := s.Item.UpdateCommerceItem(ctx, operations.UpdateCommerceItemRequest{

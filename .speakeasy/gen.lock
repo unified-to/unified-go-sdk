@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: a69d016e113a8d9eb83404e95207c9eb
+  docChecksum: 3707cd341db19ec6652e51126ae52977
   docVersion: "1.0"
-  speakeasyVersion: 1.448.2
-  generationVersion: 2.467.4
-  releaseVersion: 0.21.14
-  configChecksum: 08ebf15cd35a7939caf63b5ec1e215d3
+  speakeasyVersion: 1.451.5
+  generationVersion: 2.471.2
+  releaseVersion: 0.21.15
+  configChecksum: 68c58bdc99dffd77fcfdee84495e3d7f
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -479,6 +479,7 @@ generatedFiles:
   - /pkg/models/shared/integrationsupport.go
   - /pkg/models/shared/issue.go
   - /pkg/models/shared/kmspage.go
+  - /pkg/models/shared/kmspagemetadata.go
   - /pkg/models/shared/kmsspace.go
   - /pkg/models/shared/lmsclass.go
   - /pkg/models/shared/lmscourse.go
@@ -1470,6 +1471,7 @@ generatedFiles:
   - docs/pkg/models/shared/issue.md
   - docs/pkg/models/shared/issuestatus.md
   - docs/pkg/models/shared/kmspage.md
+  - docs/pkg/models/shared/kmspagemetadata.md
   - docs/pkg/models/shared/kmspagetype.md
   - docs/pkg/models/shared/kmsspace.md
   - docs/pkg/models/shared/listaccountid.md

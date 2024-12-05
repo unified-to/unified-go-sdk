@@ -39,17 +39,19 @@ func (e *KmsPageType) UnmarshalJSON(data []byte) error {
 }
 
 type KmsPage struct {
-	CreatedAt    *time.Time     `json:"created_at,omitempty"`
-	DownloadURL  string         `json:"download_url"`
-	ID           *string        `json:"id,omitempty"`
-	IsActive     *bool          `json:"is_active,omitempty"`
-	ParentPageID *string        `json:"parent_page_id,omitempty"`
-	Raw          map[string]any `json:"raw,omitempty"`
-	SpaceID      string         `json:"space_id"`
-	Title        string         `json:"title"`
-	Type         KmsPageType    `json:"type"`
-	UpdatedAt    *time.Time     `json:"updated_at,omitempty"`
-	UserID       *string        `json:"user_id,omitempty"`
+	CreatedAt    *time.Time        `json:"created_at,omitempty"`
+	DownloadURL  string            `json:"download_url"`
+	HasChildren  *bool             `json:"has_children,omitempty"`
+	ID           *string           `json:"id,omitempty"`
+	IsActive     *bool             `json:"is_active,omitempty"`
+	Metadata     []KmsPageMetadata `json:"metadata,omitempty"`
+	ParentPageID *string           `json:"parent_page_id,omitempty"`
+	Raw          map[string]any    `json:"raw,omitempty"`
+	SpaceID      string            `json:"space_id"`
+	Title        string            `json:"title"`
+	Type         KmsPageType       `json:"type"`
+	UpdatedAt    *time.Time        `json:"updated_at,omitempty"`
+	UserID       *string           `json:"user_id,omitempty"`
 }
 
 func (k KmsPage) MarshalJSON() ([]byte, error) {
@@ -77,6 +79,13 @@ func (o *KmsPage) GetDownloadURL() string {
 	return o.DownloadURL
 }
 
+func (o *KmsPage) GetHasChildren() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.HasChildren
+}
+
 func (o *KmsPage) GetID() *string {
 	if o == nil {
 		return nil
@@ -89,6 +98,13 @@ func (o *KmsPage) GetIsActive() *bool {
 		return nil
 	}
 	return o.IsActive
+}
+
+func (o *KmsPage) GetMetadata() []KmsPageMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *KmsPage) GetParentPageID() *string {

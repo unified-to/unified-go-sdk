@@ -13,6 +13,7 @@ type KmsSpace struct {
 	ID            *string        `json:"id,omitempty"`
 	IsActive      *bool          `json:"is_active,omitempty"`
 	Name          string         `json:"name"`
+	ParentPageID  *string        `json:"parent_page_id,omitempty"`
 	ParentSpaceID *string        `default:"sp" json:"parent_space_id"`
 	Raw           map[string]any `json:"raw,omitempty"`
 	UpdatedAt     *time.Time     `json:"updated_at,omitempty"`
@@ -63,6 +64,13 @@ func (o *KmsSpace) GetName() string {
 		return ""
 	}
 	return o.Name
+}
+
+func (o *KmsSpace) GetParentPageID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ParentPageID
 }
 
 func (o *KmsSpace) GetParentSpaceID() *string {

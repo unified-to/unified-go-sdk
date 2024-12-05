@@ -3,12 +3,12 @@
 package shared
 
 type Security struct {
-	Jwt *string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
+	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
 }
 
-func (o *Security) GetJwt() *string {
+func (o *Security) GetJwt() string {
 	if o == nil {
-		return nil
+		return ""
 	}
 	return o.Jwt
 }

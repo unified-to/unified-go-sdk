@@ -10,7 +10,9 @@ import (
 )
 
 func main() {
-	s := unifiedgosdk.New()
+	s := unifiedgosdk.New(
+		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
 
 	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
