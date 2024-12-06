@@ -17,9 +17,10 @@ type CrmContact struct {
 	// An array of deal IDs associated with this contact
 	DealIds []string `json:"deal_ids,omitempty"`
 	// An array of email addresses for this contact
-	Emails []CrmEmail `json:"emails,omitempty"`
-	ID     *string    `json:"id,omitempty"`
-	Name   *string    `json:"name,omitempty"`
+	Emails   []CrmEmail `json:"emails,omitempty"`
+	ID       *string    `json:"id,omitempty"`
+	LinkUrls []string   `json:"link_urls,omitempty"`
+	Name     *string    `json:"name,omitempty"`
 	// The raw data returned by the integration for this contact
 	Raw map[string]any `json:"raw,omitempty"`
 	// An array of telephones for this contact
@@ -87,6 +88,13 @@ func (o *CrmContact) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *CrmContact) GetLinkUrls() []string {
+	if o == nil {
+		return nil
+	}
+	return o.LinkUrls
 }
 
 func (o *CrmContact) GetName() *string {

@@ -17,6 +17,7 @@ type CrmLead struct {
 	Emails        []CrmEmail              `json:"emails,omitempty"`
 	ID            *string                 `json:"id,omitempty"`
 	IsActive      *bool                   `json:"is_active,omitempty"`
+	LinkUrls      []string                `json:"link_urls,omitempty"`
 	Name          *string                 `json:"name,omitempty"`
 	Raw           map[string]any          `json:"raw,omitempty"`
 	Source        *string                 `json:"source,omitempty"`
@@ -98,6 +99,13 @@ func (o *CrmLead) GetIsActive() *bool {
 		return nil
 	}
 	return o.IsActive
+}
+
+func (o *CrmLead) GetLinkUrls() []string {
+	if o == nil {
+		return nil
+	}
+	return o.LinkUrls
 }
 
 func (o *CrmLead) GetName() *string {
