@@ -9,23 +9,15 @@ import (
 	"time"
 )
 
-// ConnectionID - A connection represents a specific authentication of an integration.
-type ConnectionID struct {
-}
-
-// IntegrationType - Informational object for supported integrations.
-type IntegrationType struct {
-}
-
 type ListUnifiedWebhooksRequest struct {
-	// A connection represents a specific authentication of an integration.
-	ConnectionID *ConnectionID `queryParam:"style=form,explode=true,name=connection_id"`
+	// Filter the results to just this integration
+	ConnectionID *string `queryParam:"style=form,explode=true,name=connection_id"`
 	// Return only results whose created date is equal or less to this value
 	CreatedLte *time.Time `queryParam:"style=form,explode=true,name=created_lte"`
 	Env        *string    `queryParam:"style=form,explode=true,name=env"`
-	// Informational object for supported integrations.
-	IntegrationType *IntegrationType `queryParam:"style=form,explode=true,name=integration_type"`
-	Limit           *float64         `queryParam:"style=form,explode=true,name=limit"`
+	// Filter the results to just this integration
+	IntegrationType *string  `queryParam:"style=form,explode=true,name=integration_type"`
+	Limit           *float64 `queryParam:"style=form,explode=true,name=limit"`
 	// Filter the results for webhooks for only this object
 	Object *string  `queryParam:"style=form,explode=true,name=object"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
@@ -46,7 +38,7 @@ func (l *ListUnifiedWebhooksRequest) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *ListUnifiedWebhooksRequest) GetConnectionID() *ConnectionID {
+func (o *ListUnifiedWebhooksRequest) GetConnectionID() *string {
 	if o == nil {
 		return nil
 	}
@@ -67,7 +59,7 @@ func (o *ListUnifiedWebhooksRequest) GetEnv() *string {
 	return o.Env
 }
 
-func (o *ListUnifiedWebhooksRequest) GetIntegrationType() *IntegrationType {
+func (o *ListUnifiedWebhooksRequest) GetIntegrationType() *string {
 	if o == nil {
 		return nil
 	}

@@ -21,6 +21,7 @@ type MessagingMessage struct {
 	ParentMessageID    *string                               `json:"parent_message_id,omitempty"`
 	Raw                map[string]any                        `json:"raw,omitempty"`
 	Reference          *string                               `json:"reference,omitempty"`
+	RootMessageID      *string                               `json:"root_message_id,omitempty"`
 	Subject            *string                               `json:"subject,omitempty"`
 	UpdatedAt          *time.Time                            `json:"updated_at,omitempty"`
 	WebURL             *string                               `json:"web_url,omitempty"`
@@ -126,6 +127,13 @@ func (o *MessagingMessage) GetReference() *string {
 		return nil
 	}
 	return o.Reference
+}
+
+func (o *MessagingMessage) GetRootMessageID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.RootMessageID
 }
 
 func (o *MessagingMessage) GetSubject() *string {

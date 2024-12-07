@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: fdbcce3cd82999739c54ae5c1af3eaae
+  docChecksum: 42f573170bad12dc387a71808ef7cd22
   docVersion: "1.0"
-  speakeasyVersion: 1.453.0
-  generationVersion: 2.472.1
-  releaseVersion: 0.21.16
-  configChecksum: 7f38d4fbf8ef150f2ccbeebfe7e08d54
+  speakeasyVersion: 1.453.1
+  generationVersion: 2.474.4
+  releaseVersion: 0.21.17
+  configChecksum: fee3ff091f9757fc75c620438710feca
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -602,7 +602,6 @@ generatedFiles:
   - customer.go
   - deal.go
   - docs/pkg/models/operations/categories.md
-  - docs/pkg/models/operations/connectionid.md
   - docs/pkg/models/operations/createaccountingaccountrequest.md
   - docs/pkg/models/operations/createaccountingaccountresponse.md
   - docs/pkg/models/operations/createaccountingcontactrequest.md
@@ -852,7 +851,6 @@ generatedFiles:
   - docs/pkg/models/operations/getunifiedintegrationloginresponse.md
   - docs/pkg/models/operations/getunifiedwebhookrequest.md
   - docs/pkg/models/operations/getunifiedwebhookresponse.md
-  - docs/pkg/models/operations/integrationtype.md
   - docs/pkg/models/operations/listaccountingaccountsrequest.md
   - docs/pkg/models/operations/listaccountingaccountsresponse.md
   - docs/pkg/models/operations/listaccountingcontactsrequest.md
@@ -1501,6 +1499,7 @@ generatedFiles:
   - docs/pkg/models/shared/listprojectid.md
   - docs/pkg/models/shared/listquery.md
   - docs/pkg/models/shared/listrawfields.md
+  - docs/pkg/models/shared/listrootid.md
   - docs/pkg/models/shared/listsortbycreatedat.md
   - docs/pkg/models/shared/listsortbyname.md
   - docs/pkg/models/shared/listsortbyupdatedat.md

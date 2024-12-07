@@ -20,8 +20,9 @@ type ListMessagingMessagesRequest struct {
 	Order    *string  `queryParam:"style=form,explode=true,name=order"`
 	ParentID *string  `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
-	Query *string `queryParam:"style=form,explode=true,name=query"`
-	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
+	Query  *string `queryParam:"style=form,explode=true,name=query"`
+	RootID *string `queryParam:"style=form,explode=true,name=root_id"`
+	Sort   *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -91,6 +92,13 @@ func (o *ListMessagingMessagesRequest) GetQuery() *string {
 		return nil
 	}
 	return o.Query
+}
+
+func (o *ListMessagingMessagesRequest) GetRootID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.RootID
 }
 
 func (o *ListMessagingMessagesRequest) GetSort() *string {

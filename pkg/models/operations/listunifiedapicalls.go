@@ -10,14 +10,14 @@ import (
 )
 
 type ListUnifiedApicallsRequest struct {
-	// Filter the results to just this integration's API calls
+	// Filter the results to just this integration
 	ConnectionID *string `queryParam:"style=form,explode=true,name=connection_id"`
 	Env          *string `queryParam:"style=form,explode=true,name=env"`
 	// Filter the results for API Calls with errors
 	Error *bool `queryParam:"style=form,explode=true,name=error"`
 	// Filter the results to only those integrations for your user referenced by this value
 	ExternalXref *string `queryParam:"style=form,explode=true,name=external_xref"`
-	// Filter the results for connections with this integration
+	// Filter the results to just this integration
 	IntegrationType *string  `queryParam:"style=form,explode=true,name=integration_type"`
 	Limit           *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset          *float64 `queryParam:"style=form,explode=true,name=offset"`
