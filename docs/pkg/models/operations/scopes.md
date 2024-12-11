@@ -35,8 +35,6 @@
 | `ScopesCommerceInventoryWrite`     | commerce_inventory_write           |
 | `ScopesCommerceLocationRead`       | commerce_location_read             |
 | `ScopesCommerceLocationWrite`      | commerce_location_write            |
-| `ScopesCommerceMetadataRead`       | commerce_metadata_read             |
-| `ScopesCommerceMetadataWrite`      | commerce_metadata_write            |
 | `ScopesAtsActivityRead`            | ats_activity_read                  |
 | `ScopesAtsActivityWrite`           | ats_activity_write                 |
 | `ScopesAtsApplicationRead`         | ats_application_read               |
@@ -129,3 +127,5 @@
 | `ScopesRepoCommitWrite`            | repo_commit_write                  |
 | `ScopesRepoPullrequestRead`        | repo_pullrequest_read              |
 | `ScopesRepoPullrequestWrite`       | repo_pullrequest_write             |
+| `ScopesMetadataMetadataRead`       | metadata_metadata_read             |
+| `ScopesMetadataMetadataWrite`      | metadata_metadata_write            |

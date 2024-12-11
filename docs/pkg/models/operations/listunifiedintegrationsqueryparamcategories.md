@@ -25,3 +25,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesScim`        | scim                                                     |
 | `ListUnifiedIntegrationsQueryParamCategoriesLms`         | lms                                                      |
 | `ListUnifiedIntegrationsQueryParamCategoriesRepo`        | repo                                                     |
+| `ListUnifiedIntegrationsQueryParamCategoriesMetadata`    | metadata                                                 |

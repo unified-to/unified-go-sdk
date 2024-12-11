@@ -25,11 +25,11 @@ func newMetadata(sdkConfig sdkConfiguration) *Metadata {
 	}
 }
 
-// CreateCommerceMetadata - Create a metadata
-func (s *Metadata) CreateCommerceMetadata(ctx context.Context, request operations.CreateCommerceMetadataRequest, opts ...operations.Option) (*operations.CreateCommerceMetadataResponse, error) {
+// CreateMetadataMetadata - Create a metadata
+func (s *Metadata) CreateMetadataMetadata(ctx context.Context, request operations.CreateMetadataMetadataRequest, opts ...operations.Option) (*operations.CreateMetadataMetadataResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "createCommerceMetadata",
+		OperationID:    "createMetadataMetadata",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -46,12 +46,12 @@ func (s *Metadata) CreateCommerceMetadata(ctx context.Context, request operation
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/metadata", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/metadata/{connection_id}/metadata", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceMetadata", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MetadataMetadata", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -172,7 +172,7 @@ func (s *Metadata) CreateCommerceMetadata(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.CreateCommerceMetadataResponse{
+	res := &operations.CreateMetadataMetadataResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -187,12 +187,12 @@ func (s *Metadata) CreateCommerceMetadata(ctx context.Context, request operation
 				return nil, err
 			}
 
-			var out shared.CommerceMetadata
+			var out shared.MetadataMetadata
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.CommerceMetadata = &out
+			res.MetadataMetadata = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -220,11 +220,11 @@ func (s *Metadata) CreateCommerceMetadata(ctx context.Context, request operation
 
 }
 
-// GetCommerceMetadata - Retrieve a metadata
-func (s *Metadata) GetCommerceMetadata(ctx context.Context, request operations.GetCommerceMetadataRequest, opts ...operations.Option) (*operations.GetCommerceMetadataResponse, error) {
+// GetMetadataMetadata - Retrieve a metadata
+func (s *Metadata) GetMetadataMetadata(ctx context.Context, request operations.GetMetadataMetadataRequest, opts ...operations.Option) (*operations.GetMetadataMetadataResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "getCommerceMetadata",
+		OperationID:    "getMetadataMetadata",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -241,7 +241,7 @@ func (s *Metadata) GetCommerceMetadata(ctx context.Context, request operations.G
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/metadata/{id}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/metadata/{connection_id}/metadata/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -361,7 +361,7 @@ func (s *Metadata) GetCommerceMetadata(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetCommerceMetadataResponse{
+	res := &operations.GetMetadataMetadataResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -376,12 +376,12 @@ func (s *Metadata) GetCommerceMetadata(ctx context.Context, request operations.G
 				return nil, err
 			}
 
-			var out shared.CommerceMetadata
+			var out shared.MetadataMetadata
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.CommerceMetadata = &out
+			res.MetadataMetadata = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -409,11 +409,11 @@ func (s *Metadata) GetCommerceMetadata(ctx context.Context, request operations.G
 
 }
 
-// ListCommerceMetadatas - List all metadatas
-func (s *Metadata) ListCommerceMetadatas(ctx context.Context, request operations.ListCommerceMetadatasRequest, opts ...operations.Option) (*operations.ListCommerceMetadatasResponse, error) {
+// ListMetadataMetadatas - List all metadatas
+func (s *Metadata) ListMetadataMetadatas(ctx context.Context, request operations.ListMetadataMetadatasRequest, opts ...operations.Option) (*operations.ListMetadataMetadatasResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "listCommerceMetadatas",
+		OperationID:    "listMetadataMetadatas",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -430,7 +430,7 @@ func (s *Metadata) ListCommerceMetadatas(ctx context.Context, request operations
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/metadata", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/metadata/{connection_id}/metadata", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -550,7 +550,7 @@ func (s *Metadata) ListCommerceMetadatas(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListCommerceMetadatasResponse{
+	res := &operations.ListMetadataMetadatasResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -565,12 +565,12 @@ func (s *Metadata) ListCommerceMetadatas(ctx context.Context, request operations
 				return nil, err
 			}
 
-			var out []shared.CommerceMetadata
+			var out []shared.MetadataMetadata
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.CommerceMetadatas = out
+			res.MetadataMetadatas = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -598,11 +598,11 @@ func (s *Metadata) ListCommerceMetadatas(ctx context.Context, request operations
 
 }
 
-// PatchCommerceMetadata - Update a metadata
-func (s *Metadata) PatchCommerceMetadata(ctx context.Context, request operations.PatchCommerceMetadataRequest, opts ...operations.Option) (*operations.PatchCommerceMetadataResponse, error) {
+// PatchMetadataMetadata - Update a metadata
+func (s *Metadata) PatchMetadataMetadata(ctx context.Context, request operations.PatchMetadataMetadataRequest, opts ...operations.Option) (*operations.PatchMetadataMetadataResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "patchCommerceMetadata",
+		OperationID:    "patchMetadataMetadata",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -619,12 +619,12 @@ func (s *Metadata) PatchCommerceMetadata(ctx context.Context, request operations
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/metadata/{id}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/metadata/{connection_id}/metadata/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceMetadata", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MetadataMetadata", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -745,7 +745,7 @@ func (s *Metadata) PatchCommerceMetadata(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.PatchCommerceMetadataResponse{
+	res := &operations.PatchMetadataMetadataResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -760,12 +760,12 @@ func (s *Metadata) PatchCommerceMetadata(ctx context.Context, request operations
 				return nil, err
 			}
 
-			var out shared.CommerceMetadata
+			var out shared.MetadataMetadata
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.CommerceMetadata = &out
+			res.MetadataMetadata = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -793,11 +793,11 @@ func (s *Metadata) PatchCommerceMetadata(ctx context.Context, request operations
 
 }
 
-// RemoveCommerceMetadata - Remove a metadata
-func (s *Metadata) RemoveCommerceMetadata(ctx context.Context, request operations.RemoveCommerceMetadataRequest, opts ...operations.Option) (*operations.RemoveCommerceMetadataResponse, error) {
+// RemoveMetadataMetadata - Remove a metadata
+func (s *Metadata) RemoveMetadataMetadata(ctx context.Context, request operations.RemoveMetadataMetadataRequest, opts ...operations.Option) (*operations.RemoveMetadataMetadataResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "removeCommerceMetadata",
+		OperationID:    "removeMetadataMetadata",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -814,7 +814,7 @@ func (s *Metadata) RemoveCommerceMetadata(ctx context.Context, request operation
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/metadata/{id}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/metadata/{connection_id}/metadata/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -930,7 +930,7 @@ func (s *Metadata) RemoveCommerceMetadata(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.RemoveCommerceMetadataResponse{
+	res := &operations.RemoveMetadataMetadataResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -955,11 +955,11 @@ func (s *Metadata) RemoveCommerceMetadata(ctx context.Context, request operation
 
 }
 
-// UpdateCommerceMetadata - Update a metadata
-func (s *Metadata) UpdateCommerceMetadata(ctx context.Context, request operations.UpdateCommerceMetadataRequest, opts ...operations.Option) (*operations.UpdateCommerceMetadataResponse, error) {
+// UpdateMetadataMetadata - Update a metadata
+func (s *Metadata) UpdateMetadataMetadata(ctx context.Context, request operations.UpdateMetadataMetadataRequest, opts ...operations.Option) (*operations.UpdateMetadataMetadataResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "updateCommerceMetadata",
+		OperationID:    "updateMetadataMetadata",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -976,12 +976,12 @@ func (s *Metadata) UpdateCommerceMetadata(ctx context.Context, request operation
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/metadata/{id}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/metadata/{connection_id}/metadata/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceMetadata", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MetadataMetadata", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1102,7 +1102,7 @@ func (s *Metadata) UpdateCommerceMetadata(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.UpdateCommerceMetadataResponse{
+	res := &operations.UpdateMetadataMetadataResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1117,12 +1117,12 @@ func (s *Metadata) UpdateCommerceMetadata(ctx context.Context, request operation
 				return nil, err
 			}
 
-			var out shared.CommerceMetadata
+			var out shared.MetadataMetadata
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.CommerceMetadata = &out
+			res.MetadataMetadata = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {

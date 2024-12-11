@@ -25,3 +25,4 @@
 | `QueryParamCategoriesScim`        | scim                              |
 | `QueryParamCategoriesLms`         | lms                               |
 | `QueryParamCategoriesRepo`        | repo                              |
+| `QueryParamCategoriesMetadata`    | metadata                          |

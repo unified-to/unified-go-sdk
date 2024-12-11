@@ -6,28 +6,28 @@ import (
 	"net/http"
 )
 
-type RemoveCommerceMetadataRequest struct {
+type RemoveMetadataMetadataRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// ID of the Metadata
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveCommerceMetadataRequest) GetConnectionID() string {
+func (o *RemoveMetadataMetadataRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *RemoveCommerceMetadataRequest) GetID() string {
+func (o *RemoveMetadataMetadataRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type RemoveCommerceMetadataResponse struct {
+type RemoveMetadataMetadataResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	Headers     map[string][]string
@@ -37,28 +37,28 @@ type RemoveCommerceMetadataResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveCommerceMetadataResponse) GetContentType() string {
+func (o *RemoveMetadataMetadataResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *RemoveCommerceMetadataResponse) GetHeaders() map[string][]string {
+func (o *RemoveMetadataMetadataResponse) GetHeaders() map[string][]string {
 	if o == nil {
 		return map[string][]string{}
 	}
 	return o.Headers
 }
 
-func (o *RemoveCommerceMetadataResponse) GetStatusCode() int {
+func (o *RemoveMetadataMetadataResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *RemoveCommerceMetadataResponse) GetRawResponse() *http.Response {
+func (o *RemoveMetadataMetadataResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

@@ -25,3 +25,4 @@
 | `CategoriesScim`        | scim                    |
 | `CategoriesLms`         | lms                     |
 | `CategoriesRepo`        | repo                    |
+| `CategoriesMetadata`    | metadata                |

@@ -96,7 +96,6 @@ type UnifiedTo struct {
 	Inventory         *Inventory
 	Item              *Item
 	Location          *Location
-	Metadata          *Metadata
 	Crm               *Crm
 	Deal              *Deal
 	Event             *Event
@@ -126,6 +125,7 @@ type UnifiedTo struct {
 	Messaging         *Messaging
 	Channel           *Channel
 	Message           *Message
+	Metadata          *Metadata
 	Passthrough       *Passthrough
 	Payment           *Payment
 	Link              *Link
@@ -234,9 +234,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.21.17",
-			GenVersion:        "2.474.4",
-			UserAgent:         "speakeasy-sdk/go 0.21.17 2.474.4 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.21.18",
+			GenVersion:        "2.474.15",
+			UserAgent:         "speakeasy-sdk/go 0.21.18 2.474.15 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -304,8 +304,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Location = newLocation(sdk.sdkConfiguration)
 
-	sdk.Metadata = newMetadata(sdk.sdkConfiguration)
-
 	sdk.Crm = newCrm(sdk.sdkConfiguration)
 
 	sdk.Deal = newDeal(sdk.sdkConfiguration)
@@ -363,6 +361,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Channel = newChannel(sdk.sdkConfiguration)
 
 	sdk.Message = newMessage(sdk.sdkConfiguration)
+
+	sdk.Metadata = newMetadata(sdk.sdkConfiguration)
 
 	sdk.Passthrough = newPassthrough(sdk.sdkConfiguration)
 

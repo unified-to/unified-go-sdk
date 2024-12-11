@@ -34,6 +34,7 @@ const (
 	CategoriesScim        Categories = "scim"
 	CategoriesLms         Categories = "lms"
 	CategoriesRepo        Categories = "repo"
+	CategoriesMetadata    Categories = "metadata"
 )
 
 func (e Categories) ToPointer() *Categories {
@@ -84,6 +85,8 @@ func (e *Categories) UnmarshalJSON(data []byte) error {
 	case "lms":
 		fallthrough
 	case "repo":
+		fallthrough
+	case "metadata":
 		*e = Categories(v)
 		return nil
 	default:

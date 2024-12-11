@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-type ListCommerceMetadatasRequest struct {
+type ListMetadataMetadatasRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -20,110 +20,118 @@ type ListCommerceMetadatasRequest struct {
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
+	Type  *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (l ListCommerceMetadatasRequest) MarshalJSON() ([]byte, error) {
+func (l ListMetadataMetadatasRequest) MarshalJSON() ([]byte, error) {
 	return utils.MarshalJSON(l, "", false)
 }
 
-func (l *ListCommerceMetadatasRequest) UnmarshalJSON(data []byte) error {
+func (l *ListMetadataMetadatasRequest) UnmarshalJSON(data []byte) error {
 	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListCommerceMetadatasRequest) GetConnectionID() string {
+func (o *ListMetadataMetadatasRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *ListCommerceMetadatasRequest) GetFields() []string {
+func (o *ListMetadataMetadatasRequest) GetFields() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Fields
 }
 
-func (o *ListCommerceMetadatasRequest) GetLimit() *float64 {
+func (o *ListMetadataMetadatasRequest) GetLimit() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Limit
 }
 
-func (o *ListCommerceMetadatasRequest) GetOffset() *float64 {
+func (o *ListMetadataMetadatasRequest) GetOffset() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Offset
 }
 
-func (o *ListCommerceMetadatasRequest) GetOrder() *string {
+func (o *ListMetadataMetadatasRequest) GetOrder() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Order
 }
 
-func (o *ListCommerceMetadatasRequest) GetQuery() *string {
+func (o *ListMetadataMetadatasRequest) GetQuery() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Query
 }
 
-func (o *ListCommerceMetadatasRequest) GetSort() *string {
+func (o *ListMetadataMetadatasRequest) GetSort() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Sort
 }
 
-func (o *ListCommerceMetadatasRequest) GetUpdatedGte() *time.Time {
+func (o *ListMetadataMetadatasRequest) GetType() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Type
+}
+
+func (o *ListMetadataMetadatasRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.UpdatedGte
 }
 
-type ListCommerceMetadatasResponse struct {
-	// Successful
-	CommerceMetadatas []shared.CommerceMetadata
+type ListMetadataMetadatasResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	// Successful
+	MetadataMetadatas []shared.MetadataMetadata
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 
-func (o *ListCommerceMetadatasResponse) GetCommerceMetadatas() []shared.CommerceMetadata {
-	if o == nil {
-		return nil
-	}
-	return o.CommerceMetadatas
-}
-
-func (o *ListCommerceMetadatasResponse) GetContentType() string {
+func (o *ListMetadataMetadatasResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *ListCommerceMetadatasResponse) GetStatusCode() int {
+func (o *ListMetadataMetadatasResponse) GetMetadataMetadatas() []shared.MetadataMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.MetadataMetadatas
+}
+
+func (o *ListMetadataMetadatasResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *ListCommerceMetadatasResponse) GetRawResponse() *http.Response {
+func (o *ListMetadataMetadatasResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

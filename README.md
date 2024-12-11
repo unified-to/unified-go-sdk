@@ -261,32 +261,26 @@ func main() {
 * [CreateCommerceInventory](docs/sdks/commerce/README.md#createcommerceinventory) - Create an inventory
 * [CreateCommerceItem](docs/sdks/commerce/README.md#createcommerceitem) - Create an item
 * [CreateCommerceLocation](docs/sdks/commerce/README.md#createcommercelocation) - Create a location
-* [CreateCommerceMetadata](docs/sdks/commerce/README.md#createcommercemetadata) - Create a metadata
 * [GetCommerceCollection](docs/sdks/commerce/README.md#getcommercecollection) - Retrieve a collection
 * [GetCommerceInventory](docs/sdks/commerce/README.md#getcommerceinventory) - Retrieve an inventory
 * [GetCommerceItem](docs/sdks/commerce/README.md#getcommerceitem) - Retrieve an item
 * [GetCommerceLocation](docs/sdks/commerce/README.md#getcommercelocation) - Retrieve a location
-* [GetCommerceMetadata](docs/sdks/commerce/README.md#getcommercemetadata) - Retrieve a metadata
 * [ListCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [ListCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
 * [ListCommerceItems](docs/sdks/commerce/README.md#listcommerceitems) - List all items
 * [ListCommerceLocations](docs/sdks/commerce/README.md#listcommercelocations) - List all locations
-* [ListCommerceMetadatas](docs/sdks/commerce/README.md#listcommercemetadatas) - List all metadatas
 * [PatchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
 * [PatchCommerceInventory](docs/sdks/commerce/README.md#patchcommerceinventory) - Update an inventory
 * [PatchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
 * [PatchCommerceLocation](docs/sdks/commerce/README.md#patchcommercelocation) - Update a location
-* [PatchCommerceMetadata](docs/sdks/commerce/README.md#patchcommercemetadata) - Update a metadata
 * [RemoveCommerceCollection](docs/sdks/commerce/README.md#removecommercecollection) - Remove a collection
 * [RemoveCommerceInventory](docs/sdks/commerce/README.md#removecommerceinventory) - Remove an inventory
 * [RemoveCommerceItem](docs/sdks/commerce/README.md#removecommerceitem) - Remove an item
 * [RemoveCommerceLocation](docs/sdks/commerce/README.md#removecommercelocation) - Remove a location
-* [RemoveCommerceMetadata](docs/sdks/commerce/README.md#removecommercemetadata) - Remove a metadata
 * [UpdateCommerceCollection](docs/sdks/commerce/README.md#updatecommercecollection) - Update a collection
 * [UpdateCommerceInventory](docs/sdks/commerce/README.md#updatecommerceinventory) - Update an inventory
 * [UpdateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
 * [UpdateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
-* [UpdateCommerceMetadata](docs/sdks/commerce/README.md#updatecommercemetadata) - Update a metadata
 
 ### [Commit](docs/sdks/commit/README.md)
 
@@ -710,12 +704,12 @@ func main() {
 
 ### [Metadata](docs/sdks/metadata/README.md)
 
-* [CreateCommerceMetadata](docs/sdks/metadata/README.md#createcommercemetadata) - Create a metadata
-* [GetCommerceMetadata](docs/sdks/metadata/README.md#getcommercemetadata) - Retrieve a metadata
-* [ListCommerceMetadatas](docs/sdks/metadata/README.md#listcommercemetadatas) - List all metadatas
-* [PatchCommerceMetadata](docs/sdks/metadata/README.md#patchcommercemetadata) - Update a metadata
-* [RemoveCommerceMetadata](docs/sdks/metadata/README.md#removecommercemetadata) - Remove a metadata
-* [UpdateCommerceMetadata](docs/sdks/metadata/README.md#updatecommercemetadata) - Update a metadata
+* [CreateMetadataMetadata](docs/sdks/metadata/README.md#createmetadatametadata) - Create a metadata
+* [GetMetadataMetadata](docs/sdks/metadata/README.md#getmetadatametadata) - Retrieve a metadata
+* [ListMetadataMetadatas](docs/sdks/metadata/README.md#listmetadatametadatas) - List all metadatas
+* [PatchMetadataMetadata](docs/sdks/metadata/README.md#patchmetadatametadata) - Update a metadata
+* [RemoveMetadataMetadata](docs/sdks/metadata/README.md#removemetadatametadata) - Remove a metadata
+* [UpdateMetadataMetadata](docs/sdks/metadata/README.md#updatemetadatametadata) - Update a metadata
 
 ### [Model](docs/sdks/model/README.md)
 

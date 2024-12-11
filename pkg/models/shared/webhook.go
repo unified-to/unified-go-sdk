@@ -57,7 +57,6 @@ const (
 	ObjectTypeCommerceCollection     ObjectType = "commerce_collection"
 	ObjectTypeCommerceInventory      ObjectType = "commerce_inventory"
 	ObjectTypeCommerceLocation       ObjectType = "commerce_location"
-	ObjectTypeCommerceMetadata       ObjectType = "commerce_metadata"
 	ObjectTypeAtsActivity            ObjectType = "ats_activity"
 	ObjectTypeAtsApplication         ObjectType = "ats_application"
 	ObjectTypeAtsApplicationstatus   ObjectType = "ats_applicationstatus"
@@ -109,6 +108,7 @@ const (
 	ObjectTypeRepoBranch             ObjectType = "repo_branch"
 	ObjectTypeRepoCommit             ObjectType = "repo_commit"
 	ObjectTypeRepoPullrequest        ObjectType = "repo_pullrequest"
+	ObjectTypeMetadataMetadata       ObjectType = "metadata_metadata"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -151,8 +151,6 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "commerce_inventory":
 		fallthrough
 	case "commerce_location":
-		fallthrough
-	case "commerce_metadata":
 		fallthrough
 	case "ats_activity":
 		fallthrough
@@ -255,6 +253,8 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "repo_commit":
 		fallthrough
 	case "repo_pullrequest":
+		fallthrough
+	case "metadata_metadata":
 		*e = ObjectType(v)
 		return nil
 	default:

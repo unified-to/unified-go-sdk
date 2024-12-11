@@ -7,8 +7,7 @@ import (
 	"net/http"
 )
 
-type UpdateCommerceMetadataRequest struct {
-	CommerceMetadata *shared.CommerceMetadata `request:"mediaType=application/json"`
+type GetMetadataMetadataRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,67 +16,60 @@ type UpdateCommerceMetadataRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateCommerceMetadataRequest) GetCommerceMetadata() *shared.CommerceMetadata {
-	if o == nil {
-		return nil
-	}
-	return o.CommerceMetadata
-}
-
-func (o *UpdateCommerceMetadataRequest) GetConnectionID() string {
+func (o *GetMetadataMetadataRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *UpdateCommerceMetadataRequest) GetFields() []string {
+func (o *GetMetadataMetadataRequest) GetFields() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Fields
 }
 
-func (o *UpdateCommerceMetadataRequest) GetID() string {
+func (o *GetMetadataMetadataRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type UpdateCommerceMetadataResponse struct {
-	// Successful
-	CommerceMetadata *shared.CommerceMetadata
+type GetMetadataMetadataResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	// Successful
+	MetadataMetadata *shared.MetadataMetadata
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 
-func (o *UpdateCommerceMetadataResponse) GetCommerceMetadata() *shared.CommerceMetadata {
-	if o == nil {
-		return nil
-	}
-	return o.CommerceMetadata
-}
-
-func (o *UpdateCommerceMetadataResponse) GetContentType() string {
+func (o *GetMetadataMetadataResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *UpdateCommerceMetadataResponse) GetStatusCode() int {
+func (o *GetMetadataMetadataResponse) GetMetadataMetadata() *shared.MetadataMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.MetadataMetadata
+}
+
+func (o *GetMetadataMetadataResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *UpdateCommerceMetadataResponse) GetRawResponse() *http.Response {
+func (o *GetMetadataMetadataResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}

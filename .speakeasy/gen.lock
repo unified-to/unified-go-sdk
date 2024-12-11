@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 42f573170bad12dc387a71808ef7cd22
+  docChecksum: 41f6fed774011bab102d612247a8bfd9
   docVersion: "1.0"
-  speakeasyVersion: 1.453.1
-  generationVersion: 2.474.4
-  releaseVersion: 0.21.17
-  configChecksum: fee3ff091f9757fc75c620438710feca
+  speakeasyVersion: 1.453.10
+  generationVersion: 2.474.15
+  releaseVersion: 0.21.18
+  configChecksum: 5ab2821246babcf49a83574149fea653
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.6
-    core: 3.5.17
+    core: 3.5.18
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -49,7 +49,6 @@ generatedFiles:
   - /pkg/models/operations/createcommerceinventory.go
   - /pkg/models/operations/createcommerceitem.go
   - /pkg/models/operations/createcommercelocation.go
-  - /pkg/models/operations/createcommercemetadata.go
   - /pkg/models/operations/createcrmcompany.go
   - /pkg/models/operations/createcrmcontact.go
   - /pkg/models/operations/createcrmdeal.go
@@ -70,6 +69,7 @@ generatedFiles:
   - /pkg/models/operations/createmartechlist.go
   - /pkg/models/operations/createmartechmember.go
   - /pkg/models/operations/createmessagingmessage.go
+  - /pkg/models/operations/createmetadatametadata.go
   - /pkg/models/operations/createpassthroughjson.go
   - /pkg/models/operations/createpassthroughraw.go
   - /pkg/models/operations/createpaymentlink.go
@@ -110,7 +110,6 @@ generatedFiles:
   - /pkg/models/operations/getcommerceinventory.go
   - /pkg/models/operations/getcommerceitem.go
   - /pkg/models/operations/getcommercelocation.go
-  - /pkg/models/operations/getcommercemetadata.go
   - /pkg/models/operations/getcrmcompany.go
   - /pkg/models/operations/getcrmcontact.go
   - /pkg/models/operations/getcrmdeal.go
@@ -133,6 +132,7 @@ generatedFiles:
   - /pkg/models/operations/getmartechmember.go
   - /pkg/models/operations/getmessagingchannel.go
   - /pkg/models/operations/getmessagingmessage.go
+  - /pkg/models/operations/getmetadatametadata.go
   - /pkg/models/operations/getpaymentlink.go
   - /pkg/models/operations/getpaymentpayment.go
   - /pkg/models/operations/getpaymentpayout.go
@@ -177,7 +177,6 @@ generatedFiles:
   - /pkg/models/operations/listcommerceinventories.go
   - /pkg/models/operations/listcommerceitems.go
   - /pkg/models/operations/listcommercelocations.go
-  - /pkg/models/operations/listcommercemetadatas.go
   - /pkg/models/operations/listcrmcompanies.go
   - /pkg/models/operations/listcrmcontacts.go
   - /pkg/models/operations/listcrmdeals.go
@@ -203,6 +202,7 @@ generatedFiles:
   - /pkg/models/operations/listmartechmembers.go
   - /pkg/models/operations/listmessagingchannels.go
   - /pkg/models/operations/listmessagingmessages.go
+  - /pkg/models/operations/listmetadatametadatas.go
   - /pkg/models/operations/listpassthroughs.go
   - /pkg/models/operations/listpaymentlinks.go
   - /pkg/models/operations/listpaymentpayments.go
@@ -247,7 +247,6 @@ generatedFiles:
   - /pkg/models/operations/patchcommerceinventory.go
   - /pkg/models/operations/patchcommerceitem.go
   - /pkg/models/operations/patchcommercelocation.go
-  - /pkg/models/operations/patchcommercemetadata.go
   - /pkg/models/operations/patchcrmcompany.go
   - /pkg/models/operations/patchcrmcontact.go
   - /pkg/models/operations/patchcrmdeal.go
@@ -267,6 +266,7 @@ generatedFiles:
   - /pkg/models/operations/patchmartechlist.go
   - /pkg/models/operations/patchmartechmember.go
   - /pkg/models/operations/patchmessagingmessage.go
+  - /pkg/models/operations/patchmetadatametadata.go
   - /pkg/models/operations/patchpassthroughjson.go
   - /pkg/models/operations/patchpassthroughraw.go
   - /pkg/models/operations/patchpaymentlink.go
@@ -306,7 +306,6 @@ generatedFiles:
   - /pkg/models/operations/removecommerceinventory.go
   - /pkg/models/operations/removecommerceitem.go
   - /pkg/models/operations/removecommercelocation.go
-  - /pkg/models/operations/removecommercemetadata.go
   - /pkg/models/operations/removecrmcompany.go
   - /pkg/models/operations/removecrmcontact.go
   - /pkg/models/operations/removecrmdeal.go
@@ -326,6 +325,7 @@ generatedFiles:
   - /pkg/models/operations/removemartechlist.go
   - /pkg/models/operations/removemartechmember.go
   - /pkg/models/operations/removemessagingmessage.go
+  - /pkg/models/operations/removemetadatametadata.go
   - /pkg/models/operations/removepassthrough.go
   - /pkg/models/operations/removepaymentlink.go
   - /pkg/models/operations/removepaymentpayment.go
@@ -363,7 +363,6 @@ generatedFiles:
   - /pkg/models/operations/updatecommerceinventory.go
   - /pkg/models/operations/updatecommerceitem.go
   - /pkg/models/operations/updatecommercelocation.go
-  - /pkg/models/operations/updatecommercemetadata.go
   - /pkg/models/operations/updatecrmcompany.go
   - /pkg/models/operations/updatecrmcontact.go
   - /pkg/models/operations/updatecrmdeal.go
@@ -383,6 +382,7 @@ generatedFiles:
   - /pkg/models/operations/updatemartechlist.go
   - /pkg/models/operations/updatemartechmember.go
   - /pkg/models/operations/updatemessagingmessage.go
+  - /pkg/models/operations/updatemetadatametadata.go
   - /pkg/models/operations/updatepassthroughjson.go
   - /pkg/models/operations/updatepassthroughraw.go
   - /pkg/models/operations/updatepaymentlink.go
@@ -446,7 +446,6 @@ generatedFiles:
   - /pkg/models/shared/commerceitemprice.go
   - /pkg/models/shared/commerceitemvariant.go
   - /pkg/models/shared/commercelocation.go
-  - /pkg/models/shared/commercemetadata.go
   - /pkg/models/shared/connection.go
   - /pkg/models/shared/crmcompany.go
   - /pkg/models/shared/crmcontact.go
@@ -495,6 +494,7 @@ generatedFiles:
   - /pkg/models/shared/messagingchannel.go
   - /pkg/models/shared/messagingmember.go
   - /pkg/models/shared/messagingmessage.go
+  - /pkg/models/shared/metadatametadata.go
   - /pkg/models/shared/paymentlink.go
   - /pkg/models/shared/paymentlinklineitem.go
   - /pkg/models/shared/paymentpayment.go
@@ -638,8 +638,6 @@ generatedFiles:
   - docs/pkg/models/operations/createcommerceitemresponse.md
   - docs/pkg/models/operations/createcommercelocationrequest.md
   - docs/pkg/models/operations/createcommercelocationresponse.md
-  - docs/pkg/models/operations/createcommercemetadatarequest.md
-  - docs/pkg/models/operations/createcommercemetadataresponse.md
   - docs/pkg/models/operations/createcrmcompanyrequest.md
   - docs/pkg/models/operations/createcrmcompanyresponse.md
   - docs/pkg/models/operations/createcrmcontactrequest.md
@@ -680,6 +678,8 @@ generatedFiles:
   - docs/pkg/models/operations/createmartechmemberresponse.md
   - docs/pkg/models/operations/createmessagingmessagerequest.md
   - docs/pkg/models/operations/createmessagingmessageresponse.md
+  - docs/pkg/models/operations/createmetadatametadatarequest.md
+  - docs/pkg/models/operations/createmetadatametadataresponse.md
   - docs/pkg/models/operations/createpassthroughjsonrequest.md
   - docs/pkg/models/operations/createpassthroughjsonresponse.md
   - docs/pkg/models/operations/createpassthroughrawrequest.md
@@ -759,8 +759,6 @@ generatedFiles:
   - docs/pkg/models/operations/getcommerceitemresponse.md
   - docs/pkg/models/operations/getcommercelocationrequest.md
   - docs/pkg/models/operations/getcommercelocationresponse.md
-  - docs/pkg/models/operations/getcommercemetadatarequest.md
-  - docs/pkg/models/operations/getcommercemetadataresponse.md
   - docs/pkg/models/operations/getcrmcompanyrequest.md
   - docs/pkg/models/operations/getcrmcompanyresponse.md
   - docs/pkg/models/operations/getcrmcontactrequest.md
@@ -805,6 +803,8 @@ generatedFiles:
   - docs/pkg/models/operations/getmessagingchannelresponse.md
   - docs/pkg/models/operations/getmessagingmessagerequest.md
   - docs/pkg/models/operations/getmessagingmessageresponse.md
+  - docs/pkg/models/operations/getmetadatametadatarequest.md
+  - docs/pkg/models/operations/getmetadatametadataresponse.md
   - docs/pkg/models/operations/getpaymentlinkrequest.md
   - docs/pkg/models/operations/getpaymentlinkresponse.md
   - docs/pkg/models/operations/getpaymentpaymentrequest.md
@@ -893,8 +893,6 @@ generatedFiles:
   - docs/pkg/models/operations/listcommerceitemsresponse.md
   - docs/pkg/models/operations/listcommercelocationsrequest.md
   - docs/pkg/models/operations/listcommercelocationsresponse.md
-  - docs/pkg/models/operations/listcommercemetadatasrequest.md
-  - docs/pkg/models/operations/listcommercemetadatasresponse.md
   - docs/pkg/models/operations/listcrmcompaniesrequest.md
   - docs/pkg/models/operations/listcrmcompaniesresponse.md
   - docs/pkg/models/operations/listcrmcontactsrequest.md
@@ -945,6 +943,8 @@ generatedFiles:
   - docs/pkg/models/operations/listmessagingchannelsresponse.md
   - docs/pkg/models/operations/listmessagingmessagesrequest.md
   - docs/pkg/models/operations/listmessagingmessagesresponse.md
+  - docs/pkg/models/operations/listmetadatametadatasrequest.md
+  - docs/pkg/models/operations/listmetadatametadatasresponse.md
   - docs/pkg/models/operations/listpassthroughsrequest.md
   - docs/pkg/models/operations/listpassthroughsresponse.md
   - docs/pkg/models/operations/listpaymentlinksrequest.md
@@ -1035,8 +1035,6 @@ generatedFiles:
   - docs/pkg/models/operations/patchcommerceitemresponse.md
   - docs/pkg/models/operations/patchcommercelocationrequest.md
   - docs/pkg/models/operations/patchcommercelocationresponse.md
-  - docs/pkg/models/operations/patchcommercemetadatarequest.md
-  - docs/pkg/models/operations/patchcommercemetadataresponse.md
   - docs/pkg/models/operations/patchcrmcompanyrequest.md
   - docs/pkg/models/operations/patchcrmcompanyresponse.md
   - docs/pkg/models/operations/patchcrmcontactrequest.md
@@ -1075,6 +1073,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchmartechmemberresponse.md
   - docs/pkg/models/operations/patchmessagingmessagerequest.md
   - docs/pkg/models/operations/patchmessagingmessageresponse.md
+  - docs/pkg/models/operations/patchmetadatametadatarequest.md
+  - docs/pkg/models/operations/patchmetadatametadataresponse.md
   - docs/pkg/models/operations/patchpassthroughjsonrequest.md
   - docs/pkg/models/operations/patchpassthroughjsonresponse.md
   - docs/pkg/models/operations/patchpassthroughrawrequest.md
@@ -1154,8 +1154,6 @@ generatedFiles:
   - docs/pkg/models/operations/removecommerceitemresponse.md
   - docs/pkg/models/operations/removecommercelocationrequest.md
   - docs/pkg/models/operations/removecommercelocationresponse.md
-  - docs/pkg/models/operations/removecommercemetadatarequest.md
-  - docs/pkg/models/operations/removecommercemetadataresponse.md
   - docs/pkg/models/operations/removecrmcompanyrequest.md
   - docs/pkg/models/operations/removecrmcompanyresponse.md
   - docs/pkg/models/operations/removecrmcontactrequest.md
@@ -1194,6 +1192,8 @@ generatedFiles:
   - docs/pkg/models/operations/removemartechmemberresponse.md
   - docs/pkg/models/operations/removemessagingmessagerequest.md
   - docs/pkg/models/operations/removemessagingmessageresponse.md
+  - docs/pkg/models/operations/removemetadatametadatarequest.md
+  - docs/pkg/models/operations/removemetadatametadataresponse.md
   - docs/pkg/models/operations/removepassthroughrequest.md
   - docs/pkg/models/operations/removepassthroughresponse.md
   - docs/pkg/models/operations/removepaymentlinkrequest.md
@@ -1269,8 +1269,6 @@ generatedFiles:
   - docs/pkg/models/operations/updatecommerceitemresponse.md
   - docs/pkg/models/operations/updatecommercelocationrequest.md
   - docs/pkg/models/operations/updatecommercelocationresponse.md
-  - docs/pkg/models/operations/updatecommercemetadatarequest.md
-  - docs/pkg/models/operations/updatecommercemetadataresponse.md
   - docs/pkg/models/operations/updatecrmcompanyrequest.md
   - docs/pkg/models/operations/updatecrmcompanyresponse.md
   - docs/pkg/models/operations/updatecrmcontactrequest.md
@@ -1309,6 +1307,8 @@ generatedFiles:
   - docs/pkg/models/operations/updatemartechmemberresponse.md
   - docs/pkg/models/operations/updatemessagingmessagerequest.md
   - docs/pkg/models/operations/updatemessagingmessageresponse.md
+  - docs/pkg/models/operations/updatemetadatametadatarequest.md
+  - docs/pkg/models/operations/updatemetadatametadataresponse.md
   - docs/pkg/models/operations/updatepassthroughjsonrequest.md
   - docs/pkg/models/operations/updatepassthroughjsonresponse.md
   - docs/pkg/models/operations/updatepassthroughrawrequest.md
@@ -1413,7 +1413,6 @@ generatedFiles:
   - docs/pkg/models/shared/commerceitemprice.md
   - docs/pkg/models/shared/commerceitemvariant.md
   - docs/pkg/models/shared/commercelocation.md
-  - docs/pkg/models/shared/commercemetadata.md
   - docs/pkg/models/shared/connection.md
   - docs/pkg/models/shared/crmcompany.md
   - docs/pkg/models/shared/crmcontact.md
@@ -1527,6 +1526,7 @@ generatedFiles:
   - docs/pkg/models/shared/messagingchannel.md
   - docs/pkg/models/shared/messagingmember.md
   - docs/pkg/models/shared/messagingmessage.md
+  - docs/pkg/models/shared/metadatametadata.md
   - docs/pkg/models/shared/nativewebhookparentid.md
   - docs/pkg/models/shared/nativewebhookprojectid.md
   - docs/pkg/models/shared/objecttype.md
@@ -4705,4 +4705,58 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+  createMetadataMetadata:
+    speakeasy-default-create-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  getMetadataMetadata:
+    speakeasy-default-get-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  listMetadataMetadatas:
+    speakeasy-default-list-metadata-metadatas:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchMetadataMetadata:
+    speakeasy-default-patch-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  removeMetadataMetadata:
+    speakeasy-default-remove-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMetadataMetadata:
+    speakeasy-default-update-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
 generatedTests: {}

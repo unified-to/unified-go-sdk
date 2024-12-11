@@ -35,8 +35,6 @@
 | `PropertyConnectionPermissionsCommerceInventoryWrite`     | commerce_inventory_write                                  |
 | `PropertyConnectionPermissionsCommerceLocationRead`       | commerce_location_read                                    |
 | `PropertyConnectionPermissionsCommerceLocationWrite`      | commerce_location_write                                   |
-| `PropertyConnectionPermissionsCommerceMetadataRead`       | commerce_metadata_read                                    |
-| `PropertyConnectionPermissionsCommerceMetadataWrite`      | commerce_metadata_write                                   |
 | `PropertyConnectionPermissionsAtsActivityRead`            | ats_activity_read                                         |
 | `PropertyConnectionPermissionsAtsActivityWrite`           | ats_activity_write                                        |
 | `PropertyConnectionPermissionsAtsApplicationRead`         | ats_application_read                                      |
@@ -129,3 +127,5 @@
 | `PropertyConnectionPermissionsRepoCommitWrite`            | repo_commit_write                                         |
 | `PropertyConnectionPermissionsRepoPullrequestRead`        | repo_pullrequest_read                                     |
 | `PropertyConnectionPermissionsRepoPullrequestWrite`       | repo_pullrequest_write                                    |
+| `PropertyConnectionPermissionsMetadataMetadataRead`       | metadata_metadata_read                                    |
+| `PropertyConnectionPermissionsMetadataMetadataWrite`      | metadata_metadata_write                                   |

@@ -9,32 +9,26 @@
 * [CreateCommerceInventory](#createcommerceinventory) - Create an inventory
 * [CreateCommerceItem](#createcommerceitem) - Create an item
 * [CreateCommerceLocation](#createcommercelocation) - Create a location
-* [CreateCommerceMetadata](#createcommercemetadata) - Create a metadata
 * [GetCommerceCollection](#getcommercecollection) - Retrieve a collection
 * [GetCommerceInventory](#getcommerceinventory) - Retrieve an inventory
 * [GetCommerceItem](#getcommerceitem) - Retrieve an item
 * [GetCommerceLocation](#getcommercelocation) - Retrieve a location
-* [GetCommerceMetadata](#getcommercemetadata) - Retrieve a metadata
 * [ListCommerceCollections](#listcommercecollections) - List all collections
 * [ListCommerceInventories](#listcommerceinventories) - List all inventories
 * [ListCommerceItems](#listcommerceitems) - List all items
 * [ListCommerceLocations](#listcommercelocations) - List all locations
-* [ListCommerceMetadatas](#listcommercemetadatas) - List all metadatas
 * [PatchCommerceCollection](#patchcommercecollection) - Update a collection
 * [PatchCommerceInventory](#patchcommerceinventory) - Update an inventory
 * [PatchCommerceItem](#patchcommerceitem) - Update an item
 * [PatchCommerceLocation](#patchcommercelocation) - Update a location
-* [PatchCommerceMetadata](#patchcommercemetadata) - Update a metadata
 * [RemoveCommerceCollection](#removecommercecollection) - Remove a collection
 * [RemoveCommerceInventory](#removecommerceinventory) - Remove an inventory
 * [RemoveCommerceItem](#removecommerceitem) - Remove an item
 * [RemoveCommerceLocation](#removecommercelocation) - Remove a location
-* [RemoveCommerceMetadata](#removecommercemetadata) - Remove a metadata
 * [UpdateCommerceCollection](#updatecommercecollection) - Update a collection
 * [UpdateCommerceInventory](#updatecommerceinventory) - Update an inventory
 * [UpdateCommerceItem](#updatecommerceitem) - Update an item
 * [UpdateCommerceLocation](#updatecommercelocation) - Update a location
-* [UpdateCommerceMetadata](#updatecommercemetadata) - Update a metadata
 
 ## CreateCommerceCollection
 
@@ -237,58 +231,6 @@ func main() {
 ### Response
 
 **[*operations.CreateCommerceLocationResponse](../../pkg/models/operations/createcommercelocationresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## CreateCommerceMetadata
-
-Create a metadata
-
-### Example Usage
-
-```go
-package main
-
-import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
-	"log"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Commerce.CreateCommerceMetadata(ctx, operations.CreateCommerceMetadataRequest{
-        ConnectionID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.CommerceMetadata != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.CreateCommerceMetadataRequest](../../pkg/models/operations/createcommercemetadatarequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
-
-### Response
-
-**[*operations.CreateCommerceMetadataResponse](../../pkg/models/operations/createcommercemetadataresponse.md), error**
 
 ### Errors
 
@@ -508,59 +450,6 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetCommerceMetadata
-
-Retrieve a metadata
-
-### Example Usage
-
-```go
-package main
-
-import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
-	"log"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Commerce.GetCommerceMetadata(ctx, operations.GetCommerceMetadataRequest{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.CommerceMetadata != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetCommerceMetadataRequest](../../pkg/models/operations/getcommercemetadatarequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
-
-### Response
-
-**[*operations.GetCommerceMetadataResponse](../../pkg/models/operations/getcommercemetadataresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
 ## ListCommerceCollections
 
 List all collections
@@ -762,58 +651,6 @@ func main() {
 ### Response
 
 **[*operations.ListCommerceLocationsResponse](../../pkg/models/operations/listcommercelocationsresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## ListCommerceMetadatas
-
-List all metadatas
-
-### Example Usage
-
-```go
-package main
-
-import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
-	"log"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Commerce.ListCommerceMetadatas(ctx, operations.ListCommerceMetadatasRequest{
-        ConnectionID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.CommerceMetadatas != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.ListCommerceMetadatasRequest](../../pkg/models/operations/listcommercemetadatasrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
-
-### Response
-
-**[*operations.ListCommerceMetadatasResponse](../../pkg/models/operations/listcommercemetadatasresponse.md), error**
 
 ### Errors
 
@@ -1033,59 +870,6 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchCommerceMetadata
-
-Update a metadata
-
-### Example Usage
-
-```go
-package main
-
-import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
-	"log"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Commerce.PatchCommerceMetadata(ctx, operations.PatchCommerceMetadataRequest{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.CommerceMetadata != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.PatchCommerceMetadataRequest](../../pkg/models/operations/patchcommercemetadatarequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
-
-### Response
-
-**[*operations.PatchCommerceMetadataResponse](../../pkg/models/operations/patchcommercemetadataresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
 ## RemoveCommerceCollection
 
 Remove a collection
@@ -1298,59 +1082,6 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveCommerceMetadata
-
-Remove a metadata
-
-### Example Usage
-
-```go
-package main
-
-import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
-	"log"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Commerce.RemoveCommerceMetadata(ctx, operations.RemoveCommerceMetadataRequest{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.RemoveCommerceMetadataRequest](../../pkg/models/operations/removecommercemetadatarequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
-
-### Response
-
-**[*operations.RemoveCommerceMetadataResponse](../../pkg/models/operations/removecommercemetadataresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
 ## UpdateCommerceCollection
 
 Update a collection
@@ -1556,59 +1287,6 @@ func main() {
 ### Response
 
 **[*operations.UpdateCommerceLocationResponse](../../pkg/models/operations/updatecommercelocationresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateCommerceMetadata
-
-Update a metadata
-
-### Example Usage
-
-```go
-package main
-
-import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
-	"log"
-)
-
-func main() {
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Commerce.UpdateCommerceMetadata(ctx, operations.UpdateCommerceMetadataRequest{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.CommerceMetadata != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.UpdateCommerceMetadataRequest](../../pkg/models/operations/updatecommercemetadatarequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
-
-### Response
-
-**[*operations.UpdateCommerceMetadataResponse](../../pkg/models/operations/updatecommercemetadataresponse.md), error**
 
 ### Errors
 

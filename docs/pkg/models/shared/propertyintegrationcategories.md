@@ -25,3 +25,4 @@
 | `PropertyIntegrationCategoriesScim`        | scim                                       |
 | `PropertyIntegrationCategoriesLms`         | lms                                        |
 | `PropertyIntegrationCategoriesRepo`        | repo                                       |
+| `PropertyIntegrationCategoriesMetadata`    | metadata                                   |

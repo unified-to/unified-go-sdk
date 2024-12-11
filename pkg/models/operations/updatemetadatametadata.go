@@ -7,8 +7,8 @@ import (
 	"net/http"
 )
 
-type PatchCommerceMetadataRequest struct {
-	CommerceMetadata *shared.CommerceMetadata `request:"mediaType=application/json"`
+type UpdateMetadataMetadataRequest struct {
+	MetadataMetadata *shared.MetadataMetadata `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,67 +17,67 @@ type PatchCommerceMetadataRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchCommerceMetadataRequest) GetCommerceMetadata() *shared.CommerceMetadata {
+func (o *UpdateMetadataMetadataRequest) GetMetadataMetadata() *shared.MetadataMetadata {
 	if o == nil {
 		return nil
 	}
-	return o.CommerceMetadata
+	return o.MetadataMetadata
 }
 
-func (o *PatchCommerceMetadataRequest) GetConnectionID() string {
+func (o *UpdateMetadataMetadataRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *PatchCommerceMetadataRequest) GetFields() []string {
+func (o *UpdateMetadataMetadataRequest) GetFields() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Fields
 }
 
-func (o *PatchCommerceMetadataRequest) GetID() string {
+func (o *UpdateMetadataMetadataRequest) GetID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ID
 }
 
-type PatchCommerceMetadataResponse struct {
-	// Successful
-	CommerceMetadata *shared.CommerceMetadata
+type UpdateMetadataMetadataResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	// Successful
+	MetadataMetadata *shared.MetadataMetadata
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 
-func (o *PatchCommerceMetadataResponse) GetCommerceMetadata() *shared.CommerceMetadata {
-	if o == nil {
-		return nil
-	}
-	return o.CommerceMetadata
-}
-
-func (o *PatchCommerceMetadataResponse) GetContentType() string {
+func (o *UpdateMetadataMetadataResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *PatchCommerceMetadataResponse) GetStatusCode() int {
+func (o *UpdateMetadataMetadataResponse) GetMetadataMetadata() *shared.MetadataMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.MetadataMetadata
+}
+
+func (o *UpdateMetadataMetadataResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *PatchCommerceMetadataResponse) GetRawResponse() *http.Response {
+func (o *UpdateMetadataMetadataResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
