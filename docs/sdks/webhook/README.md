@@ -24,18 +24,19 @@ The data payload received by your server is described at https://docs.unified.to
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Webhook.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{})
     if err != nil {
         log.Fatal(err)
@@ -74,18 +75,19 @@ Retrieve webhook by its ID
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Webhook.GetUnifiedWebhook(ctx, operations.GetUnifiedWebhookRequest{
         ID: "<id>",
     })
@@ -126,18 +128,19 @@ Returns all registered webhooks
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Webhook.ListUnifiedWebhooks(ctx, operations.ListUnifiedWebhooksRequest{})
     if err != nil {
         log.Fatal(err)
@@ -176,18 +179,19 @@ Update webhook subscription
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Webhook.PatchUnifiedWebhook(ctx, operations.PatchUnifiedWebhookRequest{
         ID: "<id>",
     })
@@ -228,18 +232,19 @@ Trigger webhook
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Webhook.PatchUnifiedWebhookTrigger(ctx, operations.PatchUnifiedWebhookTriggerRequest{
         ID: "<id>",
     })
@@ -280,18 +285,19 @@ Remove webhook subscription
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Webhook.RemoveUnifiedWebhook(ctx, operations.RemoveUnifiedWebhookRequest{
         ID: "<id>",
     })
@@ -332,18 +338,19 @@ Update webhook subscription
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Webhook.UpdateUnifiedWebhook(ctx, operations.UpdateUnifiedWebhookRequest{
         ID: "<id>",
     })
@@ -384,18 +391,19 @@ Trigger webhook
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Webhook.UpdateUnifiedWebhookTrigger(ctx, operations.UpdateUnifiedWebhookTriggerRequest{
         ID: "<id>",
     })

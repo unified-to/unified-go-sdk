@@ -22,18 +22,19 @@ Create an activity
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Activity.CreateAtsActivity(ctx, operations.CreateAtsActivityRequest{
         ConnectionID: "<value>",
     })
@@ -74,18 +75,19 @@ Retrieve an activity
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Activity.GetAtsActivity(ctx, operations.GetAtsActivityRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -127,18 +129,19 @@ List all activities
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Activity.ListAtsActivities(ctx, operations.ListAtsActivitiesRequest{
         ConnectionID: "<value>",
     })
@@ -179,18 +182,19 @@ Update an activity
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Activity.PatchAtsActivity(ctx, operations.PatchAtsActivityRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -232,18 +236,19 @@ Remove an activity
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Activity.RemoveAtsActivity(ctx, operations.RemoveAtsActivityRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -285,18 +290,19 @@ Update an activity
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Activity.UpdateAtsActivity(ctx, operations.UpdateAtsActivityRequest{
         ConnectionID: "<value>",
         ID: "<id>",

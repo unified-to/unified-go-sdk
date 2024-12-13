@@ -18,18 +18,19 @@ Retrieve a payout
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Payout.GetPaymentPayout(ctx, operations.GetPaymentPayoutRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -71,18 +72,19 @@ List all payouts
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Payout.ListPaymentPayouts(ctx, operations.ListPaymentPayoutsRequest{
         ConnectionID: "<value>",
     })

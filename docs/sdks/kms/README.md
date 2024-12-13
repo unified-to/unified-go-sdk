@@ -28,18 +28,19 @@ Create a page
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.CreateKmsPage(ctx, operations.CreateKmsPageRequest{
         ConnectionID: "<value>",
     })
@@ -80,18 +81,19 @@ Create a space
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.CreateKmsSpace(ctx, operations.CreateKmsSpaceRequest{
         ConnectionID: "<value>",
     })
@@ -132,18 +134,19 @@ Retrieve a page
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.GetKmsPage(ctx, operations.GetKmsPageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -185,18 +188,19 @@ Retrieve a space
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.GetKmsSpace(ctx, operations.GetKmsSpaceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -238,18 +242,19 @@ List all pages
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.ListKmsPages(ctx, operations.ListKmsPagesRequest{
         ConnectionID: "<value>",
     })
@@ -290,18 +295,19 @@ List all spaces
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.ListKmsSpaces(ctx, operations.ListKmsSpacesRequest{
         ConnectionID: "<value>",
     })
@@ -342,18 +348,19 @@ Update a page
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.PatchKmsPage(ctx, operations.PatchKmsPageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -395,18 +402,19 @@ Update a space
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.PatchKmsSpace(ctx, operations.PatchKmsSpaceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -448,18 +456,19 @@ Remove a page
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.RemoveKmsPage(ctx, operations.RemoveKmsPageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -501,18 +510,19 @@ Remove a space
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.RemoveKmsSpace(ctx, operations.RemoveKmsSpaceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -554,18 +564,19 @@ Update a page
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.UpdateKmsPage(ctx, operations.UpdateKmsPageRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -607,18 +618,19 @@ Update a space
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Kms.UpdateKmsSpace(ctx, operations.UpdateKmsSpaceRequest{
         ConnectionID: "<value>",
         ID: "<id>",

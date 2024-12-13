@@ -22,18 +22,19 @@ Create a commit
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Commit.CreateRepoCommit(ctx, operations.CreateRepoCommitRequest{
         ConnectionID: "<id>",
     })
@@ -74,18 +75,19 @@ Retrieve a commit
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Commit.GetRepoCommit(ctx, operations.GetRepoCommitRequest{
         ConnectionID: "<id>",
         ID: "<id>",
@@ -127,18 +129,19 @@ List all commits
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Commit.ListRepoCommits(ctx, operations.ListRepoCommitsRequest{
         ConnectionID: "<id>",
     })
@@ -179,18 +182,19 @@ Update a commit
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Commit.PatchRepoCommit(ctx, operations.PatchRepoCommitRequest{
         ConnectionID: "<id>",
         ID: "<id>",
@@ -232,18 +236,19 @@ Remove a commit
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Commit.RemoveRepoCommit(ctx, operations.RemoveRepoCommitRequest{
         ConnectionID: "<id>",
         ID: "<id>",
@@ -285,18 +290,19 @@ Update a commit
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Commit.UpdateRepoCommit(ctx, operations.UpdateRepoCommitRequest{
         ConnectionID: "<id>",
         ID: "<id>",

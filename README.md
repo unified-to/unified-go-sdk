@@ -49,11 +49,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	})
@@ -1087,11 +1088,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	})
@@ -1135,12 +1137,13 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerIndex(1),
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	})
@@ -1168,12 +1171,13 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithServerURL("https://api.unified.to"),
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	})
@@ -1244,11 +1248,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	})
@@ -1282,11 +1287,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	}, operations.WithRetries(
@@ -1323,6 +1329,8 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithRetryConfig(
 			retry.Config{
@@ -1338,7 +1346,6 @@ func main() {
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	})

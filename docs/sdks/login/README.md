@@ -17,18 +17,19 @@ Returns an authentication URL for the specified integration.  Once a successful 
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Login.GetUnifiedIntegrationLogin(ctx, operations.GetUnifiedIntegrationLoginRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",

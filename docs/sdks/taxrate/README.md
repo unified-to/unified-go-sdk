@@ -22,18 +22,19 @@ Create a taxrate
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Taxrate.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
         ConnectionID: "<value>",
     })
@@ -74,18 +75,19 @@ Retrieve a taxrate
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Taxrate.GetAccountingTaxrate(ctx, operations.GetAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -127,18 +129,19 @@ List all taxrates
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Taxrate.ListAccountingTaxrates(ctx, operations.ListAccountingTaxratesRequest{
         ConnectionID: "<value>",
     })
@@ -179,18 +182,19 @@ Update a taxrate
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Taxrate.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -232,18 +236,19 @@ Remove a taxrate
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Taxrate.RemoveAccountingTaxrate(ctx, operations.RemoveAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -285,18 +290,19 @@ Update a taxrate
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Taxrate.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",

@@ -10,11 +10,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := unifiedgosdk.New(
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
 		ConnectionID: "<value>",
 	})

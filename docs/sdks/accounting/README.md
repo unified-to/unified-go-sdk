@@ -60,18 +60,19 @@ Create an account
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
         ConnectionID: "<value>",
     })
@@ -112,18 +113,19 @@ Create a contact
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
         ConnectionID: "<value>",
     })
@@ -164,18 +166,19 @@ Create an invoice
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.CreateAccountingInvoice(ctx, operations.CreateAccountingInvoiceRequest{
         ConnectionID: "<value>",
     })
@@ -216,18 +219,19 @@ Create a journal
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.CreateAccountingJournal(ctx, operations.CreateAccountingJournalRequest{
         ConnectionID: "<value>",
     })
@@ -268,18 +272,19 @@ Create an order
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.CreateAccountingOrder(ctx, operations.CreateAccountingOrderRequest{
         ConnectionID: "<id>",
     })
@@ -320,18 +325,19 @@ Create a taxrate
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
         ConnectionID: "<value>",
     })
@@ -372,18 +378,19 @@ Create a transaction
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
         ConnectionID: "<value>",
     })
@@ -424,18 +431,19 @@ Retrieve an account
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.GetAccountingAccount(ctx, operations.GetAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -477,18 +485,19 @@ Retrieve a contact
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.GetAccountingContact(ctx, operations.GetAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -530,18 +539,19 @@ Retrieve an invoice
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.GetAccountingInvoice(ctx, operations.GetAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -583,18 +593,19 @@ Retrieve a journal
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.GetAccountingJournal(ctx, operations.GetAccountingJournalRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -636,18 +647,19 @@ Retrieve an order
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.GetAccountingOrder(ctx, operations.GetAccountingOrderRequest{
         ConnectionID: "<id>",
         ID: "<id>",
@@ -689,18 +701,19 @@ Retrieve an organization
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.GetAccountingOrganization(ctx, operations.GetAccountingOrganizationRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -742,18 +755,19 @@ Retrieve a taxrate
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.GetAccountingTaxrate(ctx, operations.GetAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -795,18 +809,19 @@ Retrieve a transaction
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.GetAccountingTransaction(ctx, operations.GetAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -848,18 +863,19 @@ List all accounts
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.ListAccountingAccounts(ctx, operations.ListAccountingAccountsRequest{
         ConnectionID: "<value>",
     })
@@ -900,18 +916,19 @@ List all contacts
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.ListAccountingContacts(ctx, operations.ListAccountingContactsRequest{
         ConnectionID: "<value>",
     })
@@ -952,18 +969,19 @@ List all invoices
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.ListAccountingInvoices(ctx, operations.ListAccountingInvoicesRequest{
         ConnectionID: "<value>",
     })
@@ -1004,18 +1022,19 @@ List all journals
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.ListAccountingJournals(ctx, operations.ListAccountingJournalsRequest{
         ConnectionID: "<value>",
     })
@@ -1056,18 +1075,19 @@ List all orders
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.ListAccountingOrders(ctx, operations.ListAccountingOrdersRequest{
         ConnectionID: "<id>",
     })
@@ -1108,18 +1128,19 @@ List all organizations
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.ListAccountingOrganizations(ctx, operations.ListAccountingOrganizationsRequest{
         ConnectionID: "<value>",
     })
@@ -1160,18 +1181,19 @@ List all taxrates
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.ListAccountingTaxrates(ctx, operations.ListAccountingTaxratesRequest{
         ConnectionID: "<value>",
     })
@@ -1212,18 +1234,19 @@ List all transactions
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.ListAccountingTransactions(ctx, operations.ListAccountingTransactionsRequest{
         ConnectionID: "<value>",
     })
@@ -1264,18 +1287,19 @@ Update an account
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.PatchAccountingAccount(ctx, operations.PatchAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1317,18 +1341,19 @@ Update a contact
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1370,18 +1395,19 @@ Update an invoice
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.PatchAccountingInvoice(ctx, operations.PatchAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1423,18 +1449,19 @@ Update a journal
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.PatchAccountingJournal(ctx, operations.PatchAccountingJournalRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1476,18 +1503,19 @@ Update an order
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.PatchAccountingOrder(ctx, operations.PatchAccountingOrderRequest{
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1529,18 +1557,19 @@ Update a taxrate
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1582,18 +1611,19 @@ Update a transaction
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1635,18 +1665,19 @@ Remove an account
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingAccount(ctx, operations.RemoveAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1688,18 +1719,19 @@ Remove a contact
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingContact(ctx, operations.RemoveAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1741,18 +1773,19 @@ Remove an invoice
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingInvoice(ctx, operations.RemoveAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1794,18 +1827,19 @@ Remove a journal
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingJournal(ctx, operations.RemoveAccountingJournalRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1847,18 +1881,19 @@ Remove an order
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingOrder(ctx, operations.RemoveAccountingOrderRequest{
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1900,18 +1935,19 @@ Remove a taxrate
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingTaxrate(ctx, operations.RemoveAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -1953,18 +1989,19 @@ Remove a transaction
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.RemoveAccountingTransaction(ctx, operations.RemoveAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -2006,18 +2043,19 @@ Update an account
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingAccount(ctx, operations.UpdateAccountingAccountRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -2059,18 +2097,19 @@ Update a contact
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -2112,18 +2151,19 @@ Update an invoice
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingInvoice(ctx, operations.UpdateAccountingInvoiceRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -2165,18 +2205,19 @@ Update a journal
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingJournal(ctx, operations.UpdateAccountingJournalRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -2218,18 +2259,19 @@ Update an order
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingOrder(ctx, operations.UpdateAccountingOrderRequest{
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2271,18 +2313,19 @@ Update a taxrate
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -2324,18 +2367,19 @@ Update a transaction
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Accounting.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
         ConnectionID: "<value>",
         ID: "<id>",

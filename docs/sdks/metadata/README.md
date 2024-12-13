@@ -22,18 +22,19 @@ Create a metadata
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Metadata.CreateMetadataMetadata(ctx, operations.CreateMetadataMetadataRequest{
         ConnectionID: "<id>",
     })
@@ -74,18 +75,19 @@ Retrieve a metadata
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Metadata.GetMetadataMetadata(ctx, operations.GetMetadataMetadataRequest{
         ConnectionID: "<id>",
         ID: "<id>",
@@ -127,18 +129,19 @@ List all metadatas
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Metadata.ListMetadataMetadatas(ctx, operations.ListMetadataMetadatasRequest{
         ConnectionID: "<id>",
     })
@@ -179,18 +182,19 @@ Update a metadata
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Metadata.PatchMetadataMetadata(ctx, operations.PatchMetadataMetadataRequest{
         ConnectionID: "<id>",
         ID: "<id>",
@@ -232,18 +236,19 @@ Remove a metadata
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Metadata.RemoveMetadataMetadata(ctx, operations.RemoveMetadataMetadataRequest{
         ConnectionID: "<id>",
         ID: "<id>",
@@ -285,18 +290,19 @@ Update a metadata
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Metadata.UpdateMetadataMetadata(ctx, operations.UpdateMetadataMetadataRequest{
         ConnectionID: "<id>",
         ID: "<id>",

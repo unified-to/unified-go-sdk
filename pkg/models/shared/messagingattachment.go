@@ -3,11 +3,19 @@
 package shared
 
 type MessagingAttachment struct {
-	ContentType *string  `json:"content_type,omitempty"`
-	DownloadURL *string  `json:"download_url,omitempty"`
-	Filename    *string  `json:"filename,omitempty"`
-	MessageID   *string  `json:"message_id,omitempty"`
-	Size        *float64 `json:"size,omitempty"`
+	ContentIdentifier *string  `json:"content_identifier,omitempty"`
+	ContentType       *string  `json:"content_type,omitempty"`
+	DownloadURL       *string  `json:"download_url,omitempty"`
+	Filename          *string  `json:"filename,omitempty"`
+	MessageID         *string  `json:"message_id,omitempty"`
+	Size              *float64 `json:"size,omitempty"`
+}
+
+func (o *MessagingAttachment) GetContentIdentifier() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ContentIdentifier
 }
 
 func (o *MessagingAttachment) GetContentType() *string {

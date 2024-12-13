@@ -18,18 +18,19 @@ Retrieve enrichment information for a company
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Enrich.ListEnrichCompanies(ctx, operations.ListEnrichCompaniesRequest{
         ConnectionID: "<value>",
     })
@@ -70,18 +71,19 @@ Retrieve enrichment information for a person
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Enrich.ListEnrichPeople(ctx, operations.ListEnrichPeopleRequest{
         ConnectionID: "<value>",
     })

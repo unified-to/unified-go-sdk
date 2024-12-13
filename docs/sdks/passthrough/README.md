@@ -24,18 +24,19 @@ Passthrough POST
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Passthrough.CreatePassthroughJSON(ctx, operations.CreatePassthroughJSONRequest{
         ConnectionID: "<value>",
         Path: "/etc/periodic",
@@ -77,18 +78,19 @@ Passthrough POST
 package main
 
 import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Passthrough.CreatePassthroughRaw(ctx, operations.CreatePassthroughRawRequest{
         ConnectionID: "<value>",
         Path: "/etc/periodic",
@@ -130,18 +132,19 @@ Passthrough GET
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Passthrough.ListPassthroughs(ctx, operations.ListPassthroughsRequest{
         ConnectionID: "<value>",
         Path: "/selinux",
@@ -183,18 +186,19 @@ Passthrough PUT
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Passthrough.PatchPassthroughJSON(ctx, operations.PatchPassthroughJSONRequest{
         ConnectionID: "<value>",
         Path: "/mnt",
@@ -236,18 +240,19 @@ Passthrough PUT
 package main
 
 import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Passthrough.PatchPassthroughRaw(ctx, operations.PatchPassthroughRawRequest{
         ConnectionID: "<value>",
         Path: "/mnt",
@@ -289,18 +294,19 @@ Passthrough DELETE
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Passthrough.RemovePassthrough(ctx, operations.RemovePassthroughRequest{
         ConnectionID: "<value>",
         Path: "/Applications",
@@ -342,18 +348,19 @@ Passthrough PUT
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Passthrough.UpdatePassthroughJSON(ctx, operations.UpdatePassthroughJSONRequest{
         ConnectionID: "<value>",
         Path: "/dev",
@@ -395,18 +402,19 @@ Passthrough PUT
 package main
 
 import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Passthrough.UpdatePassthroughRaw(ctx, operations.UpdatePassthroughRawRequest{
         ConnectionID: "<value>",
         Path: "/dev",

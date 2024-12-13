@@ -22,17 +22,18 @@ Used only to import existing customer credentials; use "Create connection indire
 package main
 
 import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Connection.CreateUnifiedConnection(ctx, nil)
     if err != nil {
         log.Fatal(err)
@@ -71,18 +72,19 @@ Retrieve connection
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Connection.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
         ID: "<id>",
     })
@@ -123,18 +125,19 @@ List all connections
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Connection.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{})
     if err != nil {
         log.Fatal(err)
@@ -173,18 +176,19 @@ Update connection
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Connection.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
         ID: "<id>",
     })
@@ -225,18 +229,19 @@ Remove connection
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Connection.RemoveUnifiedConnection(ctx, operations.RemoveUnifiedConnectionRequest{
         ID: "<id>",
     })
@@ -277,18 +282,19 @@ Update connection
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Connection.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
         ID: "<id>",
     })

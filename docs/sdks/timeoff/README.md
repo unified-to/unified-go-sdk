@@ -18,18 +18,19 @@ Retrieve a timeoff
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Timeoff.GetHrisTimeoff(ctx, operations.GetHrisTimeoffRequest{
         ConnectionID: "<value>",
         ID: "<id>",
@@ -71,18 +72,19 @@ List all timeoffs
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Timeoff.ListHrisTimeoffs(ctx, operations.ListHrisTimeoffsRequest{
         ConnectionID: "<value>",
     })

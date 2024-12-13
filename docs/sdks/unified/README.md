@@ -36,17 +36,18 @@ Used only to import existing customer credentials; use "Create connection indire
 package main
 
 import(
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.CreateUnifiedConnection(ctx, nil)
     if err != nil {
         log.Fatal(err)
@@ -85,18 +86,19 @@ The data payload received by your server is described at https://docs.unified.to
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{})
     if err != nil {
         log.Fatal(err)
@@ -135,18 +137,19 @@ Retrieve specific API Call by its ID
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.GetUnifiedApicall(ctx, operations.GetUnifiedApicallRequest{
         ID: "<id>",
     })
@@ -187,18 +190,19 @@ Retrieve connection
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.GetUnifiedConnection(ctx, operations.GetUnifiedConnectionRequest{
         ID: "<id>",
     })
@@ -239,18 +243,19 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
         WorkspaceID: "<value>",
@@ -292,18 +297,19 @@ Retrieve webhook by its ID
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.GetUnifiedWebhook(ctx, operations.GetUnifiedWebhookRequest{
         ID: "<id>",
     })
@@ -344,18 +350,19 @@ Returns API Calls
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.ListUnifiedApicalls(ctx, operations.ListUnifiedApicallsRequest{})
     if err != nil {
         log.Fatal(err)
@@ -394,18 +401,19 @@ List all connections
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.ListUnifiedConnections(ctx, operations.ListUnifiedConnectionsRequest{})
     if err != nil {
         log.Fatal(err)
@@ -444,18 +452,19 @@ No authentication required as this is to be used by front-end interface
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
         WorkspaceID: "<value>",
     })
@@ -496,18 +505,19 @@ Returns all integrations
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.ListUnifiedIntegrations(ctx, operations.ListUnifiedIntegrationsRequest{})
     if err != nil {
         log.Fatal(err)
@@ -546,18 +556,19 @@ List support issues
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.ListUnifiedIssues(ctx, operations.ListUnifiedIssuesRequest{})
     if err != nil {
         log.Fatal(err)
@@ -596,18 +607,19 @@ Returns all registered webhooks
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.ListUnifiedWebhooks(ctx, operations.ListUnifiedWebhooksRequest{})
     if err != nil {
         log.Fatal(err)
@@ -646,18 +658,19 @@ Update connection
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
         ID: "<id>",
     })
@@ -698,18 +711,19 @@ Update webhook subscription
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.PatchUnifiedWebhook(ctx, operations.PatchUnifiedWebhookRequest{
         ID: "<id>",
     })
@@ -750,18 +764,19 @@ Trigger webhook
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.PatchUnifiedWebhookTrigger(ctx, operations.PatchUnifiedWebhookTriggerRequest{
         ID: "<id>",
     })
@@ -802,18 +817,19 @@ Remove connection
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.RemoveUnifiedConnection(ctx, operations.RemoveUnifiedConnectionRequest{
         ID: "<id>",
     })
@@ -854,18 +870,19 @@ Remove webhook subscription
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.RemoveUnifiedWebhook(ctx, operations.RemoveUnifiedWebhookRequest{
         ID: "<id>",
     })
@@ -906,18 +923,19 @@ Update connection
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
         ID: "<id>",
     })
@@ -958,18 +976,19 @@ Update webhook subscription
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.UpdateUnifiedWebhook(ctx, operations.UpdateUnifiedWebhookRequest{
         ID: "<id>",
     })
@@ -1010,18 +1029,19 @@ Trigger webhook
 package main
 
 import(
+	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"context"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := unifiedgosdk.New(
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Unified.UpdateUnifiedWebhookTrigger(ctx, operations.UpdateUnifiedWebhookTriggerRequest{
         ID: "<id>",
     })
