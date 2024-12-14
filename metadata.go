@@ -83,6 +83,10 @@ func (s *Metadata) CreateMetadataMetadata(ctx context.Context, request operation
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -272,6 +276,10 @@ func (s *Metadata) GetMetadataMetadata(ctx context.Context, request operations.G
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -459,6 +467,10 @@ func (s *Metadata) ListMetadataMetadatas(ctx context.Context, request operations
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -656,6 +668,10 @@ func (s *Metadata) PatchMetadataMetadata(ctx context.Context, request operations
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -841,6 +857,10 @@ func (s *Metadata) RemoveMetadataMetadata(ctx context.Context, request operation
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -1011,6 +1031,10 @@ func (s *Metadata) UpdateMetadataMetadata(ctx context.Context, request operation
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig

@@ -77,6 +77,10 @@ func (s *Model) ListGenaiModels(ctx context.Context, request operations.ListGena
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {

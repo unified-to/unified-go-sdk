@@ -83,6 +83,10 @@ func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operati
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -272,6 +276,10 @@ func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -459,6 +467,10 @@ func (s *Inventory) ListCommerceInventories(ctx context.Context, request operati
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -656,6 +668,10 @@ func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operatio
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -841,6 +857,10 @@ func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operati
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -1011,6 +1031,10 @@ func (s *Inventory) UpdateCommerceInventory(ctx context.Context, request operati
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig

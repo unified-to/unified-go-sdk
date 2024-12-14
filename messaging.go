@@ -83,6 +83,10 @@ func (s *Messaging) CreateMessagingMessage(ctx context.Context, request operatio
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -270,6 +274,10 @@ func (s *Messaging) GetMessagingChannel(ctx context.Context, request operations.
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -461,6 +469,10 @@ func (s *Messaging) GetMessagingMessage(ctx context.Context, request operations.
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -650,6 +662,10 @@ func (s *Messaging) ListMessagingChannels(ctx context.Context, request operation
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -837,6 +853,10 @@ func (s *Messaging) ListMessagingMessages(ctx context.Context, request operation
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -1034,6 +1054,10 @@ func (s *Messaging) PatchMessagingMessage(ctx context.Context, request operation
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -1219,6 +1243,10 @@ func (s *Messaging) RemoveMessagingMessage(ctx context.Context, request operatio
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -1389,6 +1417,10 @@ func (s *Messaging) UpdateMessagingMessage(ctx context.Context, request operatio
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig

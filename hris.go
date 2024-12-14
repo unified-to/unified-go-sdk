@@ -83,6 +83,10 @@ func (s *Hris) CreateHrisCompany(ctx context.Context, request operations.CreateH
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -276,6 +280,10 @@ func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.Create
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -473,6 +481,10 @@ func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHri
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -668,6 +680,10 @@ func (s *Hris) CreateHrisLocation(ctx context.Context, request operations.Create
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -855,6 +871,10 @@ func (s *Hris) GetHrisCompany(ctx context.Context, request operations.GetHrisCom
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -1046,6 +1066,10 @@ func (s *Hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEm
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -1233,6 +1257,10 @@ func (s *Hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroup
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -1424,6 +1452,10 @@ func (s *Hris) GetHrisLocation(ctx context.Context, request operations.GetHrisLo
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -1611,6 +1643,10 @@ func (s *Hris) GetHrisPayslip(ctx context.Context, request operations.GetHrisPay
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -1802,6 +1838,10 @@ func (s *Hris) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTim
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -1989,6 +2029,10 @@ func (s *Hris) ListHrisCompanies(ctx context.Context, request operations.ListHri
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -2180,6 +2224,10 @@ func (s *Hris) ListHrisEmployees(ctx context.Context, request operations.ListHri
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -2367,6 +2415,10 @@ func (s *Hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGr
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -2558,6 +2610,10 @@ func (s *Hris) ListHrisLocations(ctx context.Context, request operations.ListHri
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -2747,6 +2803,10 @@ func (s *Hris) ListHrisPayslips(ctx context.Context, request operations.ListHris
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -2934,6 +2994,10 @@ func (s *Hris) ListHrisTimeoffs(ctx context.Context, request operations.ListHris
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -3131,6 +3195,10 @@ func (s *Hris) PatchHrisCompany(ctx context.Context, request operations.PatchHri
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -3324,6 +3392,10 @@ func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHr
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -3521,6 +3593,10 @@ func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisG
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -3716,6 +3792,10 @@ func (s *Hris) PatchHrisLocation(ctx context.Context, request operations.PatchHr
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -3901,6 +3981,10 @@ func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveH
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -4061,6 +4145,10 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -4225,6 +4313,10 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -4385,6 +4477,10 @@ func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.Remove
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -4557,6 +4653,10 @@ func (s *Hris) UpdateHrisCompany(ctx context.Context, request operations.UpdateH
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
@@ -4754,6 +4854,10 @@ func (s *Hris) UpdateHrisEmployee(ctx context.Context, request operations.Update
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -4949,6 +5053,10 @@ func (s *Hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHri
 		return nil, err
 	}
 
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
 	globalRetryConfig := s.sdkConfiguration.RetryConfig
 	retryConfig := o.Retries
 	if retryConfig == nil {
@@ -5142,6 +5250,10 @@ func (s *Hris) UpdateHrisLocation(ctx context.Context, request operations.Update
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
 	}
 
 	globalRetryConfig := s.sdkConfiguration.RetryConfig

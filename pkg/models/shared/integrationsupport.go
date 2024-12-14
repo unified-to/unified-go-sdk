@@ -703,6 +703,35 @@ func (e *ListOrder) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListOrgID string
+
+const (
+	ListOrgIDSupportedRequired ListOrgID = "supported-required"
+	ListOrgIDSupported         ListOrgID = "supported"
+	ListOrgIDNotSupported      ListOrgID = "not-supported"
+)
+
+func (e ListOrgID) ToPointer() *ListOrgID {
+	return &e
+}
+func (e *ListOrgID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListOrgID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListOrgID: %v", v)
+	}
+}
+
 type ListParentID string
 
 const (
@@ -816,6 +845,35 @@ func (e *ListRawFields) UnmarshalJSON(data []byte) error {
 		return nil
 	default:
 		return fmt.Errorf("invalid value for ListRawFields: %v", v)
+	}
+}
+
+type ListRepoID string
+
+const (
+	ListRepoIDSupportedRequired ListRepoID = "supported-required"
+	ListRepoIDSupported         ListRepoID = "supported"
+	ListRepoIDNotSupported      ListRepoID = "not-supported"
+)
+
+func (e ListRepoID) ToPointer() *ListRepoID {
+	return &e
+}
+func (e *ListRepoID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListRepoID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListRepoID: %v", v)
 	}
 }
 
@@ -1428,6 +1486,35 @@ func (e *VirtualWebhookDealID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type VirtualWebhookJobID string
+
+const (
+	VirtualWebhookJobIDSupportedRequired VirtualWebhookJobID = "supported-required"
+	VirtualWebhookJobIDSupported         VirtualWebhookJobID = "supported"
+	VirtualWebhookJobIDNotSupported      VirtualWebhookJobID = "not-supported"
+)
+
+func (e VirtualWebhookJobID) ToPointer() *VirtualWebhookJobID {
+	return &e
+}
+func (e *VirtualWebhookJobID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = VirtualWebhookJobID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for VirtualWebhookJobID: %v", v)
+	}
+}
+
 type VirtualWebhookLimit string
 
 const (
@@ -1628,10 +1715,12 @@ type IntegrationSupport struct {
 	ListLocationID         *ListLocationID         `json:"list_location_id,omitempty"`
 	ListOffset             *ListOffset             `json:"list_offset,omitempty"`
 	ListOrder              *ListOrder              `json:"list_order,omitempty"`
+	ListOrgID              *ListOrgID              `json:"list_org_id,omitempty"`
 	ListParentID           *ListParentID           `json:"list_parent_id,omitempty"`
 	ListProjectID          *ListProjectID          `json:"list_project_id,omitempty"`
 	ListQuery              *ListQuery              `json:"list_query,omitempty"`
 	ListRawFields          *ListRawFields          `json:"list_raw_fields,omitempty"`
+	ListRepoID             *ListRepoID             `json:"list_repo_id,omitempty"`
 	ListRootID             *ListRootID             `json:"list_root_id,omitempty"`
 	ListSortByCreatedAt    *ListSortByCreatedAt    `json:"list_sort_by_created_at,omitempty"`
 	ListSortByName         *ListSortByName         `json:"list_sort_by_name,omitempty"`
@@ -1657,6 +1746,7 @@ type IntegrationSupport struct {
 	VirtualWebhookCompanyID  *VirtualWebhookCompanyID                 `json:"virtual_webhook_company_id,omitempty"`
 	VirtualWebhookContactID  *VirtualWebhookContactID                 `json:"virtual_webhook_contact_id,omitempty"`
 	VirtualWebhookDealID     *VirtualWebhookDealID                    `json:"virtual_webhook_deal_id,omitempty"`
+	VirtualWebhookJobID      *VirtualWebhookJobID                     `json:"virtual_webhook_job_id,omitempty"`
 	VirtualWebhookLimit      *VirtualWebhookLimit                     `json:"virtual_webhook_limit,omitempty"`
 	VirtualWebhookParentID   *VirtualWebhookParentID                  `json:"virtual_webhook_parent_id,omitempty"`
 	VirtualWebhookTicketID   *VirtualWebhookTicketID                  `json:"virtual_webhook_ticket_id,omitempty"`
@@ -1841,6 +1931,13 @@ func (o *IntegrationSupport) GetListOrder() *ListOrder {
 	return o.ListOrder
 }
 
+func (o *IntegrationSupport) GetListOrgID() *ListOrgID {
+	if o == nil {
+		return nil
+	}
+	return o.ListOrgID
+}
+
 func (o *IntegrationSupport) GetListParentID() *ListParentID {
 	if o == nil {
 		return nil
@@ -1867,6 +1964,13 @@ func (o *IntegrationSupport) GetListRawFields() *ListRawFields {
 		return nil
 	}
 	return o.ListRawFields
+}
+
+func (o *IntegrationSupport) GetListRepoID() *ListRepoID {
+	if o == nil {
+		return nil
+	}
+	return o.ListRepoID
 }
 
 func (o *IntegrationSupport) GetListRootID() *ListRootID {
@@ -2035,6 +2139,13 @@ func (o *IntegrationSupport) GetVirtualWebhookDealID() *VirtualWebhookDealID {
 		return nil
 	}
 	return o.VirtualWebhookDealID
+}
+
+func (o *IntegrationSupport) GetVirtualWebhookJobID() *VirtualWebhookJobID {
+	if o == nil {
+		return nil
+	}
+	return o.VirtualWebhookJobID
 }
 
 func (o *IntegrationSupport) GetVirtualWebhookLimit() *VirtualWebhookLimit {

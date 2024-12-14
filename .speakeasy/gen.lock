@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: aa3c8602e58a30faa2d1085e078be4b2
+  docChecksum: 5cab2e21dd40857ac20e5d0a4eaf95d0
   docVersion: "1.0"
-  speakeasyVersion: 1.454.2
-  generationVersion: 2.477.4
-  releaseVersion: 0.21.19
-  configChecksum: 846fe1e31524cafb2867871736db591c
+  speakeasyVersion: 1.455.3
+  generationVersion: 2.479.3
+  releaseVersion: 0.22.0
+  configChecksum: db9ef827db67868c5ad940b9ca3036f1
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.6
-    core: 3.5.18
+    core: 3.6.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -1494,10 +1494,12 @@ generatedFiles:
   - docs/pkg/models/shared/listlocationid.md
   - docs/pkg/models/shared/listoffset.md
   - docs/pkg/models/shared/listorder.md
+  - docs/pkg/models/shared/listorgid.md
   - docs/pkg/models/shared/listparentid.md
   - docs/pkg/models/shared/listprojectid.md
   - docs/pkg/models/shared/listquery.md
   - docs/pkg/models/shared/listrawfields.md
+  - docs/pkg/models/shared/listrepoid.md
   - docs/pkg/models/shared/listrootid.md
   - docs/pkg/models/shared/listsortbycreatedat.md
   - docs/pkg/models/shared/listsortbyname.md
@@ -1658,6 +1660,7 @@ generatedFiles:
   - docs/pkg/models/shared/virtualwebhookcompanyid.md
   - docs/pkg/models/shared/virtualwebhookcontactid.md
   - docs/pkg/models/shared/virtualwebhookdealid.md
+  - docs/pkg/models/shared/virtualwebhookjobid.md
   - docs/pkg/models/shared/virtualwebhooklimit.md
   - docs/pkg/models/shared/virtualwebhookparentid.md
   - docs/pkg/models/shared/virtualwebhookticketid.md
