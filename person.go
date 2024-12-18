@@ -45,7 +45,12 @@ func (s *Person) ListEnrichPeople(ctx context.Context, request operations.ListEn
 		}
 	}
 
-	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	var baseURL string
+	if o.ServerURL == nil {
+		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	} else {
+		baseURL = *o.ServerURL
+	}
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/person", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)

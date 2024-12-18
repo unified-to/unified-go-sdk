@@ -46,7 +46,12 @@ func (s *Issue) ListUnifiedIssues(ctx context.Context, request operations.ListUn
 		}
 	}
 
-	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	var baseURL string
+	if o.ServerURL == nil {
+		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	} else {
+		baseURL = *o.ServerURL
+	}
 	opURL, err := url.JoinPath(baseURL, "/unified/issue")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)

@@ -9,8 +9,10 @@ import (
 
 // CrmCompany - A company represents an organization that optionally is associated with a deal and/or contacts
 type CrmCompany struct {
-	Address   *PropertyCrmCompanyAddress `json:"address,omitempty"`
-	CreatedAt *time.Time                 `json:"created_at,omitempty"`
+	Address *PropertyCrmCompanyAddress `json:"address,omitempty"`
+	// An array of contact IDs associated with this company
+	ContactIds []string   `json:"contact_ids,omitempty"`
+	CreatedAt  *time.Time `json:"created_at,omitempty"`
 	// An array of deal IDs associated with this contact
 	DealIds     []string   `json:"deal_ids,omitempty"`
 	Description *string    `json:"description,omitempty"`
@@ -47,6 +49,13 @@ func (o *CrmCompany) GetAddress() *PropertyCrmCompanyAddress {
 		return nil
 	}
 	return o.Address
+}
+
+func (o *CrmCompany) GetContactIds() []string {
+	if o == nil {
+		return nil
+	}
+	return o.ContactIds
 }
 
 func (o *CrmCompany) GetCreatedAt() *time.Time {
