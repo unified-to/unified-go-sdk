@@ -86,6 +86,8 @@
 | `ScopesHrisLocationRead`           | hris_location_read                 |
 | `ScopesHrisLocationWrite`          | hris_location_write                |
 | `ScopesUcCallRead`                 | uc_call_read                       |
+| `ScopesUcContactRead`              | uc_contact_read                    |
+| `ScopesUcContactWrite`             | uc_contact_write                   |
 | `ScopesStorageFileRead`            | storage_file_read                  |
 | `ScopesStorageFileWrite`           | storage_file_write                 |
 | `ScopesWebhook`                    | webhook                            |

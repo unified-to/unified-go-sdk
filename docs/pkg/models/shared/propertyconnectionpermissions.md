@@ -86,6 +86,8 @@
 | `PropertyConnectionPermissionsHrisLocationRead`           | hris_location_read                                        |
 | `PropertyConnectionPermissionsHrisLocationWrite`          | hris_location_write                                       |
 | `PropertyConnectionPermissionsUcCallRead`                 | uc_call_read                                              |
+| `PropertyConnectionPermissionsUcContactRead`              | uc_contact_read                                           |
+| `PropertyConnectionPermissionsUcContactWrite`             | uc_contact_write                                          |
 | `PropertyConnectionPermissionsStorageFileRead`            | storage_file_read                                         |
 | `PropertyConnectionPermissionsStorageFileWrite`           | storage_file_write                                        |
 | `PropertyConnectionPermissionsWebhook`                    | webhook                                                   |

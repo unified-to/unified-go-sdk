@@ -91,6 +91,8 @@ const (
 	PropertyConnectionPermissionsHrisLocationRead           PropertyConnectionPermissions = "hris_location_read"
 	PropertyConnectionPermissionsHrisLocationWrite          PropertyConnectionPermissions = "hris_location_write"
 	PropertyConnectionPermissionsUcCallRead                 PropertyConnectionPermissions = "uc_call_read"
+	PropertyConnectionPermissionsUcContactRead              PropertyConnectionPermissions = "uc_contact_read"
+	PropertyConnectionPermissionsUcContactWrite             PropertyConnectionPermissions = "uc_contact_write"
 	PropertyConnectionPermissionsStorageFileRead            PropertyConnectionPermissions = "storage_file_read"
 	PropertyConnectionPermissionsStorageFileWrite           PropertyConnectionPermissions = "storage_file_write"
 	PropertyConnectionPermissionsWebhook                    PropertyConnectionPermissions = "webhook"
@@ -306,6 +308,10 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "hris_location_write":
 		fallthrough
 	case "uc_call_read":
+		fallthrough
+	case "uc_contact_read":
+		fallthrough
+	case "uc_contact_write":
 		fallthrough
 	case "storage_file_read":
 		fallthrough
