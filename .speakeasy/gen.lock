@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 11363cbfd40306b24119fb60c9ea2fc5
+  docChecksum: 05ab7803e5b317202af3aacb4835f336
   docVersion: "1.0"
-  speakeasyVersion: 1.460.2
+  speakeasyVersion: 1.460.3
   generationVersion: 2.484.0
-  releaseVersion: 0.22.2
-  configChecksum: 11dab00a4c12f2b630d41c93f4070c1d
+  releaseVersion: 0.22.3
+  configChecksum: 2b28a5e01975e3438521ffbde17acdcb
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -452,6 +452,8 @@ generatedFiles:
   - /pkg/models/shared/crmdeal.go
   - /pkg/models/shared/crmemail.go
   - /pkg/models/shared/crmevent.go
+  - /pkg/models/shared/crmeventformfield.go
+  - /pkg/models/shared/crmeventformoption.go
   - /pkg/models/shared/crmlead.go
   - /pkg/models/shared/crmpipeline.go
   - /pkg/models/shared/crmstage.go
@@ -516,8 +518,11 @@ generatedFiles:
   - /pkg/models/shared/propertycrmcontactaddress.go
   - /pkg/models/shared/propertycrmeventcall.go
   - /pkg/models/shared/propertycrmeventemail.go
+  - /pkg/models/shared/propertycrmeventform.go
+  - /pkg/models/shared/propertycrmeventmarketingemail.go
   - /pkg/models/shared/propertycrmeventmeeting.go
   - /pkg/models/shared/propertycrmeventnote.go
+  - /pkg/models/shared/propertycrmeventpageview.go
   - /pkg/models/shared/propertycrmeventtask.go
   - /pkg/models/shared/propertycrmleadaddress.go
   - /pkg/models/shared/propertyenrichcompanyaddress.go
@@ -1420,6 +1425,9 @@ generatedFiles:
   - docs/pkg/models/shared/crmemail.md
   - docs/pkg/models/shared/crmemailtype.md
   - docs/pkg/models/shared/crmevent.md
+  - docs/pkg/models/shared/crmeventformfield.md
+  - docs/pkg/models/shared/crmeventformfieldtype.md
+  - docs/pkg/models/shared/crmeventformoption.md
   - docs/pkg/models/shared/crmeventtype.md
   - docs/pkg/models/shared/crmlead.md
   - docs/pkg/models/shared/crmpipeline.md
@@ -1561,8 +1569,11 @@ generatedFiles:
   - docs/pkg/models/shared/propertycrmcontactaddress.md
   - docs/pkg/models/shared/propertycrmeventcall.md
   - docs/pkg/models/shared/propertycrmeventemail.md
+  - docs/pkg/models/shared/propertycrmeventform.md
+  - docs/pkg/models/shared/propertycrmeventmarketingemail.md
   - docs/pkg/models/shared/propertycrmeventmeeting.md
   - docs/pkg/models/shared/propertycrmeventnote.md
+  - docs/pkg/models/shared/propertycrmeventpageview.md
   - docs/pkg/models/shared/propertycrmeventtask.md
   - docs/pkg/models/shared/propertycrmeventtaskstatus.md
   - docs/pkg/models/shared/propertycrmleadaddress.md

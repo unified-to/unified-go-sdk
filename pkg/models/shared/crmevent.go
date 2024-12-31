@@ -12,11 +12,14 @@ import (
 type CrmEventType string
 
 const (
-	CrmEventTypeNote    CrmEventType = "NOTE"
-	CrmEventTypeEmail   CrmEventType = "EMAIL"
-	CrmEventTypeTask    CrmEventType = "TASK"
-	CrmEventTypeMeeting CrmEventType = "MEETING"
-	CrmEventTypeCall    CrmEventType = "CALL"
+	CrmEventTypeNote           CrmEventType = "NOTE"
+	CrmEventTypeEmail          CrmEventType = "EMAIL"
+	CrmEventTypeTask           CrmEventType = "TASK"
+	CrmEventTypeMeeting        CrmEventType = "MEETING"
+	CrmEventTypeCall           CrmEventType = "CALL"
+	CrmEventTypeMarketingEmail CrmEventType = "MARKETING_EMAIL"
+	CrmEventTypeForm           CrmEventType = "FORM"
+	CrmEventTypePageView       CrmEventType = "PAGE_VIEW"
 )
 
 func (e CrmEventType) ToPointer() *CrmEventType {
@@ -37,6 +40,12 @@ func (e *CrmEventType) UnmarshalJSON(data []byte) error {
 	case "MEETING":
 		fallthrough
 	case "CALL":
+		fallthrough
+	case "MARKETING_EMAIL":
+		fallthrough
+	case "FORM":
+		fallthrough
+	case "PAGE_VIEW":
 		*e = CrmEventType(v)
 		return nil
 	default:
@@ -56,13 +65,16 @@ type CrmEvent struct {
 	// An array of deal IDs associated with this event
 	DealIds []string `json:"deal_ids,omitempty"`
 	// The email object, when type = email
-	Email   *PropertyCrmEventEmail `json:"email,omitempty"`
-	ID      *string                `json:"id,omitempty"`
-	LeadIds []string               `json:"lead_ids,omitempty"`
+	Email          *PropertyCrmEventEmail          `json:"email,omitempty"`
+	Form           *PropertyCrmEventForm           `json:"form,omitempty"`
+	ID             *string                         `json:"id,omitempty"`
+	LeadIds        []string                        `json:"lead_ids,omitempty"`
+	MarketingEmail *PropertyCrmEventMarketingEmail `json:"marketing_email,omitempty"`
 	// The meeting object, when type = meeting
 	Meeting *PropertyCrmEventMeeting `json:"meeting,omitempty"`
 	// The note object, when type = note
-	Note *PropertyCrmEventNote `json:"note,omitempty"`
+	Note     *PropertyCrmEventNote     `json:"note,omitempty"`
+	PageView *PropertyCrmEventPageView `json:"page_view,omitempty"`
 	// The raw data returned by the integration for this event.
 	Raw map[string]any `json:"raw,omitempty"`
 	// The task object, when type = task
@@ -125,6 +137,13 @@ func (o *CrmEvent) GetEmail() *PropertyCrmEventEmail {
 	return o.Email
 }
 
+func (o *CrmEvent) GetForm() *PropertyCrmEventForm {
+	if o == nil {
+		return nil
+	}
+	return o.Form
+}
+
 func (o *CrmEvent) GetID() *string {
 	if o == nil {
 		return nil
@@ -139,6 +158,13 @@ func (o *CrmEvent) GetLeadIds() []string {
 	return o.LeadIds
 }
 
+func (o *CrmEvent) GetMarketingEmail() *PropertyCrmEventMarketingEmail {
+	if o == nil {
+		return nil
+	}
+	return o.MarketingEmail
+}
+
 func (o *CrmEvent) GetMeeting() *PropertyCrmEventMeeting {
 	if o == nil {
 		return nil
@@ -151,6 +177,13 @@ func (o *CrmEvent) GetNote() *PropertyCrmEventNote {
 		return nil
 	}
 	return o.Note
+}
+
+func (o *CrmEvent) GetPageView() *PropertyCrmEventPageView {
+	if o == nil {
+		return nil
+	}
+	return o.PageView
 }
 
 func (o *CrmEvent) GetRaw() map[string]any {

@@ -1,0 +1,11 @@
+# CrmEventFormField
+
+
+## Fields
+
+| Field                                                                                | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `Name`                                                                               | **string*                                                                            | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `Options`                                                                            | [][shared.CrmEventFormOption](../../../pkg/models/shared/crmeventformoption.md)      | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `Required`                                                                           | **bool*                                                                              | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `Type`                                                                               | [*shared.CrmEventFormFieldType](../../../pkg/models/shared/crmeventformfieldtype.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
