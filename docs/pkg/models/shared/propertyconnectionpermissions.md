@@ -27,6 +27,8 @@
 | `PropertyConnectionPermissionsPaymentRefundRead`          | payment_refund_read                                       |
 | `PropertyConnectionPermissionsPaymentLinkRead`            | payment_link_read                                         |
 | `PropertyConnectionPermissionsPaymentLinkWrite`           | payment_link_write                                        |
+| `PropertyConnectionPermissionsPaymentSubscriptionRead`    | payment_subscription_read                                 |
+| `PropertyConnectionPermissionsPaymentSubscriptionWrite`   | payment_subscription_write                                |
 | `PropertyConnectionPermissionsCommerceItemRead`           | commerce_item_read                                        |
 | `PropertyConnectionPermissionsCommerceItemWrite`          | commerce_item_write                                       |
 | `PropertyConnectionPermissionsCommerceCollectionRead`     | commerce_collection_read                                  |

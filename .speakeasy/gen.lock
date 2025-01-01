@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 05ab7803e5b317202af3aacb4835f336
+  docChecksum: d3ff121f2a7d483c6c660192f0d72464
   docVersion: "1.0"
   speakeasyVersion: 1.460.3
   generationVersion: 2.484.0
-  releaseVersion: 0.22.3
-  configChecksum: 2b28a5e01975e3438521ffbde17acdcb
+  releaseVersion: 0.22.4
+  configChecksum: 768055cc4b3f73e7720e661893c6a9d4
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -74,6 +74,7 @@ generatedFiles:
   - /pkg/models/operations/createpassthroughraw.go
   - /pkg/models/operations/createpaymentlink.go
   - /pkg/models/operations/createpaymentpayment.go
+  - /pkg/models/operations/createpaymentsubscription.go
   - /pkg/models/operations/createrepobranch.go
   - /pkg/models/operations/createrepocommit.go
   - /pkg/models/operations/createrepoorganization.go
@@ -137,6 +138,7 @@ generatedFiles:
   - /pkg/models/operations/getpaymentpayment.go
   - /pkg/models/operations/getpaymentpayout.go
   - /pkg/models/operations/getpaymentrefund.go
+  - /pkg/models/operations/getpaymentsubscription.go
   - /pkg/models/operations/getrepobranch.go
   - /pkg/models/operations/getrepocommit.go
   - /pkg/models/operations/getrepoorganization.go
@@ -208,6 +210,7 @@ generatedFiles:
   - /pkg/models/operations/listpaymentpayments.go
   - /pkg/models/operations/listpaymentpayouts.go
   - /pkg/models/operations/listpaymentrefunds.go
+  - /pkg/models/operations/listpaymentsubscriptions.go
   - /pkg/models/operations/listrepobranches.go
   - /pkg/models/operations/listrepocommits.go
   - /pkg/models/operations/listrepoorganizations.go
@@ -271,6 +274,7 @@ generatedFiles:
   - /pkg/models/operations/patchpassthroughraw.go
   - /pkg/models/operations/patchpaymentlink.go
   - /pkg/models/operations/patchpaymentpayment.go
+  - /pkg/models/operations/patchpaymentsubscription.go
   - /pkg/models/operations/patchrepobranch.go
   - /pkg/models/operations/patchrepocommit.go
   - /pkg/models/operations/patchrepoorganization.go
@@ -329,6 +333,7 @@ generatedFiles:
   - /pkg/models/operations/removepassthrough.go
   - /pkg/models/operations/removepaymentlink.go
   - /pkg/models/operations/removepaymentpayment.go
+  - /pkg/models/operations/removepaymentsubscription.go
   - /pkg/models/operations/removerepobranch.go
   - /pkg/models/operations/removerepocommit.go
   - /pkg/models/operations/removerepoorganization.go
@@ -387,6 +392,7 @@ generatedFiles:
   - /pkg/models/operations/updatepassthroughraw.go
   - /pkg/models/operations/updatepaymentlink.go
   - /pkg/models/operations/updatepaymentpayment.go
+  - /pkg/models/operations/updatepaymentsubscription.go
   - /pkg/models/operations/updaterepobranch.go
   - /pkg/models/operations/updaterepocommit.go
   - /pkg/models/operations/updaterepoorganization.go
@@ -497,11 +503,12 @@ generatedFiles:
   - /pkg/models/shared/messagingmember.go
   - /pkg/models/shared/messagingmessage.go
   - /pkg/models/shared/metadatametadata.go
+  - /pkg/models/shared/paymentlineitem.go
   - /pkg/models/shared/paymentlink.go
-  - /pkg/models/shared/paymentlinklineitem.go
   - /pkg/models/shared/paymentpayment.go
   - /pkg/models/shared/paymentpayout.go
   - /pkg/models/shared/paymentrefund.go
+  - /pkg/models/shared/paymentsubscription.go
   - /pkg/models/shared/propertyaccountingcontactbillingaddress.go
   - /pkg/models/shared/propertyaccountingcontactshippingaddress.go
   - /pkg/models/shared/propertyaccountingorderbillingaddress.go
@@ -693,6 +700,8 @@ generatedFiles:
   - docs/pkg/models/operations/createpaymentlinkresponse.md
   - docs/pkg/models/operations/createpaymentpaymentrequest.md
   - docs/pkg/models/operations/createpaymentpaymentresponse.md
+  - docs/pkg/models/operations/createpaymentsubscriptionrequest.md
+  - docs/pkg/models/operations/createpaymentsubscriptionresponse.md
   - docs/pkg/models/operations/createrepobranchrequest.md
   - docs/pkg/models/operations/createrepobranchresponse.md
   - docs/pkg/models/operations/createrepocommitrequest.md
@@ -818,6 +827,8 @@ generatedFiles:
   - docs/pkg/models/operations/getpaymentpayoutresponse.md
   - docs/pkg/models/operations/getpaymentrefundrequest.md
   - docs/pkg/models/operations/getpaymentrefundresponse.md
+  - docs/pkg/models/operations/getpaymentsubscriptionrequest.md
+  - docs/pkg/models/operations/getpaymentsubscriptionresponse.md
   - docs/pkg/models/operations/getrepobranchrequest.md
   - docs/pkg/models/operations/getrepobranchresponse.md
   - docs/pkg/models/operations/getrepocommitrequest.md
@@ -960,6 +971,8 @@ generatedFiles:
   - docs/pkg/models/operations/listpaymentpayoutsresponse.md
   - docs/pkg/models/operations/listpaymentrefundsrequest.md
   - docs/pkg/models/operations/listpaymentrefundsresponse.md
+  - docs/pkg/models/operations/listpaymentsubscriptionsrequest.md
+  - docs/pkg/models/operations/listpaymentsubscriptionsresponse.md
   - docs/pkg/models/operations/listrepobranchesrequest.md
   - docs/pkg/models/operations/listrepobranchesresponse.md
   - docs/pkg/models/operations/listrepocommitsrequest.md
@@ -1088,6 +1101,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchpaymentlinkresponse.md
   - docs/pkg/models/operations/patchpaymentpaymentrequest.md
   - docs/pkg/models/operations/patchpaymentpaymentresponse.md
+  - docs/pkg/models/operations/patchpaymentsubscriptionrequest.md
+  - docs/pkg/models/operations/patchpaymentsubscriptionresponse.md
   - docs/pkg/models/operations/patchrepobranchrequest.md
   - docs/pkg/models/operations/patchrepobranchresponse.md
   - docs/pkg/models/operations/patchrepocommitrequest.md
@@ -1205,6 +1220,8 @@ generatedFiles:
   - docs/pkg/models/operations/removepaymentlinkresponse.md
   - docs/pkg/models/operations/removepaymentpaymentrequest.md
   - docs/pkg/models/operations/removepaymentpaymentresponse.md
+  - docs/pkg/models/operations/removepaymentsubscriptionrequest.md
+  - docs/pkg/models/operations/removepaymentsubscriptionresponse.md
   - docs/pkg/models/operations/removerepobranchrequest.md
   - docs/pkg/models/operations/removerepobranchresponse.md
   - docs/pkg/models/operations/removerepocommitrequest.md
@@ -1322,6 +1339,8 @@ generatedFiles:
   - docs/pkg/models/operations/updatepaymentlinkresponse.md
   - docs/pkg/models/operations/updatepaymentpaymentrequest.md
   - docs/pkg/models/operations/updatepaymentpaymentresponse.md
+  - docs/pkg/models/operations/updatepaymentsubscriptionrequest.md
+  - docs/pkg/models/operations/updatepaymentsubscriptionresponse.md
   - docs/pkg/models/operations/updaterepobranchrequest.md
   - docs/pkg/models/operations/updaterepobranchresponse.md
   - docs/pkg/models/operations/updaterepocommitrequest.md
@@ -1473,6 +1492,7 @@ generatedFiles:
   - docs/pkg/models/shared/hristimeofftype.md
   - docs/pkg/models/shared/integration.md
   - docs/pkg/models/shared/integrationsupport.md
+  - docs/pkg/models/shared/intervalunit.md
   - docs/pkg/models/shared/issue.md
   - docs/pkg/models/shared/issuestatus.md
   - docs/pkg/models/shared/kmspage.md
@@ -1543,13 +1563,15 @@ generatedFiles:
   - docs/pkg/models/shared/operation.md
   - docs/pkg/models/shared/origin.md
   - docs/pkg/models/shared/paymentcollectionmethod.md
+  - docs/pkg/models/shared/paymentlineitem.md
   - docs/pkg/models/shared/paymentlink.md
-  - docs/pkg/models/shared/paymentlinklineitem.md
   - docs/pkg/models/shared/paymentpayment.md
   - docs/pkg/models/shared/paymentpayout.md
   - docs/pkg/models/shared/paymentpayoutstatus.md
   - docs/pkg/models/shared/paymentrefund.md
   - docs/pkg/models/shared/paymentrefundstatus.md
+  - docs/pkg/models/shared/paymentsubscription.md
+  - docs/pkg/models/shared/paymentsubscriptionstatus.md
   - docs/pkg/models/shared/paymenttype.md
   - docs/pkg/models/shared/priority.md
   - docs/pkg/models/shared/propertyaccountingcontactbillingaddress.md
@@ -1755,6 +1777,7 @@ generatedFiles:
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/student/README.md
+  - docs/sdks/subscription/README.md
   - docs/sdks/task/README.md
   - docs/sdks/taxrate/README.md
   - docs/sdks/ticket/README.md
@@ -1838,6 +1861,7 @@ generatedFiles:
   - space.go
   - storage.go
   - student.go
+  - subscription.go
   - task.go
   - taxrate.go
   - ticket.go
@@ -5277,4 +5301,58 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>", "object_type": "<value>"}
+  createPaymentSubscription:
+    speakeasy-default-create-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  getPaymentSubscription:
+    speakeasy-default-get-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listPaymentSubscriptions:
+    speakeasy-default-list-payment-subscriptions:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  patchPaymentSubscription:
+    speakeasy-default-patch-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  removePaymentSubscription:
+    speakeasy-default-remove-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updatePaymentSubscription:
+    speakeasy-default-update-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
 generatedTests: {}

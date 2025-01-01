@@ -33,6 +33,8 @@ const (
 	ScopesPaymentRefundRead          Scopes = "payment_refund_read"
 	ScopesPaymentLinkRead            Scopes = "payment_link_read"
 	ScopesPaymentLinkWrite           Scopes = "payment_link_write"
+	ScopesPaymentSubscriptionRead    Scopes = "payment_subscription_read"
+	ScopesPaymentSubscriptionWrite   Scopes = "payment_subscription_write"
 	ScopesCommerceItemRead           Scopes = "commerce_item_read"
 	ScopesCommerceItemWrite          Scopes = "commerce_item_write"
 	ScopesCommerceCollectionRead     Scopes = "commerce_collection_read"
@@ -191,6 +193,10 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "payment_link_read":
 		fallthrough
 	case "payment_link_write":
+		fallthrough
+	case "payment_subscription_read":
+		fallthrough
+	case "payment_subscription_write":
 		fallthrough
 	case "commerce_item_read":
 		fallthrough

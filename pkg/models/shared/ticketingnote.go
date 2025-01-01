@@ -14,7 +14,7 @@ type TicketingNote struct {
 	ID          *string        `json:"id,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	TicketID    *string        `json:"ticket_id,omitempty"`
-	UpdatedAt   *string        `json:"updated_at,omitempty"`
+	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
 	UserID      *string        `json:"user_id,omitempty"`
 }
 
@@ -71,7 +71,7 @@ func (o *TicketingNote) GetTicketID() *string {
 	return o.TicketID
 }
 
-func (o *TicketingNote) GetUpdatedAt() *string {
+func (o *TicketingNote) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

@@ -8,19 +8,19 @@ import (
 )
 
 type PaymentLink struct {
-	Amount          *float64              `json:"amount,omitempty"`
-	ContactID       *string               `json:"contact_id,omitempty"`
-	CreatedAt       *time.Time            `json:"created_at,omitempty"`
-	Currency        *string               `json:"currency,omitempty"`
-	ID              *string               `json:"id,omitempty"`
-	IsActive        *bool                 `json:"is_active,omitempty"`
-	IsChargeableNow *bool                 `json:"is_chargeable_now,omitempty"`
-	Lineitems       []PaymentLinkLineitem `json:"lineitems,omitempty"`
-	PaymentID       *string               `json:"payment_id,omitempty"`
-	Raw             map[string]any        `json:"raw,omitempty"`
-	SuccessURL      *string               `json:"success_url,omitempty"`
-	UpdatedAt       *time.Time            `json:"updated_at,omitempty"`
-	URL             *string               `json:"url,omitempty"`
+	Amount          *float64          `json:"amount,omitempty"`
+	ContactID       *string           `json:"contact_id,omitempty"`
+	CreatedAt       *time.Time        `json:"created_at,omitempty"`
+	Currency        *string           `json:"currency,omitempty"`
+	ID              *string           `json:"id,omitempty"`
+	IsActive        *bool             `json:"is_active,omitempty"`
+	IsChargeableNow *bool             `json:"is_chargeable_now,omitempty"`
+	Lineitems       []PaymentLineitem `json:"lineitems,omitempty"`
+	PaymentID       *string           `json:"payment_id,omitempty"`
+	Raw             map[string]any    `json:"raw,omitempty"`
+	SuccessURL      *string           `json:"success_url,omitempty"`
+	UpdatedAt       *time.Time        `json:"updated_at,omitempty"`
+	URL             *string           `json:"url,omitempty"`
 }
 
 func (p PaymentLink) MarshalJSON() ([]byte, error) {
@@ -83,7 +83,7 @@ func (o *PaymentLink) GetIsChargeableNow() *bool {
 	return o.IsChargeableNow
 }
 
-func (o *PaymentLink) GetLineitems() []PaymentLinkLineitem {
+func (o *PaymentLink) GetLineitems() []PaymentLineitem {
 	if o == nil {
 		return nil
 	}

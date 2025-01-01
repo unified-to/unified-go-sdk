@@ -2,21 +2,37 @@
 
 package shared
 
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
+)
+
 type AccountingJournal struct {
-	CreatedAt   *string `json:"created_at,omitempty"`
-	Currency    *string `json:"currency,omitempty"`
-	Description *string `json:"description,omitempty"`
-	ID          *string `json:"id,omitempty"`
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Currency    *string    `json:"currency,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	ID          *string    `json:"id,omitempty"`
 	// new field name
 	Lineitems []AccountingJournalLineitem `json:"lineitems,omitempty"`
 	Raw       map[string]any              `json:"raw,omitempty"`
 	Reference *string                     `json:"reference,omitempty"`
 	TaxAmount *float64                    `json:"tax_amount,omitempty"`
 	TaxrateID *string                     `json:"taxrate_id,omitempty"`
-	UpdatedAt *string                     `json:"updated_at,omitempty"`
+	UpdatedAt *time.Time                  `json:"updated_at,omitempty"`
 }
 
-func (o *AccountingJournal) GetCreatedAt() *string {
+func (a AccountingJournal) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountingJournal) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (o *AccountingJournal) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -79,7 +95,7 @@ func (o *AccountingJournal) GetTaxrateID() *string {
 	return o.TaxrateID
 }
 
-func (o *AccountingJournal) GetUpdatedAt() *string {
+func (o *AccountingJournal) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

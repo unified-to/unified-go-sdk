@@ -27,6 +27,8 @@
 | `ScopesPaymentRefundRead`          | payment_refund_read                |
 | `ScopesPaymentLinkRead`            | payment_link_read                  |
 | `ScopesPaymentLinkWrite`           | payment_link_write                 |
+| `ScopesPaymentSubscriptionRead`    | payment_subscription_read          |
+| `ScopesPaymentSubscriptionWrite`   | payment_subscription_write         |
 | `ScopesCommerceItemRead`           | commerce_item_read                 |
 | `ScopesCommerceItemWrite`          | commerce_item_write                |
 | `ScopesCommerceCollectionRead`     | commerce_collection_read           |

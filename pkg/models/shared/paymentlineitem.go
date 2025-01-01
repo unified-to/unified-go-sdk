@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-type PaymentLinkLineitem struct {
+type PaymentLineitem struct {
 	AccountID       *string    `json:"account_id,omitempty"`
 	CreatedAt       *time.Time `json:"created_at,omitempty"`
 	DiscountAmount  *float64   `json:"discount_amount,omitempty"`
@@ -27,130 +27,130 @@ type PaymentLinkLineitem struct {
 	UpdatedAt       *time.Time `json:"updated_at,omitempty"`
 }
 
-func (p PaymentLinkLineitem) MarshalJSON() ([]byte, error) {
+func (p PaymentLineitem) MarshalJSON() ([]byte, error) {
 	return utils.MarshalJSON(p, "", false)
 }
 
-func (p *PaymentLinkLineitem) UnmarshalJSON(data []byte) error {
+func (p *PaymentLineitem) UnmarshalJSON(data []byte) error {
 	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *PaymentLinkLineitem) GetAccountID() *string {
+func (o *PaymentLineitem) GetAccountID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.AccountID
 }
 
-func (o *PaymentLinkLineitem) GetCreatedAt() *time.Time {
+func (o *PaymentLineitem) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.CreatedAt
 }
 
-func (o *PaymentLinkLineitem) GetDiscountAmount() *float64 {
+func (o *PaymentLineitem) GetDiscountAmount() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.DiscountAmount
 }
 
-func (o *PaymentLinkLineitem) GetID() *string {
+func (o *PaymentLineitem) GetID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ID
 }
 
-func (o *PaymentLinkLineitem) GetItemDescription() *string {
+func (o *PaymentLineitem) GetItemDescription() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ItemDescription
 }
 
-func (o *PaymentLinkLineitem) GetItemID() *string {
+func (o *PaymentLineitem) GetItemID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ItemID
 }
 
-func (o *PaymentLinkLineitem) GetItemName() *string {
+func (o *PaymentLineitem) GetItemName() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ItemName
 }
 
-func (o *PaymentLinkLineitem) GetItemSku() *string {
+func (o *PaymentLineitem) GetItemSku() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ItemSku
 }
 
-func (o *PaymentLinkLineitem) GetNotes() *string {
+func (o *PaymentLineitem) GetNotes() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Notes
 }
 
-func (o *PaymentLinkLineitem) GetRefundAmount() *float64 {
+func (o *PaymentLineitem) GetRefundAmount() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.RefundAmount
 }
 
-func (o *PaymentLinkLineitem) GetRefundedAt() *time.Time {
+func (o *PaymentLineitem) GetRefundedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.RefundedAt
 }
 
-func (o *PaymentLinkLineitem) GetTaxAmount() *float64 {
+func (o *PaymentLineitem) GetTaxAmount() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.TaxAmount
 }
 
-func (o *PaymentLinkLineitem) GetTaxrateID() *string {
+func (o *PaymentLineitem) GetTaxrateID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.TaxrateID
 }
 
-func (o *PaymentLinkLineitem) GetTotalAmount() *float64 {
+func (o *PaymentLineitem) GetTotalAmount() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.TotalAmount
 }
 
-func (o *PaymentLinkLineitem) GetUnitAmount() *float64 {
+func (o *PaymentLineitem) GetUnitAmount() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.UnitAmount
 }
 
-func (o *PaymentLinkLineitem) GetUnitQuantity() *float64 {
+func (o *PaymentLineitem) GetUnitQuantity() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.UnitQuantity
 }
 
-func (o *PaymentLinkLineitem) GetUpdatedAt() *time.Time {
+func (o *PaymentLineitem) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

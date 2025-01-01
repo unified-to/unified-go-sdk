@@ -2,15 +2,31 @@
 
 package shared
 
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
+)
+
 type RepoOrganization struct {
 	AvatarURL   *string        `json:"avatar_url,omitempty"`
-	CreatedAt   *string        `json:"created_at,omitempty"`
+	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
-	Name        string         `json:"name"`
+	Name        *string        `json:"name,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
-	UpdatedAt   *string        `json:"updated_at,omitempty"`
+	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
 	WebURL      *string        `json:"web_url,omitempty"`
+}
+
+func (r RepoOrganization) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(r, "", false)
+}
+
+func (r *RepoOrganization) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &r, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *RepoOrganization) GetAvatarURL() *string {
@@ -20,7 +36,7 @@ func (o *RepoOrganization) GetAvatarURL() *string {
 	return o.AvatarURL
 }
 
-func (o *RepoOrganization) GetCreatedAt() *string {
+func (o *RepoOrganization) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -41,9 +57,9 @@ func (o *RepoOrganization) GetID() *string {
 	return o.ID
 }
 
-func (o *RepoOrganization) GetName() string {
+func (o *RepoOrganization) GetName() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Name
 }
@@ -55,7 +71,7 @@ func (o *RepoOrganization) GetRaw() map[string]any {
 	return o.Raw
 }
 
-func (o *RepoOrganization) GetUpdatedAt() *string {
+func (o *RepoOrganization) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

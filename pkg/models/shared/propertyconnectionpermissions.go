@@ -32,6 +32,8 @@ const (
 	PropertyConnectionPermissionsPaymentRefundRead          PropertyConnectionPermissions = "payment_refund_read"
 	PropertyConnectionPermissionsPaymentLinkRead            PropertyConnectionPermissions = "payment_link_read"
 	PropertyConnectionPermissionsPaymentLinkWrite           PropertyConnectionPermissions = "payment_link_write"
+	PropertyConnectionPermissionsPaymentSubscriptionRead    PropertyConnectionPermissions = "payment_subscription_read"
+	PropertyConnectionPermissionsPaymentSubscriptionWrite   PropertyConnectionPermissions = "payment_subscription_write"
 	PropertyConnectionPermissionsCommerceItemRead           PropertyConnectionPermissions = "commerce_item_read"
 	PropertyConnectionPermissionsCommerceItemWrite          PropertyConnectionPermissions = "commerce_item_write"
 	PropertyConnectionPermissionsCommerceCollectionRead     PropertyConnectionPermissions = "commerce_collection_read"
@@ -190,6 +192,10 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "payment_link_read":
 		fallthrough
 	case "payment_link_write":
+		fallthrough
+	case "payment_subscription_read":
+		fallthrough
+	case "payment_subscription_write":
 		fallthrough
 	case "commerce_item_read":
 		fallthrough

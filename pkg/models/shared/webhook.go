@@ -53,6 +53,7 @@ const (
 	ObjectTypePaymentLink            ObjectType = "payment_link"
 	ObjectTypePaymentPayout          ObjectType = "payment_payout"
 	ObjectTypePaymentRefund          ObjectType = "payment_refund"
+	ObjectTypePaymentSubscription    ObjectType = "payment_subscription"
 	ObjectTypeCommerceItem           ObjectType = "commerce_item"
 	ObjectTypeCommerceCollection     ObjectType = "commerce_collection"
 	ObjectTypeCommerceInventory      ObjectType = "commerce_inventory"
@@ -143,6 +144,8 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "payment_payout":
 		fallthrough
 	case "payment_refund":
+		fallthrough
+	case "payment_subscription":
 		fallthrough
 	case "commerce_item":
 		fallthrough

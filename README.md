@@ -769,20 +769,26 @@ func main() {
 
 * [CreatePaymentLink](docs/sdks/payment/README.md#createpaymentlink) - Create a link
 * [CreatePaymentPayment](docs/sdks/payment/README.md#createpaymentpayment) - Create a payment
+* [CreatePaymentSubscription](docs/sdks/payment/README.md#createpaymentsubscription) - Create a subscription
 * [GetPaymentLink](docs/sdks/payment/README.md#getpaymentlink) - Retrieve a link
 * [GetPaymentPayment](docs/sdks/payment/README.md#getpaymentpayment) - Retrieve a payment
 * [GetPaymentPayout](docs/sdks/payment/README.md#getpaymentpayout) - Retrieve a payout
 * [GetPaymentRefund](docs/sdks/payment/README.md#getpaymentrefund) - Retrieve a refund
+* [GetPaymentSubscription](docs/sdks/payment/README.md#getpaymentsubscription) - Retrieve a subscription
 * [ListPaymentLinks](docs/sdks/payment/README.md#listpaymentlinks) - List all links
 * [ListPaymentPayments](docs/sdks/payment/README.md#listpaymentpayments) - List all payments
 * [ListPaymentPayouts](docs/sdks/payment/README.md#listpaymentpayouts) - List all payouts
 * [ListPaymentRefunds](docs/sdks/payment/README.md#listpaymentrefunds) - List all refunds
+* [ListPaymentSubscriptions](docs/sdks/payment/README.md#listpaymentsubscriptions) - List all subscriptions
 * [PatchPaymentLink](docs/sdks/payment/README.md#patchpaymentlink) - Update a link
 * [PatchPaymentPayment](docs/sdks/payment/README.md#patchpaymentpayment) - Update a payment
+* [PatchPaymentSubscription](docs/sdks/payment/README.md#patchpaymentsubscription) - Update a subscription
 * [RemovePaymentLink](docs/sdks/payment/README.md#removepaymentlink) - Remove a link
 * [RemovePaymentPayment](docs/sdks/payment/README.md#removepaymentpayment) - Remove a payment
+* [RemovePaymentSubscription](docs/sdks/payment/README.md#removepaymentsubscription) - Remove a subscription
 * [UpdatePaymentLink](docs/sdks/payment/README.md#updatepaymentlink) - Update a link
 * [UpdatePaymentPayment](docs/sdks/payment/README.md#updatepaymentpayment) - Update a payment
+* [UpdatePaymentSubscription](docs/sdks/payment/README.md#updatepaymentsubscription) - Update a subscription
 
 ### [Payout](docs/sdks/payout/README.md)
 
@@ -926,6 +932,15 @@ func main() {
 * [PatchLmsStudent](docs/sdks/student/README.md#patchlmsstudent) - Update a student
 * [RemoveLmsStudent](docs/sdks/student/README.md#removelmsstudent) - Remove a student
 * [UpdateLmsStudent](docs/sdks/student/README.md#updatelmsstudent) - Update a student
+
+### [Subscription](docs/sdks/subscription/README.md)
+
+* [CreatePaymentSubscription](docs/sdks/subscription/README.md#createpaymentsubscription) - Create a subscription
+* [GetPaymentSubscription](docs/sdks/subscription/README.md#getpaymentsubscription) - Retrieve a subscription
+* [ListPaymentSubscriptions](docs/sdks/subscription/README.md#listpaymentsubscriptions) - List all subscriptions
+* [PatchPaymentSubscription](docs/sdks/subscription/README.md#patchpaymentsubscription) - Update a subscription
+* [RemovePaymentSubscription](docs/sdks/subscription/README.md#removepaymentsubscription) - Remove a subscription
+* [UpdatePaymentSubscription](docs/sdks/subscription/README.md#updatepaymentsubscription) - Update a subscription
 
 ### [Task](docs/sdks/task/README.md)
 

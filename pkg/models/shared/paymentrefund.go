@@ -5,6 +5,8 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
 )
 
 type PaymentRefundStatus string
@@ -40,7 +42,7 @@ func (e *PaymentRefundStatus) UnmarshalJSON(data []byte) error {
 }
 
 type PaymentRefund struct {
-	CreatedAt   *string              `json:"created_at,omitempty"`
+	CreatedAt   *time.Time           `json:"created_at,omitempty"`
 	Currency    *string              `json:"currency,omitempty"`
 	ID          *string              `json:"id,omitempty"`
 	Notes       *string              `json:"notes,omitempty"`
@@ -49,10 +51,21 @@ type PaymentRefund struct {
 	Reference   *string              `json:"reference,omitempty"`
 	Status      *PaymentRefundStatus `json:"status,omitempty"`
 	TotalAmount float64              `json:"total_amount"`
-	UpdatedAt   *string              `json:"updated_at,omitempty"`
+	UpdatedAt   *time.Time           `json:"updated_at,omitempty"`
 }
 
-func (o *PaymentRefund) GetCreatedAt() *string {
+func (p PaymentRefund) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(p, "", false)
+}
+
+func (p *PaymentRefund) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (o *PaymentRefund) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -115,7 +128,7 @@ func (o *PaymentRefund) GetTotalAmount() float64 {
 	return o.TotalAmount
 }
 
-func (o *PaymentRefund) GetUpdatedAt() *string {
+func (o *PaymentRefund) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}

@@ -6,11 +6,11 @@ package shared
 type PropertyCrmEventEmail struct {
 	AttachmentFileIds []string `json:"attachment_file_ids,omitempty"`
 	Body              *string  `json:"body,omitempty"`
-	// The event email's cc name & email (name )
+	// The event email's cc name & email (name <test@test.com>)
 	Cc      []string `json:"cc,omitempty"`
 	From    *string  `json:"from,omitempty"`
 	Subject *string  `json:"subject,omitempty"`
-	// The event email's "to" name & email (name )
+	// The event email's "to" name & email (name <test@test.com>)
 	To []string `json:"to,omitempty"`
 }
 
