@@ -62,6 +62,7 @@
 | `ObjectTypeKmsPage`                | kms_page                           |
 | `ObjectTypeTaskProject`            | task_project                       |
 | `ObjectTypeTaskTask`               | task_task                          |
+| `ObjectTypeTaskComment`            | task_comment                       |
 | `ObjectTypeScimUsers`              | scim_users                         |
 | `ObjectTypeScimGroups`             | scim_groups                        |
 | `ObjectTypeLmsCourse`              | lms_course                         |

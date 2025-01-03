@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: d3ff121f2a7d483c6c660192f0d72464
+  docChecksum: 20714033389bb63e345a793caa0911b9
   docVersion: "1.0"
-  speakeasyVersion: 1.460.3
+  speakeasyVersion: 1.460.5
   generationVersion: 2.484.0
-  releaseVersion: 0.22.4
-  configChecksum: 768055cc4b3f73e7720e661893c6a9d4
+  releaseVersion: 0.22.5
+  configChecksum: 2c4836f78e69aef7cdc979acdff17e16
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -83,6 +83,7 @@ generatedFiles:
   - /pkg/models/operations/createscimgroups.go
   - /pkg/models/operations/createscimusers.go
   - /pkg/models/operations/createstoragefile.go
+  - /pkg/models/operations/createtaskcomment.go
   - /pkg/models/operations/createtaskproject.go
   - /pkg/models/operations/createtasktask.go
   - /pkg/models/operations/createticketingcustomer.go
@@ -147,6 +148,7 @@ generatedFiles:
   - /pkg/models/operations/getscimgroups.go
   - /pkg/models/operations/getscimusers.go
   - /pkg/models/operations/getstoragefile.go
+  - /pkg/models/operations/gettaskcomment.go
   - /pkg/models/operations/gettaskproject.go
   - /pkg/models/operations/gettasktask.go
   - /pkg/models/operations/getticketingcustomer.go
@@ -219,6 +221,7 @@ generatedFiles:
   - /pkg/models/operations/listscimgroups.go
   - /pkg/models/operations/listscimusers.go
   - /pkg/models/operations/liststoragefiles.go
+  - /pkg/models/operations/listtaskcomments.go
   - /pkg/models/operations/listtaskprojects.go
   - /pkg/models/operations/listtasktasks.go
   - /pkg/models/operations/listticketingcustomers.go
@@ -283,6 +286,7 @@ generatedFiles:
   - /pkg/models/operations/patchscimgroups.go
   - /pkg/models/operations/patchscimusers.go
   - /pkg/models/operations/patchstoragefile.go
+  - /pkg/models/operations/patchtaskcomment.go
   - /pkg/models/operations/patchtaskproject.go
   - /pkg/models/operations/patchtasktask.go
   - /pkg/models/operations/patchticketingcustomer.go
@@ -342,6 +346,7 @@ generatedFiles:
   - /pkg/models/operations/removescimgroups.go
   - /pkg/models/operations/removescimusers.go
   - /pkg/models/operations/removestoragefile.go
+  - /pkg/models/operations/removetaskcomment.go
   - /pkg/models/operations/removetaskproject.go
   - /pkg/models/operations/removetasktask.go
   - /pkg/models/operations/removeticketingcustomer.go
@@ -401,6 +406,7 @@ generatedFiles:
   - /pkg/models/operations/updatescimgroups.go
   - /pkg/models/operations/updatescimusers.go
   - /pkg/models/operations/updatestoragefile.go
+  - /pkg/models/operations/updatetaskcomment.go
   - /pkg/models/operations/updatetaskproject.go
   - /pkg/models/operations/updatetasktask.go
   - /pkg/models/operations/updateticketingcustomer.go
@@ -576,6 +582,7 @@ generatedFiles:
   - /pkg/models/shared/security.go
   - /pkg/models/shared/storagefile.go
   - /pkg/models/shared/storagepermission.go
+  - /pkg/models/shared/taskcomment.go
   - /pkg/models/shared/taskproject.go
   - /pkg/models/shared/tasktask.go
   - /pkg/models/shared/ticketingcustomer.go
@@ -604,6 +611,7 @@ generatedFiles:
   - channel.go
   - class.go
   - collection.go
+  - comment.go
   - commerce.go
   - commit.go
   - company.go
@@ -718,6 +726,8 @@ generatedFiles:
   - docs/pkg/models/operations/createscimusersresponse.md
   - docs/pkg/models/operations/createstoragefilerequest.md
   - docs/pkg/models/operations/createstoragefileresponse.md
+  - docs/pkg/models/operations/createtaskcommentrequest.md
+  - docs/pkg/models/operations/createtaskcommentresponse.md
   - docs/pkg/models/operations/createtaskprojectrequest.md
   - docs/pkg/models/operations/createtaskprojectresponse.md
   - docs/pkg/models/operations/createtasktaskrequest.md
@@ -845,6 +855,8 @@ generatedFiles:
   - docs/pkg/models/operations/getscimusersresponse.md
   - docs/pkg/models/operations/getstoragefilerequest.md
   - docs/pkg/models/operations/getstoragefileresponse.md
+  - docs/pkg/models/operations/gettaskcommentrequest.md
+  - docs/pkg/models/operations/gettaskcommentresponse.md
   - docs/pkg/models/operations/gettaskprojectrequest.md
   - docs/pkg/models/operations/gettaskprojectresponse.md
   - docs/pkg/models/operations/gettasktaskrequest.md
@@ -989,6 +1001,8 @@ generatedFiles:
   - docs/pkg/models/operations/listscimusersresponse.md
   - docs/pkg/models/operations/liststoragefilesrequest.md
   - docs/pkg/models/operations/liststoragefilesresponse.md
+  - docs/pkg/models/operations/listtaskcommentsrequest.md
+  - docs/pkg/models/operations/listtaskcommentsresponse.md
   - docs/pkg/models/operations/listtaskprojectsrequest.md
   - docs/pkg/models/operations/listtaskprojectsresponse.md
   - docs/pkg/models/operations/listtasktasksrequest.md
@@ -1119,6 +1133,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchscimusersresponse.md
   - docs/pkg/models/operations/patchstoragefilerequest.md
   - docs/pkg/models/operations/patchstoragefileresponse.md
+  - docs/pkg/models/operations/patchtaskcommentrequest.md
+  - docs/pkg/models/operations/patchtaskcommentresponse.md
   - docs/pkg/models/operations/patchtaskprojectrequest.md
   - docs/pkg/models/operations/patchtaskprojectresponse.md
   - docs/pkg/models/operations/patchtasktaskrequest.md
@@ -1238,6 +1254,8 @@ generatedFiles:
   - docs/pkg/models/operations/removescimusersresponse.md
   - docs/pkg/models/operations/removestoragefilerequest.md
   - docs/pkg/models/operations/removestoragefileresponse.md
+  - docs/pkg/models/operations/removetaskcommentrequest.md
+  - docs/pkg/models/operations/removetaskcommentresponse.md
   - docs/pkg/models/operations/removetaskprojectrequest.md
   - docs/pkg/models/operations/removetaskprojectresponse.md
   - docs/pkg/models/operations/removetasktaskrequest.md
@@ -1357,6 +1375,8 @@ generatedFiles:
   - docs/pkg/models/operations/updatescimusersresponse.md
   - docs/pkg/models/operations/updatestoragefilerequest.md
   - docs/pkg/models/operations/updatestoragefileresponse.md
+  - docs/pkg/models/operations/updatetaskcommentrequest.md
+  - docs/pkg/models/operations/updatetaskcommentresponse.md
   - docs/pkg/models/operations/updatetaskprojectrequest.md
   - docs/pkg/models/operations/updatetaskprojectresponse.md
   - docs/pkg/models/operations/updatetasktaskrequest.md
@@ -1670,6 +1690,7 @@ generatedFiles:
   - docs/pkg/models/shared/storagefile.md
   - docs/pkg/models/shared/storagefiletype.md
   - docs/pkg/models/shared/storagepermission.md
+  - docs/pkg/models/shared/taskcomment.md
   - docs/pkg/models/shared/taskproject.md
   - docs/pkg/models/shared/tasktask.md
   - docs/pkg/models/shared/tasktaskstatus.md
@@ -1717,6 +1738,7 @@ generatedFiles:
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
+  - docs/sdks/comment/README.md
   - docs/sdks/commerce/README.md
   - docs/sdks/commit/README.md
   - docs/sdks/company/README.md
@@ -5355,4 +5377,58 @@ examples:
       responses:
         "200":
           application/json: {}
+  createTaskComment:
+    speakeasy-default-create-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  getTaskComment:
+    speakeasy-default-get-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  listTaskComments:
+    speakeasy-default-list-task-comments:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchTaskComment:
+    speakeasy-default-patch-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  removeTaskComment:
+    speakeasy-default-remove-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateTaskComment:
+    speakeasy-default-update-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
 generatedTests: {}

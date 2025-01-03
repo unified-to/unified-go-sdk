@@ -39,7 +39,9 @@ func (e *TaskTaskStatus) UnmarshalJSON(data []byte) error {
 }
 
 type TaskTask struct {
-	AssignedUserIds []string        `json:"assigned_user_ids,omitempty"`
+	AssignedUserIds []string `json:"assigned_user_ids,omitempty"`
+	// Array of attachment IDs retrieved from StorageFile.Get endpoint
+	AttachmentIds   []string        `json:"attachment_ids,omitempty"`
 	CompletedAt     *time.Time      `json:"completed_at,omitempty"`
 	CreatedAt       *time.Time      `json:"created_at,omitempty"`
 	CreatorUserID   *string         `json:"creator_user_id,omitempty"`
@@ -75,6 +77,13 @@ func (o *TaskTask) GetAssignedUserIds() []string {
 		return nil
 	}
 	return o.AssignedUserIds
+}
+
+func (o *TaskTask) GetAttachmentIds() []string {
+	if o == nil {
+		return nil
+	}
+	return o.AttachmentIds
 }
 
 func (o *TaskTask) GetCompletedAt() *time.Time {

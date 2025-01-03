@@ -114,6 +114,8 @@ const (
 	PropertyConnectionPermissionsTaskProjectWrite           PropertyConnectionPermissions = "task_project_write"
 	PropertyConnectionPermissionsTaskTaskRead               PropertyConnectionPermissions = "task_task_read"
 	PropertyConnectionPermissionsTaskTaskWrite              PropertyConnectionPermissions = "task_task_write"
+	PropertyConnectionPermissionsTaskCommentRead            PropertyConnectionPermissions = "task_comment_read"
+	PropertyConnectionPermissionsTaskCommentWrite           PropertyConnectionPermissions = "task_comment_write"
 	PropertyConnectionPermissionsScimUsersRead              PropertyConnectionPermissions = "scim_users_read"
 	PropertyConnectionPermissionsScimUsersWrite             PropertyConnectionPermissions = "scim_users_write"
 	PropertyConnectionPermissionsScimGroupsRead             PropertyConnectionPermissions = "scim_groups_read"
@@ -356,6 +358,10 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "task_task_read":
 		fallthrough
 	case "task_task_write":
+		fallthrough
+	case "task_comment_read":
+		fallthrough
+	case "task_comment_write":
 		fallthrough
 	case "scim_users_read":
 		fallthrough

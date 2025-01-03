@@ -115,6 +115,8 @@ const (
 	ScopesTaskProjectWrite           Scopes = "task_project_write"
 	ScopesTaskTaskRead               Scopes = "task_task_read"
 	ScopesTaskTaskWrite              Scopes = "task_task_write"
+	ScopesTaskCommentRead            Scopes = "task_comment_read"
+	ScopesTaskCommentWrite           Scopes = "task_comment_write"
 	ScopesScimUsersRead              Scopes = "scim_users_read"
 	ScopesScimUsersWrite             Scopes = "scim_users_write"
 	ScopesScimGroupsRead             Scopes = "scim_groups_read"
@@ -357,6 +359,10 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "task_task_read":
 		fallthrough
 	case "task_task_write":
+		fallthrough
+	case "task_comment_read":
+		fallthrough
+	case "task_comment_write":
 		fallthrough
 	case "scim_users_read":
 		fallthrough

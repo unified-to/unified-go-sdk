@@ -256,6 +256,15 @@ func main() {
 * [RemoveCommerceCollection](docs/sdks/collection/README.md#removecommercecollection) - Remove a collection
 * [UpdateCommerceCollection](docs/sdks/collection/README.md#updatecommercecollection) - Update a collection
 
+### [Comment](docs/sdks/comment/README.md)
+
+* [CreateTaskComment](docs/sdks/comment/README.md#createtaskcomment) - Create a comment
+* [GetTaskComment](docs/sdks/comment/README.md#gettaskcomment) - Retrieve a comment
+* [ListTaskComments](docs/sdks/comment/README.md#listtaskcomments) - List all comments
+* [PatchTaskComment](docs/sdks/comment/README.md#patchtaskcomment) - Update a comment
+* [RemoveTaskComment](docs/sdks/comment/README.md#removetaskcomment) - Remove a comment
+* [UpdateTaskComment](docs/sdks/comment/README.md#updatetaskcomment) - Update a comment
+
 ### [Commerce](docs/sdks/commerce/README.md)
 
 * [CreateCommerceCollection](docs/sdks/commerce/README.md#createcommercecollection) - Create a collection
@@ -944,16 +953,22 @@ func main() {
 
 ### [Task](docs/sdks/task/README.md)
 
+* [CreateTaskComment](docs/sdks/task/README.md#createtaskcomment) - Create a comment
 * [CreateTaskProject](docs/sdks/task/README.md#createtaskproject) - Create a project
 * [CreateTaskTask](docs/sdks/task/README.md#createtasktask) - Create a task
+* [GetTaskComment](docs/sdks/task/README.md#gettaskcomment) - Retrieve a comment
 * [GetTaskProject](docs/sdks/task/README.md#gettaskproject) - Retrieve a project
 * [GetTaskTask](docs/sdks/task/README.md#gettasktask) - Retrieve a task
+* [ListTaskComments](docs/sdks/task/README.md#listtaskcomments) - List all comments
 * [ListTaskProjects](docs/sdks/task/README.md#listtaskprojects) - List all projects
 * [ListTaskTasks](docs/sdks/task/README.md#listtasktasks) - List all tasks
+* [PatchTaskComment](docs/sdks/task/README.md#patchtaskcomment) - Update a comment
 * [PatchTaskProject](docs/sdks/task/README.md#patchtaskproject) - Update a project
 * [PatchTaskTask](docs/sdks/task/README.md#patchtasktask) - Update a task
+* [RemoveTaskComment](docs/sdks/task/README.md#removetaskcomment) - Remove a comment
 * [RemoveTaskProject](docs/sdks/task/README.md#removetaskproject) - Remove a project
 * [RemoveTaskTask](docs/sdks/task/README.md#removetasktask) - Remove a task
+* [UpdateTaskComment](docs/sdks/task/README.md#updatetaskcomment) - Update a comment
 * [UpdateTaskProject](docs/sdks/task/README.md#updatetaskproject) - Update a project
 * [UpdateTaskTask](docs/sdks/task/README.md#updatetasktask) - Update a task
 
