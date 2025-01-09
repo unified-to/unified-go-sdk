@@ -3,9 +3,11 @@
 package shared
 
 type StoragePermission struct {
-	GroupID *string                          `json:"group_id,omitempty"`
-	Roles   []PropertyStoragePermissionRoles `json:"roles"`
-	UserID  *string                          `json:"user_id,omitempty"`
+	GroupID  *string                          `json:"group_id,omitempty"`
+	IsHidden *bool                            `json:"is_hidden,omitempty"`
+	IsPublic *bool                            `json:"is_public,omitempty"`
+	Roles    []PropertyStoragePermissionRoles `json:"roles"`
+	UserID   *string                          `json:"user_id,omitempty"`
 }
 
 func (o *StoragePermission) GetGroupID() *string {
@@ -13,6 +15,20 @@ func (o *StoragePermission) GetGroupID() *string {
 		return nil
 	}
 	return o.GroupID
+}
+
+func (o *StoragePermission) GetIsHidden() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsHidden
+}
+
+func (o *StoragePermission) GetIsPublic() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsPublic
 }
 
 func (o *StoragePermission) GetRoles() []PropertyStoragePermissionRoles {

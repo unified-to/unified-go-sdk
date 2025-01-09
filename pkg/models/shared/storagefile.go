@@ -52,6 +52,7 @@ type StorageFile struct {
 	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
 	UserID      *string             `json:"user_id,omitempty"`
 	Version     *string             `json:"version,omitempty"`
+	WebURL      *string             `json:"web_url,omitempty"`
 }
 
 func (s StorageFile) MarshalJSON() ([]byte, error) {
@@ -175,4 +176,11 @@ func (o *StorageFile) GetVersion() *string {
 		return nil
 	}
 	return o.Version
+}
+
+func (o *StorageFile) GetWebURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.WebURL
 }

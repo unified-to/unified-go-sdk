@@ -52,6 +52,7 @@ type KmsPage struct {
 	Type         KmsPageType       `json:"type"`
 	UpdatedAt    *time.Time        `json:"updated_at,omitempty"`
 	UserID       *string           `json:"user_id,omitempty"`
+	WebURL       *string           `json:"web_url,omitempty"`
 }
 
 func (k KmsPage) MarshalJSON() ([]byte, error) {
@@ -154,4 +155,11 @@ func (o *KmsPage) GetUserID() *string {
 		return nil
 	}
 	return o.UserID
+}
+
+func (o *KmsPage) GetWebURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.WebURL
 }
