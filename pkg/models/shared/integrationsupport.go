@@ -1051,6 +1051,35 @@ func (e *ListStudentID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListTaskID string
+
+const (
+	ListTaskIDSupportedRequired ListTaskID = "supported-required"
+	ListTaskIDSupported         ListTaskID = "supported"
+	ListTaskIDNotSupported      ListTaskID = "not-supported"
+)
+
+func (e ListTaskID) ToPointer() *ListTaskID {
+	return &e
+}
+func (e *ListTaskID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListTaskID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListTaskID: %v", v)
+	}
+}
+
 type ListTicketID string
 
 const (
@@ -1727,6 +1756,7 @@ type IntegrationSupport struct {
 	ListSortByUpdatedAt    *ListSortByUpdatedAt    `json:"list_sort_by_updated_at,omitempty"`
 	ListSpaceID            *ListSpaceID            `json:"list_space_id,omitempty"`
 	ListStudentID          *ListStudentID          `json:"list_student_id,omitempty"`
+	ListTaskID             *ListTaskID             `json:"list_task_id,omitempty"`
 	ListTicketID           *ListTicketID           `json:"list_ticket_id,omitempty"`
 	ListType               *ListType               `json:"list_type,omitempty"`
 	ListUpdatedGte         *ListUpdatedGte         `json:"list_updated_gte,omitempty"`
@@ -2013,6 +2043,13 @@ func (o *IntegrationSupport) GetListStudentID() *ListStudentID {
 		return nil
 	}
 	return o.ListStudentID
+}
+
+func (o *IntegrationSupport) GetListTaskID() *ListTaskID {
+	if o == nil {
+		return nil
+	}
+	return o.ListTaskID
 }
 
 func (o *IntegrationSupport) GetListTicketID() *ListTicketID {

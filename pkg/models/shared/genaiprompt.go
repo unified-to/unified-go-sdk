@@ -9,6 +9,7 @@ type GenaiPrompt struct {
 	Raw         map[string]any `json:"raw,omitempty"`
 	Responses   []string       `json:"responses,omitempty"`
 	Temperature *float64       `json:"temperature,omitempty"`
+	TokensUsed  *float64       `json:"tokens_used,omitempty"`
 }
 
 func (o *GenaiPrompt) GetMaxTokens() *float64 {
@@ -51,4 +52,11 @@ func (o *GenaiPrompt) GetTemperature() *float64 {
 		return nil
 	}
 	return o.Temperature
+}
+
+func (o *GenaiPrompt) GetTokensUsed() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.TokensUsed
 }

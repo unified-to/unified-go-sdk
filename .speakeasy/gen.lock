@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 3613acd1631dbba37d5cd8b1d0150cb1
+  docChecksum: d4d729a2453d8e64af714d75ba2fa32b
   docVersion: "1.0"
-  speakeasyVersion: 1.465.1
-  generationVersion: 2.488.4
-  releaseVersion: 0.22.7
-  configChecksum: 203608b01fbaa5d79fd2b4cdf6a98008
+  speakeasyVersion: 1.468.2
+  generationVersion: 2.493.4
+  releaseVersion: 0.22.8
+  configChecksum: 2ca720a8a0e2c1a514fa8a0adb888e12
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -595,7 +595,6 @@ generatedFiles:
   - /pkg/models/shared/ucemail.go
   - /pkg/models/shared/uctelephone.go
   - /pkg/models/shared/webhook.go
-  - CONTRIBUTING.md
   - USAGE.md
   - account.go
   - accounting.go
@@ -1554,6 +1553,7 @@ generatedFiles:
   - docs/pkg/models/shared/listsortbyupdatedat.md
   - docs/pkg/models/shared/listspaceid.md
   - docs/pkg/models/shared/liststudentid.md
+  - docs/pkg/models/shared/listtaskid.md
   - docs/pkg/models/shared/listticketid.md
   - docs/pkg/models/shared/listtype.md
   - docs/pkg/models/shared/listupdatedgte.md
