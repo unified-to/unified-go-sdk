@@ -9,12 +9,17 @@ import (
 
 // MarketingList - Mailing List
 type MarketingList struct {
-	CreatedAt *string `json:"created_at,omitempty"`
-	ID        *string `json:"id,omitempty"`
-	Name      *string `json:"name,omitempty"`
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	EndAt       *time.Time `json:"end_at,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	IsActive    *bool      `json:"is_active,omitempty"`
+	Name        *string    `json:"name,omitempty"`
 	// The raw data returned by the integration for this list
 	Raw       map[string]any `json:"raw,omitempty"`
+	StartAt   *time.Time     `json:"start_at,omitempty"`
 	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
+	UserID    *string        `json:"user_id,omitempty"`
 }
 
 func (m MarketingList) MarshalJSON() ([]byte, error) {
@@ -28,11 +33,25 @@ func (m *MarketingList) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *MarketingList) GetCreatedAt() *string {
+func (o *MarketingList) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.CreatedAt
+}
+
+func (o *MarketingList) GetDescription() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Description
+}
+
+func (o *MarketingList) GetEndAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.EndAt
 }
 
 func (o *MarketingList) GetID() *string {
@@ -40,6 +59,13 @@ func (o *MarketingList) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *MarketingList) GetIsActive() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsActive
 }
 
 func (o *MarketingList) GetName() *string {
@@ -56,9 +82,23 @@ func (o *MarketingList) GetRaw() map[string]any {
 	return o.Raw
 }
 
+func (o *MarketingList) GetStartAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.StartAt
+}
+
 func (o *MarketingList) GetUpdatedAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *MarketingList) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }
