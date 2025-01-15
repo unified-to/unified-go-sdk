@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 9a16887c027162328aa6a5e6c8f1b276
+  docChecksum: 606c3dbe1f74df17ff3207b34bc6b503
   docVersion: "1.0"
-  speakeasyVersion: 1.468.3
-  generationVersion: 2.493.4
-  releaseVersion: 0.22.9
-  configChecksum: 5d196338bfb4d760ed326d177d25389e
+  speakeasyVersion: 1.468.6
+  generationVersion: 2.493.13
+  releaseVersion: 0.22.10
+  configChecksum: 36650c3affc5c6024bd5dcada7ddf5f5
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.6
-    core: 3.6.2
+    core: 3.6.5
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -3842,6 +3842,7 @@ examples:
           application/xml: "<value>"
           text/csv: "<value>"
           text/plain: "<value>"
+          '*/*': "x-file: example.file"
     speakeasy-default-create-passthrough-raw:
       parameters:
         path:
@@ -3857,6 +3858,7 @@ examples:
           application/xml: "<value>"
           text/csv: "<value>"
           text/plain: "<value>"
+          '*/*': "x-file: example.file"
   listPassthroughs:
     speakeasy-default-list-passthroughs:
       parameters:
@@ -3873,6 +3875,7 @@ examples:
           application/xml: "<value>"
           text/csv: "<value>"
           text/plain: "<value>"
+          '*/*': "x-file: example.file"
   patchPassthrough:
     speakeasy-default-patch-passthrough:
       parameters:
@@ -3897,6 +3900,7 @@ examples:
           application/xml: "<value>"
           text/csv: "<value>"
           text/plain: "<value>"
+          '*/*': "x-file: example.file"
     speakeasy-default-patch-passthrough-raw:
       parameters:
         path:
@@ -3912,6 +3916,7 @@ examples:
           application/xml: "<value>"
           text/csv: "<value>"
           text/plain: "<value>"
+          '*/*': "x-file: example.file"
   removePassthrough:
     speakeasy-default-remove-passthrough:
       parameters:
@@ -3928,6 +3933,7 @@ examples:
           application/xml: "<value>"
           text/csv: "<value>"
           text/plain: "<value>"
+          '*/*': "x-file: example.file"
   updatePassthrough:
     speakeasy-default-update-passthrough:
       parameters:
@@ -3952,6 +3958,7 @@ examples:
           application/xml: "<value>"
           text/csv: "<value>"
           text/plain: "<value>"
+          '*/*': "x-file: example.file"
     speakeasy-default-update-passthrough-raw:
       parameters:
         path:
@@ -3967,6 +3974,7 @@ examples:
           application/xml: "<value>"
           text/csv: "<value>"
           text/plain: "<value>"
+          '*/*': "x-file: example.file"
   createPaymentLink:
     speakeasy-default-create-payment-link:
       parameters:

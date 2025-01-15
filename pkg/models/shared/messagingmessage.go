@@ -8,23 +8,25 @@ import (
 )
 
 type MessagingMessage struct {
-	Attachments        []MessagingAttachment                 `json:"attachments,omitempty"`
-	AuthorMember       *PropertyMessagingMessageAuthorMember `json:"author_member,omitempty"`
-	ChannelID          *string                               `json:"channel_id,omitempty"`
-	CreatedAt          *time.Time                            `json:"created_at,omitempty"`
-	DestinationMembers []MessagingMember                     `json:"destination_members,omitempty"`
-	HiddenMembers      []MessagingMember                     `json:"hidden_members,omitempty"`
-	ID                 *string                               `json:"id,omitempty"`
-	MentionedMembers   []MessagingMember                     `json:"mentioned_members,omitempty"`
-	Message            *string                               `json:"message,omitempty"`
-	MessageHTML        *string                               `json:"message_html,omitempty"`
-	ParentMessageID    *string                               `json:"parent_message_id,omitempty"`
-	Raw                map[string]any                        `json:"raw,omitempty"`
-	Reference          *string                               `json:"reference,omitempty"`
-	RootMessageID      *string                               `json:"root_message_id,omitempty"`
-	Subject            *string                               `json:"subject,omitempty"`
-	UpdatedAt          *time.Time                            `json:"updated_at,omitempty"`
-	WebURL             *string                               `json:"web_url,omitempty"`
+	Attachments  []MessagingAttachment                 `json:"attachments,omitempty"`
+	AuthorMember *PropertyMessagingMessageAuthorMember `json:"author_member,omitempty"`
+	ChannelID    *string                               `json:"channel_id,omitempty"`
+	// Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+	ChannelIds         []string          `json:"channel_ids,omitempty"`
+	CreatedAt          *time.Time        `json:"created_at,omitempty"`
+	DestinationMembers []MessagingMember `json:"destination_members,omitempty"`
+	HiddenMembers      []MessagingMember `json:"hidden_members,omitempty"`
+	ID                 *string           `json:"id,omitempty"`
+	MentionedMembers   []MessagingMember `json:"mentioned_members,omitempty"`
+	Message            *string           `json:"message,omitempty"`
+	MessageHTML        *string           `json:"message_html,omitempty"`
+	ParentMessageID    *string           `json:"parent_message_id,omitempty"`
+	Raw                map[string]any    `json:"raw,omitempty"`
+	Reference          *string           `json:"reference,omitempty"`
+	RootMessageID      *string           `json:"root_message_id,omitempty"`
+	Subject            *string           `json:"subject,omitempty"`
+	UpdatedAt          *time.Time        `json:"updated_at,omitempty"`
+	WebURL             *string           `json:"web_url,omitempty"`
 }
 
 func (m MessagingMessage) MarshalJSON() ([]byte, error) {
@@ -57,6 +59,13 @@ func (o *MessagingMessage) GetChannelID() *string {
 		return nil
 	}
 	return o.ChannelID
+}
+
+func (o *MessagingMessage) GetChannelIds() []string {
+	if o == nil {
+		return nil
+	}
+	return o.ChannelIds
 }
 
 func (o *MessagingMessage) GetCreatedAt() *time.Time {
