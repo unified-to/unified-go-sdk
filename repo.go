@@ -212,7 +212,11 @@ func (s *Repo) CreateRepoBranch(ctx context.Context, request operations.CreateRe
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -418,7 +422,11 @@ func (s *Repo) CreateRepoCommit(ctx context.Context, request operations.CreateRe
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -624,7 +632,11 @@ func (s *Repo) CreateRepoOrganization(ctx context.Context, request operations.Cr
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -830,7 +842,11 @@ func (s *Repo) CreateRepoPullrequest(ctx context.Context, request operations.Cre
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1036,7 +1052,11 @@ func (s *Repo) CreateRepoRepository(ctx context.Context, request operations.Crea
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1234,7 +1254,11 @@ func (s *Repo) GetRepoBranch(ctx context.Context, request operations.GetRepoBran
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1432,7 +1456,11 @@ func (s *Repo) GetRepoCommit(ctx context.Context, request operations.GetRepoComm
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1630,7 +1658,11 @@ func (s *Repo) GetRepoOrganization(ctx context.Context, request operations.GetRe
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1828,7 +1860,11 @@ func (s *Repo) GetRepoPullrequest(ctx context.Context, request operations.GetRep
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2026,7 +2062,11 @@ func (s *Repo) GetRepoRepository(ctx context.Context, request operations.GetRepo
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2224,7 +2264,11 @@ func (s *Repo) ListRepoBranches(ctx context.Context, request operations.ListRepo
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2422,7 +2466,11 @@ func (s *Repo) ListRepoCommits(ctx context.Context, request operations.ListRepoC
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2620,7 +2668,11 @@ func (s *Repo) ListRepoOrganizations(ctx context.Context, request operations.Lis
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2818,7 +2870,11 @@ func (s *Repo) ListRepoPullrequests(ctx context.Context, request operations.List
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3016,7 +3072,11 @@ func (s *Repo) ListRepoRepositories(ctx context.Context, request operations.List
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3222,7 +3282,11 @@ func (s *Repo) PatchRepoBranch(ctx context.Context, request operations.PatchRepo
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3428,7 +3492,11 @@ func (s *Repo) PatchRepoCommit(ctx context.Context, request operations.PatchRepo
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3634,7 +3702,11 @@ func (s *Repo) PatchRepoOrganization(ctx context.Context, request operations.Pat
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3840,7 +3912,11 @@ func (s *Repo) PatchRepoPullrequest(ctx context.Context, request operations.Patc
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -4046,7 +4122,11 @@ func (s *Repo) PatchRepoRepository(ctx context.Context, request operations.Patch
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -4220,7 +4300,11 @@ func (s *Repo) RemoveRepoBranch(ctx context.Context, request operations.RemoveRe
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -4391,7 +4475,11 @@ func (s *Repo) RemoveRepoCommit(ctx context.Context, request operations.RemoveRe
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -4562,7 +4650,11 @@ func (s *Repo) RemoveRepoOrganization(ctx context.Context, request operations.Re
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -4733,7 +4825,11 @@ func (s *Repo) RemoveRepoPullrequest(ctx context.Context, request operations.Rem
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -4904,7 +5000,11 @@ func (s *Repo) RemoveRepoRepository(ctx context.Context, request operations.Remo
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -5107,7 +5207,11 @@ func (s *Repo) UpdateRepoBranch(ctx context.Context, request operations.UpdateRe
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -5313,7 +5417,11 @@ func (s *Repo) UpdateRepoCommit(ctx context.Context, request operations.UpdateRe
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -5519,7 +5627,11 @@ func (s *Repo) UpdateRepoOrganization(ctx context.Context, request operations.Up
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -5725,7 +5837,11 @@ func (s *Repo) UpdateRepoPullrequest(ctx context.Context, request operations.Upd
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -5931,7 +6047,11 @@ func (s *Repo) UpdateRepoRepository(ctx context.Context, request operations.Upda
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {

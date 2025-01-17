@@ -194,12 +194,17 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 205:
-		fallthrough
+		res.Headers = httpRes.Header
+
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -433,12 +438,17 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 205:
-		fallthrough
+		res.Headers = httpRes.Header
+
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -664,12 +674,17 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 205:
-		fallthrough
+		res.Headers = httpRes.Header
+
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -903,12 +918,17 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 205:
-		fallthrough
+		res.Headers = httpRes.Header
+
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1142,12 +1162,17 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 205:
-		fallthrough
+		res.Headers = httpRes.Header
+
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1373,12 +1398,17 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 205:
-		fallthrough
+		res.Headers = httpRes.Header
+
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1612,12 +1642,17 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 205:
-		fallthrough
+		res.Headers = httpRes.Header
+
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1851,12 +1886,17 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 205:
-		fallthrough
+		res.Headers = httpRes.Header
+
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
 
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {

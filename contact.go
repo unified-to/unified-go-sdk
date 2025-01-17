@@ -212,7 +212,11 @@ func (s *Contact) CreateAccountingContact(ctx context.Context, request operation
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -418,7 +422,11 @@ func (s *Contact) CreateCrmContact(ctx context.Context, request operations.Creat
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -624,7 +632,11 @@ func (s *Contact) CreateUcContact(ctx context.Context, request operations.Create
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -822,7 +834,11 @@ func (s *Contact) GetAccountingContact(ctx context.Context, request operations.G
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1020,7 +1036,11 @@ func (s *Contact) GetCrmContact(ctx context.Context, request operations.GetCrmCo
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1218,7 +1238,11 @@ func (s *Contact) GetUcContact(ctx context.Context, request operations.GetUcCont
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1416,7 +1440,11 @@ func (s *Contact) ListAccountingContacts(ctx context.Context, request operations
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1614,7 +1642,11 @@ func (s *Contact) ListCrmContacts(ctx context.Context, request operations.ListCr
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1812,7 +1844,11 @@ func (s *Contact) ListUcContacts(ctx context.Context, request operations.ListUcC
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2018,7 +2054,11 @@ func (s *Contact) PatchAccountingContact(ctx context.Context, request operations
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2224,7 +2264,11 @@ func (s *Contact) PatchCrmContact(ctx context.Context, request operations.PatchC
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2430,7 +2474,11 @@ func (s *Contact) PatchUcContact(ctx context.Context, request operations.PatchUc
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2604,7 +2652,11 @@ func (s *Contact) RemoveAccountingContact(ctx context.Context, request operation
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2775,7 +2827,11 @@ func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.Remov
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2946,7 +3002,11 @@ func (s *Contact) RemoveUcContact(ctx context.Context, request operations.Remove
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3149,7 +3209,11 @@ func (s *Contact) UpdateAccountingContact(ctx context.Context, request operation
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3355,7 +3419,11 @@ func (s *Contact) UpdateCrmContact(ctx context.Context, request operations.Updat
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3561,7 +3629,11 @@ func (s *Contact) UpdateUcContact(ctx context.Context, request operations.Update
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {

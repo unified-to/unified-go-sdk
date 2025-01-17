@@ -212,7 +212,11 @@ func (s *Task) CreateTaskComment(ctx context.Context, request operations.CreateT
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -418,7 +422,11 @@ func (s *Task) CreateTaskProject(ctx context.Context, request operations.CreateT
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -624,7 +632,11 @@ func (s *Task) CreateTaskTask(ctx context.Context, request operations.CreateTask
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -822,7 +834,11 @@ func (s *Task) GetTaskComment(ctx context.Context, request operations.GetTaskCom
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1020,7 +1036,11 @@ func (s *Task) GetTaskProject(ctx context.Context, request operations.GetTaskPro
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1218,7 +1238,11 @@ func (s *Task) GetTaskTask(ctx context.Context, request operations.GetTaskTaskRe
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1416,7 +1440,11 @@ func (s *Task) ListTaskComments(ctx context.Context, request operations.ListTask
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1614,7 +1642,11 @@ func (s *Task) ListTaskProjects(ctx context.Context, request operations.ListTask
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1812,7 +1844,11 @@ func (s *Task) ListTaskTasks(ctx context.Context, request operations.ListTaskTas
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2018,7 +2054,11 @@ func (s *Task) PatchTaskComment(ctx context.Context, request operations.PatchTas
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2224,7 +2264,11 @@ func (s *Task) PatchTaskProject(ctx context.Context, request operations.PatchTas
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2430,7 +2474,11 @@ func (s *Task) PatchTaskTask(ctx context.Context, request operations.PatchTaskTa
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2604,7 +2652,11 @@ func (s *Task) RemoveTaskComment(ctx context.Context, request operations.RemoveT
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2775,7 +2827,11 @@ func (s *Task) RemoveTaskProject(ctx context.Context, request operations.RemoveT
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2946,7 +3002,11 @@ func (s *Task) RemoveTaskTask(ctx context.Context, request operations.RemoveTask
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3149,7 +3209,11 @@ func (s *Task) UpdateTaskComment(ctx context.Context, request operations.UpdateT
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3355,7 +3419,11 @@ func (s *Task) UpdateTaskProject(ctx context.Context, request operations.UpdateT
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3561,7 +3629,11 @@ func (s *Task) UpdateTaskTask(ctx context.Context, request operations.UpdateTask
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {

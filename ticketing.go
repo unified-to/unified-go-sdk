@@ -212,7 +212,11 @@ func (s *Ticketing) CreateTicketingCustomer(ctx context.Context, request operati
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -418,7 +422,11 @@ func (s *Ticketing) CreateTicketingNote(ctx context.Context, request operations.
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -624,7 +632,11 @@ func (s *Ticketing) CreateTicketingTicket(ctx context.Context, request operation
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -822,7 +834,11 @@ func (s *Ticketing) GetTicketingCustomer(ctx context.Context, request operations
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1020,7 +1036,11 @@ func (s *Ticketing) GetTicketingNote(ctx context.Context, request operations.Get
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1218,7 +1238,11 @@ func (s *Ticketing) GetTicketingTicket(ctx context.Context, request operations.G
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1416,7 +1440,11 @@ func (s *Ticketing) ListTicketingCustomers(ctx context.Context, request operatio
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1614,7 +1642,11 @@ func (s *Ticketing) ListTicketingNotes(ctx context.Context, request operations.L
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1812,7 +1844,11 @@ func (s *Ticketing) ListTicketingTickets(ctx context.Context, request operations
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2018,7 +2054,11 @@ func (s *Ticketing) PatchTicketingCustomer(ctx context.Context, request operatio
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2224,7 +2264,11 @@ func (s *Ticketing) PatchTicketingNote(ctx context.Context, request operations.P
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2430,7 +2474,11 @@ func (s *Ticketing) PatchTicketingTicket(ctx context.Context, request operations
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2604,7 +2652,11 @@ func (s *Ticketing) RemoveTicketingCustomer(ctx context.Context, request operati
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2775,7 +2827,11 @@ func (s *Ticketing) RemoveTicketingNote(ctx context.Context, request operations.
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -2946,7 +3002,11 @@ func (s *Ticketing) RemoveTicketingTicket(ctx context.Context, request operation
 	switch {
 	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3149,7 +3209,11 @@ func (s *Ticketing) UpdateTicketingCustomer(ctx context.Context, request operati
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3355,7 +3419,11 @@ func (s *Ticketing) UpdateTicketingNote(ctx context.Context, request operations.
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3561,7 +3629,11 @@ func (s *Ticketing) UpdateTicketingTicket(ctx context.Context, request operation
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {

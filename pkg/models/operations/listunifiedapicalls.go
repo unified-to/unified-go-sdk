@@ -18,13 +18,19 @@ type ListUnifiedApicallsRequest struct {
 	// Filter the results to only those integrations for your user referenced by this value
 	ExternalXref *string `queryParam:"style=form,explode=true,name=external_xref"`
 	// Filter the results to just this integration
-	IntegrationType *string  `queryParam:"style=form,explode=true,name=integration_type"`
-	Limit           *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset          *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order           *string  `queryParam:"style=form,explode=true,name=order"`
-	Sort            *string  `queryParam:"style=form,explode=true,name=sort"`
+	IntegrationType *string `queryParam:"style=form,explode=true,name=integration_type"`
+	// Filter the results for only billable API Calls
+	IsBillable *bool    `queryParam:"style=form,explode=true,name=is_billable"`
+	Limit      *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order      *string  `queryParam:"style=form,explode=true,name=order"`
+	Sort       *string  `queryParam:"style=form,explode=true,name=sort"`
+	// Filter the results to just this type
+	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	// Filter the results to just this webhook
+	WebhookID *string `queryParam:"style=form,explode=true,name=webhook_id"`
 }
 
 func (l ListUnifiedApicallsRequest) MarshalJSON() ([]byte, error) {
@@ -73,6 +79,13 @@ func (o *ListUnifiedApicallsRequest) GetIntegrationType() *string {
 	return o.IntegrationType
 }
 
+func (o *ListUnifiedApicallsRequest) GetIsBillable() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsBillable
+}
+
 func (o *ListUnifiedApicallsRequest) GetLimit() *float64 {
 	if o == nil {
 		return nil
@@ -101,11 +114,25 @@ func (o *ListUnifiedApicallsRequest) GetSort() *string {
 	return o.Sort
 }
 
+func (o *ListUnifiedApicallsRequest) GetType() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Type
+}
+
 func (o *ListUnifiedApicallsRequest) GetUpdatedGte() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.UpdatedGte
+}
+
+func (o *ListUnifiedApicallsRequest) GetWebhookID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.WebhookID
 }
 
 type ListUnifiedApicallsResponse struct {
