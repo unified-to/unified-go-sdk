@@ -3,9 +3,9 @@
 package shared
 
 type KmsPageMetadata struct {
-	Name  string         `json:"name"`
-	Type  *string        `json:"type,omitempty"`
-	Value map[string]any `json:"value,omitempty"`
+	Name  string  `json:"name"`
+	Type  *string `json:"type,omitempty"`
+	Value *string `json:"value,omitempty"`
 }
 
 func (o *KmsPageMetadata) GetName() string {
@@ -22,7 +22,7 @@ func (o *KmsPageMetadata) GetType() *string {
 	return o.Type
 }
 
-func (o *KmsPageMetadata) GetValue() map[string]any {
+func (o *KmsPageMetadata) GetValue() *string {
 	if o == nil {
 		return nil
 	}
