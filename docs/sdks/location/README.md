@@ -42,7 +42,7 @@ func main() {
     )
 
     res, err := s.Location.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -95,7 +95,7 @@ func main() {
     )
 
     res, err := s.Location.CreateHrisLocation(ctx, operations.CreateHrisLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -148,7 +148,7 @@ func main() {
     )
 
     res, err := s.Location.GetCommerceLocation(ctx, operations.GetCommerceLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -202,7 +202,7 @@ func main() {
     )
 
     res, err := s.Location.GetHrisLocation(ctx, operations.GetHrisLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -256,7 +256,7 @@ func main() {
     )
 
     res, err := s.Location.ListCommerceLocations(ctx, operations.ListCommerceLocationsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -309,7 +309,7 @@ func main() {
     )
 
     res, err := s.Location.ListHrisLocations(ctx, operations.ListHrisLocationsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -362,7 +362,7 @@ func main() {
     )
 
     res, err := s.Location.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -416,7 +416,7 @@ func main() {
     )
 
     res, err := s.Location.PatchHrisLocation(ctx, operations.PatchHrisLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -470,7 +470,7 @@ func main() {
     )
 
     res, err := s.Location.RemoveCommerceLocation(ctx, operations.RemoveCommerceLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -524,7 +524,7 @@ func main() {
     )
 
     res, err := s.Location.RemoveHrisLocation(ctx, operations.RemoveHrisLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -578,7 +578,7 @@ func main() {
     )
 
     res, err := s.Location.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -632,7 +632,7 @@ func main() {
     )
 
     res, err := s.Location.UpdateHrisLocation(ctx, operations.UpdateHrisLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

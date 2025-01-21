@@ -732,6 +732,35 @@ func (e *ListOrgID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListPageID string
+
+const (
+	ListPageIDSupportedRequired ListPageID = "supported-required"
+	ListPageIDSupported         ListPageID = "supported"
+	ListPageIDNotSupported      ListPageID = "not-supported"
+)
+
+func (e ListPageID) ToPointer() *ListPageID {
+	return &e
+}
+func (e *ListPageID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListPageID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListPageID: %v", v)
+	}
+}
+
 type ListParentID string
 
 const (
@@ -1745,6 +1774,7 @@ type IntegrationSupport struct {
 	ListOffset             *ListOffset             `json:"list_offset,omitempty"`
 	ListOrder              *ListOrder              `json:"list_order,omitempty"`
 	ListOrgID              *ListOrgID              `json:"list_org_id,omitempty"`
+	ListPageID             *ListPageID             `json:"list_page_id,omitempty"`
 	ListParentID           *ListParentID           `json:"list_parent_id,omitempty"`
 	ListProjectID          *ListProjectID          `json:"list_project_id,omitempty"`
 	ListQuery              *ListQuery              `json:"list_query,omitempty"`
@@ -1772,6 +1802,7 @@ type IntegrationSupport struct {
 	SearchLinkedinurl        *SearchLinkedinurl                       `json:"search_linkedinurl,omitempty"`
 	SearchName               *SearchName                              `json:"search_name,omitempty"`
 	SearchTwitter            *SearchTwitter                           `json:"search_twitter,omitempty"`
+	SlowFields               []string                                 `json:"slow_fields,omitempty"`
 	VirtualWebhookChannelID  *VirtualWebhookChannelID                 `json:"virtual_webhook_channel_id,omitempty"`
 	VirtualWebhookCompanyID  *VirtualWebhookCompanyID                 `json:"virtual_webhook_company_id,omitempty"`
 	VirtualWebhookContactID  *VirtualWebhookContactID                 `json:"virtual_webhook_contact_id,omitempty"`
@@ -1968,6 +1999,13 @@ func (o *IntegrationSupport) GetListOrgID() *ListOrgID {
 	return o.ListOrgID
 }
 
+func (o *IntegrationSupport) GetListPageID() *ListPageID {
+	if o == nil {
+		return nil
+	}
+	return o.ListPageID
+}
+
 func (o *IntegrationSupport) GetListParentID() *ListParentID {
 	if o == nil {
 		return nil
@@ -2148,6 +2186,13 @@ func (o *IntegrationSupport) GetSearchTwitter() *SearchTwitter {
 		return nil
 	}
 	return o.SearchTwitter
+}
+
+func (o *IntegrationSupport) GetSlowFields() []string {
+	if o == nil {
+		return nil
+	}
+	return o.SlowFields
 }
 
 func (o *IntegrationSupport) GetVirtualWebhookChannelID() *VirtualWebhookChannelID {

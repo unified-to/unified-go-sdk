@@ -36,7 +36,7 @@ func main() {
     )
 
     res, err := s.Scorecard.CreateAtsScorecard(ctx, operations.CreateAtsScorecardRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,7 +89,7 @@ func main() {
     )
 
     res, err := s.Scorecard.GetAtsScorecard(ctx, operations.GetAtsScorecardRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -143,7 +143,7 @@ func main() {
     )
 
     res, err := s.Scorecard.ListAtsScorecards(ctx, operations.ListAtsScorecardsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -196,7 +196,7 @@ func main() {
     )
 
     res, err := s.Scorecard.PatchAtsScorecard(ctx, operations.PatchAtsScorecardRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
     )
 
     res, err := s.Scorecard.RemoveAtsScorecard(ctx, operations.RemoveAtsScorecardRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -304,7 +304,7 @@ func main() {
     )
 
     res, err := s.Scorecard.UpdateAtsScorecard(ctx, operations.UpdateAtsScorecardRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

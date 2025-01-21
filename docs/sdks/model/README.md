@@ -31,7 +31,7 @@ func main() {
     )
 
     res, err := s.Model.ListGenaiModels(ctx, operations.ListGenaiModelsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

@@ -36,7 +36,7 @@ func main() {
     )
 
     res, err := s.Lead.CreateCrmLead(ctx, operations.CreateCrmLeadRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,7 +89,7 @@ func main() {
     )
 
     res, err := s.Lead.GetCrmLead(ctx, operations.GetCrmLeadRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -143,7 +143,7 @@ func main() {
     )
 
     res, err := s.Lead.ListCrmLeads(ctx, operations.ListCrmLeadsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -196,7 +196,7 @@ func main() {
     )
 
     res, err := s.Lead.PatchCrmLead(ctx, operations.PatchCrmLeadRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
     )
 
     res, err := s.Lead.RemoveCrmLead(ctx, operations.RemoveCrmLeadRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -304,7 +304,7 @@ func main() {
     )
 
     res, err := s.Lead.UpdateCrmLead(ctx, operations.UpdateCrmLeadRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

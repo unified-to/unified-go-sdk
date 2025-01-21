@@ -36,7 +36,7 @@ func main() {
     )
 
     res, err := s.Job.CreateAtsJob(ctx, operations.CreateAtsJobRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,7 +89,7 @@ func main() {
     )
 
     res, err := s.Job.GetAtsJob(ctx, operations.GetAtsJobRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -143,7 +143,7 @@ func main() {
     )
 
     res, err := s.Job.ListAtsJobs(ctx, operations.ListAtsJobsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -196,7 +196,7 @@ func main() {
     )
 
     res, err := s.Job.PatchAtsJob(ctx, operations.PatchAtsJobRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
     )
 
     res, err := s.Job.RemoveAtsJob(ctx, operations.RemoveAtsJobRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -304,7 +304,7 @@ func main() {
     )
 
     res, err := s.Job.UpdateAtsJob(ctx, operations.UpdateAtsJobRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

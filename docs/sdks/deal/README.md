@@ -36,7 +36,7 @@ func main() {
     )
 
     res, err := s.Deal.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,7 +89,7 @@ func main() {
     )
 
     res, err := s.Deal.GetCrmDeal(ctx, operations.GetCrmDealRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -143,7 +143,7 @@ func main() {
     )
 
     res, err := s.Deal.ListCrmDeals(ctx, operations.ListCrmDealsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -196,7 +196,7 @@ func main() {
     )
 
     res, err := s.Deal.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
     )
 
     res, err := s.Deal.RemoveCrmDeal(ctx, operations.RemoveCrmDealRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -304,7 +304,7 @@ func main() {
     )
 
     res, err := s.Deal.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

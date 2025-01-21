@@ -36,7 +36,7 @@ func main() {
     )
 
     res, err := s.File.CreateStorageFile(ctx, operations.CreateStorageFileRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -89,7 +89,7 @@ func main() {
     )
 
     res, err := s.File.GetStorageFile(ctx, operations.GetStorageFileRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -143,7 +143,7 @@ func main() {
     )
 
     res, err := s.File.ListStorageFiles(ctx, operations.ListStorageFilesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -196,7 +196,7 @@ func main() {
     )
 
     res, err := s.File.PatchStorageFile(ctx, operations.PatchStorageFileRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -250,7 +250,7 @@ func main() {
     )
 
     res, err := s.File.RemoveStorageFile(ctx, operations.RemoveStorageFileRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -304,7 +304,7 @@ func main() {
     )
 
     res, err := s.File.UpdateStorageFile(ctx, operations.UpdateStorageFileRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

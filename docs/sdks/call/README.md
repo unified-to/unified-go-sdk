@@ -31,7 +31,7 @@ func main() {
     )
 
     res, err := s.Call.ListUcCalls(ctx, operations.ListUcCallsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

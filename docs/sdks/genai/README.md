@@ -32,7 +32,7 @@ func main() {
     )
 
     res, err := s.Genai.CreateGenaiPrompt(ctx, operations.CreateGenaiPromptRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -85,7 +85,7 @@ func main() {
     )
 
     res, err := s.Genai.ListGenaiModels(ctx, operations.ListGenaiModelsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

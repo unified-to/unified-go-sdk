@@ -60,6 +60,7 @@
 | `ObjectTypeMessagingChannel`       | messaging_channel                  |
 | `ObjectTypeKmsSpace`               | kms_space                          |
 | `ObjectTypeKmsPage`                | kms_page                           |
+| `ObjectTypeKmsComment`             | kms_comment                        |
 | `ObjectTypeTaskProject`            | task_project                       |
 | `ObjectTypeTaskTask`               | task_task                          |
 | `ObjectTypeTaskComment`            | task_comment                       |

@@ -32,7 +32,7 @@ func main() {
     )
 
     res, err := s.Payout.GetPaymentPayout(ctx, operations.GetPaymentPayoutRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -86,7 +86,7 @@ func main() {
     )
 
     res, err := s.Payout.ListPaymentPayouts(ctx, operations.ListPaymentPayoutsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

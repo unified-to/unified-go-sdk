@@ -38,8 +38,8 @@ func main() {
     )
 
     res, err := s.Passthrough.CreatePassthroughJSON(ctx, operations.CreatePassthroughJSONRequest{
-        ConnectionID: "<value>",
-        Path: "/etc/periodic",
+        ConnectionID: "<id>",
+        Path: "/opt/lib",
     })
     if err != nil {
         log.Fatal(err)
@@ -92,8 +92,8 @@ func main() {
     )
 
     res, err := s.Passthrough.CreatePassthroughRaw(ctx, operations.CreatePassthroughRawRequest{
-        ConnectionID: "<value>",
-        Path: "/etc/periodic",
+        ConnectionID: "<id>",
+        Path: "/opt/lib",
     })
     if err != nil {
         log.Fatal(err)
@@ -146,7 +146,7 @@ func main() {
     )
 
     res, err := s.Passthrough.ListPassthroughs(ctx, operations.ListPassthroughsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         Path: "/selinux",
     })
     if err != nil {
@@ -200,8 +200,8 @@ func main() {
     )
 
     res, err := s.Passthrough.PatchPassthroughJSON(ctx, operations.PatchPassthroughJSONRequest{
-        ConnectionID: "<value>",
-        Path: "/mnt",
+        ConnectionID: "<id>",
+        Path: "/home/user",
     })
     if err != nil {
         log.Fatal(err)
@@ -254,8 +254,8 @@ func main() {
     )
 
     res, err := s.Passthrough.PatchPassthroughRaw(ctx, operations.PatchPassthroughRawRequest{
-        ConnectionID: "<value>",
-        Path: "/mnt",
+        ConnectionID: "<id>",
+        Path: "/home/user",
     })
     if err != nil {
         log.Fatal(err)
@@ -308,7 +308,7 @@ func main() {
     )
 
     res, err := s.Passthrough.RemovePassthrough(ctx, operations.RemovePassthroughRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         Path: "/Applications",
     })
     if err != nil {
@@ -362,8 +362,8 @@ func main() {
     )
 
     res, err := s.Passthrough.UpdatePassthroughJSON(ctx, operations.UpdatePassthroughJSONRequest{
-        ConnectionID: "<value>",
-        Path: "/dev",
+        ConnectionID: "<id>",
+        Path: "/etc/namedb",
     })
     if err != nil {
         log.Fatal(err)
@@ -416,8 +416,8 @@ func main() {
     )
 
     res, err := s.Passthrough.UpdatePassthroughRaw(ctx, operations.UpdatePassthroughRawRequest{
-        ConnectionID: "<value>",
-        Path: "/dev",
+        ConnectionID: "<id>",
+        Path: "/etc/namedb",
     })
     if err != nil {
         log.Fatal(err)

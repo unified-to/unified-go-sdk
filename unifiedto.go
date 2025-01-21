@@ -112,6 +112,7 @@ type UnifiedTo struct {
 	Payslip           *Payslip
 	Timeoff           *Timeoff
 	Kms               *Kms
+	Comment           *Comment
 	Page              *Page
 	Space             *Space
 	Lms               *Lms
@@ -142,7 +143,6 @@ type UnifiedTo struct {
 	Storage           *Storage
 	File              *File
 	Task              *Task
-	Comment           *Comment
 	Project           *Project
 	Ticketing         *Ticketing
 	Customer          *Customer
@@ -236,9 +236,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.22.12",
-			GenVersion:        "2.493.21",
-			UserAgent:         "speakeasy-sdk/go 0.22.12 2.493.21 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.22.13",
+			GenVersion:        "2.493.32",
+			UserAgent:         "speakeasy-sdk/go 0.22.13 2.493.32 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -338,6 +338,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Kms = newKms(sdk.sdkConfiguration)
 
+	sdk.Comment = newComment(sdk.sdkConfiguration)
+
 	sdk.Page = newPage(sdk.sdkConfiguration)
 
 	sdk.Space = newSpace(sdk.sdkConfiguration)
@@ -397,8 +399,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.File = newFile(sdk.sdkConfiguration)
 
 	sdk.Task = newTask(sdk.sdkConfiguration)
-
-	sdk.Comment = newComment(sdk.sdkConfiguration)
 
 	sdk.Project = newProject(sdk.sdkConfiguration)
 

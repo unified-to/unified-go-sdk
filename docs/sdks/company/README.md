@@ -45,7 +45,7 @@ func main() {
     )
 
     res, err := s.Company.CreateCrmCompany(ctx, operations.CreateCrmCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -98,7 +98,7 @@ func main() {
     )
 
     res, err := s.Company.CreateHrisCompany(ctx, operations.CreateHrisCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -151,7 +151,7 @@ func main() {
     )
 
     res, err := s.Company.GetAtsCompany(ctx, operations.GetAtsCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -205,7 +205,7 @@ func main() {
     )
 
     res, err := s.Company.GetCrmCompany(ctx, operations.GetCrmCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -259,7 +259,7 @@ func main() {
     )
 
     res, err := s.Company.GetHrisCompany(ctx, operations.GetHrisCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -313,7 +313,7 @@ func main() {
     )
 
     res, err := s.Company.ListAtsCompanies(ctx, operations.ListAtsCompaniesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -366,7 +366,7 @@ func main() {
     )
 
     res, err := s.Company.ListCrmCompanies(ctx, operations.ListCrmCompaniesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -419,7 +419,7 @@ func main() {
     )
 
     res, err := s.Company.ListEnrichCompanies(ctx, operations.ListEnrichCompaniesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -472,7 +472,7 @@ func main() {
     )
 
     res, err := s.Company.ListHrisCompanies(ctx, operations.ListHrisCompaniesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -525,7 +525,7 @@ func main() {
     )
 
     res, err := s.Company.PatchCrmCompany(ctx, operations.PatchCrmCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -579,7 +579,7 @@ func main() {
     )
 
     res, err := s.Company.PatchHrisCompany(ctx, operations.PatchHrisCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -633,7 +633,7 @@ func main() {
     )
 
     res, err := s.Company.RemoveCrmCompany(ctx, operations.RemoveCrmCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -687,7 +687,7 @@ func main() {
     )
 
     res, err := s.Company.RemoveHrisCompany(ctx, operations.RemoveHrisCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -741,7 +741,7 @@ func main() {
     )
 
     res, err := s.Company.UpdateCrmCompany(ctx, operations.UpdateCrmCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -795,7 +795,7 @@ func main() {
     )
 
     res, err := s.Company.UpdateHrisCompany(ctx, operations.UpdateHrisCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

@@ -32,7 +32,7 @@ func main() {
     )
 
     res, err := s.Channel.GetMessagingChannel(ctx, operations.GetMessagingChannelRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -86,7 +86,7 @@ func main() {
     )
 
     res, err := s.Channel.ListMessagingChannels(ctx, operations.ListMessagingChannelsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

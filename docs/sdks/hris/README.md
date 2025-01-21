@@ -58,7 +58,7 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisCompany(ctx, operations.CreateHrisCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -111,7 +111,7 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisEmployee(ctx, operations.CreateHrisEmployeeRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -164,7 +164,7 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisGroup(ctx, operations.CreateHrisGroupRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -217,7 +217,7 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisLocation(ctx, operations.CreateHrisLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -270,7 +270,7 @@ func main() {
     )
 
     res, err := s.Hris.GetHrisCompany(ctx, operations.GetHrisCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -324,7 +324,7 @@ func main() {
     )
 
     res, err := s.Hris.GetHrisEmployee(ctx, operations.GetHrisEmployeeRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -378,7 +378,7 @@ func main() {
     )
 
     res, err := s.Hris.GetHrisGroup(ctx, operations.GetHrisGroupRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -432,7 +432,7 @@ func main() {
     )
 
     res, err := s.Hris.GetHrisLocation(ctx, operations.GetHrisLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -486,7 +486,7 @@ func main() {
     )
 
     res, err := s.Hris.GetHrisPayslip(ctx, operations.GetHrisPayslipRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -540,7 +540,7 @@ func main() {
     )
 
     res, err := s.Hris.GetHrisTimeoff(ctx, operations.GetHrisTimeoffRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -594,7 +594,7 @@ func main() {
     )
 
     res, err := s.Hris.ListHrisCompanies(ctx, operations.ListHrisCompaniesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -647,7 +647,7 @@ func main() {
     )
 
     res, err := s.Hris.ListHrisEmployees(ctx, operations.ListHrisEmployeesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -700,7 +700,7 @@ func main() {
     )
 
     res, err := s.Hris.ListHrisGroups(ctx, operations.ListHrisGroupsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -753,7 +753,7 @@ func main() {
     )
 
     res, err := s.Hris.ListHrisLocations(ctx, operations.ListHrisLocationsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -806,7 +806,7 @@ func main() {
     )
 
     res, err := s.Hris.ListHrisPayslips(ctx, operations.ListHrisPayslipsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -859,7 +859,7 @@ func main() {
     )
 
     res, err := s.Hris.ListHrisTimeoffs(ctx, operations.ListHrisTimeoffsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -912,7 +912,7 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisCompany(ctx, operations.PatchHrisCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -966,7 +966,7 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisEmployee(ctx, operations.PatchHrisEmployeeRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1020,7 +1020,7 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisGroup(ctx, operations.PatchHrisGroupRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1074,7 +1074,7 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisLocation(ctx, operations.PatchHrisLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1128,7 +1128,7 @@ func main() {
     )
 
     res, err := s.Hris.RemoveHrisCompany(ctx, operations.RemoveHrisCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1182,7 +1182,7 @@ func main() {
     )
 
     res, err := s.Hris.RemoveHrisEmployee(ctx, operations.RemoveHrisEmployeeRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1236,7 +1236,7 @@ func main() {
     )
 
     res, err := s.Hris.RemoveHrisGroup(ctx, operations.RemoveHrisGroupRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1290,7 +1290,7 @@ func main() {
     )
 
     res, err := s.Hris.RemoveHrisLocation(ctx, operations.RemoveHrisLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1344,7 +1344,7 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisCompany(ctx, operations.UpdateHrisCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1398,7 +1398,7 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisEmployee(ctx, operations.UpdateHrisEmployeeRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1452,7 +1452,7 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisGroup(ctx, operations.UpdateHrisGroupRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1506,7 +1506,7 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisLocation(ctx, operations.UpdateHrisLocationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

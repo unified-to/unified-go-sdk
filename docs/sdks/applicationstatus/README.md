@@ -31,7 +31,7 @@ func main() {
     )
 
     res, err := s.Applicationstatus.ListAtsApplicationstatuses(ctx, operations.ListAtsApplicationstatusesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

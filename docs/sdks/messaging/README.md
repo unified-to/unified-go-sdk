@@ -38,7 +38,7 @@ func main() {
     )
 
     res, err := s.Messaging.CreateMessagingMessage(ctx, operations.CreateMessagingMessageRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -91,7 +91,7 @@ func main() {
     )
 
     res, err := s.Messaging.GetMessagingChannel(ctx, operations.GetMessagingChannelRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -145,7 +145,7 @@ func main() {
     )
 
     res, err := s.Messaging.GetMessagingMessage(ctx, operations.GetMessagingMessageRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -199,7 +199,7 @@ func main() {
     )
 
     res, err := s.Messaging.ListMessagingChannels(ctx, operations.ListMessagingChannelsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -252,7 +252,7 @@ func main() {
     )
 
     res, err := s.Messaging.ListMessagingMessages(ctx, operations.ListMessagingMessagesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -305,7 +305,7 @@ func main() {
     )
 
     res, err := s.Messaging.PatchMessagingMessage(ctx, operations.PatchMessagingMessageRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -359,7 +359,7 @@ func main() {
     )
 
     res, err := s.Messaging.RemoveMessagingMessage(ctx, operations.RemoveMessagingMessageRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -413,7 +413,7 @@ func main() {
     )
 
     res, err := s.Messaging.UpdateMessagingMessage(ctx, operations.UpdateMessagingMessageRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

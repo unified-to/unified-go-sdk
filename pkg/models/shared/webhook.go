@@ -96,6 +96,7 @@ const (
 	ObjectTypeMessagingChannel       ObjectType = "messaging_channel"
 	ObjectTypeKmsSpace               ObjectType = "kms_space"
 	ObjectTypeKmsPage                ObjectType = "kms_page"
+	ObjectTypeKmsComment             ObjectType = "kms_comment"
 	ObjectTypeTaskProject            ObjectType = "task_project"
 	ObjectTypeTaskTask               ObjectType = "task_task"
 	ObjectTypeTaskComment            ObjectType = "task_comment"
@@ -231,6 +232,8 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "kms_space":
 		fallthrough
 	case "kms_page":
+		fallthrough
+	case "kms_comment":
 		fallthrough
 	case "task_project":
 		fallthrough

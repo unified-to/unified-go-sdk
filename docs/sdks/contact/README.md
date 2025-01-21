@@ -48,7 +48,7 @@ func main() {
     )
 
     res, err := s.Contact.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -101,7 +101,7 @@ func main() {
     )
 
     res, err := s.Contact.CreateCrmContact(ctx, operations.CreateCrmContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -154,7 +154,7 @@ func main() {
     )
 
     res, err := s.Contact.CreateUcContact(ctx, operations.CreateUcContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -207,7 +207,7 @@ func main() {
     )
 
     res, err := s.Contact.GetAccountingContact(ctx, operations.GetAccountingContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -261,7 +261,7 @@ func main() {
     )
 
     res, err := s.Contact.GetCrmContact(ctx, operations.GetCrmContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -315,7 +315,7 @@ func main() {
     )
 
     res, err := s.Contact.GetUcContact(ctx, operations.GetUcContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -369,7 +369,7 @@ func main() {
     )
 
     res, err := s.Contact.ListAccountingContacts(ctx, operations.ListAccountingContactsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -422,7 +422,7 @@ func main() {
     )
 
     res, err := s.Contact.ListCrmContacts(ctx, operations.ListCrmContactsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -475,7 +475,7 @@ func main() {
     )
 
     res, err := s.Contact.ListUcContacts(ctx, operations.ListUcContactsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -528,7 +528,7 @@ func main() {
     )
 
     res, err := s.Contact.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -582,7 +582,7 @@ func main() {
     )
 
     res, err := s.Contact.PatchCrmContact(ctx, operations.PatchCrmContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -636,7 +636,7 @@ func main() {
     )
 
     res, err := s.Contact.PatchUcContact(ctx, operations.PatchUcContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -690,7 +690,7 @@ func main() {
     )
 
     res, err := s.Contact.RemoveAccountingContact(ctx, operations.RemoveAccountingContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -744,7 +744,7 @@ func main() {
     )
 
     res, err := s.Contact.RemoveCrmContact(ctx, operations.RemoveCrmContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -798,7 +798,7 @@ func main() {
     )
 
     res, err := s.Contact.RemoveUcContact(ctx, operations.RemoveUcContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -852,7 +852,7 @@ func main() {
     )
 
     res, err := s.Contact.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -906,7 +906,7 @@ func main() {
     )
 
     res, err := s.Contact.UpdateCrmContact(ctx, operations.UpdateCrmContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -960,7 +960,7 @@ func main() {
     )
 
     res, err := s.Contact.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

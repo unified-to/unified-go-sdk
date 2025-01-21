@@ -258,7 +258,7 @@ func main() {
 
     res, err := s.Unified.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
-        WorkspaceID: "<value>",
+        WorkspaceID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -466,7 +466,7 @@ func main() {
     )
 
     res, err := s.Unified.ListUnifiedIntegrationWorkspaces(ctx, operations.ListUnifiedIntegrationWorkspacesRequest{
-        WorkspaceID: "<value>",
+        WorkspaceID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

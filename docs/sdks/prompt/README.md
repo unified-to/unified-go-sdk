@@ -31,7 +31,7 @@ func main() {
     )
 
     res, err := s.Prompt.CreateGenaiPrompt(ctx, operations.CreateGenaiPromptRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

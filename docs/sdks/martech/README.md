@@ -42,7 +42,7 @@ func main() {
     )
 
     res, err := s.Martech.CreateMartechList(ctx, operations.CreateMartechListRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -95,7 +95,7 @@ func main() {
     )
 
     res, err := s.Martech.CreateMartechMember(ctx, operations.CreateMartechMemberRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -148,7 +148,7 @@ func main() {
     )
 
     res, err := s.Martech.GetMartechList(ctx, operations.GetMartechListRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -202,7 +202,7 @@ func main() {
     )
 
     res, err := s.Martech.GetMartechMember(ctx, operations.GetMartechMemberRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -256,7 +256,7 @@ func main() {
     )
 
     res, err := s.Martech.ListMartechLists(ctx, operations.ListMartechListsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -309,7 +309,7 @@ func main() {
     )
 
     res, err := s.Martech.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -362,7 +362,7 @@ func main() {
     )
 
     res, err := s.Martech.PatchMartechList(ctx, operations.PatchMartechListRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -416,7 +416,7 @@ func main() {
     )
 
     res, err := s.Martech.PatchMartechMember(ctx, operations.PatchMartechMemberRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -470,7 +470,7 @@ func main() {
     )
 
     res, err := s.Martech.RemoveMartechList(ctx, operations.RemoveMartechListRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -524,7 +524,7 @@ func main() {
     )
 
     res, err := s.Martech.RemoveMartechMember(ctx, operations.RemoveMartechMemberRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -578,7 +578,7 @@ func main() {
     )
 
     res, err := s.Martech.UpdateMartechList(ctx, operations.UpdateMartechListRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -632,7 +632,7 @@ func main() {
     )
 
     res, err := s.Martech.UpdateMartechMember(ctx, operations.UpdateMartechMemberRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

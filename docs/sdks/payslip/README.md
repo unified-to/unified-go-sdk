@@ -32,7 +32,7 @@ func main() {
     )
 
     res, err := s.Payslip.GetHrisPayslip(ctx, operations.GetHrisPayslipRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -86,7 +86,7 @@ func main() {
     )
 
     res, err := s.Payslip.ListHrisPayslips(ctx, operations.ListHrisPayslipsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

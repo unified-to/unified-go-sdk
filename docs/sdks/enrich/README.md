@@ -32,7 +32,7 @@ func main() {
     )
 
     res, err := s.Enrich.ListEnrichCompanies(ctx, operations.ListEnrichCompaniesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -85,7 +85,7 @@ func main() {
     )
 
     res, err := s.Enrich.ListEnrichPeople(ctx, operations.ListEnrichPeopleRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

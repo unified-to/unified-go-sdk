@@ -33,7 +33,7 @@ func main() {
 
     res, err := s.Auth.GetUnifiedIntegrationAuth(ctx, operations.GetUnifiedIntegrationAuthRequest{
         IntegrationType: "<value>",
-        WorkspaceID: "<value>",
+        WorkspaceID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -87,7 +87,7 @@ func main() {
 
     res, err := s.Auth.GetUnifiedIntegrationLogin(ctx, operations.GetUnifiedIntegrationLoginRequest{
         IntegrationType: "<value>",
-        WorkspaceID: "<value>",
+        WorkspaceID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

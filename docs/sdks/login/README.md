@@ -32,7 +32,7 @@ func main() {
 
     res, err := s.Login.GetUnifiedIntegrationLogin(ctx, operations.GetUnifiedIntegrationLoginRequest{
         IntegrationType: "<value>",
-        WorkspaceID: "<value>",
+        WorkspaceID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

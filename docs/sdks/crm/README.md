@@ -66,7 +66,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmCompany(ctx, operations.CreateCrmCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -119,7 +119,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmContact(ctx, operations.CreateCrmContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -172,7 +172,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -225,7 +225,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmEvent(ctx, operations.CreateCrmEventRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -278,7 +278,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmLead(ctx, operations.CreateCrmLeadRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -331,7 +331,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmPipeline(ctx, operations.CreateCrmPipelineRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -384,7 +384,7 @@ func main() {
     )
 
     res, err := s.Crm.GetCrmCompany(ctx, operations.GetCrmCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -438,7 +438,7 @@ func main() {
     )
 
     res, err := s.Crm.GetCrmContact(ctx, operations.GetCrmContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -492,7 +492,7 @@ func main() {
     )
 
     res, err := s.Crm.GetCrmDeal(ctx, operations.GetCrmDealRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -546,7 +546,7 @@ func main() {
     )
 
     res, err := s.Crm.GetCrmEvent(ctx, operations.GetCrmEventRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -600,7 +600,7 @@ func main() {
     )
 
     res, err := s.Crm.GetCrmLead(ctx, operations.GetCrmLeadRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -654,7 +654,7 @@ func main() {
     )
 
     res, err := s.Crm.GetCrmPipeline(ctx, operations.GetCrmPipelineRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -708,7 +708,7 @@ func main() {
     )
 
     res, err := s.Crm.ListCrmCompanies(ctx, operations.ListCrmCompaniesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -761,7 +761,7 @@ func main() {
     )
 
     res, err := s.Crm.ListCrmContacts(ctx, operations.ListCrmContactsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -814,7 +814,7 @@ func main() {
     )
 
     res, err := s.Crm.ListCrmDeals(ctx, operations.ListCrmDealsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -867,7 +867,7 @@ func main() {
     )
 
     res, err := s.Crm.ListCrmEvents(ctx, operations.ListCrmEventsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -920,7 +920,7 @@ func main() {
     )
 
     res, err := s.Crm.ListCrmLeads(ctx, operations.ListCrmLeadsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -973,7 +973,7 @@ func main() {
     )
 
     res, err := s.Crm.ListCrmPipelines(ctx, operations.ListCrmPipelinesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1026,7 +1026,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmCompany(ctx, operations.PatchCrmCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1080,7 +1080,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmContact(ctx, operations.PatchCrmContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1134,7 +1134,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1188,7 +1188,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmEvent(ctx, operations.PatchCrmEventRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1242,7 +1242,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmLead(ctx, operations.PatchCrmLeadRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1296,7 +1296,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmPipeline(ctx, operations.PatchCrmPipelineRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1350,7 +1350,7 @@ func main() {
     )
 
     res, err := s.Crm.RemoveCrmCompany(ctx, operations.RemoveCrmCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1404,7 +1404,7 @@ func main() {
     )
 
     res, err := s.Crm.RemoveCrmContact(ctx, operations.RemoveCrmContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1458,7 +1458,7 @@ func main() {
     )
 
     res, err := s.Crm.RemoveCrmDeal(ctx, operations.RemoveCrmDealRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1512,7 +1512,7 @@ func main() {
     )
 
     res, err := s.Crm.RemoveCrmEvent(ctx, operations.RemoveCrmEventRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1566,7 +1566,7 @@ func main() {
     )
 
     res, err := s.Crm.RemoveCrmLead(ctx, operations.RemoveCrmLeadRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1620,7 +1620,7 @@ func main() {
     )
 
     res, err := s.Crm.RemoveCrmPipeline(ctx, operations.RemoveCrmPipelineRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1674,7 +1674,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmCompany(ctx, operations.UpdateCrmCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1728,7 +1728,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmContact(ctx, operations.UpdateCrmContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1782,7 +1782,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1836,7 +1836,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmEvent(ctx, operations.UpdateCrmEventRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1890,7 +1890,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmLead(ctx, operations.UpdateCrmLeadRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1944,7 +1944,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmPipeline(ctx, operations.UpdateCrmPipelineRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

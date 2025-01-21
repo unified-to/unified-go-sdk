@@ -17,7 +17,7 @@ func main() {
 	)
 
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "<value>",
+		ConnectionID: "<id>",
 	})
 	if err != nil {
 		log.Fatal(err)

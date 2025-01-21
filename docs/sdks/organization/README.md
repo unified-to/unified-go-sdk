@@ -91,7 +91,7 @@ func main() {
     )
 
     res, err := s.Organization.GetAccountingOrganization(ctx, operations.GetAccountingOrganizationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -199,7 +199,7 @@ func main() {
     )
 
     res, err := s.Organization.ListAccountingOrganizations(ctx, operations.ListAccountingOrganizationsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

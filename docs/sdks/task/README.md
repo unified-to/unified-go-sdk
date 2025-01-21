@@ -101,7 +101,7 @@ func main() {
     )
 
     res, err := s.Task.CreateTaskProject(ctx, operations.CreateTaskProjectRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -154,7 +154,7 @@ func main() {
     )
 
     res, err := s.Task.CreateTaskTask(ctx, operations.CreateTaskTaskRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -261,7 +261,7 @@ func main() {
     )
 
     res, err := s.Task.GetTaskProject(ctx, operations.GetTaskProjectRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -315,7 +315,7 @@ func main() {
     )
 
     res, err := s.Task.GetTaskTask(ctx, operations.GetTaskTaskRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -422,7 +422,7 @@ func main() {
     )
 
     res, err := s.Task.ListTaskProjects(ctx, operations.ListTaskProjectsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -475,7 +475,7 @@ func main() {
     )
 
     res, err := s.Task.ListTaskTasks(ctx, operations.ListTaskTasksRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -582,7 +582,7 @@ func main() {
     )
 
     res, err := s.Task.PatchTaskProject(ctx, operations.PatchTaskProjectRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -636,7 +636,7 @@ func main() {
     )
 
     res, err := s.Task.PatchTaskTask(ctx, operations.PatchTaskTaskRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -744,7 +744,7 @@ func main() {
     )
 
     res, err := s.Task.RemoveTaskProject(ctx, operations.RemoveTaskProjectRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -798,7 +798,7 @@ func main() {
     )
 
     res, err := s.Task.RemoveTaskTask(ctx, operations.RemoveTaskTaskRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -906,7 +906,7 @@ func main() {
     )
 
     res, err := s.Task.UpdateTaskProject(ctx, operations.UpdateTaskProjectRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -960,7 +960,7 @@ func main() {
     )
 
     res, err := s.Task.UpdateTaskTask(ctx, operations.UpdateTaskTaskRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

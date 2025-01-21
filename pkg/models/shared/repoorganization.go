@@ -15,7 +15,9 @@ type RepoOrganization struct {
 	Name        *string        `json:"name,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
-	WebURL      *string        `json:"web_url,omitempty"`
+	// id values of the users/employees associated with this organization
+	UserIds []string `json:"user_ids,omitempty"`
+	WebURL  *string  `json:"web_url,omitempty"`
 }
 
 func (r RepoOrganization) MarshalJSON() ([]byte, error) {
@@ -76,6 +78,13 @@ func (o *RepoOrganization) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return o.UpdatedAt
+}
+
+func (o *RepoOrganization) GetUserIds() []string {
+	if o == nil {
+		return nil
+	}
+	return o.UserIds
 }
 
 func (o *RepoOrganization) GetWebURL() *string {

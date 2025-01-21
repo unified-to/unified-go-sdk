@@ -32,7 +32,7 @@ func main() {
     )
 
     res, err := s.Refund.GetPaymentRefund(ctx, operations.GetPaymentRefundRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -86,7 +86,7 @@ func main() {
     )
 
     res, err := s.Refund.ListPaymentRefunds(ctx, operations.ListPaymentRefundsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)

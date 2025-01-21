@@ -52,7 +52,7 @@ func main() {
     )
 
     res, err := s.Payment.CreatePaymentLink(ctx, operations.CreatePaymentLinkRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -105,7 +105,7 @@ func main() {
     )
 
     res, err := s.Payment.CreatePaymentPayment(ctx, operations.CreatePaymentPaymentRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -211,7 +211,7 @@ func main() {
     )
 
     res, err := s.Payment.GetPaymentLink(ctx, operations.GetPaymentLinkRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -265,7 +265,7 @@ func main() {
     )
 
     res, err := s.Payment.GetPaymentPayment(ctx, operations.GetPaymentPaymentRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -319,7 +319,7 @@ func main() {
     )
 
     res, err := s.Payment.GetPaymentPayout(ctx, operations.GetPaymentPayoutRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -373,7 +373,7 @@ func main() {
     )
 
     res, err := s.Payment.GetPaymentRefund(ctx, operations.GetPaymentRefundRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -481,7 +481,7 @@ func main() {
     )
 
     res, err := s.Payment.ListPaymentLinks(ctx, operations.ListPaymentLinksRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -534,7 +534,7 @@ func main() {
     )
 
     res, err := s.Payment.ListPaymentPayments(ctx, operations.ListPaymentPaymentsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -587,7 +587,7 @@ func main() {
     )
 
     res, err := s.Payment.ListPaymentPayouts(ctx, operations.ListPaymentPayoutsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -640,7 +640,7 @@ func main() {
     )
 
     res, err := s.Payment.ListPaymentRefunds(ctx, operations.ListPaymentRefundsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -746,7 +746,7 @@ func main() {
     )
 
     res, err := s.Payment.PatchPaymentLink(ctx, operations.PatchPaymentLinkRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -800,7 +800,7 @@ func main() {
     )
 
     res, err := s.Payment.PatchPaymentPayment(ctx, operations.PatchPaymentPaymentRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -908,7 +908,7 @@ func main() {
     )
 
     res, err := s.Payment.RemovePaymentLink(ctx, operations.RemovePaymentLinkRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -962,7 +962,7 @@ func main() {
     )
 
     res, err := s.Payment.RemovePaymentPayment(ctx, operations.RemovePaymentPaymentRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1070,7 +1070,7 @@ func main() {
     )
 
     res, err := s.Payment.UpdatePaymentLink(ctx, operations.UpdatePaymentLinkRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1124,7 +1124,7 @@ func main() {
     )
 
     res, err := s.Payment.UpdatePaymentPayment(ctx, operations.UpdatePaymentPaymentRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

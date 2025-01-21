@@ -37,7 +37,7 @@ func main() {
     )
 
     res, err := s.Uc.CreateUcContact(ctx, operations.CreateUcContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -90,7 +90,7 @@ func main() {
     )
 
     res, err := s.Uc.GetUcContact(ctx, operations.GetUcContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -144,7 +144,7 @@ func main() {
     )
 
     res, err := s.Uc.ListUcCalls(ctx, operations.ListUcCallsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -197,7 +197,7 @@ func main() {
     )
 
     res, err := s.Uc.ListUcContacts(ctx, operations.ListUcContactsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -250,7 +250,7 @@ func main() {
     )
 
     res, err := s.Uc.PatchUcContact(ctx, operations.PatchUcContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -304,7 +304,7 @@ func main() {
     )
 
     res, err := s.Uc.RemoveUcContact(ctx, operations.RemoveUcContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -358,7 +358,7 @@ func main() {
     )
 
     res, err := s.Uc.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {

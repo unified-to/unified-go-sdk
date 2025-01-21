@@ -75,7 +75,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsActivity(ctx, operations.CreateAtsActivityRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -128,7 +128,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsApplication(ctx, operations.CreateAtsApplicationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -181,7 +181,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsCandidate(ctx, operations.CreateAtsCandidateRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -234,7 +234,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsDocument(ctx, operations.CreateAtsDocumentRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -287,7 +287,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsInterview(ctx, operations.CreateAtsInterviewRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -340,7 +340,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsJob(ctx, operations.CreateAtsJobRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -393,7 +393,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsScorecard(ctx, operations.CreateAtsScorecardRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -446,7 +446,7 @@ func main() {
     )
 
     res, err := s.Ats.GetAtsActivity(ctx, operations.GetAtsActivityRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -500,7 +500,7 @@ func main() {
     )
 
     res, err := s.Ats.GetAtsApplication(ctx, operations.GetAtsApplicationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -554,7 +554,7 @@ func main() {
     )
 
     res, err := s.Ats.GetAtsCandidate(ctx, operations.GetAtsCandidateRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -608,7 +608,7 @@ func main() {
     )
 
     res, err := s.Ats.GetAtsCompany(ctx, operations.GetAtsCompanyRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -662,7 +662,7 @@ func main() {
     )
 
     res, err := s.Ats.GetAtsDocument(ctx, operations.GetAtsDocumentRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -716,7 +716,7 @@ func main() {
     )
 
     res, err := s.Ats.GetAtsInterview(ctx, operations.GetAtsInterviewRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -770,7 +770,7 @@ func main() {
     )
 
     res, err := s.Ats.GetAtsJob(ctx, operations.GetAtsJobRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -824,7 +824,7 @@ func main() {
     )
 
     res, err := s.Ats.GetAtsScorecard(ctx, operations.GetAtsScorecardRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -878,7 +878,7 @@ func main() {
     )
 
     res, err := s.Ats.ListAtsActivities(ctx, operations.ListAtsActivitiesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -931,7 +931,7 @@ func main() {
     )
 
     res, err := s.Ats.ListAtsApplications(ctx, operations.ListAtsApplicationsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -984,7 +984,7 @@ func main() {
     )
 
     res, err := s.Ats.ListAtsApplicationstatuses(ctx, operations.ListAtsApplicationstatusesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1037,7 +1037,7 @@ func main() {
     )
 
     res, err := s.Ats.ListAtsCandidates(ctx, operations.ListAtsCandidatesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1090,7 +1090,7 @@ func main() {
     )
 
     res, err := s.Ats.ListAtsCompanies(ctx, operations.ListAtsCompaniesRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1143,7 +1143,7 @@ func main() {
     )
 
     res, err := s.Ats.ListAtsDocuments(ctx, operations.ListAtsDocumentsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1196,7 +1196,7 @@ func main() {
     )
 
     res, err := s.Ats.ListAtsInterviews(ctx, operations.ListAtsInterviewsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1249,7 +1249,7 @@ func main() {
     )
 
     res, err := s.Ats.ListAtsJobs(ctx, operations.ListAtsJobsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1302,7 +1302,7 @@ func main() {
     )
 
     res, err := s.Ats.ListAtsScorecards(ctx, operations.ListAtsScorecardsRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
@@ -1355,7 +1355,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsActivity(ctx, operations.PatchAtsActivityRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1409,7 +1409,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsApplication(ctx, operations.PatchAtsApplicationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1463,7 +1463,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsCandidate(ctx, operations.PatchAtsCandidateRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1517,7 +1517,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsDocument(ctx, operations.PatchAtsDocumentRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1571,7 +1571,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsInterview(ctx, operations.PatchAtsInterviewRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1625,7 +1625,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsJob(ctx, operations.PatchAtsJobRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1679,7 +1679,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsScorecard(ctx, operations.PatchAtsScorecardRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1733,7 +1733,7 @@ func main() {
     )
 
     res, err := s.Ats.RemoveAtsActivity(ctx, operations.RemoveAtsActivityRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1787,7 +1787,7 @@ func main() {
     )
 
     res, err := s.Ats.RemoveAtsApplication(ctx, operations.RemoveAtsApplicationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1841,7 +1841,7 @@ func main() {
     )
 
     res, err := s.Ats.RemoveAtsCandidate(ctx, operations.RemoveAtsCandidateRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1895,7 +1895,7 @@ func main() {
     )
 
     res, err := s.Ats.RemoveAtsDocument(ctx, operations.RemoveAtsDocumentRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -1949,7 +1949,7 @@ func main() {
     )
 
     res, err := s.Ats.RemoveAtsInterview(ctx, operations.RemoveAtsInterviewRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -2003,7 +2003,7 @@ func main() {
     )
 
     res, err := s.Ats.RemoveAtsJob(ctx, operations.RemoveAtsJobRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -2057,7 +2057,7 @@ func main() {
     )
 
     res, err := s.Ats.RemoveAtsScorecard(ctx, operations.RemoveAtsScorecardRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -2111,7 +2111,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsActivity(ctx, operations.UpdateAtsActivityRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -2165,7 +2165,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsApplication(ctx, operations.UpdateAtsApplicationRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -2219,7 +2219,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsCandidate(ctx, operations.UpdateAtsCandidateRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -2273,7 +2273,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsDocument(ctx, operations.UpdateAtsDocumentRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -2327,7 +2327,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsInterview(ctx, operations.UpdateAtsInterviewRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -2381,7 +2381,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsJob(ctx, operations.UpdateAtsJobRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
@@ -2435,7 +2435,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsScorecard(ctx, operations.UpdateAtsScorecardRequest{
-        ConnectionID: "<value>",
+        ConnectionID: "<id>",
         ID: "<id>",
     })
     if err != nil {
