@@ -8,3 +8,4 @@
 | `KmsPageTypeHTML`     | HTML                  |
 | `KmsPageTypeMarkdown` | MARKDOWN              |
 | `KmsPageTypeText`     | TEXT                  |
+| `KmsPageTypeOther`    | OTHER                 |

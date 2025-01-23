@@ -8,3 +8,4 @@
 | `ContentTypeHTML`     | HTML                  |
 | `ContentTypeMarkdown` | MARKDOWN              |
 | `ContentTypeText`     | TEXT                  |
+| `ContentTypeOther`    | OTHER                 |

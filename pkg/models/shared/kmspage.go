@@ -15,6 +15,7 @@ const (
 	KmsPageTypeHTML     KmsPageType = "HTML"
 	KmsPageTypeMarkdown KmsPageType = "MARKDOWN"
 	KmsPageTypeText     KmsPageType = "TEXT"
+	KmsPageTypeOther    KmsPageType = "OTHER"
 )
 
 func (e KmsPageType) ToPointer() *KmsPageType {
@@ -31,6 +32,8 @@ func (e *KmsPageType) UnmarshalJSON(data []byte) error {
 	case "MARKDOWN":
 		fallthrough
 	case "TEXT":
+		fallthrough
+	case "OTHER":
 		*e = KmsPageType(v)
 		return nil
 	default:
@@ -40,7 +43,7 @@ func (e *KmsPageType) UnmarshalJSON(data []byte) error {
 
 type KmsPage struct {
 	CreatedAt    *time.Time        `json:"created_at,omitempty"`
-	DownloadURL  string            `json:"download_url"`
+	DownloadURL  *string           `json:"download_url,omitempty"`
 	HasChildren  *bool             `json:"has_children,omitempty"`
 	ID           *string           `json:"id,omitempty"`
 	IsActive     *bool             `json:"is_active,omitempty"`
@@ -73,9 +76,9 @@ func (o *KmsPage) GetCreatedAt() *time.Time {
 	return o.CreatedAt
 }
 
-func (o *KmsPage) GetDownloadURL() string {
+func (o *KmsPage) GetDownloadURL() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.DownloadURL
 }

@@ -15,6 +15,7 @@ const (
 	ContentTypeHTML     ContentType = "HTML"
 	ContentTypeMarkdown ContentType = "MARKDOWN"
 	ContentTypeText     ContentType = "TEXT"
+	ContentTypeOther    ContentType = "OTHER"
 )
 
 func (e ContentType) ToPointer() *ContentType {
@@ -31,6 +32,8 @@ func (e *ContentType) UnmarshalJSON(data []byte) error {
 	case "MARKDOWN":
 		fallthrough
 	case "TEXT":
+		fallthrough
+	case "OTHER":
 		*e = ContentType(v)
 		return nil
 	default:
