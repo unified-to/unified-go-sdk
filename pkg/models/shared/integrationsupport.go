@@ -906,35 +906,6 @@ func (e *ListRepoID) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type ListRootID string
-
-const (
-	ListRootIDSupportedRequired ListRootID = "supported-required"
-	ListRootIDSupported         ListRootID = "supported"
-	ListRootIDNotSupported      ListRootID = "not-supported"
-)
-
-func (e ListRootID) ToPointer() *ListRootID {
-	return &e
-}
-func (e *ListRootID) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "supported-required":
-		fallthrough
-	case "supported":
-		fallthrough
-	case "not-supported":
-		*e = ListRootID(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ListRootID: %v", v)
-	}
-}
-
 type ListSortByCreatedAt string
 
 const (
@@ -1780,7 +1751,6 @@ type IntegrationSupport struct {
 	ListQuery              *ListQuery              `json:"list_query,omitempty"`
 	ListRawFields          *ListRawFields          `json:"list_raw_fields,omitempty"`
 	ListRepoID             *ListRepoID             `json:"list_repo_id,omitempty"`
-	ListRootID             *ListRootID             `json:"list_root_id,omitempty"`
 	ListSortByCreatedAt    *ListSortByCreatedAt    `json:"list_sort_by_created_at,omitempty"`
 	ListSortByName         *ListSortByName         `json:"list_sort_by_name,omitempty"`
 	ListSortByUpdatedAt    *ListSortByUpdatedAt    `json:"list_sort_by_updated_at,omitempty"`
@@ -2039,13 +2009,6 @@ func (o *IntegrationSupport) GetListRepoID() *ListRepoID {
 		return nil
 	}
 	return o.ListRepoID
-}
-
-func (o *IntegrationSupport) GetListRootID() *ListRootID {
-	if o == nil {
-		return nil
-	}
-	return o.ListRootID
 }
 
 func (o *IntegrationSupport) GetListSortByCreatedAt() *ListSortByCreatedAt {
