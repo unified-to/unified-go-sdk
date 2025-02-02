@@ -7,6 +7,9 @@ import (
 	"time"
 )
 
+type CommerceLocationRaw struct {
+}
+
 type CommerceLocation struct {
 	Address     *PropertyCommerceLocationAddress `json:"address,omitempty"`
 	CreatedAt   *time.Time                       `json:"created_at,omitempty"`
@@ -14,7 +17,7 @@ type CommerceLocation struct {
 	ID          *string                          `json:"id,omitempty"`
 	IsActive    *bool                            `json:"is_active,omitempty"`
 	Name        string                           `json:"name"`
-	Raw         map[string]any                   `json:"raw,omitempty"`
+	Raw         *CommerceLocationRaw             `json:"raw,omitempty"`
 	UpdatedAt   *time.Time                       `json:"updated_at,omitempty"`
 }
 
@@ -71,7 +74,7 @@ func (o *CommerceLocation) GetName() string {
 	return o.Name
 }
 
-func (o *CommerceLocation) GetRaw() map[string]any {
+func (o *CommerceLocation) GetRaw() *CommerceLocationRaw {
 	if o == nil {
 		return nil
 	}

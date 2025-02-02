@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 0348382e89126471fa3b06fe46a31486
+  docChecksum: 00e71c38f182c4bad7a19b0c7bb3e211
   docVersion: "1.0"
-  speakeasyVersion: 1.474.0
-  generationVersion: 2.495.0
-  releaseVersion: 0.22.15
-  configChecksum: bfbac40369d66a4db762255d687bbaaf
+  speakeasyVersion: 1.481.1
+  generationVersion: 2.500.5
+  releaseVersion: 0.22.16
+  configChecksum: 1ee65a7d7fac5b2dd4e2a35d5f981a5e
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.6
-    core: 3.6.9
+    core: 3.6.12
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -1467,14 +1467,17 @@ generatedFiles:
   - docs/pkg/models/shared/commercecollection.md
   - docs/pkg/models/shared/commercecollectiontype.md
   - docs/pkg/models/shared/commerceinventory.md
+  - docs/pkg/models/shared/commerceinventoryraw.md
   - docs/pkg/models/shared/commerceitem.md
   - docs/pkg/models/shared/commerceitemmedia.md
   - docs/pkg/models/shared/commerceitemmediatype.md
   - docs/pkg/models/shared/commerceitemmetadata.md
   - docs/pkg/models/shared/commerceitemoption.md
   - docs/pkg/models/shared/commerceitemprice.md
+  - docs/pkg/models/shared/commerceitemraw.md
   - docs/pkg/models/shared/commerceitemvariant.md
   - docs/pkg/models/shared/commercelocation.md
+  - docs/pkg/models/shared/commercelocationraw.md
   - docs/pkg/models/shared/connection.md
   - docs/pkg/models/shared/contenttype.md
   - docs/pkg/models/shared/crmcompany.md
@@ -1503,6 +1506,7 @@ generatedFiles:
   - docs/pkg/models/shared/enrichtelephonetype.md
   - docs/pkg/models/shared/ethnicity.md
   - docs/pkg/models/shared/event.md
+  - docs/pkg/models/shared/extradata.md
   - docs/pkg/models/shared/frequency.md
   - docs/pkg/models/shared/fromwebhook.md
   - docs/pkg/models/shared/genaicontent.md
@@ -1671,6 +1675,7 @@ generatedFiles:
   - docs/pkg/models/shared/propertystoragepermissionroles.md
   - docs/pkg/models/shared/propertyuccalltelephone.md
   - docs/pkg/models/shared/propertyuccalltelephonetype.md
+  - docs/pkg/models/shared/raw.md
   - docs/pkg/models/shared/recommendation.md
   - docs/pkg/models/shared/repobranch.md
   - docs/pkg/models/shared/repocommit.md
@@ -1732,6 +1737,7 @@ generatedFiles:
   - docs/pkg/models/shared/ucemailtype.md
   - docs/pkg/models/shared/uctelephone.md
   - docs/pkg/models/shared/uctelephonetype.md
+  - docs/pkg/models/shared/value.md
   - docs/pkg/models/shared/virtualwebhookchannelid.md
   - docs/pkg/models/shared/virtualwebhookcompanyid.md
   - docs/pkg/models/shared/virtualwebhookcontactid.md

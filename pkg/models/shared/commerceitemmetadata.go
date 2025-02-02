@@ -2,16 +2,22 @@
 
 package shared
 
-type CommerceItemMetadata struct {
-	ExtraData map[string]any `json:"extra_data,omitempty"`
-	ID        *string        `json:"id,omitempty"`
-	Key       string         `json:"key"`
-	Namespace *string        `json:"namespace,omitempty"`
-	Type      *string        `json:"type,omitempty"`
-	Value     map[string]any `json:"value,omitempty"`
+type ExtraData struct {
 }
 
-func (o *CommerceItemMetadata) GetExtraData() map[string]any {
+type Value struct {
+}
+
+type CommerceItemMetadata struct {
+	ExtraData *ExtraData `json:"extra_data,omitempty"`
+	ID        *string    `json:"id,omitempty"`
+	Key       string     `json:"key"`
+	Namespace *string    `json:"namespace,omitempty"`
+	Type      *string    `json:"type,omitempty"`
+	Value     *Value     `json:"value,omitempty"`
+}
+
+func (o *CommerceItemMetadata) GetExtraData() *ExtraData {
 	if o == nil {
 		return nil
 	}
@@ -46,7 +52,7 @@ func (o *CommerceItemMetadata) GetType() *string {
 	return o.Type
 }
 
-func (o *CommerceItemMetadata) GetValue() map[string]any {
+func (o *CommerceItemMetadata) GetValue() *Value {
 	if o == nil {
 		return nil
 	}

@@ -7,6 +7,9 @@ import (
 	"time"
 )
 
+type CommerceItemRaw struct {
+}
+
 type CommerceItem struct {
 	AccountID         *string                `json:"account_id,omitempty"`
 	CollectionIds     []string               `json:"collection_ids,omitempty"`
@@ -20,7 +23,7 @@ type CommerceItem struct {
 	Name              *string                `json:"name,omitempty"`
 	PublicDescription *string                `json:"public_description,omitempty"`
 	PublicName        *string                `json:"public_name,omitempty"`
-	Raw               map[string]any         `json:"raw,omitempty"`
+	Raw               *CommerceItemRaw       `json:"raw,omitempty"`
 	Slug              *string                `json:"slug,omitempty"`
 	Tags              []string               `json:"tags,omitempty"`
 	Type              *string                `json:"type,omitempty"`
@@ -125,7 +128,7 @@ func (o *CommerceItem) GetPublicName() *string {
 	return o.PublicName
 }
 
-func (o *CommerceItem) GetRaw() map[string]any {
+func (o *CommerceItem) GetRaw() *CommerceItemRaw {
 	if o == nil {
 		return nil
 	}

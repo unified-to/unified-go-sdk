@@ -9,6 +9,9 @@ import (
 	"time"
 )
 
+type Raw struct {
+}
+
 type CommerceCollectionType string
 
 const (
@@ -52,7 +55,7 @@ type CommerceCollection struct {
 	ParentID          *string                 `json:"parent_id,omitempty"`
 	PublicDescription *string                 `json:"public_description,omitempty"`
 	PublicName        *string                 `json:"public_name,omitempty"`
-	Raw               map[string]any          `json:"raw,omitempty"`
+	Raw               *Raw                    `json:"raw,omitempty"`
 	Tags              []string                `json:"tags,omitempty"`
 	Type              *CommerceCollectionType `json:"type,omitempty"`
 	UpdatedAt         *time.Time              `json:"updated_at,omitempty"`
@@ -153,7 +156,7 @@ func (o *CommerceCollection) GetPublicName() *string {
 	return o.PublicName
 }
 
-func (o *CommerceCollection) GetRaw() map[string]any {
+func (o *CommerceCollection) GetRaw() *Raw {
 	if o == nil {
 		return nil
 	}
