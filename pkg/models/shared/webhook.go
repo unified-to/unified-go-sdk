@@ -38,6 +38,9 @@ func (e *Event) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type Meta struct {
+}
+
 type ObjectType string
 
 const (
@@ -311,7 +314,7 @@ type Webhook struct {
 	IntegrationType *string           `json:"integration_type,omitempty"`
 	Interval        *float64          `json:"interval,omitempty"`
 	IsHealthy       *bool             `json:"is_healthy,omitempty"`
-	Meta            map[string]any    `json:"meta,omitempty"`
+	Meta            *Meta             `json:"meta,omitempty"`
 	ObjectType      ObjectType        `json:"object_type"`
 	PageMaxLimit    *float64          `json:"page_max_limit,omitempty"`
 	// An array of the most revent virtual webhook runs
@@ -416,7 +419,7 @@ func (o *Webhook) GetIsHealthy() *bool {
 	return o.IsHealthy
 }
 
-func (o *Webhook) GetMeta() map[string]any {
+func (o *Webhook) GetMeta() *Meta {
 	if o == nil {
 		return nil
 	}

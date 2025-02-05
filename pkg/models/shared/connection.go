@@ -18,6 +18,7 @@ type Connection struct {
 	Environment     *string                         `default:"Production" json:"environment"`
 	ExternalXref    *string                         `json:"external_xref,omitempty"`
 	ID              *string                         `json:"id,omitempty"`
+	IntegrationName string                          `json:"integration_name"`
 	IntegrationType string                          `json:"integration_type"`
 	IsPaused        *bool                           `json:"is_paused,omitempty"`
 	LastHealthyAt   *time.Time                      `json:"last_healthy_at,omitempty"`
@@ -85,6 +86,13 @@ func (o *Connection) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *Connection) GetIntegrationName() string {
+	if o == nil {
+		return ""
+	}
+	return o.IntegrationName
 }
 
 func (o *Connection) GetIntegrationType() string {

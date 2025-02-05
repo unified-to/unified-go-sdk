@@ -10,6 +10,7 @@ import (
 )
 
 type ListHrisTimeoffsRequest struct {
+	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -34,6 +35,13 @@ func (l *ListHrisTimeoffsRequest) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (o *ListHrisTimeoffsRequest) GetCompanyID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyID
 }
 
 func (o *ListHrisTimeoffsRequest) GetConnectionID() string {
