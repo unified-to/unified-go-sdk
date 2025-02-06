@@ -3,19 +3,84 @@
 package shared
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
+type MetadataMetadataRaw struct {
+}
+
+type MetadataMetadataType string
+
+const (
+	MetadataMetadataTypeText           MetadataMetadataType = "TEXT"
+	MetadataMetadataTypeNumber         MetadataMetadataType = "NUMBER"
+	MetadataMetadataTypeDate           MetadataMetadataType = "DATE"
+	MetadataMetadataTypeBoolean        MetadataMetadataType = "BOOLEAN"
+	MetadataMetadataTypeFile           MetadataMetadataType = "FILE"
+	MetadataMetadataTypeTextarea       MetadataMetadataType = "TEXTAREA"
+	MetadataMetadataTypeSingleSelect   MetadataMetadataType = "SINGLE_SELECT"
+	MetadataMetadataTypeMultipleSelect MetadataMetadataType = "MULTIPLE_SELECT"
+	MetadataMetadataTypeMeasurement    MetadataMetadataType = "MEASUREMENT"
+	MetadataMetadataTypePrice          MetadataMetadataType = "PRICE"
+	MetadataMetadataTypeYesNo          MetadataMetadataType = "YES_NO"
+	MetadataMetadataTypeCurrency       MetadataMetadataType = "CURRENCY"
+	MetadataMetadataTypeURL            MetadataMetadataType = "URL"
+)
+
+func (e MetadataMetadataType) ToPointer() *MetadataMetadataType {
+	return &e
+}
+func (e *MetadataMetadataType) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "TEXT":
+		fallthrough
+	case "NUMBER":
+		fallthrough
+	case "DATE":
+		fallthrough
+	case "BOOLEAN":
+		fallthrough
+	case "FILE":
+		fallthrough
+	case "TEXTAREA":
+		fallthrough
+	case "SINGLE_SELECT":
+		fallthrough
+	case "MULTIPLE_SELECT":
+		fallthrough
+	case "MEASUREMENT":
+		fallthrough
+	case "PRICE":
+		fallthrough
+	case "YES_NO":
+		fallthrough
+	case "CURRENCY":
+		fallthrough
+	case "URL":
+		*e = MetadataMetadataType(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for MetadataMetadataType: %v", v)
+	}
+}
+
 type MetadataMetadata struct {
-	CreatedAt  *time.Time        `json:"created_at,omitempty"`
-	ID         *string           `json:"id,omitempty"`
-	Name       string            `json:"name"`
-	ObjectType string            `json:"object_type"`
-	Objects    map[string]string `json:"objects,omitempty"`
-	Raw        map[string]any    `json:"raw,omitempty"`
-	Type       *string           `json:"type,omitempty"`
-	UpdatedAt  *time.Time        `json:"updated_at,omitempty"`
+	CreatedAt  *time.Time            `json:"created_at,omitempty"`
+	ID         *string               `json:"id,omitempty"`
+	Name       string                `json:"name"`
+	ObjectType string                `json:"object_type"`
+	Objects    map[string]string     `json:"objects,omitempty"`
+	Options    []string              `json:"options,omitempty"`
+	Raw        *MetadataMetadataRaw  `json:"raw,omitempty"`
+	Type       *MetadataMetadataType `json:"type,omitempty"`
+	UpdatedAt  *time.Time            `json:"updated_at,omitempty"`
 }
 
 func (m MetadataMetadata) MarshalJSON() ([]byte, error) {
@@ -64,14 +129,21 @@ func (o *MetadataMetadata) GetObjects() map[string]string {
 	return o.Objects
 }
 
-func (o *MetadataMetadata) GetRaw() map[string]any {
+func (o *MetadataMetadata) GetOptions() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Options
+}
+
+func (o *MetadataMetadata) GetRaw() *MetadataMetadataRaw {
 	if o == nil {
 		return nil
 	}
 	return o.Raw
 }
 
-func (o *MetadataMetadata) GetType() *string {
+func (o *MetadataMetadata) GetType() *MetadataMetadataType {
 	if o == nil {
 		return nil
 	}

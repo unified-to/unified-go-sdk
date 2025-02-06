@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 075b9cea2675db23b5f8cea829ebb57f
+  docChecksum: d11952529f2b721f734977d81996920c
   docVersion: "1.0"
   speakeasyVersion: 1.484.1
   generationVersion: 2.503.2
-  releaseVersion: 0.22.17
-  configChecksum: b360a052c17514c361f4bbf185df94c4
+  releaseVersion: 0.22.18
+  configChecksum: ceecb941e0b505c1329c67089f1a89a8
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -1605,6 +1605,8 @@ generatedFiles:
   - docs/pkg/models/shared/messagingmessage.md
   - docs/pkg/models/shared/meta.md
   - docs/pkg/models/shared/metadatametadata.md
+  - docs/pkg/models/shared/metadatametadataraw.md
+  - docs/pkg/models/shared/metadatametadatatype.md
   - docs/pkg/models/shared/nativewebhookparentid.md
   - docs/pkg/models/shared/nativewebhookprojectid.md
   - docs/pkg/models/shared/objecttype.md
