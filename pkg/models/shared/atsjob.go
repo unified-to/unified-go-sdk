@@ -59,6 +59,9 @@ func (e *EmploymentType) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type AtsJobRaw struct {
+}
+
 type AtsJobStatus string
 
 const (
@@ -109,10 +112,12 @@ type AtsJob struct {
 	LanguageLocale   *string         `json:"language_locale,omitempty"`
 	Name             *string         `json:"name,omitempty"`
 	NumberOfOpenings *float64        `json:"number_of_openings,omitempty"`
+	// Public job postings
+	Postings []AtsJobPosting `json:"postings,omitempty"`
 	// URLs for pages containing public listings for the job
 	PublicJobUrls []string         `json:"public_job_urls,omitempty"`
 	Questions     []AtsJobQuestion `json:"questions,omitempty"`
-	Raw           map[string]any   `json:"raw,omitempty"`
+	Raw           *AtsJobRaw       `json:"raw,omitempty"`
 	RecruiterIds  []string         `json:"recruiter_ids,omitempty"`
 	Remote        *bool            `json:"remote,omitempty"`
 	Status        *AtsJobStatus    `json:"status,omitempty"`
@@ -221,6 +226,13 @@ func (o *AtsJob) GetNumberOfOpenings() *float64 {
 	return o.NumberOfOpenings
 }
 
+func (o *AtsJob) GetPostings() []AtsJobPosting {
+	if o == nil {
+		return nil
+	}
+	return o.Postings
+}
+
 func (o *AtsJob) GetPublicJobUrls() []string {
 	if o == nil {
 		return nil
@@ -235,7 +247,7 @@ func (o *AtsJob) GetQuestions() []AtsJobQuestion {
 	return o.Questions
 }
 
-func (o *AtsJob) GetRaw() map[string]any {
+func (o *AtsJob) GetRaw() *AtsJobRaw {
 	if o == nil {
 		return nil
 	}

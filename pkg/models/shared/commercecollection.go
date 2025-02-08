@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-type Raw struct {
+type CommerceCollectionRaw struct {
 }
 
 type CommerceCollectionType string
@@ -55,7 +55,7 @@ type CommerceCollection struct {
 	ParentID          *string                 `json:"parent_id,omitempty"`
 	PublicDescription *string                 `json:"public_description,omitempty"`
 	PublicName        *string                 `json:"public_name,omitempty"`
-	Raw               *Raw                    `json:"raw,omitempty"`
+	Raw               *CommerceCollectionRaw  `json:"raw,omitempty"`
 	Tags              []string                `json:"tags,omitempty"`
 	Type              *CommerceCollectionType `json:"type,omitempty"`
 	UpdatedAt         *time.Time              `json:"updated_at,omitempty"`
@@ -156,7 +156,7 @@ func (o *CommerceCollection) GetPublicName() *string {
 	return o.PublicName
 }
 
-func (o *CommerceCollection) GetRaw() *Raw {
+func (o *CommerceCollection) GetRaw() *CommerceCollectionRaw {
 	if o == nil {
 		return nil
 	}

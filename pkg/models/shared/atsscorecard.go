@@ -9,6 +9,9 @@ import (
 	"time"
 )
 
+type AtsScorecardRaw struct {
+}
+
 type Recommendation string
 
 const (
@@ -51,7 +54,7 @@ type AtsScorecard struct {
 	InterviewerID  *string                `json:"interviewer_id,omitempty"`
 	JobID          *string                `json:"job_id,omitempty"`
 	Questions      []AtsScorecardQuestion `json:"questions,omitempty"`
-	Raw            map[string]any         `json:"raw,omitempty"`
+	Raw            *AtsScorecardRaw       `json:"raw,omitempty"`
 	Recommendation *Recommendation        `json:"recommendation,omitempty"`
 	UpdatedAt      *time.Time             `json:"updated_at,omitempty"`
 }
@@ -130,7 +133,7 @@ func (o *AtsScorecard) GetQuestions() []AtsScorecardQuestion {
 	return o.Questions
 }
 
-func (o *AtsScorecard) GetRaw() map[string]any {
+func (o *AtsScorecard) GetRaw() *AtsScorecardRaw {
 	if o == nil {
 		return nil
 	}

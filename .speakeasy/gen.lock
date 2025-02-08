@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: d11952529f2b721f734977d81996920c
+  docChecksum: 079a662c33e65673ca2fb2b1cc54edc4
   docVersion: "1.0"
-  speakeasyVersion: 1.484.1
-  generationVersion: 2.503.2
-  releaseVersion: 0.22.18
-  configChecksum: ceecb941e0b505c1329c67089f1a89a8
+  speakeasyVersion: 1.487.1
+  generationVersion: 2.506.0
+  releaseVersion: 0.23.0
+  configChecksum: 6cef6dafedd87aeb047bc012a013d9f9
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -15,8 +15,8 @@ features:
   go:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.6
-    core: 3.6.12
+    constsAndDefaults: 0.1.7
+    core: 3.7.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -449,6 +449,7 @@ generatedFiles:
   - /pkg/models/shared/atsemail.go
   - /pkg/models/shared/atsinterview.go
   - /pkg/models/shared/atsjob.go
+  - /pkg/models/shared/atsjobposting.go
   - /pkg/models/shared/atsjobquestion.go
   - /pkg/models/shared/atsoffer.go
   - /pkg/models/shared/atsscorecard.go
@@ -530,6 +531,7 @@ generatedFiles:
   - /pkg/models/shared/propertyatsactivityfrom.go
   - /pkg/models/shared/propertyatscandidateaddress.go
   - /pkg/models/shared/propertyatscompanyaddress.go
+  - /pkg/models/shared/propertyatsjobpostingaddress.go
   - /pkg/models/shared/propertycommercelocationaddress.go
   - /pkg/models/shared/propertyconnectionauth.go
   - /pkg/models/shared/propertyconnectioncategories.go
@@ -1442,29 +1444,39 @@ generatedFiles:
   - docs/pkg/models/shared/atsaddress.md
   - docs/pkg/models/shared/atsapplication.md
   - docs/pkg/models/shared/atsapplicationanswer.md
+  - docs/pkg/models/shared/atsapplicationraw.md
   - docs/pkg/models/shared/atsapplicationstatus.md
   - docs/pkg/models/shared/atscandidate.md
+  - docs/pkg/models/shared/atscandidateraw.md
   - docs/pkg/models/shared/atscompany.md
+  - docs/pkg/models/shared/atscompanyraw.md
   - docs/pkg/models/shared/atscompensation.md
   - docs/pkg/models/shared/atscompensationtype.md
   - docs/pkg/models/shared/atsdocument.md
+  - docs/pkg/models/shared/atsdocumentraw.md
   - docs/pkg/models/shared/atsdocumenttype.md
   - docs/pkg/models/shared/atsemail.md
   - docs/pkg/models/shared/atsemailtype.md
   - docs/pkg/models/shared/atsinterview.md
+  - docs/pkg/models/shared/atsinterviewraw.md
   - docs/pkg/models/shared/atsinterviewstatus.md
   - docs/pkg/models/shared/atsjob.md
+  - docs/pkg/models/shared/atsjobposting.md
   - docs/pkg/models/shared/atsjobquestion.md
   - docs/pkg/models/shared/atsjobquestiontype.md
+  - docs/pkg/models/shared/atsjobraw.md
   - docs/pkg/models/shared/atsjobstatus.md
   - docs/pkg/models/shared/atsoffer.md
   - docs/pkg/models/shared/atsscorecard.md
   - docs/pkg/models/shared/atsscorecardquestion.md
+  - docs/pkg/models/shared/atsscorecardraw.md
   - docs/pkg/models/shared/atsstatus.md
+  - docs/pkg/models/shared/atsstatusraw.md
   - docs/pkg/models/shared/atsstatusstatus.md
   - docs/pkg/models/shared/atstelephone.md
   - docs/pkg/models/shared/atstelephonetype.md
   - docs/pkg/models/shared/commercecollection.md
+  - docs/pkg/models/shared/commercecollectionraw.md
   - docs/pkg/models/shared/commercecollectiontype.md
   - docs/pkg/models/shared/commerceinventory.md
   - docs/pkg/models/shared/commerceinventoryraw.md
@@ -1633,6 +1645,7 @@ generatedFiles:
   - docs/pkg/models/shared/propertyatsactivityfromtype.md
   - docs/pkg/models/shared/propertyatscandidateaddress.md
   - docs/pkg/models/shared/propertyatscompanyaddress.md
+  - docs/pkg/models/shared/propertyatsjobpostingaddress.md
   - docs/pkg/models/shared/propertycommercelocationaddress.md
   - docs/pkg/models/shared/propertyconnectionauth.md
   - docs/pkg/models/shared/propertyconnectionauthmeta.md
