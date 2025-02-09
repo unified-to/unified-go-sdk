@@ -7,6 +7,9 @@ import (
 	"time"
 )
 
+type CrmContactRaw struct {
+}
+
 // CrmContact - A contact represents a person that optionally is associated with a deal and/or a company
 type CrmContact struct {
 	Address *PropertyCrmContactAddress `json:"address,omitempty"`
@@ -17,12 +20,12 @@ type CrmContact struct {
 	// An array of deal IDs associated with this contact
 	DealIds []string `json:"deal_ids,omitempty"`
 	// An array of email addresses for this contact
-	Emails   []CrmEmail `json:"emails,omitempty"`
-	ID       *string    `json:"id,omitempty"`
-	LinkUrls []string   `json:"link_urls,omitempty"`
-	Name     *string    `json:"name,omitempty"`
-	// The raw data returned by the integration for this contact
-	Raw map[string]any `json:"raw,omitempty"`
+	Emails []CrmEmail `json:"emails,omitempty"`
+	ID     *string    `json:"id,omitempty"`
+	// Additional URLs associated with the contact e.g., LinkedIn, website, etc
+	LinkUrls []string       `json:"link_urls,omitempty"`
+	Name     *string        `json:"name,omitempty"`
+	Raw      *CrmContactRaw `json:"raw,omitempty"`
 	// An array of telephones for this contact
 	Telephones []CrmTelephone `json:"telephones,omitempty"`
 	Title      *string        `json:"title,omitempty"`
@@ -104,7 +107,7 @@ func (o *CrmContact) GetName() *string {
 	return o.Name
 }
 
-func (o *CrmContact) GetRaw() map[string]any {
+func (o *CrmContact) GetRaw() *CrmContactRaw {
 	if o == nil {
 		return nil
 	}

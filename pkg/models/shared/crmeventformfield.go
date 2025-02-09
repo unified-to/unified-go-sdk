@@ -17,6 +17,7 @@ const (
 	CrmEventFormFieldTypeMultipleChoice CrmEventFormFieldType = "MULTIPLE_CHOICE"
 	CrmEventFormFieldTypeFile           CrmEventFormFieldType = "FILE"
 	CrmEventFormFieldTypeTextarea       CrmEventFormFieldType = "TEXTAREA"
+	CrmEventFormFieldTypeSingleSelect   CrmEventFormFieldType = "SINGLE_SELECT"
 	CrmEventFormFieldTypeMultipleSelect CrmEventFormFieldType = "MULTIPLE_SELECT"
 	CrmEventFormFieldTypeEmail          CrmEventFormFieldType = "EMAIL"
 	CrmEventFormFieldTypePhone          CrmEventFormFieldType = "PHONE"
@@ -47,6 +48,8 @@ func (e *CrmEventFormFieldType) UnmarshalJSON(data []byte) error {
 	case "FILE":
 		fallthrough
 	case "TEXTAREA":
+		fallthrough
+	case "SINGLE_SELECT":
 		fallthrough
 	case "MULTIPLE_SELECT":
 		fallthrough

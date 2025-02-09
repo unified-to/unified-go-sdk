@@ -12,6 +12,7 @@
 | `CrmEventFormFieldTypeMultipleChoice` | MULTIPLE_CHOICE                       |
 | `CrmEventFormFieldTypeFile`           | FILE                                  |
 | `CrmEventFormFieldTypeTextarea`       | TEXTAREA                              |
+| `CrmEventFormFieldTypeSingleSelect`   | SINGLE_SELECT                         |
 | `CrmEventFormFieldTypeMultipleSelect` | MULTIPLE_SELECT                       |
 | `CrmEventFormFieldTypeEmail`          | EMAIL                                 |
 | `CrmEventFormFieldTypePhone`          | PHONE                                 |

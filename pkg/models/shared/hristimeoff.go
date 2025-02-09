@@ -9,6 +9,9 @@ import (
 	"time"
 )
 
+type HrisTimeoffRaw struct {
+}
+
 type HrisTimeoffStatus string
 
 const (
@@ -68,15 +71,16 @@ type HrisTimeoff struct {
 	ApprovedAt     *time.Time         `json:"approved_at,omitempty"`
 	ApproverUserID *string            `json:"approver_user_id,omitempty"`
 	Comments       *string            `json:"comments,omitempty"`
+	CompanyID      *string            `json:"company_id,omitempty"`
 	CreatedAt      *time.Time         `json:"created_at,omitempty"`
 	EndAt          *time.Time         `json:"end_at,omitempty"`
 	ID             *string            `json:"id,omitempty"`
-	Raw            map[string]any     `json:"raw,omitempty"`
+	Raw            *HrisTimeoffRaw    `json:"raw,omitempty"`
 	StartAt        time.Time          `json:"start_at"`
 	Status         *HrisTimeoffStatus `json:"status,omitempty"`
 	Type           *HrisTimeoffType   `json:"type,omitempty"`
 	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
-	UserID         string             `json:"user_id"`
+	UserID         *string            `json:"user_id,omitempty"`
 }
 
 func (h HrisTimeoff) MarshalJSON() ([]byte, error) {
@@ -111,6 +115,13 @@ func (o *HrisTimeoff) GetComments() *string {
 	return o.Comments
 }
 
+func (o *HrisTimeoff) GetCompanyID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyID
+}
+
 func (o *HrisTimeoff) GetCreatedAt() *time.Time {
 	if o == nil {
 		return nil
@@ -132,7 +143,7 @@ func (o *HrisTimeoff) GetID() *string {
 	return o.ID
 }
 
-func (o *HrisTimeoff) GetRaw() map[string]any {
+func (o *HrisTimeoff) GetRaw() *HrisTimeoffRaw {
 	if o == nil {
 		return nil
 	}
@@ -167,9 +178,9 @@ func (o *HrisTimeoff) GetUpdatedAt() *time.Time {
 	return o.UpdatedAt
 }
 
-func (o *HrisTimeoff) GetUserID() string {
+func (o *HrisTimeoff) GetUserID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.UserID
 }

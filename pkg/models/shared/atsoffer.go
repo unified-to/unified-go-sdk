@@ -2,5 +2,155 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
+)
+
+type AtsOfferRaw struct {
+}
+
+type AtsOfferStatus string
+
+const (
+	AtsOfferStatusCreated  AtsOfferStatus = "CREATED"
+	AtsOfferStatusSent     AtsOfferStatus = "SENT"
+	AtsOfferStatusAccepted AtsOfferStatus = "ACCEPTED"
+	AtsOfferStatusRejected AtsOfferStatus = "REJECTED"
+)
+
+func (e AtsOfferStatus) ToPointer() *AtsOfferStatus {
+	return &e
+}
+func (e *AtsOfferStatus) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "CREATED":
+		fallthrough
+	case "SENT":
+		fallthrough
+	case "ACCEPTED":
+		fallthrough
+	case "REJECTED":
+		*e = AtsOfferStatus(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for AtsOfferStatus: %v", v)
+	}
+}
+
 type AtsOffer struct {
+	AcceptedAt *time.Time `json:"accepted_at,omitempty"`
+	// compensation details for the offer
+	Compensation   []AtsCompensation `json:"compensation,omitempty"`
+	CreatedAt      *time.Time        `json:"created_at,omitempty"`
+	CreatorUserID  *string           `json:"creator_user_id,omitempty"`
+	EmployeeUserID *string           `json:"employee_user_id,omitempty"`
+	ID             *string           `json:"id,omitempty"`
+	Raw            *AtsOfferRaw      `json:"raw,omitempty"`
+	RejectedAt     *time.Time        `json:"rejected_at,omitempty"`
+	SentAt         *time.Time        `json:"sent_at,omitempty"`
+	StartAt        *time.Time        `json:"start_at,omitempty"`
+	Status         *AtsOfferStatus   `json:"status,omitempty"`
+	UpdatedAt      *time.Time        `json:"updated_at,omitempty"`
+}
+
+func (a AtsOffer) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AtsOffer) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (o *AtsOffer) GetAcceptedAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.AcceptedAt
+}
+
+func (o *AtsOffer) GetCompensation() []AtsCompensation {
+	if o == nil {
+		return nil
+	}
+	return o.Compensation
+}
+
+func (o *AtsOffer) GetCreatedAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.CreatedAt
+}
+
+func (o *AtsOffer) GetCreatorUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CreatorUserID
+}
+
+func (o *AtsOffer) GetEmployeeUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.EmployeeUserID
+}
+
+func (o *AtsOffer) GetID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ID
+}
+
+func (o *AtsOffer) GetRaw() *AtsOfferRaw {
+	if o == nil {
+		return nil
+	}
+	return o.Raw
+}
+
+func (o *AtsOffer) GetRejectedAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.RejectedAt
+}
+
+func (o *AtsOffer) GetSentAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.SentAt
+}
+
+func (o *AtsOffer) GetStartAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.StartAt
+}
+
+func (o *AtsOffer) GetStatus() *AtsOfferStatus {
+	if o == nil {
+		return nil
+	}
+	return o.Status
+}
+
+func (o *AtsOffer) GetUpdatedAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.UpdatedAt
 }

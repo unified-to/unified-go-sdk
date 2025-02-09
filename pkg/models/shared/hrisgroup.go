@@ -9,6 +9,9 @@ import (
 	"time"
 )
 
+type HrisGroupRaw struct {
+}
+
 type HrisGroupType string
 
 const (
@@ -59,7 +62,7 @@ type HrisGroup struct {
 	ManagerIds  []string       `json:"manager_ids,omitempty"`
 	Name        *string        `json:"name,omitempty"`
 	ParentID    *string        `json:"parent_id,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
+	Raw         *HrisGroupRaw  `json:"raw,omitempty"`
 	Type        *HrisGroupType `json:"type,omitempty"`
 	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
 	UserIds     []string       `json:"user_ids,omitempty"`
@@ -132,7 +135,7 @@ func (o *HrisGroup) GetParentID() *string {
 	return o.ParentID
 }
 
-func (o *HrisGroup) GetRaw() map[string]any {
+func (o *HrisGroup) GetRaw() *HrisGroupRaw {
 	if o == nil {
 		return nil
 	}

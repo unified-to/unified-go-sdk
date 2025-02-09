@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-type Raw struct {
+type AtsActivityRaw struct {
 }
 
 type AtsActivityType string
@@ -54,7 +54,7 @@ type AtsActivity struct {
 	InterviewID   *string                  `json:"interview_id,omitempty"`
 	IsPrivate     *bool                    `json:"is_private,omitempty"`
 	JobID         *string                  `json:"job_id,omitempty"`
-	Raw           *Raw                     `json:"raw,omitempty"`
+	Raw           *AtsActivityRaw          `json:"raw,omitempty"`
 	SubType       *string                  `json:"sub_type,omitempty"`
 	Title         *string                  `json:"title,omitempty"`
 	To            []AtsEmail               `json:"to,omitempty"`
@@ -159,7 +159,7 @@ func (o *AtsActivity) GetJobID() *string {
 	return o.JobID
 }
 
-func (o *AtsActivity) GetRaw() *Raw {
+func (o *AtsActivity) GetRaw() *AtsActivityRaw {
 	if o == nil {
 		return nil
 	}

@@ -3,4 +3,28 @@
 package shared
 
 type AccountingTransactionContact struct {
+	ID         string `json:"id"`
+	IsCustomer *bool  `json:"is_customer,omitempty"`
+	IsSupplier *bool  `json:"is_supplier,omitempty"`
+}
+
+func (o *AccountingTransactionContact) GetID() string {
+	if o == nil {
+		return ""
+	}
+	return o.ID
+}
+
+func (o *AccountingTransactionContact) GetIsCustomer() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsCustomer
+}
+
+func (o *AccountingTransactionContact) GetIsSupplier() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsSupplier
 }

@@ -7,6 +7,9 @@ import (
 	"time"
 )
 
+type HrisLocationRaw struct {
+}
+
 type HrisLocation struct {
 	Address            *PropertyHrisLocationAddress `json:"address,omitempty"`
 	CreatedAt          *time.Time                   `json:"created_at,omitempty"`
@@ -19,7 +22,7 @@ type HrisLocation struct {
 	LanguageLocale     *string                      `json:"language_locale,omitempty"`
 	Name               *string                      `json:"name,omitempty"`
 	ParentID           *string                      `json:"parent_id,omitempty"`
-	Raw                map[string]any               `json:"raw,omitempty"`
+	Raw                *HrisLocationRaw             `json:"raw,omitempty"`
 	Telephones         []HrisTelephone              `json:"telephones,omitempty"`
 	Timezone           *string                      `json:"timezone,omitempty"`
 	UpdatedAt          *time.Time                   `json:"updated_at,omitempty"`
@@ -113,7 +116,7 @@ func (o *HrisLocation) GetParentID() *string {
 	return o.ParentID
 }
 
-func (o *HrisLocation) GetRaw() map[string]any {
+func (o *HrisLocation) GetRaw() *HrisLocationRaw {
 	if o == nil {
 		return nil
 	}

@@ -7,6 +7,9 @@ import (
 	"time"
 )
 
+type CrmCompanyRaw struct {
+}
+
 // CrmCompany - A company represents an organization that optionally is associated with a deal and/or contacts
 type CrmCompany struct {
 	Address *PropertyCrmCompanyAddress `json:"address,omitempty"`
@@ -21,10 +24,10 @@ type CrmCompany struct {
 	ID          *string    `json:"id,omitempty"`
 	Industry    *string    `json:"industry,omitempty"`
 	IsActive    *bool      `json:"is_active,omitempty"`
-	LinkUrls    []string   `json:"link_urls,omitempty"`
-	Name        *string    `json:"name,omitempty"`
-	// The raw data returned by the integration for this company
-	Raw        map[string]any `json:"raw,omitempty"`
+	// Additional URLs associated with the contact e.g., LinkedIn, website, etc
+	LinkUrls   []string       `json:"link_urls,omitempty"`
+	Name       *string        `json:"name,omitempty"`
+	Raw        *CrmCompanyRaw `json:"raw,omitempty"`
 	Tags       []string       `json:"tags,omitempty"`
 	Telephones []CrmTelephone `json:"telephones,omitempty"`
 	Timezone   *string        `json:"timezone,omitempty"`
@@ -128,7 +131,7 @@ func (o *CrmCompany) GetName() *string {
 	return o.Name
 }
 
-func (o *CrmCompany) GetRaw() map[string]any {
+func (o *CrmCompany) GetRaw() *CrmCompanyRaw {
 	if o == nil {
 		return nil
 	}

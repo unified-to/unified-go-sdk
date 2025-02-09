@@ -146,6 +146,9 @@ func (e *MaritalStatus) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type HrisEmployeeRaw struct {
+}
+
 type HrisEmployee struct {
 	Address          *PropertyHrisEmployeeAddress        `json:"address,omitempty"`
 	Bio              *string                             `json:"bio,omitempty"`
@@ -163,25 +166,25 @@ type HrisEmployee struct {
 	EmploymentType   *HrisEmployeeEmploymentType         `json:"employment_type,omitempty"`
 	Gender           *HrisEmployeeGender                 `json:"gender,omitempty"`
 	// Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
-	Groups         []HrisGroup     `json:"groups,omitempty"`
-	HiredAt        *time.Time      `json:"hired_at,omitempty"`
-	ID             *string         `json:"id,omitempty"`
-	ImageURL       *string         `json:"image_url,omitempty"`
-	LanguageLocale *string         `json:"language_locale,omitempty"`
-	Location       *string         `json:"location,omitempty"`
-	Locations      []HrisLocation  `json:"locations,omitempty"`
-	ManagerID      *string         `json:"manager_id,omitempty"`
-	MaritalStatus  *MaritalStatus  `json:"marital_status,omitempty"`
-	Name           *string         `json:"name,omitempty"`
-	Pronouns       *string         `json:"pronouns,omitempty"`
-	Raw            map[string]any  `json:"raw,omitempty"`
-	Salutation     *string         `json:"salutation,omitempty"`
-	SsnSin         *string         `json:"ssn_sin,omitempty"`
-	Telephones     []HrisTelephone `json:"telephones,omitempty"`
-	TerminatedAt   *time.Time      `json:"terminated_at,omitempty"`
-	Timezone       *string         `json:"timezone,omitempty"`
-	Title          *string         `json:"title,omitempty"`
-	UpdatedAt      *time.Time      `json:"updated_at,omitempty"`
+	Groups         []HrisGroup      `json:"groups,omitempty"`
+	HiredAt        *time.Time       `json:"hired_at,omitempty"`
+	ID             *string          `json:"id,omitempty"`
+	ImageURL       *string          `json:"image_url,omitempty"`
+	LanguageLocale *string          `json:"language_locale,omitempty"`
+	Location       *string          `json:"location,omitempty"`
+	Locations      []HrisLocation   `json:"locations,omitempty"`
+	ManagerID      *string          `json:"manager_id,omitempty"`
+	MaritalStatus  *MaritalStatus   `json:"marital_status,omitempty"`
+	Name           *string          `json:"name,omitempty"`
+	Pronouns       *string          `json:"pronouns,omitempty"`
+	Raw            *HrisEmployeeRaw `json:"raw,omitempty"`
+	Salutation     *string          `json:"salutation,omitempty"`
+	SsnSin         *string          `json:"ssn_sin,omitempty"`
+	Telephones     []HrisTelephone  `json:"telephones,omitempty"`
+	TerminatedAt   *time.Time       `json:"terminated_at,omitempty"`
+	Timezone       *string          `json:"timezone,omitempty"`
+	Title          *string          `json:"title,omitempty"`
+	UpdatedAt      *time.Time       `json:"updated_at,omitempty"`
 }
 
 func (h HrisEmployee) MarshalJSON() ([]byte, error) {
@@ -377,7 +380,7 @@ func (o *HrisEmployee) GetPronouns() *string {
 	return o.Pronouns
 }
 
-func (o *HrisEmployee) GetRaw() map[string]any {
+func (o *HrisEmployee) GetRaw() *HrisEmployeeRaw {
 	if o == nil {
 		return nil
 	}

@@ -9,6 +9,9 @@ import (
 	"time"
 )
 
+type Raw struct {
+}
+
 type Status string
 
 const (
@@ -97,14 +100,13 @@ type AccountingAccount struct {
 	IsPayable           *bool      `json:"is_payable,omitempty"`
 	Name                *string    `json:"name,omitempty"`
 	ParentAccountID     *string    `json:"parent_account_id,omitempty"`
-	// The original data from the integration's API
-	Raw        map[string]any `json:"raw,omitempty"`
-	Section    *string        `json:"section,omitempty"`
-	Status     *Status        `json:"status,omitempty"`
-	Subgroup   *string        `json:"subgroup,omitempty"`
-	Subsection *string        `json:"subsection,omitempty"`
-	Type       *Type          `json:"type,omitempty"`
-	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
+	Raw                 *Raw       `json:"raw,omitempty"`
+	Section             *string    `json:"section,omitempty"`
+	Status              *Status    `json:"status,omitempty"`
+	Subgroup            *string    `json:"subgroup,omitempty"`
+	Subsection          *string    `json:"subsection,omitempty"`
+	Type                *Type      `json:"type,omitempty"`
+	UpdatedAt           *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingAccount) MarshalJSON() ([]byte, error) {
@@ -188,7 +190,7 @@ func (o *AccountingAccount) GetParentAccountID() *string {
 	return o.ParentAccountID
 }
 
-func (o *AccountingAccount) GetRaw() map[string]any {
+func (o *AccountingAccount) GetRaw() *Raw {
 	if o == nil {
 		return nil
 	}
