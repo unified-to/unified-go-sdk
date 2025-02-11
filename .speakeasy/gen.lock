@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: b8229482579a72269cca223071c1d36c
+  docChecksum: 9242e0b56a832180eec64ef3e27e0be0
   docVersion: "1.0"
-  speakeasyVersion: 1.487.1
+  speakeasyVersion: 1.488.0
   generationVersion: 2.506.0
-  releaseVersion: 0.23.1
-  configChecksum: c0ebc26c99cd60a33aaf3f6ba54eea36
+  releaseVersion: 0.23.2
+  configChecksum: b1322b3dc00afab9f3db27517eb551a4
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -1523,6 +1523,7 @@ generatedFiles:
   - docs/pkg/models/shared/crmstage.md
   - docs/pkg/models/shared/crmtelephone.md
   - docs/pkg/models/shared/crmtelephonetype.md
+  - docs/pkg/models/shared/dbtype.md
   - docs/pkg/models/shared/employmentstatus.md
   - docs/pkg/models/shared/employmenttype.md
   - docs/pkg/models/shared/enrichcompany.md

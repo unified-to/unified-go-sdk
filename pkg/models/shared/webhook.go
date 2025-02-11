@@ -9,6 +9,41 @@ import (
 	"time"
 )
 
+type DbType string
+
+const (
+	DbTypeMongodb  DbType = "mongodb"
+	DbTypeMysql    DbType = "mysql"
+	DbTypePostgres DbType = "postgres"
+	DbTypeMssql    DbType = "mssql"
+	DbTypeMariadb  DbType = "mariadb"
+)
+
+func (e DbType) ToPointer() *DbType {
+	return &e
+}
+func (e *DbType) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "mongodb":
+		fallthrough
+	case "mysql":
+		fallthrough
+	case "postgres":
+		fallthrough
+	case "mssql":
+		fallthrough
+	case "mariadb":
+		*e = DbType(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for DbType: %v", v)
+	}
+}
+
 type Event string
 
 const (
@@ -305,11 +340,14 @@ type Webhook struct {
 	CheckedAt       *time.Time        `json:"checked_at,omitempty"`
 	ConnectionID    string            `json:"connection_id"`
 	CreatedAt       *time.Time        `json:"created_at,omitempty"`
+	DbNamePrefix    *string           `json:"db_name_prefix,omitempty"`
+	DbType          *DbType           `json:"db_type,omitempty"`
+	DbURL           *string           `json:"db_url,omitempty"`
 	Environment     *string           `default:"Production" json:"environment"`
 	Event           Event             `json:"event"`
 	Fields          *string           `json:"fields,omitempty"`
 	Filters         map[string]string `json:"filters,omitempty"`
-	HookURL         string            `json:"hook_url"`
+	HookURL         *string           `json:"hook_url,omitempty"`
 	ID              *string           `json:"id,omitempty"`
 	IntegrationType *string           `json:"integration_type,omitempty"`
 	Interval        *float64          `json:"interval,omitempty"`
@@ -356,6 +394,27 @@ func (o *Webhook) GetCreatedAt() *time.Time {
 	return o.CreatedAt
 }
 
+func (o *Webhook) GetDbNamePrefix() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DbNamePrefix
+}
+
+func (o *Webhook) GetDbType() *DbType {
+	if o == nil {
+		return nil
+	}
+	return o.DbType
+}
+
+func (o *Webhook) GetDbURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DbURL
+}
+
 func (o *Webhook) GetEnvironment() *string {
 	if o == nil {
 		return nil
@@ -384,9 +443,9 @@ func (o *Webhook) GetFilters() map[string]string {
 	return o.Filters
 }
 
-func (o *Webhook) GetHookURL() string {
+func (o *Webhook) GetHookURL() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.HookURL
 }
