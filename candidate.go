@@ -27,12 +27,6 @@ func newCandidate(sdkConfig sdkConfiguration) *Candidate {
 
 // CreateAtsCandidate - Create a candidate
 func (s *Candidate) CreateAtsCandidate(ctx context.Context, request operations.CreateAtsCandidateRequest, opts ...operations.Option) (*operations.CreateAtsCandidateResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createAtsCandidate",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Candidate) CreateAtsCandidate(ctx context.Context, request operations.C
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createAtsCandidate",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsCandidate", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Candidate) CreateAtsCandidate(ctx context.Context, request operations.C
 
 // GetAtsCandidate - Retrieve a candidate
 func (s *Candidate) GetAtsCandidate(ctx context.Context, request operations.GetAtsCandidateRequest, opts ...operations.Option) (*operations.GetAtsCandidateResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getAtsCandidate",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Candidate) GetAtsCandidate(ctx context.Context, request operations.GetA
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getAtsCandidate",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Candidate) GetAtsCandidate(ctx context.Context, request operations.GetA
 
 // ListAtsCandidates - List all candidates
 func (s *Candidate) ListAtsCandidates(ctx context.Context, request operations.ListAtsCandidatesRequest, opts ...operations.Option) (*operations.ListAtsCandidatesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listAtsCandidates",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Candidate) ListAtsCandidates(ctx context.Context, request operations.Li
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listAtsCandidates",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Candidate) ListAtsCandidates(ctx context.Context, request operations.Li
 
 // PatchAtsCandidate - Update a candidate
 func (s *Candidate) PatchAtsCandidate(ctx context.Context, request operations.PatchAtsCandidateRequest, opts ...operations.Option) (*operations.PatchAtsCandidateResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchAtsCandidate",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Candidate) PatchAtsCandidate(ctx context.Context, request operations.Pa
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchAtsCandidate",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsCandidate", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Candidate) PatchAtsCandidate(ctx context.Context, request operations.Pa
 
 // RemoveAtsCandidate - Remove a candidate
 func (s *Candidate) RemoveAtsCandidate(ctx context.Context, request operations.RemoveAtsCandidateRequest, opts ...operations.Option) (*operations.RemoveAtsCandidateResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeAtsCandidate",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Candidate) RemoveAtsCandidate(ctx context.Context, request operations.R
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/candidate/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeAtsCandidate",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Candidate) RemoveAtsCandidate(ctx context.Context, request operations.R
 
 // UpdateAtsCandidate - Update a candidate
 func (s *Candidate) UpdateAtsCandidate(ctx context.Context, request operations.UpdateAtsCandidateRequest, opts ...operations.Option) (*operations.UpdateAtsCandidateResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateAtsCandidate",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Candidate) UpdateAtsCandidate(ctx context.Context, request operations.U
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateAtsCandidate",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsCandidate", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

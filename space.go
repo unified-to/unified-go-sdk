@@ -27,12 +27,6 @@ func newSpace(sdkConfig sdkConfiguration) *Space {
 
 // CreateKmsSpace - Create a space
 func (s *Space) CreateKmsSpace(ctx context.Context, request operations.CreateKmsSpaceRequest, opts ...operations.Option) (*operations.CreateKmsSpaceResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createKmsSpace",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Space) CreateKmsSpace(ctx context.Context, request operations.CreateKms
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createKmsSpace",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsSpace", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Space) CreateKmsSpace(ctx context.Context, request operations.CreateKms
 
 // GetKmsSpace - Retrieve a space
 func (s *Space) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceRequest, opts ...operations.Option) (*operations.GetKmsSpaceResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getKmsSpace",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Space) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceR
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/space/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getKmsSpace",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Space) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceR
 
 // ListKmsSpaces - List all spaces
 func (s *Space) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpacesRequest, opts ...operations.Option) (*operations.ListKmsSpacesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listKmsSpaces",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Space) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpa
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/space", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listKmsSpaces",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Space) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpa
 
 // PatchKmsSpace - Update a space
 func (s *Space) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSpaceRequest, opts ...operations.Option) (*operations.PatchKmsSpaceResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchKmsSpace",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Space) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSp
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchKmsSpace",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsSpace", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Space) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSp
 
 // RemoveKmsSpace - Remove a space
 func (s *Space) RemoveKmsSpace(ctx context.Context, request operations.RemoveKmsSpaceRequest, opts ...operations.Option) (*operations.RemoveKmsSpaceResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeKmsSpace",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Space) RemoveKmsSpace(ctx context.Context, request operations.RemoveKms
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/space/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeKmsSpace",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Space) RemoveKmsSpace(ctx context.Context, request operations.RemoveKms
 
 // UpdateKmsSpace - Update a space
 func (s *Space) UpdateKmsSpace(ctx context.Context, request operations.UpdateKmsSpaceRequest, opts ...operations.Option) (*operations.UpdateKmsSpaceResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateKmsSpace",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Space) UpdateKmsSpace(ctx context.Context, request operations.UpdateKms
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateKmsSpace",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsSpace", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

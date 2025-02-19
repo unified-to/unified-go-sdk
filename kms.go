@@ -27,12 +27,6 @@ func newKms(sdkConfig sdkConfiguration) *Kms {
 
 // CreateKmsComment - Create a comment
 func (s *Kms) CreateKmsComment(ctx context.Context, request operations.CreateKmsCommentRequest, opts ...operations.Option) (*operations.CreateKmsCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createKmsComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Kms) CreateKmsComment(ctx context.Context, request operations.CreateKms
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createKmsComment",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Kms) CreateKmsComment(ctx context.Context, request operations.CreateKms
 
 // CreateKmsPage - Create a page
 func (s *Kms) CreateKmsPage(ctx context.Context, request operations.CreateKmsPageRequest, opts ...operations.Option) (*operations.CreateKmsPageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createKmsPage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -266,6 +260,12 @@ func (s *Kms) CreateKmsPage(ctx context.Context, request operations.CreateKmsPag
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createKmsPage",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsPage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -447,12 +447,6 @@ func (s *Kms) CreateKmsPage(ctx context.Context, request operations.CreateKmsPag
 
 // CreateKmsSpace - Create a space
 func (s *Kms) CreateKmsSpace(ctx context.Context, request operations.CreateKmsSpaceRequest, opts ...operations.Option) (*operations.CreateKmsSpaceResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createKmsSpace",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -476,6 +470,12 @@ func (s *Kms) CreateKmsSpace(ctx context.Context, request operations.CreateKmsSp
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createKmsSpace",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsSpace", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -657,12 +657,6 @@ func (s *Kms) CreateKmsSpace(ctx context.Context, request operations.CreateKmsSp
 
 // GetKmsComment - Retrieve a comment
 func (s *Kms) GetKmsComment(ctx context.Context, request operations.GetKmsCommentRequest, opts ...operations.Option) (*operations.GetKmsCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getKmsComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -684,6 +678,13 @@ func (s *Kms) GetKmsComment(ctx context.Context, request operations.GetKmsCommen
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/comment/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getKmsComment",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -859,12 +860,6 @@ func (s *Kms) GetKmsComment(ctx context.Context, request operations.GetKmsCommen
 
 // GetKmsPage - Retrieve a page
 func (s *Kms) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequest, opts ...operations.Option) (*operations.GetKmsPageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getKmsPage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -886,6 +881,13 @@ func (s *Kms) GetKmsPage(ctx context.Context, request operations.GetKmsPageReque
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/page/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getKmsPage",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1061,12 +1063,6 @@ func (s *Kms) GetKmsPage(ctx context.Context, request operations.GetKmsPageReque
 
 // GetKmsSpace - Retrieve a space
 func (s *Kms) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceRequest, opts ...operations.Option) (*operations.GetKmsSpaceResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getKmsSpace",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1088,6 +1084,13 @@ func (s *Kms) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceReq
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/space/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getKmsSpace",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1263,12 +1266,6 @@ func (s *Kms) GetKmsSpace(ctx context.Context, request operations.GetKmsSpaceReq
 
 // ListKmsComments - List all comments
 func (s *Kms) ListKmsComments(ctx context.Context, request operations.ListKmsCommentsRequest, opts ...operations.Option) (*operations.ListKmsCommentsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listKmsComments",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1290,6 +1287,13 @@ func (s *Kms) ListKmsComments(ctx context.Context, request operations.ListKmsCom
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/comment", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listKmsComments",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1465,12 +1469,6 @@ func (s *Kms) ListKmsComments(ctx context.Context, request operations.ListKmsCom
 
 // ListKmsPages - List all pages
 func (s *Kms) ListKmsPages(ctx context.Context, request operations.ListKmsPagesRequest, opts ...operations.Option) (*operations.ListKmsPagesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listKmsPages",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1492,6 +1490,13 @@ func (s *Kms) ListKmsPages(ctx context.Context, request operations.ListKmsPagesR
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/page", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listKmsPages",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1667,12 +1672,6 @@ func (s *Kms) ListKmsPages(ctx context.Context, request operations.ListKmsPagesR
 
 // ListKmsSpaces - List all spaces
 func (s *Kms) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpacesRequest, opts ...operations.Option) (*operations.ListKmsSpacesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listKmsSpaces",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1694,6 +1693,13 @@ func (s *Kms) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpace
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/space", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listKmsSpaces",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1869,12 +1875,6 @@ func (s *Kms) ListKmsSpaces(ctx context.Context, request operations.ListKmsSpace
 
 // PatchKmsComment - Update a comment
 func (s *Kms) PatchKmsComment(ctx context.Context, request operations.PatchKmsCommentRequest, opts ...operations.Option) (*operations.PatchKmsCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchKmsComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1898,6 +1898,12 @@ func (s *Kms) PatchKmsComment(ctx context.Context, request operations.PatchKmsCo
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchKmsComment",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2079,12 +2085,6 @@ func (s *Kms) PatchKmsComment(ctx context.Context, request operations.PatchKmsCo
 
 // PatchKmsPage - Update a page
 func (s *Kms) PatchKmsPage(ctx context.Context, request operations.PatchKmsPageRequest, opts ...operations.Option) (*operations.PatchKmsPageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchKmsPage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2108,6 +2108,12 @@ func (s *Kms) PatchKmsPage(ctx context.Context, request operations.PatchKmsPageR
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchKmsPage",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsPage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2289,12 +2295,6 @@ func (s *Kms) PatchKmsPage(ctx context.Context, request operations.PatchKmsPageR
 
 // PatchKmsSpace - Update a space
 func (s *Kms) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSpaceRequest, opts ...operations.Option) (*operations.PatchKmsSpaceResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchKmsSpace",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2318,6 +2318,12 @@ func (s *Kms) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSpac
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchKmsSpace",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsSpace", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2499,12 +2505,6 @@ func (s *Kms) PatchKmsSpace(ctx context.Context, request operations.PatchKmsSpac
 
 // RemoveKmsComment - Remove a comment
 func (s *Kms) RemoveKmsComment(ctx context.Context, request operations.RemoveKmsCommentRequest, opts ...operations.Option) (*operations.RemoveKmsCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeKmsComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2526,6 +2526,13 @@ func (s *Kms) RemoveKmsComment(ctx context.Context, request operations.RemoveKms
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/comment/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeKmsComment",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2674,12 +2681,6 @@ func (s *Kms) RemoveKmsComment(ctx context.Context, request operations.RemoveKms
 
 // RemoveKmsPage - Remove a page
 func (s *Kms) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPageRequest, opts ...operations.Option) (*operations.RemoveKmsPageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeKmsPage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2701,6 +2702,13 @@ func (s *Kms) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPag
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/page/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeKmsPage",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2849,12 +2857,6 @@ func (s *Kms) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPag
 
 // RemoveKmsSpace - Remove a space
 func (s *Kms) RemoveKmsSpace(ctx context.Context, request operations.RemoveKmsSpaceRequest, opts ...operations.Option) (*operations.RemoveKmsSpaceResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeKmsSpace",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2876,6 +2878,13 @@ func (s *Kms) RemoveKmsSpace(ctx context.Context, request operations.RemoveKmsSp
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/space/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeKmsSpace",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -3024,12 +3033,6 @@ func (s *Kms) RemoveKmsSpace(ctx context.Context, request operations.RemoveKmsSp
 
 // UpdateKmsComment - Update a comment
 func (s *Kms) UpdateKmsComment(ctx context.Context, request operations.UpdateKmsCommentRequest, opts ...operations.Option) (*operations.UpdateKmsCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateKmsComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3053,6 +3056,12 @@ func (s *Kms) UpdateKmsComment(ctx context.Context, request operations.UpdateKms
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateKmsComment",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -3234,12 +3243,6 @@ func (s *Kms) UpdateKmsComment(ctx context.Context, request operations.UpdateKms
 
 // UpdateKmsPage - Update a page
 func (s *Kms) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPageRequest, opts ...operations.Option) (*operations.UpdateKmsPageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateKmsPage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3263,6 +3266,12 @@ func (s *Kms) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPag
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateKmsPage",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsPage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -3444,12 +3453,6 @@ func (s *Kms) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPag
 
 // UpdateKmsSpace - Update a space
 func (s *Kms) UpdateKmsSpace(ctx context.Context, request operations.UpdateKmsSpaceRequest, opts ...operations.Option) (*operations.UpdateKmsSpaceResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateKmsSpace",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3473,6 +3476,12 @@ func (s *Kms) UpdateKmsSpace(ctx context.Context, request operations.UpdateKmsSp
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateKmsSpace",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsSpace", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

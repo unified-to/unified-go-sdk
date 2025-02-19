@@ -27,12 +27,6 @@ func newGenai(sdkConfig sdkConfiguration) *Genai {
 
 // CreateGenaiPrompt - Create a prompt
 func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.CreateGenaiPromptRequest, opts ...operations.Option) (*operations.CreateGenaiPromptResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createGenaiPrompt",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.Create
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createGenaiPrompt",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "GenaiPrompt", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.Create
 
 // ListGenaiModels - List all models
 func (s *Genai) ListGenaiModels(ctx context.Context, request operations.ListGenaiModelsRequest, opts ...operations.Option) (*operations.ListGenaiModelsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listGenaiModels",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Genai) ListGenaiModels(ctx context.Context, request operations.ListGena
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/genai/{connection_id}/model", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listGenaiModels",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

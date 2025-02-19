@@ -27,12 +27,6 @@ func newPerson(sdkConfig sdkConfiguration) *Person {
 
 // ListEnrichPeople - Retrieve enrichment information for a person
 func (s *Person) ListEnrichPeople(ctx context.Context, request operations.ListEnrichPeopleRequest, opts ...operations.Option) (*operations.ListEnrichPeopleResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listEnrichPeople",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -54,6 +48,13 @@ func (s *Person) ListEnrichPeople(ctx context.Context, request operations.ListEn
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/person", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listEnrichPeople",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

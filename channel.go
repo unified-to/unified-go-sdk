@@ -27,12 +27,6 @@ func newChannel(sdkConfig sdkConfiguration) *Channel {
 
 // GetMessagingChannel - Retrieve a channel
 func (s *Channel) GetMessagingChannel(ctx context.Context, request operations.GetMessagingChannelRequest, opts ...operations.Option) (*operations.GetMessagingChannelResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getMessagingChannel",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -54,6 +48,13 @@ func (s *Channel) GetMessagingChannel(ctx context.Context, request operations.Ge
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/messaging/{connection_id}/channel/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getMessagingChannel",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -229,12 +230,6 @@ func (s *Channel) GetMessagingChannel(ctx context.Context, request operations.Ge
 
 // ListMessagingChannels - List all channels
 func (s *Channel) ListMessagingChannels(ctx context.Context, request operations.ListMessagingChannelsRequest, opts ...operations.Option) (*operations.ListMessagingChannelsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listMessagingChannels",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -256,6 +251,13 @@ func (s *Channel) ListMessagingChannels(ctx context.Context, request operations.
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/messaging/{connection_id}/channel", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listMessagingChannels",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

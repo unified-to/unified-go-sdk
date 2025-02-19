@@ -27,12 +27,6 @@ func newBranch(sdkConfig sdkConfiguration) *Branch {
 
 // CreateRepoBranch - Create a branch
 func (s *Branch) CreateRepoBranch(ctx context.Context, request operations.CreateRepoBranchRequest, opts ...operations.Option) (*operations.CreateRepoBranchResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createRepoBranch",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Branch) CreateRepoBranch(ctx context.Context, request operations.Create
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createRepoBranch",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoBranch", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Branch) CreateRepoBranch(ctx context.Context, request operations.Create
 
 // GetRepoBranch - Retrieve a branch
 func (s *Branch) GetRepoBranch(ctx context.Context, request operations.GetRepoBranchRequest, opts ...operations.Option) (*operations.GetRepoBranchResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getRepoBranch",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Branch) GetRepoBranch(ctx context.Context, request operations.GetRepoBr
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/repo/{connection_id}/branch/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getRepoBranch",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Branch) GetRepoBranch(ctx context.Context, request operations.GetRepoBr
 
 // ListRepoBranches - List all branches
 func (s *Branch) ListRepoBranches(ctx context.Context, request operations.ListRepoBranchesRequest, opts ...operations.Option) (*operations.ListRepoBranchesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listRepoBranches",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Branch) ListRepoBranches(ctx context.Context, request operations.ListRe
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/repo/{connection_id}/branch", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listRepoBranches",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Branch) ListRepoBranches(ctx context.Context, request operations.ListRe
 
 // PatchRepoBranch - Update a branch
 func (s *Branch) PatchRepoBranch(ctx context.Context, request operations.PatchRepoBranchRequest, opts ...operations.Option) (*operations.PatchRepoBranchResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchRepoBranch",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Branch) PatchRepoBranch(ctx context.Context, request operations.PatchRe
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchRepoBranch",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoBranch", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Branch) PatchRepoBranch(ctx context.Context, request operations.PatchRe
 
 // RemoveRepoBranch - Remove a branch
 func (s *Branch) RemoveRepoBranch(ctx context.Context, request operations.RemoveRepoBranchRequest, opts ...operations.Option) (*operations.RemoveRepoBranchResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeRepoBranch",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Branch) RemoveRepoBranch(ctx context.Context, request operations.Remove
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/repo/{connection_id}/branch/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeRepoBranch",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Branch) RemoveRepoBranch(ctx context.Context, request operations.Remove
 
 // UpdateRepoBranch - Update a branch
 func (s *Branch) UpdateRepoBranch(ctx context.Context, request operations.UpdateRepoBranchRequest, opts ...operations.Option) (*operations.UpdateRepoBranchResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateRepoBranch",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Branch) UpdateRepoBranch(ctx context.Context, request operations.Update
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateRepoBranch",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoBranch", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

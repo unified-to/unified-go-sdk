@@ -27,12 +27,6 @@ func newLocation(sdkConfig sdkConfiguration) *Location {
 
 // CreateCommerceLocation - Create a location
 func (s *Location) CreateCommerceLocation(ctx context.Context, request operations.CreateCommerceLocationRequest, opts ...operations.Option) (*operations.CreateCommerceLocationResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCommerceLocation",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Location) CreateCommerceLocation(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCommerceLocation",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Location) CreateCommerceLocation(ctx context.Context, request operation
 
 // CreateHrisLocation - Create a location
 func (s *Location) CreateHrisLocation(ctx context.Context, request operations.CreateHrisLocationRequest, opts ...operations.Option) (*operations.CreateHrisLocationResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createHrisLocation",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -266,6 +260,12 @@ func (s *Location) CreateHrisLocation(ctx context.Context, request operations.Cr
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createHrisLocation",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -447,12 +447,6 @@ func (s *Location) CreateHrisLocation(ctx context.Context, request operations.Cr
 
 // GetCommerceLocation - Retrieve a location
 func (s *Location) GetCommerceLocation(ctx context.Context, request operations.GetCommerceLocationRequest, opts ...operations.Option) (*operations.GetCommerceLocationResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCommerceLocation",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -474,6 +468,13 @@ func (s *Location) GetCommerceLocation(ctx context.Context, request operations.G
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/location/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCommerceLocation",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -649,12 +650,6 @@ func (s *Location) GetCommerceLocation(ctx context.Context, request operations.G
 
 // GetHrisLocation - Retrieve a location
 func (s *Location) GetHrisLocation(ctx context.Context, request operations.GetHrisLocationRequest, opts ...operations.Option) (*operations.GetHrisLocationResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getHrisLocation",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -676,6 +671,13 @@ func (s *Location) GetHrisLocation(ctx context.Context, request operations.GetHr
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/location/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getHrisLocation",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -851,12 +853,6 @@ func (s *Location) GetHrisLocation(ctx context.Context, request operations.GetHr
 
 // ListCommerceLocations - List all locations
 func (s *Location) ListCommerceLocations(ctx context.Context, request operations.ListCommerceLocationsRequest, opts ...operations.Option) (*operations.ListCommerceLocationsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCommerceLocations",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Location) ListCommerceLocations(ctx context.Context, request operations
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/location", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCommerceLocations",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1053,12 +1056,6 @@ func (s *Location) ListCommerceLocations(ctx context.Context, request operations
 
 // ListHrisLocations - List all locations
 func (s *Location) ListHrisLocations(ctx context.Context, request operations.ListHrisLocationsRequest, opts ...operations.Option) (*operations.ListHrisLocationsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listHrisLocations",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1080,6 +1077,13 @@ func (s *Location) ListHrisLocations(ctx context.Context, request operations.Lis
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/location", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listHrisLocations",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1255,12 +1259,6 @@ func (s *Location) ListHrisLocations(ctx context.Context, request operations.Lis
 
 // PatchCommerceLocation - Update a location
 func (s *Location) PatchCommerceLocation(ctx context.Context, request operations.PatchCommerceLocationRequest, opts ...operations.Option) (*operations.PatchCommerceLocationResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCommerceLocation",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1284,6 +1282,12 @@ func (s *Location) PatchCommerceLocation(ctx context.Context, request operations
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCommerceLocation",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1465,12 +1469,6 @@ func (s *Location) PatchCommerceLocation(ctx context.Context, request operations
 
 // PatchHrisLocation - Update a location
 func (s *Location) PatchHrisLocation(ctx context.Context, request operations.PatchHrisLocationRequest, opts ...operations.Option) (*operations.PatchHrisLocationResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchHrisLocation",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1494,6 +1492,12 @@ func (s *Location) PatchHrisLocation(ctx context.Context, request operations.Pat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchHrisLocation",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1675,12 +1679,6 @@ func (s *Location) PatchHrisLocation(ctx context.Context, request operations.Pat
 
 // RemoveCommerceLocation - Remove a location
 func (s *Location) RemoveCommerceLocation(ctx context.Context, request operations.RemoveCommerceLocationRequest, opts ...operations.Option) (*operations.RemoveCommerceLocationResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCommerceLocation",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1702,6 +1700,13 @@ func (s *Location) RemoveCommerceLocation(ctx context.Context, request operation
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/location/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCommerceLocation",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1850,12 +1855,6 @@ func (s *Location) RemoveCommerceLocation(ctx context.Context, request operation
 
 // RemoveHrisLocation - Remove a location
 func (s *Location) RemoveHrisLocation(ctx context.Context, request operations.RemoveHrisLocationRequest, opts ...operations.Option) (*operations.RemoveHrisLocationResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeHrisLocation",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1877,6 +1876,13 @@ func (s *Location) RemoveHrisLocation(ctx context.Context, request operations.Re
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/location/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeHrisLocation",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2025,12 +2031,6 @@ func (s *Location) RemoveHrisLocation(ctx context.Context, request operations.Re
 
 // UpdateCommerceLocation - Update a location
 func (s *Location) UpdateCommerceLocation(ctx context.Context, request operations.UpdateCommerceLocationRequest, opts ...operations.Option) (*operations.UpdateCommerceLocationResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCommerceLocation",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2054,6 +2054,12 @@ func (s *Location) UpdateCommerceLocation(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCommerceLocation",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2235,12 +2241,6 @@ func (s *Location) UpdateCommerceLocation(ctx context.Context, request operation
 
 // UpdateHrisLocation - Update a location
 func (s *Location) UpdateHrisLocation(ctx context.Context, request operations.UpdateHrisLocationRequest, opts ...operations.Option) (*operations.UpdateHrisLocationResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateHrisLocation",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2264,6 +2264,12 @@ func (s *Location) UpdateHrisLocation(ctx context.Context, request operations.Up
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateHrisLocation",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

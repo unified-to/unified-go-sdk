@@ -27,12 +27,6 @@ func newStudent(sdkConfig sdkConfiguration) *Student {
 
 // CreateLmsStudent - Create a student
 func (s *Student) CreateLmsStudent(ctx context.Context, request operations.CreateLmsStudentRequest, opts ...operations.Option) (*operations.CreateLmsStudentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createLmsStudent",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Student) CreateLmsStudent(ctx context.Context, request operations.Creat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createLmsStudent",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "LmsStudent", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Student) CreateLmsStudent(ctx context.Context, request operations.Creat
 
 // GetLmsStudent - Retrieve a student
 func (s *Student) GetLmsStudent(ctx context.Context, request operations.GetLmsStudentRequest, opts ...operations.Option) (*operations.GetLmsStudentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getLmsStudent",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Student) GetLmsStudent(ctx context.Context, request operations.GetLmsSt
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/lms/{connection_id}/student/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getLmsStudent",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Student) GetLmsStudent(ctx context.Context, request operations.GetLmsSt
 
 // ListLmsStudents - List all students
 func (s *Student) ListLmsStudents(ctx context.Context, request operations.ListLmsStudentsRequest, opts ...operations.Option) (*operations.ListLmsStudentsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listLmsStudents",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Student) ListLmsStudents(ctx context.Context, request operations.ListLm
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/lms/{connection_id}/student", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listLmsStudents",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Student) ListLmsStudents(ctx context.Context, request operations.ListLm
 
 // PatchLmsStudent - Update a student
 func (s *Student) PatchLmsStudent(ctx context.Context, request operations.PatchLmsStudentRequest, opts ...operations.Option) (*operations.PatchLmsStudentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchLmsStudent",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Student) PatchLmsStudent(ctx context.Context, request operations.PatchL
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchLmsStudent",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "LmsStudent", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Student) PatchLmsStudent(ctx context.Context, request operations.PatchL
 
 // RemoveLmsStudent - Remove a student
 func (s *Student) RemoveLmsStudent(ctx context.Context, request operations.RemoveLmsStudentRequest, opts ...operations.Option) (*operations.RemoveLmsStudentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeLmsStudent",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Student) RemoveLmsStudent(ctx context.Context, request operations.Remov
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/lms/{connection_id}/student/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeLmsStudent",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Student) RemoveLmsStudent(ctx context.Context, request operations.Remov
 
 // UpdateLmsStudent - Update a student
 func (s *Student) UpdateLmsStudent(ctx context.Context, request operations.UpdateLmsStudentRequest, opts ...operations.Option) (*operations.UpdateLmsStudentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateLmsStudent",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Student) UpdateLmsStudent(ctx context.Context, request operations.Updat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateLmsStudent",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "LmsStudent", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

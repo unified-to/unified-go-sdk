@@ -27,12 +27,6 @@ func newEmployee(sdkConfig sdkConfiguration) *Employee {
 
 // CreateHrisEmployee - Create an employee
 func (s *Employee) CreateHrisEmployee(ctx context.Context, request operations.CreateHrisEmployeeRequest, opts ...operations.Option) (*operations.CreateHrisEmployeeResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createHrisEmployee",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Employee) CreateHrisEmployee(ctx context.Context, request operations.Cr
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createHrisEmployee",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisEmployee", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Employee) CreateHrisEmployee(ctx context.Context, request operations.Cr
 
 // GetHrisEmployee - Retrieve an employee
 func (s *Employee) GetHrisEmployee(ctx context.Context, request operations.GetHrisEmployeeRequest, opts ...operations.Option) (*operations.GetHrisEmployeeResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getHrisEmployee",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Employee) GetHrisEmployee(ctx context.Context, request operations.GetHr
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getHrisEmployee",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Employee) GetHrisEmployee(ctx context.Context, request operations.GetHr
 
 // ListHrisEmployees - List all employees
 func (s *Employee) ListHrisEmployees(ctx context.Context, request operations.ListHrisEmployeesRequest, opts ...operations.Option) (*operations.ListHrisEmployeesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listHrisEmployees",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Employee) ListHrisEmployees(ctx context.Context, request operations.Lis
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listHrisEmployees",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Employee) ListHrisEmployees(ctx context.Context, request operations.Lis
 
 // PatchHrisEmployee - Update an employee
 func (s *Employee) PatchHrisEmployee(ctx context.Context, request operations.PatchHrisEmployeeRequest, opts ...operations.Option) (*operations.PatchHrisEmployeeResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchHrisEmployee",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Employee) PatchHrisEmployee(ctx context.Context, request operations.Pat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchHrisEmployee",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisEmployee", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Employee) PatchHrisEmployee(ctx context.Context, request operations.Pat
 
 // RemoveHrisEmployee - Remove an employee
 func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.RemoveHrisEmployeeRequest, opts ...operations.Option) (*operations.RemoveHrisEmployeeResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeHrisEmployee",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.Re
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/employee/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeHrisEmployee",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.Re
 
 // UpdateHrisEmployee - Update an employee
 func (s *Employee) UpdateHrisEmployee(ctx context.Context, request operations.UpdateHrisEmployeeRequest, opts ...operations.Option) (*operations.UpdateHrisEmployeeResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateHrisEmployee",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Employee) UpdateHrisEmployee(ctx context.Context, request operations.Up
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateHrisEmployee",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisEmployee", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

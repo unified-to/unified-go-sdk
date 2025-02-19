@@ -27,12 +27,6 @@ func newComment(sdkConfig sdkConfiguration) *Comment {
 
 // CreateKmsComment - Create a comment
 func (s *Comment) CreateKmsComment(ctx context.Context, request operations.CreateKmsCommentRequest, opts ...operations.Option) (*operations.CreateKmsCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createKmsComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Comment) CreateKmsComment(ctx context.Context, request operations.Creat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createKmsComment",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Comment) CreateKmsComment(ctx context.Context, request operations.Creat
 
 // CreateTaskComment - Create a comment
 func (s *Comment) CreateTaskComment(ctx context.Context, request operations.CreateTaskCommentRequest, opts ...operations.Option) (*operations.CreateTaskCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createTaskComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -266,6 +260,12 @@ func (s *Comment) CreateTaskComment(ctx context.Context, request operations.Crea
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createTaskComment",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -447,12 +447,6 @@ func (s *Comment) CreateTaskComment(ctx context.Context, request operations.Crea
 
 // GetKmsComment - Retrieve a comment
 func (s *Comment) GetKmsComment(ctx context.Context, request operations.GetKmsCommentRequest, opts ...operations.Option) (*operations.GetKmsCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getKmsComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -474,6 +468,13 @@ func (s *Comment) GetKmsComment(ctx context.Context, request operations.GetKmsCo
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/comment/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getKmsComment",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -649,12 +650,6 @@ func (s *Comment) GetKmsComment(ctx context.Context, request operations.GetKmsCo
 
 // GetTaskComment - Retrieve a comment
 func (s *Comment) GetTaskComment(ctx context.Context, request operations.GetTaskCommentRequest, opts ...operations.Option) (*operations.GetTaskCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getTaskComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -676,6 +671,13 @@ func (s *Comment) GetTaskComment(ctx context.Context, request operations.GetTask
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/task/{connection_id}/comment/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getTaskComment",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -851,12 +853,6 @@ func (s *Comment) GetTaskComment(ctx context.Context, request operations.GetTask
 
 // ListKmsComments - List all comments
 func (s *Comment) ListKmsComments(ctx context.Context, request operations.ListKmsCommentsRequest, opts ...operations.Option) (*operations.ListKmsCommentsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listKmsComments",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Comment) ListKmsComments(ctx context.Context, request operations.ListKm
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/comment", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listKmsComments",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1053,12 +1056,6 @@ func (s *Comment) ListKmsComments(ctx context.Context, request operations.ListKm
 
 // ListTaskComments - List all comments
 func (s *Comment) ListTaskComments(ctx context.Context, request operations.ListTaskCommentsRequest, opts ...operations.Option) (*operations.ListTaskCommentsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listTaskComments",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1080,6 +1077,13 @@ func (s *Comment) ListTaskComments(ctx context.Context, request operations.ListT
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/task/{connection_id}/comment", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listTaskComments",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1255,12 +1259,6 @@ func (s *Comment) ListTaskComments(ctx context.Context, request operations.ListT
 
 // PatchKmsComment - Update a comment
 func (s *Comment) PatchKmsComment(ctx context.Context, request operations.PatchKmsCommentRequest, opts ...operations.Option) (*operations.PatchKmsCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchKmsComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1284,6 +1282,12 @@ func (s *Comment) PatchKmsComment(ctx context.Context, request operations.PatchK
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchKmsComment",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1465,12 +1469,6 @@ func (s *Comment) PatchKmsComment(ctx context.Context, request operations.PatchK
 
 // PatchTaskComment - Update a comment
 func (s *Comment) PatchTaskComment(ctx context.Context, request operations.PatchTaskCommentRequest, opts ...operations.Option) (*operations.PatchTaskCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchTaskComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1494,6 +1492,12 @@ func (s *Comment) PatchTaskComment(ctx context.Context, request operations.Patch
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchTaskComment",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1675,12 +1679,6 @@ func (s *Comment) PatchTaskComment(ctx context.Context, request operations.Patch
 
 // RemoveKmsComment - Remove a comment
 func (s *Comment) RemoveKmsComment(ctx context.Context, request operations.RemoveKmsCommentRequest, opts ...operations.Option) (*operations.RemoveKmsCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeKmsComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1702,6 +1700,13 @@ func (s *Comment) RemoveKmsComment(ctx context.Context, request operations.Remov
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/comment/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeKmsComment",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1850,12 +1855,6 @@ func (s *Comment) RemoveKmsComment(ctx context.Context, request operations.Remov
 
 // RemoveTaskComment - Remove a comment
 func (s *Comment) RemoveTaskComment(ctx context.Context, request operations.RemoveTaskCommentRequest, opts ...operations.Option) (*operations.RemoveTaskCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeTaskComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1877,6 +1876,13 @@ func (s *Comment) RemoveTaskComment(ctx context.Context, request operations.Remo
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/task/{connection_id}/comment/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeTaskComment",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2025,12 +2031,6 @@ func (s *Comment) RemoveTaskComment(ctx context.Context, request operations.Remo
 
 // UpdateKmsComment - Update a comment
 func (s *Comment) UpdateKmsComment(ctx context.Context, request operations.UpdateKmsCommentRequest, opts ...operations.Option) (*operations.UpdateKmsCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateKmsComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2054,6 +2054,12 @@ func (s *Comment) UpdateKmsComment(ctx context.Context, request operations.Updat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateKmsComment",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2235,12 +2241,6 @@ func (s *Comment) UpdateKmsComment(ctx context.Context, request operations.Updat
 
 // UpdateTaskComment - Update a comment
 func (s *Comment) UpdateTaskComment(ctx context.Context, request operations.UpdateTaskCommentRequest, opts ...operations.Option) (*operations.UpdateTaskCommentResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateTaskComment",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2264,6 +2264,12 @@ func (s *Comment) UpdateTaskComment(ctx context.Context, request operations.Upda
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateTaskComment",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

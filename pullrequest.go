@@ -27,12 +27,6 @@ func newPullrequest(sdkConfig sdkConfiguration) *Pullrequest {
 
 // CreateRepoPullrequest - Create a pullrequest
 func (s *Pullrequest) CreateRepoPullrequest(ctx context.Context, request operations.CreateRepoPullrequestRequest, opts ...operations.Option) (*operations.CreateRepoPullrequestResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createRepoPullrequest",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Pullrequest) CreateRepoPullrequest(ctx context.Context, request operati
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createRepoPullrequest",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Pullrequest) CreateRepoPullrequest(ctx context.Context, request operati
 
 // GetRepoPullrequest - Retrieve a pullrequest
 func (s *Pullrequest) GetRepoPullrequest(ctx context.Context, request operations.GetRepoPullrequestRequest, opts ...operations.Option) (*operations.GetRepoPullrequestResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getRepoPullrequest",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Pullrequest) GetRepoPullrequest(ctx context.Context, request operations
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/repo/{connection_id}/pullrequest/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getRepoPullrequest",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Pullrequest) GetRepoPullrequest(ctx context.Context, request operations
 
 // ListRepoPullrequests - List all pullrequests
 func (s *Pullrequest) ListRepoPullrequests(ctx context.Context, request operations.ListRepoPullrequestsRequest, opts ...operations.Option) (*operations.ListRepoPullrequestsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listRepoPullrequests",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Pullrequest) ListRepoPullrequests(ctx context.Context, request operatio
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/repo/{connection_id}/pullrequest", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listRepoPullrequests",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Pullrequest) ListRepoPullrequests(ctx context.Context, request operatio
 
 // PatchRepoPullrequest - Update a pullrequest
 func (s *Pullrequest) PatchRepoPullrequest(ctx context.Context, request operations.PatchRepoPullrequestRequest, opts ...operations.Option) (*operations.PatchRepoPullrequestResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchRepoPullrequest",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Pullrequest) PatchRepoPullrequest(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchRepoPullrequest",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Pullrequest) PatchRepoPullrequest(ctx context.Context, request operatio
 
 // RemoveRepoPullrequest - Remove a pullrequest
 func (s *Pullrequest) RemoveRepoPullrequest(ctx context.Context, request operations.RemoveRepoPullrequestRequest, opts ...operations.Option) (*operations.RemoveRepoPullrequestResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeRepoPullrequest",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Pullrequest) RemoveRepoPullrequest(ctx context.Context, request operati
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/repo/{connection_id}/pullrequest/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeRepoPullrequest",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Pullrequest) RemoveRepoPullrequest(ctx context.Context, request operati
 
 // UpdateRepoPullrequest - Update a pullrequest
 func (s *Pullrequest) UpdateRepoPullrequest(ctx context.Context, request operations.UpdateRepoPullrequestRequest, opts ...operations.Option) (*operations.UpdateRepoPullrequestResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateRepoPullrequest",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Pullrequest) UpdateRepoPullrequest(ctx context.Context, request operati
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateRepoPullrequest",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

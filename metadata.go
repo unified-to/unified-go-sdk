@@ -27,12 +27,6 @@ func newMetadata(sdkConfig sdkConfiguration) *Metadata {
 
 // CreateMetadataMetadata - Create a metadata
 func (s *Metadata) CreateMetadataMetadata(ctx context.Context, request operations.CreateMetadataMetadataRequest, opts ...operations.Option) (*operations.CreateMetadataMetadataResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createMetadataMetadata",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Metadata) CreateMetadataMetadata(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createMetadataMetadata",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MetadataMetadata", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Metadata) CreateMetadataMetadata(ctx context.Context, request operation
 
 // GetMetadataMetadata - Retrieve a metadata
 func (s *Metadata) GetMetadataMetadata(ctx context.Context, request operations.GetMetadataMetadataRequest, opts ...operations.Option) (*operations.GetMetadataMetadataResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getMetadataMetadata",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Metadata) GetMetadataMetadata(ctx context.Context, request operations.G
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/metadata/{connection_id}/metadata/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getMetadataMetadata",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Metadata) GetMetadataMetadata(ctx context.Context, request operations.G
 
 // ListMetadataMetadatas - List all metadatas
 func (s *Metadata) ListMetadataMetadatas(ctx context.Context, request operations.ListMetadataMetadatasRequest, opts ...operations.Option) (*operations.ListMetadataMetadatasResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listMetadataMetadatas",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Metadata) ListMetadataMetadatas(ctx context.Context, request operations
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/metadata/{connection_id}/metadata", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listMetadataMetadatas",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Metadata) ListMetadataMetadatas(ctx context.Context, request operations
 
 // PatchMetadataMetadata - Update a metadata
 func (s *Metadata) PatchMetadataMetadata(ctx context.Context, request operations.PatchMetadataMetadataRequest, opts ...operations.Option) (*operations.PatchMetadataMetadataResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchMetadataMetadata",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Metadata) PatchMetadataMetadata(ctx context.Context, request operations
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchMetadataMetadata",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MetadataMetadata", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Metadata) PatchMetadataMetadata(ctx context.Context, request operations
 
 // RemoveMetadataMetadata - Remove a metadata
 func (s *Metadata) RemoveMetadataMetadata(ctx context.Context, request operations.RemoveMetadataMetadataRequest, opts ...operations.Option) (*operations.RemoveMetadataMetadataResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeMetadataMetadata",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Metadata) RemoveMetadataMetadata(ctx context.Context, request operation
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/metadata/{connection_id}/metadata/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeMetadataMetadata",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Metadata) RemoveMetadataMetadata(ctx context.Context, request operation
 
 // UpdateMetadataMetadata - Update a metadata
 func (s *Metadata) UpdateMetadataMetadata(ctx context.Context, request operations.UpdateMetadataMetadataRequest, opts ...operations.Option) (*operations.UpdateMetadataMetadataResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateMetadataMetadata",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Metadata) UpdateMetadataMetadata(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateMetadataMetadata",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MetadataMetadata", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

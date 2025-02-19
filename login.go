@@ -26,12 +26,6 @@ func newLogin(sdkConfig sdkConfiguration) *Login {
 // GetUnifiedIntegrationLogin - Sign in a user
 // Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
 func (s *Login) GetUnifiedIntegrationLogin(ctx context.Context, request operations.GetUnifiedIntegrationLoginRequest, opts ...operations.Option) (*operations.GetUnifiedIntegrationLoginResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUnifiedIntegrationLogin",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -53,6 +47,13 @@ func (s *Login) GetUnifiedIntegrationLogin(ctx context.Context, request operatio
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/login/{workspace_id}/{integration_type}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUnifiedIntegrationLogin",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

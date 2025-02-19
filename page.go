@@ -27,12 +27,6 @@ func newPage(sdkConfig sdkConfiguration) *Page {
 
 // CreateKmsPage - Create a page
 func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPageRequest, opts ...operations.Option) (*operations.CreateKmsPageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createKmsPage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPa
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createKmsPage",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsPage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPa
 
 // GetKmsPage - Retrieve a page
 func (s *Page) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequest, opts ...operations.Option) (*operations.GetKmsPageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getKmsPage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Page) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequ
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/page/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getKmsPage",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Page) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequ
 
 // ListKmsPages - List all pages
 func (s *Page) ListKmsPages(ctx context.Context, request operations.ListKmsPagesRequest, opts ...operations.Option) (*operations.ListKmsPagesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listKmsPages",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Page) ListKmsPages(ctx context.Context, request operations.ListKmsPages
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/page", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listKmsPages",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Page) ListKmsPages(ctx context.Context, request operations.ListKmsPages
 
 // PatchKmsPage - Update a page
 func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPageRequest, opts ...operations.Option) (*operations.PatchKmsPageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchKmsPage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPage
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchKmsPage",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsPage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPage
 
 // RemoveKmsPage - Remove a page
 func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPageRequest, opts ...operations.Option) (*operations.RemoveKmsPageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeKmsPage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPa
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/kms/{connection_id}/page/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeKmsPage",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPa
 
 // UpdateKmsPage - Update a page
 func (s *Page) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPageRequest, opts ...operations.Option) (*operations.UpdateKmsPageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateKmsPage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Page) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPa
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateKmsPage",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsPage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

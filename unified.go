@@ -29,12 +29,6 @@ func newUnified(sdkConfig sdkConfiguration) *Unified {
 // CreateUnifiedConnection - Create connection
 // Used only to import existing customer credentials; use "Create connection indirectly" instead
 func (s *Unified) CreateUnifiedConnection(ctx context.Context, request *shared.Connection, opts ...operations.Option) (*operations.CreateUnifiedConnectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createUnifiedConnection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -58,6 +52,12 @@ func (s *Unified) CreateUnifiedConnection(ctx context.Context, request *shared.C
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createUnifiedConnection",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -236,12 +236,6 @@ func (s *Unified) CreateUnifiedConnection(ctx context.Context, request *shared.C
 // CreateUnifiedWebhook - Create webhook subscription
 // The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
 func (s *Unified) CreateUnifiedWebhook(ctx context.Context, request operations.CreateUnifiedWebhookRequest, opts ...operations.Option) (*operations.CreateUnifiedWebhookResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createUnifiedWebhook",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -265,6 +259,12 @@ func (s *Unified) CreateUnifiedWebhook(ctx context.Context, request operations.C
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createUnifiedWebhook",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -446,12 +446,6 @@ func (s *Unified) CreateUnifiedWebhook(ctx context.Context, request operations.C
 
 // GetUnifiedApicall - Retrieve specific API Call by its ID
 func (s *Unified) GetUnifiedApicall(ctx context.Context, request operations.GetUnifiedApicallRequest, opts ...operations.Option) (*operations.GetUnifiedApicallResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUnifiedApicall",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -473,6 +467,13 @@ func (s *Unified) GetUnifiedApicall(ctx context.Context, request operations.GetU
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/apicall/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUnifiedApicall",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -644,12 +645,6 @@ func (s *Unified) GetUnifiedApicall(ctx context.Context, request operations.GetU
 
 // GetUnifiedConnection - Retrieve connection
 func (s *Unified) GetUnifiedConnection(ctx context.Context, request operations.GetUnifiedConnectionRequest, opts ...operations.Option) (*operations.GetUnifiedConnectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUnifiedConnection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -671,6 +666,13 @@ func (s *Unified) GetUnifiedConnection(ctx context.Context, request operations.G
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUnifiedConnection",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -843,12 +845,6 @@ func (s *Unified) GetUnifiedConnection(ctx context.Context, request operations.G
 // GetUnifiedIntegrationAuth - Create connection indirectly
 // Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 func (s *Unified) GetUnifiedIntegrationAuth(ctx context.Context, request operations.GetUnifiedIntegrationAuthRequest, opts ...operations.Option) (*operations.GetUnifiedIntegrationAuthResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUnifiedIntegrationAuth",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -870,6 +866,13 @@ func (s *Unified) GetUnifiedIntegrationAuth(ctx context.Context, request operati
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/auth/{workspace_id}/{integration_type}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUnifiedIntegrationAuth",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1041,12 +1044,6 @@ func (s *Unified) GetUnifiedIntegrationAuth(ctx context.Context, request operati
 
 // GetUnifiedWebhook - Retrieve webhook by its ID
 func (s *Unified) GetUnifiedWebhook(ctx context.Context, request operations.GetUnifiedWebhookRequest, opts ...operations.Option) (*operations.GetUnifiedWebhookResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUnifiedWebhook",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1068,6 +1065,13 @@ func (s *Unified) GetUnifiedWebhook(ctx context.Context, request operations.GetU
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUnifiedWebhook",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1239,12 +1243,6 @@ func (s *Unified) GetUnifiedWebhook(ctx context.Context, request operations.GetU
 
 // ListUnifiedApicalls - Returns API Calls
 func (s *Unified) ListUnifiedApicalls(ctx context.Context, request operations.ListUnifiedApicallsRequest, opts ...operations.Option) (*operations.ListUnifiedApicallsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedApicalls",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1266,6 +1264,13 @@ func (s *Unified) ListUnifiedApicalls(ctx context.Context, request operations.Li
 	opURL, err := url.JoinPath(baseURL, "/unified/apicall")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedApicalls",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1441,12 +1446,6 @@ func (s *Unified) ListUnifiedApicalls(ctx context.Context, request operations.Li
 
 // ListUnifiedConnections - List all connections
 func (s *Unified) ListUnifiedConnections(ctx context.Context, request operations.ListUnifiedConnectionsRequest, opts ...operations.Option) (*operations.ListUnifiedConnectionsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedConnections",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1468,6 +1467,13 @@ func (s *Unified) ListUnifiedConnections(ctx context.Context, request operations
 	opURL, err := url.JoinPath(baseURL, "/unified/connection")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedConnections",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1644,12 +1650,6 @@ func (s *Unified) ListUnifiedConnections(ctx context.Context, request operations
 // ListUnifiedIntegrationWorkspaces - Returns all activated integrations in a workspace
 // No authentication required as this is to be used by front-end interface
 func (s *Unified) ListUnifiedIntegrationWorkspaces(ctx context.Context, request operations.ListUnifiedIntegrationWorkspacesRequest, opts ...operations.Option) (*operations.ListUnifiedIntegrationWorkspacesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedIntegrationWorkspaces",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1671,6 +1671,13 @@ func (s *Unified) ListUnifiedIntegrationWorkspaces(ctx context.Context, request 
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/workspace/{workspace_id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedIntegrationWorkspaces",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1846,12 +1853,6 @@ func (s *Unified) ListUnifiedIntegrationWorkspaces(ctx context.Context, request 
 
 // ListUnifiedIntegrations - Returns all integrations
 func (s *Unified) ListUnifiedIntegrations(ctx context.Context, request operations.ListUnifiedIntegrationsRequest, opts ...operations.Option) (*operations.ListUnifiedIntegrationsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedIntegrations",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1873,6 +1874,13 @@ func (s *Unified) ListUnifiedIntegrations(ctx context.Context, request operation
 	opURL, err := url.JoinPath(baseURL, "/unified/integration")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedIntegrations",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2048,12 +2056,6 @@ func (s *Unified) ListUnifiedIntegrations(ctx context.Context, request operation
 
 // ListUnifiedIssues - List support issues
 func (s *Unified) ListUnifiedIssues(ctx context.Context, request operations.ListUnifiedIssuesRequest, opts ...operations.Option) (*operations.ListUnifiedIssuesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedIssues",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2075,6 +2077,13 @@ func (s *Unified) ListUnifiedIssues(ctx context.Context, request operations.List
 	opURL, err := url.JoinPath(baseURL, "/unified/issue")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedIssues",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2250,12 +2259,6 @@ func (s *Unified) ListUnifiedIssues(ctx context.Context, request operations.List
 
 // ListUnifiedWebhooks - Returns all registered webhooks
 func (s *Unified) ListUnifiedWebhooks(ctx context.Context, request operations.ListUnifiedWebhooksRequest, opts ...operations.Option) (*operations.ListUnifiedWebhooksResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedWebhooks",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2277,6 +2280,13 @@ func (s *Unified) ListUnifiedWebhooks(ctx context.Context, request operations.Li
 	opURL, err := url.JoinPath(baseURL, "/unified/webhook")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedWebhooks",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2452,12 +2462,6 @@ func (s *Unified) ListUnifiedWebhooks(ctx context.Context, request operations.Li
 
 // PatchUnifiedConnection - Update connection
 func (s *Unified) PatchUnifiedConnection(ctx context.Context, request operations.PatchUnifiedConnectionRequest, opts ...operations.Option) (*operations.PatchUnifiedConnectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchUnifiedConnection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2481,6 +2485,12 @@ func (s *Unified) PatchUnifiedConnection(ctx context.Context, request operations
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchUnifiedConnection",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Connection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2658,12 +2668,6 @@ func (s *Unified) PatchUnifiedConnection(ctx context.Context, request operations
 
 // PatchUnifiedWebhook - Update webhook subscription
 func (s *Unified) PatchUnifiedWebhook(ctx context.Context, request operations.PatchUnifiedWebhookRequest, opts ...operations.Option) (*operations.PatchUnifiedWebhookResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchUnifiedWebhook",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2687,6 +2691,12 @@ func (s *Unified) PatchUnifiedWebhook(ctx context.Context, request operations.Pa
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchUnifiedWebhook",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2864,12 +2874,6 @@ func (s *Unified) PatchUnifiedWebhook(ctx context.Context, request operations.Pa
 
 // PatchUnifiedWebhookTrigger - Trigger webhook
 func (s *Unified) PatchUnifiedWebhookTrigger(ctx context.Context, request operations.PatchUnifiedWebhookTriggerRequest, opts ...operations.Option) (*operations.PatchUnifiedWebhookTriggerResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchUnifiedWebhookTrigger",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2891,6 +2895,13 @@ func (s *Unified) PatchUnifiedWebhookTrigger(ctx context.Context, request operat
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}/trigger", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchUnifiedWebhookTrigger",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -3039,12 +3050,6 @@ func (s *Unified) PatchUnifiedWebhookTrigger(ctx context.Context, request operat
 
 // RemoveUnifiedConnection - Remove connection
 func (s *Unified) RemoveUnifiedConnection(ctx context.Context, request operations.RemoveUnifiedConnectionRequest, opts ...operations.Option) (*operations.RemoveUnifiedConnectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeUnifiedConnection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3066,6 +3071,13 @@ func (s *Unified) RemoveUnifiedConnection(ctx context.Context, request operation
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeUnifiedConnection",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -3214,12 +3226,6 @@ func (s *Unified) RemoveUnifiedConnection(ctx context.Context, request operation
 
 // RemoveUnifiedWebhook - Remove webhook subscription
 func (s *Unified) RemoveUnifiedWebhook(ctx context.Context, request operations.RemoveUnifiedWebhookRequest, opts ...operations.Option) (*operations.RemoveUnifiedWebhookResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeUnifiedWebhook",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3241,6 +3247,13 @@ func (s *Unified) RemoveUnifiedWebhook(ctx context.Context, request operations.R
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeUnifiedWebhook",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -3389,12 +3402,6 @@ func (s *Unified) RemoveUnifiedWebhook(ctx context.Context, request operations.R
 
 // UpdateUnifiedConnection - Update connection
 func (s *Unified) UpdateUnifiedConnection(ctx context.Context, request operations.UpdateUnifiedConnectionRequest, opts ...operations.Option) (*operations.UpdateUnifiedConnectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateUnifiedConnection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3418,6 +3425,12 @@ func (s *Unified) UpdateUnifiedConnection(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateUnifiedConnection",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Connection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -3595,12 +3608,6 @@ func (s *Unified) UpdateUnifiedConnection(ctx context.Context, request operation
 
 // UpdateUnifiedWebhook - Update webhook subscription
 func (s *Unified) UpdateUnifiedWebhook(ctx context.Context, request operations.UpdateUnifiedWebhookRequest, opts ...operations.Option) (*operations.UpdateUnifiedWebhookResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateUnifiedWebhook",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3624,6 +3631,12 @@ func (s *Unified) UpdateUnifiedWebhook(ctx context.Context, request operations.U
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateUnifiedWebhook",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -3801,12 +3814,6 @@ func (s *Unified) UpdateUnifiedWebhook(ctx context.Context, request operations.U
 
 // UpdateUnifiedWebhookTrigger - Trigger webhook
 func (s *Unified) UpdateUnifiedWebhookTrigger(ctx context.Context, request operations.UpdateUnifiedWebhookTriggerRequest, opts ...operations.Option) (*operations.UpdateUnifiedWebhookTriggerResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateUnifiedWebhookTrigger",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3828,6 +3835,13 @@ func (s *Unified) UpdateUnifiedWebhookTrigger(ctx context.Context, request opera
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}/trigger", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateUnifiedWebhookTrigger",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

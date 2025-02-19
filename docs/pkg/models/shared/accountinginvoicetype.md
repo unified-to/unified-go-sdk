@@ -3,7 +3,8 @@
 
 ## Values
 
-| Name                           | Value                          |
-| ------------------------------ | ------------------------------ |
-| `AccountingInvoiceTypeBill`    | BILL                           |
-| `AccountingInvoiceTypeInvoice` | INVOICE                        |
+| Name                              | Value                             |
+| --------------------------------- | --------------------------------- |
+| `AccountingInvoiceTypeBill`       | BILL                              |
+| `AccountingInvoiceTypeInvoice`    | INVOICE                           |
+| `AccountingInvoiceTypeCreditmemo` | CREDITMEMO                        |

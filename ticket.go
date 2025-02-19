@@ -27,12 +27,6 @@ func newTicket(sdkConfig sdkConfiguration) *Ticket {
 
 // CreateTicketingTicket - Create a ticket
 func (s *Ticket) CreateTicketingTicket(ctx context.Context, request operations.CreateTicketingTicketRequest, opts ...operations.Option) (*operations.CreateTicketingTicketResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createTicketingTicket",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Ticket) CreateTicketingTicket(ctx context.Context, request operations.C
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createTicketingTicket",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingTicket", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Ticket) CreateTicketingTicket(ctx context.Context, request operations.C
 
 // GetTicketingTicket - Retrieve a ticket
 func (s *Ticket) GetTicketingTicket(ctx context.Context, request operations.GetTicketingTicketRequest, opts ...operations.Option) (*operations.GetTicketingTicketResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getTicketingTicket",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Ticket) GetTicketingTicket(ctx context.Context, request operations.GetT
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/ticket/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getTicketingTicket",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Ticket) GetTicketingTicket(ctx context.Context, request operations.GetT
 
 // ListTicketingTickets - List all tickets
 func (s *Ticket) ListTicketingTickets(ctx context.Context, request operations.ListTicketingTicketsRequest, opts ...operations.Option) (*operations.ListTicketingTicketsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listTicketingTickets",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Ticket) ListTicketingTickets(ctx context.Context, request operations.Li
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/ticket", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listTicketingTickets",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Ticket) ListTicketingTickets(ctx context.Context, request operations.Li
 
 // PatchTicketingTicket - Update a ticket
 func (s *Ticket) PatchTicketingTicket(ctx context.Context, request operations.PatchTicketingTicketRequest, opts ...operations.Option) (*operations.PatchTicketingTicketResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchTicketingTicket",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Ticket) PatchTicketingTicket(ctx context.Context, request operations.Pa
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchTicketingTicket",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingTicket", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Ticket) PatchTicketingTicket(ctx context.Context, request operations.Pa
 
 // RemoveTicketingTicket - Remove a ticket
 func (s *Ticket) RemoveTicketingTicket(ctx context.Context, request operations.RemoveTicketingTicketRequest, opts ...operations.Option) (*operations.RemoveTicketingTicketResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeTicketingTicket",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Ticket) RemoveTicketingTicket(ctx context.Context, request operations.R
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ticketing/{connection_id}/ticket/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeTicketingTicket",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Ticket) RemoveTicketingTicket(ctx context.Context, request operations.R
 
 // UpdateTicketingTicket - Update a ticket
 func (s *Ticket) UpdateTicketingTicket(ctx context.Context, request operations.UpdateTicketingTicketRequest, opts ...operations.Option) (*operations.UpdateTicketingTicketResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateTicketingTicket",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Ticket) UpdateTicketingTicket(ctx context.Context, request operations.U
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateTicketingTicket",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingTicket", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

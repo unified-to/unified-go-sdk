@@ -27,12 +27,6 @@ func newCourse(sdkConfig sdkConfiguration) *Course {
 
 // CreateLmsCourse - Create a course
 func (s *Course) CreateLmsCourse(ctx context.Context, request operations.CreateLmsCourseRequest, opts ...operations.Option) (*operations.CreateLmsCourseResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createLmsCourse",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Course) CreateLmsCourse(ctx context.Context, request operations.CreateL
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createLmsCourse",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "LmsCourse", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Course) CreateLmsCourse(ctx context.Context, request operations.CreateL
 
 // GetLmsCourse - Retrieve a course
 func (s *Course) GetLmsCourse(ctx context.Context, request operations.GetLmsCourseRequest, opts ...operations.Option) (*operations.GetLmsCourseResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getLmsCourse",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Course) GetLmsCourse(ctx context.Context, request operations.GetLmsCour
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/lms/{connection_id}/course/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getLmsCourse",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Course) GetLmsCourse(ctx context.Context, request operations.GetLmsCour
 
 // ListLmsCourses - List all courses
 func (s *Course) ListLmsCourses(ctx context.Context, request operations.ListLmsCoursesRequest, opts ...operations.Option) (*operations.ListLmsCoursesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listLmsCourses",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Course) ListLmsCourses(ctx context.Context, request operations.ListLmsC
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/lms/{connection_id}/course", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listLmsCourses",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Course) ListLmsCourses(ctx context.Context, request operations.ListLmsC
 
 // PatchLmsCourse - Update a course
 func (s *Course) PatchLmsCourse(ctx context.Context, request operations.PatchLmsCourseRequest, opts ...operations.Option) (*operations.PatchLmsCourseResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchLmsCourse",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Course) PatchLmsCourse(ctx context.Context, request operations.PatchLms
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchLmsCourse",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "LmsCourse", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Course) PatchLmsCourse(ctx context.Context, request operations.PatchLms
 
 // RemoveLmsCourse - Remove a course
 func (s *Course) RemoveLmsCourse(ctx context.Context, request operations.RemoveLmsCourseRequest, opts ...operations.Option) (*operations.RemoveLmsCourseResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeLmsCourse",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Course) RemoveLmsCourse(ctx context.Context, request operations.RemoveL
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/lms/{connection_id}/course/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeLmsCourse",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Course) RemoveLmsCourse(ctx context.Context, request operations.RemoveL
 
 // UpdateLmsCourse - Update a course
 func (s *Course) UpdateLmsCourse(ctx context.Context, request operations.UpdateLmsCourseRequest, opts ...operations.Option) (*operations.UpdateLmsCourseResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateLmsCourse",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Course) UpdateLmsCourse(ctx context.Context, request operations.UpdateL
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateLmsCourse",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "LmsCourse", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

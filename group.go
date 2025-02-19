@@ -27,12 +27,6 @@ func newGroup(sdkConfig sdkConfiguration) *Group {
 
 // CreateHrisGroup - Create a group
 func (s *Group) CreateHrisGroup(ctx context.Context, request operations.CreateHrisGroupRequest, opts ...operations.Option) (*operations.CreateHrisGroupResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createHrisGroup",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Group) CreateHrisGroup(ctx context.Context, request operations.CreateHr
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createHrisGroup",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Group) CreateHrisGroup(ctx context.Context, request operations.CreateHr
 
 // CreateScimGroups - Create group
 func (s *Group) CreateScimGroups(ctx context.Context, request operations.CreateScimGroupsRequest, opts ...operations.Option) (*operations.CreateScimGroupsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createScimGroups",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -266,6 +260,12 @@ func (s *Group) CreateScimGroups(ctx context.Context, request operations.CreateS
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createScimGroups",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -443,12 +443,6 @@ func (s *Group) CreateScimGroups(ctx context.Context, request operations.CreateS
 
 // GetHrisGroup - Retrieve a group
 func (s *Group) GetHrisGroup(ctx context.Context, request operations.GetHrisGroupRequest, opts ...operations.Option) (*operations.GetHrisGroupResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getHrisGroup",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -470,6 +464,13 @@ func (s *Group) GetHrisGroup(ctx context.Context, request operations.GetHrisGrou
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/group/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getHrisGroup",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -645,12 +646,6 @@ func (s *Group) GetHrisGroup(ctx context.Context, request operations.GetHrisGrou
 
 // GetScimGroups - Get group
 func (s *Group) GetScimGroups(ctx context.Context, request operations.GetScimGroupsRequest, opts ...operations.Option) (*operations.GetScimGroupsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getScimGroups",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -672,6 +667,13 @@ func (s *Group) GetScimGroups(ctx context.Context, request operations.GetScimGro
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/scim/{connection_id}/groups/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getScimGroups",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -843,12 +845,6 @@ func (s *Group) GetScimGroups(ctx context.Context, request operations.GetScimGro
 
 // ListHrisGroups - List all groups
 func (s *Group) ListHrisGroups(ctx context.Context, request operations.ListHrisGroupsRequest, opts ...operations.Option) (*operations.ListHrisGroupsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listHrisGroups",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -870,6 +866,13 @@ func (s *Group) ListHrisGroups(ctx context.Context, request operations.ListHrisG
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/group", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listHrisGroups",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1045,12 +1048,6 @@ func (s *Group) ListHrisGroups(ctx context.Context, request operations.ListHrisG
 
 // ListScimGroups - List groups
 func (s *Group) ListScimGroups(ctx context.Context, request operations.ListScimGroupsRequest, opts ...operations.Option) (*operations.ListScimGroupsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listScimGroups",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1072,6 +1069,13 @@ func (s *Group) ListScimGroups(ctx context.Context, request operations.ListScimG
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/scim/{connection_id}/groups", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listScimGroups",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1247,12 +1251,6 @@ func (s *Group) ListScimGroups(ctx context.Context, request operations.ListScimG
 
 // PatchHrisGroup - Update a group
 func (s *Group) PatchHrisGroup(ctx context.Context, request operations.PatchHrisGroupRequest, opts ...operations.Option) (*operations.PatchHrisGroupResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchHrisGroup",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1276,6 +1274,12 @@ func (s *Group) PatchHrisGroup(ctx context.Context, request operations.PatchHris
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchHrisGroup",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1457,12 +1461,6 @@ func (s *Group) PatchHrisGroup(ctx context.Context, request operations.PatchHris
 
 // PatchScimGroups - Update group
 func (s *Group) PatchScimGroups(ctx context.Context, request operations.PatchScimGroupsRequest, opts ...operations.Option) (*operations.PatchScimGroupsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchScimGroups",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1486,6 +1484,12 @@ func (s *Group) PatchScimGroups(ctx context.Context, request operations.PatchSci
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchScimGroups",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1663,12 +1667,6 @@ func (s *Group) PatchScimGroups(ctx context.Context, request operations.PatchSci
 
 // RemoveHrisGroup - Remove a group
 func (s *Group) RemoveHrisGroup(ctx context.Context, request operations.RemoveHrisGroupRequest, opts ...operations.Option) (*operations.RemoveHrisGroupResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeHrisGroup",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1690,6 +1688,13 @@ func (s *Group) RemoveHrisGroup(ctx context.Context, request operations.RemoveHr
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/group/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeHrisGroup",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1838,12 +1843,6 @@ func (s *Group) RemoveHrisGroup(ctx context.Context, request operations.RemoveHr
 
 // RemoveScimGroups - Delete group
 func (s *Group) RemoveScimGroups(ctx context.Context, request operations.RemoveScimGroupsRequest, opts ...operations.Option) (*operations.RemoveScimGroupsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeScimGroups",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1865,6 +1864,13 @@ func (s *Group) RemoveScimGroups(ctx context.Context, request operations.RemoveS
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/scim/{connection_id}/groups/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeScimGroups",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2013,12 +2019,6 @@ func (s *Group) RemoveScimGroups(ctx context.Context, request operations.RemoveS
 
 // UpdateHrisGroup - Update a group
 func (s *Group) UpdateHrisGroup(ctx context.Context, request operations.UpdateHrisGroupRequest, opts ...operations.Option) (*operations.UpdateHrisGroupResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateHrisGroup",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2042,6 +2042,12 @@ func (s *Group) UpdateHrisGroup(ctx context.Context, request operations.UpdateHr
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateHrisGroup",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2223,12 +2229,6 @@ func (s *Group) UpdateHrisGroup(ctx context.Context, request operations.UpdateHr
 
 // UpdateScimGroups - Update group
 func (s *Group) UpdateScimGroups(ctx context.Context, request operations.UpdateScimGroupsRequest, opts ...operations.Option) (*operations.UpdateScimGroupsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateScimGroups",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2252,6 +2252,12 @@ func (s *Group) UpdateScimGroups(ctx context.Context, request operations.UpdateS
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateScimGroups",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

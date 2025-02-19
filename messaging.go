@@ -27,12 +27,6 @@ func newMessaging(sdkConfig sdkConfiguration) *Messaging {
 
 // CreateMessagingMessage - Create a message
 func (s *Messaging) CreateMessagingMessage(ctx context.Context, request operations.CreateMessagingMessageRequest, opts ...operations.Option) (*operations.CreateMessagingMessageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createMessagingMessage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Messaging) CreateMessagingMessage(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createMessagingMessage",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MessagingMessage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Messaging) CreateMessagingMessage(ctx context.Context, request operatio
 
 // GetMessagingChannel - Retrieve a channel
 func (s *Messaging) GetMessagingChannel(ctx context.Context, request operations.GetMessagingChannelRequest, opts ...operations.Option) (*operations.GetMessagingChannelResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getMessagingChannel",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Messaging) GetMessagingChannel(ctx context.Context, request operations.
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/messaging/{connection_id}/channel/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getMessagingChannel",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Messaging) GetMessagingChannel(ctx context.Context, request operations.
 
 // GetMessagingMessage - Retrieve a message
 func (s *Messaging) GetMessagingMessage(ctx context.Context, request operations.GetMessagingMessageRequest, opts ...operations.Option) (*operations.GetMessagingMessageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getMessagingMessage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Messaging) GetMessagingMessage(ctx context.Context, request operations.
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/messaging/{connection_id}/message/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getMessagingMessage",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Messaging) GetMessagingMessage(ctx context.Context, request operations.
 
 // ListMessagingChannels - List all channels
 func (s *Messaging) ListMessagingChannels(ctx context.Context, request operations.ListMessagingChannelsRequest, opts ...operations.Option) (*operations.ListMessagingChannelsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listMessagingChannels",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -668,6 +664,13 @@ func (s *Messaging) ListMessagingChannels(ctx context.Context, request operation
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/messaging/{connection_id}/channel", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listMessagingChannels",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -843,12 +846,6 @@ func (s *Messaging) ListMessagingChannels(ctx context.Context, request operation
 
 // ListMessagingMessages - List all messages
 func (s *Messaging) ListMessagingMessages(ctx context.Context, request operations.ListMessagingMessagesRequest, opts ...operations.Option) (*operations.ListMessagingMessagesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listMessagingMessages",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -870,6 +867,13 @@ func (s *Messaging) ListMessagingMessages(ctx context.Context, request operation
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/messaging/{connection_id}/message", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listMessagingMessages",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1045,12 +1049,6 @@ func (s *Messaging) ListMessagingMessages(ctx context.Context, request operation
 
 // PatchMessagingMessage - Update a message
 func (s *Messaging) PatchMessagingMessage(ctx context.Context, request operations.PatchMessagingMessageRequest, opts ...operations.Option) (*operations.PatchMessagingMessageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchMessagingMessage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1074,6 +1072,12 @@ func (s *Messaging) PatchMessagingMessage(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchMessagingMessage",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MessagingMessage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1255,12 +1259,6 @@ func (s *Messaging) PatchMessagingMessage(ctx context.Context, request operation
 
 // RemoveMessagingMessage - Remove a message
 func (s *Messaging) RemoveMessagingMessage(ctx context.Context, request operations.RemoveMessagingMessageRequest, opts ...operations.Option) (*operations.RemoveMessagingMessageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeMessagingMessage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1282,6 +1280,13 @@ func (s *Messaging) RemoveMessagingMessage(ctx context.Context, request operatio
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/messaging/{connection_id}/message/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeMessagingMessage",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1430,12 +1435,6 @@ func (s *Messaging) RemoveMessagingMessage(ctx context.Context, request operatio
 
 // UpdateMessagingMessage - Update a message
 func (s *Messaging) UpdateMessagingMessage(ctx context.Context, request operations.UpdateMessagingMessageRequest, opts ...operations.Option) (*operations.UpdateMessagingMessageResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateMessagingMessage",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1459,6 +1458,12 @@ func (s *Messaging) UpdateMessagingMessage(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateMessagingMessage",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MessagingMessage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

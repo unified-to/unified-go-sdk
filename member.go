@@ -27,12 +27,6 @@ func newMember(sdkConfig sdkConfiguration) *Member {
 
 // CreateMartechMember - Create a member
 func (s *Member) CreateMartechMember(ctx context.Context, request operations.CreateMartechMemberRequest, opts ...operations.Option) (*operations.CreateMartechMemberResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createMartechMember",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Member) CreateMartechMember(ctx context.Context, request operations.Cre
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createMartechMember",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MarketingMember", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Member) CreateMartechMember(ctx context.Context, request operations.Cre
 
 // GetMartechMember - Retrieve a member
 func (s *Member) GetMartechMember(ctx context.Context, request operations.GetMartechMemberRequest, opts ...operations.Option) (*operations.GetMartechMemberResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getMartechMember",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Member) GetMartechMember(ctx context.Context, request operations.GetMar
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/member/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getMartechMember",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Member) GetMartechMember(ctx context.Context, request operations.GetMar
 
 // ListMartechMembers - List all members
 func (s *Member) ListMartechMembers(ctx context.Context, request operations.ListMartechMembersRequest, opts ...operations.Option) (*operations.ListMartechMembersResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listMartechMembers",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Member) ListMartechMembers(ctx context.Context, request operations.List
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/member", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listMartechMembers",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Member) ListMartechMembers(ctx context.Context, request operations.List
 
 // PatchMartechMember - Update a member
 func (s *Member) PatchMartechMember(ctx context.Context, request operations.PatchMartechMemberRequest, opts ...operations.Option) (*operations.PatchMartechMemberResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchMartechMember",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Member) PatchMartechMember(ctx context.Context, request operations.Patc
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchMartechMember",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MarketingMember", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Member) PatchMartechMember(ctx context.Context, request operations.Patc
 
 // RemoveMartechMember - Remove a member
 func (s *Member) RemoveMartechMember(ctx context.Context, request operations.RemoveMartechMemberRequest, opts ...operations.Option) (*operations.RemoveMartechMemberResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeMartechMember",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Member) RemoveMartechMember(ctx context.Context, request operations.Rem
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/member/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeMartechMember",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Member) RemoveMartechMember(ctx context.Context, request operations.Rem
 
 // UpdateMartechMember - Update a member
 func (s *Member) UpdateMartechMember(ctx context.Context, request operations.UpdateMartechMemberRequest, opts ...operations.Option) (*operations.UpdateMartechMemberResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateMartechMember",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Member) UpdateMartechMember(ctx context.Context, request operations.Upd
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateMartechMember",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MarketingMember", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

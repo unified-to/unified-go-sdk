@@ -29,12 +29,6 @@ func newWebhook(sdkConfig sdkConfiguration) *Webhook {
 // CreateUnifiedWebhook - Create webhook subscription
 // The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
 func (s *Webhook) CreateUnifiedWebhook(ctx context.Context, request operations.CreateUnifiedWebhookRequest, opts ...operations.Option) (*operations.CreateUnifiedWebhookResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createUnifiedWebhook",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -58,6 +52,12 @@ func (s *Webhook) CreateUnifiedWebhook(ctx context.Context, request operations.C
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createUnifiedWebhook",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -239,12 +239,6 @@ func (s *Webhook) CreateUnifiedWebhook(ctx context.Context, request operations.C
 
 // GetUnifiedWebhook - Retrieve webhook by its ID
 func (s *Webhook) GetUnifiedWebhook(ctx context.Context, request operations.GetUnifiedWebhookRequest, opts ...operations.Option) (*operations.GetUnifiedWebhookResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUnifiedWebhook",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -266,6 +260,13 @@ func (s *Webhook) GetUnifiedWebhook(ctx context.Context, request operations.GetU
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUnifiedWebhook",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -437,12 +438,6 @@ func (s *Webhook) GetUnifiedWebhook(ctx context.Context, request operations.GetU
 
 // ListUnifiedWebhooks - Returns all registered webhooks
 func (s *Webhook) ListUnifiedWebhooks(ctx context.Context, request operations.ListUnifiedWebhooksRequest, opts ...operations.Option) (*operations.ListUnifiedWebhooksResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedWebhooks",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -464,6 +459,13 @@ func (s *Webhook) ListUnifiedWebhooks(ctx context.Context, request operations.Li
 	opURL, err := url.JoinPath(baseURL, "/unified/webhook")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedWebhooks",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -639,12 +641,6 @@ func (s *Webhook) ListUnifiedWebhooks(ctx context.Context, request operations.Li
 
 // PatchUnifiedWebhook - Update webhook subscription
 func (s *Webhook) PatchUnifiedWebhook(ctx context.Context, request operations.PatchUnifiedWebhookRequest, opts ...operations.Option) (*operations.PatchUnifiedWebhookResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchUnifiedWebhook",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -668,6 +664,12 @@ func (s *Webhook) PatchUnifiedWebhook(ctx context.Context, request operations.Pa
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchUnifiedWebhook",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -845,12 +847,6 @@ func (s *Webhook) PatchUnifiedWebhook(ctx context.Context, request operations.Pa
 
 // PatchUnifiedWebhookTrigger - Trigger webhook
 func (s *Webhook) PatchUnifiedWebhookTrigger(ctx context.Context, request operations.PatchUnifiedWebhookTriggerRequest, opts ...operations.Option) (*operations.PatchUnifiedWebhookTriggerResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchUnifiedWebhookTrigger",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -872,6 +868,13 @@ func (s *Webhook) PatchUnifiedWebhookTrigger(ctx context.Context, request operat
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}/trigger", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchUnifiedWebhookTrigger",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1020,12 +1023,6 @@ func (s *Webhook) PatchUnifiedWebhookTrigger(ctx context.Context, request operat
 
 // RemoveUnifiedWebhook - Remove webhook subscription
 func (s *Webhook) RemoveUnifiedWebhook(ctx context.Context, request operations.RemoveUnifiedWebhookRequest, opts ...operations.Option) (*operations.RemoveUnifiedWebhookResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeUnifiedWebhook",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1047,6 +1044,13 @@ func (s *Webhook) RemoveUnifiedWebhook(ctx context.Context, request operations.R
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeUnifiedWebhook",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1195,12 +1199,6 @@ func (s *Webhook) RemoveUnifiedWebhook(ctx context.Context, request operations.R
 
 // UpdateUnifiedWebhook - Update webhook subscription
 func (s *Webhook) UpdateUnifiedWebhook(ctx context.Context, request operations.UpdateUnifiedWebhookRequest, opts ...operations.Option) (*operations.UpdateUnifiedWebhookResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateUnifiedWebhook",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1224,6 +1222,12 @@ func (s *Webhook) UpdateUnifiedWebhook(ctx context.Context, request operations.U
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateUnifiedWebhook",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1401,12 +1405,6 @@ func (s *Webhook) UpdateUnifiedWebhook(ctx context.Context, request operations.U
 
 // UpdateUnifiedWebhookTrigger - Trigger webhook
 func (s *Webhook) UpdateUnifiedWebhookTrigger(ctx context.Context, request operations.UpdateUnifiedWebhookTriggerRequest, opts ...operations.Option) (*operations.UpdateUnifiedWebhookTriggerResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateUnifiedWebhookTrigger",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1428,6 +1426,13 @@ func (s *Webhook) UpdateUnifiedWebhookTrigger(ctx context.Context, request opera
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/webhook/{id}/trigger", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateUnifiedWebhookTrigger",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

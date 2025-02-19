@@ -27,12 +27,6 @@ func newLink(sdkConfig sdkConfiguration) *Link {
 
 // CreatePaymentLink - Create a link
 func (s *Link) CreatePaymentLink(ctx context.Context, request operations.CreatePaymentLinkRequest, opts ...operations.Option) (*operations.CreatePaymentLinkResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createPaymentLink",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Link) CreatePaymentLink(ctx context.Context, request operations.CreateP
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createPaymentLink",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentLink", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Link) CreatePaymentLink(ctx context.Context, request operations.CreateP
 
 // GetPaymentLink - Retrieve a link
 func (s *Link) GetPaymentLink(ctx context.Context, request operations.GetPaymentLinkRequest, opts ...operations.Option) (*operations.GetPaymentLinkResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getPaymentLink",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Link) GetPaymentLink(ctx context.Context, request operations.GetPayment
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/payment/{connection_id}/link/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getPaymentLink",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Link) GetPaymentLink(ctx context.Context, request operations.GetPayment
 
 // ListPaymentLinks - List all links
 func (s *Link) ListPaymentLinks(ctx context.Context, request operations.ListPaymentLinksRequest, opts ...operations.Option) (*operations.ListPaymentLinksResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listPaymentLinks",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Link) ListPaymentLinks(ctx context.Context, request operations.ListPaym
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/payment/{connection_id}/link", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listPaymentLinks",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Link) ListPaymentLinks(ctx context.Context, request operations.ListPaym
 
 // PatchPaymentLink - Update a link
 func (s *Link) PatchPaymentLink(ctx context.Context, request operations.PatchPaymentLinkRequest, opts ...operations.Option) (*operations.PatchPaymentLinkResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchPaymentLink",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Link) PatchPaymentLink(ctx context.Context, request operations.PatchPay
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchPaymentLink",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentLink", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Link) PatchPaymentLink(ctx context.Context, request operations.PatchPay
 
 // RemovePaymentLink - Remove a link
 func (s *Link) RemovePaymentLink(ctx context.Context, request operations.RemovePaymentLinkRequest, opts ...operations.Option) (*operations.RemovePaymentLinkResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removePaymentLink",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Link) RemovePaymentLink(ctx context.Context, request operations.RemoveP
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/payment/{connection_id}/link/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removePaymentLink",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Link) RemovePaymentLink(ctx context.Context, request operations.RemoveP
 
 // UpdatePaymentLink - Update a link
 func (s *Link) UpdatePaymentLink(ctx context.Context, request operations.UpdatePaymentLinkRequest, opts ...operations.Option) (*operations.UpdatePaymentLinkResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updatePaymentLink",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Link) UpdatePaymentLink(ctx context.Context, request operations.UpdateP
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updatePaymentLink",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentLink", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

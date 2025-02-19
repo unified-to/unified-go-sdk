@@ -27,12 +27,6 @@ func newActivity(sdkConfig sdkConfiguration) *Activity {
 
 // CreateAtsActivity - Create an activity
 func (s *Activity) CreateAtsActivity(ctx context.Context, request operations.CreateAtsActivityRequest, opts ...operations.Option) (*operations.CreateAtsActivityResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createAtsActivity",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Activity) CreateAtsActivity(ctx context.Context, request operations.Cre
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createAtsActivity",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsActivity", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Activity) CreateAtsActivity(ctx context.Context, request operations.Cre
 
 // GetAtsActivity - Retrieve an activity
 func (s *Activity) GetAtsActivity(ctx context.Context, request operations.GetAtsActivityRequest, opts ...operations.Option) (*operations.GetAtsActivityResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getAtsActivity",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Activity) GetAtsActivity(ctx context.Context, request operations.GetAts
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/activity/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getAtsActivity",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Activity) GetAtsActivity(ctx context.Context, request operations.GetAts
 
 // ListAtsActivities - List all activities
 func (s *Activity) ListAtsActivities(ctx context.Context, request operations.ListAtsActivitiesRequest, opts ...operations.Option) (*operations.ListAtsActivitiesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listAtsActivities",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Activity) ListAtsActivities(ctx context.Context, request operations.Lis
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/activity", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listAtsActivities",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Activity) ListAtsActivities(ctx context.Context, request operations.Lis
 
 // PatchAtsActivity - Update an activity
 func (s *Activity) PatchAtsActivity(ctx context.Context, request operations.PatchAtsActivityRequest, opts ...operations.Option) (*operations.PatchAtsActivityResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchAtsActivity",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Activity) PatchAtsActivity(ctx context.Context, request operations.Patc
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchAtsActivity",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsActivity", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Activity) PatchAtsActivity(ctx context.Context, request operations.Patc
 
 // RemoveAtsActivity - Remove an activity
 func (s *Activity) RemoveAtsActivity(ctx context.Context, request operations.RemoveAtsActivityRequest, opts ...operations.Option) (*operations.RemoveAtsActivityResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeAtsActivity",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Activity) RemoveAtsActivity(ctx context.Context, request operations.Rem
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/activity/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeAtsActivity",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Activity) RemoveAtsActivity(ctx context.Context, request operations.Rem
 
 // UpdateAtsActivity - Update an activity
 func (s *Activity) UpdateAtsActivity(ctx context.Context, request operations.UpdateAtsActivityRequest, opts ...operations.Option) (*operations.UpdateAtsActivityResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateAtsActivity",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Activity) UpdateAtsActivity(ctx context.Context, request operations.Upd
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateAtsActivity",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsActivity", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

@@ -27,12 +27,6 @@ func newAccount(sdkConfig sdkConfiguration) *Account {
 
 // CreateAccountingAccount - Create an account
 func (s *Account) CreateAccountingAccount(ctx context.Context, request operations.CreateAccountingAccountRequest, opts ...operations.Option) (*operations.CreateAccountingAccountResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createAccountingAccount",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Account) CreateAccountingAccount(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createAccountingAccount",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingAccount", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Account) CreateAccountingAccount(ctx context.Context, request operation
 
 // GetAccountingAccount - Retrieve an account
 func (s *Account) GetAccountingAccount(ctx context.Context, request operations.GetAccountingAccountRequest, opts ...operations.Option) (*operations.GetAccountingAccountResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getAccountingAccount",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Account) GetAccountingAccount(ctx context.Context, request operations.G
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/account/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getAccountingAccount",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Account) GetAccountingAccount(ctx context.Context, request operations.G
 
 // ListAccountingAccounts - List all accounts
 func (s *Account) ListAccountingAccounts(ctx context.Context, request operations.ListAccountingAccountsRequest, opts ...operations.Option) (*operations.ListAccountingAccountsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listAccountingAccounts",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Account) ListAccountingAccounts(ctx context.Context, request operations
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/account", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listAccountingAccounts",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Account) ListAccountingAccounts(ctx context.Context, request operations
 
 // PatchAccountingAccount - Update an account
 func (s *Account) PatchAccountingAccount(ctx context.Context, request operations.PatchAccountingAccountRequest, opts ...operations.Option) (*operations.PatchAccountingAccountResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchAccountingAccount",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Account) PatchAccountingAccount(ctx context.Context, request operations
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchAccountingAccount",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingAccount", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Account) PatchAccountingAccount(ctx context.Context, request operations
 
 // RemoveAccountingAccount - Remove an account
 func (s *Account) RemoveAccountingAccount(ctx context.Context, request operations.RemoveAccountingAccountRequest, opts ...operations.Option) (*operations.RemoveAccountingAccountResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeAccountingAccount",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Account) RemoveAccountingAccount(ctx context.Context, request operation
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/account/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeAccountingAccount",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Account) RemoveAccountingAccount(ctx context.Context, request operation
 
 // UpdateAccountingAccount - Update an account
 func (s *Account) UpdateAccountingAccount(ctx context.Context, request operations.UpdateAccountingAccountRequest, opts ...operations.Option) (*operations.UpdateAccountingAccountResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateAccountingAccount",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Account) UpdateAccountingAccount(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateAccountingAccount",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingAccount", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

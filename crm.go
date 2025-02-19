@@ -27,12 +27,6 @@ func newCrm(sdkConfig sdkConfiguration) *Crm {
 
 // CreateCrmCompany - Create a company
 func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrmCompanyRequest, opts ...operations.Option) (*operations.CreateCrmCompanyResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCrmCompany",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrm
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCrmCompany",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmCompany", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrm
 
 // CreateCrmContact - Create a contact
 func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrmContactRequest, opts ...operations.Option) (*operations.CreateCrmContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCrmContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -266,6 +260,12 @@ func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrm
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCrmContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -447,12 +447,6 @@ func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrm
 
 // CreateCrmDeal - Create a deal
 func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDealRequest, opts ...operations.Option) (*operations.CreateCrmDealResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCrmDeal",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -476,6 +470,12 @@ func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDea
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCrmDeal",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmDeal", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -657,12 +657,6 @@ func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDea
 
 // CreateCrmEvent - Create an event
 func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEventRequest, opts ...operations.Option) (*operations.CreateCrmEventResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCrmEvent",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -686,6 +680,12 @@ func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEv
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCrmEvent",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmEvent", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -867,12 +867,6 @@ func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEv
 
 // CreateCrmLead - Create a lead
 func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLeadRequest, opts ...operations.Option) (*operations.CreateCrmLeadResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCrmLead",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -896,6 +890,12 @@ func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLea
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCrmLead",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmLead", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1077,12 +1077,6 @@ func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLea
 
 // CreateCrmPipeline - Create a pipeline
 func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCrmPipelineRequest, opts ...operations.Option) (*operations.CreateCrmPipelineResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCrmPipeline",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1106,6 +1100,12 @@ func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCr
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCrmPipeline",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmPipeline", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1287,12 +1287,6 @@ func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCr
 
 // GetCrmCompany - Retrieve a company
 func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompanyRequest, opts ...operations.Option) (*operations.GetCrmCompanyResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCrmCompany",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1314,6 +1308,13 @@ func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompan
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCrmCompany",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1489,12 +1490,6 @@ func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompan
 
 // GetCrmContact - Retrieve a contact
 func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContactRequest, opts ...operations.Option) (*operations.GetCrmContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCrmContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1516,6 +1511,13 @@ func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContac
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCrmContact",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1691,12 +1693,6 @@ func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContac
 
 // GetCrmDeal - Retrieve a deal
 func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealRequest, opts ...operations.Option) (*operations.GetCrmDealResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCrmDeal",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1718,6 +1714,13 @@ func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealReque
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCrmDeal",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1893,12 +1896,6 @@ func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealReque
 
 // GetCrmEvent - Retrieve an event
 func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventRequest, opts ...operations.Option) (*operations.GetCrmEventResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCrmEvent",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1920,6 +1917,13 @@ func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventReq
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCrmEvent",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2095,12 +2099,6 @@ func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventReq
 
 // GetCrmLead - Retrieve a lead
 func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadRequest, opts ...operations.Option) (*operations.GetCrmLeadResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCrmLead",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2122,6 +2120,13 @@ func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadReque
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCrmLead",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2297,12 +2302,6 @@ func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadReque
 
 // GetCrmPipeline - Retrieve a pipeline
 func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipelineRequest, opts ...operations.Option) (*operations.GetCrmPipelineResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCrmPipeline",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2324,6 +2323,13 @@ func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipel
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCrmPipeline",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2499,12 +2505,6 @@ func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipel
 
 // ListCrmCompanies - List all companies
 func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCompaniesRequest, opts ...operations.Option) (*operations.ListCrmCompaniesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCrmCompanies",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2526,6 +2526,13 @@ func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCo
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCrmCompanies",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2701,12 +2708,6 @@ func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCo
 
 // ListCrmContacts - List all contacts
 func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmContactsRequest, opts ...operations.Option) (*operations.ListCrmContactsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCrmContacts",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2728,6 +2729,13 @@ func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmCon
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCrmContacts",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2903,12 +2911,6 @@ func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmCon
 
 // ListCrmDeals - List all deals
 func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsRequest, opts ...operations.Option) (*operations.ListCrmDealsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCrmDeals",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2930,6 +2932,13 @@ func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsR
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCrmDeals",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -3105,12 +3114,6 @@ func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsR
 
 // ListCrmEvents - List all events
 func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEventsRequest, opts ...operations.Option) (*operations.ListCrmEventsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCrmEvents",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3132,6 +3135,13 @@ func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEvent
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCrmEvents",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -3307,12 +3317,6 @@ func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEvent
 
 // ListCrmLeads - List all leads
 func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsRequest, opts ...operations.Option) (*operations.ListCrmLeadsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCrmLeads",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3334,6 +3338,13 @@ func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsR
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCrmLeads",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -3509,12 +3520,6 @@ func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsR
 
 // ListCrmPipelines - List all pipelines
 func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPipelinesRequest, opts ...operations.Option) (*operations.ListCrmPipelinesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCrmPipelines",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3536,6 +3541,13 @@ func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPi
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCrmPipelines",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -3711,12 +3723,6 @@ func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPi
 
 // PatchCrmCompany - Update a company
 func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCompanyRequest, opts ...operations.Option) (*operations.PatchCrmCompanyResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCrmCompany",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3740,6 +3746,12 @@ func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCo
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCrmCompany",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmCompany", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -3921,12 +3933,6 @@ func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCo
 
 // PatchCrmContact - Update a contact
 func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmContactRequest, opts ...operations.Option) (*operations.PatchCrmContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCrmContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3950,6 +3956,12 @@ func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmCo
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCrmContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -4131,12 +4143,6 @@ func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmCo
 
 // PatchCrmDeal - Update a deal
 func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealRequest, opts ...operations.Option) (*operations.PatchCrmDealResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCrmDeal",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4160,6 +4166,12 @@ func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealR
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCrmDeal",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmDeal", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -4341,12 +4353,6 @@ func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealR
 
 // PatchCrmEvent - Update an event
 func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEventRequest, opts ...operations.Option) (*operations.PatchCrmEventResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCrmEvent",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4370,6 +4376,12 @@ func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEven
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCrmEvent",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmEvent", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -4551,12 +4563,6 @@ func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEven
 
 // PatchCrmLead - Update a lead
 func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadRequest, opts ...operations.Option) (*operations.PatchCrmLeadResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCrmLead",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4580,6 +4586,12 @@ func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadR
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCrmLead",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmLead", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -4761,12 +4773,6 @@ func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadR
 
 // PatchCrmPipeline - Update a pipeline
 func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmPipelineRequest, opts ...operations.Option) (*operations.PatchCrmPipelineResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCrmPipeline",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4790,6 +4796,12 @@ func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmP
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCrmPipeline",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmPipeline", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -4971,12 +4983,6 @@ func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmP
 
 // RemoveCrmCompany - Remove a company
 func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrmCompanyRequest, opts ...operations.Option) (*operations.RemoveCrmCompanyResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCrmCompany",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4998,6 +5004,13 @@ func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrm
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/company/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCrmCompany",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -5146,12 +5159,6 @@ func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrm
 
 // RemoveCrmContact - Remove a contact
 func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrmContactRequest, opts ...operations.Option) (*operations.RemoveCrmContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCrmContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5173,6 +5180,13 @@ func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrm
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCrmContact",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -5321,12 +5335,6 @@ func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrm
 
 // RemoveCrmDeal - Remove a deal
 func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDealRequest, opts ...operations.Option) (*operations.RemoveCrmDealResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCrmDeal",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5348,6 +5356,13 @@ func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/deal/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCrmDeal",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -5496,12 +5511,6 @@ func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 
 // RemoveCrmEvent - Remove an event
 func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEventRequest, opts ...operations.Option) (*operations.RemoveCrmEventResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCrmEvent",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5523,6 +5532,13 @@ func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEv
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/event/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCrmEvent",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -5671,12 +5687,6 @@ func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEv
 
 // RemoveCrmLead - Remove a lead
 func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLeadRequest, opts ...operations.Option) (*operations.RemoveCrmLeadResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCrmLead",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5698,6 +5708,13 @@ func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLea
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/lead/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCrmLead",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -5846,12 +5863,6 @@ func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLea
 
 // RemoveCrmPipeline - Remove a pipeline
 func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCrmPipelineRequest, opts ...operations.Option) (*operations.RemoveCrmPipelineResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCrmPipeline",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5873,6 +5884,13 @@ func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCr
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCrmPipeline",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -6021,12 +6039,6 @@ func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCr
 
 // UpdateCrmCompany - Update a company
 func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrmCompanyRequest, opts ...operations.Option) (*operations.UpdateCrmCompanyResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCrmCompany",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6050,6 +6062,12 @@ func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrm
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCrmCompany",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmCompany", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -6231,12 +6249,6 @@ func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrm
 
 // UpdateCrmContact - Update a contact
 func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrmContactRequest, opts ...operations.Option) (*operations.UpdateCrmContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCrmContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6260,6 +6272,12 @@ func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrm
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCrmContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -6441,12 +6459,6 @@ func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrm
 
 // UpdateCrmDeal - Update a deal
 func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDealRequest, opts ...operations.Option) (*operations.UpdateCrmDealResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCrmDeal",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6470,6 +6482,12 @@ func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDea
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCrmDeal",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmDeal", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -6651,12 +6669,6 @@ func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDea
 
 // UpdateCrmEvent - Update an event
 func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEventRequest, opts ...operations.Option) (*operations.UpdateCrmEventResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCrmEvent",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6680,6 +6692,12 @@ func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEv
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCrmEvent",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmEvent", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -6861,12 +6879,6 @@ func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEv
 
 // UpdateCrmLead - Update a lead
 func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLeadRequest, opts ...operations.Option) (*operations.UpdateCrmLeadResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCrmLead",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6890,6 +6902,12 @@ func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLea
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCrmLead",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmLead", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -7071,12 +7089,6 @@ func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLea
 
 // UpdateCrmPipeline - Update a pipeline
 func (s *Crm) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCrmPipelineRequest, opts ...operations.Option) (*operations.UpdateCrmPipelineResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCrmPipeline",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7100,6 +7112,12 @@ func (s *Crm) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCr
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCrmPipeline",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmPipeline", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

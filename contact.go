@@ -27,12 +27,6 @@ func newContact(sdkConfig sdkConfiguration) *Contact {
 
 // CreateAccountingContact - Create a contact
 func (s *Contact) CreateAccountingContact(ctx context.Context, request operations.CreateAccountingContactRequest, opts ...operations.Option) (*operations.CreateAccountingContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createAccountingContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Contact) CreateAccountingContact(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createAccountingContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Contact) CreateAccountingContact(ctx context.Context, request operation
 
 // CreateCrmContact - Create a contact
 func (s *Contact) CreateCrmContact(ctx context.Context, request operations.CreateCrmContactRequest, opts ...operations.Option) (*operations.CreateCrmContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCrmContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -266,6 +260,12 @@ func (s *Contact) CreateCrmContact(ctx context.Context, request operations.Creat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCrmContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -447,12 +447,6 @@ func (s *Contact) CreateCrmContact(ctx context.Context, request operations.Creat
 
 // CreateUcContact - Create a contact
 func (s *Contact) CreateUcContact(ctx context.Context, request operations.CreateUcContactRequest, opts ...operations.Option) (*operations.CreateUcContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createUcContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -476,6 +470,12 @@ func (s *Contact) CreateUcContact(ctx context.Context, request operations.Create
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createUcContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "UcContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -657,12 +657,6 @@ func (s *Contact) CreateUcContact(ctx context.Context, request operations.Create
 
 // GetAccountingContact - Retrieve a contact
 func (s *Contact) GetAccountingContact(ctx context.Context, request operations.GetAccountingContactRequest, opts ...operations.Option) (*operations.GetAccountingContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getAccountingContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -684,6 +678,13 @@ func (s *Contact) GetAccountingContact(ctx context.Context, request operations.G
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getAccountingContact",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -859,12 +860,6 @@ func (s *Contact) GetAccountingContact(ctx context.Context, request operations.G
 
 // GetCrmContact - Retrieve a contact
 func (s *Contact) GetCrmContact(ctx context.Context, request operations.GetCrmContactRequest, opts ...operations.Option) (*operations.GetCrmContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCrmContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -886,6 +881,13 @@ func (s *Contact) GetCrmContact(ctx context.Context, request operations.GetCrmCo
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCrmContact",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1061,12 +1063,6 @@ func (s *Contact) GetCrmContact(ctx context.Context, request operations.GetCrmCo
 
 // GetUcContact - Retrieve a contact
 func (s *Contact) GetUcContact(ctx context.Context, request operations.GetUcContactRequest, opts ...operations.Option) (*operations.GetUcContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUcContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1088,6 +1084,13 @@ func (s *Contact) GetUcContact(ctx context.Context, request operations.GetUcCont
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUcContact",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1263,12 +1266,6 @@ func (s *Contact) GetUcContact(ctx context.Context, request operations.GetUcCont
 
 // ListAccountingContacts - List all contacts
 func (s *Contact) ListAccountingContacts(ctx context.Context, request operations.ListAccountingContactsRequest, opts ...operations.Option) (*operations.ListAccountingContactsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listAccountingContacts",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1290,6 +1287,13 @@ func (s *Contact) ListAccountingContacts(ctx context.Context, request operations
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/contact", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listAccountingContacts",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1465,12 +1469,6 @@ func (s *Contact) ListAccountingContacts(ctx context.Context, request operations
 
 // ListCrmContacts - List all contacts
 func (s *Contact) ListCrmContacts(ctx context.Context, request operations.ListCrmContactsRequest, opts ...operations.Option) (*operations.ListCrmContactsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCrmContacts",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1492,6 +1490,13 @@ func (s *Contact) ListCrmContacts(ctx context.Context, request operations.ListCr
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCrmContacts",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1667,12 +1672,6 @@ func (s *Contact) ListCrmContacts(ctx context.Context, request operations.ListCr
 
 // ListUcContacts - List all contacts
 func (s *Contact) ListUcContacts(ctx context.Context, request operations.ListUcContactsRequest, opts ...operations.Option) (*operations.ListUcContactsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUcContacts",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1694,6 +1693,13 @@ func (s *Contact) ListUcContacts(ctx context.Context, request operations.ListUcC
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUcContacts",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1869,12 +1875,6 @@ func (s *Contact) ListUcContacts(ctx context.Context, request operations.ListUcC
 
 // PatchAccountingContact - Update a contact
 func (s *Contact) PatchAccountingContact(ctx context.Context, request operations.PatchAccountingContactRequest, opts ...operations.Option) (*operations.PatchAccountingContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchAccountingContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1898,6 +1898,12 @@ func (s *Contact) PatchAccountingContact(ctx context.Context, request operations
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchAccountingContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2079,12 +2085,6 @@ func (s *Contact) PatchAccountingContact(ctx context.Context, request operations
 
 // PatchCrmContact - Update a contact
 func (s *Contact) PatchCrmContact(ctx context.Context, request operations.PatchCrmContactRequest, opts ...operations.Option) (*operations.PatchCrmContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCrmContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2108,6 +2108,12 @@ func (s *Contact) PatchCrmContact(ctx context.Context, request operations.PatchC
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCrmContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2289,12 +2295,6 @@ func (s *Contact) PatchCrmContact(ctx context.Context, request operations.PatchC
 
 // PatchUcContact - Update a contact
 func (s *Contact) PatchUcContact(ctx context.Context, request operations.PatchUcContactRequest, opts ...operations.Option) (*operations.PatchUcContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchUcContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2318,6 +2318,12 @@ func (s *Contact) PatchUcContact(ctx context.Context, request operations.PatchUc
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchUcContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "UcContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -2499,12 +2505,6 @@ func (s *Contact) PatchUcContact(ctx context.Context, request operations.PatchUc
 
 // RemoveAccountingContact - Remove a contact
 func (s *Contact) RemoveAccountingContact(ctx context.Context, request operations.RemoveAccountingContactRequest, opts ...operations.Option) (*operations.RemoveAccountingContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeAccountingContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2526,6 +2526,13 @@ func (s *Contact) RemoveAccountingContact(ctx context.Context, request operation
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeAccountingContact",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2674,12 +2681,6 @@ func (s *Contact) RemoveAccountingContact(ctx context.Context, request operation
 
 // RemoveCrmContact - Remove a contact
 func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.RemoveCrmContactRequest, opts ...operations.Option) (*operations.RemoveCrmContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCrmContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2701,6 +2702,13 @@ func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.Remov
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCrmContact",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -2849,12 +2857,6 @@ func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.Remov
 
 // RemoveUcContact - Remove a contact
 func (s *Contact) RemoveUcContact(ctx context.Context, request operations.RemoveUcContactRequest, opts ...operations.Option) (*operations.RemoveUcContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeUcContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2876,6 +2878,13 @@ func (s *Contact) RemoveUcContact(ctx context.Context, request operations.Remove
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeUcContact",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -3024,12 +3033,6 @@ func (s *Contact) RemoveUcContact(ctx context.Context, request operations.Remove
 
 // UpdateAccountingContact - Update a contact
 func (s *Contact) UpdateAccountingContact(ctx context.Context, request operations.UpdateAccountingContactRequest, opts ...operations.Option) (*operations.UpdateAccountingContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateAccountingContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3053,6 +3056,12 @@ func (s *Contact) UpdateAccountingContact(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateAccountingContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -3234,12 +3243,6 @@ func (s *Contact) UpdateAccountingContact(ctx context.Context, request operation
 
 // UpdateCrmContact - Update a contact
 func (s *Contact) UpdateCrmContact(ctx context.Context, request operations.UpdateCrmContactRequest, opts ...operations.Option) (*operations.UpdateCrmContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCrmContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3263,6 +3266,12 @@ func (s *Contact) UpdateCrmContact(ctx context.Context, request operations.Updat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCrmContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -3444,12 +3453,6 @@ func (s *Contact) UpdateCrmContact(ctx context.Context, request operations.Updat
 
 // UpdateUcContact - Update a contact
 func (s *Contact) UpdateUcContact(ctx context.Context, request operations.UpdateUcContactRequest, opts ...operations.Option) (*operations.UpdateUcContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateUcContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3473,6 +3476,12 @@ func (s *Contact) UpdateUcContact(ctx context.Context, request operations.Update
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateUcContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "UcContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

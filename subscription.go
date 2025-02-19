@@ -27,12 +27,6 @@ func newSubscription(sdkConfig sdkConfiguration) *Subscription {
 
 // CreatePaymentSubscription - Create a subscription
 func (s *Subscription) CreatePaymentSubscription(ctx context.Context, request operations.CreatePaymentSubscriptionRequest, opts ...operations.Option) (*operations.CreatePaymentSubscriptionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createPaymentSubscription",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Subscription) CreatePaymentSubscription(ctx context.Context, request op
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createPaymentSubscription",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Subscription) CreatePaymentSubscription(ctx context.Context, request op
 
 // GetPaymentSubscription - Retrieve a subscription
 func (s *Subscription) GetPaymentSubscription(ctx context.Context, request operations.GetPaymentSubscriptionRequest, opts ...operations.Option) (*operations.GetPaymentSubscriptionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getPaymentSubscription",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Subscription) GetPaymentSubscription(ctx context.Context, request opera
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/payment/{connection_id}/subscription/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getPaymentSubscription",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Subscription) GetPaymentSubscription(ctx context.Context, request opera
 
 // ListPaymentSubscriptions - List all subscriptions
 func (s *Subscription) ListPaymentSubscriptions(ctx context.Context, request operations.ListPaymentSubscriptionsRequest, opts ...operations.Option) (*operations.ListPaymentSubscriptionsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listPaymentSubscriptions",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Subscription) ListPaymentSubscriptions(ctx context.Context, request ope
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/payment/{connection_id}/subscription", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listPaymentSubscriptions",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Subscription) ListPaymentSubscriptions(ctx context.Context, request ope
 
 // PatchPaymentSubscription - Update a subscription
 func (s *Subscription) PatchPaymentSubscription(ctx context.Context, request operations.PatchPaymentSubscriptionRequest, opts ...operations.Option) (*operations.PatchPaymentSubscriptionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchPaymentSubscription",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Subscription) PatchPaymentSubscription(ctx context.Context, request ope
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchPaymentSubscription",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Subscription) PatchPaymentSubscription(ctx context.Context, request ope
 
 // RemovePaymentSubscription - Remove a subscription
 func (s *Subscription) RemovePaymentSubscription(ctx context.Context, request operations.RemovePaymentSubscriptionRequest, opts ...operations.Option) (*operations.RemovePaymentSubscriptionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removePaymentSubscription",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Subscription) RemovePaymentSubscription(ctx context.Context, request op
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/payment/{connection_id}/subscription/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removePaymentSubscription",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Subscription) RemovePaymentSubscription(ctx context.Context, request op
 
 // UpdatePaymentSubscription - Update a subscription
 func (s *Subscription) UpdatePaymentSubscription(ctx context.Context, request operations.UpdatePaymentSubscriptionRequest, opts ...operations.Option) (*operations.UpdatePaymentSubscriptionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updatePaymentSubscription",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Subscription) UpdatePaymentSubscription(ctx context.Context, request op
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updatePaymentSubscription",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

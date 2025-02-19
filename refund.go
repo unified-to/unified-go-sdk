@@ -27,12 +27,6 @@ func newRefund(sdkConfig sdkConfiguration) *Refund {
 
 // GetPaymentRefund - Retrieve a refund
 func (s *Refund) GetPaymentRefund(ctx context.Context, request operations.GetPaymentRefundRequest, opts ...operations.Option) (*operations.GetPaymentRefundResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getPaymentRefund",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -54,6 +48,13 @@ func (s *Refund) GetPaymentRefund(ctx context.Context, request operations.GetPay
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/payment/{connection_id}/refund/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getPaymentRefund",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -229,12 +230,6 @@ func (s *Refund) GetPaymentRefund(ctx context.Context, request operations.GetPay
 
 // ListPaymentRefunds - List all refunds
 func (s *Refund) ListPaymentRefunds(ctx context.Context, request operations.ListPaymentRefundsRequest, opts ...operations.Option) (*operations.ListPaymentRefundsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listPaymentRefunds",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -256,6 +251,13 @@ func (s *Refund) ListPaymentRefunds(ctx context.Context, request operations.List
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/payment/{connection_id}/refund", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listPaymentRefunds",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

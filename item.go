@@ -27,12 +27,6 @@ func newItem(sdkConfig sdkConfiguration) *Item {
 
 // CreateCommerceItem - Create an item
 func (s *Item) CreateCommerceItem(ctx context.Context, request operations.CreateCommerceItemRequest, opts ...operations.Option) (*operations.CreateCommerceItemResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCommerceItem",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Item) CreateCommerceItem(ctx context.Context, request operations.Create
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCommerceItem",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceItem", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Item) CreateCommerceItem(ctx context.Context, request operations.Create
 
 // GetCommerceItem - Retrieve an item
 func (s *Item) GetCommerceItem(ctx context.Context, request operations.GetCommerceItemRequest, opts ...operations.Option) (*operations.GetCommerceItemResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCommerceItem",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Item) GetCommerceItem(ctx context.Context, request operations.GetCommer
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCommerceItem",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Item) GetCommerceItem(ctx context.Context, request operations.GetCommer
 
 // ListCommerceItems - List all items
 func (s *Item) ListCommerceItems(ctx context.Context, request operations.ListCommerceItemsRequest, opts ...operations.Option) (*operations.ListCommerceItemsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCommerceItems",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Item) ListCommerceItems(ctx context.Context, request operations.ListCom
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCommerceItems",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Item) ListCommerceItems(ctx context.Context, request operations.ListCom
 
 // PatchCommerceItem - Update an item
 func (s *Item) PatchCommerceItem(ctx context.Context, request operations.PatchCommerceItemRequest, opts ...operations.Option) (*operations.PatchCommerceItemResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCommerceItem",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Item) PatchCommerceItem(ctx context.Context, request operations.PatchCo
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCommerceItem",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceItem", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Item) PatchCommerceItem(ctx context.Context, request operations.PatchCo
 
 // RemoveCommerceItem - Remove an item
 func (s *Item) RemoveCommerceItem(ctx context.Context, request operations.RemoveCommerceItemRequest, opts ...operations.Option) (*operations.RemoveCommerceItemResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCommerceItem",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Item) RemoveCommerceItem(ctx context.Context, request operations.Remove
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/item/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCommerceItem",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Item) RemoveCommerceItem(ctx context.Context, request operations.Remove
 
 // UpdateCommerceItem - Update an item
 func (s *Item) UpdateCommerceItem(ctx context.Context, request operations.UpdateCommerceItemRequest, opts ...operations.Option) (*operations.UpdateCommerceItemResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCommerceItem",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Item) UpdateCommerceItem(ctx context.Context, request operations.Update
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCommerceItem",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceItem", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

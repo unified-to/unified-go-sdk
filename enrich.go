@@ -27,12 +27,6 @@ func newEnrich(sdkConfig sdkConfiguration) *Enrich {
 
 // ListEnrichCompanies - Retrieve enrichment information for a company
 func (s *Enrich) ListEnrichCompanies(ctx context.Context, request operations.ListEnrichCompaniesRequest, opts ...operations.Option) (*operations.ListEnrichCompaniesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listEnrichCompanies",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -54,6 +48,13 @@ func (s *Enrich) ListEnrichCompanies(ctx context.Context, request operations.Lis
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/company", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listEnrichCompanies",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -229,12 +230,6 @@ func (s *Enrich) ListEnrichCompanies(ctx context.Context, request operations.Lis
 
 // ListEnrichPeople - Retrieve enrichment information for a person
 func (s *Enrich) ListEnrichPeople(ctx context.Context, request operations.ListEnrichPeopleRequest, opts ...operations.Option) (*operations.ListEnrichPeopleResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listEnrichPeople",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -256,6 +251,13 @@ func (s *Enrich) ListEnrichPeople(ctx context.Context, request operations.ListEn
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/enrich/{connection_id}/person", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listEnrichPeople",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

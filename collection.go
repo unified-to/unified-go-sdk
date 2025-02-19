@@ -27,12 +27,6 @@ func newCollection(sdkConfig sdkConfiguration) *Collection {
 
 // CreateCommerceCollection - Create a collection
 func (s *Collection) CreateCommerceCollection(ctx context.Context, request operations.CreateCommerceCollectionRequest, opts ...operations.Option) (*operations.CreateCommerceCollectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCommerceCollection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Collection) CreateCommerceCollection(ctx context.Context, request opera
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCommerceCollection",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceCollection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Collection) CreateCommerceCollection(ctx context.Context, request opera
 
 // GetCommerceCollection - Retrieve a collection
 func (s *Collection) GetCommerceCollection(ctx context.Context, request operations.GetCommerceCollectionRequest, opts ...operations.Option) (*operations.GetCommerceCollectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCommerceCollection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Collection) GetCommerceCollection(ctx context.Context, request operatio
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/collection/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCommerceCollection",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Collection) GetCommerceCollection(ctx context.Context, request operatio
 
 // ListCommerceCollections - List all collections
 func (s *Collection) ListCommerceCollections(ctx context.Context, request operations.ListCommerceCollectionsRequest, opts ...operations.Option) (*operations.ListCommerceCollectionsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCommerceCollections",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Collection) ListCommerceCollections(ctx context.Context, request operat
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/collection", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCommerceCollections",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Collection) ListCommerceCollections(ctx context.Context, request operat
 
 // PatchCommerceCollection - Update a collection
 func (s *Collection) PatchCommerceCollection(ctx context.Context, request operations.PatchCommerceCollectionRequest, opts ...operations.Option) (*operations.PatchCommerceCollectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCommerceCollection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Collection) PatchCommerceCollection(ctx context.Context, request operat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCommerceCollection",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceCollection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Collection) PatchCommerceCollection(ctx context.Context, request operat
 
 // RemoveCommerceCollection - Remove a collection
 func (s *Collection) RemoveCommerceCollection(ctx context.Context, request operations.RemoveCommerceCollectionRequest, opts ...operations.Option) (*operations.RemoveCommerceCollectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCommerceCollection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Collection) RemoveCommerceCollection(ctx context.Context, request opera
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/collection/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCommerceCollection",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Collection) RemoveCommerceCollection(ctx context.Context, request opera
 
 // UpdateCommerceCollection - Update a collection
 func (s *Collection) UpdateCommerceCollection(ctx context.Context, request operations.UpdateCommerceCollectionRequest, opts ...operations.Option) (*operations.UpdateCommerceCollectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCommerceCollection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Collection) UpdateCommerceCollection(ctx context.Context, request opera
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCommerceCollection",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceCollection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

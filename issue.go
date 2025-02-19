@@ -28,12 +28,6 @@ func newIssue(sdkConfig sdkConfiguration) *Issue {
 
 // ListUnifiedIssues - List support issues
 func (s *Issue) ListUnifiedIssues(ctx context.Context, request operations.ListUnifiedIssuesRequest, opts ...operations.Option) (*operations.ListUnifiedIssuesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedIssues",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -55,6 +49,13 @@ func (s *Issue) ListUnifiedIssues(ctx context.Context, request operations.ListUn
 	opURL, err := url.JoinPath(baseURL, "/unified/issue")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedIssues",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

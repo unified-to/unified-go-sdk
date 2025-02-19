@@ -27,12 +27,6 @@ func newProject(sdkConfig sdkConfiguration) *Project {
 
 // CreateTaskProject - Create a project
 func (s *Project) CreateTaskProject(ctx context.Context, request operations.CreateTaskProjectRequest, opts ...operations.Option) (*operations.CreateTaskProjectResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createTaskProject",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Project) CreateTaskProject(ctx context.Context, request operations.Crea
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createTaskProject",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskProject", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Project) CreateTaskProject(ctx context.Context, request operations.Crea
 
 // GetTaskProject - Retrieve a project
 func (s *Project) GetTaskProject(ctx context.Context, request operations.GetTaskProjectRequest, opts ...operations.Option) (*operations.GetTaskProjectResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getTaskProject",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Project) GetTaskProject(ctx context.Context, request operations.GetTask
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/task/{connection_id}/project/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getTaskProject",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Project) GetTaskProject(ctx context.Context, request operations.GetTask
 
 // ListTaskProjects - List all projects
 func (s *Project) ListTaskProjects(ctx context.Context, request operations.ListTaskProjectsRequest, opts ...operations.Option) (*operations.ListTaskProjectsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listTaskProjects",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Project) ListTaskProjects(ctx context.Context, request operations.ListT
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/task/{connection_id}/project", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listTaskProjects",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Project) ListTaskProjects(ctx context.Context, request operations.ListT
 
 // PatchTaskProject - Update a project
 func (s *Project) PatchTaskProject(ctx context.Context, request operations.PatchTaskProjectRequest, opts ...operations.Option) (*operations.PatchTaskProjectResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchTaskProject",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Project) PatchTaskProject(ctx context.Context, request operations.Patch
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchTaskProject",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskProject", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Project) PatchTaskProject(ctx context.Context, request operations.Patch
 
 // RemoveTaskProject - Remove a project
 func (s *Project) RemoveTaskProject(ctx context.Context, request operations.RemoveTaskProjectRequest, opts ...operations.Option) (*operations.RemoveTaskProjectResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeTaskProject",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Project) RemoveTaskProject(ctx context.Context, request operations.Remo
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/task/{connection_id}/project/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeTaskProject",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Project) RemoveTaskProject(ctx context.Context, request operations.Remo
 
 // UpdateTaskProject - Update a project
 func (s *Project) UpdateTaskProject(ctx context.Context, request operations.UpdateTaskProjectRequest, opts ...operations.Option) (*operations.UpdateTaskProjectResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateTaskProject",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Project) UpdateTaskProject(ctx context.Context, request operations.Upda
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateTaskProject",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskProject", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

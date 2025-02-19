@@ -27,12 +27,6 @@ func newFile(sdkConfig sdkConfiguration) *File {
 
 // CreateStorageFile - Create a file
 func (s *File) CreateStorageFile(ctx context.Context, request operations.CreateStorageFileRequest, opts ...operations.Option) (*operations.CreateStorageFileResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createStorageFile",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *File) CreateStorageFile(ctx context.Context, request operations.CreateS
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createStorageFile",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "StorageFile", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *File) CreateStorageFile(ctx context.Context, request operations.CreateS
 
 // GetStorageFile - Retrieve a file
 func (s *File) GetStorageFile(ctx context.Context, request operations.GetStorageFileRequest, opts ...operations.Option) (*operations.GetStorageFileResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getStorageFile",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *File) GetStorageFile(ctx context.Context, request operations.GetStorage
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/storage/{connection_id}/file/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getStorageFile",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *File) GetStorageFile(ctx context.Context, request operations.GetStorage
 
 // ListStorageFiles - List all files
 func (s *File) ListStorageFiles(ctx context.Context, request operations.ListStorageFilesRequest, opts ...operations.Option) (*operations.ListStorageFilesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listStorageFiles",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *File) ListStorageFiles(ctx context.Context, request operations.ListStor
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/storage/{connection_id}/file", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listStorageFiles",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *File) ListStorageFiles(ctx context.Context, request operations.ListStor
 
 // PatchStorageFile - Update a file
 func (s *File) PatchStorageFile(ctx context.Context, request operations.PatchStorageFileRequest, opts ...operations.Option) (*operations.PatchStorageFileResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchStorageFile",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *File) PatchStorageFile(ctx context.Context, request operations.PatchSto
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchStorageFile",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "StorageFile", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *File) PatchStorageFile(ctx context.Context, request operations.PatchSto
 
 // RemoveStorageFile - Remove a file
 func (s *File) RemoveStorageFile(ctx context.Context, request operations.RemoveStorageFileRequest, opts ...operations.Option) (*operations.RemoveStorageFileResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeStorageFile",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *File) RemoveStorageFile(ctx context.Context, request operations.RemoveS
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/storage/{connection_id}/file/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeStorageFile",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *File) RemoveStorageFile(ctx context.Context, request operations.RemoveS
 
 // UpdateStorageFile - Update a file
 func (s *File) UpdateStorageFile(ctx context.Context, request operations.UpdateStorageFileRequest, opts ...operations.Option) (*operations.UpdateStorageFileResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateStorageFile",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *File) UpdateStorageFile(ctx context.Context, request operations.UpdateS
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateStorageFile",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "StorageFile", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

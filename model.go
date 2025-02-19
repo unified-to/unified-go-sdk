@@ -27,12 +27,6 @@ func newModel(sdkConfig sdkConfiguration) *Model {
 
 // ListGenaiModels - List all models
 func (s *Model) ListGenaiModels(ctx context.Context, request operations.ListGenaiModelsRequest, opts ...operations.Option) (*operations.ListGenaiModelsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listGenaiModels",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -54,6 +48,13 @@ func (s *Model) ListGenaiModels(ctx context.Context, request operations.ListGena
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/genai/{connection_id}/model", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listGenaiModels",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

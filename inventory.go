@@ -27,12 +27,6 @@ func newInventory(sdkConfig sdkConfiguration) *Inventory {
 
 // CreateCommerceInventory - Create an inventory
 func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operations.CreateCommerceInventoryRequest, opts ...operations.Option) (*operations.CreateCommerceInventoryResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCommerceInventory",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operati
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCommerceInventory",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceInventory", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operati
 
 // GetCommerceInventory - Retrieve an inventory
 func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations.GetCommerceInventoryRequest, opts ...operations.Option) (*operations.GetCommerceInventoryResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCommerceInventory",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/inventory/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCommerceInventory",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Inventory) GetCommerceInventory(ctx context.Context, request operations
 
 // ListCommerceInventories - List all inventories
 func (s *Inventory) ListCommerceInventories(ctx context.Context, request operations.ListCommerceInventoriesRequest, opts ...operations.Option) (*operations.ListCommerceInventoriesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCommerceInventories",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Inventory) ListCommerceInventories(ctx context.Context, request operati
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/inventory", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCommerceInventories",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Inventory) ListCommerceInventories(ctx context.Context, request operati
 
 // PatchCommerceInventory - Update an inventory
 func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operations.PatchCommerceInventoryRequest, opts ...operations.Option) (*operations.PatchCommerceInventoryResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCommerceInventory",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCommerceInventory",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceInventory", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operatio
 
 // RemoveCommerceInventory - Remove an inventory
 func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operations.RemoveCommerceInventoryRequest, opts ...operations.Option) (*operations.RemoveCommerceInventoryResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCommerceInventory",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operati
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/commerce/{connection_id}/inventory/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCommerceInventory",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Inventory) RemoveCommerceInventory(ctx context.Context, request operati
 
 // UpdateCommerceInventory - Update an inventory
 func (s *Inventory) UpdateCommerceInventory(ctx context.Context, request operations.UpdateCommerceInventoryRequest, opts ...operations.Option) (*operations.UpdateCommerceInventoryResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCommerceInventory",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Inventory) UpdateCommerceInventory(ctx context.Context, request operati
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCommerceInventory",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceInventory", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

@@ -29,12 +29,6 @@ func newIntegration(sdkConfig sdkConfiguration) *Integration {
 // GetUnifiedIntegrationAuth - Create connection indirectly
 // Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 func (s *Integration) GetUnifiedIntegrationAuth(ctx context.Context, request operations.GetUnifiedIntegrationAuthRequest, opts ...operations.Option) (*operations.GetUnifiedIntegrationAuthResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUnifiedIntegrationAuth",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,13 @@ func (s *Integration) GetUnifiedIntegrationAuth(ctx context.Context, request ope
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/auth/{workspace_id}/{integration_type}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUnifiedIntegrationAuth",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -228,12 +229,6 @@ func (s *Integration) GetUnifiedIntegrationAuth(ctx context.Context, request ope
 // ListUnifiedIntegrationWorkspaces - Returns all activated integrations in a workspace
 // No authentication required as this is to be used by front-end interface
 func (s *Integration) ListUnifiedIntegrationWorkspaces(ctx context.Context, request operations.ListUnifiedIntegrationWorkspacesRequest, opts ...operations.Option) (*operations.ListUnifiedIntegrationWorkspacesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedIntegrationWorkspaces",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -255,6 +250,13 @@ func (s *Integration) ListUnifiedIntegrationWorkspaces(ctx context.Context, requ
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/workspace/{workspace_id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedIntegrationWorkspaces",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -430,12 +432,6 @@ func (s *Integration) ListUnifiedIntegrationWorkspaces(ctx context.Context, requ
 
 // ListUnifiedIntegrations - Returns all integrations
 func (s *Integration) ListUnifiedIntegrations(ctx context.Context, request operations.ListUnifiedIntegrationsRequest, opts ...operations.Option) (*operations.ListUnifiedIntegrationsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedIntegrations",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -457,6 +453,13 @@ func (s *Integration) ListUnifiedIntegrations(ctx context.Context, request opera
 	opURL, err := url.JoinPath(baseURL, "/unified/integration")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedIntegrations",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

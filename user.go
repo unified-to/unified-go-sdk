@@ -27,12 +27,6 @@ func newUser(sdkConfig sdkConfiguration) *User {
 
 // CreateScimUsers - Create user
 func (s *User) CreateScimUsers(ctx context.Context, request operations.CreateScimUsersRequest, opts ...operations.Option) (*operations.CreateScimUsersResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createScimUsers",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *User) CreateScimUsers(ctx context.Context, request operations.CreateSci
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createScimUsers",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimUser", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *User) CreateScimUsers(ctx context.Context, request operations.CreateSci
 
 // GetScimUsers - Get user
 func (s *User) GetScimUsers(ctx context.Context, request operations.GetScimUsersRequest, opts ...operations.Option) (*operations.GetScimUsersResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getScimUsers",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *User) GetScimUsers(ctx context.Context, request operations.GetScimUsers
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/scim/{connection_id}/users/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getScimUsers",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -435,12 +436,6 @@ func (s *User) GetScimUsers(ctx context.Context, request operations.GetScimUsers
 
 // ListScimUsers - List users
 func (s *User) ListScimUsers(ctx context.Context, request operations.ListScimUsersRequest, opts ...operations.Option) (*operations.ListScimUsersResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listScimUsers",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -462,6 +457,13 @@ func (s *User) ListScimUsers(ctx context.Context, request operations.ListScimUse
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/scim/{connection_id}/users", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listScimUsers",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -637,12 +639,6 @@ func (s *User) ListScimUsers(ctx context.Context, request operations.ListScimUse
 
 // PatchScimUsers - Update user
 func (s *User) PatchScimUsers(ctx context.Context, request operations.PatchScimUsersRequest, opts ...operations.Option) (*operations.PatchScimUsersResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchScimUsers",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -666,6 +662,12 @@ func (s *User) PatchScimUsers(ctx context.Context, request operations.PatchScimU
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchScimUsers",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimUser", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -843,12 +845,6 @@ func (s *User) PatchScimUsers(ctx context.Context, request operations.PatchScimU
 
 // RemoveScimUsers - Delete user
 func (s *User) RemoveScimUsers(ctx context.Context, request operations.RemoveScimUsersRequest, opts ...operations.Option) (*operations.RemoveScimUsersResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeScimUsers",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -870,6 +866,13 @@ func (s *User) RemoveScimUsers(ctx context.Context, request operations.RemoveSci
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/scim/{connection_id}/users/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeScimUsers",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1018,12 +1021,6 @@ func (s *User) RemoveScimUsers(ctx context.Context, request operations.RemoveSci
 
 // UpdateScimUsers - Update user
 func (s *User) UpdateScimUsers(ctx context.Context, request operations.UpdateScimUsersRequest, opts ...operations.Option) (*operations.UpdateScimUsersResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateScimUsers",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1047,6 +1044,12 @@ func (s *User) UpdateScimUsers(ctx context.Context, request operations.UpdateSci
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateScimUsers",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimUser", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

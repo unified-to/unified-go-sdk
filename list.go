@@ -27,12 +27,6 @@ func newList(sdkConfig sdkConfiguration) *List {
 
 // CreateMartechList - Create a list
 func (s *List) CreateMartechList(ctx context.Context, request operations.CreateMartechListRequest, opts ...operations.Option) (*operations.CreateMartechListResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createMartechList",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *List) CreateMartechList(ctx context.Context, request operations.CreateM
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createMartechList",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MarketingList", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *List) CreateMartechList(ctx context.Context, request operations.CreateM
 
 // GetMartechList - Retrieve a list
 func (s *List) GetMartechList(ctx context.Context, request operations.GetMartechListRequest, opts ...operations.Option) (*operations.GetMartechListResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getMartechList",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *List) GetMartechList(ctx context.Context, request operations.GetMartech
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/list/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getMartechList",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *List) GetMartechList(ctx context.Context, request operations.GetMartech
 
 // ListMartechLists - List all lists
 func (s *List) ListMartechLists(ctx context.Context, request operations.ListMartechListsRequest, opts ...operations.Option) (*operations.ListMartechListsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listMartechLists",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *List) ListMartechLists(ctx context.Context, request operations.ListMart
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/list", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listMartechLists",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *List) ListMartechLists(ctx context.Context, request operations.ListMart
 
 // PatchMartechList - Update a list
 func (s *List) PatchMartechList(ctx context.Context, request operations.PatchMartechListRequest, opts ...operations.Option) (*operations.PatchMartechListResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchMartechList",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *List) PatchMartechList(ctx context.Context, request operations.PatchMar
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchMartechList",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MarketingList", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *List) PatchMartechList(ctx context.Context, request operations.PatchMar
 
 // RemoveMartechList - Remove a list
 func (s *List) RemoveMartechList(ctx context.Context, request operations.RemoveMartechListRequest, opts ...operations.Option) (*operations.RemoveMartechListResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeMartechList",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *List) RemoveMartechList(ctx context.Context, request operations.RemoveM
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/martech/{connection_id}/list/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeMartechList",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *List) RemoveMartechList(ctx context.Context, request operations.RemoveM
 
 // UpdateMartechList - Update a list
 func (s *List) UpdateMartechList(ctx context.Context, request operations.UpdateMartechListRequest, opts ...operations.Option) (*operations.UpdateMartechListResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateMartechList",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *List) UpdateMartechList(ctx context.Context, request operations.UpdateM
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateMartechList",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MarketingList", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

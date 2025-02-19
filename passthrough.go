@@ -26,12 +26,6 @@ func newPassthrough(sdkConfig sdkConfiguration) *Passthrough {
 
 // CreatePassthroughJSON - Passthrough POST
 func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operations.CreatePassthroughJSONRequest, opts ...operations.Option) (*operations.CreatePassthroughJSONResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createPassthrough_json",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createPassthrough_json",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -270,12 +270,6 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 
 // CreatePassthroughRaw - Passthrough POST
 func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operations.CreatePassthroughRawRequest, opts ...operations.Option) (*operations.CreatePassthroughRawResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createPassthrough_raw",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -300,6 +294,12 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createPassthrough_raw",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "raw", `request:"mediaType=text/plain"`)
 	if err != nil {
 		return nil, err
@@ -514,12 +514,6 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 
 // ListPassthroughs - Passthrough GET
 func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.ListPassthroughsRequest, opts ...operations.Option) (*operations.ListPassthroughsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listPassthroughs",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -542,6 +536,13 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/passthrough/{connection_id}/{path}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listPassthroughs",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -750,12 +751,6 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 
 // PatchPassthroughJSON - Passthrough PUT
 func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operations.PatchPassthroughJSONRequest, opts ...operations.Option) (*operations.PatchPassthroughJSONResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchPassthrough_json",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -780,6 +775,12 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchPassthrough_json",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -994,12 +995,6 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 
 // PatchPassthroughRaw - Passthrough PUT
 func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operations.PatchPassthroughRawRequest, opts ...operations.Option) (*operations.PatchPassthroughRawResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchPassthrough_raw",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1024,6 +1019,12 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchPassthrough_raw",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "raw", `request:"mediaType=text/plain"`)
 	if err != nil {
 		return nil, err
@@ -1238,12 +1239,6 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 
 // RemovePassthrough - Passthrough DELETE
 func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.RemovePassthroughRequest, opts ...operations.Option) (*operations.RemovePassthroughResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removePassthrough",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1266,6 +1261,13 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/passthrough/{connection_id}/{path}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removePassthrough",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1474,12 +1476,6 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 
 // UpdatePassthroughJSON - Passthrough PUT
 func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operations.UpdatePassthroughJSONRequest, opts ...operations.Option) (*operations.UpdatePassthroughJSONResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updatePassthrough_json",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1504,6 +1500,12 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updatePassthrough_json",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1718,12 +1720,6 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 
 // UpdatePassthroughRaw - Passthrough PUT
 func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operations.UpdatePassthroughRawRequest, opts ...operations.Option) (*operations.UpdatePassthroughRawResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updatePassthrough_raw",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1748,6 +1744,12 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updatePassthrough_raw",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "raw", `request:"mediaType=text/plain"`)
 	if err != nil {
 		return nil, err

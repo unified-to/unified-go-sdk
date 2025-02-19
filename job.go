@@ -27,12 +27,6 @@ func newJob(sdkConfig sdkConfiguration) *Job {
 
 // CreateAtsJob - Create a job
 func (s *Job) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobRequest, opts ...operations.Option) (*operations.CreateAtsJobResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createAtsJob",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Job) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createAtsJob",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsJob", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Job) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 
 // GetAtsJob - Retrieve a job
 func (s *Job) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest, opts ...operations.Option) (*operations.GetAtsJobResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getAtsJob",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Job) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getAtsJob",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Job) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 
 // ListAtsJobs - List all jobs
 func (s *Job) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsRequest, opts ...operations.Option) (*operations.ListAtsJobsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listAtsJobs",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Job) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listAtsJobs",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Job) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 
 // PatchAtsJob - Update a job
 func (s *Job) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobRequest, opts ...operations.Option) (*operations.PatchAtsJobResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchAtsJob",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Job) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchAtsJob",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsJob", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Job) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 
 // RemoveAtsJob - Remove a job
 func (s *Job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobRequest, opts ...operations.Option) (*operations.RemoveAtsJobResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeAtsJob",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/job/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeAtsJob",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 
 // UpdateAtsJob - Update a job
 func (s *Job) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobRequest, opts ...operations.Option) (*operations.UpdateAtsJobResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateAtsJob",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Job) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobR
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateAtsJob",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsJob", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

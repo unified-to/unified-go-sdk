@@ -27,12 +27,6 @@ func newUc(sdkConfig sdkConfiguration) *Uc {
 
 // CreateUcContact - Create a contact
 func (s *Uc) CreateUcContact(ctx context.Context, request operations.CreateUcContactRequest, opts ...operations.Option) (*operations.CreateUcContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createUcContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Uc) CreateUcContact(ctx context.Context, request operations.CreateUcCon
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createUcContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "UcContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Uc) CreateUcContact(ctx context.Context, request operations.CreateUcCon
 
 // GetUcContact - Retrieve a contact
 func (s *Uc) GetUcContact(ctx context.Context, request operations.GetUcContactRequest, opts ...operations.Option) (*operations.GetUcContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUcContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Uc) GetUcContact(ctx context.Context, request operations.GetUcContactRe
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUcContact",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Uc) GetUcContact(ctx context.Context, request operations.GetUcContactRe
 
 // ListUcCalls - List all calls
 func (s *Uc) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest, opts ...operations.Option) (*operations.ListUcCallsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUcCalls",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Uc) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequ
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/call", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUcCalls",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Uc) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequ
 
 // ListUcContacts - List all contacts
 func (s *Uc) ListUcContacts(ctx context.Context, request operations.ListUcContactsRequest, opts ...operations.Option) (*operations.ListUcContactsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUcContacts",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -668,6 +664,13 @@ func (s *Uc) ListUcContacts(ctx context.Context, request operations.ListUcContac
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUcContacts",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -843,12 +846,6 @@ func (s *Uc) ListUcContacts(ctx context.Context, request operations.ListUcContac
 
 // PatchUcContact - Update a contact
 func (s *Uc) PatchUcContact(ctx context.Context, request operations.PatchUcContactRequest, opts ...operations.Option) (*operations.PatchUcContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchUcContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -872,6 +869,12 @@ func (s *Uc) PatchUcContact(ctx context.Context, request operations.PatchUcConta
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchUcContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "UcContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -1053,12 +1056,6 @@ func (s *Uc) PatchUcContact(ctx context.Context, request operations.PatchUcConta
 
 // RemoveUcContact - Remove a contact
 func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcContactRequest, opts ...operations.Option) (*operations.RemoveUcContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeUcContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1080,6 +1077,13 @@ func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcCon
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/contact/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeUcContact",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1228,12 +1232,6 @@ func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcCon
 
 // UpdateUcContact - Update a contact
 func (s *Uc) UpdateUcContact(ctx context.Context, request operations.UpdateUcContactRequest, opts ...operations.Option) (*operations.UpdateUcContactResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateUcContact",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1257,6 +1255,12 @@ func (s *Uc) UpdateUcContact(ctx context.Context, request operations.UpdateUcCon
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateUcContact",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "UcContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

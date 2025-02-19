@@ -27,12 +27,6 @@ func newJournal(sdkConfig sdkConfiguration) *Journal {
 
 // CreateAccountingJournal - Create a journal
 func (s *Journal) CreateAccountingJournal(ctx context.Context, request operations.CreateAccountingJournalRequest, opts ...operations.Option) (*operations.CreateAccountingJournalResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createAccountingJournal",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Journal) CreateAccountingJournal(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createAccountingJournal",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingJournal", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Journal) CreateAccountingJournal(ctx context.Context, request operation
 
 // GetAccountingJournal - Retrieve a journal
 func (s *Journal) GetAccountingJournal(ctx context.Context, request operations.GetAccountingJournalRequest, opts ...operations.Option) (*operations.GetAccountingJournalResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getAccountingJournal",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Journal) GetAccountingJournal(ctx context.Context, request operations.G
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/journal/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getAccountingJournal",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Journal) GetAccountingJournal(ctx context.Context, request operations.G
 
 // ListAccountingJournals - List all journals
 func (s *Journal) ListAccountingJournals(ctx context.Context, request operations.ListAccountingJournalsRequest, opts ...operations.Option) (*operations.ListAccountingJournalsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listAccountingJournals",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Journal) ListAccountingJournals(ctx context.Context, request operations
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/journal", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listAccountingJournals",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Journal) ListAccountingJournals(ctx context.Context, request operations
 
 // PatchAccountingJournal - Update a journal
 func (s *Journal) PatchAccountingJournal(ctx context.Context, request operations.PatchAccountingJournalRequest, opts ...operations.Option) (*operations.PatchAccountingJournalResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchAccountingJournal",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Journal) PatchAccountingJournal(ctx context.Context, request operations
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchAccountingJournal",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingJournal", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Journal) PatchAccountingJournal(ctx context.Context, request operations
 
 // RemoveAccountingJournal - Remove a journal
 func (s *Journal) RemoveAccountingJournal(ctx context.Context, request operations.RemoveAccountingJournalRequest, opts ...operations.Option) (*operations.RemoveAccountingJournalResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeAccountingJournal",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Journal) RemoveAccountingJournal(ctx context.Context, request operation
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/journal/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeAccountingJournal",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Journal) RemoveAccountingJournal(ctx context.Context, request operation
 
 // UpdateAccountingJournal - Update a journal
 func (s *Journal) UpdateAccountingJournal(ctx context.Context, request operations.UpdateAccountingJournalRequest, opts ...operations.Option) (*operations.UpdateAccountingJournalResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateAccountingJournal",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Journal) UpdateAccountingJournal(ctx context.Context, request operation
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateAccountingJournal",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingJournal", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

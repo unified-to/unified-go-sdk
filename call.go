@@ -27,12 +27,6 @@ func newCall(sdkConfig sdkConfiguration) *Call {
 
 // ListUcCalls - List all calls
 func (s *Call) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest, opts ...operations.Option) (*operations.ListUcCallsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUcCalls",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -54,6 +48,13 @@ func (s *Call) ListUcCalls(ctx context.Context, request operations.ListUcCallsRe
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/uc/{connection_id}/call", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUcCalls",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

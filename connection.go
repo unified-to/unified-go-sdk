@@ -29,12 +29,6 @@ func newConnection(sdkConfig sdkConfiguration) *Connection {
 // CreateUnifiedConnection - Create connection
 // Used only to import existing customer credentials; use "Create connection indirectly" instead
 func (s *Connection) CreateUnifiedConnection(ctx context.Context, request *shared.Connection, opts ...operations.Option) (*operations.CreateUnifiedConnectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createUnifiedConnection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -58,6 +52,12 @@ func (s *Connection) CreateUnifiedConnection(ctx context.Context, request *share
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createUnifiedConnection",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -235,12 +235,6 @@ func (s *Connection) CreateUnifiedConnection(ctx context.Context, request *share
 
 // GetUnifiedConnection - Retrieve connection
 func (s *Connection) GetUnifiedConnection(ctx context.Context, request operations.GetUnifiedConnectionRequest, opts ...operations.Option) (*operations.GetUnifiedConnectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUnifiedConnection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -262,6 +256,13 @@ func (s *Connection) GetUnifiedConnection(ctx context.Context, request operation
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUnifiedConnection",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -433,12 +434,6 @@ func (s *Connection) GetUnifiedConnection(ctx context.Context, request operation
 
 // ListUnifiedConnections - List all connections
 func (s *Connection) ListUnifiedConnections(ctx context.Context, request operations.ListUnifiedConnectionsRequest, opts ...operations.Option) (*operations.ListUnifiedConnectionsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedConnections",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -460,6 +455,13 @@ func (s *Connection) ListUnifiedConnections(ctx context.Context, request operati
 	opURL, err := url.JoinPath(baseURL, "/unified/connection")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedConnections",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -635,12 +637,6 @@ func (s *Connection) ListUnifiedConnections(ctx context.Context, request operati
 
 // PatchUnifiedConnection - Update connection
 func (s *Connection) PatchUnifiedConnection(ctx context.Context, request operations.PatchUnifiedConnectionRequest, opts ...operations.Option) (*operations.PatchUnifiedConnectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchUnifiedConnection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -664,6 +660,12 @@ func (s *Connection) PatchUnifiedConnection(ctx context.Context, request operati
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchUnifiedConnection",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Connection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -841,12 +843,6 @@ func (s *Connection) PatchUnifiedConnection(ctx context.Context, request operati
 
 // RemoveUnifiedConnection - Remove connection
 func (s *Connection) RemoveUnifiedConnection(ctx context.Context, request operations.RemoveUnifiedConnectionRequest, opts ...operations.Option) (*operations.RemoveUnifiedConnectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeUnifiedConnection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -868,6 +864,13 @@ func (s *Connection) RemoveUnifiedConnection(ctx context.Context, request operat
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/connection/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeUnifiedConnection",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1016,12 +1019,6 @@ func (s *Connection) RemoveUnifiedConnection(ctx context.Context, request operat
 
 // UpdateUnifiedConnection - Update connection
 func (s *Connection) UpdateUnifiedConnection(ctx context.Context, request operations.UpdateUnifiedConnectionRequest, opts ...operations.Option) (*operations.UpdateUnifiedConnectionResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateUnifiedConnection",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1045,6 +1042,12 @@ func (s *Connection) UpdateUnifiedConnection(ctx context.Context, request operat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateUnifiedConnection",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Connection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

@@ -27,12 +27,6 @@ func newPrompt(sdkConfig sdkConfiguration) *Prompt {
 
 // CreateGenaiPrompt - Create a prompt
 func (s *Prompt) CreateGenaiPrompt(ctx context.Context, request operations.CreateGenaiPromptRequest, opts ...operations.Option) (*operations.CreateGenaiPromptResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createGenaiPrompt",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Prompt) CreateGenaiPrompt(ctx context.Context, request operations.Creat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createGenaiPrompt",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "GenaiPrompt", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

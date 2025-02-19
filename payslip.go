@@ -27,12 +27,6 @@ func newPayslip(sdkConfig sdkConfiguration) *Payslip {
 
 // GetHrisPayslip - Retrieve a payslip
 func (s *Payslip) GetHrisPayslip(ctx context.Context, request operations.GetHrisPayslipRequest, opts ...operations.Option) (*operations.GetHrisPayslipResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getHrisPayslip",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -54,6 +48,13 @@ func (s *Payslip) GetHrisPayslip(ctx context.Context, request operations.GetHris
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/payslip/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getHrisPayslip",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -229,12 +230,6 @@ func (s *Payslip) GetHrisPayslip(ctx context.Context, request operations.GetHris
 
 // ListHrisPayslips - List all payslips
 func (s *Payslip) ListHrisPayslips(ctx context.Context, request operations.ListHrisPayslipsRequest, opts ...operations.Option) (*operations.ListHrisPayslipsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listHrisPayslips",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -256,6 +251,13 @@ func (s *Payslip) ListHrisPayslips(ctx context.Context, request operations.ListH
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/hris/{connection_id}/payslip", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listHrisPayslips",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

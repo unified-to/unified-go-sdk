@@ -82,8 +82,9 @@ func (e *AccountingInvoiceStatus) UnmarshalJSON(data []byte) error {
 type AccountingInvoiceType string
 
 const (
-	AccountingInvoiceTypeBill    AccountingInvoiceType = "BILL"
-	AccountingInvoiceTypeInvoice AccountingInvoiceType = "INVOICE"
+	AccountingInvoiceTypeBill       AccountingInvoiceType = "BILL"
+	AccountingInvoiceTypeInvoice    AccountingInvoiceType = "INVOICE"
+	AccountingInvoiceTypeCreditmemo AccountingInvoiceType = "CREDITMEMO"
 )
 
 func (e AccountingInvoiceType) ToPointer() *AccountingInvoiceType {
@@ -98,6 +99,8 @@ func (e *AccountingInvoiceType) UnmarshalJSON(data []byte) error {
 	case "BILL":
 		fallthrough
 	case "INVOICE":
+		fallthrough
+	case "CREDITMEMO":
 		*e = AccountingInvoiceType(v)
 		return nil
 	default:

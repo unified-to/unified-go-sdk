@@ -27,12 +27,6 @@ func newOrder(sdkConfig sdkConfiguration) *Order {
 
 // CreateAccountingOrder - Create an order
 func (s *Order) CreateAccountingOrder(ctx context.Context, request operations.CreateAccountingOrderRequest, opts ...operations.Option) (*operations.CreateAccountingOrderResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createAccountingOrder",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Order) CreateAccountingOrder(ctx context.Context, request operations.Cr
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createAccountingOrder",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingOrder", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Order) CreateAccountingOrder(ctx context.Context, request operations.Cr
 
 // GetAccountingOrder - Retrieve an order
 func (s *Order) GetAccountingOrder(ctx context.Context, request operations.GetAccountingOrderRequest, opts ...operations.Option) (*operations.GetAccountingOrderResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getAccountingOrder",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Order) GetAccountingOrder(ctx context.Context, request operations.GetAc
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/order/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getAccountingOrder",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Order) GetAccountingOrder(ctx context.Context, request operations.GetAc
 
 // ListAccountingOrders - List all orders
 func (s *Order) ListAccountingOrders(ctx context.Context, request operations.ListAccountingOrdersRequest, opts ...operations.Option) (*operations.ListAccountingOrdersResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listAccountingOrders",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Order) ListAccountingOrders(ctx context.Context, request operations.Lis
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/order", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listAccountingOrders",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Order) ListAccountingOrders(ctx context.Context, request operations.Lis
 
 // PatchAccountingOrder - Update an order
 func (s *Order) PatchAccountingOrder(ctx context.Context, request operations.PatchAccountingOrderRequest, opts ...operations.Option) (*operations.PatchAccountingOrderResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchAccountingOrder",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Order) PatchAccountingOrder(ctx context.Context, request operations.Pat
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchAccountingOrder",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingOrder", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Order) PatchAccountingOrder(ctx context.Context, request operations.Pat
 
 // RemoveAccountingOrder - Remove an order
 func (s *Order) RemoveAccountingOrder(ctx context.Context, request operations.RemoveAccountingOrderRequest, opts ...operations.Option) (*operations.RemoveAccountingOrderResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeAccountingOrder",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Order) RemoveAccountingOrder(ctx context.Context, request operations.Re
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/order/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeAccountingOrder",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Order) RemoveAccountingOrder(ctx context.Context, request operations.Re
 
 // UpdateAccountingOrder - Update an order
 func (s *Order) UpdateAccountingOrder(ctx context.Context, request operations.UpdateAccountingOrderRequest, opts ...operations.Option) (*operations.UpdateAccountingOrderResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateAccountingOrder",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Order) UpdateAccountingOrder(ctx context.Context, request operations.Up
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateAccountingOrder",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingOrder", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err

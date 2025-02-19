@@ -28,12 +28,6 @@ func newApicall(sdkConfig sdkConfiguration) *Apicall {
 
 // GetUnifiedApicall - Retrieve specific API Call by its ID
 func (s *Apicall) GetUnifiedApicall(ctx context.Context, request operations.GetUnifiedApicallRequest, opts ...operations.Option) (*operations.GetUnifiedApicallResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getUnifiedApicall",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -55,6 +49,13 @@ func (s *Apicall) GetUnifiedApicall(ctx context.Context, request operations.GetU
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/apicall/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getUnifiedApicall",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -226,12 +227,6 @@ func (s *Apicall) GetUnifiedApicall(ctx context.Context, request operations.GetU
 
 // ListUnifiedApicalls - Returns API Calls
 func (s *Apicall) ListUnifiedApicalls(ctx context.Context, request operations.ListUnifiedApicallsRequest, opts ...operations.Option) (*operations.ListUnifiedApicallsResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listUnifiedApicalls",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -253,6 +248,13 @@ func (s *Apicall) ListUnifiedApicalls(ctx context.Context, request operations.Li
 	opURL, err := url.JoinPath(baseURL, "/unified/apicall")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listUnifiedApicalls",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

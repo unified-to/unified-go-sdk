@@ -27,12 +27,6 @@ func newApplicationstatus(sdkConfig sdkConfiguration) *Applicationstatus {
 
 // ListAtsApplicationstatuses - List all applicationstatuses
 func (s *Applicationstatus) ListAtsApplicationstatuses(ctx context.Context, request operations.ListAtsApplicationstatusesRequest, opts ...operations.Option) (*operations.ListAtsApplicationstatusesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listAtsApplicationstatuses",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -54,6 +48,13 @@ func (s *Applicationstatus) ListAtsApplicationstatuses(ctx context.Context, requ
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/ats/{connection_id}/applicationstatus", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listAtsApplicationstatuses",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout

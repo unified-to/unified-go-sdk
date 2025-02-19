@@ -27,12 +27,6 @@ func newPipeline(sdkConfig sdkConfiguration) *Pipeline {
 
 // CreateCrmPipeline - Create a pipeline
 func (s *Pipeline) CreateCrmPipeline(ctx context.Context, request operations.CreateCrmPipelineRequest, opts ...operations.Option) (*operations.CreateCrmPipelineResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "createCrmPipeline",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -56,6 +50,12 @@ func (s *Pipeline) CreateCrmPipeline(ctx context.Context, request operations.Cre
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "createCrmPipeline",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmPipeline", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -237,12 +237,6 @@ func (s *Pipeline) CreateCrmPipeline(ctx context.Context, request operations.Cre
 
 // GetCrmPipeline - Retrieve a pipeline
 func (s *Pipeline) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipelineRequest, opts ...operations.Option) (*operations.GetCrmPipelineResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "getCrmPipeline",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -264,6 +258,13 @@ func (s *Pipeline) GetCrmPipeline(ctx context.Context, request operations.GetCrm
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "getCrmPipeline",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -439,12 +440,6 @@ func (s *Pipeline) GetCrmPipeline(ctx context.Context, request operations.GetCrm
 
 // ListCrmPipelines - List all pipelines
 func (s *Pipeline) ListCrmPipelines(ctx context.Context, request operations.ListCrmPipelinesRequest, opts ...operations.Option) (*operations.ListCrmPipelinesResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "listCrmPipelines",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -466,6 +461,13 @@ func (s *Pipeline) ListCrmPipelines(ctx context.Context, request operations.List
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "listCrmPipelines",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -641,12 +643,6 @@ func (s *Pipeline) ListCrmPipelines(ctx context.Context, request operations.List
 
 // PatchCrmPipeline - Update a pipeline
 func (s *Pipeline) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmPipelineRequest, opts ...operations.Option) (*operations.PatchCrmPipelineResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "patchCrmPipeline",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -670,6 +666,12 @@ func (s *Pipeline) PatchCrmPipeline(ctx context.Context, request operations.Patc
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "patchCrmPipeline",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmPipeline", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
@@ -851,12 +853,6 @@ func (s *Pipeline) PatchCrmPipeline(ctx context.Context, request operations.Patc
 
 // RemoveCrmPipeline - Remove a pipeline
 func (s *Pipeline) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCrmPipelineRequest, opts ...operations.Option) (*operations.RemoveCrmPipelineResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "removeCrmPipeline",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -878,6 +874,13 @@ func (s *Pipeline) RemoveCrmPipeline(ctx context.Context, request operations.Rem
 	opURL, err := utils.GenerateURL(ctx, baseURL, "/crm/{connection_id}/pipeline/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "removeCrmPipeline",
+		SecuritySource: s.sdkConfiguration.Security,
 	}
 
 	timeout := o.Timeout
@@ -1026,12 +1029,6 @@ func (s *Pipeline) RemoveCrmPipeline(ctx context.Context, request operations.Rem
 
 // UpdateCrmPipeline - Update a pipeline
 func (s *Pipeline) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCrmPipelineRequest, opts ...operations.Option) (*operations.UpdateCrmPipelineResponse, error) {
-	hookCtx := hooks.HookContext{
-		Context:        ctx,
-		OperationID:    "updateCrmPipeline",
-		SecuritySource: s.sdkConfiguration.Security,
-	}
-
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1055,6 +1052,12 @@ func (s *Pipeline) UpdateCrmPipeline(ctx context.Context, request operations.Upd
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
+	hookCtx := hooks.HookContext{
+		BaseURL:        baseURL,
+		Context:        ctx,
+		OperationID:    "updateCrmPipeline",
+		SecuritySource: s.sdkConfiguration.Security,
+	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CrmPipeline", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
