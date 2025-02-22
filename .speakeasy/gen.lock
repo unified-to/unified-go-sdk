@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 3da93e71a8a8edbd419c4dd261a040f9
+  docChecksum: c0d6af0ca0a33fa3f44a1fca666d6fae
   docVersion: "1.0"
-  speakeasyVersion: 1.494.0
-  generationVersion: 2.515.0
-  releaseVersion: 0.23.3
-  configChecksum: c7a48634c40d265d4de2cc37e40a8d00
+  speakeasyVersion: 1.501.0
+  generationVersion: 2.522.1
+  releaseVersion: 0.23.4
+  configChecksum: eea44d9d24dec8f3b3375176a09875d1
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -15,8 +15,8 @@ features:
   go:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.9
-    core: 3.7.1
+    constsAndDefaults: 0.1.10
+    core: 3.7.2
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -447,6 +447,7 @@ generatedFiles:
   - /pkg/models/shared/atscompensation.go
   - /pkg/models/shared/atsdocument.go
   - /pkg/models/shared/atsemail.go
+  - /pkg/models/shared/atsgroup.go
   - /pkg/models/shared/atsinterview.go
   - /pkg/models/shared/atsjob.go
   - /pkg/models/shared/atsjobposting.go
@@ -1465,6 +1466,8 @@ generatedFiles:
   - docs/pkg/models/shared/atsdocumenttype.md
   - docs/pkg/models/shared/atsemail.md
   - docs/pkg/models/shared/atsemailtype.md
+  - docs/pkg/models/shared/atsgroup.md
+  - docs/pkg/models/shared/atsgrouptype.md
   - docs/pkg/models/shared/atsinterview.md
   - docs/pkg/models/shared/atsinterviewraw.md
   - docs/pkg/models/shared/atsinterviewstatus.md
@@ -1536,6 +1539,7 @@ generatedFiles:
   - docs/pkg/models/shared/ethnicity.md
   - docs/pkg/models/shared/event.md
   - docs/pkg/models/shared/extradata.md
+  - docs/pkg/models/shared/format.md
   - docs/pkg/models/shared/frequency.md
   - docs/pkg/models/shared/fromwebhook.md
   - docs/pkg/models/shared/genaicontent.md
@@ -1641,7 +1645,6 @@ generatedFiles:
   - docs/pkg/models/shared/meta.md
   - docs/pkg/models/shared/metadatametadata.md
   - docs/pkg/models/shared/metadatametadataraw.md
-  - docs/pkg/models/shared/metadatametadatatype.md
   - docs/pkg/models/shared/nativewebhookparentid.md
   - docs/pkg/models/shared/nativewebhookprojectid.md
   - docs/pkg/models/shared/objecttype.md

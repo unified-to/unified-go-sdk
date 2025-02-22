@@ -352,6 +352,7 @@ type Webhook struct {
 	IntegrationType *string           `json:"integration_type,omitempty"`
 	Interval        *float64          `json:"interval,omitempty"`
 	IsHealthy       *bool             `json:"is_healthy,omitempty"`
+	IsPaused        *bool             `json:"is_paused,omitempty"`
 	Meta            *Meta             `json:"meta,omitempty"`
 	ObjectType      ObjectType        `json:"object_type"`
 	PageMaxLimit    *float64          `json:"page_max_limit,omitempty"`
@@ -476,6 +477,13 @@ func (o *Webhook) GetIsHealthy() *bool {
 		return nil
 	}
 	return o.IsHealthy
+}
+
+func (o *Webhook) GetIsPaused() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsPaused
 }
 
 func (o *Webhook) GetMeta() *Meta {

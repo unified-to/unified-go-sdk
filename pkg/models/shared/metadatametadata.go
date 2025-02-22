@@ -9,31 +9,28 @@ import (
 	"time"
 )
 
-type MetadataMetadataRaw struct {
-}
-
-type MetadataMetadataType string
+type Format string
 
 const (
-	MetadataMetadataTypeText           MetadataMetadataType = "TEXT"
-	MetadataMetadataTypeNumber         MetadataMetadataType = "NUMBER"
-	MetadataMetadataTypeDate           MetadataMetadataType = "DATE"
-	MetadataMetadataTypeBoolean        MetadataMetadataType = "BOOLEAN"
-	MetadataMetadataTypeFile           MetadataMetadataType = "FILE"
-	MetadataMetadataTypeTextarea       MetadataMetadataType = "TEXTAREA"
-	MetadataMetadataTypeSingleSelect   MetadataMetadataType = "SINGLE_SELECT"
-	MetadataMetadataTypeMultipleSelect MetadataMetadataType = "MULTIPLE_SELECT"
-	MetadataMetadataTypeMeasurement    MetadataMetadataType = "MEASUREMENT"
-	MetadataMetadataTypePrice          MetadataMetadataType = "PRICE"
-	MetadataMetadataTypeYesNo          MetadataMetadataType = "YES_NO"
-	MetadataMetadataTypeCurrency       MetadataMetadataType = "CURRENCY"
-	MetadataMetadataTypeURL            MetadataMetadataType = "URL"
+	FormatText           Format = "TEXT"
+	FormatNumber         Format = "NUMBER"
+	FormatDate           Format = "DATE"
+	FormatBoolean        Format = "BOOLEAN"
+	FormatFile           Format = "FILE"
+	FormatTextarea       Format = "TEXTAREA"
+	FormatSingleSelect   Format = "SINGLE_SELECT"
+	FormatMultipleSelect Format = "MULTIPLE_SELECT"
+	FormatMeasurement    Format = "MEASUREMENT"
+	FormatPrice          Format = "PRICE"
+	FormatYesNo          Format = "YES_NO"
+	FormatCurrency       Format = "CURRENCY"
+	FormatURL            Format = "URL"
 )
 
-func (e MetadataMetadataType) ToPointer() *MetadataMetadataType {
+func (e Format) ToPointer() *Format {
 	return &e
 }
-func (e *MetadataMetadataType) UnmarshalJSON(data []byte) error {
+func (e *Format) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -64,23 +61,27 @@ func (e *MetadataMetadataType) UnmarshalJSON(data []byte) error {
 	case "CURRENCY":
 		fallthrough
 	case "URL":
-		*e = MetadataMetadataType(v)
+		*e = Format(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetadataMetadataType: %v", v)
+		return fmt.Errorf("invalid value for Format: %v", v)
 	}
 }
 
+type MetadataMetadataRaw struct {
+}
+
 type MetadataMetadata struct {
-	CreatedAt  *time.Time            `json:"created_at,omitempty"`
-	ID         *string               `json:"id,omitempty"`
-	Name       string                `json:"name"`
-	ObjectType string                `json:"object_type"`
-	Objects    map[string]string     `json:"objects,omitempty"`
-	Options    []string              `json:"options,omitempty"`
-	Raw        *MetadataMetadataRaw  `json:"raw,omitempty"`
-	Type       *MetadataMetadataType `json:"type,omitempty"`
-	UpdatedAt  *time.Time            `json:"updated_at,omitempty"`
+	CreatedAt      *time.Time           `json:"created_at,omitempty"`
+	Format         *Format              `json:"format,omitempty"`
+	ID             *string              `json:"id,omitempty"`
+	Name           string               `json:"name"`
+	ObjectType     string               `json:"object_type"`
+	Objects        map[string]string    `json:"objects,omitempty"`
+	Options        []string             `json:"options,omitempty"`
+	OriginalFormat *string              `json:"original_format,omitempty"`
+	Raw            *MetadataMetadataRaw `json:"raw,omitempty"`
+	UpdatedAt      *time.Time           `json:"updated_at,omitempty"`
 }
 
 func (m MetadataMetadata) MarshalJSON() ([]byte, error) {
@@ -99,6 +100,13 @@ func (o *MetadataMetadata) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return o.CreatedAt
+}
+
+func (o *MetadataMetadata) GetFormat() *Format {
+	if o == nil {
+		return nil
+	}
+	return o.Format
 }
 
 func (o *MetadataMetadata) GetID() *string {
@@ -136,18 +144,18 @@ func (o *MetadataMetadata) GetOptions() []string {
 	return o.Options
 }
 
+func (o *MetadataMetadata) GetOriginalFormat() *string {
+	if o == nil {
+		return nil
+	}
+	return o.OriginalFormat
+}
+
 func (o *MetadataMetadata) GetRaw() *MetadataMetadataRaw {
 	if o == nil {
 		return nil
 	}
 	return o.Raw
-}
-
-func (o *MetadataMetadata) GetType() *MetadataMetadataType {
-	if o == nil {
-		return nil
-	}
-	return o.Type
 }
 
 func (o *MetadataMetadata) GetUpdatedAt() *time.Time {
