@@ -8,16 +8,16 @@ import (
 )
 
 type CreateGenaiPromptRequest struct {
-	GenaiPrompt *shared.GenaiPrompt `request:"mediaType=application/json"`
+	GenaiPrompt shared.GenaiPrompt `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateGenaiPromptRequest) GetGenaiPrompt() *shared.GenaiPrompt {
+func (o *CreateGenaiPromptRequest) GetGenaiPrompt() shared.GenaiPrompt {
 	if o == nil {
-		return nil
+		return shared.GenaiPrompt{}
 	}
 	return o.GenaiPrompt
 }

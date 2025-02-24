@@ -56,7 +56,7 @@ func (s *Order) CreateAccountingOrder(ctx context.Context, request operations.Cr
 		OperationID:    "createAccountingOrder",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingOrder", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingOrder", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Order) PatchAccountingOrder(ctx context.Context, request operations.Pat
 		OperationID:    "patchAccountingOrder",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingOrder", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingOrder", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Order) UpdateAccountingOrder(ctx context.Context, request operations.Up
 		OperationID:    "updateAccountingOrder",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingOrder", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingOrder", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

@@ -8,16 +8,16 @@ import (
 )
 
 type CreateTaskCommentRequest struct {
-	TaskComment *shared.TaskComment `request:"mediaType=application/json"`
+	TaskComment shared.TaskComment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateTaskCommentRequest) GetTaskComment() *shared.TaskComment {
+func (o *CreateTaskCommentRequest) GetTaskComment() shared.TaskComment {
 	if o == nil {
-		return nil
+		return shared.TaskComment{}
 	}
 	return o.TaskComment
 }

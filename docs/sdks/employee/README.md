@@ -24,6 +24,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -36,6 +37,7 @@ func main() {
     )
 
     res, err := s.Employee.CreateHrisEmployee(ctx, operations.CreateHrisEmployeeRequest{
+        HrisEmployee: shared.HrisEmployee{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -184,6 +186,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -196,6 +199,7 @@ func main() {
     )
 
     res, err := s.Employee.PatchHrisEmployee(ctx, operations.PatchHrisEmployeeRequest{
+        HrisEmployee: shared.HrisEmployee{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -292,6 +296,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -304,6 +309,7 @@ func main() {
     )
 
     res, err := s.Employee.UpdateHrisEmployee(ctx, operations.UpdateHrisEmployeeRequest{
+        HrisEmployee: shared.HrisEmployee{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

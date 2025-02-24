@@ -56,7 +56,7 @@ func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request o
 		OperationID:    "createAccountingTransaction",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request op
 		OperationID:    "patchAccountingTransaction",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Transaction) UpdateAccountingTransaction(ctx context.Context, request o
 		OperationID:    "updateAccountingTransaction",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

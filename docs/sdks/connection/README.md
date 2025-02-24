@@ -24,6 +24,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
@@ -34,7 +35,18 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Connection.CreateUnifiedConnection(ctx, nil)
+    res, err := s.Connection.CreateUnifiedConnection(ctx, shared.Connection{
+        Categories: []shared.PropertyConnectionCategories{
+            shared.PropertyConnectionCategoriesAccounting,
+            shared.PropertyConnectionCategoriesMartech,
+            shared.PropertyConnectionCategoriesMartech,
+        },
+        IntegrationType: "<value>",
+        Permissions: []shared.PropertyConnectionPermissions{
+            shared.PropertyConnectionPermissionsLmsCourseRead,
+            shared.PropertyConnectionPermissionsScimUsersRead,
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -178,6 +190,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -190,6 +203,16 @@ func main() {
     )
 
     res, err := s.Connection.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
+        Connection: shared.Connection{
+            Categories: []shared.PropertyConnectionCategories{
+                shared.PropertyConnectionCategoriesMetadata,
+                shared.PropertyConnectionCategoriesCrm,
+            },
+            IntegrationType: "<value>",
+            Permissions: []shared.PropertyConnectionPermissions{
+
+            },
+        },
         ID: "<id>",
     })
     if err != nil {
@@ -284,6 +307,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -296,6 +320,17 @@ func main() {
     )
 
     res, err := s.Connection.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
+        Connection: shared.Connection{
+            Categories: []shared.PropertyConnectionCategories{
+                shared.PropertyConnectionCategoriesMetadata,
+                shared.PropertyConnectionCategoriesAccounting,
+                shared.PropertyConnectionCategoriesMetadata,
+            },
+            IntegrationType: "<value>",
+            Permissions: []shared.PropertyConnectionPermissions{
+
+            },
+        },
         ID: "<id>",
     })
     if err != nil {

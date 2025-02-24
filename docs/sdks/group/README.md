@@ -30,6 +30,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -42,6 +43,7 @@ func main() {
     )
 
     res, err := s.Group.CreateHrisGroup(ctx, operations.CreateHrisGroupRequest{
+        HrisGroup: shared.HrisGroup{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -83,6 +85,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -95,6 +98,9 @@ func main() {
     )
 
     res, err := s.Group.CreateScimGroups(ctx, operations.CreateScimGroupsRequest{
+        ScimGroup: shared.ScimGroup{
+            DisplayName: "Bert89",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -350,6 +356,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -362,6 +369,7 @@ func main() {
     )
 
     res, err := s.Group.PatchHrisGroup(ctx, operations.PatchHrisGroupRequest{
+        HrisGroup: shared.HrisGroup{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -404,6 +412,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -416,6 +425,9 @@ func main() {
     )
 
     res, err := s.Group.PatchScimGroups(ctx, operations.PatchScimGroupsRequest{
+        ScimGroup: shared.ScimGroup{
+            DisplayName: "Damon_Rutherford93",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -566,6 +578,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -578,6 +591,7 @@ func main() {
     )
 
     res, err := s.Group.UpdateHrisGroup(ctx, operations.UpdateHrisGroupRequest{
+        HrisGroup: shared.HrisGroup{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -620,6 +634,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -632,6 +647,9 @@ func main() {
     )
 
     res, err := s.Group.UpdateScimGroups(ctx, operations.UpdateScimGroupsRequest{
+        ScimGroup: shared.ScimGroup{
+            DisplayName: "Frederic.Reichel",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

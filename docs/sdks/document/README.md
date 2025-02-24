@@ -24,6 +24,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -36,6 +37,7 @@ func main() {
     )
 
     res, err := s.Document.CreateAtsDocument(ctx, operations.CreateAtsDocumentRequest{
+        AtsDocument: shared.AtsDocument{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -184,6 +186,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -196,6 +199,7 @@ func main() {
     )
 
     res, err := s.Document.PatchAtsDocument(ctx, operations.PatchAtsDocumentRequest{
+        AtsDocument: shared.AtsDocument{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -292,6 +296,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -304,6 +309,7 @@ func main() {
     )
 
     res, err := s.Document.UpdateAtsDocument(ctx, operations.UpdateAtsDocumentRequest{
+        AtsDocument: shared.AtsDocument{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

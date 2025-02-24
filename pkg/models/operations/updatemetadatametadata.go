@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateMetadataMetadataRequest struct {
-	MetadataMetadata *shared.MetadataMetadata `request:"mediaType=application/json"`
+	MetadataMetadata shared.MetadataMetadata `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateMetadataMetadataRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateMetadataMetadataRequest) GetMetadataMetadata() *shared.MetadataMetadata {
+func (o *UpdateMetadataMetadataRequest) GetMetadataMetadata() shared.MetadataMetadata {
 	if o == nil {
-		return nil
+		return shared.MetadataMetadata{}
 	}
 	return o.MetadataMetadata
 }

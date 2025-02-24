@@ -9,7 +9,7 @@ import (
 
 type PatchUcContactRequest struct {
 	// A contact represents a person that optionally is associated with a call
-	UcContact *shared.UcContact `request:"mediaType=application/json"`
+	UcContact shared.UcContact `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -18,9 +18,9 @@ type PatchUcContactRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchUcContactRequest) GetUcContact() *shared.UcContact {
+func (o *PatchUcContactRequest) GetUcContact() shared.UcContact {
 	if o == nil {
-		return nil
+		return shared.UcContact{}
 	}
 	return o.UcContact
 }

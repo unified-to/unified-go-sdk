@@ -24,6 +24,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -36,6 +37,7 @@ func main() {
     )
 
     res, err := s.Instructor.CreateLmsInstructor(ctx, operations.CreateLmsInstructorRequest{
+        LmsInstructor: shared.LmsInstructor{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -184,6 +186,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -196,6 +199,7 @@ func main() {
     )
 
     res, err := s.Instructor.PatchLmsInstructor(ctx, operations.PatchLmsInstructorRequest{
+        LmsInstructor: shared.LmsInstructor{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -292,6 +296,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -304,6 +309,7 @@ func main() {
     )
 
     res, err := s.Instructor.UpdateLmsInstructor(ctx, operations.UpdateLmsInstructorRequest{
+        LmsInstructor: shared.LmsInstructor{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

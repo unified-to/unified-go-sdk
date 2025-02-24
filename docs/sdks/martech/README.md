@@ -30,6 +30,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -42,6 +43,7 @@ func main() {
     )
 
     res, err := s.Martech.CreateMartechList(ctx, operations.CreateMartechListRequest{
+        MarketingList: shared.MarketingList{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -83,6 +85,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -95,6 +98,7 @@ func main() {
     )
 
     res, err := s.Martech.CreateMartechMember(ctx, operations.CreateMartechMemberRequest{
+        MarketingMember: shared.MarketingMember{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -350,6 +354,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -362,6 +367,7 @@ func main() {
     )
 
     res, err := s.Martech.PatchMartechList(ctx, operations.PatchMartechListRequest{
+        MarketingList: shared.MarketingList{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -404,6 +410,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -416,6 +423,7 @@ func main() {
     )
 
     res, err := s.Martech.PatchMartechMember(ctx, operations.PatchMartechMemberRequest{
+        MarketingMember: shared.MarketingMember{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -566,6 +574,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -578,6 +587,7 @@ func main() {
     )
 
     res, err := s.Martech.UpdateMartechList(ctx, operations.UpdateMartechListRequest{
+        MarketingList: shared.MarketingList{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -620,6 +630,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -632,6 +643,7 @@ func main() {
     )
 
     res, err := s.Martech.UpdateMartechMember(ctx, operations.UpdateMartechMemberRequest{
+        MarketingMember: shared.MarketingMember{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

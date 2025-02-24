@@ -56,7 +56,7 @@ func (s *Organization) CreateRepoOrganization(ctx context.Context, request opera
 		OperationID:    "createRepoOrganization",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoOrganization", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoOrganization", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1078,7 +1078,7 @@ func (s *Organization) PatchRepoOrganization(ctx context.Context, request operat
 		OperationID:    "patchRepoOrganization",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoOrganization", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoOrganization", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1464,7 +1464,7 @@ func (s *Organization) UpdateRepoOrganization(ctx context.Context, request opera
 		OperationID:    "updateRepoOrganization",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoOrganization", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoOrganization", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

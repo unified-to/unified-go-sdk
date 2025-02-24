@@ -8,16 +8,16 @@ import (
 )
 
 type CreateMetadataMetadataRequest struct {
-	MetadataMetadata *shared.MetadataMetadata `request:"mediaType=application/json"`
+	MetadataMetadata shared.MetadataMetadata `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateMetadataMetadataRequest) GetMetadataMetadata() *shared.MetadataMetadata {
+func (o *CreateMetadataMetadataRequest) GetMetadataMetadata() shared.MetadataMetadata {
 	if o == nil {
-		return nil
+		return shared.MetadataMetadata{}
 	}
 	return o.MetadataMetadata
 }

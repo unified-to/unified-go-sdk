@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateTaskTaskRequest struct {
-	TaskTask *shared.TaskTask `request:"mediaType=application/json"`
+	TaskTask shared.TaskTask `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateTaskTaskRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateTaskTaskRequest) GetTaskTask() *shared.TaskTask {
+func (o *UpdateTaskTaskRequest) GetTaskTask() shared.TaskTask {
 	if o == nil {
-		return nil
+		return shared.TaskTask{}
 	}
 	return o.TaskTask
 }

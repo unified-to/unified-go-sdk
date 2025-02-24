@@ -8,7 +8,7 @@ import (
 )
 
 type PatchTaskCommentRequest struct {
-	TaskComment *shared.TaskComment `request:"mediaType=application/json"`
+	TaskComment shared.TaskComment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchTaskCommentRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchTaskCommentRequest) GetTaskComment() *shared.TaskComment {
+func (o *PatchTaskCommentRequest) GetTaskComment() shared.TaskComment {
 	if o == nil {
-		return nil
+		return shared.TaskComment{}
 	}
 	return o.TaskComment
 }

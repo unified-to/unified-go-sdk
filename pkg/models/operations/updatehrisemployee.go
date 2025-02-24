@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateHrisEmployeeRequest struct {
-	HrisEmployee *shared.HrisEmployee `request:"mediaType=application/json"`
+	HrisEmployee shared.HrisEmployee `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateHrisEmployeeRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateHrisEmployeeRequest) GetHrisEmployee() *shared.HrisEmployee {
+func (o *UpdateHrisEmployeeRequest) GetHrisEmployee() shared.HrisEmployee {
 	if o == nil {
-		return nil
+		return shared.HrisEmployee{}
 	}
 	return o.HrisEmployee
 }

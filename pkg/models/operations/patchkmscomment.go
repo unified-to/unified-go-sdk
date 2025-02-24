@@ -8,7 +8,7 @@ import (
 )
 
 type PatchKmsCommentRequest struct {
-	KmsComment *shared.KmsComment `request:"mediaType=application/json"`
+	KmsComment shared.KmsComment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchKmsCommentRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchKmsCommentRequest) GetKmsComment() *shared.KmsComment {
+func (o *PatchKmsCommentRequest) GetKmsComment() shared.KmsComment {
 	if o == nil {
-		return nil
+		return shared.KmsComment{}
 	}
 	return o.KmsComment
 }

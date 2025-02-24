@@ -56,7 +56,7 @@ func (s *Hris) CreateHrisCompany(ctx context.Context, request operations.CreateH
 		OperationID:    "createHrisCompany",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisCompany", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisCompany", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -266,7 +266,7 @@ func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.Create
 		OperationID:    "createHrisEmployee",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisEmployee", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisEmployee", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -476,7 +476,7 @@ func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHri
 		OperationID:    "createHrisGroup",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisGroup", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -686,7 +686,7 @@ func (s *Hris) CreateHrisLocation(ctx context.Context, request operations.Create
 		OperationID:    "createHrisLocation",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisLocation", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3332,7 +3332,7 @@ func (s *Hris) PatchHrisCompany(ctx context.Context, request operations.PatchHri
 		OperationID:    "patchHrisCompany",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisCompany", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisCompany", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3542,7 +3542,7 @@ func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHr
 		OperationID:    "patchHrisEmployee",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisEmployee", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisEmployee", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3752,7 +3752,7 @@ func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisG
 		OperationID:    "patchHrisGroup",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisGroup", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3962,7 +3962,7 @@ func (s *Hris) PatchHrisLocation(ctx context.Context, request operations.PatchHr
 		OperationID:    "patchHrisLocation",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisLocation", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -4876,7 +4876,7 @@ func (s *Hris) UpdateHrisCompany(ctx context.Context, request operations.UpdateH
 		OperationID:    "updateHrisCompany",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisCompany", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisCompany", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -5086,7 +5086,7 @@ func (s *Hris) UpdateHrisEmployee(ctx context.Context, request operations.Update
 		OperationID:    "updateHrisEmployee",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisEmployee", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisEmployee", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -5296,7 +5296,7 @@ func (s *Hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHri
 		OperationID:    "updateHrisGroup",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisGroup", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -5506,7 +5506,7 @@ func (s *Hris) UpdateHrisLocation(ctx context.Context, request operations.Update
 		OperationID:    "updateHrisLocation",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisLocation", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

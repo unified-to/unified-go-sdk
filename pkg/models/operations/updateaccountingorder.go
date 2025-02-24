@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateAccountingOrderRequest struct {
-	AccountingOrder *shared.AccountingOrder `request:"mediaType=application/json"`
+	AccountingOrder shared.AccountingOrder `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateAccountingOrderRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateAccountingOrderRequest) GetAccountingOrder() *shared.AccountingOrder {
+func (o *UpdateAccountingOrderRequest) GetAccountingOrder() shared.AccountingOrder {
 	if o == nil {
-		return nil
+		return shared.AccountingOrder{}
 	}
 	return o.AccountingOrder
 }

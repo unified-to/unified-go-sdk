@@ -36,6 +36,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -48,6 +49,9 @@ func main() {
     )
 
     res, err := s.Kms.CreateKmsComment(ctx, operations.CreateKmsCommentRequest{
+        KmsComment: shared.KmsComment{
+            Content: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -89,6 +93,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -101,6 +106,10 @@ func main() {
     )
 
     res, err := s.Kms.CreateKmsPage(ctx, operations.CreateKmsPageRequest{
+        KmsPage: shared.KmsPage{
+            Title: "<value>",
+            Type: shared.KmsPageTypeHTML,
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -142,6 +151,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -154,6 +164,9 @@ func main() {
     )
 
     res, err := s.Kms.CreateKmsSpace(ctx, operations.CreateKmsSpaceRequest{
+        KmsSpace: shared.KmsSpace{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -516,6 +529,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -528,6 +542,9 @@ func main() {
     )
 
     res, err := s.Kms.PatchKmsComment(ctx, operations.PatchKmsCommentRequest{
+        KmsComment: shared.KmsComment{
+            Content: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -570,6 +587,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -582,6 +600,10 @@ func main() {
     )
 
     res, err := s.Kms.PatchKmsPage(ctx, operations.PatchKmsPageRequest{
+        KmsPage: shared.KmsPage{
+            Title: "<value>",
+            Type: shared.KmsPageTypeText,
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -624,6 +646,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -636,6 +659,9 @@ func main() {
     )
 
     res, err := s.Kms.PatchKmsSpace(ctx, operations.PatchKmsSpaceRequest{
+        KmsSpace: shared.KmsSpace{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -840,6 +866,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -852,6 +879,9 @@ func main() {
     )
 
     res, err := s.Kms.UpdateKmsComment(ctx, operations.UpdateKmsCommentRequest{
+        KmsComment: shared.KmsComment{
+            Content: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -894,6 +924,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -906,6 +937,10 @@ func main() {
     )
 
     res, err := s.Kms.UpdateKmsPage(ctx, operations.UpdateKmsPageRequest{
+        KmsPage: shared.KmsPage{
+            Title: "<value>",
+            Type: shared.KmsPageTypeOther,
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -948,6 +983,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -960,6 +996,9 @@ func main() {
     )
 
     res, err := s.Kms.UpdateKmsSpace(ctx, operations.UpdateKmsSpaceRequest{
+        KmsSpace: shared.KmsSpace{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

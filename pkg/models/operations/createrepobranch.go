@@ -8,16 +8,16 @@ import (
 )
 
 type CreateRepoBranchRequest struct {
-	RepoBranch *shared.RepoBranch `request:"mediaType=application/json"`
+	RepoBranch shared.RepoBranch `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateRepoBranchRequest) GetRepoBranch() *shared.RepoBranch {
+func (o *CreateRepoBranchRequest) GetRepoBranch() shared.RepoBranch {
 	if o == nil {
-		return nil
+		return shared.RepoBranch{}
 	}
 	return o.RepoBranch
 }

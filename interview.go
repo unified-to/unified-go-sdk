@@ -56,7 +56,7 @@ func (s *Interview) CreateAtsInterview(ctx context.Context, request operations.C
 		OperationID:    "createAtsInterview",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsInterview", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsInterview", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Interview) PatchAtsInterview(ctx context.Context, request operations.Pa
 		OperationID:    "patchAtsInterview",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsInterview", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsInterview", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Interview) UpdateAtsInterview(ctx context.Context, request operations.U
 		OperationID:    "updateAtsInterview",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsInterview", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsInterview", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

@@ -56,7 +56,7 @@ func (s *Activity) CreateAtsActivity(ctx context.Context, request operations.Cre
 		OperationID:    "createAtsActivity",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsActivity", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsActivity", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Activity) PatchAtsActivity(ctx context.Context, request operations.Patc
 		OperationID:    "patchAtsActivity",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsActivity", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsActivity", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Activity) UpdateAtsActivity(ctx context.Context, request operations.Upd
 		OperationID:    "updateAtsActivity",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsActivity", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsActivity", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

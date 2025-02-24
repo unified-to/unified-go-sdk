@@ -56,7 +56,7 @@ func (s *Scorecard) CreateAtsScorecard(ctx context.Context, request operations.C
 		OperationID:    "createAtsScorecard",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsScorecard", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsScorecard", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Scorecard) PatchAtsScorecard(ctx context.Context, request operations.Pa
 		OperationID:    "patchAtsScorecard",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsScorecard", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsScorecard", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Scorecard) UpdateAtsScorecard(ctx context.Context, request operations.U
 		OperationID:    "updateAtsScorecard",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "AtsScorecard", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsScorecard", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

@@ -56,7 +56,7 @@ func (s *Inventory) CreateCommerceInventory(ctx context.Context, request operati
 		OperationID:    "createCommerceInventory",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceInventory", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceInventory", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Inventory) PatchCommerceInventory(ctx context.Context, request operatio
 		OperationID:    "patchCommerceInventory",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceInventory", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceInventory", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Inventory) UpdateCommerceInventory(ctx context.Context, request operati
 		OperationID:    "updateCommerceInventory",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceInventory", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceInventory", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

@@ -9,16 +9,16 @@ import (
 
 type CreateUcContactRequest struct {
 	// A contact represents a person that optionally is associated with a call
-	UcContact *shared.UcContact `request:"mediaType=application/json"`
+	UcContact shared.UcContact `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateUcContactRequest) GetUcContact() *shared.UcContact {
+func (o *CreateUcContactRequest) GetUcContact() shared.UcContact {
 	if o == nil {
-		return nil
+		return shared.UcContact{}
 	}
 	return o.UcContact
 }

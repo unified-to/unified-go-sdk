@@ -8,16 +8,16 @@ import (
 )
 
 type CreateRepoRepositoryRequest struct {
-	RepoRepository *shared.RepoRepository `request:"mediaType=application/json"`
+	RepoRepository shared.RepoRepository `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateRepoRepositoryRequest) GetRepoRepository() *shared.RepoRepository {
+func (o *CreateRepoRepositoryRequest) GetRepoRepository() shared.RepoRepository {
 	if o == nil {
-		return nil
+		return shared.RepoRepository{}
 	}
 	return o.RepoRepository
 }

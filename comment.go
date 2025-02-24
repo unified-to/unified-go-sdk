@@ -56,7 +56,7 @@ func (s *Comment) CreateKmsComment(ctx context.Context, request operations.Creat
 		OperationID:    "createKmsComment",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsComment", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -266,7 +266,7 @@ func (s *Comment) CreateTaskComment(ctx context.Context, request operations.Crea
 		OperationID:    "createTaskComment",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskComment", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1288,7 +1288,7 @@ func (s *Comment) PatchKmsComment(ctx context.Context, request operations.PatchK
 		OperationID:    "patchKmsComment",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsComment", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1498,7 +1498,7 @@ func (s *Comment) PatchTaskComment(ctx context.Context, request operations.Patch
 		OperationID:    "patchTaskComment",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskComment", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2060,7 +2060,7 @@ func (s *Comment) UpdateKmsComment(ctx context.Context, request operations.Updat
 		OperationID:    "updateKmsComment",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsComment", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2270,7 +2270,7 @@ func (s *Comment) UpdateTaskComment(ctx context.Context, request operations.Upda
 		OperationID:    "updateTaskComment",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskComment", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

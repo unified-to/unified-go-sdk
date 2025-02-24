@@ -8,16 +8,16 @@ import (
 )
 
 type CreateAtsActivityRequest struct {
-	AtsActivity *shared.AtsActivity `request:"mediaType=application/json"`
+	AtsActivity shared.AtsActivity `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateAtsActivityRequest) GetAtsActivity() *shared.AtsActivity {
+func (o *CreateAtsActivityRequest) GetAtsActivity() shared.AtsActivity {
 	if o == nil {
-		return nil
+		return shared.AtsActivity{}
 	}
 	return o.AtsActivity
 }

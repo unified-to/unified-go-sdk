@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateAtsActivityRequest struct {
-	AtsActivity *shared.AtsActivity `request:"mediaType=application/json"`
+	AtsActivity shared.AtsActivity `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateAtsActivityRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateAtsActivityRequest) GetAtsActivity() *shared.AtsActivity {
+func (o *UpdateAtsActivityRequest) GetAtsActivity() shared.AtsActivity {
 	if o == nil {
-		return nil
+		return shared.AtsActivity{}
 	}
 	return o.AtsActivity
 }

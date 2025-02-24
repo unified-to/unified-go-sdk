@@ -56,7 +56,7 @@ func (s *File) CreateStorageFile(ctx context.Context, request operations.CreateS
 		OperationID:    "createStorageFile",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "StorageFile", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "StorageFile", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *File) PatchStorageFile(ctx context.Context, request operations.PatchSto
 		OperationID:    "patchStorageFile",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "StorageFile", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "StorageFile", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *File) UpdateStorageFile(ctx context.Context, request operations.UpdateS
 		OperationID:    "updateStorageFile",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "StorageFile", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "StorageFile", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

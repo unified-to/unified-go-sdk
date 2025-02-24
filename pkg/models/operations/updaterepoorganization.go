@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateRepoOrganizationRequest struct {
-	RepoOrganization *shared.RepoOrganization `request:"mediaType=application/json"`
+	RepoOrganization shared.RepoOrganization `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateRepoOrganizationRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateRepoOrganizationRequest) GetRepoOrganization() *shared.RepoOrganization {
+func (o *UpdateRepoOrganizationRequest) GetRepoOrganization() shared.RepoOrganization {
 	if o == nil {
-		return nil
+		return shared.RepoOrganization{}
 	}
 	return o.RepoOrganization
 }

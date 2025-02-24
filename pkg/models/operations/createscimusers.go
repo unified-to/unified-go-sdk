@@ -8,7 +8,7 @@ import (
 )
 
 type CreateScimUsersRequest struct {
-	ScimUser *shared.ScimUser `request:"mediaType=application/json"`
+	ScimUser shared.ScimUser `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string   `pathParam:"style=simple,explode=false,name=connection_id"`
 	Count        *float64 `queryParam:"style=form,explode=true,name=count"`
@@ -18,9 +18,9 @@ type CreateScimUsersRequest struct {
 	StartIndex   *float64 `queryParam:"style=form,explode=true,name=startIndex"`
 }
 
-func (o *CreateScimUsersRequest) GetScimUser() *shared.ScimUser {
+func (o *CreateScimUsersRequest) GetScimUser() shared.ScimUser {
 	if o == nil {
-		return nil
+		return shared.ScimUser{}
 	}
 	return o.ScimUser
 }

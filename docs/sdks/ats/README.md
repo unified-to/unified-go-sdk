@@ -63,6 +63,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -75,6 +76,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsActivity(ctx, operations.CreateAtsActivityRequest{
+        AtsActivity: shared.AtsActivity{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -116,6 +118,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -128,6 +131,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsApplication(ctx, operations.CreateAtsApplicationRequest{
+        AtsApplication: shared.AtsApplication{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -169,6 +173,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -181,6 +186,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsCandidate(ctx, operations.CreateAtsCandidateRequest{
+        AtsCandidate: shared.AtsCandidate{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -222,6 +228,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -234,6 +241,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsDocument(ctx, operations.CreateAtsDocumentRequest{
+        AtsDocument: shared.AtsDocument{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -275,6 +283,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -287,6 +296,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsInterview(ctx, operations.CreateAtsInterviewRequest{
+        AtsInterview: shared.AtsInterview{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -328,6 +338,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -340,6 +351,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsJob(ctx, operations.CreateAtsJobRequest{
+        AtsJob: shared.AtsJob{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -381,6 +393,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -393,6 +406,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsScorecard(ctx, operations.CreateAtsScorecardRequest{
+        AtsScorecard: shared.AtsScorecard{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1343,6 +1357,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1355,6 +1370,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsActivity(ctx, operations.PatchAtsActivityRequest{
+        AtsActivity: shared.AtsActivity{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1397,6 +1413,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1409,6 +1426,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsApplication(ctx, operations.PatchAtsApplicationRequest{
+        AtsApplication: shared.AtsApplication{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1451,6 +1469,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1463,6 +1482,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsCandidate(ctx, operations.PatchAtsCandidateRequest{
+        AtsCandidate: shared.AtsCandidate{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1505,6 +1525,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1517,6 +1538,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsDocument(ctx, operations.PatchAtsDocumentRequest{
+        AtsDocument: shared.AtsDocument{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1559,6 +1581,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1571,6 +1594,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsInterview(ctx, operations.PatchAtsInterviewRequest{
+        AtsInterview: shared.AtsInterview{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1613,6 +1637,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1625,6 +1650,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsJob(ctx, operations.PatchAtsJobRequest{
+        AtsJob: shared.AtsJob{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1667,6 +1693,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1679,6 +1706,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsScorecard(ctx, operations.PatchAtsScorecardRequest{
+        AtsScorecard: shared.AtsScorecard{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2099,6 +2127,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2111,6 +2140,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsActivity(ctx, operations.UpdateAtsActivityRequest{
+        AtsActivity: shared.AtsActivity{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2153,6 +2183,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2165,6 +2196,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsApplication(ctx, operations.UpdateAtsApplicationRequest{
+        AtsApplication: shared.AtsApplication{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2207,6 +2239,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2219,6 +2252,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsCandidate(ctx, operations.UpdateAtsCandidateRequest{
+        AtsCandidate: shared.AtsCandidate{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2261,6 +2295,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2273,6 +2308,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsDocument(ctx, operations.UpdateAtsDocumentRequest{
+        AtsDocument: shared.AtsDocument{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2315,6 +2351,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2327,6 +2364,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsInterview(ctx, operations.UpdateAtsInterviewRequest{
+        AtsInterview: shared.AtsInterview{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2369,6 +2407,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2381,6 +2420,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsJob(ctx, operations.UpdateAtsJobRequest{
+        AtsJob: shared.AtsJob{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2423,6 +2463,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2435,6 +2476,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsScorecard(ctx, operations.UpdateAtsScorecardRequest{
+        AtsScorecard: shared.AtsScorecard{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

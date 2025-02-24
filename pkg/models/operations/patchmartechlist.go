@@ -9,7 +9,7 @@ import (
 
 type PatchMartechListRequest struct {
 	// Mailing List
-	MarketingList *shared.MarketingList `request:"mediaType=application/json"`
+	MarketingList shared.MarketingList `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -18,9 +18,9 @@ type PatchMartechListRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchMartechListRequest) GetMarketingList() *shared.MarketingList {
+func (o *PatchMartechListRequest) GetMarketingList() shared.MarketingList {
 	if o == nil {
-		return nil
+		return shared.MarketingList{}
 	}
 	return o.MarketingList
 }

@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateCommerceInventoryRequest struct {
-	CommerceInventory *shared.CommerceInventory `request:"mediaType=application/json"`
+	CommerceInventory shared.CommerceInventory `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateCommerceInventoryRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateCommerceInventoryRequest) GetCommerceInventory() *shared.CommerceInventory {
+func (o *UpdateCommerceInventoryRequest) GetCommerceInventory() shared.CommerceInventory {
 	if o == nil {
-		return nil
+		return shared.CommerceInventory{}
 	}
 	return o.CommerceInventory
 }

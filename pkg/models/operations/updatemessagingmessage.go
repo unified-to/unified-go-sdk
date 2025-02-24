@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateMessagingMessageRequest struct {
-	MessagingMessage *shared.MessagingMessage `request:"mediaType=application/json"`
+	MessagingMessage shared.MessagingMessage `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateMessagingMessageRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateMessagingMessageRequest) GetMessagingMessage() *shared.MessagingMessage {
+func (o *UpdateMessagingMessageRequest) GetMessagingMessage() shared.MessagingMessage {
 	if o == nil {
-		return nil
+		return shared.MessagingMessage{}
 	}
 	return o.MessagingMessage
 }

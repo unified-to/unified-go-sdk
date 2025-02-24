@@ -8,16 +8,16 @@ import (
 )
 
 type CreateAccountingTaxrateRequest struct {
-	AccountingTaxrate *shared.AccountingTaxrate `request:"mediaType=application/json"`
+	AccountingTaxrate shared.AccountingTaxrate `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateAccountingTaxrateRequest) GetAccountingTaxrate() *shared.AccountingTaxrate {
+func (o *CreateAccountingTaxrateRequest) GetAccountingTaxrate() shared.AccountingTaxrate {
 	if o == nil {
-		return nil
+		return shared.AccountingTaxrate{}
 	}
 	return o.AccountingTaxrate
 }

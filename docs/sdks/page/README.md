@@ -24,6 +24,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -36,6 +37,10 @@ func main() {
     )
 
     res, err := s.Page.CreateKmsPage(ctx, operations.CreateKmsPageRequest{
+        KmsPage: shared.KmsPage{
+            Title: "<value>",
+            Type: shared.KmsPageTypeHTML,
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -184,6 +189,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -196,6 +202,10 @@ func main() {
     )
 
     res, err := s.Page.PatchKmsPage(ctx, operations.PatchKmsPageRequest{
+        KmsPage: shared.KmsPage{
+            Title: "<value>",
+            Type: shared.KmsPageTypeText,
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -292,6 +302,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -304,6 +315,10 @@ func main() {
     )
 
     res, err := s.Page.UpdateKmsPage(ctx, operations.UpdateKmsPageRequest{
+        KmsPage: shared.KmsPage{
+            Title: "<value>",
+            Type: shared.KmsPageTypeOther,
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

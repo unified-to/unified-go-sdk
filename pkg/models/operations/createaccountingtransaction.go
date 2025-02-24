@@ -8,16 +8,16 @@ import (
 )
 
 type CreateAccountingTransactionRequest struct {
-	AccountingTransaction *shared.AccountingTransaction `request:"mediaType=application/json"`
+	AccountingTransaction shared.AccountingTransaction `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateAccountingTransactionRequest) GetAccountingTransaction() *shared.AccountingTransaction {
+func (o *CreateAccountingTransactionRequest) GetAccountingTransaction() shared.AccountingTransaction {
 	if o == nil {
-		return nil
+		return shared.AccountingTransaction{}
 	}
 	return o.AccountingTransaction
 }

@@ -42,6 +42,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -54,6 +55,10 @@ func main() {
     )
 
     res, err := s.Lms.CreateLmsClass(ctx, operations.CreateLmsClassRequest{
+        LmsClass: shared.LmsClass{
+            CourseID: "<id>",
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -95,6 +100,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -107,6 +113,9 @@ func main() {
     )
 
     res, err := s.Lms.CreateLmsCourse(ctx, operations.CreateLmsCourseRequest{
+        LmsCourse: shared.LmsCourse{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -148,6 +157,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -160,6 +170,7 @@ func main() {
     )
 
     res, err := s.Lms.CreateLmsInstructor(ctx, operations.CreateLmsInstructorRequest{
+        LmsInstructor: shared.LmsInstructor{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -201,6 +212,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -213,6 +225,7 @@ func main() {
     )
 
     res, err := s.Lms.CreateLmsStudent(ctx, operations.CreateLmsStudentRequest{
+        LmsStudent: shared.LmsStudent{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -682,6 +695,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -694,6 +708,10 @@ func main() {
     )
 
     res, err := s.Lms.PatchLmsClass(ctx, operations.PatchLmsClassRequest{
+        LmsClass: shared.LmsClass{
+            CourseID: "<id>",
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -736,6 +754,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -748,6 +767,9 @@ func main() {
     )
 
     res, err := s.Lms.PatchLmsCourse(ctx, operations.PatchLmsCourseRequest{
+        LmsCourse: shared.LmsCourse{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -790,6 +812,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -802,6 +825,7 @@ func main() {
     )
 
     res, err := s.Lms.PatchLmsInstructor(ctx, operations.PatchLmsInstructorRequest{
+        LmsInstructor: shared.LmsInstructor{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -844,6 +868,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -856,6 +881,7 @@ func main() {
     )
 
     res, err := s.Lms.PatchLmsStudent(ctx, operations.PatchLmsStudentRequest{
+        LmsStudent: shared.LmsStudent{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1114,6 +1140,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1126,6 +1153,10 @@ func main() {
     )
 
     res, err := s.Lms.UpdateLmsClass(ctx, operations.UpdateLmsClassRequest{
+        LmsClass: shared.LmsClass{
+            CourseID: "<id>",
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1168,6 +1199,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1180,6 +1212,9 @@ func main() {
     )
 
     res, err := s.Lms.UpdateLmsCourse(ctx, operations.UpdateLmsCourseRequest{
+        LmsCourse: shared.LmsCourse{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1222,6 +1257,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1234,6 +1270,7 @@ func main() {
     )
 
     res, err := s.Lms.UpdateLmsInstructor(ctx, operations.UpdateLmsInstructorRequest{
+        LmsInstructor: shared.LmsInstructor{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1276,6 +1313,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1288,6 +1326,7 @@ func main() {
     )
 
     res, err := s.Lms.UpdateLmsStudent(ctx, operations.UpdateLmsStudentRequest{
+        LmsStudent: shared.LmsStudent{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -56,7 +56,7 @@ func (s *Task) CreateTaskComment(ctx context.Context, request operations.CreateT
 		OperationID:    "createTaskComment",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskComment", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -266,7 +266,7 @@ func (s *Task) CreateTaskProject(ctx context.Context, request operations.CreateT
 		OperationID:    "createTaskProject",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskProject", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskProject", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -476,7 +476,7 @@ func (s *Task) CreateTaskTask(ctx context.Context, request operations.CreateTask
 		OperationID:    "createTaskTask",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskTask", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskTask", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1904,7 +1904,7 @@ func (s *Task) PatchTaskComment(ctx context.Context, request operations.PatchTas
 		OperationID:    "patchTaskComment",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskComment", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2114,7 +2114,7 @@ func (s *Task) PatchTaskProject(ctx context.Context, request operations.PatchTas
 		OperationID:    "patchTaskProject",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskProject", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskProject", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2324,7 +2324,7 @@ func (s *Task) PatchTaskTask(ctx context.Context, request operations.PatchTaskTa
 		OperationID:    "patchTaskTask",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskTask", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskTask", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3062,7 +3062,7 @@ func (s *Task) UpdateTaskComment(ctx context.Context, request operations.UpdateT
 		OperationID:    "updateTaskComment",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskComment", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3272,7 +3272,7 @@ func (s *Task) UpdateTaskProject(ctx context.Context, request operations.UpdateT
 		OperationID:    "updateTaskProject",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskProject", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskProject", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3482,7 +3482,7 @@ func (s *Task) UpdateTaskTask(ctx context.Context, request operations.UpdateTask
 		OperationID:    "updateTaskTask",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TaskTask", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskTask", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

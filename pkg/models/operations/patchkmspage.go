@@ -8,7 +8,7 @@ import (
 )
 
 type PatchKmsPageRequest struct {
-	KmsPage *shared.KmsPage `request:"mediaType=application/json"`
+	KmsPage shared.KmsPage `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchKmsPageRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchKmsPageRequest) GetKmsPage() *shared.KmsPage {
+func (o *PatchKmsPageRequest) GetKmsPage() shared.KmsPage {
 	if o == nil {
-		return nil
+		return shared.KmsPage{}
 	}
 	return o.KmsPage
 }

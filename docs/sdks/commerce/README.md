@@ -42,6 +42,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -54,6 +55,9 @@ func main() {
     )
 
     res, err := s.Commerce.CreateCommerceCollection(ctx, operations.CreateCommerceCollectionRequest{
+        CommerceCollection: shared.CommerceCollection{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -95,6 +99,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -107,6 +112,9 @@ func main() {
     )
 
     res, err := s.Commerce.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
+        CommerceInventory: shared.CommerceInventory{
+            Available: 5165.08,
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -148,6 +156,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -160,6 +169,7 @@ func main() {
     )
 
     res, err := s.Commerce.CreateCommerceItem(ctx, operations.CreateCommerceItemRequest{
+        CommerceItem: shared.CommerceItem{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -201,6 +211,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -213,6 +224,9 @@ func main() {
     )
 
     res, err := s.Commerce.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
+        CommerceLocation: shared.CommerceLocation{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -682,6 +696,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -694,6 +709,9 @@ func main() {
     )
 
     res, err := s.Commerce.PatchCommerceCollection(ctx, operations.PatchCommerceCollectionRequest{
+        CommerceCollection: shared.CommerceCollection{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -736,6 +754,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -748,6 +767,9 @@ func main() {
     )
 
     res, err := s.Commerce.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
+        CommerceInventory: shared.CommerceInventory{
+            Available: 615.23,
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -790,6 +812,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -802,6 +825,7 @@ func main() {
     )
 
     res, err := s.Commerce.PatchCommerceItem(ctx, operations.PatchCommerceItemRequest{
+        CommerceItem: shared.CommerceItem{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -844,6 +868,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -856,6 +881,9 @@ func main() {
     )
 
     res, err := s.Commerce.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
+        CommerceLocation: shared.CommerceLocation{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1114,6 +1142,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1126,6 +1155,9 @@ func main() {
     )
 
     res, err := s.Commerce.UpdateCommerceCollection(ctx, operations.UpdateCommerceCollectionRequest{
+        CommerceCollection: shared.CommerceCollection{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1168,6 +1200,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1180,6 +1213,9 @@ func main() {
     )
 
     res, err := s.Commerce.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
+        CommerceInventory: shared.CommerceInventory{
+            Available: 9360.02,
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1222,6 +1258,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1234,6 +1271,7 @@ func main() {
     )
 
     res, err := s.Commerce.UpdateCommerceItem(ctx, operations.UpdateCommerceItemRequest{
+        CommerceItem: shared.CommerceItem{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1276,6 +1314,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1288,6 +1327,9 @@ func main() {
     )
 
     res, err := s.Commerce.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
+        CommerceLocation: shared.CommerceLocation{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

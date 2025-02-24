@@ -30,6 +30,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -42,6 +43,9 @@ func main() {
     )
 
     res, err := s.Comment.CreateKmsComment(ctx, operations.CreateKmsCommentRequest{
+        KmsComment: shared.KmsComment{
+            Content: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -83,6 +87,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -95,6 +100,10 @@ func main() {
     )
 
     res, err := s.Comment.CreateTaskComment(ctx, operations.CreateTaskCommentRequest{
+        TaskComment: shared.TaskComment{
+            TaskID: "<id>",
+            Text: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -350,6 +359,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -362,6 +372,9 @@ func main() {
     )
 
     res, err := s.Comment.PatchKmsComment(ctx, operations.PatchKmsCommentRequest{
+        KmsComment: shared.KmsComment{
+            Content: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -404,6 +417,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -416,6 +430,10 @@ func main() {
     )
 
     res, err := s.Comment.PatchTaskComment(ctx, operations.PatchTaskCommentRequest{
+        TaskComment: shared.TaskComment{
+            TaskID: "<id>",
+            Text: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -566,6 +584,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -578,6 +597,9 @@ func main() {
     )
 
     res, err := s.Comment.UpdateKmsComment(ctx, operations.UpdateKmsCommentRequest{
+        KmsComment: shared.KmsComment{
+            Content: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -620,6 +642,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -632,6 +655,10 @@ func main() {
     )
 
     res, err := s.Comment.UpdateTaskComment(ctx, operations.UpdateTaskCommentRequest{
+        TaskComment: shared.TaskComment{
+            TaskID: "<id>",
+            Text: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

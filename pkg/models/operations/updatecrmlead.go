@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateCrmLeadRequest struct {
-	CrmLead *shared.CrmLead `request:"mediaType=application/json"`
+	CrmLead shared.CrmLead `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateCrmLeadRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateCrmLeadRequest) GetCrmLead() *shared.CrmLead {
+func (o *UpdateCrmLeadRequest) GetCrmLead() shared.CrmLead {
 	if o == nil {
-		return nil
+		return shared.CrmLead{}
 	}
 	return o.CrmLead
 }

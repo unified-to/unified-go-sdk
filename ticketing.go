@@ -56,7 +56,7 @@ func (s *Ticketing) CreateTicketingCustomer(ctx context.Context, request operati
 		OperationID:    "createTicketingCustomer",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingCustomer", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCustomer", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -266,7 +266,7 @@ func (s *Ticketing) CreateTicketingNote(ctx context.Context, request operations.
 		OperationID:    "createTicketingNote",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingNote", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingNote", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -476,7 +476,7 @@ func (s *Ticketing) CreateTicketingTicket(ctx context.Context, request operation
 		OperationID:    "createTicketingTicket",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingTicket", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingTicket", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1904,7 +1904,7 @@ func (s *Ticketing) PatchTicketingCustomer(ctx context.Context, request operatio
 		OperationID:    "patchTicketingCustomer",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingCustomer", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCustomer", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2114,7 +2114,7 @@ func (s *Ticketing) PatchTicketingNote(ctx context.Context, request operations.P
 		OperationID:    "patchTicketingNote",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingNote", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingNote", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2324,7 +2324,7 @@ func (s *Ticketing) PatchTicketingTicket(ctx context.Context, request operations
 		OperationID:    "patchTicketingTicket",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingTicket", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingTicket", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3062,7 +3062,7 @@ func (s *Ticketing) UpdateTicketingCustomer(ctx context.Context, request operati
 		OperationID:    "updateTicketingCustomer",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingCustomer", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCustomer", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3272,7 +3272,7 @@ func (s *Ticketing) UpdateTicketingNote(ctx context.Context, request operations.
 		OperationID:    "updateTicketingNote",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingNote", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingNote", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3482,7 +3482,7 @@ func (s *Ticketing) UpdateTicketingTicket(ctx context.Context, request operation
 		OperationID:    "updateTicketingTicket",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "TicketingTicket", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingTicket", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

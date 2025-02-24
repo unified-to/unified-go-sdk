@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateCrmPipelineRequest struct {
-	CrmPipeline *shared.CrmPipeline `request:"mediaType=application/json"`
+	CrmPipeline shared.CrmPipeline `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateCrmPipelineRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateCrmPipelineRequest) GetCrmPipeline() *shared.CrmPipeline {
+func (o *UpdateCrmPipelineRequest) GetCrmPipeline() shared.CrmPipeline {
 	if o == nil {
-		return nil
+		return shared.CrmPipeline{}
 	}
 	return o.CrmPipeline
 }

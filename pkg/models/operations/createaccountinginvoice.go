@@ -8,16 +8,16 @@ import (
 )
 
 type CreateAccountingInvoiceRequest struct {
-	AccountingInvoice *shared.AccountingInvoice `request:"mediaType=application/json"`
+	AccountingInvoice shared.AccountingInvoice `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateAccountingInvoiceRequest) GetAccountingInvoice() *shared.AccountingInvoice {
+func (o *CreateAccountingInvoiceRequest) GetAccountingInvoice() shared.AccountingInvoice {
 	if o == nil {
-		return nil
+		return shared.AccountingInvoice{}
 	}
 	return o.AccountingInvoice
 }

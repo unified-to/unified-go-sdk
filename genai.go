@@ -56,7 +56,7 @@ func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.Create
 		OperationID:    "createGenaiPrompt",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "GenaiPrompt", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "GenaiPrompt", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

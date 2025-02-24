@@ -8,16 +8,16 @@ import (
 )
 
 type CreateKmsCommentRequest struct {
-	KmsComment *shared.KmsComment `request:"mediaType=application/json"`
+	KmsComment shared.KmsComment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateKmsCommentRequest) GetKmsComment() *shared.KmsComment {
+func (o *CreateKmsCommentRequest) GetKmsComment() shared.KmsComment {
 	if o == nil {
-		return nil
+		return shared.KmsComment{}
 	}
 	return o.KmsComment
 }

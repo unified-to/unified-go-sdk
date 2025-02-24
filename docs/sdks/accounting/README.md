@@ -62,6 +62,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -74,6 +75,7 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+        AccountingAccount: shared.AccountingAccount{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -115,6 +117,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -127,6 +130,7 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
+        AccountingContact: shared.AccountingContact{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -168,6 +172,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -180,6 +185,7 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingInvoice(ctx, operations.CreateAccountingInvoiceRequest{
+        AccountingInvoice: shared.AccountingInvoice{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -221,6 +227,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -233,6 +240,7 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingJournal(ctx, operations.CreateAccountingJournalRequest{
+        AccountingJournal: shared.AccountingJournal{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -274,6 +282,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -286,6 +295,7 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingOrder(ctx, operations.CreateAccountingOrderRequest{
+        AccountingOrder: shared.AccountingOrder{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -327,6 +337,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -339,6 +350,7 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
+        AccountingTaxrate: shared.AccountingTaxrate{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -380,6 +392,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -392,6 +405,7 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
+        AccountingTransaction: shared.AccountingTransaction{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1289,6 +1303,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1301,6 +1316,7 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingAccount(ctx, operations.PatchAccountingAccountRequest{
+        AccountingAccount: shared.AccountingAccount{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1343,6 +1359,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1355,6 +1372,7 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
+        AccountingContact: shared.AccountingContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1397,6 +1415,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1409,6 +1428,7 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingInvoice(ctx, operations.PatchAccountingInvoiceRequest{
+        AccountingInvoice: shared.AccountingInvoice{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1451,6 +1471,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1463,6 +1484,7 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingJournal(ctx, operations.PatchAccountingJournalRequest{
+        AccountingJournal: shared.AccountingJournal{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1505,6 +1527,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1517,6 +1540,7 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingOrder(ctx, operations.PatchAccountingOrderRequest{
+        AccountingOrder: shared.AccountingOrder{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1559,6 +1583,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1571,6 +1596,7 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
+        AccountingTaxrate: shared.AccountingTaxrate{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1613,6 +1639,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1625,6 +1652,7 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
+        AccountingTransaction: shared.AccountingTransaction{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2045,6 +2073,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2057,6 +2086,7 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingAccount(ctx, operations.UpdateAccountingAccountRequest{
+        AccountingAccount: shared.AccountingAccount{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2099,6 +2129,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2111,6 +2142,7 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
+        AccountingContact: shared.AccountingContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2153,6 +2185,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2165,6 +2198,7 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingInvoice(ctx, operations.UpdateAccountingInvoiceRequest{
+        AccountingInvoice: shared.AccountingInvoice{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2207,6 +2241,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2219,6 +2254,7 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingJournal(ctx, operations.UpdateAccountingJournalRequest{
+        AccountingJournal: shared.AccountingJournal{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2261,6 +2297,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2273,6 +2310,7 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingOrder(ctx, operations.UpdateAccountingOrderRequest{
+        AccountingOrder: shared.AccountingOrder{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2315,6 +2353,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2327,6 +2366,7 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
+        AccountingTaxrate: shared.AccountingTaxrate{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2369,6 +2409,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2381,6 +2422,7 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
+        AccountingTransaction: shared.AccountingTransaction{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

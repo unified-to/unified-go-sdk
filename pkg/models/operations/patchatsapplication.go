@@ -8,7 +8,7 @@ import (
 )
 
 type PatchAtsApplicationRequest struct {
-	AtsApplication *shared.AtsApplication `request:"mediaType=application/json"`
+	AtsApplication shared.AtsApplication `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchAtsApplicationRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchAtsApplicationRequest) GetAtsApplication() *shared.AtsApplication {
+func (o *PatchAtsApplicationRequest) GetAtsApplication() shared.AtsApplication {
 	if o == nil {
-		return nil
+		return shared.AtsApplication{}
 	}
 	return o.AtsApplication
 }

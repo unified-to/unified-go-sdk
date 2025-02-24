@@ -56,7 +56,7 @@ func (s *Link) CreatePaymentLink(ctx context.Context, request operations.CreateP
 		OperationID:    "createPaymentLink",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentLink", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentLink", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Link) PatchPaymentLink(ctx context.Context, request operations.PatchPay
 		OperationID:    "patchPaymentLink",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentLink", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentLink", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Link) UpdatePaymentLink(ctx context.Context, request operations.UpdateP
 		OperationID:    "updatePaymentLink",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentLink", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentLink", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

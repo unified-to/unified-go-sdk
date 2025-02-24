@@ -56,7 +56,7 @@ func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPa
 		OperationID:    "createKmsPage",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsPage", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsPage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPage
 		OperationID:    "patchKmsPage",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsPage", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsPage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Page) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPa
 		OperationID:    "updateKmsPage",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "KmsPage", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsPage", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

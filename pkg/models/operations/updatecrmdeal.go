@@ -9,7 +9,7 @@ import (
 
 type UpdateCrmDealRequest struct {
 	// A deal represents an opportunity with companies and/or contacts
-	CrmDeal *shared.CrmDeal `request:"mediaType=application/json"`
+	CrmDeal shared.CrmDeal `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -18,9 +18,9 @@ type UpdateCrmDealRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateCrmDealRequest) GetCrmDeal() *shared.CrmDeal {
+func (o *UpdateCrmDealRequest) GetCrmDeal() shared.CrmDeal {
 	if o == nil {
-		return nil
+		return shared.CrmDeal{}
 	}
 	return o.CrmDeal
 }

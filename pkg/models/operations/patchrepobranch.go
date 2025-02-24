@@ -8,7 +8,7 @@ import (
 )
 
 type PatchRepoBranchRequest struct {
-	RepoBranch *shared.RepoBranch `request:"mediaType=application/json"`
+	RepoBranch shared.RepoBranch `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchRepoBranchRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchRepoBranchRequest) GetRepoBranch() *shared.RepoBranch {
+func (o *PatchRepoBranchRequest) GetRepoBranch() shared.RepoBranch {
 	if o == nil {
-		return nil
+		return shared.RepoBranch{}
 	}
 	return o.RepoBranch
 }

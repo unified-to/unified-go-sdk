@@ -58,7 +58,7 @@ func (s *Webhook) CreateUnifiedWebhook(ctx context.Context, request operations.C
 		OperationID:    "createUnifiedWebhook",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -670,7 +670,7 @@ func (s *Webhook) PatchUnifiedWebhook(ctx context.Context, request operations.Pa
 		OperationID:    "patchUnifiedWebhook",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1228,7 +1228,7 @@ func (s *Webhook) UpdateUnifiedWebhook(ctx context.Context, request operations.U
 		OperationID:    "updateUnifiedWebhook",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

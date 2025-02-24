@@ -25,6 +25,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,6 +38,7 @@ func main() {
     )
 
     res, err := s.Uc.CreateUcContact(ctx, operations.CreateUcContactRequest{
+        UcContact: shared.UcContact{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -238,6 +240,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -250,6 +253,7 @@ func main() {
     )
 
     res, err := s.Uc.PatchUcContact(ctx, operations.PatchUcContactRequest{
+        UcContact: shared.UcContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -346,6 +350,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -358,6 +363,7 @@ func main() {
     )
 
     res, err := s.Uc.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
+        UcContact: shared.UcContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

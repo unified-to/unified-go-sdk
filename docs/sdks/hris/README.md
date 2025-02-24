@@ -46,6 +46,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -58,6 +59,7 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisCompany(ctx, operations.CreateHrisCompanyRequest{
+        HrisCompany: shared.HrisCompany{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -99,6 +101,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -111,6 +114,7 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisEmployee(ctx, operations.CreateHrisEmployeeRequest{
+        HrisEmployee: shared.HrisEmployee{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -152,6 +156,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -164,6 +169,7 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisGroup(ctx, operations.CreateHrisGroupRequest{
+        HrisGroup: shared.HrisGroup{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -205,6 +211,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -217,6 +224,7 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisLocation(ctx, operations.CreateHrisLocationRequest{
+        HrisLocation: shared.HrisLocation{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -900,6 +908,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -912,6 +921,7 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisCompany(ctx, operations.PatchHrisCompanyRequest{
+        HrisCompany: shared.HrisCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -954,6 +964,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -966,6 +977,7 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisEmployee(ctx, operations.PatchHrisEmployeeRequest{
+        HrisEmployee: shared.HrisEmployee{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1008,6 +1020,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1020,6 +1033,7 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisGroup(ctx, operations.PatchHrisGroupRequest{
+        HrisGroup: shared.HrisGroup{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1062,6 +1076,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1074,6 +1089,7 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisLocation(ctx, operations.PatchHrisLocationRequest{
+        HrisLocation: shared.HrisLocation{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1332,6 +1348,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1344,6 +1361,7 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisCompany(ctx, operations.UpdateHrisCompanyRequest{
+        HrisCompany: shared.HrisCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1386,6 +1404,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1398,6 +1417,7 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisEmployee(ctx, operations.UpdateHrisEmployeeRequest{
+        HrisEmployee: shared.HrisEmployee{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1440,6 +1460,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1452,6 +1473,7 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisGroup(ctx, operations.UpdateHrisGroupRequest{
+        HrisGroup: shared.HrisGroup{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1494,6 +1516,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1506,6 +1529,7 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisLocation(ctx, operations.UpdateHrisLocationRequest{
+        HrisLocation: shared.HrisLocation{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

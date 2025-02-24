@@ -9,16 +9,16 @@ import (
 
 type CreateCrmCompanyRequest struct {
 	// A company represents an organization that optionally is associated with a deal and/or contacts
-	CrmCompany *shared.CrmCompany `request:"mediaType=application/json"`
+	CrmCompany shared.CrmCompany `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateCrmCompanyRequest) GetCrmCompany() *shared.CrmCompany {
+func (o *CreateCrmCompanyRequest) GetCrmCompany() shared.CrmCompany {
 	if o == nil {
-		return nil
+		return shared.CrmCompany{}
 	}
 	return o.CrmCompany
 }

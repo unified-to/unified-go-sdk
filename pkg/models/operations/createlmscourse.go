@@ -8,16 +8,16 @@ import (
 )
 
 type CreateLmsCourseRequest struct {
-	LmsCourse *shared.LmsCourse `request:"mediaType=application/json"`
+	LmsCourse shared.LmsCourse `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateLmsCourseRequest) GetLmsCourse() *shared.LmsCourse {
+func (o *CreateLmsCourseRequest) GetLmsCourse() shared.LmsCourse {
 	if o == nil {
-		return nil
+		return shared.LmsCourse{}
 	}
 	return o.LmsCourse
 }

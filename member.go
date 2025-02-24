@@ -56,7 +56,7 @@ func (s *Member) CreateMartechMember(ctx context.Context, request operations.Cre
 		OperationID:    "createMartechMember",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MarketingMember", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MarketingMember", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Member) PatchMartechMember(ctx context.Context, request operations.Patc
 		OperationID:    "patchMartechMember",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MarketingMember", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MarketingMember", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Member) UpdateMartechMember(ctx context.Context, request operations.Upd
 		OperationID:    "updateMartechMember",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "MarketingMember", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MarketingMember", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

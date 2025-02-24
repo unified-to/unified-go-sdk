@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateRepoPullrequestRequest struct {
-	RepoPullrequest *shared.RepoPullrequest `request:"mediaType=application/json"`
+	RepoPullrequest shared.RepoPullrequest `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateRepoPullrequestRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateRepoPullrequestRequest) GetRepoPullrequest() *shared.RepoPullrequest {
+func (o *UpdateRepoPullrequestRequest) GetRepoPullrequest() shared.RepoPullrequest {
 	if o == nil {
-		return nil
+		return shared.RepoPullrequest{}
 	}
 	return o.RepoPullrequest
 }

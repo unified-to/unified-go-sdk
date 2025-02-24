@@ -6,6 +6,7 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
@@ -17,7 +18,8 @@ func main() {
 	)
 
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "<id>",
+		AccountingAccount: shared.AccountingAccount{},
+		ConnectionID:      "<id>",
 	})
 	if err != nil {
 		log.Fatal(err)

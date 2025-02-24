@@ -56,7 +56,7 @@ func (s *Uc) CreateUcContact(ctx context.Context, request operations.CreateUcCon
 		OperationID:    "createUcContact",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "UcContact", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -875,7 +875,7 @@ func (s *Uc) PatchUcContact(ctx context.Context, request operations.PatchUcConta
 		OperationID:    "patchUcContact",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "UcContact", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1261,7 +1261,7 @@ func (s *Uc) UpdateUcContact(ctx context.Context, request operations.UpdateUcCon
 		OperationID:    "updateUcContact",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "UcContact", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcContact", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

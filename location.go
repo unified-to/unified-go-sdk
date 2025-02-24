@@ -56,7 +56,7 @@ func (s *Location) CreateCommerceLocation(ctx context.Context, request operation
 		OperationID:    "createCommerceLocation",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceLocation", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -266,7 +266,7 @@ func (s *Location) CreateHrisLocation(ctx context.Context, request operations.Cr
 		OperationID:    "createHrisLocation",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisLocation", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1288,7 +1288,7 @@ func (s *Location) PatchCommerceLocation(ctx context.Context, request operations
 		OperationID:    "patchCommerceLocation",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceLocation", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1498,7 +1498,7 @@ func (s *Location) PatchHrisLocation(ctx context.Context, request operations.Pat
 		OperationID:    "patchHrisLocation",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisLocation", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2060,7 +2060,7 @@ func (s *Location) UpdateCommerceLocation(ctx context.Context, request operation
 		OperationID:    "updateCommerceLocation",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "CommerceLocation", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2270,7 +2270,7 @@ func (s *Location) UpdateHrisLocation(ctx context.Context, request operations.Up
 		OperationID:    "updateHrisLocation",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "HrisLocation", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

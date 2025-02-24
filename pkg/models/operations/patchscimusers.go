@@ -8,16 +8,16 @@ import (
 )
 
 type PatchScimUsersRequest struct {
-	ScimUser *shared.ScimUser `request:"mediaType=application/json"`
+	ScimUser shared.ScimUser `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// ID of the User
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchScimUsersRequest) GetScimUser() *shared.ScimUser {
+func (o *PatchScimUsersRequest) GetScimUser() shared.ScimUser {
 	if o == nil {
-		return nil
+		return shared.ScimUser{}
 	}
 	return o.ScimUser
 }

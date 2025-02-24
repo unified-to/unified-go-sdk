@@ -56,7 +56,7 @@ func (s *Subscription) CreatePaymentSubscription(ctx context.Context, request op
 		OperationID:    "createPaymentSubscription",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Subscription) PatchPaymentSubscription(ctx context.Context, request ope
 		OperationID:    "patchPaymentSubscription",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Subscription) UpdatePaymentSubscription(ctx context.Context, request op
 		OperationID:    "updatePaymentSubscription",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

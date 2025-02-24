@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateAccountingInvoiceRequest struct {
-	AccountingInvoice *shared.AccountingInvoice `request:"mediaType=application/json"`
+	AccountingInvoice shared.AccountingInvoice `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateAccountingInvoiceRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateAccountingInvoiceRequest) GetAccountingInvoice() *shared.AccountingInvoice {
+func (o *UpdateAccountingInvoiceRequest) GetAccountingInvoice() shared.AccountingInvoice {
 	if o == nil {
-		return nil
+		return shared.AccountingInvoice{}
 	}
 	return o.AccountingInvoice
 }

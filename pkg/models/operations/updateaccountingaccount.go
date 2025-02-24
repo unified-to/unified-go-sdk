@@ -9,7 +9,7 @@ import (
 
 type UpdateAccountingAccountRequest struct {
 	// Chart of accounts
-	AccountingAccount *shared.AccountingAccount `request:"mediaType=application/json"`
+	AccountingAccount shared.AccountingAccount `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -18,9 +18,9 @@ type UpdateAccountingAccountRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateAccountingAccountRequest) GetAccountingAccount() *shared.AccountingAccount {
+func (o *UpdateAccountingAccountRequest) GetAccountingAccount() shared.AccountingAccount {
 	if o == nil {
-		return nil
+		return shared.AccountingAccount{}
 	}
 	return o.AccountingAccount
 }

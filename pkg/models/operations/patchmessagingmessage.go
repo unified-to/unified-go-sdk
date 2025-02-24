@@ -8,7 +8,7 @@ import (
 )
 
 type PatchMessagingMessageRequest struct {
-	MessagingMessage *shared.MessagingMessage `request:"mediaType=application/json"`
+	MessagingMessage shared.MessagingMessage `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchMessagingMessageRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchMessagingMessageRequest) GetMessagingMessage() *shared.MessagingMessage {
+func (o *PatchMessagingMessageRequest) GetMessagingMessage() shared.MessagingMessage {
 	if o == nil {
-		return nil
+		return shared.MessagingMessage{}
 	}
 	return o.MessagingMessage
 }

@@ -56,7 +56,7 @@ func (s *Repo) CreateRepoBranch(ctx context.Context, request operations.CreateRe
 		OperationID:    "createRepoBranch",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoBranch", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoBranch", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -266,7 +266,7 @@ func (s *Repo) CreateRepoCommit(ctx context.Context, request operations.CreateRe
 		OperationID:    "createRepoCommit",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoCommit", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoCommit", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -476,7 +476,7 @@ func (s *Repo) CreateRepoOrganization(ctx context.Context, request operations.Cr
 		OperationID:    "createRepoOrganization",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoOrganization", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoOrganization", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -686,7 +686,7 @@ func (s *Repo) CreateRepoPullrequest(ctx context.Context, request operations.Cre
 		OperationID:    "createRepoPullrequest",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -896,7 +896,7 @@ func (s *Repo) CreateRepoRepository(ctx context.Context, request operations.Crea
 		OperationID:    "createRepoRepository",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoRepository", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoRepository", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3136,7 +3136,7 @@ func (s *Repo) PatchRepoBranch(ctx context.Context, request operations.PatchRepo
 		OperationID:    "patchRepoBranch",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoBranch", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoBranch", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3346,7 +3346,7 @@ func (s *Repo) PatchRepoCommit(ctx context.Context, request operations.PatchRepo
 		OperationID:    "patchRepoCommit",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoCommit", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoCommit", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3556,7 +3556,7 @@ func (s *Repo) PatchRepoOrganization(ctx context.Context, request operations.Pat
 		OperationID:    "patchRepoOrganization",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoOrganization", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoOrganization", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3766,7 +3766,7 @@ func (s *Repo) PatchRepoPullrequest(ctx context.Context, request operations.Patc
 		OperationID:    "patchRepoPullrequest",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3976,7 +3976,7 @@ func (s *Repo) PatchRepoRepository(ctx context.Context, request operations.Patch
 		OperationID:    "patchRepoRepository",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoRepository", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoRepository", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -5066,7 +5066,7 @@ func (s *Repo) UpdateRepoBranch(ctx context.Context, request operations.UpdateRe
 		OperationID:    "updateRepoBranch",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoBranch", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoBranch", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -5276,7 +5276,7 @@ func (s *Repo) UpdateRepoCommit(ctx context.Context, request operations.UpdateRe
 		OperationID:    "updateRepoCommit",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoCommit", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoCommit", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -5486,7 +5486,7 @@ func (s *Repo) UpdateRepoOrganization(ctx context.Context, request operations.Up
 		OperationID:    "updateRepoOrganization",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoOrganization", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoOrganization", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -5696,7 +5696,7 @@ func (s *Repo) UpdateRepoPullrequest(ctx context.Context, request operations.Upd
 		OperationID:    "updateRepoPullrequest",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -5906,7 +5906,7 @@ func (s *Repo) UpdateRepoRepository(ctx context.Context, request operations.Upda
 		OperationID:    "updateRepoRepository",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoRepository", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoRepository", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

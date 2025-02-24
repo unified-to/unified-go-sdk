@@ -8,16 +8,16 @@ import (
 )
 
 type CreateMessagingMessageRequest struct {
-	MessagingMessage *shared.MessagingMessage `request:"mediaType=application/json"`
+	MessagingMessage shared.MessagingMessage `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateMessagingMessageRequest) GetMessagingMessage() *shared.MessagingMessage {
+func (o *CreateMessagingMessageRequest) GetMessagingMessage() shared.MessagingMessage {
 	if o == nil {
-		return nil
+		return shared.MessagingMessage{}
 	}
 	return o.MessagingMessage
 }

@@ -28,7 +28,7 @@ func newConnection(sdkConfig sdkConfiguration) *Connection {
 
 // CreateUnifiedConnection - Create connection
 // Used only to import existing customer credentials; use "Create connection indirectly" instead
-func (s *Connection) CreateUnifiedConnection(ctx context.Context, request *shared.Connection, opts ...operations.Option) (*operations.CreateUnifiedConnectionResponse, error) {
+func (s *Connection) CreateUnifiedConnection(ctx context.Context, request shared.Connection, opts ...operations.Option) (*operations.CreateUnifiedConnectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -58,7 +58,7 @@ func (s *Connection) CreateUnifiedConnection(ctx context.Context, request *share
 		OperationID:    "createUnifiedConnection",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -666,7 +666,7 @@ func (s *Connection) PatchUnifiedConnection(ctx context.Context, request operati
 		OperationID:    "patchUnifiedConnection",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Connection", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Connection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1048,7 +1048,7 @@ func (s *Connection) UpdateUnifiedConnection(ctx context.Context, request operat
 		OperationID:    "updateUnifiedConnection",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Connection", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Connection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

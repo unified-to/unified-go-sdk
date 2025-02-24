@@ -28,7 +28,7 @@ func newUnified(sdkConfig sdkConfiguration) *Unified {
 
 // CreateUnifiedConnection - Create connection
 // Used only to import existing customer credentials; use "Create connection indirectly" instead
-func (s *Unified) CreateUnifiedConnection(ctx context.Context, request *shared.Connection, opts ...operations.Option) (*operations.CreateUnifiedConnectionResponse, error) {
+func (s *Unified) CreateUnifiedConnection(ctx context.Context, request shared.Connection, opts ...operations.Option) (*operations.CreateUnifiedConnectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -58,7 +58,7 @@ func (s *Unified) CreateUnifiedConnection(ctx context.Context, request *shared.C
 		OperationID:    "createUnifiedConnection",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -265,7 +265,7 @@ func (s *Unified) CreateUnifiedWebhook(ctx context.Context, request operations.C
 		OperationID:    "createUnifiedWebhook",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2491,7 +2491,7 @@ func (s *Unified) PatchUnifiedConnection(ctx context.Context, request operations
 		OperationID:    "patchUnifiedConnection",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Connection", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Connection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2697,7 +2697,7 @@ func (s *Unified) PatchUnifiedWebhook(ctx context.Context, request operations.Pa
 		OperationID:    "patchUnifiedWebhook",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3431,7 +3431,7 @@ func (s *Unified) UpdateUnifiedConnection(ctx context.Context, request operation
 		OperationID:    "updateUnifiedConnection",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Connection", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Connection", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -3637,7 +3637,7 @@ func (s *Unified) UpdateUnifiedWebhook(ctx context.Context, request operations.U
 		OperationID:    "updateUnifiedWebhook",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Webhook", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Webhook", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

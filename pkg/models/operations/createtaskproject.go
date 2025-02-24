@@ -8,16 +8,16 @@ import (
 )
 
 type CreateTaskProjectRequest struct {
-	TaskProject *shared.TaskProject `request:"mediaType=application/json"`
+	TaskProject shared.TaskProject `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateTaskProjectRequest) GetTaskProject() *shared.TaskProject {
+func (o *CreateTaskProjectRequest) GetTaskProject() shared.TaskProject {
 	if o == nil {
-		return nil
+		return shared.TaskProject{}
 	}
 	return o.TaskProject
 }

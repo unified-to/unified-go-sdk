@@ -8,7 +8,7 @@ import (
 )
 
 type PatchAtsScorecardRequest struct {
-	AtsScorecard *shared.AtsScorecard `request:"mediaType=application/json"`
+	AtsScorecard shared.AtsScorecard `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchAtsScorecardRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchAtsScorecardRequest) GetAtsScorecard() *shared.AtsScorecard {
+func (o *PatchAtsScorecardRequest) GetAtsScorecard() shared.AtsScorecard {
 	if o == nil {
-		return nil
+		return shared.AtsScorecard{}
 	}
 	return o.AtsScorecard
 }

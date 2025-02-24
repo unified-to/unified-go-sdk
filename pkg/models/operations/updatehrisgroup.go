@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateHrisGroupRequest struct {
-	HrisGroup *shared.HrisGroup `request:"mediaType=application/json"`
+	HrisGroup shared.HrisGroup `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateHrisGroupRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateHrisGroupRequest) GetHrisGroup() *shared.HrisGroup {
+func (o *UpdateHrisGroupRequest) GetHrisGroup() shared.HrisGroup {
 	if o == nil {
-		return nil
+		return shared.HrisGroup{}
 	}
 	return o.HrisGroup
 }

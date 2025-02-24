@@ -8,16 +8,16 @@ import (
 )
 
 type CreateHrisEmployeeRequest struct {
-	HrisEmployee *shared.HrisEmployee `request:"mediaType=application/json"`
+	HrisEmployee shared.HrisEmployee `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateHrisEmployeeRequest) GetHrisEmployee() *shared.HrisEmployee {
+func (o *CreateHrisEmployeeRequest) GetHrisEmployee() shared.HrisEmployee {
 	if o == nil {
-		return nil
+		return shared.HrisEmployee{}
 	}
 	return o.HrisEmployee
 }

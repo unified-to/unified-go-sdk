@@ -8,16 +8,16 @@ import (
 )
 
 type CreateAccountingOrderRequest struct {
-	AccountingOrder *shared.AccountingOrder `request:"mediaType=application/json"`
+	AccountingOrder shared.AccountingOrder `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateAccountingOrderRequest) GetAccountingOrder() *shared.AccountingOrder {
+func (o *CreateAccountingOrderRequest) GetAccountingOrder() shared.AccountingOrder {
 	if o == nil {
-		return nil
+		return shared.AccountingOrder{}
 	}
 	return o.AccountingOrder
 }

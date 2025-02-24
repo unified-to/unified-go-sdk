@@ -8,7 +8,7 @@ import (
 )
 
 type PatchAtsJobRequest struct {
-	AtsJob *shared.AtsJob `request:"mediaType=application/json"`
+	AtsJob shared.AtsJob `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchAtsJobRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchAtsJobRequest) GetAtsJob() *shared.AtsJob {
+func (o *PatchAtsJobRequest) GetAtsJob() shared.AtsJob {
 	if o == nil {
-		return nil
+		return shared.AtsJob{}
 	}
 	return o.AtsJob
 }

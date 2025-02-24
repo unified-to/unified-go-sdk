@@ -45,6 +45,7 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
@@ -56,7 +57,8 @@ func main() {
 	)
 
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "<id>",
+		AccountingAccount: shared.AccountingAccount{},
+		ConnectionID:      "<id>",
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -1126,6 +1128,7 @@ import (
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"github.com/unified-to/unified-go-sdk/pkg/models/sdkerrors"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
@@ -1137,7 +1140,8 @@ func main() {
 	)
 
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "<id>",
+		AccountingAccount: shared.AccountingAccount{},
+		ConnectionID:      "<id>",
 	})
 	if err != nil {
 
@@ -1175,6 +1179,7 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
@@ -1187,7 +1192,8 @@ func main() {
 	)
 
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "<id>",
+		AccountingAccount: shared.AccountingAccount{},
+		ConnectionID:      "<id>",
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -1209,6 +1215,7 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
@@ -1221,7 +1228,8 @@ func main() {
 	)
 
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "<id>",
+		AccountingAccount: shared.AccountingAccount{},
+		ConnectionID:      "<id>",
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -1286,6 +1294,7 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
@@ -1297,7 +1306,8 @@ func main() {
 	)
 
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "<id>",
+		AccountingAccount: shared.AccountingAccount{},
+		ConnectionID:      "<id>",
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -1323,6 +1333,7 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/retry"
 	"log"
 	"pkg/models/operations"
@@ -1336,7 +1347,8 @@ func main() {
 	)
 
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "<id>",
+		AccountingAccount: shared.AccountingAccount{},
+		ConnectionID:      "<id>",
 	}, operations.WithRetries(
 		retry.Config{
 			Strategy: "backoff",
@@ -1366,6 +1378,7 @@ import (
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/retry"
 	"log"
 )
@@ -1389,7 +1402,8 @@ func main() {
 	)
 
 	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-		ConnectionID: "<id>",
+		AccountingAccount: shared.AccountingAccount{},
+		ConnectionID:      "<id>",
 	})
 	if err != nil {
 		log.Fatal(err)

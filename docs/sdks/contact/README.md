@@ -36,6 +36,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -48,6 +49,7 @@ func main() {
     )
 
     res, err := s.Contact.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
+        AccountingContact: shared.AccountingContact{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -89,6 +91,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -101,6 +104,7 @@ func main() {
     )
 
     res, err := s.Contact.CreateCrmContact(ctx, operations.CreateCrmContactRequest{
+        CrmContact: shared.CrmContact{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -142,6 +146,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -154,6 +159,7 @@ func main() {
     )
 
     res, err := s.Contact.CreateUcContact(ctx, operations.CreateUcContactRequest{
+        UcContact: shared.UcContact{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -516,6 +522,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -528,6 +535,7 @@ func main() {
     )
 
     res, err := s.Contact.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
+        AccountingContact: shared.AccountingContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -570,6 +578,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -582,6 +591,7 @@ func main() {
     )
 
     res, err := s.Contact.PatchCrmContact(ctx, operations.PatchCrmContactRequest{
+        CrmContact: shared.CrmContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -624,6 +634,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -636,6 +647,7 @@ func main() {
     )
 
     res, err := s.Contact.PatchUcContact(ctx, operations.PatchUcContactRequest{
+        UcContact: shared.UcContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -840,6 +852,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -852,6 +865,7 @@ func main() {
     )
 
     res, err := s.Contact.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
+        AccountingContact: shared.AccountingContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -894,6 +908,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -906,6 +921,7 @@ func main() {
     )
 
     res, err := s.Contact.UpdateCrmContact(ctx, operations.UpdateCrmContactRequest{
+        CrmContact: shared.CrmContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -948,6 +964,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -960,6 +977,7 @@ func main() {
     )
 
     res, err := s.Contact.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
+        UcContact: shared.UcContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

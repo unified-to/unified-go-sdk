@@ -56,7 +56,7 @@ func (s *Branch) CreateRepoBranch(ctx context.Context, request operations.Create
 		OperationID:    "createRepoBranch",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoBranch", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoBranch", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Branch) PatchRepoBranch(ctx context.Context, request operations.PatchRe
 		OperationID:    "patchRepoBranch",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoBranch", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoBranch", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Branch) UpdateRepoBranch(ctx context.Context, request operations.Update
 		OperationID:    "updateRepoBranch",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoBranch", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoBranch", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

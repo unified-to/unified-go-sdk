@@ -8,16 +8,16 @@ import (
 )
 
 type CreateRepoCommitRequest struct {
-	RepoCommit *shared.RepoCommit `request:"mediaType=application/json"`
+	RepoCommit shared.RepoCommit `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateRepoCommitRequest) GetRepoCommit() *shared.RepoCommit {
+func (o *CreateRepoCommitRequest) GetRepoCommit() shared.RepoCommit {
 	if o == nil {
-		return nil
+		return shared.RepoCommit{}
 	}
 	return o.RepoCommit
 }

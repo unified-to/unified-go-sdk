@@ -9,7 +9,7 @@ import (
 
 type UpdateMartechMemberRequest struct {
 	// A member represents a person
-	MarketingMember *shared.MarketingMember `request:"mediaType=application/json"`
+	MarketingMember shared.MarketingMember `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -18,9 +18,9 @@ type UpdateMartechMemberRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateMartechMemberRequest) GetMarketingMember() *shared.MarketingMember {
+func (o *UpdateMartechMemberRequest) GetMarketingMember() shared.MarketingMember {
 	if o == nil {
-		return nil
+		return shared.MarketingMember{}
 	}
 	return o.MarketingMember
 }

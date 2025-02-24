@@ -9,14 +9,14 @@ import (
 
 type UpdateUnifiedWebhookRequest struct {
 	// A webhook is used to POST new/updated information to your server.
-	Webhook *shared.Webhook `request:"mediaType=application/json"`
+	Webhook shared.Webhook `request:"mediaType=application/json"`
 	// ID of the Webhook
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateUnifiedWebhookRequest) GetWebhook() *shared.Webhook {
+func (o *UpdateUnifiedWebhookRequest) GetWebhook() shared.Webhook {
 	if o == nil {
-		return nil
+		return shared.Webhook{}
 	}
 	return o.Webhook
 }

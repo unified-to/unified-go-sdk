@@ -36,6 +36,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -48,6 +49,7 @@ func main() {
     )
 
     res, err := s.Ticketing.CreateTicketingCustomer(ctx, operations.CreateTicketingCustomerRequest{
+        TicketingCustomer: shared.TicketingCustomer{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -89,6 +91,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -101,6 +104,7 @@ func main() {
     )
 
     res, err := s.Ticketing.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
+        TicketingNote: shared.TicketingNote{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -142,6 +146,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -154,6 +159,7 @@ func main() {
     )
 
     res, err := s.Ticketing.CreateTicketingTicket(ctx, operations.CreateTicketingTicketRequest{
+        TicketingTicket: shared.TicketingTicket{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -516,6 +522,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -528,6 +535,7 @@ func main() {
     )
 
     res, err := s.Ticketing.PatchTicketingCustomer(ctx, operations.PatchTicketingCustomerRequest{
+        TicketingCustomer: shared.TicketingCustomer{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -570,6 +578,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -582,6 +591,7 @@ func main() {
     )
 
     res, err := s.Ticketing.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
+        TicketingNote: shared.TicketingNote{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -624,6 +634,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -636,6 +647,7 @@ func main() {
     )
 
     res, err := s.Ticketing.PatchTicketingTicket(ctx, operations.PatchTicketingTicketRequest{
+        TicketingTicket: shared.TicketingTicket{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -840,6 +852,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -852,6 +865,7 @@ func main() {
     )
 
     res, err := s.Ticketing.UpdateTicketingCustomer(ctx, operations.UpdateTicketingCustomerRequest{
+        TicketingCustomer: shared.TicketingCustomer{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -894,6 +908,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -906,6 +921,7 @@ func main() {
     )
 
     res, err := s.Ticketing.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
+        TicketingNote: shared.TicketingNote{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -948,6 +964,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -960,6 +977,7 @@ func main() {
     )
 
     res, err := s.Ticketing.UpdateTicketingTicket(ctx, operations.UpdateTicketingTicketRequest{
+        TicketingTicket: shared.TicketingTicket{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

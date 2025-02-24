@@ -54,6 +54,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -66,6 +67,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmCompany(ctx, operations.CreateCrmCompanyRequest{
+        CrmCompany: shared.CrmCompany{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -107,6 +109,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -119,6 +122,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmContact(ctx, operations.CreateCrmContactRequest{
+        CrmContact: shared.CrmContact{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,6 +164,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -172,6 +177,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
+        CrmDeal: shared.CrmDeal{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -213,6 +219,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -225,6 +232,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmEvent(ctx, operations.CreateCrmEventRequest{
+        CrmEvent: shared.CrmEvent{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -266,6 +274,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -278,6 +287,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmLead(ctx, operations.CreateCrmLeadRequest{
+        CrmLead: shared.CrmLead{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -319,6 +329,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -331,6 +342,7 @@ func main() {
     )
 
     res, err := s.Crm.CreateCrmPipeline(ctx, operations.CreateCrmPipelineRequest{
+        CrmPipeline: shared.CrmPipeline{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1014,6 +1026,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1026,6 +1039,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmCompany(ctx, operations.PatchCrmCompanyRequest{
+        CrmCompany: shared.CrmCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1068,6 +1082,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1080,6 +1095,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmContact(ctx, operations.PatchCrmContactRequest{
+        CrmContact: shared.CrmContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1122,6 +1138,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1134,6 +1151,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
+        CrmDeal: shared.CrmDeal{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1176,6 +1194,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1188,6 +1207,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmEvent(ctx, operations.PatchCrmEventRequest{
+        CrmEvent: shared.CrmEvent{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1230,6 +1250,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1242,6 +1263,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmLead(ctx, operations.PatchCrmLeadRequest{
+        CrmLead: shared.CrmLead{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1284,6 +1306,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1296,6 +1319,7 @@ func main() {
     )
 
     res, err := s.Crm.PatchCrmPipeline(ctx, operations.PatchCrmPipelineRequest{
+        CrmPipeline: shared.CrmPipeline{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1662,6 +1686,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1674,6 +1699,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmCompany(ctx, operations.UpdateCrmCompanyRequest{
+        CrmCompany: shared.CrmCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1716,6 +1742,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1728,6 +1755,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmContact(ctx, operations.UpdateCrmContactRequest{
+        CrmContact: shared.CrmContact{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1770,6 +1798,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1782,6 +1811,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
+        CrmDeal: shared.CrmDeal{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1824,6 +1854,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1836,6 +1867,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmEvent(ctx, operations.UpdateCrmEventRequest{
+        CrmEvent: shared.CrmEvent{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1878,6 +1910,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1890,6 +1923,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmLead(ctx, operations.UpdateCrmLeadRequest{
+        CrmLead: shared.CrmLead{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1932,6 +1966,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1944,6 +1979,7 @@ func main() {
     )
 
     res, err := s.Crm.UpdateCrmPipeline(ctx, operations.UpdateCrmPipelineRequest{
+        CrmPipeline: shared.CrmPipeline{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

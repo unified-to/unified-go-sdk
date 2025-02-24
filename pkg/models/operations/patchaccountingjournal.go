@@ -8,7 +8,7 @@ import (
 )
 
 type PatchAccountingJournalRequest struct {
-	AccountingJournal *shared.AccountingJournal `request:"mediaType=application/json"`
+	AccountingJournal shared.AccountingJournal `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchAccountingJournalRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchAccountingJournalRequest) GetAccountingJournal() *shared.AccountingJournal {
+func (o *PatchAccountingJournalRequest) GetAccountingJournal() shared.AccountingJournal {
 	if o == nil {
-		return nil
+		return shared.AccountingJournal{}
 	}
 	return o.AccountingJournal
 }

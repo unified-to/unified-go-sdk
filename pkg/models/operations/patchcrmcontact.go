@@ -9,7 +9,7 @@ import (
 
 type PatchCrmContactRequest struct {
 	// A contact represents a person that optionally is associated with a deal and/or a company
-	CrmContact *shared.CrmContact `request:"mediaType=application/json"`
+	CrmContact shared.CrmContact `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -18,9 +18,9 @@ type PatchCrmContactRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchCrmContactRequest) GetCrmContact() *shared.CrmContact {
+func (o *PatchCrmContactRequest) GetCrmContact() shared.CrmContact {
 	if o == nil {
-		return nil
+		return shared.CrmContact{}
 	}
 	return o.CrmContact
 }

@@ -33,6 +33,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -45,6 +46,7 @@ func main() {
     )
 
     res, err := s.Company.CreateCrmCompany(ctx, operations.CreateCrmCompanyRequest{
+        CrmCompany: shared.CrmCompany{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -86,6 +88,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -98,6 +101,7 @@ func main() {
     )
 
     res, err := s.Company.CreateHrisCompany(ctx, operations.CreateHrisCompanyRequest{
+        HrisCompany: shared.HrisCompany{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -513,6 +517,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -525,6 +530,7 @@ func main() {
     )
 
     res, err := s.Company.PatchCrmCompany(ctx, operations.PatchCrmCompanyRequest{
+        CrmCompany: shared.CrmCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -567,6 +573,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -579,6 +586,7 @@ func main() {
     )
 
     res, err := s.Company.PatchHrisCompany(ctx, operations.PatchHrisCompanyRequest{
+        HrisCompany: shared.HrisCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -729,6 +737,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -741,6 +750,7 @@ func main() {
     )
 
     res, err := s.Company.UpdateCrmCompany(ctx, operations.UpdateCrmCompanyRequest{
+        CrmCompany: shared.CrmCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -783,6 +793,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -795,6 +806,7 @@ func main() {
     )
 
     res, err := s.Company.UpdateHrisCompany(ctx, operations.UpdateHrisCompanyRequest{
+        HrisCompany: shared.HrisCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

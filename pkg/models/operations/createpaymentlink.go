@@ -8,16 +8,16 @@ import (
 )
 
 type CreatePaymentLinkRequest struct {
-	PaymentLink *shared.PaymentLink `request:"mediaType=application/json"`
+	PaymentLink shared.PaymentLink `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreatePaymentLinkRequest) GetPaymentLink() *shared.PaymentLink {
+func (o *CreatePaymentLinkRequest) GetPaymentLink() shared.PaymentLink {
 	if o == nil {
-		return nil
+		return shared.PaymentLink{}
 	}
 	return o.PaymentLink
 }

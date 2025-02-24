@@ -8,16 +8,16 @@ import (
 )
 
 type UpdateScimGroupsRequest struct {
-	ScimGroup *shared.ScimGroup `request:"mediaType=application/json"`
+	ScimGroup shared.ScimGroup `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// ID of the Group
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateScimGroupsRequest) GetScimGroup() *shared.ScimGroup {
+func (o *UpdateScimGroupsRequest) GetScimGroup() shared.ScimGroup {
 	if o == nil {
-		return nil
+		return shared.ScimGroup{}
 	}
 	return o.ScimGroup
 }

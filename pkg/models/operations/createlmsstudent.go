@@ -8,16 +8,16 @@ import (
 )
 
 type CreateLmsStudentRequest struct {
-	LmsStudent *shared.LmsStudent `request:"mediaType=application/json"`
+	LmsStudent shared.LmsStudent `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateLmsStudentRequest) GetLmsStudent() *shared.LmsStudent {
+func (o *CreateLmsStudentRequest) GetLmsStudent() shared.LmsStudent {
 	if o == nil {
-		return nil
+		return shared.LmsStudent{}
 	}
 	return o.LmsStudent
 }

@@ -56,7 +56,7 @@ func (s *Scim) CreateScimGroups(ctx context.Context, request operations.CreateSc
 		OperationID:    "createScimGroups",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimGroup", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ScimGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -262,7 +262,7 @@ func (s *Scim) CreateScimUsers(ctx context.Context, request operations.CreateSci
 		OperationID:    "createScimUsers",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimUser", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ScimUser", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1276,7 +1276,7 @@ func (s *Scim) PatchScimGroups(ctx context.Context, request operations.PatchScim
 		OperationID:    "patchScimGroups",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimGroup", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ScimGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1482,7 +1482,7 @@ func (s *Scim) PatchScimUsers(ctx context.Context, request operations.PatchScimU
 		OperationID:    "patchScimUsers",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimUser", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ScimUser", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2040,7 +2040,7 @@ func (s *Scim) UpdateScimGroups(ctx context.Context, request operations.UpdateSc
 		OperationID:    "updateScimGroups",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimGroup", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ScimGroup", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -2246,7 +2246,7 @@ func (s *Scim) UpdateScimUsers(ctx context.Context, request operations.UpdateSci
 		OperationID:    "updateScimUsers",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "ScimUser", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ScimUser", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

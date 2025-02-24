@@ -56,7 +56,7 @@ func (s *Commit) CreateRepoCommit(ctx context.Context, request operations.Create
 		OperationID:    "createRepoCommit",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoCommit", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoCommit", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Commit) PatchRepoCommit(ctx context.Context, request operations.PatchRe
 		OperationID:    "patchRepoCommit",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoCommit", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoCommit", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Commit) UpdateRepoCommit(ctx context.Context, request operations.Update
 		OperationID:    "updateRepoCommit",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RepoCommit", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoCommit", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

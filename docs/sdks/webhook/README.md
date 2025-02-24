@@ -26,6 +26,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Webhook.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{})
+    res, err := s.Webhook.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{
+        Webhook: shared.Webhook{
+            ConnectionID: "<id>",
+            Event: shared.EventCreated,
+            ObjectType: shared.ObjectTypeHrisEmployee,
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -181,6 +188,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -193,6 +201,11 @@ func main() {
     )
 
     res, err := s.Webhook.PatchUnifiedWebhook(ctx, operations.PatchUnifiedWebhookRequest{
+        Webhook: shared.Webhook{
+            ConnectionID: "<id>",
+            Event: shared.EventDeleted,
+            ObjectType: shared.ObjectTypeCrmDeal,
+        },
         ID: "<id>",
     })
     if err != nil {
@@ -340,6 +353,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -352,6 +366,11 @@ func main() {
     )
 
     res, err := s.Webhook.UpdateUnifiedWebhook(ctx, operations.UpdateUnifiedWebhookRequest{
+        Webhook: shared.Webhook{
+            ConnectionID: "<id>",
+            Event: shared.EventCreated,
+            ObjectType: shared.ObjectTypePaymentLink,
+        },
         ID: "<id>",
     })
     if err != nil {

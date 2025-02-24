@@ -8,7 +8,7 @@ import (
 )
 
 type PatchRepoPullrequestRequest struct {
-	RepoPullrequest *shared.RepoPullrequest `request:"mediaType=application/json"`
+	RepoPullrequest shared.RepoPullrequest `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchRepoPullrequestRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchRepoPullrequestRequest) GetRepoPullrequest() *shared.RepoPullrequest {
+func (o *PatchRepoPullrequestRequest) GetRepoPullrequest() shared.RepoPullrequest {
 	if o == nil {
-		return nil
+		return shared.RepoPullrequest{}
 	}
 	return o.RepoPullrequest
 }

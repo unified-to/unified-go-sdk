@@ -38,6 +38,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"log"
 )
 
@@ -48,7 +49,18 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Unified.CreateUnifiedConnection(ctx, nil)
+    res, err := s.Unified.CreateUnifiedConnection(ctx, shared.Connection{
+        Categories: []shared.PropertyConnectionCategories{
+            shared.PropertyConnectionCategoriesAccounting,
+            shared.PropertyConnectionCategoriesMartech,
+            shared.PropertyConnectionCategoriesMartech,
+        },
+        IntegrationType: "<value>",
+        Permissions: []shared.PropertyConnectionPermissions{
+            shared.PropertyConnectionPermissionsLmsCourseRead,
+            shared.PropertyConnectionPermissionsScimUsersRead,
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -88,6 +100,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -99,7 +112,13 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Unified.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{})
+    res, err := s.Unified.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{
+        Webhook: shared.Webhook{
+            ConnectionID: "<id>",
+            Event: shared.EventCreated,
+            ObjectType: shared.ObjectTypeHrisEmployee,
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -660,6 +679,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -672,6 +692,16 @@ func main() {
     )
 
     res, err := s.Unified.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
+        Connection: shared.Connection{
+            Categories: []shared.PropertyConnectionCategories{
+                shared.PropertyConnectionCategoriesMetadata,
+                shared.PropertyConnectionCategoriesCrm,
+            },
+            IntegrationType: "<value>",
+            Permissions: []shared.PropertyConnectionPermissions{
+
+            },
+        },
         ID: "<id>",
     })
     if err != nil {
@@ -713,6 +743,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -725,6 +756,11 @@ func main() {
     )
 
     res, err := s.Unified.PatchUnifiedWebhook(ctx, operations.PatchUnifiedWebhookRequest{
+        Webhook: shared.Webhook{
+            ConnectionID: "<id>",
+            Event: shared.EventDeleted,
+            ObjectType: shared.ObjectTypeCrmDeal,
+        },
         ID: "<id>",
     })
     if err != nil {
@@ -925,6 +961,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -937,6 +974,17 @@ func main() {
     )
 
     res, err := s.Unified.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
+        Connection: shared.Connection{
+            Categories: []shared.PropertyConnectionCategories{
+                shared.PropertyConnectionCategoriesMetadata,
+                shared.PropertyConnectionCategoriesAccounting,
+                shared.PropertyConnectionCategoriesMetadata,
+            },
+            IntegrationType: "<value>",
+            Permissions: []shared.PropertyConnectionPermissions{
+
+            },
+        },
         ID: "<id>",
     })
     if err != nil {
@@ -978,6 +1026,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -990,6 +1039,11 @@ func main() {
     )
 
     res, err := s.Unified.UpdateUnifiedWebhook(ctx, operations.UpdateUnifiedWebhookRequest{
+        Webhook: shared.Webhook{
+            ConnectionID: "<id>",
+            Event: shared.EventCreated,
+            ObjectType: shared.ObjectTypePaymentLink,
+        },
         ID: "<id>",
     })
     if err != nil {

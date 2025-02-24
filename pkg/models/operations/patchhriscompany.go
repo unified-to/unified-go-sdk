@@ -8,7 +8,7 @@ import (
 )
 
 type PatchHrisCompanyRequest struct {
-	HrisCompany *shared.HrisCompany `request:"mediaType=application/json"`
+	HrisCompany shared.HrisCompany `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchHrisCompanyRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchHrisCompanyRequest) GetHrisCompany() *shared.HrisCompany {
+func (o *PatchHrisCompanyRequest) GetHrisCompany() shared.HrisCompany {
 	if o == nil {
-		return nil
+		return shared.HrisCompany{}
 	}
 	return o.HrisCompany
 }

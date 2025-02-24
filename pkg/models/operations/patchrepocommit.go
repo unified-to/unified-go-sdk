@@ -8,7 +8,7 @@ import (
 )
 
 type PatchRepoCommitRequest struct {
-	RepoCommit *shared.RepoCommit `request:"mediaType=application/json"`
+	RepoCommit shared.RepoCommit `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchRepoCommitRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchRepoCommitRequest) GetRepoCommit() *shared.RepoCommit {
+func (o *PatchRepoCommitRequest) GetRepoCommit() shared.RepoCommit {
 	if o == nil {
-		return nil
+		return shared.RepoCommit{}
 	}
 	return o.RepoCommit
 }

@@ -8,16 +8,16 @@ import (
 )
 
 type CreateCommerceLocationRequest struct {
-	CommerceLocation *shared.CommerceLocation `request:"mediaType=application/json"`
+	CommerceLocation shared.CommerceLocation `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateCommerceLocationRequest) GetCommerceLocation() *shared.CommerceLocation {
+func (o *CreateCommerceLocationRequest) GetCommerceLocation() shared.CommerceLocation {
 	if o == nil {
-		return nil
+		return shared.CommerceLocation{}
 	}
 	return o.CommerceLocation
 }

@@ -56,7 +56,7 @@ func (s *Class) CreateLmsClass(ctx context.Context, request operations.CreateLms
 		OperationID:    "createLmsClass",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "LmsClass", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsClass", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -672,7 +672,7 @@ func (s *Class) PatchLmsClass(ctx context.Context, request operations.PatchLmsCl
 		OperationID:    "patchLmsClass",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "LmsClass", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsClass", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1058,7 +1058,7 @@ func (s *Class) UpdateLmsClass(ctx context.Context, request operations.UpdateLms
 		OperationID:    "updateLmsClass",
 		SecuritySource: s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "LmsClass", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsClass", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}

@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateStorageFileRequest struct {
-	StorageFile *shared.StorageFile `request:"mediaType=application/json"`
+	StorageFile shared.StorageFile `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateStorageFileRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateStorageFileRequest) GetStorageFile() *shared.StorageFile {
+func (o *UpdateStorageFileRequest) GetStorageFile() shared.StorageFile {
 	if o == nil {
-		return nil
+		return shared.StorageFile{}
 	}
 	return o.StorageFile
 }

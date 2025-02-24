@@ -8,16 +8,16 @@ import (
 )
 
 type CreateCommerceItemRequest struct {
-	CommerceItem *shared.CommerceItem `request:"mediaType=application/json"`
+	CommerceItem shared.CommerceItem `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateCommerceItemRequest) GetCommerceItem() *shared.CommerceItem {
+func (o *CreateCommerceItemRequest) GetCommerceItem() shared.CommerceItem {
 	if o == nil {
-		return nil
+		return shared.CommerceItem{}
 	}
 	return o.CommerceItem
 }

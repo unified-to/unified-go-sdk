@@ -8,7 +8,7 @@ import (
 )
 
 type PatchPaymentSubscriptionRequest struct {
-	PaymentSubscription *shared.PaymentSubscription `request:"mediaType=application/json"`
+	PaymentSubscription shared.PaymentSubscription `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchPaymentSubscriptionRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchPaymentSubscriptionRequest) GetPaymentSubscription() *shared.PaymentSubscription {
+func (o *PatchPaymentSubscriptionRequest) GetPaymentSubscription() shared.PaymentSubscription {
 	if o == nil {
-		return nil
+		return shared.PaymentSubscription{}
 	}
 	return o.PaymentSubscription
 }

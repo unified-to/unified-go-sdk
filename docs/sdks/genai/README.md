@@ -20,6 +20,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -32,6 +33,7 @@ func main() {
     )
 
     res, err := s.Genai.CreateGenaiPrompt(ctx, operations.CreateGenaiPromptRequest{
+        GenaiPrompt: shared.GenaiPrompt{},
         ConnectionID: "<id>",
     })
     if err != nil {

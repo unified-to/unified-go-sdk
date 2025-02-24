@@ -9,7 +9,7 @@ import (
 
 type PatchAccountingAccountRequest struct {
 	// Chart of accounts
-	AccountingAccount *shared.AccountingAccount `request:"mediaType=application/json"`
+	AccountingAccount shared.AccountingAccount `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -18,9 +18,9 @@ type PatchAccountingAccountRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchAccountingAccountRequest) GetAccountingAccount() *shared.AccountingAccount {
+func (o *PatchAccountingAccountRequest) GetAccountingAccount() shared.AccountingAccount {
 	if o == nil {
-		return nil
+		return shared.AccountingAccount{}
 	}
 	return o.AccountingAccount
 }

@@ -30,6 +30,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -42,6 +43,9 @@ func main() {
     )
 
     res, err := s.Scim.CreateScimGroups(ctx, operations.CreateScimGroupsRequest{
+        ScimGroup: shared.ScimGroup{
+            DisplayName: "Bert89",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -83,6 +87,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -95,6 +100,7 @@ func main() {
     )
 
     res, err := s.Scim.CreateScimUsers(ctx, operations.CreateScimUsersRequest{
+        ScimUser: shared.ScimUser{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -350,6 +356,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -362,6 +369,9 @@ func main() {
     )
 
     res, err := s.Scim.PatchScimGroups(ctx, operations.PatchScimGroupsRequest{
+        ScimGroup: shared.ScimGroup{
+            DisplayName: "Damon_Rutherford93",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -404,6 +414,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -416,6 +427,7 @@ func main() {
     )
 
     res, err := s.Scim.PatchScimUsers(ctx, operations.PatchScimUsersRequest{
+        ScimUser: shared.ScimUser{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -566,6 +578,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -578,6 +591,9 @@ func main() {
     )
 
     res, err := s.Scim.UpdateScimGroups(ctx, operations.UpdateScimGroupsRequest{
+        ScimGroup: shared.ScimGroup{
+            DisplayName: "Frederic.Reichel",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -620,6 +636,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -632,6 +649,7 @@ func main() {
     )
 
     res, err := s.Scim.UpdateScimUsers(ctx, operations.UpdateScimUsersRequest{
+        ScimUser: shared.ScimUser{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -9,14 +9,14 @@ import (
 
 type PatchUnifiedConnectionRequest struct {
 	// A connection represents a specific authentication of an integration.
-	Connection *shared.Connection `request:"mediaType=application/json"`
+	Connection shared.Connection `request:"mediaType=application/json"`
 	// ID of the Connection
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchUnifiedConnectionRequest) GetConnection() *shared.Connection {
+func (o *PatchUnifiedConnectionRequest) GetConnection() shared.Connection {
 	if o == nil {
-		return nil
+		return shared.Connection{}
 	}
 	return o.Connection
 }

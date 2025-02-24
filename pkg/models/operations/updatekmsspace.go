@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateKmsSpaceRequest struct {
-	KmsSpace *shared.KmsSpace `request:"mediaType=application/json"`
+	KmsSpace shared.KmsSpace `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateKmsSpaceRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateKmsSpaceRequest) GetKmsSpace() *shared.KmsSpace {
+func (o *UpdateKmsSpaceRequest) GetKmsSpace() shared.KmsSpace {
 	if o == nil {
-		return nil
+		return shared.KmsSpace{}
 	}
 	return o.KmsSpace
 }

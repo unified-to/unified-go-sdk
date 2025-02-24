@@ -8,7 +8,7 @@ import (
 )
 
 type PatchAccountingTaxrateRequest struct {
-	AccountingTaxrate *shared.AccountingTaxrate `request:"mediaType=application/json"`
+	AccountingTaxrate shared.AccountingTaxrate `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchAccountingTaxrateRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchAccountingTaxrateRequest) GetAccountingTaxrate() *shared.AccountingTaxrate {
+func (o *PatchAccountingTaxrateRequest) GetAccountingTaxrate() shared.AccountingTaxrate {
 	if o == nil {
-		return nil
+		return shared.AccountingTaxrate{}
 	}
 	return o.AccountingTaxrate
 }

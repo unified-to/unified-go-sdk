@@ -8,16 +8,16 @@ import (
 )
 
 type CreateRepoOrganizationRequest struct {
-	RepoOrganization *shared.RepoOrganization `request:"mediaType=application/json"`
+	RepoOrganization shared.RepoOrganization `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateRepoOrganizationRequest) GetRepoOrganization() *shared.RepoOrganization {
+func (o *CreateRepoOrganizationRequest) GetRepoOrganization() shared.RepoOrganization {
 	if o == nil {
-		return nil
+		return shared.RepoOrganization{}
 	}
 	return o.RepoOrganization
 }

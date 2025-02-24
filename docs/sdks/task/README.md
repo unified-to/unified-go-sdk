@@ -36,6 +36,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -48,6 +49,10 @@ func main() {
     )
 
     res, err := s.Task.CreateTaskComment(ctx, operations.CreateTaskCommentRequest{
+        TaskComment: shared.TaskComment{
+            TaskID: "<id>",
+            Text: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -89,6 +94,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -101,6 +107,7 @@ func main() {
     )
 
     res, err := s.Task.CreateTaskProject(ctx, operations.CreateTaskProjectRequest{
+        TaskProject: shared.TaskProject{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -142,6 +149,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -154,6 +162,7 @@ func main() {
     )
 
     res, err := s.Task.CreateTaskTask(ctx, operations.CreateTaskTaskRequest{
+        TaskTask: shared.TaskTask{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -516,6 +525,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -528,6 +538,10 @@ func main() {
     )
 
     res, err := s.Task.PatchTaskComment(ctx, operations.PatchTaskCommentRequest{
+        TaskComment: shared.TaskComment{
+            TaskID: "<id>",
+            Text: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -570,6 +584,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -582,6 +597,7 @@ func main() {
     )
 
     res, err := s.Task.PatchTaskProject(ctx, operations.PatchTaskProjectRequest{
+        TaskProject: shared.TaskProject{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -624,6 +640,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -636,6 +653,7 @@ func main() {
     )
 
     res, err := s.Task.PatchTaskTask(ctx, operations.PatchTaskTaskRequest{
+        TaskTask: shared.TaskTask{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -840,6 +858,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -852,6 +871,10 @@ func main() {
     )
 
     res, err := s.Task.UpdateTaskComment(ctx, operations.UpdateTaskCommentRequest{
+        TaskComment: shared.TaskComment{
+            TaskID: "<id>",
+            Text: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -894,6 +917,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -906,6 +930,7 @@ func main() {
     )
 
     res, err := s.Task.UpdateTaskProject(ctx, operations.UpdateTaskProjectRequest{
+        TaskProject: shared.TaskProject{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -948,6 +973,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -960,6 +986,7 @@ func main() {
     )
 
     res, err := s.Task.UpdateTaskTask(ctx, operations.UpdateTaskTaskRequest{
+        TaskTask: shared.TaskTask{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

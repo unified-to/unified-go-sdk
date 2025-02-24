@@ -30,6 +30,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -42,6 +43,9 @@ func main() {
     )
 
     res, err := s.Location.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
+        CommerceLocation: shared.CommerceLocation{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -83,6 +87,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -95,6 +100,7 @@ func main() {
     )
 
     res, err := s.Location.CreateHrisLocation(ctx, operations.CreateHrisLocationRequest{
+        HrisLocation: shared.HrisLocation{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -350,6 +356,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -362,6 +369,9 @@ func main() {
     )
 
     res, err := s.Location.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
+        CommerceLocation: shared.CommerceLocation{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -404,6 +414,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -416,6 +427,7 @@ func main() {
     )
 
     res, err := s.Location.PatchHrisLocation(ctx, operations.PatchHrisLocationRequest{
+        HrisLocation: shared.HrisLocation{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -566,6 +578,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -578,6 +591,9 @@ func main() {
     )
 
     res, err := s.Location.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
+        CommerceLocation: shared.CommerceLocation{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -620,6 +636,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -632,6 +649,7 @@ func main() {
     )
 
     res, err := s.Location.UpdateHrisLocation(ctx, operations.UpdateHrisLocationRequest{
+        HrisLocation: shared.HrisLocation{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

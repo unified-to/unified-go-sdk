@@ -40,6 +40,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -52,6 +53,7 @@ func main() {
     )
 
     res, err := s.Payment.CreatePaymentLink(ctx, operations.CreatePaymentLinkRequest{
+        PaymentLink: shared.PaymentLink{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -93,6 +95,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -105,6 +108,7 @@ func main() {
     )
 
     res, err := s.Payment.CreatePaymentPayment(ctx, operations.CreatePaymentPaymentRequest{
+        PaymentPayment: shared.PaymentPayment{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -146,6 +150,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -158,6 +163,7 @@ func main() {
     )
 
     res, err := s.Payment.CreatePaymentSubscription(ctx, operations.CreatePaymentSubscriptionRequest{
+        PaymentSubscription: shared.PaymentSubscription{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -734,6 +740,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -746,6 +753,7 @@ func main() {
     )
 
     res, err := s.Payment.PatchPaymentLink(ctx, operations.PatchPaymentLinkRequest{
+        PaymentLink: shared.PaymentLink{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -788,6 +796,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -800,6 +809,7 @@ func main() {
     )
 
     res, err := s.Payment.PatchPaymentPayment(ctx, operations.PatchPaymentPaymentRequest{
+        PaymentPayment: shared.PaymentPayment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -842,6 +852,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -854,6 +865,7 @@ func main() {
     )
 
     res, err := s.Payment.PatchPaymentSubscription(ctx, operations.PatchPaymentSubscriptionRequest{
+        PaymentSubscription: shared.PaymentSubscription{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1058,6 +1070,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1070,6 +1083,7 @@ func main() {
     )
 
     res, err := s.Payment.UpdatePaymentLink(ctx, operations.UpdatePaymentLinkRequest{
+        PaymentLink: shared.PaymentLink{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1112,6 +1126,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1124,6 +1139,7 @@ func main() {
     )
 
     res, err := s.Payment.UpdatePaymentPayment(ctx, operations.UpdatePaymentPaymentRequest{
+        PaymentPayment: shared.PaymentPayment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1166,6 +1182,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1178,6 +1195,7 @@ func main() {
     )
 
     res, err := s.Payment.UpdatePaymentSubscription(ctx, operations.UpdatePaymentSubscriptionRequest{
+        PaymentSubscription: shared.PaymentSubscription{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

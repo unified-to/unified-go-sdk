@@ -8,7 +8,7 @@ import (
 )
 
 type PatchAtsCandidateRequest struct {
-	AtsCandidate *shared.AtsCandidate `request:"mediaType=application/json"`
+	AtsCandidate shared.AtsCandidate `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchAtsCandidateRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchAtsCandidateRequest) GetAtsCandidate() *shared.AtsCandidate {
+func (o *PatchAtsCandidateRequest) GetAtsCandidate() shared.AtsCandidate {
 	if o == nil {
-		return nil
+		return shared.AtsCandidate{}
 	}
 	return o.AtsCandidate
 }

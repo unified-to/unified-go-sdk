@@ -9,7 +9,7 @@ import (
 
 type UpdateCommerceCollectionRequest struct {
 	// A collection of items/products/services
-	CommerceCollection *shared.CommerceCollection `request:"mediaType=application/json"`
+	CommerceCollection shared.CommerceCollection `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -18,9 +18,9 @@ type UpdateCommerceCollectionRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateCommerceCollectionRequest) GetCommerceCollection() *shared.CommerceCollection {
+func (o *UpdateCommerceCollectionRequest) GetCommerceCollection() shared.CommerceCollection {
 	if o == nil {
-		return nil
+		return shared.CommerceCollection{}
 	}
 	return o.CommerceCollection
 }

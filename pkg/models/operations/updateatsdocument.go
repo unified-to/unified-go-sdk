@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateAtsDocumentRequest struct {
-	AtsDocument *shared.AtsDocument `request:"mediaType=application/json"`
+	AtsDocument shared.AtsDocument `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type UpdateAtsDocumentRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateAtsDocumentRequest) GetAtsDocument() *shared.AtsDocument {
+func (o *UpdateAtsDocumentRequest) GetAtsDocument() shared.AtsDocument {
 	if o == nil {
-		return nil
+		return shared.AtsDocument{}
 	}
 	return o.AtsDocument
 }

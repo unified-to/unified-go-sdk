@@ -9,16 +9,16 @@ import (
 
 type CreateCrmEventRequest struct {
 	// An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
-	CrmEvent *shared.CrmEvent `request:"mediaType=application/json"`
+	CrmEvent shared.CrmEvent `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateCrmEventRequest) GetCrmEvent() *shared.CrmEvent {
+func (o *CreateCrmEventRequest) GetCrmEvent() shared.CrmEvent {
 	if o == nil {
-		return nil
+		return shared.CrmEvent{}
 	}
 	return o.CrmEvent
 }

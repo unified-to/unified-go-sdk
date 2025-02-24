@@ -8,7 +8,7 @@ import (
 )
 
 type PatchCommerceItemRequest struct {
-	CommerceItem *shared.CommerceItem `request:"mediaType=application/json"`
+	CommerceItem shared.CommerceItem `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchCommerceItemRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchCommerceItemRequest) GetCommerceItem() *shared.CommerceItem {
+func (o *PatchCommerceItemRequest) GetCommerceItem() shared.CommerceItem {
 	if o == nil {
-		return nil
+		return shared.CommerceItem{}
 	}
 	return o.CommerceItem
 }

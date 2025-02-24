@@ -9,14 +9,14 @@ import (
 
 type CreateUnifiedWebhookRequest struct {
 	// A webhook is used to POST new/updated information to your server.
-	Webhook *shared.Webhook `request:"mediaType=application/json"`
+	Webhook shared.Webhook `request:"mediaType=application/json"`
 	// When set, all of the existing data will sent back to your server.
 	IncludeAll *bool `queryParam:"style=form,explode=true,name=include_all"`
 }
 
-func (o *CreateUnifiedWebhookRequest) GetWebhook() *shared.Webhook {
+func (o *CreateUnifiedWebhookRequest) GetWebhook() shared.Webhook {
 	if o == nil {
-		return nil
+		return shared.Webhook{}
 	}
 	return o.Webhook
 }

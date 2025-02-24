@@ -8,16 +8,16 @@ import (
 )
 
 type CreateHrisLocationRequest struct {
-	HrisLocation *shared.HrisLocation `request:"mediaType=application/json"`
+	HrisLocation shared.HrisLocation `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateHrisLocationRequest) GetHrisLocation() *shared.HrisLocation {
+func (o *CreateHrisLocationRequest) GetHrisLocation() shared.HrisLocation {
 	if o == nil {
-		return nil
+		return shared.HrisLocation{}
 	}
 	return o.HrisLocation
 }

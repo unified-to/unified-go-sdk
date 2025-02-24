@@ -9,7 +9,7 @@ import (
 
 type PatchCrmEventRequest struct {
 	// An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
-	CrmEvent *shared.CrmEvent `request:"mediaType=application/json"`
+	CrmEvent shared.CrmEvent `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -18,9 +18,9 @@ type PatchCrmEventRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchCrmEventRequest) GetCrmEvent() *shared.CrmEvent {
+func (o *PatchCrmEventRequest) GetCrmEvent() shared.CrmEvent {
 	if o == nil {
-		return nil
+		return shared.CrmEvent{}
 	}
 	return o.CrmEvent
 }

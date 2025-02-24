@@ -8,16 +8,16 @@ import (
 )
 
 type CreateTicketingTicketRequest struct {
-	TicketingTicket *shared.TicketingTicket `request:"mediaType=application/json"`
+	TicketingTicket shared.TicketingTicket `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 }
 
-func (o *CreateTicketingTicketRequest) GetTicketingTicket() *shared.TicketingTicket {
+func (o *CreateTicketingTicketRequest) GetTicketingTicket() shared.TicketingTicket {
 	if o == nil {
-		return nil
+		return shared.TicketingTicket{}
 	}
 	return o.TicketingTicket
 }

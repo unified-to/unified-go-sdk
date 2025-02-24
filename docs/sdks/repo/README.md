@@ -48,6 +48,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -60,6 +61,10 @@ func main() {
     )
 
     res, err := s.Repo.CreateRepoBranch(ctx, operations.CreateRepoBranchRequest{
+        RepoBranch: shared.RepoBranch{
+            Name: "<value>",
+            RepoID: "<id>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -101,6 +106,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -113,6 +119,10 @@ func main() {
     )
 
     res, err := s.Repo.CreateRepoCommit(ctx, operations.CreateRepoCommitRequest{
+        RepoCommit: shared.RepoCommit{
+            RepoID: "<id>",
+            UserID: "<id>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -154,6 +164,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -166,6 +177,7 @@ func main() {
     )
 
     res, err := s.Repo.CreateRepoOrganization(ctx, operations.CreateRepoOrganizationRequest{
+        RepoOrganization: shared.RepoOrganization{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -207,6 +219,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -219,6 +232,7 @@ func main() {
     )
 
     res, err := s.Repo.CreateRepoPullrequest(ctx, operations.CreateRepoPullrequestRequest{
+        RepoPullrequest: shared.RepoPullrequest{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -260,6 +274,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -272,6 +287,9 @@ func main() {
     )
 
     res, err := s.Repo.CreateRepoRepository(ctx, operations.CreateRepoRepositoryRequest{
+        RepoRepository: shared.RepoRepository{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -848,6 +866,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -860,6 +879,10 @@ func main() {
     )
 
     res, err := s.Repo.PatchRepoBranch(ctx, operations.PatchRepoBranchRequest{
+        RepoBranch: shared.RepoBranch{
+            Name: "<value>",
+            RepoID: "<id>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -902,6 +925,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -914,6 +938,10 @@ func main() {
     )
 
     res, err := s.Repo.PatchRepoCommit(ctx, operations.PatchRepoCommitRequest{
+        RepoCommit: shared.RepoCommit{
+            RepoID: "<id>",
+            UserID: "<id>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -956,6 +984,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -968,6 +997,7 @@ func main() {
     )
 
     res, err := s.Repo.PatchRepoOrganization(ctx, operations.PatchRepoOrganizationRequest{
+        RepoOrganization: shared.RepoOrganization{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1010,6 +1040,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1022,6 +1053,7 @@ func main() {
     )
 
     res, err := s.Repo.PatchRepoPullrequest(ctx, operations.PatchRepoPullrequestRequest{
+        RepoPullrequest: shared.RepoPullrequest{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1064,6 +1096,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1076,6 +1109,9 @@ func main() {
     )
 
     res, err := s.Repo.PatchRepoRepository(ctx, operations.PatchRepoRepositoryRequest{
+        RepoRepository: shared.RepoRepository{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1388,6 +1424,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1400,6 +1437,10 @@ func main() {
     )
 
     res, err := s.Repo.UpdateRepoBranch(ctx, operations.UpdateRepoBranchRequest{
+        RepoBranch: shared.RepoBranch{
+            Name: "<value>",
+            RepoID: "<id>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1442,6 +1483,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1454,6 +1496,10 @@ func main() {
     )
 
     res, err := s.Repo.UpdateRepoCommit(ctx, operations.UpdateRepoCommitRequest{
+        RepoCommit: shared.RepoCommit{
+            RepoID: "<id>",
+            UserID: "<id>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1496,6 +1542,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1508,6 +1555,7 @@ func main() {
     )
 
     res, err := s.Repo.UpdateRepoOrganization(ctx, operations.UpdateRepoOrganizationRequest{
+        RepoOrganization: shared.RepoOrganization{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1550,6 +1598,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1562,6 +1611,7 @@ func main() {
     )
 
     res, err := s.Repo.UpdateRepoPullrequest(ctx, operations.UpdateRepoPullrequestRequest{
+        RepoPullrequest: shared.RepoPullrequest{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1604,6 +1654,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1616,6 +1667,9 @@ func main() {
     )
 
     res, err := s.Repo.UpdateRepoRepository(ctx, operations.UpdateRepoRepositoryRequest{
+        RepoRepository: shared.RepoRepository{
+            Name: "<value>",
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

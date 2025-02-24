@@ -8,7 +8,7 @@ import (
 )
 
 type PatchLmsStudentRequest struct {
-	LmsStudent *shared.LmsStudent `request:"mediaType=application/json"`
+	LmsStudent shared.LmsStudent `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -17,9 +17,9 @@ type PatchLmsStudentRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchLmsStudentRequest) GetLmsStudent() *shared.LmsStudent {
+func (o *PatchLmsStudentRequest) GetLmsStudent() shared.LmsStudent {
 	if o == nil {
-		return nil
+		return shared.LmsStudent{}
 	}
 	return o.LmsStudent
 }
