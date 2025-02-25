@@ -355,6 +355,35 @@ func (e *ListDealID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListEndLe string
+
+const (
+	ListEndLeSupportedRequired ListEndLe = "supported-required"
+	ListEndLeSupported         ListEndLe = "supported"
+	ListEndLeNotSupported      ListEndLe = "not-supported"
+)
+
+func (e ListEndLe) ToPointer() *ListEndLe {
+	return &e
+}
+func (e *ListEndLe) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListEndLe(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListEndLe: %v", v)
+	}
+}
+
 type ListInstructorID string
 
 const (
@@ -1048,6 +1077,35 @@ func (e *ListSpaceID) UnmarshalJSON(data []byte) error {
 		return nil
 	default:
 		return fmt.Errorf("invalid value for ListSpaceID: %v", v)
+	}
+}
+
+type ListStartGte string
+
+const (
+	ListStartGteSupportedRequired ListStartGte = "supported-required"
+	ListStartGteSupported         ListStartGte = "supported"
+	ListStartGteNotSupported      ListStartGte = "not-supported"
+)
+
+func (e ListStartGte) ToPointer() *ListStartGte {
+	return &e
+}
+func (e *ListStartGte) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListStartGte(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListStartGte: %v", v)
 	}
 }
 
@@ -1761,6 +1819,7 @@ type IntegrationSupport struct {
 	ListCourseID           *ListCourseID           `json:"list_course_id,omitempty"`
 	ListCustomerID         *ListCustomerID         `json:"list_customer_id,omitempty"`
 	ListDealID             *ListDealID             `json:"list_deal_id,omitempty"`
+	ListEndLe              *ListEndLe              `json:"list_end_le,omitempty"`
 	ListInstructorID       *ListInstructorID       `json:"list_instructor_id,omitempty"`
 	ListInterviewID        *ListInterviewID        `json:"list_interview_id,omitempty"`
 	ListInvoiceID          *ListInvoiceID          `json:"list_invoice_id,omitempty"`
@@ -1785,6 +1844,7 @@ type IntegrationSupport struct {
 	ListSortByName         *ListSortByName         `json:"list_sort_by_name,omitempty"`
 	ListSortByUpdatedAt    *ListSortByUpdatedAt    `json:"list_sort_by_updated_at,omitempty"`
 	ListSpaceID            *ListSpaceID            `json:"list_space_id,omitempty"`
+	ListStartGte           *ListStartGte           `json:"list_start_gte,omitempty"`
 	ListStudentID          *ListStudentID          `json:"list_student_id,omitempty"`
 	ListTaskID             *ListTaskID             `json:"list_task_id,omitempty"`
 	ListTicketID           *ListTicketID           `json:"list_ticket_id,omitempty"`
@@ -1906,6 +1966,13 @@ func (o *IntegrationSupport) GetListDealID() *ListDealID {
 		return nil
 	}
 	return o.ListDealID
+}
+
+func (o *IntegrationSupport) GetListEndLe() *ListEndLe {
+	if o == nil {
+		return nil
+	}
+	return o.ListEndLe
 }
 
 func (o *IntegrationSupport) GetListInstructorID() *ListInstructorID {
@@ -2074,6 +2141,13 @@ func (o *IntegrationSupport) GetListSpaceID() *ListSpaceID {
 		return nil
 	}
 	return o.ListSpaceID
+}
+
+func (o *IntegrationSupport) GetListStartGte() *ListStartGte {
+	if o == nil {
+		return nil
+	}
+	return o.ListStartGte
 }
 
 func (o *IntegrationSupport) GetListStudentID() *ListStudentID {

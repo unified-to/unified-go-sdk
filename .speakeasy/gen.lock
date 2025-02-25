@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 3c83ac41ca19a0aa4a6ad1896f8a1398
+  docChecksum: 9075a5eee0d5e437f7630ea01fb59832
   docVersion: "1.0"
-  speakeasyVersion: 1.501.0
-  generationVersion: 2.522.1
-  releaseVersion: 0.23.5
-  configChecksum: 45b4a1a8ae793d7badbc159da127c9a8
+  speakeasyVersion: 1.502.0
+  generationVersion: 2.524.1
+  releaseVersion: 0.23.6
+  configChecksum: fcae3299cc53af05ddf49c4680f9f29b
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -1594,6 +1594,7 @@ generatedFiles:
   - docs/pkg/models/shared/listcourseid.md
   - docs/pkg/models/shared/listcustomerid.md
   - docs/pkg/models/shared/listdealid.md
+  - docs/pkg/models/shared/listendle.md
   - docs/pkg/models/shared/listinstructorid.md
   - docs/pkg/models/shared/listinterviewid.md
   - docs/pkg/models/shared/listinvoiceid.md
@@ -1618,6 +1619,7 @@ generatedFiles:
   - docs/pkg/models/shared/listsortbyname.md
   - docs/pkg/models/shared/listsortbyupdatedat.md
   - docs/pkg/models/shared/listspaceid.md
+  - docs/pkg/models/shared/liststartgte.md
   - docs/pkg/models/shared/liststudentid.md
   - docs/pkg/models/shared/listtaskid.md
   - docs/pkg/models/shared/listticketid.md
