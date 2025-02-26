@@ -12,7 +12,8 @@ import (
 type ListMessagingMessagesRequest struct {
 	ChannelID *string `queryParam:"style=form,explode=true,name=channel_id"`
 	// ID of the connection
-	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
+	EndLe        *string `queryParam:"style=form,explode=true,name=end_le"`
 	// Comma-delimited fields to return
 	Fields   []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit    *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -20,8 +21,9 @@ type ListMessagingMessagesRequest struct {
 	Order    *string  `queryParam:"style=form,explode=true,name=order"`
 	ParentID *string  `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
-	Query *string `queryParam:"style=form,explode=true,name=query"`
-	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
+	Query    *string `queryParam:"style=form,explode=true,name=query"`
+	Sort     *string `queryParam:"style=form,explode=true,name=sort"`
+	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -49,6 +51,13 @@ func (o *ListMessagingMessagesRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *ListMessagingMessagesRequest) GetEndLe() *string {
+	if o == nil {
+		return nil
+	}
+	return o.EndLe
 }
 
 func (o *ListMessagingMessagesRequest) GetFields() []string {
@@ -98,6 +107,13 @@ func (o *ListMessagingMessagesRequest) GetSort() *string {
 		return nil
 	}
 	return o.Sort
+}
+
+func (o *ListMessagingMessagesRequest) GetStartGte() *string {
+	if o == nil {
+		return nil
+	}
+	return o.StartGte
 }
 
 func (o *ListMessagingMessagesRequest) GetUpdatedGte() *time.Time {
