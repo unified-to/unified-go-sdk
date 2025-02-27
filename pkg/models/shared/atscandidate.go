@@ -56,7 +56,9 @@ type AtsCandidate struct {
 	CompanyName        *string                      `json:"company_name,omitempty"`
 	CreatedAt          *time.Time                   `json:"created_at,omitempty"`
 	DateOfBirth        *time.Time                   `json:"date_of_birth,omitempty"`
+	Education          []AtsCandidateEducation      `json:"education,omitempty"`
 	Emails             []AtsEmail                   `json:"emails,omitempty"`
+	Experiences        []AtsCandidateExperience     `json:"experiences,omitempty"`
 	ExternalIdentifier *string                      `json:"external_identifier,omitempty"`
 	ID                 *string                      `json:"id,omitempty"`
 	ImageURL           *string                      `json:"image_url,omitempty"`
@@ -65,6 +67,7 @@ type AtsCandidate struct {
 	Name       *string          `json:"name,omitempty"`
 	Origin     *Origin          `json:"origin,omitempty"`
 	Raw        *AtsCandidateRaw `json:"raw,omitempty"`
+	Skills     []string         `json:"skills,omitempty"`
 	Sources    []string         `json:"sources,omitempty"`
 	Tags       []string         `json:"tags,omitempty"`
 	Telephones []AtsTelephone   `json:"telephones,omitempty"`
@@ -120,11 +123,25 @@ func (o *AtsCandidate) GetDateOfBirth() *time.Time {
 	return o.DateOfBirth
 }
 
+func (o *AtsCandidate) GetEducation() []AtsCandidateEducation {
+	if o == nil {
+		return nil
+	}
+	return o.Education
+}
+
 func (o *AtsCandidate) GetEmails() []AtsEmail {
 	if o == nil {
 		return nil
 	}
 	return o.Emails
+}
+
+func (o *AtsCandidate) GetExperiences() []AtsCandidateExperience {
+	if o == nil {
+		return nil
+	}
+	return o.Experiences
 }
 
 func (o *AtsCandidate) GetExternalIdentifier() *string {
@@ -174,6 +191,13 @@ func (o *AtsCandidate) GetRaw() *AtsCandidateRaw {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *AtsCandidate) GetSkills() []string {
+	if o == nil {
+		return nil
+	}
+	return o.Skills
 }
 
 func (o *AtsCandidate) GetSources() []string {

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: eed3e21cce15d18d6d589ec03e5be2ce
+  docChecksum: a642c7bece4e0a94752d9efa149625ea
   docVersion: "1.0"
-  speakeasyVersion: 1.504.1
-  generationVersion: 2.529.2
-  releaseVersion: 0.23.7
-  configChecksum: 7664b132031488a837c3aa525ee52abc
+  speakeasyVersion: 1.505.1
+  generationVersion: 2.531.0
+  releaseVersion: 0.23.8
+  configChecksum: deb0b6d3d301430a62273c9a6d52a9b4
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -443,6 +443,8 @@ generatedFiles:
   - /pkg/models/shared/atsapplication.go
   - /pkg/models/shared/atsapplicationanswer.go
   - /pkg/models/shared/atscandidate.go
+  - /pkg/models/shared/atscandidateeducation.go
+  - /pkg/models/shared/atscandidateexperience.go
   - /pkg/models/shared/atscompany.go
   - /pkg/models/shared/atscompensation.go
   - /pkg/models/shared/atsdocument.go
@@ -1456,6 +1458,8 @@ generatedFiles:
   - docs/pkg/models/shared/atsapplicationraw.md
   - docs/pkg/models/shared/atsapplicationstatus.md
   - docs/pkg/models/shared/atscandidate.md
+  - docs/pkg/models/shared/atscandidateeducation.md
+  - docs/pkg/models/shared/atscandidateexperience.md
   - docs/pkg/models/shared/atscandidateraw.md
   - docs/pkg/models/shared/atscompany.md
   - docs/pkg/models/shared/atscompanyraw.md
