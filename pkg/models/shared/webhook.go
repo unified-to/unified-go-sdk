@@ -150,6 +150,11 @@ const (
 	ObjectTypeRepoCommit             ObjectType = "repo_commit"
 	ObjectTypeRepoPullrequest        ObjectType = "repo_pullrequest"
 	ObjectTypeMetadataMetadata       ObjectType = "metadata_metadata"
+	ObjectTypeCalendarCalendar       ObjectType = "calendar_calendar"
+	ObjectTypeCalendarEvent          ObjectType = "calendar_event"
+	ObjectTypeCalendarBusy           ObjectType = "calendar_busy"
+	ObjectTypeCalendarLink           ObjectType = "calendar_link"
+	ObjectTypeCalendarRecording      ObjectType = "calendar_recording"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -302,6 +307,16 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "repo_pullrequest":
 		fallthrough
 	case "metadata_metadata":
+		fallthrough
+	case "calendar_calendar":
+		fallthrough
+	case "calendar_event":
+		fallthrough
+	case "calendar_busy":
+		fallthrough
+	case "calendar_link":
+		fallthrough
+	case "calendar_recording":
 		*e = ObjectType(v)
 		return nil
 	default:

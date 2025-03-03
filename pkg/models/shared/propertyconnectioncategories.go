@@ -31,6 +31,7 @@ const (
 	PropertyConnectionCategoriesLms         PropertyConnectionCategories = "lms"
 	PropertyConnectionCategoriesRepo        PropertyConnectionCategories = "repo"
 	PropertyConnectionCategoriesMetadata    PropertyConnectionCategories = "metadata"
+	PropertyConnectionCategoriesCalendar    PropertyConnectionCategories = "calendar"
 )
 
 func (e PropertyConnectionCategories) ToPointer() *PropertyConnectionCategories {
@@ -83,6 +84,8 @@ func (e *PropertyConnectionCategories) UnmarshalJSON(data []byte) error {
 	case "repo":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "calendar":
 		*e = PropertyConnectionCategories(v)
 		return nil
 	default:

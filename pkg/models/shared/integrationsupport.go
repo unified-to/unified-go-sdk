@@ -94,6 +94,35 @@ func (e *ListApplicationID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListCalendarID string
+
+const (
+	ListCalendarIDSupportedRequired ListCalendarID = "supported-required"
+	ListCalendarIDSupported         ListCalendarID = "supported"
+	ListCalendarIDNotSupported      ListCalendarID = "not-supported"
+)
+
+func (e ListCalendarID) ToPointer() *ListCalendarID {
+	return &e
+}
+func (e *ListCalendarID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListCalendarID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCalendarID: %v", v)
+	}
+}
+
 type ListCandidateID string
 
 const (
@@ -381,6 +410,35 @@ func (e *ListEndLe) UnmarshalJSON(data []byte) error {
 		return nil
 	default:
 		return fmt.Errorf("invalid value for ListEndLe: %v", v)
+	}
+}
+
+type ListEventID string
+
+const (
+	ListEventIDSupportedRequired ListEventID = "supported-required"
+	ListEventIDSupported         ListEventID = "supported"
+	ListEventIDNotSupported      ListEventID = "not-supported"
+)
+
+func (e ListEventID) ToPointer() *ListEventID {
+	return &e
+}
+func (e *ListEventID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListEventID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListEventID: %v", v)
 	}
 }
 
@@ -1810,6 +1868,7 @@ type IntegrationSupport struct {
 	InboundFields          map[string]any          `json:"inbound_fields,omitempty"`
 	ListAccountID          *ListAccountID          `json:"list_account_id,omitempty"`
 	ListApplicationID      *ListApplicationID      `json:"list_application_id,omitempty"`
+	ListCalendarID         *ListCalendarID         `json:"list_calendar_id,omitempty"`
 	ListCandidateID        *ListCandidateID        `json:"list_candidate_id,omitempty"`
 	ListChannelID          *ListChannelID          `json:"list_channel_id,omitempty"`
 	ListClassID            *ListClassID            `json:"list_class_id,omitempty"`
@@ -1820,6 +1879,7 @@ type IntegrationSupport struct {
 	ListCustomerID         *ListCustomerID         `json:"list_customer_id,omitempty"`
 	ListDealID             *ListDealID             `json:"list_deal_id,omitempty"`
 	ListEndLe              *ListEndLe              `json:"list_end_le,omitempty"`
+	ListEventID            *ListEventID            `json:"list_event_id,omitempty"`
 	ListInstructorID       *ListInstructorID       `json:"list_instructor_id,omitempty"`
 	ListInterviewID        *ListInterviewID        `json:"list_interview_id,omitempty"`
 	ListInvoiceID          *ListInvoiceID          `json:"list_invoice_id,omitempty"`
@@ -1905,6 +1965,13 @@ func (o *IntegrationSupport) GetListApplicationID() *ListApplicationID {
 	return o.ListApplicationID
 }
 
+func (o *IntegrationSupport) GetListCalendarID() *ListCalendarID {
+	if o == nil {
+		return nil
+	}
+	return o.ListCalendarID
+}
+
 func (o *IntegrationSupport) GetListCandidateID() *ListCandidateID {
 	if o == nil {
 		return nil
@@ -1973,6 +2040,13 @@ func (o *IntegrationSupport) GetListEndLe() *ListEndLe {
 		return nil
 	}
 	return o.ListEndLe
+}
+
+func (o *IntegrationSupport) GetListEventID() *ListEventID {
+	if o == nil {
+		return nil
+	}
+	return o.ListEventID
 }
 
 func (o *IntegrationSupport) GetListInstructorID() *ListInstructorID {

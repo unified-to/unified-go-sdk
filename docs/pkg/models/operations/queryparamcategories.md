@@ -26,3 +26,4 @@
 | `QueryParamCategoriesLms`         | lms                               |
 | `QueryParamCategoriesRepo`        | repo                              |
 | `QueryParamCategoriesMetadata`    | metadata                          |
+| `QueryParamCategoriesCalendar`    | calendar                          |

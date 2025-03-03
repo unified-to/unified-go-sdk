@@ -140,6 +140,16 @@ const (
 	PropertyConnectionPermissionsRepoPullrequestWrite       PropertyConnectionPermissions = "repo_pullrequest_write"
 	PropertyConnectionPermissionsMetadataMetadataRead       PropertyConnectionPermissions = "metadata_metadata_read"
 	PropertyConnectionPermissionsMetadataMetadataWrite      PropertyConnectionPermissions = "metadata_metadata_write"
+	PropertyConnectionPermissionsCalendarCalendarRead       PropertyConnectionPermissions = "calendar_calendar_read"
+	PropertyConnectionPermissionsCalendarCalendarWrite      PropertyConnectionPermissions = "calendar_calendar_write"
+	PropertyConnectionPermissionsCalendarEventRead          PropertyConnectionPermissions = "calendar_event_read"
+	PropertyConnectionPermissionsCalendarEventWrite         PropertyConnectionPermissions = "calendar_event_write"
+	PropertyConnectionPermissionsCalendarBusyRead           PropertyConnectionPermissions = "calendar_busy_read"
+	PropertyConnectionPermissionsCalendarBusyWrite          PropertyConnectionPermissions = "calendar_busy_write"
+	PropertyConnectionPermissionsCalendarLinkRead           PropertyConnectionPermissions = "calendar_link_read"
+	PropertyConnectionPermissionsCalendarLinkWrite          PropertyConnectionPermissions = "calendar_link_write"
+	PropertyConnectionPermissionsCalendarRecordingRead      PropertyConnectionPermissions = "calendar_recording_read"
+	PropertyConnectionPermissionsCalendarRecordingWrite     PropertyConnectionPermissions = "calendar_recording_write"
 )
 
 func (e PropertyConnectionPermissions) ToPointer() *PropertyConnectionPermissions {
@@ -410,6 +420,26 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "metadata_metadata_read":
 		fallthrough
 	case "metadata_metadata_write":
+		fallthrough
+	case "calendar_calendar_read":
+		fallthrough
+	case "calendar_calendar_write":
+		fallthrough
+	case "calendar_event_read":
+		fallthrough
+	case "calendar_event_write":
+		fallthrough
+	case "calendar_busy_read":
+		fallthrough
+	case "calendar_busy_write":
+		fallthrough
+	case "calendar_link_read":
+		fallthrough
+	case "calendar_link_write":
+		fallthrough
+	case "calendar_recording_read":
+		fallthrough
+	case "calendar_recording_write":
 		*e = PropertyConnectionPermissions(v)
 		return nil
 	default:

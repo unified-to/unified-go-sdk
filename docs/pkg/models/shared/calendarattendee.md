@@ -1,0 +1,12 @@
+# CalendarAttendee
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `Email`                                                                                | **string*                                                                              | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `Name`                                                                                 | **string*                                                                              | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `Required`                                                                             | **bool*                                                                                | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `Status`                                                                               | [*shared.CalendarAttendeeStatus](../../../pkg/models/shared/calendarattendeestatus.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `UserID`                                                                               | **string*                                                                              | :heavy_minus_sign:                                                                     | N/A                                                                                    |

@@ -26,3 +26,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesLms`         | lms                                                      |
 | `ListUnifiedIntegrationsQueryParamCategoriesRepo`        | repo                                                     |
 | `ListUnifiedIntegrationsQueryParamCategoriesMetadata`    | metadata                                                 |
+| `ListUnifiedIntegrationsQueryParamCategoriesCalendar`    | calendar                                                 |

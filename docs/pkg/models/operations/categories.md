@@ -26,3 +26,4 @@
 | `CategoriesLms`         | lms                     |
 | `CategoriesRepo`        | repo                    |
 | `CategoriesMetadata`    | metadata                |
+| `CategoriesCalendar`    | calendar                |

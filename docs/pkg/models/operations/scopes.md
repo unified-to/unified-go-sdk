@@ -135,3 +135,13 @@
 | `ScopesRepoPullrequestWrite`       | repo_pullrequest_write             |
 | `ScopesMetadataMetadataRead`       | metadata_metadata_read             |
 | `ScopesMetadataMetadataWrite`      | metadata_metadata_write            |
+| `ScopesCalendarCalendarRead`       | calendar_calendar_read             |
+| `ScopesCalendarCalendarWrite`      | calendar_calendar_write            |
+| `ScopesCalendarEventRead`          | calendar_event_read                |
+| `ScopesCalendarEventWrite`         | calendar_event_write               |
+| `ScopesCalendarBusyRead`           | calendar_busy_read                 |
+| `ScopesCalendarBusyWrite`          | calendar_busy_write                |
+| `ScopesCalendarLinkRead`           | calendar_link_read                 |
+| `ScopesCalendarLinkWrite`          | calendar_link_write                |
+| `ScopesCalendarRecordingRead`      | calendar_recording_read            |
+| `ScopesCalendarRecordingWrite`     | calendar_recording_write           |

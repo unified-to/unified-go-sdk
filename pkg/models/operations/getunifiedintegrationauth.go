@@ -141,6 +141,16 @@ const (
 	ScopesRepoPullrequestWrite       Scopes = "repo_pullrequest_write"
 	ScopesMetadataMetadataRead       Scopes = "metadata_metadata_read"
 	ScopesMetadataMetadataWrite      Scopes = "metadata_metadata_write"
+	ScopesCalendarCalendarRead       Scopes = "calendar_calendar_read"
+	ScopesCalendarCalendarWrite      Scopes = "calendar_calendar_write"
+	ScopesCalendarEventRead          Scopes = "calendar_event_read"
+	ScopesCalendarEventWrite         Scopes = "calendar_event_write"
+	ScopesCalendarBusyRead           Scopes = "calendar_busy_read"
+	ScopesCalendarBusyWrite          Scopes = "calendar_busy_write"
+	ScopesCalendarLinkRead           Scopes = "calendar_link_read"
+	ScopesCalendarLinkWrite          Scopes = "calendar_link_write"
+	ScopesCalendarRecordingRead      Scopes = "calendar_recording_read"
+	ScopesCalendarRecordingWrite     Scopes = "calendar_recording_write"
 )
 
 func (e Scopes) ToPointer() *Scopes {
@@ -411,6 +421,26 @@ func (e *Scopes) UnmarshalJSON(data []byte) error {
 	case "metadata_metadata_read":
 		fallthrough
 	case "metadata_metadata_write":
+		fallthrough
+	case "calendar_calendar_read":
+		fallthrough
+	case "calendar_calendar_write":
+		fallthrough
+	case "calendar_event_read":
+		fallthrough
+	case "calendar_event_write":
+		fallthrough
+	case "calendar_busy_read":
+		fallthrough
+	case "calendar_busy_write":
+		fallthrough
+	case "calendar_link_read":
+		fallthrough
+	case "calendar_link_write":
+		fallthrough
+	case "calendar_recording_read":
+		fallthrough
+	case "calendar_recording_write":
 		*e = Scopes(v)
 		return nil
 	default:

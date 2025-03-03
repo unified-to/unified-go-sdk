@@ -36,6 +36,7 @@ type PropertyConnectionAuth struct {
 	State                   *string    `json:"state,omitempty"`
 	Token                   *string    `json:"token,omitempty"`
 	TokenURL                *string    `json:"token_url,omitempty"`
+	UserID                  *string    `json:"user_id,omitempty"`
 }
 
 func (p PropertyConnectionAuth) MarshalJSON() ([]byte, error) {
@@ -208,4 +209,11 @@ func (o *PropertyConnectionAuth) GetTokenURL() *string {
 		return nil
 	}
 	return o.TokenURL
+}
+
+func (o *PropertyConnectionAuth) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }

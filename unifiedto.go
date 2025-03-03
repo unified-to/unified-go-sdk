@@ -91,6 +91,11 @@ type UnifiedTo struct {
 	Interview         *Interview
 	Job               *Job
 	Scorecard         *Scorecard
+	Calendar          *Calendar
+	Busy              *Busy
+	Event             *Event
+	Link              *Link
+	Recording         *Recording
 	Commerce          *Commerce
 	Collection        *Collection
 	Inventory         *Inventory
@@ -98,7 +103,6 @@ type UnifiedTo struct {
 	Location          *Location
 	Crm               *Crm
 	Deal              *Deal
-	Event             *Event
 	Lead              *Lead
 	Pipeline          *Pipeline
 	Enrich            *Enrich
@@ -129,7 +133,6 @@ type UnifiedTo struct {
 	Metadata          *Metadata
 	Passthrough       *Passthrough
 	Payment           *Payment
-	Link              *Link
 	Payout            *Payout
 	Refund            *Refund
 	Subscription      *Subscription
@@ -236,9 +239,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.23.8",
-			GenVersion:        "2.531.0",
-			UserAgent:         "speakeasy-sdk/go 0.23.8 2.531.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.23.9",
+			GenVersion:        "2.536.0",
+			UserAgent:         "speakeasy-sdk/go 0.23.9 2.536.0 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -296,6 +299,16 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Scorecard = newScorecard(sdk.sdkConfiguration)
 
+	sdk.Calendar = newCalendar(sdk.sdkConfiguration)
+
+	sdk.Busy = newBusy(sdk.sdkConfiguration)
+
+	sdk.Event = newEvent(sdk.sdkConfiguration)
+
+	sdk.Link = newLink(sdk.sdkConfiguration)
+
+	sdk.Recording = newRecording(sdk.sdkConfiguration)
+
 	sdk.Commerce = newCommerce(sdk.sdkConfiguration)
 
 	sdk.Collection = newCollection(sdk.sdkConfiguration)
@@ -309,8 +322,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Crm = newCrm(sdk.sdkConfiguration)
 
 	sdk.Deal = newDeal(sdk.sdkConfiguration)
-
-	sdk.Event = newEvent(sdk.sdkConfiguration)
 
 	sdk.Lead = newLead(sdk.sdkConfiguration)
 
@@ -371,8 +382,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Passthrough = newPassthrough(sdk.sdkConfiguration)
 
 	sdk.Payment = newPayment(sdk.sdkConfiguration)
-
-	sdk.Link = newLink(sdk.sdkConfiguration)
 
 	sdk.Payout = newPayout(sdk.sdkConfiguration)
 

@@ -26,3 +26,4 @@
 | `PropertyConnectionCategoriesLms`         | lms                                       |
 | `PropertyConnectionCategoriesRepo`        | repo                                      |
 | `PropertyConnectionCategoriesMetadata`    | metadata                                  |
+| `PropertyConnectionCategoriesCalendar`    | calendar                                  |

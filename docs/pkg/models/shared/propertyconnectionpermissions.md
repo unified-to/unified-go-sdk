@@ -135,3 +135,13 @@
 | `PropertyConnectionPermissionsRepoPullrequestWrite`       | repo_pullrequest_write                                    |
 | `PropertyConnectionPermissionsMetadataMetadataRead`       | metadata_metadata_read                                    |
 | `PropertyConnectionPermissionsMetadataMetadataWrite`      | metadata_metadata_write                                   |
+| `PropertyConnectionPermissionsCalendarCalendarRead`       | calendar_calendar_read                                    |
+| `PropertyConnectionPermissionsCalendarCalendarWrite`      | calendar_calendar_write                                   |
+| `PropertyConnectionPermissionsCalendarEventRead`          | calendar_event_read                                       |
+| `PropertyConnectionPermissionsCalendarEventWrite`         | calendar_event_write                                      |
+| `PropertyConnectionPermissionsCalendarBusyRead`           | calendar_busy_read                                        |
+| `PropertyConnectionPermissionsCalendarBusyWrite`          | calendar_busy_write                                       |
+| `PropertyConnectionPermissionsCalendarLinkRead`           | calendar_link_read                                        |
+| `PropertyConnectionPermissionsCalendarLinkWrite`          | calendar_link_write                                       |
+| `PropertyConnectionPermissionsCalendarRecordingRead`      | calendar_recording_read                                   |
+| `PropertyConnectionPermissionsCalendarRecordingWrite`     | calendar_recording_write                                  |

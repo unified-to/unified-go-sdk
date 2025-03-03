@@ -222,6 +222,34 @@ func main() {
 * [RemoveRepoBranch](docs/sdks/branch/README.md#removerepobranch) - Remove a branch
 * [UpdateRepoBranch](docs/sdks/branch/README.md#updaterepobranch) - Update a branch
 
+### [Busy](docs/sdks/busy/README.md)
+
+* [ListCalendarBusies](docs/sdks/busy/README.md#listcalendarbusies) - List all busies
+
+### [Calendar](docs/sdks/calendar/README.md)
+
+* [CreateCalendarCalendar](docs/sdks/calendar/README.md#createcalendarcalendar) - Create a calendar
+* [CreateCalendarEvent](docs/sdks/calendar/README.md#createcalendarevent) - Create an event
+* [CreateCalendarLink](docs/sdks/calendar/README.md#createcalendarlink) - Create a link
+* [GetCalendarCalendar](docs/sdks/calendar/README.md#getcalendarcalendar) - Retrieve a calendar
+* [GetCalendarEvent](docs/sdks/calendar/README.md#getcalendarevent) - Retrieve an event
+* [GetCalendarLink](docs/sdks/calendar/README.md#getcalendarlink) - Retrieve a link
+* [GetCalendarRecording](docs/sdks/calendar/README.md#getcalendarrecording) - Retrieve a recording
+* [ListCalendarBusies](docs/sdks/calendar/README.md#listcalendarbusies) - List all busies
+* [ListCalendarCalendars](docs/sdks/calendar/README.md#listcalendarcalendars) - List all calendars
+* [ListCalendarEvents](docs/sdks/calendar/README.md#listcalendarevents) - List all events
+* [ListCalendarLinks](docs/sdks/calendar/README.md#listcalendarlinks) - List all links
+* [ListCalendarRecordings](docs/sdks/calendar/README.md#listcalendarrecordings) - List all recordings
+* [PatchCalendarCalendar](docs/sdks/calendar/README.md#patchcalendarcalendar) - Update a calendar
+* [PatchCalendarEvent](docs/sdks/calendar/README.md#patchcalendarevent) - Update an event
+* [PatchCalendarLink](docs/sdks/calendar/README.md#patchcalendarlink) - Update a link
+* [RemoveCalendarCalendar](docs/sdks/calendar/README.md#removecalendarcalendar) - Remove a calendar
+* [RemoveCalendarEvent](docs/sdks/calendar/README.md#removecalendarevent) - Remove an event
+* [RemoveCalendarLink](docs/sdks/calendar/README.md#removecalendarlink) - Remove a link
+* [UpdateCalendarCalendar](docs/sdks/calendar/README.md#updatecalendarcalendar) - Update a calendar
+* [UpdateCalendarEvent](docs/sdks/calendar/README.md#updatecalendarevent) - Update an event
+* [UpdateCalendarLink](docs/sdks/calendar/README.md#updatecalendarlink) - Update a link
+
 ### [Call](docs/sdks/call/README.md)
 
 * [ListUcCalls](docs/sdks/call/README.md#listuccalls) - List all calls
@@ -448,11 +476,17 @@ func main() {
 
 ### [Event](docs/sdks/event/README.md)
 
+* [CreateCalendarEvent](docs/sdks/event/README.md#createcalendarevent) - Create an event
 * [CreateCrmEvent](docs/sdks/event/README.md#createcrmevent) - Create an event
+* [GetCalendarEvent](docs/sdks/event/README.md#getcalendarevent) - Retrieve an event
 * [GetCrmEvent](docs/sdks/event/README.md#getcrmevent) - Retrieve an event
+* [ListCalendarEvents](docs/sdks/event/README.md#listcalendarevents) - List all events
 * [ListCrmEvents](docs/sdks/event/README.md#listcrmevents) - List all events
+* [PatchCalendarEvent](docs/sdks/event/README.md#patchcalendarevent) - Update an event
 * [PatchCrmEvent](docs/sdks/event/README.md#patchcrmevent) - Update an event
+* [RemoveCalendarEvent](docs/sdks/event/README.md#removecalendarevent) - Remove an event
 * [RemoveCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove an event
+* [UpdateCalendarEvent](docs/sdks/event/README.md#updatecalendarevent) - Update an event
 * [UpdateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update an event
 
 ### [File](docs/sdks/file/README.md)
@@ -620,11 +654,17 @@ func main() {
 
 ### [Link](docs/sdks/link/README.md)
 
+* [CreateCalendarLink](docs/sdks/link/README.md#createcalendarlink) - Create a link
 * [CreatePaymentLink](docs/sdks/link/README.md#createpaymentlink) - Create a link
+* [GetCalendarLink](docs/sdks/link/README.md#getcalendarlink) - Retrieve a link
 * [GetPaymentLink](docs/sdks/link/README.md#getpaymentlink) - Retrieve a link
+* [ListCalendarLinks](docs/sdks/link/README.md#listcalendarlinks) - List all links
 * [ListPaymentLinks](docs/sdks/link/README.md#listpaymentlinks) - List all links
+* [PatchCalendarLink](docs/sdks/link/README.md#patchcalendarlink) - Update a link
 * [PatchPaymentLink](docs/sdks/link/README.md#patchpaymentlink) - Update a link
+* [RemoveCalendarLink](docs/sdks/link/README.md#removecalendarlink) - Remove a link
 * [RemovePaymentLink](docs/sdks/link/README.md#removepaymentlink) - Remove a link
+* [UpdateCalendarLink](docs/sdks/link/README.md#updatecalendarlink) - Update a link
 * [UpdatePaymentLink](docs/sdks/link/README.md#updatepaymentlink) - Update a link
 
 ### [List](docs/sdks/list/README.md)
@@ -857,6 +897,11 @@ func main() {
 * [PatchRepoPullrequest](docs/sdks/pullrequest/README.md#patchrepopullrequest) - Update a pullrequest
 * [RemoveRepoPullrequest](docs/sdks/pullrequest/README.md#removerepopullrequest) - Remove a pullrequest
 * [UpdateRepoPullrequest](docs/sdks/pullrequest/README.md#updaterepopullrequest) - Update a pullrequest
+
+### [Recording](docs/sdks/recording/README.md)
+
+* [GetCalendarRecording](docs/sdks/recording/README.md#getcalendarrecording) - Retrieve a recording
+* [ListCalendarRecordings](docs/sdks/recording/README.md#listcalendarrecordings) - List all recordings
 
 ### [Refund](docs/sdks/refund/README.md)
 

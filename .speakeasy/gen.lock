@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: a642c7bece4e0a94752d9efa149625ea
+  docChecksum: 04bf3a6a3ccbffee7bf0c8268abe98b3
   docVersion: "1.0"
-  speakeasyVersion: 1.505.1
-  generationVersion: 2.531.0
-  releaseVersion: 0.23.8
-  configChecksum: deb0b6d3d301430a62273c9a6d52a9b4
+  speakeasyVersion: 1.508.1
+  generationVersion: 2.536.0
+  releaseVersion: 0.23.9
+  configChecksum: 32c923f03db285d2caa840759f8f9d6e
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -45,6 +45,9 @@ generatedFiles:
   - /pkg/models/operations/createatsinterview.go
   - /pkg/models/operations/createatsjob.go
   - /pkg/models/operations/createatsscorecard.go
+  - /pkg/models/operations/createcalendarcalendar.go
+  - /pkg/models/operations/createcalendarevent.go
+  - /pkg/models/operations/createcalendarlink.go
   - /pkg/models/operations/createcommercecollection.go
   - /pkg/models/operations/createcommerceinventory.go
   - /pkg/models/operations/createcommerceitem.go
@@ -109,6 +112,10 @@ generatedFiles:
   - /pkg/models/operations/getatsinterview.go
   - /pkg/models/operations/getatsjob.go
   - /pkg/models/operations/getatsscorecard.go
+  - /pkg/models/operations/getcalendarcalendar.go
+  - /pkg/models/operations/getcalendarevent.go
+  - /pkg/models/operations/getcalendarlink.go
+  - /pkg/models/operations/getcalendarrecording.go
   - /pkg/models/operations/getcommercecollection.go
   - /pkg/models/operations/getcommerceinventory.go
   - /pkg/models/operations/getcommerceitem.go
@@ -179,6 +186,11 @@ generatedFiles:
   - /pkg/models/operations/listatsinterviews.go
   - /pkg/models/operations/listatsjobs.go
   - /pkg/models/operations/listatsscorecards.go
+  - /pkg/models/operations/listcalendarbusies.go
+  - /pkg/models/operations/listcalendarcalendars.go
+  - /pkg/models/operations/listcalendarevents.go
+  - /pkg/models/operations/listcalendarlinks.go
+  - /pkg/models/operations/listcalendarrecordings.go
   - /pkg/models/operations/listcommercecollections.go
   - /pkg/models/operations/listcommerceinventories.go
   - /pkg/models/operations/listcommerceitems.go
@@ -252,6 +264,9 @@ generatedFiles:
   - /pkg/models/operations/patchatsinterview.go
   - /pkg/models/operations/patchatsjob.go
   - /pkg/models/operations/patchatsscorecard.go
+  - /pkg/models/operations/patchcalendarcalendar.go
+  - /pkg/models/operations/patchcalendarevent.go
+  - /pkg/models/operations/patchcalendarlink.go
   - /pkg/models/operations/patchcommercecollection.go
   - /pkg/models/operations/patchcommerceinventory.go
   - /pkg/models/operations/patchcommerceitem.go
@@ -314,6 +329,9 @@ generatedFiles:
   - /pkg/models/operations/removeatsinterview.go
   - /pkg/models/operations/removeatsjob.go
   - /pkg/models/operations/removeatsscorecard.go
+  - /pkg/models/operations/removecalendarcalendar.go
+  - /pkg/models/operations/removecalendarevent.go
+  - /pkg/models/operations/removecalendarlink.go
   - /pkg/models/operations/removecommercecollection.go
   - /pkg/models/operations/removecommerceinventory.go
   - /pkg/models/operations/removecommerceitem.go
@@ -374,6 +392,9 @@ generatedFiles:
   - /pkg/models/operations/updateatsinterview.go
   - /pkg/models/operations/updateatsjob.go
   - /pkg/models/operations/updateatsscorecard.go
+  - /pkg/models/operations/updatecalendarcalendar.go
+  - /pkg/models/operations/updatecalendarevent.go
+  - /pkg/models/operations/updatecalendarlink.go
   - /pkg/models/operations/updatecommercecollection.go
   - /pkg/models/operations/updatecommerceinventory.go
   - /pkg/models/operations/updatecommerceitem.go
@@ -459,6 +480,14 @@ generatedFiles:
   - /pkg/models/shared/atsscorecardquestion.go
   - /pkg/models/shared/atsstatus.go
   - /pkg/models/shared/atstelephone.go
+  - /pkg/models/shared/calendarattendee.go
+  - /pkg/models/shared/calendarbusy.go
+  - /pkg/models/shared/calendarcalendar.go
+  - /pkg/models/shared/calendarevent.go
+  - /pkg/models/shared/calendarlink.go
+  - /pkg/models/shared/calendarrecording.go
+  - /pkg/models/shared/calendarrecordingmedia.go
+  - /pkg/models/shared/calendarrecordingtranscript.go
   - /pkg/models/shared/commercecollection.go
   - /pkg/models/shared/commerceinventory.go
   - /pkg/models/shared/commerceitem.go
@@ -535,6 +564,8 @@ generatedFiles:
   - /pkg/models/shared/propertyatscandidateaddress.go
   - /pkg/models/shared/propertyatscompanyaddress.go
   - /pkg/models/shared/propertyatsjobpostingaddress.go
+  - /pkg/models/shared/propertycalendareventorganizer.go
+  - /pkg/models/shared/propertycalendarrecordingtranscriptattendee.go
   - /pkg/models/shared/propertycommercelocationaddress.go
   - /pkg/models/shared/propertyconnectionauth.go
   - /pkg/models/shared/propertyconnectioncategories.go
@@ -617,6 +648,8 @@ generatedFiles:
   - ats.go
   - auth.go
   - branch.go
+  - busy.go
+  - calendar.go
   - call.go
   - candidate.go
   - channel.go
@@ -661,6 +694,12 @@ generatedFiles:
   - docs/pkg/models/operations/createatsjobresponse.md
   - docs/pkg/models/operations/createatsscorecardrequest.md
   - docs/pkg/models/operations/createatsscorecardresponse.md
+  - docs/pkg/models/operations/createcalendarcalendarrequest.md
+  - docs/pkg/models/operations/createcalendarcalendarresponse.md
+  - docs/pkg/models/operations/createcalendareventrequest.md
+  - docs/pkg/models/operations/createcalendareventresponse.md
+  - docs/pkg/models/operations/createcalendarlinkrequest.md
+  - docs/pkg/models/operations/createcalendarlinkresponse.md
   - docs/pkg/models/operations/createcommercecollectionrequest.md
   - docs/pkg/models/operations/createcommercecollectionresponse.md
   - docs/pkg/models/operations/createcommerceinventoryrequest.md
@@ -788,6 +827,14 @@ generatedFiles:
   - docs/pkg/models/operations/getatsjobresponse.md
   - docs/pkg/models/operations/getatsscorecardrequest.md
   - docs/pkg/models/operations/getatsscorecardresponse.md
+  - docs/pkg/models/operations/getcalendarcalendarrequest.md
+  - docs/pkg/models/operations/getcalendarcalendarresponse.md
+  - docs/pkg/models/operations/getcalendareventrequest.md
+  - docs/pkg/models/operations/getcalendareventresponse.md
+  - docs/pkg/models/operations/getcalendarlinkrequest.md
+  - docs/pkg/models/operations/getcalendarlinkresponse.md
+  - docs/pkg/models/operations/getcalendarrecordingrequest.md
+  - docs/pkg/models/operations/getcalendarrecordingresponse.md
   - docs/pkg/models/operations/getcommercecollectionrequest.md
   - docs/pkg/models/operations/getcommercecollectionresponse.md
   - docs/pkg/models/operations/getcommerceinventoryrequest.md
@@ -928,6 +975,16 @@ generatedFiles:
   - docs/pkg/models/operations/listatsjobsresponse.md
   - docs/pkg/models/operations/listatsscorecardsrequest.md
   - docs/pkg/models/operations/listatsscorecardsresponse.md
+  - docs/pkg/models/operations/listcalendarbusiesrequest.md
+  - docs/pkg/models/operations/listcalendarbusiesresponse.md
+  - docs/pkg/models/operations/listcalendarcalendarsrequest.md
+  - docs/pkg/models/operations/listcalendarcalendarsresponse.md
+  - docs/pkg/models/operations/listcalendareventsrequest.md
+  - docs/pkg/models/operations/listcalendareventsresponse.md
+  - docs/pkg/models/operations/listcalendarlinksrequest.md
+  - docs/pkg/models/operations/listcalendarlinksresponse.md
+  - docs/pkg/models/operations/listcalendarrecordingsrequest.md
+  - docs/pkg/models/operations/listcalendarrecordingsresponse.md
   - docs/pkg/models/operations/listcommercecollectionsrequest.md
   - docs/pkg/models/operations/listcommercecollectionsresponse.md
   - docs/pkg/models/operations/listcommerceinventoriesrequest.md
@@ -1076,6 +1133,12 @@ generatedFiles:
   - docs/pkg/models/operations/patchatsjobresponse.md
   - docs/pkg/models/operations/patchatsscorecardrequest.md
   - docs/pkg/models/operations/patchatsscorecardresponse.md
+  - docs/pkg/models/operations/patchcalendarcalendarrequest.md
+  - docs/pkg/models/operations/patchcalendarcalendarresponse.md
+  - docs/pkg/models/operations/patchcalendareventrequest.md
+  - docs/pkg/models/operations/patchcalendareventresponse.md
+  - docs/pkg/models/operations/patchcalendarlinkrequest.md
+  - docs/pkg/models/operations/patchcalendarlinkresponse.md
   - docs/pkg/models/operations/patchcommercecollectionrequest.md
   - docs/pkg/models/operations/patchcommercecollectionresponse.md
   - docs/pkg/models/operations/patchcommerceinventoryrequest.md
@@ -1201,6 +1264,12 @@ generatedFiles:
   - docs/pkg/models/operations/removeatsjobresponse.md
   - docs/pkg/models/operations/removeatsscorecardrequest.md
   - docs/pkg/models/operations/removeatsscorecardresponse.md
+  - docs/pkg/models/operations/removecalendarcalendarrequest.md
+  - docs/pkg/models/operations/removecalendarcalendarresponse.md
+  - docs/pkg/models/operations/removecalendareventrequest.md
+  - docs/pkg/models/operations/removecalendareventresponse.md
+  - docs/pkg/models/operations/removecalendarlinkrequest.md
+  - docs/pkg/models/operations/removecalendarlinkresponse.md
   - docs/pkg/models/operations/removecommercecollectionrequest.md
   - docs/pkg/models/operations/removecommercecollectionresponse.md
   - docs/pkg/models/operations/removecommerceinventoryrequest.md
@@ -1322,6 +1391,12 @@ generatedFiles:
   - docs/pkg/models/operations/updateatsjobresponse.md
   - docs/pkg/models/operations/updateatsscorecardrequest.md
   - docs/pkg/models/operations/updateatsscorecardresponse.md
+  - docs/pkg/models/operations/updatecalendarcalendarrequest.md
+  - docs/pkg/models/operations/updatecalendarcalendarresponse.md
+  - docs/pkg/models/operations/updatecalendareventrequest.md
+  - docs/pkg/models/operations/updatecalendareventresponse.md
+  - docs/pkg/models/operations/updatecalendarlinkrequest.md
+  - docs/pkg/models/operations/updatecalendarlinkresponse.md
   - docs/pkg/models/operations/updatecommercecollectionrequest.md
   - docs/pkg/models/operations/updatecommercecollectionresponse.md
   - docs/pkg/models/operations/updatecommerceinventoryrequest.md
@@ -1492,6 +1567,21 @@ generatedFiles:
   - docs/pkg/models/shared/atsstatusstatus.md
   - docs/pkg/models/shared/atstelephone.md
   - docs/pkg/models/shared/atstelephonetype.md
+  - docs/pkg/models/shared/calendarattendee.md
+  - docs/pkg/models/shared/calendarattendeestatus.md
+  - docs/pkg/models/shared/calendarbusy.md
+  - docs/pkg/models/shared/calendarbusyraw.md
+  - docs/pkg/models/shared/calendarcalendar.md
+  - docs/pkg/models/shared/calendarcalendarraw.md
+  - docs/pkg/models/shared/calendarevent.md
+  - docs/pkg/models/shared/calendareventraw.md
+  - docs/pkg/models/shared/calendareventstatus.md
+  - docs/pkg/models/shared/calendarlink.md
+  - docs/pkg/models/shared/calendarlinkraw.md
+  - docs/pkg/models/shared/calendarrecording.md
+  - docs/pkg/models/shared/calendarrecordingmedia.md
+  - docs/pkg/models/shared/calendarrecordingraw.md
+  - docs/pkg/models/shared/calendarrecordingtranscript.md
   - docs/pkg/models/shared/commercecollection.md
   - docs/pkg/models/shared/commercecollectionraw.md
   - docs/pkg/models/shared/commercecollectiontype.md
@@ -1589,6 +1679,7 @@ generatedFiles:
   - docs/pkg/models/shared/kmsspace.md
   - docs/pkg/models/shared/listaccountid.md
   - docs/pkg/models/shared/listapplicationid.md
+  - docs/pkg/models/shared/listcalendarid.md
   - docs/pkg/models/shared/listcandidateid.md
   - docs/pkg/models/shared/listchannelid.md
   - docs/pkg/models/shared/listclassid.md
@@ -1599,6 +1690,7 @@ generatedFiles:
   - docs/pkg/models/shared/listcustomerid.md
   - docs/pkg/models/shared/listdealid.md
   - docs/pkg/models/shared/listendle.md
+  - docs/pkg/models/shared/listeventid.md
   - docs/pkg/models/shared/listinstructorid.md
   - docs/pkg/models/shared/listinterviewid.md
   - docs/pkg/models/shared/listinvoiceid.md
@@ -1678,6 +1770,10 @@ generatedFiles:
   - docs/pkg/models/shared/propertyatscandidateaddress.md
   - docs/pkg/models/shared/propertyatscompanyaddress.md
   - docs/pkg/models/shared/propertyatsjobpostingaddress.md
+  - docs/pkg/models/shared/propertycalendareventorganizer.md
+  - docs/pkg/models/shared/propertycalendareventorganizerstatus.md
+  - docs/pkg/models/shared/propertycalendarrecordingtranscriptattendee.md
+  - docs/pkg/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
   - docs/pkg/models/shared/propertycommercelocationaddress.md
   - docs/pkg/models/shared/propertyconnectionauth.md
   - docs/pkg/models/shared/propertyconnectionauthmeta.md
@@ -1811,6 +1907,8 @@ generatedFiles:
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
   - docs/sdks/branch/README.md
+  - docs/sdks/busy/README.md
+  - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
   - docs/sdks/channel/README.md
@@ -1869,6 +1967,7 @@ generatedFiles:
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/pullrequest/README.md
+  - docs/sdks/recording/README.md
   - docs/sdks/refund/README.md
   - docs/sdks/repo/README.md
   - docs/sdks/repository/README.md
@@ -1953,6 +2052,7 @@ generatedFiles:
   - project.go
   - prompt.go
   - pullrequest.go
+  - recording.go
   - refund.go
   - repo.go
   - repository.go
@@ -5829,5 +5929,213 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createCalendarCalendar:
+    speakeasy-default-create-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  createCalendarEvent:
+    speakeasy-default-create-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  createCalendarLink:
+    speakeasy-default-create-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://sturdy-begonia.biz/"}
+      responses:
+        "200":
+          application/json: {"url": "https://mealy-crest.com"}
+  getCalendarCalendar:
+    speakeasy-default-get-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getCalendarEvent:
+    speakeasy-default-get-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  getCalendarLink:
+    speakeasy-default-get-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"url": "https://helpful-rule.com/"}
+  getCalendarRecording:
+    speakeasy-default-get-calendar-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listCalendarBusies:
+    speakeasy-default-list-calendar-busies:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"end_at": "2024-10-27T10:02:59.053Z", "start_at": "2025-09-24T22:24:48.779Z"}, {"end_at": "2024-03-01T22:16:54.474Z", "start_at": "2025-05-11T06:32:32.457Z"}, {"end_at": "2023-06-10T22:37:04.573Z", "start_at": "2023-09-17T05:28:38.179Z"}]
+  listCalendarCalendars:
+    speakeasy-default-list-calendar-calendars:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}, {"name": "<value>"}, {"name": "<value>"}]
+  listCalendarEvents:
+    speakeasy-default-list-calendar-events:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}]
+  listCalendarLinks:
+    speakeasy-default-list-calendar-links:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"url": "https://unwritten-approach.info/"}, {"url": "https://innocent-ruin.biz/"}]
+  listCalendarRecordings:
+    speakeasy-default-list-calendar-recordings:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
+  patchCalendarCalendar:
+    speakeasy-default-patch-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  patchCalendarEvent:
+    speakeasy-default-patch-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  patchCalendarLink:
+    speakeasy-default-patch-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://curly-skyline.biz/"}
+      responses:
+        "200":
+          application/json: {"url": "https://first-testimonial.biz/"}
+  removeCalendarCalendar:
+    speakeasy-default-remove-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCalendarEvent:
+    speakeasy-default-remove-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCalendarLink:
+    speakeasy-default-remove-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCalendarCalendar:
+    speakeasy-default-update-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  updateCalendarEvent:
+    speakeasy-default-update-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  updateCalendarLink:
+    speakeasy-default-update-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://quiet-coordination.name"}
+      responses:
+        "200":
+          application/json: {"url": "https://standard-birth.info/"}
 examplesVersion: 1.0.0
 generatedTests: {}
