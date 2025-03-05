@@ -15,6 +15,7 @@ type CalendarCalendar struct {
 	Description *string              `json:"description,omitempty"`
 	ID          *string              `json:"id,omitempty"`
 	Name        string               `json:"name"`
+	Primary     *bool                `json:"primary,omitempty"`
 	Raw         *CalendarCalendarRaw `json:"raw,omitempty"`
 	Timezone    *string              `json:"timezone,omitempty"`
 	UpdatedAt   *time.Time           `json:"updated_at,omitempty"`
@@ -57,6 +58,13 @@ func (o *CalendarCalendar) GetName() string {
 		return ""
 	}
 	return o.Name
+}
+
+func (o *CalendarCalendar) GetPrimary() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.Primary
 }
 
 func (o *CalendarCalendar) GetRaw() *CalendarCalendarRaw {
