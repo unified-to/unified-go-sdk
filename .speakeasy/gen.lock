@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 03fb3687a9211f1c85a85fd634fa1c98
+  docChecksum: 469567133059289c1dda4dbb71768014
   docVersion: "1.0"
-  speakeasyVersion: 1.509.1
-  generationVersion: 2.539.1
-  releaseVersion: 0.23.10
-  configChecksum: cc19fb9e28810357a4e3ae972953a017
+  speakeasyVersion: 1.510.0
+  generationVersion: 2.541.0
+  releaseVersion: 0.23.11
+  configChecksum: b1112e791bb4d7a2b22c79c784e34fec
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -1362,7 +1362,6 @@ generatedFiles:
   - docs/pkg/models/operations/removeunifiedconnectionresponse.md
   - docs/pkg/models/operations/removeunifiedwebhookrequest.md
   - docs/pkg/models/operations/removeunifiedwebhookresponse.md
-  - docs/pkg/models/operations/scopes.md
   - docs/pkg/models/operations/updateaccountingaccountrequest.md
   - docs/pkg/models/operations/updateaccountingaccountresponse.md
   - docs/pkg/models/operations/updateaccountingcontactrequest.md

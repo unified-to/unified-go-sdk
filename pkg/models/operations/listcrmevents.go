@@ -17,6 +17,7 @@ type ListCrmEventsRequest struct {
 	DealID       *string `queryParam:"style=form,explode=true,name=deal_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	LeadID *string  `queryParam:"style=form,explode=true,name=lead_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
@@ -73,6 +74,13 @@ func (o *ListCrmEventsRequest) GetFields() []string {
 		return nil
 	}
 	return o.Fields
+}
+
+func (o *ListCrmEventsRequest) GetLeadID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.LeadID
 }
 
 func (o *ListCrmEventsRequest) GetLimit() *float64 {
