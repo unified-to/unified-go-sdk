@@ -616,6 +616,35 @@ func (e *ListJobID) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type ListLeadID string
+
+const (
+	ListLeadIDSupportedRequired ListLeadID = "supported-required"
+	ListLeadIDSupported         ListLeadID = "supported"
+	ListLeadIDNotSupported      ListLeadID = "not-supported"
+)
+
+func (e ListLeadID) ToPointer() *ListLeadID {
+	return &e
+}
+func (e *ListLeadID) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "supported-required":
+		fallthrough
+	case "supported":
+		fallthrough
+	case "not-supported":
+		*e = ListLeadID(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListLeadID: %v", v)
+	}
+}
+
 type ListLimit string
 
 const (
@@ -1886,6 +1915,7 @@ type IntegrationSupport struct {
 	ListItemID             *ListItemID             `json:"list_item_id,omitempty"`
 	ListItemVariantID      *ListItemVariantID      `json:"list_item_variant_id,omitempty"`
 	ListJobID              *ListJobID              `json:"list_job_id,omitempty"`
+	ListLeadID             *ListLeadID             `json:"list_lead_id,omitempty"`
 	ListLimit              *ListLimit              `json:"list_limit,omitempty"`
 	ListLinkID             *ListLinkID             `json:"list_link_id,omitempty"`
 	ListListID             *ListListID             `json:"list_list_id,omitempty"`
@@ -2089,6 +2119,13 @@ func (o *IntegrationSupport) GetListJobID() *ListJobID {
 		return nil
 	}
 	return o.ListJobID
+}
+
+func (o *IntegrationSupport) GetListLeadID() *ListLeadID {
+	if o == nil {
+		return nil
+	}
+	return o.ListLeadID
 }
 
 func (o *IntegrationSupport) GetListLimit() *ListLimit {
