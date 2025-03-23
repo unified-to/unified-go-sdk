@@ -17,6 +17,8 @@ const (
 	AccountingContactPaymentMethodTypeIdeal   AccountingContactPaymentMethodType = "IDEAL"
 	AccountingContactPaymentMethodTypeOther   AccountingContactPaymentMethodType = "OTHER"
 	AccountingContactPaymentMethodTypePaypal  AccountingContactPaymentMethodType = "PAYPAL"
+	AccountingContactPaymentMethodTypeWire    AccountingContactPaymentMethodType = "WIRE"
+	AccountingContactPaymentMethodTypeCheck   AccountingContactPaymentMethodType = "CHECK"
 )
 
 func (e AccountingContactPaymentMethodType) ToPointer() *AccountingContactPaymentMethodType {
@@ -41,6 +43,10 @@ func (e *AccountingContactPaymentMethodType) UnmarshalJSON(data []byte) error {
 	case "OTHER":
 		fallthrough
 	case "PAYPAL":
+		fallthrough
+	case "WIRE":
+		fallthrough
+	case "CHECK":
 		*e = AccountingContactPaymentMethodType(v)
 		return nil
 	default:

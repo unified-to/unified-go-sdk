@@ -12,3 +12,5 @@
 | `AccountingContactPaymentMethodTypeIdeal`   | IDEAL                                       |
 | `AccountingContactPaymentMethodTypeOther`   | OTHER                                       |
 | `AccountingContactPaymentMethodTypePaypal`  | PAYPAL                                      |
+| `AccountingContactPaymentMethodTypeWire`    | WIRE                                        |
+| `AccountingContactPaymentMethodTypeCheck`   | CHECK                                       |
