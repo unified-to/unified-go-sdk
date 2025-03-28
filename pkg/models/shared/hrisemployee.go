@@ -175,6 +175,7 @@ type HrisEmployee struct {
 	Locations      []HrisLocation   `json:"locations,omitempty"`
 	ManagerID      *string          `json:"manager_id,omitempty"`
 	MaritalStatus  *MaritalStatus   `json:"marital_status,omitempty"`
+	Metadata       []HrisMetadata   `json:"metadata,omitempty"`
 	Name           *string          `json:"name,omitempty"`
 	Pronouns       *string          `json:"pronouns,omitempty"`
 	Raw            *HrisEmployeeRaw `json:"raw,omitempty"`
@@ -364,6 +365,13 @@ func (o *HrisEmployee) GetMaritalStatus() *MaritalStatus {
 		return nil
 	}
 	return o.MaritalStatus
+}
+
+func (o *HrisEmployee) GetMetadata() []HrisMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *HrisEmployee) GetName() *string {

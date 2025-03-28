@@ -24,6 +24,7 @@ type CrmContact struct {
 	ID     *string    `json:"id,omitempty"`
 	// Additional URLs associated with the contact e.g., LinkedIn, website, etc
 	LinkUrls []string       `json:"link_urls,omitempty"`
+	Metadata []CrmMetadata  `json:"metadata,omitempty"`
 	Name     *string        `json:"name,omitempty"`
 	Raw      *CrmContactRaw `json:"raw,omitempty"`
 	// An array of telephones for this contact
@@ -98,6 +99,13 @@ func (o *CrmContact) GetLinkUrls() []string {
 		return nil
 	}
 	return o.LinkUrls
+}
+
+func (o *CrmContact) GetMetadata() []CrmMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *CrmContact) GetName() *string {

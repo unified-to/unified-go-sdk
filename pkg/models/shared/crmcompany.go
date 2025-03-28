@@ -26,6 +26,7 @@ type CrmCompany struct {
 	IsActive    *bool      `json:"is_active,omitempty"`
 	// Additional URLs associated with the contact e.g., LinkedIn, website, etc
 	LinkUrls   []string       `json:"link_urls,omitempty"`
+	Metadata   []CrmMetadata  `json:"metadata,omitempty"`
 	Name       *string        `json:"name,omitempty"`
 	Raw        *CrmCompanyRaw `json:"raw,omitempty"`
 	Tags       []string       `json:"tags,omitempty"`
@@ -122,6 +123,13 @@ func (o *CrmCompany) GetLinkUrls() []string {
 		return nil
 	}
 	return o.LinkUrls
+}
+
+func (o *CrmCompany) GetMetadata() []CrmMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *CrmCompany) GetName() *string {

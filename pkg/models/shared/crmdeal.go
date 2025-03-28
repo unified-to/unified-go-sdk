@@ -12,26 +12,27 @@ type CrmDealRaw struct {
 
 // CrmDeal - A deal represents an opportunity with companies and/or contacts
 type CrmDeal struct {
-	Amount      *float64    `json:"amount,omitempty"`
-	ClosedAt    *time.Time  `json:"closed_at,omitempty"`
-	CompanyIds  []string    `json:"company_ids,omitempty"`
-	ContactIds  []string    `json:"contact_ids,omitempty"`
-	CreatedAt   *time.Time  `json:"created_at,omitempty"`
-	Currency    *string     `json:"currency,omitempty"`
-	ID          *string     `json:"id,omitempty"`
-	LostReason  *string     `json:"lost_reason,omitempty"`
-	Name        *string     `json:"name,omitempty"`
-	Pipeline    *string     `json:"pipeline,omitempty"`
-	PipelineID  *string     `json:"pipeline_id,omitempty"`
-	Probability *float64    `json:"probability,omitempty"`
-	Raw         *CrmDealRaw `json:"raw,omitempty"`
-	Source      *string     `json:"source,omitempty"`
-	Stage       *string     `json:"stage,omitempty"`
-	StageID     *string     `json:"stage_id,omitempty"`
-	Tags        []string    `json:"tags,omitempty"`
-	UpdatedAt   *time.Time  `json:"updated_at,omitempty"`
-	UserID      *string     `json:"user_id,omitempty"`
-	WonReason   *string     `json:"won_reason,omitempty"`
+	Amount      *float64      `json:"amount,omitempty"`
+	ClosedAt    *time.Time    `json:"closed_at,omitempty"`
+	CompanyIds  []string      `json:"company_ids,omitempty"`
+	ContactIds  []string      `json:"contact_ids,omitempty"`
+	CreatedAt   *time.Time    `json:"created_at,omitempty"`
+	Currency    *string       `json:"currency,omitempty"`
+	ID          *string       `json:"id,omitempty"`
+	LostReason  *string       `json:"lost_reason,omitempty"`
+	Metadata    []CrmMetadata `json:"metadata,omitempty"`
+	Name        *string       `json:"name,omitempty"`
+	Pipeline    *string       `json:"pipeline,omitempty"`
+	PipelineID  *string       `json:"pipeline_id,omitempty"`
+	Probability *float64      `json:"probability,omitempty"`
+	Raw         *CrmDealRaw   `json:"raw,omitempty"`
+	Source      *string       `json:"source,omitempty"`
+	Stage       *string       `json:"stage,omitempty"`
+	StageID     *string       `json:"stage_id,omitempty"`
+	Tags        []string      `json:"tags,omitempty"`
+	UpdatedAt   *time.Time    `json:"updated_at,omitempty"`
+	UserID      *string       `json:"user_id,omitempty"`
+	WonReason   *string       `json:"won_reason,omitempty"`
 }
 
 func (c CrmDeal) MarshalJSON() ([]byte, error) {
@@ -99,6 +100,13 @@ func (o *CrmDeal) GetLostReason() *string {
 		return nil
 	}
 	return o.LostReason
+}
+
+func (o *CrmDeal) GetMetadata() []CrmMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *CrmDeal) GetName() *string {

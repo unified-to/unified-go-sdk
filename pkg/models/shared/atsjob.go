@@ -108,12 +108,13 @@ type AtsJob struct {
 	Description    *string         `json:"description,omitempty"`
 	EmploymentType *EmploymentType `json:"employment_type,omitempty"`
 	// The departments/divisions/teams that this job belongs to
-	Groups           []AtsGroup `json:"groups,omitempty"`
-	HiringManagerIds []string   `json:"hiring_manager_ids,omitempty"`
-	ID               *string    `json:"id,omitempty"`
-	LanguageLocale   *string    `json:"language_locale,omitempty"`
-	Name             *string    `json:"name,omitempty"`
-	NumberOfOpenings *float64   `json:"number_of_openings,omitempty"`
+	Groups           []AtsGroup    `json:"groups,omitempty"`
+	HiringManagerIds []string      `json:"hiring_manager_ids,omitempty"`
+	ID               *string       `json:"id,omitempty"`
+	LanguageLocale   *string       `json:"language_locale,omitempty"`
+	Metadata         []AtsMetadata `json:"metadata,omitempty"`
+	Name             *string       `json:"name,omitempty"`
+	NumberOfOpenings *float64      `json:"number_of_openings,omitempty"`
 	// Public job postings
 	Postings []AtsJobPosting `json:"postings,omitempty"`
 	// URLs for pages containing public listings for the job
@@ -219,6 +220,13 @@ func (o *AtsJob) GetLanguageLocale() *string {
 		return nil
 	}
 	return o.LanguageLocale
+}
+
+func (o *AtsJob) GetMetadata() []AtsMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *AtsJob) GetName() *string {

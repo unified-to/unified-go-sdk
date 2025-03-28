@@ -14,6 +14,7 @@ type AtsCompany struct {
 	Address      *PropertyAtsCompanyAddress `json:"address,omitempty"`
 	CreatedAt    *time.Time                 `json:"created_at,omitempty"`
 	ID           *string                    `json:"id,omitempty"`
+	Metadata     []AtsMetadata              `json:"metadata,omitempty"`
 	Name         string                     `json:"name"`
 	ParentID     *string                    `json:"parent_id,omitempty"`
 	Phone        *string                    `json:"phone,omitempty"`
@@ -53,6 +54,13 @@ func (o *AtsCompany) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *AtsCompany) GetMetadata() []AtsMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *AtsCompany) GetName() string {

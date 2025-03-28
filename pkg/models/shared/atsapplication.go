@@ -82,6 +82,7 @@ type AtsApplication struct {
 	HiredAt        *time.Time             `json:"hired_at,omitempty"`
 	ID             *string                `json:"id,omitempty"`
 	JobID          *string                `json:"job_id,omitempty"`
+	Metadata       []AtsMetadata          `json:"metadata,omitempty"`
 	Offers         []AtsOffer             `json:"offers,omitempty"`
 	OriginalStatus *string                `json:"original_status,omitempty"`
 	Raw            *AtsApplicationRaw     `json:"raw,omitempty"`
@@ -150,6 +151,13 @@ func (o *AtsApplication) GetJobID() *string {
 		return nil
 	}
 	return o.JobID
+}
+
+func (o *AtsApplication) GetMetadata() []AtsMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *AtsApplication) GetOffers() []AtsOffer {

@@ -77,7 +77,7 @@ type MetadataMetadata struct {
 	ID             *string              `json:"id,omitempty"`
 	Name           string               `json:"name"`
 	ObjectType     string               `json:"object_type"`
-	Objects        map[string]string    `json:"objects,omitempty"`
+	Objects        map[string]any       `json:"objects,omitempty"`
 	Options        []string             `json:"options,omitempty"`
 	OriginalFormat *string              `json:"original_format,omitempty"`
 	Raw            *MetadataMetadataRaw `json:"raw,omitempty"`
@@ -130,7 +130,7 @@ func (o *MetadataMetadata) GetObjectType() string {
 	return o.ObjectType
 }
 
-func (o *MetadataMetadata) GetObjects() map[string]string {
+func (o *MetadataMetadata) GetObjects() map[string]any {
 	if o == nil {
 		return nil
 	}

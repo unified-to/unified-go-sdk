@@ -124,6 +124,7 @@ type AccountingInvoice struct {
 	PaidAmount              *float64                 `json:"paid_amount,omitempty"`
 	PaidAt                  *time.Time               `json:"paid_at,omitempty"`
 	PaymentCollectionMethod *PaymentCollectionMethod `json:"payment_collection_method,omitempty"`
+	PostedAt                *time.Time               `json:"posted_at,omitempty"`
 	Raw                     *AccountingInvoiceRaw    `json:"raw,omitempty"`
 	RefundAmount            *float64                 `json:"refund_amount,omitempty"`
 	RefundReason            *string                  `json:"refund_reason,omitempty"`
@@ -250,6 +251,13 @@ func (o *AccountingInvoice) GetPaymentCollectionMethod() *PaymentCollectionMetho
 		return nil
 	}
 	return o.PaymentCollectionMethod
+}
+
+func (o *AccountingInvoice) GetPostedAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.PostedAt
 }
 
 func (o *AccountingInvoice) GetRaw() *AccountingInvoiceRaw {

@@ -21,6 +21,7 @@ type CrmLead struct {
 	ID            *string                 `json:"id,omitempty"`
 	IsActive      *bool                   `json:"is_active,omitempty"`
 	LinkUrls      []string                `json:"link_urls,omitempty"`
+	Metadata      []CrmMetadata           `json:"metadata,omitempty"`
 	Name          *string                 `json:"name,omitempty"`
 	Raw           *CrmLeadRaw             `json:"raw,omitempty"`
 	Source        *string                 `json:"source,omitempty"`
@@ -109,6 +110,13 @@ func (o *CrmLead) GetLinkUrls() []string {
 		return nil
 	}
 	return o.LinkUrls
+}
+
+func (o *CrmLead) GetMetadata() []CrmMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *CrmLead) GetName() *string {
