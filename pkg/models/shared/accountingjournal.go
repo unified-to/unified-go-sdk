@@ -17,6 +17,7 @@ type AccountingJournal struct {
 	ID          *string    `json:"id,omitempty"`
 	// new field name
 	Lineitems []AccountingJournalLineitem `json:"lineitems,omitempty"`
+	PostedAt  *time.Time                  `json:"posted_at,omitempty"`
 	Raw       *AccountingJournalRaw       `json:"raw,omitempty"`
 	Reference *string                     `json:"reference,omitempty"`
 	TaxAmount *float64                    `json:"tax_amount,omitempty"`
@@ -68,6 +69,13 @@ func (o *AccountingJournal) GetLineitems() []AccountingJournalLineitem {
 		return nil
 	}
 	return o.Lineitems
+}
+
+func (o *AccountingJournal) GetPostedAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.PostedAt
 }
 
 func (o *AccountingJournal) GetRaw() *AccountingJournalRaw {
