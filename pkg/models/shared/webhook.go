@@ -73,9 +73,6 @@ func (e *Event) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type Meta struct {
-}
-
 type ObjectType string
 
 const (
@@ -368,7 +365,7 @@ type Webhook struct {
 	Interval        *float64          `json:"interval,omitempty"`
 	IsHealthy       *bool             `json:"is_healthy,omitempty"`
 	IsPaused        *bool             `json:"is_paused,omitempty"`
-	Meta            *Meta             `json:"meta,omitempty"`
+	Meta            map[string]any    `json:"meta,omitempty"`
 	ObjectType      ObjectType        `json:"object_type"`
 	PageMaxLimit    *float64          `json:"page_max_limit,omitempty"`
 	// An array of the most revent virtual webhook runs
@@ -501,7 +498,7 @@ func (o *Webhook) GetIsPaused() *bool {
 	return o.IsPaused
 }
 
-func (o *Webhook) GetMeta() *Meta {
+func (o *Webhook) GetMeta() map[string]any {
 	if o == nil {
 		return nil
 	}

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 9857048e17c51b706f1f1755ce5dafdc
+  docChecksum: b86a0a7e009b89c881979b0459cdcf9b
   docVersion: "1.0"
-  speakeasyVersion: 1.526.0
-  generationVersion: 2.563.0
-  releaseVersion: 0.23.15
-  configChecksum: bc616d4363b5a853255319b13481d068
+  speakeasyVersion: 1.526.5
+  generationVersion: 2.563.1
+  releaseVersion: 0.23.16
+  configChecksum: b97f69af2b7569a969b5598ef51d83d2
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -1752,7 +1752,6 @@ generatedFiles:
   - docs/pkg/models/shared/messagingchannel.md
   - docs/pkg/models/shared/messagingmember.md
   - docs/pkg/models/shared/messagingmessage.md
-  - docs/pkg/models/shared/meta.md
   - docs/pkg/models/shared/metadatametadata.md
   - docs/pkg/models/shared/metadatametadataraw.md
   - docs/pkg/models/shared/nativewebhookparentid.md
@@ -1788,7 +1787,6 @@ generatedFiles:
   - docs/pkg/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
   - docs/pkg/models/shared/propertycommercelocationaddress.md
   - docs/pkg/models/shared/propertyconnectionauth.md
-  - docs/pkg/models/shared/propertyconnectionauthmeta.md
   - docs/pkg/models/shared/propertyconnectioncategories.md
   - docs/pkg/models/shared/propertyconnectionpermissions.md
   - docs/pkg/models/shared/propertycrmcompanyaddress.md
