@@ -1941,7 +1941,7 @@ type IntegrationSupport struct {
 	ListType               *ListType               `json:"list_type,omitempty"`
 	ListUpdatedGte         *ListUpdatedGte         `json:"list_updated_gte,omitempty"`
 	ListUserID             *ListUserID             `json:"list_user_id,omitempty"`
-	Methods                map[string]bool         `json:"methods,omitempty"`
+	Methods                map[string]any          `json:"methods,omitempty"`
 	NativeWebhookParentID  *NativeWebhookParentID  `json:"native_webhook_parent_id,omitempty"`
 	NativeWebhookProjectID *NativeWebhookProjectID `json:"native_webhook_project_id,omitempty"`
 	OutboundFields         map[string]any          `json:"outbound_fields,omitempty"`
@@ -2303,7 +2303,7 @@ func (o *IntegrationSupport) GetListUserID() *ListUserID {
 	return o.ListUserID
 }
 
-func (o *IntegrationSupport) GetMethods() map[string]bool {
+func (o *IntegrationSupport) GetMethods() map[string]any {
 	if o == nil {
 		return nil
 	}

@@ -84,6 +84,7 @@ const (
 	ObjectTypeAccountingTaxrate      ObjectType = "accounting_taxrate"
 	ObjectTypeAccountingOrganization ObjectType = "accounting_organization"
 	ObjectTypeAccountingOrder        ObjectType = "accounting_order"
+	ObjectTypeAccountingReport       ObjectType = "accounting_report"
 	ObjectTypePaymentPayment         ObjectType = "payment_payment"
 	ObjectTypePaymentLink            ObjectType = "payment_link"
 	ObjectTypePaymentPayout          ObjectType = "payment_payout"
@@ -178,6 +179,8 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "accounting_organization":
 		fallthrough
 	case "accounting_order":
+		fallthrough
+	case "accounting_report":
 		fallthrough
 	case "payment_payment":
 		fallthrough
@@ -349,25 +352,25 @@ func (e *WebhookType) UnmarshalJSON(data []byte) error {
 
 // Webhook - A webhook is used to POST new/updated information to your server.
 type Webhook struct {
-	CheckedAt       *time.Time        `json:"checked_at,omitempty"`
-	ConnectionID    string            `json:"connection_id"`
-	CreatedAt       *time.Time        `json:"created_at,omitempty"`
-	DbNamePrefix    *string           `json:"db_name_prefix,omitempty"`
-	DbType          *DbType           `json:"db_type,omitempty"`
-	DbURL           *string           `json:"db_url,omitempty"`
-	Environment     *string           `default:"Production" json:"environment"`
-	Event           Event             `json:"event"`
-	Fields          *string           `json:"fields,omitempty"`
-	Filters         map[string]string `json:"filters,omitempty"`
-	HookURL         *string           `json:"hook_url,omitempty"`
-	ID              *string           `json:"id,omitempty"`
-	IntegrationType *string           `json:"integration_type,omitempty"`
-	Interval        *float64          `json:"interval,omitempty"`
-	IsHealthy       *bool             `json:"is_healthy,omitempty"`
-	IsPaused        *bool             `json:"is_paused,omitempty"`
-	Meta            map[string]any    `json:"meta,omitempty"`
-	ObjectType      ObjectType        `json:"object_type"`
-	PageMaxLimit    *float64          `json:"page_max_limit,omitempty"`
+	CheckedAt       *time.Time     `json:"checked_at,omitempty"`
+	ConnectionID    string         `json:"connection_id"`
+	CreatedAt       *time.Time     `json:"created_at,omitempty"`
+	DbNamePrefix    *string        `json:"db_name_prefix,omitempty"`
+	DbType          *DbType        `json:"db_type,omitempty"`
+	DbURL           *string        `json:"db_url,omitempty"`
+	Environment     *string        `default:"Production" json:"environment"`
+	Event           Event          `json:"event"`
+	Fields          *string        `json:"fields,omitempty"`
+	Filters         map[string]any `json:"filters,omitempty"`
+	HookURL         *string        `json:"hook_url,omitempty"`
+	ID              *string        `json:"id,omitempty"`
+	IntegrationType *string        `json:"integration_type,omitempty"`
+	Interval        *float64       `json:"interval,omitempty"`
+	IsHealthy       *bool          `json:"is_healthy,omitempty"`
+	IsPaused        *bool          `json:"is_paused,omitempty"`
+	Meta            map[string]any `json:"meta,omitempty"`
+	ObjectType      ObjectType     `json:"object_type"`
+	PageMaxLimit    *float64       `json:"page_max_limit,omitempty"`
 	// An array of the most revent virtual webhook runs
 	Runs        []string     `json:"runs,omitempty"`
 	UpdatedAt   *time.Time   `json:"updated_at,omitempty"`
@@ -449,7 +452,7 @@ func (o *Webhook) GetFields() *string {
 	return o.Fields
 }
 
-func (o *Webhook) GetFilters() map[string]string {
+func (o *Webhook) GetFilters() map[string]any {
 	if o == nil {
 		return nil
 	}

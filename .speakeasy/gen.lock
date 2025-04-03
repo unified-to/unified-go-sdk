@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: b86a0a7e009b89c881979b0459cdcf9b
+  docChecksum: 17d655d886642d9b7380dfa9cd15cb96
   docVersion: "1.0"
-  speakeasyVersion: 1.526.5
-  generationVersion: 2.563.1
-  releaseVersion: 0.23.16
-  configChecksum: b97f69af2b7569a969b5598ef51d83d2
+  speakeasyVersion: 1.528.1
+  generationVersion: 2.565.1
+  releaseVersion: 0.23.17
+  configChecksum: 7cbf24622f7600c64584968bbc246099
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -102,6 +102,7 @@ generatedFiles:
   - /pkg/models/operations/getaccountingjournal.go
   - /pkg/models/operations/getaccountingorder.go
   - /pkg/models/operations/getaccountingorganization.go
+  - /pkg/models/operations/getaccountingreport.go
   - /pkg/models/operations/getaccountingtaxrate.go
   - /pkg/models/operations/getaccountingtransaction.go
   - /pkg/models/operations/getatsactivity.go
@@ -175,6 +176,7 @@ generatedFiles:
   - /pkg/models/operations/listaccountingjournals.go
   - /pkg/models/operations/listaccountingorders.go
   - /pkg/models/operations/listaccountingorganizations.go
+  - /pkg/models/operations/listaccountingreports.go
   - /pkg/models/operations/listaccountingtaxrates.go
   - /pkg/models/operations/listaccountingtransactions.go
   - /pkg/models/operations/listatsactivities.go
@@ -453,6 +455,7 @@ generatedFiles:
   - /pkg/models/shared/accountinglineitem.go
   - /pkg/models/shared/accountingorder.go
   - /pkg/models/shared/accountingorganization.go
+  - /pkg/models/shared/accountingreport.go
   - /pkg/models/shared/accountingtaxrate.go
   - /pkg/models/shared/accountingtelephone.go
   - /pkg/models/shared/accountingtransaction.go
@@ -810,6 +813,8 @@ generatedFiles:
   - docs/pkg/models/operations/getaccountingorderresponse.md
   - docs/pkg/models/operations/getaccountingorganizationrequest.md
   - docs/pkg/models/operations/getaccountingorganizationresponse.md
+  - docs/pkg/models/operations/getaccountingreportrequest.md
+  - docs/pkg/models/operations/getaccountingreportresponse.md
   - docs/pkg/models/operations/getaccountingtaxraterequest.md
   - docs/pkg/models/operations/getaccountingtaxrateresponse.md
   - docs/pkg/models/operations/getaccountingtransactionrequest.md
@@ -956,6 +961,8 @@ generatedFiles:
   - docs/pkg/models/operations/listaccountingordersresponse.md
   - docs/pkg/models/operations/listaccountingorganizationsrequest.md
   - docs/pkg/models/operations/listaccountingorganizationsresponse.md
+  - docs/pkg/models/operations/listaccountingreportsrequest.md
+  - docs/pkg/models/operations/listaccountingreportsresponse.md
   - docs/pkg/models/operations/listaccountingtaxratesrequest.md
   - docs/pkg/models/operations/listaccountingtaxratesresponse.md
   - docs/pkg/models/operations/listaccountingtransactionsrequest.md
@@ -1516,6 +1523,9 @@ generatedFiles:
   - docs/pkg/models/shared/accountingordertype.md
   - docs/pkg/models/shared/accountingorganization.md
   - docs/pkg/models/shared/accountingorganizationraw.md
+  - docs/pkg/models/shared/accountingreport.md
+  - docs/pkg/models/shared/accountingreportraw.md
+  - docs/pkg/models/shared/accountingreporttype.md
   - docs/pkg/models/shared/accountingtaxrate.md
   - docs/pkg/models/shared/accountingtaxrateraw.md
   - docs/pkg/models/shared/accountingtelephone.md
@@ -1980,6 +1990,7 @@ generatedFiles:
   - docs/sdks/recording/README.md
   - docs/sdks/refund/README.md
   - docs/sdks/repo/README.md
+  - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
@@ -2065,6 +2076,7 @@ generatedFiles:
   - recording.go
   - refund.go
   - repo.go
+  - report.go
   - repository.go
   - scim.go
   - scorecard.go
@@ -6147,5 +6159,24 @@ examples:
       responses:
         "200":
           application/json: {"url": "https://standard-birth.info/"}
+  getAccountingReport:
+    speakeasy-default-get-accounting-report:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listAccountingReports:
+    speakeasy-default-list-accounting-reports:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
 examplesVersion: 1.0.0
 generatedTests: {}

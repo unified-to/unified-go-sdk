@@ -21,6 +21,8 @@
 | `PropertyConnectionPermissionsAccountingOrganizationRead` | accounting_organization_read                              |
 | `PropertyConnectionPermissionsAccountingOrderRead`        | accounting_order_read                                     |
 | `PropertyConnectionPermissionsAccountingOrderWrite`       | accounting_order_write                                    |
+| `PropertyConnectionPermissionsAccountingReportRead`       | accounting_report_read                                    |
+| `PropertyConnectionPermissionsAccountingReportWrite`      | accounting_report_write                                   |
 | `PropertyConnectionPermissionsPaymentPaymentRead`         | payment_payment_read                                      |
 | `PropertyConnectionPermissionsPaymentPaymentWrite`        | payment_payment_write                                     |
 | `PropertyConnectionPermissionsPaymentPayoutRead`          | payment_payout_read                                       |
