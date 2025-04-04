@@ -81,6 +81,7 @@ type MetadataMetadata struct {
 	Options        []string             `json:"options,omitempty"`
 	OriginalFormat *string              `json:"original_format,omitempty"`
 	Raw            *MetadataMetadataRaw `json:"raw,omitempty"`
+	Slug           *string              `json:"slug,omitempty"`
 	UpdatedAt      *time.Time           `json:"updated_at,omitempty"`
 }
 
@@ -156,6 +157,13 @@ func (o *MetadataMetadata) GetRaw() *MetadataMetadataRaw {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *MetadataMetadata) GetSlug() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Slug
 }
 
 func (o *MetadataMetadata) GetUpdatedAt() *time.Time {

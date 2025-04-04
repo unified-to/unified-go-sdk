@@ -166,26 +166,29 @@ type HrisEmployee struct {
 	EmploymentType   *HrisEmployeeEmploymentType         `json:"employment_type,omitempty"`
 	Gender           *HrisEmployeeGender                 `json:"gender,omitempty"`
 	// Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
-	Groups         []HrisGroup      `json:"groups,omitempty"`
-	HiredAt        *time.Time       `json:"hired_at,omitempty"`
-	ID             *string          `json:"id,omitempty"`
-	ImageURL       *string          `json:"image_url,omitempty"`
-	LanguageLocale *string          `json:"language_locale,omitempty"`
-	Location       *string          `json:"location,omitempty"`
-	Locations      []HrisLocation   `json:"locations,omitempty"`
-	ManagerID      *string          `json:"manager_id,omitempty"`
-	MaritalStatus  *MaritalStatus   `json:"marital_status,omitempty"`
-	Metadata       []HrisMetadata   `json:"metadata,omitempty"`
-	Name           *string          `json:"name,omitempty"`
-	Pronouns       *string          `json:"pronouns,omitempty"`
-	Raw            *HrisEmployeeRaw `json:"raw,omitempty"`
-	Salutation     *string          `json:"salutation,omitempty"`
-	SsnSin         *string          `json:"ssn_sin,omitempty"`
-	Telephones     []HrisTelephone  `json:"telephones,omitempty"`
-	TerminatedAt   *time.Time       `json:"terminated_at,omitempty"`
-	Timezone       *string          `json:"timezone,omitempty"`
-	Title          *string          `json:"title,omitempty"`
-	UpdatedAt      *time.Time       `json:"updated_at,omitempty"`
+	Groups                []HrisGroup      `json:"groups,omitempty"`
+	HiredAt               *time.Time       `json:"hired_at,omitempty"`
+	ID                    *string          `json:"id,omitempty"`
+	ImageURL              *string          `json:"image_url,omitempty"`
+	LanguageLocale        *string          `json:"language_locale,omitempty"`
+	Location              *string          `json:"location,omitempty"`
+	Locations             []HrisLocation   `json:"locations,omitempty"`
+	ManagerID             *string          `json:"manager_id,omitempty"`
+	MaritalStatus         *MaritalStatus   `json:"marital_status,omitempty"`
+	Metadata              []HrisMetadata   `json:"metadata,omitempty"`
+	Name                  *string          `json:"name,omitempty"`
+	Pronouns              *string          `json:"pronouns,omitempty"`
+	Raw                   *HrisEmployeeRaw `json:"raw,omitempty"`
+	Salutation            *string          `json:"salutation,omitempty"`
+	SsnSin                *string          `json:"ssn_sin,omitempty"`
+	StorageQuotaAllocated *float64         `json:"storage_quota_allocated,omitempty"`
+	StorageQuotaAvailable *float64         `json:"storage_quota_available,omitempty"`
+	StorageQuotaUsed      *float64         `json:"storage_quota_used,omitempty"`
+	Telephones            []HrisTelephone  `json:"telephones,omitempty"`
+	TerminatedAt          *time.Time       `json:"terminated_at,omitempty"`
+	Timezone              *string          `json:"timezone,omitempty"`
+	Title                 *string          `json:"title,omitempty"`
+	UpdatedAt             *time.Time       `json:"updated_at,omitempty"`
 }
 
 func (h HrisEmployee) MarshalJSON() ([]byte, error) {
@@ -407,6 +410,27 @@ func (o *HrisEmployee) GetSsnSin() *string {
 		return nil
 	}
 	return o.SsnSin
+}
+
+func (o *HrisEmployee) GetStorageQuotaAllocated() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.StorageQuotaAllocated
+}
+
+func (o *HrisEmployee) GetStorageQuotaAvailable() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.StorageQuotaAvailable
+}
+
+func (o *HrisEmployee) GetStorageQuotaUsed() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.StorageQuotaUsed
 }
 
 func (o *HrisEmployee) GetTelephones() []HrisTelephone {
