@@ -11,8 +11,9 @@ type Value struct {
 type AtsMetadata struct {
 	ExtraData *ExtraData `json:"extra_data,omitempty"`
 	ID        *string    `json:"id,omitempty"`
-	Key       string     `json:"key"`
+	Key       *string    `json:"key,omitempty"`
 	Namespace *string    `json:"namespace,omitempty"`
+	Slug      *string    `json:"slug,omitempty"`
 	Type      *string    `json:"type,omitempty"`
 	Value     *Value     `json:"value,omitempty"`
 }
@@ -31,9 +32,9 @@ func (o *AtsMetadata) GetID() *string {
 	return o.ID
 }
 
-func (o *AtsMetadata) GetKey() string {
+func (o *AtsMetadata) GetKey() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Key
 }
@@ -43,6 +44,13 @@ func (o *AtsMetadata) GetNamespace() *string {
 		return nil
 	}
 	return o.Namespace
+}
+
+func (o *AtsMetadata) GetSlug() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Slug
 }
 
 func (o *AtsMetadata) GetType() *string {

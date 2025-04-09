@@ -11,23 +11,23 @@ type CommerceItemRaw struct {
 }
 
 type CommerceItem struct {
-	AccountID         *string                `json:"account_id,omitempty"`
-	CollectionIds     []string               `json:"collection_ids,omitempty"`
-	CreatedAt         *time.Time             `json:"created_at,omitempty"`
-	Description       *string                `json:"description,omitempty"`
-	ID                *string                `json:"id,omitempty"`
-	IsActive          *bool                  `json:"is_active,omitempty"`
-	IsTaxable         *bool                  `json:"is_taxable,omitempty"`
-	Media             []CommerceItemMedia    `json:"media,omitempty"`
-	Metadata          []CommerceItemMetadata `json:"metadata,omitempty"`
-	Name              *string                `json:"name,omitempty"`
-	PublicDescription *string                `json:"public_description,omitempty"`
-	PublicName        *string                `json:"public_name,omitempty"`
-	Raw               *CommerceItemRaw       `json:"raw,omitempty"`
-	Slug              *string                `json:"slug,omitempty"`
-	Tags              []string               `json:"tags,omitempty"`
-	Type              *string                `json:"type,omitempty"`
-	UpdatedAt         *time.Time             `json:"updated_at,omitempty"`
+	AccountID         *string             `json:"account_id,omitempty"`
+	CollectionIds     []string            `json:"collection_ids,omitempty"`
+	CreatedAt         *time.Time          `json:"created_at,omitempty"`
+	Description       *string             `json:"description,omitempty"`
+	ID                *string             `json:"id,omitempty"`
+	IsActive          *bool               `json:"is_active,omitempty"`
+	IsTaxable         *bool               `json:"is_taxable,omitempty"`
+	Media             []CommerceItemMedia `json:"media,omitempty"`
+	Metadata          []CommerceMetadata  `json:"metadata,omitempty"`
+	Name              *string             `json:"name,omitempty"`
+	PublicDescription *string             `json:"public_description,omitempty"`
+	PublicName        *string             `json:"public_name,omitempty"`
+	Raw               *CommerceItemRaw    `json:"raw,omitempty"`
+	Slug              *string             `json:"slug,omitempty"`
+	Tags              []string            `json:"tags,omitempty"`
+	Type              *string             `json:"type,omitempty"`
+	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
 	// first variant is the default variant
 	Variants   []CommerceItemVariant `json:"variants,omitempty"`
 	VendorName *string               `json:"vendor_name,omitempty"`
@@ -100,7 +100,7 @@ func (o *CommerceItem) GetMedia() []CommerceItemMedia {
 	return o.Media
 }
 
-func (o *CommerceItem) GetMetadata() []CommerceItemMetadata {
+func (o *CommerceItem) GetMetadata() []CommerceMetadata {
 	if o == nil {
 		return nil
 	}

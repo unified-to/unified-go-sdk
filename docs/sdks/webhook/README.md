@@ -42,7 +42,7 @@ func main() {
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
             Event: shared.EventCreated,
-            ObjectType: shared.ObjectTypeHrisEmployee,
+            ObjectType: shared.ObjectTypeHrisPayslip,
         },
     })
     if err != nil {
@@ -204,7 +204,7 @@ func main() {
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
             Event: shared.EventDeleted,
-            ObjectType: shared.ObjectTypeCrmDeal,
+            ObjectType: shared.ObjectTypeCrmLead,
         },
         ID: "<id>",
     })

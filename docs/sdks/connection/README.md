@@ -43,8 +43,8 @@ func main() {
         },
         IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsLmsCourseRead,
-            shared.PropertyConnectionPermissionsScimUsersRead,
+            shared.PropertyConnectionPermissionsRepoOrganizationRead,
+            shared.PropertyConnectionPermissionsLmsClassWrite,
         },
     })
     if err != nil {
@@ -205,8 +205,8 @@ func main() {
     res, err := s.Connection.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
         Connection: shared.Connection{
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesMetadata,
-                shared.PropertyConnectionCategoriesCrm,
+                shared.PropertyConnectionCategoriesCalendar,
+                shared.PropertyConnectionCategoriesEnrich,
             },
             IntegrationType: "<value>",
             Permissions: []shared.PropertyConnectionPermissions{
@@ -322,9 +322,9 @@ func main() {
     res, err := s.Connection.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
         Connection: shared.Connection{
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesMetadata,
-                shared.PropertyConnectionCategoriesAccounting,
-                shared.PropertyConnectionCategoriesMetadata,
+                shared.PropertyConnectionCategoriesCalendar,
+                shared.PropertyConnectionCategoriesStorage,
+                shared.PropertyConnectionCategoriesCalendar,
             },
             IntegrationType: "<value>",
             Permissions: []shared.PropertyConnectionPermissions{

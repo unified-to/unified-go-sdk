@@ -50,7 +50,7 @@ type CommerceCollection struct {
 	IsFeatured        *bool                   `json:"is_featured,omitempty"`
 	IsVisible         *bool                   `json:"is_visible,omitempty"`
 	Media             []CommerceItemMedia     `json:"media,omitempty"`
-	Metadata          []CommerceItemMetadata  `json:"metadata,omitempty"`
+	Metadata          []CommerceMetadata      `json:"metadata,omitempty"`
 	Name              string                  `json:"name"`
 	ParentID          *string                 `json:"parent_id,omitempty"`
 	PublicDescription *string                 `json:"public_description,omitempty"`
@@ -121,7 +121,7 @@ func (o *CommerceCollection) GetMedia() []CommerceItemMedia {
 	return o.Media
 }
 
-func (o *CommerceCollection) GetMetadata() []CommerceItemMetadata {
+func (o *CommerceCollection) GetMetadata() []CommerceMetadata {
 	if o == nil {
 		return nil
 	}

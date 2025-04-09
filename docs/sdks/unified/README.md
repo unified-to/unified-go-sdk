@@ -57,8 +57,8 @@ func main() {
         },
         IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsLmsCourseRead,
-            shared.PropertyConnectionPermissionsScimUsersRead,
+            shared.PropertyConnectionPermissionsRepoOrganizationRead,
+            shared.PropertyConnectionPermissionsLmsClassWrite,
         },
     })
     if err != nil {
@@ -116,7 +116,7 @@ func main() {
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
             Event: shared.EventCreated,
-            ObjectType: shared.ObjectTypeHrisEmployee,
+            ObjectType: shared.ObjectTypeHrisPayslip,
         },
     })
     if err != nil {
@@ -694,8 +694,8 @@ func main() {
     res, err := s.Unified.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
         Connection: shared.Connection{
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesMetadata,
-                shared.PropertyConnectionCategoriesCrm,
+                shared.PropertyConnectionCategoriesCalendar,
+                shared.PropertyConnectionCategoriesEnrich,
             },
             IntegrationType: "<value>",
             Permissions: []shared.PropertyConnectionPermissions{
@@ -759,7 +759,7 @@ func main() {
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
             Event: shared.EventDeleted,
-            ObjectType: shared.ObjectTypeCrmDeal,
+            ObjectType: shared.ObjectTypeCrmLead,
         },
         ID: "<id>",
     })
@@ -976,9 +976,9 @@ func main() {
     res, err := s.Unified.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
         Connection: shared.Connection{
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesMetadata,
-                shared.PropertyConnectionCategoriesAccounting,
-                shared.PropertyConnectionCategoriesMetadata,
+                shared.PropertyConnectionCategoriesCalendar,
+                shared.PropertyConnectionCategoriesStorage,
+                shared.PropertyConnectionCategoriesCalendar,
             },
             IntegrationType: "<value>",
             Permissions: []shared.PropertyConnectionPermissions{
