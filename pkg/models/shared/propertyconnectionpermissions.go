@@ -152,6 +152,8 @@ const (
 	PropertyConnectionPermissionsCalendarLinkWrite          PropertyConnectionPermissions = "calendar_link_write"
 	PropertyConnectionPermissionsCalendarRecordingRead      PropertyConnectionPermissions = "calendar_recording_read"
 	PropertyConnectionPermissionsCalendarRecordingWrite     PropertyConnectionPermissions = "calendar_recording_write"
+	PropertyConnectionPermissionsEnrichPersonRead           PropertyConnectionPermissions = "enrich_person_read"
+	PropertyConnectionPermissionsEnrichCompanyRead          PropertyConnectionPermissions = "enrich_company_read"
 )
 
 func (e PropertyConnectionPermissions) ToPointer() *PropertyConnectionPermissions {
@@ -446,6 +448,10 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "calendar_recording_read":
 		fallthrough
 	case "calendar_recording_write":
+		fallthrough
+	case "enrich_person_read":
+		fallthrough
+	case "enrich_company_read":
 		*e = PropertyConnectionPermissions(v)
 		return nil
 	default:

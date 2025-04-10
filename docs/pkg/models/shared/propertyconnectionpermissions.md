@@ -147,3 +147,5 @@
 | `PropertyConnectionPermissionsCalendarLinkWrite`          | calendar_link_write                                       |
 | `PropertyConnectionPermissionsCalendarRecordingRead`      | calendar_recording_read                                   |
 | `PropertyConnectionPermissionsCalendarRecordingWrite`     | calendar_recording_write                                  |
+| `PropertyConnectionPermissionsEnrichPersonRead`           | enrich_person_read                                        |
+| `PropertyConnectionPermissionsEnrichCompanyRead`          | enrich_company_read                                       |
