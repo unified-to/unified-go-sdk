@@ -47,9 +47,6 @@ func (e *Origin) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AtsCandidateRaw struct {
-}
-
 type AtsCandidate struct {
 	Address            *PropertyAtsCandidateAddress `json:"address,omitempty"`
 	CompanyID          *string                      `json:"company_id,omitempty"`
@@ -63,19 +60,19 @@ type AtsCandidate struct {
 	ID                 *string                      `json:"id,omitempty"`
 	ImageURL           *string                      `json:"image_url,omitempty"`
 	// URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
-	LinkUrls   []string         `json:"link_urls,omitempty"`
-	Metadata   []AtsMetadata    `json:"metadata,omitempty"`
-	Name       *string          `json:"name,omitempty"`
-	Origin     *Origin          `json:"origin,omitempty"`
-	Raw        *AtsCandidateRaw `json:"raw,omitempty"`
-	Skills     []string         `json:"skills,omitempty"`
-	Sources    []string         `json:"sources,omitempty"`
-	Tags       []string         `json:"tags,omitempty"`
-	Telephones []AtsTelephone   `json:"telephones,omitempty"`
-	Title      *string          `json:"title,omitempty"`
-	UpdatedAt  *time.Time       `json:"updated_at,omitempty"`
-	UserID     *string          `json:"user_id,omitempty"`
-	WebURL     *string          `json:"web_url,omitempty"`
+	LinkUrls   []string       `json:"link_urls,omitempty"`
+	Metadata   []AtsMetadata  `json:"metadata,omitempty"`
+	Name       *string        `json:"name,omitempty"`
+	Origin     *Origin        `json:"origin,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	Skills     []string       `json:"skills,omitempty"`
+	Sources    []string       `json:"sources,omitempty"`
+	Tags       []string       `json:"tags,omitempty"`
+	Telephones []AtsTelephone `json:"telephones,omitempty"`
+	Title      *string        `json:"title,omitempty"`
+	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
+	UserID     *string        `json:"user_id,omitempty"`
+	WebURL     *string        `json:"web_url,omitempty"`
 }
 
 func (a AtsCandidate) MarshalJSON() ([]byte, error) {
@@ -194,7 +191,7 @@ func (o *AtsCandidate) GetOrigin() *Origin {
 	return o.Origin
 }
 
-func (o *AtsCandidate) GetRaw() *AtsCandidateRaw {
+func (o *AtsCandidate) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

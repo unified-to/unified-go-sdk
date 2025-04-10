@@ -7,16 +7,13 @@ import (
 	"time"
 )
 
-type CalendarBusyRaw struct {
-}
-
 type CalendarBusy struct {
-	Description *string          `json:"description,omitempty"`
-	EndAt       time.Time        `json:"end_at"`
-	ID          *string          `json:"id,omitempty"`
-	Raw         *CalendarBusyRaw `json:"raw,omitempty"`
-	StartAt     time.Time        `json:"start_at"`
-	Timezone    *string          `json:"timezone,omitempty"`
+	Description *string        `json:"description,omitempty"`
+	EndAt       time.Time      `json:"end_at"`
+	ID          *string        `json:"id,omitempty"`
+	Raw         map[string]any `json:"raw,omitempty"`
+	StartAt     time.Time      `json:"start_at"`
+	Timezone    *string        `json:"timezone,omitempty"`
 }
 
 func (c CalendarBusy) MarshalJSON() ([]byte, error) {
@@ -51,7 +48,7 @@ func (o *CalendarBusy) GetID() *string {
 	return o.ID
 }
 
-func (o *CalendarBusy) GetRaw() *CalendarBusyRaw {
+func (o *CalendarBusy) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

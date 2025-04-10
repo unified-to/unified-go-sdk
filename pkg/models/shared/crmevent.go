@@ -9,9 +9,6 @@ import (
 	"time"
 )
 
-type CrmEventRaw struct {
-}
-
 type CrmEventType string
 
 const (
@@ -78,7 +75,7 @@ type CrmEvent struct {
 	// The note object, when type = note
 	Note     *PropertyCrmEventNote     `json:"note,omitempty"`
 	PageView *PropertyCrmEventPageView `json:"page_view,omitempty"`
-	Raw      *CrmEventRaw              `json:"raw,omitempty"`
+	Raw      map[string]any            `json:"raw,omitempty"`
 	// The task object, when type = task
 	Task      *PropertyCrmEventTask `json:"task,omitempty"`
 	Type      *CrmEventType         `json:"type,omitempty"`
@@ -188,7 +185,7 @@ func (o *CrmEvent) GetPageView() *PropertyCrmEventPageView {
 	return o.PageView
 }
 
-func (o *CrmEvent) GetRaw() *CrmEventRaw {
+func (o *CrmEvent) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

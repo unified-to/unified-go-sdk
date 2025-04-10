@@ -9,9 +9,6 @@ import (
 	"time"
 )
 
-type AccountingReportRaw struct {
-}
-
 type AccountingReportType string
 
 const (
@@ -48,7 +45,7 @@ type AccountingReport struct {
 	CreatedAt *time.Time            `json:"created_at,omitempty"`
 	Group     *string               `json:"group,omitempty"`
 	ID        *string               `json:"id,omitempty"`
-	Raw       *AccountingReportRaw  `json:"raw,omitempty"`
+	Raw       map[string]any        `json:"raw,omitempty"`
 	Subgroup  *string               `json:"subgroup,omitempty"`
 	Type      *AccountingReportType `json:"type,omitempty"`
 	UpdatedAt *time.Time            `json:"updated_at,omitempty"`
@@ -107,7 +104,7 @@ func (o *AccountingReport) GetID() *string {
 	return o.ID
 }
 
-func (o *AccountingReport) GetRaw() *AccountingReportRaw {
+func (o *AccountingReport) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

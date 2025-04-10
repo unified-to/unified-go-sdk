@@ -9,9 +9,6 @@ import (
 	"time"
 )
 
-type AtsOfferRaw struct {
-}
-
 type AtsOfferStatus string
 
 const (
@@ -52,7 +49,7 @@ type AtsOffer struct {
 	CreatorUserID  *string           `json:"creator_user_id,omitempty"`
 	EmployeeUserID *string           `json:"employee_user_id,omitempty"`
 	ID             *string           `json:"id,omitempty"`
-	Raw            *AtsOfferRaw      `json:"raw,omitempty"`
+	Raw            map[string]any    `json:"raw,omitempty"`
 	RejectedAt     *time.Time        `json:"rejected_at,omitempty"`
 	SentAt         *time.Time        `json:"sent_at,omitempty"`
 	StartAt        *time.Time        `json:"start_at,omitempty"`
@@ -113,7 +110,7 @@ func (o *AtsOffer) GetID() *string {
 	return o.ID
 }
 
-func (o *AtsOffer) GetRaw() *AtsOfferRaw {
+func (o *AtsOffer) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

@@ -9,9 +9,6 @@ import (
 	"time"
 )
 
-type AtsInterviewRaw struct {
-}
-
 type AtsInterviewStatus string
 
 const (
@@ -56,7 +53,7 @@ type AtsInterview struct {
 	ID                *string             `json:"id,omitempty"`
 	JobID             *string             `json:"job_id,omitempty"`
 	Location          *string             `json:"location,omitempty"`
-	Raw               *AtsInterviewRaw    `json:"raw,omitempty"`
+	Raw               map[string]any      `json:"raw,omitempty"`
 	StartAt           *time.Time          `json:"start_at,omitempty"`
 	Status            *AtsInterviewStatus `json:"status,omitempty"`
 	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
@@ -130,7 +127,7 @@ func (o *AtsInterview) GetLocation() *string {
 	return o.Location
 }
 
-func (o *AtsInterview) GetRaw() *AtsInterviewRaw {
+func (o *AtsInterview) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

@@ -7,18 +7,15 @@ import (
 	"time"
 )
 
-type CalendarCalendarRaw struct {
-}
-
 type CalendarCalendar struct {
-	CreatedAt   *time.Time           `json:"created_at,omitempty"`
-	Description *string              `json:"description,omitempty"`
-	ID          *string              `json:"id,omitempty"`
-	Name        string               `json:"name"`
-	Primary     *bool                `json:"primary,omitempty"`
-	Raw         *CalendarCalendarRaw `json:"raw,omitempty"`
-	Timezone    *string              `json:"timezone,omitempty"`
-	UpdatedAt   *time.Time           `json:"updated_at,omitempty"`
+	CreatedAt   *time.Time     `json:"created_at,omitempty"`
+	Description *string        `json:"description,omitempty"`
+	ID          *string        `json:"id,omitempty"`
+	Name        string         `json:"name"`
+	Primary     *bool          `json:"primary,omitempty"`
+	Raw         map[string]any `json:"raw,omitempty"`
+	Timezone    *string        `json:"timezone,omitempty"`
+	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (c CalendarCalendar) MarshalJSON() ([]byte, error) {
@@ -67,7 +64,7 @@ func (o *CalendarCalendar) GetPrimary() *bool {
 	return o.Primary
 }
 
-func (o *CalendarCalendar) GetRaw() *CalendarCalendarRaw {
+func (o *CalendarCalendar) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

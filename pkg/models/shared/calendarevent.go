@@ -7,9 +7,6 @@ import (
 	"fmt"
 )
 
-type CalendarEventRaw struct {
-}
-
 type CalendarEventStatus string
 
 const (
@@ -51,7 +48,7 @@ type CalendarEvent struct {
 	Location   *string                         `json:"location,omitempty"`
 	Notes      *string                         `json:"notes,omitempty"`
 	Organizer  *PropertyCalendarEventOrganizer `json:"organizer,omitempty"`
-	Raw        *CalendarEventRaw               `json:"raw,omitempty"`
+	Raw        map[string]any                  `json:"raw,omitempty"`
 	StartAt    string                          `json:"start_at"`
 	Status     *CalendarEventStatus            `json:"status,omitempty"`
 	Subject    string                          `json:"subject"`
@@ -137,7 +134,7 @@ func (o *CalendarEvent) GetOrganizer() *PropertyCalendarEventOrganizer {
 	return o.Organizer
 }
 
-func (o *CalendarEvent) GetRaw() *CalendarEventRaw {
+func (o *CalendarEvent) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

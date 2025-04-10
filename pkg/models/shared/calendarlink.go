@@ -2,21 +2,18 @@
 
 package shared
 
-type CalendarLinkRaw struct {
-}
-
 type CalendarLink struct {
-	CreatedAt     *string          `json:"created_at,omitempty"`
-	Description   *string          `json:"description,omitempty"`
-	Duration      *float64         `json:"duration,omitempty"`
-	ID            *string          `json:"id,omitempty"`
-	IsActive      *bool            `json:"is_active,omitempty"`
-	Name          *string          `json:"name,omitempty"`
-	PriceAmount   *float64         `json:"price_amount,omitempty"`
-	PriceCurrency *string          `json:"price_currency,omitempty"`
-	Raw           *CalendarLinkRaw `json:"raw,omitempty"`
-	UpdatedAt     *string          `json:"updated_at,omitempty"`
-	URL           string           `json:"url"`
+	CreatedAt     *string        `json:"created_at,omitempty"`
+	Description   *string        `json:"description,omitempty"`
+	Duration      *float64       `json:"duration,omitempty"`
+	ID            *string        `json:"id,omitempty"`
+	IsActive      *bool          `json:"is_active,omitempty"`
+	Name          *string        `json:"name,omitempty"`
+	PriceAmount   *float64       `json:"price_amount,omitempty"`
+	PriceCurrency *string        `json:"price_currency,omitempty"`
+	Raw           map[string]any `json:"raw,omitempty"`
+	UpdatedAt     *string        `json:"updated_at,omitempty"`
+	URL           string         `json:"url"`
 }
 
 func (o *CalendarLink) GetCreatedAt() *string {
@@ -75,7 +72,7 @@ func (o *CalendarLink) GetPriceCurrency() *string {
 	return o.PriceCurrency
 }
 
-func (o *CalendarLink) GetRaw() *CalendarLinkRaw {
+func (o *CalendarLink) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

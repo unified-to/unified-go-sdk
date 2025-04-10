@@ -7,9 +7,6 @@ import (
 	"time"
 )
 
-type AccountingJournalRaw struct {
-}
-
 type AccountingJournal struct {
 	CreatedAt   *time.Time `json:"created_at,omitempty"`
 	Currency    *string    `json:"currency,omitempty"`
@@ -18,7 +15,7 @@ type AccountingJournal struct {
 	// new field name
 	Lineitems []AccountingJournalLineitem `json:"lineitems,omitempty"`
 	PostedAt  *time.Time                  `json:"posted_at,omitempty"`
-	Raw       *AccountingJournalRaw       `json:"raw,omitempty"`
+	Raw       map[string]any              `json:"raw,omitempty"`
 	Reference *string                     `json:"reference,omitempty"`
 	TaxAmount *float64                    `json:"tax_amount,omitempty"`
 	TaxrateID *string                     `json:"taxrate_id,omitempty"`
@@ -78,7 +75,7 @@ func (o *AccountingJournal) GetPostedAt() *time.Time {
 	return o.PostedAt
 }
 
-func (o *AccountingJournal) GetRaw() *AccountingJournalRaw {
+func (o *AccountingJournal) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

@@ -7,9 +7,6 @@ import (
 	"time"
 )
 
-type AccountingTransactionRaw struct {
-}
-
 type AccountingTransaction struct {
 	AccountID       *string                         `json:"account_id,omitempty"`
 	ContactID       *string                         `json:"contact_id,omitempty"`
@@ -22,7 +19,7 @@ type AccountingTransaction struct {
 	Memo            *string                         `json:"memo,omitempty"`
 	PaymentMethod   *string                         `json:"payment_method,omitempty"`
 	PaymentTerms    *string                         `json:"payment_terms,omitempty"`
-	Raw             *AccountingTransactionRaw       `json:"raw,omitempty"`
+	Raw             map[string]any                  `json:"raw,omitempty"`
 	Reference       *string                         `json:"reference,omitempty"`
 	SplitAccountID  *string                         `json:"split_account_id,omitempty"`
 	SubTotalAmount  *float64                        `json:"sub_total_amount,omitempty"`
@@ -120,7 +117,7 @@ func (o *AccountingTransaction) GetPaymentTerms() *string {
 	return o.PaymentTerms
 }
 
-func (o *AccountingTransaction) GetRaw() *AccountingTransactionRaw {
+func (o *AccountingTransaction) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

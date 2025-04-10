@@ -59,9 +59,6 @@ func (e *EmploymentType) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AtsJobRaw struct {
-}
-
 type AtsJobStatus string
 
 const (
@@ -120,7 +117,7 @@ type AtsJob struct {
 	// URLs for pages containing public listings for the job
 	PublicJobUrls []string         `json:"public_job_urls,omitempty"`
 	Questions     []AtsJobQuestion `json:"questions,omitempty"`
-	Raw           *AtsJobRaw       `json:"raw,omitempty"`
+	Raw           map[string]any   `json:"raw,omitempty"`
 	RecruiterIds  []string         `json:"recruiter_ids,omitempty"`
 	Remote        *bool            `json:"remote,omitempty"`
 	Status        *AtsJobStatus    `json:"status,omitempty"`
@@ -264,7 +261,7 @@ func (o *AtsJob) GetQuestions() []AtsJobQuestion {
 	return o.Questions
 }
 
-func (o *AtsJob) GetRaw() *AtsJobRaw {
+func (o *AtsJob) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

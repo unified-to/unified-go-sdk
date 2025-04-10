@@ -7,19 +7,16 @@ import (
 	"time"
 )
 
-type CrmPipelineRaw struct {
-}
-
 type CrmPipeline struct {
-	CreatedAt       *time.Time      `json:"created_at,omitempty"`
-	DealProbability *float64        `json:"deal_probability,omitempty"`
-	DisplayOrder    *float64        `json:"display_order,omitempty"`
-	ID              *string         `json:"id,omitempty"`
-	IsActive        *bool           `json:"is_active,omitempty"`
-	Name            *string         `json:"name,omitempty"`
-	Raw             *CrmPipelineRaw `json:"raw,omitempty"`
-	Stages          []CrmStage      `json:"stages,omitempty"`
-	UpdatedAt       *time.Time      `json:"updated_at,omitempty"`
+	CreatedAt       *time.Time     `json:"created_at,omitempty"`
+	DealProbability *float64       `json:"deal_probability,omitempty"`
+	DisplayOrder    *float64       `json:"display_order,omitempty"`
+	ID              *string        `json:"id,omitempty"`
+	IsActive        *bool          `json:"is_active,omitempty"`
+	Name            *string        `json:"name,omitempty"`
+	Raw             map[string]any `json:"raw,omitempty"`
+	Stages          []CrmStage     `json:"stages,omitempty"`
+	UpdatedAt       *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (c CrmPipeline) MarshalJSON() ([]byte, error) {
@@ -75,7 +72,7 @@ func (o *CrmPipeline) GetName() *string {
 	return o.Name
 }
 
-func (o *CrmPipeline) GetRaw() *CrmPipelineRaw {
+func (o *CrmPipeline) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

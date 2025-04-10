@@ -7,16 +7,13 @@ import (
 	"time"
 )
 
-type HrisCompanyRaw struct {
-}
-
 type HrisCompany struct {
 	Address   *PropertyHrisCompanyAddress `json:"address,omitempty"`
 	CreatedAt *time.Time                  `json:"created_at,omitempty"`
 	ID        *string                     `json:"id,omitempty"`
 	LegalName *string                     `json:"legal_name,omitempty"`
 	Name      *string                     `json:"name,omitempty"`
-	Raw       *HrisCompanyRaw             `json:"raw,omitempty"`
+	Raw       map[string]any              `json:"raw,omitempty"`
 	UpdatedAt *time.Time                  `json:"updated_at,omitempty"`
 }
 
@@ -66,7 +63,7 @@ func (o *HrisCompany) GetName() *string {
 	return o.Name
 }
 
-func (o *HrisCompany) GetRaw() *HrisCompanyRaw {
+func (o *HrisCompany) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

@@ -7,9 +7,6 @@ import (
 	"time"
 )
 
-type CrmLeadRaw struct {
-}
-
 type CrmLead struct {
 	Address       *PropertyCrmLeadAddress `json:"address,omitempty"`
 	CompanyID     *string                 `json:"company_id,omitempty"`
@@ -23,7 +20,7 @@ type CrmLead struct {
 	LinkUrls      []string                `json:"link_urls,omitempty"`
 	Metadata      []CrmMetadata           `json:"metadata,omitempty"`
 	Name          *string                 `json:"name,omitempty"`
-	Raw           *CrmLeadRaw             `json:"raw,omitempty"`
+	Raw           map[string]any          `json:"raw,omitempty"`
 	Source        *string                 `json:"source,omitempty"`
 	Status        *string                 `json:"status,omitempty"`
 	Telephones    []CrmTelephone          `json:"telephones,omitempty"`
@@ -126,7 +123,7 @@ func (o *CrmLead) GetName() *string {
 	return o.Name
 }
 
-func (o *CrmLead) GetRaw() *CrmLeadRaw {
+func (o *CrmLead) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

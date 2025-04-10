@@ -7,9 +7,6 @@ import (
 	"time"
 )
 
-type AccountingOrganizationRaw struct {
-}
-
 type AccountingOrganization struct {
 	Address            *PropertyAccountingOrganizationAddress `json:"address,omitempty"`
 	CreatedAt          *time.Time                             `json:"created_at,omitempty"`
@@ -19,7 +16,7 @@ type AccountingOrganization struct {
 	LegalName          *string                                `json:"legal_name,omitempty"`
 	Name               string                                 `json:"name"`
 	OrganizationCode   *string                                `json:"organization_code,omitempty"`
-	Raw                *AccountingOrganizationRaw             `json:"raw,omitempty"`
+	Raw                map[string]any                         `json:"raw,omitempty"`
 	TaxNumber          *string                                `json:"tax_number,omitempty"`
 	Timezone           *string                                `json:"timezone,omitempty"`
 	UpdatedAt          *time.Time                             `json:"updated_at,omitempty"`
@@ -93,7 +90,7 @@ func (o *AccountingOrganization) GetOrganizationCode() *string {
 	return o.OrganizationCode
 }
 
-func (o *AccountingOrganization) GetRaw() *AccountingOrganizationRaw {
+func (o *AccountingOrganization) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

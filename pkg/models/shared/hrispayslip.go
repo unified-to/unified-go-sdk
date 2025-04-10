@@ -38,9 +38,6 @@ func (e *PaymentType) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type HrisPayslipRaw struct {
-}
-
 type HrisPayslip struct {
 	CompanyID   *string             `json:"company_id,omitempty"`
 	CreatedAt   *time.Time          `json:"created_at,omitempty"`
@@ -52,7 +49,7 @@ type HrisPayslip struct {
 	NetAmount   *float64            `json:"net_amount,omitempty"`
 	PaidAt      *time.Time          `json:"paid_at,omitempty"`
 	PaymentType *PaymentType        `json:"payment_type,omitempty"`
-	Raw         HrisPayslipRaw      `json:"raw"`
+	Raw         map[string]any      `json:"raw"`
 	StartAt     *time.Time          `json:"start_at,omitempty"`
 	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
 	UserID      *string             `json:"user_id,omitempty"`
@@ -139,9 +136,9 @@ func (o *HrisPayslip) GetPaymentType() *PaymentType {
 	return o.PaymentType
 }
 
-func (o *HrisPayslip) GetRaw() HrisPayslipRaw {
+func (o *HrisPayslip) GetRaw() map[string]any {
 	if o == nil {
-		return HrisPayslipRaw{}
+		return map[string]any{}
 	}
 	return o.Raw
 }

@@ -9,9 +9,6 @@ import (
 	"time"
 )
 
-type AtsApplicationRaw struct {
-}
-
 type AtsApplicationStatus string
 
 const (
@@ -85,7 +82,7 @@ type AtsApplication struct {
 	Metadata       []AtsMetadata          `json:"metadata,omitempty"`
 	Offers         []AtsOffer             `json:"offers,omitempty"`
 	OriginalStatus *string                `json:"original_status,omitempty"`
-	Raw            *AtsApplicationRaw     `json:"raw,omitempty"`
+	Raw            map[string]any         `json:"raw,omitempty"`
 	RejectedAt     *time.Time             `json:"rejected_at,omitempty"`
 	RejectedReason *string                `json:"rejected_reason,omitempty"`
 	Source         *string                `json:"source,omitempty"`
@@ -174,7 +171,7 @@ func (o *AtsApplication) GetOriginalStatus() *string {
 	return o.OriginalStatus
 }
 
-func (o *AtsApplication) GetRaw() *AtsApplicationRaw {
+func (o *AtsApplication) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

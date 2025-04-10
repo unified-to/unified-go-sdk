@@ -9,9 +9,6 @@ import (
 	"time"
 )
 
-type HrisTimeoffRaw struct {
-}
-
 type HrisTimeoffStatus string
 
 const (
@@ -75,7 +72,7 @@ type HrisTimeoff struct {
 	CreatedAt      *time.Time         `json:"created_at,omitempty"`
 	EndAt          *time.Time         `json:"end_at,omitempty"`
 	ID             *string            `json:"id,omitempty"`
-	Raw            *HrisTimeoffRaw    `json:"raw,omitempty"`
+	Raw            map[string]any     `json:"raw,omitempty"`
 	StartAt        time.Time          `json:"start_at"`
 	Status         *HrisTimeoffStatus `json:"status,omitempty"`
 	Type           *HrisTimeoffType   `json:"type,omitempty"`
@@ -143,7 +140,7 @@ func (o *HrisTimeoff) GetID() *string {
 	return o.ID
 }
 
-func (o *HrisTimeoff) GetRaw() *HrisTimeoffRaw {
+func (o *HrisTimeoff) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

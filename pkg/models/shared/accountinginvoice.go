@@ -35,9 +35,6 @@ func (e *PaymentCollectionMethod) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type AccountingInvoiceRaw struct {
-}
-
 type AccountingInvoiceStatus string
 
 const (
@@ -125,7 +122,7 @@ type AccountingInvoice struct {
 	PaidAt                  *time.Time               `json:"paid_at,omitempty"`
 	PaymentCollectionMethod *PaymentCollectionMethod `json:"payment_collection_method,omitempty"`
 	PostedAt                *time.Time               `json:"posted_at,omitempty"`
-	Raw                     *AccountingInvoiceRaw    `json:"raw,omitempty"`
+	Raw                     map[string]any           `json:"raw,omitempty"`
 	RefundAmount            *float64                 `json:"refund_amount,omitempty"`
 	RefundReason            *string                  `json:"refund_reason,omitempty"`
 	RefundedAt              *time.Time               `json:"refunded_at,omitempty"`
@@ -260,7 +257,7 @@ func (o *AccountingInvoice) GetPostedAt() *time.Time {
 	return o.PostedAt
 }
 
-func (o *AccountingInvoice) GetRaw() *AccountingInvoiceRaw {
+func (o *AccountingInvoice) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

@@ -9,9 +9,6 @@ import (
 	"time"
 )
 
-type AccountingOrderRaw struct {
-}
-
 type AccountingOrderStatus string
 
 const (
@@ -87,7 +84,7 @@ type AccountingOrder struct {
 	Currency        *string                                 `json:"currency,omitempty"`
 	ID              *string                                 `json:"id,omitempty"`
 	Lineitems       []AccountingLineitem                    `json:"lineitems,omitempty"`
-	Raw             *AccountingOrderRaw                     `json:"raw,omitempty"`
+	Raw             map[string]any                          `json:"raw,omitempty"`
 	ShippingAddress *PropertyAccountingOrderShippingAddress `json:"shipping_address,omitempty"`
 	Status          *AccountingOrderStatus                  `json:"status,omitempty"`
 	TotalAmount     *float64                                `json:"total_amount,omitempty"`
@@ -155,7 +152,7 @@ func (o *AccountingOrder) GetLineitems() []AccountingLineitem {
 	return o.Lineitems
 }
 
-func (o *AccountingOrder) GetRaw() *AccountingOrderRaw {
+func (o *AccountingOrder) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

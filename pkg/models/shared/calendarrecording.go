@@ -7,9 +7,6 @@ import (
 	"time"
 )
 
-type CalendarRecordingRaw struct {
-}
-
 type CalendarRecording struct {
 	CreatedAt *time.Time               `json:"created_at,omitempty"`
 	EndAt     *time.Time               `json:"end_at,omitempty"`
@@ -17,7 +14,7 @@ type CalendarRecording struct {
 	ExpiresAt *time.Time               `json:"expires_at,omitempty"`
 	ID        *string                  `json:"id,omitempty"`
 	Media     []CalendarRecordingMedia `json:"media,omitempty"`
-	Raw       *CalendarRecordingRaw    `json:"raw,omitempty"`
+	Raw       map[string]any           `json:"raw,omitempty"`
 	StartAt   *time.Time               `json:"start_at,omitempty"`
 	UpdatedAt *time.Time               `json:"updated_at,omitempty"`
 	WebURL    *string                  `json:"web_url,omitempty"`
@@ -76,7 +73,7 @@ func (o *CalendarRecording) GetMedia() []CalendarRecordingMedia {
 	return o.Media
 }
 
-func (o *CalendarRecording) GetRaw() *CalendarRecordingRaw {
+func (o *CalendarRecording) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

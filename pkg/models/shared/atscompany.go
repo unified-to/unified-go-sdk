@@ -7,9 +7,6 @@ import (
 	"time"
 )
 
-type AtsCompanyRaw struct {
-}
-
 type AtsCompany struct {
 	Address      *PropertyAtsCompanyAddress `json:"address,omitempty"`
 	CreatedAt    *time.Time                 `json:"created_at,omitempty"`
@@ -18,7 +15,7 @@ type AtsCompany struct {
 	Name         string                     `json:"name"`
 	ParentID     *string                    `json:"parent_id,omitempty"`
 	Phone        *string                    `json:"phone,omitempty"`
-	Raw          *AtsCompanyRaw             `json:"raw,omitempty"`
+	Raw          map[string]any             `json:"raw,omitempty"`
 	RecruiterIds []string                   `json:"recruiter_ids,omitempty"`
 	UpdatedAt    *time.Time                 `json:"updated_at,omitempty"`
 	WebsiteURL   *string                    `json:"website_url,omitempty"`
@@ -84,7 +81,7 @@ func (o *AtsCompany) GetPhone() *string {
 	return o.Phone
 }
 
-func (o *AtsCompany) GetRaw() *AtsCompanyRaw {
+func (o *AtsCompany) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

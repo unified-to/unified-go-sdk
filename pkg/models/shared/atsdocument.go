@@ -9,9 +9,6 @@ import (
 	"time"
 )
 
-type AtsDocumentRaw struct {
-}
-
 type AtsDocumentType string
 
 const (
@@ -59,7 +56,7 @@ type AtsDocument struct {
 	Filename      *string          `json:"filename,omitempty"`
 	ID            *string          `json:"id,omitempty"`
 	JobID         *string          `json:"job_id,omitempty"`
-	Raw           *AtsDocumentRaw  `json:"raw,omitempty"`
+	Raw           map[string]any   `json:"raw,omitempty"`
 	Type          *AtsDocumentType `json:"type,omitempty"`
 	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
 	UserID        *string          `json:"user_id,omitempty"`
@@ -132,7 +129,7 @@ func (o *AtsDocument) GetJobID() *string {
 	return o.JobID
 }
 
-func (o *AtsDocument) GetRaw() *AtsDocumentRaw {
+func (o *AtsDocument) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}

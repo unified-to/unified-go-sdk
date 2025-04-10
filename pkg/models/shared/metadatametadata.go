@@ -68,21 +68,18 @@ func (e *Format) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type MetadataMetadataRaw struct {
-}
-
 type MetadataMetadata struct {
-	CreatedAt      *time.Time           `json:"created_at,omitempty"`
-	Format         *Format              `json:"format,omitempty"`
-	ID             *string              `json:"id,omitempty"`
-	Name           string               `json:"name"`
-	ObjectType     string               `json:"object_type"`
-	Objects        map[string]any       `json:"objects,omitempty"`
-	Options        []string             `json:"options,omitempty"`
-	OriginalFormat *string              `json:"original_format,omitempty"`
-	Raw            *MetadataMetadataRaw `json:"raw,omitempty"`
-	Slug           *string              `json:"slug,omitempty"`
-	UpdatedAt      *time.Time           `json:"updated_at,omitempty"`
+	CreatedAt      *time.Time     `json:"created_at,omitempty"`
+	Format         *Format        `json:"format,omitempty"`
+	ID             *string        `json:"id,omitempty"`
+	Name           string         `json:"name"`
+	ObjectType     string         `json:"object_type"`
+	Objects        map[string]any `json:"objects,omitempty"`
+	Options        []string       `json:"options,omitempty"`
+	OriginalFormat *string        `json:"original_format,omitempty"`
+	Raw            map[string]any `json:"raw,omitempty"`
+	Slug           *string        `json:"slug,omitempty"`
+	UpdatedAt      *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (m MetadataMetadata) MarshalJSON() ([]byte, error) {
@@ -152,7 +149,7 @@ func (o *MetadataMetadata) GetOriginalFormat() *string {
 	return o.OriginalFormat
 }
 
-func (o *MetadataMetadata) GetRaw() *MetadataMetadataRaw {
+func (o *MetadataMetadata) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}
