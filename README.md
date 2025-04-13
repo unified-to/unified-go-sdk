@@ -1221,6 +1221,7 @@ You can override the default server globally using the `WithServerIndex(serverIn
 | --- | --------------------------- | -------------------------- |
 | 0   | `https://api.unified.to`    | North American data region |
 | 1   | `https://api-eu.unified.to` | European data region       |
+| 2   | `https://api-au.unified.to` | Australian data region     |
 
 #### Example
 
@@ -1239,7 +1240,7 @@ func main() {
 	ctx := context.Background()
 
 	s := unifiedgosdk.New(
-		unifiedgosdk.WithServerIndex(1),
+		unifiedgosdk.WithServerIndex(2),
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 

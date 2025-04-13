@@ -19,6 +19,8 @@ var ServerList = []string{
 	"https://api.unified.to",
 	// European data region
 	"https://api-eu.unified.to",
+	// Australian data region
+	"https://api-au.unified.to",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -240,9 +242,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.23.22",
-			GenVersion:        "2.570.0",
-			UserAgent:         "speakeasy-sdk/go 0.23.22 2.570.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.23.23",
+			GenVersion:        "2.570.4",
+			UserAgent:         "speakeasy-sdk/go 0.23.23 2.570.4 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
