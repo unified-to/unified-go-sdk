@@ -44,7 +44,7 @@ func (e *ContentType) UnmarshalJSON(data []byte) error {
 type KmsCommentType string
 
 const (
-	KmsCommentTypePageInline KmsCommentType = "PAGE-INLINE"
+	KmsCommentTypePageInline KmsCommentType = "PAGE_INLINE"
 	KmsCommentTypePage       KmsCommentType = "PAGE"
 )
 
@@ -57,7 +57,7 @@ func (e *KmsCommentType) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "PAGE-INLINE":
+	case "PAGE_INLINE":
 		fallthrough
 	case "PAGE":
 		*e = KmsCommentType(v)

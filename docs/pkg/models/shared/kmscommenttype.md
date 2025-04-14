@@ -5,5 +5,5 @@
 
 | Name                       | Value                      |
 | -------------------------- | -------------------------- |
-| `KmsCommentTypePageInline` | PAGE-INLINE                |
+| `KmsCommentTypePageInline` | PAGE_INLINE                |
 | `KmsCommentTypePage`       | PAGE                       |
