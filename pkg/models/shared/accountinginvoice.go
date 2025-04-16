@@ -106,6 +106,7 @@ func (e *AccountingInvoiceType) UnmarshalJSON(data []byte) error {
 }
 
 type AccountingInvoice struct {
+	Attachments             []AccountingAttachment   `json:"attachments,omitempty"`
 	BalanceAmount           *float64                 `json:"balance_amount,omitempty"`
 	CancelledAt             *time.Time               `json:"cancelled_at,omitempty"`
 	ContactID               *string                  `json:"contact_id,omitempty"`
@@ -143,6 +144,13 @@ func (a *AccountingInvoice) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (o *AccountingInvoice) GetAttachments() []AccountingAttachment {
+	if o == nil {
+		return nil
+	}
+	return o.Attachments
 }
 
 func (o *AccountingInvoice) GetBalanceAmount() *float64 {

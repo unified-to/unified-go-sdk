@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: f8c33b302b35d5dce19e700a53e8ea50
+  docChecksum: ce6ebc30e4ad046db9275dc804220d8b
   docVersion: "1.0"
-  speakeasyVersion: 1.531.4
-  generationVersion: 2.570.4
-  releaseVersion: 0.23.24
-  configChecksum: 6aa4759c632d7e7ce2e1823a67628f6f
+  speakeasyVersion: 1.533.0
+  generationVersion: 2.578.0
+  releaseVersion: 0.23.25
+  configChecksum: 9380b005e038e9f24295dbc46d88c773
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -446,6 +446,7 @@ generatedFiles:
   - /pkg/models/operations/updateunifiedwebhook.go
   - /pkg/models/operations/updateunifiedwebhooktrigger.go
   - /pkg/models/shared/accountingaccount.go
+  - /pkg/models/shared/accountingattachment.go
   - /pkg/models/shared/accountingcontact.go
   - /pkg/models/shared/accountingcontactpaymentmethod.go
   - /pkg/models/shared/accountingemail.go
@@ -1503,6 +1504,7 @@ generatedFiles:
   - docs/pkg/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/pkg/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/pkg/models/shared/accountingaccount.md
+  - docs/pkg/models/shared/accountingattachment.md
   - docs/pkg/models/shared/accountingcontact.md
   - docs/pkg/models/shared/accountingcontactpaymentmethod.md
   - docs/pkg/models/shared/accountingcontactpaymentmethodtype.md
