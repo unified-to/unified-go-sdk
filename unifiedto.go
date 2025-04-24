@@ -114,6 +114,7 @@ type UnifiedTo struct {
 	Model             *Model
 	Prompt            *Prompt
 	Hris              *Hris
+	Device            *Device
 	Employee          *Employee
 	Group             *Group
 	Payslip           *Payslip
@@ -242,9 +243,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.23.26",
-			GenVersion:        "2.578.0",
-			UserAgent:         "speakeasy-sdk/go 0.23.26 2.578.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.23.27",
+			GenVersion:        "2.591.1",
+			UserAgent:         "speakeasy-sdk/go 0.23.27 2.591.1 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -343,6 +344,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Prompt = newPrompt(sdk.sdkConfiguration)
 
 	sdk.Hris = newHris(sdk.sdkConfiguration)
+
+	sdk.Device = newDevice(sdk.sdkConfiguration)
 
 	sdk.Employee = newEmployee(sdk.sdkConfiguration)
 

@@ -21,6 +21,7 @@ type ListStorageFilesRequest struct {
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
+	Type  *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -90,6 +91,13 @@ func (o *ListStorageFilesRequest) GetSort() *string {
 		return nil
 	}
 	return o.Sort
+}
+
+func (o *ListStorageFilesRequest) GetType() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Type
 }
 
 func (o *ListStorageFilesRequest) GetUpdatedGte() *time.Time {

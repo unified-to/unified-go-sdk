@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 55f4dd2a712f44154e41aa0daba1b8ca
+  docChecksum: 8813ee1f8602d4e03a2488861b978482
   docVersion: "1.0"
-  speakeasyVersion: 1.533.0
-  generationVersion: 2.578.0
-  releaseVersion: 0.23.26
-  configChecksum: c46494e6aee15a94231edc6cae38b510
+  speakeasyVersion: 1.538.0
+  generationVersion: 2.591.1
+  releaseVersion: 0.23.27
+  configChecksum: 122e8161968232c9d2062b9800b7df8f
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -60,6 +60,7 @@ generatedFiles:
   - /pkg/models/operations/createcrmpipeline.go
   - /pkg/models/operations/creategenaiprompt.go
   - /pkg/models/operations/createhriscompany.go
+  - /pkg/models/operations/createhrisdevice.go
   - /pkg/models/operations/createhrisemployee.go
   - /pkg/models/operations/createhrisgroup.go
   - /pkg/models/operations/createhrislocation.go
@@ -128,6 +129,7 @@ generatedFiles:
   - /pkg/models/operations/getcrmlead.go
   - /pkg/models/operations/getcrmpipeline.go
   - /pkg/models/operations/gethriscompany.go
+  - /pkg/models/operations/gethrisdevice.go
   - /pkg/models/operations/gethrisemployee.go
   - /pkg/models/operations/gethrisgroup.go
   - /pkg/models/operations/gethrislocation.go
@@ -207,6 +209,7 @@ generatedFiles:
   - /pkg/models/operations/listenrichpeople.go
   - /pkg/models/operations/listgenaimodels.go
   - /pkg/models/operations/listhriscompanies.go
+  - /pkg/models/operations/listhrisdevices.go
   - /pkg/models/operations/listhrisemployees.go
   - /pkg/models/operations/listhrisgroups.go
   - /pkg/models/operations/listhrislocations.go
@@ -280,6 +283,7 @@ generatedFiles:
   - /pkg/models/operations/patchcrmlead.go
   - /pkg/models/operations/patchcrmpipeline.go
   - /pkg/models/operations/patchhriscompany.go
+  - /pkg/models/operations/patchhrisdevice.go
   - /pkg/models/operations/patchhrisemployee.go
   - /pkg/models/operations/patchhrisgroup.go
   - /pkg/models/operations/patchhrislocation.go
@@ -345,6 +349,7 @@ generatedFiles:
   - /pkg/models/operations/removecrmlead.go
   - /pkg/models/operations/removecrmpipeline.go
   - /pkg/models/operations/removehriscompany.go
+  - /pkg/models/operations/removehrisdevice.go
   - /pkg/models/operations/removehrisemployee.go
   - /pkg/models/operations/removehrisgroup.go
   - /pkg/models/operations/removehrislocation.go
@@ -408,6 +413,7 @@ generatedFiles:
   - /pkg/models/operations/updatecrmlead.go
   - /pkg/models/operations/updatecrmpipeline.go
   - /pkg/models/operations/updatehriscompany.go
+  - /pkg/models/operations/updatehrisdevice.go
   - /pkg/models/operations/updatehrisemployee.go
   - /pkg/models/operations/updatehrisgroup.go
   - /pkg/models/operations/updatehrislocation.go
@@ -446,6 +452,7 @@ generatedFiles:
   - /pkg/models/operations/updateunifiedwebhook.go
   - /pkg/models/operations/updateunifiedwebhooktrigger.go
   - /pkg/models/shared/accountingaccount.go
+  - /pkg/models/shared/accountingassociatedcontact.go
   - /pkg/models/shared/accountingattachment.go
   - /pkg/models/shared/accountingcontact.go
   - /pkg/models/shared/accountingcontactpaymentmethod.go
@@ -477,6 +484,7 @@ generatedFiles:
   - /pkg/models/shared/atsgroup.go
   - /pkg/models/shared/atsinterview.go
   - /pkg/models/shared/atsjob.go
+  - /pkg/models/shared/atsjobopening.go
   - /pkg/models/shared/atsjobposting.go
   - /pkg/models/shared/atsjobquestion.go
   - /pkg/models/shared/atsmetadata.go
@@ -525,6 +533,7 @@ generatedFiles:
   - /pkg/models/shared/genaiprompt.go
   - /pkg/models/shared/hriscompany.go
   - /pkg/models/shared/hriscompensation.go
+  - /pkg/models/shared/hrisdevice.go
   - /pkg/models/shared/hrisemail.go
   - /pkg/models/shared/hrisemployee.go
   - /pkg/models/shared/hrisgroup.go
@@ -672,6 +681,7 @@ generatedFiles:
   - crm.go
   - customer.go
   - deal.go
+  - device.go
   - docs/pkg/models/operations/categories.md
   - docs/pkg/models/operations/createaccountingaccountrequest.md
   - docs/pkg/models/operations/createaccountingaccountresponse.md
@@ -731,6 +741,8 @@ generatedFiles:
   - docs/pkg/models/operations/creategenaipromptresponse.md
   - docs/pkg/models/operations/createhriscompanyrequest.md
   - docs/pkg/models/operations/createhriscompanyresponse.md
+  - docs/pkg/models/operations/createhrisdevicerequest.md
+  - docs/pkg/models/operations/createhrisdeviceresponse.md
   - docs/pkg/models/operations/createhrisemployeerequest.md
   - docs/pkg/models/operations/createhrisemployeeresponse.md
   - docs/pkg/models/operations/createhrisgrouprequest.md
@@ -866,6 +878,8 @@ generatedFiles:
   - docs/pkg/models/operations/getcrmpipelineresponse.md
   - docs/pkg/models/operations/gethriscompanyrequest.md
   - docs/pkg/models/operations/gethriscompanyresponse.md
+  - docs/pkg/models/operations/gethrisdevicerequest.md
+  - docs/pkg/models/operations/gethrisdeviceresponse.md
   - docs/pkg/models/operations/gethrisemployeerequest.md
   - docs/pkg/models/operations/gethrisemployeeresponse.md
   - docs/pkg/models/operations/gethrisgrouprequest.md
@@ -1024,6 +1038,8 @@ generatedFiles:
   - docs/pkg/models/operations/listgenaimodelsresponse.md
   - docs/pkg/models/operations/listhriscompaniesrequest.md
   - docs/pkg/models/operations/listhriscompaniesresponse.md
+  - docs/pkg/models/operations/listhrisdevicesrequest.md
+  - docs/pkg/models/operations/listhrisdevicesresponse.md
   - docs/pkg/models/operations/listhrisemployeesrequest.md
   - docs/pkg/models/operations/listhrisemployeesresponse.md
   - docs/pkg/models/operations/listhrisgroupsrequest.md
@@ -1172,6 +1188,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchcrmpipelineresponse.md
   - docs/pkg/models/operations/patchhriscompanyrequest.md
   - docs/pkg/models/operations/patchhriscompanyresponse.md
+  - docs/pkg/models/operations/patchhrisdevicerequest.md
+  - docs/pkg/models/operations/patchhrisdeviceresponse.md
   - docs/pkg/models/operations/patchhrisemployeerequest.md
   - docs/pkg/models/operations/patchhrisemployeeresponse.md
   - docs/pkg/models/operations/patchhrisgrouprequest.md
@@ -1303,6 +1321,8 @@ generatedFiles:
   - docs/pkg/models/operations/removecrmpipelineresponse.md
   - docs/pkg/models/operations/removehriscompanyrequest.md
   - docs/pkg/models/operations/removehriscompanyresponse.md
+  - docs/pkg/models/operations/removehrisdevicerequest.md
+  - docs/pkg/models/operations/removehrisdeviceresponse.md
   - docs/pkg/models/operations/removehrisemployeerequest.md
   - docs/pkg/models/operations/removehrisemployeeresponse.md
   - docs/pkg/models/operations/removehrisgrouprequest.md
@@ -1429,6 +1449,8 @@ generatedFiles:
   - docs/pkg/models/operations/updatecrmpipelineresponse.md
   - docs/pkg/models/operations/updatehriscompanyrequest.md
   - docs/pkg/models/operations/updatehriscompanyresponse.md
+  - docs/pkg/models/operations/updatehrisdevicerequest.md
+  - docs/pkg/models/operations/updatehrisdeviceresponse.md
   - docs/pkg/models/operations/updatehrisemployeerequest.md
   - docs/pkg/models/operations/updatehrisemployeeresponse.md
   - docs/pkg/models/operations/updatehrisgrouprequest.md
@@ -1504,6 +1526,7 @@ generatedFiles:
   - docs/pkg/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/pkg/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/pkg/models/shared/accountingaccount.md
+  - docs/pkg/models/shared/accountingassociatedcontact.md
   - docs/pkg/models/shared/accountingattachment.md
   - docs/pkg/models/shared/accountingcontact.md
   - docs/pkg/models/shared/accountingcontactpaymentmethod.md
@@ -1551,6 +1574,8 @@ generatedFiles:
   - docs/pkg/models/shared/atsinterview.md
   - docs/pkg/models/shared/atsinterviewstatus.md
   - docs/pkg/models/shared/atsjob.md
+  - docs/pkg/models/shared/atsjobopening.md
+  - docs/pkg/models/shared/atsjobopeningstatus.md
   - docs/pkg/models/shared/atsjobposting.md
   - docs/pkg/models/shared/atsjobquestion.md
   - docs/pkg/models/shared/atsjobquestiontype.md
@@ -1631,6 +1656,7 @@ generatedFiles:
   - docs/pkg/models/shared/hriscompensation.md
   - docs/pkg/models/shared/hriscompensationfrequency.md
   - docs/pkg/models/shared/hriscompensationtype.md
+  - docs/pkg/models/shared/hrisdevice.md
   - docs/pkg/models/shared/hrisemail.md
   - docs/pkg/models/shared/hrisemailtype.md
   - docs/pkg/models/shared/hrisemployee.md
@@ -1905,6 +1931,7 @@ generatedFiles:
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/deal/README.md
+  - docs/sdks/device/README.md
   - docs/sdks/document/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
@@ -6139,5 +6166,65 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createHrisDevice:
+    speakeasy-default-create-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getHrisDevice:
+    speakeasy-default-get-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  listHrisDevices:
+    speakeasy-default-list-hris-devices:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}, {"name": "<value>"}]
+  patchHrisDevice:
+    speakeasy-default-patch-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  removeHrisDevice:
+    speakeasy-default-remove-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisDevice:
+    speakeasy-default-update-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
 examplesVersion: 1.0.1
 generatedTests: {}

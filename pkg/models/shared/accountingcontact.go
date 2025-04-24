@@ -63,25 +63,26 @@ func (e *TaxExemption) UnmarshalJSON(data []byte) error {
 }
 
 type AccountingContact struct {
-	BillingAddress  *PropertyAccountingContactBillingAddress  `json:"billing_address,omitempty"`
-	CompanyName     *string                                   `json:"company_name,omitempty"`
-	CreatedAt       *time.Time                                `json:"created_at,omitempty"`
-	Currency        *string                                   `default:"USD" json:"currency"`
-	Emails          []AccountingEmail                         `json:"emails,omitempty"`
-	ID              *string                                   `json:"id,omitempty"`
-	Identification  *string                                   `json:"identification,omitempty"`
-	IsActive        *bool                                     `json:"is_active,omitempty"`
-	IsCustomer      *bool                                     `json:"is_customer,omitempty"`
-	IsSupplier      *bool                                     `json:"is_supplier,omitempty"`
-	Name            *string                                   `json:"name,omitempty"`
-	PaymentMethods  []AccountingContactPaymentMethod          `json:"payment_methods,omitempty"`
-	PortalURL       *string                                   `json:"portal_url,omitempty"`
-	Raw             map[string]any                            `json:"raw,omitempty"`
-	ShippingAddress *PropertyAccountingContactShippingAddress `json:"shipping_address,omitempty"`
-	TaxExemption    *TaxExemption                             `json:"tax_exemption,omitempty"`
-	TaxNumber       *string                                   `json:"tax_number,omitempty"`
-	Telephones      []AccountingTelephone                     `json:"telephones,omitempty"`
-	UpdatedAt       *time.Time                                `json:"updated_at,omitempty"`
+	AssociatedContacts []AccountingAssociatedContact             `json:"associated_contacts,omitempty"`
+	BillingAddress     *PropertyAccountingContactBillingAddress  `json:"billing_address,omitempty"`
+	CompanyName        *string                                   `json:"company_name,omitempty"`
+	CreatedAt          *time.Time                                `json:"created_at,omitempty"`
+	Currency           *string                                   `default:"USD" json:"currency"`
+	Emails             []AccountingEmail                         `json:"emails,omitempty"`
+	ID                 *string                                   `json:"id,omitempty"`
+	Identification     *string                                   `json:"identification,omitempty"`
+	IsActive           *bool                                     `json:"is_active,omitempty"`
+	IsCustomer         *bool                                     `json:"is_customer,omitempty"`
+	IsSupplier         *bool                                     `json:"is_supplier,omitempty"`
+	Name               *string                                   `json:"name,omitempty"`
+	PaymentMethods     []AccountingContactPaymentMethod          `json:"payment_methods,omitempty"`
+	PortalURL          *string                                   `json:"portal_url,omitempty"`
+	Raw                map[string]any                            `json:"raw,omitempty"`
+	ShippingAddress    *PropertyAccountingContactShippingAddress `json:"shipping_address,omitempty"`
+	TaxExemption       *TaxExemption                             `json:"tax_exemption,omitempty"`
+	TaxNumber          *string                                   `json:"tax_number,omitempty"`
+	Telephones         []AccountingTelephone                     `json:"telephones,omitempty"`
+	UpdatedAt          *time.Time                                `json:"updated_at,omitempty"`
 }
 
 func (a AccountingContact) MarshalJSON() ([]byte, error) {
@@ -93,6 +94,13 @@ func (a *AccountingContact) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (o *AccountingContact) GetAssociatedContacts() []AccountingAssociatedContact {
+	if o == nil {
+		return nil
+	}
+	return o.AssociatedContacts
 }
 
 func (o *AccountingContact) GetBillingAddress() *PropertyAccountingContactBillingAddress {

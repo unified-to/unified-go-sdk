@@ -44,6 +44,7 @@
 | `ObjectTypeHrisTimeoff`            | hris_timeoff                       |
 | `ObjectTypeHrisCompany`            | hris_company                       |
 | `ObjectTypeHrisLocation`           | hris_location                      |
+| `ObjectTypeHrisDevice`             | hris_device                        |
 | `ObjectTypeMartechList`            | martech_list                       |
 | `ObjectTypeMartechMember`          | martech_member                     |
 | `ObjectTypePassthrough`            | passthrough                        |

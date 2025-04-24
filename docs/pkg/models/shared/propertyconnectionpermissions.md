@@ -89,6 +89,8 @@
 | `PropertyConnectionPermissionsHrisCompanyWrite`           | hris_company_write                                        |
 | `PropertyConnectionPermissionsHrisLocationRead`           | hris_location_read                                        |
 | `PropertyConnectionPermissionsHrisLocationWrite`          | hris_location_write                                       |
+| `PropertyConnectionPermissionsHrisDeviceRead`             | hris_device_read                                          |
+| `PropertyConnectionPermissionsHrisDeviceWrite`            | hris_device_write                                         |
 | `PropertyConnectionPermissionsUcCallRead`                 | uc_call_read                                              |
 | `PropertyConnectionPermissionsUcContactRead`              | uc_contact_read                                           |
 | `PropertyConnectionPermissionsUcContactWrite`             | uc_contact_write                                          |

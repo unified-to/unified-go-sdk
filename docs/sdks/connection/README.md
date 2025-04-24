@@ -209,9 +209,7 @@ func main() {
                 shared.PropertyConnectionCategoriesEnrich,
             },
             IntegrationType: "<value>",
-            Permissions: []shared.PropertyConnectionPermissions{
-
-            },
+            Permissions: []shared.PropertyConnectionPermissions{},
         },
         ID: "<id>",
     })
@@ -327,9 +325,7 @@ func main() {
                 shared.PropertyConnectionCategoriesCalendar,
             },
             IntegrationType: "<value>",
-            Permissions: []shared.PropertyConnectionPermissions{
-
-            },
+            Permissions: []shared.PropertyConnectionPermissions{},
         },
         ID: "<id>",
     })

@@ -1,0 +1,12 @@
+# AtsJobOpening
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ApplicationID`                                                                  | **string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `CloseReason`                                                                    | **string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `ClosedAt`                                                                       | [*time.Time](https://pkg.go.dev/time#Time)                                       | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `OpenedAt`                                                                       | [*time.Time](https://pkg.go.dev/time#Time)                                       | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Status`                                                                         | [*shared.AtsJobOpeningStatus](../../../pkg/models/shared/atsjobopeningstatus.md) | :heavy_minus_sign:                                                               | N/A                                                                              |

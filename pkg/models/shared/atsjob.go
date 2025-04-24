@@ -105,13 +105,14 @@ type AtsJob struct {
 	Description    *string         `json:"description,omitempty"`
 	EmploymentType *EmploymentType `json:"employment_type,omitempty"`
 	// The departments/divisions/teams that this job belongs to
-	Groups           []AtsGroup    `json:"groups,omitempty"`
-	HiringManagerIds []string      `json:"hiring_manager_ids,omitempty"`
-	ID               *string       `json:"id,omitempty"`
-	LanguageLocale   *string       `json:"language_locale,omitempty"`
-	Metadata         []AtsMetadata `json:"metadata,omitempty"`
-	Name             *string       `json:"name,omitempty"`
-	NumberOfOpenings *float64      `json:"number_of_openings,omitempty"`
+	Groups           []AtsGroup      `json:"groups,omitempty"`
+	HiringManagerIds []string        `json:"hiring_manager_ids,omitempty"`
+	ID               *string         `json:"id,omitempty"`
+	LanguageLocale   *string         `json:"language_locale,omitempty"`
+	Metadata         []AtsMetadata   `json:"metadata,omitempty"`
+	Name             *string         `json:"name,omitempty"`
+	NumberOfOpenings *float64        `json:"number_of_openings,omitempty"`
+	Openings         []AtsJobOpening `json:"openings,omitempty"`
 	// Public job postings
 	Postings []AtsJobPosting `json:"postings,omitempty"`
 	// URLs for pages containing public listings for the job
@@ -238,6 +239,13 @@ func (o *AtsJob) GetNumberOfOpenings() *float64 {
 		return nil
 	}
 	return o.NumberOfOpenings
+}
+
+func (o *AtsJob) GetOpenings() []AtsJobOpening {
+	if o == nil {
+		return nil
+	}
+	return o.Openings
 }
 
 func (o *AtsJob) GetPostings() []AtsJobPosting {

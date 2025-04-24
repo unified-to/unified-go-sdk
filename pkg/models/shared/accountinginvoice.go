@@ -127,6 +127,7 @@ type AccountingInvoice struct {
 	RefundAmount            *float64                 `json:"refund_amount,omitempty"`
 	RefundReason            *string                  `json:"refund_reason,omitempty"`
 	RefundedAt              *time.Time               `json:"refunded_at,omitempty"`
+	Send                    *bool                    `json:"send,omitempty"`
 	Status                  *AccountingInvoiceStatus `json:"status,omitempty"`
 	TaxAmount               *float64                 `json:"tax_amount,omitempty"`
 	TotalAmount             *float64                 `json:"total_amount,omitempty"`
@@ -291,6 +292,13 @@ func (o *AccountingInvoice) GetRefundedAt() *time.Time {
 		return nil
 	}
 	return o.RefundedAt
+}
+
+func (o *AccountingInvoice) GetSend() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.Send
 }
 
 func (o *AccountingInvoice) GetStatus() *AccountingInvoiceStatus {
