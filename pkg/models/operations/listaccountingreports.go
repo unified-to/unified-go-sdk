@@ -11,16 +11,18 @@ import (
 
 type ListAccountingReportsRequest struct {
 	// ID of the connection
-	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
+	EndLe        *string `queryParam:"style=form,explode=true,name=end_le"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
-	Query *string `queryParam:"style=form,explode=true,name=query"`
-	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
-	Type  *string `queryParam:"style=form,explode=true,name=type"`
+	Query    *string `queryParam:"style=form,explode=true,name=query"`
+	Sort     *string `queryParam:"style=form,explode=true,name=sort"`
+	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
+	Type     *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -41,6 +43,13 @@ func (o *ListAccountingReportsRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *ListAccountingReportsRequest) GetEndLe() *string {
+	if o == nil {
+		return nil
+	}
+	return o.EndLe
 }
 
 func (o *ListAccountingReportsRequest) GetFields() []string {
@@ -83,6 +92,13 @@ func (o *ListAccountingReportsRequest) GetSort() *string {
 		return nil
 	}
 	return o.Sort
+}
+
+func (o *ListAccountingReportsRequest) GetStartGte() *string {
+	if o == nil {
+		return nil
+	}
+	return o.StartGte
 }
 
 func (o *ListAccountingReportsRequest) GetType() *string {

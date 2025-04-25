@@ -39,16 +39,18 @@ func (e *AccountingReportType) UnmarshalJSON(data []byte) error {
 }
 
 type AccountingReport struct {
-	AccountID *string               `json:"account_id,omitempty"`
-	Amount    *float64              `json:"amount,omitempty"`
-	ContactID *string               `json:"contact_id,omitempty"`
-	CreatedAt *time.Time            `json:"created_at,omitempty"`
-	Group     *string               `json:"group,omitempty"`
-	ID        *string               `json:"id,omitempty"`
-	Raw       map[string]any        `json:"raw,omitempty"`
-	Subgroup  *string               `json:"subgroup,omitempty"`
-	Type      *AccountingReportType `json:"type,omitempty"`
-	UpdatedAt *time.Time            `json:"updated_at,omitempty"`
+	BalanceSheet  *PropertyAccountingReportBalanceSheet  `json:"balance_sheet,omitempty"`
+	CreatedAt     *time.Time                             `json:"created_at,omitempty"`
+	Currency      *string                                `json:"currency,omitempty"`
+	EndAt         *time.Time                             `json:"end_at,omitempty"`
+	ID            *string                                `json:"id,omitempty"`
+	Name          *string                                `json:"name,omitempty"`
+	ProfitAndLoss *PropertyAccountingReportProfitAndLoss `json:"profit_and_loss,omitempty"`
+	Raw           map[string]any                         `json:"raw,omitempty"`
+	StartAt       *time.Time                             `json:"start_at,omitempty"`
+	TrialBalance  *PropertyAccountingReportTrialBalance  `json:"trial_balance,omitempty"`
+	Type          *AccountingReportType                  `json:"type,omitempty"`
+	UpdatedAt     *time.Time                             `json:"updated_at,omitempty"`
 }
 
 func (a AccountingReport) MarshalJSON() ([]byte, error) {
@@ -62,25 +64,11 @@ func (a *AccountingReport) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingReport) GetAccountID() *string {
+func (o *AccountingReport) GetBalanceSheet() *PropertyAccountingReportBalanceSheet {
 	if o == nil {
 		return nil
 	}
-	return o.AccountID
-}
-
-func (o *AccountingReport) GetAmount() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Amount
-}
-
-func (o *AccountingReport) GetContactID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.ContactID
+	return o.BalanceSheet
 }
 
 func (o *AccountingReport) GetCreatedAt() *time.Time {
@@ -90,11 +78,18 @@ func (o *AccountingReport) GetCreatedAt() *time.Time {
 	return o.CreatedAt
 }
 
-func (o *AccountingReport) GetGroup() *string {
+func (o *AccountingReport) GetCurrency() *string {
 	if o == nil {
 		return nil
 	}
-	return o.Group
+	return o.Currency
+}
+
+func (o *AccountingReport) GetEndAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.EndAt
 }
 
 func (o *AccountingReport) GetID() *string {
@@ -104,6 +99,20 @@ func (o *AccountingReport) GetID() *string {
 	return o.ID
 }
 
+func (o *AccountingReport) GetName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Name
+}
+
+func (o *AccountingReport) GetProfitAndLoss() *PropertyAccountingReportProfitAndLoss {
+	if o == nil {
+		return nil
+	}
+	return o.ProfitAndLoss
+}
+
 func (o *AccountingReport) GetRaw() map[string]any {
 	if o == nil {
 		return nil
@@ -111,11 +120,18 @@ func (o *AccountingReport) GetRaw() map[string]any {
 	return o.Raw
 }
 
-func (o *AccountingReport) GetSubgroup() *string {
+func (o *AccountingReport) GetStartAt() *time.Time {
 	if o == nil {
 		return nil
 	}
-	return o.Subgroup
+	return o.StartAt
+}
+
+func (o *AccountingReport) GetTrialBalance() *PropertyAccountingReportTrialBalance {
+	if o == nil {
+		return nil
+	}
+	return o.TrialBalance
 }
 
 func (o *AccountingReport) GetType() *AccountingReportType {

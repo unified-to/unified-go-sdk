@@ -1,0 +1,10 @@
+# PropertyAccountingReportTrialBalance
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `SubItems`                                                                                            | [][shared.AccountingTrialBalanceSubItem](../../../pkg/models/shared/accountingtrialbalancesubitem.md) | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `TotalCreditAmount`                                                                                   | **float64*                                                                                            | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `TotalDebitAmount`                                                                                    | **float64*                                                                                            | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
