@@ -12,11 +12,10 @@ type UcContact struct {
 	Company   *string    `json:"company,omitempty"`
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of email addresses for this contact
-	Emails []UcEmail `json:"emails,omitempty"`
-	ID     *string   `json:"id,omitempty"`
-	Name   *string   `json:"name,omitempty"`
-	// The raw data returned by the integration for this contact
-	Raw map[string]any `json:"raw,omitempty"`
+	Emails []UcEmail      `json:"emails,omitempty"`
+	ID     *string        `json:"id,omitempty"`
+	Name   *string        `json:"name,omitempty"`
+	Raw    map[string]any `json:"raw,omitempty"`
 	// An array of telephones for this contact
 	Telephones []UcTelephone `json:"telephones,omitempty"`
 	Title      *string       `json:"title,omitempty"`

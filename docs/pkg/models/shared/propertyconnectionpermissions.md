@@ -94,6 +94,9 @@
 | `PropertyConnectionPermissionsUcCallRead`                 | uc_call_read                                              |
 | `PropertyConnectionPermissionsUcContactRead`              | uc_contact_read                                           |
 | `PropertyConnectionPermissionsUcContactWrite`             | uc_contact_write                                          |
+| `PropertyConnectionPermissionsUcCommentRead`              | uc_comment_read                                           |
+| `PropertyConnectionPermissionsUcCommentWrite`             | uc_comment_write                                          |
+| `PropertyConnectionPermissionsUcRecordingRead`            | uc_recording_read                                         |
 | `PropertyConnectionPermissionsStorageFileRead`            | storage_file_read                                         |
 | `PropertyConnectionPermissionsStorageFileWrite`           | storage_file_write                                        |
 | `PropertyConnectionPermissionsWebhook`                    | webhook                                                   |

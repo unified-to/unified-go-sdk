@@ -12,8 +12,9 @@ type CreatePassthroughRawRequest struct {
 	// This field accepts []byte data or io.Reader implementations, such as *os.File.
 	RequestBody *any `request:"mediaType=text/plain"`
 	// ID of the connection
-	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	Path         string `pathParam:"style=simple,explode=false,name=path"`
+	ConnectionID string         `pathParam:"style=simple,explode=false,name=connection_id"`
+	Path         string         `pathParam:"style=simple,explode=false,name=path"`
+	Query        map[string]any `queryParam:"style=form,explode=true,name=query"`
 }
 
 func (o *CreatePassthroughRawRequest) GetRequestBody() *any {
@@ -35,6 +36,13 @@ func (o *CreatePassthroughRawRequest) GetPath() string {
 		return ""
 	}
 	return o.Path
+}
+
+func (o *CreatePassthroughRawRequest) GetQuery() map[string]any {
+	if o == nil {
+		return nil
+	}
+	return o.Query
 }
 
 type CreatePassthroughRawResponse struct {

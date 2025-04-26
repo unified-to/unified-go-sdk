@@ -3,22 +3,22 @@
 package shared
 
 type AccountingAttachment struct {
-	DownloadURL string  `json:"download_url"`
-	ID          string  `json:"id"`
+	DownloadURL *string `json:"download_url,omitempty"`
+	ID          *string `json:"id,omitempty"`
 	MimeType    *string `json:"mime_type,omitempty"`
-	Name        string  `json:"name"`
+	Name        *string `json:"name,omitempty"`
 }
 
-func (o *AccountingAttachment) GetDownloadURL() string {
+func (o *AccountingAttachment) GetDownloadURL() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.DownloadURL
 }
 
-func (o *AccountingAttachment) GetID() string {
+func (o *AccountingAttachment) GetID() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.ID
 }
@@ -30,9 +30,9 @@ func (o *AccountingAttachment) GetMimeType() *string {
 	return o.MimeType
 }
 
-func (o *AccountingAttachment) GetName() string {
+func (o *AccountingAttachment) GetName() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Name
 }

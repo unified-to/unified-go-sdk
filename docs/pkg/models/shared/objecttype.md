@@ -53,6 +53,8 @@
 | `ObjectTypeTicketingCustomer`      | ticketing_customer                 |
 | `ObjectTypeUcContact`              | uc_contact                         |
 | `ObjectTypeUcCall`                 | uc_call                            |
+| `ObjectTypeUcComment`              | uc_comment                         |
+| `ObjectTypeUcRecording`            | uc_recording                       |
 | `ObjectTypeEnrichPerson`           | enrich_person                      |
 | `ObjectTypeEnrichCompany`          | enrich_company                     |
 | `ObjectTypeStorageFile`            | storage_file                       |

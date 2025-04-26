@@ -9,8 +9,9 @@ import (
 
 type RemovePassthroughRequest struct {
 	// ID of the connection
-	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	Path         string `pathParam:"style=simple,explode=false,name=path"`
+	ConnectionID string         `pathParam:"style=simple,explode=false,name=connection_id"`
+	Path         string         `pathParam:"style=simple,explode=false,name=path"`
+	Query        map[string]any `queryParam:"style=form,explode=true,name=query"`
 }
 
 func (o *RemovePassthroughRequest) GetConnectionID() string {
@@ -25,6 +26,13 @@ func (o *RemovePassthroughRequest) GetPath() string {
 		return ""
 	}
 	return o.Path
+}
+
+func (o *RemovePassthroughRequest) GetQuery() map[string]any {
+	if o == nil {
+		return nil
+	}
+	return o.Query
 }
 
 type RemovePassthroughResponse struct {

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 3cc7cb33432bf3a1c948159a8589fc49
+  docChecksum: e254ae145e90e83e726dc49d774763d7
   docVersion: "1.0"
-  speakeasyVersion: 1.539.2
-  generationVersion: 2.591.1
-  releaseVersion: 0.23.28
-  configChecksum: 751a24193628d6a0684ca0b2dbe29de7
+  speakeasyVersion: 1.540.0
+  generationVersion: 2.593.3
+  releaseVersion: 0.23.29
+  configChecksum: 9393c40401bc0ce0d3058bfdca565ed8
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -94,7 +94,9 @@ generatedFiles:
   - /pkg/models/operations/createticketingcustomer.go
   - /pkg/models/operations/createticketingnote.go
   - /pkg/models/operations/createticketingticket.go
+  - /pkg/models/operations/createuccomment.go
   - /pkg/models/operations/createuccontact.go
+  - /pkg/models/operations/createucrecording.go
   - /pkg/models/operations/createunifiedconnection.go
   - /pkg/models/operations/createunifiedwebhook.go
   - /pkg/models/operations/getaccountingaccount.go
@@ -166,7 +168,9 @@ generatedFiles:
   - /pkg/models/operations/getticketingcustomer.go
   - /pkg/models/operations/getticketingnote.go
   - /pkg/models/operations/getticketingticket.go
+  - /pkg/models/operations/getuccomment.go
   - /pkg/models/operations/getuccontact.go
+  - /pkg/models/operations/getucrecording.go
   - /pkg/models/operations/getunifiedapicall.go
   - /pkg/models/operations/getunifiedconnection.go
   - /pkg/models/operations/getunifiedintegrationauth.go
@@ -248,7 +252,9 @@ generatedFiles:
   - /pkg/models/operations/listticketingnotes.go
   - /pkg/models/operations/listticketingtickets.go
   - /pkg/models/operations/listuccalls.go
+  - /pkg/models/operations/listuccomments.go
   - /pkg/models/operations/listuccontacts.go
+  - /pkg/models/operations/listucrecordings.go
   - /pkg/models/operations/listunifiedapicalls.go
   - /pkg/models/operations/listunifiedconnections.go
   - /pkg/models/operations/listunifiedintegrations.go
@@ -317,7 +323,9 @@ generatedFiles:
   - /pkg/models/operations/patchticketingcustomer.go
   - /pkg/models/operations/patchticketingnote.go
   - /pkg/models/operations/patchticketingticket.go
+  - /pkg/models/operations/patchuccomment.go
   - /pkg/models/operations/patchuccontact.go
+  - /pkg/models/operations/patchucrecording.go
   - /pkg/models/operations/patchunifiedconnection.go
   - /pkg/models/operations/patchunifiedwebhook.go
   - /pkg/models/operations/patchunifiedwebhooktrigger.go
@@ -382,7 +390,9 @@ generatedFiles:
   - /pkg/models/operations/removeticketingcustomer.go
   - /pkg/models/operations/removeticketingnote.go
   - /pkg/models/operations/removeticketingticket.go
+  - /pkg/models/operations/removeuccomment.go
   - /pkg/models/operations/removeuccontact.go
+  - /pkg/models/operations/removeucrecording.go
   - /pkg/models/operations/removeunifiedconnection.go
   - /pkg/models/operations/removeunifiedwebhook.go
   - /pkg/models/operations/updateaccountingaccount.go
@@ -447,7 +457,9 @@ generatedFiles:
   - /pkg/models/operations/updateticketingcustomer.go
   - /pkg/models/operations/updateticketingnote.go
   - /pkg/models/operations/updateticketingticket.go
+  - /pkg/models/operations/updateuccomment.go
   - /pkg/models/operations/updateuccontact.go
+  - /pkg/models/operations/updateucrecording.go
   - /pkg/models/operations/updateunifiedconnection.go
   - /pkg/models/operations/updateunifiedwebhook.go
   - /pkg/models/operations/updateunifiedwebhooktrigger.go
@@ -658,8 +670,12 @@ generatedFiles:
   - /pkg/models/shared/ticketingtelephone.go
   - /pkg/models/shared/ticketingticket.go
   - /pkg/models/shared/uccall.go
+  - /pkg/models/shared/uccomment.go
   - /pkg/models/shared/uccontact.go
   - /pkg/models/shared/ucemail.go
+  - /pkg/models/shared/ucrecording.go
+  - /pkg/models/shared/ucrecordingmedia.go
+  - /pkg/models/shared/ucrecordingtranscript.go
   - /pkg/models/shared/uctelephone.go
   - /pkg/models/shared/webhook.go
   - USAGE.md
@@ -817,8 +833,12 @@ generatedFiles:
   - docs/pkg/models/operations/createticketingnoteresponse.md
   - docs/pkg/models/operations/createticketingticketrequest.md
   - docs/pkg/models/operations/createticketingticketresponse.md
+  - docs/pkg/models/operations/createuccommentrequest.md
+  - docs/pkg/models/operations/createuccommentresponse.md
   - docs/pkg/models/operations/createuccontactrequest.md
   - docs/pkg/models/operations/createuccontactresponse.md
+  - docs/pkg/models/operations/createucrecordingrequest.md
+  - docs/pkg/models/operations/createucrecordingresponse.md
   - docs/pkg/models/operations/createunifiedconnectionresponse.md
   - docs/pkg/models/operations/createunifiedwebhookrequest.md
   - docs/pkg/models/operations/createunifiedwebhookresponse.md
@@ -960,8 +980,12 @@ generatedFiles:
   - docs/pkg/models/operations/getticketingnoteresponse.md
   - docs/pkg/models/operations/getticketingticketrequest.md
   - docs/pkg/models/operations/getticketingticketresponse.md
+  - docs/pkg/models/operations/getuccommentrequest.md
+  - docs/pkg/models/operations/getuccommentresponse.md
   - docs/pkg/models/operations/getuccontactrequest.md
   - docs/pkg/models/operations/getuccontactresponse.md
+  - docs/pkg/models/operations/getucrecordingrequest.md
+  - docs/pkg/models/operations/getucrecordingresponse.md
   - docs/pkg/models/operations/getunifiedapicallrequest.md
   - docs/pkg/models/operations/getunifiedapicallresponse.md
   - docs/pkg/models/operations/getunifiedconnectionrequest.md
@@ -1124,8 +1148,12 @@ generatedFiles:
   - docs/pkg/models/operations/listticketingticketsresponse.md
   - docs/pkg/models/operations/listuccallsrequest.md
   - docs/pkg/models/operations/listuccallsresponse.md
+  - docs/pkg/models/operations/listuccommentsrequest.md
+  - docs/pkg/models/operations/listuccommentsresponse.md
   - docs/pkg/models/operations/listuccontactsrequest.md
   - docs/pkg/models/operations/listuccontactsresponse.md
+  - docs/pkg/models/operations/listucrecordingsrequest.md
+  - docs/pkg/models/operations/listucrecordingsresponse.md
   - docs/pkg/models/operations/listunifiedapicallsrequest.md
   - docs/pkg/models/operations/listunifiedapicallsresponse.md
   - docs/pkg/models/operations/listunifiedconnectionsrequest.md
@@ -1264,8 +1292,12 @@ generatedFiles:
   - docs/pkg/models/operations/patchticketingnoteresponse.md
   - docs/pkg/models/operations/patchticketingticketrequest.md
   - docs/pkg/models/operations/patchticketingticketresponse.md
+  - docs/pkg/models/operations/patchuccommentrequest.md
+  - docs/pkg/models/operations/patchuccommentresponse.md
   - docs/pkg/models/operations/patchuccontactrequest.md
   - docs/pkg/models/operations/patchuccontactresponse.md
+  - docs/pkg/models/operations/patchucrecordingrequest.md
+  - docs/pkg/models/operations/patchucrecordingresponse.md
   - docs/pkg/models/operations/patchunifiedconnectionrequest.md
   - docs/pkg/models/operations/patchunifiedconnectionresponse.md
   - docs/pkg/models/operations/patchunifiedwebhookrequest.md
@@ -1395,8 +1427,12 @@ generatedFiles:
   - docs/pkg/models/operations/removeticketingnoteresponse.md
   - docs/pkg/models/operations/removeticketingticketrequest.md
   - docs/pkg/models/operations/removeticketingticketresponse.md
+  - docs/pkg/models/operations/removeuccommentrequest.md
+  - docs/pkg/models/operations/removeuccommentresponse.md
   - docs/pkg/models/operations/removeuccontactrequest.md
   - docs/pkg/models/operations/removeuccontactresponse.md
+  - docs/pkg/models/operations/removeucrecordingrequest.md
+  - docs/pkg/models/operations/removeucrecordingresponse.md
   - docs/pkg/models/operations/removeunifiedconnectionrequest.md
   - docs/pkg/models/operations/removeunifiedconnectionresponse.md
   - docs/pkg/models/operations/removeunifiedwebhookrequest.md
@@ -1525,8 +1561,12 @@ generatedFiles:
   - docs/pkg/models/operations/updateticketingnoteresponse.md
   - docs/pkg/models/operations/updateticketingticketrequest.md
   - docs/pkg/models/operations/updateticketingticketresponse.md
+  - docs/pkg/models/operations/updateuccommentrequest.md
+  - docs/pkg/models/operations/updateuccommentresponse.md
   - docs/pkg/models/operations/updateuccontactrequest.md
   - docs/pkg/models/operations/updateuccontactresponse.md
+  - docs/pkg/models/operations/updateucrecordingrequest.md
+  - docs/pkg/models/operations/updateucrecordingresponse.md
   - docs/pkg/models/operations/updateunifiedconnectionrequest.md
   - docs/pkg/models/operations/updateunifiedconnectionresponse.md
   - docs/pkg/models/operations/updateunifiedwebhookrequest.md
@@ -1702,6 +1742,7 @@ generatedFiles:
   - docs/pkg/models/shared/listaccountid.md
   - docs/pkg/models/shared/listapplicationid.md
   - docs/pkg/models/shared/listcalendarid.md
+  - docs/pkg/models/shared/listcallid.md
   - docs/pkg/models/shared/listcandidateid.md
   - docs/pkg/models/shared/listchannelid.md
   - docs/pkg/models/shared/listclassid.md
@@ -1901,9 +1942,13 @@ generatedFiles:
   - docs/pkg/models/shared/ticketingticketstatus.md
   - docs/pkg/models/shared/type.md
   - docs/pkg/models/shared/uccall.md
+  - docs/pkg/models/shared/uccomment.md
   - docs/pkg/models/shared/uccontact.md
   - docs/pkg/models/shared/ucemail.md
   - docs/pkg/models/shared/ucemailtype.md
+  - docs/pkg/models/shared/ucrecording.md
+  - docs/pkg/models/shared/ucrecordingmedia.md
+  - docs/pkg/models/shared/ucrecordingtranscript.md
   - docs/pkg/models/shared/uctelephone.md
   - docs/pkg/models/shared/uctelephonetype.md
   - docs/pkg/models/shared/value.md
@@ -5111,6 +5156,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/opt/lib"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5123,6 +5169,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/namedb"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5136,6 +5183,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/selinux"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5149,6 +5197,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/home/user"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5161,6 +5210,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/mail"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5174,6 +5224,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/Applications"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5187,6 +5238,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/namedb"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5199,6 +5251,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/System"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -6242,5 +6295,125 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createUcRecording:
+    speakeasy-default-create-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getUcRecording:
+    speakeasy-default-get-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listUcRecordings:
+    speakeasy-default-list-uc-recordings:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  patchUcRecording:
+    speakeasy-default-patch-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeUcRecording:
+    speakeasy-default-remove-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateUcRecording:
+    speakeasy-default-update-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createUcComment:
+    speakeasy-default-create-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  getUcComment:
+    speakeasy-default-get-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  listUcComments:
+    speakeasy-default-list-uc-comments:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"content": "<value>"}, {"content": "<value>"}]
+  patchUcComment:
+    speakeasy-default-patch-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  removeUcComment:
+    speakeasy-default-remove-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateUcComment:
+    speakeasy-default-update-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
 examplesVersion: 1.0.1
 generatedTests: {}

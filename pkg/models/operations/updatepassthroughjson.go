@@ -11,8 +11,9 @@ type UpdatePassthroughJSONRequest struct {
 	// integration-specific payload
 	RequestBody any `request:"mediaType=application/json"`
 	// ID of the connection
-	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	Path         string `pathParam:"style=simple,explode=false,name=path"`
+	ConnectionID string         `pathParam:"style=simple,explode=false,name=connection_id"`
+	Path         string         `pathParam:"style=simple,explode=false,name=path"`
+	Query        map[string]any `queryParam:"style=form,explode=true,name=query"`
 }
 
 func (o *UpdatePassthroughJSONRequest) GetRequestBody() any {
@@ -34,6 +35,13 @@ func (o *UpdatePassthroughJSONRequest) GetPath() string {
 		return ""
 	}
 	return o.Path
+}
+
+func (o *UpdatePassthroughJSONRequest) GetQuery() map[string]any {
+	if o == nil {
+		return nil
+	}
+	return o.Query
 }
 
 type UpdatePassthroughJSONResponse struct {

@@ -292,16 +292,22 @@ func main() {
 
 * [CreateKmsComment](docs/sdks/comment/README.md#createkmscomment) - Create a comment
 * [CreateTaskComment](docs/sdks/comment/README.md#createtaskcomment) - Create a comment
+* [CreateUcComment](docs/sdks/comment/README.md#createuccomment) - Create a comment
 * [GetKmsComment](docs/sdks/comment/README.md#getkmscomment) - Retrieve a comment
 * [GetTaskComment](docs/sdks/comment/README.md#gettaskcomment) - Retrieve a comment
+* [GetUcComment](docs/sdks/comment/README.md#getuccomment) - Retrieve a comment
 * [ListKmsComments](docs/sdks/comment/README.md#listkmscomments) - List all comments
 * [ListTaskComments](docs/sdks/comment/README.md#listtaskcomments) - List all comments
+* [ListUcComments](docs/sdks/comment/README.md#listuccomments) - List all comments
 * [PatchKmsComment](docs/sdks/comment/README.md#patchkmscomment) - Update a comment
 * [PatchTaskComment](docs/sdks/comment/README.md#patchtaskcomment) - Update a comment
+* [PatchUcComment](docs/sdks/comment/README.md#patchuccomment) - Update a comment
 * [RemoveKmsComment](docs/sdks/comment/README.md#removekmscomment) - Remove a comment
 * [RemoveTaskComment](docs/sdks/comment/README.md#removetaskcomment) - Remove a comment
+* [RemoveUcComment](docs/sdks/comment/README.md#removeuccomment) - Remove a comment
 * [UpdateKmsComment](docs/sdks/comment/README.md#updatekmscomment) - Update a comment
 * [UpdateTaskComment](docs/sdks/comment/README.md#updatetaskcomment) - Update a comment
+* [UpdateUcComment](docs/sdks/comment/README.md#updateuccomment) - Update a comment
 
 ### [Commerce](docs/sdks/commerce/README.md)
 
@@ -917,8 +923,14 @@ func main() {
 
 ### [Recording](docs/sdks/recording/README.md)
 
+* [CreateUcRecording](docs/sdks/recording/README.md#createucrecording) - Create a recording
 * [GetCalendarRecording](docs/sdks/recording/README.md#getcalendarrecording) - Retrieve a recording
+* [GetUcRecording](docs/sdks/recording/README.md#getucrecording) - Retrieve a recording
 * [ListCalendarRecordings](docs/sdks/recording/README.md#listcalendarrecordings) - List all recordings
+* [ListUcRecordings](docs/sdks/recording/README.md#listucrecordings) - List all recordings
+* [PatchUcRecording](docs/sdks/recording/README.md#patchucrecording) - Update a recording
+* [RemoveUcRecording](docs/sdks/recording/README.md#removeucrecording) - Remove a recording
+* [UpdateUcRecording](docs/sdks/recording/README.md#updateucrecording) - Update a recording
 
 ### [Refund](docs/sdks/refund/README.md)
 
@@ -1108,13 +1120,25 @@ func main() {
 
 ### [Uc](docs/sdks/uc/README.md)
 
+* [CreateUcComment](docs/sdks/uc/README.md#createuccomment) - Create a comment
 * [CreateUcContact](docs/sdks/uc/README.md#createuccontact) - Create a contact
+* [CreateUcRecording](docs/sdks/uc/README.md#createucrecording) - Create a recording
+* [GetUcComment](docs/sdks/uc/README.md#getuccomment) - Retrieve a comment
 * [GetUcContact](docs/sdks/uc/README.md#getuccontact) - Retrieve a contact
+* [GetUcRecording](docs/sdks/uc/README.md#getucrecording) - Retrieve a recording
 * [ListUcCalls](docs/sdks/uc/README.md#listuccalls) - List all calls
+* [ListUcComments](docs/sdks/uc/README.md#listuccomments) - List all comments
 * [ListUcContacts](docs/sdks/uc/README.md#listuccontacts) - List all contacts
+* [ListUcRecordings](docs/sdks/uc/README.md#listucrecordings) - List all recordings
+* [PatchUcComment](docs/sdks/uc/README.md#patchuccomment) - Update a comment
 * [PatchUcContact](docs/sdks/uc/README.md#patchuccontact) - Update a contact
+* [PatchUcRecording](docs/sdks/uc/README.md#patchucrecording) - Update a recording
+* [RemoveUcComment](docs/sdks/uc/README.md#removeuccomment) - Remove a comment
 * [RemoveUcContact](docs/sdks/uc/README.md#removeuccontact) - Remove a contact
+* [RemoveUcRecording](docs/sdks/uc/README.md#removeucrecording) - Remove a recording
+* [UpdateUcComment](docs/sdks/uc/README.md#updateuccomment) - Update a comment
 * [UpdateUcContact](docs/sdks/uc/README.md#updateuccontact) - Update a contact
+* [UpdateUcRecording](docs/sdks/uc/README.md#updateucrecording) - Update a recording
 
 ### [Unified](docs/sdks/unified/README.md)
 

@@ -124,6 +124,8 @@ const (
 	ObjectTypeTicketingCustomer      ObjectType = "ticketing_customer"
 	ObjectTypeUcContact              ObjectType = "uc_contact"
 	ObjectTypeUcCall                 ObjectType = "uc_call"
+	ObjectTypeUcComment              ObjectType = "uc_comment"
+	ObjectTypeUcRecording            ObjectType = "uc_recording"
 	ObjectTypeEnrichPerson           ObjectType = "enrich_person"
 	ObjectTypeEnrichCompany          ObjectType = "enrich_company"
 	ObjectTypeStorageFile            ObjectType = "storage_file"
@@ -260,6 +262,10 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "uc_contact":
 		fallthrough
 	case "uc_call":
+		fallthrough
+	case "uc_comment":
+		fallthrough
+	case "uc_recording":
 		fallthrough
 	case "enrich_person":
 		fallthrough
