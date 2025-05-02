@@ -17,6 +17,7 @@ type ListAccountingAccountsRequest struct {
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	OrgID  *string  `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
@@ -68,6 +69,13 @@ func (o *ListAccountingAccountsRequest) GetOrder() *string {
 		return nil
 	}
 	return o.Order
+}
+
+func (o *ListAccountingAccountsRequest) GetOrgID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.OrgID
 }
 
 func (o *ListAccountingAccountsRequest) GetQuery() *string {
