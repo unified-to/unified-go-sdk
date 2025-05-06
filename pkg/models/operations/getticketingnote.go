@@ -14,6 +14,8 @@ type GetTicketingNoteRequest struct {
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Note
 	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
 func (o *GetTicketingNoteRequest) GetConnectionID() string {
@@ -35,6 +37,13 @@ func (o *GetTicketingNoteRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *GetTicketingNoteRequest) GetRaw() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Raw
 }
 
 type GetTicketingNoteResponse struct {

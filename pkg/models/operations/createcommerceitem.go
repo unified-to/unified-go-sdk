@@ -13,6 +13,8 @@ type CreateCommerceItemRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
 func (o *CreateCommerceItemRequest) GetCommerceItem() shared.CommerceItem {
@@ -34,6 +36,13 @@ func (o *CreateCommerceItemRequest) GetFields() []string {
 		return nil
 	}
 	return o.Fields
+}
+
+func (o *CreateCommerceItemRequest) GetRaw() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Raw
 }
 
 type CreateCommerceItemResponse struct {

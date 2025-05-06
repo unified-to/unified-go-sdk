@@ -22,7 +22,9 @@ type ListLmsInstructorsRequest struct {
 	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order      *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
-	Query     *string `queryParam:"style=form,explode=true,name=query"`
+	Query *string `queryParam:"style=form,explode=true,name=query"`
+	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+	Raw       *string `queryParam:"style=form,explode=true,name=raw"`
 	SessionID *string `queryParam:"style=form,explode=true,name=session_id"`
 	Sort      *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
@@ -108,6 +110,13 @@ func (o *ListLmsInstructorsRequest) GetQuery() *string {
 		return nil
 	}
 	return o.Query
+}
+
+func (o *ListLmsInstructorsRequest) GetRaw() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Raw
 }
 
 func (o *ListLmsInstructorsRequest) GetSessionID() *string {

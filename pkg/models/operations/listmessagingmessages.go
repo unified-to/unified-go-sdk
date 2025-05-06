@@ -21,7 +21,9 @@ type ListMessagingMessagesRequest struct {
 	Order    *string  `queryParam:"style=form,explode=true,name=order"`
 	ParentID *string  `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
-	Query    *string `queryParam:"style=form,explode=true,name=query"`
+	Query *string `queryParam:"style=form,explode=true,name=query"`
+	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+	Raw      *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort     *string `queryParam:"style=form,explode=true,name=sort"`
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value
@@ -100,6 +102,13 @@ func (o *ListMessagingMessagesRequest) GetQuery() *string {
 		return nil
 	}
 	return o.Query
+}
+
+func (o *ListMessagingMessagesRequest) GetRaw() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Raw
 }
 
 func (o *ListMessagingMessagesRequest) GetSort() *string {

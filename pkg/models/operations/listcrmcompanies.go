@@ -21,7 +21,9 @@ type ListCrmCompaniesRequest struct {
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
-	Sort  *string `queryParam:"style=form,explode=true,name=sort"`
+	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
@@ -92,6 +94,13 @@ func (o *ListCrmCompaniesRequest) GetQuery() *string {
 		return nil
 	}
 	return o.Query
+}
+
+func (o *ListCrmCompaniesRequest) GetRaw() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Raw
 }
 
 func (o *ListCrmCompaniesRequest) GetSort() *string {

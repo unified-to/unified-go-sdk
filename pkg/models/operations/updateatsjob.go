@@ -15,6 +15,8 @@ type UpdateAtsJobRequest struct {
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Job
 	ID string `pathParam:"style=simple,explode=false,name=id"`
+	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
+	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
 func (o *UpdateAtsJobRequest) GetAtsJob() shared.AtsJob {
@@ -43,6 +45,13 @@ func (o *UpdateAtsJobRequest) GetID() string {
 		return ""
 	}
 	return o.ID
+}
+
+func (o *UpdateAtsJobRequest) GetRaw() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Raw
 }
 
 type UpdateAtsJobResponse struct {
