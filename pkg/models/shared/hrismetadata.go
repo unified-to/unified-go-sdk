@@ -2,10 +2,802 @@
 
 package shared
 
-type HrisMetadataExtraData struct {
+import (
+	"errors"
+	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+)
+
+type HrisMetadataSchemasExtraData52 struct {
 }
 
+type HrisMetadata5Type string
+
+const (
+	HrisMetadata5TypeArrayOfAny                     HrisMetadata5Type = "arrayOfAny"
+	HrisMetadata5TypeHrisMetadataSchemasExtraData52 HrisMetadata5Type = "HrisMetadata_Schemas_extra_data_5_2"
+)
+
+type HrisMetadata5 struct {
+	ArrayOfAny                     []any                           `queryParam:"inline"`
+	HrisMetadataSchemasExtraData52 *HrisMetadataSchemasExtraData52 `queryParam:"inline"`
+
+	Type HrisMetadata5Type
+}
+
+func CreateHrisMetadata5ArrayOfAny(arrayOfAny []any) HrisMetadata5 {
+	typ := HrisMetadata5TypeArrayOfAny
+
+	return HrisMetadata5{
+		ArrayOfAny: arrayOfAny,
+		Type:       typ,
+	}
+}
+
+func CreateHrisMetadata5HrisMetadataSchemasExtraData52(hrisMetadataSchemasExtraData52 HrisMetadataSchemasExtraData52) HrisMetadata5 {
+	typ := HrisMetadata5TypeHrisMetadataSchemasExtraData52
+
+	return HrisMetadata5{
+		HrisMetadataSchemasExtraData52: &hrisMetadataSchemasExtraData52,
+		Type:                           typ,
+	}
+}
+
+func (u *HrisMetadata5) UnmarshalJSON(data []byte) error {
+
+	var hrisMetadataSchemasExtraData52 HrisMetadataSchemasExtraData52 = HrisMetadataSchemasExtraData52{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemasExtraData52, "", true, true); err == nil {
+		u.HrisMetadataSchemasExtraData52 = &hrisMetadataSchemasExtraData52
+		u.Type = HrisMetadata5TypeHrisMetadataSchemasExtraData52
+		return nil
+	}
+
+	var arrayOfAny []any = []any{}
+	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
+		u.ArrayOfAny = arrayOfAny
+		u.Type = HrisMetadata5TypeArrayOfAny
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for HrisMetadata5", string(data))
+}
+
+func (u HrisMetadata5) MarshalJSON() ([]byte, error) {
+	if u.ArrayOfAny != nil {
+		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	}
+
+	if u.HrisMetadataSchemasExtraData52 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemasExtraData52, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type HrisMetadata5: all fields are null")
+}
+
+type HrisMetadataSchemasExtraData2 struct {
+}
+
+type HrisMetadata4Type string
+
+const (
+	HrisMetadata4TypeBoolean                       HrisMetadata4Type = "boolean"
+	HrisMetadata4TypeHrisMetadataSchemasExtraData2 HrisMetadata4Type = "HrisMetadata_Schemas_extra_data_2"
+)
+
+type HrisMetadata4 struct {
+	Boolean                       *bool                          `queryParam:"inline"`
+	HrisMetadataSchemasExtraData2 *HrisMetadataSchemasExtraData2 `queryParam:"inline"`
+
+	Type HrisMetadata4Type
+}
+
+func CreateHrisMetadata4Boolean(boolean bool) HrisMetadata4 {
+	typ := HrisMetadata4TypeBoolean
+
+	return HrisMetadata4{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateHrisMetadata4HrisMetadataSchemasExtraData2(hrisMetadataSchemasExtraData2 HrisMetadataSchemasExtraData2) HrisMetadata4 {
+	typ := HrisMetadata4TypeHrisMetadataSchemasExtraData2
+
+	return HrisMetadata4{
+		HrisMetadataSchemasExtraData2: &hrisMetadataSchemasExtraData2,
+		Type:                          typ,
+	}
+}
+
+func (u *HrisMetadata4) UnmarshalJSON(data []byte) error {
+
+	var hrisMetadataSchemasExtraData2 HrisMetadataSchemasExtraData2 = HrisMetadataSchemasExtraData2{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemasExtraData2, "", true, true); err == nil {
+		u.HrisMetadataSchemasExtraData2 = &hrisMetadataSchemasExtraData2
+		u.Type = HrisMetadata4TypeHrisMetadataSchemasExtraData2
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = HrisMetadata4TypeBoolean
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for HrisMetadata4", string(data))
+}
+
+func (u HrisMetadata4) MarshalJSON() ([]byte, error) {
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	if u.HrisMetadataSchemasExtraData2 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemasExtraData2, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type HrisMetadata4: all fields are null")
+}
+
+type HrisMetadataSchemasExtraData32 struct {
+}
+
+type HrisMetadata3Type string
+
+const (
+	HrisMetadata3TypeNumber                         HrisMetadata3Type = "number"
+	HrisMetadata3TypeHrisMetadataSchemasExtraData32 HrisMetadata3Type = "HrisMetadata_Schemas_extra_data_3_2"
+)
+
+type HrisMetadata3 struct {
+	Number                         *float64                        `queryParam:"inline"`
+	HrisMetadataSchemasExtraData32 *HrisMetadataSchemasExtraData32 `queryParam:"inline"`
+
+	Type HrisMetadata3Type
+}
+
+func CreateHrisMetadata3Number(number float64) HrisMetadata3 {
+	typ := HrisMetadata3TypeNumber
+
+	return HrisMetadata3{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateHrisMetadata3HrisMetadataSchemasExtraData32(hrisMetadataSchemasExtraData32 HrisMetadataSchemasExtraData32) HrisMetadata3 {
+	typ := HrisMetadata3TypeHrisMetadataSchemasExtraData32
+
+	return HrisMetadata3{
+		HrisMetadataSchemasExtraData32: &hrisMetadataSchemasExtraData32,
+		Type:                           typ,
+	}
+}
+
+func (u *HrisMetadata3) UnmarshalJSON(data []byte) error {
+
+	var hrisMetadataSchemasExtraData32 HrisMetadataSchemasExtraData32 = HrisMetadataSchemasExtraData32{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemasExtraData32, "", true, true); err == nil {
+		u.HrisMetadataSchemasExtraData32 = &hrisMetadataSchemasExtraData32
+		u.Type = HrisMetadata3TypeHrisMetadataSchemasExtraData32
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = HrisMetadata3TypeNumber
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for HrisMetadata3", string(data))
+}
+
+func (u HrisMetadata3) MarshalJSON() ([]byte, error) {
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.HrisMetadataSchemasExtraData32 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemasExtraData32, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type HrisMetadata3: all fields are null")
+}
+
+type HrisMetadataSchemasExtraData22 struct {
+}
+
+type HrisMetadata2Type string
+
+const (
+	HrisMetadata2TypeStr                            HrisMetadata2Type = "str"
+	HrisMetadata2TypeHrisMetadataSchemasExtraData22 HrisMetadata2Type = "HrisMetadata_Schemas_extra_data_2_2"
+)
+
+type HrisMetadata2 struct {
+	Str                            *string                         `queryParam:"inline"`
+	HrisMetadataSchemasExtraData22 *HrisMetadataSchemasExtraData22 `queryParam:"inline"`
+
+	Type HrisMetadata2Type
+}
+
+func CreateHrisMetadata2Str(str string) HrisMetadata2 {
+	typ := HrisMetadata2TypeStr
+
+	return HrisMetadata2{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateHrisMetadata2HrisMetadataSchemasExtraData22(hrisMetadataSchemasExtraData22 HrisMetadataSchemasExtraData22) HrisMetadata2 {
+	typ := HrisMetadata2TypeHrisMetadataSchemasExtraData22
+
+	return HrisMetadata2{
+		HrisMetadataSchemasExtraData22: &hrisMetadataSchemasExtraData22,
+		Type:                           typ,
+	}
+}
+
+func (u *HrisMetadata2) UnmarshalJSON(data []byte) error {
+
+	var hrisMetadataSchemasExtraData22 HrisMetadataSchemasExtraData22 = HrisMetadataSchemasExtraData22{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemasExtraData22, "", true, true); err == nil {
+		u.HrisMetadataSchemasExtraData22 = &hrisMetadataSchemasExtraData22
+		u.Type = HrisMetadata2TypeHrisMetadataSchemasExtraData22
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = HrisMetadata2TypeStr
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for HrisMetadata2", string(data))
+}
+
+func (u HrisMetadata2) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.HrisMetadataSchemasExtraData22 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemasExtraData22, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type HrisMetadata2: all fields are null")
+}
+
+type HrisMetadata1 struct {
+}
+
+type HrisMetadataExtraDataType string
+
+const (
+	HrisMetadataExtraDataTypeHrisMetadata1 HrisMetadataExtraDataType = "HrisMetadata_1"
+	HrisMetadataExtraDataTypeHrisMetadata2 HrisMetadataExtraDataType = "HrisMetadata_2"
+	HrisMetadataExtraDataTypeHrisMetadata3 HrisMetadataExtraDataType = "HrisMetadata_3"
+	HrisMetadataExtraDataTypeHrisMetadata4 HrisMetadataExtraDataType = "HrisMetadata_4"
+	HrisMetadataExtraDataTypeHrisMetadata5 HrisMetadataExtraDataType = "HrisMetadata_5"
+)
+
+type HrisMetadataExtraData struct {
+	HrisMetadata1 *HrisMetadata1 `queryParam:"inline"`
+	HrisMetadata2 *HrisMetadata2 `queryParam:"inline"`
+	HrisMetadata3 *HrisMetadata3 `queryParam:"inline"`
+	HrisMetadata4 *HrisMetadata4 `queryParam:"inline"`
+	HrisMetadata5 *HrisMetadata5 `queryParam:"inline"`
+
+	Type HrisMetadataExtraDataType
+}
+
+func CreateHrisMetadataExtraDataHrisMetadata1(hrisMetadata1 HrisMetadata1) HrisMetadataExtraData {
+	typ := HrisMetadataExtraDataTypeHrisMetadata1
+
+	return HrisMetadataExtraData{
+		HrisMetadata1: &hrisMetadata1,
+		Type:          typ,
+	}
+}
+
+func CreateHrisMetadataExtraDataHrisMetadata2(hrisMetadata2 HrisMetadata2) HrisMetadataExtraData {
+	typ := HrisMetadataExtraDataTypeHrisMetadata2
+
+	return HrisMetadataExtraData{
+		HrisMetadata2: &hrisMetadata2,
+		Type:          typ,
+	}
+}
+
+func CreateHrisMetadataExtraDataHrisMetadata3(hrisMetadata3 HrisMetadata3) HrisMetadataExtraData {
+	typ := HrisMetadataExtraDataTypeHrisMetadata3
+
+	return HrisMetadataExtraData{
+		HrisMetadata3: &hrisMetadata3,
+		Type:          typ,
+	}
+}
+
+func CreateHrisMetadataExtraDataHrisMetadata4(hrisMetadata4 HrisMetadata4) HrisMetadataExtraData {
+	typ := HrisMetadataExtraDataTypeHrisMetadata4
+
+	return HrisMetadataExtraData{
+		HrisMetadata4: &hrisMetadata4,
+		Type:          typ,
+	}
+}
+
+func CreateHrisMetadataExtraDataHrisMetadata5(hrisMetadata5 HrisMetadata5) HrisMetadataExtraData {
+	typ := HrisMetadataExtraDataTypeHrisMetadata5
+
+	return HrisMetadataExtraData{
+		HrisMetadata5: &hrisMetadata5,
+		Type:          typ,
+	}
+}
+
+func (u *HrisMetadataExtraData) UnmarshalJSON(data []byte) error {
+
+	var hrisMetadata1 HrisMetadata1 = HrisMetadata1{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadata1, "", true, true); err == nil {
+		u.HrisMetadata1 = &hrisMetadata1
+		u.Type = HrisMetadataExtraDataTypeHrisMetadata1
+		return nil
+	}
+
+	var hrisMetadata2 HrisMetadata2 = HrisMetadata2{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadata2, "", true, true); err == nil {
+		u.HrisMetadata2 = &hrisMetadata2
+		u.Type = HrisMetadataExtraDataTypeHrisMetadata2
+		return nil
+	}
+
+	var hrisMetadata3 HrisMetadata3 = HrisMetadata3{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadata3, "", true, true); err == nil {
+		u.HrisMetadata3 = &hrisMetadata3
+		u.Type = HrisMetadataExtraDataTypeHrisMetadata3
+		return nil
+	}
+
+	var hrisMetadata4 HrisMetadata4 = HrisMetadata4{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadata4, "", true, true); err == nil {
+		u.HrisMetadata4 = &hrisMetadata4
+		u.Type = HrisMetadataExtraDataTypeHrisMetadata4
+		return nil
+	}
+
+	var hrisMetadata5 HrisMetadata5 = HrisMetadata5{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadata5, "", true, true); err == nil {
+		u.HrisMetadata5 = &hrisMetadata5
+		u.Type = HrisMetadataExtraDataTypeHrisMetadata5
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for HrisMetadataExtraData", string(data))
+}
+
+func (u HrisMetadataExtraData) MarshalJSON() ([]byte, error) {
+	if u.HrisMetadata1 != nil {
+		return utils.MarshalJSON(u.HrisMetadata1, "", true)
+	}
+
+	if u.HrisMetadata2 != nil {
+		return utils.MarshalJSON(u.HrisMetadata2, "", true)
+	}
+
+	if u.HrisMetadata3 != nil {
+		return utils.MarshalJSON(u.HrisMetadata3, "", true)
+	}
+
+	if u.HrisMetadata4 != nil {
+		return utils.MarshalJSON(u.HrisMetadata4, "", true)
+	}
+
+	if u.HrisMetadata5 != nil {
+		return utils.MarshalJSON(u.HrisMetadata5, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type HrisMetadataExtraData: all fields are null")
+}
+
+type HrisMetadataSchemasValue52 struct {
+}
+
+type HrisMetadataSchemas5Type string
+
+const (
+	HrisMetadataSchemas5TypeArrayOfAny                 HrisMetadataSchemas5Type = "arrayOfAny"
+	HrisMetadataSchemas5TypeHrisMetadataSchemasValue52 HrisMetadataSchemas5Type = "HrisMetadata_Schemas_value_5_2"
+)
+
+type HrisMetadataSchemas5 struct {
+	ArrayOfAny                 []any                       `queryParam:"inline"`
+	HrisMetadataSchemasValue52 *HrisMetadataSchemasValue52 `queryParam:"inline"`
+
+	Type HrisMetadataSchemas5Type
+}
+
+func CreateHrisMetadataSchemas5ArrayOfAny(arrayOfAny []any) HrisMetadataSchemas5 {
+	typ := HrisMetadataSchemas5TypeArrayOfAny
+
+	return HrisMetadataSchemas5{
+		ArrayOfAny: arrayOfAny,
+		Type:       typ,
+	}
+}
+
+func CreateHrisMetadataSchemas5HrisMetadataSchemasValue52(hrisMetadataSchemasValue52 HrisMetadataSchemasValue52) HrisMetadataSchemas5 {
+	typ := HrisMetadataSchemas5TypeHrisMetadataSchemasValue52
+
+	return HrisMetadataSchemas5{
+		HrisMetadataSchemasValue52: &hrisMetadataSchemasValue52,
+		Type:                       typ,
+	}
+}
+
+func (u *HrisMetadataSchemas5) UnmarshalJSON(data []byte) error {
+
+	var hrisMetadataSchemasValue52 HrisMetadataSchemasValue52 = HrisMetadataSchemasValue52{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemasValue52, "", true, true); err == nil {
+		u.HrisMetadataSchemasValue52 = &hrisMetadataSchemasValue52
+		u.Type = HrisMetadataSchemas5TypeHrisMetadataSchemasValue52
+		return nil
+	}
+
+	var arrayOfAny []any = []any{}
+	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
+		u.ArrayOfAny = arrayOfAny
+		u.Type = HrisMetadataSchemas5TypeArrayOfAny
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for HrisMetadataSchemas5", string(data))
+}
+
+func (u HrisMetadataSchemas5) MarshalJSON() ([]byte, error) {
+	if u.ArrayOfAny != nil {
+		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	}
+
+	if u.HrisMetadataSchemasValue52 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemasValue52, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type HrisMetadataSchemas5: all fields are null")
+}
+
+type HrisMetadataSchemasValue42 struct {
+}
+
+type HrisMetadataSchemas4Type string
+
+const (
+	HrisMetadataSchemas4TypeBoolean                    HrisMetadataSchemas4Type = "boolean"
+	HrisMetadataSchemas4TypeHrisMetadataSchemasValue42 HrisMetadataSchemas4Type = "HrisMetadata_Schemas_value_4_2"
+)
+
+type HrisMetadataSchemas4 struct {
+	Boolean                    *bool                       `queryParam:"inline"`
+	HrisMetadataSchemasValue42 *HrisMetadataSchemasValue42 `queryParam:"inline"`
+
+	Type HrisMetadataSchemas4Type
+}
+
+func CreateHrisMetadataSchemas4Boolean(boolean bool) HrisMetadataSchemas4 {
+	typ := HrisMetadataSchemas4TypeBoolean
+
+	return HrisMetadataSchemas4{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateHrisMetadataSchemas4HrisMetadataSchemasValue42(hrisMetadataSchemasValue42 HrisMetadataSchemasValue42) HrisMetadataSchemas4 {
+	typ := HrisMetadataSchemas4TypeHrisMetadataSchemasValue42
+
+	return HrisMetadataSchemas4{
+		HrisMetadataSchemasValue42: &hrisMetadataSchemasValue42,
+		Type:                       typ,
+	}
+}
+
+func (u *HrisMetadataSchemas4) UnmarshalJSON(data []byte) error {
+
+	var hrisMetadataSchemasValue42 HrisMetadataSchemasValue42 = HrisMetadataSchemasValue42{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemasValue42, "", true, true); err == nil {
+		u.HrisMetadataSchemasValue42 = &hrisMetadataSchemasValue42
+		u.Type = HrisMetadataSchemas4TypeHrisMetadataSchemasValue42
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = HrisMetadataSchemas4TypeBoolean
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for HrisMetadataSchemas4", string(data))
+}
+
+func (u HrisMetadataSchemas4) MarshalJSON() ([]byte, error) {
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	if u.HrisMetadataSchemasValue42 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemasValue42, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type HrisMetadataSchemas4: all fields are null")
+}
+
+type HrisMetadataSchemasValue32 struct {
+}
+
+type HrisMetadataSchemas3Type string
+
+const (
+	HrisMetadataSchemas3TypeNumber                     HrisMetadataSchemas3Type = "number"
+	HrisMetadataSchemas3TypeHrisMetadataSchemasValue32 HrisMetadataSchemas3Type = "HrisMetadata_Schemas_value_3_2"
+)
+
+type HrisMetadataSchemas3 struct {
+	Number                     *float64                    `queryParam:"inline"`
+	HrisMetadataSchemasValue32 *HrisMetadataSchemasValue32 `queryParam:"inline"`
+
+	Type HrisMetadataSchemas3Type
+}
+
+func CreateHrisMetadataSchemas3Number(number float64) HrisMetadataSchemas3 {
+	typ := HrisMetadataSchemas3TypeNumber
+
+	return HrisMetadataSchemas3{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateHrisMetadataSchemas3HrisMetadataSchemasValue32(hrisMetadataSchemasValue32 HrisMetadataSchemasValue32) HrisMetadataSchemas3 {
+	typ := HrisMetadataSchemas3TypeHrisMetadataSchemasValue32
+
+	return HrisMetadataSchemas3{
+		HrisMetadataSchemasValue32: &hrisMetadataSchemasValue32,
+		Type:                       typ,
+	}
+}
+
+func (u *HrisMetadataSchemas3) UnmarshalJSON(data []byte) error {
+
+	var hrisMetadataSchemasValue32 HrisMetadataSchemasValue32 = HrisMetadataSchemasValue32{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemasValue32, "", true, true); err == nil {
+		u.HrisMetadataSchemasValue32 = &hrisMetadataSchemasValue32
+		u.Type = HrisMetadataSchemas3TypeHrisMetadataSchemasValue32
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = HrisMetadataSchemas3TypeNumber
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for HrisMetadataSchemas3", string(data))
+}
+
+func (u HrisMetadataSchemas3) MarshalJSON() ([]byte, error) {
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.HrisMetadataSchemasValue32 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemasValue32, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type HrisMetadataSchemas3: all fields are null")
+}
+
+type HrisMetadataSchemasValue2 struct {
+}
+
+type HrisMetadataSchemas2Type string
+
+const (
+	HrisMetadataSchemas2TypeStr                       HrisMetadataSchemas2Type = "str"
+	HrisMetadataSchemas2TypeHrisMetadataSchemasValue2 HrisMetadataSchemas2Type = "HrisMetadata_Schemas_value_2"
+)
+
+type HrisMetadataSchemas2 struct {
+	Str                       *string                    `queryParam:"inline"`
+	HrisMetadataSchemasValue2 *HrisMetadataSchemasValue2 `queryParam:"inline"`
+
+	Type HrisMetadataSchemas2Type
+}
+
+func CreateHrisMetadataSchemas2Str(str string) HrisMetadataSchemas2 {
+	typ := HrisMetadataSchemas2TypeStr
+
+	return HrisMetadataSchemas2{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateHrisMetadataSchemas2HrisMetadataSchemasValue2(hrisMetadataSchemasValue2 HrisMetadataSchemasValue2) HrisMetadataSchemas2 {
+	typ := HrisMetadataSchemas2TypeHrisMetadataSchemasValue2
+
+	return HrisMetadataSchemas2{
+		HrisMetadataSchemasValue2: &hrisMetadataSchemasValue2,
+		Type:                      typ,
+	}
+}
+
+func (u *HrisMetadataSchemas2) UnmarshalJSON(data []byte) error {
+
+	var hrisMetadataSchemasValue2 HrisMetadataSchemasValue2 = HrisMetadataSchemasValue2{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemasValue2, "", true, true); err == nil {
+		u.HrisMetadataSchemasValue2 = &hrisMetadataSchemasValue2
+		u.Type = HrisMetadataSchemas2TypeHrisMetadataSchemasValue2
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = HrisMetadataSchemas2TypeStr
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for HrisMetadataSchemas2", string(data))
+}
+
+func (u HrisMetadataSchemas2) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.HrisMetadataSchemasValue2 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemasValue2, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type HrisMetadataSchemas2: all fields are null")
+}
+
+type HrisMetadataSchemas1 struct {
+}
+
+type HrisMetadataValueType string
+
+const (
+	HrisMetadataValueTypeHrisMetadataSchemas1 HrisMetadataValueType = "HrisMetadata_Schemas_1"
+	HrisMetadataValueTypeHrisMetadataSchemas2 HrisMetadataValueType = "HrisMetadata_Schemas_2"
+	HrisMetadataValueTypeHrisMetadataSchemas3 HrisMetadataValueType = "HrisMetadata_Schemas_3"
+	HrisMetadataValueTypeHrisMetadataSchemas4 HrisMetadataValueType = "HrisMetadata_Schemas_4"
+	HrisMetadataValueTypeHrisMetadataSchemas5 HrisMetadataValueType = "HrisMetadata_Schemas_5"
+)
+
 type HrisMetadataValue struct {
+	HrisMetadataSchemas1 *HrisMetadataSchemas1 `queryParam:"inline"`
+	HrisMetadataSchemas2 *HrisMetadataSchemas2 `queryParam:"inline"`
+	HrisMetadataSchemas3 *HrisMetadataSchemas3 `queryParam:"inline"`
+	HrisMetadataSchemas4 *HrisMetadataSchemas4 `queryParam:"inline"`
+	HrisMetadataSchemas5 *HrisMetadataSchemas5 `queryParam:"inline"`
+
+	Type HrisMetadataValueType
+}
+
+func CreateHrisMetadataValueHrisMetadataSchemas1(hrisMetadataSchemas1 HrisMetadataSchemas1) HrisMetadataValue {
+	typ := HrisMetadataValueTypeHrisMetadataSchemas1
+
+	return HrisMetadataValue{
+		HrisMetadataSchemas1: &hrisMetadataSchemas1,
+		Type:                 typ,
+	}
+}
+
+func CreateHrisMetadataValueHrisMetadataSchemas2(hrisMetadataSchemas2 HrisMetadataSchemas2) HrisMetadataValue {
+	typ := HrisMetadataValueTypeHrisMetadataSchemas2
+
+	return HrisMetadataValue{
+		HrisMetadataSchemas2: &hrisMetadataSchemas2,
+		Type:                 typ,
+	}
+}
+
+func CreateHrisMetadataValueHrisMetadataSchemas3(hrisMetadataSchemas3 HrisMetadataSchemas3) HrisMetadataValue {
+	typ := HrisMetadataValueTypeHrisMetadataSchemas3
+
+	return HrisMetadataValue{
+		HrisMetadataSchemas3: &hrisMetadataSchemas3,
+		Type:                 typ,
+	}
+}
+
+func CreateHrisMetadataValueHrisMetadataSchemas4(hrisMetadataSchemas4 HrisMetadataSchemas4) HrisMetadataValue {
+	typ := HrisMetadataValueTypeHrisMetadataSchemas4
+
+	return HrisMetadataValue{
+		HrisMetadataSchemas4: &hrisMetadataSchemas4,
+		Type:                 typ,
+	}
+}
+
+func CreateHrisMetadataValueHrisMetadataSchemas5(hrisMetadataSchemas5 HrisMetadataSchemas5) HrisMetadataValue {
+	typ := HrisMetadataValueTypeHrisMetadataSchemas5
+
+	return HrisMetadataValue{
+		HrisMetadataSchemas5: &hrisMetadataSchemas5,
+		Type:                 typ,
+	}
+}
+
+func (u *HrisMetadataValue) UnmarshalJSON(data []byte) error {
+
+	var hrisMetadataSchemas1 HrisMetadataSchemas1 = HrisMetadataSchemas1{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemas1, "", true, true); err == nil {
+		u.HrisMetadataSchemas1 = &hrisMetadataSchemas1
+		u.Type = HrisMetadataValueTypeHrisMetadataSchemas1
+		return nil
+	}
+
+	var hrisMetadataSchemas2 HrisMetadataSchemas2 = HrisMetadataSchemas2{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemas2, "", true, true); err == nil {
+		u.HrisMetadataSchemas2 = &hrisMetadataSchemas2
+		u.Type = HrisMetadataValueTypeHrisMetadataSchemas2
+		return nil
+	}
+
+	var hrisMetadataSchemas3 HrisMetadataSchemas3 = HrisMetadataSchemas3{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemas3, "", true, true); err == nil {
+		u.HrisMetadataSchemas3 = &hrisMetadataSchemas3
+		u.Type = HrisMetadataValueTypeHrisMetadataSchemas3
+		return nil
+	}
+
+	var hrisMetadataSchemas4 HrisMetadataSchemas4 = HrisMetadataSchemas4{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemas4, "", true, true); err == nil {
+		u.HrisMetadataSchemas4 = &hrisMetadataSchemas4
+		u.Type = HrisMetadataValueTypeHrisMetadataSchemas4
+		return nil
+	}
+
+	var hrisMetadataSchemas5 HrisMetadataSchemas5 = HrisMetadataSchemas5{}
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemas5, "", true, true); err == nil {
+		u.HrisMetadataSchemas5 = &hrisMetadataSchemas5
+		u.Type = HrisMetadataValueTypeHrisMetadataSchemas5
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for HrisMetadataValue", string(data))
+}
+
+func (u HrisMetadataValue) MarshalJSON() ([]byte, error) {
+	if u.HrisMetadataSchemas1 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemas1, "", true)
+	}
+
+	if u.HrisMetadataSchemas2 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemas2, "", true)
+	}
+
+	if u.HrisMetadataSchemas3 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemas3, "", true)
+	}
+
+	if u.HrisMetadataSchemas4 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemas4, "", true)
+	}
+
+	if u.HrisMetadataSchemas5 != nil {
+		return utils.MarshalJSON(u.HrisMetadataSchemas5, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type HrisMetadataValue: all fields are null")
 }
 
 type HrisMetadata struct {

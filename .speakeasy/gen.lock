@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: f032e2d929e6463e2d345fa322684244
+  docChecksum: 2625a6ddd69ded1a0dfa97e04747a5af
   docVersion: "1.0"
   speakeasyVersion: 1.542.3
   generationVersion: 2.597.9
-  releaseVersion: 0.23.31
-  configChecksum: d1a84b1ebaa23985c805079493f410c3
+  releaseVersion: 0.24.0
+  configChecksum: 926a3134eaf5deef48c813a0b73bf1f0
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -28,6 +28,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.83.2
     sdkHooks: 0.1.0
+    unions: 2.85.10
     uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
@@ -1633,6 +1634,19 @@ generatedFiles:
   - docs/pkg/models/shared/atsjobquestiontype.md
   - docs/pkg/models/shared/atsjobstatus.md
   - docs/pkg/models/shared/atsmetadata.md
+  - docs/pkg/models/shared/atsmetadata1.md
+  - docs/pkg/models/shared/atsmetadata2.md
+  - docs/pkg/models/shared/atsmetadata3.md
+  - docs/pkg/models/shared/atsmetadata4.md
+  - docs/pkg/models/shared/atsmetadata5.md
+  - docs/pkg/models/shared/atsmetadataschemas2.md
+  - docs/pkg/models/shared/atsmetadataschemasextradata2.md
+  - docs/pkg/models/shared/atsmetadataschemasextradata22.md
+  - docs/pkg/models/shared/atsmetadataschemasextradata32.md
+  - docs/pkg/models/shared/atsmetadataschemasvalue2.md
+  - docs/pkg/models/shared/atsmetadataschemasvalue32.md
+  - docs/pkg/models/shared/atsmetadataschemasvalue42.md
+  - docs/pkg/models/shared/atsmetadataschemasvalue52.md
   - docs/pkg/models/shared/atsoffer.md
   - docs/pkg/models/shared/atsofferstatus.md
   - docs/pkg/models/shared/atsscorecard.md
@@ -1662,7 +1676,25 @@ generatedFiles:
   - docs/pkg/models/shared/commerceitemvariant.md
   - docs/pkg/models/shared/commercelocation.md
   - docs/pkg/models/shared/commercemetadata.md
+  - docs/pkg/models/shared/commercemetadata1.md
+  - docs/pkg/models/shared/commercemetadata2.md
+  - docs/pkg/models/shared/commercemetadata3.md
+  - docs/pkg/models/shared/commercemetadata4.md
+  - docs/pkg/models/shared/commercemetadata5.md
   - docs/pkg/models/shared/commercemetadataextradata.md
+  - docs/pkg/models/shared/commercemetadataschemas1.md
+  - docs/pkg/models/shared/commercemetadataschemas2.md
+  - docs/pkg/models/shared/commercemetadataschemas3.md
+  - docs/pkg/models/shared/commercemetadataschemas4.md
+  - docs/pkg/models/shared/commercemetadataschemas5.md
+  - docs/pkg/models/shared/commercemetadataschemasextradata2.md
+  - docs/pkg/models/shared/commercemetadataschemasextradata22.md
+  - docs/pkg/models/shared/commercemetadataschemasextradata32.md
+  - docs/pkg/models/shared/commercemetadataschemasextradata52.md
+  - docs/pkg/models/shared/commercemetadataschemasvalue2.md
+  - docs/pkg/models/shared/commercemetadataschemasvalue32.md
+  - docs/pkg/models/shared/commercemetadataschemasvalue42.md
+  - docs/pkg/models/shared/commercemetadataschemasvalue52.md
   - docs/pkg/models/shared/commercemetadatavalue.md
   - docs/pkg/models/shared/connection.md
   - docs/pkg/models/shared/contenttype.md
@@ -1678,7 +1710,25 @@ generatedFiles:
   - docs/pkg/models/shared/crmeventtype.md
   - docs/pkg/models/shared/crmlead.md
   - docs/pkg/models/shared/crmmetadata.md
+  - docs/pkg/models/shared/crmmetadata1.md
+  - docs/pkg/models/shared/crmmetadata2.md
+  - docs/pkg/models/shared/crmmetadata3.md
+  - docs/pkg/models/shared/crmmetadata4.md
+  - docs/pkg/models/shared/crmmetadata5.md
   - docs/pkg/models/shared/crmmetadataextradata.md
+  - docs/pkg/models/shared/crmmetadataschemas1.md
+  - docs/pkg/models/shared/crmmetadataschemas2.md
+  - docs/pkg/models/shared/crmmetadataschemas3.md
+  - docs/pkg/models/shared/crmmetadataschemas4.md
+  - docs/pkg/models/shared/crmmetadataschemas5.md
+  - docs/pkg/models/shared/crmmetadataschemasextradata2.md
+  - docs/pkg/models/shared/crmmetadataschemasextradata22.md
+  - docs/pkg/models/shared/crmmetadataschemasextradata32.md
+  - docs/pkg/models/shared/crmmetadataschemasextradata52.md
+  - docs/pkg/models/shared/crmmetadataschemasvalue2.md
+  - docs/pkg/models/shared/crmmetadataschemasvalue32.md
+  - docs/pkg/models/shared/crmmetadataschemasvalue42.md
+  - docs/pkg/models/shared/crmmetadataschemasvalue52.md
   - docs/pkg/models/shared/crmmetadatavalue.md
   - docs/pkg/models/shared/crmpipeline.md
   - docs/pkg/models/shared/crmstage.md
@@ -1697,7 +1747,9 @@ generatedFiles:
   - docs/pkg/models/shared/ethnicity.md
   - docs/pkg/models/shared/event.md
   - docs/pkg/models/shared/extradata.md
+  - docs/pkg/models/shared/five.md
   - docs/pkg/models/shared/format.md
+  - docs/pkg/models/shared/four.md
   - docs/pkg/models/shared/frequency.md
   - docs/pkg/models/shared/fromwebhook.md
   - docs/pkg/models/shared/genaicontent.md
@@ -1718,7 +1770,25 @@ generatedFiles:
   - docs/pkg/models/shared/hrisgrouptype.md
   - docs/pkg/models/shared/hrislocation.md
   - docs/pkg/models/shared/hrismetadata.md
+  - docs/pkg/models/shared/hrismetadata1.md
+  - docs/pkg/models/shared/hrismetadata2.md
+  - docs/pkg/models/shared/hrismetadata3.md
+  - docs/pkg/models/shared/hrismetadata4.md
+  - docs/pkg/models/shared/hrismetadata5.md
   - docs/pkg/models/shared/hrismetadataextradata.md
+  - docs/pkg/models/shared/hrismetadataschemas1.md
+  - docs/pkg/models/shared/hrismetadataschemas2.md
+  - docs/pkg/models/shared/hrismetadataschemas3.md
+  - docs/pkg/models/shared/hrismetadataschemas4.md
+  - docs/pkg/models/shared/hrismetadataschemas5.md
+  - docs/pkg/models/shared/hrismetadataschemasextradata2.md
+  - docs/pkg/models/shared/hrismetadataschemasextradata22.md
+  - docs/pkg/models/shared/hrismetadataschemasextradata32.md
+  - docs/pkg/models/shared/hrismetadataschemasextradata52.md
+  - docs/pkg/models/shared/hrismetadataschemasvalue2.md
+  - docs/pkg/models/shared/hrismetadataschemasvalue32.md
+  - docs/pkg/models/shared/hrismetadataschemasvalue42.md
+  - docs/pkg/models/shared/hrismetadataschemasvalue52.md
   - docs/pkg/models/shared/hrismetadatavalue.md
   - docs/pkg/models/shared/hrispayslip.md
   - docs/pkg/models/shared/hrispayslipdetail.md
@@ -1808,6 +1878,7 @@ generatedFiles:
   - docs/pkg/models/shared/nativewebhookparentid.md
   - docs/pkg/models/shared/nativewebhookprojectid.md
   - docs/pkg/models/shared/objecttype.md
+  - docs/pkg/models/shared/one.md
   - docs/pkg/models/shared/operation.md
   - docs/pkg/models/shared/origin.md
   - docs/pkg/models/shared/paymentcollectionmethod.md
@@ -1932,6 +2003,7 @@ generatedFiles:
   - docs/pkg/models/shared/tasktask.md
   - docs/pkg/models/shared/tasktaskstatus.md
   - docs/pkg/models/shared/taxexemption.md
+  - docs/pkg/models/shared/three.md
   - docs/pkg/models/shared/ticketingcustomer.md
   - docs/pkg/models/shared/ticketingemail.md
   - docs/pkg/models/shared/ticketingemailtype.md
@@ -1940,6 +2012,7 @@ generatedFiles:
   - docs/pkg/models/shared/ticketingtelephonetype.md
   - docs/pkg/models/shared/ticketingticket.md
   - docs/pkg/models/shared/ticketingticketstatus.md
+  - docs/pkg/models/shared/two.md
   - docs/pkg/models/shared/type.md
   - docs/pkg/models/shared/uccall.md
   - docs/pkg/models/shared/uccomment.md

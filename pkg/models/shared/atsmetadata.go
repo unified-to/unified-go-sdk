@@ -2,10 +2,802 @@
 
 package shared
 
-type ExtraData struct {
+import (
+	"errors"
+	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+)
+
+type AtsMetadataSchemasExtraData2 struct {
 }
 
+type FiveType string
+
+const (
+	FiveTypeArrayOfAny                   FiveType = "arrayOfAny"
+	FiveTypeAtsMetadataSchemasExtraData2 FiveType = "AtsMetadata_Schemas_extra_data_2"
+)
+
+type Five struct {
+	ArrayOfAny                   []any                         `queryParam:"inline"`
+	AtsMetadataSchemasExtraData2 *AtsMetadataSchemasExtraData2 `queryParam:"inline"`
+
+	Type FiveType
+}
+
+func CreateFiveArrayOfAny(arrayOfAny []any) Five {
+	typ := FiveTypeArrayOfAny
+
+	return Five{
+		ArrayOfAny: arrayOfAny,
+		Type:       typ,
+	}
+}
+
+func CreateFiveAtsMetadataSchemasExtraData2(atsMetadataSchemasExtraData2 AtsMetadataSchemasExtraData2) Five {
+	typ := FiveTypeAtsMetadataSchemasExtraData2
+
+	return Five{
+		AtsMetadataSchemasExtraData2: &atsMetadataSchemasExtraData2,
+		Type:                         typ,
+	}
+}
+
+func (u *Five) UnmarshalJSON(data []byte) error {
+
+	var atsMetadataSchemasExtraData2 AtsMetadataSchemasExtraData2 = AtsMetadataSchemasExtraData2{}
+	if err := utils.UnmarshalJSON(data, &atsMetadataSchemasExtraData2, "", true, true); err == nil {
+		u.AtsMetadataSchemasExtraData2 = &atsMetadataSchemasExtraData2
+		u.Type = FiveTypeAtsMetadataSchemasExtraData2
+		return nil
+	}
+
+	var arrayOfAny []any = []any{}
+	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
+		u.ArrayOfAny = arrayOfAny
+		u.Type = FiveTypeArrayOfAny
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Five", string(data))
+}
+
+func (u Five) MarshalJSON() ([]byte, error) {
+	if u.ArrayOfAny != nil {
+		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	}
+
+	if u.AtsMetadataSchemasExtraData2 != nil {
+		return utils.MarshalJSON(u.AtsMetadataSchemasExtraData2, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Five: all fields are null")
+}
+
+type AtsMetadataSchemas2 struct {
+}
+
+type FourType string
+
+const (
+	FourTypeBoolean             FourType = "boolean"
+	FourTypeAtsMetadataSchemas2 FourType = "AtsMetadata_Schemas_2"
+)
+
+type Four struct {
+	Boolean             *bool                `queryParam:"inline"`
+	AtsMetadataSchemas2 *AtsMetadataSchemas2 `queryParam:"inline"`
+
+	Type FourType
+}
+
+func CreateFourBoolean(boolean bool) Four {
+	typ := FourTypeBoolean
+
+	return Four{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateFourAtsMetadataSchemas2(atsMetadataSchemas2 AtsMetadataSchemas2) Four {
+	typ := FourTypeAtsMetadataSchemas2
+
+	return Four{
+		AtsMetadataSchemas2: &atsMetadataSchemas2,
+		Type:                typ,
+	}
+}
+
+func (u *Four) UnmarshalJSON(data []byte) error {
+
+	var atsMetadataSchemas2 AtsMetadataSchemas2 = AtsMetadataSchemas2{}
+	if err := utils.UnmarshalJSON(data, &atsMetadataSchemas2, "", true, true); err == nil {
+		u.AtsMetadataSchemas2 = &atsMetadataSchemas2
+		u.Type = FourTypeAtsMetadataSchemas2
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = FourTypeBoolean
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Four", string(data))
+}
+
+func (u Four) MarshalJSON() ([]byte, error) {
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	if u.AtsMetadataSchemas2 != nil {
+		return utils.MarshalJSON(u.AtsMetadataSchemas2, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Four: all fields are null")
+}
+
+type AtsMetadataSchemasExtraData32 struct {
+}
+
+type ThreeType string
+
+const (
+	ThreeTypeNumber                        ThreeType = "number"
+	ThreeTypeAtsMetadataSchemasExtraData32 ThreeType = "AtsMetadata_Schemas_extra_data_3_2"
+)
+
+type Three struct {
+	Number                        *float64                       `queryParam:"inline"`
+	AtsMetadataSchemasExtraData32 *AtsMetadataSchemasExtraData32 `queryParam:"inline"`
+
+	Type ThreeType
+}
+
+func CreateThreeNumber(number float64) Three {
+	typ := ThreeTypeNumber
+
+	return Three{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateThreeAtsMetadataSchemasExtraData32(atsMetadataSchemasExtraData32 AtsMetadataSchemasExtraData32) Three {
+	typ := ThreeTypeAtsMetadataSchemasExtraData32
+
+	return Three{
+		AtsMetadataSchemasExtraData32: &atsMetadataSchemasExtraData32,
+		Type:                          typ,
+	}
+}
+
+func (u *Three) UnmarshalJSON(data []byte) error {
+
+	var atsMetadataSchemasExtraData32 AtsMetadataSchemasExtraData32 = AtsMetadataSchemasExtraData32{}
+	if err := utils.UnmarshalJSON(data, &atsMetadataSchemasExtraData32, "", true, true); err == nil {
+		u.AtsMetadataSchemasExtraData32 = &atsMetadataSchemasExtraData32
+		u.Type = ThreeTypeAtsMetadataSchemasExtraData32
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = ThreeTypeNumber
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Three", string(data))
+}
+
+func (u Three) MarshalJSON() ([]byte, error) {
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.AtsMetadataSchemasExtraData32 != nil {
+		return utils.MarshalJSON(u.AtsMetadataSchemasExtraData32, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Three: all fields are null")
+}
+
+type AtsMetadataSchemasExtraData22 struct {
+}
+
+type TwoType string
+
+const (
+	TwoTypeStr                           TwoType = "str"
+	TwoTypeAtsMetadataSchemasExtraData22 TwoType = "AtsMetadata_Schemas_extra_data_2_2"
+)
+
+type Two struct {
+	Str                           *string                        `queryParam:"inline"`
+	AtsMetadataSchemasExtraData22 *AtsMetadataSchemasExtraData22 `queryParam:"inline"`
+
+	Type TwoType
+}
+
+func CreateTwoStr(str string) Two {
+	typ := TwoTypeStr
+
+	return Two{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateTwoAtsMetadataSchemasExtraData22(atsMetadataSchemasExtraData22 AtsMetadataSchemasExtraData22) Two {
+	typ := TwoTypeAtsMetadataSchemasExtraData22
+
+	return Two{
+		AtsMetadataSchemasExtraData22: &atsMetadataSchemasExtraData22,
+		Type:                          typ,
+	}
+}
+
+func (u *Two) UnmarshalJSON(data []byte) error {
+
+	var atsMetadataSchemasExtraData22 AtsMetadataSchemasExtraData22 = AtsMetadataSchemasExtraData22{}
+	if err := utils.UnmarshalJSON(data, &atsMetadataSchemasExtraData22, "", true, true); err == nil {
+		u.AtsMetadataSchemasExtraData22 = &atsMetadataSchemasExtraData22
+		u.Type = TwoTypeAtsMetadataSchemasExtraData22
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = TwoTypeStr
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Two", string(data))
+}
+
+func (u Two) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.AtsMetadataSchemasExtraData22 != nil {
+		return utils.MarshalJSON(u.AtsMetadataSchemasExtraData22, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Two: all fields are null")
+}
+
+type One struct {
+}
+
+type ExtraDataType string
+
+const (
+	ExtraDataTypeOne   ExtraDataType = "1"
+	ExtraDataTypeTwo   ExtraDataType = "2"
+	ExtraDataTypeThree ExtraDataType = "3"
+	ExtraDataTypeFour  ExtraDataType = "4"
+	ExtraDataTypeFive  ExtraDataType = "5"
+)
+
+type ExtraData struct {
+	One   *One   `queryParam:"inline"`
+	Two   *Two   `queryParam:"inline"`
+	Three *Three `queryParam:"inline"`
+	Four  *Four  `queryParam:"inline"`
+	Five  *Five  `queryParam:"inline"`
+
+	Type ExtraDataType
+}
+
+func CreateExtraDataOne(one One) ExtraData {
+	typ := ExtraDataTypeOne
+
+	return ExtraData{
+		One:  &one,
+		Type: typ,
+	}
+}
+
+func CreateExtraDataTwo(two Two) ExtraData {
+	typ := ExtraDataTypeTwo
+
+	return ExtraData{
+		Two:  &two,
+		Type: typ,
+	}
+}
+
+func CreateExtraDataThree(three Three) ExtraData {
+	typ := ExtraDataTypeThree
+
+	return ExtraData{
+		Three: &three,
+		Type:  typ,
+	}
+}
+
+func CreateExtraDataFour(four Four) ExtraData {
+	typ := ExtraDataTypeFour
+
+	return ExtraData{
+		Four: &four,
+		Type: typ,
+	}
+}
+
+func CreateExtraDataFive(five Five) ExtraData {
+	typ := ExtraDataTypeFive
+
+	return ExtraData{
+		Five: &five,
+		Type: typ,
+	}
+}
+
+func (u *ExtraData) UnmarshalJSON(data []byte) error {
+
+	var one One = One{}
+	if err := utils.UnmarshalJSON(data, &one, "", true, true); err == nil {
+		u.One = &one
+		u.Type = ExtraDataTypeOne
+		return nil
+	}
+
+	var two Two = Two{}
+	if err := utils.UnmarshalJSON(data, &two, "", true, true); err == nil {
+		u.Two = &two
+		u.Type = ExtraDataTypeTwo
+		return nil
+	}
+
+	var three Three = Three{}
+	if err := utils.UnmarshalJSON(data, &three, "", true, true); err == nil {
+		u.Three = &three
+		u.Type = ExtraDataTypeThree
+		return nil
+	}
+
+	var four Four = Four{}
+	if err := utils.UnmarshalJSON(data, &four, "", true, true); err == nil {
+		u.Four = &four
+		u.Type = ExtraDataTypeFour
+		return nil
+	}
+
+	var five Five = Five{}
+	if err := utils.UnmarshalJSON(data, &five, "", true, true); err == nil {
+		u.Five = &five
+		u.Type = ExtraDataTypeFive
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for ExtraData", string(data))
+}
+
+func (u ExtraData) MarshalJSON() ([]byte, error) {
+	if u.One != nil {
+		return utils.MarshalJSON(u.One, "", true)
+	}
+
+	if u.Two != nil {
+		return utils.MarshalJSON(u.Two, "", true)
+	}
+
+	if u.Three != nil {
+		return utils.MarshalJSON(u.Three, "", true)
+	}
+
+	if u.Four != nil {
+		return utils.MarshalJSON(u.Four, "", true)
+	}
+
+	if u.Five != nil {
+		return utils.MarshalJSON(u.Five, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type ExtraData: all fields are null")
+}
+
+type AtsMetadataSchemasValue52 struct {
+}
+
+type AtsMetadata5Type string
+
+const (
+	AtsMetadata5TypeArrayOfAny                AtsMetadata5Type = "arrayOfAny"
+	AtsMetadata5TypeAtsMetadataSchemasValue52 AtsMetadata5Type = "AtsMetadata_Schemas_value_5_2"
+)
+
+type AtsMetadata5 struct {
+	ArrayOfAny                []any                      `queryParam:"inline"`
+	AtsMetadataSchemasValue52 *AtsMetadataSchemasValue52 `queryParam:"inline"`
+
+	Type AtsMetadata5Type
+}
+
+func CreateAtsMetadata5ArrayOfAny(arrayOfAny []any) AtsMetadata5 {
+	typ := AtsMetadata5TypeArrayOfAny
+
+	return AtsMetadata5{
+		ArrayOfAny: arrayOfAny,
+		Type:       typ,
+	}
+}
+
+func CreateAtsMetadata5AtsMetadataSchemasValue52(atsMetadataSchemasValue52 AtsMetadataSchemasValue52) AtsMetadata5 {
+	typ := AtsMetadata5TypeAtsMetadataSchemasValue52
+
+	return AtsMetadata5{
+		AtsMetadataSchemasValue52: &atsMetadataSchemasValue52,
+		Type:                      typ,
+	}
+}
+
+func (u *AtsMetadata5) UnmarshalJSON(data []byte) error {
+
+	var atsMetadataSchemasValue52 AtsMetadataSchemasValue52 = AtsMetadataSchemasValue52{}
+	if err := utils.UnmarshalJSON(data, &atsMetadataSchemasValue52, "", true, true); err == nil {
+		u.AtsMetadataSchemasValue52 = &atsMetadataSchemasValue52
+		u.Type = AtsMetadata5TypeAtsMetadataSchemasValue52
+		return nil
+	}
+
+	var arrayOfAny []any = []any{}
+	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
+		u.ArrayOfAny = arrayOfAny
+		u.Type = AtsMetadata5TypeArrayOfAny
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for AtsMetadata5", string(data))
+}
+
+func (u AtsMetadata5) MarshalJSON() ([]byte, error) {
+	if u.ArrayOfAny != nil {
+		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	}
+
+	if u.AtsMetadataSchemasValue52 != nil {
+		return utils.MarshalJSON(u.AtsMetadataSchemasValue52, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type AtsMetadata5: all fields are null")
+}
+
+type AtsMetadataSchemasValue42 struct {
+}
+
+type AtsMetadata4Type string
+
+const (
+	AtsMetadata4TypeBoolean                   AtsMetadata4Type = "boolean"
+	AtsMetadata4TypeAtsMetadataSchemasValue42 AtsMetadata4Type = "AtsMetadata_Schemas_value_4_2"
+)
+
+type AtsMetadata4 struct {
+	Boolean                   *bool                      `queryParam:"inline"`
+	AtsMetadataSchemasValue42 *AtsMetadataSchemasValue42 `queryParam:"inline"`
+
+	Type AtsMetadata4Type
+}
+
+func CreateAtsMetadata4Boolean(boolean bool) AtsMetadata4 {
+	typ := AtsMetadata4TypeBoolean
+
+	return AtsMetadata4{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateAtsMetadata4AtsMetadataSchemasValue42(atsMetadataSchemasValue42 AtsMetadataSchemasValue42) AtsMetadata4 {
+	typ := AtsMetadata4TypeAtsMetadataSchemasValue42
+
+	return AtsMetadata4{
+		AtsMetadataSchemasValue42: &atsMetadataSchemasValue42,
+		Type:                      typ,
+	}
+}
+
+func (u *AtsMetadata4) UnmarshalJSON(data []byte) error {
+
+	var atsMetadataSchemasValue42 AtsMetadataSchemasValue42 = AtsMetadataSchemasValue42{}
+	if err := utils.UnmarshalJSON(data, &atsMetadataSchemasValue42, "", true, true); err == nil {
+		u.AtsMetadataSchemasValue42 = &atsMetadataSchemasValue42
+		u.Type = AtsMetadata4TypeAtsMetadataSchemasValue42
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = AtsMetadata4TypeBoolean
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for AtsMetadata4", string(data))
+}
+
+func (u AtsMetadata4) MarshalJSON() ([]byte, error) {
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	if u.AtsMetadataSchemasValue42 != nil {
+		return utils.MarshalJSON(u.AtsMetadataSchemasValue42, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type AtsMetadata4: all fields are null")
+}
+
+type AtsMetadataSchemasValue32 struct {
+}
+
+type AtsMetadata3Type string
+
+const (
+	AtsMetadata3TypeNumber                    AtsMetadata3Type = "number"
+	AtsMetadata3TypeAtsMetadataSchemasValue32 AtsMetadata3Type = "AtsMetadata_Schemas_value_3_2"
+)
+
+type AtsMetadata3 struct {
+	Number                    *float64                   `queryParam:"inline"`
+	AtsMetadataSchemasValue32 *AtsMetadataSchemasValue32 `queryParam:"inline"`
+
+	Type AtsMetadata3Type
+}
+
+func CreateAtsMetadata3Number(number float64) AtsMetadata3 {
+	typ := AtsMetadata3TypeNumber
+
+	return AtsMetadata3{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateAtsMetadata3AtsMetadataSchemasValue32(atsMetadataSchemasValue32 AtsMetadataSchemasValue32) AtsMetadata3 {
+	typ := AtsMetadata3TypeAtsMetadataSchemasValue32
+
+	return AtsMetadata3{
+		AtsMetadataSchemasValue32: &atsMetadataSchemasValue32,
+		Type:                      typ,
+	}
+}
+
+func (u *AtsMetadata3) UnmarshalJSON(data []byte) error {
+
+	var atsMetadataSchemasValue32 AtsMetadataSchemasValue32 = AtsMetadataSchemasValue32{}
+	if err := utils.UnmarshalJSON(data, &atsMetadataSchemasValue32, "", true, true); err == nil {
+		u.AtsMetadataSchemasValue32 = &atsMetadataSchemasValue32
+		u.Type = AtsMetadata3TypeAtsMetadataSchemasValue32
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = AtsMetadata3TypeNumber
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for AtsMetadata3", string(data))
+}
+
+func (u AtsMetadata3) MarshalJSON() ([]byte, error) {
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.AtsMetadataSchemasValue32 != nil {
+		return utils.MarshalJSON(u.AtsMetadataSchemasValue32, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type AtsMetadata3: all fields are null")
+}
+
+type AtsMetadataSchemasValue2 struct {
+}
+
+type AtsMetadata2Type string
+
+const (
+	AtsMetadata2TypeStr                      AtsMetadata2Type = "str"
+	AtsMetadata2TypeAtsMetadataSchemasValue2 AtsMetadata2Type = "AtsMetadata_Schemas_value_2"
+)
+
+type AtsMetadata2 struct {
+	Str                      *string                   `queryParam:"inline"`
+	AtsMetadataSchemasValue2 *AtsMetadataSchemasValue2 `queryParam:"inline"`
+
+	Type AtsMetadata2Type
+}
+
+func CreateAtsMetadata2Str(str string) AtsMetadata2 {
+	typ := AtsMetadata2TypeStr
+
+	return AtsMetadata2{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateAtsMetadata2AtsMetadataSchemasValue2(atsMetadataSchemasValue2 AtsMetadataSchemasValue2) AtsMetadata2 {
+	typ := AtsMetadata2TypeAtsMetadataSchemasValue2
+
+	return AtsMetadata2{
+		AtsMetadataSchemasValue2: &atsMetadataSchemasValue2,
+		Type:                     typ,
+	}
+}
+
+func (u *AtsMetadata2) UnmarshalJSON(data []byte) error {
+
+	var atsMetadataSchemasValue2 AtsMetadataSchemasValue2 = AtsMetadataSchemasValue2{}
+	if err := utils.UnmarshalJSON(data, &atsMetadataSchemasValue2, "", true, true); err == nil {
+		u.AtsMetadataSchemasValue2 = &atsMetadataSchemasValue2
+		u.Type = AtsMetadata2TypeAtsMetadataSchemasValue2
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = AtsMetadata2TypeStr
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for AtsMetadata2", string(data))
+}
+
+func (u AtsMetadata2) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.AtsMetadataSchemasValue2 != nil {
+		return utils.MarshalJSON(u.AtsMetadataSchemasValue2, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type AtsMetadata2: all fields are null")
+}
+
+type AtsMetadata1 struct {
+}
+
+type ValueType string
+
+const (
+	ValueTypeAtsMetadata1 ValueType = "AtsMetadata_1"
+	ValueTypeAtsMetadata2 ValueType = "AtsMetadata_2"
+	ValueTypeAtsMetadata3 ValueType = "AtsMetadata_3"
+	ValueTypeAtsMetadata4 ValueType = "AtsMetadata_4"
+	ValueTypeAtsMetadata5 ValueType = "AtsMetadata_5"
+)
+
 type Value struct {
+	AtsMetadata1 *AtsMetadata1 `queryParam:"inline"`
+	AtsMetadata2 *AtsMetadata2 `queryParam:"inline"`
+	AtsMetadata3 *AtsMetadata3 `queryParam:"inline"`
+	AtsMetadata4 *AtsMetadata4 `queryParam:"inline"`
+	AtsMetadata5 *AtsMetadata5 `queryParam:"inline"`
+
+	Type ValueType
+}
+
+func CreateValueAtsMetadata1(atsMetadata1 AtsMetadata1) Value {
+	typ := ValueTypeAtsMetadata1
+
+	return Value{
+		AtsMetadata1: &atsMetadata1,
+		Type:         typ,
+	}
+}
+
+func CreateValueAtsMetadata2(atsMetadata2 AtsMetadata2) Value {
+	typ := ValueTypeAtsMetadata2
+
+	return Value{
+		AtsMetadata2: &atsMetadata2,
+		Type:         typ,
+	}
+}
+
+func CreateValueAtsMetadata3(atsMetadata3 AtsMetadata3) Value {
+	typ := ValueTypeAtsMetadata3
+
+	return Value{
+		AtsMetadata3: &atsMetadata3,
+		Type:         typ,
+	}
+}
+
+func CreateValueAtsMetadata4(atsMetadata4 AtsMetadata4) Value {
+	typ := ValueTypeAtsMetadata4
+
+	return Value{
+		AtsMetadata4: &atsMetadata4,
+		Type:         typ,
+	}
+}
+
+func CreateValueAtsMetadata5(atsMetadata5 AtsMetadata5) Value {
+	typ := ValueTypeAtsMetadata5
+
+	return Value{
+		AtsMetadata5: &atsMetadata5,
+		Type:         typ,
+	}
+}
+
+func (u *Value) UnmarshalJSON(data []byte) error {
+
+	var atsMetadata1 AtsMetadata1 = AtsMetadata1{}
+	if err := utils.UnmarshalJSON(data, &atsMetadata1, "", true, true); err == nil {
+		u.AtsMetadata1 = &atsMetadata1
+		u.Type = ValueTypeAtsMetadata1
+		return nil
+	}
+
+	var atsMetadata2 AtsMetadata2 = AtsMetadata2{}
+	if err := utils.UnmarshalJSON(data, &atsMetadata2, "", true, true); err == nil {
+		u.AtsMetadata2 = &atsMetadata2
+		u.Type = ValueTypeAtsMetadata2
+		return nil
+	}
+
+	var atsMetadata3 AtsMetadata3 = AtsMetadata3{}
+	if err := utils.UnmarshalJSON(data, &atsMetadata3, "", true, true); err == nil {
+		u.AtsMetadata3 = &atsMetadata3
+		u.Type = ValueTypeAtsMetadata3
+		return nil
+	}
+
+	var atsMetadata4 AtsMetadata4 = AtsMetadata4{}
+	if err := utils.UnmarshalJSON(data, &atsMetadata4, "", true, true); err == nil {
+		u.AtsMetadata4 = &atsMetadata4
+		u.Type = ValueTypeAtsMetadata4
+		return nil
+	}
+
+	var atsMetadata5 AtsMetadata5 = AtsMetadata5{}
+	if err := utils.UnmarshalJSON(data, &atsMetadata5, "", true, true); err == nil {
+		u.AtsMetadata5 = &atsMetadata5
+		u.Type = ValueTypeAtsMetadata5
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Value", string(data))
+}
+
+func (u Value) MarshalJSON() ([]byte, error) {
+	if u.AtsMetadata1 != nil {
+		return utils.MarshalJSON(u.AtsMetadata1, "", true)
+	}
+
+	if u.AtsMetadata2 != nil {
+		return utils.MarshalJSON(u.AtsMetadata2, "", true)
+	}
+
+	if u.AtsMetadata3 != nil {
+		return utils.MarshalJSON(u.AtsMetadata3, "", true)
+	}
+
+	if u.AtsMetadata4 != nil {
+		return utils.MarshalJSON(u.AtsMetadata4, "", true)
+	}
+
+	if u.AtsMetadata5 != nil {
+		return utils.MarshalJSON(u.AtsMetadata5, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Value: all fields are null")
 }
 
 type AtsMetadata struct {
