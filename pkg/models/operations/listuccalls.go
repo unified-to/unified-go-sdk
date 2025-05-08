@@ -11,8 +11,9 @@ import (
 
 type ListUcCallsRequest struct {
 	// ID of the connection
-	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
-	ContactID    *string `queryParam:"style=form,explode=true,name=contact_id"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The contact ID to filter by
+	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -25,7 +26,8 @@ type ListUcCallsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
+	// The user/employee ID to filter by
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListUcCallsRequest) MarshalJSON() ([]byte, error) {

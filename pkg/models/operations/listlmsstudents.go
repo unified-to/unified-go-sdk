@@ -10,22 +10,24 @@ import (
 )
 
 type ListLmsStudentsRequest struct {
+	// The class ID to filter by
 	ClassID *string `queryParam:"style=form,explode=true,name=class_id"`
 	// ID of the connection
-	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
-	CourseID     *string `queryParam:"style=form,explode=true,name=course_id"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The course ID to filter by
+	CourseID *string `queryParam:"style=form,explode=true,name=course_id"`
 	// Comma-delimited fields to return
-	Fields     []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit      *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
+	// The location ID to filter by
 	LocationID *string  `queryParam:"style=form,explode=true,name=location_id"`
 	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order      *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-	Raw       *string `queryParam:"style=form,explode=true,name=raw"`
-	SessionID *string `queryParam:"style=form,explode=true,name=session_id"`
-	Sort      *string `queryParam:"style=form,explode=true,name=sort"`
+	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -109,13 +111,6 @@ func (o *ListLmsStudentsRequest) GetRaw() *string {
 		return nil
 	}
 	return o.Raw
-}
-
-func (o *ListLmsStudentsRequest) GetSessionID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.SessionID
 }
 
 func (o *ListLmsStudentsRequest) GetSort() *string {

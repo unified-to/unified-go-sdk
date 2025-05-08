@@ -10,6 +10,7 @@ import (
 )
 
 type ListCommerceItemsRequest struct {
+	// The collection ID to filter by
 	CollectionID *string `queryParam:"style=form,explode=true,name=collection_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

@@ -11,10 +11,12 @@ import (
 
 type ListPaymentPaymentsRequest struct {
 	// ID of the connection
-	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
-	ContactID    *string `queryParam:"style=form,explode=true,name=contact_id"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The contact ID to filter by
+	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
-	Fields    []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	// The invoice ID to filter by
 	InvoiceID *string  `queryParam:"style=form,explode=true,name=invoice_id"`
 	Limit     *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset    *float64 `queryParam:"style=form,explode=true,name=offset"`

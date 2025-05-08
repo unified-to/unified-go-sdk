@@ -13,12 +13,14 @@ type ListCommerceInventoriesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields        []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	// The item variant ID to filter by
 	ItemVariantID *string  `queryParam:"style=form,explode=true,name=item_variant_id"`
 	Limit         *float64 `queryParam:"style=form,explode=true,name=limit"`
-	LocationID    *string  `queryParam:"style=form,explode=true,name=location_id"`
-	Offset        *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order         *string  `queryParam:"style=form,explode=true,name=order"`
+	// The location ID to filter by
+	LocationID *string  `queryParam:"style=form,explode=true,name=location_id"`
+	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order      *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar

@@ -11,8 +11,9 @@ import (
 
 type ListTicketingTicketsRequest struct {
 	// ID of the connection
-	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
-	CustomerID   *string `queryParam:"style=form,explode=true,name=customer_id"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The customer ID to filter by
+	CustomerID *string `queryParam:"style=form,explode=true,name=customer_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -25,7 +26,8 @@ type ListTicketingTicketsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
+	// The user/employee ID to filter by
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListTicketingTicketsRequest) MarshalJSON() ([]byte, error) {

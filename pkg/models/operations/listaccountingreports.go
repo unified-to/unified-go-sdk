@@ -11,8 +11,9 @@ import (
 
 type ListAccountingReportsRequest struct {
 	// ID of the connection
-	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
-	EndLe        *string `queryParam:"style=form,explode=true,name=end_le"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The end date to filter by
+	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -21,8 +22,9 @@ type ListAccountingReportsRequest struct {
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-	Raw      *string `queryParam:"style=form,explode=true,name=raw"`
-	Sort     *string `queryParam:"style=form,explode=true,name=sort"`
+	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The start date to filter by
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	Type     *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value

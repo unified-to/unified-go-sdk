@@ -10,11 +10,14 @@ import (
 )
 
 type ListLmsCoursesRequest struct {
-	ClassID   *string `queryParam:"style=form,explode=true,name=class_id"`
+	// The class ID to filter by
+	ClassID *string `queryParam:"style=form,explode=true,name=class_id"`
+	// The company ID to filter by
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
-	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
-	CourseID     *string `queryParam:"style=form,explode=true,name=course_id"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The course ID to filter by
+	CourseID *string `queryParam:"style=form,explode=true,name=course_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`

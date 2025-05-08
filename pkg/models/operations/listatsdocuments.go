@@ -10,12 +10,15 @@ import (
 )
 
 type ListAtsDocumentsRequest struct {
+	// The application ID to filter by
 	ApplicationID *string `queryParam:"style=form,explode=true,name=application_id"`
-	CandidateID   *string `queryParam:"style=form,explode=true,name=candidate_id"`
+	// The candidate ID to filter by
+	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	// The job ID to filter by
 	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`

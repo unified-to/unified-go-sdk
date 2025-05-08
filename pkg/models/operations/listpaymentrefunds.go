@@ -13,11 +13,12 @@ type ListPaymentRefundsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields    []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit     *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset    *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order     *string  `queryParam:"style=form,explode=true,name=order"`
-	PaymentID *string  `queryParam:"style=form,explode=true,name=payment_id"`
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	// The payment ID to filter by
+	PaymentID *string `queryParam:"style=form,explode=true,name=payment_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar

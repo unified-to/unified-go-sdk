@@ -10,6 +10,7 @@ import (
 )
 
 type ListHrisTimeoffsRequest struct {
+	// The company ID to filter by
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
@@ -25,7 +26,8 @@ type ListHrisTimeoffsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
+	// The user/employee ID to filter by
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListHrisTimeoffsRequest) MarshalJSON() ([]byte, error) {

@@ -24,7 +24,8 @@ type ListUcContactsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
+	// The user/employee ID to filter by
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListUcContactsRequest) MarshalJSON() ([]byte, error) {

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 2625a6ddd69ded1a0dfa97e04747a5af
+  docChecksum: 1cbf51aa4a732ad7a3160606fa7ef127
   docVersion: "1.0"
   speakeasyVersion: 1.542.3
   generationVersion: 2.597.9
-  releaseVersion: 0.24.0
-  configChecksum: 926a3134eaf5deef48c813a0b73bf1f0
+  releaseVersion: 0.24.1
+  configChecksum: dbd8ae7a69716dd08496b938a0e0e7e4
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -53,6 +53,7 @@ generatedFiles:
   - /pkg/models/operations/createcommerceinventory.go
   - /pkg/models/operations/createcommerceitem.go
   - /pkg/models/operations/createcommercelocation.go
+  - /pkg/models/operations/createcommercereview.go
   - /pkg/models/operations/createcrmcompany.go
   - /pkg/models/operations/createcrmcontact.go
   - /pkg/models/operations/createcrmdeal.go
@@ -125,6 +126,7 @@ generatedFiles:
   - /pkg/models/operations/getcommerceinventory.go
   - /pkg/models/operations/getcommerceitem.go
   - /pkg/models/operations/getcommercelocation.go
+  - /pkg/models/operations/getcommercereview.go
   - /pkg/models/operations/getcrmcompany.go
   - /pkg/models/operations/getcrmcontact.go
   - /pkg/models/operations/getcrmdeal.go
@@ -204,6 +206,7 @@ generatedFiles:
   - /pkg/models/operations/listcommerceinventories.go
   - /pkg/models/operations/listcommerceitems.go
   - /pkg/models/operations/listcommercelocations.go
+  - /pkg/models/operations/listcommercereviews.go
   - /pkg/models/operations/listcrmcompanies.go
   - /pkg/models/operations/listcrmcontacts.go
   - /pkg/models/operations/listcrmdeals.go
@@ -283,6 +286,7 @@ generatedFiles:
   - /pkg/models/operations/patchcommerceinventory.go
   - /pkg/models/operations/patchcommerceitem.go
   - /pkg/models/operations/patchcommercelocation.go
+  - /pkg/models/operations/patchcommercereview.go
   - /pkg/models/operations/patchcrmcompany.go
   - /pkg/models/operations/patchcrmcontact.go
   - /pkg/models/operations/patchcrmdeal.go
@@ -351,6 +355,7 @@ generatedFiles:
   - /pkg/models/operations/removecommerceinventory.go
   - /pkg/models/operations/removecommerceitem.go
   - /pkg/models/operations/removecommercelocation.go
+  - /pkg/models/operations/removecommercereview.go
   - /pkg/models/operations/removecrmcompany.go
   - /pkg/models/operations/removecrmcontact.go
   - /pkg/models/operations/removecrmdeal.go
@@ -417,6 +422,7 @@ generatedFiles:
   - /pkg/models/operations/updatecommerceinventory.go
   - /pkg/models/operations/updatecommerceitem.go
   - /pkg/models/operations/updatecommercelocation.go
+  - /pkg/models/operations/updatecommercereview.go
   - /pkg/models/operations/updatecrmcompany.go
   - /pkg/models/operations/updatecrmcontact.go
   - /pkg/models/operations/updatecrmdeal.go
@@ -527,6 +533,8 @@ generatedFiles:
   - /pkg/models/shared/commerceitemvariant.go
   - /pkg/models/shared/commercelocation.go
   - /pkg/models/shared/commercemetadata.go
+  - /pkg/models/shared/commercereview.go
+  - /pkg/models/shared/commercereviewcomment.go
   - /pkg/models/shared/connection.go
   - /pkg/models/shared/crmcompany.go
   - /pkg/models/shared/crmcontact.go
@@ -750,6 +758,8 @@ generatedFiles:
   - docs/pkg/models/operations/createcommerceitemresponse.md
   - docs/pkg/models/operations/createcommercelocationrequest.md
   - docs/pkg/models/operations/createcommercelocationresponse.md
+  - docs/pkg/models/operations/createcommercereviewrequest.md
+  - docs/pkg/models/operations/createcommercereviewresponse.md
   - docs/pkg/models/operations/createcrmcompanyrequest.md
   - docs/pkg/models/operations/createcrmcompanyresponse.md
   - docs/pkg/models/operations/createcrmcontactrequest.md
@@ -893,6 +903,8 @@ generatedFiles:
   - docs/pkg/models/operations/getcommerceitemresponse.md
   - docs/pkg/models/operations/getcommercelocationrequest.md
   - docs/pkg/models/operations/getcommercelocationresponse.md
+  - docs/pkg/models/operations/getcommercereviewrequest.md
+  - docs/pkg/models/operations/getcommercereviewresponse.md
   - docs/pkg/models/operations/getcrmcompanyrequest.md
   - docs/pkg/models/operations/getcrmcompanyresponse.md
   - docs/pkg/models/operations/getcrmcontactrequest.md
@@ -1051,6 +1063,8 @@ generatedFiles:
   - docs/pkg/models/operations/listcommerceitemsresponse.md
   - docs/pkg/models/operations/listcommercelocationsrequest.md
   - docs/pkg/models/operations/listcommercelocationsresponse.md
+  - docs/pkg/models/operations/listcommercereviewsrequest.md
+  - docs/pkg/models/operations/listcommercereviewsresponse.md
   - docs/pkg/models/operations/listcrmcompaniesrequest.md
   - docs/pkg/models/operations/listcrmcompaniesresponse.md
   - docs/pkg/models/operations/listcrmcontactsrequest.md
@@ -1211,6 +1225,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchcommerceitemresponse.md
   - docs/pkg/models/operations/patchcommercelocationrequest.md
   - docs/pkg/models/operations/patchcommercelocationresponse.md
+  - docs/pkg/models/operations/patchcommercereviewrequest.md
+  - docs/pkg/models/operations/patchcommercereviewresponse.md
   - docs/pkg/models/operations/patchcrmcompanyrequest.md
   - docs/pkg/models/operations/patchcrmcompanyresponse.md
   - docs/pkg/models/operations/patchcrmcontactrequest.md
@@ -1348,6 +1364,8 @@ generatedFiles:
   - docs/pkg/models/operations/removecommerceitemresponse.md
   - docs/pkg/models/operations/removecommercelocationrequest.md
   - docs/pkg/models/operations/removecommercelocationresponse.md
+  - docs/pkg/models/operations/removecommercereviewrequest.md
+  - docs/pkg/models/operations/removecommercereviewresponse.md
   - docs/pkg/models/operations/removecrmcompanyrequest.md
   - docs/pkg/models/operations/removecrmcompanyresponse.md
   - docs/pkg/models/operations/removecrmcontactrequest.md
@@ -1480,6 +1498,8 @@ generatedFiles:
   - docs/pkg/models/operations/updatecommerceitemresponse.md
   - docs/pkg/models/operations/updatecommercelocationrequest.md
   - docs/pkg/models/operations/updatecommercelocationresponse.md
+  - docs/pkg/models/operations/updatecommercereviewrequest.md
+  - docs/pkg/models/operations/updatecommercereviewresponse.md
   - docs/pkg/models/operations/updatecrmcompanyrequest.md
   - docs/pkg/models/operations/updatecrmcompanyresponse.md
   - docs/pkg/models/operations/updatecrmcontactrequest.md
@@ -1696,6 +1716,10 @@ generatedFiles:
   - docs/pkg/models/shared/commercemetadataschemasvalue42.md
   - docs/pkg/models/shared/commercemetadataschemasvalue52.md
   - docs/pkg/models/shared/commercemetadatavalue.md
+  - docs/pkg/models/shared/commercereview.md
+  - docs/pkg/models/shared/commercereviewcomment.md
+  - docs/pkg/models/shared/commercereviewcommentstatus.md
+  - docs/pkg/models/shared/commercereviewstatus.md
   - docs/pkg/models/shared/connection.md
   - docs/pkg/models/shared/contenttype.md
   - docs/pkg/models/shared/crmcompany.md
@@ -2114,6 +2138,7 @@ generatedFiles:
   - docs/sdks/repo/README.md
   - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
+  - docs/sdks/review/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/space/README.md
@@ -2200,6 +2225,7 @@ generatedFiles:
   - repo.go
   - report.go
   - repository.go
+  - review.go
   - scim.go
   - scorecard.go
   - space.go
@@ -6488,5 +6514,65 @@ examples:
       responses:
         "200":
           application/json: {"content": "<value>"}
+  createCommerceReview:
+    speakeasy-default-create-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"item_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
+  getCommerceReview:
+    speakeasy-default-get-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
+  listCommerceReviews:
+    speakeasy-default-list-commerce-reviews:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"item_id": "<id>"}, {"item_id": "<id>"}, {"item_id": "<id>"}]
+  patchCommerceReview:
+    speakeasy-default-patch-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"item_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
+  removeCommerceReview:
+    speakeasy-default-remove-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceReview:
+    speakeasy-default-update-commerce-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"item_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"item_id": "<id>"}
 examplesVersion: 1.0.1
 generatedTests: {}

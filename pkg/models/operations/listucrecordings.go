@@ -10,10 +10,14 @@ import (
 )
 
 type ListUcRecordingsRequest struct {
+	// The call ID to filter by
 	CallID *string `queryParam:"style=form,explode=true,name=call_id"`
 	// ID of the connection
-	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
-	EndLe        *string `queryParam:"style=form,explode=true,name=end_le"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The contact ID to filter by
+	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
+	// The end date to filter by
+	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -22,12 +26,14 @@ type ListUcRecordingsRequest struct {
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-	Raw      *string `queryParam:"style=form,explode=true,name=raw"`
-	Sort     *string `queryParam:"style=form,explode=true,name=sort"`
+	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The start date to filter by
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
+	// The user/employee ID to filter by
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListUcRecordingsRequest) MarshalJSON() ([]byte, error) {
@@ -53,6 +59,13 @@ func (o *ListUcRecordingsRequest) GetConnectionID() string {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *ListUcRecordingsRequest) GetContactID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ContactID
 }
 
 func (o *ListUcRecordingsRequest) GetEndLe() *string {

@@ -104,6 +104,7 @@ type UnifiedTo struct {
 	Inventory         *Inventory
 	Item              *Item
 	Location          *Location
+	Review            *Review
 	Crm               *Crm
 	Deal              *Deal
 	Lead              *Lead
@@ -243,9 +244,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.24.0",
+			SDKVersion:        "0.24.1",
 			GenVersion:        "2.597.9",
-			UserAgent:         "speakeasy-sdk/go 0.24.0 2.597.9 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:         "speakeasy-sdk/go 0.24.1 2.597.9 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -324,6 +325,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Item = newItem(sdk.sdkConfiguration)
 
 	sdk.Location = newLocation(sdk.sdkConfiguration)
+
+	sdk.Review = newReview(sdk.sdkConfiguration)
 
 	sdk.Crm = newCrm(sdk.sdkConfiguration)
 

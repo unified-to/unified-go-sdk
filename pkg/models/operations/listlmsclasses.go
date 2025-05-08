@@ -11,11 +11,13 @@ import (
 
 type ListLmsClassesRequest struct {
 	// ID of the connection
-	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
-	CourseID     *string `queryParam:"style=form,explode=true,name=course_id"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The course ID to filter by
+	CourseID *string `queryParam:"style=form,explode=true,name=course_id"`
 	// Comma-delimited fields to return
-	Fields     []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit      *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
+	// The location ID to filter by
 	LocationID *string  `queryParam:"style=form,explode=true,name=location_id"`
 	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order      *string  `queryParam:"style=form,explode=true,name=order"`

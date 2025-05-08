@@ -10,6 +10,7 @@ import (
 )
 
 type ListHrisEmployeesRequest struct {
+	// The company ID to filter by
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

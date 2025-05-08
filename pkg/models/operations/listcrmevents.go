@@ -10,13 +10,17 @@ import (
 )
 
 type ListCrmEventsRequest struct {
+	// The company ID to filter by
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
-	ConnectionID string  `pathParam:"style=simple,explode=false,name=connection_id"`
-	ContactID    *string `queryParam:"style=form,explode=true,name=contact_id"`
-	DealID       *string `queryParam:"style=form,explode=true,name=deal_id"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The contact ID to filter by
+	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
+	// The deal ID to filter by
+	DealID *string `queryParam:"style=form,explode=true,name=deal_id"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	// The CRM lead ID to filter by
 	LeadID *string  `queryParam:"style=form,explode=true,name=lead_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
@@ -29,7 +33,8 @@ type ListCrmEventsRequest struct {
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-	UserID     *string    `queryParam:"style=form,explode=true,name=user_id"`
+	// The user/employee ID to filter by
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l ListCrmEventsRequest) MarshalJSON() ([]byte, error) {
