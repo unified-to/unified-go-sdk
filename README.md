@@ -1330,7 +1330,7 @@ func main() {
 	ctx := context.Background()
 
 	s := unifiedgosdk.New(
-		unifiedgosdk.WithServerURL("https://api.unified.to"),
+		unifiedgosdk.WithServerURL("https://api-au.unified.to"),
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 

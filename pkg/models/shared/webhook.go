@@ -94,6 +94,7 @@ const (
 	ObjectTypeCommerceCollection     ObjectType = "commerce_collection"
 	ObjectTypeCommerceInventory      ObjectType = "commerce_inventory"
 	ObjectTypeCommerceLocation       ObjectType = "commerce_location"
+	ObjectTypeCommerceReview         ObjectType = "commerce_review"
 	ObjectTypeAtsActivity            ObjectType = "ats_activity"
 	ObjectTypeAtsApplication         ObjectType = "ats_application"
 	ObjectTypeAtsApplicationstatus   ObjectType = "ats_applicationstatus"
@@ -202,6 +203,8 @@ func (e *ObjectType) UnmarshalJSON(data []byte) error {
 	case "commerce_inventory":
 		fallthrough
 	case "commerce_location":
+		fallthrough
+	case "commerce_review":
 		fallthrough
 	case "ats_activity":
 		fallthrough

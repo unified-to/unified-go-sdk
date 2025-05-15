@@ -3,16 +3,1206 @@
 package shared
 
 import (
+	"errors"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
 
+type IntegrationSchemasAPI52 struct {
+}
+
+type Integration5Type string
+
+const (
+	Integration5TypeArrayOfAny              Integration5Type = "arrayOfAny"
+	Integration5TypeIntegrationSchemasAPI52 Integration5Type = "Integration_Schemas_api_5_2"
+)
+
+type Integration5 struct {
+	ArrayOfAny              []any                    `queryParam:"inline"`
+	IntegrationSchemasAPI52 *IntegrationSchemasAPI52 `queryParam:"inline"`
+
+	Type Integration5Type
+}
+
+func CreateIntegration5ArrayOfAny(arrayOfAny []any) Integration5 {
+	typ := Integration5TypeArrayOfAny
+
+	return Integration5{
+		ArrayOfAny: arrayOfAny,
+		Type:       typ,
+	}
+}
+
+func CreateIntegration5IntegrationSchemasAPI52(integrationSchemasAPI52 IntegrationSchemasAPI52) Integration5 {
+	typ := Integration5TypeIntegrationSchemasAPI52
+
+	return Integration5{
+		IntegrationSchemasAPI52: &integrationSchemasAPI52,
+		Type:                    typ,
+	}
+}
+
+func (u *Integration5) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasAPI52 IntegrationSchemasAPI52 = IntegrationSchemasAPI52{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasAPI52, "", true, true); err == nil {
+		u.IntegrationSchemasAPI52 = &integrationSchemasAPI52
+		u.Type = Integration5TypeIntegrationSchemasAPI52
+		return nil
+	}
+
+	var arrayOfAny []any = []any{}
+	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
+		u.ArrayOfAny = arrayOfAny
+		u.Type = Integration5TypeArrayOfAny
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Integration5", string(data))
+}
+
+func (u Integration5) MarshalJSON() ([]byte, error) {
+	if u.ArrayOfAny != nil {
+		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	}
+
+	if u.IntegrationSchemasAPI52 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasAPI52, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Integration5: all fields are null")
+}
+
+type IntegrationSchemasAPI2 struct {
+}
+
+type Integration4Type string
+
+const (
+	Integration4TypeBoolean                Integration4Type = "boolean"
+	Integration4TypeIntegrationSchemasAPI2 Integration4Type = "Integration_Schemas_api_2"
+)
+
+type Integration4 struct {
+	Boolean                *bool                   `queryParam:"inline"`
+	IntegrationSchemasAPI2 *IntegrationSchemasAPI2 `queryParam:"inline"`
+
+	Type Integration4Type
+}
+
+func CreateIntegration4Boolean(boolean bool) Integration4 {
+	typ := Integration4TypeBoolean
+
+	return Integration4{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateIntegration4IntegrationSchemasAPI2(integrationSchemasAPI2 IntegrationSchemasAPI2) Integration4 {
+	typ := Integration4TypeIntegrationSchemasAPI2
+
+	return Integration4{
+		IntegrationSchemasAPI2: &integrationSchemasAPI2,
+		Type:                   typ,
+	}
+}
+
+func (u *Integration4) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasAPI2 IntegrationSchemasAPI2 = IntegrationSchemasAPI2{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasAPI2, "", true, true); err == nil {
+		u.IntegrationSchemasAPI2 = &integrationSchemasAPI2
+		u.Type = Integration4TypeIntegrationSchemasAPI2
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = Integration4TypeBoolean
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Integration4", string(data))
+}
+
+func (u Integration4) MarshalJSON() ([]byte, error) {
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	if u.IntegrationSchemasAPI2 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasAPI2, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Integration4: all fields are null")
+}
+
+type IntegrationSchemasAPI32 struct {
+}
+
+type Integration3Type string
+
+const (
+	Integration3TypeNumber                  Integration3Type = "number"
+	Integration3TypeIntegrationSchemasAPI32 Integration3Type = "Integration_Schemas_api_3_2"
+)
+
+type Integration3 struct {
+	Number                  *float64                 `queryParam:"inline"`
+	IntegrationSchemasAPI32 *IntegrationSchemasAPI32 `queryParam:"inline"`
+
+	Type Integration3Type
+}
+
+func CreateIntegration3Number(number float64) Integration3 {
+	typ := Integration3TypeNumber
+
+	return Integration3{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateIntegration3IntegrationSchemasAPI32(integrationSchemasAPI32 IntegrationSchemasAPI32) Integration3 {
+	typ := Integration3TypeIntegrationSchemasAPI32
+
+	return Integration3{
+		IntegrationSchemasAPI32: &integrationSchemasAPI32,
+		Type:                    typ,
+	}
+}
+
+func (u *Integration3) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasAPI32 IntegrationSchemasAPI32 = IntegrationSchemasAPI32{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasAPI32, "", true, true); err == nil {
+		u.IntegrationSchemasAPI32 = &integrationSchemasAPI32
+		u.Type = Integration3TypeIntegrationSchemasAPI32
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = Integration3TypeNumber
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Integration3", string(data))
+}
+
+func (u Integration3) MarshalJSON() ([]byte, error) {
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.IntegrationSchemasAPI32 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasAPI32, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Integration3: all fields are null")
+}
+
+type IntegrationSchemasAPI22 struct {
+}
+
+type Integration2Type string
+
+const (
+	Integration2TypeStr                     Integration2Type = "str"
+	Integration2TypeIntegrationSchemasAPI22 Integration2Type = "Integration_Schemas_api_2_2"
+)
+
+type Integration2 struct {
+	Str                     *string                  `queryParam:"inline"`
+	IntegrationSchemasAPI22 *IntegrationSchemasAPI22 `queryParam:"inline"`
+
+	Type Integration2Type
+}
+
+func CreateIntegration2Str(str string) Integration2 {
+	typ := Integration2TypeStr
+
+	return Integration2{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateIntegration2IntegrationSchemasAPI22(integrationSchemasAPI22 IntegrationSchemasAPI22) Integration2 {
+	typ := Integration2TypeIntegrationSchemasAPI22
+
+	return Integration2{
+		IntegrationSchemasAPI22: &integrationSchemasAPI22,
+		Type:                    typ,
+	}
+}
+
+func (u *Integration2) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasAPI22 IntegrationSchemasAPI22 = IntegrationSchemasAPI22{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasAPI22, "", true, true); err == nil {
+		u.IntegrationSchemasAPI22 = &integrationSchemasAPI22
+		u.Type = Integration2TypeIntegrationSchemasAPI22
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = Integration2TypeStr
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Integration2", string(data))
+}
+
+func (u Integration2) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.IntegrationSchemasAPI22 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasAPI22, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Integration2: all fields are null")
+}
+
+type Integration1 struct {
+}
+
+type APIType string
+
+const (
+	APITypeIntegration1 APIType = "Integration_1"
+	APITypeIntegration2 APIType = "Integration_2"
+	APITypeIntegration3 APIType = "Integration_3"
+	APITypeIntegration4 APIType = "Integration_4"
+	APITypeIntegration5 APIType = "Integration_5"
+)
+
+type API struct {
+	Integration1 *Integration1 `queryParam:"inline"`
+	Integration2 *Integration2 `queryParam:"inline"`
+	Integration3 *Integration3 `queryParam:"inline"`
+	Integration4 *Integration4 `queryParam:"inline"`
+	Integration5 *Integration5 `queryParam:"inline"`
+
+	Type APIType
+}
+
+func CreateAPIIntegration1(integration1 Integration1) API {
+	typ := APITypeIntegration1
+
+	return API{
+		Integration1: &integration1,
+		Type:         typ,
+	}
+}
+
+func CreateAPIIntegration2(integration2 Integration2) API {
+	typ := APITypeIntegration2
+
+	return API{
+		Integration2: &integration2,
+		Type:         typ,
+	}
+}
+
+func CreateAPIIntegration3(integration3 Integration3) API {
+	typ := APITypeIntegration3
+
+	return API{
+		Integration3: &integration3,
+		Type:         typ,
+	}
+}
+
+func CreateAPIIntegration4(integration4 Integration4) API {
+	typ := APITypeIntegration4
+
+	return API{
+		Integration4: &integration4,
+		Type:         typ,
+	}
+}
+
+func CreateAPIIntegration5(integration5 Integration5) API {
+	typ := APITypeIntegration5
+
+	return API{
+		Integration5: &integration5,
+		Type:         typ,
+	}
+}
+
+func (u *API) UnmarshalJSON(data []byte) error {
+
+	var integration1 Integration1 = Integration1{}
+	if err := utils.UnmarshalJSON(data, &integration1, "", true, true); err == nil {
+		u.Integration1 = &integration1
+		u.Type = APITypeIntegration1
+		return nil
+	}
+
+	var integration2 Integration2 = Integration2{}
+	if err := utils.UnmarshalJSON(data, &integration2, "", true, true); err == nil {
+		u.Integration2 = &integration2
+		u.Type = APITypeIntegration2
+		return nil
+	}
+
+	var integration3 Integration3 = Integration3{}
+	if err := utils.UnmarshalJSON(data, &integration3, "", true, true); err == nil {
+		u.Integration3 = &integration3
+		u.Type = APITypeIntegration3
+		return nil
+	}
+
+	var integration4 Integration4 = Integration4{}
+	if err := utils.UnmarshalJSON(data, &integration4, "", true, true); err == nil {
+		u.Integration4 = &integration4
+		u.Type = APITypeIntegration4
+		return nil
+	}
+
+	var integration5 Integration5 = Integration5{}
+	if err := utils.UnmarshalJSON(data, &integration5, "", true, true); err == nil {
+		u.Integration5 = &integration5
+		u.Type = APITypeIntegration5
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for API", string(data))
+}
+
+func (u API) MarshalJSON() ([]byte, error) {
+	if u.Integration1 != nil {
+		return utils.MarshalJSON(u.Integration1, "", true)
+	}
+
+	if u.Integration2 != nil {
+		return utils.MarshalJSON(u.Integration2, "", true)
+	}
+
+	if u.Integration3 != nil {
+		return utils.MarshalJSON(u.Integration3, "", true)
+	}
+
+	if u.Integration4 != nil {
+		return utils.MarshalJSON(u.Integration4, "", true)
+	}
+
+	if u.Integration5 != nil {
+		return utils.MarshalJSON(u.Integration5, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type API: all fields are null")
+}
+
+type IntegrationSchemasPartnership52 struct {
+}
+
+type IntegrationSchemas5Type string
+
+const (
+	IntegrationSchemas5TypeArrayOfAny                      IntegrationSchemas5Type = "arrayOfAny"
+	IntegrationSchemas5TypeIntegrationSchemasPartnership52 IntegrationSchemas5Type = "Integration_Schemas_partnership_5_2"
+)
+
+type IntegrationSchemas5 struct {
+	ArrayOfAny                      []any                            `queryParam:"inline"`
+	IntegrationSchemasPartnership52 *IntegrationSchemasPartnership52 `queryParam:"inline"`
+
+	Type IntegrationSchemas5Type
+}
+
+func CreateIntegrationSchemas5ArrayOfAny(arrayOfAny []any) IntegrationSchemas5 {
+	typ := IntegrationSchemas5TypeArrayOfAny
+
+	return IntegrationSchemas5{
+		ArrayOfAny: arrayOfAny,
+		Type:       typ,
+	}
+}
+
+func CreateIntegrationSchemas5IntegrationSchemasPartnership52(integrationSchemasPartnership52 IntegrationSchemasPartnership52) IntegrationSchemas5 {
+	typ := IntegrationSchemas5TypeIntegrationSchemasPartnership52
+
+	return IntegrationSchemas5{
+		IntegrationSchemasPartnership52: &integrationSchemasPartnership52,
+		Type:                            typ,
+	}
+}
+
+func (u *IntegrationSchemas5) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasPartnership52 IntegrationSchemasPartnership52 = IntegrationSchemasPartnership52{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasPartnership52, "", true, true); err == nil {
+		u.IntegrationSchemasPartnership52 = &integrationSchemasPartnership52
+		u.Type = IntegrationSchemas5TypeIntegrationSchemasPartnership52
+		return nil
+	}
+
+	var arrayOfAny []any = []any{}
+	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
+		u.ArrayOfAny = arrayOfAny
+		u.Type = IntegrationSchemas5TypeArrayOfAny
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSchemas5", string(data))
+}
+
+func (u IntegrationSchemas5) MarshalJSON() ([]byte, error) {
+	if u.ArrayOfAny != nil {
+		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	}
+
+	if u.IntegrationSchemasPartnership52 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasPartnership52, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type IntegrationSchemas5: all fields are null")
+}
+
+type IntegrationSchemasPartnership42 struct {
+}
+
+type IntegrationSchemas4Type string
+
+const (
+	IntegrationSchemas4TypeBoolean                         IntegrationSchemas4Type = "boolean"
+	IntegrationSchemas4TypeIntegrationSchemasPartnership42 IntegrationSchemas4Type = "Integration_Schemas_partnership_4_2"
+)
+
+type IntegrationSchemas4 struct {
+	Boolean                         *bool                            `queryParam:"inline"`
+	IntegrationSchemasPartnership42 *IntegrationSchemasPartnership42 `queryParam:"inline"`
+
+	Type IntegrationSchemas4Type
+}
+
+func CreateIntegrationSchemas4Boolean(boolean bool) IntegrationSchemas4 {
+	typ := IntegrationSchemas4TypeBoolean
+
+	return IntegrationSchemas4{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateIntegrationSchemas4IntegrationSchemasPartnership42(integrationSchemasPartnership42 IntegrationSchemasPartnership42) IntegrationSchemas4 {
+	typ := IntegrationSchemas4TypeIntegrationSchemasPartnership42
+
+	return IntegrationSchemas4{
+		IntegrationSchemasPartnership42: &integrationSchemasPartnership42,
+		Type:                            typ,
+	}
+}
+
+func (u *IntegrationSchemas4) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasPartnership42 IntegrationSchemasPartnership42 = IntegrationSchemasPartnership42{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasPartnership42, "", true, true); err == nil {
+		u.IntegrationSchemasPartnership42 = &integrationSchemasPartnership42
+		u.Type = IntegrationSchemas4TypeIntegrationSchemasPartnership42
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = IntegrationSchemas4TypeBoolean
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSchemas4", string(data))
+}
+
+func (u IntegrationSchemas4) MarshalJSON() ([]byte, error) {
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	if u.IntegrationSchemasPartnership42 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasPartnership42, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type IntegrationSchemas4: all fields are null")
+}
+
+type IntegrationSchemasPartnership32 struct {
+}
+
+type IntegrationSchemas3Type string
+
+const (
+	IntegrationSchemas3TypeNumber                          IntegrationSchemas3Type = "number"
+	IntegrationSchemas3TypeIntegrationSchemasPartnership32 IntegrationSchemas3Type = "Integration_Schemas_partnership_3_2"
+)
+
+type IntegrationSchemas3 struct {
+	Number                          *float64                         `queryParam:"inline"`
+	IntegrationSchemasPartnership32 *IntegrationSchemasPartnership32 `queryParam:"inline"`
+
+	Type IntegrationSchemas3Type
+}
+
+func CreateIntegrationSchemas3Number(number float64) IntegrationSchemas3 {
+	typ := IntegrationSchemas3TypeNumber
+
+	return IntegrationSchemas3{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateIntegrationSchemas3IntegrationSchemasPartnership32(integrationSchemasPartnership32 IntegrationSchemasPartnership32) IntegrationSchemas3 {
+	typ := IntegrationSchemas3TypeIntegrationSchemasPartnership32
+
+	return IntegrationSchemas3{
+		IntegrationSchemasPartnership32: &integrationSchemasPartnership32,
+		Type:                            typ,
+	}
+}
+
+func (u *IntegrationSchemas3) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasPartnership32 IntegrationSchemasPartnership32 = IntegrationSchemasPartnership32{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasPartnership32, "", true, true); err == nil {
+		u.IntegrationSchemasPartnership32 = &integrationSchemasPartnership32
+		u.Type = IntegrationSchemas3TypeIntegrationSchemasPartnership32
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = IntegrationSchemas3TypeNumber
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSchemas3", string(data))
+}
+
+func (u IntegrationSchemas3) MarshalJSON() ([]byte, error) {
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.IntegrationSchemasPartnership32 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasPartnership32, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type IntegrationSchemas3: all fields are null")
+}
+
+type IntegrationSchemasPartnership2 struct {
+}
+
+type IntegrationSchemas2Type string
+
+const (
+	IntegrationSchemas2TypeStr                            IntegrationSchemas2Type = "str"
+	IntegrationSchemas2TypeIntegrationSchemasPartnership2 IntegrationSchemas2Type = "Integration_Schemas_partnership_2"
+)
+
+type IntegrationSchemas2 struct {
+	Str                            *string                         `queryParam:"inline"`
+	IntegrationSchemasPartnership2 *IntegrationSchemasPartnership2 `queryParam:"inline"`
+
+	Type IntegrationSchemas2Type
+}
+
+func CreateIntegrationSchemas2Str(str string) IntegrationSchemas2 {
+	typ := IntegrationSchemas2TypeStr
+
+	return IntegrationSchemas2{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateIntegrationSchemas2IntegrationSchemasPartnership2(integrationSchemasPartnership2 IntegrationSchemasPartnership2) IntegrationSchemas2 {
+	typ := IntegrationSchemas2TypeIntegrationSchemasPartnership2
+
+	return IntegrationSchemas2{
+		IntegrationSchemasPartnership2: &integrationSchemasPartnership2,
+		Type:                           typ,
+	}
+}
+
+func (u *IntegrationSchemas2) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasPartnership2 IntegrationSchemasPartnership2 = IntegrationSchemasPartnership2{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasPartnership2, "", true, true); err == nil {
+		u.IntegrationSchemasPartnership2 = &integrationSchemasPartnership2
+		u.Type = IntegrationSchemas2TypeIntegrationSchemasPartnership2
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = IntegrationSchemas2TypeStr
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSchemas2", string(data))
+}
+
+func (u IntegrationSchemas2) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.IntegrationSchemasPartnership2 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasPartnership2, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type IntegrationSchemas2: all fields are null")
+}
+
+type IntegrationSchemas1 struct {
+}
+
+type PartnershipType string
+
+const (
+	PartnershipTypeIntegrationSchemas1 PartnershipType = "Integration_Schemas_1"
+	PartnershipTypeIntegrationSchemas2 PartnershipType = "Integration_Schemas_2"
+	PartnershipTypeIntegrationSchemas3 PartnershipType = "Integration_Schemas_3"
+	PartnershipTypeIntegrationSchemas4 PartnershipType = "Integration_Schemas_4"
+	PartnershipTypeIntegrationSchemas5 PartnershipType = "Integration_Schemas_5"
+)
+
+type Partnership struct {
+	IntegrationSchemas1 *IntegrationSchemas1 `queryParam:"inline"`
+	IntegrationSchemas2 *IntegrationSchemas2 `queryParam:"inline"`
+	IntegrationSchemas3 *IntegrationSchemas3 `queryParam:"inline"`
+	IntegrationSchemas4 *IntegrationSchemas4 `queryParam:"inline"`
+	IntegrationSchemas5 *IntegrationSchemas5 `queryParam:"inline"`
+
+	Type PartnershipType
+}
+
+func CreatePartnershipIntegrationSchemas1(integrationSchemas1 IntegrationSchemas1) Partnership {
+	typ := PartnershipTypeIntegrationSchemas1
+
+	return Partnership{
+		IntegrationSchemas1: &integrationSchemas1,
+		Type:                typ,
+	}
+}
+
+func CreatePartnershipIntegrationSchemas2(integrationSchemas2 IntegrationSchemas2) Partnership {
+	typ := PartnershipTypeIntegrationSchemas2
+
+	return Partnership{
+		IntegrationSchemas2: &integrationSchemas2,
+		Type:                typ,
+	}
+}
+
+func CreatePartnershipIntegrationSchemas3(integrationSchemas3 IntegrationSchemas3) Partnership {
+	typ := PartnershipTypeIntegrationSchemas3
+
+	return Partnership{
+		IntegrationSchemas3: &integrationSchemas3,
+		Type:                typ,
+	}
+}
+
+func CreatePartnershipIntegrationSchemas4(integrationSchemas4 IntegrationSchemas4) Partnership {
+	typ := PartnershipTypeIntegrationSchemas4
+
+	return Partnership{
+		IntegrationSchemas4: &integrationSchemas4,
+		Type:                typ,
+	}
+}
+
+func CreatePartnershipIntegrationSchemas5(integrationSchemas5 IntegrationSchemas5) Partnership {
+	typ := PartnershipTypeIntegrationSchemas5
+
+	return Partnership{
+		IntegrationSchemas5: &integrationSchemas5,
+		Type:                typ,
+	}
+}
+
+func (u *Partnership) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemas1 IntegrationSchemas1 = IntegrationSchemas1{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemas1, "", true, true); err == nil {
+		u.IntegrationSchemas1 = &integrationSchemas1
+		u.Type = PartnershipTypeIntegrationSchemas1
+		return nil
+	}
+
+	var integrationSchemas2 IntegrationSchemas2 = IntegrationSchemas2{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemas2, "", true, true); err == nil {
+		u.IntegrationSchemas2 = &integrationSchemas2
+		u.Type = PartnershipTypeIntegrationSchemas2
+		return nil
+	}
+
+	var integrationSchemas3 IntegrationSchemas3 = IntegrationSchemas3{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemas3, "", true, true); err == nil {
+		u.IntegrationSchemas3 = &integrationSchemas3
+		u.Type = PartnershipTypeIntegrationSchemas3
+		return nil
+	}
+
+	var integrationSchemas4 IntegrationSchemas4 = IntegrationSchemas4{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemas4, "", true, true); err == nil {
+		u.IntegrationSchemas4 = &integrationSchemas4
+		u.Type = PartnershipTypeIntegrationSchemas4
+		return nil
+	}
+
+	var integrationSchemas5 IntegrationSchemas5 = IntegrationSchemas5{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemas5, "", true, true); err == nil {
+		u.IntegrationSchemas5 = &integrationSchemas5
+		u.Type = PartnershipTypeIntegrationSchemas5
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Partnership", string(data))
+}
+
+func (u Partnership) MarshalJSON() ([]byte, error) {
+	if u.IntegrationSchemas1 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemas1, "", true)
+	}
+
+	if u.IntegrationSchemas2 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemas2, "", true)
+	}
+
+	if u.IntegrationSchemas3 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemas3, "", true)
+	}
+
+	if u.IntegrationSchemas4 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemas4, "", true)
+	}
+
+	if u.IntegrationSchemas5 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemas5, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Partnership: all fields are null")
+}
+
+type IntegrationSchemasSandbox52 struct {
+}
+
+type IntegrationSchemasSandbox5Type string
+
+const (
+	IntegrationSchemasSandbox5TypeArrayOfAny                  IntegrationSchemasSandbox5Type = "arrayOfAny"
+	IntegrationSchemasSandbox5TypeIntegrationSchemasSandbox52 IntegrationSchemasSandbox5Type = "Integration_Schemas_sandbox_5_2"
+)
+
+type IntegrationSchemasSandbox5 struct {
+	ArrayOfAny                  []any                        `queryParam:"inline"`
+	IntegrationSchemasSandbox52 *IntegrationSchemasSandbox52 `queryParam:"inline"`
+
+	Type IntegrationSchemasSandbox5Type
+}
+
+func CreateIntegrationSchemasSandbox5ArrayOfAny(arrayOfAny []any) IntegrationSchemasSandbox5 {
+	typ := IntegrationSchemasSandbox5TypeArrayOfAny
+
+	return IntegrationSchemasSandbox5{
+		ArrayOfAny: arrayOfAny,
+		Type:       typ,
+	}
+}
+
+func CreateIntegrationSchemasSandbox5IntegrationSchemasSandbox52(integrationSchemasSandbox52 IntegrationSchemasSandbox52) IntegrationSchemasSandbox5 {
+	typ := IntegrationSchemasSandbox5TypeIntegrationSchemasSandbox52
+
+	return IntegrationSchemasSandbox5{
+		IntegrationSchemasSandbox52: &integrationSchemasSandbox52,
+		Type:                        typ,
+	}
+}
+
+func (u *IntegrationSchemasSandbox5) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasSandbox52 IntegrationSchemasSandbox52 = IntegrationSchemasSandbox52{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox52, "", true, true); err == nil {
+		u.IntegrationSchemasSandbox52 = &integrationSchemasSandbox52
+		u.Type = IntegrationSchemasSandbox5TypeIntegrationSchemasSandbox52
+		return nil
+	}
+
+	var arrayOfAny []any = []any{}
+	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
+		u.ArrayOfAny = arrayOfAny
+		u.Type = IntegrationSchemasSandbox5TypeArrayOfAny
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSchemasSandbox5", string(data))
+}
+
+func (u IntegrationSchemasSandbox5) MarshalJSON() ([]byte, error) {
+	if u.ArrayOfAny != nil {
+		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	}
+
+	if u.IntegrationSchemasSandbox52 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasSandbox52, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type IntegrationSchemasSandbox5: all fields are null")
+}
+
+type IntegrationSchemasSandbox42 struct {
+}
+
+type IntegrationSchemasSandbox4Type string
+
+const (
+	IntegrationSchemasSandbox4TypeBoolean                     IntegrationSchemasSandbox4Type = "boolean"
+	IntegrationSchemasSandbox4TypeIntegrationSchemasSandbox42 IntegrationSchemasSandbox4Type = "Integration_Schemas_sandbox_4_2"
+)
+
+type IntegrationSchemasSandbox4 struct {
+	Boolean                     *bool                        `queryParam:"inline"`
+	IntegrationSchemasSandbox42 *IntegrationSchemasSandbox42 `queryParam:"inline"`
+
+	Type IntegrationSchemasSandbox4Type
+}
+
+func CreateIntegrationSchemasSandbox4Boolean(boolean bool) IntegrationSchemasSandbox4 {
+	typ := IntegrationSchemasSandbox4TypeBoolean
+
+	return IntegrationSchemasSandbox4{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateIntegrationSchemasSandbox4IntegrationSchemasSandbox42(integrationSchemasSandbox42 IntegrationSchemasSandbox42) IntegrationSchemasSandbox4 {
+	typ := IntegrationSchemasSandbox4TypeIntegrationSchemasSandbox42
+
+	return IntegrationSchemasSandbox4{
+		IntegrationSchemasSandbox42: &integrationSchemasSandbox42,
+		Type:                        typ,
+	}
+}
+
+func (u *IntegrationSchemasSandbox4) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasSandbox42 IntegrationSchemasSandbox42 = IntegrationSchemasSandbox42{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox42, "", true, true); err == nil {
+		u.IntegrationSchemasSandbox42 = &integrationSchemasSandbox42
+		u.Type = IntegrationSchemasSandbox4TypeIntegrationSchemasSandbox42
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = IntegrationSchemasSandbox4TypeBoolean
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSchemasSandbox4", string(data))
+}
+
+func (u IntegrationSchemasSandbox4) MarshalJSON() ([]byte, error) {
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	if u.IntegrationSchemasSandbox42 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasSandbox42, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type IntegrationSchemasSandbox4: all fields are null")
+}
+
+type IntegrationSchemasSandbox32 struct {
+}
+
+type IntegrationSchemasSandbox3Type string
+
+const (
+	IntegrationSchemasSandbox3TypeNumber                      IntegrationSchemasSandbox3Type = "number"
+	IntegrationSchemasSandbox3TypeIntegrationSchemasSandbox32 IntegrationSchemasSandbox3Type = "Integration_Schemas_sandbox_3_2"
+)
+
+type IntegrationSchemasSandbox3 struct {
+	Number                      *float64                     `queryParam:"inline"`
+	IntegrationSchemasSandbox32 *IntegrationSchemasSandbox32 `queryParam:"inline"`
+
+	Type IntegrationSchemasSandbox3Type
+}
+
+func CreateIntegrationSchemasSandbox3Number(number float64) IntegrationSchemasSandbox3 {
+	typ := IntegrationSchemasSandbox3TypeNumber
+
+	return IntegrationSchemasSandbox3{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateIntegrationSchemasSandbox3IntegrationSchemasSandbox32(integrationSchemasSandbox32 IntegrationSchemasSandbox32) IntegrationSchemasSandbox3 {
+	typ := IntegrationSchemasSandbox3TypeIntegrationSchemasSandbox32
+
+	return IntegrationSchemasSandbox3{
+		IntegrationSchemasSandbox32: &integrationSchemasSandbox32,
+		Type:                        typ,
+	}
+}
+
+func (u *IntegrationSchemasSandbox3) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasSandbox32 IntegrationSchemasSandbox32 = IntegrationSchemasSandbox32{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox32, "", true, true); err == nil {
+		u.IntegrationSchemasSandbox32 = &integrationSchemasSandbox32
+		u.Type = IntegrationSchemasSandbox3TypeIntegrationSchemasSandbox32
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = IntegrationSchemasSandbox3TypeNumber
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSchemasSandbox3", string(data))
+}
+
+func (u IntegrationSchemasSandbox3) MarshalJSON() ([]byte, error) {
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.IntegrationSchemasSandbox32 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasSandbox32, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type IntegrationSchemasSandbox3: all fields are null")
+}
+
+type IntegrationSchemasSandbox22 struct {
+}
+
+type IntegrationSchemasSandbox2Type string
+
+const (
+	IntegrationSchemasSandbox2TypeStr                         IntegrationSchemasSandbox2Type = "str"
+	IntegrationSchemasSandbox2TypeIntegrationSchemasSandbox22 IntegrationSchemasSandbox2Type = "Integration_Schemas_sandbox_2_2"
+)
+
+type IntegrationSchemasSandbox2 struct {
+	Str                         *string                      `queryParam:"inline"`
+	IntegrationSchemasSandbox22 *IntegrationSchemasSandbox22 `queryParam:"inline"`
+
+	Type IntegrationSchemasSandbox2Type
+}
+
+func CreateIntegrationSchemasSandbox2Str(str string) IntegrationSchemasSandbox2 {
+	typ := IntegrationSchemasSandbox2TypeStr
+
+	return IntegrationSchemasSandbox2{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateIntegrationSchemasSandbox2IntegrationSchemasSandbox22(integrationSchemasSandbox22 IntegrationSchemasSandbox22) IntegrationSchemasSandbox2 {
+	typ := IntegrationSchemasSandbox2TypeIntegrationSchemasSandbox22
+
+	return IntegrationSchemasSandbox2{
+		IntegrationSchemasSandbox22: &integrationSchemasSandbox22,
+		Type:                        typ,
+	}
+}
+
+func (u *IntegrationSchemasSandbox2) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasSandbox22 IntegrationSchemasSandbox22 = IntegrationSchemasSandbox22{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox22, "", true, true); err == nil {
+		u.IntegrationSchemasSandbox22 = &integrationSchemasSandbox22
+		u.Type = IntegrationSchemasSandbox2TypeIntegrationSchemasSandbox22
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = IntegrationSchemasSandbox2TypeStr
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSchemasSandbox2", string(data))
+}
+
+func (u IntegrationSchemasSandbox2) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.IntegrationSchemasSandbox22 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasSandbox22, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type IntegrationSchemasSandbox2: all fields are null")
+}
+
+type IntegrationSchemasSandbox1 struct {
+}
+
+type SandboxType string
+
+const (
+	SandboxTypeIntegrationSchemasSandbox1 SandboxType = "Integration_Schemas_sandbox_1"
+	SandboxTypeIntegrationSchemasSandbox2 SandboxType = "Integration_Schemas_sandbox_2"
+	SandboxTypeIntegrationSchemasSandbox3 SandboxType = "Integration_Schemas_sandbox_3"
+	SandboxTypeIntegrationSchemasSandbox4 SandboxType = "Integration_Schemas_sandbox_4"
+	SandboxTypeIntegrationSchemasSandbox5 SandboxType = "Integration_Schemas_sandbox_5"
+)
+
+type Sandbox struct {
+	IntegrationSchemasSandbox1 *IntegrationSchemasSandbox1 `queryParam:"inline"`
+	IntegrationSchemasSandbox2 *IntegrationSchemasSandbox2 `queryParam:"inline"`
+	IntegrationSchemasSandbox3 *IntegrationSchemasSandbox3 `queryParam:"inline"`
+	IntegrationSchemasSandbox4 *IntegrationSchemasSandbox4 `queryParam:"inline"`
+	IntegrationSchemasSandbox5 *IntegrationSchemasSandbox5 `queryParam:"inline"`
+
+	Type SandboxType
+}
+
+func CreateSandboxIntegrationSchemasSandbox1(integrationSchemasSandbox1 IntegrationSchemasSandbox1) Sandbox {
+	typ := SandboxTypeIntegrationSchemasSandbox1
+
+	return Sandbox{
+		IntegrationSchemasSandbox1: &integrationSchemasSandbox1,
+		Type:                       typ,
+	}
+}
+
+func CreateSandboxIntegrationSchemasSandbox2(integrationSchemasSandbox2 IntegrationSchemasSandbox2) Sandbox {
+	typ := SandboxTypeIntegrationSchemasSandbox2
+
+	return Sandbox{
+		IntegrationSchemasSandbox2: &integrationSchemasSandbox2,
+		Type:                       typ,
+	}
+}
+
+func CreateSandboxIntegrationSchemasSandbox3(integrationSchemasSandbox3 IntegrationSchemasSandbox3) Sandbox {
+	typ := SandboxTypeIntegrationSchemasSandbox3
+
+	return Sandbox{
+		IntegrationSchemasSandbox3: &integrationSchemasSandbox3,
+		Type:                       typ,
+	}
+}
+
+func CreateSandboxIntegrationSchemasSandbox4(integrationSchemasSandbox4 IntegrationSchemasSandbox4) Sandbox {
+	typ := SandboxTypeIntegrationSchemasSandbox4
+
+	return Sandbox{
+		IntegrationSchemasSandbox4: &integrationSchemasSandbox4,
+		Type:                       typ,
+	}
+}
+
+func CreateSandboxIntegrationSchemasSandbox5(integrationSchemasSandbox5 IntegrationSchemasSandbox5) Sandbox {
+	typ := SandboxTypeIntegrationSchemasSandbox5
+
+	return Sandbox{
+		IntegrationSchemasSandbox5: &integrationSchemasSandbox5,
+		Type:                       typ,
+	}
+}
+
+func (u *Sandbox) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasSandbox1 IntegrationSchemasSandbox1 = IntegrationSchemasSandbox1{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox1, "", true, true); err == nil {
+		u.IntegrationSchemasSandbox1 = &integrationSchemasSandbox1
+		u.Type = SandboxTypeIntegrationSchemasSandbox1
+		return nil
+	}
+
+	var integrationSchemasSandbox2 IntegrationSchemasSandbox2 = IntegrationSchemasSandbox2{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox2, "", true, true); err == nil {
+		u.IntegrationSchemasSandbox2 = &integrationSchemasSandbox2
+		u.Type = SandboxTypeIntegrationSchemasSandbox2
+		return nil
+	}
+
+	var integrationSchemasSandbox3 IntegrationSchemasSandbox3 = IntegrationSchemasSandbox3{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox3, "", true, true); err == nil {
+		u.IntegrationSchemasSandbox3 = &integrationSchemasSandbox3
+		u.Type = SandboxTypeIntegrationSchemasSandbox3
+		return nil
+	}
+
+	var integrationSchemasSandbox4 IntegrationSchemasSandbox4 = IntegrationSchemasSandbox4{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox4, "", true, true); err == nil {
+		u.IntegrationSchemasSandbox4 = &integrationSchemasSandbox4
+		u.Type = SandboxTypeIntegrationSchemasSandbox4
+		return nil
+	}
+
+	var integrationSchemasSandbox5 IntegrationSchemasSandbox5 = IntegrationSchemasSandbox5{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox5, "", true, true); err == nil {
+		u.IntegrationSchemasSandbox5 = &integrationSchemasSandbox5
+		u.Type = SandboxTypeIntegrationSchemasSandbox5
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Sandbox", string(data))
+}
+
+func (u Sandbox) MarshalJSON() ([]byte, error) {
+	if u.IntegrationSchemasSandbox1 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasSandbox1, "", true)
+	}
+
+	if u.IntegrationSchemasSandbox2 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasSandbox2, "", true)
+	}
+
+	if u.IntegrationSchemasSandbox3 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasSandbox3, "", true)
+	}
+
+	if u.IntegrationSchemasSandbox4 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasSandbox4, "", true)
+	}
+
+	if u.IntegrationSchemasSandbox5 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasSandbox5, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Sandbox: all fields are null")
+}
+
 // Integration - Informational object for supported integrations.
 type Integration struct {
-	ActiveHealthyConnections *float64       `json:"active_healthy_connections,omitempty"`
-	API                      map[string]any `json:"api,omitempty"`
-	APIDocsURL               *string        `json:"api_docs_url,omitempty"`
-	Beta                     *bool          `json:"beta,omitempty"`
+	ActiveHealthyConnections *float64 `json:"active_healthy_connections,omitempty"`
+	API                      *API     `json:"api,omitempty"`
+	APIDocsURL               *string  `json:"api_docs_url,omitempty"`
+	Beta                     *bool    `json:"beta,omitempty"`
 	// The categories of support solutions that this integration has
 	Categories           []PropertyIntegrationCategories `json:"categories"`
 	Color                *string                         `json:"color,omitempty"`
@@ -24,9 +1214,11 @@ type Integration struct {
 	IsActive             *bool                           `json:"is_active,omitempty"`
 	LogoURL              *string                         `json:"logo_url,omitempty"`
 	Name                 string                          `json:"name"`
+	Partnership          *Partnership                    `json:"partnership,omitempty"`
 	Popularity           *float64                        `json:"popularity,omitempty"`
 	RateLimitDescription *string                         `json:"rate_limit_description,omitempty"`
-	Support              map[string]IntegrationSupport   `json:"support,omitempty"`
+	Sandbox              *Sandbox                        `json:"sandbox,omitempty"`
+	Support              map[string]any                  `json:"support,omitempty"`
 	TestedAt             *time.Time                      `json:"tested_at,omitempty"`
 	TextColor            *string                         `json:"text_color,omitempty"`
 	// instructions for the user on how to find the token/key
@@ -56,7 +1248,7 @@ func (o *Integration) GetActiveHealthyConnections() *float64 {
 	return o.ActiveHealthyConnections
 }
 
-func (o *Integration) GetAPI() map[string]any {
+func (o *Integration) GetAPI() *API {
 	if o == nil {
 		return nil
 	}
@@ -147,6 +1339,13 @@ func (o *Integration) GetName() string {
 	return o.Name
 }
 
+func (o *Integration) GetPartnership() *Partnership {
+	if o == nil {
+		return nil
+	}
+	return o.Partnership
+}
+
 func (o *Integration) GetPopularity() *float64 {
 	if o == nil {
 		return nil
@@ -161,7 +1360,14 @@ func (o *Integration) GetRateLimitDescription() *string {
 	return o.RateLimitDescription
 }
 
-func (o *Integration) GetSupport() map[string]IntegrationSupport {
+func (o *Integration) GetSandbox() *Sandbox {
+	if o == nil {
+		return nil
+	}
+	return o.Sandbox
+}
+
+func (o *Integration) GetSupport() map[string]any {
 	if o == nil {
 		return nil
 	}

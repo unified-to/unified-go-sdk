@@ -39,6 +39,8 @@
 | `PropertyConnectionPermissionsCommerceInventoryWrite`     | commerce_inventory_write                                  |
 | `PropertyConnectionPermissionsCommerceLocationRead`       | commerce_location_read                                    |
 | `PropertyConnectionPermissionsCommerceLocationWrite`      | commerce_location_write                                   |
+| `PropertyConnectionPermissionsCommerceReviewRead`         | commerce_review_read                                      |
+| `PropertyConnectionPermissionsCommerceReviewWrite`        | commerce_review_write                                     |
 | `PropertyConnectionPermissionsAtsActivityRead`            | ats_activity_read                                         |
 | `PropertyConnectionPermissionsAtsActivityWrite`           | ats_activity_write                                        |
 | `PropertyConnectionPermissionsAtsApplicationRead`         | ats_application_read                                      |

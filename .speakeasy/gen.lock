@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 1cbf51aa4a732ad7a3160606fa7ef127
+  docChecksum: 384d22984f53ba58e35d8b7c45507e05
   docVersion: "1.0"
-  speakeasyVersion: 1.542.3
-  generationVersion: 2.597.9
-  releaseVersion: 0.24.1
-  configChecksum: dbd8ae7a69716dd08496b938a0e0e7e4
+  speakeasyVersion: 1.545.0
+  generationVersion: 2.599.0
+  releaseVersion: 0.24.2
+  configChecksum: 8ea9c2e94b2f4511d4c52f917b65c84d
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -23,7 +23,7 @@ features:
     globalSecurity: 2.82.11
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
-    globalServerURLs: 2.82.2
+    globalServerURLs: 2.82.3
     intellisenseMarkdownSupport: 0.1.0
     responseFormat: 0.1.2
     retries: 2.83.2
@@ -569,7 +569,6 @@ generatedFiles:
   - /pkg/models/shared/hristelephone.go
   - /pkg/models/shared/hristimeoff.go
   - /pkg/models/shared/integration.go
-  - /pkg/models/shared/integrationsupport.go
   - /pkg/models/shared/issue.go
   - /pkg/models/shared/kmscomment.go
   - /pkg/models/shared/kmspage.go
@@ -633,10 +632,6 @@ generatedFiles:
   - /pkg/models/shared/propertyhrisemployeeemployeeroles.go
   - /pkg/models/shared/propertyhrislocationaddress.go
   - /pkg/models/shared/propertyintegrationcategories.go
-  - /pkg/models/shared/propertyintegrationsupportwebhookevents.go
-  - /pkg/models/shared/propertyintegrationsupportwebhookeventscreated.go
-  - /pkg/models/shared/propertyintegrationsupportwebhookeventsdeleted.go
-  - /pkg/models/shared/propertyintegrationsupportwebhookeventsupdated.go
   - /pkg/models/shared/propertylmsstudentaddress.go
   - /pkg/models/shared/propertymessagingmessageauthormember.go
   - /pkg/models/shared/propertyscimgroupmeta.go
@@ -1624,6 +1619,7 @@ generatedFiles:
   - docs/pkg/models/shared/accountingtransactioncontact.md
   - docs/pkg/models/shared/accountingtransactionlineitem.md
   - docs/pkg/models/shared/accountingtrialbalancesubitem.md
+  - docs/pkg/models/shared/api.md
   - docs/pkg/models/shared/apicall.md
   - docs/pkg/models/shared/apicalltype.md
   - docs/pkg/models/shared/atsactivity.md
@@ -1775,7 +1771,6 @@ generatedFiles:
   - docs/pkg/models/shared/format.md
   - docs/pkg/models/shared/four.md
   - docs/pkg/models/shared/frequency.md
-  - docs/pkg/models/shared/fromwebhook.md
   - docs/pkg/models/shared/genaicontent.md
   - docs/pkg/models/shared/genaimodel.md
   - docs/pkg/models/shared/genaiprompt.md
@@ -1823,7 +1818,33 @@ generatedFiles:
   - docs/pkg/models/shared/hristimeoffstatus.md
   - docs/pkg/models/shared/hristimeofftype.md
   - docs/pkg/models/shared/integration.md
-  - docs/pkg/models/shared/integrationsupport.md
+  - docs/pkg/models/shared/integration1.md
+  - docs/pkg/models/shared/integration2.md
+  - docs/pkg/models/shared/integration3.md
+  - docs/pkg/models/shared/integration4.md
+  - docs/pkg/models/shared/integration5.md
+  - docs/pkg/models/shared/integrationschemas1.md
+  - docs/pkg/models/shared/integrationschemas2.md
+  - docs/pkg/models/shared/integrationschemas3.md
+  - docs/pkg/models/shared/integrationschemas4.md
+  - docs/pkg/models/shared/integrationschemas5.md
+  - docs/pkg/models/shared/integrationschemasapi2.md
+  - docs/pkg/models/shared/integrationschemasapi22.md
+  - docs/pkg/models/shared/integrationschemasapi32.md
+  - docs/pkg/models/shared/integrationschemasapi52.md
+  - docs/pkg/models/shared/integrationschemaspartnership2.md
+  - docs/pkg/models/shared/integrationschemaspartnership32.md
+  - docs/pkg/models/shared/integrationschemaspartnership42.md
+  - docs/pkg/models/shared/integrationschemaspartnership52.md
+  - docs/pkg/models/shared/integrationschemassandbox1.md
+  - docs/pkg/models/shared/integrationschemassandbox2.md
+  - docs/pkg/models/shared/integrationschemassandbox22.md
+  - docs/pkg/models/shared/integrationschemassandbox3.md
+  - docs/pkg/models/shared/integrationschemassandbox32.md
+  - docs/pkg/models/shared/integrationschemassandbox4.md
+  - docs/pkg/models/shared/integrationschemassandbox42.md
+  - docs/pkg/models/shared/integrationschemassandbox5.md
+  - docs/pkg/models/shared/integrationschemassandbox52.md
   - docs/pkg/models/shared/intervalunit.md
   - docs/pkg/models/shared/issue.md
   - docs/pkg/models/shared/issuestatus.md
@@ -1833,53 +1854,6 @@ generatedFiles:
   - docs/pkg/models/shared/kmspagemetadata.md
   - docs/pkg/models/shared/kmspagetype.md
   - docs/pkg/models/shared/kmsspace.md
-  - docs/pkg/models/shared/listaccountid.md
-  - docs/pkg/models/shared/listapplicationid.md
-  - docs/pkg/models/shared/listcalendarid.md
-  - docs/pkg/models/shared/listcallid.md
-  - docs/pkg/models/shared/listcandidateid.md
-  - docs/pkg/models/shared/listchannelid.md
-  - docs/pkg/models/shared/listclassid.md
-  - docs/pkg/models/shared/listcollectionid.md
-  - docs/pkg/models/shared/listcompanyid.md
-  - docs/pkg/models/shared/listcontactid.md
-  - docs/pkg/models/shared/listcourseid.md
-  - docs/pkg/models/shared/listcustomerid.md
-  - docs/pkg/models/shared/listdealid.md
-  - docs/pkg/models/shared/listendle.md
-  - docs/pkg/models/shared/listeventid.md
-  - docs/pkg/models/shared/listinstructorid.md
-  - docs/pkg/models/shared/listinterviewid.md
-  - docs/pkg/models/shared/listinvoiceid.md
-  - docs/pkg/models/shared/listitemid.md
-  - docs/pkg/models/shared/listitemvariantid.md
-  - docs/pkg/models/shared/listjobid.md
-  - docs/pkg/models/shared/listleadid.md
-  - docs/pkg/models/shared/listlimit.md
-  - docs/pkg/models/shared/listlinkid.md
-  - docs/pkg/models/shared/listlistid.md
-  - docs/pkg/models/shared/listlocationid.md
-  - docs/pkg/models/shared/listoffset.md
-  - docs/pkg/models/shared/listorder.md
-  - docs/pkg/models/shared/listorgid.md
-  - docs/pkg/models/shared/listpageid.md
-  - docs/pkg/models/shared/listparentid.md
-  - docs/pkg/models/shared/listprojectid.md
-  - docs/pkg/models/shared/listquery.md
-  - docs/pkg/models/shared/listrawfields.md
-  - docs/pkg/models/shared/listrepoid.md
-  - docs/pkg/models/shared/listrootid.md
-  - docs/pkg/models/shared/listsortbycreatedat.md
-  - docs/pkg/models/shared/listsortbyname.md
-  - docs/pkg/models/shared/listsortbyupdatedat.md
-  - docs/pkg/models/shared/listspaceid.md
-  - docs/pkg/models/shared/liststartgte.md
-  - docs/pkg/models/shared/liststudentid.md
-  - docs/pkg/models/shared/listtaskid.md
-  - docs/pkg/models/shared/listticketid.md
-  - docs/pkg/models/shared/listtype.md
-  - docs/pkg/models/shared/listupdatedgte.md
-  - docs/pkg/models/shared/listuserid.md
   - docs/pkg/models/shared/lmsclass.md
   - docs/pkg/models/shared/lmscourse.md
   - docs/pkg/models/shared/lmsemail.md
@@ -1899,12 +1873,11 @@ generatedFiles:
   - docs/pkg/models/shared/messagingmember.md
   - docs/pkg/models/shared/messagingmessage.md
   - docs/pkg/models/shared/metadatametadata.md
-  - docs/pkg/models/shared/nativewebhookparentid.md
-  - docs/pkg/models/shared/nativewebhookprojectid.md
   - docs/pkg/models/shared/objecttype.md
   - docs/pkg/models/shared/one.md
   - docs/pkg/models/shared/operation.md
   - docs/pkg/models/shared/origin.md
+  - docs/pkg/models/shared/partnership.md
   - docs/pkg/models/shared/paymentcollectionmethod.md
   - docs/pkg/models/shared/paymentlineitem.md
   - docs/pkg/models/shared/paymentlink.md
@@ -1958,10 +1931,6 @@ generatedFiles:
   - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/pkg/models/shared/propertyhrislocationaddress.md
   - docs/pkg/models/shared/propertyintegrationcategories.md
-  - docs/pkg/models/shared/propertyintegrationsupportwebhookevents.md
-  - docs/pkg/models/shared/propertyintegrationsupportwebhookeventscreated.md
-  - docs/pkg/models/shared/propertyintegrationsupportwebhookeventsdeleted.md
-  - docs/pkg/models/shared/propertyintegrationsupportwebhookeventsupdated.md
   - docs/pkg/models/shared/propertylmsstudentaddress.md
   - docs/pkg/models/shared/propertymessagingmessageauthormember.md
   - docs/pkg/models/shared/propertyscimgroupmeta.md
@@ -1990,6 +1959,7 @@ generatedFiles:
   - docs/pkg/models/shared/reporepository.md
   - docs/pkg/models/shared/resourcetype.md
   - docs/pkg/models/shared/role.md
+  - docs/pkg/models/shared/sandbox.md
   - docs/pkg/models/shared/scimaddress.md
   - docs/pkg/models/shared/scimaddresstype.md
   - docs/pkg/models/shared/scimemail.md
@@ -2010,11 +1980,6 @@ generatedFiles:
   - docs/pkg/models/shared/scimuser.md
   - docs/pkg/models/shared/scimusergroups.md
   - docs/pkg/models/shared/scimusergroupstype.md
-  - docs/pkg/models/shared/searchdomain.md
-  - docs/pkg/models/shared/searchemail.md
-  - docs/pkg/models/shared/searchlinkedinurl.md
-  - docs/pkg/models/shared/searchname.md
-  - docs/pkg/models/shared/searchtwitter.md
   - docs/pkg/models/shared/security.md
   - docs/pkg/models/shared/sexualorientation.md
   - docs/pkg/models/shared/sizeunit.md
@@ -2049,17 +2014,6 @@ generatedFiles:
   - docs/pkg/models/shared/uctelephone.md
   - docs/pkg/models/shared/uctelephonetype.md
   - docs/pkg/models/shared/value.md
-  - docs/pkg/models/shared/virtualwebhookchannelid.md
-  - docs/pkg/models/shared/virtualwebhookcompanyid.md
-  - docs/pkg/models/shared/virtualwebhookcontactid.md
-  - docs/pkg/models/shared/virtualwebhookdealid.md
-  - docs/pkg/models/shared/virtualwebhookjobid.md
-  - docs/pkg/models/shared/virtualwebhooklimit.md
-  - docs/pkg/models/shared/virtualwebhookparentid.md
-  - docs/pkg/models/shared/virtualwebhookticketid.md
-  - docs/pkg/models/shared/virtualwebhooktype.md
-  - docs/pkg/models/shared/virtualwebhookupdatedgte.md
-  - docs/pkg/models/shared/virtualwebhookuserid.md
   - docs/pkg/models/shared/webhook.md
   - docs/pkg/models/shared/webhooktype.md
   - docs/pkg/models/shared/weightunit.md
