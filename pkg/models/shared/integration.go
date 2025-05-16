@@ -1222,7 +1222,7 @@ type Integration struct {
 	TestedAt             *time.Time                      `json:"tested_at,omitempty"`
 	TextColor            *string                         `json:"text_color,omitempty"`
 	// instructions for the user on how to find the token/key
-	TokenInstructions []string `json:"token_instructions,omitempty"`
+	TokenInstructions []PropertyIntegrationTokenInstructions `json:"token_instructions,omitempty"`
 	// if auth_types = 'token'
 	TokenNames []string `json:"token_names,omitempty"`
 	Type       string   `json:"type"`
@@ -1388,7 +1388,7 @@ func (o *Integration) GetTextColor() *string {
 	return o.TextColor
 }
 
-func (o *Integration) GetTokenInstructions() []string {
+func (o *Integration) GetTokenInstructions() []PropertyIntegrationTokenInstructions {
 	if o == nil {
 		return nil
 	}

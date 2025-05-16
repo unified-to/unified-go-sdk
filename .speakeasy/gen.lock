@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 384d22984f53ba58e35d8b7c45507e05
+  docChecksum: 896ad02cb1fe122b37a5db9ff432b9bf
   docVersion: "1.0"
   speakeasyVersion: 1.545.0
   generationVersion: 2.599.0
-  releaseVersion: 0.24.2
-  configChecksum: 8ea9c2e94b2f4511d4c52f917b65c84d
+  releaseVersion: 0.24.3
+  configChecksum: e9a4ec02d30ad23c42c1dead08209f64
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -632,6 +632,7 @@ generatedFiles:
   - /pkg/models/shared/propertyhrisemployeeemployeeroles.go
   - /pkg/models/shared/propertyhrislocationaddress.go
   - /pkg/models/shared/propertyintegrationcategories.go
+  - /pkg/models/shared/propertyintegrationtokeninstructions.go
   - /pkg/models/shared/propertylmsstudentaddress.go
   - /pkg/models/shared/propertymessagingmessageauthormember.go
   - /pkg/models/shared/propertyscimgroupmeta.go
@@ -1931,6 +1932,7 @@ generatedFiles:
   - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/pkg/models/shared/propertyhrislocationaddress.md
   - docs/pkg/models/shared/propertyintegrationcategories.md
+  - docs/pkg/models/shared/propertyintegrationtokeninstructions.md
   - docs/pkg/models/shared/propertylmsstudentaddress.md
   - docs/pkg/models/shared/propertymessagingmessageauthormember.md
   - docs/pkg/models/shared/propertyscimgroupmeta.md

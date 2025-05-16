@@ -17,6 +17,8 @@ type ListTaskProjectsRequest struct {
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by
+	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
@@ -72,6 +74,13 @@ func (o *ListTaskProjectsRequest) GetOrder() *string {
 		return nil
 	}
 	return o.Order
+}
+
+func (o *ListTaskProjectsRequest) GetOrgID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.OrgID
 }
 
 func (o *ListTaskProjectsRequest) GetParentID() *string {
