@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListAtsDocumentsRequest struct {
@@ -28,19 +26,10 @@ type ListAtsDocumentsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The type to filter by
+	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListAtsDocumentsRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListAtsDocumentsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListAtsDocumentsRequest) GetApplicationID() *string {
@@ -120,7 +109,14 @@ func (o *ListAtsDocumentsRequest) GetSort() *string {
 	return o.Sort
 }
 
-func (o *ListAtsDocumentsRequest) GetUpdatedGte() *time.Time {
+func (o *ListAtsDocumentsRequest) GetType() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Type
+}
+
+func (o *ListAtsDocumentsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

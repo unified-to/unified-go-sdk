@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListKmsPagesRequest struct {
@@ -27,18 +25,7 @@ type ListKmsPagesRequest struct {
 	// The space ID to filter by
 	SpaceID *string `queryParam:"style=form,explode=true,name=space_id"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListKmsPagesRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListKmsPagesRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListKmsPagesRequest) GetConnectionID() string {
@@ -111,7 +98,7 @@ func (o *ListKmsPagesRequest) GetSpaceID() *string {
 	return o.SpaceID
 }
 
-func (o *ListKmsPagesRequest) GetUpdatedGte() *time.Time {
+func (o *ListKmsPagesRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

@@ -37,24 +37,26 @@ func (e *CalendarEventStatus) UnmarshalJSON(data []byte) error {
 }
 
 type CalendarEvent struct {
-	Attendees  []CalendarAttendee              `json:"attendees,omitempty"`
-	CalendarID *string                         `json:"calendar_id,omitempty"`
-	CreatedAt  *string                         `json:"created_at,omitempty"`
-	EndAt      string                          `json:"end_at"`
-	ID         *string                         `json:"id,omitempty"`
-	IsAllDay   *bool                           `json:"is_all_day,omitempty"`
-	IsFree     *bool                           `json:"is_free,omitempty"`
-	IsPrivate  *bool                           `json:"is_private,omitempty"`
-	Location   *string                         `json:"location,omitempty"`
-	Notes      *string                         `json:"notes,omitempty"`
-	Organizer  *PropertyCalendarEventOrganizer `json:"organizer,omitempty"`
-	Raw        map[string]any                  `json:"raw,omitempty"`
-	StartAt    string                          `json:"start_at"`
-	Status     *CalendarEventStatus            `json:"status,omitempty"`
-	Subject    string                          `json:"subject"`
-	Timezone   *string                         `json:"timezone,omitempty"`
-	UpdatedAt  *string                         `json:"updated_at,omitempty"`
-	WebURL     *string                         `json:"web_url,omitempty"`
+	Attendees        []CalendarAttendee              `json:"attendees,omitempty"`
+	CalendarID       *string                         `json:"calendar_id,omitempty"`
+	CreatedAt        *string                         `json:"created_at,omitempty"`
+	EndAt            string                          `json:"end_at"`
+	ID               *string                         `json:"id,omitempty"`
+	IsAllDay         *bool                           `json:"is_all_day,omitempty"`
+	IsFree           *bool                           `json:"is_free,omitempty"`
+	IsPrivate        *bool                           `json:"is_private,omitempty"`
+	Location         *string                         `json:"location,omitempty"`
+	Notes            *string                         `json:"notes,omitempty"`
+	Organizer        *PropertyCalendarEventOrganizer `json:"organizer,omitempty"`
+	Raw              map[string]any                  `json:"raw,omitempty"`
+	Recurrence       []CalendarEventRecurrence       `json:"recurrence,omitempty"`
+	RecurringEventID *string                         `json:"recurring_event_id,omitempty"`
+	StartAt          string                          `json:"start_at"`
+	Status           *CalendarEventStatus            `json:"status,omitempty"`
+	Subject          string                          `json:"subject"`
+	Timezone         *string                         `json:"timezone,omitempty"`
+	UpdatedAt        *string                         `json:"updated_at,omitempty"`
+	WebURL           *string                         `json:"web_url,omitempty"`
 }
 
 func (o *CalendarEvent) GetAttendees() []CalendarAttendee {
@@ -139,6 +141,20 @@ func (o *CalendarEvent) GetRaw() map[string]any {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *CalendarEvent) GetRecurrence() []CalendarEventRecurrence {
+	if o == nil {
+		return nil
+	}
+	return o.Recurrence
+}
+
+func (o *CalendarEvent) GetRecurringEventID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.RecurringEventID
 }
 
 func (o *CalendarEvent) GetStartAt() string {

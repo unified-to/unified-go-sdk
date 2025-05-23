@@ -8,23 +8,23 @@ import (
 )
 
 type CommerceItem struct {
-	AccountID         *string             `json:"account_id,omitempty"`
-	CollectionIds     []string            `json:"collection_ids,omitempty"`
-	CreatedAt         *time.Time          `json:"created_at,omitempty"`
-	Description       *string             `json:"description,omitempty"`
-	ID                *string             `json:"id,omitempty"`
-	IsActive          *bool               `json:"is_active,omitempty"`
-	IsTaxable         *bool               `json:"is_taxable,omitempty"`
-	Media             []CommerceItemMedia `json:"media,omitempty"`
-	Metadata          []CommerceMetadata  `json:"metadata,omitempty"`
-	Name              *string             `json:"name,omitempty"`
-	PublicDescription *string             `json:"public_description,omitempty"`
-	PublicName        *string             `json:"public_name,omitempty"`
-	Raw               map[string]any      `json:"raw,omitempty"`
-	Slug              *string             `json:"slug,omitempty"`
-	Tags              []string            `json:"tags,omitempty"`
-	Type              *string             `json:"type,omitempty"`
-	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
+	AccountID         *string                    `json:"account_id,omitempty"`
+	CollectionIds     []string                   `json:"collection_ids,omitempty"`
+	CreatedAt         *time.Time                 `json:"created_at,omitempty"`
+	Description       *string                    `json:"description,omitempty"`
+	ID                *string                    `json:"id,omitempty"`
+	IsActive          *bool                      `json:"is_active,omitempty"`
+	IsTaxable         *bool                      `json:"is_taxable,omitempty"`
+	Media             []CommerceItemMedia        `json:"media,omitempty"`
+	Metadata          []CommerceMetadata         `json:"metadata,omitempty"`
+	Name              *string                    `json:"name,omitempty"`
+	PublicDescription *string                    `json:"public_description,omitempty"`
+	PublicName        *string                    `json:"public_name,omitempty"`
+	Raw               map[string]any             `json:"raw,omitempty"`
+	Slug              *string                    `json:"slug,omitempty"`
+	Tags              []PropertyCommerceItemTags `json:"tags,omitempty"`
+	Type              *string                    `json:"type,omitempty"`
+	UpdatedAt         *time.Time                 `json:"updated_at,omitempty"`
 	// first variant is the default variant
 	Variants   []CommerceItemVariant `json:"variants,omitempty"`
 	VendorName *string               `json:"vendor_name,omitempty"`
@@ -139,7 +139,7 @@ func (o *CommerceItem) GetSlug() *string {
 	return o.Slug
 }
 
-func (o *CommerceItem) GetTags() []string {
+func (o *CommerceItem) GetTags() []PropertyCommerceItemTags {
 	if o == nil {
 		return nil
 	}

@@ -169,7 +169,7 @@ func main() {
 
     res, err := s.Calendar.CreateCalendarLink(ctx, operations.CreateCalendarLinkRequest{
         CalendarLink: shared.CalendarLink{
-            URL: "https://sturdy-begonia.biz/",
+            URL: "https://misguided-thongs.info",
         },
         ConnectionID: "<id>",
     })
@@ -825,7 +825,7 @@ func main() {
 
     res, err := s.Calendar.PatchCalendarLink(ctx, operations.PatchCalendarLinkRequest{
         CalendarLink: shared.CalendarLink{
-            URL: "https://curly-skyline.biz/",
+            URL: "https://warm-hexagon.name/",
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1163,7 +1163,7 @@ func main() {
 
     res, err := s.Calendar.UpdateCalendarLink(ctx, operations.UpdateCalendarLinkRequest{
         CalendarLink: shared.CalendarLink{
-            URL: "https://quiet-coordination.name",
+            URL: "https://partial-hydrocarbon.info",
         },
         ConnectionID: "<id>",
         ID: "<id>",

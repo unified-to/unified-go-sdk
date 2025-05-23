@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListCrmEventsRequest struct {
@@ -32,20 +30,9 @@ type ListCrmEventsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-func (l ListCrmEventsRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListCrmEventsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
 }
 
 func (o *ListCrmEventsRequest) GetCompanyID() *string {
@@ -139,7 +126,7 @@ func (o *ListCrmEventsRequest) GetType() *string {
 	return o.Type
 }
 
-func (o *ListCrmEventsRequest) GetUpdatedGte() *time.Time {
+func (o *ListCrmEventsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListCalendarEventsRequest struct {
@@ -16,6 +14,8 @@ type ListCalendarEventsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The end date to filter by
 	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
+	// Whether to expand recurring calendar events
+	ExpandRecurringEvents *string `queryParam:"style=form,explode=true,name=expand_recurring_events"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -29,18 +29,7 @@ type ListCalendarEventsRequest struct {
 	// The start date to filter by
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListCalendarEventsRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListCalendarEventsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListCalendarEventsRequest) GetCalendarID() *string {
@@ -62,6 +51,13 @@ func (o *ListCalendarEventsRequest) GetEndLe() *string {
 		return nil
 	}
 	return o.EndLe
+}
+
+func (o *ListCalendarEventsRequest) GetExpandRecurringEvents() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ExpandRecurringEvents
 }
 
 func (o *ListCalendarEventsRequest) GetFields() []string {
@@ -120,7 +116,7 @@ func (o *ListCalendarEventsRequest) GetStartGte() *string {
 	return o.StartGte
 }
 
-func (o *ListCalendarEventsRequest) GetUpdatedGte() *time.Time {
+func (o *ListCalendarEventsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

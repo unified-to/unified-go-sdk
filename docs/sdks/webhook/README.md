@@ -42,7 +42,7 @@ func main() {
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
             Event: shared.EventCreated,
-            ObjectType: shared.ObjectTypeHrisPayslip,
+            ObjectType: shared.ObjectTypeAtsScorecard,
         },
     })
     if err != nil {
@@ -203,8 +203,8 @@ func main() {
     res, err := s.Webhook.PatchUnifiedWebhook(ctx, operations.PatchUnifiedWebhookRequest{
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
-            Event: shared.EventDeleted,
-            ObjectType: shared.ObjectTypeCrmLead,
+            Event: shared.EventUpdated,
+            ObjectType: shared.ObjectTypeTicketingCustomer,
         },
         ID: "<id>",
     })
@@ -368,8 +368,8 @@ func main() {
     res, err := s.Webhook.UpdateUnifiedWebhook(ctx, operations.UpdateUnifiedWebhookRequest{
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
-            Event: shared.EventCreated,
-            ObjectType: shared.ObjectTypePaymentLink,
+            Event: shared.EventDeleted,
+            ObjectType: shared.ObjectTypeMessagingChannel,
         },
         ID: "<id>",
     })

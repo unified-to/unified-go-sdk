@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListAccountingReportsRequest struct {
@@ -28,18 +26,7 @@ type ListAccountingReportsRequest struct {
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	Type     *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListAccountingReportsRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListAccountingReportsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListAccountingReportsRequest) GetConnectionID() string {
@@ -119,7 +106,7 @@ func (o *ListAccountingReportsRequest) GetType() *string {
 	return o.Type
 }
 
-func (o *ListAccountingReportsRequest) GetUpdatedGte() *time.Time {
+func (o *ListAccountingReportsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

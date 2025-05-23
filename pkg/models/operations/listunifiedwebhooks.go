@@ -4,17 +4,15 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListUnifiedWebhooksRequest struct {
 	// Filter the results to just this integration
 	ConnectionID *string `queryParam:"style=form,explode=true,name=connection_id"`
 	// Return only results whose created date is equal or less to this value
-	CreatedLte *time.Time `queryParam:"style=form,explode=true,name=created_lte"`
-	Env        *string    `queryParam:"style=form,explode=true,name=env"`
+	CreatedLte *string `queryParam:"style=form,explode=true,name=created_lte"`
+	Env        *string `queryParam:"style=form,explode=true,name=env"`
 	// Filter the results to just this integration
 	IntegrationType *string  `queryParam:"style=form,explode=true,name=integration_type"`
 	Limit           *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -24,18 +22,7 @@ type ListUnifiedWebhooksRequest struct {
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	Sort   *string  `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListUnifiedWebhooksRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListUnifiedWebhooksRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListUnifiedWebhooksRequest) GetConnectionID() *string {
@@ -45,7 +32,7 @@ func (o *ListUnifiedWebhooksRequest) GetConnectionID() *string {
 	return o.ConnectionID
 }
 
-func (o *ListUnifiedWebhooksRequest) GetCreatedLte() *time.Time {
+func (o *ListUnifiedWebhooksRequest) GetCreatedLte() *string {
 	if o == nil {
 		return nil
 	}
@@ -101,7 +88,7 @@ func (o *ListUnifiedWebhooksRequest) GetSort() *string {
 	return o.Sort
 }
 
-func (o *ListUnifiedWebhooksRequest) GetUpdatedGte() *time.Time {
+func (o *ListUnifiedWebhooksRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

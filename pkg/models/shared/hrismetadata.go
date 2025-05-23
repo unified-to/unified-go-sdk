@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
@@ -404,6 +405,65 @@ func (u HrisMetadataExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type HrisMetadataExtraData: all fields are null")
 }
 
+type HrisMetadataFormat string
+
+const (
+	HrisMetadataFormatText           HrisMetadataFormat = "TEXT"
+	HrisMetadataFormatNumber         HrisMetadataFormat = "NUMBER"
+	HrisMetadataFormatDate           HrisMetadataFormat = "DATE"
+	HrisMetadataFormatBoolean        HrisMetadataFormat = "BOOLEAN"
+	HrisMetadataFormatFile           HrisMetadataFormat = "FILE"
+	HrisMetadataFormatTextarea       HrisMetadataFormat = "TEXTAREA"
+	HrisMetadataFormatSingleSelect   HrisMetadataFormat = "SINGLE_SELECT"
+	HrisMetadataFormatMultipleSelect HrisMetadataFormat = "MULTIPLE_SELECT"
+	HrisMetadataFormatMeasurement    HrisMetadataFormat = "MEASUREMENT"
+	HrisMetadataFormatPrice          HrisMetadataFormat = "PRICE"
+	HrisMetadataFormatYesNo          HrisMetadataFormat = "YES_NO"
+	HrisMetadataFormatCurrency       HrisMetadataFormat = "CURRENCY"
+	HrisMetadataFormatURL            HrisMetadataFormat = "URL"
+)
+
+func (e HrisMetadataFormat) ToPointer() *HrisMetadataFormat {
+	return &e
+}
+func (e *HrisMetadataFormat) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "TEXT":
+		fallthrough
+	case "NUMBER":
+		fallthrough
+	case "DATE":
+		fallthrough
+	case "BOOLEAN":
+		fallthrough
+	case "FILE":
+		fallthrough
+	case "TEXTAREA":
+		fallthrough
+	case "SINGLE_SELECT":
+		fallthrough
+	case "MULTIPLE_SELECT":
+		fallthrough
+	case "MEASUREMENT":
+		fallthrough
+	case "PRICE":
+		fallthrough
+	case "YES_NO":
+		fallthrough
+	case "CURRENCY":
+		fallthrough
+	case "URL":
+		*e = HrisMetadataFormat(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for HrisMetadataFormat: %v", v)
+	}
+}
+
 type HrisMetadataSchemasValue52 struct {
 }
 
@@ -802,6 +862,7 @@ func (u HrisMetadataValue) MarshalJSON() ([]byte, error) {
 
 type HrisMetadata struct {
 	ExtraData *HrisMetadataExtraData `json:"extra_data,omitempty"`
+	Format    *HrisMetadataFormat    `json:"format,omitempty"`
 	ID        *string                `json:"id,omitempty"`
 	Key       *string                `json:"key,omitempty"`
 	Namespace *string                `json:"namespace,omitempty"`
@@ -815,6 +876,13 @@ func (o *HrisMetadata) GetExtraData() *HrisMetadataExtraData {
 		return nil
 	}
 	return o.ExtraData
+}
+
+func (o *HrisMetadata) GetFormat() *HrisMetadataFormat {
+	if o == nil {
+		return nil
+	}
+	return o.Format
 }
 
 func (o *HrisMetadata) GetID() *string {

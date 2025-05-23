@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListTicketingNotesRequest struct {
@@ -27,18 +25,7 @@ type ListTicketingNotesRequest struct {
 	// The ticket ID to filter by
 	TicketID *string `queryParam:"style=form,explode=true,name=ticket_id"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListTicketingNotesRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListTicketingNotesRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListTicketingNotesRequest) GetConnectionID() string {
@@ -111,7 +98,7 @@ func (o *ListTicketingNotesRequest) GetTicketID() *string {
 	return o.TicketID
 }
 
-func (o *ListTicketingNotesRequest) GetUpdatedGte() *time.Time {
+func (o *ListTicketingNotesRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

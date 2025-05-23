@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListUcContactsRequest struct {
@@ -23,20 +21,9 @@ type ListUcContactsRequest struct {
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-func (l ListUcContactsRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListUcContactsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
 }
 
 func (o *ListUcContactsRequest) GetConnectionID() string {
@@ -95,7 +82,7 @@ func (o *ListUcContactsRequest) GetSort() *string {
 	return o.Sort
 }
 
-func (o *ListUcContactsRequest) GetUpdatedGte() *time.Time {
+func (o *ListUcContactsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListCrmCompaniesRequest struct {
@@ -27,20 +25,9 @@ type ListCrmCompaniesRequest struct {
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-func (l ListCrmCompaniesRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListCrmCompaniesRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
 }
 
 func (o *ListCrmCompaniesRequest) GetConnectionID() string {
@@ -113,7 +100,7 @@ func (o *ListCrmCompaniesRequest) GetSort() *string {
 	return o.Sort
 }
 
-func (o *ListCrmCompaniesRequest) GetUpdatedGte() *time.Time {
+func (o *ListCrmCompaniesRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

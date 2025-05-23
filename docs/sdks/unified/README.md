@@ -50,15 +50,10 @@ func main() {
     )
 
     res, err := s.Unified.CreateUnifiedConnection(ctx, shared.Connection{
-        Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesAccounting,
-            shared.PropertyConnectionCategoriesMartech,
-            shared.PropertyConnectionCategoriesMartech,
-        },
+        Categories: []shared.PropertyConnectionCategories{},
         IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsRepoOrganizationRead,
-            shared.PropertyConnectionPermissionsLmsClassWrite,
+            shared.PropertyConnectionPermissionsEnrichCompanyRead,
         },
     })
     if err != nil {
@@ -116,7 +111,7 @@ func main() {
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
             Event: shared.EventCreated,
-            ObjectType: shared.ObjectTypeHrisPayslip,
+            ObjectType: shared.ObjectTypeAtsScorecard,
         },
     })
     if err != nil {
@@ -694,11 +689,12 @@ func main() {
     res, err := s.Unified.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
         Connection: shared.Connection{
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesCalendar,
-                shared.PropertyConnectionCategoriesEnrich,
+                shared.PropertyConnectionCategoriesStorage,
             },
             IntegrationType: "<value>",
-            Permissions: []shared.PropertyConnectionPermissions{},
+            Permissions: []shared.PropertyConnectionPermissions{
+                shared.PropertyConnectionPermissionsUcContactWrite,
+            },
         },
         ID: "<id>",
     })
@@ -756,8 +752,8 @@ func main() {
     res, err := s.Unified.PatchUnifiedWebhook(ctx, operations.PatchUnifiedWebhookRequest{
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
-            Event: shared.EventDeleted,
-            ObjectType: shared.ObjectTypeCrmLead,
+            Event: shared.EventUpdated,
+            ObjectType: shared.ObjectTypeTicketingCustomer,
         },
         ID: "<id>",
     })
@@ -973,13 +969,12 @@ func main() {
 
     res, err := s.Unified.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
         Connection: shared.Connection{
-            Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesCalendar,
-                shared.PropertyConnectionCategoriesStorage,
-                shared.PropertyConnectionCategoriesCalendar,
-            },
+            Categories: []shared.PropertyConnectionCategories{},
             IntegrationType: "<value>",
-            Permissions: []shared.PropertyConnectionPermissions{},
+            Permissions: []shared.PropertyConnectionPermissions{
+                shared.PropertyConnectionPermissionsCommerceReviewRead,
+                shared.PropertyConnectionPermissionsCalendarCalendarRead,
+            },
         },
         ID: "<id>",
     })
@@ -1037,8 +1032,8 @@ func main() {
     res, err := s.Unified.UpdateUnifiedWebhook(ctx, operations.UpdateUnifiedWebhookRequest{
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
-            Event: shared.EventCreated,
-            ObjectType: shared.ObjectTypePaymentLink,
+            Event: shared.EventDeleted,
+            ObjectType: shared.ObjectTypeMessagingChannel,
         },
         ID: "<id>",
     })

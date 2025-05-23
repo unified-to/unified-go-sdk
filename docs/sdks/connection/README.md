@@ -36,15 +36,10 @@ func main() {
     )
 
     res, err := s.Connection.CreateUnifiedConnection(ctx, shared.Connection{
-        Categories: []shared.PropertyConnectionCategories{
-            shared.PropertyConnectionCategoriesAccounting,
-            shared.PropertyConnectionCategoriesMartech,
-            shared.PropertyConnectionCategoriesMartech,
-        },
+        Categories: []shared.PropertyConnectionCategories{},
         IntegrationType: "<value>",
         Permissions: []shared.PropertyConnectionPermissions{
-            shared.PropertyConnectionPermissionsRepoOrganizationRead,
-            shared.PropertyConnectionPermissionsLmsClassWrite,
+            shared.PropertyConnectionPermissionsEnrichCompanyRead,
         },
     })
     if err != nil {
@@ -205,11 +200,12 @@ func main() {
     res, err := s.Connection.PatchUnifiedConnection(ctx, operations.PatchUnifiedConnectionRequest{
         Connection: shared.Connection{
             Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesCalendar,
-                shared.PropertyConnectionCategoriesEnrich,
+                shared.PropertyConnectionCategoriesStorage,
             },
             IntegrationType: "<value>",
-            Permissions: []shared.PropertyConnectionPermissions{},
+            Permissions: []shared.PropertyConnectionPermissions{
+                shared.PropertyConnectionPermissionsUcContactWrite,
+            },
         },
         ID: "<id>",
     })
@@ -319,13 +315,12 @@ func main() {
 
     res, err := s.Connection.UpdateUnifiedConnection(ctx, operations.UpdateUnifiedConnectionRequest{
         Connection: shared.Connection{
-            Categories: []shared.PropertyConnectionCategories{
-                shared.PropertyConnectionCategoriesCalendar,
-                shared.PropertyConnectionCategoriesStorage,
-                shared.PropertyConnectionCategoriesCalendar,
-            },
+            Categories: []shared.PropertyConnectionCategories{},
             IntegrationType: "<value>",
-            Permissions: []shared.PropertyConnectionPermissions{},
+            Permissions: []shared.PropertyConnectionPermissions{
+                shared.PropertyConnectionPermissionsCommerceReviewRead,
+                shared.PropertyConnectionPermissionsCalendarCalendarRead,
+            },
         },
         ID: "<id>",
     })

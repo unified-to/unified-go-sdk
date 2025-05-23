@@ -9,28 +9,28 @@ import (
 	"time"
 )
 
-type Format string
+type MetadataMetadataFormat string
 
 const (
-	FormatText           Format = "TEXT"
-	FormatNumber         Format = "NUMBER"
-	FormatDate           Format = "DATE"
-	FormatBoolean        Format = "BOOLEAN"
-	FormatFile           Format = "FILE"
-	FormatTextarea       Format = "TEXTAREA"
-	FormatSingleSelect   Format = "SINGLE_SELECT"
-	FormatMultipleSelect Format = "MULTIPLE_SELECT"
-	FormatMeasurement    Format = "MEASUREMENT"
-	FormatPrice          Format = "PRICE"
-	FormatYesNo          Format = "YES_NO"
-	FormatCurrency       Format = "CURRENCY"
-	FormatURL            Format = "URL"
+	MetadataMetadataFormatText           MetadataMetadataFormat = "TEXT"
+	MetadataMetadataFormatNumber         MetadataMetadataFormat = "NUMBER"
+	MetadataMetadataFormatDate           MetadataMetadataFormat = "DATE"
+	MetadataMetadataFormatBoolean        MetadataMetadataFormat = "BOOLEAN"
+	MetadataMetadataFormatFile           MetadataMetadataFormat = "FILE"
+	MetadataMetadataFormatTextarea       MetadataMetadataFormat = "TEXTAREA"
+	MetadataMetadataFormatSingleSelect   MetadataMetadataFormat = "SINGLE_SELECT"
+	MetadataMetadataFormatMultipleSelect MetadataMetadataFormat = "MULTIPLE_SELECT"
+	MetadataMetadataFormatMeasurement    MetadataMetadataFormat = "MEASUREMENT"
+	MetadataMetadataFormatPrice          MetadataMetadataFormat = "PRICE"
+	MetadataMetadataFormatYesNo          MetadataMetadataFormat = "YES_NO"
+	MetadataMetadataFormatCurrency       MetadataMetadataFormat = "CURRENCY"
+	MetadataMetadataFormatURL            MetadataMetadataFormat = "URL"
 )
 
-func (e Format) ToPointer() *Format {
+func (e MetadataMetadataFormat) ToPointer() *MetadataMetadataFormat {
 	return &e
 }
-func (e *Format) UnmarshalJSON(data []byte) error {
+func (e *MetadataMetadataFormat) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -61,25 +61,25 @@ func (e *Format) UnmarshalJSON(data []byte) error {
 	case "CURRENCY":
 		fallthrough
 	case "URL":
-		*e = Format(v)
+		*e = MetadataMetadataFormat(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Format: %v", v)
+		return fmt.Errorf("invalid value for MetadataMetadataFormat: %v", v)
 	}
 }
 
 type MetadataMetadata struct {
-	CreatedAt      *time.Time     `json:"created_at,omitempty"`
-	Format         *Format        `json:"format,omitempty"`
-	ID             *string        `json:"id,omitempty"`
-	Name           string         `json:"name"`
-	ObjectType     string         `json:"object_type"`
-	Objects        map[string]any `json:"objects,omitempty"`
-	Options        []string       `json:"options,omitempty"`
-	OriginalFormat *string        `json:"original_format,omitempty"`
-	Raw            map[string]any `json:"raw,omitempty"`
-	Slug           *string        `json:"slug,omitempty"`
-	UpdatedAt      *time.Time     `json:"updated_at,omitempty"`
+	CreatedAt      *time.Time                        `json:"created_at,omitempty"`
+	Format         *MetadataMetadataFormat           `json:"format,omitempty"`
+	ID             *string                           `json:"id,omitempty"`
+	Name           string                            `json:"name"`
+	ObjectType     string                            `json:"object_type"`
+	Objects        map[string]any                    `json:"objects,omitempty"`
+	Options        []PropertyMetadataMetadataOptions `json:"options,omitempty"`
+	OriginalFormat *string                           `json:"original_format,omitempty"`
+	Raw            map[string]any                    `json:"raw,omitempty"`
+	Slug           *string                           `json:"slug,omitempty"`
+	UpdatedAt      *time.Time                        `json:"updated_at,omitempty"`
 }
 
 func (m MetadataMetadata) MarshalJSON() ([]byte, error) {
@@ -100,7 +100,7 @@ func (o *MetadataMetadata) GetCreatedAt() *time.Time {
 	return o.CreatedAt
 }
 
-func (o *MetadataMetadata) GetFormat() *Format {
+func (o *MetadataMetadata) GetFormat() *MetadataMetadataFormat {
 	if o == nil {
 		return nil
 	}
@@ -135,7 +135,7 @@ func (o *MetadataMetadata) GetObjects() map[string]any {
 	return o.Objects
 }
 
-func (o *MetadataMetadata) GetOptions() []string {
+func (o *MetadataMetadata) GetOptions() []PropertyMetadataMetadataOptions {
 	if o == nil {
 		return nil
 	}

@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListAtsCandidatesRequest struct {
@@ -23,18 +21,7 @@ type ListAtsCandidatesRequest struct {
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListAtsCandidatesRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListAtsCandidatesRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListAtsCandidatesRequest) GetConnectionID() string {
@@ -93,7 +80,7 @@ func (o *ListAtsCandidatesRequest) GetSort() *string {
 	return o.Sort
 }
 
-func (o *ListAtsCandidatesRequest) GetUpdatedGte() *time.Time {
+func (o *ListAtsCandidatesRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

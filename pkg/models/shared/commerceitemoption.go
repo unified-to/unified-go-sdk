@@ -3,10 +3,10 @@
 package shared
 
 type CommerceItemOption struct {
-	ID       *string  `json:"id,omitempty"`
-	Name     string   `json:"name"`
-	Position *float64 `json:"position,omitempty"`
-	Values   []string `json:"values"`
+	ID       *string                            `json:"id,omitempty"`
+	Name     string                             `json:"name"`
+	Position *float64                           `json:"position,omitempty"`
+	Values   []PropertyCommerceItemOptionValues `json:"values"`
 }
 
 func (o *CommerceItemOption) GetID() *string {
@@ -30,9 +30,9 @@ func (o *CommerceItemOption) GetPosition() *float64 {
 	return o.Position
 }
 
-func (o *CommerceItemOption) GetValues() []string {
+func (o *CommerceItemOption) GetValues() []PropertyCommerceItemOptionValues {
 	if o == nil {
-		return []string{}
+		return []PropertyCommerceItemOptionValues{}
 	}
 	return o.Values
 }

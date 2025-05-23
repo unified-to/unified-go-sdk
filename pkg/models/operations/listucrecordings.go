@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListUcRecordingsRequest struct {
@@ -31,20 +29,9 @@ type ListUcRecordingsRequest struct {
 	// The start date to filter by
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
-}
-
-func (l ListUcRecordingsRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListUcRecordingsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
 }
 
 func (o *ListUcRecordingsRequest) GetCallID() *string {
@@ -131,7 +118,7 @@ func (o *ListUcRecordingsRequest) GetStartGte() *string {
 	return o.StartGte
 }
 
-func (o *ListUcRecordingsRequest) GetUpdatedGte() *time.Time {
+func (o *ListUcRecordingsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListMessagingMessagesRequest struct {
@@ -31,18 +29,7 @@ type ListMessagingMessagesRequest struct {
 	// The start date to filter by
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListMessagingMessagesRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListMessagingMessagesRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListMessagingMessagesRequest) GetChannelID() *string {
@@ -129,7 +116,7 @@ func (o *ListMessagingMessagesRequest) GetStartGte() *string {
 	return o.StartGte
 }
 
-func (o *ListMessagingMessagesRequest) GetUpdatedGte() *time.Time {
+func (o *ListMessagingMessagesRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

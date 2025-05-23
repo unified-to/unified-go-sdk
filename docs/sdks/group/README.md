@@ -99,7 +99,7 @@ func main() {
 
     res, err := s.Group.CreateScimGroups(ctx, operations.CreateScimGroupsRequest{
         ScimGroup: shared.ScimGroup{
-            DisplayName: "Bert89",
+            DisplayName: "Nina.Tremblay",
         },
         ConnectionID: "<id>",
     })
@@ -426,7 +426,7 @@ func main() {
 
     res, err := s.Group.PatchScimGroups(ctx, operations.PatchScimGroupsRequest{
         ScimGroup: shared.ScimGroup{
-            DisplayName: "Damon_Rutherford93",
+            DisplayName: "Newell.Hoeger",
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -648,7 +648,7 @@ func main() {
 
     res, err := s.Group.UpdateScimGroups(ctx, operations.UpdateScimGroupsRequest{
         ScimGroup: shared.ScimGroup{
-            DisplayName: "Frederic.Reichel",
+            DisplayName: "Reynold90",
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListUnifiedApicallsRequest struct {
@@ -28,20 +26,9 @@ type ListUnifiedApicallsRequest struct {
 	// Filter the results to just this type
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// Filter the results to just this webhook
 	WebhookID *string `queryParam:"style=form,explode=true,name=webhook_id"`
-}
-
-func (l ListUnifiedApicallsRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListUnifiedApicallsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
 }
 
 func (o *ListUnifiedApicallsRequest) GetConnectionID() *string {
@@ -121,7 +108,7 @@ func (o *ListUnifiedApicallsRequest) GetType() *string {
 	return o.Type
 }
 
-func (o *ListUnifiedApicallsRequest) GetUpdatedGte() *time.Time {
+func (o *ListUnifiedApicallsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

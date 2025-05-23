@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListCalendarBusiesRequest struct {
@@ -29,18 +27,7 @@ type ListCalendarBusiesRequest struct {
 	// The start date to filter by
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListCalendarBusiesRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListCalendarBusiesRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListCalendarBusiesRequest) GetCalendarID() *string {
@@ -120,7 +107,7 @@ func (o *ListCalendarBusiesRequest) GetStartGte() *string {
 	return o.StartGte
 }
 
-func (o *ListCalendarBusiesRequest) GetUpdatedGte() *time.Time {
+func (o *ListCalendarBusiesRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

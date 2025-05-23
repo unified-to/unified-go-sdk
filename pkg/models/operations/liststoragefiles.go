@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListStorageFilesRequest struct {
@@ -27,18 +25,7 @@ type ListStorageFilesRequest struct {
 	// The type to filter by
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListStorageFilesRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListStorageFilesRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListStorageFilesRequest) GetConnectionID() string {
@@ -111,7 +98,7 @@ func (o *ListStorageFilesRequest) GetType() *string {
 	return o.Type
 }
 
-func (o *ListStorageFilesRequest) GetUpdatedGte() *time.Time {
+func (o *ListStorageFilesRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

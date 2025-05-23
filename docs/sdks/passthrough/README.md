@@ -39,7 +39,7 @@ func main() {
 
     res, err := s.Passthrough.CreatePassthroughJSON(ctx, operations.CreatePassthroughJSONRequest{
         ConnectionID: "<id>",
-        Path: "/opt/lib",
+        Path: "/var/log",
     })
     if err != nil {
         log.Fatal(err)
@@ -93,7 +93,7 @@ func main() {
 
     res, err := s.Passthrough.CreatePassthroughRaw(ctx, operations.CreatePassthroughRawRequest{
         ConnectionID: "<id>",
-        Path: "/opt/lib",
+        Path: "/var/log",
     })
     if err != nil {
         log.Fatal(err)
@@ -147,7 +147,7 @@ func main() {
 
     res, err := s.Passthrough.ListPassthroughs(ctx, operations.ListPassthroughsRequest{
         ConnectionID: "<id>",
-        Path: "/selinux",
+        Path: "/System",
     })
     if err != nil {
         log.Fatal(err)
@@ -201,7 +201,7 @@ func main() {
 
     res, err := s.Passthrough.PatchPassthroughJSON(ctx, operations.PatchPassthroughJSONRequest{
         ConnectionID: "<id>",
-        Path: "/home/user",
+        Path: "/System",
     })
     if err != nil {
         log.Fatal(err)
@@ -255,7 +255,7 @@ func main() {
 
     res, err := s.Passthrough.PatchPassthroughRaw(ctx, operations.PatchPassthroughRawRequest{
         ConnectionID: "<id>",
-        Path: "/home/user",
+        Path: "/System",
     })
     if err != nil {
         log.Fatal(err)
@@ -309,7 +309,7 @@ func main() {
 
     res, err := s.Passthrough.RemovePassthrough(ctx, operations.RemovePassthroughRequest{
         ConnectionID: "<id>",
-        Path: "/Applications",
+        Path: "/bin",
     })
     if err != nil {
         log.Fatal(err)
@@ -363,7 +363,7 @@ func main() {
 
     res, err := s.Passthrough.UpdatePassthroughJSON(ctx, operations.UpdatePassthroughJSONRequest{
         ConnectionID: "<id>",
-        Path: "/etc/namedb",
+        Path: "/var/tmp",
     })
     if err != nil {
         log.Fatal(err)
@@ -417,7 +417,7 @@ func main() {
 
     res, err := s.Passthrough.UpdatePassthroughRaw(ctx, operations.UpdatePassthroughRawRequest{
         ConnectionID: "<id>",
-        Path: "/etc/namedb",
+        Path: "/var/tmp",
     })
     if err != nil {
         log.Fatal(err)

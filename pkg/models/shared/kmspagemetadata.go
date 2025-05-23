@@ -2,17 +2,915 @@
 
 package shared
 
-type KmsPageMetadata struct {
-	Name  string  `json:"name"`
-	Type  *string `json:"type,omitempty"`
-	Value *string `json:"value,omitempty"`
+import (
+	"encoding/json"
+	"errors"
+	"fmt"
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+)
+
+type KmsPageMetadataSchemasExtraData52 struct {
 }
 
-func (o *KmsPageMetadata) GetName() string {
-	if o == nil {
-		return ""
+type KmsPageMetadata5Type string
+
+const (
+	KmsPageMetadata5TypeArrayOfAny                        KmsPageMetadata5Type = "arrayOfAny"
+	KmsPageMetadata5TypeKmsPageMetadataSchemasExtraData52 KmsPageMetadata5Type = "KmsPageMetadata_Schemas_extra_data_5_2"
+)
+
+type KmsPageMetadata5 struct {
+	ArrayOfAny                        []any                              `queryParam:"inline"`
+	KmsPageMetadataSchemasExtraData52 *KmsPageMetadataSchemasExtraData52 `queryParam:"inline"`
+
+	Type KmsPageMetadata5Type
+}
+
+func CreateKmsPageMetadata5ArrayOfAny(arrayOfAny []any) KmsPageMetadata5 {
+	typ := KmsPageMetadata5TypeArrayOfAny
+
+	return KmsPageMetadata5{
+		ArrayOfAny: arrayOfAny,
+		Type:       typ,
 	}
-	return o.Name
+}
+
+func CreateKmsPageMetadata5KmsPageMetadataSchemasExtraData52(kmsPageMetadataSchemasExtraData52 KmsPageMetadataSchemasExtraData52) KmsPageMetadata5 {
+	typ := KmsPageMetadata5TypeKmsPageMetadataSchemasExtraData52
+
+	return KmsPageMetadata5{
+		KmsPageMetadataSchemasExtraData52: &kmsPageMetadataSchemasExtraData52,
+		Type:                              typ,
+	}
+}
+
+func (u *KmsPageMetadata5) UnmarshalJSON(data []byte) error {
+
+	var kmsPageMetadataSchemasExtraData52 KmsPageMetadataSchemasExtraData52 = KmsPageMetadataSchemasExtraData52{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemasExtraData52, "", true, true); err == nil {
+		u.KmsPageMetadataSchemasExtraData52 = &kmsPageMetadataSchemasExtraData52
+		u.Type = KmsPageMetadata5TypeKmsPageMetadataSchemasExtraData52
+		return nil
+	}
+
+	var arrayOfAny []any = []any{}
+	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
+		u.ArrayOfAny = arrayOfAny
+		u.Type = KmsPageMetadata5TypeArrayOfAny
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for KmsPageMetadata5", string(data))
+}
+
+func (u KmsPageMetadata5) MarshalJSON() ([]byte, error) {
+	if u.ArrayOfAny != nil {
+		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	}
+
+	if u.KmsPageMetadataSchemasExtraData52 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemasExtraData52, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type KmsPageMetadata5: all fields are null")
+}
+
+type KmsPageMetadataSchemasExtraData2 struct {
+}
+
+type KmsPageMetadata4Type string
+
+const (
+	KmsPageMetadata4TypeBoolean                          KmsPageMetadata4Type = "boolean"
+	KmsPageMetadata4TypeKmsPageMetadataSchemasExtraData2 KmsPageMetadata4Type = "KmsPageMetadata_Schemas_extra_data_2"
+)
+
+type KmsPageMetadata4 struct {
+	Boolean                          *bool                             `queryParam:"inline"`
+	KmsPageMetadataSchemasExtraData2 *KmsPageMetadataSchemasExtraData2 `queryParam:"inline"`
+
+	Type KmsPageMetadata4Type
+}
+
+func CreateKmsPageMetadata4Boolean(boolean bool) KmsPageMetadata4 {
+	typ := KmsPageMetadata4TypeBoolean
+
+	return KmsPageMetadata4{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateKmsPageMetadata4KmsPageMetadataSchemasExtraData2(kmsPageMetadataSchemasExtraData2 KmsPageMetadataSchemasExtraData2) KmsPageMetadata4 {
+	typ := KmsPageMetadata4TypeKmsPageMetadataSchemasExtraData2
+
+	return KmsPageMetadata4{
+		KmsPageMetadataSchemasExtraData2: &kmsPageMetadataSchemasExtraData2,
+		Type:                             typ,
+	}
+}
+
+func (u *KmsPageMetadata4) UnmarshalJSON(data []byte) error {
+
+	var kmsPageMetadataSchemasExtraData2 KmsPageMetadataSchemasExtraData2 = KmsPageMetadataSchemasExtraData2{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemasExtraData2, "", true, true); err == nil {
+		u.KmsPageMetadataSchemasExtraData2 = &kmsPageMetadataSchemasExtraData2
+		u.Type = KmsPageMetadata4TypeKmsPageMetadataSchemasExtraData2
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = KmsPageMetadata4TypeBoolean
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for KmsPageMetadata4", string(data))
+}
+
+func (u KmsPageMetadata4) MarshalJSON() ([]byte, error) {
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	if u.KmsPageMetadataSchemasExtraData2 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemasExtraData2, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type KmsPageMetadata4: all fields are null")
+}
+
+type KmsPageMetadataSchemasExtraData32 struct {
+}
+
+type KmsPageMetadata3Type string
+
+const (
+	KmsPageMetadata3TypeNumber                            KmsPageMetadata3Type = "number"
+	KmsPageMetadata3TypeKmsPageMetadataSchemasExtraData32 KmsPageMetadata3Type = "KmsPageMetadata_Schemas_extra_data_3_2"
+)
+
+type KmsPageMetadata3 struct {
+	Number                            *float64                           `queryParam:"inline"`
+	KmsPageMetadataSchemasExtraData32 *KmsPageMetadataSchemasExtraData32 `queryParam:"inline"`
+
+	Type KmsPageMetadata3Type
+}
+
+func CreateKmsPageMetadata3Number(number float64) KmsPageMetadata3 {
+	typ := KmsPageMetadata3TypeNumber
+
+	return KmsPageMetadata3{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateKmsPageMetadata3KmsPageMetadataSchemasExtraData32(kmsPageMetadataSchemasExtraData32 KmsPageMetadataSchemasExtraData32) KmsPageMetadata3 {
+	typ := KmsPageMetadata3TypeKmsPageMetadataSchemasExtraData32
+
+	return KmsPageMetadata3{
+		KmsPageMetadataSchemasExtraData32: &kmsPageMetadataSchemasExtraData32,
+		Type:                              typ,
+	}
+}
+
+func (u *KmsPageMetadata3) UnmarshalJSON(data []byte) error {
+
+	var kmsPageMetadataSchemasExtraData32 KmsPageMetadataSchemasExtraData32 = KmsPageMetadataSchemasExtraData32{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemasExtraData32, "", true, true); err == nil {
+		u.KmsPageMetadataSchemasExtraData32 = &kmsPageMetadataSchemasExtraData32
+		u.Type = KmsPageMetadata3TypeKmsPageMetadataSchemasExtraData32
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = KmsPageMetadata3TypeNumber
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for KmsPageMetadata3", string(data))
+}
+
+func (u KmsPageMetadata3) MarshalJSON() ([]byte, error) {
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.KmsPageMetadataSchemasExtraData32 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemasExtraData32, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type KmsPageMetadata3: all fields are null")
+}
+
+type KmsPageMetadataSchemasExtraData22 struct {
+}
+
+type KmsPageMetadata2Type string
+
+const (
+	KmsPageMetadata2TypeStr                               KmsPageMetadata2Type = "str"
+	KmsPageMetadata2TypeKmsPageMetadataSchemasExtraData22 KmsPageMetadata2Type = "KmsPageMetadata_Schemas_extra_data_2_2"
+)
+
+type KmsPageMetadata2 struct {
+	Str                               *string                            `queryParam:"inline"`
+	KmsPageMetadataSchemasExtraData22 *KmsPageMetadataSchemasExtraData22 `queryParam:"inline"`
+
+	Type KmsPageMetadata2Type
+}
+
+func CreateKmsPageMetadata2Str(str string) KmsPageMetadata2 {
+	typ := KmsPageMetadata2TypeStr
+
+	return KmsPageMetadata2{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateKmsPageMetadata2KmsPageMetadataSchemasExtraData22(kmsPageMetadataSchemasExtraData22 KmsPageMetadataSchemasExtraData22) KmsPageMetadata2 {
+	typ := KmsPageMetadata2TypeKmsPageMetadataSchemasExtraData22
+
+	return KmsPageMetadata2{
+		KmsPageMetadataSchemasExtraData22: &kmsPageMetadataSchemasExtraData22,
+		Type:                              typ,
+	}
+}
+
+func (u *KmsPageMetadata2) UnmarshalJSON(data []byte) error {
+
+	var kmsPageMetadataSchemasExtraData22 KmsPageMetadataSchemasExtraData22 = KmsPageMetadataSchemasExtraData22{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemasExtraData22, "", true, true); err == nil {
+		u.KmsPageMetadataSchemasExtraData22 = &kmsPageMetadataSchemasExtraData22
+		u.Type = KmsPageMetadata2TypeKmsPageMetadataSchemasExtraData22
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = KmsPageMetadata2TypeStr
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for KmsPageMetadata2", string(data))
+}
+
+func (u KmsPageMetadata2) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.KmsPageMetadataSchemasExtraData22 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemasExtraData22, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type KmsPageMetadata2: all fields are null")
+}
+
+type KmsPageMetadata1 struct {
+}
+
+type KmsPageMetadataExtraDataType string
+
+const (
+	KmsPageMetadataExtraDataTypeKmsPageMetadata1 KmsPageMetadataExtraDataType = "KmsPageMetadata_1"
+	KmsPageMetadataExtraDataTypeKmsPageMetadata2 KmsPageMetadataExtraDataType = "KmsPageMetadata_2"
+	KmsPageMetadataExtraDataTypeKmsPageMetadata3 KmsPageMetadataExtraDataType = "KmsPageMetadata_3"
+	KmsPageMetadataExtraDataTypeKmsPageMetadata4 KmsPageMetadataExtraDataType = "KmsPageMetadata_4"
+	KmsPageMetadataExtraDataTypeKmsPageMetadata5 KmsPageMetadataExtraDataType = "KmsPageMetadata_5"
+)
+
+type KmsPageMetadataExtraData struct {
+	KmsPageMetadata1 *KmsPageMetadata1 `queryParam:"inline"`
+	KmsPageMetadata2 *KmsPageMetadata2 `queryParam:"inline"`
+	KmsPageMetadata3 *KmsPageMetadata3 `queryParam:"inline"`
+	KmsPageMetadata4 *KmsPageMetadata4 `queryParam:"inline"`
+	KmsPageMetadata5 *KmsPageMetadata5 `queryParam:"inline"`
+
+	Type KmsPageMetadataExtraDataType
+}
+
+func CreateKmsPageMetadataExtraDataKmsPageMetadata1(kmsPageMetadata1 KmsPageMetadata1) KmsPageMetadataExtraData {
+	typ := KmsPageMetadataExtraDataTypeKmsPageMetadata1
+
+	return KmsPageMetadataExtraData{
+		KmsPageMetadata1: &kmsPageMetadata1,
+		Type:             typ,
+	}
+}
+
+func CreateKmsPageMetadataExtraDataKmsPageMetadata2(kmsPageMetadata2 KmsPageMetadata2) KmsPageMetadataExtraData {
+	typ := KmsPageMetadataExtraDataTypeKmsPageMetadata2
+
+	return KmsPageMetadataExtraData{
+		KmsPageMetadata2: &kmsPageMetadata2,
+		Type:             typ,
+	}
+}
+
+func CreateKmsPageMetadataExtraDataKmsPageMetadata3(kmsPageMetadata3 KmsPageMetadata3) KmsPageMetadataExtraData {
+	typ := KmsPageMetadataExtraDataTypeKmsPageMetadata3
+
+	return KmsPageMetadataExtraData{
+		KmsPageMetadata3: &kmsPageMetadata3,
+		Type:             typ,
+	}
+}
+
+func CreateKmsPageMetadataExtraDataKmsPageMetadata4(kmsPageMetadata4 KmsPageMetadata4) KmsPageMetadataExtraData {
+	typ := KmsPageMetadataExtraDataTypeKmsPageMetadata4
+
+	return KmsPageMetadataExtraData{
+		KmsPageMetadata4: &kmsPageMetadata4,
+		Type:             typ,
+	}
+}
+
+func CreateKmsPageMetadataExtraDataKmsPageMetadata5(kmsPageMetadata5 KmsPageMetadata5) KmsPageMetadataExtraData {
+	typ := KmsPageMetadataExtraDataTypeKmsPageMetadata5
+
+	return KmsPageMetadataExtraData{
+		KmsPageMetadata5: &kmsPageMetadata5,
+		Type:             typ,
+	}
+}
+
+func (u *KmsPageMetadataExtraData) UnmarshalJSON(data []byte) error {
+
+	var kmsPageMetadata1 KmsPageMetadata1 = KmsPageMetadata1{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadata1, "", true, true); err == nil {
+		u.KmsPageMetadata1 = &kmsPageMetadata1
+		u.Type = KmsPageMetadataExtraDataTypeKmsPageMetadata1
+		return nil
+	}
+
+	var kmsPageMetadata2 KmsPageMetadata2 = KmsPageMetadata2{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadata2, "", true, true); err == nil {
+		u.KmsPageMetadata2 = &kmsPageMetadata2
+		u.Type = KmsPageMetadataExtraDataTypeKmsPageMetadata2
+		return nil
+	}
+
+	var kmsPageMetadata3 KmsPageMetadata3 = KmsPageMetadata3{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadata3, "", true, true); err == nil {
+		u.KmsPageMetadata3 = &kmsPageMetadata3
+		u.Type = KmsPageMetadataExtraDataTypeKmsPageMetadata3
+		return nil
+	}
+
+	var kmsPageMetadata4 KmsPageMetadata4 = KmsPageMetadata4{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadata4, "", true, true); err == nil {
+		u.KmsPageMetadata4 = &kmsPageMetadata4
+		u.Type = KmsPageMetadataExtraDataTypeKmsPageMetadata4
+		return nil
+	}
+
+	var kmsPageMetadata5 KmsPageMetadata5 = KmsPageMetadata5{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadata5, "", true, true); err == nil {
+		u.KmsPageMetadata5 = &kmsPageMetadata5
+		u.Type = KmsPageMetadataExtraDataTypeKmsPageMetadata5
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for KmsPageMetadataExtraData", string(data))
+}
+
+func (u KmsPageMetadataExtraData) MarshalJSON() ([]byte, error) {
+	if u.KmsPageMetadata1 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadata1, "", true)
+	}
+
+	if u.KmsPageMetadata2 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadata2, "", true)
+	}
+
+	if u.KmsPageMetadata3 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadata3, "", true)
+	}
+
+	if u.KmsPageMetadata4 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadata4, "", true)
+	}
+
+	if u.KmsPageMetadata5 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadata5, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type KmsPageMetadataExtraData: all fields are null")
+}
+
+type KmsPageMetadataFormat string
+
+const (
+	KmsPageMetadataFormatText           KmsPageMetadataFormat = "TEXT"
+	KmsPageMetadataFormatNumber         KmsPageMetadataFormat = "NUMBER"
+	KmsPageMetadataFormatDate           KmsPageMetadataFormat = "DATE"
+	KmsPageMetadataFormatBoolean        KmsPageMetadataFormat = "BOOLEAN"
+	KmsPageMetadataFormatFile           KmsPageMetadataFormat = "FILE"
+	KmsPageMetadataFormatTextarea       KmsPageMetadataFormat = "TEXTAREA"
+	KmsPageMetadataFormatSingleSelect   KmsPageMetadataFormat = "SINGLE_SELECT"
+	KmsPageMetadataFormatMultipleSelect KmsPageMetadataFormat = "MULTIPLE_SELECT"
+	KmsPageMetadataFormatMeasurement    KmsPageMetadataFormat = "MEASUREMENT"
+	KmsPageMetadataFormatPrice          KmsPageMetadataFormat = "PRICE"
+	KmsPageMetadataFormatYesNo          KmsPageMetadataFormat = "YES_NO"
+	KmsPageMetadataFormatCurrency       KmsPageMetadataFormat = "CURRENCY"
+	KmsPageMetadataFormatURL            KmsPageMetadataFormat = "URL"
+)
+
+func (e KmsPageMetadataFormat) ToPointer() *KmsPageMetadataFormat {
+	return &e
+}
+func (e *KmsPageMetadataFormat) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "TEXT":
+		fallthrough
+	case "NUMBER":
+		fallthrough
+	case "DATE":
+		fallthrough
+	case "BOOLEAN":
+		fallthrough
+	case "FILE":
+		fallthrough
+	case "TEXTAREA":
+		fallthrough
+	case "SINGLE_SELECT":
+		fallthrough
+	case "MULTIPLE_SELECT":
+		fallthrough
+	case "MEASUREMENT":
+		fallthrough
+	case "PRICE":
+		fallthrough
+	case "YES_NO":
+		fallthrough
+	case "CURRENCY":
+		fallthrough
+	case "URL":
+		*e = KmsPageMetadataFormat(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for KmsPageMetadataFormat: %v", v)
+	}
+}
+
+type KmsPageMetadataSchemasValue52 struct {
+}
+
+type KmsPageMetadataSchemas5Type string
+
+const (
+	KmsPageMetadataSchemas5TypeArrayOfAny                    KmsPageMetadataSchemas5Type = "arrayOfAny"
+	KmsPageMetadataSchemas5TypeKmsPageMetadataSchemasValue52 KmsPageMetadataSchemas5Type = "KmsPageMetadata_Schemas_value_5_2"
+)
+
+type KmsPageMetadataSchemas5 struct {
+	ArrayOfAny                    []any                          `queryParam:"inline"`
+	KmsPageMetadataSchemasValue52 *KmsPageMetadataSchemasValue52 `queryParam:"inline"`
+
+	Type KmsPageMetadataSchemas5Type
+}
+
+func CreateKmsPageMetadataSchemas5ArrayOfAny(arrayOfAny []any) KmsPageMetadataSchemas5 {
+	typ := KmsPageMetadataSchemas5TypeArrayOfAny
+
+	return KmsPageMetadataSchemas5{
+		ArrayOfAny: arrayOfAny,
+		Type:       typ,
+	}
+}
+
+func CreateKmsPageMetadataSchemas5KmsPageMetadataSchemasValue52(kmsPageMetadataSchemasValue52 KmsPageMetadataSchemasValue52) KmsPageMetadataSchemas5 {
+	typ := KmsPageMetadataSchemas5TypeKmsPageMetadataSchemasValue52
+
+	return KmsPageMetadataSchemas5{
+		KmsPageMetadataSchemasValue52: &kmsPageMetadataSchemasValue52,
+		Type:                          typ,
+	}
+}
+
+func (u *KmsPageMetadataSchemas5) UnmarshalJSON(data []byte) error {
+
+	var kmsPageMetadataSchemasValue52 KmsPageMetadataSchemasValue52 = KmsPageMetadataSchemasValue52{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemasValue52, "", true, true); err == nil {
+		u.KmsPageMetadataSchemasValue52 = &kmsPageMetadataSchemasValue52
+		u.Type = KmsPageMetadataSchemas5TypeKmsPageMetadataSchemasValue52
+		return nil
+	}
+
+	var arrayOfAny []any = []any{}
+	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
+		u.ArrayOfAny = arrayOfAny
+		u.Type = KmsPageMetadataSchemas5TypeArrayOfAny
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for KmsPageMetadataSchemas5", string(data))
+}
+
+func (u KmsPageMetadataSchemas5) MarshalJSON() ([]byte, error) {
+	if u.ArrayOfAny != nil {
+		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	}
+
+	if u.KmsPageMetadataSchemasValue52 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemasValue52, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type KmsPageMetadataSchemas5: all fields are null")
+}
+
+type KmsPageMetadataSchemasValue42 struct {
+}
+
+type KmsPageMetadataSchemas4Type string
+
+const (
+	KmsPageMetadataSchemas4TypeBoolean                       KmsPageMetadataSchemas4Type = "boolean"
+	KmsPageMetadataSchemas4TypeKmsPageMetadataSchemasValue42 KmsPageMetadataSchemas4Type = "KmsPageMetadata_Schemas_value_4_2"
+)
+
+type KmsPageMetadataSchemas4 struct {
+	Boolean                       *bool                          `queryParam:"inline"`
+	KmsPageMetadataSchemasValue42 *KmsPageMetadataSchemasValue42 `queryParam:"inline"`
+
+	Type KmsPageMetadataSchemas4Type
+}
+
+func CreateKmsPageMetadataSchemas4Boolean(boolean bool) KmsPageMetadataSchemas4 {
+	typ := KmsPageMetadataSchemas4TypeBoolean
+
+	return KmsPageMetadataSchemas4{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateKmsPageMetadataSchemas4KmsPageMetadataSchemasValue42(kmsPageMetadataSchemasValue42 KmsPageMetadataSchemasValue42) KmsPageMetadataSchemas4 {
+	typ := KmsPageMetadataSchemas4TypeKmsPageMetadataSchemasValue42
+
+	return KmsPageMetadataSchemas4{
+		KmsPageMetadataSchemasValue42: &kmsPageMetadataSchemasValue42,
+		Type:                          typ,
+	}
+}
+
+func (u *KmsPageMetadataSchemas4) UnmarshalJSON(data []byte) error {
+
+	var kmsPageMetadataSchemasValue42 KmsPageMetadataSchemasValue42 = KmsPageMetadataSchemasValue42{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemasValue42, "", true, true); err == nil {
+		u.KmsPageMetadataSchemasValue42 = &kmsPageMetadataSchemasValue42
+		u.Type = KmsPageMetadataSchemas4TypeKmsPageMetadataSchemasValue42
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = KmsPageMetadataSchemas4TypeBoolean
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for KmsPageMetadataSchemas4", string(data))
+}
+
+func (u KmsPageMetadataSchemas4) MarshalJSON() ([]byte, error) {
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	if u.KmsPageMetadataSchemasValue42 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemasValue42, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type KmsPageMetadataSchemas4: all fields are null")
+}
+
+type KmsPageMetadataSchemasValue32 struct {
+}
+
+type KmsPageMetadataSchemas3Type string
+
+const (
+	KmsPageMetadataSchemas3TypeNumber                        KmsPageMetadataSchemas3Type = "number"
+	KmsPageMetadataSchemas3TypeKmsPageMetadataSchemasValue32 KmsPageMetadataSchemas3Type = "KmsPageMetadata_Schemas_value_3_2"
+)
+
+type KmsPageMetadataSchemas3 struct {
+	Number                        *float64                       `queryParam:"inline"`
+	KmsPageMetadataSchemasValue32 *KmsPageMetadataSchemasValue32 `queryParam:"inline"`
+
+	Type KmsPageMetadataSchemas3Type
+}
+
+func CreateKmsPageMetadataSchemas3Number(number float64) KmsPageMetadataSchemas3 {
+	typ := KmsPageMetadataSchemas3TypeNumber
+
+	return KmsPageMetadataSchemas3{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateKmsPageMetadataSchemas3KmsPageMetadataSchemasValue32(kmsPageMetadataSchemasValue32 KmsPageMetadataSchemasValue32) KmsPageMetadataSchemas3 {
+	typ := KmsPageMetadataSchemas3TypeKmsPageMetadataSchemasValue32
+
+	return KmsPageMetadataSchemas3{
+		KmsPageMetadataSchemasValue32: &kmsPageMetadataSchemasValue32,
+		Type:                          typ,
+	}
+}
+
+func (u *KmsPageMetadataSchemas3) UnmarshalJSON(data []byte) error {
+
+	var kmsPageMetadataSchemasValue32 KmsPageMetadataSchemasValue32 = KmsPageMetadataSchemasValue32{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemasValue32, "", true, true); err == nil {
+		u.KmsPageMetadataSchemasValue32 = &kmsPageMetadataSchemasValue32
+		u.Type = KmsPageMetadataSchemas3TypeKmsPageMetadataSchemasValue32
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = KmsPageMetadataSchemas3TypeNumber
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for KmsPageMetadataSchemas3", string(data))
+}
+
+func (u KmsPageMetadataSchemas3) MarshalJSON() ([]byte, error) {
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.KmsPageMetadataSchemasValue32 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemasValue32, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type KmsPageMetadataSchemas3: all fields are null")
+}
+
+type KmsPageMetadataSchemasValue2 struct {
+}
+
+type KmsPageMetadataSchemas2Type string
+
+const (
+	KmsPageMetadataSchemas2TypeStr                          KmsPageMetadataSchemas2Type = "str"
+	KmsPageMetadataSchemas2TypeKmsPageMetadataSchemasValue2 KmsPageMetadataSchemas2Type = "KmsPageMetadata_Schemas_value_2"
+)
+
+type KmsPageMetadataSchemas2 struct {
+	Str                          *string                       `queryParam:"inline"`
+	KmsPageMetadataSchemasValue2 *KmsPageMetadataSchemasValue2 `queryParam:"inline"`
+
+	Type KmsPageMetadataSchemas2Type
+}
+
+func CreateKmsPageMetadataSchemas2Str(str string) KmsPageMetadataSchemas2 {
+	typ := KmsPageMetadataSchemas2TypeStr
+
+	return KmsPageMetadataSchemas2{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateKmsPageMetadataSchemas2KmsPageMetadataSchemasValue2(kmsPageMetadataSchemasValue2 KmsPageMetadataSchemasValue2) KmsPageMetadataSchemas2 {
+	typ := KmsPageMetadataSchemas2TypeKmsPageMetadataSchemasValue2
+
+	return KmsPageMetadataSchemas2{
+		KmsPageMetadataSchemasValue2: &kmsPageMetadataSchemasValue2,
+		Type:                         typ,
+	}
+}
+
+func (u *KmsPageMetadataSchemas2) UnmarshalJSON(data []byte) error {
+
+	var kmsPageMetadataSchemasValue2 KmsPageMetadataSchemasValue2 = KmsPageMetadataSchemasValue2{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemasValue2, "", true, true); err == nil {
+		u.KmsPageMetadataSchemasValue2 = &kmsPageMetadataSchemasValue2
+		u.Type = KmsPageMetadataSchemas2TypeKmsPageMetadataSchemasValue2
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = KmsPageMetadataSchemas2TypeStr
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for KmsPageMetadataSchemas2", string(data))
+}
+
+func (u KmsPageMetadataSchemas2) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.KmsPageMetadataSchemasValue2 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemasValue2, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type KmsPageMetadataSchemas2: all fields are null")
+}
+
+type KmsPageMetadataSchemas1 struct {
+}
+
+type KmsPageMetadataValueType string
+
+const (
+	KmsPageMetadataValueTypeKmsPageMetadataSchemas1 KmsPageMetadataValueType = "KmsPageMetadata_Schemas_1"
+	KmsPageMetadataValueTypeKmsPageMetadataSchemas2 KmsPageMetadataValueType = "KmsPageMetadata_Schemas_2"
+	KmsPageMetadataValueTypeKmsPageMetadataSchemas3 KmsPageMetadataValueType = "KmsPageMetadata_Schemas_3"
+	KmsPageMetadataValueTypeKmsPageMetadataSchemas4 KmsPageMetadataValueType = "KmsPageMetadata_Schemas_4"
+	KmsPageMetadataValueTypeKmsPageMetadataSchemas5 KmsPageMetadataValueType = "KmsPageMetadata_Schemas_5"
+)
+
+type KmsPageMetadataValue struct {
+	KmsPageMetadataSchemas1 *KmsPageMetadataSchemas1 `queryParam:"inline"`
+	KmsPageMetadataSchemas2 *KmsPageMetadataSchemas2 `queryParam:"inline"`
+	KmsPageMetadataSchemas3 *KmsPageMetadataSchemas3 `queryParam:"inline"`
+	KmsPageMetadataSchemas4 *KmsPageMetadataSchemas4 `queryParam:"inline"`
+	KmsPageMetadataSchemas5 *KmsPageMetadataSchemas5 `queryParam:"inline"`
+
+	Type KmsPageMetadataValueType
+}
+
+func CreateKmsPageMetadataValueKmsPageMetadataSchemas1(kmsPageMetadataSchemas1 KmsPageMetadataSchemas1) KmsPageMetadataValue {
+	typ := KmsPageMetadataValueTypeKmsPageMetadataSchemas1
+
+	return KmsPageMetadataValue{
+		KmsPageMetadataSchemas1: &kmsPageMetadataSchemas1,
+		Type:                    typ,
+	}
+}
+
+func CreateKmsPageMetadataValueKmsPageMetadataSchemas2(kmsPageMetadataSchemas2 KmsPageMetadataSchemas2) KmsPageMetadataValue {
+	typ := KmsPageMetadataValueTypeKmsPageMetadataSchemas2
+
+	return KmsPageMetadataValue{
+		KmsPageMetadataSchemas2: &kmsPageMetadataSchemas2,
+		Type:                    typ,
+	}
+}
+
+func CreateKmsPageMetadataValueKmsPageMetadataSchemas3(kmsPageMetadataSchemas3 KmsPageMetadataSchemas3) KmsPageMetadataValue {
+	typ := KmsPageMetadataValueTypeKmsPageMetadataSchemas3
+
+	return KmsPageMetadataValue{
+		KmsPageMetadataSchemas3: &kmsPageMetadataSchemas3,
+		Type:                    typ,
+	}
+}
+
+func CreateKmsPageMetadataValueKmsPageMetadataSchemas4(kmsPageMetadataSchemas4 KmsPageMetadataSchemas4) KmsPageMetadataValue {
+	typ := KmsPageMetadataValueTypeKmsPageMetadataSchemas4
+
+	return KmsPageMetadataValue{
+		KmsPageMetadataSchemas4: &kmsPageMetadataSchemas4,
+		Type:                    typ,
+	}
+}
+
+func CreateKmsPageMetadataValueKmsPageMetadataSchemas5(kmsPageMetadataSchemas5 KmsPageMetadataSchemas5) KmsPageMetadataValue {
+	typ := KmsPageMetadataValueTypeKmsPageMetadataSchemas5
+
+	return KmsPageMetadataValue{
+		KmsPageMetadataSchemas5: &kmsPageMetadataSchemas5,
+		Type:                    typ,
+	}
+}
+
+func (u *KmsPageMetadataValue) UnmarshalJSON(data []byte) error {
+
+	var kmsPageMetadataSchemas1 KmsPageMetadataSchemas1 = KmsPageMetadataSchemas1{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemas1, "", true, true); err == nil {
+		u.KmsPageMetadataSchemas1 = &kmsPageMetadataSchemas1
+		u.Type = KmsPageMetadataValueTypeKmsPageMetadataSchemas1
+		return nil
+	}
+
+	var kmsPageMetadataSchemas2 KmsPageMetadataSchemas2 = KmsPageMetadataSchemas2{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemas2, "", true, true); err == nil {
+		u.KmsPageMetadataSchemas2 = &kmsPageMetadataSchemas2
+		u.Type = KmsPageMetadataValueTypeKmsPageMetadataSchemas2
+		return nil
+	}
+
+	var kmsPageMetadataSchemas3 KmsPageMetadataSchemas3 = KmsPageMetadataSchemas3{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemas3, "", true, true); err == nil {
+		u.KmsPageMetadataSchemas3 = &kmsPageMetadataSchemas3
+		u.Type = KmsPageMetadataValueTypeKmsPageMetadataSchemas3
+		return nil
+	}
+
+	var kmsPageMetadataSchemas4 KmsPageMetadataSchemas4 = KmsPageMetadataSchemas4{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemas4, "", true, true); err == nil {
+		u.KmsPageMetadataSchemas4 = &kmsPageMetadataSchemas4
+		u.Type = KmsPageMetadataValueTypeKmsPageMetadataSchemas4
+		return nil
+	}
+
+	var kmsPageMetadataSchemas5 KmsPageMetadataSchemas5 = KmsPageMetadataSchemas5{}
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemas5, "", true, true); err == nil {
+		u.KmsPageMetadataSchemas5 = &kmsPageMetadataSchemas5
+		u.Type = KmsPageMetadataValueTypeKmsPageMetadataSchemas5
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for KmsPageMetadataValue", string(data))
+}
+
+func (u KmsPageMetadataValue) MarshalJSON() ([]byte, error) {
+	if u.KmsPageMetadataSchemas1 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemas1, "", true)
+	}
+
+	if u.KmsPageMetadataSchemas2 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemas2, "", true)
+	}
+
+	if u.KmsPageMetadataSchemas3 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemas3, "", true)
+	}
+
+	if u.KmsPageMetadataSchemas4 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemas4, "", true)
+	}
+
+	if u.KmsPageMetadataSchemas5 != nil {
+		return utils.MarshalJSON(u.KmsPageMetadataSchemas5, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type KmsPageMetadataValue: all fields are null")
+}
+
+type KmsPageMetadata struct {
+	ExtraData *KmsPageMetadataExtraData `json:"extra_data,omitempty"`
+	Format    *KmsPageMetadataFormat    `json:"format,omitempty"`
+	ID        *string                   `json:"id,omitempty"`
+	Key       *string                   `json:"key,omitempty"`
+	Namespace *string                   `json:"namespace,omitempty"`
+	Slug      *string                   `json:"slug,omitempty"`
+	Type      *string                   `json:"type,omitempty"`
+	Value     *KmsPageMetadataValue     `json:"value,omitempty"`
+}
+
+func (o *KmsPageMetadata) GetExtraData() *KmsPageMetadataExtraData {
+	if o == nil {
+		return nil
+	}
+	return o.ExtraData
+}
+
+func (o *KmsPageMetadata) GetFormat() *KmsPageMetadataFormat {
+	if o == nil {
+		return nil
+	}
+	return o.Format
+}
+
+func (o *KmsPageMetadata) GetID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ID
+}
+
+func (o *KmsPageMetadata) GetKey() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Key
+}
+
+func (o *KmsPageMetadata) GetNamespace() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Namespace
+}
+
+func (o *KmsPageMetadata) GetSlug() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Slug
 }
 
 func (o *KmsPageMetadata) GetType() *string {
@@ -22,7 +920,7 @@ func (o *KmsPageMetadata) GetType() *string {
 	return o.Type
 }
 
-func (o *KmsPageMetadata) GetValue() *string {
+func (o *KmsPageMetadata) GetValue() *KmsPageMetadataValue {
 	if o == nil {
 		return nil
 	}

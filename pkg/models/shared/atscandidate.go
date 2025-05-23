@@ -60,19 +60,19 @@ type AtsCandidate struct {
 	ID                 *string                      `json:"id,omitempty"`
 	ImageURL           *string                      `json:"image_url,omitempty"`
 	// URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
-	LinkUrls   []string       `json:"link_urls,omitempty"`
-	Metadata   []AtsMetadata  `json:"metadata,omitempty"`
-	Name       *string        `json:"name,omitempty"`
-	Origin     *Origin        `json:"origin,omitempty"`
-	Raw        map[string]any `json:"raw,omitempty"`
-	Skills     []string       `json:"skills,omitempty"`
-	Sources    []string       `json:"sources,omitempty"`
-	Tags       []string       `json:"tags,omitempty"`
-	Telephones []AtsTelephone `json:"telephones,omitempty"`
-	Title      *string        `json:"title,omitempty"`
-	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
-	UserID     *string        `json:"user_id,omitempty"`
-	WebURL     *string        `json:"web_url,omitempty"`
+	LinkUrls   []PropertyAtsCandidateLinkUrls `json:"link_urls,omitempty"`
+	Metadata   []AtsMetadata                  `json:"metadata,omitempty"`
+	Name       *string                        `json:"name,omitempty"`
+	Origin     *Origin                        `json:"origin,omitempty"`
+	Raw        map[string]any                 `json:"raw,omitempty"`
+	Skills     []PropertyAtsCandidateSkills   `json:"skills,omitempty"`
+	Sources    []PropertyAtsCandidateSources  `json:"sources,omitempty"`
+	Tags       []PropertyAtsCandidateTags     `json:"tags,omitempty"`
+	Telephones []AtsTelephone                 `json:"telephones,omitempty"`
+	Title      *string                        `json:"title,omitempty"`
+	UpdatedAt  *time.Time                     `json:"updated_at,omitempty"`
+	UserID     *string                        `json:"user_id,omitempty"`
+	WebURL     *string                        `json:"web_url,omitempty"`
 }
 
 func (a AtsCandidate) MarshalJSON() ([]byte, error) {
@@ -163,7 +163,7 @@ func (o *AtsCandidate) GetImageURL() *string {
 	return o.ImageURL
 }
 
-func (o *AtsCandidate) GetLinkUrls() []string {
+func (o *AtsCandidate) GetLinkUrls() []PropertyAtsCandidateLinkUrls {
 	if o == nil {
 		return nil
 	}
@@ -198,21 +198,21 @@ func (o *AtsCandidate) GetRaw() map[string]any {
 	return o.Raw
 }
 
-func (o *AtsCandidate) GetSkills() []string {
+func (o *AtsCandidate) GetSkills() []PropertyAtsCandidateSkills {
 	if o == nil {
 		return nil
 	}
 	return o.Skills
 }
 
-func (o *AtsCandidate) GetSources() []string {
+func (o *AtsCandidate) GetSources() []PropertyAtsCandidateSources {
 	if o == nil {
 		return nil
 	}
 	return o.Sources
 }
 
-func (o *AtsCandidate) GetTags() []string {
+func (o *AtsCandidate) GetTags() []PropertyAtsCandidateTags {
 	if o == nil {
 		return nil
 	}

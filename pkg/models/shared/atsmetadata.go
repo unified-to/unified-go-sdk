@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
@@ -404,6 +405,65 @@ func (u ExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type ExtraData: all fields are null")
 }
 
+type Format string
+
+const (
+	FormatText           Format = "TEXT"
+	FormatNumber         Format = "NUMBER"
+	FormatDate           Format = "DATE"
+	FormatBoolean        Format = "BOOLEAN"
+	FormatFile           Format = "FILE"
+	FormatTextarea       Format = "TEXTAREA"
+	FormatSingleSelect   Format = "SINGLE_SELECT"
+	FormatMultipleSelect Format = "MULTIPLE_SELECT"
+	FormatMeasurement    Format = "MEASUREMENT"
+	FormatPrice          Format = "PRICE"
+	FormatYesNo          Format = "YES_NO"
+	FormatCurrency       Format = "CURRENCY"
+	FormatURL            Format = "URL"
+)
+
+func (e Format) ToPointer() *Format {
+	return &e
+}
+func (e *Format) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "TEXT":
+		fallthrough
+	case "NUMBER":
+		fallthrough
+	case "DATE":
+		fallthrough
+	case "BOOLEAN":
+		fallthrough
+	case "FILE":
+		fallthrough
+	case "TEXTAREA":
+		fallthrough
+	case "SINGLE_SELECT":
+		fallthrough
+	case "MULTIPLE_SELECT":
+		fallthrough
+	case "MEASUREMENT":
+		fallthrough
+	case "PRICE":
+		fallthrough
+	case "YES_NO":
+		fallthrough
+	case "CURRENCY":
+		fallthrough
+	case "URL":
+		*e = Format(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for Format: %v", v)
+	}
+}
+
 type AtsMetadataSchemasValue52 struct {
 }
 
@@ -802,6 +862,7 @@ func (u Value) MarshalJSON() ([]byte, error) {
 
 type AtsMetadata struct {
 	ExtraData *ExtraData `json:"extra_data,omitempty"`
+	Format    *Format    `json:"format,omitempty"`
 	ID        *string    `json:"id,omitempty"`
 	Key       *string    `json:"key,omitempty"`
 	Namespace *string    `json:"namespace,omitempty"`
@@ -815,6 +876,13 @@ func (o *AtsMetadata) GetExtraData() *ExtraData {
 		return nil
 	}
 	return o.ExtraData
+}
+
+func (o *AtsMetadata) GetFormat() *Format {
+	if o == nil {
+		return nil
+	}
+	return o.Format
 }
 
 func (o *AtsMetadata) GetID() *string {

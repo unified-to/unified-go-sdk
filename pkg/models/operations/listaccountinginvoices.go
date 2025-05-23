@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListAccountingInvoicesRequest struct {
@@ -19,6 +17,8 @@ type ListAccountingInvoicesRequest struct {
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by
+	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -26,18 +26,7 @@ type ListAccountingInvoicesRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListAccountingInvoicesRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListAccountingInvoicesRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListAccountingInvoicesRequest) GetConnectionID() string {
@@ -82,6 +71,13 @@ func (o *ListAccountingInvoicesRequest) GetOrder() *string {
 	return o.Order
 }
 
+func (o *ListAccountingInvoicesRequest) GetOrgID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.OrgID
+}
+
 func (o *ListAccountingInvoicesRequest) GetQuery() *string {
 	if o == nil {
 		return nil
@@ -110,7 +106,7 @@ func (o *ListAccountingInvoicesRequest) GetType() *string {
 	return o.Type
 }
 
-func (o *ListAccountingInvoicesRequest) GetUpdatedGte() *time.Time {
+func (o *ListAccountingInvoicesRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

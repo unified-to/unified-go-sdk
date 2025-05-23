@@ -3,6 +3,7 @@
 package shared
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
@@ -404,6 +405,65 @@ func (u CommerceMetadataExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type CommerceMetadataExtraData: all fields are null")
 }
 
+type CommerceMetadataFormat string
+
+const (
+	CommerceMetadataFormatText           CommerceMetadataFormat = "TEXT"
+	CommerceMetadataFormatNumber         CommerceMetadataFormat = "NUMBER"
+	CommerceMetadataFormatDate           CommerceMetadataFormat = "DATE"
+	CommerceMetadataFormatBoolean        CommerceMetadataFormat = "BOOLEAN"
+	CommerceMetadataFormatFile           CommerceMetadataFormat = "FILE"
+	CommerceMetadataFormatTextarea       CommerceMetadataFormat = "TEXTAREA"
+	CommerceMetadataFormatSingleSelect   CommerceMetadataFormat = "SINGLE_SELECT"
+	CommerceMetadataFormatMultipleSelect CommerceMetadataFormat = "MULTIPLE_SELECT"
+	CommerceMetadataFormatMeasurement    CommerceMetadataFormat = "MEASUREMENT"
+	CommerceMetadataFormatPrice          CommerceMetadataFormat = "PRICE"
+	CommerceMetadataFormatYesNo          CommerceMetadataFormat = "YES_NO"
+	CommerceMetadataFormatCurrency       CommerceMetadataFormat = "CURRENCY"
+	CommerceMetadataFormatURL            CommerceMetadataFormat = "URL"
+)
+
+func (e CommerceMetadataFormat) ToPointer() *CommerceMetadataFormat {
+	return &e
+}
+func (e *CommerceMetadataFormat) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "TEXT":
+		fallthrough
+	case "NUMBER":
+		fallthrough
+	case "DATE":
+		fallthrough
+	case "BOOLEAN":
+		fallthrough
+	case "FILE":
+		fallthrough
+	case "TEXTAREA":
+		fallthrough
+	case "SINGLE_SELECT":
+		fallthrough
+	case "MULTIPLE_SELECT":
+		fallthrough
+	case "MEASUREMENT":
+		fallthrough
+	case "PRICE":
+		fallthrough
+	case "YES_NO":
+		fallthrough
+	case "CURRENCY":
+		fallthrough
+	case "URL":
+		*e = CommerceMetadataFormat(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CommerceMetadataFormat: %v", v)
+	}
+}
+
 type CommerceMetadataSchemasValue52 struct {
 }
 
@@ -802,6 +862,7 @@ func (u CommerceMetadataValue) MarshalJSON() ([]byte, error) {
 
 type CommerceMetadata struct {
 	ExtraData *CommerceMetadataExtraData `json:"extra_data,omitempty"`
+	Format    *CommerceMetadataFormat    `json:"format,omitempty"`
 	ID        *string                    `json:"id,omitempty"`
 	Key       *string                    `json:"key,omitempty"`
 	Namespace *string                    `json:"namespace,omitempty"`
@@ -815,6 +876,13 @@ func (o *CommerceMetadata) GetExtraData() *CommerceMetadataExtraData {
 		return nil
 	}
 	return o.ExtraData
+}
+
+func (o *CommerceMetadata) GetFormat() *CommerceMetadataFormat {
+	if o == nil {
+		return nil
+	}
+	return o.Format
 }
 
 func (o *CommerceMetadata) GetID() *string {

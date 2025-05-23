@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListCommerceCollectionsRequest struct {
@@ -26,18 +24,7 @@ type ListCommerceCollectionsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListCommerceCollectionsRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListCommerceCollectionsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListCommerceCollectionsRequest) GetConnectionID() string {
@@ -110,7 +97,7 @@ func (o *ListCommerceCollectionsRequest) GetType() *string {
 	return o.Type
 }
 
-func (o *ListCommerceCollectionsRequest) GetUpdatedGte() *time.Time {
+func (o *ListCommerceCollectionsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

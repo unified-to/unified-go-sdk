@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListRepoBranchesRequest struct {
@@ -25,18 +23,7 @@ type ListRepoBranchesRequest struct {
 	RepoID *string `queryParam:"style=form,explode=true,name=repo_id"`
 	Sort   *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListRepoBranchesRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListRepoBranchesRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListRepoBranchesRequest) GetConnectionID() string {
@@ -102,7 +89,7 @@ func (o *ListRepoBranchesRequest) GetSort() *string {
 	return o.Sort
 }
 
-func (o *ListRepoBranchesRequest) GetUpdatedGte() *time.Time {
+func (o *ListRepoBranchesRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}

@@ -64,13 +64,13 @@ func (e *AtsJobQuestionType) UnmarshalJSON(data []byte) error {
 }
 
 type AtsJobQuestion struct {
-	Description *string            `json:"description,omitempty"`
-	ID          *string            `json:"id,omitempty"`
-	Options     []string           `json:"options,omitempty"`
-	Prompt      *string            `json:"prompt,omitempty"`
-	Question    string             `json:"question"`
-	Required    *bool              `json:"required,omitempty"`
-	Type        AtsJobQuestionType `json:"type"`
+	Description *string                         `json:"description,omitempty"`
+	ID          *string                         `json:"id,omitempty"`
+	Options     []PropertyAtsJobQuestionOptions `json:"options,omitempty"`
+	Prompt      *string                         `json:"prompt,omitempty"`
+	Question    string                          `json:"question"`
+	Required    *bool                           `json:"required,omitempty"`
+	Type        AtsJobQuestionType              `json:"type"`
 }
 
 func (o *AtsJobQuestion) GetDescription() *string {
@@ -87,7 +87,7 @@ func (o *AtsJobQuestion) GetID() *string {
 	return o.ID
 }
 
-func (o *AtsJobQuestion) GetOptions() []string {
+func (o *AtsJobQuestion) GetOptions() []PropertyAtsJobQuestionOptions {
 	if o == nil {
 		return nil
 	}

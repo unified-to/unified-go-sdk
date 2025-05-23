@@ -4,9 +4,7 @@ package operations
 
 import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"net/http"
-	"time"
 )
 
 type ListKmsCommentsRequest struct {
@@ -29,18 +27,7 @@ type ListKmsCommentsRequest struct {
 	// The type to filter by
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value
-	UpdatedGte *time.Time `queryParam:"style=form,explode=true,name=updated_gte"`
-}
-
-func (l ListKmsCommentsRequest) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(l, "", false)
-}
-
-func (l *ListKmsCommentsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
-		return err
-	}
-	return nil
+	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
 func (o *ListKmsCommentsRequest) GetConnectionID() string {
@@ -120,7 +107,7 @@ func (o *ListKmsCommentsRequest) GetType() *string {
 	return o.Type
 }
 
-func (o *ListKmsCommentsRequest) GetUpdatedGte() *time.Time {
+func (o *ListKmsCommentsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}
