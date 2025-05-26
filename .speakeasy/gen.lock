@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 0410d1777305583960db5f8722b2f00f
+  docChecksum: 22dac4e470df3ae38d82ad39b894304a
   docVersion: "1.0"
-  speakeasyVersion: 1.550.0
+  speakeasyVersion: 1.551.0
   generationVersion: 2.610.0
-  releaseVersion: 0.24.4
-  configChecksum: e1a6c29832be5ab0d8b38d2a70322243
+  releaseVersion: 0.24.5
+  configChecksum: 46be97fc7d425e62c12f960978a930a6
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -66,6 +66,7 @@ generatedFiles:
   - /pkg/models/operations/createhrisemployee.go
   - /pkg/models/operations/createhrisgroup.go
   - /pkg/models/operations/createhrislocation.go
+  - /pkg/models/operations/createhristimeshift.go
   - /pkg/models/operations/createkmscomment.go
   - /pkg/models/operations/createkmspage.go
   - /pkg/models/operations/createkmsspace.go
@@ -140,6 +141,7 @@ generatedFiles:
   - /pkg/models/operations/gethrislocation.go
   - /pkg/models/operations/gethrispayslip.go
   - /pkg/models/operations/gethristimeoff.go
+  - /pkg/models/operations/gethristimeshift.go
   - /pkg/models/operations/getkmscomment.go
   - /pkg/models/operations/getkmspage.go
   - /pkg/models/operations/getkmsspace.go
@@ -223,6 +225,7 @@ generatedFiles:
   - /pkg/models/operations/listhrislocations.go
   - /pkg/models/operations/listhrispayslips.go
   - /pkg/models/operations/listhristimeoffs.go
+  - /pkg/models/operations/listhristimeshifts.go
   - /pkg/models/operations/listkmscomments.go
   - /pkg/models/operations/listkmspages.go
   - /pkg/models/operations/listkmsspaces.go
@@ -298,6 +301,7 @@ generatedFiles:
   - /pkg/models/operations/patchhrisemployee.go
   - /pkg/models/operations/patchhrisgroup.go
   - /pkg/models/operations/patchhrislocation.go
+  - /pkg/models/operations/patchhristimeshift.go
   - /pkg/models/operations/patchkmscomment.go
   - /pkg/models/operations/patchkmspage.go
   - /pkg/models/operations/patchkmsspace.go
@@ -367,6 +371,7 @@ generatedFiles:
   - /pkg/models/operations/removehrisemployee.go
   - /pkg/models/operations/removehrisgroup.go
   - /pkg/models/operations/removehrislocation.go
+  - /pkg/models/operations/removehristimeshift.go
   - /pkg/models/operations/removekmscomment.go
   - /pkg/models/operations/removekmspage.go
   - /pkg/models/operations/removekmsspace.go
@@ -434,6 +439,7 @@ generatedFiles:
   - /pkg/models/operations/updatehrisemployee.go
   - /pkg/models/operations/updatehrisgroup.go
   - /pkg/models/operations/updatehrislocation.go
+  - /pkg/models/operations/updatehristimeshift.go
   - /pkg/models/operations/updatekmscomment.go
   - /pkg/models/operations/updatekmspage.go
   - /pkg/models/operations/updatekmsspace.go
@@ -569,6 +575,7 @@ generatedFiles:
   - /pkg/models/shared/hrispayslipdetail.go
   - /pkg/models/shared/hristelephone.go
   - /pkg/models/shared/hristimeoff.go
+  - /pkg/models/shared/hristimeshift.go
   - /pkg/models/shared/integration.go
   - /pkg/models/shared/issue.go
   - /pkg/models/shared/kmscomment.go
@@ -795,6 +802,8 @@ generatedFiles:
   - docs/pkg/models/operations/createhrisgroupresponse.md
   - docs/pkg/models/operations/createhrislocationrequest.md
   - docs/pkg/models/operations/createhrislocationresponse.md
+  - docs/pkg/models/operations/createhristimeshiftrequest.md
+  - docs/pkg/models/operations/createhristimeshiftresponse.md
   - docs/pkg/models/operations/createkmscommentrequest.md
   - docs/pkg/models/operations/createkmscommentresponse.md
   - docs/pkg/models/operations/createkmspagerequest.md
@@ -942,6 +951,8 @@ generatedFiles:
   - docs/pkg/models/operations/gethrispayslipresponse.md
   - docs/pkg/models/operations/gethristimeoffrequest.md
   - docs/pkg/models/operations/gethristimeoffresponse.md
+  - docs/pkg/models/operations/gethristimeshiftrequest.md
+  - docs/pkg/models/operations/gethristimeshiftresponse.md
   - docs/pkg/models/operations/getkmscommentrequest.md
   - docs/pkg/models/operations/getkmscommentresponse.md
   - docs/pkg/models/operations/getkmspagerequest.md
@@ -1108,6 +1119,8 @@ generatedFiles:
   - docs/pkg/models/operations/listhrispayslipsresponse.md
   - docs/pkg/models/operations/listhristimeoffsrequest.md
   - docs/pkg/models/operations/listhristimeoffsresponse.md
+  - docs/pkg/models/operations/listhristimeshiftsrequest.md
+  - docs/pkg/models/operations/listhristimeshiftsresponse.md
   - docs/pkg/models/operations/listkmscommentsrequest.md
   - docs/pkg/models/operations/listkmscommentsresponse.md
   - docs/pkg/models/operations/listkmspagesrequest.md
@@ -1260,6 +1273,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchhrisgroupresponse.md
   - docs/pkg/models/operations/patchhrislocationrequest.md
   - docs/pkg/models/operations/patchhrislocationresponse.md
+  - docs/pkg/models/operations/patchhristimeshiftrequest.md
+  - docs/pkg/models/operations/patchhristimeshiftresponse.md
   - docs/pkg/models/operations/patchkmscommentrequest.md
   - docs/pkg/models/operations/patchkmscommentresponse.md
   - docs/pkg/models/operations/patchkmspagerequest.md
@@ -1399,6 +1414,8 @@ generatedFiles:
   - docs/pkg/models/operations/removehrisgroupresponse.md
   - docs/pkg/models/operations/removehrislocationrequest.md
   - docs/pkg/models/operations/removehrislocationresponse.md
+  - docs/pkg/models/operations/removehristimeshiftrequest.md
+  - docs/pkg/models/operations/removehristimeshiftresponse.md
   - docs/pkg/models/operations/removekmscommentrequest.md
   - docs/pkg/models/operations/removekmscommentresponse.md
   - docs/pkg/models/operations/removekmspagerequest.md
@@ -1533,6 +1550,8 @@ generatedFiles:
   - docs/pkg/models/operations/updatehrisgroupresponse.md
   - docs/pkg/models/operations/updatehrislocationrequest.md
   - docs/pkg/models/operations/updatehrislocationresponse.md
+  - docs/pkg/models/operations/updatehristimeshiftrequest.md
+  - docs/pkg/models/operations/updatehristimeshiftresponse.md
   - docs/pkg/models/operations/updatekmscommentrequest.md
   - docs/pkg/models/operations/updatekmscommentresponse.md
   - docs/pkg/models/operations/updatekmspagerequest.md
@@ -1837,6 +1856,7 @@ generatedFiles:
   - docs/pkg/models/shared/hristimeoff.md
   - docs/pkg/models/shared/hristimeoffstatus.md
   - docs/pkg/models/shared/hristimeofftype.md
+  - docs/pkg/models/shared/hristimeshift.md
   - docs/pkg/models/shared/integration.md
   - docs/pkg/models/shared/integration1.md
   - docs/pkg/models/shared/integration2.md
@@ -2161,6 +2181,7 @@ generatedFiles:
   - docs/sdks/ticket/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/timeoff/README.md
+  - docs/sdks/timeshift/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
@@ -2248,6 +2269,7 @@ generatedFiles:
   - ticket.go
   - ticketing.go
   - timeoff.go
+  - timeshift.go
   - transaction.go
   - uc.go
   - unified.go
@@ -6236,5 +6258,60 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createHrisTimeshift:
+    speakeasy-default-create-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getHrisTimeshift:
+    speakeasy-default-get-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listHrisTimeshifts:
+    speakeasy-default-list-hris-timeshifts:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
+  patchHrisTimeshift:
+    speakeasy-default-patch-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeHrisTimeshift:
+    speakeasy-default-remove-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisTimeshift:
+    speakeasy-default-update-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

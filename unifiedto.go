@@ -120,6 +120,7 @@ type UnifiedTo struct {
 	Group             *Group
 	Payslip           *Payslip
 	Timeoff           *Timeoff
+	Timeshift         *Timeshift
 	Kms               *Kms
 	Comment           *Comment
 	Page              *Page
@@ -244,9 +245,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.24.4",
+			SDKVersion:        "0.24.5",
 			GenVersion:        "2.610.0",
-			UserAgent:         "speakeasy-sdk/go 0.24.4 2.610.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:         "speakeasy-sdk/go 0.24.5 2.610.0 1.0 github.com/unified-to/unified-go-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -357,6 +358,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Payslip = newPayslip(sdk.sdkConfiguration)
 
 	sdk.Timeoff = newTimeoff(sdk.sdkConfiguration)
+
+	sdk.Timeshift = newTimeshift(sdk.sdkConfiguration)
 
 	sdk.Kms = newKms(sdk.sdkConfiguration)
 

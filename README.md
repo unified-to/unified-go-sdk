@@ -548,6 +548,7 @@ func main() {
 * [CreateHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [CreateHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
+* [CreateHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
 * [GetHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
 * [GetHrisDevice](docs/sdks/hris/README.md#gethrisdevice) - Retrieve a device
 * [GetHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
@@ -555,6 +556,7 @@ func main() {
 * [GetHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
 * [GetHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [GetHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
+* [GetHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
 * [ListHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
 * [ListHrisDevices](docs/sdks/hris/README.md#listhrisdevices) - List all devices
 * [ListHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
@@ -562,21 +564,25 @@ func main() {
 * [ListHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
 * [ListHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [ListHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
+* [ListHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
 * [PatchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
 * [PatchHrisDevice](docs/sdks/hris/README.md#patchhrisdevice) - Update a device
 * [PatchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [PatchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
+* [PatchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
 * [RemoveHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
 * [RemoveHrisDevice](docs/sdks/hris/README.md#removehrisdevice) - Remove a device
 * [RemoveHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [RemoveHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [RemoveHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
+* [RemoveHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
 * [UpdateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
 * [UpdateHrisDevice](docs/sdks/hris/README.md#updatehrisdevice) - Update a device
 * [UpdateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [UpdateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
+* [UpdateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
 ### [Instructor](docs/sdks/instructor/README.md)
 
@@ -1123,6 +1129,15 @@ func main() {
 
 * [GetHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
 * [ListHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
+
+### [Timeshift](docs/sdks/timeshift/README.md)
+
+* [CreateHrisTimeshift](docs/sdks/timeshift/README.md#createhristimeshift) - Create a timeshift
+* [GetHrisTimeshift](docs/sdks/timeshift/README.md#gethristimeshift) - Retrieve a timeshift
+* [ListHrisTimeshifts](docs/sdks/timeshift/README.md#listhristimeshifts) - List all timeshifts
+* [PatchHrisTimeshift](docs/sdks/timeshift/README.md#patchhristimeshift) - Update a timeshift
+* [RemoveHrisTimeshift](docs/sdks/timeshift/README.md#removehristimeshift) - Remove a timeshift
+* [UpdateHrisTimeshift](docs/sdks/timeshift/README.md#updatehristimeshift) - Update a timeshift
 
 ### [Transaction](docs/sdks/transaction/README.md)
 

@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-type ListHrisTimeoffsRequest struct {
+type ListHrisTimeshiftsRequest struct {
 	// The company ID to filter by
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
@@ -17,8 +17,10 @@ type ListHrisTimeoffsRequest struct {
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	// The location ID to filter by
+	LocationID *string  `queryParam:"style=form,explode=true,name=location_id"`
+	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order      *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -32,130 +34,137 @@ type ListHrisTimeoffsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListHrisTimeoffsRequest) GetCompanyID() *string {
+func (o *ListHrisTimeshiftsRequest) GetCompanyID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.CompanyID
 }
 
-func (o *ListHrisTimeoffsRequest) GetConnectionID() string {
+func (o *ListHrisTimeshiftsRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
 }
 
-func (o *ListHrisTimeoffsRequest) GetEndLe() *string {
+func (o *ListHrisTimeshiftsRequest) GetEndLe() *string {
 	if o == nil {
 		return nil
 	}
 	return o.EndLe
 }
 
-func (o *ListHrisTimeoffsRequest) GetFields() []string {
+func (o *ListHrisTimeshiftsRequest) GetFields() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Fields
 }
 
-func (o *ListHrisTimeoffsRequest) GetLimit() *float64 {
+func (o *ListHrisTimeshiftsRequest) GetLimit() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Limit
 }
 
-func (o *ListHrisTimeoffsRequest) GetOffset() *float64 {
+func (o *ListHrisTimeshiftsRequest) GetLocationID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.LocationID
+}
+
+func (o *ListHrisTimeshiftsRequest) GetOffset() *float64 {
 	if o == nil {
 		return nil
 	}
 	return o.Offset
 }
 
-func (o *ListHrisTimeoffsRequest) GetOrder() *string {
+func (o *ListHrisTimeshiftsRequest) GetOrder() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Order
 }
 
-func (o *ListHrisTimeoffsRequest) GetQuery() *string {
+func (o *ListHrisTimeshiftsRequest) GetQuery() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Query
 }
 
-func (o *ListHrisTimeoffsRequest) GetRaw() *string {
+func (o *ListHrisTimeshiftsRequest) GetRaw() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Raw
 }
 
-func (o *ListHrisTimeoffsRequest) GetSort() *string {
+func (o *ListHrisTimeshiftsRequest) GetSort() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Sort
 }
 
-func (o *ListHrisTimeoffsRequest) GetStartGte() *string {
+func (o *ListHrisTimeshiftsRequest) GetStartGte() *string {
 	if o == nil {
 		return nil
 	}
 	return o.StartGte
 }
 
-func (o *ListHrisTimeoffsRequest) GetUpdatedGte() *string {
+func (o *ListHrisTimeshiftsRequest) GetUpdatedGte() *string {
 	if o == nil {
 		return nil
 	}
 	return o.UpdatedGte
 }
 
-func (o *ListHrisTimeoffsRequest) GetUserID() *string {
+func (o *ListHrisTimeshiftsRequest) GetUserID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.UserID
 }
 
-type ListHrisTimeoffsResponse struct {
+type ListHrisTimeshiftsResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	HrisTimeoffs []shared.HrisTimeoff
+	HrisTimeshifts []shared.HrisTimeshift
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 
-func (o *ListHrisTimeoffsResponse) GetContentType() string {
+func (o *ListHrisTimeshiftsResponse) GetContentType() string {
 	if o == nil {
 		return ""
 	}
 	return o.ContentType
 }
 
-func (o *ListHrisTimeoffsResponse) GetHrisTimeoffs() []shared.HrisTimeoff {
+func (o *ListHrisTimeshiftsResponse) GetHrisTimeshifts() []shared.HrisTimeshift {
 	if o == nil {
 		return nil
 	}
-	return o.HrisTimeoffs
+	return o.HrisTimeshifts
 }
 
-func (o *ListHrisTimeoffsResponse) GetStatusCode() int {
+func (o *ListHrisTimeshiftsResponse) GetStatusCode() int {
 	if o == nil {
 		return 0
 	}
 	return o.StatusCode
 }
 
-func (o *ListHrisTimeoffsResponse) GetRawResponse() *http.Response {
+func (o *ListHrisTimeshiftsResponse) GetRawResponse() *http.Response {
 	if o == nil {
 		return nil
 	}
