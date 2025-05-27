@@ -15,6 +15,7 @@ type MessagingMessage struct {
 	ChannelIds         []string          `json:"channel_ids,omitempty"`
 	CreatedAt          *time.Time        `json:"created_at,omitempty"`
 	DestinationMembers []MessagingMember `json:"destination_members,omitempty"`
+	HasChildren        *bool             `json:"has_children,omitempty"`
 	HiddenMembers      []MessagingMember `json:"hidden_members,omitempty"`
 	ID                 *string           `json:"id,omitempty"`
 	MentionedMembers   []MessagingMember `json:"mentioned_members,omitempty"`
@@ -80,6 +81,13 @@ func (o *MessagingMessage) GetDestinationMembers() []MessagingMember {
 		return nil
 	}
 	return o.DestinationMembers
+}
+
+func (o *MessagingMessage) GetHasChildren() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.HasChildren
 }
 
 func (o *MessagingMessage) GetHiddenMembers() []MessagingMember {

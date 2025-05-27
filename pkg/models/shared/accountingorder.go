@@ -84,6 +84,7 @@ type AccountingOrder struct {
 	Currency        *string                                 `json:"currency,omitempty"`
 	ID              *string                                 `json:"id,omitempty"`
 	Lineitems       []AccountingLineitem                    `json:"lineitems,omitempty"`
+	PostedAt        *time.Time                              `json:"posted_at,omitempty"`
 	Raw             map[string]any                          `json:"raw,omitempty"`
 	ShippingAddress *PropertyAccountingOrderShippingAddress `json:"shipping_address,omitempty"`
 	Status          *AccountingOrderStatus                  `json:"status,omitempty"`
@@ -150,6 +151,13 @@ func (o *AccountingOrder) GetLineitems() []AccountingLineitem {
 		return nil
 	}
 	return o.Lineitems
+}
+
+func (o *AccountingOrder) GetPostedAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.PostedAt
 }
 
 func (o *AccountingOrder) GetRaw() map[string]any {
