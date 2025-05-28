@@ -3,13 +3,13 @@
 package shared
 
 type AtsApplicationAnswer struct {
-	Answers    []PropertyAtsApplicationAnswerAnswers `json:"answers"`
-	QuestionID string                                `json:"question_id"`
+	Answers    []string `json:"answers"`
+	QuestionID string   `json:"question_id"`
 }
 
-func (o *AtsApplicationAnswer) GetAnswers() []PropertyAtsApplicationAnswerAnswers {
+func (o *AtsApplicationAnswer) GetAnswers() []string {
 	if o == nil {
-		return []PropertyAtsApplicationAnswerAnswers{}
+		return []string{}
 	}
 	return o.Answers
 }

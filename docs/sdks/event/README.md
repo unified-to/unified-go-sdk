@@ -43,11 +43,7 @@ func main() {
     )
 
     res, err := s.Event.CreateCalendarEvent(ctx, operations.CreateCalendarEventRequest{
-        CalendarEvent: shared.CalendarEvent{
-            EndAt: "<value>",
-            StartAt: "<value>",
-            Subject: "<value>",
-        },
+        CalendarEvent: shared.CalendarEvent{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -371,11 +367,7 @@ func main() {
     )
 
     res, err := s.Event.PatchCalendarEvent(ctx, operations.PatchCalendarEventRequest{
-        CalendarEvent: shared.CalendarEvent{
-            EndAt: "<value>",
-            StartAt: "<value>",
-            Subject: "<value>",
-        },
+        CalendarEvent: shared.CalendarEvent{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -595,11 +587,7 @@ func main() {
     )
 
     res, err := s.Event.UpdateCalendarEvent(ctx, operations.UpdateCalendarEventRequest{
-        CalendarEvent: shared.CalendarEvent{
-            EndAt: "<value>",
-            StartAt: "<value>",
-            Subject: "<value>",
-        },
+        CalendarEvent: shared.CalendarEvent{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

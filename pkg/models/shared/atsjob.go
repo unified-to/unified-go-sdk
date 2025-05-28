@@ -101,9 +101,9 @@ type AtsJob struct {
 	Compensation []AtsCompensation `json:"compensation,omitempty"`
 	CreatedAt    *time.Time        `json:"created_at,omitempty"`
 	// @deprecated Use `groups` instead
-	Departments    []PropertyAtsJobDepartments `json:"departments,omitempty"`
-	Description    *string                     `json:"description,omitempty"`
-	EmploymentType *EmploymentType             `json:"employment_type,omitempty"`
+	Departments    []string        `json:"departments,omitempty"`
+	Description    *string         `json:"description,omitempty"`
+	EmploymentType *EmploymentType `json:"employment_type,omitempty"`
 	// The departments/divisions/teams that this job belongs to
 	Groups           []AtsGroup      `json:"groups,omitempty"`
 	HiringManagerIds []string        `json:"hiring_manager_ids,omitempty"`
@@ -116,13 +116,13 @@ type AtsJob struct {
 	// Public job postings
 	Postings []AtsJobPosting `json:"postings,omitempty"`
 	// URLs for pages containing public listings for the job
-	PublicJobUrls []PropertyAtsJobPublicJobUrls `json:"public_job_urls,omitempty"`
-	Questions     []AtsJobQuestion              `json:"questions,omitempty"`
-	Raw           map[string]any                `json:"raw,omitempty"`
-	RecruiterIds  []string                      `json:"recruiter_ids,omitempty"`
-	Remote        *bool                         `json:"remote,omitempty"`
-	Status        *AtsJobStatus                 `json:"status,omitempty"`
-	UpdatedAt     *time.Time                    `json:"updated_at,omitempty"`
+	PublicJobUrls []string         `json:"public_job_urls,omitempty"`
+	Questions     []AtsJobQuestion `json:"questions,omitempty"`
+	Raw           map[string]any   `json:"raw,omitempty"`
+	RecruiterIds  []string         `json:"recruiter_ids,omitempty"`
+	Remote        *bool            `json:"remote,omitempty"`
+	Status        *AtsJobStatus    `json:"status,omitempty"`
+	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
 }
 
 func (a AtsJob) MarshalJSON() ([]byte, error) {
@@ -171,7 +171,7 @@ func (o *AtsJob) GetCreatedAt() *time.Time {
 	return o.CreatedAt
 }
 
-func (o *AtsJob) GetDepartments() []PropertyAtsJobDepartments {
+func (o *AtsJob) GetDepartments() []string {
 	if o == nil {
 		return nil
 	}
@@ -255,7 +255,7 @@ func (o *AtsJob) GetPostings() []AtsJobPosting {
 	return o.Postings
 }
 
-func (o *AtsJob) GetPublicJobUrls() []PropertyAtsJobPublicJobUrls {
+func (o *AtsJob) GetPublicJobUrls() []string {
 	if o == nil {
 		return nil
 	}

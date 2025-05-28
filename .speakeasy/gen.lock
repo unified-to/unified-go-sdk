@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 5d7224eae5351ceaef9292fed7b8c35a
+  docChecksum: d14d19d0a1732100e72235d3371aa316
   docVersion: "1.0"
-  speakeasyVersion: 1.551.0
+  speakeasyVersion: 1.552.0
   generationVersion: 2.610.0
-  releaseVersion: 0.24.6
-  configChecksum: fbe1bfa1d4b3caa6b58ca80e4c3f3a78
+  releaseVersion: 0.24.7
+  configChecksum: 3a844a9878f20bb7070eae75554c4031
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -613,24 +613,12 @@ generatedFiles:
   - /pkg/models/shared/propertyaccountingreportprofitandloss.go
   - /pkg/models/shared/propertyaccountingreporttrialbalance.go
   - /pkg/models/shared/propertyatsactivityfrom.go
-  - /pkg/models/shared/propertyatsapplicationansweranswers.go
   - /pkg/models/shared/propertyatscandidateaddress.go
-  - /pkg/models/shared/propertyatscandidatelinkurls.go
-  - /pkg/models/shared/propertyatscandidateskills.go
-  - /pkg/models/shared/propertyatscandidatesources.go
-  - /pkg/models/shared/propertyatscandidatetags.go
   - /pkg/models/shared/propertyatscompanyaddress.go
-  - /pkg/models/shared/propertyatsjobdepartments.go
   - /pkg/models/shared/propertyatsjobpostingaddress.go
-  - /pkg/models/shared/propertyatsjobpublicjoburls.go
-  - /pkg/models/shared/propertyatsjobquestionoptions.go
   - /pkg/models/shared/propertycalendareventorganizer.go
   - /pkg/models/shared/propertycalendareventrecurrenceondays.go
   - /pkg/models/shared/propertycalendarrecordingtranscriptattendee.go
-  - /pkg/models/shared/propertycommercecollectiontags.go
-  - /pkg/models/shared/propertycommerceitemoptionvalues.go
-  - /pkg/models/shared/propertycommerceitemtags.go
-  - /pkg/models/shared/propertycommerceitemvarianttags.go
   - /pkg/models/shared/propertycommercelocationaddress.go
   - /pkg/models/shared/propertyconnectionauth.go
   - /pkg/models/shared/propertyconnectioncategories.go
@@ -653,10 +641,8 @@ generatedFiles:
   - /pkg/models/shared/propertyhrisemployeeemployeeroles.go
   - /pkg/models/shared/propertyhrislocationaddress.go
   - /pkg/models/shared/propertyintegrationcategories.go
-  - /pkg/models/shared/propertyintegrationtokeninstructions.go
   - /pkg/models/shared/propertylmsstudentaddress.go
   - /pkg/models/shared/propertymessagingmessageauthormember.go
-  - /pkg/models/shared/propertymetadatametadataoptions.go
   - /pkg/models/shared/propertyscimgroupmeta.go
   - /pkg/models/shared/propertyscimgroupschemas.go
   - /pkg/models/shared/propertyscimusermeta.go
@@ -1963,26 +1949,14 @@ generatedFiles:
   - docs/pkg/models/shared/propertyaccountingreporttrialbalance.md
   - docs/pkg/models/shared/propertyatsactivityfrom.md
   - docs/pkg/models/shared/propertyatsactivityfromtype.md
-  - docs/pkg/models/shared/propertyatsapplicationansweranswers.md
   - docs/pkg/models/shared/propertyatscandidateaddress.md
-  - docs/pkg/models/shared/propertyatscandidatelinkurls.md
-  - docs/pkg/models/shared/propertyatscandidateskills.md
-  - docs/pkg/models/shared/propertyatscandidatesources.md
-  - docs/pkg/models/shared/propertyatscandidatetags.md
   - docs/pkg/models/shared/propertyatscompanyaddress.md
-  - docs/pkg/models/shared/propertyatsjobdepartments.md
   - docs/pkg/models/shared/propertyatsjobpostingaddress.md
-  - docs/pkg/models/shared/propertyatsjobpublicjoburls.md
-  - docs/pkg/models/shared/propertyatsjobquestionoptions.md
   - docs/pkg/models/shared/propertycalendareventorganizer.md
   - docs/pkg/models/shared/propertycalendareventorganizerstatus.md
   - docs/pkg/models/shared/propertycalendareventrecurrenceondays.md
   - docs/pkg/models/shared/propertycalendarrecordingtranscriptattendee.md
   - docs/pkg/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
-  - docs/pkg/models/shared/propertycommercecollectiontags.md
-  - docs/pkg/models/shared/propertycommerceitemoptionvalues.md
-  - docs/pkg/models/shared/propertycommerceitemtags.md
-  - docs/pkg/models/shared/propertycommerceitemvarianttags.md
   - docs/pkg/models/shared/propertycommercelocationaddress.md
   - docs/pkg/models/shared/propertyconnectionauth.md
   - docs/pkg/models/shared/propertyconnectioncategories.md
@@ -2006,10 +1980,8 @@ generatedFiles:
   - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/pkg/models/shared/propertyhrislocationaddress.md
   - docs/pkg/models/shared/propertyintegrationcategories.md
-  - docs/pkg/models/shared/propertyintegrationtokeninstructions.md
   - docs/pkg/models/shared/propertylmsstudentaddress.md
   - docs/pkg/models/shared/propertymessagingmessageauthormember.md
-  - docs/pkg/models/shared/propertymetadatametadataoptions.md
   - docs/pkg/models/shared/propertyscimgroupmeta.md
   - docs/pkg/models/shared/propertyscimgroupschemas.md
   - docs/pkg/models/shared/propertyscimusermeta.md
@@ -3405,10 +3377,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   createCalendarLink:
     speakeasy-default-create-calendar-link:
       parameters:
@@ -3436,7 +3408,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   getCalendarLink:
     speakeasy-default-get-calendar-link:
       parameters:
@@ -3513,10 +3485,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   patchCalendarLink:
     speakeasy-default-patch-calendar-link:
       parameters:
@@ -3564,10 +3536,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   updateCalendarLink:
     speakeasy-default-update-calendar-link:
       parameters:
