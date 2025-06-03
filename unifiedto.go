@@ -2,9 +2,12 @@
 
 package unifiedgosdk
 
+// Generated from OpenAPI doc version 1.0 and generator version 2.618.0
+
 import (
 	"context"
 	"fmt"
+	"github.com/unified-to/unified-go-sdk/internal/config"
 	"github.com/unified-to/unified-go-sdk/internal/hooks"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/retry"
@@ -23,7 +26,7 @@ var ServerList = []string{
 	"https://api-au.unified.to",
 }
 
-// HTTPClient provides an interface for suplying the SDK with a custom HTTP client
+// HTTPClient provides an interface for supplying the SDK with a custom HTTP client
 type HTTPClient interface {
 	Do(req *http.Request) (*http.Response, error)
 }
@@ -49,31 +52,9 @@ func Float64(f float64) *float64 { return &f }
 // Pointer provides a helper function to return a pointer to a type
 func Pointer[T any](v T) *T { return &v }
 
-type sdkConfiguration struct {
-	Client            HTTPClient
-	Security          func(context.Context) (interface{}, error)
-	ServerURL         string
-	ServerIndex       int
-	Language          string
-	OpenAPIDocVersion string
-	SDKVersion        string
-	GenVersion        string
-	UserAgent         string
-	RetryConfig       *retry.Config
-	Hooks             *hooks.Hooks
-	Timeout           *time.Duration
-}
-
-func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
-	if c.ServerURL != "" {
-		return c.ServerURL, nil
-	}
-
-	return ServerList[c.ServerIndex], nil
-}
-
 // UnifiedTo - Unified.to API: One API to Rule Them All
 type UnifiedTo struct {
+	SDKVersion        string
 	Accounting        *Accounting
 	Account           *Account
 	Contact           *Contact
@@ -168,7 +149,8 @@ type UnifiedTo struct {
 	Issue             *Issue
 	Webhook           *Webhook
 
-	sdkConfiguration sdkConfiguration
+	sdkConfiguration config.SDKConfiguration
+	hooks            *hooks.Hooks
 }
 
 type SDKOption func(*UnifiedTo)
@@ -242,14 +224,12 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		sdkConfiguration: sdkConfiguration{
-			Language:          "go",
-			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.24.7",
-			GenVersion:        "2.610.0",
-			UserAgent:         "speakeasy-sdk/go 0.24.7 2.610.0 1.0 github.com/unified-to/unified-go-sdk",
-			Hooks:             hooks.New(),
+		SDKVersion: "0.25.0",
+		sdkConfiguration: config.SDKConfiguration{
+			UserAgent:  "speakeasy-sdk/go 0.25.0 2.618.0 1.0 github.com/unified-to/unified-go-sdk",
+			ServerList: ServerList,
 		},
+		hooks: hooks.New(),
 	}
 	for _, opt := range opts {
 		opt(sdk)
@@ -262,196 +242,104 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	currentServerURL, _ := sdk.sdkConfiguration.GetServerDetails()
 	serverURL := currentServerURL
-	serverURL, sdk.sdkConfiguration.Client = sdk.sdkConfiguration.Hooks.SDKInit(currentServerURL, sdk.sdkConfiguration.Client)
-	if serverURL != currentServerURL {
+	serverURL, sdk.sdkConfiguration.Client = sdk.hooks.SDKInit(currentServerURL, sdk.sdkConfiguration.Client)
+	if currentServerURL != serverURL {
 		sdk.sdkConfiguration.ServerURL = serverURL
 	}
 
-	sdk.Accounting = newAccounting(sdk.sdkConfiguration)
-
-	sdk.Account = newAccount(sdk.sdkConfiguration)
-
-	sdk.Contact = newContact(sdk.sdkConfiguration)
-
-	sdk.Invoice = newInvoice(sdk.sdkConfiguration)
-
-	sdk.Journal = newJournal(sdk.sdkConfiguration)
-
-	sdk.Order = newOrder(sdk.sdkConfiguration)
-
-	sdk.Organization = newOrganization(sdk.sdkConfiguration)
-
-	sdk.Report = newReport(sdk.sdkConfiguration)
-
-	sdk.Taxrate = newTaxrate(sdk.sdkConfiguration)
-
-	sdk.Transaction = newTransaction(sdk.sdkConfiguration)
-
-	sdk.Ats = newAts(sdk.sdkConfiguration)
-
-	sdk.Activity = newActivity(sdk.sdkConfiguration)
-
-	sdk.Application = newApplication(sdk.sdkConfiguration)
-
-	sdk.Applicationstatus = newApplicationstatus(sdk.sdkConfiguration)
-
-	sdk.Candidate = newCandidate(sdk.sdkConfiguration)
-
-	sdk.Company = newCompany(sdk.sdkConfiguration)
-
-	sdk.Document = newDocument(sdk.sdkConfiguration)
-
-	sdk.Interview = newInterview(sdk.sdkConfiguration)
-
-	sdk.Job = newJob(sdk.sdkConfiguration)
-
-	sdk.Scorecard = newScorecard(sdk.sdkConfiguration)
-
-	sdk.Calendar = newCalendar(sdk.sdkConfiguration)
-
-	sdk.Busy = newBusy(sdk.sdkConfiguration)
-
-	sdk.Event = newEvent(sdk.sdkConfiguration)
-
-	sdk.Link = newLink(sdk.sdkConfiguration)
-
-	sdk.Recording = newRecording(sdk.sdkConfiguration)
-
-	sdk.Commerce = newCommerce(sdk.sdkConfiguration)
-
-	sdk.Collection = newCollection(sdk.sdkConfiguration)
-
-	sdk.Inventory = newInventory(sdk.sdkConfiguration)
-
-	sdk.Item = newItem(sdk.sdkConfiguration)
-
-	sdk.Location = newLocation(sdk.sdkConfiguration)
-
-	sdk.Review = newReview(sdk.sdkConfiguration)
-
-	sdk.Crm = newCrm(sdk.sdkConfiguration)
-
-	sdk.Deal = newDeal(sdk.sdkConfiguration)
-
-	sdk.Lead = newLead(sdk.sdkConfiguration)
-
-	sdk.Pipeline = newPipeline(sdk.sdkConfiguration)
-
-	sdk.Enrich = newEnrich(sdk.sdkConfiguration)
-
-	sdk.Person = newPerson(sdk.sdkConfiguration)
-
-	sdk.Genai = newGenai(sdk.sdkConfiguration)
-
-	sdk.Model = newModel(sdk.sdkConfiguration)
-
-	sdk.Prompt = newPrompt(sdk.sdkConfiguration)
-
-	sdk.Hris = newHris(sdk.sdkConfiguration)
-
-	sdk.Device = newDevice(sdk.sdkConfiguration)
-
-	sdk.Employee = newEmployee(sdk.sdkConfiguration)
-
-	sdk.Group = newGroup(sdk.sdkConfiguration)
-
-	sdk.Payslip = newPayslip(sdk.sdkConfiguration)
-
-	sdk.Timeoff = newTimeoff(sdk.sdkConfiguration)
-
-	sdk.Timeshift = newTimeshift(sdk.sdkConfiguration)
-
-	sdk.Kms = newKms(sdk.sdkConfiguration)
-
-	sdk.Comment = newComment(sdk.sdkConfiguration)
-
-	sdk.Page = newPage(sdk.sdkConfiguration)
-
-	sdk.Space = newSpace(sdk.sdkConfiguration)
-
-	sdk.Lms = newLms(sdk.sdkConfiguration)
-
-	sdk.Class = newClass(sdk.sdkConfiguration)
-
-	sdk.Course = newCourse(sdk.sdkConfiguration)
-
-	sdk.Instructor = newInstructor(sdk.sdkConfiguration)
-
-	sdk.Student = newStudent(sdk.sdkConfiguration)
-
-	sdk.Martech = newMartech(sdk.sdkConfiguration)
-
-	sdk.List = newList(sdk.sdkConfiguration)
-
-	sdk.Member = newMember(sdk.sdkConfiguration)
-
-	sdk.Messaging = newMessaging(sdk.sdkConfiguration)
-
-	sdk.Channel = newChannel(sdk.sdkConfiguration)
-
-	sdk.Message = newMessage(sdk.sdkConfiguration)
-
-	sdk.Metadata = newMetadata(sdk.sdkConfiguration)
-
-	sdk.Passthrough = newPassthrough(sdk.sdkConfiguration)
-
-	sdk.Payment = newPayment(sdk.sdkConfiguration)
-
-	sdk.Payout = newPayout(sdk.sdkConfiguration)
-
-	sdk.Refund = newRefund(sdk.sdkConfiguration)
-
-	sdk.Subscription = newSubscription(sdk.sdkConfiguration)
-
-	sdk.Repo = newRepo(sdk.sdkConfiguration)
-
-	sdk.Branch = newBranch(sdk.sdkConfiguration)
-
-	sdk.Commit = newCommit(sdk.sdkConfiguration)
-
-	sdk.Pullrequest = newPullrequest(sdk.sdkConfiguration)
-
-	sdk.Repository = newRepository(sdk.sdkConfiguration)
-
-	sdk.Scim = newScim(sdk.sdkConfiguration)
-
-	sdk.User = newUser(sdk.sdkConfiguration)
-
-	sdk.Storage = newStorage(sdk.sdkConfiguration)
-
-	sdk.File = newFile(sdk.sdkConfiguration)
-
-	sdk.Task = newTask(sdk.sdkConfiguration)
-
-	sdk.Project = newProject(sdk.sdkConfiguration)
-
-	sdk.Ticketing = newTicketing(sdk.sdkConfiguration)
-
-	sdk.Customer = newCustomer(sdk.sdkConfiguration)
-
-	sdk.Note = newNote(sdk.sdkConfiguration)
-
-	sdk.Ticket = newTicket(sdk.sdkConfiguration)
-
-	sdk.Uc = newUc(sdk.sdkConfiguration)
-
-	sdk.Call = newCall(sdk.sdkConfiguration)
-
-	sdk.Unified = newUnified(sdk.sdkConfiguration)
-
-	sdk.Apicall = newApicall(sdk.sdkConfiguration)
-
-	sdk.Connection = newConnection(sdk.sdkConfiguration)
-
-	sdk.Integration = newIntegration(sdk.sdkConfiguration)
-
-	sdk.Auth = newAuth(sdk.sdkConfiguration)
-
-	sdk.Login = newLogin(sdk.sdkConfiguration)
-
-	sdk.Issue = newIssue(sdk.sdkConfiguration)
-
-	sdk.Webhook = newWebhook(sdk.sdkConfiguration)
+	sdk.Accounting = newAccounting(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Account = newAccount(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Contact = newContact(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Invoice = newInvoice(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Journal = newJournal(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Order = newOrder(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Organization = newOrganization(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Report = newReport(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Taxrate = newTaxrate(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Transaction = newTransaction(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Ats = newAts(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Activity = newActivity(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Application = newApplication(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Applicationstatus = newApplicationstatus(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Candidate = newCandidate(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Company = newCompany(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Document = newDocument(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Interview = newInterview(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Job = newJob(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Scorecard = newScorecard(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Calendar = newCalendar(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Busy = newBusy(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Event = newEvent(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Link = newLink(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Recording = newRecording(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Commerce = newCommerce(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Collection = newCollection(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Inventory = newInventory(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Item = newItem(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Location = newLocation(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Review = newReview(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Crm = newCrm(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Deal = newDeal(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Lead = newLead(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Pipeline = newPipeline(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Enrich = newEnrich(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Person = newPerson(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Genai = newGenai(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Model = newModel(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Prompt = newPrompt(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Hris = newHris(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Device = newDevice(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Employee = newEmployee(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Group = newGroup(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Payslip = newPayslip(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Timeoff = newTimeoff(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Timeshift = newTimeshift(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Kms = newKms(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Comment = newComment(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Page = newPage(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Space = newSpace(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Lms = newLms(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Class = newClass(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Course = newCourse(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Instructor = newInstructor(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Student = newStudent(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Martech = newMartech(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.List = newList(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Member = newMember(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Messaging = newMessaging(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Channel = newChannel(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Message = newMessage(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Metadata = newMetadata(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Passthrough = newPassthrough(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Payment = newPayment(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Payout = newPayout(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Refund = newRefund(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Subscription = newSubscription(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Repo = newRepo(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Branch = newBranch(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Commit = newCommit(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Pullrequest = newPullrequest(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Repository = newRepository(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Scim = newScim(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.User = newUser(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Storage = newStorage(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.File = newFile(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Task = newTask(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Project = newProject(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Ticketing = newTicketing(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Customer = newCustomer(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Note = newNote(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Ticket = newTicket(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Uc = newUc(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Call = newCall(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Unified = newUnified(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Apicall = newApicall(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Connection = newConnection(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Integration = newIntegration(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Auth = newAuth(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Login = newLogin(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Issue = newIssue(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Webhook = newWebhook(sdk, sdk.sdkConfiguration, sdk.hooks)
 
 	return sdk
 }

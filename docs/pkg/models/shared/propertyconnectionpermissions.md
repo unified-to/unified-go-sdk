@@ -87,6 +87,8 @@
 | `PropertyConnectionPermissionsHrisPayslipWrite`           | hris_payslip_write                                        |
 | `PropertyConnectionPermissionsHrisTimeoffRead`            | hris_timeoff_read                                         |
 | `PropertyConnectionPermissionsHrisTimeoffWrite`           | hris_timeoff_write                                        |
+| `PropertyConnectionPermissionsHrisTimeshiftRead`          | hris_timeshift_read                                       |
+| `PropertyConnectionPermissionsHrisTimeshiftWrite`         | hris_timeshift_write                                      |
 | `PropertyConnectionPermissionsHrisCompanyRead`            | hris_company_read                                         |
 | `PropertyConnectionPermissionsHrisCompanyWrite`           | hris_company_write                                        |
 | `PropertyConnectionPermissionsHrisLocationRead`           | hris_location_read                                        |
@@ -149,7 +151,6 @@
 | `PropertyConnectionPermissionsCalendarEventRead`          | calendar_event_read                                       |
 | `PropertyConnectionPermissionsCalendarEventWrite`         | calendar_event_write                                      |
 | `PropertyConnectionPermissionsCalendarBusyRead`           | calendar_busy_read                                        |
-| `PropertyConnectionPermissionsCalendarBusyWrite`          | calendar_busy_write                                       |
 | `PropertyConnectionPermissionsCalendarLinkRead`           | calendar_link_read                                        |
 | `PropertyConnectionPermissionsCalendarLinkWrite`          | calendar_link_write                                       |
 | `PropertyConnectionPermissionsCalendarRecordingRead`      | calendar_recording_read                                   |

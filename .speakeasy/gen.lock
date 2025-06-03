@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: d14d19d0a1732100e72235d3371aa316
+  docChecksum: f9bc57192bd992fcccfe33378ff85c27
   docVersion: "1.0"
-  speakeasyVersion: 1.552.0
-  generationVersion: 2.610.0
-  releaseVersion: 0.24.7
-  configChecksum: 3a844a9878f20bb7070eae75554c4031
+  speakeasyVersion: 1.555.0
+  generationVersion: 2.618.0
+  releaseVersion: 0.25.0
+  configChecksum: 0e08608d5e0b653d27963d14263a04bf
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -27,7 +27,7 @@ features:
     intellisenseMarkdownSupport: 0.1.0
     responseFormat: 0.1.2
     retries: 2.83.2
-    sdkHooks: 0.1.0
+    sdkHooks: 0.2.0
     unions: 2.85.10
     uploadStreams: 0.1.0
 generatedFiles:
@@ -2171,6 +2171,7 @@ generatedFiles:
   - hris.go
   - instructor.go
   - integration.go
+  - internal/config/sdkconfiguration.go
   - internal/hooks/hooks.go
   - interview.go
   - inventory.go

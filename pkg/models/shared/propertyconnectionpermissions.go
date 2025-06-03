@@ -92,6 +92,8 @@ const (
 	PropertyConnectionPermissionsHrisPayslipWrite           PropertyConnectionPermissions = "hris_payslip_write"
 	PropertyConnectionPermissionsHrisTimeoffRead            PropertyConnectionPermissions = "hris_timeoff_read"
 	PropertyConnectionPermissionsHrisTimeoffWrite           PropertyConnectionPermissions = "hris_timeoff_write"
+	PropertyConnectionPermissionsHrisTimeshiftRead          PropertyConnectionPermissions = "hris_timeshift_read"
+	PropertyConnectionPermissionsHrisTimeshiftWrite         PropertyConnectionPermissions = "hris_timeshift_write"
 	PropertyConnectionPermissionsHrisCompanyRead            PropertyConnectionPermissions = "hris_company_read"
 	PropertyConnectionPermissionsHrisCompanyWrite           PropertyConnectionPermissions = "hris_company_write"
 	PropertyConnectionPermissionsHrisLocationRead           PropertyConnectionPermissions = "hris_location_read"
@@ -154,7 +156,6 @@ const (
 	PropertyConnectionPermissionsCalendarEventRead          PropertyConnectionPermissions = "calendar_event_read"
 	PropertyConnectionPermissionsCalendarEventWrite         PropertyConnectionPermissions = "calendar_event_write"
 	PropertyConnectionPermissionsCalendarBusyRead           PropertyConnectionPermissions = "calendar_busy_read"
-	PropertyConnectionPermissionsCalendarBusyWrite          PropertyConnectionPermissions = "calendar_busy_write"
 	PropertyConnectionPermissionsCalendarLinkRead           PropertyConnectionPermissions = "calendar_link_read"
 	PropertyConnectionPermissionsCalendarLinkWrite          PropertyConnectionPermissions = "calendar_link_write"
 	PropertyConnectionPermissionsCalendarRecordingRead      PropertyConnectionPermissions = "calendar_recording_read"
@@ -336,6 +337,10 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "hris_timeoff_write":
 		fallthrough
+	case "hris_timeshift_read":
+		fallthrough
+	case "hris_timeshift_write":
+		fallthrough
 	case "hris_company_read":
 		fallthrough
 	case "hris_company_write":
@@ -459,8 +464,6 @@ func (e *PropertyConnectionPermissions) UnmarshalJSON(data []byte) error {
 	case "calendar_event_write":
 		fallthrough
 	case "calendar_busy_read":
-		fallthrough
-	case "calendar_busy_write":
 		fallthrough
 	case "calendar_link_read":
 		fallthrough
