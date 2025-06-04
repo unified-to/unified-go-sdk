@@ -8,14 +8,17 @@ import (
 )
 
 type CommerceLocation struct {
-	Address     *PropertyCommerceLocationAddress `json:"address,omitempty"`
-	CreatedAt   *time.Time                       `json:"created_at,omitempty"`
-	Description *string                          `json:"description,omitempty"`
-	ID          *string                          `json:"id,omitempty"`
-	IsActive    *bool                            `json:"is_active,omitempty"`
-	Name        string                           `json:"name"`
-	Raw         map[string]any                   `json:"raw,omitempty"`
-	UpdatedAt   *time.Time                       `json:"updated_at,omitempty"`
+	Address        *PropertyCommerceLocationAddress `json:"address,omitempty"`
+	CreatedAt      *time.Time                       `json:"created_at,omitempty"`
+	Currency       *string                          `json:"currency,omitempty"`
+	Description    *string                          `json:"description,omitempty"`
+	ID             *string                          `json:"id,omitempty"`
+	IsActive       *bool                            `json:"is_active,omitempty"`
+	LanguageLocale *string                          `json:"language_locale,omitempty"`
+	Name           string                           `json:"name"`
+	ParentID       *string                          `json:"parent_id,omitempty"`
+	Raw            map[string]any                   `json:"raw,omitempty"`
+	UpdatedAt      *time.Time                       `json:"updated_at,omitempty"`
 }
 
 func (c CommerceLocation) MarshalJSON() ([]byte, error) {
@@ -43,6 +46,13 @@ func (o *CommerceLocation) GetCreatedAt() *time.Time {
 	return o.CreatedAt
 }
 
+func (o *CommerceLocation) GetCurrency() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Currency
+}
+
 func (o *CommerceLocation) GetDescription() *string {
 	if o == nil {
 		return nil
@@ -64,11 +74,25 @@ func (o *CommerceLocation) GetIsActive() *bool {
 	return o.IsActive
 }
 
+func (o *CommerceLocation) GetLanguageLocale() *string {
+	if o == nil {
+		return nil
+	}
+	return o.LanguageLocale
+}
+
 func (o *CommerceLocation) GetName() string {
 	if o == nil {
 		return ""
 	}
 	return o.Name
+}
+
+func (o *CommerceLocation) GetParentID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ParentID
 }
 
 func (o *CommerceLocation) GetRaw() map[string]any {
