@@ -10,6 +10,8 @@ import (
 type ListAtsApplicationsRequest struct {
 	// The candidate ID to filter by
 	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`
+	// The company ID to filter by
+	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -33,6 +35,13 @@ func (o *ListAtsApplicationsRequest) GetCandidateID() *string {
 		return nil
 	}
 	return o.CandidateID
+}
+
+func (o *ListAtsApplicationsRequest) GetCompanyID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyID
 }
 
 func (o *ListAtsApplicationsRequest) GetConnectionID() string {

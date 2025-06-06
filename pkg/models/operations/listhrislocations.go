@@ -8,6 +8,8 @@ import (
 )
 
 type ListHrisLocationsRequest struct {
+	// The company ID to filter by
+	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -22,6 +24,13 @@ type ListHrisLocationsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
+}
+
+func (o *ListHrisLocationsRequest) GetCompanyID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyID
 }
 
 func (o *ListHrisLocationsRequest) GetConnectionID() string {

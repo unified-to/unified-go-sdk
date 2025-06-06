@@ -8,6 +8,8 @@ import (
 )
 
 type ListAtsJobsRequest struct {
+	// The company ID to filter by
+	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -24,6 +26,13 @@ type ListAtsJobsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
+}
+
+func (o *ListAtsJobsRequest) GetCompanyID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CompanyID
 }
 
 func (o *ListAtsJobsRequest) GetConnectionID() string {

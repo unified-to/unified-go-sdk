@@ -28,6 +28,8 @@ type ListCalendarBusiesRequest struct {
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
+	// The user/employee ID to filter by
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (o *ListCalendarBusiesRequest) GetCalendarID() *string {
@@ -112,6 +114,13 @@ func (o *ListCalendarBusiesRequest) GetUpdatedGte() *string {
 		return nil
 	}
 	return o.UpdatedGte
+}
+
+func (o *ListCalendarBusiesRequest) GetUserID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.UserID
 }
 
 type ListCalendarBusiesResponse struct {
