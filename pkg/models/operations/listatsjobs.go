@@ -22,6 +22,8 @@ type ListAtsJobsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The status to filter by
+	Status *string `queryParam:"style=form,explode=true,name=status"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by
@@ -89,6 +91,13 @@ func (o *ListAtsJobsRequest) GetSort() *string {
 		return nil
 	}
 	return o.Sort
+}
+
+func (o *ListAtsJobsRequest) GetStatus() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Status
 }
 
 func (o *ListAtsJobsRequest) GetUpdatedGte() *string {

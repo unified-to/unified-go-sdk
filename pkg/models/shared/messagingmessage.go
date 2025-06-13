@@ -21,6 +21,7 @@ type MessagingMessage struct {
 	MentionedMembers   []MessagingMember `json:"mentioned_members,omitempty"`
 	Message            *string           `json:"message,omitempty"`
 	MessageHTML        *string           `json:"message_html,omitempty"`
+	MessageMarkdown    *string           `json:"message_markdown,omitempty"`
 	ParentMessageID    *string           `json:"parent_message_id,omitempty"`
 	Raw                map[string]any    `json:"raw,omitempty"`
 	Reference          *string           `json:"reference,omitempty"`
@@ -123,6 +124,13 @@ func (o *MessagingMessage) GetMessageHTML() *string {
 		return nil
 	}
 	return o.MessageHTML
+}
+
+func (o *MessagingMessage) GetMessageMarkdown() *string {
+	if o == nil {
+		return nil
+	}
+	return o.MessageMarkdown
 }
 
 func (o *MessagingMessage) GetParentMessageID() *string {
