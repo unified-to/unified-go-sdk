@@ -8,6 +8,7 @@
 | `CreatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
 | `Description`                              | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
 | `GroupIds`                                 | []*string*                                 | :heavy_minus_sign:                         | N/A                                        |
+| `HasChildren`                              | **bool*                                    | :heavy_minus_sign:                         | N/A                                        |
 | `HasTasks`                                 | **bool*                                    | :heavy_minus_sign:                         | N/A                                        |
 | `ID`                                       | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
 | `Name`                                     | **string*                                  | :heavy_minus_sign:                         | N/A                                        |

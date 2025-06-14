@@ -41,6 +41,7 @@ type CalendarEvent struct {
 	CalendarID       *string                         `json:"calendar_id,omitempty"`
 	CreatedAt        *string                         `json:"created_at,omitempty"`
 	EndAt            *string                         `json:"end_at,omitempty"`
+	HasConference    *bool                           `json:"has_conference,omitempty"`
 	ID               *string                         `json:"id,omitempty"`
 	IsAllDay         *bool                           `json:"is_all_day,omitempty"`
 	IsFree           *bool                           `json:"is_free,omitempty"`
@@ -85,6 +86,13 @@ func (o *CalendarEvent) GetEndAt() *string {
 		return nil
 	}
 	return o.EndAt
+}
+
+func (o *CalendarEvent) GetHasConference() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.HasConference
 }
 
 func (o *CalendarEvent) GetID() *string {
