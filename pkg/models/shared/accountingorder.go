@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -24,31 +22,6 @@ const (
 func (e AccountingOrderStatus) ToPointer() *AccountingOrderStatus {
 	return &e
 }
-func (e *AccountingOrderStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "DRAFT":
-		fallthrough
-	case "VOIDED":
-		fallthrough
-	case "AUTHORIZED":
-		fallthrough
-	case "PAID":
-		fallthrough
-	case "PARTIALLY_PAID":
-		fallthrough
-	case "PARTIALLY_REFUNDED":
-		fallthrough
-	case "REFUNDED":
-		*e = AccountingOrderStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountingOrderStatus: %v", v)
-	}
-}
 
 type AccountingOrderType string
 
@@ -59,21 +32,6 @@ const (
 
 func (e AccountingOrderType) ToPointer() *AccountingOrderType {
 	return &e
-}
-func (e *AccountingOrderType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "SALES":
-		fallthrough
-	case "PURCHASE":
-		*e = AccountingOrderType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountingOrderType: %v", v)
-	}
 }
 
 type AccountingOrder struct {

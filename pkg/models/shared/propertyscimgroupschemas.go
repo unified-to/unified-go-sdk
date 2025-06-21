@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type PropertyScimGroupSchemas string
 
 const (
@@ -15,17 +10,4 @@ const (
 
 func (e PropertyScimGroupSchemas) ToPointer() *PropertyScimGroupSchemas {
 	return &e
-}
-func (e *PropertyScimGroupSchemas) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "urn:ietf:params:scim:schemas:core:2.0:Group":
-		*e = PropertyScimGroupSchemas(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyScimGroupSchemas: %v", v)
-	}
 }

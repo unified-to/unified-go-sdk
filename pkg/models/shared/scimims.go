@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type ScimImsType string
 
 const (
@@ -22,33 +17,6 @@ const (
 
 func (e ScimImsType) ToPointer() *ScimImsType {
 	return &e
-}
-func (e *ScimImsType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "aim":
-		fallthrough
-	case "qtalk":
-		fallthrough
-	case "icq":
-		fallthrough
-	case "xmpp":
-		fallthrough
-	case "msn":
-		fallthrough
-	case "skype":
-		fallthrough
-	case "qq":
-		fallthrough
-	case "yahoo":
-		*e = ScimImsType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ScimImsType: %v", v)
-	}
 }
 
 type ScimIms struct {

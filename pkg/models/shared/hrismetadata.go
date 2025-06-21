@@ -3,7 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
@@ -425,43 +424,6 @@ const (
 
 func (e HrisMetadataFormat) ToPointer() *HrisMetadataFormat {
 	return &e
-}
-func (e *HrisMetadataFormat) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "TEXT":
-		fallthrough
-	case "NUMBER":
-		fallthrough
-	case "DATE":
-		fallthrough
-	case "BOOLEAN":
-		fallthrough
-	case "FILE":
-		fallthrough
-	case "TEXTAREA":
-		fallthrough
-	case "SINGLE_SELECT":
-		fallthrough
-	case "MULTIPLE_SELECT":
-		fallthrough
-	case "MEASUREMENT":
-		fallthrough
-	case "PRICE":
-		fallthrough
-	case "YES_NO":
-		fallthrough
-	case "CURRENCY":
-		fallthrough
-	case "URL":
-		*e = HrisMetadataFormat(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisMetadataFormat: %v", v)
-	}
 }
 
 type HrisMetadataSchemasValue52 struct {

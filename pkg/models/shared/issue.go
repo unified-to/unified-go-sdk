@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type IssueStatus string
 
 const (
@@ -22,33 +17,6 @@ const (
 
 func (e IssueStatus) ToPointer() *IssueStatus {
 	return &e
-}
-func (e *IssueStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "COMPLETED":
-		fallthrough
-	case "NEW":
-		fallthrough
-	case "ROADMAP":
-		fallthrough
-	case "IN_PROGRESS":
-		fallthrough
-	case "ON_HOLD":
-		fallthrough
-	case "VALIDATING":
-		fallthrough
-	case "REJECTED":
-		fallthrough
-	case "UP_NEXT":
-		*e = IssueStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for IssueStatus: %v", v)
-	}
 }
 
 type Issue struct {

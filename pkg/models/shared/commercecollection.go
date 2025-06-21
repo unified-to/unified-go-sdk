@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -19,23 +17,6 @@ const (
 
 func (e CommerceCollectionType) ToPointer() *CommerceCollectionType {
 	return &e
-}
-func (e *CommerceCollectionType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "COLLECTION":
-		fallthrough
-	case "SAVED_SEARCH":
-		fallthrough
-	case "CATEGORY":
-		*e = CommerceCollectionType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CommerceCollectionType: %v", v)
-	}
 }
 
 // CommerceCollection - A collection of items/products/services

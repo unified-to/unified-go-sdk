@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -22,29 +20,6 @@ const (
 
 func (e AtsDocumentType) ToPointer() *AtsDocumentType {
 	return &e
-}
-func (e *AtsDocumentType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "RESUME":
-		fallthrough
-	case "COVER_LETTER":
-		fallthrough
-	case "OFFER_PACKET":
-		fallthrough
-	case "OFFER_LETTER":
-		fallthrough
-	case "TAKE_HOME_TEST":
-		fallthrough
-	case "OTHER":
-		*e = AtsDocumentType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AtsDocumentType: %v", v)
-	}
 }
 
 type AtsDocument struct {

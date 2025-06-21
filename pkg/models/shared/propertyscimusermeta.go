@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type PropertyScimUserMetaResourceType string
 
 const (
@@ -16,21 +11,6 @@ const (
 
 func (e PropertyScimUserMetaResourceType) ToPointer() *PropertyScimUserMetaResourceType {
 	return &e
-}
-func (e *PropertyScimUserMetaResourceType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "User":
-		fallthrough
-	case "Group":
-		*e = PropertyScimUserMetaResourceType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyScimUserMetaResourceType: %v", v)
-	}
 }
 
 type PropertyScimUserMeta struct {

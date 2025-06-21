@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type AccountingEmailType string
 
 const (
@@ -17,23 +12,6 @@ const (
 
 func (e AccountingEmailType) ToPointer() *AccountingEmailType {
 	return &e
-}
-func (e *AccountingEmailType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "WORK":
-		fallthrough
-	case "HOME":
-		fallthrough
-	case "OTHER":
-		*e = AccountingEmailType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountingEmailType: %v", v)
-	}
 }
 
 type AccountingEmail struct {

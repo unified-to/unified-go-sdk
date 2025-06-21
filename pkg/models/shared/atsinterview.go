@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -21,27 +19,6 @@ const (
 
 func (e AtsInterviewStatus) ToPointer() *AtsInterviewStatus {
 	return &e
-}
-func (e *AtsInterviewStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "SCHEDULED":
-		fallthrough
-	case "AWAITING_FEEDBACK":
-		fallthrough
-	case "COMPLETE":
-		fallthrough
-	case "CANCELED":
-		fallthrough
-	case "NEEDS_SCHEDULING":
-		*e = AtsInterviewStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AtsInterviewStatus: %v", v)
-	}
 }
 
 type AtsInterview struct {

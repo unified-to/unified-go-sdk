@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type CrmEmailType string
 
 const (
@@ -17,23 +12,6 @@ const (
 
 func (e CrmEmailType) ToPointer() *CrmEmailType {
 	return &e
-}
-func (e *CrmEmailType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "WORK":
-		fallthrough
-	case "HOME":
-		fallthrough
-	case "OTHER":
-		*e = CrmEmailType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CrmEmailType: %v", v)
-	}
 }
 
 type CrmEmail struct {

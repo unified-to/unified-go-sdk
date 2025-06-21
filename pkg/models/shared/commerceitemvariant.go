@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -19,21 +17,6 @@ const (
 func (e SizeUnit) ToPointer() *SizeUnit {
 	return &e
 }
-func (e *SizeUnit) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "cm":
-		fallthrough
-	case "inch":
-		*e = SizeUnit(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for SizeUnit: %v", v)
-	}
-}
 
 type WeightUnit string
 
@@ -46,25 +29,6 @@ const (
 
 func (e WeightUnit) ToPointer() *WeightUnit {
 	return &e
-}
-func (e *WeightUnit) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "g":
-		fallthrough
-	case "kg":
-		fallthrough
-	case "oz":
-		fallthrough
-	case "lb":
-		*e = WeightUnit(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for WeightUnit: %v", v)
-	}
 }
 
 type CommerceItemVariant struct {

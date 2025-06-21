@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -23,31 +21,6 @@ const (
 
 func (e HrisGroupType) ToPointer() *HrisGroupType {
 	return &e
-}
-func (e *HrisGroupType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "TEAM":
-		fallthrough
-	case "GROUP":
-		fallthrough
-	case "DEPARTMENT":
-		fallthrough
-	case "DIVISION":
-		fallthrough
-	case "BUSINESS_UNIT":
-		fallthrough
-	case "BRANCH":
-		fallthrough
-	case "SUB_DEPARTMENT":
-		*e = HrisGroupType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisGroupType: %v", v)
-	}
 }
 
 type HrisGroup struct {

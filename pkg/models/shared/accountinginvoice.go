@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -18,21 +16,6 @@ const (
 
 func (e PaymentCollectionMethod) ToPointer() *PaymentCollectionMethod {
 	return &e
-}
-func (e *PaymentCollectionMethod) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "send_invoice":
-		fallthrough
-	case "charge_automatically":
-		*e = PaymentCollectionMethod(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PaymentCollectionMethod: %v", v)
-	}
 }
 
 type AccountingInvoiceStatus string
@@ -50,31 +33,6 @@ const (
 func (e AccountingInvoiceStatus) ToPointer() *AccountingInvoiceStatus {
 	return &e
 }
-func (e *AccountingInvoiceStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "DRAFT":
-		fallthrough
-	case "VOIDED":
-		fallthrough
-	case "AUTHORIZED":
-		fallthrough
-	case "PAID":
-		fallthrough
-	case "PARTIALLY_PAID":
-		fallthrough
-	case "PARTIALLY_REFUNDED":
-		fallthrough
-	case "REFUNDED":
-		*e = AccountingInvoiceStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountingInvoiceStatus: %v", v)
-	}
-}
 
 type AccountingInvoiceType string
 
@@ -86,23 +44,6 @@ const (
 
 func (e AccountingInvoiceType) ToPointer() *AccountingInvoiceType {
 	return &e
-}
-func (e *AccountingInvoiceType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "BILL":
-		fallthrough
-	case "INVOICE":
-		fallthrough
-	case "CREDITMEMO":
-		*e = AccountingInvoiceType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountingInvoiceType: %v", v)
-	}
 }
 
 type AccountingInvoice struct {

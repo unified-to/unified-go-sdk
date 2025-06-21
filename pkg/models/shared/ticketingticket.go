@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -18,21 +16,6 @@ const (
 
 func (e TicketingTicketStatus) ToPointer() *TicketingTicketStatus {
 	return &e
-}
-func (e *TicketingTicketStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ACTIVE":
-		fallthrough
-	case "CLOSED":
-		*e = TicketingTicketStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for TicketingTicketStatus: %v", v)
-	}
 }
 
 type TicketingTicket struct {

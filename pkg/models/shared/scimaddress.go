@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type ScimAddressType string
 
 const (
@@ -17,23 +12,6 @@ const (
 
 func (e ScimAddressType) ToPointer() *ScimAddressType {
 	return &e
-}
-func (e *ScimAddressType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "work":
-		fallthrough
-	case "home":
-		fallthrough
-	case "other":
-		*e = ScimAddressType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ScimAddressType: %v", v)
-	}
 }
 
 type ScimAddress struct {

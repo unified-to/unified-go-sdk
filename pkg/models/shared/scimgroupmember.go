@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type Operation string
 
 const (
@@ -16,21 +11,6 @@ const (
 
 func (e Operation) ToPointer() *Operation {
 	return &e
-}
-func (e *Operation) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "add":
-		fallthrough
-	case "delete":
-		*e = Operation(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Operation: %v", v)
-	}
 }
 
 type ScimGroupMemberType string
@@ -42,21 +22,6 @@ const (
 
 func (e ScimGroupMemberType) ToPointer() *ScimGroupMemberType {
 	return &e
-}
-func (e *ScimGroupMemberType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "User":
-		fallthrough
-	case "Group":
-		*e = ScimGroupMemberType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ScimGroupMemberType: %v", v)
-	}
 }
 
 type ScimGroupMember struct {

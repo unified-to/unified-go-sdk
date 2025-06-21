@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type HrisPayslipDetailType string
 
 const (
@@ -31,51 +26,6 @@ const (
 
 func (e HrisPayslipDetailType) ToPointer() *HrisPayslipDetailType {
 	return &e
-}
-func (e *HrisPayslipDetailType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "EARNING_SALARY":
-		fallthrough
-	case "EARNING_OVERTIME":
-		fallthrough
-	case "EARNING_TIP":
-		fallthrough
-	case "EARNING_BONUS":
-		fallthrough
-	case "EARNING_COMMISSION":
-		fallthrough
-	case "EARNING_ADJUSTMENT":
-		fallthrough
-	case "EARNING":
-		fallthrough
-	case "PRETAX_DEDUCTION":
-		fallthrough
-	case "PRETAX_DEDUCTION_HEALTH_INSURANCE":
-		fallthrough
-	case "PRETAX_DEDUCTION_RETIREMENT":
-		fallthrough
-	case "PRETAX_DEDUCTION_HRA":
-		fallthrough
-	case "TAX_FEDERAL":
-		fallthrough
-	case "TAX_REGION":
-		fallthrough
-	case "TAX_LOCAL":
-		fallthrough
-	case "POSTTAX_BENEFIT":
-		fallthrough
-	case "POSTTAX_GARNISHMENT":
-		fallthrough
-	case "REIMBURSEMENT":
-		*e = HrisPayslipDetailType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisPayslipDetailType: %v", v)
-	}
 }
 
 type HrisPayslipDetail struct {

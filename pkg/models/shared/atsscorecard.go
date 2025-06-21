@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -20,25 +18,6 @@ const (
 
 func (e Recommendation) ToPointer() *Recommendation {
 	return &e
-}
-func (e *Recommendation) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "DEFINITELY_NO":
-		fallthrough
-	case "NO":
-		fallthrough
-	case "YES":
-		fallthrough
-	case "STRONG_YES":
-		*e = Recommendation(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Recommendation: %v", v)
-	}
 }
 
 type AtsScorecard struct {

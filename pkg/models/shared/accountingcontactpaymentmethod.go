@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type AccountingContactPaymentMethodType string
 
 const (
@@ -23,35 +18,6 @@ const (
 
 func (e AccountingContactPaymentMethodType) ToPointer() *AccountingContactPaymentMethodType {
 	return &e
-}
-func (e *AccountingContactPaymentMethodType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ACH":
-		fallthrough
-	case "ALIPAY":
-		fallthrough
-	case "CARD":
-		fallthrough
-	case "GIROPAY":
-		fallthrough
-	case "IDEAL":
-		fallthrough
-	case "OTHER":
-		fallthrough
-	case "PAYPAL":
-		fallthrough
-	case "WIRE":
-		fallthrough
-	case "CHECK":
-		*e = AccountingContactPaymentMethodType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountingContactPaymentMethodType: %v", v)
-	}
 }
 
 type AccountingContactPaymentMethod struct {

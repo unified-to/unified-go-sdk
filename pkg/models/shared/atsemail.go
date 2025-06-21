@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type AtsEmailType string
 
 const (
@@ -17,23 +12,6 @@ const (
 
 func (e AtsEmailType) ToPointer() *AtsEmailType {
 	return &e
-}
-func (e *AtsEmailType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "WORK":
-		fallthrough
-	case "HOME":
-		fallthrough
-	case "OTHER":
-		*e = AtsEmailType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AtsEmailType: %v", v)
-	}
 }
 
 type AtsEmail struct {

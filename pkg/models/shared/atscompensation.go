@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type Frequency string
 
 const (
@@ -22,31 +17,6 @@ const (
 func (e Frequency) ToPointer() *Frequency {
 	return &e
 }
-func (e *Frequency) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ONE_TIME":
-		fallthrough
-	case "DAY":
-		fallthrough
-	case "QUARTER":
-		fallthrough
-	case "YEAR":
-		fallthrough
-	case "HOUR":
-		fallthrough
-	case "MONTH":
-		fallthrough
-	case "WEEK":
-		*e = Frequency(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Frequency: %v", v)
-	}
-}
 
 type AtsCompensationType string
 
@@ -60,27 +30,6 @@ const (
 
 func (e AtsCompensationType) ToPointer() *AtsCompensationType {
 	return &e
-}
-func (e *AtsCompensationType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "SALARY":
-		fallthrough
-	case "BONUS":
-		fallthrough
-	case "STOCK_OPTIONS":
-		fallthrough
-	case "EQUITY":
-		fallthrough
-	case "OTHER":
-		*e = AtsCompensationType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AtsCompensationType: %v", v)
-	}
 }
 
 type AtsCompensation struct {

@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type CalendarAttendeeStatus string
 
 const (
@@ -17,23 +12,6 @@ const (
 
 func (e CalendarAttendeeStatus) ToPointer() *CalendarAttendeeStatus {
 	return &e
-}
-func (e *CalendarAttendeeStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ACCEPTED":
-		fallthrough
-	case "REJECTED":
-		fallthrough
-	case "TENTATIVE":
-		*e = CalendarAttendeeStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CalendarAttendeeStatus: %v", v)
-	}
 }
 
 type CalendarAttendee struct {

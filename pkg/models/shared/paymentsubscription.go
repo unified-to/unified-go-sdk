@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -21,25 +19,6 @@ const (
 func (e IntervalUnit) ToPointer() *IntervalUnit {
 	return &e
 }
-func (e *IntervalUnit) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "YEAR":
-		fallthrough
-	case "MONTH":
-		fallthrough
-	case "WEEK":
-		fallthrough
-	case "DAY":
-		*e = IntervalUnit(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for IntervalUnit: %v", v)
-	}
-}
 
 type PaymentSubscriptionStatus string
 
@@ -52,25 +31,6 @@ const (
 
 func (e PaymentSubscriptionStatus) ToPointer() *PaymentSubscriptionStatus {
 	return &e
-}
-func (e *PaymentSubscriptionStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ACTIVE":
-		fallthrough
-	case "INACTIVE":
-		fallthrough
-	case "CANCELED":
-		fallthrough
-	case "PAUSED":
-		*e = PaymentSubscriptionStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PaymentSubscriptionStatus: %v", v)
-	}
 }
 
 type PaymentSubscription struct {

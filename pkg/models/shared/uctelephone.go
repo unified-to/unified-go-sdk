@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type UcTelephoneType string
 
 const (
@@ -19,27 +14,6 @@ const (
 
 func (e UcTelephoneType) ToPointer() *UcTelephoneType {
 	return &e
-}
-func (e *UcTelephoneType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "WORK":
-		fallthrough
-	case "HOME":
-		fallthrough
-	case "OTHER":
-		fallthrough
-	case "FAX":
-		fallthrough
-	case "MOBILE":
-		*e = UcTelephoneType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for UcTelephoneType: %v", v)
-	}
 }
 
 type UcTelephone struct {

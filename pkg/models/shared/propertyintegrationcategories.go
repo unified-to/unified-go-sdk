@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type PropertyIntegrationCategories string
 
 const (
@@ -36,59 +31,4 @@ const (
 
 func (e PropertyIntegrationCategories) ToPointer() *PropertyIntegrationCategories {
 	return &e
-}
-func (e *PropertyIntegrationCategories) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "passthrough":
-		fallthrough
-	case "hris":
-		fallthrough
-	case "ats":
-		fallthrough
-	case "auth":
-		fallthrough
-	case "crm":
-		fallthrough
-	case "enrich":
-		fallthrough
-	case "martech":
-		fallthrough
-	case "ticketing":
-		fallthrough
-	case "uc":
-		fallthrough
-	case "accounting":
-		fallthrough
-	case "storage":
-		fallthrough
-	case "commerce":
-		fallthrough
-	case "payment":
-		fallthrough
-	case "genai":
-		fallthrough
-	case "messaging":
-		fallthrough
-	case "kms":
-		fallthrough
-	case "task":
-		fallthrough
-	case "scim":
-		fallthrough
-	case "lms":
-		fallthrough
-	case "repo":
-		fallthrough
-	case "metadata":
-		fallthrough
-	case "calendar":
-		*e = PropertyIntegrationCategories(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyIntegrationCategories: %v", v)
-	}
 }

@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type PropertyScimUserSchemas string
 
 const (
@@ -18,23 +13,4 @@ const (
 
 func (e PropertyScimUserSchemas) ToPointer() *PropertyScimUserSchemas {
 	return &e
-}
-func (e *PropertyScimUserSchemas) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "urn:ietf:params:scim:schemas:core:2.0:User":
-		fallthrough
-	case "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User":
-		fallthrough
-	case "urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User":
-		fallthrough
-	case "urn:ietf:params:scim:schemas:extension:peakon:2.0:User":
-		*e = PropertyScimUserSchemas(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyScimUserSchemas: %v", v)
-	}
 }

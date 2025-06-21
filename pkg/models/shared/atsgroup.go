@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type AtsGroupType string
 
 const (
@@ -21,31 +16,6 @@ const (
 
 func (e AtsGroupType) ToPointer() *AtsGroupType {
 	return &e
-}
-func (e *AtsGroupType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "TEAM":
-		fallthrough
-	case "GROUP":
-		fallthrough
-	case "DEPARTMENT":
-		fallthrough
-	case "DIVISION":
-		fallthrough
-	case "BUSINESS_UNIT":
-		fallthrough
-	case "BRANCH":
-		fallthrough
-	case "SUB_DEPARTMENT":
-		*e = AtsGroupType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AtsGroupType: %v", v)
-	}
 }
 
 type AtsGroup struct {

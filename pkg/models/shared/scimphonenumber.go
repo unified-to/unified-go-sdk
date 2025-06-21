@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type ScimPhoneNumberType string
 
 const (
@@ -20,29 +15,6 @@ const (
 
 func (e ScimPhoneNumberType) ToPointer() *ScimPhoneNumberType {
 	return &e
-}
-func (e *ScimPhoneNumberType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "work":
-		fallthrough
-	case "home":
-		fallthrough
-	case "other":
-		fallthrough
-	case "mobile":
-		fallthrough
-	case "fax":
-		fallthrough
-	case "pager":
-		*e = ScimPhoneNumberType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ScimPhoneNumberType: %v", v)
-	}
 }
 
 type ScimPhoneNumber struct {

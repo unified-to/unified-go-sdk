@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -18,21 +16,6 @@ const (
 
 func (e AtsJobOpeningStatus) ToPointer() *AtsJobOpeningStatus {
 	return &e
-}
-func (e *AtsJobOpeningStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "OPEN":
-		fallthrough
-	case "CLOSED":
-		*e = AtsJobOpeningStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AtsJobOpeningStatus: %v", v)
-	}
 }
 
 type AtsJobOpening struct {

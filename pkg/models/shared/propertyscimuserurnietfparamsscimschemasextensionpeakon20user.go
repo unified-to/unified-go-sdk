@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -18,21 +16,6 @@ const (
 
 func (e PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender) ToPointer() *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender {
 	return &e
-}
-func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "Female":
-		fallthrough
-	case "Male":
-		*e = PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender: %v", v)
-	}
 }
 
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User struct {

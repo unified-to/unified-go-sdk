@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType string
 
 const (
@@ -16,21 +11,6 @@ const (
 
 func (e PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType) ToPointer() *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType {
 	return &e
-}
-func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "direct":
-		fallthrough
-	case "indirect":
-		*e = PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType: %v", v)
-	}
 }
 
 // PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager - "id" attribute of another User.

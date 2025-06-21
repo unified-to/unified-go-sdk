@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type ScimUserGroupsType string
 
 const (
@@ -16,21 +11,6 @@ const (
 
 func (e ScimUserGroupsType) ToPointer() *ScimUserGroupsType {
 	return &e
-}
-func (e *ScimUserGroupsType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "direct":
-		fallthrough
-	case "indirect":
-		*e = ScimUserGroupsType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ScimUserGroupsType: %v", v)
-	}
 }
 
 type ScimUserGroups struct {

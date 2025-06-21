@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -21,25 +19,6 @@ const (
 func (e ContentType) ToPointer() *ContentType {
 	return &e
 }
-func (e *ContentType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "HTML":
-		fallthrough
-	case "MARKDOWN":
-		fallthrough
-	case "TEXT":
-		fallthrough
-	case "OTHER":
-		*e = ContentType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ContentType: %v", v)
-	}
-}
 
 type KmsCommentType string
 
@@ -50,21 +29,6 @@ const (
 
 func (e KmsCommentType) ToPointer() *KmsCommentType {
 	return &e
-}
-func (e *KmsCommentType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "PAGE_INLINE":
-		fallthrough
-	case "PAGE":
-		*e = KmsCommentType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for KmsCommentType: %v", v)
-	}
 }
 
 type KmsComment struct {

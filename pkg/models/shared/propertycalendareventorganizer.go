@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type PropertyCalendarEventOrganizerStatus string
 
 const (
@@ -17,23 +12,6 @@ const (
 
 func (e PropertyCalendarEventOrganizerStatus) ToPointer() *PropertyCalendarEventOrganizerStatus {
 	return &e
-}
-func (e *PropertyCalendarEventOrganizerStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ACCEPTED":
-		fallthrough
-	case "REJECTED":
-		fallthrough
-	case "TENTATIVE":
-		*e = PropertyCalendarEventOrganizerStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyCalendarEventOrganizerStatus: %v", v)
-	}
 }
 
 type PropertyCalendarEventOrganizer struct {

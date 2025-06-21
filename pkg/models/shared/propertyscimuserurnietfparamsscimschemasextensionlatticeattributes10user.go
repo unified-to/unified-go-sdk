@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -27,37 +25,6 @@ const (
 func (e Ethnicity) ToPointer() *Ethnicity {
 	return &e
 }
-func (e *Ethnicity) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "Caucasian":
-		fallthrough
-	case "East Asian":
-		fallthrough
-	case "Middle Eastern":
-		fallthrough
-	case "Black":
-		fallthrough
-	case "Biracial (South Asian & Caucasian)":
-		fallthrough
-	case "Filipino":
-		fallthrough
-	case "South Asian":
-		fallthrough
-	case "Indian":
-		fallthrough
-	case "White":
-		fallthrough
-	case "Asian":
-		*e = Ethnicity(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Ethnicity: %v", v)
-	}
-}
 
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender string
 
@@ -68,21 +35,6 @@ const (
 
 func (e PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender) ToPointer() *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender {
 	return &e
-}
-func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "male":
-		fallthrough
-	case "female":
-		*e = PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender: %v", v)
-	}
 }
 
 type SexualOrientation string
@@ -95,23 +47,6 @@ const (
 
 func (e SexualOrientation) ToPointer() *SexualOrientation {
 	return &e
-}
-func (e *SexualOrientation) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "Queer":
-		fallthrough
-	case "Heterosexual":
-		fallthrough
-	case "Straight":
-		*e = SexualOrientation(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for SexualOrientation: %v", v)
-	}
 }
 
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User struct {

@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -18,21 +16,6 @@ const (
 
 func (e EmploymentStatus) ToPointer() *EmploymentStatus {
 	return &e
-}
-func (e *EmploymentStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ACTIVE":
-		fallthrough
-	case "INACTIVE":
-		*e = EmploymentStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for EmploymentStatus: %v", v)
-	}
 }
 
 type HrisEmployeeEmploymentType string
@@ -53,37 +36,6 @@ const (
 func (e HrisEmployeeEmploymentType) ToPointer() *HrisEmployeeEmploymentType {
 	return &e
 }
-func (e *HrisEmployeeEmploymentType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "FULL_TIME":
-		fallthrough
-	case "PART_TIME":
-		fallthrough
-	case "CONTRACTOR":
-		fallthrough
-	case "INTERN":
-		fallthrough
-	case "CONSULTANT":
-		fallthrough
-	case "VOLUNTEER":
-		fallthrough
-	case "CASUAL":
-		fallthrough
-	case "SEASONAL":
-		fallthrough
-	case "FREELANCE":
-		fallthrough
-	case "OTHER":
-		*e = HrisEmployeeEmploymentType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisEmployeeEmploymentType: %v", v)
-	}
-}
 
 type HrisEmployeeGender string
 
@@ -98,27 +50,6 @@ const (
 func (e HrisEmployeeGender) ToPointer() *HrisEmployeeGender {
 	return &e
 }
-func (e *HrisEmployeeGender) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "MALE":
-		fallthrough
-	case "FEMALE":
-		fallthrough
-	case "INTERSEX":
-		fallthrough
-	case "TRANS":
-		fallthrough
-	case "NON_BINARY":
-		*e = HrisEmployeeGender(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisEmployeeGender: %v", v)
-	}
-}
 
 type MaritalStatus string
 
@@ -129,21 +60,6 @@ const (
 
 func (e MaritalStatus) ToPointer() *MaritalStatus {
 	return &e
-}
-func (e *MaritalStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "MARRIED":
-		fallthrough
-	case "SINGLE":
-		*e = MaritalStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for MaritalStatus: %v", v)
-	}
 }
 
 type HrisEmployee struct {

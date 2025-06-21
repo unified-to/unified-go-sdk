@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type LmsMediaType string
 
 const (
@@ -20,29 +15,6 @@ const (
 
 func (e LmsMediaType) ToPointer() *LmsMediaType {
 	return &e
-}
-func (e *LmsMediaType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "IMAGE":
-		fallthrough
-	case "HEADSHOT":
-		fallthrough
-	case "VIDEO":
-		fallthrough
-	case "WEB":
-		fallthrough
-	case "DOCUMENT":
-		fallthrough
-	case "OTHER":
-		*e = LmsMediaType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for LmsMediaType: %v", v)
-	}
 }
 
 type LmsMedia struct {

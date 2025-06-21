@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -19,23 +17,6 @@ const (
 
 func (e TaskTaskStatus) ToPointer() *TaskTaskStatus {
 	return &e
-}
-func (e *TaskTaskStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "OPENED":
-		fallthrough
-	case "IN_PROGRESS":
-		fallthrough
-	case "COMPLETED":
-		*e = TaskTaskStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for TaskTaskStatus: %v", v)
-	}
 }
 
 type TaskTask struct {

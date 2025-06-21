@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -18,21 +16,6 @@ const (
 
 func (e Status) ToPointer() *Status {
 	return &e
-}
-func (e *Status) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ACTIVE":
-		fallthrough
-	case "ARCHIVED":
-		*e = Status(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Status: %v", v)
-	}
 }
 
 type Type string
@@ -52,37 +35,6 @@ const (
 
 func (e Type) ToPointer() *Type {
 	return &e
-}
-func (e *Type) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ACCOUNTS_PAYABLE":
-		fallthrough
-	case "ACCOUNTS_RECEIVABLE":
-		fallthrough
-	case "BANK":
-		fallthrough
-	case "CREDIT_CARD":
-		fallthrough
-	case "FIXED_ASSET":
-		fallthrough
-	case "LIABILITY":
-		fallthrough
-	case "EQUITY":
-		fallthrough
-	case "EXPENSE":
-		fallthrough
-	case "REVENUE":
-		fallthrough
-	case "OTHER":
-		*e = Type(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Type: %v", v)
-	}
 }
 
 // AccountingAccount - Chart of accounts

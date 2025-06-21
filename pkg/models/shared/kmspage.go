@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -20,25 +18,6 @@ const (
 
 func (e KmsPageType) ToPointer() *KmsPageType {
 	return &e
-}
-func (e *KmsPageType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "HTML":
-		fallthrough
-	case "MARKDOWN":
-		fallthrough
-	case "TEXT":
-		fallthrough
-	case "OTHER":
-		*e = KmsPageType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for KmsPageType: %v", v)
-	}
 }
 
 type KmsPage struct {

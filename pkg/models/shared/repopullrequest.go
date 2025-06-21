@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -19,23 +17,6 @@ const (
 
 func (e RepoPullrequestStatus) ToPointer() *RepoPullrequestStatus {
 	return &e
-}
-func (e *RepoPullrequestStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "PENDING":
-		fallthrough
-	case "APPROVED":
-		fallthrough
-	case "REJECTED":
-		*e = RepoPullrequestStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for RepoPullrequestStatus: %v", v)
-	}
 }
 
 type RepoPullrequest struct {

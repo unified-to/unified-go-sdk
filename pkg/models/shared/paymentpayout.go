@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type PaymentPayoutStatus string
 
 const (
@@ -18,25 +13,6 @@ const (
 
 func (e PaymentPayoutStatus) ToPointer() *PaymentPayoutStatus {
 	return &e
-}
-func (e *PaymentPayoutStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "SUCCEEDED":
-		fallthrough
-	case "PENDING":
-		fallthrough
-	case "FAILED":
-		fallthrough
-	case "CANCELED":
-		*e = PaymentPayoutStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PaymentPayoutStatus: %v", v)
-	}
 }
 
 type PaymentPayout struct {

@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -19,23 +17,6 @@ const (
 
 func (e AccountingReportType) ToPointer() *AccountingReportType {
 	return &e
-}
-func (e *AccountingReportType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "TRIAL_BALANCE":
-		fallthrough
-	case "BALANCE_SHEET":
-		fallthrough
-	case "PROFIT_AND_LOSS":
-		*e = AccountingReportType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountingReportType: %v", v)
-	}
 }
 
 type AccountingReport struct {

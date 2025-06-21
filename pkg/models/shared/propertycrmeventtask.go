@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -20,23 +18,6 @@ const (
 func (e Priority) ToPointer() *Priority {
 	return &e
 }
-func (e *Priority) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "HIGH":
-		fallthrough
-	case "MEDIUM":
-		fallthrough
-	case "LOW":
-		*e = Priority(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Priority: %v", v)
-	}
-}
 
 type PropertyCrmEventTaskStatus string
 
@@ -49,25 +30,6 @@ const (
 
 func (e PropertyCrmEventTaskStatus) ToPointer() *PropertyCrmEventTaskStatus {
 	return &e
-}
-func (e *PropertyCrmEventTaskStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "COMPLETED":
-		fallthrough
-	case "NOT_STARTED":
-		fallthrough
-	case "WORK_IN_PROGRESS":
-		fallthrough
-	case "DEFERRED":
-		*e = PropertyCrmEventTaskStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyCrmEventTaskStatus: %v", v)
-	}
 }
 
 // PropertyCrmEventTask - The task object, when type = task

@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type CalendarEventStatus string
 
 const (
@@ -18,27 +13,12 @@ const (
 func (e CalendarEventStatus) ToPointer() *CalendarEventStatus {
 	return &e
 }
-func (e *CalendarEventStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "CANCELED":
-		fallthrough
-	case "CONFIRMED":
-		fallthrough
-	case "TENTATIVE":
-		*e = CalendarEventStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CalendarEventStatus: %v", v)
-	}
-}
 
 type CalendarEvent struct {
+	Attachments      []CalendarAttachment            `json:"attachments,omitempty"`
 	Attendees        []CalendarAttendee              `json:"attendees,omitempty"`
 	CalendarID       *string                         `json:"calendar_id,omitempty"`
+	Conference       []CalendarConference            `json:"conference,omitempty"`
 	CreatedAt        *string                         `json:"created_at,omitempty"`
 	EndAt            *string                         `json:"end_at,omitempty"`
 	HasConference    *bool                           `json:"has_conference,omitempty"`
@@ -60,6 +40,13 @@ type CalendarEvent struct {
 	WebURL           *string                         `json:"web_url,omitempty"`
 }
 
+func (o *CalendarEvent) GetAttachments() []CalendarAttachment {
+	if o == nil {
+		return nil
+	}
+	return o.Attachments
+}
+
 func (o *CalendarEvent) GetAttendees() []CalendarAttendee {
 	if o == nil {
 		return nil
@@ -72,6 +59,13 @@ func (o *CalendarEvent) GetCalendarID() *string {
 		return nil
 	}
 	return o.CalendarID
+}
+
+func (o *CalendarEvent) GetConference() []CalendarConference {
+	if o == nil {
+		return nil
+	}
+	return o.Conference
 }
 
 func (o *CalendarEvent) GetCreatedAt() *string {

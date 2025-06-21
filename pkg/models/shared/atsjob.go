@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -27,37 +25,6 @@ const (
 func (e EmploymentType) ToPointer() *EmploymentType {
 	return &e
 }
-func (e *EmploymentType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "FULL_TIME":
-		fallthrough
-	case "PART_TIME":
-		fallthrough
-	case "CONTRACTOR":
-		fallthrough
-	case "INTERN":
-		fallthrough
-	case "CONSULTANT":
-		fallthrough
-	case "VOLUNTEER":
-		fallthrough
-	case "CASUAL":
-		fallthrough
-	case "SEASONAL":
-		fallthrough
-	case "FREELANCE":
-		fallthrough
-	case "OTHER":
-		*e = EmploymentType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for EmploymentType: %v", v)
-	}
-}
 
 type AtsJobStatus string
 
@@ -71,27 +38,6 @@ const (
 
 func (e AtsJobStatus) ToPointer() *AtsJobStatus {
 	return &e
-}
-func (e *AtsJobStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ARCHIVED":
-		fallthrough
-	case "PENDING":
-		fallthrough
-	case "DRAFT":
-		fallthrough
-	case "OPEN":
-		fallthrough
-	case "CLOSED":
-		*e = AtsJobStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AtsJobStatus: %v", v)
-	}
 }
 
 type AtsJob struct {

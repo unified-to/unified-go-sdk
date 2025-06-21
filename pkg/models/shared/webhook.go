@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -22,27 +20,6 @@ const (
 func (e DbType) ToPointer() *DbType {
 	return &e
 }
-func (e *DbType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "mongodb":
-		fallthrough
-	case "mysql":
-		fallthrough
-	case "postgres":
-		fallthrough
-	case "mssql":
-		fallthrough
-	case "mariadb":
-		*e = DbType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for DbType: %v", v)
-	}
-}
 
 type Event string
 
@@ -54,23 +31,6 @@ const (
 
 func (e Event) ToPointer() *Event {
 	return &e
-}
-func (e *Event) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "updated":
-		fallthrough
-	case "created":
-		fallthrough
-	case "deleted":
-		*e = Event(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Event: %v", v)
-	}
 }
 
 type ObjectType string
@@ -163,181 +123,6 @@ const (
 func (e ObjectType) ToPointer() *ObjectType {
 	return &e
 }
-func (e *ObjectType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "accounting_account":
-		fallthrough
-	case "accounting_transaction":
-		fallthrough
-	case "accounting_journal":
-		fallthrough
-	case "accounting_contact":
-		fallthrough
-	case "accounting_invoice":
-		fallthrough
-	case "accounting_taxrate":
-		fallthrough
-	case "accounting_organization":
-		fallthrough
-	case "accounting_order":
-		fallthrough
-	case "accounting_report":
-		fallthrough
-	case "payment_payment":
-		fallthrough
-	case "payment_link":
-		fallthrough
-	case "payment_payout":
-		fallthrough
-	case "payment_refund":
-		fallthrough
-	case "payment_subscription":
-		fallthrough
-	case "commerce_item":
-		fallthrough
-	case "commerce_collection":
-		fallthrough
-	case "commerce_inventory":
-		fallthrough
-	case "commerce_location":
-		fallthrough
-	case "commerce_review":
-		fallthrough
-	case "ats_activity":
-		fallthrough
-	case "ats_application":
-		fallthrough
-	case "ats_applicationstatus":
-		fallthrough
-	case "ats_candidate":
-		fallthrough
-	case "ats_document":
-		fallthrough
-	case "ats_interview":
-		fallthrough
-	case "ats_job":
-		fallthrough
-	case "ats_scorecard":
-		fallthrough
-	case "ats_company":
-		fallthrough
-	case "crm_company":
-		fallthrough
-	case "crm_contact":
-		fallthrough
-	case "crm_deal":
-		fallthrough
-	case "crm_event":
-		fallthrough
-	case "crm_lead":
-		fallthrough
-	case "crm_pipeline":
-		fallthrough
-	case "hris_employee":
-		fallthrough
-	case "hris_group":
-		fallthrough
-	case "hris_payslip":
-		fallthrough
-	case "hris_timeoff":
-		fallthrough
-	case "hris_company":
-		fallthrough
-	case "hris_location":
-		fallthrough
-	case "hris_device":
-		fallthrough
-	case "hris_timeshift":
-		fallthrough
-	case "martech_list":
-		fallthrough
-	case "martech_member":
-		fallthrough
-	case "passthrough":
-		fallthrough
-	case "ticketing_note":
-		fallthrough
-	case "ticketing_ticket":
-		fallthrough
-	case "ticketing_customer":
-		fallthrough
-	case "uc_contact":
-		fallthrough
-	case "uc_call":
-		fallthrough
-	case "uc_comment":
-		fallthrough
-	case "uc_recording":
-		fallthrough
-	case "enrich_person":
-		fallthrough
-	case "enrich_company":
-		fallthrough
-	case "storage_file":
-		fallthrough
-	case "genai_model":
-		fallthrough
-	case "genai_prompt":
-		fallthrough
-	case "messaging_message":
-		fallthrough
-	case "messaging_channel":
-		fallthrough
-	case "kms_space":
-		fallthrough
-	case "kms_page":
-		fallthrough
-	case "kms_comment":
-		fallthrough
-	case "task_project":
-		fallthrough
-	case "task_task":
-		fallthrough
-	case "task_comment":
-		fallthrough
-	case "scim_users":
-		fallthrough
-	case "scim_groups":
-		fallthrough
-	case "lms_course":
-		fallthrough
-	case "lms_class":
-		fallthrough
-	case "lms_student":
-		fallthrough
-	case "lms_instructor":
-		fallthrough
-	case "repo_organization":
-		fallthrough
-	case "repo_repository":
-		fallthrough
-	case "repo_branch":
-		fallthrough
-	case "repo_commit":
-		fallthrough
-	case "repo_pullrequest":
-		fallthrough
-	case "metadata_metadata":
-		fallthrough
-	case "calendar_calendar":
-		fallthrough
-	case "calendar_event":
-		fallthrough
-	case "calendar_busy":
-		fallthrough
-	case "calendar_link":
-		fallthrough
-	case "calendar_recording":
-		*e = ObjectType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ObjectType: %v", v)
-	}
-}
 
 type WebhookType string
 
@@ -348,21 +133,6 @@ const (
 
 func (e WebhookType) ToPointer() *WebhookType {
 	return &e
-}
-func (e *WebhookType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "virtual":
-		fallthrough
-	case "native":
-		*e = WebhookType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for WebhookType: %v", v)
-	}
 }
 
 // Webhook - A webhook is used to POST new/updated information to your server.

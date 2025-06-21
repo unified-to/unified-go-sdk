@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type ScimPhotoType string
 
 const (
@@ -16,21 +11,6 @@ const (
 
 func (e ScimPhotoType) ToPointer() *ScimPhotoType {
 	return &e
-}
-func (e *ScimPhotoType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "photo":
-		fallthrough
-	case "thumbnail":
-		*e = ScimPhotoType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ScimPhotoType: %v", v)
-	}
 }
 
 type ScimPhoto struct {

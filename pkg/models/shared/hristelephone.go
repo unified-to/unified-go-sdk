@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type HrisTelephoneType string
 
 const (
@@ -19,27 +14,6 @@ const (
 
 func (e HrisTelephoneType) ToPointer() *HrisTelephoneType {
 	return &e
-}
-func (e *HrisTelephoneType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "WORK":
-		fallthrough
-	case "HOME":
-		fallthrough
-	case "OTHER":
-		fallthrough
-	case "FAX":
-		fallthrough
-	case "MOBILE":
-		*e = HrisTelephoneType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisTelephoneType: %v", v)
-	}
 }
 
 type HrisTelephone struct {

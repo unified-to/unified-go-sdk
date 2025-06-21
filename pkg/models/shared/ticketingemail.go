@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type TicketingEmailType string
 
 const (
@@ -17,23 +12,6 @@ const (
 
 func (e TicketingEmailType) ToPointer() *TicketingEmailType {
 	return &e
-}
-func (e *TicketingEmailType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "WORK":
-		fallthrough
-	case "HOME":
-		fallthrough
-	case "OTHER":
-		*e = TicketingEmailType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for TicketingEmailType: %v", v)
-	}
 }
 
 type TicketingEmail struct {

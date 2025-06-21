@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type PropertyCalendarEventRecurrenceOnDays string
 
 const (
@@ -21,29 +16,4 @@ const (
 
 func (e PropertyCalendarEventRecurrenceOnDays) ToPointer() *PropertyCalendarEventRecurrenceOnDays {
 	return &e
-}
-func (e *PropertyCalendarEventRecurrenceOnDays) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "SU":
-		fallthrough
-	case "MO":
-		fallthrough
-	case "TU":
-		fallthrough
-	case "WE":
-		fallthrough
-	case "TH":
-		fallthrough
-	case "FR":
-		fallthrough
-	case "SA":
-		*e = PropertyCalendarEventRecurrenceOnDays(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PropertyCalendarEventRecurrenceOnDays: %v", v)
-	}
 }

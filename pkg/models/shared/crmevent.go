@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -24,33 +22,6 @@ const (
 
 func (e CrmEventType) ToPointer() *CrmEventType {
 	return &e
-}
-func (e *CrmEventType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "NOTE":
-		fallthrough
-	case "EMAIL":
-		fallthrough
-	case "TASK":
-		fallthrough
-	case "MEETING":
-		fallthrough
-	case "CALL":
-		fallthrough
-	case "MARKETING_EMAIL":
-		fallthrough
-	case "FORM":
-		fallthrough
-	case "PAGE_VIEW":
-		*e = CrmEventType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CrmEventType: %v", v)
-	}
 }
 
 // CrmEvent - An event represents an event, activity, or engagement and is always associated with a deal, contact, or company

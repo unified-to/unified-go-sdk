@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type ResourceType string
 
 const (
@@ -16,21 +11,6 @@ const (
 
 func (e ResourceType) ToPointer() *ResourceType {
 	return &e
-}
-func (e *ResourceType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "User":
-		fallthrough
-	case "Group":
-		*e = ResourceType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ResourceType: %v", v)
-	}
 }
 
 type PropertyScimGroupMeta struct {

@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -20,25 +18,6 @@ const (
 
 func (e CalendarEventRecurrenceFrequency) ToPointer() *CalendarEventRecurrenceFrequency {
 	return &e
-}
-func (e *CalendarEventRecurrenceFrequency) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "DAILY":
-		fallthrough
-	case "WEEKLY":
-		fallthrough
-	case "MONTHLY":
-		fallthrough
-	case "YEARLY":
-		*e = CalendarEventRecurrenceFrequency(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CalendarEventRecurrenceFrequency: %v", v)
-	}
 }
 
 type CalendarEventRecurrence struct {

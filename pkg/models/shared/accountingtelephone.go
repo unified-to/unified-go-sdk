@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type AccountingTelephoneType string
 
 const (
@@ -19,27 +14,6 @@ const (
 
 func (e AccountingTelephoneType) ToPointer() *AccountingTelephoneType {
 	return &e
-}
-func (e *AccountingTelephoneType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "WORK":
-		fallthrough
-	case "HOME":
-		fallthrough
-	case "OTHER":
-		fallthrough
-	case "FAX":
-		fallthrough
-	case "MOBILE":
-		*e = AccountingTelephoneType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountingTelephoneType: %v", v)
-	}
 }
 
 type AccountingTelephone struct {

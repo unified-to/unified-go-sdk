@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type CrmEventFormFieldType string
 
 const (
@@ -28,45 +23,6 @@ const (
 
 func (e CrmEventFormFieldType) ToPointer() *CrmEventFormFieldType {
 	return &e
-}
-func (e *CrmEventFormFieldType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "TEXT":
-		fallthrough
-	case "NUMBER":
-		fallthrough
-	case "DATE":
-		fallthrough
-	case "BOOLEAN":
-		fallthrough
-	case "MULTIPLE_CHOICE":
-		fallthrough
-	case "FILE":
-		fallthrough
-	case "TEXTAREA":
-		fallthrough
-	case "SINGLE_SELECT":
-		fallthrough
-	case "MULTIPLE_SELECT":
-		fallthrough
-	case "EMAIL":
-		fallthrough
-	case "PHONE":
-		fallthrough
-	case "YES_NO":
-		fallthrough
-	case "CURRENCY":
-		fallthrough
-	case "URL":
-		*e = CrmEventFormFieldType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CrmEventFormFieldType: %v", v)
-	}
 }
 
 type CrmEventFormField struct {

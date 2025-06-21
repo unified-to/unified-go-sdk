@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -20,23 +18,6 @@ const (
 func (e HrisTimeoffStatus) ToPointer() *HrisTimeoffStatus {
 	return &e
 }
-func (e *HrisTimeoffStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "APPROVED":
-		fallthrough
-	case "PENDING":
-		fallthrough
-	case "DENIED":
-		*e = HrisTimeoffStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisTimeoffStatus: %v", v)
-	}
-}
 
 type HrisTimeoffType string
 
@@ -47,21 +28,6 @@ const (
 
 func (e HrisTimeoffType) ToPointer() *HrisTimeoffType {
 	return &e
-}
-func (e *HrisTimeoffType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "PAID":
-		fallthrough
-	case "UNPAID":
-		*e = HrisTimeoffType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisTimeoffType: %v", v)
-	}
 }
 
 type HrisTimeoff struct {

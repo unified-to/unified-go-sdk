@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -22,29 +20,6 @@ const (
 
 func (e Origin) ToPointer() *Origin {
 	return &e
-}
-func (e *Origin) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "AGENCY":
-		fallthrough
-	case "APPLIED":
-		fallthrough
-	case "INTERNAL":
-		fallthrough
-	case "REFERRED":
-		fallthrough
-	case "SOURCED":
-		fallthrough
-	case "UNIVERSITY":
-		*e = Origin(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Origin: %v", v)
-	}
 }
 
 type AtsCandidate struct {

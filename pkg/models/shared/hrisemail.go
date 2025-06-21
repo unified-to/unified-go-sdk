@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type HrisEmailType string
 
 const (
@@ -17,23 +12,6 @@ const (
 
 func (e HrisEmailType) ToPointer() *HrisEmailType {
 	return &e
-}
-func (e *HrisEmailType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "WORK":
-		fallthrough
-	case "HOME":
-		fallthrough
-	case "OTHER":
-		*e = HrisEmailType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisEmailType: %v", v)
-	}
 }
 
 type HrisEmail struct {

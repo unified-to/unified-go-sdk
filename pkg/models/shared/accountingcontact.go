@@ -3,8 +3,6 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 	"time"
 )
@@ -27,39 +25,6 @@ const (
 
 func (e TaxExemption) ToPointer() *TaxExemption {
 	return &e
-}
-func (e *TaxExemption) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "FEDERAL_GOV":
-		fallthrough
-	case "REGION_GOV":
-		fallthrough
-	case "LOCAL_GOV":
-		fallthrough
-	case "TRIBAL_GOV":
-		fallthrough
-	case "CHARITABLE_ORG":
-		fallthrough
-	case "RELIGIOUS_ORG":
-		fallthrough
-	case "EDUCATIONAL_ORG":
-		fallthrough
-	case "MEDICAL_ORG":
-		fallthrough
-	case "RESALE":
-		fallthrough
-	case "FOREIGN":
-		fallthrough
-	case "OTHER":
-		*e = TaxExemption(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for TaxExemption: %v", v)
-	}
 }
 
 type AccountingContact struct {

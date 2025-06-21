@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type CommerceItemMediaType string
 
 const (
@@ -16,21 +11,6 @@ const (
 
 func (e CommerceItemMediaType) ToPointer() *CommerceItemMediaType {
 	return &e
-}
-func (e *CommerceItemMediaType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "image":
-		fallthrough
-	case "video":
-		*e = CommerceItemMediaType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CommerceItemMediaType: %v", v)
-	}
 }
 
 type CommerceItemMedia struct {

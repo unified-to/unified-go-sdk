@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type HrisCompensationFrequency string
 
 const (
@@ -22,31 +17,6 @@ const (
 func (e HrisCompensationFrequency) ToPointer() *HrisCompensationFrequency {
 	return &e
 }
-func (e *HrisCompensationFrequency) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ONE_TIME":
-		fallthrough
-	case "DAY":
-		fallthrough
-	case "QUARTER":
-		fallthrough
-	case "YEAR":
-		fallthrough
-	case "HOUR":
-		fallthrough
-	case "MONTH":
-		fallthrough
-	case "WEEK":
-		*e = HrisCompensationFrequency(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisCompensationFrequency: %v", v)
-	}
-}
 
 type HrisCompensationType string
 
@@ -60,27 +30,6 @@ const (
 
 func (e HrisCompensationType) ToPointer() *HrisCompensationType {
 	return &e
-}
-func (e *HrisCompensationType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "SALARY":
-		fallthrough
-	case "BONUS":
-		fallthrough
-	case "STOCK_OPTIONS":
-		fallthrough
-	case "EQUITY":
-		fallthrough
-	case "OTHER":
-		*e = HrisCompensationType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for HrisCompensationType: %v", v)
-	}
 }
 
 type HrisCompensation struct {

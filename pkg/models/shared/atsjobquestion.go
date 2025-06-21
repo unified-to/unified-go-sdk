@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type AtsJobQuestionType string
 
 const (
@@ -26,41 +21,6 @@ const (
 
 func (e AtsJobQuestionType) ToPointer() *AtsJobQuestionType {
 	return &e
-}
-func (e *AtsJobQuestionType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "TEXT":
-		fallthrough
-	case "NUMBER":
-		fallthrough
-	case "DATE":
-		fallthrough
-	case "BOOLEAN":
-		fallthrough
-	case "MULTIPLE_CHOICE":
-		fallthrough
-	case "FILE":
-		fallthrough
-	case "TEXTAREA":
-		fallthrough
-	case "MULTIPLE_SELECT":
-		fallthrough
-	case "UNIVERSITY":
-		fallthrough
-	case "YES_NO":
-		fallthrough
-	case "CURRENCY":
-		fallthrough
-	case "URL":
-		*e = AtsJobQuestionType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AtsJobQuestionType: %v", v)
-	}
 }
 
 type AtsJobQuestion struct {

@@ -2,11 +2,6 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type ScimManagerType string
 
 const (
@@ -16,21 +11,6 @@ const (
 
 func (e ScimManagerType) ToPointer() *ScimManagerType {
 	return &e
-}
-func (e *ScimManagerType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "direct":
-		fallthrough
-	case "indirect":
-		*e = ScimManagerType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ScimManagerType: %v", v)
-	}
 }
 
 // ScimManager - "id" attribute of another User.
