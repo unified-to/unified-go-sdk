@@ -17,6 +17,7 @@ type MessagingChannel struct {
 	Members         []MessagingMember `json:"members,omitempty"`
 	Name            string            `json:"name"`
 	ParentChannelID *string           `json:"parent_channel_id,omitempty"`
+	ParentID        *string           `json:"parent_id,omitempty"`
 	Raw             map[string]any    `json:"raw,omitempty"`
 	UpdatedAt       *time.Time        `json:"updated_at,omitempty"`
 	WebURL          *string           `json:"web_url,omitempty"`
@@ -94,6 +95,13 @@ func (o *MessagingChannel) GetParentChannelID() *string {
 		return nil
 	}
 	return o.ParentChannelID
+}
+
+func (o *MessagingChannel) GetParentID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ParentID
 }
 
 func (o *MessagingChannel) GetRaw() map[string]any {
