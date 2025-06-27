@@ -14,10 +14,14 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
+  tests:
+    generateTests: true
+    generateNewTests: false
+    skipResponseBodyAssertions: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.27.1
+  version: 0.27.2
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: UnifiedToError

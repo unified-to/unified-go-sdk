@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: eefce76fdb52f66af4668d4a91100b69
+  docChecksum: 1ed136fdd156254f45506d66d75335d4
   docVersion: "1.0"
-  speakeasyVersion: 1.568.1
-  generationVersion: 2.634.1
-  releaseVersion: 0.27.1
-  configChecksum: dcbfa913bbda9ba39775f1971233f1a3
+  speakeasyVersion: 1.570.2
+  generationVersion: 2.638.5
+  releaseVersion: 0.27.2
+  configChecksum: 4e6687b77d07144ce0a68669ea193cf5
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -678,6 +678,7 @@ generatedFiles:
   - /pkg/models/shared/storagefile.go
   - /pkg/models/shared/storagepermission.go
   - /pkg/models/shared/taskcomment.go
+  - /pkg/models/shared/taskmetadata.go
   - /pkg/models/shared/taskproject.go
   - /pkg/models/shared/tasktask.go
   - /pkg/models/shared/ticketingcustomer.go
@@ -2042,6 +2043,28 @@ generatedFiles:
   - docs/pkg/models/shared/storagefiletype.md
   - docs/pkg/models/shared/storagepermission.md
   - docs/pkg/models/shared/taskcomment.md
+  - docs/pkg/models/shared/taskmetadata.md
+  - docs/pkg/models/shared/taskmetadata1.md
+  - docs/pkg/models/shared/taskmetadata2.md
+  - docs/pkg/models/shared/taskmetadata3.md
+  - docs/pkg/models/shared/taskmetadata4.md
+  - docs/pkg/models/shared/taskmetadata5.md
+  - docs/pkg/models/shared/taskmetadataextradata.md
+  - docs/pkg/models/shared/taskmetadataformat.md
+  - docs/pkg/models/shared/taskmetadataschemas1.md
+  - docs/pkg/models/shared/taskmetadataschemas2.md
+  - docs/pkg/models/shared/taskmetadataschemas3.md
+  - docs/pkg/models/shared/taskmetadataschemas4.md
+  - docs/pkg/models/shared/taskmetadataschemas5.md
+  - docs/pkg/models/shared/taskmetadataschemasextradata2.md
+  - docs/pkg/models/shared/taskmetadataschemasextradata22.md
+  - docs/pkg/models/shared/taskmetadataschemasextradata32.md
+  - docs/pkg/models/shared/taskmetadataschemasextradata52.md
+  - docs/pkg/models/shared/taskmetadataschemasvalue2.md
+  - docs/pkg/models/shared/taskmetadataschemasvalue32.md
+  - docs/pkg/models/shared/taskmetadataschemasvalue42.md
+  - docs/pkg/models/shared/taskmetadataschemasvalue52.md
+  - docs/pkg/models/shared/taskmetadatavalue.md
   - docs/pkg/models/shared/taskproject.md
   - docs/pkg/models/shared/tasktask.md
   - docs/pkg/models/shared/tasktaskstatus.md

@@ -30,6 +30,7 @@ type TaskTask struct {
 	FollowerUserIds []string        `json:"follower_user_ids,omitempty"`
 	GroupIds        []string        `json:"group_ids,omitempty"`
 	ID              *string         `json:"id,omitempty"`
+	Metadata        []TaskMetadata  `json:"metadata,omitempty"`
 	Name            *string         `json:"name,omitempty"`
 	Notes           *string         `json:"notes,omitempty"`
 	ParentID        *string         `json:"parent_id,omitempty"`
@@ -114,6 +115,13 @@ func (o *TaskTask) GetID() *string {
 		return nil
 	}
 	return o.ID
+}
+
+func (o *TaskTask) GetMetadata() []TaskMetadata {
+	if o == nil {
+		return nil
+	}
+	return o.Metadata
 }
 
 func (o *TaskTask) GetName() *string {
