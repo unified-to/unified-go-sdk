@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 1ed136fdd156254f45506d66d75335d4
+  docChecksum: 30f30cd0f1e19f64975bb2a6da82b7fc
   docVersion: "1.0"
-  speakeasyVersion: 1.570.2
-  generationVersion: 2.638.5
-  releaseVersion: 0.27.2
-  configChecksum: 4e6687b77d07144ce0a68669ea193cf5
+  speakeasyVersion: 1.571.1
+  generationVersion: 2.640.2
+  releaseVersion: 0.27.3
+  configChecksum: 469bf0d1cd09a6602d6208b404fd28f3
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -43,6 +43,7 @@ generatedFiles:
   - /pkg/models/operations/createatsactivity.go
   - /pkg/models/operations/createatsapplication.go
   - /pkg/models/operations/createatscandidate.go
+  - /pkg/models/operations/createatscompany.go
   - /pkg/models/operations/createatsdocument.go
   - /pkg/models/operations/createatsinterview.go
   - /pkg/models/operations/createatsjob.go
@@ -279,6 +280,7 @@ generatedFiles:
   - /pkg/models/operations/patchatsactivity.go
   - /pkg/models/operations/patchatsapplication.go
   - /pkg/models/operations/patchatscandidate.go
+  - /pkg/models/operations/patchatscompany.go
   - /pkg/models/operations/patchatsdocument.go
   - /pkg/models/operations/patchatsinterview.go
   - /pkg/models/operations/patchatsjob.go
@@ -349,6 +351,7 @@ generatedFiles:
   - /pkg/models/operations/removeatsactivity.go
   - /pkg/models/operations/removeatsapplication.go
   - /pkg/models/operations/removeatscandidate.go
+  - /pkg/models/operations/removeatscompany.go
   - /pkg/models/operations/removeatsdocument.go
   - /pkg/models/operations/removeatsinterview.go
   - /pkg/models/operations/removeatsjob.go
@@ -417,6 +420,7 @@ generatedFiles:
   - /pkg/models/operations/updateatsactivity.go
   - /pkg/models/operations/updateatsapplication.go
   - /pkg/models/operations/updateatscandidate.go
+  - /pkg/models/operations/updateatscompany.go
   - /pkg/models/operations/updateatsdocument.go
   - /pkg/models/operations/updateatsinterview.go
   - /pkg/models/operations/updateatsjob.go
@@ -744,6 +748,8 @@ generatedFiles:
   - docs/pkg/models/operations/createatsapplicationresponse.md
   - docs/pkg/models/operations/createatscandidaterequest.md
   - docs/pkg/models/operations/createatscandidateresponse.md
+  - docs/pkg/models/operations/createatscompanyrequest.md
+  - docs/pkg/models/operations/createatscompanyresponse.md
   - docs/pkg/models/operations/createatsdocumentrequest.md
   - docs/pkg/models/operations/createatsdocumentresponse.md
   - docs/pkg/models/operations/createatsinterviewrequest.md
@@ -1217,6 +1223,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchatsapplicationresponse.md
   - docs/pkg/models/operations/patchatscandidaterequest.md
   - docs/pkg/models/operations/patchatscandidateresponse.md
+  - docs/pkg/models/operations/patchatscompanyrequest.md
+  - docs/pkg/models/operations/patchatscompanyresponse.md
   - docs/pkg/models/operations/patchatsdocumentrequest.md
   - docs/pkg/models/operations/patchatsdocumentresponse.md
   - docs/pkg/models/operations/patchatsinterviewrequest.md
@@ -1358,6 +1366,8 @@ generatedFiles:
   - docs/pkg/models/operations/removeatsapplicationresponse.md
   - docs/pkg/models/operations/removeatscandidaterequest.md
   - docs/pkg/models/operations/removeatscandidateresponse.md
+  - docs/pkg/models/operations/removeatscompanyrequest.md
+  - docs/pkg/models/operations/removeatscompanyresponse.md
   - docs/pkg/models/operations/removeatsdocumentrequest.md
   - docs/pkg/models/operations/removeatsdocumentresponse.md
   - docs/pkg/models/operations/removeatsinterviewrequest.md
@@ -1494,6 +1504,8 @@ generatedFiles:
   - docs/pkg/models/operations/updateatsapplicationresponse.md
   - docs/pkg/models/operations/updateatscandidaterequest.md
   - docs/pkg/models/operations/updateatscandidateresponse.md
+  - docs/pkg/models/operations/updateatscompanyrequest.md
+  - docs/pkg/models/operations/updateatscompanyresponse.md
   - docs/pkg/models/operations/updateatsdocumentrequest.md
   - docs/pkg/models/operations/updateatsdocumentresponse.md
   - docs/pkg/models/operations/updateatsinterviewrequest.md
@@ -6314,5 +6326,43 @@ examples:
       responses:
         "200":
           application/json: {}
+  createAtsCompany:
+    speakeasy-default-create-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  patchAtsCompany:
+    speakeasy-default-patch-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  removeAtsCompany:
+    speakeasy-default-remove-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAtsCompany:
+    speakeasy-default-update-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
 examplesVersion: 1.0.2
 generatedTests: {}

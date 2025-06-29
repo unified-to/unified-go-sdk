@@ -167,6 +167,7 @@ func main() {
 * [CreateAtsActivity](docs/sdks/ats/README.md#createatsactivity) - Create an activity
 * [CreateAtsApplication](docs/sdks/ats/README.md#createatsapplication) - Create an application
 * [CreateAtsCandidate](docs/sdks/ats/README.md#createatscandidate) - Create a candidate
+* [CreateAtsCompany](docs/sdks/ats/README.md#createatscompany) - Create a company
 * [CreateAtsDocument](docs/sdks/ats/README.md#createatsdocument) - Create a document
 * [CreateAtsInterview](docs/sdks/ats/README.md#createatsinterview) - Create an interview
 * [CreateAtsJob](docs/sdks/ats/README.md#createatsjob) - Create a job
@@ -191,6 +192,7 @@ func main() {
 * [PatchAtsActivity](docs/sdks/ats/README.md#patchatsactivity) - Update an activity
 * [PatchAtsApplication](docs/sdks/ats/README.md#patchatsapplication) - Update an application
 * [PatchAtsCandidate](docs/sdks/ats/README.md#patchatscandidate) - Update a candidate
+* [PatchAtsCompany](docs/sdks/ats/README.md#patchatscompany) - Update a company
 * [PatchAtsDocument](docs/sdks/ats/README.md#patchatsdocument) - Update a document
 * [PatchAtsInterview](docs/sdks/ats/README.md#patchatsinterview) - Update an interview
 * [PatchAtsJob](docs/sdks/ats/README.md#patchatsjob) - Update a job
@@ -198,6 +200,7 @@ func main() {
 * [RemoveAtsActivity](docs/sdks/ats/README.md#removeatsactivity) - Remove an activity
 * [RemoveAtsApplication](docs/sdks/ats/README.md#removeatsapplication) - Remove an application
 * [RemoveAtsCandidate](docs/sdks/ats/README.md#removeatscandidate) - Remove a candidate
+* [RemoveAtsCompany](docs/sdks/ats/README.md#removeatscompany) - Remove a company
 * [RemoveAtsDocument](docs/sdks/ats/README.md#removeatsdocument) - Remove a document
 * [RemoveAtsInterview](docs/sdks/ats/README.md#removeatsinterview) - Remove an interview
 * [RemoveAtsJob](docs/sdks/ats/README.md#removeatsjob) - Remove a job
@@ -205,6 +208,7 @@ func main() {
 * [UpdateAtsActivity](docs/sdks/ats/README.md#updateatsactivity) - Update an activity
 * [UpdateAtsApplication](docs/sdks/ats/README.md#updateatsapplication) - Update an application
 * [UpdateAtsCandidate](docs/sdks/ats/README.md#updateatscandidate) - Update a candidate
+* [UpdateAtsCompany](docs/sdks/ats/README.md#updateatscompany) - Update a company
 * [UpdateAtsDocument](docs/sdks/ats/README.md#updateatsdocument) - Update a document
 * [UpdateAtsInterview](docs/sdks/ats/README.md#updateatsinterview) - Update an interview
 * [UpdateAtsJob](docs/sdks/ats/README.md#updateatsjob) - Update a job
@@ -353,6 +357,7 @@ func main() {
 
 ### [Company](docs/sdks/company/README.md)
 
+* [CreateAtsCompany](docs/sdks/company/README.md#createatscompany) - Create a company
 * [CreateCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
 * [CreateHrisCompany](docs/sdks/company/README.md#createhriscompany) - Create a company
 * [GetAtsCompany](docs/sdks/company/README.md#getatscompany) - Retrieve a company
@@ -362,10 +367,13 @@ func main() {
 * [ListCrmCompanies](docs/sdks/company/README.md#listcrmcompanies) - List all companies
 * [ListEnrichCompanies](docs/sdks/company/README.md#listenrichcompanies) - Retrieve enrichment information for a company
 * [ListHrisCompanies](docs/sdks/company/README.md#listhriscompanies) - List all companies
+* [PatchAtsCompany](docs/sdks/company/README.md#patchatscompany) - Update a company
 * [PatchCrmCompany](docs/sdks/company/README.md#patchcrmcompany) - Update a company
 * [PatchHrisCompany](docs/sdks/company/README.md#patchhriscompany) - Update a company
+* [RemoveAtsCompany](docs/sdks/company/README.md#removeatscompany) - Remove a company
 * [RemoveCrmCompany](docs/sdks/company/README.md#removecrmcompany) - Remove a company
 * [RemoveHrisCompany](docs/sdks/company/README.md#removehriscompany) - Remove a company
+* [UpdateAtsCompany](docs/sdks/company/README.md#updateatscompany) - Update a company
 * [UpdateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 * [UpdateHrisCompany](docs/sdks/company/README.md#updatehriscompany) - Update a company
 
