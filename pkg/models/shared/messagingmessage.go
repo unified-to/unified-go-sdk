@@ -12,23 +12,24 @@ type MessagingMessage struct {
 	AuthorMember *PropertyMessagingMessageAuthorMember `json:"author_member,omitempty"`
 	ChannelID    *string                               `json:"channel_id,omitempty"`
 	// Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
-	ChannelIds         []string          `json:"channel_ids,omitempty"`
-	CreatedAt          *time.Time        `json:"created_at,omitempty"`
-	DestinationMembers []MessagingMember `json:"destination_members,omitempty"`
-	HasChildren        *bool             `json:"has_children,omitempty"`
-	HiddenMembers      []MessagingMember `json:"hidden_members,omitempty"`
-	ID                 *string           `json:"id,omitempty"`
-	MentionedMembers   []MessagingMember `json:"mentioned_members,omitempty"`
-	Message            *string           `json:"message,omitempty"`
-	MessageHTML        *string           `json:"message_html,omitempty"`
-	MessageMarkdown    *string           `json:"message_markdown,omitempty"`
-	ParentMessageID    *string           `json:"parent_message_id,omitempty"`
-	Raw                map[string]any    `json:"raw,omitempty"`
-	Reference          *string           `json:"reference,omitempty"`
-	RootMessageID      *string           `json:"root_message_id,omitempty"`
-	Subject            *string           `json:"subject,omitempty"`
-	UpdatedAt          *time.Time        `json:"updated_at,omitempty"`
-	WebURL             *string           `json:"web_url,omitempty"`
+	ChannelIds         []string            `json:"channel_ids,omitempty"`
+	CreatedAt          *time.Time          `json:"created_at,omitempty"`
+	DestinationMembers []MessagingMember   `json:"destination_members,omitempty"`
+	HasChildren        *bool               `json:"has_children,omitempty"`
+	HiddenMembers      []MessagingMember   `json:"hidden_members,omitempty"`
+	ID                 *string             `json:"id,omitempty"`
+	MentionedMembers   []MessagingMember   `json:"mentioned_members,omitempty"`
+	Message            *string             `json:"message,omitempty"`
+	MessageHTML        *string             `json:"message_html,omitempty"`
+	MessageMarkdown    *string             `json:"message_markdown,omitempty"`
+	ParentMessageID    *string             `json:"parent_message_id,omitempty"`
+	Raw                map[string]any      `json:"raw,omitempty"`
+	Reactions          []MessagingReaction `json:"reactions,omitempty"`
+	Reference          *string             `json:"reference,omitempty"`
+	RootMessageID      *string             `json:"root_message_id,omitempty"`
+	Subject            *string             `json:"subject,omitempty"`
+	UpdatedAt          *time.Time          `json:"updated_at,omitempty"`
+	WebURL             *string             `json:"web_url,omitempty"`
 }
 
 func (m MessagingMessage) MarshalJSON() ([]byte, error) {
@@ -145,6 +146,13 @@ func (o *MessagingMessage) GetRaw() map[string]any {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *MessagingMessage) GetReactions() []MessagingReaction {
+	if o == nil {
+		return nil
+	}
+	return o.Reactions
 }
 
 func (o *MessagingMessage) GetReference() *string {

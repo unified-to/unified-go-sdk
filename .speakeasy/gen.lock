@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 30f30cd0f1e19f64975bb2a6da82b7fc
+  docChecksum: b9a9d44d0d49d0a08964e6f3ef075270
   docVersion: "1.0"
-  speakeasyVersion: 1.571.1
-  generationVersion: 2.640.2
-  releaseVersion: 0.27.3
-  configChecksum: 469bf0d1cd09a6602d6208b404fd28f3
+  speakeasyVersion: 1.575.1
+  generationVersion: 2.648.1
+  releaseVersion: 0.27.4
+  configChecksum: bd62c83dab66942edf66475c2326a4f2
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -603,6 +603,7 @@ generatedFiles:
   - /pkg/models/shared/messagingchannel.go
   - /pkg/models/shared/messagingmember.go
   - /pkg/models/shared/messagingmessage.go
+  - /pkg/models/shared/messagingreaction.go
   - /pkg/models/shared/metadatametadata.go
   - /pkg/models/shared/paymentlineitem.go
   - /pkg/models/shared/paymentlink.go
@@ -650,6 +651,7 @@ generatedFiles:
   - /pkg/models/shared/propertyintegrationcategories.go
   - /pkg/models/shared/propertylmsstudentaddress.go
   - /pkg/models/shared/propertymessagingmessageauthormember.go
+  - /pkg/models/shared/propertymessagingreactionmember.go
   - /pkg/models/shared/propertyscimgroupmeta.go
   - /pkg/models/shared/propertyscimgroupschemas.go
   - /pkg/models/shared/propertyscimusermeta.go
@@ -1937,6 +1939,7 @@ generatedFiles:
   - docs/pkg/models/shared/messagingchannel.md
   - docs/pkg/models/shared/messagingmember.md
   - docs/pkg/models/shared/messagingmessage.md
+  - docs/pkg/models/shared/messagingreaction.md
   - docs/pkg/models/shared/metadatametadata.md
   - docs/pkg/models/shared/metadatametadataformat.md
   - docs/pkg/models/shared/objecttype.md
@@ -2000,6 +2003,7 @@ generatedFiles:
   - docs/pkg/models/shared/propertyintegrationcategories.md
   - docs/pkg/models/shared/propertylmsstudentaddress.md
   - docs/pkg/models/shared/propertymessagingmessageauthormember.md
+  - docs/pkg/models/shared/propertymessagingreactionmember.md
   - docs/pkg/models/shared/propertyscimgroupmeta.md
   - docs/pkg/models/shared/propertyscimgroupschemas.md
   - docs/pkg/models/shared/propertyscimusermeta.md
