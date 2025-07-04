@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: b9a9d44d0d49d0a08964e6f3ef075270
+  docChecksum: cfcf5e019d822f732c2d765252728b21
   docVersion: "1.0"
-  speakeasyVersion: 1.575.1
-  generationVersion: 2.648.1
-  releaseVersion: 0.27.4
-  configChecksum: bd62c83dab66942edf66475c2326a4f2
+  speakeasyVersion: 1.575.4
+  generationVersion: 2.648.7
+  releaseVersion: 0.27.5
+  configChecksum: 0a621458fd3de069a0d85405370a04b7
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -29,7 +29,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.83.3
     sdkHooks: 0.2.0
-    unions: 2.85.11
+    unions: 2.85.12
     uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
@@ -494,7 +494,9 @@ generatedFiles:
   - /pkg/models/shared/accountinglineitem.go
   - /pkg/models/shared/accountingorder.go
   - /pkg/models/shared/accountingorganization.go
+  - /pkg/models/shared/accountingprofitandlossaccount.go
   - /pkg/models/shared/accountingprofitandlosscategory.go
+  - /pkg/models/shared/accountingprofitandlosssection.go
   - /pkg/models/shared/accountingprofitandlosssubcategory.go
   - /pkg/models/shared/accountingreport.go
   - /pkg/models/shared/accountingtaxrate.go
@@ -1647,7 +1649,9 @@ generatedFiles:
   - docs/pkg/models/shared/accountingorderstatus.md
   - docs/pkg/models/shared/accountingordertype.md
   - docs/pkg/models/shared/accountingorganization.md
+  - docs/pkg/models/shared/accountingprofitandlossaccount.md
   - docs/pkg/models/shared/accountingprofitandlosscategory.md
+  - docs/pkg/models/shared/accountingprofitandlosssection.md
   - docs/pkg/models/shared/accountingprofitandlosssubcategory.md
   - docs/pkg/models/shared/accountingreport.md
   - docs/pkg/models/shared/accountingreporttype.md

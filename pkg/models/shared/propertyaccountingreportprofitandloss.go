@@ -3,10 +3,20 @@
 package shared
 
 type PropertyAccountingReportProfitAndLoss struct {
-	CostOfGoodsSold   []AccountingProfitAndLossCategory `json:"cost_of_goods_sold,omitempty"`
-	Expenses          []AccountingProfitAndLossCategory `json:"expenses,omitempty"`
-	GrossProfitAmount *float64                          `json:"gross_profit_amount,omitempty"`
+	// @deprecated
+	CostOfGoodsSold            []AccountingProfitAndLossCategory `json:"cost_of_goods_sold,omitempty"`
+	CostOfGoodsSoldSections    []AccountingProfitAndLossSection  `json:"cost_of_goods_sold_sections,omitempty"`
+	CostOfGoodsSoldTotalAmount *float64                          `json:"cost_of_goods_sold_total_amount,omitempty"`
+	// @deprecated
+	Expenses            []AccountingProfitAndLossCategory `json:"expenses,omitempty"`
+	ExpensesSections    []AccountingProfitAndLossSection  `json:"expenses_sections,omitempty"`
+	ExpensesTotalAmount *float64                          `json:"expenses_total_amount,omitempty"`
+	GrossProfitAmount   *float64                          `json:"gross_profit_amount,omitempty"`
+	// @deprecated
 	Income            []AccountingProfitAndLossCategory `json:"income,omitempty"`
+	IncomeSections    []AccountingProfitAndLossSection  `json:"income_sections,omitempty"`
+	IncomeTotalAmount *float64                          `json:"income_total_amount,omitempty"`
+	NetIncomeAmount   *float64                          `json:"net_income_amount,omitempty"`
 	NetProfitAmount   *float64                          `json:"net_profit_amount,omitempty"`
 }
 
@@ -17,11 +27,39 @@ func (o *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSold() []Accountin
 	return o.CostOfGoodsSold
 }
 
+func (o *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSoldSections() []AccountingProfitAndLossSection {
+	if o == nil {
+		return nil
+	}
+	return o.CostOfGoodsSoldSections
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSoldTotalAmount() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.CostOfGoodsSoldTotalAmount
+}
+
 func (o *PropertyAccountingReportProfitAndLoss) GetExpenses() []AccountingProfitAndLossCategory {
 	if o == nil {
 		return nil
 	}
 	return o.Expenses
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetExpensesSections() []AccountingProfitAndLossSection {
+	if o == nil {
+		return nil
+	}
+	return o.ExpensesSections
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetExpensesTotalAmount() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.ExpensesTotalAmount
 }
 
 func (o *PropertyAccountingReportProfitAndLoss) GetGrossProfitAmount() *float64 {
@@ -36,6 +74,27 @@ func (o *PropertyAccountingReportProfitAndLoss) GetIncome() []AccountingProfitAn
 		return nil
 	}
 	return o.Income
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetIncomeSections() []AccountingProfitAndLossSection {
+	if o == nil {
+		return nil
+	}
+	return o.IncomeSections
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetIncomeTotalAmount() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.IncomeTotalAmount
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetNetIncomeAmount() *float64 {
+	if o == nil {
+		return nil
+	}
+	return o.NetIncomeAmount
 }
 
 func (o *PropertyAccountingReportProfitAndLoss) GetNetProfitAmount() *float64 {
