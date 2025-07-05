@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: cfcf5e019d822f732c2d765252728b21
+  docChecksum: df14941bc85aac484869c35ad39aa806
   docVersion: "1.0"
-  speakeasyVersion: 1.575.4
+  speakeasyVersion: 1.575.5
   generationVersion: 2.648.7
-  releaseVersion: 0.27.5
-  configChecksum: 0a621458fd3de069a0d85405370a04b7
+  releaseVersion: 0.27.6
+  configChecksum: 0c9823eebe1a492ceb6bc9393133b5f0
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -34,10 +34,14 @@ features:
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
+  - /pkg/models/operations/createaccountingbill.go
   - /pkg/models/operations/createaccountingcontact.go
+  - /pkg/models/operations/createaccountingcreditmemo.go
   - /pkg/models/operations/createaccountinginvoice.go
   - /pkg/models/operations/createaccountingjournal.go
   - /pkg/models/operations/createaccountingorder.go
+  - /pkg/models/operations/createaccountingpurchaseorder.go
+  - /pkg/models/operations/createaccountingsalesorder.go
   - /pkg/models/operations/createaccountingtaxrate.go
   - /pkg/models/operations/createaccountingtransaction.go
   - /pkg/models/operations/createatsactivity.go
@@ -105,14 +109,21 @@ generatedFiles:
   - /pkg/models/operations/createunifiedconnection.go
   - /pkg/models/operations/createunifiedwebhook.go
   - /pkg/models/operations/getaccountingaccount.go
+  - /pkg/models/operations/getaccountingbalancesheet.go
+  - /pkg/models/operations/getaccountingbill.go
   - /pkg/models/operations/getaccountingcontact.go
+  - /pkg/models/operations/getaccountingcreditmemo.go
   - /pkg/models/operations/getaccountinginvoice.go
   - /pkg/models/operations/getaccountingjournal.go
   - /pkg/models/operations/getaccountingorder.go
   - /pkg/models/operations/getaccountingorganization.go
+  - /pkg/models/operations/getaccountingprofitloss.go
+  - /pkg/models/operations/getaccountingpurchaseorder.go
   - /pkg/models/operations/getaccountingreport.go
+  - /pkg/models/operations/getaccountingsalesorder.go
   - /pkg/models/operations/getaccountingtaxrate.go
   - /pkg/models/operations/getaccountingtransaction.go
+  - /pkg/models/operations/getaccountingtrialbalance.go
   - /pkg/models/operations/getatsactivity.go
   - /pkg/models/operations/getatsapplication.go
   - /pkg/models/operations/getatscandidate.go
@@ -184,14 +195,21 @@ generatedFiles:
   - /pkg/models/operations/getunifiedintegrationlogin.go
   - /pkg/models/operations/getunifiedwebhook.go
   - /pkg/models/operations/listaccountingaccounts.go
+  - /pkg/models/operations/listaccountingbalancesheets.go
+  - /pkg/models/operations/listaccountingbills.go
   - /pkg/models/operations/listaccountingcontacts.go
+  - /pkg/models/operations/listaccountingcreditmemoes.go
   - /pkg/models/operations/listaccountinginvoices.go
   - /pkg/models/operations/listaccountingjournals.go
   - /pkg/models/operations/listaccountingorders.go
   - /pkg/models/operations/listaccountingorganizations.go
+  - /pkg/models/operations/listaccountingprofitlosses.go
+  - /pkg/models/operations/listaccountingpurchaseorders.go
   - /pkg/models/operations/listaccountingreports.go
+  - /pkg/models/operations/listaccountingsalesorders.go
   - /pkg/models/operations/listaccountingtaxrates.go
   - /pkg/models/operations/listaccountingtransactions.go
+  - /pkg/models/operations/listaccountingtrialbalances.go
   - /pkg/models/operations/listatsactivities.go
   - /pkg/models/operations/listatsapplications.go
   - /pkg/models/operations/listatsapplicationstatuses.go
@@ -271,10 +289,14 @@ generatedFiles:
   - /pkg/models/operations/listunifiedissues.go
   - /pkg/models/operations/listunifiedwebhooks.go
   - /pkg/models/operations/patchaccountingaccount.go
+  - /pkg/models/operations/patchaccountingbill.go
   - /pkg/models/operations/patchaccountingcontact.go
+  - /pkg/models/operations/patchaccountingcreditmemo.go
   - /pkg/models/operations/patchaccountinginvoice.go
   - /pkg/models/operations/patchaccountingjournal.go
   - /pkg/models/operations/patchaccountingorder.go
+  - /pkg/models/operations/patchaccountingpurchaseorder.go
+  - /pkg/models/operations/patchaccountingsalesorder.go
   - /pkg/models/operations/patchaccountingtaxrate.go
   - /pkg/models/operations/patchaccountingtransaction.go
   - /pkg/models/operations/patchatsactivity.go
@@ -342,10 +364,14 @@ generatedFiles:
   - /pkg/models/operations/patchunifiedwebhook.go
   - /pkg/models/operations/patchunifiedwebhooktrigger.go
   - /pkg/models/operations/removeaccountingaccount.go
+  - /pkg/models/operations/removeaccountingbill.go
   - /pkg/models/operations/removeaccountingcontact.go
+  - /pkg/models/operations/removeaccountingcreditmemo.go
   - /pkg/models/operations/removeaccountinginvoice.go
   - /pkg/models/operations/removeaccountingjournal.go
   - /pkg/models/operations/removeaccountingorder.go
+  - /pkg/models/operations/removeaccountingpurchaseorder.go
+  - /pkg/models/operations/removeaccountingsalesorder.go
   - /pkg/models/operations/removeaccountingtaxrate.go
   - /pkg/models/operations/removeaccountingtransaction.go
   - /pkg/models/operations/removeatsactivity.go
@@ -411,10 +437,14 @@ generatedFiles:
   - /pkg/models/operations/removeunifiedconnection.go
   - /pkg/models/operations/removeunifiedwebhook.go
   - /pkg/models/operations/updateaccountingaccount.go
+  - /pkg/models/operations/updateaccountingbill.go
   - /pkg/models/operations/updateaccountingcontact.go
+  - /pkg/models/operations/updateaccountingcreditmemo.go
   - /pkg/models/operations/updateaccountinginvoice.go
   - /pkg/models/operations/updateaccountingjournal.go
   - /pkg/models/operations/updateaccountingorder.go
+  - /pkg/models/operations/updateaccountingpurchaseorder.go
+  - /pkg/models/operations/updateaccountingsalesorder.go
   - /pkg/models/operations/updateaccountingtaxrate.go
   - /pkg/models/operations/updateaccountingtransaction.go
   - /pkg/models/operations/updateatsactivity.go
@@ -484,9 +514,12 @@ generatedFiles:
   - /pkg/models/shared/accountingaccount.go
   - /pkg/models/shared/accountingassociatedcontact.go
   - /pkg/models/shared/accountingattachment.go
+  - /pkg/models/shared/accountingbalancesheet.go
   - /pkg/models/shared/accountingbalancesheetitem.go
+  - /pkg/models/shared/accountingbill.go
   - /pkg/models/shared/accountingcontact.go
   - /pkg/models/shared/accountingcontactpaymentmethod.go
+  - /pkg/models/shared/accountingcreditmemo.go
   - /pkg/models/shared/accountingemail.go
   - /pkg/models/shared/accountinginvoice.go
   - /pkg/models/shared/accountingjournal.go
@@ -494,16 +527,20 @@ generatedFiles:
   - /pkg/models/shared/accountinglineitem.go
   - /pkg/models/shared/accountingorder.go
   - /pkg/models/shared/accountingorganization.go
-  - /pkg/models/shared/accountingprofitandlossaccount.go
-  - /pkg/models/shared/accountingprofitandlosscategory.go
-  - /pkg/models/shared/accountingprofitandlosssection.go
-  - /pkg/models/shared/accountingprofitandlosssubcategory.go
+  - /pkg/models/shared/accountingprofitloss.go
+  - /pkg/models/shared/accountingprofitlossaccount.go
+  - /pkg/models/shared/accountingprofitlosscategory.go
+  - /pkg/models/shared/accountingprofitlosssection.go
+  - /pkg/models/shared/accountingprofitlosssubcategory.go
+  - /pkg/models/shared/accountingpurchaseorder.go
   - /pkg/models/shared/accountingreport.go
+  - /pkg/models/shared/accountingsalesorder.go
   - /pkg/models/shared/accountingtaxrate.go
   - /pkg/models/shared/accountingtelephone.go
   - /pkg/models/shared/accountingtransaction.go
   - /pkg/models/shared/accountingtransactioncontact.go
   - /pkg/models/shared/accountingtransactionlineitem.go
+  - /pkg/models/shared/accountingtrialbalance.go
   - /pkg/models/shared/accountingtrialbalancesubitem.go
   - /pkg/models/shared/apicall.go
   - /pkg/models/shared/atsactivity.go
@@ -619,9 +656,13 @@ generatedFiles:
   - /pkg/models/shared/propertyaccountingorderbillingaddress.go
   - /pkg/models/shared/propertyaccountingordershippingaddress.go
   - /pkg/models/shared/propertyaccountingorganizationaddress.go
+  - /pkg/models/shared/propertyaccountingpurchaseorderbillingaddress.go
+  - /pkg/models/shared/propertyaccountingpurchaseordershippingaddress.go
   - /pkg/models/shared/propertyaccountingreportbalancesheet.go
   - /pkg/models/shared/propertyaccountingreportprofitandloss.go
   - /pkg/models/shared/propertyaccountingreporttrialbalance.go
+  - /pkg/models/shared/propertyaccountingsalesorderbillingaddress.go
+  - /pkg/models/shared/propertyaccountingsalesordershippingaddress.go
   - /pkg/models/shared/propertyatsactivityfrom.go
   - /pkg/models/shared/propertyatscandidateaddress.go
   - /pkg/models/shared/propertyatscompanyaddress.go
@@ -712,6 +753,8 @@ generatedFiles:
   - applicationstatus.go
   - ats.go
   - auth.go
+  - balancesheet.go
+  - bill.go
   - branch.go
   - busy.go
   - calendar.go
@@ -727,6 +770,7 @@ generatedFiles:
   - connection.go
   - contact.go
   - course.go
+  - creditmemo.go
   - crm.go
   - customer.go
   - deal.go
@@ -734,14 +778,22 @@ generatedFiles:
   - docs/pkg/models/operations/categories.md
   - docs/pkg/models/operations/createaccountingaccountrequest.md
   - docs/pkg/models/operations/createaccountingaccountresponse.md
+  - docs/pkg/models/operations/createaccountingbillrequest.md
+  - docs/pkg/models/operations/createaccountingbillresponse.md
   - docs/pkg/models/operations/createaccountingcontactrequest.md
   - docs/pkg/models/operations/createaccountingcontactresponse.md
+  - docs/pkg/models/operations/createaccountingcreditmemorequest.md
+  - docs/pkg/models/operations/createaccountingcreditmemoresponse.md
   - docs/pkg/models/operations/createaccountinginvoicerequest.md
   - docs/pkg/models/operations/createaccountinginvoiceresponse.md
   - docs/pkg/models/operations/createaccountingjournalrequest.md
   - docs/pkg/models/operations/createaccountingjournalresponse.md
   - docs/pkg/models/operations/createaccountingorderrequest.md
   - docs/pkg/models/operations/createaccountingorderresponse.md
+  - docs/pkg/models/operations/createaccountingpurchaseorderrequest.md
+  - docs/pkg/models/operations/createaccountingpurchaseorderresponse.md
+  - docs/pkg/models/operations/createaccountingsalesorderrequest.md
+  - docs/pkg/models/operations/createaccountingsalesorderresponse.md
   - docs/pkg/models/operations/createaccountingtaxraterequest.md
   - docs/pkg/models/operations/createaccountingtaxrateresponse.md
   - docs/pkg/models/operations/createaccountingtransactionrequest.md
@@ -875,8 +927,14 @@ generatedFiles:
   - docs/pkg/models/operations/createunifiedwebhookresponse.md
   - docs/pkg/models/operations/getaccountingaccountrequest.md
   - docs/pkg/models/operations/getaccountingaccountresponse.md
+  - docs/pkg/models/operations/getaccountingbalancesheetrequest.md
+  - docs/pkg/models/operations/getaccountingbalancesheetresponse.md
+  - docs/pkg/models/operations/getaccountingbillrequest.md
+  - docs/pkg/models/operations/getaccountingbillresponse.md
   - docs/pkg/models/operations/getaccountingcontactrequest.md
   - docs/pkg/models/operations/getaccountingcontactresponse.md
+  - docs/pkg/models/operations/getaccountingcreditmemorequest.md
+  - docs/pkg/models/operations/getaccountingcreditmemoresponse.md
   - docs/pkg/models/operations/getaccountinginvoicerequest.md
   - docs/pkg/models/operations/getaccountinginvoiceresponse.md
   - docs/pkg/models/operations/getaccountingjournalrequest.md
@@ -885,12 +943,20 @@ generatedFiles:
   - docs/pkg/models/operations/getaccountingorderresponse.md
   - docs/pkg/models/operations/getaccountingorganizationrequest.md
   - docs/pkg/models/operations/getaccountingorganizationresponse.md
+  - docs/pkg/models/operations/getaccountingprofitlossrequest.md
+  - docs/pkg/models/operations/getaccountingprofitlossresponse.md
+  - docs/pkg/models/operations/getaccountingpurchaseorderrequest.md
+  - docs/pkg/models/operations/getaccountingpurchaseorderresponse.md
   - docs/pkg/models/operations/getaccountingreportrequest.md
   - docs/pkg/models/operations/getaccountingreportresponse.md
+  - docs/pkg/models/operations/getaccountingsalesorderrequest.md
+  - docs/pkg/models/operations/getaccountingsalesorderresponse.md
   - docs/pkg/models/operations/getaccountingtaxraterequest.md
   - docs/pkg/models/operations/getaccountingtaxrateresponse.md
   - docs/pkg/models/operations/getaccountingtransactionrequest.md
   - docs/pkg/models/operations/getaccountingtransactionresponse.md
+  - docs/pkg/models/operations/getaccountingtrialbalancerequest.md
+  - docs/pkg/models/operations/getaccountingtrialbalanceresponse.md
   - docs/pkg/models/operations/getatsactivityrequest.md
   - docs/pkg/models/operations/getatsactivityresponse.md
   - docs/pkg/models/operations/getatsapplicationrequest.md
@@ -1033,8 +1099,14 @@ generatedFiles:
   - docs/pkg/models/operations/getunifiedwebhookresponse.md
   - docs/pkg/models/operations/listaccountingaccountsrequest.md
   - docs/pkg/models/operations/listaccountingaccountsresponse.md
+  - docs/pkg/models/operations/listaccountingbalancesheetsrequest.md
+  - docs/pkg/models/operations/listaccountingbalancesheetsresponse.md
+  - docs/pkg/models/operations/listaccountingbillsrequest.md
+  - docs/pkg/models/operations/listaccountingbillsresponse.md
   - docs/pkg/models/operations/listaccountingcontactsrequest.md
   - docs/pkg/models/operations/listaccountingcontactsresponse.md
+  - docs/pkg/models/operations/listaccountingcreditmemoesrequest.md
+  - docs/pkg/models/operations/listaccountingcreditmemoesresponse.md
   - docs/pkg/models/operations/listaccountinginvoicesrequest.md
   - docs/pkg/models/operations/listaccountinginvoicesresponse.md
   - docs/pkg/models/operations/listaccountingjournalsrequest.md
@@ -1043,12 +1115,20 @@ generatedFiles:
   - docs/pkg/models/operations/listaccountingordersresponse.md
   - docs/pkg/models/operations/listaccountingorganizationsrequest.md
   - docs/pkg/models/operations/listaccountingorganizationsresponse.md
+  - docs/pkg/models/operations/listaccountingprofitlossesrequest.md
+  - docs/pkg/models/operations/listaccountingprofitlossesresponse.md
+  - docs/pkg/models/operations/listaccountingpurchaseordersrequest.md
+  - docs/pkg/models/operations/listaccountingpurchaseordersresponse.md
   - docs/pkg/models/operations/listaccountingreportsrequest.md
   - docs/pkg/models/operations/listaccountingreportsresponse.md
+  - docs/pkg/models/operations/listaccountingsalesordersrequest.md
+  - docs/pkg/models/operations/listaccountingsalesordersresponse.md
   - docs/pkg/models/operations/listaccountingtaxratesrequest.md
   - docs/pkg/models/operations/listaccountingtaxratesresponse.md
   - docs/pkg/models/operations/listaccountingtransactionsrequest.md
   - docs/pkg/models/operations/listaccountingtransactionsresponse.md
+  - docs/pkg/models/operations/listaccountingtrialbalancesrequest.md
+  - docs/pkg/models/operations/listaccountingtrialbalancesresponse.md
   - docs/pkg/models/operations/listatsactivitiesrequest.md
   - docs/pkg/models/operations/listatsactivitiesresponse.md
   - docs/pkg/models/operations/listatsapplicationsrequest.md
@@ -1209,14 +1289,22 @@ generatedFiles:
   - docs/pkg/models/operations/option.md
   - docs/pkg/models/operations/patchaccountingaccountrequest.md
   - docs/pkg/models/operations/patchaccountingaccountresponse.md
+  - docs/pkg/models/operations/patchaccountingbillrequest.md
+  - docs/pkg/models/operations/patchaccountingbillresponse.md
   - docs/pkg/models/operations/patchaccountingcontactrequest.md
   - docs/pkg/models/operations/patchaccountingcontactresponse.md
+  - docs/pkg/models/operations/patchaccountingcreditmemorequest.md
+  - docs/pkg/models/operations/patchaccountingcreditmemoresponse.md
   - docs/pkg/models/operations/patchaccountinginvoicerequest.md
   - docs/pkg/models/operations/patchaccountinginvoiceresponse.md
   - docs/pkg/models/operations/patchaccountingjournalrequest.md
   - docs/pkg/models/operations/patchaccountingjournalresponse.md
   - docs/pkg/models/operations/patchaccountingorderrequest.md
   - docs/pkg/models/operations/patchaccountingorderresponse.md
+  - docs/pkg/models/operations/patchaccountingpurchaseorderrequest.md
+  - docs/pkg/models/operations/patchaccountingpurchaseorderresponse.md
+  - docs/pkg/models/operations/patchaccountingsalesorderrequest.md
+  - docs/pkg/models/operations/patchaccountingsalesorderresponse.md
   - docs/pkg/models/operations/patchaccountingtaxraterequest.md
   - docs/pkg/models/operations/patchaccountingtaxrateresponse.md
   - docs/pkg/models/operations/patchaccountingtransactionrequest.md
@@ -1352,14 +1440,22 @@ generatedFiles:
   - docs/pkg/models/operations/queryparamcategories.md
   - docs/pkg/models/operations/removeaccountingaccountrequest.md
   - docs/pkg/models/operations/removeaccountingaccountresponse.md
+  - docs/pkg/models/operations/removeaccountingbillrequest.md
+  - docs/pkg/models/operations/removeaccountingbillresponse.md
   - docs/pkg/models/operations/removeaccountingcontactrequest.md
   - docs/pkg/models/operations/removeaccountingcontactresponse.md
+  - docs/pkg/models/operations/removeaccountingcreditmemorequest.md
+  - docs/pkg/models/operations/removeaccountingcreditmemoresponse.md
   - docs/pkg/models/operations/removeaccountinginvoicerequest.md
   - docs/pkg/models/operations/removeaccountinginvoiceresponse.md
   - docs/pkg/models/operations/removeaccountingjournalrequest.md
   - docs/pkg/models/operations/removeaccountingjournalresponse.md
   - docs/pkg/models/operations/removeaccountingorderrequest.md
   - docs/pkg/models/operations/removeaccountingorderresponse.md
+  - docs/pkg/models/operations/removeaccountingpurchaseorderrequest.md
+  - docs/pkg/models/operations/removeaccountingpurchaseorderresponse.md
+  - docs/pkg/models/operations/removeaccountingsalesorderrequest.md
+  - docs/pkg/models/operations/removeaccountingsalesorderresponse.md
   - docs/pkg/models/operations/removeaccountingtaxraterequest.md
   - docs/pkg/models/operations/removeaccountingtaxrateresponse.md
   - docs/pkg/models/operations/removeaccountingtransactionrequest.md
@@ -1490,14 +1586,22 @@ generatedFiles:
   - docs/pkg/models/operations/removeunifiedwebhookresponse.md
   - docs/pkg/models/operations/updateaccountingaccountrequest.md
   - docs/pkg/models/operations/updateaccountingaccountresponse.md
+  - docs/pkg/models/operations/updateaccountingbillrequest.md
+  - docs/pkg/models/operations/updateaccountingbillresponse.md
   - docs/pkg/models/operations/updateaccountingcontactrequest.md
   - docs/pkg/models/operations/updateaccountingcontactresponse.md
+  - docs/pkg/models/operations/updateaccountingcreditmemorequest.md
+  - docs/pkg/models/operations/updateaccountingcreditmemoresponse.md
   - docs/pkg/models/operations/updateaccountinginvoicerequest.md
   - docs/pkg/models/operations/updateaccountinginvoiceresponse.md
   - docs/pkg/models/operations/updateaccountingjournalrequest.md
   - docs/pkg/models/operations/updateaccountingjournalresponse.md
   - docs/pkg/models/operations/updateaccountingorderrequest.md
   - docs/pkg/models/operations/updateaccountingorderresponse.md
+  - docs/pkg/models/operations/updateaccountingpurchaseorderrequest.md
+  - docs/pkg/models/operations/updateaccountingpurchaseorderresponse.md
+  - docs/pkg/models/operations/updateaccountingsalesorderrequest.md
+  - docs/pkg/models/operations/updateaccountingsalesorderresponse.md
   - docs/pkg/models/operations/updateaccountingtaxraterequest.md
   - docs/pkg/models/operations/updateaccountingtaxrateresponse.md
   - docs/pkg/models/operations/updateaccountingtransactionrequest.md
@@ -1633,13 +1737,20 @@ generatedFiles:
   - docs/pkg/models/shared/accountingaccount.md
   - docs/pkg/models/shared/accountingassociatedcontact.md
   - docs/pkg/models/shared/accountingattachment.md
+  - docs/pkg/models/shared/accountingbalancesheet.md
   - docs/pkg/models/shared/accountingbalancesheetitem.md
+  - docs/pkg/models/shared/accountingbill.md
+  - docs/pkg/models/shared/accountingbillstatus.md
   - docs/pkg/models/shared/accountingcontact.md
   - docs/pkg/models/shared/accountingcontactpaymentmethod.md
   - docs/pkg/models/shared/accountingcontactpaymentmethodtype.md
+  - docs/pkg/models/shared/accountingcreditmemo.md
+  - docs/pkg/models/shared/accountingcreditmemopaymentcollectionmethod.md
+  - docs/pkg/models/shared/accountingcreditmemostatus.md
   - docs/pkg/models/shared/accountingemail.md
   - docs/pkg/models/shared/accountingemailtype.md
   - docs/pkg/models/shared/accountinginvoice.md
+  - docs/pkg/models/shared/accountinginvoicepaymentcollectionmethod.md
   - docs/pkg/models/shared/accountinginvoicestatus.md
   - docs/pkg/models/shared/accountinginvoicetype.md
   - docs/pkg/models/shared/accountingjournal.md
@@ -1649,18 +1760,24 @@ generatedFiles:
   - docs/pkg/models/shared/accountingorderstatus.md
   - docs/pkg/models/shared/accountingordertype.md
   - docs/pkg/models/shared/accountingorganization.md
-  - docs/pkg/models/shared/accountingprofitandlossaccount.md
-  - docs/pkg/models/shared/accountingprofitandlosscategory.md
-  - docs/pkg/models/shared/accountingprofitandlosssection.md
-  - docs/pkg/models/shared/accountingprofitandlosssubcategory.md
+  - docs/pkg/models/shared/accountingprofitloss.md
+  - docs/pkg/models/shared/accountingprofitlossaccount.md
+  - docs/pkg/models/shared/accountingprofitlosscategory.md
+  - docs/pkg/models/shared/accountingprofitlosssection.md
+  - docs/pkg/models/shared/accountingprofitlosssubcategory.md
+  - docs/pkg/models/shared/accountingpurchaseorder.md
+  - docs/pkg/models/shared/accountingpurchaseorderstatus.md
   - docs/pkg/models/shared/accountingreport.md
   - docs/pkg/models/shared/accountingreporttype.md
+  - docs/pkg/models/shared/accountingsalesorder.md
+  - docs/pkg/models/shared/accountingsalesorderstatus.md
   - docs/pkg/models/shared/accountingtaxrate.md
   - docs/pkg/models/shared/accountingtelephone.md
   - docs/pkg/models/shared/accountingtelephonetype.md
   - docs/pkg/models/shared/accountingtransaction.md
   - docs/pkg/models/shared/accountingtransactioncontact.md
   - docs/pkg/models/shared/accountingtransactionlineitem.md
+  - docs/pkg/models/shared/accountingtrialbalance.md
   - docs/pkg/models/shared/accountingtrialbalancesubitem.md
   - docs/pkg/models/shared/api.md
   - docs/pkg/models/shared/apicall.md
@@ -1969,9 +2086,13 @@ generatedFiles:
   - docs/pkg/models/shared/propertyaccountingorderbillingaddress.md
   - docs/pkg/models/shared/propertyaccountingordershippingaddress.md
   - docs/pkg/models/shared/propertyaccountingorganizationaddress.md
+  - docs/pkg/models/shared/propertyaccountingpurchaseorderbillingaddress.md
+  - docs/pkg/models/shared/propertyaccountingpurchaseordershippingaddress.md
   - docs/pkg/models/shared/propertyaccountingreportbalancesheet.md
   - docs/pkg/models/shared/propertyaccountingreportprofitandloss.md
   - docs/pkg/models/shared/propertyaccountingreporttrialbalance.md
+  - docs/pkg/models/shared/propertyaccountingsalesorderbillingaddress.md
+  - docs/pkg/models/shared/propertyaccountingsalesordershippingaddress.md
   - docs/pkg/models/shared/propertyatsactivityfrom.md
   - docs/pkg/models/shared/propertyatsactivityfromtype.md
   - docs/pkg/models/shared/propertyatscandidateaddress.md
@@ -2122,6 +2243,8 @@ generatedFiles:
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
+  - docs/sdks/balancesheet/README.md
+  - docs/sdks/bill/README.md
   - docs/sdks/branch/README.md
   - docs/sdks/busy/README.md
   - docs/sdks/calendar/README.md
@@ -2137,6 +2260,7 @@ generatedFiles:
   - docs/sdks/connection/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/course/README.md
+  - docs/sdks/creditmemo/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/deal/README.md
@@ -2181,15 +2305,18 @@ generatedFiles:
   - docs/sdks/payslip/README.md
   - docs/sdks/person/README.md
   - docs/sdks/pipeline/README.md
+  - docs/sdks/profitloss/README.md
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/pullrequest/README.md
+  - docs/sdks/purchaseorder/README.md
   - docs/sdks/recording/README.md
   - docs/sdks/refund/README.md
   - docs/sdks/repo/README.md
   - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
   - docs/sdks/review/README.md
+  - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/space/README.md
@@ -2203,6 +2330,7 @@ generatedFiles:
   - docs/sdks/timeoff/README.md
   - docs/sdks/timeshift/README.md
   - docs/sdks/transaction/README.md
+  - docs/sdks/trialbalance/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
@@ -2270,15 +2398,18 @@ generatedFiles:
   - pkg/utils/retries.go
   - pkg/utils/security.go
   - pkg/utils/utils.go
+  - profitloss.go
   - project.go
   - prompt.go
   - pullrequest.go
+  - purchaseorder.go
   - recording.go
   - refund.go
   - repo.go
   - report.go
   - repository.go
   - review.go
+  - salesorder.go
   - scim.go
   - scorecard.go
   - space.go
@@ -2292,6 +2423,7 @@ generatedFiles:
   - timeoff.go
   - timeshift.go
   - transaction.go
+  - trialbalance.go
   - uc.go
   - unified.go
   - unifiedto.go
@@ -6372,5 +6504,276 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createAccountingBill:
+    speakeasy-default-create-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingCreditmemo:
+    speakeasy-default-create-accounting-creditmemo:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingPurchaseorder:
+    speakeasy-default-create-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingSalesorder:
+    speakeasy-default-create-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingBalancesheet:
+    speakeasy-default-get-accounting-balancesheet:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingBill:
+    speakeasy-default-get-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingCreditmemo:
+    speakeasy-default-get-accounting-creditmemo:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingProfitloss:
+    speakeasy-default-get-accounting-profitloss:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingPurchaseorder:
+    speakeasy-default-get-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingSalesorder:
+    speakeasy-default-get-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingTrialbalance:
+    speakeasy-default-get-accounting-trialbalance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingBalancesheets:
+    speakeasy-default-list-accounting-balancesheets:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingBills:
+    speakeasy-default-list-accounting-bills:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingCreditmemoes:
+    speakeasy-default-list-accounting-creditmemoes:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingProfitlosses:
+    speakeasy-default-list-accounting-profitlosses:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingPurchaseorders:
+    speakeasy-default-list-accounting-purchaseorders:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingSalesorders:
+    speakeasy-default-list-accounting-salesorders:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingTrialbalances:
+    speakeasy-default-list-accounting-trialbalances:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingBill:
+    speakeasy-default-patch-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAccountingCreditmemo:
+    speakeasy-default-patch-accounting-creditmemo:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAccountingPurchaseorder:
+    speakeasy-default-patch-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAccountingSalesorder:
+    speakeasy-default-patch-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingBill:
+    speakeasy-default-remove-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingCreditmemo:
+    speakeasy-default-remove-accounting-creditmemo:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingPurchaseorder:
+    speakeasy-default-remove-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingSalesorder:
+    speakeasy-default-remove-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingBill:
+    speakeasy-default-update-accounting-bill:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingCreditmemo:
+    speakeasy-default-update-accounting-creditmemo:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingPurchaseorder:
+    speakeasy-default-update-accounting-purchaseorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingSalesorder:
+    speakeasy-default-update-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

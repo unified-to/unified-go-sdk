@@ -1,0 +1,12 @@
+# AccountingProfitlossCategory
+
+@deprecated
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `Amount`                                                                                                  | **float64*                                                                                                | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |
+| `Name`                                                                                                    | **string*                                                                                                 | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |
+| `SubItems`                                                                                                | [][shared.AccountingProfitlossSubcategory](../../../pkg/models/shared/accountingprofitlosssubcategory.md) | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |

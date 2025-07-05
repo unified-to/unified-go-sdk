@@ -2,27 +2,27 @@
 
 package shared
 
-type AccountingTrialBalanceSubItem struct {
+type AccountingTrialbalanceSubItem struct {
 	AccountID   *string  `json:"account_id,omitempty"`
 	AccountName *string  `json:"account_name,omitempty"`
 	Amount      *float64 `json:"amount,omitempty"`
 }
 
-func (o *AccountingTrialBalanceSubItem) GetAccountID() *string {
+func (o *AccountingTrialbalanceSubItem) GetAccountID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.AccountID
 }
 
-func (o *AccountingTrialBalanceSubItem) GetAccountName() *string {
+func (o *AccountingTrialbalanceSubItem) GetAccountName() *string {
 	if o == nil {
 		return nil
 	}
 	return o.AccountName
 }
 
-func (o *AccountingTrialBalanceSubItem) GetAmount() *float64 {
+func (o *AccountingTrialbalanceSubItem) GetAmount() *float64 {
 	if o == nil {
 		return nil
 	}

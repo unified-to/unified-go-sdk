@@ -57,14 +57,21 @@ type UnifiedTo struct {
 	SDKVersion        string
 	Accounting        *Accounting
 	Account           *Account
+	Balancesheet      *Balancesheet
+	Bill              *Bill
 	Contact           *Contact
+	Creditmemo        *Creditmemo
 	Invoice           *Invoice
 	Journal           *Journal
 	Order             *Order
 	Organization      *Organization
+	Profitloss        *Profitloss
+	Purchaseorder     *Purchaseorder
 	Report            *Report
+	Salesorder        *Salesorder
 	Taxrate           *Taxrate
 	Transaction       *Transaction
+	Trialbalance      *Trialbalance
 	Ats               *Ats
 	Activity          *Activity
 	Application       *Application
@@ -224,9 +231,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.27.5",
+		SDKVersion: "0.27.6",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.27.5 2.648.7 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.27.6 2.648.7 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -249,14 +256,21 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Accounting = newAccounting(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Account = newAccount(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Balancesheet = newBalancesheet(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Bill = newBill(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Contact = newContact(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Creditmemo = newCreditmemo(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Invoice = newInvoice(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Journal = newJournal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Order = newOrder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Organization = newOrganization(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Profitloss = newProfitloss(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Purchaseorder = newPurchaseorder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Report = newReport(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Salesorder = newSalesorder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Taxrate = newTaxrate(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Transaction = newTransaction(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Trialbalance = newTrialbalance(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ats = newAts(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Activity = newActivity(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Application = newApplication(sdk, sdk.sdkConfiguration, sdk.hooks)

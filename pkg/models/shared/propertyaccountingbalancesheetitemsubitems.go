@@ -2,5 +2,5 @@
 
 package shared
 
-type PropertyAccountingBalanceSheetItemSubItems struct {
+type PropertyAccountingBalancesheetItemSubItems struct {
 }

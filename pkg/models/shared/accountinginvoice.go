@@ -7,14 +7,14 @@ import (
 	"time"
 )
 
-type PaymentCollectionMethod string
+type AccountingInvoicePaymentCollectionMethod string
 
 const (
-	PaymentCollectionMethodSendInvoice         PaymentCollectionMethod = "send_invoice"
-	PaymentCollectionMethodChargeAutomatically PaymentCollectionMethod = "charge_automatically"
+	AccountingInvoicePaymentCollectionMethodSendInvoice         AccountingInvoicePaymentCollectionMethod = "send_invoice"
+	AccountingInvoicePaymentCollectionMethodChargeAutomatically AccountingInvoicePaymentCollectionMethod = "charge_automatically"
 )
 
-func (e PaymentCollectionMethod) ToPointer() *PaymentCollectionMethod {
+func (e AccountingInvoicePaymentCollectionMethod) ToPointer() *AccountingInvoicePaymentCollectionMethod {
 	return &e
 }
 
@@ -47,34 +47,34 @@ func (e AccountingInvoiceType) ToPointer() *AccountingInvoiceType {
 }
 
 type AccountingInvoice struct {
-	Attachments             []AccountingAttachment   `json:"attachments,omitempty"`
-	BalanceAmount           *float64                 `json:"balance_amount,omitempty"`
-	CancelledAt             *time.Time               `json:"cancelled_at,omitempty"`
-	ContactID               *string                  `json:"contact_id,omitempty"`
-	CreatedAt               *time.Time               `json:"created_at,omitempty"`
-	Currency                *string                  `json:"currency,omitempty"`
-	DiscountAmount          *float64                 `json:"discount_amount,omitempty"`
-	DueAt                   *time.Time               `json:"due_at,omitempty"`
-	ID                      *string                  `json:"id,omitempty"`
-	InvoiceAt               *time.Time               `json:"invoice_at,omitempty"`
-	InvoiceNumber           *string                  `json:"invoice_number,omitempty"`
-	Lineitems               []AccountingLineitem     `json:"lineitems,omitempty"`
-	Notes                   *string                  `json:"notes,omitempty"`
-	PaidAmount              *float64                 `json:"paid_amount,omitempty"`
-	PaidAt                  *time.Time               `json:"paid_at,omitempty"`
-	PaymentCollectionMethod *PaymentCollectionMethod `json:"payment_collection_method,omitempty"`
-	PostedAt                *time.Time               `json:"posted_at,omitempty"`
-	Raw                     map[string]any           `json:"raw,omitempty"`
-	RefundAmount            *float64                 `json:"refund_amount,omitempty"`
-	RefundReason            *string                  `json:"refund_reason,omitempty"`
-	RefundedAt              *time.Time               `json:"refunded_at,omitempty"`
-	Send                    *bool                    `json:"send,omitempty"`
-	Status                  *AccountingInvoiceStatus `json:"status,omitempty"`
-	TaxAmount               *float64                 `json:"tax_amount,omitempty"`
-	TotalAmount             *float64                 `json:"total_amount,omitempty"`
-	Type                    *AccountingInvoiceType   `json:"type,omitempty"`
-	UpdatedAt               *time.Time               `json:"updated_at,omitempty"`
-	URL                     *string                  `json:"url,omitempty"`
+	Attachments             []AccountingAttachment                    `json:"attachments,omitempty"`
+	BalanceAmount           *float64                                  `json:"balance_amount,omitempty"`
+	CancelledAt             *time.Time                                `json:"cancelled_at,omitempty"`
+	ContactID               *string                                   `json:"contact_id,omitempty"`
+	CreatedAt               *time.Time                                `json:"created_at,omitempty"`
+	Currency                *string                                   `json:"currency,omitempty"`
+	DiscountAmount          *float64                                  `json:"discount_amount,omitempty"`
+	DueAt                   *time.Time                                `json:"due_at,omitempty"`
+	ID                      *string                                   `json:"id,omitempty"`
+	InvoiceAt               *time.Time                                `json:"invoice_at,omitempty"`
+	InvoiceNumber           *string                                   `json:"invoice_number,omitempty"`
+	Lineitems               []AccountingLineitem                      `json:"lineitems,omitempty"`
+	Notes                   *string                                   `json:"notes,omitempty"`
+	PaidAmount              *float64                                  `json:"paid_amount,omitempty"`
+	PaidAt                  *time.Time                                `json:"paid_at,omitempty"`
+	PaymentCollectionMethod *AccountingInvoicePaymentCollectionMethod `json:"payment_collection_method,omitempty"`
+	PostedAt                *time.Time                                `json:"posted_at,omitempty"`
+	Raw                     map[string]any                            `json:"raw,omitempty"`
+	RefundAmount            *float64                                  `json:"refund_amount,omitempty"`
+	RefundReason            *string                                   `json:"refund_reason,omitempty"`
+	RefundedAt              *time.Time                                `json:"refunded_at,omitempty"`
+	Send                    *bool                                     `json:"send,omitempty"`
+	Status                  *AccountingInvoiceStatus                  `json:"status,omitempty"`
+	TaxAmount               *float64                                  `json:"tax_amount,omitempty"`
+	TotalAmount             *float64                                  `json:"total_amount,omitempty"`
+	Type                    *AccountingInvoiceType                    `json:"type,omitempty"`
+	UpdatedAt               *time.Time                                `json:"updated_at,omitempty"`
+	URL                     *string                                   `json:"url,omitempty"`
 }
 
 func (a AccountingInvoice) MarshalJSON() ([]byte, error) {
@@ -193,7 +193,7 @@ func (o *AccountingInvoice) GetPaidAt() *time.Time {
 	return o.PaidAt
 }
 
-func (o *AccountingInvoice) GetPaymentCollectionMethod() *PaymentCollectionMethod {
+func (o *AccountingInvoice) GetPaymentCollectionMethod() *AccountingInvoicePaymentCollectionMethod {
 	if o == nil {
 		return nil
 	}

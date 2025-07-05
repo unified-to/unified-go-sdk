@@ -2,32 +2,56 @@
 
 package shared
 
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
+)
+
 type PropertyAccountingReportProfitAndLoss struct {
 	// @deprecated
-	CostOfGoodsSold            []AccountingProfitAndLossCategory `json:"cost_of_goods_sold,omitempty"`
-	CostOfGoodsSoldSections    []AccountingProfitAndLossSection  `json:"cost_of_goods_sold_sections,omitempty"`
-	CostOfGoodsSoldTotalAmount *float64                          `json:"cost_of_goods_sold_total_amount,omitempty"`
+	CostOfGoodsSold            []AccountingProfitlossCategory `json:"cost_of_goods_sold,omitempty"`
+	CostOfGoodsSoldSections    []AccountingProfitlossSection  `json:"cost_of_goods_sold_sections,omitempty"`
+	CostOfGoodsSoldTotalAmount *float64                       `json:"cost_of_goods_sold_total_amount,omitempty"`
+	CreatedAt                  *time.Time                     `json:"created_at,omitempty"`
+	Currency                   *string                        `json:"currency,omitempty"`
+	EndAt                      *time.Time                     `json:"end_at,omitempty"`
 	// @deprecated
-	Expenses            []AccountingProfitAndLossCategory `json:"expenses,omitempty"`
-	ExpensesSections    []AccountingProfitAndLossSection  `json:"expenses_sections,omitempty"`
-	ExpensesTotalAmount *float64                          `json:"expenses_total_amount,omitempty"`
-	GrossProfitAmount   *float64                          `json:"gross_profit_amount,omitempty"`
+	Expenses            []AccountingProfitlossCategory `json:"expenses,omitempty"`
+	ExpensesSections    []AccountingProfitlossSection  `json:"expenses_sections,omitempty"`
+	ExpensesTotalAmount *float64                       `json:"expenses_total_amount,omitempty"`
+	GrossProfitAmount   *float64                       `json:"gross_profit_amount,omitempty"`
+	ID                  *string                        `json:"id,omitempty"`
 	// @deprecated
-	Income            []AccountingProfitAndLossCategory `json:"income,omitempty"`
-	IncomeSections    []AccountingProfitAndLossSection  `json:"income_sections,omitempty"`
-	IncomeTotalAmount *float64                          `json:"income_total_amount,omitempty"`
-	NetIncomeAmount   *float64                          `json:"net_income_amount,omitempty"`
-	NetProfitAmount   *float64                          `json:"net_profit_amount,omitempty"`
+	Income            []AccountingProfitlossCategory `json:"income,omitempty"`
+	IncomeSections    []AccountingProfitlossSection  `json:"income_sections,omitempty"`
+	IncomeTotalAmount *float64                       `json:"income_total_amount,omitempty"`
+	Name              *string                        `json:"name,omitempty"`
+	NetIncomeAmount   *float64                       `json:"net_income_amount,omitempty"`
+	NetProfitAmount   *float64                       `json:"net_profit_amount,omitempty"`
+	Raw               map[string]any                 `json:"raw,omitempty"`
+	StartAt           *time.Time                     `json:"start_at,omitempty"`
+	UpdatedAt         *time.Time                     `json:"updated_at,omitempty"`
 }
 
-func (o *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSold() []AccountingProfitAndLossCategory {
+func (p PropertyAccountingReportProfitAndLoss) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(p, "", false)
+}
+
+func (p *PropertyAccountingReportProfitAndLoss) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSold() []AccountingProfitlossCategory {
 	if o == nil {
 		return nil
 	}
 	return o.CostOfGoodsSold
 }
 
-func (o *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSoldSections() []AccountingProfitAndLossSection {
+func (o *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSoldSections() []AccountingProfitlossSection {
 	if o == nil {
 		return nil
 	}
@@ -41,14 +65,35 @@ func (o *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSoldTotalAmount() 
 	return o.CostOfGoodsSoldTotalAmount
 }
 
-func (o *PropertyAccountingReportProfitAndLoss) GetExpenses() []AccountingProfitAndLossCategory {
+func (o *PropertyAccountingReportProfitAndLoss) GetCreatedAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.CreatedAt
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetCurrency() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Currency
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetEndAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.EndAt
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetExpenses() []AccountingProfitlossCategory {
 	if o == nil {
 		return nil
 	}
 	return o.Expenses
 }
 
-func (o *PropertyAccountingReportProfitAndLoss) GetExpensesSections() []AccountingProfitAndLossSection {
+func (o *PropertyAccountingReportProfitAndLoss) GetExpensesSections() []AccountingProfitlossSection {
 	if o == nil {
 		return nil
 	}
@@ -69,14 +114,21 @@ func (o *PropertyAccountingReportProfitAndLoss) GetGrossProfitAmount() *float64 
 	return o.GrossProfitAmount
 }
 
-func (o *PropertyAccountingReportProfitAndLoss) GetIncome() []AccountingProfitAndLossCategory {
+func (o *PropertyAccountingReportProfitAndLoss) GetID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ID
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetIncome() []AccountingProfitlossCategory {
 	if o == nil {
 		return nil
 	}
 	return o.Income
 }
 
-func (o *PropertyAccountingReportProfitAndLoss) GetIncomeSections() []AccountingProfitAndLossSection {
+func (o *PropertyAccountingReportProfitAndLoss) GetIncomeSections() []AccountingProfitlossSection {
 	if o == nil {
 		return nil
 	}
@@ -88,6 +140,13 @@ func (o *PropertyAccountingReportProfitAndLoss) GetIncomeTotalAmount() *float64 
 		return nil
 	}
 	return o.IncomeTotalAmount
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Name
 }
 
 func (o *PropertyAccountingReportProfitAndLoss) GetNetIncomeAmount() *float64 {
@@ -102,4 +161,25 @@ func (o *PropertyAccountingReportProfitAndLoss) GetNetProfitAmount() *float64 {
 		return nil
 	}
 	return o.NetProfitAmount
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetRaw() map[string]any {
+	if o == nil {
+		return nil
+	}
+	return o.Raw
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetStartAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.StartAt
+}
+
+func (o *PropertyAccountingReportProfitAndLoss) GetUpdatedAt() *time.Time {
+	if o == nil {
+		return nil
+	}
+	return o.UpdatedAt
 }
