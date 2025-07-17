@@ -12,7 +12,6 @@ const (
 	IssueStatusOnHold     IssueStatus = "ON_HOLD"
 	IssueStatusValidating IssueStatus = "VALIDATING"
 	IssueStatusRejected   IssueStatus = "REJECTED"
-	IssueStatusUpNext     IssueStatus = "UP_NEXT"
 )
 
 func (e IssueStatus) ToPointer() *IssueStatus {

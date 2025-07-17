@@ -29,6 +29,7 @@ type TaskTask struct {
 	DueAt           *time.Time      `json:"due_at,omitempty"`
 	FollowerUserIds []string        `json:"follower_user_ids,omitempty"`
 	GroupIds        []string        `json:"group_ids,omitempty"`
+	HasChildren     *bool           `json:"has_children,omitempty"`
 	ID              *string         `json:"id,omitempty"`
 	Metadata        []TaskMetadata  `json:"metadata,omitempty"`
 	Name            *string         `json:"name,omitempty"`
@@ -108,6 +109,13 @@ func (o *TaskTask) GetGroupIds() []string {
 		return nil
 	}
 	return o.GroupIds
+}
+
+func (o *TaskTask) GetHasChildren() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.HasChildren
 }
 
 func (o *TaskTask) GetID() *string {
