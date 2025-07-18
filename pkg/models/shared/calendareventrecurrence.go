@@ -20,6 +20,22 @@ func (e CalendarEventRecurrenceFrequency) ToPointer() *CalendarEventRecurrenceFr
 	return &e
 }
 
+type WeekStart string
+
+const (
+	WeekStartSu WeekStart = "SU"
+	WeekStartMo WeekStart = "MO"
+	WeekStartTu WeekStart = "TU"
+	WeekStartWe WeekStart = "WE"
+	WeekStartTh WeekStart = "TH"
+	WeekStartFr WeekStart = "FR"
+	WeekStartSa WeekStart = "SA"
+)
+
+func (e WeekStart) ToPointer() *WeekStart {
+	return &e
+}
+
 type CalendarEventRecurrence struct {
 	Count *float64   `json:"count,omitempty"`
 	EndAt *time.Time `json:"end_at,omitempty"`
@@ -33,6 +49,12 @@ type CalendarEventRecurrence struct {
 	OnMonthDays []float64 `json:"on_month_days,omitempty"`
 	// months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1
 	OnMonths []float64 `json:"on_months,omitempty"`
+	// week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
+	OnWeeks []float64 `json:"on_weeks,omitempty"`
+	// days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
+	OnYearDays []float64  `json:"on_year_days,omitempty"`
+	Timezone   *string    `json:"timezone,omitempty"`
+	WeekStart  *WeekStart `json:"week_start,omitempty"`
 }
 
 func (c CalendarEventRecurrence) MarshalJSON() ([]byte, error) {
@@ -100,4 +122,32 @@ func (o *CalendarEventRecurrence) GetOnMonths() []float64 {
 		return nil
 	}
 	return o.OnMonths
+}
+
+func (o *CalendarEventRecurrence) GetOnWeeks() []float64 {
+	if o == nil {
+		return nil
+	}
+	return o.OnWeeks
+}
+
+func (o *CalendarEventRecurrence) GetOnYearDays() []float64 {
+	if o == nil {
+		return nil
+	}
+	return o.OnYearDays
+}
+
+func (o *CalendarEventRecurrence) GetTimezone() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Timezone
+}
+
+func (o *CalendarEventRecurrence) GetWeekStart() *WeekStart {
+	if o == nil {
+		return nil
+	}
+	return o.WeekStart
 }

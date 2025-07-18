@@ -32,7 +32,7 @@ func newConnection(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 }
 
 // CreateUnifiedConnection - Create connection
-// Used only to import existing customer credentials; use "Create connection indirectly" instead
+// Used only to import existing customer credentials; use "Authorize new connection" instead
 func (s *Connection) CreateUnifiedConnection(ctx context.Context, request shared.Connection, opts ...operations.Option) (*operations.CreateUnifiedConnectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

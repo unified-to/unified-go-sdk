@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: a8fe650f09e411054ff20cdef36cc669
+  docChecksum: 34e9b060cccb99df9d62ad47f96d358d
   docVersion: "1.0"
   speakeasyVersion: 1.582.0
   generationVersion: 2.657.1
-  releaseVersion: 0.27.8
-  configChecksum: 8c08c5468954b3bbb3e39afce4c5caf7
+  releaseVersion: 0.27.9
+  configChecksum: b84e1ecbc680581e204def29b01efbb4
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -2234,6 +2234,7 @@ generatedFiles:
   - docs/pkg/models/shared/value.md
   - docs/pkg/models/shared/webhook.md
   - docs/pkg/models/shared/webhooktype.md
+  - docs/pkg/models/shared/weekstart.md
   - docs/pkg/models/shared/weightunit.md
   - docs/sdks/account/README.md
   - docs/sdks/accounting/README.md

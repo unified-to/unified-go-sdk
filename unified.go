@@ -32,7 +32,7 @@ func newUnified(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateUnifiedConnection - Create connection
-// Used only to import existing customer credentials; use "Create connection indirectly" instead
+// Used only to import existing customer credentials; use "Authorize new connection" instead
 func (s *Unified) CreateUnifiedConnection(ctx context.Context, request shared.Connection, opts ...operations.Option) (*operations.CreateUnifiedConnectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -863,7 +863,7 @@ func (s *Unified) GetUnifiedConnection(ctx context.Context, request operations.G
 
 }
 
-// GetUnifiedIntegrationAuth - Create connection indirectly
+// GetUnifiedIntegrationAuth - Authorize new connection
 // Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 func (s *Unified) GetUnifiedIntegrationAuth(ctx context.Context, request operations.GetUnifiedIntegrationAuthRequest, opts ...operations.Option) (*operations.GetUnifiedIntegrationAuthResponse, error) {
 	o := operations.Options{}
