@@ -48,6 +48,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
 ```go
 package main
 
@@ -103,6 +104,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
 ```go
 package main
 
@@ -158,6 +160,7 @@ Create a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
 ```go
 package main
 
@@ -213,6 +216,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```go
 package main
 
@@ -268,6 +272,7 @@ Create a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
 ```go
 package main
 
@@ -323,6 +328,7 @@ Create a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
 ```go
 package main
 
@@ -378,6 +384,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -432,6 +439,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -486,6 +494,7 @@ Retrieve a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -540,6 +549,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -594,6 +604,7 @@ Retrieve a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmLead" method="get" path="/crm/{connection_id}/lead/{id}" -->
 ```go
 package main
 
@@ -648,6 +659,7 @@ Retrieve a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmPipeline" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
 ```go
 package main
 
@@ -702,6 +714,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
 ```go
 package main
 
@@ -755,6 +768,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
 ```go
 package main
 
@@ -808,6 +822,7 @@ List all deals
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
 ```go
 package main
 
@@ -861,6 +876,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```go
 package main
 
@@ -914,6 +930,7 @@ List all leads
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmLeads" method="get" path="/crm/{connection_id}/lead" -->
 ```go
 package main
 
@@ -967,6 +984,7 @@ List all pipelines
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmPipelines" method="get" path="/crm/{connection_id}/pipeline" -->
 ```go
 package main
 
@@ -1020,6 +1038,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -1076,6 +1095,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -1132,6 +1152,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -1188,6 +1209,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -1244,6 +1266,7 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
 ```go
 package main
 
@@ -1300,6 +1323,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
 ```go
 package main
 
@@ -1356,6 +1380,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -1410,6 +1435,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -1464,6 +1490,7 @@ Remove a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -1518,6 +1545,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -1572,6 +1600,7 @@ Remove a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmLead" method="delete" path="/crm/{connection_id}/lead/{id}" -->
 ```go
 package main
 
@@ -1626,6 +1655,7 @@ Remove a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmPipeline" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
 ```go
 package main
 
@@ -1680,6 +1710,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -1736,6 +1767,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -1792,6 +1824,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -1848,6 +1881,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -1904,6 +1938,7 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
 ```go
 package main
 
@@ -1960,6 +1995,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
 ```go
 package main
 

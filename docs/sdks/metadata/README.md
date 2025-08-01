@@ -18,6 +18,7 @@ Create a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
 ```go
 package main
 
@@ -76,6 +77,7 @@ Retrieve a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getMetadataMetadata" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
 ```go
 package main
 
@@ -130,6 +132,7 @@ List all metadatas
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listMetadataMetadatas" method="get" path="/metadata/{connection_id}/metadata" -->
 ```go
 package main
 
@@ -183,6 +186,7 @@ Update a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
 ```go
 package main
 
@@ -242,6 +246,7 @@ Remove a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeMetadataMetadata" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
 ```go
 package main
 
@@ -296,6 +301,7 @@ Update a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
 ```go
 package main
 

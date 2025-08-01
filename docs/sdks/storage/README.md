@@ -18,6 +18,7 @@ Create a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getStorageFile" method="get" path="/storage/{connection_id}/file/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all files
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listStorageFiles" method="get" path="/storage/{connection_id}/file" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeStorageFile" method="delete" path="/storage/{connection_id}/file/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" -->
 ```go
 package main
 

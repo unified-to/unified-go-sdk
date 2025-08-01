@@ -15,6 +15,7 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUnifiedIntegrationAuth" method="get" path="/unified/integration/auth/{workspace_id}/{integration_type}" -->
 ```go
 package main
 
@@ -69,6 +70,7 @@ No authentication required as this is to be used by front-end interface
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUnifiedIntegrationWorkspaces" method="get" path="/unified/integration/workspace/{workspace_id}" -->
 ```go
 package main
 
@@ -122,6 +124,7 @@ Returns all integrations
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUnifiedIntegrations" method="get" path="/unified/integration" -->
 ```go
 package main
 

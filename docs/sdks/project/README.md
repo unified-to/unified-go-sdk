@@ -18,6 +18,7 @@ Create a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all projects
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 

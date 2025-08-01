@@ -33,6 +33,7 @@ Create a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCalendarCalendar" method="post" path="/calendar/{connection_id}/calendar" -->
 ```go
 package main
 
@@ -90,6 +91,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```go
 package main
 
@@ -145,6 +147,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
 ```go
 package main
 
@@ -202,6 +205,7 @@ Retrieve a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCalendarCalendar" method="get" path="/calendar/{connection_id}/calendar/{id}" -->
 ```go
 package main
 
@@ -256,6 +260,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -310,6 +315,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -364,6 +370,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -418,6 +425,7 @@ List all busies
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```go
 package main
 
@@ -471,6 +479,7 @@ List all calendars
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCalendarCalendars" method="get" path="/calendar/{connection_id}/calendar" -->
 ```go
 package main
 
@@ -524,6 +533,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```go
 package main
 
@@ -577,6 +587,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
 ```go
 package main
 
@@ -630,6 +641,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
 ```go
 package main
 
@@ -683,6 +695,7 @@ Update a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCalendarCalendar" method="patch" path="/calendar/{connection_id}/calendar/{id}" -->
 ```go
 package main
 
@@ -741,6 +754,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -797,6 +811,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -855,6 +870,7 @@ Remove a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCalendarCalendar" method="delete" path="/calendar/{connection_id}/calendar/{id}" -->
 ```go
 package main
 
@@ -909,6 +925,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -963,6 +980,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -1017,6 +1035,7 @@ Update a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCalendarCalendar" method="put" path="/calendar/{connection_id}/calendar/{id}" -->
 ```go
 package main
 
@@ -1075,6 +1094,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -1131,6 +1151,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```go
 package main
 

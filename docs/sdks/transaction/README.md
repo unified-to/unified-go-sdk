@@ -18,6 +18,7 @@ Create a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingTransaction" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all transactions
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingTransactions" method="get" path="/accounting/{connection_id}/transaction" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingTransaction" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
 ```go
 package main
 

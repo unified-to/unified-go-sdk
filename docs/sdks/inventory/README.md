@@ -18,6 +18,7 @@ Create an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
 ```go
 package main
 
@@ -129,6 +131,7 @@ List all inventories
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
 ```go
 package main
 
@@ -182,6 +185,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
 ```go
 package main
 
@@ -240,6 +244,7 @@ Remove an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
 ```go
 package main
 
@@ -294,6 +299,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```go
 package main
 

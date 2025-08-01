@@ -31,6 +31,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
 ```go
 package main
 
@@ -88,6 +89,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
 ```go
 package main
 
@@ -143,6 +145,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
 ```go
 package main
 
@@ -198,6 +201,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsCompany" method="get" path="/ats/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -252,6 +256,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -306,6 +311,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisCompany" method="get" path="/hris/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -360,6 +366,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsCompanies" method="get" path="/ats/{connection_id}/company" -->
 ```go
 package main
 
@@ -413,6 +420,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
 ```go
 package main
 
@@ -466,6 +474,7 @@ Retrieve enrichment information for a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listEnrichCompanies" method="get" path="/enrich/{connection_id}/company" -->
 ```go
 package main
 
@@ -519,6 +528,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisCompanies" method="get" path="/hris/{connection_id}/company" -->
 ```go
 package main
 
@@ -572,6 +582,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -630,6 +641,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -686,6 +698,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -742,6 +755,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsCompany" method="delete" path="/ats/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -796,6 +810,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -850,6 +865,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisCompany" method="delete" path="/hris/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -904,6 +920,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -962,6 +979,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -1018,6 +1036,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
 ```go
 package main
 

@@ -13,6 +13,7 @@ List support issues
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUnifiedIssues" method="get" path="/unified/issue" -->
 ```go
 package main
 

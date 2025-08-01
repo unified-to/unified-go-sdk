@@ -14,6 +14,7 @@ Retrieve a refund
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```go
 package main
 
@@ -68,6 +69,7 @@ List all refunds
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
 ```go
 package main
 

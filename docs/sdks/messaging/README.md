@@ -20,6 +20,7 @@ Create a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve a channel
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```go
 package main
 
@@ -129,6 +131,7 @@ Retrieve a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getMessagingMessage" method="get" path="/messaging/{connection_id}/message/{id}" -->
 ```go
 package main
 
@@ -183,6 +186,7 @@ List all channels
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ List all messages
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listMessagingMessages" method="get" path="/messaging/{connection_id}/message" -->
 ```go
 package main
 
@@ -289,6 +294,7 @@ Update a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
 ```go
 package main
 
@@ -345,6 +351,7 @@ Remove a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeMessagingMessage" method="delete" path="/messaging/{connection_id}/message/{id}" -->
 ```go
 package main
 
@@ -399,6 +406,7 @@ Update a message
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
 ```go
 package main
 

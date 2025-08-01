@@ -36,6 +36,7 @@ Create a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
 ```go
 package main
 
@@ -94,6 +95,7 @@ Create a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
 ```go
 package main
 
@@ -151,6 +153,7 @@ Create an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
 ```go
 package main
 
@@ -206,6 +209,7 @@ Create a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
 ```go
 package main
 
@@ -261,6 +265,7 @@ Retrieve a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getLmsClass" method="get" path="/lms/{connection_id}/class/{id}" -->
 ```go
 package main
 
@@ -315,6 +320,7 @@ Retrieve a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getLmsCourse" method="get" path="/lms/{connection_id}/course/{id}" -->
 ```go
 package main
 
@@ -369,6 +375,7 @@ Retrieve an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```go
 package main
 
@@ -423,6 +430,7 @@ Retrieve a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getLmsStudent" method="get" path="/lms/{connection_id}/student/{id}" -->
 ```go
 package main
 
@@ -477,6 +485,7 @@ List all classes
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listLmsClasses" method="get" path="/lms/{connection_id}/class" -->
 ```go
 package main
 
@@ -530,6 +539,7 @@ List all courses
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listLmsCourses" method="get" path="/lms/{connection_id}/course" -->
 ```go
 package main
 
@@ -583,6 +593,7 @@ List all instructors
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
 ```go
 package main
 
@@ -636,6 +647,7 @@ List all students
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listLmsStudents" method="get" path="/lms/{connection_id}/student" -->
 ```go
 package main
 
@@ -689,6 +701,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
 ```go
 package main
 
@@ -748,6 +761,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
 ```go
 package main
 
@@ -806,6 +820,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
 ```go
 package main
 
@@ -862,6 +877,7 @@ Update a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
 ```go
 package main
 
@@ -918,6 +934,7 @@ Remove a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeLmsClass" method="delete" path="/lms/{connection_id}/class/{id}" -->
 ```go
 package main
 
@@ -972,6 +989,7 @@ Remove a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeLmsCourse" method="delete" path="/lms/{connection_id}/course/{id}" -->
 ```go
 package main
 
@@ -1026,6 +1044,7 @@ Remove an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
 ```go
 package main
 
@@ -1080,6 +1099,7 @@ Remove a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeLmsStudent" method="delete" path="/lms/{connection_id}/student/{id}" -->
 ```go
 package main
 
@@ -1134,6 +1154,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
 ```go
 package main
 
@@ -1193,6 +1214,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
 ```go
 package main
 
@@ -1251,6 +1273,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```go
 package main
 
@@ -1307,6 +1330,7 @@ Update a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
 ```go
 package main
 

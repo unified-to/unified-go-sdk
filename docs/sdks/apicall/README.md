@@ -14,6 +14,7 @@ Retrieve specific API Call by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUnifiedApicall" method="get" path="/unified/apicall/{id}" -->
 ```go
 package main
 
@@ -67,6 +68,7 @@ Returns API Calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUnifiedApicalls" method="get" path="/unified/apicall" -->
 ```go
 package main
 

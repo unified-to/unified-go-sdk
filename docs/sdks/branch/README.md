@@ -18,6 +18,7 @@ Create a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
 ```go
 package main
 
@@ -76,6 +77,7 @@ Retrieve a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```go
 package main
 
@@ -130,6 +132,7 @@ List all branches
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
 ```go
 package main
 
@@ -183,6 +186,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```go
 package main
 
@@ -242,6 +246,7 @@ Remove a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```go
 package main
 
@@ -296,6 +301,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```go
 package main
 

@@ -13,6 +13,7 @@ List all calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```go
 package main
 

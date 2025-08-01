@@ -13,6 +13,7 @@ List all models
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
 ```go
 package main
 

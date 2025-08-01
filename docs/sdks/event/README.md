@@ -24,6 +24,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```go
 package main
 
@@ -79,6 +80,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```go
 package main
 
@@ -134,6 +136,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -188,6 +191,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -242,6 +246,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```go
 package main
 
@@ -295,6 +300,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```go
 package main
 
@@ -348,6 +354,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -404,6 +411,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -460,6 +468,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -514,6 +523,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -568,6 +578,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```go
 package main
 
@@ -624,6 +635,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```go
 package main
 

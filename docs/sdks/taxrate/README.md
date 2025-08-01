@@ -18,6 +18,7 @@ Create a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all taxrates
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 

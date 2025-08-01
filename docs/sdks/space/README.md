@@ -18,6 +18,7 @@ Create a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```go
 package main
 
@@ -129,6 +131,7 @@ List all spaces
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```go
 package main
 
@@ -182,6 +185,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```go
 package main
 
@@ -240,6 +244,7 @@ Remove a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```go
 package main
 
@@ -294,6 +299,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```go
 package main
 

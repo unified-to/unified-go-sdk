@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
 ```go
 package main
 
@@ -87,6 +88,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
 ```go
 package main
 
@@ -145,6 +147,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```go
 package main
 
@@ -202,6 +205,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -256,6 +260,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -310,6 +315,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -364,6 +370,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
 ```go
 package main
 
@@ -417,6 +424,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
 ```go
 package main
 
@@ -470,6 +478,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```go
 package main
 
@@ -523,6 +532,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -581,6 +591,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -640,6 +651,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -698,6 +710,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -752,6 +765,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -806,6 +820,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -860,6 +875,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -918,6 +934,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -977,6 +994,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 

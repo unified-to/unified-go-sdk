@@ -18,6 +18,7 @@ Create an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingInvoice" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all invoices
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingInvoices" method="get" path="/accounting/{connection_id}/invoice" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingInvoice" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
 ```go
 package main
 

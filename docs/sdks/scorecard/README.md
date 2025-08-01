@@ -18,6 +18,7 @@ Create a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsScorecard" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all scorecards
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsScorecards" method="get" path="/ats/{connection_id}/scorecard" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsScorecard" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
 ```go
 package main
 

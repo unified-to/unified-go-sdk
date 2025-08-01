@@ -18,6 +18,7 @@ Create a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all salesorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 

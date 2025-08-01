@@ -14,6 +14,7 @@ Retrieve a payout
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getPaymentPayout" method="get" path="/payment/{connection_id}/payout/{id}" -->
 ```go
 package main
 
@@ -68,6 +69,7 @@ List all payouts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listPaymentPayouts" method="get" path="/payment/{connection_id}/payout" -->
 ```go
 package main
 

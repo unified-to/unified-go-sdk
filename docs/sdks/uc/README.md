@@ -31,6 +31,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```go
 package main
 
@@ -88,6 +89,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```go
 package main
 
@@ -143,6 +145,7 @@ Create a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
 ```go
 package main
 
@@ -198,6 +201,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -252,6 +256,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -306,6 +311,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -360,6 +366,7 @@ List all calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```go
 package main
 
@@ -413,6 +420,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```go
 package main
 
@@ -466,6 +474,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```go
 package main
 
@@ -519,6 +528,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
 ```go
 package main
 
@@ -572,6 +582,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -630,6 +641,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -686,6 +698,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -742,6 +755,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -796,6 +810,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -850,6 +865,7 @@ Remove a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -904,6 +920,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -962,6 +979,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -1018,6 +1036,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 

@@ -24,6 +24,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```go
 package main
 
@@ -81,6 +82,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```go
 package main
 
@@ -136,6 +138,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -190,6 +193,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -244,6 +248,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```go
 package main
 
@@ -297,6 +302,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```go
 package main
 
@@ -350,6 +356,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -408,6 +415,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -464,6 +472,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -518,6 +527,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -572,6 +582,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -630,6 +641,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```go
 package main
 

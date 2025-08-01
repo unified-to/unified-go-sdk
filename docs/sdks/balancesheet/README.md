@@ -14,6 +14,7 @@ Retrieve a balancesheet
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```go
 package main
 
@@ -68,6 +69,7 @@ List all balancesheets
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```go
 package main
 

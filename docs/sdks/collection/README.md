@@ -18,6 +18,7 @@ Create a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCommerceCollection" method="get" path="/commerce/{connection_id}/collection/{id}" -->
 ```go
 package main
 
@@ -129,6 +131,7 @@ List all collections
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCommerceCollections" method="get" path="/commerce/{connection_id}/collection" -->
 ```go
 package main
 
@@ -182,6 +185,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
 ```go
 package main
 
@@ -240,6 +244,7 @@ Remove a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCommerceCollection" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
 ```go
 package main
 
@@ -294,6 +299,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
 ```go
 package main
 

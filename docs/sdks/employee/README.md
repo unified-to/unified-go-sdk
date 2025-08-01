@@ -18,6 +18,7 @@ Create an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisEmployee" method="get" path="/hris/{connection_id}/employee/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all employees
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisEmployees" method="get" path="/hris/{connection_id}/employee" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisEmployee" method="delete" path="/hris/{connection_id}/employee/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
 ```go
 package main
 

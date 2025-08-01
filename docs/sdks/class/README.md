@@ -18,6 +18,7 @@ Create a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
 ```go
 package main
 
@@ -76,6 +77,7 @@ Retrieve a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getLmsClass" method="get" path="/lms/{connection_id}/class/{id}" -->
 ```go
 package main
 
@@ -130,6 +132,7 @@ List all classes
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listLmsClasses" method="get" path="/lms/{connection_id}/class" -->
 ```go
 package main
 
@@ -183,6 +186,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
 ```go
 package main
 
@@ -242,6 +246,7 @@ Remove a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeLmsClass" method="delete" path="/lms/{connection_id}/class/{id}" -->
 ```go
 package main
 
@@ -296,6 +301,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
 ```go
 package main
 

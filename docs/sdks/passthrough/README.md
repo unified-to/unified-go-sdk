@@ -20,6 +20,7 @@ Passthrough POST
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createPassthrough_json" method="post" path="/passthrough/{connection_id}/{path}" -->
 ```go
 package main
 
@@ -74,6 +75,7 @@ Passthrough POST
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createPassthrough_raw" method="post" path="/passthrough/{connection_id}/{path}" -->
 ```go
 package main
 
@@ -128,6 +130,7 @@ Passthrough GET
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listPassthroughs" method="get" path="/passthrough/{connection_id}/{path}" -->
 ```go
 package main
 
@@ -182,6 +185,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchPassthrough_json" method="patch" path="/passthrough/{connection_id}/{path}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchPassthrough_raw" method="patch" path="/passthrough/{connection_id}/{path}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Passthrough DELETE
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removePassthrough" method="delete" path="/passthrough/{connection_id}/{path}" -->
 ```go
 package main
 
@@ -344,6 +350,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updatePassthrough_json" method="put" path="/passthrough/{connection_id}/{path}" -->
 ```go
 package main
 
@@ -398,6 +405,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updatePassthrough_raw" method="put" path="/passthrough/{connection_id}/{path}" -->
 ```go
 package main
 

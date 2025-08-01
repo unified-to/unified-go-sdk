@@ -18,6 +18,7 @@ Create a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsDocument" method="get" path="/ats/{connection_id}/document/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all documents
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsDocuments" method="get" path="/ats/{connection_id}/document" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsDocument" method="delete" path="/ats/{connection_id}/document/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
 ```go
 package main
 

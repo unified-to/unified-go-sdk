@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 34e9b060cccb99df9d62ad47f96d358d
+  docChecksum: 29f7859e9080ffea0b7fd7e4996b62ce
   docVersion: "1.0"
-  speakeasyVersion: 1.582.0
-  generationVersion: 2.657.1
-  releaseVersion: 0.27.9
-  configChecksum: b84e1ecbc680581e204def29b01efbb4
+  speakeasyVersion: 1.595.0
+  generationVersion: 2.670.1
+  releaseVersion: 0.28.0
+  configChecksum: 9a8fdd1d6e6153b79159ae6daca8701c
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.8.1
+    core: 3.9.3
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -27,7 +27,7 @@ features:
     intellisenseMarkdownSupport: 0.1.0
     openEnums: 0.1.0
     responseFormat: 0.1.2
-    retries: 2.83.3
+    retries: 2.84.0
     sdkHooks: 0.2.0
     unions: 2.85.12
     uploadStreams: 0.1.0
@@ -35,6 +35,7 @@ generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
   - /pkg/models/operations/createaccountingbill.go
+  - /pkg/models/operations/createaccountingcategory.go
   - /pkg/models/operations/createaccountingcontact.go
   - /pkg/models/operations/createaccountingcreditmemo.go
   - /pkg/models/operations/createaccountinginvoice.go
@@ -111,6 +112,7 @@ generatedFiles:
   - /pkg/models/operations/getaccountingaccount.go
   - /pkg/models/operations/getaccountingbalancesheet.go
   - /pkg/models/operations/getaccountingbill.go
+  - /pkg/models/operations/getaccountingcategory.go
   - /pkg/models/operations/getaccountingcontact.go
   - /pkg/models/operations/getaccountingcreditmemo.go
   - /pkg/models/operations/getaccountinginvoice.go
@@ -197,6 +199,7 @@ generatedFiles:
   - /pkg/models/operations/listaccountingaccounts.go
   - /pkg/models/operations/listaccountingbalancesheets.go
   - /pkg/models/operations/listaccountingbills.go
+  - /pkg/models/operations/listaccountingcategories.go
   - /pkg/models/operations/listaccountingcontacts.go
   - /pkg/models/operations/listaccountingcreditmemoes.go
   - /pkg/models/operations/listaccountinginvoices.go
@@ -290,6 +293,7 @@ generatedFiles:
   - /pkg/models/operations/listunifiedwebhooks.go
   - /pkg/models/operations/patchaccountingaccount.go
   - /pkg/models/operations/patchaccountingbill.go
+  - /pkg/models/operations/patchaccountingcategory.go
   - /pkg/models/operations/patchaccountingcontact.go
   - /pkg/models/operations/patchaccountingcreditmemo.go
   - /pkg/models/operations/patchaccountinginvoice.go
@@ -365,6 +369,7 @@ generatedFiles:
   - /pkg/models/operations/patchunifiedwebhooktrigger.go
   - /pkg/models/operations/removeaccountingaccount.go
   - /pkg/models/operations/removeaccountingbill.go
+  - /pkg/models/operations/removeaccountingcategory.go
   - /pkg/models/operations/removeaccountingcontact.go
   - /pkg/models/operations/removeaccountingcreditmemo.go
   - /pkg/models/operations/removeaccountinginvoice.go
@@ -438,6 +443,7 @@ generatedFiles:
   - /pkg/models/operations/removeunifiedwebhook.go
   - /pkg/models/operations/updateaccountingaccount.go
   - /pkg/models/operations/updateaccountingbill.go
+  - /pkg/models/operations/updateaccountingcategory.go
   - /pkg/models/operations/updateaccountingcontact.go
   - /pkg/models/operations/updateaccountingcreditmemo.go
   - /pkg/models/operations/updateaccountinginvoice.go
@@ -517,6 +523,7 @@ generatedFiles:
   - /pkg/models/shared/accountingbalancesheet.go
   - /pkg/models/shared/accountingbalancesheetitem.go
   - /pkg/models/shared/accountingbill.go
+  - /pkg/models/shared/accountingcategory.go
   - /pkg/models/shared/accountingcontact.go
   - /pkg/models/shared/accountingcontactpaymentmethod.go
   - /pkg/models/shared/accountingcreditmemo.go
@@ -760,6 +767,7 @@ generatedFiles:
   - calendar.go
   - call.go
   - candidate.go
+  - category.go
   - channel.go
   - class.go
   - collection.go
@@ -780,6 +788,8 @@ generatedFiles:
   - docs/pkg/models/operations/createaccountingaccountresponse.md
   - docs/pkg/models/operations/createaccountingbillrequest.md
   - docs/pkg/models/operations/createaccountingbillresponse.md
+  - docs/pkg/models/operations/createaccountingcategoryrequest.md
+  - docs/pkg/models/operations/createaccountingcategoryresponse.md
   - docs/pkg/models/operations/createaccountingcontactrequest.md
   - docs/pkg/models/operations/createaccountingcontactresponse.md
   - docs/pkg/models/operations/createaccountingcreditmemorequest.md
@@ -931,6 +941,8 @@ generatedFiles:
   - docs/pkg/models/operations/getaccountingbalancesheetresponse.md
   - docs/pkg/models/operations/getaccountingbillrequest.md
   - docs/pkg/models/operations/getaccountingbillresponse.md
+  - docs/pkg/models/operations/getaccountingcategoryrequest.md
+  - docs/pkg/models/operations/getaccountingcategoryresponse.md
   - docs/pkg/models/operations/getaccountingcontactrequest.md
   - docs/pkg/models/operations/getaccountingcontactresponse.md
   - docs/pkg/models/operations/getaccountingcreditmemorequest.md
@@ -1103,6 +1115,8 @@ generatedFiles:
   - docs/pkg/models/operations/listaccountingbalancesheetsresponse.md
   - docs/pkg/models/operations/listaccountingbillsrequest.md
   - docs/pkg/models/operations/listaccountingbillsresponse.md
+  - docs/pkg/models/operations/listaccountingcategoriesrequest.md
+  - docs/pkg/models/operations/listaccountingcategoriesresponse.md
   - docs/pkg/models/operations/listaccountingcontactsrequest.md
   - docs/pkg/models/operations/listaccountingcontactsresponse.md
   - docs/pkg/models/operations/listaccountingcreditmemoesrequest.md
@@ -1291,6 +1305,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchaccountingaccountresponse.md
   - docs/pkg/models/operations/patchaccountingbillrequest.md
   - docs/pkg/models/operations/patchaccountingbillresponse.md
+  - docs/pkg/models/operations/patchaccountingcategoryrequest.md
+  - docs/pkg/models/operations/patchaccountingcategoryresponse.md
   - docs/pkg/models/operations/patchaccountingcontactrequest.md
   - docs/pkg/models/operations/patchaccountingcontactresponse.md
   - docs/pkg/models/operations/patchaccountingcreditmemorequest.md
@@ -1442,6 +1458,8 @@ generatedFiles:
   - docs/pkg/models/operations/removeaccountingaccountresponse.md
   - docs/pkg/models/operations/removeaccountingbillrequest.md
   - docs/pkg/models/operations/removeaccountingbillresponse.md
+  - docs/pkg/models/operations/removeaccountingcategoryrequest.md
+  - docs/pkg/models/operations/removeaccountingcategoryresponse.md
   - docs/pkg/models/operations/removeaccountingcontactrequest.md
   - docs/pkg/models/operations/removeaccountingcontactresponse.md
   - docs/pkg/models/operations/removeaccountingcreditmemorequest.md
@@ -1588,6 +1606,8 @@ generatedFiles:
   - docs/pkg/models/operations/updateaccountingaccountresponse.md
   - docs/pkg/models/operations/updateaccountingbillrequest.md
   - docs/pkg/models/operations/updateaccountingbillresponse.md
+  - docs/pkg/models/operations/updateaccountingcategoryrequest.md
+  - docs/pkg/models/operations/updateaccountingcategoryresponse.md
   - docs/pkg/models/operations/updateaccountingcontactrequest.md
   - docs/pkg/models/operations/updateaccountingcontactresponse.md
   - docs/pkg/models/operations/updateaccountingcreditmemorequest.md
@@ -1741,6 +1761,7 @@ generatedFiles:
   - docs/pkg/models/shared/accountingbalancesheetitem.md
   - docs/pkg/models/shared/accountingbill.md
   - docs/pkg/models/shared/accountingbillstatus.md
+  - docs/pkg/models/shared/accountingcategory.md
   - docs/pkg/models/shared/accountingcontact.md
   - docs/pkg/models/shared/accountingcontactpaymentmethod.md
   - docs/pkg/models/shared/accountingcontactpaymentmethodtype.md
@@ -2251,6 +2272,7 @@ generatedFiles:
   - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/category/README.md
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
@@ -6767,6 +6789,61 @@ examples:
           application/json: {}
   updateAccountingSalesorder:
     speakeasy-default-update-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingCategory:
+    speakeasy-default-create-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingCategory:
+    speakeasy-default-get-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingCategories:
+    speakeasy-default-list-accounting-categories:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingCategory:
+    speakeasy-default-patch-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingCategory:
+    speakeasy-default-remove-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingCategory:
+    speakeasy-default-update-accounting-category:
       parameters:
         path:
           connection_id: "<id>"

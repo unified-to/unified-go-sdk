@@ -18,6 +18,7 @@ Used only to import existing customer credentials; use "Authorize new connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createUnifiedConnection" method="post" path="/unified/connection" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUnifiedConnection" method="get" path="/unified/connection/{id}" -->
 ```go
 package main
 
@@ -128,6 +130,7 @@ List all connections
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUnifiedConnections" method="get" path="/unified/connection" -->
 ```go
 package main
 
@@ -179,6 +182,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchUnifiedConnection" method="patch" path="/unified/connection/{id}" -->
 ```go
 package main
 
@@ -242,6 +246,7 @@ Remove connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeUnifiedConnection" method="delete" path="/unified/connection/{id}" -->
 ```go
 package main
 
@@ -295,6 +300,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateUnifiedConnection" method="put" path="/unified/connection/{id}" -->
 ```go
 package main
 

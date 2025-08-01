@@ -18,6 +18,7 @@ Create a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```go
 package main
 
@@ -129,6 +131,7 @@ List all devices
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```go
 package main
 
@@ -182,6 +185,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```go
 package main
 
@@ -240,6 +244,7 @@ Remove a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```go
 package main
 
@@ -294,6 +299,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```go
 package main
 

@@ -18,6 +18,7 @@ Create an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCommerceItem" method="get" path="/commerce/{connection_id}/item/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all items
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCommerceItems" method="get" path="/commerce/{connection_id}/item" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCommerceItem" method="delete" path="/commerce/{connection_id}/item/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
 ```go
 package main
 

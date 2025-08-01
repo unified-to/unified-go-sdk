@@ -30,6 +30,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```go
 package main
 
@@ -85,6 +86,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
 ```go
 package main
 
@@ -140,6 +142,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```go
 package main
 
@@ -195,6 +198,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -249,6 +253,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -303,6 +308,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -357,6 +363,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
 ```go
 package main
 
@@ -410,6 +417,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
 ```go
 package main
 
@@ -463,6 +471,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```go
 package main
 
@@ -516,6 +525,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -572,6 +582,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -628,6 +639,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -684,6 +696,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -738,6 +751,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -792,6 +806,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -846,6 +861,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -902,6 +918,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -958,6 +975,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 

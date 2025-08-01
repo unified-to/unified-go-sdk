@@ -13,6 +13,7 @@ Retrieve enrichment information for a person
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listEnrichPeople" method="get" path="/enrich/{connection_id}/person" -->
 ```go
 package main
 

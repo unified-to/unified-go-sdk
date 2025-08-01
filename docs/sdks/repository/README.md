@@ -18,6 +18,7 @@ Create a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getRepoRepository" method="get" path="/repo/{connection_id}/repository/{id}" -->
 ```go
 package main
 
@@ -129,6 +131,7 @@ List all repositories
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listRepoRepositories" method="get" path="/repo/{connection_id}/repository" -->
 ```go
 package main
 
@@ -182,6 +185,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
 ```go
 package main
 
@@ -240,6 +244,7 @@ Remove a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeRepoRepository" method="delete" path="/repo/{connection_id}/repository/{id}" -->
 ```go
 package main
 
@@ -294,6 +299,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
 ```go
 package main
 

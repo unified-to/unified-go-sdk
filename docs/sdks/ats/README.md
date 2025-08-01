@@ -61,6 +61,7 @@ Create an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
 ```go
 package main
 
@@ -116,6 +117,7 @@ Create an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
 ```go
 package main
 
@@ -171,6 +173,7 @@ Create a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
 ```go
 package main
 
@@ -226,6 +229,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
 ```go
 package main
 
@@ -283,6 +287,7 @@ Create a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
 ```go
 package main
 
@@ -338,6 +343,7 @@ Create an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
 ```go
 package main
 
@@ -393,6 +399,7 @@ Create a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
 ```go
 package main
 
@@ -448,6 +455,7 @@ Create a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
 ```go
 package main
 
@@ -503,6 +511,7 @@ Retrieve an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```go
 package main
 
@@ -557,6 +566,7 @@ Retrieve an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsApplication" method="get" path="/ats/{connection_id}/application/{id}" -->
 ```go
 package main
 
@@ -611,6 +621,7 @@ Retrieve a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsCandidate" method="get" path="/ats/{connection_id}/candidate/{id}" -->
 ```go
 package main
 
@@ -665,6 +676,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsCompany" method="get" path="/ats/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -719,6 +731,7 @@ Retrieve a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsDocument" method="get" path="/ats/{connection_id}/document/{id}" -->
 ```go
 package main
 
@@ -773,6 +786,7 @@ Retrieve an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```go
 package main
 
@@ -827,6 +841,7 @@ Retrieve a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsJob" method="get" path="/ats/{connection_id}/job/{id}" -->
 ```go
 package main
 
@@ -881,6 +896,7 @@ Retrieve a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsScorecard" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
 ```go
 package main
 
@@ -935,6 +951,7 @@ List all activities
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
 ```go
 package main
 
@@ -988,6 +1005,7 @@ List all applications
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsApplications" method="get" path="/ats/{connection_id}/application" -->
 ```go
 package main
 
@@ -1041,6 +1059,7 @@ List all applicationstatuses
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```go
 package main
 
@@ -1094,6 +1113,7 @@ List all candidates
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsCandidates" method="get" path="/ats/{connection_id}/candidate" -->
 ```go
 package main
 
@@ -1147,6 +1167,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsCompanies" method="get" path="/ats/{connection_id}/company" -->
 ```go
 package main
 
@@ -1200,6 +1221,7 @@ List all documents
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsDocuments" method="get" path="/ats/{connection_id}/document" -->
 ```go
 package main
 
@@ -1253,6 +1275,7 @@ List all interviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
 ```go
 package main
 
@@ -1306,6 +1329,7 @@ List all jobs
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsJobs" method="get" path="/ats/{connection_id}/job" -->
 ```go
 package main
 
@@ -1359,6 +1383,7 @@ List all scorecards
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsScorecards" method="get" path="/ats/{connection_id}/scorecard" -->
 ```go
 package main
 
@@ -1412,6 +1437,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```go
 package main
 
@@ -1468,6 +1494,7 @@ Update an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
 ```go
 package main
 
@@ -1524,6 +1551,7 @@ Update a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
 ```go
 package main
 
@@ -1580,6 +1608,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -1638,6 +1667,7 @@ Update a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
 ```go
 package main
 
@@ -1694,6 +1724,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
 ```go
 package main
 
@@ -1750,6 +1781,7 @@ Update a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
 ```go
 package main
 
@@ -1806,6 +1838,7 @@ Update a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
 ```go
 package main
 
@@ -1862,6 +1895,7 @@ Remove an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
 ```go
 package main
 
@@ -1916,6 +1950,7 @@ Remove an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsApplication" method="delete" path="/ats/{connection_id}/application/{id}" -->
 ```go
 package main
 
@@ -1970,6 +2005,7 @@ Remove a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsCandidate" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
 ```go
 package main
 
@@ -2024,6 +2060,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsCompany" method="delete" path="/ats/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -2078,6 +2115,7 @@ Remove a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsDocument" method="delete" path="/ats/{connection_id}/document/{id}" -->
 ```go
 package main
 
@@ -2132,6 +2170,7 @@ Remove an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```go
 package main
 
@@ -2186,6 +2225,7 @@ Remove a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsJob" method="delete" path="/ats/{connection_id}/job/{id}" -->
 ```go
 package main
 
@@ -2240,6 +2280,7 @@ Remove a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsScorecard" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
 ```go
 package main
 
@@ -2294,6 +2335,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
 ```go
 package main
 
@@ -2350,6 +2392,7 @@ Update an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
 ```go
 package main
 
@@ -2406,6 +2449,7 @@ Update a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
 ```go
 package main
 
@@ -2462,6 +2506,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -2520,6 +2565,7 @@ Update a document
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
 ```go
 package main
 
@@ -2576,6 +2622,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```go
 package main
 
@@ -2632,6 +2679,7 @@ Update a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
 ```go
 package main
 
@@ -2688,6 +2736,7 @@ Update a scorecard
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
 ```go
 package main
 

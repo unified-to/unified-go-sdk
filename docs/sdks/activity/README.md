@@ -18,6 +18,7 @@ Create an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all activities
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update an activity
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
 ```go
 package main
 

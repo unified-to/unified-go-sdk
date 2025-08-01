@@ -18,6 +18,7 @@ Create a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all deals
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 

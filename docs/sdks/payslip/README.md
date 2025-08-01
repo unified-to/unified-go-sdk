@@ -14,6 +14,7 @@ Retrieve a payslip
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```go
 package main
 
@@ -68,6 +69,7 @@ List all payslips
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```go
 package main
 

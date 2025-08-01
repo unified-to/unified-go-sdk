@@ -18,6 +18,7 @@ Create a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getLmsStudent" method="get" path="/lms/{connection_id}/student/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all students
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listLmsStudents" method="get" path="/lms/{connection_id}/student" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeLmsStudent" method="delete" path="/lms/{connection_id}/student/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
 ```go
 package main
 

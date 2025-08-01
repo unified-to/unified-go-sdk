@@ -18,6 +18,7 @@ Create a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCrmPipeline" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all pipelines
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCrmPipelines" method="get" path="/crm/{connection_id}/pipeline" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCrmPipeline" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
 ```go
 package main
 

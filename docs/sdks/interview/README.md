@@ -18,6 +18,7 @@ Create an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all interviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update an interview
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```go
 package main
 

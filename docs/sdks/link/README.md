@@ -24,6 +24,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
 ```go
 package main
 
@@ -81,6 +82,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
 ```go
 package main
 
@@ -136,6 +138,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -190,6 +193,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getPaymentLink" method="get" path="/payment/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -244,6 +248,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
 ```go
 package main
 
@@ -297,6 +302,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listPaymentLinks" method="get" path="/payment/{connection_id}/link" -->
 ```go
 package main
 
@@ -350,6 +356,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -408,6 +415,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -464,6 +472,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -518,6 +527,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removePaymentLink" method="delete" path="/payment/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -572,6 +582,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -630,6 +641,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
 ```go
 package main
 

@@ -18,6 +18,7 @@ Create a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisTimeshift" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all timeshifts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisTimeshifts" method="get" path="/hris/{connection_id}/timeshift" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisTimeshift" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
 ```go
 package main
 

@@ -18,6 +18,7 @@ Create a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getPaymentSubscription" method="get" path="/payment/{connection_id}/subscription/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all subscriptions
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listPaymentSubscriptions" method="get" path="/payment/{connection_id}/subscription" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removePaymentSubscription" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
 ```go
 package main
 

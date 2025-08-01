@@ -18,6 +18,7 @@ Create a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsCandidate" method="get" path="/ats/{connection_id}/candidate/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all candidates
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsCandidates" method="get" path="/ats/{connection_id}/candidate" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsCandidate" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a candidate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
 ```go
 package main
 

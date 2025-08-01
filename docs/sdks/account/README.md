@@ -18,6 +18,7 @@ Create an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all accounts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```go
 package main
 

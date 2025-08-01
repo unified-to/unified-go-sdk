@@ -18,6 +18,7 @@ Create a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getLmsCourse" method="get" path="/lms/{connection_id}/course/{id}" -->
 ```go
 package main
 
@@ -129,6 +131,7 @@ List all courses
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listLmsCourses" method="get" path="/lms/{connection_id}/course" -->
 ```go
 package main
 
@@ -182,6 +185,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
 ```go
 package main
 
@@ -240,6 +244,7 @@ Remove a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeLmsCourse" method="delete" path="/lms/{connection_id}/course/{id}" -->
 ```go
 package main
 
@@ -294,6 +299,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
 ```go
 package main
 

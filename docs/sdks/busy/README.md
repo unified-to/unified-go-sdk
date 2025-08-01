@@ -13,6 +13,7 @@ List all busies
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```go
 package main
 

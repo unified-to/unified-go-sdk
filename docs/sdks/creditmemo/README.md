@@ -18,6 +18,7 @@ Create a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingCreditmemo" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all creditmemoes
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingCreditmemoes" method="get" path="/accounting/{connection_id}/creditmemo" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingCreditmemo" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```go
 package main
 

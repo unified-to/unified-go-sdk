@@ -20,6 +20,7 @@ Create an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -129,6 +131,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -183,6 +186,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
 ```go
 package main
 
@@ -289,6 +294,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -345,6 +351,7 @@ Remove an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -399,6 +406,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```go
 package main
 

@@ -18,6 +18,7 @@ Create an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingOrder" method="get" path="/accounting/{connection_id}/order/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all orders
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingOrders" method="get" path="/accounting/{connection_id}/order" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingOrder" method="delete" path="/accounting/{connection_id}/order/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
 ```go
 package main
 

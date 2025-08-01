@@ -6,6 +6,7 @@
 | Field                                      | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
 | `AccountID`                                | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
+| `CategoryIds`                              | []*string*                                 | :heavy_minus_sign:                         | N/A                                        |
 | `CreatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
 | `DiscountAmount`                           | **float64*                                 | :heavy_minus_sign:                         | N/A                                        |
 | `ID`                                       | **string*                                  | :heavy_minus_sign:                         | N/A                                        |

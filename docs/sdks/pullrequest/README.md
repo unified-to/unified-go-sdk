@@ -18,6 +18,7 @@ Create a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getRepoPullrequest" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all pullrequests
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listRepoPullrequests" method="get" path="/repo/{connection_id}/pullrequest" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeRepoPullrequest" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```go
 package main
 

@@ -18,6 +18,7 @@ Create an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all instructors
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```go
 package main
 

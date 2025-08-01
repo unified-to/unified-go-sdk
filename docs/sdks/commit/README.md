@@ -18,6 +18,7 @@ Create a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```go
 package main
 
@@ -76,6 +77,7 @@ Retrieve a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -130,6 +132,7 @@ List all commits
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```go
 package main
 
@@ -183,6 +186,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -242,6 +246,7 @@ Remove a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -296,6 +301,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 

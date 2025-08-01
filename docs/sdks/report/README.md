@@ -14,6 +14,7 @@ Retrieve a report
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```go
 package main
 
@@ -68,6 +69,7 @@ List all reports
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```go
 package main
 

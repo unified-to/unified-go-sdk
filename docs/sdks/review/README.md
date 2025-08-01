@@ -18,6 +18,7 @@ Create a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCommerceReview" method="get" path="/commerce/{connection_id}/review/{id}" -->
 ```go
 package main
 
@@ -129,6 +131,7 @@ List all reviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCommerceReviews" method="get" path="/commerce/{connection_id}/review" -->
 ```go
 package main
 
@@ -182,6 +185,7 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
 ```go
 package main
 
@@ -240,6 +244,7 @@ Remove a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCommerceReview" method="delete" path="/commerce/{connection_id}/review/{id}" -->
 ```go
 package main
 
@@ -294,6 +299,7 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
 ```go
 package main
 

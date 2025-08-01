@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
 ```go
 package main
 
@@ -88,6 +89,7 @@ Create a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
 ```go
 package main
 
@@ -143,6 +145,7 @@ Create a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
 ```go
 package main
 
@@ -198,6 +201,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -252,6 +256,7 @@ Retrieve a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -306,6 +311,7 @@ Retrieve a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getTaskTask" method="get" path="/task/{connection_id}/task/{id}" -->
 ```go
 package main
 
@@ -360,6 +366,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
 ```go
 package main
 
@@ -413,6 +420,7 @@ List all projects
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
 ```go
 package main
 
@@ -466,6 +474,7 @@ List all tasks
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listTaskTasks" method="get" path="/task/{connection_id}/task" -->
 ```go
 package main
 
@@ -519,6 +528,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -578,6 +588,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -634,6 +645,7 @@ Update a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
 ```go
 package main
 
@@ -690,6 +702,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -744,6 +757,7 @@ Remove a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -798,6 +812,7 @@ Remove a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeTaskTask" method="delete" path="/task/{connection_id}/task/{id}" -->
 ```go
 package main
 
@@ -852,6 +867,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -911,6 +927,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -967,6 +984,7 @@ Update a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
 ```go
 package main
 

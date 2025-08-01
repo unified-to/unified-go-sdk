@@ -13,6 +13,7 @@ List all applicationstatuses
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```go
 package main
 

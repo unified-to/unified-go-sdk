@@ -14,6 +14,7 @@ Retrieve a timeoff
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```go
 package main
 
@@ -68,6 +69,7 @@ List all timeoffs
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
 ```go
 package main
 

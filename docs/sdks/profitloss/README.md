@@ -14,6 +14,7 @@ Retrieve a profitloss
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```go
 package main
 
@@ -68,6 +69,7 @@ List all profitlosses
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```go
 package main
 

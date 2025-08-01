@@ -14,6 +14,7 @@ Create a prompt
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```go
 package main
 
@@ -69,6 +70,7 @@ List all models
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
 ```go
 package main
 

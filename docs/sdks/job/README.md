@@ -18,6 +18,7 @@ Create a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsJob" method="get" path="/ats/{connection_id}/job/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all jobs
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsJobs" method="get" path="/ats/{connection_id}/job" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsJob" method="delete" path="/ats/{connection_id}/job/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a job
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
 ```go
 package main
 

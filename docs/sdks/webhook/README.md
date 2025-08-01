@@ -20,6 +20,7 @@ The data payload received by your server is described at https://docs.unified.to
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createUnifiedWebhook" method="post" path="/unified/webhook" -->
 ```go
 package main
 
@@ -78,6 +79,7 @@ Retrieve webhook by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUnifiedWebhook" method="get" path="/unified/webhook/{id}" -->
 ```go
 package main
 
@@ -131,6 +133,7 @@ Returns all registered webhooks
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUnifiedWebhooks" method="get" path="/unified/webhook" -->
 ```go
 package main
 
@@ -182,6 +185,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchUnifiedWebhook" method="patch" path="/unified/webhook/{id}" -->
 ```go
 package main
 
@@ -241,6 +245,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchUnifiedWebhookTrigger" method="patch" path="/unified/webhook/{id}/trigger" -->
 ```go
 package main
 
@@ -294,6 +299,7 @@ Remove webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeUnifiedWebhook" method="delete" path="/unified/webhook/{id}" -->
 ```go
 package main
 
@@ -347,6 +353,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateUnifiedWebhook" method="put" path="/unified/webhook/{id}" -->
 ```go
 package main
 
@@ -406,6 +413,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateUnifiedWebhookTrigger" method="put" path="/unified/webhook/{id}/trigger" -->
 ```go
 package main
 

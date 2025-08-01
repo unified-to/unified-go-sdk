@@ -14,6 +14,7 @@ Retrieve a trialbalance
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```go
 package main
 
@@ -68,6 +69,7 @@ List all trialbalances
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```go
 package main
 

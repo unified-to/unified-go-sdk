@@ -18,6 +18,7 @@ Create a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getTicketingCustomer" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all customers
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listTicketingCustomers" method="get" path="/ticketing/{connection_id}/customer" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeTicketingCustomer" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
 ```go
 package main
 

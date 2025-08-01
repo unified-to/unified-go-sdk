@@ -20,6 +20,7 @@ Create a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
 ```go
 package main
 
@@ -75,6 +76,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -129,6 +131,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -183,6 +186,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
 ```go
 package main
 
@@ -289,6 +294,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -345,6 +351,7 @@ Remove a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -399,6 +406,7 @@ Update a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 

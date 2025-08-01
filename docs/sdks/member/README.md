@@ -18,6 +18,7 @@ Create a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getMartechMember" method="get" path="/martech/{connection_id}/member/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all members
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listMartechMembers" method="get" path="/martech/{connection_id}/member" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeMartechMember" method="delete" path="/martech/{connection_id}/member/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
 ```go
 package main
 

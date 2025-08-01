@@ -18,6 +18,7 @@ Create a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingPurchaseorder" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all purchaseorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingPurchaseorders" method="get" path="/accounting/{connection_id}/purchaseorder" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingPurchaseorder" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```go
 package main
 

@@ -18,6 +18,7 @@ Create an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAtsApplication" method="get" path="/ats/{connection_id}/application/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all applications
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAtsApplications" method="get" path="/ats/{connection_id}/application" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAtsApplication" method="delete" path="/ats/{connection_id}/application/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update an application
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
 ```go
 package main
 

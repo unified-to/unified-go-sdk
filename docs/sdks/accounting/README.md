@@ -7,6 +7,7 @@
 
 * [CreateAccountingAccount](#createaccountingaccount) - Create an account
 * [CreateAccountingBill](#createaccountingbill) - Create a bill
+* [CreateAccountingCategory](#createaccountingcategory) - Create a category
 * [CreateAccountingContact](#createaccountingcontact) - Create a contact
 * [CreateAccountingCreditmemo](#createaccountingcreditmemo) - Create a creditmemo
 * [CreateAccountingInvoice](#createaccountinginvoice) - Create an invoice
@@ -19,6 +20,7 @@
 * [GetAccountingAccount](#getaccountingaccount) - Retrieve an account
 * [GetAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
 * [GetAccountingBill](#getaccountingbill) - Retrieve a bill
+* [GetAccountingCategory](#getaccountingcategory) - Retrieve a category
 * [GetAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [GetAccountingCreditmemo](#getaccountingcreditmemo) - Retrieve a creditmemo
 * [GetAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
@@ -35,6 +37,7 @@
 * [ListAccountingAccounts](#listaccountingaccounts) - List all accounts
 * [ListAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
 * [ListAccountingBills](#listaccountingbills) - List all bills
+* [ListAccountingCategories](#listaccountingcategories) - List all categories
 * [ListAccountingContacts](#listaccountingcontacts) - List all contacts
 * [ListAccountingCreditmemoes](#listaccountingcreditmemoes) - List all creditmemoes
 * [ListAccountingInvoices](#listaccountinginvoices) - List all invoices
@@ -50,6 +53,7 @@
 * [ListAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
 * [PatchAccountingAccount](#patchaccountingaccount) - Update an account
 * [PatchAccountingBill](#patchaccountingbill) - Update a bill
+* [PatchAccountingCategory](#patchaccountingcategory) - Update a category
 * [PatchAccountingContact](#patchaccountingcontact) - Update a contact
 * [PatchAccountingCreditmemo](#patchaccountingcreditmemo) - Update a creditmemo
 * [PatchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
@@ -61,6 +65,7 @@
 * [PatchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
 * [RemoveAccountingAccount](#removeaccountingaccount) - Remove an account
 * [RemoveAccountingBill](#removeaccountingbill) - Remove a bill
+* [RemoveAccountingCategory](#removeaccountingcategory) - Remove a category
 * [RemoveAccountingContact](#removeaccountingcontact) - Remove a contact
 * [RemoveAccountingCreditmemo](#removeaccountingcreditmemo) - Remove a creditmemo
 * [RemoveAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
@@ -72,6 +77,7 @@
 * [RemoveAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
 * [UpdateAccountingAccount](#updateaccountingaccount) - Update an account
 * [UpdateAccountingBill](#updateaccountingbill) - Update a bill
+* [UpdateAccountingCategory](#updateaccountingcategory) - Update a category
 * [UpdateAccountingContact](#updateaccountingcontact) - Update a contact
 * [UpdateAccountingCreditmemo](#updateaccountingcreditmemo) - Update a creditmemo
 * [UpdateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
@@ -88,6 +94,7 @@ Create an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```go
 package main
 
@@ -143,6 +150,7 @@ Create a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
 ```go
 package main
 
@@ -192,12 +200,69 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## CreateAccountingCategory
+
+Create a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.CreateAccountingCategory(ctx, operations.CreateAccountingCategoryRequest{
+        AccountingCategory: shared.AccountingCategory{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.CreateAccountingCategoryRequest](../../pkg/models/operations/createaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.CreateAccountingCategoryResponse](../../pkg/models/operations/createaccountingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## CreateAccountingContact
 
 Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```go
 package main
 
@@ -253,6 +318,7 @@ Create a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
 ```go
 package main
 
@@ -308,6 +374,7 @@ Create an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
 ```go
 package main
 
@@ -363,6 +430,7 @@ Create a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```go
 package main
 
@@ -418,6 +486,7 @@ Create an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
 ```go
 package main
 
@@ -473,6 +542,7 @@ Create a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
 ```go
 package main
 
@@ -528,6 +598,7 @@ Create a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```go
 package main
 
@@ -583,6 +654,7 @@ Create a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```go
 package main
 
@@ -638,6 +710,7 @@ Create a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
 ```go
 package main
 
@@ -693,6 +766,7 @@ Retrieve an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```go
 package main
 
@@ -747,6 +821,7 @@ Retrieve a balancesheet
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```go
 package main
 
@@ -801,6 +876,7 @@ Retrieve a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingBill" method="get" path="/accounting/{connection_id}/bill/{id}" -->
 ```go
 package main
 
@@ -849,12 +925,68 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetAccountingCategory
+
+Retrieve a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAccountingCategory" method="get" path="/accounting/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.GetAccountingCategory(ctx, operations.GetAccountingCategoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetAccountingCategoryRequest](../../pkg/models/operations/getaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.GetAccountingCategoryResponse](../../pkg/models/operations/getaccountingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetAccountingContact
 
 Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -909,6 +1041,7 @@ Retrieve a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingCreditmemo" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```go
 package main
 
@@ -963,6 +1096,7 @@ Retrieve an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingInvoice" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
 ```go
 package main
 
@@ -1017,6 +1151,7 @@ Retrieve a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```go
 package main
 
@@ -1071,6 +1206,7 @@ Retrieve an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingOrder" method="get" path="/accounting/{connection_id}/order/{id}" -->
 ```go
 package main
 
@@ -1125,6 +1261,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -1179,6 +1316,7 @@ Retrieve a profitloss
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```go
 package main
 
@@ -1233,6 +1371,7 @@ Retrieve a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingPurchaseorder" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```go
 package main
 
@@ -1287,6 +1426,7 @@ Retrieve a report
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```go
 package main
 
@@ -1341,6 +1481,7 @@ Retrieve a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -1395,6 +1536,7 @@ Retrieve a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -1449,6 +1591,7 @@ Retrieve a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingTransaction" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
 ```go
 package main
 
@@ -1503,6 +1646,7 @@ Retrieve a trialbalance
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```go
 package main
 
@@ -1557,6 +1701,7 @@ List all accounts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
 ```go
 package main
 
@@ -1610,6 +1755,7 @@ List all balancesheets
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```go
 package main
 
@@ -1663,6 +1809,7 @@ List all bills
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingBills" method="get" path="/accounting/{connection_id}/bill" -->
 ```go
 package main
 
@@ -1710,12 +1857,67 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListAccountingCategories
+
+List all categories
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAccountingCategories" method="get" path="/accounting/{connection_id}/category" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.ListAccountingCategories(ctx, operations.ListAccountingCategoriesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingCategories != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.ListAccountingCategoriesRequest](../../pkg/models/operations/listaccountingcategoriesrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.ListAccountingCategoriesResponse](../../pkg/models/operations/listaccountingcategoriesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListAccountingContacts
 
 List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
 ```go
 package main
 
@@ -1769,6 +1971,7 @@ List all creditmemoes
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingCreditmemoes" method="get" path="/accounting/{connection_id}/creditmemo" -->
 ```go
 package main
 
@@ -1822,6 +2025,7 @@ List all invoices
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingInvoices" method="get" path="/accounting/{connection_id}/invoice" -->
 ```go
 package main
 
@@ -1875,6 +2079,7 @@ List all journals
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```go
 package main
 
@@ -1928,6 +2133,7 @@ List all orders
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingOrders" method="get" path="/accounting/{connection_id}/order" -->
 ```go
 package main
 
@@ -1981,6 +2187,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```go
 package main
 
@@ -2034,6 +2241,7 @@ List all profitlosses
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```go
 package main
 
@@ -2087,6 +2295,7 @@ List all purchaseorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingPurchaseorders" method="get" path="/accounting/{connection_id}/purchaseorder" -->
 ```go
 package main
 
@@ -2140,6 +2349,7 @@ List all reports
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```go
 package main
 
@@ -2193,6 +2403,7 @@ List all salesorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```go
 package main
 
@@ -2246,6 +2457,7 @@ List all taxrates
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```go
 package main
 
@@ -2299,6 +2511,7 @@ List all transactions
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingTransactions" method="get" path="/accounting/{connection_id}/transaction" -->
 ```go
 package main
 
@@ -2352,6 +2565,7 @@ List all trialbalances
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```go
 package main
 
@@ -2405,6 +2619,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```go
 package main
 
@@ -2461,6 +2676,7 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
 ```go
 package main
 
@@ -2511,12 +2727,70 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## PatchAccountingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.PatchAccountingCategory(ctx, operations.PatchAccountingCategoryRequest{
+        AccountingCategory: shared.AccountingCategory{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.PatchAccountingCategoryRequest](../../pkg/models/operations/patchaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.PatchAccountingCategoryResponse](../../pkg/models/operations/patchaccountingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchAccountingContact
 
 Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -2573,6 +2847,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```go
 package main
 
@@ -2629,6 +2904,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
 ```go
 package main
 
@@ -2685,6 +2961,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```go
 package main
 
@@ -2741,6 +3018,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
 ```go
 package main
 
@@ -2797,6 +3075,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```go
 package main
 
@@ -2853,6 +3132,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -2909,6 +3189,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -2965,6 +3246,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
 ```go
 package main
 
@@ -3021,6 +3303,7 @@ Remove an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```go
 package main
 
@@ -3075,6 +3358,7 @@ Remove a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingBill" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
 ```go
 package main
 
@@ -3123,12 +3407,68 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemoveAccountingCategory
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAccountingCategory" method="delete" path="/accounting/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.RemoveAccountingCategory(ctx, operations.RemoveAccountingCategoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.RemoveAccountingCategoryRequest](../../pkg/models/operations/removeaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.RemoveAccountingCategoryResponse](../../pkg/models/operations/removeaccountingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemoveAccountingContact
 
 Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -3183,6 +3523,7 @@ Remove a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingCreditmemo" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```go
 package main
 
@@ -3237,6 +3578,7 @@ Remove an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingInvoice" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
 ```go
 package main
 
@@ -3291,6 +3633,7 @@ Remove a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```go
 package main
 
@@ -3345,6 +3688,7 @@ Remove an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingOrder" method="delete" path="/accounting/{connection_id}/order/{id}" -->
 ```go
 package main
 
@@ -3399,6 +3743,7 @@ Remove a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingPurchaseorder" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```go
 package main
 
@@ -3453,6 +3798,7 @@ Remove a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -3507,6 +3853,7 @@ Remove a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -3561,6 +3908,7 @@ Remove a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingTransaction" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
 ```go
 package main
 
@@ -3615,6 +3963,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```go
 package main
 
@@ -3671,6 +4020,7 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
 ```go
 package main
 
@@ -3721,12 +4071,70 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## UpdateAccountingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.UpdateAccountingCategory(ctx, operations.UpdateAccountingCategoryRequest{
+        AccountingCategory: shared.AccountingCategory{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.UpdateAccountingCategoryRequest](../../pkg/models/operations/updateaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.UpdateAccountingCategoryResponse](../../pkg/models/operations/updateaccountingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## UpdateAccountingContact
 
 Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -3783,6 +4191,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```go
 package main
 
@@ -3839,6 +4248,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
 ```go
 package main
 
@@ -3895,6 +4305,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```go
 package main
 
@@ -3951,6 +4362,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
 ```go
 package main
 
@@ -4007,6 +4419,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```go
 package main
 
@@ -4063,6 +4476,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -4119,6 +4533,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -4175,6 +4590,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
 ```go
 package main
 

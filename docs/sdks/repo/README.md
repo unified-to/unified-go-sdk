@@ -42,6 +42,7 @@ Create a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
 ```go
 package main
 
@@ -100,6 +101,7 @@ Create a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```go
 package main
 
@@ -158,6 +160,7 @@ Create an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
 ```go
 package main
 
@@ -213,6 +216,7 @@ Create a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
 ```go
 package main
 
@@ -268,6 +272,7 @@ Create a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
 ```go
 package main
 
@@ -325,6 +330,7 @@ Retrieve a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```go
 package main
 
@@ -379,6 +385,7 @@ Retrieve a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -433,6 +440,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -487,6 +495,7 @@ Retrieve a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getRepoPullrequest" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```go
 package main
 
@@ -541,6 +550,7 @@ Retrieve a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getRepoRepository" method="get" path="/repo/{connection_id}/repository/{id}" -->
 ```go
 package main
 
@@ -595,6 +605,7 @@ List all branches
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
 ```go
 package main
 
@@ -648,6 +659,7 @@ List all commits
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```go
 package main
 
@@ -701,6 +713,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
 ```go
 package main
 
@@ -754,6 +767,7 @@ List all pullrequests
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listRepoPullrequests" method="get" path="/repo/{connection_id}/pullrequest" -->
 ```go
 package main
 
@@ -807,6 +821,7 @@ List all repositories
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listRepoRepositories" method="get" path="/repo/{connection_id}/repository" -->
 ```go
 package main
 
@@ -860,6 +875,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```go
 package main
 
@@ -919,6 +935,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -978,6 +995,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -1034,6 +1052,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```go
 package main
 
@@ -1090,6 +1109,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
 ```go
 package main
 
@@ -1148,6 +1168,7 @@ Remove a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```go
 package main
 
@@ -1202,6 +1223,7 @@ Remove a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -1256,6 +1278,7 @@ Remove an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -1310,6 +1333,7 @@ Remove a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeRepoPullrequest" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```go
 package main
 
@@ -1364,6 +1388,7 @@ Remove a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeRepoRepository" method="delete" path="/repo/{connection_id}/repository/{id}" -->
 ```go
 package main
 
@@ -1418,6 +1443,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```go
 package main
 
@@ -1477,6 +1503,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -1536,6 +1563,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -1592,6 +1620,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```go
 package main
 
@@ -1648,6 +1677,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
 ```go
 package main
 

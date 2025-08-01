@@ -52,6 +52,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
 ```go
 package main
 
@@ -107,6 +108,7 @@ Create a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```go
 package main
 
@@ -164,6 +166,7 @@ Create an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
 ```go
 package main
 
@@ -219,6 +222,7 @@ Create a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```go
 package main
 
@@ -274,6 +278,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```go
 package main
 
@@ -329,6 +334,7 @@ Create a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
 ```go
 package main
 
@@ -384,6 +390,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisCompany" method="get" path="/hris/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -438,6 +445,7 @@ Retrieve a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```go
 package main
 
@@ -492,6 +500,7 @@ Retrieve an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisEmployee" method="get" path="/hris/{connection_id}/employee/{id}" -->
 ```go
 package main
 
@@ -546,6 +555,7 @@ Retrieve a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```go
 package main
 
@@ -600,6 +610,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -654,6 +665,7 @@ Retrieve a payslip
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```go
 package main
 
@@ -708,6 +720,7 @@ Retrieve a timeoff
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```go
 package main
 
@@ -762,6 +775,7 @@ Retrieve a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisTimeshift" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
 ```go
 package main
 
@@ -816,6 +830,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisCompanies" method="get" path="/hris/{connection_id}/company" -->
 ```go
 package main
 
@@ -869,6 +884,7 @@ List all devices
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```go
 package main
 
@@ -922,6 +938,7 @@ List all employees
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisEmployees" method="get" path="/hris/{connection_id}/employee" -->
 ```go
 package main
 
@@ -975,6 +992,7 @@ List all groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```go
 package main
 
@@ -1028,6 +1046,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```go
 package main
 
@@ -1081,6 +1100,7 @@ List all payslips
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```go
 package main
 
@@ -1134,6 +1154,7 @@ List all timeoffs
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
 ```go
 package main
 
@@ -1187,6 +1208,7 @@ List all timeshifts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisTimeshifts" method="get" path="/hris/{connection_id}/timeshift" -->
 ```go
 package main
 
@@ -1240,6 +1262,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -1296,6 +1319,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```go
 package main
 
@@ -1354,6 +1378,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
 ```go
 package main
 
@@ -1410,6 +1435,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```go
 package main
 
@@ -1466,6 +1492,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -1522,6 +1549,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
 ```go
 package main
 
@@ -1578,6 +1606,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisCompany" method="delete" path="/hris/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -1632,6 +1661,7 @@ Remove a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```go
 package main
 
@@ -1686,6 +1716,7 @@ Remove an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisEmployee" method="delete" path="/hris/{connection_id}/employee/{id}" -->
 ```go
 package main
 
@@ -1740,6 +1771,7 @@ Remove a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
 ```go
 package main
 
@@ -1794,6 +1826,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -1848,6 +1881,7 @@ Remove a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisTimeshift" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
 ```go
 package main
 
@@ -1902,6 +1936,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
 ```go
 package main
 
@@ -1958,6 +1993,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```go
 package main
 
@@ -2016,6 +2052,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
 ```go
 package main
 
@@ -2072,6 +2109,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```go
 package main
 
@@ -2128,6 +2166,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -2184,6 +2223,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
 ```go
 package main
 

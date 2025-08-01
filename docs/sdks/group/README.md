@@ -24,6 +24,7 @@ Create a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```go
 package main
 
@@ -79,6 +80,7 @@ Create group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createScimGroups" method="post" path="/scim/{connection_id}/groups" -->
 ```go
 package main
 
@@ -136,6 +138,7 @@ Retrieve a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```go
 package main
 
@@ -190,6 +193,7 @@ Get group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getScimGroups" method="get" path="/scim/{connection_id}/groups/{id}" -->
 ```go
 package main
 
@@ -244,6 +248,7 @@ List all groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```go
 package main
 
@@ -297,6 +302,7 @@ List groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listScimGroups" method="get" path="/scim/{connection_id}/groups" -->
 ```go
 package main
 
@@ -350,6 +356,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```go
 package main
 
@@ -406,6 +413,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchScimGroups" method="patch" path="/scim/{connection_id}/groups/{id}" -->
 ```go
 package main
 
@@ -464,6 +472,7 @@ Remove a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
 ```go
 package main
 
@@ -518,6 +527,7 @@ Delete group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeScimGroups" method="delete" path="/scim/{connection_id}/groups/{id}" -->
 ```go
 package main
 
@@ -572,6 +582,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```go
 package main
 
@@ -628,6 +639,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateScimGroups" method="put" path="/scim/{connection_id}/groups/{id}" -->
 ```go
 package main
 

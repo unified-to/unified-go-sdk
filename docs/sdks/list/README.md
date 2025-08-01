@@ -18,6 +18,7 @@ Create a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getMartechList" method="get" path="/martech/{connection_id}/list/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all lists
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listMartechLists" method="get" path="/martech/{connection_id}/list" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeMartechList" method="delete" path="/martech/{connection_id}/list/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
 ```go
 package main
 

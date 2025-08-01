@@ -13,6 +13,7 @@ Returns an authentication URL for the specified integration.  Once a successful 
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getUnifiedIntegrationLogin" method="get" path="/unified/integration/login/{workspace_id}/{integration_type}" -->
 ```go
 package main
 

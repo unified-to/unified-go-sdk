@@ -18,6 +18,7 @@ Create a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all journals
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```go
 package main
 

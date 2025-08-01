@@ -34,6 +34,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
 ```go
 package main
 
@@ -89,6 +90,7 @@ Create a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createPaymentPayment" method="post" path="/payment/{connection_id}/payment" -->
 ```go
 package main
 
@@ -144,6 +146,7 @@ Create a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
 ```go
 package main
 
@@ -199,6 +202,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getPaymentLink" method="get" path="/payment/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -253,6 +257,7 @@ Retrieve a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getPaymentPayment" method="get" path="/payment/{connection_id}/payment/{id}" -->
 ```go
 package main
 
@@ -307,6 +312,7 @@ Retrieve a payout
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getPaymentPayout" method="get" path="/payment/{connection_id}/payout/{id}" -->
 ```go
 package main
 
@@ -361,6 +367,7 @@ Retrieve a refund
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```go
 package main
 
@@ -415,6 +422,7 @@ Retrieve a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getPaymentSubscription" method="get" path="/payment/{connection_id}/subscription/{id}" -->
 ```go
 package main
 
@@ -469,6 +477,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listPaymentLinks" method="get" path="/payment/{connection_id}/link" -->
 ```go
 package main
 
@@ -522,6 +531,7 @@ List all payments
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listPaymentPayments" method="get" path="/payment/{connection_id}/payment" -->
 ```go
 package main
 
@@ -575,6 +585,7 @@ List all payouts
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listPaymentPayouts" method="get" path="/payment/{connection_id}/payout" -->
 ```go
 package main
 
@@ -628,6 +639,7 @@ List all refunds
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
 ```go
 package main
 
@@ -681,6 +693,7 @@ List all subscriptions
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listPaymentSubscriptions" method="get" path="/payment/{connection_id}/subscription" -->
 ```go
 package main
 
@@ -734,6 +747,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -790,6 +804,7 @@ Update a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchPaymentPayment" method="patch" path="/payment/{connection_id}/payment/{id}" -->
 ```go
 package main
 
@@ -846,6 +861,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
 ```go
 package main
 
@@ -902,6 +918,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removePaymentLink" method="delete" path="/payment/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -956,6 +973,7 @@ Remove a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removePaymentPayment" method="delete" path="/payment/{connection_id}/payment/{id}" -->
 ```go
 package main
 
@@ -1010,6 +1028,7 @@ Remove a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removePaymentSubscription" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
 ```go
 package main
 
@@ -1064,6 +1083,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
 ```go
 package main
 
@@ -1120,6 +1140,7 @@ Update a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updatePaymentPayment" method="put" path="/payment/{connection_id}/payment/{id}" -->
 ```go
 package main
 
@@ -1176,6 +1197,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
 ```go
 package main
 

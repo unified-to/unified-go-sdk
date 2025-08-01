@@ -90,6 +90,7 @@ func main() {
 
 * [CreateAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
 * [CreateAccountingBill](docs/sdks/accounting/README.md#createaccountingbill) - Create a bill
+* [CreateAccountingCategory](docs/sdks/accounting/README.md#createaccountingcategory) - Create a category
 * [CreateAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
 * [CreateAccountingCreditmemo](docs/sdks/accounting/README.md#createaccountingcreditmemo) - Create a creditmemo
 * [CreateAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
@@ -102,6 +103,7 @@ func main() {
 * [GetAccountingAccount](docs/sdks/accounting/README.md#getaccountingaccount) - Retrieve an account
 * [GetAccountingBalancesheet](docs/sdks/accounting/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
 * [GetAccountingBill](docs/sdks/accounting/README.md#getaccountingbill) - Retrieve a bill
+* [GetAccountingCategory](docs/sdks/accounting/README.md#getaccountingcategory) - Retrieve a category
 * [GetAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [GetAccountingCreditmemo](docs/sdks/accounting/README.md#getaccountingcreditmemo) - Retrieve a creditmemo
 * [GetAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
@@ -118,6 +120,7 @@ func main() {
 * [ListAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
 * [ListAccountingBalancesheets](docs/sdks/accounting/README.md#listaccountingbalancesheets) - List all balancesheets
 * [ListAccountingBills](docs/sdks/accounting/README.md#listaccountingbills) - List all bills
+* [ListAccountingCategories](docs/sdks/accounting/README.md#listaccountingcategories) - List all categories
 * [ListAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [ListAccountingCreditmemoes](docs/sdks/accounting/README.md#listaccountingcreditmemoes) - List all creditmemoes
 * [ListAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
@@ -133,6 +136,7 @@ func main() {
 * [ListAccountingTrialbalances](docs/sdks/accounting/README.md#listaccountingtrialbalances) - List all trialbalances
 * [PatchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
 * [PatchAccountingBill](docs/sdks/accounting/README.md#patchaccountingbill) - Update a bill
+* [PatchAccountingCategory](docs/sdks/accounting/README.md#patchaccountingcategory) - Update a category
 * [PatchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
 * [PatchAccountingCreditmemo](docs/sdks/accounting/README.md#patchaccountingcreditmemo) - Update a creditmemo
 * [PatchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
@@ -144,6 +148,7 @@ func main() {
 * [PatchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
 * [RemoveAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
 * [RemoveAccountingBill](docs/sdks/accounting/README.md#removeaccountingbill) - Remove a bill
+* [RemoveAccountingCategory](docs/sdks/accounting/README.md#removeaccountingcategory) - Remove a category
 * [RemoveAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
 * [RemoveAccountingCreditmemo](docs/sdks/accounting/README.md#removeaccountingcreditmemo) - Remove a creditmemo
 * [RemoveAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
@@ -155,6 +160,7 @@ func main() {
 * [RemoveAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
 * [UpdateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
 * [UpdateAccountingBill](docs/sdks/accounting/README.md#updateaccountingbill) - Update a bill
+* [UpdateAccountingCategory](docs/sdks/accounting/README.md#updateaccountingcategory) - Update a category
 * [UpdateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
 * [UpdateAccountingCreditmemo](docs/sdks/accounting/README.md#updateaccountingcreditmemo) - Update a creditmemo
 * [UpdateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
@@ -312,6 +318,15 @@ func main() {
 * [PatchAtsCandidate](docs/sdks/candidate/README.md#patchatscandidate) - Update a candidate
 * [RemoveAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [UpdateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
+
+### [Category](docs/sdks/category/README.md)
+
+* [CreateAccountingCategory](docs/sdks/category/README.md#createaccountingcategory) - Create a category
+* [GetAccountingCategory](docs/sdks/category/README.md#getaccountingcategory) - Retrieve a category
+* [ListAccountingCategories](docs/sdks/category/README.md#listaccountingcategories) - List all categories
+* [PatchAccountingCategory](docs/sdks/category/README.md#patchaccountingcategory) - Update a category
+* [RemoveAccountingCategory](docs/sdks/category/README.md#removeaccountingcategory) - Remove a category
+* [UpdateAccountingCategory](docs/sdks/category/README.md#updateaccountingcategory) - Update a category
 
 ### [Channel](docs/sdks/channel/README.md)
 
@@ -1472,12 +1487,13 @@ The built-in `net/http` client satisfies this interface and a default client bas
 import (
 	"net/http"
 	"time"
-	"github.com/myorg/your-go-sdk"
+
+	"github.com/unified-to/unified-go-sdk"
 )
 
 var (
 	httpClient = &http.Client{Timeout: 30 * time.Second}
-	sdkClient  = sdk.New(sdk.WithClient(httpClient))
+	sdkClient  = unifiedgosdk.New(unifiedgosdk.WithClient(httpClient))
 )
 ```
 

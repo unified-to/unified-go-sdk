@@ -18,6 +18,7 @@ Create a ticket
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createTicketingTicket" method="post" path="/ticketing/{connection_id}/ticket" -->
 ```go
 package main
 
@@ -73,6 +74,7 @@ Retrieve a ticket
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getTicketingTicket" method="get" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```go
 package main
 
@@ -127,6 +129,7 @@ List all tickets
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listTicketingTickets" method="get" path="/ticketing/{connection_id}/ticket" -->
 ```go
 package main
 
@@ -180,6 +183,7 @@ Update a ticket
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchTicketingTicket" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```go
 package main
 
@@ -236,6 +240,7 @@ Remove a ticket
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeTicketingTicket" method="delete" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```go
 package main
 
@@ -290,6 +295,7 @@ Update a ticket
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateTicketingTicket" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```go
 package main
 

@@ -24,6 +24,7 @@ Create group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createScimGroups" method="post" path="/scim/{connection_id}/groups" -->
 ```go
 package main
 
@@ -81,6 +82,7 @@ Create user
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createScimUsers" method="post" path="/scim/{connection_id}/users" -->
 ```go
 package main
 
@@ -136,6 +138,7 @@ Get group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getScimGroups" method="get" path="/scim/{connection_id}/groups/{id}" -->
 ```go
 package main
 
@@ -190,6 +193,7 @@ Get user
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getScimUsers" method="get" path="/scim/{connection_id}/users/{id}" -->
 ```go
 package main
 
@@ -244,6 +248,7 @@ List groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listScimGroups" method="get" path="/scim/{connection_id}/groups" -->
 ```go
 package main
 
@@ -297,6 +302,7 @@ List users
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listScimUsers" method="get" path="/scim/{connection_id}/users" -->
 ```go
 package main
 
@@ -350,6 +356,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchScimGroups" method="patch" path="/scim/{connection_id}/groups/{id}" -->
 ```go
 package main
 
@@ -408,6 +415,7 @@ Update user
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchScimUsers" method="patch" path="/scim/{connection_id}/users/{id}" -->
 ```go
 package main
 
@@ -464,6 +472,7 @@ Delete group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeScimGroups" method="delete" path="/scim/{connection_id}/groups/{id}" -->
 ```go
 package main
 
@@ -518,6 +527,7 @@ Delete user
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeScimUsers" method="delete" path="/scim/{connection_id}/users/{id}" -->
 ```go
 package main
 
@@ -572,6 +582,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateScimGroups" method="put" path="/scim/{connection_id}/groups/{id}" -->
 ```go
 package main
 
@@ -630,6 +641,7 @@ Update user
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateScimUsers" method="put" path="/scim/{connection_id}/users/{id}" -->
 ```go
 package main
 

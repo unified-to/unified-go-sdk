@@ -42,6 +42,7 @@ Create a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
 ```go
 package main
 
@@ -99,6 +100,7 @@ Create an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
 ```go
 package main
 
@@ -156,6 +158,7 @@ Create an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
 ```go
 package main
 
@@ -211,6 +214,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```go
 package main
 
@@ -268,6 +272,7 @@ Create a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
 ```go
 package main
 
@@ -325,6 +330,7 @@ Retrieve a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCommerceCollection" method="get" path="/commerce/{connection_id}/collection/{id}" -->
 ```go
 package main
 
@@ -379,6 +385,7 @@ Retrieve an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
 ```go
 package main
 
@@ -433,6 +440,7 @@ Retrieve an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCommerceItem" method="get" path="/commerce/{connection_id}/item/{id}" -->
 ```go
 package main
 
@@ -487,6 +495,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -541,6 +550,7 @@ Retrieve a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getCommerceReview" method="get" path="/commerce/{connection_id}/review/{id}" -->
 ```go
 package main
 
@@ -595,6 +605,7 @@ List all collections
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCommerceCollections" method="get" path="/commerce/{connection_id}/collection" -->
 ```go
 package main
 
@@ -648,6 +659,7 @@ List all inventories
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
 ```go
 package main
 
@@ -701,6 +713,7 @@ List all items
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCommerceItems" method="get" path="/commerce/{connection_id}/item" -->
 ```go
 package main
 
@@ -754,6 +767,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```go
 package main
 
@@ -807,6 +821,7 @@ List all reviews
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listCommerceReviews" method="get" path="/commerce/{connection_id}/review" -->
 ```go
 package main
 
@@ -860,6 +875,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
 ```go
 package main
 
@@ -918,6 +934,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
 ```go
 package main
 
@@ -976,6 +993,7 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
 ```go
 package main
 
@@ -1032,6 +1050,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -1090,6 +1109,7 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
 ```go
 package main
 
@@ -1148,6 +1168,7 @@ Remove a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCommerceCollection" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
 ```go
 package main
 
@@ -1202,6 +1223,7 @@ Remove an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
 ```go
 package main
 
@@ -1256,6 +1278,7 @@ Remove an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCommerceItem" method="delete" path="/commerce/{connection_id}/item/{id}" -->
 ```go
 package main
 
@@ -1310,6 +1333,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -1364,6 +1388,7 @@ Remove a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeCommerceReview" method="delete" path="/commerce/{connection_id}/review/{id}" -->
 ```go
 package main
 
@@ -1418,6 +1443,7 @@ Update a collection
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
 ```go
 package main
 
@@ -1476,6 +1502,7 @@ Update an inventory
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```go
 package main
 
@@ -1534,6 +1561,7 @@ Update an item
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
 ```go
 package main
 
@@ -1590,6 +1618,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
 ```go
 package main
 
@@ -1648,6 +1677,7 @@ Update a review
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
 ```go
 package main
 

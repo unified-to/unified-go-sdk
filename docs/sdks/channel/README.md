@@ -14,6 +14,7 @@ Retrieve a channel
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```go
 package main
 
@@ -68,6 +69,7 @@ List all channels
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
 ```go
 package main
 

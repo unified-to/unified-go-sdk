@@ -18,6 +18,7 @@ Create a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
 ```go
 package main
 
@@ -76,6 +77,7 @@ Retrieve a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```go
 package main
 
@@ -130,6 +132,7 @@ List all pages
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
 ```go
 package main
 
@@ -183,6 +186,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
 ```go
 package main
 
@@ -242,6 +246,7 @@ Remove a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
 ```go
 package main
 
@@ -296,6 +301,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```go
 package main
 
