@@ -8,20 +8,20 @@ import (
 )
 
 type AccountingProfitloss struct {
-	// @deprecated
+	// @deprecated – use cost_of_goods_sold_sections instead
 	CostOfGoodsSold            []AccountingProfitlossCategory `json:"cost_of_goods_sold,omitempty"`
 	CostOfGoodsSoldSections    []AccountingProfitlossSection  `json:"cost_of_goods_sold_sections,omitempty"`
 	CostOfGoodsSoldTotalAmount *float64                       `json:"cost_of_goods_sold_total_amount,omitempty"`
 	CreatedAt                  *time.Time                     `json:"created_at,omitempty"`
 	Currency                   *string                        `json:"currency,omitempty"`
 	EndAt                      *time.Time                     `json:"end_at,omitempty"`
-	// @deprecated
+	// @deprecated – use expenses_sections instead
 	Expenses            []AccountingProfitlossCategory `json:"expenses,omitempty"`
 	ExpensesSections    []AccountingProfitlossSection  `json:"expenses_sections,omitempty"`
 	ExpensesTotalAmount *float64                       `json:"expenses_total_amount,omitempty"`
 	GrossProfitAmount   *float64                       `json:"gross_profit_amount,omitempty"`
 	ID                  *string                        `json:"id,omitempty"`
-	// @deprecated
+	// @deprecated – use income_sections instead
 	Income            []AccountingProfitlossCategory `json:"income,omitempty"`
 	IncomeSections    []AccountingProfitlossSection  `json:"income_sections,omitempty"`
 	IncomeTotalAmount *float64                       `json:"income_total_amount,omitempty"`

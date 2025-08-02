@@ -37,6 +37,8 @@ const (
 	PropertyConnectionPermissionsAccountingProfitlossWrite    PropertyConnectionPermissions = "accounting_profitloss_write"
 	PropertyConnectionPermissionsAccountingBalancesheetRead   PropertyConnectionPermissions = "accounting_balancesheet_read"
 	PropertyConnectionPermissionsAccountingBalancesheetWrite  PropertyConnectionPermissions = "accounting_balancesheet_write"
+	PropertyConnectionPermissionsAccountingCategoryRead       PropertyConnectionPermissions = "accounting_category_read"
+	PropertyConnectionPermissionsAccountingCategoryWrite      PropertyConnectionPermissions = "accounting_category_write"
 	PropertyConnectionPermissionsPaymentPaymentRead           PropertyConnectionPermissions = "payment_payment_read"
 	PropertyConnectionPermissionsPaymentPaymentWrite          PropertyConnectionPermissions = "payment_payment_write"
 	PropertyConnectionPermissionsPaymentPayoutRead            PropertyConnectionPermissions = "payment_payout_read"

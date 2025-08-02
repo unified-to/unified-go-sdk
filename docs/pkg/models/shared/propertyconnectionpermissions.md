@@ -37,6 +37,8 @@
 | `PropertyConnectionPermissionsAccountingProfitlossWrite`    | accounting_profitloss_write                                 |
 | `PropertyConnectionPermissionsAccountingBalancesheetRead`   | accounting_balancesheet_read                                |
 | `PropertyConnectionPermissionsAccountingBalancesheetWrite`  | accounting_balancesheet_write                               |
+| `PropertyConnectionPermissionsAccountingCategoryRead`       | accounting_category_read                                    |
+| `PropertyConnectionPermissionsAccountingCategoryWrite`      | accounting_category_write                                   |
 | `PropertyConnectionPermissionsPaymentPaymentRead`           | payment_payment_read                                        |
 | `PropertyConnectionPermissionsPaymentPaymentWrite`          | payment_payment_write                                       |
 | `PropertyConnectionPermissionsPaymentPayoutRead`            | payment_payout_read                                         |

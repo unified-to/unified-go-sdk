@@ -52,6 +52,7 @@ const (
 	ObjectTypeAccountingBalancesheet  ObjectType = "accounting_balancesheet"
 	ObjectTypeAccountingProfitloss    ObjectType = "accounting_profitloss"
 	ObjectTypeAccountingTrialbalance  ObjectType = "accounting_trialbalance"
+	ObjectTypeAccountingCategory      ObjectType = "accounting_category"
 	ObjectTypePaymentPayment          ObjectType = "payment_payment"
 	ObjectTypePaymentLink             ObjectType = "payment_link"
 	ObjectTypePaymentPayout           ObjectType = "payment_payout"
