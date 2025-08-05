@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### TaskMetadata1
+### 
 
 ```go
-taskMetadataExtraData := shared.CreateTaskMetadataExtraDataTaskMetadata1(shared.TaskMetadata1{/* values here */})
+taskMetadataExtraData := shared.CreateTaskMetadataExtraDataMapOfAny(map[string]any{/* values here */})
 ```
 
-### TaskMetadata2
+### 
 
 ```go
-taskMetadataExtraData := shared.CreateTaskMetadataExtraDataTaskMetadata2(shared.TaskMetadata2{/* values here */})
+taskMetadataExtraData := shared.CreateTaskMetadataExtraDataStr(string{/* values here */})
 ```
 
-### TaskMetadata3
+### 
 
 ```go
-taskMetadataExtraData := shared.CreateTaskMetadataExtraDataTaskMetadata3(shared.TaskMetadata3{/* values here */})
+taskMetadataExtraData := shared.CreateTaskMetadataExtraDataNumber(float64{/* values here */})
 ```
 
-### TaskMetadata4
+### 
 
 ```go
-taskMetadataExtraData := shared.CreateTaskMetadataExtraDataTaskMetadata4(shared.TaskMetadata4{/* values here */})
+taskMetadataExtraData := shared.CreateTaskMetadataExtraDataBoolean(bool{/* values here */})
 ```
 
-### TaskMetadata5
+### 
 
 ```go
-taskMetadataExtraData := shared.CreateTaskMetadataExtraDataTaskMetadata5(shared.TaskMetadata5{/* values here */})
+taskMetadataExtraData := shared.CreateTaskMetadataExtraDataArrayOfTaskMetadata5([]shared.TaskMetadata5{/* values here */})
 ```
 

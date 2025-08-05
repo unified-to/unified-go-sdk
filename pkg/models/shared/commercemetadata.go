@@ -8,54 +8,90 @@ import (
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 )
 
-type CommerceMetadataSchemasExtraData52 struct {
+type CommerceMetadata1 struct {
 }
 
 type CommerceMetadata5Type string
 
 const (
-	CommerceMetadata5TypeArrayOfAny                         CommerceMetadata5Type = "arrayOfAny"
-	CommerceMetadata5TypeCommerceMetadataSchemasExtraData52 CommerceMetadata5Type = "CommerceMetadata_Schemas_extra_data_5_2"
+	CommerceMetadata5TypeCommerceMetadata1 CommerceMetadata5Type = "CommerceMetadata_1"
+	CommerceMetadata5TypeStr               CommerceMetadata5Type = "str"
+	CommerceMetadata5TypeNumber            CommerceMetadata5Type = "number"
+	CommerceMetadata5TypeBoolean           CommerceMetadata5Type = "boolean"
 )
 
 type CommerceMetadata5 struct {
-	ArrayOfAny                         []any                               `queryParam:"inline"`
-	CommerceMetadataSchemasExtraData52 *CommerceMetadataSchemasExtraData52 `queryParam:"inline"`
+	CommerceMetadata1 *CommerceMetadata1 `queryParam:"inline"`
+	Str               *string            `queryParam:"inline"`
+	Number            *float64           `queryParam:"inline"`
+	Boolean           *bool              `queryParam:"inline"`
 
 	Type CommerceMetadata5Type
 }
 
-func CreateCommerceMetadata5ArrayOfAny(arrayOfAny []any) CommerceMetadata5 {
-	typ := CommerceMetadata5TypeArrayOfAny
+func CreateCommerceMetadata5CommerceMetadata1(commerceMetadata1 CommerceMetadata1) CommerceMetadata5 {
+	typ := CommerceMetadata5TypeCommerceMetadata1
 
 	return CommerceMetadata5{
-		ArrayOfAny: arrayOfAny,
-		Type:       typ,
+		CommerceMetadata1: &commerceMetadata1,
+		Type:              typ,
 	}
 }
 
-func CreateCommerceMetadata5CommerceMetadataSchemasExtraData52(commerceMetadataSchemasExtraData52 CommerceMetadataSchemasExtraData52) CommerceMetadata5 {
-	typ := CommerceMetadata5TypeCommerceMetadataSchemasExtraData52
+func CreateCommerceMetadata5Str(str string) CommerceMetadata5 {
+	typ := CommerceMetadata5TypeStr
 
 	return CommerceMetadata5{
-		CommerceMetadataSchemasExtraData52: &commerceMetadataSchemasExtraData52,
-		Type:                               typ,
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateCommerceMetadata5Number(number float64) CommerceMetadata5 {
+	typ := CommerceMetadata5TypeNumber
+
+	return CommerceMetadata5{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateCommerceMetadata5Boolean(boolean bool) CommerceMetadata5 {
+	typ := CommerceMetadata5TypeBoolean
+
+	return CommerceMetadata5{
+		Boolean: &boolean,
+		Type:    typ,
 	}
 }
 
 func (u *CommerceMetadata5) UnmarshalJSON(data []byte) error {
 
-	var commerceMetadataSchemasExtraData52 CommerceMetadataSchemasExtraData52 = CommerceMetadataSchemasExtraData52{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemasExtraData52, "", true, true); err == nil {
-		u.CommerceMetadataSchemasExtraData52 = &commerceMetadataSchemasExtraData52
-		u.Type = CommerceMetadata5TypeCommerceMetadataSchemasExtraData52
+	var commerceMetadata1 CommerceMetadata1 = CommerceMetadata1{}
+	if err := utils.UnmarshalJSON(data, &commerceMetadata1, "", true, true); err == nil {
+		u.CommerceMetadata1 = &commerceMetadata1
+		u.Type = CommerceMetadata5TypeCommerceMetadata1
 		return nil
 	}
 
-	var arrayOfAny []any = []any{}
-	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
-		u.ArrayOfAny = arrayOfAny
-		u.Type = CommerceMetadata5TypeArrayOfAny
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = CommerceMetadata5TypeStr
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = CommerceMetadata5TypeNumber
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = CommerceMetadata5TypeBoolean
 		return nil
 	}
 
@@ -63,317 +99,124 @@ func (u *CommerceMetadata5) UnmarshalJSON(data []byte) error {
 }
 
 func (u CommerceMetadata5) MarshalJSON() ([]byte, error) {
-	if u.ArrayOfAny != nil {
-		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	if u.CommerceMetadata1 != nil {
+		return utils.MarshalJSON(u.CommerceMetadata1, "", true)
 	}
 
-	if u.CommerceMetadataSchemasExtraData52 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemasExtraData52, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type CommerceMetadata5: all fields are null")
 }
 
-type CommerceMetadataSchemasExtraData2 struct {
-}
-
-type CommerceMetadata4Type string
+type CommerceMetadataExtraDataType string
 
 const (
-	CommerceMetadata4TypeBoolean                           CommerceMetadata4Type = "boolean"
-	CommerceMetadata4TypeCommerceMetadataSchemasExtraData2 CommerceMetadata4Type = "CommerceMetadata_Schemas_extra_data_2"
+	CommerceMetadataExtraDataTypeMapOfAny                 CommerceMetadataExtraDataType = "mapOfAny"
+	CommerceMetadataExtraDataTypeStr                      CommerceMetadataExtraDataType = "str"
+	CommerceMetadataExtraDataTypeNumber                   CommerceMetadataExtraDataType = "number"
+	CommerceMetadataExtraDataTypeBoolean                  CommerceMetadataExtraDataType = "boolean"
+	CommerceMetadataExtraDataTypeArrayOfCommerceMetadata5 CommerceMetadataExtraDataType = "arrayOfCommerceMetadata5"
 )
 
-type CommerceMetadata4 struct {
-	Boolean                           *bool                              `queryParam:"inline"`
-	CommerceMetadataSchemasExtraData2 *CommerceMetadataSchemasExtraData2 `queryParam:"inline"`
+type CommerceMetadataExtraData struct {
+	MapOfAny                 map[string]any      `queryParam:"inline"`
+	Str                      *string             `queryParam:"inline"`
+	Number                   *float64            `queryParam:"inline"`
+	Boolean                  *bool               `queryParam:"inline"`
+	ArrayOfCommerceMetadata5 []CommerceMetadata5 `queryParam:"inline"`
 
-	Type CommerceMetadata4Type
+	Type CommerceMetadataExtraDataType
 }
 
-func CreateCommerceMetadata4Boolean(boolean bool) CommerceMetadata4 {
-	typ := CommerceMetadata4TypeBoolean
+func CreateCommerceMetadataExtraDataMapOfAny(mapOfAny map[string]any) CommerceMetadataExtraData {
+	typ := CommerceMetadataExtraDataTypeMapOfAny
 
-	return CommerceMetadata4{
-		Boolean: &boolean,
-		Type:    typ,
+	return CommerceMetadataExtraData{
+		MapOfAny: mapOfAny,
+		Type:     typ,
 	}
 }
 
-func CreateCommerceMetadata4CommerceMetadataSchemasExtraData2(commerceMetadataSchemasExtraData2 CommerceMetadataSchemasExtraData2) CommerceMetadata4 {
-	typ := CommerceMetadata4TypeCommerceMetadataSchemasExtraData2
+func CreateCommerceMetadataExtraDataStr(str string) CommerceMetadataExtraData {
+	typ := CommerceMetadataExtraDataTypeStr
 
-	return CommerceMetadata4{
-		CommerceMetadataSchemasExtraData2: &commerceMetadataSchemasExtraData2,
-		Type:                              typ,
-	}
-}
-
-func (u *CommerceMetadata4) UnmarshalJSON(data []byte) error {
-
-	var commerceMetadataSchemasExtraData2 CommerceMetadataSchemasExtraData2 = CommerceMetadataSchemasExtraData2{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemasExtraData2, "", true, true); err == nil {
-		u.CommerceMetadataSchemasExtraData2 = &commerceMetadataSchemasExtraData2
-		u.Type = CommerceMetadata4TypeCommerceMetadataSchemasExtraData2
-		return nil
-	}
-
-	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
-		u.Boolean = &boolean
-		u.Type = CommerceMetadata4TypeBoolean
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CommerceMetadata4", string(data))
-}
-
-func (u CommerceMetadata4) MarshalJSON() ([]byte, error) {
-	if u.Boolean != nil {
-		return utils.MarshalJSON(u.Boolean, "", true)
-	}
-
-	if u.CommerceMetadataSchemasExtraData2 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemasExtraData2, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CommerceMetadata4: all fields are null")
-}
-
-type CommerceMetadataSchemasExtraData32 struct {
-}
-
-type CommerceMetadata3Type string
-
-const (
-	CommerceMetadata3TypeNumber                             CommerceMetadata3Type = "number"
-	CommerceMetadata3TypeCommerceMetadataSchemasExtraData32 CommerceMetadata3Type = "CommerceMetadata_Schemas_extra_data_3_2"
-)
-
-type CommerceMetadata3 struct {
-	Number                             *float64                            `queryParam:"inline"`
-	CommerceMetadataSchemasExtraData32 *CommerceMetadataSchemasExtraData32 `queryParam:"inline"`
-
-	Type CommerceMetadata3Type
-}
-
-func CreateCommerceMetadata3Number(number float64) CommerceMetadata3 {
-	typ := CommerceMetadata3TypeNumber
-
-	return CommerceMetadata3{
-		Number: &number,
-		Type:   typ,
-	}
-}
-
-func CreateCommerceMetadata3CommerceMetadataSchemasExtraData32(commerceMetadataSchemasExtraData32 CommerceMetadataSchemasExtraData32) CommerceMetadata3 {
-	typ := CommerceMetadata3TypeCommerceMetadataSchemasExtraData32
-
-	return CommerceMetadata3{
-		CommerceMetadataSchemasExtraData32: &commerceMetadataSchemasExtraData32,
-		Type:                               typ,
-	}
-}
-
-func (u *CommerceMetadata3) UnmarshalJSON(data []byte) error {
-
-	var commerceMetadataSchemasExtraData32 CommerceMetadataSchemasExtraData32 = CommerceMetadataSchemasExtraData32{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemasExtraData32, "", true, true); err == nil {
-		u.CommerceMetadataSchemasExtraData32 = &commerceMetadataSchemasExtraData32
-		u.Type = CommerceMetadata3TypeCommerceMetadataSchemasExtraData32
-		return nil
-	}
-
-	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
-		u.Number = &number
-		u.Type = CommerceMetadata3TypeNumber
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CommerceMetadata3", string(data))
-}
-
-func (u CommerceMetadata3) MarshalJSON() ([]byte, error) {
-	if u.Number != nil {
-		return utils.MarshalJSON(u.Number, "", true)
-	}
-
-	if u.CommerceMetadataSchemasExtraData32 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemasExtraData32, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CommerceMetadata3: all fields are null")
-}
-
-type CommerceMetadataSchemasExtraData22 struct {
-}
-
-type CommerceMetadata2Type string
-
-const (
-	CommerceMetadata2TypeStr                                CommerceMetadata2Type = "str"
-	CommerceMetadata2TypeCommerceMetadataSchemasExtraData22 CommerceMetadata2Type = "CommerceMetadata_Schemas_extra_data_2_2"
-)
-
-type CommerceMetadata2 struct {
-	Str                                *string                             `queryParam:"inline"`
-	CommerceMetadataSchemasExtraData22 *CommerceMetadataSchemasExtraData22 `queryParam:"inline"`
-
-	Type CommerceMetadata2Type
-}
-
-func CreateCommerceMetadata2Str(str string) CommerceMetadata2 {
-	typ := CommerceMetadata2TypeStr
-
-	return CommerceMetadata2{
+	return CommerceMetadataExtraData{
 		Str:  &str,
 		Type: typ,
 	}
 }
 
-func CreateCommerceMetadata2CommerceMetadataSchemasExtraData22(commerceMetadataSchemasExtraData22 CommerceMetadataSchemasExtraData22) CommerceMetadata2 {
-	typ := CommerceMetadata2TypeCommerceMetadataSchemasExtraData22
+func CreateCommerceMetadataExtraDataNumber(number float64) CommerceMetadataExtraData {
+	typ := CommerceMetadataExtraDataTypeNumber
 
-	return CommerceMetadata2{
-		CommerceMetadataSchemasExtraData22: &commerceMetadataSchemasExtraData22,
-		Type:                               typ,
+	return CommerceMetadataExtraData{
+		Number: &number,
+		Type:   typ,
 	}
 }
 
-func (u *CommerceMetadata2) UnmarshalJSON(data []byte) error {
+func CreateCommerceMetadataExtraDataBoolean(boolean bool) CommerceMetadataExtraData {
+	typ := CommerceMetadataExtraDataTypeBoolean
 
-	var commerceMetadataSchemasExtraData22 CommerceMetadataSchemasExtraData22 = CommerceMetadataSchemasExtraData22{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemasExtraData22, "", true, true); err == nil {
-		u.CommerceMetadataSchemasExtraData22 = &commerceMetadataSchemasExtraData22
-		u.Type = CommerceMetadata2TypeCommerceMetadataSchemasExtraData22
+	return CommerceMetadataExtraData{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateCommerceMetadataExtraDataArrayOfCommerceMetadata5(arrayOfCommerceMetadata5 []CommerceMetadata5) CommerceMetadataExtraData {
+	typ := CommerceMetadataExtraDataTypeArrayOfCommerceMetadata5
+
+	return CommerceMetadataExtraData{
+		ArrayOfCommerceMetadata5: arrayOfCommerceMetadata5,
+		Type:                     typ,
+	}
+}
+
+func (u *CommerceMetadataExtraData) UnmarshalJSON(data []byte) error {
+
+	var mapOfAny map[string]any = map[string]any{}
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+		u.MapOfAny = mapOfAny
+		u.Type = CommerceMetadataExtraDataTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
 	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
 		u.Str = &str
-		u.Type = CommerceMetadata2TypeStr
+		u.Type = CommerceMetadataExtraDataTypeStr
 		return nil
 	}
 
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CommerceMetadata2", string(data))
-}
-
-func (u CommerceMetadata2) MarshalJSON() ([]byte, error) {
-	if u.Str != nil {
-		return utils.MarshalJSON(u.Str, "", true)
-	}
-
-	if u.CommerceMetadataSchemasExtraData22 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemasExtraData22, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CommerceMetadata2: all fields are null")
-}
-
-type CommerceMetadata1 struct {
-}
-
-type CommerceMetadataExtraDataType string
-
-const (
-	CommerceMetadataExtraDataTypeCommerceMetadata1 CommerceMetadataExtraDataType = "CommerceMetadata_1"
-	CommerceMetadataExtraDataTypeCommerceMetadata2 CommerceMetadataExtraDataType = "CommerceMetadata_2"
-	CommerceMetadataExtraDataTypeCommerceMetadata3 CommerceMetadataExtraDataType = "CommerceMetadata_3"
-	CommerceMetadataExtraDataTypeCommerceMetadata4 CommerceMetadataExtraDataType = "CommerceMetadata_4"
-	CommerceMetadataExtraDataTypeCommerceMetadata5 CommerceMetadataExtraDataType = "CommerceMetadata_5"
-)
-
-type CommerceMetadataExtraData struct {
-	CommerceMetadata1 *CommerceMetadata1 `queryParam:"inline"`
-	CommerceMetadata2 *CommerceMetadata2 `queryParam:"inline"`
-	CommerceMetadata3 *CommerceMetadata3 `queryParam:"inline"`
-	CommerceMetadata4 *CommerceMetadata4 `queryParam:"inline"`
-	CommerceMetadata5 *CommerceMetadata5 `queryParam:"inline"`
-
-	Type CommerceMetadataExtraDataType
-}
-
-func CreateCommerceMetadataExtraDataCommerceMetadata1(commerceMetadata1 CommerceMetadata1) CommerceMetadataExtraData {
-	typ := CommerceMetadataExtraDataTypeCommerceMetadata1
-
-	return CommerceMetadataExtraData{
-		CommerceMetadata1: &commerceMetadata1,
-		Type:              typ,
-	}
-}
-
-func CreateCommerceMetadataExtraDataCommerceMetadata2(commerceMetadata2 CommerceMetadata2) CommerceMetadataExtraData {
-	typ := CommerceMetadataExtraDataTypeCommerceMetadata2
-
-	return CommerceMetadataExtraData{
-		CommerceMetadata2: &commerceMetadata2,
-		Type:              typ,
-	}
-}
-
-func CreateCommerceMetadataExtraDataCommerceMetadata3(commerceMetadata3 CommerceMetadata3) CommerceMetadataExtraData {
-	typ := CommerceMetadataExtraDataTypeCommerceMetadata3
-
-	return CommerceMetadataExtraData{
-		CommerceMetadata3: &commerceMetadata3,
-		Type:              typ,
-	}
-}
-
-func CreateCommerceMetadataExtraDataCommerceMetadata4(commerceMetadata4 CommerceMetadata4) CommerceMetadataExtraData {
-	typ := CommerceMetadataExtraDataTypeCommerceMetadata4
-
-	return CommerceMetadataExtraData{
-		CommerceMetadata4: &commerceMetadata4,
-		Type:              typ,
-	}
-}
-
-func CreateCommerceMetadataExtraDataCommerceMetadata5(commerceMetadata5 CommerceMetadata5) CommerceMetadataExtraData {
-	typ := CommerceMetadataExtraDataTypeCommerceMetadata5
-
-	return CommerceMetadataExtraData{
-		CommerceMetadata5: &commerceMetadata5,
-		Type:              typ,
-	}
-}
-
-func (u *CommerceMetadataExtraData) UnmarshalJSON(data []byte) error {
-
-	var commerceMetadata1 CommerceMetadata1 = CommerceMetadata1{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadata1, "", true, true); err == nil {
-		u.CommerceMetadata1 = &commerceMetadata1
-		u.Type = CommerceMetadataExtraDataTypeCommerceMetadata1
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = CommerceMetadataExtraDataTypeNumber
 		return nil
 	}
 
-	var commerceMetadata2 CommerceMetadata2 = CommerceMetadata2{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadata2, "", true, true); err == nil {
-		u.CommerceMetadata2 = &commerceMetadata2
-		u.Type = CommerceMetadataExtraDataTypeCommerceMetadata2
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = CommerceMetadataExtraDataTypeBoolean
 		return nil
 	}
 
-	var commerceMetadata3 CommerceMetadata3 = CommerceMetadata3{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadata3, "", true, true); err == nil {
-		u.CommerceMetadata3 = &commerceMetadata3
-		u.Type = CommerceMetadataExtraDataTypeCommerceMetadata3
-		return nil
-	}
-
-	var commerceMetadata4 CommerceMetadata4 = CommerceMetadata4{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadata4, "", true, true); err == nil {
-		u.CommerceMetadata4 = &commerceMetadata4
-		u.Type = CommerceMetadataExtraDataTypeCommerceMetadata4
-		return nil
-	}
-
-	var commerceMetadata5 CommerceMetadata5 = CommerceMetadata5{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadata5, "", true, true); err == nil {
-		u.CommerceMetadata5 = &commerceMetadata5
-		u.Type = CommerceMetadataExtraDataTypeCommerceMetadata5
+	var arrayOfCommerceMetadata5 []CommerceMetadata5 = []CommerceMetadata5{}
+	if err := utils.UnmarshalJSON(data, &arrayOfCommerceMetadata5, "", true, true); err == nil {
+		u.ArrayOfCommerceMetadata5 = arrayOfCommerceMetadata5
+		u.Type = CommerceMetadataExtraDataTypeArrayOfCommerceMetadata5
 		return nil
 	}
 
@@ -381,24 +224,24 @@ func (u *CommerceMetadataExtraData) UnmarshalJSON(data []byte) error {
 }
 
 func (u CommerceMetadataExtraData) MarshalJSON() ([]byte, error) {
-	if u.CommerceMetadata1 != nil {
-		return utils.MarshalJSON(u.CommerceMetadata1, "", true)
+	if u.MapOfAny != nil {
+		return utils.MarshalJSON(u.MapOfAny, "", true)
 	}
 
-	if u.CommerceMetadata2 != nil {
-		return utils.MarshalJSON(u.CommerceMetadata2, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
 	}
 
-	if u.CommerceMetadata3 != nil {
-		return utils.MarshalJSON(u.CommerceMetadata3, "", true)
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
 	}
 
-	if u.CommerceMetadata4 != nil {
-		return utils.MarshalJSON(u.CommerceMetadata4, "", true)
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
-	if u.CommerceMetadata5 != nil {
-		return utils.MarshalJSON(u.CommerceMetadata5, "", true)
+	if u.ArrayOfCommerceMetadata5 != nil {
+		return utils.MarshalJSON(u.ArrayOfCommerceMetadata5, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type CommerceMetadataExtraData: all fields are null")
@@ -426,54 +269,90 @@ func (e CommerceMetadataFormat) ToPointer() *CommerceMetadataFormat {
 	return &e
 }
 
-type CommerceMetadataSchemasValue52 struct {
+type CommerceMetadataSchemas1 struct {
 }
 
 type CommerceMetadataSchemas5Type string
 
 const (
-	CommerceMetadataSchemas5TypeArrayOfAny                     CommerceMetadataSchemas5Type = "arrayOfAny"
-	CommerceMetadataSchemas5TypeCommerceMetadataSchemasValue52 CommerceMetadataSchemas5Type = "CommerceMetadata_Schemas_value_5_2"
+	CommerceMetadataSchemas5TypeCommerceMetadataSchemas1 CommerceMetadataSchemas5Type = "CommerceMetadata_Schemas_1"
+	CommerceMetadataSchemas5TypeStr                      CommerceMetadataSchemas5Type = "str"
+	CommerceMetadataSchemas5TypeNumber                   CommerceMetadataSchemas5Type = "number"
+	CommerceMetadataSchemas5TypeBoolean                  CommerceMetadataSchemas5Type = "boolean"
 )
 
 type CommerceMetadataSchemas5 struct {
-	ArrayOfAny                     []any                           `queryParam:"inline"`
-	CommerceMetadataSchemasValue52 *CommerceMetadataSchemasValue52 `queryParam:"inline"`
+	CommerceMetadataSchemas1 *CommerceMetadataSchemas1 `queryParam:"inline"`
+	Str                      *string                   `queryParam:"inline"`
+	Number                   *float64                  `queryParam:"inline"`
+	Boolean                  *bool                     `queryParam:"inline"`
 
 	Type CommerceMetadataSchemas5Type
 }
 
-func CreateCommerceMetadataSchemas5ArrayOfAny(arrayOfAny []any) CommerceMetadataSchemas5 {
-	typ := CommerceMetadataSchemas5TypeArrayOfAny
+func CreateCommerceMetadataSchemas5CommerceMetadataSchemas1(commerceMetadataSchemas1 CommerceMetadataSchemas1) CommerceMetadataSchemas5 {
+	typ := CommerceMetadataSchemas5TypeCommerceMetadataSchemas1
 
 	return CommerceMetadataSchemas5{
-		ArrayOfAny: arrayOfAny,
-		Type:       typ,
+		CommerceMetadataSchemas1: &commerceMetadataSchemas1,
+		Type:                     typ,
 	}
 }
 
-func CreateCommerceMetadataSchemas5CommerceMetadataSchemasValue52(commerceMetadataSchemasValue52 CommerceMetadataSchemasValue52) CommerceMetadataSchemas5 {
-	typ := CommerceMetadataSchemas5TypeCommerceMetadataSchemasValue52
+func CreateCommerceMetadataSchemas5Str(str string) CommerceMetadataSchemas5 {
+	typ := CommerceMetadataSchemas5TypeStr
 
 	return CommerceMetadataSchemas5{
-		CommerceMetadataSchemasValue52: &commerceMetadataSchemasValue52,
-		Type:                           typ,
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateCommerceMetadataSchemas5Number(number float64) CommerceMetadataSchemas5 {
+	typ := CommerceMetadataSchemas5TypeNumber
+
+	return CommerceMetadataSchemas5{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateCommerceMetadataSchemas5Boolean(boolean bool) CommerceMetadataSchemas5 {
+	typ := CommerceMetadataSchemas5TypeBoolean
+
+	return CommerceMetadataSchemas5{
+		Boolean: &boolean,
+		Type:    typ,
 	}
 }
 
 func (u *CommerceMetadataSchemas5) UnmarshalJSON(data []byte) error {
 
-	var commerceMetadataSchemasValue52 CommerceMetadataSchemasValue52 = CommerceMetadataSchemasValue52{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemasValue52, "", true, true); err == nil {
-		u.CommerceMetadataSchemasValue52 = &commerceMetadataSchemasValue52
-		u.Type = CommerceMetadataSchemas5TypeCommerceMetadataSchemasValue52
+	var commerceMetadataSchemas1 CommerceMetadataSchemas1 = CommerceMetadataSchemas1{}
+	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemas1, "", true, true); err == nil {
+		u.CommerceMetadataSchemas1 = &commerceMetadataSchemas1
+		u.Type = CommerceMetadataSchemas5TypeCommerceMetadataSchemas1
 		return nil
 	}
 
-	var arrayOfAny []any = []any{}
-	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
-		u.ArrayOfAny = arrayOfAny
-		u.Type = CommerceMetadataSchemas5TypeArrayOfAny
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = CommerceMetadataSchemas5TypeStr
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = CommerceMetadataSchemas5TypeNumber
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = CommerceMetadataSchemas5TypeBoolean
 		return nil
 	}
 
@@ -481,317 +360,124 @@ func (u *CommerceMetadataSchemas5) UnmarshalJSON(data []byte) error {
 }
 
 func (u CommerceMetadataSchemas5) MarshalJSON() ([]byte, error) {
-	if u.ArrayOfAny != nil {
-		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	if u.CommerceMetadataSchemas1 != nil {
+		return utils.MarshalJSON(u.CommerceMetadataSchemas1, "", true)
 	}
 
-	if u.CommerceMetadataSchemasValue52 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemasValue52, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type CommerceMetadataSchemas5: all fields are null")
 }
 
-type CommerceMetadataSchemasValue42 struct {
-}
-
-type CommerceMetadataSchemas4Type string
+type CommerceMetadataValueType string
 
 const (
-	CommerceMetadataSchemas4TypeBoolean                        CommerceMetadataSchemas4Type = "boolean"
-	CommerceMetadataSchemas4TypeCommerceMetadataSchemasValue42 CommerceMetadataSchemas4Type = "CommerceMetadata_Schemas_value_4_2"
+	CommerceMetadataValueTypeMapOfAny                        CommerceMetadataValueType = "mapOfAny"
+	CommerceMetadataValueTypeStr                             CommerceMetadataValueType = "str"
+	CommerceMetadataValueTypeNumber                          CommerceMetadataValueType = "number"
+	CommerceMetadataValueTypeBoolean                         CommerceMetadataValueType = "boolean"
+	CommerceMetadataValueTypeArrayOfCommerceMetadataSchemas5 CommerceMetadataValueType = "arrayOfCommerceMetadataSchemas5"
 )
 
-type CommerceMetadataSchemas4 struct {
-	Boolean                        *bool                           `queryParam:"inline"`
-	CommerceMetadataSchemasValue42 *CommerceMetadataSchemasValue42 `queryParam:"inline"`
+type CommerceMetadataValue struct {
+	MapOfAny                        map[string]any             `queryParam:"inline"`
+	Str                             *string                    `queryParam:"inline"`
+	Number                          *float64                   `queryParam:"inline"`
+	Boolean                         *bool                      `queryParam:"inline"`
+	ArrayOfCommerceMetadataSchemas5 []CommerceMetadataSchemas5 `queryParam:"inline"`
 
-	Type CommerceMetadataSchemas4Type
+	Type CommerceMetadataValueType
 }
 
-func CreateCommerceMetadataSchemas4Boolean(boolean bool) CommerceMetadataSchemas4 {
-	typ := CommerceMetadataSchemas4TypeBoolean
+func CreateCommerceMetadataValueMapOfAny(mapOfAny map[string]any) CommerceMetadataValue {
+	typ := CommerceMetadataValueTypeMapOfAny
 
-	return CommerceMetadataSchemas4{
-		Boolean: &boolean,
-		Type:    typ,
+	return CommerceMetadataValue{
+		MapOfAny: mapOfAny,
+		Type:     typ,
 	}
 }
 
-func CreateCommerceMetadataSchemas4CommerceMetadataSchemasValue42(commerceMetadataSchemasValue42 CommerceMetadataSchemasValue42) CommerceMetadataSchemas4 {
-	typ := CommerceMetadataSchemas4TypeCommerceMetadataSchemasValue42
+func CreateCommerceMetadataValueStr(str string) CommerceMetadataValue {
+	typ := CommerceMetadataValueTypeStr
 
-	return CommerceMetadataSchemas4{
-		CommerceMetadataSchemasValue42: &commerceMetadataSchemasValue42,
-		Type:                           typ,
-	}
-}
-
-func (u *CommerceMetadataSchemas4) UnmarshalJSON(data []byte) error {
-
-	var commerceMetadataSchemasValue42 CommerceMetadataSchemasValue42 = CommerceMetadataSchemasValue42{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemasValue42, "", true, true); err == nil {
-		u.CommerceMetadataSchemasValue42 = &commerceMetadataSchemasValue42
-		u.Type = CommerceMetadataSchemas4TypeCommerceMetadataSchemasValue42
-		return nil
-	}
-
-	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
-		u.Boolean = &boolean
-		u.Type = CommerceMetadataSchemas4TypeBoolean
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CommerceMetadataSchemas4", string(data))
-}
-
-func (u CommerceMetadataSchemas4) MarshalJSON() ([]byte, error) {
-	if u.Boolean != nil {
-		return utils.MarshalJSON(u.Boolean, "", true)
-	}
-
-	if u.CommerceMetadataSchemasValue42 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemasValue42, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CommerceMetadataSchemas4: all fields are null")
-}
-
-type CommerceMetadataSchemasValue32 struct {
-}
-
-type CommerceMetadataSchemas3Type string
-
-const (
-	CommerceMetadataSchemas3TypeNumber                         CommerceMetadataSchemas3Type = "number"
-	CommerceMetadataSchemas3TypeCommerceMetadataSchemasValue32 CommerceMetadataSchemas3Type = "CommerceMetadata_Schemas_value_3_2"
-)
-
-type CommerceMetadataSchemas3 struct {
-	Number                         *float64                        `queryParam:"inline"`
-	CommerceMetadataSchemasValue32 *CommerceMetadataSchemasValue32 `queryParam:"inline"`
-
-	Type CommerceMetadataSchemas3Type
-}
-
-func CreateCommerceMetadataSchemas3Number(number float64) CommerceMetadataSchemas3 {
-	typ := CommerceMetadataSchemas3TypeNumber
-
-	return CommerceMetadataSchemas3{
-		Number: &number,
-		Type:   typ,
-	}
-}
-
-func CreateCommerceMetadataSchemas3CommerceMetadataSchemasValue32(commerceMetadataSchemasValue32 CommerceMetadataSchemasValue32) CommerceMetadataSchemas3 {
-	typ := CommerceMetadataSchemas3TypeCommerceMetadataSchemasValue32
-
-	return CommerceMetadataSchemas3{
-		CommerceMetadataSchemasValue32: &commerceMetadataSchemasValue32,
-		Type:                           typ,
-	}
-}
-
-func (u *CommerceMetadataSchemas3) UnmarshalJSON(data []byte) error {
-
-	var commerceMetadataSchemasValue32 CommerceMetadataSchemasValue32 = CommerceMetadataSchemasValue32{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemasValue32, "", true, true); err == nil {
-		u.CommerceMetadataSchemasValue32 = &commerceMetadataSchemasValue32
-		u.Type = CommerceMetadataSchemas3TypeCommerceMetadataSchemasValue32
-		return nil
-	}
-
-	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
-		u.Number = &number
-		u.Type = CommerceMetadataSchemas3TypeNumber
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CommerceMetadataSchemas3", string(data))
-}
-
-func (u CommerceMetadataSchemas3) MarshalJSON() ([]byte, error) {
-	if u.Number != nil {
-		return utils.MarshalJSON(u.Number, "", true)
-	}
-
-	if u.CommerceMetadataSchemasValue32 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemasValue32, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CommerceMetadataSchemas3: all fields are null")
-}
-
-type CommerceMetadataSchemasValue2 struct {
-}
-
-type CommerceMetadataSchemas2Type string
-
-const (
-	CommerceMetadataSchemas2TypeStr                           CommerceMetadataSchemas2Type = "str"
-	CommerceMetadataSchemas2TypeCommerceMetadataSchemasValue2 CommerceMetadataSchemas2Type = "CommerceMetadata_Schemas_value_2"
-)
-
-type CommerceMetadataSchemas2 struct {
-	Str                           *string                        `queryParam:"inline"`
-	CommerceMetadataSchemasValue2 *CommerceMetadataSchemasValue2 `queryParam:"inline"`
-
-	Type CommerceMetadataSchemas2Type
-}
-
-func CreateCommerceMetadataSchemas2Str(str string) CommerceMetadataSchemas2 {
-	typ := CommerceMetadataSchemas2TypeStr
-
-	return CommerceMetadataSchemas2{
+	return CommerceMetadataValue{
 		Str:  &str,
 		Type: typ,
 	}
 }
 
-func CreateCommerceMetadataSchemas2CommerceMetadataSchemasValue2(commerceMetadataSchemasValue2 CommerceMetadataSchemasValue2) CommerceMetadataSchemas2 {
-	typ := CommerceMetadataSchemas2TypeCommerceMetadataSchemasValue2
+func CreateCommerceMetadataValueNumber(number float64) CommerceMetadataValue {
+	typ := CommerceMetadataValueTypeNumber
 
-	return CommerceMetadataSchemas2{
-		CommerceMetadataSchemasValue2: &commerceMetadataSchemasValue2,
-		Type:                          typ,
+	return CommerceMetadataValue{
+		Number: &number,
+		Type:   typ,
 	}
 }
 
-func (u *CommerceMetadataSchemas2) UnmarshalJSON(data []byte) error {
+func CreateCommerceMetadataValueBoolean(boolean bool) CommerceMetadataValue {
+	typ := CommerceMetadataValueTypeBoolean
 
-	var commerceMetadataSchemasValue2 CommerceMetadataSchemasValue2 = CommerceMetadataSchemasValue2{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemasValue2, "", true, true); err == nil {
-		u.CommerceMetadataSchemasValue2 = &commerceMetadataSchemasValue2
-		u.Type = CommerceMetadataSchemas2TypeCommerceMetadataSchemasValue2
+	return CommerceMetadataValue{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateCommerceMetadataValueArrayOfCommerceMetadataSchemas5(arrayOfCommerceMetadataSchemas5 []CommerceMetadataSchemas5) CommerceMetadataValue {
+	typ := CommerceMetadataValueTypeArrayOfCommerceMetadataSchemas5
+
+	return CommerceMetadataValue{
+		ArrayOfCommerceMetadataSchemas5: arrayOfCommerceMetadataSchemas5,
+		Type:                            typ,
+	}
+}
+
+func (u *CommerceMetadataValue) UnmarshalJSON(data []byte) error {
+
+	var mapOfAny map[string]any = map[string]any{}
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+		u.MapOfAny = mapOfAny
+		u.Type = CommerceMetadataValueTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
 	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
 		u.Str = &str
-		u.Type = CommerceMetadataSchemas2TypeStr
+		u.Type = CommerceMetadataValueTypeStr
 		return nil
 	}
 
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CommerceMetadataSchemas2", string(data))
-}
-
-func (u CommerceMetadataSchemas2) MarshalJSON() ([]byte, error) {
-	if u.Str != nil {
-		return utils.MarshalJSON(u.Str, "", true)
-	}
-
-	if u.CommerceMetadataSchemasValue2 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemasValue2, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CommerceMetadataSchemas2: all fields are null")
-}
-
-type CommerceMetadataSchemas1 struct {
-}
-
-type CommerceMetadataValueType string
-
-const (
-	CommerceMetadataValueTypeCommerceMetadataSchemas1 CommerceMetadataValueType = "CommerceMetadata_Schemas_1"
-	CommerceMetadataValueTypeCommerceMetadataSchemas2 CommerceMetadataValueType = "CommerceMetadata_Schemas_2"
-	CommerceMetadataValueTypeCommerceMetadataSchemas3 CommerceMetadataValueType = "CommerceMetadata_Schemas_3"
-	CommerceMetadataValueTypeCommerceMetadataSchemas4 CommerceMetadataValueType = "CommerceMetadata_Schemas_4"
-	CommerceMetadataValueTypeCommerceMetadataSchemas5 CommerceMetadataValueType = "CommerceMetadata_Schemas_5"
-)
-
-type CommerceMetadataValue struct {
-	CommerceMetadataSchemas1 *CommerceMetadataSchemas1 `queryParam:"inline"`
-	CommerceMetadataSchemas2 *CommerceMetadataSchemas2 `queryParam:"inline"`
-	CommerceMetadataSchemas3 *CommerceMetadataSchemas3 `queryParam:"inline"`
-	CommerceMetadataSchemas4 *CommerceMetadataSchemas4 `queryParam:"inline"`
-	CommerceMetadataSchemas5 *CommerceMetadataSchemas5 `queryParam:"inline"`
-
-	Type CommerceMetadataValueType
-}
-
-func CreateCommerceMetadataValueCommerceMetadataSchemas1(commerceMetadataSchemas1 CommerceMetadataSchemas1) CommerceMetadataValue {
-	typ := CommerceMetadataValueTypeCommerceMetadataSchemas1
-
-	return CommerceMetadataValue{
-		CommerceMetadataSchemas1: &commerceMetadataSchemas1,
-		Type:                     typ,
-	}
-}
-
-func CreateCommerceMetadataValueCommerceMetadataSchemas2(commerceMetadataSchemas2 CommerceMetadataSchemas2) CommerceMetadataValue {
-	typ := CommerceMetadataValueTypeCommerceMetadataSchemas2
-
-	return CommerceMetadataValue{
-		CommerceMetadataSchemas2: &commerceMetadataSchemas2,
-		Type:                     typ,
-	}
-}
-
-func CreateCommerceMetadataValueCommerceMetadataSchemas3(commerceMetadataSchemas3 CommerceMetadataSchemas3) CommerceMetadataValue {
-	typ := CommerceMetadataValueTypeCommerceMetadataSchemas3
-
-	return CommerceMetadataValue{
-		CommerceMetadataSchemas3: &commerceMetadataSchemas3,
-		Type:                     typ,
-	}
-}
-
-func CreateCommerceMetadataValueCommerceMetadataSchemas4(commerceMetadataSchemas4 CommerceMetadataSchemas4) CommerceMetadataValue {
-	typ := CommerceMetadataValueTypeCommerceMetadataSchemas4
-
-	return CommerceMetadataValue{
-		CommerceMetadataSchemas4: &commerceMetadataSchemas4,
-		Type:                     typ,
-	}
-}
-
-func CreateCommerceMetadataValueCommerceMetadataSchemas5(commerceMetadataSchemas5 CommerceMetadataSchemas5) CommerceMetadataValue {
-	typ := CommerceMetadataValueTypeCommerceMetadataSchemas5
-
-	return CommerceMetadataValue{
-		CommerceMetadataSchemas5: &commerceMetadataSchemas5,
-		Type:                     typ,
-	}
-}
-
-func (u *CommerceMetadataValue) UnmarshalJSON(data []byte) error {
-
-	var commerceMetadataSchemas1 CommerceMetadataSchemas1 = CommerceMetadataSchemas1{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemas1, "", true, true); err == nil {
-		u.CommerceMetadataSchemas1 = &commerceMetadataSchemas1
-		u.Type = CommerceMetadataValueTypeCommerceMetadataSchemas1
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = CommerceMetadataValueTypeNumber
 		return nil
 	}
 
-	var commerceMetadataSchemas2 CommerceMetadataSchemas2 = CommerceMetadataSchemas2{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemas2, "", true, true); err == nil {
-		u.CommerceMetadataSchemas2 = &commerceMetadataSchemas2
-		u.Type = CommerceMetadataValueTypeCommerceMetadataSchemas2
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = CommerceMetadataValueTypeBoolean
 		return nil
 	}
 
-	var commerceMetadataSchemas3 CommerceMetadataSchemas3 = CommerceMetadataSchemas3{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemas3, "", true, true); err == nil {
-		u.CommerceMetadataSchemas3 = &commerceMetadataSchemas3
-		u.Type = CommerceMetadataValueTypeCommerceMetadataSchemas3
-		return nil
-	}
-
-	var commerceMetadataSchemas4 CommerceMetadataSchemas4 = CommerceMetadataSchemas4{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemas4, "", true, true); err == nil {
-		u.CommerceMetadataSchemas4 = &commerceMetadataSchemas4
-		u.Type = CommerceMetadataValueTypeCommerceMetadataSchemas4
-		return nil
-	}
-
-	var commerceMetadataSchemas5 CommerceMetadataSchemas5 = CommerceMetadataSchemas5{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemas5, "", true, true); err == nil {
-		u.CommerceMetadataSchemas5 = &commerceMetadataSchemas5
-		u.Type = CommerceMetadataValueTypeCommerceMetadataSchemas5
+	var arrayOfCommerceMetadataSchemas5 []CommerceMetadataSchemas5 = []CommerceMetadataSchemas5{}
+	if err := utils.UnmarshalJSON(data, &arrayOfCommerceMetadataSchemas5, "", true, true); err == nil {
+		u.ArrayOfCommerceMetadataSchemas5 = arrayOfCommerceMetadataSchemas5
+		u.Type = CommerceMetadataValueTypeArrayOfCommerceMetadataSchemas5
 		return nil
 	}
 
@@ -799,24 +485,24 @@ func (u *CommerceMetadataValue) UnmarshalJSON(data []byte) error {
 }
 
 func (u CommerceMetadataValue) MarshalJSON() ([]byte, error) {
-	if u.CommerceMetadataSchemas1 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemas1, "", true)
+	if u.MapOfAny != nil {
+		return utils.MarshalJSON(u.MapOfAny, "", true)
 	}
 
-	if u.CommerceMetadataSchemas2 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemas2, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
 	}
 
-	if u.CommerceMetadataSchemas3 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemas3, "", true)
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
 	}
 
-	if u.CommerceMetadataSchemas4 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemas4, "", true)
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
-	if u.CommerceMetadataSchemas5 != nil {
-		return utils.MarshalJSON(u.CommerceMetadataSchemas5, "", true)
+	if u.ArrayOfCommerceMetadataSchemas5 != nil {
+		return utils.MarshalJSON(u.ArrayOfCommerceMetadataSchemas5, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type CommerceMetadataValue: all fields are null")

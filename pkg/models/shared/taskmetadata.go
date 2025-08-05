@@ -8,54 +8,90 @@ import (
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 )
 
-type TaskMetadataSchemasExtraData52 struct {
+type TaskMetadata1 struct {
 }
 
 type TaskMetadata5Type string
 
 const (
-	TaskMetadata5TypeArrayOfAny                     TaskMetadata5Type = "arrayOfAny"
-	TaskMetadata5TypeTaskMetadataSchemasExtraData52 TaskMetadata5Type = "TaskMetadata_Schemas_extra_data_5_2"
+	TaskMetadata5TypeTaskMetadata1 TaskMetadata5Type = "TaskMetadata_1"
+	TaskMetadata5TypeStr           TaskMetadata5Type = "str"
+	TaskMetadata5TypeNumber        TaskMetadata5Type = "number"
+	TaskMetadata5TypeBoolean       TaskMetadata5Type = "boolean"
 )
 
 type TaskMetadata5 struct {
-	ArrayOfAny                     []any                           `queryParam:"inline"`
-	TaskMetadataSchemasExtraData52 *TaskMetadataSchemasExtraData52 `queryParam:"inline"`
+	TaskMetadata1 *TaskMetadata1 `queryParam:"inline"`
+	Str           *string        `queryParam:"inline"`
+	Number        *float64       `queryParam:"inline"`
+	Boolean       *bool          `queryParam:"inline"`
 
 	Type TaskMetadata5Type
 }
 
-func CreateTaskMetadata5ArrayOfAny(arrayOfAny []any) TaskMetadata5 {
-	typ := TaskMetadata5TypeArrayOfAny
+func CreateTaskMetadata5TaskMetadata1(taskMetadata1 TaskMetadata1) TaskMetadata5 {
+	typ := TaskMetadata5TypeTaskMetadata1
 
 	return TaskMetadata5{
-		ArrayOfAny: arrayOfAny,
-		Type:       typ,
+		TaskMetadata1: &taskMetadata1,
+		Type:          typ,
 	}
 }
 
-func CreateTaskMetadata5TaskMetadataSchemasExtraData52(taskMetadataSchemasExtraData52 TaskMetadataSchemasExtraData52) TaskMetadata5 {
-	typ := TaskMetadata5TypeTaskMetadataSchemasExtraData52
+func CreateTaskMetadata5Str(str string) TaskMetadata5 {
+	typ := TaskMetadata5TypeStr
 
 	return TaskMetadata5{
-		TaskMetadataSchemasExtraData52: &taskMetadataSchemasExtraData52,
-		Type:                           typ,
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateTaskMetadata5Number(number float64) TaskMetadata5 {
+	typ := TaskMetadata5TypeNumber
+
+	return TaskMetadata5{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateTaskMetadata5Boolean(boolean bool) TaskMetadata5 {
+	typ := TaskMetadata5TypeBoolean
+
+	return TaskMetadata5{
+		Boolean: &boolean,
+		Type:    typ,
 	}
 }
 
 func (u *TaskMetadata5) UnmarshalJSON(data []byte) error {
 
-	var taskMetadataSchemasExtraData52 TaskMetadataSchemasExtraData52 = TaskMetadataSchemasExtraData52{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemasExtraData52, "", true, true); err == nil {
-		u.TaskMetadataSchemasExtraData52 = &taskMetadataSchemasExtraData52
-		u.Type = TaskMetadata5TypeTaskMetadataSchemasExtraData52
+	var taskMetadata1 TaskMetadata1 = TaskMetadata1{}
+	if err := utils.UnmarshalJSON(data, &taskMetadata1, "", true, true); err == nil {
+		u.TaskMetadata1 = &taskMetadata1
+		u.Type = TaskMetadata5TypeTaskMetadata1
 		return nil
 	}
 
-	var arrayOfAny []any = []any{}
-	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
-		u.ArrayOfAny = arrayOfAny
-		u.Type = TaskMetadata5TypeArrayOfAny
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = TaskMetadata5TypeStr
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = TaskMetadata5TypeNumber
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = TaskMetadata5TypeBoolean
 		return nil
 	}
 
@@ -63,317 +99,124 @@ func (u *TaskMetadata5) UnmarshalJSON(data []byte) error {
 }
 
 func (u TaskMetadata5) MarshalJSON() ([]byte, error) {
-	if u.ArrayOfAny != nil {
-		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	if u.TaskMetadata1 != nil {
+		return utils.MarshalJSON(u.TaskMetadata1, "", true)
 	}
 
-	if u.TaskMetadataSchemasExtraData52 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemasExtraData52, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type TaskMetadata5: all fields are null")
 }
 
-type TaskMetadataSchemasExtraData2 struct {
-}
-
-type TaskMetadata4Type string
+type TaskMetadataExtraDataType string
 
 const (
-	TaskMetadata4TypeBoolean                       TaskMetadata4Type = "boolean"
-	TaskMetadata4TypeTaskMetadataSchemasExtraData2 TaskMetadata4Type = "TaskMetadata_Schemas_extra_data_2"
+	TaskMetadataExtraDataTypeMapOfAny             TaskMetadataExtraDataType = "mapOfAny"
+	TaskMetadataExtraDataTypeStr                  TaskMetadataExtraDataType = "str"
+	TaskMetadataExtraDataTypeNumber               TaskMetadataExtraDataType = "number"
+	TaskMetadataExtraDataTypeBoolean              TaskMetadataExtraDataType = "boolean"
+	TaskMetadataExtraDataTypeArrayOfTaskMetadata5 TaskMetadataExtraDataType = "arrayOfTaskMetadata5"
 )
 
-type TaskMetadata4 struct {
-	Boolean                       *bool                          `queryParam:"inline"`
-	TaskMetadataSchemasExtraData2 *TaskMetadataSchemasExtraData2 `queryParam:"inline"`
+type TaskMetadataExtraData struct {
+	MapOfAny             map[string]any  `queryParam:"inline"`
+	Str                  *string         `queryParam:"inline"`
+	Number               *float64        `queryParam:"inline"`
+	Boolean              *bool           `queryParam:"inline"`
+	ArrayOfTaskMetadata5 []TaskMetadata5 `queryParam:"inline"`
 
-	Type TaskMetadata4Type
+	Type TaskMetadataExtraDataType
 }
 
-func CreateTaskMetadata4Boolean(boolean bool) TaskMetadata4 {
-	typ := TaskMetadata4TypeBoolean
+func CreateTaskMetadataExtraDataMapOfAny(mapOfAny map[string]any) TaskMetadataExtraData {
+	typ := TaskMetadataExtraDataTypeMapOfAny
 
-	return TaskMetadata4{
-		Boolean: &boolean,
-		Type:    typ,
+	return TaskMetadataExtraData{
+		MapOfAny: mapOfAny,
+		Type:     typ,
 	}
 }
 
-func CreateTaskMetadata4TaskMetadataSchemasExtraData2(taskMetadataSchemasExtraData2 TaskMetadataSchemasExtraData2) TaskMetadata4 {
-	typ := TaskMetadata4TypeTaskMetadataSchemasExtraData2
+func CreateTaskMetadataExtraDataStr(str string) TaskMetadataExtraData {
+	typ := TaskMetadataExtraDataTypeStr
 
-	return TaskMetadata4{
-		TaskMetadataSchemasExtraData2: &taskMetadataSchemasExtraData2,
-		Type:                          typ,
-	}
-}
-
-func (u *TaskMetadata4) UnmarshalJSON(data []byte) error {
-
-	var taskMetadataSchemasExtraData2 TaskMetadataSchemasExtraData2 = TaskMetadataSchemasExtraData2{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemasExtraData2, "", true, true); err == nil {
-		u.TaskMetadataSchemasExtraData2 = &taskMetadataSchemasExtraData2
-		u.Type = TaskMetadata4TypeTaskMetadataSchemasExtraData2
-		return nil
-	}
-
-	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
-		u.Boolean = &boolean
-		u.Type = TaskMetadata4TypeBoolean
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for TaskMetadata4", string(data))
-}
-
-func (u TaskMetadata4) MarshalJSON() ([]byte, error) {
-	if u.Boolean != nil {
-		return utils.MarshalJSON(u.Boolean, "", true)
-	}
-
-	if u.TaskMetadataSchemasExtraData2 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemasExtraData2, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type TaskMetadata4: all fields are null")
-}
-
-type TaskMetadataSchemasExtraData32 struct {
-}
-
-type TaskMetadata3Type string
-
-const (
-	TaskMetadata3TypeNumber                         TaskMetadata3Type = "number"
-	TaskMetadata3TypeTaskMetadataSchemasExtraData32 TaskMetadata3Type = "TaskMetadata_Schemas_extra_data_3_2"
-)
-
-type TaskMetadata3 struct {
-	Number                         *float64                        `queryParam:"inline"`
-	TaskMetadataSchemasExtraData32 *TaskMetadataSchemasExtraData32 `queryParam:"inline"`
-
-	Type TaskMetadata3Type
-}
-
-func CreateTaskMetadata3Number(number float64) TaskMetadata3 {
-	typ := TaskMetadata3TypeNumber
-
-	return TaskMetadata3{
-		Number: &number,
-		Type:   typ,
-	}
-}
-
-func CreateTaskMetadata3TaskMetadataSchemasExtraData32(taskMetadataSchemasExtraData32 TaskMetadataSchemasExtraData32) TaskMetadata3 {
-	typ := TaskMetadata3TypeTaskMetadataSchemasExtraData32
-
-	return TaskMetadata3{
-		TaskMetadataSchemasExtraData32: &taskMetadataSchemasExtraData32,
-		Type:                           typ,
-	}
-}
-
-func (u *TaskMetadata3) UnmarshalJSON(data []byte) error {
-
-	var taskMetadataSchemasExtraData32 TaskMetadataSchemasExtraData32 = TaskMetadataSchemasExtraData32{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemasExtraData32, "", true, true); err == nil {
-		u.TaskMetadataSchemasExtraData32 = &taskMetadataSchemasExtraData32
-		u.Type = TaskMetadata3TypeTaskMetadataSchemasExtraData32
-		return nil
-	}
-
-	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
-		u.Number = &number
-		u.Type = TaskMetadata3TypeNumber
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for TaskMetadata3", string(data))
-}
-
-func (u TaskMetadata3) MarshalJSON() ([]byte, error) {
-	if u.Number != nil {
-		return utils.MarshalJSON(u.Number, "", true)
-	}
-
-	if u.TaskMetadataSchemasExtraData32 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemasExtraData32, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type TaskMetadata3: all fields are null")
-}
-
-type TaskMetadataSchemasExtraData22 struct {
-}
-
-type TaskMetadata2Type string
-
-const (
-	TaskMetadata2TypeStr                            TaskMetadata2Type = "str"
-	TaskMetadata2TypeTaskMetadataSchemasExtraData22 TaskMetadata2Type = "TaskMetadata_Schemas_extra_data_2_2"
-)
-
-type TaskMetadata2 struct {
-	Str                            *string                         `queryParam:"inline"`
-	TaskMetadataSchemasExtraData22 *TaskMetadataSchemasExtraData22 `queryParam:"inline"`
-
-	Type TaskMetadata2Type
-}
-
-func CreateTaskMetadata2Str(str string) TaskMetadata2 {
-	typ := TaskMetadata2TypeStr
-
-	return TaskMetadata2{
+	return TaskMetadataExtraData{
 		Str:  &str,
 		Type: typ,
 	}
 }
 
-func CreateTaskMetadata2TaskMetadataSchemasExtraData22(taskMetadataSchemasExtraData22 TaskMetadataSchemasExtraData22) TaskMetadata2 {
-	typ := TaskMetadata2TypeTaskMetadataSchemasExtraData22
+func CreateTaskMetadataExtraDataNumber(number float64) TaskMetadataExtraData {
+	typ := TaskMetadataExtraDataTypeNumber
 
-	return TaskMetadata2{
-		TaskMetadataSchemasExtraData22: &taskMetadataSchemasExtraData22,
-		Type:                           typ,
+	return TaskMetadataExtraData{
+		Number: &number,
+		Type:   typ,
 	}
 }
 
-func (u *TaskMetadata2) UnmarshalJSON(data []byte) error {
+func CreateTaskMetadataExtraDataBoolean(boolean bool) TaskMetadataExtraData {
+	typ := TaskMetadataExtraDataTypeBoolean
 
-	var taskMetadataSchemasExtraData22 TaskMetadataSchemasExtraData22 = TaskMetadataSchemasExtraData22{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemasExtraData22, "", true, true); err == nil {
-		u.TaskMetadataSchemasExtraData22 = &taskMetadataSchemasExtraData22
-		u.Type = TaskMetadata2TypeTaskMetadataSchemasExtraData22
+	return TaskMetadataExtraData{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateTaskMetadataExtraDataArrayOfTaskMetadata5(arrayOfTaskMetadata5 []TaskMetadata5) TaskMetadataExtraData {
+	typ := TaskMetadataExtraDataTypeArrayOfTaskMetadata5
+
+	return TaskMetadataExtraData{
+		ArrayOfTaskMetadata5: arrayOfTaskMetadata5,
+		Type:                 typ,
+	}
+}
+
+func (u *TaskMetadataExtraData) UnmarshalJSON(data []byte) error {
+
+	var mapOfAny map[string]any = map[string]any{}
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+		u.MapOfAny = mapOfAny
+		u.Type = TaskMetadataExtraDataTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
 	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
 		u.Str = &str
-		u.Type = TaskMetadata2TypeStr
+		u.Type = TaskMetadataExtraDataTypeStr
 		return nil
 	}
 
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for TaskMetadata2", string(data))
-}
-
-func (u TaskMetadata2) MarshalJSON() ([]byte, error) {
-	if u.Str != nil {
-		return utils.MarshalJSON(u.Str, "", true)
-	}
-
-	if u.TaskMetadataSchemasExtraData22 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemasExtraData22, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type TaskMetadata2: all fields are null")
-}
-
-type TaskMetadata1 struct {
-}
-
-type TaskMetadataExtraDataType string
-
-const (
-	TaskMetadataExtraDataTypeTaskMetadata1 TaskMetadataExtraDataType = "TaskMetadata_1"
-	TaskMetadataExtraDataTypeTaskMetadata2 TaskMetadataExtraDataType = "TaskMetadata_2"
-	TaskMetadataExtraDataTypeTaskMetadata3 TaskMetadataExtraDataType = "TaskMetadata_3"
-	TaskMetadataExtraDataTypeTaskMetadata4 TaskMetadataExtraDataType = "TaskMetadata_4"
-	TaskMetadataExtraDataTypeTaskMetadata5 TaskMetadataExtraDataType = "TaskMetadata_5"
-)
-
-type TaskMetadataExtraData struct {
-	TaskMetadata1 *TaskMetadata1 `queryParam:"inline"`
-	TaskMetadata2 *TaskMetadata2 `queryParam:"inline"`
-	TaskMetadata3 *TaskMetadata3 `queryParam:"inline"`
-	TaskMetadata4 *TaskMetadata4 `queryParam:"inline"`
-	TaskMetadata5 *TaskMetadata5 `queryParam:"inline"`
-
-	Type TaskMetadataExtraDataType
-}
-
-func CreateTaskMetadataExtraDataTaskMetadata1(taskMetadata1 TaskMetadata1) TaskMetadataExtraData {
-	typ := TaskMetadataExtraDataTypeTaskMetadata1
-
-	return TaskMetadataExtraData{
-		TaskMetadata1: &taskMetadata1,
-		Type:          typ,
-	}
-}
-
-func CreateTaskMetadataExtraDataTaskMetadata2(taskMetadata2 TaskMetadata2) TaskMetadataExtraData {
-	typ := TaskMetadataExtraDataTypeTaskMetadata2
-
-	return TaskMetadataExtraData{
-		TaskMetadata2: &taskMetadata2,
-		Type:          typ,
-	}
-}
-
-func CreateTaskMetadataExtraDataTaskMetadata3(taskMetadata3 TaskMetadata3) TaskMetadataExtraData {
-	typ := TaskMetadataExtraDataTypeTaskMetadata3
-
-	return TaskMetadataExtraData{
-		TaskMetadata3: &taskMetadata3,
-		Type:          typ,
-	}
-}
-
-func CreateTaskMetadataExtraDataTaskMetadata4(taskMetadata4 TaskMetadata4) TaskMetadataExtraData {
-	typ := TaskMetadataExtraDataTypeTaskMetadata4
-
-	return TaskMetadataExtraData{
-		TaskMetadata4: &taskMetadata4,
-		Type:          typ,
-	}
-}
-
-func CreateTaskMetadataExtraDataTaskMetadata5(taskMetadata5 TaskMetadata5) TaskMetadataExtraData {
-	typ := TaskMetadataExtraDataTypeTaskMetadata5
-
-	return TaskMetadataExtraData{
-		TaskMetadata5: &taskMetadata5,
-		Type:          typ,
-	}
-}
-
-func (u *TaskMetadataExtraData) UnmarshalJSON(data []byte) error {
-
-	var taskMetadata1 TaskMetadata1 = TaskMetadata1{}
-	if err := utils.UnmarshalJSON(data, &taskMetadata1, "", true, true); err == nil {
-		u.TaskMetadata1 = &taskMetadata1
-		u.Type = TaskMetadataExtraDataTypeTaskMetadata1
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = TaskMetadataExtraDataTypeNumber
 		return nil
 	}
 
-	var taskMetadata2 TaskMetadata2 = TaskMetadata2{}
-	if err := utils.UnmarshalJSON(data, &taskMetadata2, "", true, true); err == nil {
-		u.TaskMetadata2 = &taskMetadata2
-		u.Type = TaskMetadataExtraDataTypeTaskMetadata2
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = TaskMetadataExtraDataTypeBoolean
 		return nil
 	}
 
-	var taskMetadata3 TaskMetadata3 = TaskMetadata3{}
-	if err := utils.UnmarshalJSON(data, &taskMetadata3, "", true, true); err == nil {
-		u.TaskMetadata3 = &taskMetadata3
-		u.Type = TaskMetadataExtraDataTypeTaskMetadata3
-		return nil
-	}
-
-	var taskMetadata4 TaskMetadata4 = TaskMetadata4{}
-	if err := utils.UnmarshalJSON(data, &taskMetadata4, "", true, true); err == nil {
-		u.TaskMetadata4 = &taskMetadata4
-		u.Type = TaskMetadataExtraDataTypeTaskMetadata4
-		return nil
-	}
-
-	var taskMetadata5 TaskMetadata5 = TaskMetadata5{}
-	if err := utils.UnmarshalJSON(data, &taskMetadata5, "", true, true); err == nil {
-		u.TaskMetadata5 = &taskMetadata5
-		u.Type = TaskMetadataExtraDataTypeTaskMetadata5
+	var arrayOfTaskMetadata5 []TaskMetadata5 = []TaskMetadata5{}
+	if err := utils.UnmarshalJSON(data, &arrayOfTaskMetadata5, "", true, true); err == nil {
+		u.ArrayOfTaskMetadata5 = arrayOfTaskMetadata5
+		u.Type = TaskMetadataExtraDataTypeArrayOfTaskMetadata5
 		return nil
 	}
 
@@ -381,24 +224,24 @@ func (u *TaskMetadataExtraData) UnmarshalJSON(data []byte) error {
 }
 
 func (u TaskMetadataExtraData) MarshalJSON() ([]byte, error) {
-	if u.TaskMetadata1 != nil {
-		return utils.MarshalJSON(u.TaskMetadata1, "", true)
+	if u.MapOfAny != nil {
+		return utils.MarshalJSON(u.MapOfAny, "", true)
 	}
 
-	if u.TaskMetadata2 != nil {
-		return utils.MarshalJSON(u.TaskMetadata2, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
 	}
 
-	if u.TaskMetadata3 != nil {
-		return utils.MarshalJSON(u.TaskMetadata3, "", true)
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
 	}
 
-	if u.TaskMetadata4 != nil {
-		return utils.MarshalJSON(u.TaskMetadata4, "", true)
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
-	if u.TaskMetadata5 != nil {
-		return utils.MarshalJSON(u.TaskMetadata5, "", true)
+	if u.ArrayOfTaskMetadata5 != nil {
+		return utils.MarshalJSON(u.ArrayOfTaskMetadata5, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type TaskMetadataExtraData: all fields are null")
@@ -426,54 +269,90 @@ func (e TaskMetadataFormat) ToPointer() *TaskMetadataFormat {
 	return &e
 }
 
-type TaskMetadataSchemasValue52 struct {
+type TaskMetadataSchemas1 struct {
 }
 
 type TaskMetadataSchemas5Type string
 
 const (
-	TaskMetadataSchemas5TypeArrayOfAny                 TaskMetadataSchemas5Type = "arrayOfAny"
-	TaskMetadataSchemas5TypeTaskMetadataSchemasValue52 TaskMetadataSchemas5Type = "TaskMetadata_Schemas_value_5_2"
+	TaskMetadataSchemas5TypeTaskMetadataSchemas1 TaskMetadataSchemas5Type = "TaskMetadata_Schemas_1"
+	TaskMetadataSchemas5TypeStr                  TaskMetadataSchemas5Type = "str"
+	TaskMetadataSchemas5TypeNumber               TaskMetadataSchemas5Type = "number"
+	TaskMetadataSchemas5TypeBoolean              TaskMetadataSchemas5Type = "boolean"
 )
 
 type TaskMetadataSchemas5 struct {
-	ArrayOfAny                 []any                       `queryParam:"inline"`
-	TaskMetadataSchemasValue52 *TaskMetadataSchemasValue52 `queryParam:"inline"`
+	TaskMetadataSchemas1 *TaskMetadataSchemas1 `queryParam:"inline"`
+	Str                  *string               `queryParam:"inline"`
+	Number               *float64              `queryParam:"inline"`
+	Boolean              *bool                 `queryParam:"inline"`
 
 	Type TaskMetadataSchemas5Type
 }
 
-func CreateTaskMetadataSchemas5ArrayOfAny(arrayOfAny []any) TaskMetadataSchemas5 {
-	typ := TaskMetadataSchemas5TypeArrayOfAny
+func CreateTaskMetadataSchemas5TaskMetadataSchemas1(taskMetadataSchemas1 TaskMetadataSchemas1) TaskMetadataSchemas5 {
+	typ := TaskMetadataSchemas5TypeTaskMetadataSchemas1
 
 	return TaskMetadataSchemas5{
-		ArrayOfAny: arrayOfAny,
-		Type:       typ,
+		TaskMetadataSchemas1: &taskMetadataSchemas1,
+		Type:                 typ,
 	}
 }
 
-func CreateTaskMetadataSchemas5TaskMetadataSchemasValue52(taskMetadataSchemasValue52 TaskMetadataSchemasValue52) TaskMetadataSchemas5 {
-	typ := TaskMetadataSchemas5TypeTaskMetadataSchemasValue52
+func CreateTaskMetadataSchemas5Str(str string) TaskMetadataSchemas5 {
+	typ := TaskMetadataSchemas5TypeStr
 
 	return TaskMetadataSchemas5{
-		TaskMetadataSchemasValue52: &taskMetadataSchemasValue52,
-		Type:                       typ,
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateTaskMetadataSchemas5Number(number float64) TaskMetadataSchemas5 {
+	typ := TaskMetadataSchemas5TypeNumber
+
+	return TaskMetadataSchemas5{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateTaskMetadataSchemas5Boolean(boolean bool) TaskMetadataSchemas5 {
+	typ := TaskMetadataSchemas5TypeBoolean
+
+	return TaskMetadataSchemas5{
+		Boolean: &boolean,
+		Type:    typ,
 	}
 }
 
 func (u *TaskMetadataSchemas5) UnmarshalJSON(data []byte) error {
 
-	var taskMetadataSchemasValue52 TaskMetadataSchemasValue52 = TaskMetadataSchemasValue52{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemasValue52, "", true, true); err == nil {
-		u.TaskMetadataSchemasValue52 = &taskMetadataSchemasValue52
-		u.Type = TaskMetadataSchemas5TypeTaskMetadataSchemasValue52
+	var taskMetadataSchemas1 TaskMetadataSchemas1 = TaskMetadataSchemas1{}
+	if err := utils.UnmarshalJSON(data, &taskMetadataSchemas1, "", true, true); err == nil {
+		u.TaskMetadataSchemas1 = &taskMetadataSchemas1
+		u.Type = TaskMetadataSchemas5TypeTaskMetadataSchemas1
 		return nil
 	}
 
-	var arrayOfAny []any = []any{}
-	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
-		u.ArrayOfAny = arrayOfAny
-		u.Type = TaskMetadataSchemas5TypeArrayOfAny
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = TaskMetadataSchemas5TypeStr
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = TaskMetadataSchemas5TypeNumber
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = TaskMetadataSchemas5TypeBoolean
 		return nil
 	}
 
@@ -481,317 +360,124 @@ func (u *TaskMetadataSchemas5) UnmarshalJSON(data []byte) error {
 }
 
 func (u TaskMetadataSchemas5) MarshalJSON() ([]byte, error) {
-	if u.ArrayOfAny != nil {
-		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	if u.TaskMetadataSchemas1 != nil {
+		return utils.MarshalJSON(u.TaskMetadataSchemas1, "", true)
 	}
 
-	if u.TaskMetadataSchemasValue52 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemasValue52, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type TaskMetadataSchemas5: all fields are null")
 }
 
-type TaskMetadataSchemasValue42 struct {
-}
-
-type TaskMetadataSchemas4Type string
+type TaskMetadataValueType string
 
 const (
-	TaskMetadataSchemas4TypeBoolean                    TaskMetadataSchemas4Type = "boolean"
-	TaskMetadataSchemas4TypeTaskMetadataSchemasValue42 TaskMetadataSchemas4Type = "TaskMetadata_Schemas_value_4_2"
+	TaskMetadataValueTypeMapOfAny                    TaskMetadataValueType = "mapOfAny"
+	TaskMetadataValueTypeStr                         TaskMetadataValueType = "str"
+	TaskMetadataValueTypeNumber                      TaskMetadataValueType = "number"
+	TaskMetadataValueTypeBoolean                     TaskMetadataValueType = "boolean"
+	TaskMetadataValueTypeArrayOfTaskMetadataSchemas5 TaskMetadataValueType = "arrayOfTaskMetadataSchemas5"
 )
 
-type TaskMetadataSchemas4 struct {
-	Boolean                    *bool                       `queryParam:"inline"`
-	TaskMetadataSchemasValue42 *TaskMetadataSchemasValue42 `queryParam:"inline"`
+type TaskMetadataValue struct {
+	MapOfAny                    map[string]any         `queryParam:"inline"`
+	Str                         *string                `queryParam:"inline"`
+	Number                      *float64               `queryParam:"inline"`
+	Boolean                     *bool                  `queryParam:"inline"`
+	ArrayOfTaskMetadataSchemas5 []TaskMetadataSchemas5 `queryParam:"inline"`
 
-	Type TaskMetadataSchemas4Type
+	Type TaskMetadataValueType
 }
 
-func CreateTaskMetadataSchemas4Boolean(boolean bool) TaskMetadataSchemas4 {
-	typ := TaskMetadataSchemas4TypeBoolean
+func CreateTaskMetadataValueMapOfAny(mapOfAny map[string]any) TaskMetadataValue {
+	typ := TaskMetadataValueTypeMapOfAny
 
-	return TaskMetadataSchemas4{
-		Boolean: &boolean,
-		Type:    typ,
+	return TaskMetadataValue{
+		MapOfAny: mapOfAny,
+		Type:     typ,
 	}
 }
 
-func CreateTaskMetadataSchemas4TaskMetadataSchemasValue42(taskMetadataSchemasValue42 TaskMetadataSchemasValue42) TaskMetadataSchemas4 {
-	typ := TaskMetadataSchemas4TypeTaskMetadataSchemasValue42
+func CreateTaskMetadataValueStr(str string) TaskMetadataValue {
+	typ := TaskMetadataValueTypeStr
 
-	return TaskMetadataSchemas4{
-		TaskMetadataSchemasValue42: &taskMetadataSchemasValue42,
-		Type:                       typ,
-	}
-}
-
-func (u *TaskMetadataSchemas4) UnmarshalJSON(data []byte) error {
-
-	var taskMetadataSchemasValue42 TaskMetadataSchemasValue42 = TaskMetadataSchemasValue42{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemasValue42, "", true, true); err == nil {
-		u.TaskMetadataSchemasValue42 = &taskMetadataSchemasValue42
-		u.Type = TaskMetadataSchemas4TypeTaskMetadataSchemasValue42
-		return nil
-	}
-
-	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
-		u.Boolean = &boolean
-		u.Type = TaskMetadataSchemas4TypeBoolean
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for TaskMetadataSchemas4", string(data))
-}
-
-func (u TaskMetadataSchemas4) MarshalJSON() ([]byte, error) {
-	if u.Boolean != nil {
-		return utils.MarshalJSON(u.Boolean, "", true)
-	}
-
-	if u.TaskMetadataSchemasValue42 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemasValue42, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type TaskMetadataSchemas4: all fields are null")
-}
-
-type TaskMetadataSchemasValue32 struct {
-}
-
-type TaskMetadataSchemas3Type string
-
-const (
-	TaskMetadataSchemas3TypeNumber                     TaskMetadataSchemas3Type = "number"
-	TaskMetadataSchemas3TypeTaskMetadataSchemasValue32 TaskMetadataSchemas3Type = "TaskMetadata_Schemas_value_3_2"
-)
-
-type TaskMetadataSchemas3 struct {
-	Number                     *float64                    `queryParam:"inline"`
-	TaskMetadataSchemasValue32 *TaskMetadataSchemasValue32 `queryParam:"inline"`
-
-	Type TaskMetadataSchemas3Type
-}
-
-func CreateTaskMetadataSchemas3Number(number float64) TaskMetadataSchemas3 {
-	typ := TaskMetadataSchemas3TypeNumber
-
-	return TaskMetadataSchemas3{
-		Number: &number,
-		Type:   typ,
-	}
-}
-
-func CreateTaskMetadataSchemas3TaskMetadataSchemasValue32(taskMetadataSchemasValue32 TaskMetadataSchemasValue32) TaskMetadataSchemas3 {
-	typ := TaskMetadataSchemas3TypeTaskMetadataSchemasValue32
-
-	return TaskMetadataSchemas3{
-		TaskMetadataSchemasValue32: &taskMetadataSchemasValue32,
-		Type:                       typ,
-	}
-}
-
-func (u *TaskMetadataSchemas3) UnmarshalJSON(data []byte) error {
-
-	var taskMetadataSchemasValue32 TaskMetadataSchemasValue32 = TaskMetadataSchemasValue32{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemasValue32, "", true, true); err == nil {
-		u.TaskMetadataSchemasValue32 = &taskMetadataSchemasValue32
-		u.Type = TaskMetadataSchemas3TypeTaskMetadataSchemasValue32
-		return nil
-	}
-
-	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
-		u.Number = &number
-		u.Type = TaskMetadataSchemas3TypeNumber
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for TaskMetadataSchemas3", string(data))
-}
-
-func (u TaskMetadataSchemas3) MarshalJSON() ([]byte, error) {
-	if u.Number != nil {
-		return utils.MarshalJSON(u.Number, "", true)
-	}
-
-	if u.TaskMetadataSchemasValue32 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemasValue32, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type TaskMetadataSchemas3: all fields are null")
-}
-
-type TaskMetadataSchemasValue2 struct {
-}
-
-type TaskMetadataSchemas2Type string
-
-const (
-	TaskMetadataSchemas2TypeStr                       TaskMetadataSchemas2Type = "str"
-	TaskMetadataSchemas2TypeTaskMetadataSchemasValue2 TaskMetadataSchemas2Type = "TaskMetadata_Schemas_value_2"
-)
-
-type TaskMetadataSchemas2 struct {
-	Str                       *string                    `queryParam:"inline"`
-	TaskMetadataSchemasValue2 *TaskMetadataSchemasValue2 `queryParam:"inline"`
-
-	Type TaskMetadataSchemas2Type
-}
-
-func CreateTaskMetadataSchemas2Str(str string) TaskMetadataSchemas2 {
-	typ := TaskMetadataSchemas2TypeStr
-
-	return TaskMetadataSchemas2{
+	return TaskMetadataValue{
 		Str:  &str,
 		Type: typ,
 	}
 }
 
-func CreateTaskMetadataSchemas2TaskMetadataSchemasValue2(taskMetadataSchemasValue2 TaskMetadataSchemasValue2) TaskMetadataSchemas2 {
-	typ := TaskMetadataSchemas2TypeTaskMetadataSchemasValue2
+func CreateTaskMetadataValueNumber(number float64) TaskMetadataValue {
+	typ := TaskMetadataValueTypeNumber
 
-	return TaskMetadataSchemas2{
-		TaskMetadataSchemasValue2: &taskMetadataSchemasValue2,
-		Type:                      typ,
+	return TaskMetadataValue{
+		Number: &number,
+		Type:   typ,
 	}
 }
 
-func (u *TaskMetadataSchemas2) UnmarshalJSON(data []byte) error {
+func CreateTaskMetadataValueBoolean(boolean bool) TaskMetadataValue {
+	typ := TaskMetadataValueTypeBoolean
 
-	var taskMetadataSchemasValue2 TaskMetadataSchemasValue2 = TaskMetadataSchemasValue2{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemasValue2, "", true, true); err == nil {
-		u.TaskMetadataSchemasValue2 = &taskMetadataSchemasValue2
-		u.Type = TaskMetadataSchemas2TypeTaskMetadataSchemasValue2
+	return TaskMetadataValue{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateTaskMetadataValueArrayOfTaskMetadataSchemas5(arrayOfTaskMetadataSchemas5 []TaskMetadataSchemas5) TaskMetadataValue {
+	typ := TaskMetadataValueTypeArrayOfTaskMetadataSchemas5
+
+	return TaskMetadataValue{
+		ArrayOfTaskMetadataSchemas5: arrayOfTaskMetadataSchemas5,
+		Type:                        typ,
+	}
+}
+
+func (u *TaskMetadataValue) UnmarshalJSON(data []byte) error {
+
+	var mapOfAny map[string]any = map[string]any{}
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+		u.MapOfAny = mapOfAny
+		u.Type = TaskMetadataValueTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
 	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
 		u.Str = &str
-		u.Type = TaskMetadataSchemas2TypeStr
+		u.Type = TaskMetadataValueTypeStr
 		return nil
 	}
 
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for TaskMetadataSchemas2", string(data))
-}
-
-func (u TaskMetadataSchemas2) MarshalJSON() ([]byte, error) {
-	if u.Str != nil {
-		return utils.MarshalJSON(u.Str, "", true)
-	}
-
-	if u.TaskMetadataSchemasValue2 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemasValue2, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type TaskMetadataSchemas2: all fields are null")
-}
-
-type TaskMetadataSchemas1 struct {
-}
-
-type TaskMetadataValueType string
-
-const (
-	TaskMetadataValueTypeTaskMetadataSchemas1 TaskMetadataValueType = "TaskMetadata_Schemas_1"
-	TaskMetadataValueTypeTaskMetadataSchemas2 TaskMetadataValueType = "TaskMetadata_Schemas_2"
-	TaskMetadataValueTypeTaskMetadataSchemas3 TaskMetadataValueType = "TaskMetadata_Schemas_3"
-	TaskMetadataValueTypeTaskMetadataSchemas4 TaskMetadataValueType = "TaskMetadata_Schemas_4"
-	TaskMetadataValueTypeTaskMetadataSchemas5 TaskMetadataValueType = "TaskMetadata_Schemas_5"
-)
-
-type TaskMetadataValue struct {
-	TaskMetadataSchemas1 *TaskMetadataSchemas1 `queryParam:"inline"`
-	TaskMetadataSchemas2 *TaskMetadataSchemas2 `queryParam:"inline"`
-	TaskMetadataSchemas3 *TaskMetadataSchemas3 `queryParam:"inline"`
-	TaskMetadataSchemas4 *TaskMetadataSchemas4 `queryParam:"inline"`
-	TaskMetadataSchemas5 *TaskMetadataSchemas5 `queryParam:"inline"`
-
-	Type TaskMetadataValueType
-}
-
-func CreateTaskMetadataValueTaskMetadataSchemas1(taskMetadataSchemas1 TaskMetadataSchemas1) TaskMetadataValue {
-	typ := TaskMetadataValueTypeTaskMetadataSchemas1
-
-	return TaskMetadataValue{
-		TaskMetadataSchemas1: &taskMetadataSchemas1,
-		Type:                 typ,
-	}
-}
-
-func CreateTaskMetadataValueTaskMetadataSchemas2(taskMetadataSchemas2 TaskMetadataSchemas2) TaskMetadataValue {
-	typ := TaskMetadataValueTypeTaskMetadataSchemas2
-
-	return TaskMetadataValue{
-		TaskMetadataSchemas2: &taskMetadataSchemas2,
-		Type:                 typ,
-	}
-}
-
-func CreateTaskMetadataValueTaskMetadataSchemas3(taskMetadataSchemas3 TaskMetadataSchemas3) TaskMetadataValue {
-	typ := TaskMetadataValueTypeTaskMetadataSchemas3
-
-	return TaskMetadataValue{
-		TaskMetadataSchemas3: &taskMetadataSchemas3,
-		Type:                 typ,
-	}
-}
-
-func CreateTaskMetadataValueTaskMetadataSchemas4(taskMetadataSchemas4 TaskMetadataSchemas4) TaskMetadataValue {
-	typ := TaskMetadataValueTypeTaskMetadataSchemas4
-
-	return TaskMetadataValue{
-		TaskMetadataSchemas4: &taskMetadataSchemas4,
-		Type:                 typ,
-	}
-}
-
-func CreateTaskMetadataValueTaskMetadataSchemas5(taskMetadataSchemas5 TaskMetadataSchemas5) TaskMetadataValue {
-	typ := TaskMetadataValueTypeTaskMetadataSchemas5
-
-	return TaskMetadataValue{
-		TaskMetadataSchemas5: &taskMetadataSchemas5,
-		Type:                 typ,
-	}
-}
-
-func (u *TaskMetadataValue) UnmarshalJSON(data []byte) error {
-
-	var taskMetadataSchemas1 TaskMetadataSchemas1 = TaskMetadataSchemas1{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemas1, "", true, true); err == nil {
-		u.TaskMetadataSchemas1 = &taskMetadataSchemas1
-		u.Type = TaskMetadataValueTypeTaskMetadataSchemas1
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = TaskMetadataValueTypeNumber
 		return nil
 	}
 
-	var taskMetadataSchemas2 TaskMetadataSchemas2 = TaskMetadataSchemas2{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemas2, "", true, true); err == nil {
-		u.TaskMetadataSchemas2 = &taskMetadataSchemas2
-		u.Type = TaskMetadataValueTypeTaskMetadataSchemas2
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = TaskMetadataValueTypeBoolean
 		return nil
 	}
 
-	var taskMetadataSchemas3 TaskMetadataSchemas3 = TaskMetadataSchemas3{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemas3, "", true, true); err == nil {
-		u.TaskMetadataSchemas3 = &taskMetadataSchemas3
-		u.Type = TaskMetadataValueTypeTaskMetadataSchemas3
-		return nil
-	}
-
-	var taskMetadataSchemas4 TaskMetadataSchemas4 = TaskMetadataSchemas4{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemas4, "", true, true); err == nil {
-		u.TaskMetadataSchemas4 = &taskMetadataSchemas4
-		u.Type = TaskMetadataValueTypeTaskMetadataSchemas4
-		return nil
-	}
-
-	var taskMetadataSchemas5 TaskMetadataSchemas5 = TaskMetadataSchemas5{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemas5, "", true, true); err == nil {
-		u.TaskMetadataSchemas5 = &taskMetadataSchemas5
-		u.Type = TaskMetadataValueTypeTaskMetadataSchemas5
+	var arrayOfTaskMetadataSchemas5 []TaskMetadataSchemas5 = []TaskMetadataSchemas5{}
+	if err := utils.UnmarshalJSON(data, &arrayOfTaskMetadataSchemas5, "", true, true); err == nil {
+		u.ArrayOfTaskMetadataSchemas5 = arrayOfTaskMetadataSchemas5
+		u.Type = TaskMetadataValueTypeArrayOfTaskMetadataSchemas5
 		return nil
 	}
 
@@ -799,24 +485,24 @@ func (u *TaskMetadataValue) UnmarshalJSON(data []byte) error {
 }
 
 func (u TaskMetadataValue) MarshalJSON() ([]byte, error) {
-	if u.TaskMetadataSchemas1 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemas1, "", true)
+	if u.MapOfAny != nil {
+		return utils.MarshalJSON(u.MapOfAny, "", true)
 	}
 
-	if u.TaskMetadataSchemas2 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemas2, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
 	}
 
-	if u.TaskMetadataSchemas3 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemas3, "", true)
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
 	}
 
-	if u.TaskMetadataSchemas4 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemas4, "", true)
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
-	if u.TaskMetadataSchemas5 != nil {
-		return utils.MarshalJSON(u.TaskMetadataSchemas5, "", true)
+	if u.ArrayOfTaskMetadataSchemas5 != nil {
+		return utils.MarshalJSON(u.ArrayOfTaskMetadataSchemas5, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type TaskMetadataValue: all fields are null")

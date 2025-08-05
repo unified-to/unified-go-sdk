@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### AtsMetadata1
+### 
 
 ```go
-value := shared.CreateValueAtsMetadata1(shared.AtsMetadata1{/* values here */})
+value := shared.CreateValueMapOfAny(map[string]any{/* values here */})
 ```
 
-### AtsMetadata2
+### 
 
 ```go
-value := shared.CreateValueAtsMetadata2(shared.AtsMetadata2{/* values here */})
+value := shared.CreateValueStr(string{/* values here */})
 ```
 
-### AtsMetadata3
+### 
 
 ```go
-value := shared.CreateValueAtsMetadata3(shared.AtsMetadata3{/* values here */})
+value := shared.CreateValueNumber(float64{/* values here */})
 ```
 
-### AtsMetadata4
+### 
 
 ```go
-value := shared.CreateValueAtsMetadata4(shared.AtsMetadata4{/* values here */})
+value := shared.CreateValueBoolean(bool{/* values here */})
 ```
 
-### AtsMetadata5
+### 
 
 ```go
-value := shared.CreateValueAtsMetadata5(shared.AtsMetadata5{/* values here */})
+value := shared.CreateValueArrayOfAtsMetadata5([]shared.AtsMetadata5{/* values here */})
 ```
 

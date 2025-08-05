@@ -3,15 +3,27 @@
 
 ## Supported Types
 
+### KmsPageMetadataSchemas1
+
+```go
+kmsPageMetadataSchemas5 := shared.CreateKmsPageMetadataSchemas5KmsPageMetadataSchemas1(shared.KmsPageMetadataSchemas1{/* values here */})
+```
+
 ### 
 
 ```go
-kmsPageMetadataSchemas5 := shared.CreateKmsPageMetadataSchemas5ArrayOfAny([]any{/* values here */})
+kmsPageMetadataSchemas5 := shared.CreateKmsPageMetadataSchemas5Str(string{/* values here */})
 ```
 
-### KmsPageMetadataSchemasValue52
+### 
 
 ```go
-kmsPageMetadataSchemas5 := shared.CreateKmsPageMetadataSchemas5KmsPageMetadataSchemasValue52(shared.KmsPageMetadataSchemasValue52{/* values here */})
+kmsPageMetadataSchemas5 := shared.CreateKmsPageMetadataSchemas5Number(float64{/* values here */})
+```
+
+### 
+
+```go
+kmsPageMetadataSchemas5 := shared.CreateKmsPageMetadataSchemas5Boolean(bool{/* values here */})
 ```
 

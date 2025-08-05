@@ -8,54 +8,90 @@ import (
 	"github.com/unified-to/unified-go-sdk/pkg/utils"
 )
 
-type CrmMetadataSchemasExtraData52 struct {
+type CrmMetadata1 struct {
 }
 
 type CrmMetadata5Type string
 
 const (
-	CrmMetadata5TypeArrayOfAny                    CrmMetadata5Type = "arrayOfAny"
-	CrmMetadata5TypeCrmMetadataSchemasExtraData52 CrmMetadata5Type = "CrmMetadata_Schemas_extra_data_5_2"
+	CrmMetadata5TypeCrmMetadata1 CrmMetadata5Type = "CrmMetadata_1"
+	CrmMetadata5TypeStr          CrmMetadata5Type = "str"
+	CrmMetadata5TypeNumber       CrmMetadata5Type = "number"
+	CrmMetadata5TypeBoolean      CrmMetadata5Type = "boolean"
 )
 
 type CrmMetadata5 struct {
-	ArrayOfAny                    []any                          `queryParam:"inline"`
-	CrmMetadataSchemasExtraData52 *CrmMetadataSchemasExtraData52 `queryParam:"inline"`
+	CrmMetadata1 *CrmMetadata1 `queryParam:"inline"`
+	Str          *string       `queryParam:"inline"`
+	Number       *float64      `queryParam:"inline"`
+	Boolean      *bool         `queryParam:"inline"`
 
 	Type CrmMetadata5Type
 }
 
-func CreateCrmMetadata5ArrayOfAny(arrayOfAny []any) CrmMetadata5 {
-	typ := CrmMetadata5TypeArrayOfAny
+func CreateCrmMetadata5CrmMetadata1(crmMetadata1 CrmMetadata1) CrmMetadata5 {
+	typ := CrmMetadata5TypeCrmMetadata1
 
 	return CrmMetadata5{
-		ArrayOfAny: arrayOfAny,
-		Type:       typ,
+		CrmMetadata1: &crmMetadata1,
+		Type:         typ,
 	}
 }
 
-func CreateCrmMetadata5CrmMetadataSchemasExtraData52(crmMetadataSchemasExtraData52 CrmMetadataSchemasExtraData52) CrmMetadata5 {
-	typ := CrmMetadata5TypeCrmMetadataSchemasExtraData52
+func CreateCrmMetadata5Str(str string) CrmMetadata5 {
+	typ := CrmMetadata5TypeStr
 
 	return CrmMetadata5{
-		CrmMetadataSchemasExtraData52: &crmMetadataSchemasExtraData52,
-		Type:                          typ,
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateCrmMetadata5Number(number float64) CrmMetadata5 {
+	typ := CrmMetadata5TypeNumber
+
+	return CrmMetadata5{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateCrmMetadata5Boolean(boolean bool) CrmMetadata5 {
+	typ := CrmMetadata5TypeBoolean
+
+	return CrmMetadata5{
+		Boolean: &boolean,
+		Type:    typ,
 	}
 }
 
 func (u *CrmMetadata5) UnmarshalJSON(data []byte) error {
 
-	var crmMetadataSchemasExtraData52 CrmMetadataSchemasExtraData52 = CrmMetadataSchemasExtraData52{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemasExtraData52, "", true, true); err == nil {
-		u.CrmMetadataSchemasExtraData52 = &crmMetadataSchemasExtraData52
-		u.Type = CrmMetadata5TypeCrmMetadataSchemasExtraData52
+	var crmMetadata1 CrmMetadata1 = CrmMetadata1{}
+	if err := utils.UnmarshalJSON(data, &crmMetadata1, "", true, true); err == nil {
+		u.CrmMetadata1 = &crmMetadata1
+		u.Type = CrmMetadata5TypeCrmMetadata1
 		return nil
 	}
 
-	var arrayOfAny []any = []any{}
-	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
-		u.ArrayOfAny = arrayOfAny
-		u.Type = CrmMetadata5TypeArrayOfAny
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = CrmMetadata5TypeStr
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = CrmMetadata5TypeNumber
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = CrmMetadata5TypeBoolean
 		return nil
 	}
 
@@ -63,317 +99,124 @@ func (u *CrmMetadata5) UnmarshalJSON(data []byte) error {
 }
 
 func (u CrmMetadata5) MarshalJSON() ([]byte, error) {
-	if u.ArrayOfAny != nil {
-		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	if u.CrmMetadata1 != nil {
+		return utils.MarshalJSON(u.CrmMetadata1, "", true)
 	}
 
-	if u.CrmMetadataSchemasExtraData52 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemasExtraData52, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type CrmMetadata5: all fields are null")
 }
 
-type CrmMetadataSchemasExtraData2 struct {
-}
-
-type CrmMetadata4Type string
+type CrmMetadataExtraDataType string
 
 const (
-	CrmMetadata4TypeBoolean                      CrmMetadata4Type = "boolean"
-	CrmMetadata4TypeCrmMetadataSchemasExtraData2 CrmMetadata4Type = "CrmMetadata_Schemas_extra_data_2"
+	CrmMetadataExtraDataTypeMapOfAny            CrmMetadataExtraDataType = "mapOfAny"
+	CrmMetadataExtraDataTypeStr                 CrmMetadataExtraDataType = "str"
+	CrmMetadataExtraDataTypeNumber              CrmMetadataExtraDataType = "number"
+	CrmMetadataExtraDataTypeBoolean             CrmMetadataExtraDataType = "boolean"
+	CrmMetadataExtraDataTypeArrayOfCrmMetadata5 CrmMetadataExtraDataType = "arrayOfCrmMetadata5"
 )
 
-type CrmMetadata4 struct {
-	Boolean                      *bool                         `queryParam:"inline"`
-	CrmMetadataSchemasExtraData2 *CrmMetadataSchemasExtraData2 `queryParam:"inline"`
+type CrmMetadataExtraData struct {
+	MapOfAny            map[string]any `queryParam:"inline"`
+	Str                 *string        `queryParam:"inline"`
+	Number              *float64       `queryParam:"inline"`
+	Boolean             *bool          `queryParam:"inline"`
+	ArrayOfCrmMetadata5 []CrmMetadata5 `queryParam:"inline"`
 
-	Type CrmMetadata4Type
+	Type CrmMetadataExtraDataType
 }
 
-func CreateCrmMetadata4Boolean(boolean bool) CrmMetadata4 {
-	typ := CrmMetadata4TypeBoolean
+func CreateCrmMetadataExtraDataMapOfAny(mapOfAny map[string]any) CrmMetadataExtraData {
+	typ := CrmMetadataExtraDataTypeMapOfAny
 
-	return CrmMetadata4{
-		Boolean: &boolean,
-		Type:    typ,
+	return CrmMetadataExtraData{
+		MapOfAny: mapOfAny,
+		Type:     typ,
 	}
 }
 
-func CreateCrmMetadata4CrmMetadataSchemasExtraData2(crmMetadataSchemasExtraData2 CrmMetadataSchemasExtraData2) CrmMetadata4 {
-	typ := CrmMetadata4TypeCrmMetadataSchemasExtraData2
+func CreateCrmMetadataExtraDataStr(str string) CrmMetadataExtraData {
+	typ := CrmMetadataExtraDataTypeStr
 
-	return CrmMetadata4{
-		CrmMetadataSchemasExtraData2: &crmMetadataSchemasExtraData2,
-		Type:                         typ,
-	}
-}
-
-func (u *CrmMetadata4) UnmarshalJSON(data []byte) error {
-
-	var crmMetadataSchemasExtraData2 CrmMetadataSchemasExtraData2 = CrmMetadataSchemasExtraData2{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemasExtraData2, "", true, true); err == nil {
-		u.CrmMetadataSchemasExtraData2 = &crmMetadataSchemasExtraData2
-		u.Type = CrmMetadata4TypeCrmMetadataSchemasExtraData2
-		return nil
-	}
-
-	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
-		u.Boolean = &boolean
-		u.Type = CrmMetadata4TypeBoolean
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CrmMetadata4", string(data))
-}
-
-func (u CrmMetadata4) MarshalJSON() ([]byte, error) {
-	if u.Boolean != nil {
-		return utils.MarshalJSON(u.Boolean, "", true)
-	}
-
-	if u.CrmMetadataSchemasExtraData2 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemasExtraData2, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CrmMetadata4: all fields are null")
-}
-
-type CrmMetadataSchemasExtraData32 struct {
-}
-
-type CrmMetadata3Type string
-
-const (
-	CrmMetadata3TypeNumber                        CrmMetadata3Type = "number"
-	CrmMetadata3TypeCrmMetadataSchemasExtraData32 CrmMetadata3Type = "CrmMetadata_Schemas_extra_data_3_2"
-)
-
-type CrmMetadata3 struct {
-	Number                        *float64                       `queryParam:"inline"`
-	CrmMetadataSchemasExtraData32 *CrmMetadataSchemasExtraData32 `queryParam:"inline"`
-
-	Type CrmMetadata3Type
-}
-
-func CreateCrmMetadata3Number(number float64) CrmMetadata3 {
-	typ := CrmMetadata3TypeNumber
-
-	return CrmMetadata3{
-		Number: &number,
-		Type:   typ,
-	}
-}
-
-func CreateCrmMetadata3CrmMetadataSchemasExtraData32(crmMetadataSchemasExtraData32 CrmMetadataSchemasExtraData32) CrmMetadata3 {
-	typ := CrmMetadata3TypeCrmMetadataSchemasExtraData32
-
-	return CrmMetadata3{
-		CrmMetadataSchemasExtraData32: &crmMetadataSchemasExtraData32,
-		Type:                          typ,
-	}
-}
-
-func (u *CrmMetadata3) UnmarshalJSON(data []byte) error {
-
-	var crmMetadataSchemasExtraData32 CrmMetadataSchemasExtraData32 = CrmMetadataSchemasExtraData32{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemasExtraData32, "", true, true); err == nil {
-		u.CrmMetadataSchemasExtraData32 = &crmMetadataSchemasExtraData32
-		u.Type = CrmMetadata3TypeCrmMetadataSchemasExtraData32
-		return nil
-	}
-
-	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
-		u.Number = &number
-		u.Type = CrmMetadata3TypeNumber
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CrmMetadata3", string(data))
-}
-
-func (u CrmMetadata3) MarshalJSON() ([]byte, error) {
-	if u.Number != nil {
-		return utils.MarshalJSON(u.Number, "", true)
-	}
-
-	if u.CrmMetadataSchemasExtraData32 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemasExtraData32, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CrmMetadata3: all fields are null")
-}
-
-type CrmMetadataSchemasExtraData22 struct {
-}
-
-type CrmMetadata2Type string
-
-const (
-	CrmMetadata2TypeStr                           CrmMetadata2Type = "str"
-	CrmMetadata2TypeCrmMetadataSchemasExtraData22 CrmMetadata2Type = "CrmMetadata_Schemas_extra_data_2_2"
-)
-
-type CrmMetadata2 struct {
-	Str                           *string                        `queryParam:"inline"`
-	CrmMetadataSchemasExtraData22 *CrmMetadataSchemasExtraData22 `queryParam:"inline"`
-
-	Type CrmMetadata2Type
-}
-
-func CreateCrmMetadata2Str(str string) CrmMetadata2 {
-	typ := CrmMetadata2TypeStr
-
-	return CrmMetadata2{
+	return CrmMetadataExtraData{
 		Str:  &str,
 		Type: typ,
 	}
 }
 
-func CreateCrmMetadata2CrmMetadataSchemasExtraData22(crmMetadataSchemasExtraData22 CrmMetadataSchemasExtraData22) CrmMetadata2 {
-	typ := CrmMetadata2TypeCrmMetadataSchemasExtraData22
+func CreateCrmMetadataExtraDataNumber(number float64) CrmMetadataExtraData {
+	typ := CrmMetadataExtraDataTypeNumber
 
-	return CrmMetadata2{
-		CrmMetadataSchemasExtraData22: &crmMetadataSchemasExtraData22,
-		Type:                          typ,
+	return CrmMetadataExtraData{
+		Number: &number,
+		Type:   typ,
 	}
 }
 
-func (u *CrmMetadata2) UnmarshalJSON(data []byte) error {
+func CreateCrmMetadataExtraDataBoolean(boolean bool) CrmMetadataExtraData {
+	typ := CrmMetadataExtraDataTypeBoolean
 
-	var crmMetadataSchemasExtraData22 CrmMetadataSchemasExtraData22 = CrmMetadataSchemasExtraData22{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemasExtraData22, "", true, true); err == nil {
-		u.CrmMetadataSchemasExtraData22 = &crmMetadataSchemasExtraData22
-		u.Type = CrmMetadata2TypeCrmMetadataSchemasExtraData22
+	return CrmMetadataExtraData{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateCrmMetadataExtraDataArrayOfCrmMetadata5(arrayOfCrmMetadata5 []CrmMetadata5) CrmMetadataExtraData {
+	typ := CrmMetadataExtraDataTypeArrayOfCrmMetadata5
+
+	return CrmMetadataExtraData{
+		ArrayOfCrmMetadata5: arrayOfCrmMetadata5,
+		Type:                typ,
+	}
+}
+
+func (u *CrmMetadataExtraData) UnmarshalJSON(data []byte) error {
+
+	var mapOfAny map[string]any = map[string]any{}
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+		u.MapOfAny = mapOfAny
+		u.Type = CrmMetadataExtraDataTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
 	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
 		u.Str = &str
-		u.Type = CrmMetadata2TypeStr
+		u.Type = CrmMetadataExtraDataTypeStr
 		return nil
 	}
 
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CrmMetadata2", string(data))
-}
-
-func (u CrmMetadata2) MarshalJSON() ([]byte, error) {
-	if u.Str != nil {
-		return utils.MarshalJSON(u.Str, "", true)
-	}
-
-	if u.CrmMetadataSchemasExtraData22 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemasExtraData22, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CrmMetadata2: all fields are null")
-}
-
-type CrmMetadata1 struct {
-}
-
-type CrmMetadataExtraDataType string
-
-const (
-	CrmMetadataExtraDataTypeCrmMetadata1 CrmMetadataExtraDataType = "CrmMetadata_1"
-	CrmMetadataExtraDataTypeCrmMetadata2 CrmMetadataExtraDataType = "CrmMetadata_2"
-	CrmMetadataExtraDataTypeCrmMetadata3 CrmMetadataExtraDataType = "CrmMetadata_3"
-	CrmMetadataExtraDataTypeCrmMetadata4 CrmMetadataExtraDataType = "CrmMetadata_4"
-	CrmMetadataExtraDataTypeCrmMetadata5 CrmMetadataExtraDataType = "CrmMetadata_5"
-)
-
-type CrmMetadataExtraData struct {
-	CrmMetadata1 *CrmMetadata1 `queryParam:"inline"`
-	CrmMetadata2 *CrmMetadata2 `queryParam:"inline"`
-	CrmMetadata3 *CrmMetadata3 `queryParam:"inline"`
-	CrmMetadata4 *CrmMetadata4 `queryParam:"inline"`
-	CrmMetadata5 *CrmMetadata5 `queryParam:"inline"`
-
-	Type CrmMetadataExtraDataType
-}
-
-func CreateCrmMetadataExtraDataCrmMetadata1(crmMetadata1 CrmMetadata1) CrmMetadataExtraData {
-	typ := CrmMetadataExtraDataTypeCrmMetadata1
-
-	return CrmMetadataExtraData{
-		CrmMetadata1: &crmMetadata1,
-		Type:         typ,
-	}
-}
-
-func CreateCrmMetadataExtraDataCrmMetadata2(crmMetadata2 CrmMetadata2) CrmMetadataExtraData {
-	typ := CrmMetadataExtraDataTypeCrmMetadata2
-
-	return CrmMetadataExtraData{
-		CrmMetadata2: &crmMetadata2,
-		Type:         typ,
-	}
-}
-
-func CreateCrmMetadataExtraDataCrmMetadata3(crmMetadata3 CrmMetadata3) CrmMetadataExtraData {
-	typ := CrmMetadataExtraDataTypeCrmMetadata3
-
-	return CrmMetadataExtraData{
-		CrmMetadata3: &crmMetadata3,
-		Type:         typ,
-	}
-}
-
-func CreateCrmMetadataExtraDataCrmMetadata4(crmMetadata4 CrmMetadata4) CrmMetadataExtraData {
-	typ := CrmMetadataExtraDataTypeCrmMetadata4
-
-	return CrmMetadataExtraData{
-		CrmMetadata4: &crmMetadata4,
-		Type:         typ,
-	}
-}
-
-func CreateCrmMetadataExtraDataCrmMetadata5(crmMetadata5 CrmMetadata5) CrmMetadataExtraData {
-	typ := CrmMetadataExtraDataTypeCrmMetadata5
-
-	return CrmMetadataExtraData{
-		CrmMetadata5: &crmMetadata5,
-		Type:         typ,
-	}
-}
-
-func (u *CrmMetadataExtraData) UnmarshalJSON(data []byte) error {
-
-	var crmMetadata1 CrmMetadata1 = CrmMetadata1{}
-	if err := utils.UnmarshalJSON(data, &crmMetadata1, "", true, true); err == nil {
-		u.CrmMetadata1 = &crmMetadata1
-		u.Type = CrmMetadataExtraDataTypeCrmMetadata1
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = CrmMetadataExtraDataTypeNumber
 		return nil
 	}
 
-	var crmMetadata2 CrmMetadata2 = CrmMetadata2{}
-	if err := utils.UnmarshalJSON(data, &crmMetadata2, "", true, true); err == nil {
-		u.CrmMetadata2 = &crmMetadata2
-		u.Type = CrmMetadataExtraDataTypeCrmMetadata2
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = CrmMetadataExtraDataTypeBoolean
 		return nil
 	}
 
-	var crmMetadata3 CrmMetadata3 = CrmMetadata3{}
-	if err := utils.UnmarshalJSON(data, &crmMetadata3, "", true, true); err == nil {
-		u.CrmMetadata3 = &crmMetadata3
-		u.Type = CrmMetadataExtraDataTypeCrmMetadata3
-		return nil
-	}
-
-	var crmMetadata4 CrmMetadata4 = CrmMetadata4{}
-	if err := utils.UnmarshalJSON(data, &crmMetadata4, "", true, true); err == nil {
-		u.CrmMetadata4 = &crmMetadata4
-		u.Type = CrmMetadataExtraDataTypeCrmMetadata4
-		return nil
-	}
-
-	var crmMetadata5 CrmMetadata5 = CrmMetadata5{}
-	if err := utils.UnmarshalJSON(data, &crmMetadata5, "", true, true); err == nil {
-		u.CrmMetadata5 = &crmMetadata5
-		u.Type = CrmMetadataExtraDataTypeCrmMetadata5
+	var arrayOfCrmMetadata5 []CrmMetadata5 = []CrmMetadata5{}
+	if err := utils.UnmarshalJSON(data, &arrayOfCrmMetadata5, "", true, true); err == nil {
+		u.ArrayOfCrmMetadata5 = arrayOfCrmMetadata5
+		u.Type = CrmMetadataExtraDataTypeArrayOfCrmMetadata5
 		return nil
 	}
 
@@ -381,77 +224,113 @@ func (u *CrmMetadataExtraData) UnmarshalJSON(data []byte) error {
 }
 
 func (u CrmMetadataExtraData) MarshalJSON() ([]byte, error) {
-	if u.CrmMetadata1 != nil {
-		return utils.MarshalJSON(u.CrmMetadata1, "", true)
+	if u.MapOfAny != nil {
+		return utils.MarshalJSON(u.MapOfAny, "", true)
 	}
 
-	if u.CrmMetadata2 != nil {
-		return utils.MarshalJSON(u.CrmMetadata2, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
 	}
 
-	if u.CrmMetadata3 != nil {
-		return utils.MarshalJSON(u.CrmMetadata3, "", true)
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
 	}
 
-	if u.CrmMetadata4 != nil {
-		return utils.MarshalJSON(u.CrmMetadata4, "", true)
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
-	if u.CrmMetadata5 != nil {
-		return utils.MarshalJSON(u.CrmMetadata5, "", true)
+	if u.ArrayOfCrmMetadata5 != nil {
+		return utils.MarshalJSON(u.ArrayOfCrmMetadata5, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type CrmMetadataExtraData: all fields are null")
 }
 
-type CrmMetadataSchemasValue52 struct {
+type CrmMetadataSchemas1 struct {
 }
 
 type CrmMetadataSchemas5Type string
 
 const (
-	CrmMetadataSchemas5TypeArrayOfAny                CrmMetadataSchemas5Type = "arrayOfAny"
-	CrmMetadataSchemas5TypeCrmMetadataSchemasValue52 CrmMetadataSchemas5Type = "CrmMetadata_Schemas_value_5_2"
+	CrmMetadataSchemas5TypeCrmMetadataSchemas1 CrmMetadataSchemas5Type = "CrmMetadata_Schemas_1"
+	CrmMetadataSchemas5TypeStr                 CrmMetadataSchemas5Type = "str"
+	CrmMetadataSchemas5TypeNumber              CrmMetadataSchemas5Type = "number"
+	CrmMetadataSchemas5TypeBoolean             CrmMetadataSchemas5Type = "boolean"
 )
 
 type CrmMetadataSchemas5 struct {
-	ArrayOfAny                []any                      `queryParam:"inline"`
-	CrmMetadataSchemasValue52 *CrmMetadataSchemasValue52 `queryParam:"inline"`
+	CrmMetadataSchemas1 *CrmMetadataSchemas1 `queryParam:"inline"`
+	Str                 *string              `queryParam:"inline"`
+	Number              *float64             `queryParam:"inline"`
+	Boolean             *bool                `queryParam:"inline"`
 
 	Type CrmMetadataSchemas5Type
 }
 
-func CreateCrmMetadataSchemas5ArrayOfAny(arrayOfAny []any) CrmMetadataSchemas5 {
-	typ := CrmMetadataSchemas5TypeArrayOfAny
+func CreateCrmMetadataSchemas5CrmMetadataSchemas1(crmMetadataSchemas1 CrmMetadataSchemas1) CrmMetadataSchemas5 {
+	typ := CrmMetadataSchemas5TypeCrmMetadataSchemas1
 
 	return CrmMetadataSchemas5{
-		ArrayOfAny: arrayOfAny,
-		Type:       typ,
+		CrmMetadataSchemas1: &crmMetadataSchemas1,
+		Type:                typ,
 	}
 }
 
-func CreateCrmMetadataSchemas5CrmMetadataSchemasValue52(crmMetadataSchemasValue52 CrmMetadataSchemasValue52) CrmMetadataSchemas5 {
-	typ := CrmMetadataSchemas5TypeCrmMetadataSchemasValue52
+func CreateCrmMetadataSchemas5Str(str string) CrmMetadataSchemas5 {
+	typ := CrmMetadataSchemas5TypeStr
 
 	return CrmMetadataSchemas5{
-		CrmMetadataSchemasValue52: &crmMetadataSchemasValue52,
-		Type:                      typ,
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateCrmMetadataSchemas5Number(number float64) CrmMetadataSchemas5 {
+	typ := CrmMetadataSchemas5TypeNumber
+
+	return CrmMetadataSchemas5{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateCrmMetadataSchemas5Boolean(boolean bool) CrmMetadataSchemas5 {
+	typ := CrmMetadataSchemas5TypeBoolean
+
+	return CrmMetadataSchemas5{
+		Boolean: &boolean,
+		Type:    typ,
 	}
 }
 
 func (u *CrmMetadataSchemas5) UnmarshalJSON(data []byte) error {
 
-	var crmMetadataSchemasValue52 CrmMetadataSchemasValue52 = CrmMetadataSchemasValue52{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemasValue52, "", true, true); err == nil {
-		u.CrmMetadataSchemasValue52 = &crmMetadataSchemasValue52
-		u.Type = CrmMetadataSchemas5TypeCrmMetadataSchemasValue52
+	var crmMetadataSchemas1 CrmMetadataSchemas1 = CrmMetadataSchemas1{}
+	if err := utils.UnmarshalJSON(data, &crmMetadataSchemas1, "", true, true); err == nil {
+		u.CrmMetadataSchemas1 = &crmMetadataSchemas1
+		u.Type = CrmMetadataSchemas5TypeCrmMetadataSchemas1
 		return nil
 	}
 
-	var arrayOfAny []any = []any{}
-	if err := utils.UnmarshalJSON(data, &arrayOfAny, "", true, true); err == nil {
-		u.ArrayOfAny = arrayOfAny
-		u.Type = CrmMetadataSchemas5TypeArrayOfAny
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+		u.Str = &str
+		u.Type = CrmMetadataSchemas5TypeStr
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = CrmMetadataSchemas5TypeNumber
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = CrmMetadataSchemas5TypeBoolean
 		return nil
 	}
 
@@ -459,317 +338,124 @@ func (u *CrmMetadataSchemas5) UnmarshalJSON(data []byte) error {
 }
 
 func (u CrmMetadataSchemas5) MarshalJSON() ([]byte, error) {
-	if u.ArrayOfAny != nil {
-		return utils.MarshalJSON(u.ArrayOfAny, "", true)
+	if u.CrmMetadataSchemas1 != nil {
+		return utils.MarshalJSON(u.CrmMetadataSchemas1, "", true)
 	}
 
-	if u.CrmMetadataSchemasValue52 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemasValue52, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type CrmMetadataSchemas5: all fields are null")
 }
 
-type CrmMetadataSchemasValue42 struct {
-}
-
-type CrmMetadataSchemas4Type string
+type CrmMetadataValueType string
 
 const (
-	CrmMetadataSchemas4TypeBoolean                   CrmMetadataSchemas4Type = "boolean"
-	CrmMetadataSchemas4TypeCrmMetadataSchemasValue42 CrmMetadataSchemas4Type = "CrmMetadata_Schemas_value_4_2"
+	CrmMetadataValueTypeMapOfAny                   CrmMetadataValueType = "mapOfAny"
+	CrmMetadataValueTypeStr                        CrmMetadataValueType = "str"
+	CrmMetadataValueTypeNumber                     CrmMetadataValueType = "number"
+	CrmMetadataValueTypeBoolean                    CrmMetadataValueType = "boolean"
+	CrmMetadataValueTypeArrayOfCrmMetadataSchemas5 CrmMetadataValueType = "arrayOfCrmMetadataSchemas5"
 )
 
-type CrmMetadataSchemas4 struct {
-	Boolean                   *bool                      `queryParam:"inline"`
-	CrmMetadataSchemasValue42 *CrmMetadataSchemasValue42 `queryParam:"inline"`
+type CrmMetadataValue struct {
+	MapOfAny                   map[string]any        `queryParam:"inline"`
+	Str                        *string               `queryParam:"inline"`
+	Number                     *float64              `queryParam:"inline"`
+	Boolean                    *bool                 `queryParam:"inline"`
+	ArrayOfCrmMetadataSchemas5 []CrmMetadataSchemas5 `queryParam:"inline"`
 
-	Type CrmMetadataSchemas4Type
+	Type CrmMetadataValueType
 }
 
-func CreateCrmMetadataSchemas4Boolean(boolean bool) CrmMetadataSchemas4 {
-	typ := CrmMetadataSchemas4TypeBoolean
+func CreateCrmMetadataValueMapOfAny(mapOfAny map[string]any) CrmMetadataValue {
+	typ := CrmMetadataValueTypeMapOfAny
 
-	return CrmMetadataSchemas4{
-		Boolean: &boolean,
-		Type:    typ,
+	return CrmMetadataValue{
+		MapOfAny: mapOfAny,
+		Type:     typ,
 	}
 }
 
-func CreateCrmMetadataSchemas4CrmMetadataSchemasValue42(crmMetadataSchemasValue42 CrmMetadataSchemasValue42) CrmMetadataSchemas4 {
-	typ := CrmMetadataSchemas4TypeCrmMetadataSchemasValue42
+func CreateCrmMetadataValueStr(str string) CrmMetadataValue {
+	typ := CrmMetadataValueTypeStr
 
-	return CrmMetadataSchemas4{
-		CrmMetadataSchemasValue42: &crmMetadataSchemasValue42,
-		Type:                      typ,
-	}
-}
-
-func (u *CrmMetadataSchemas4) UnmarshalJSON(data []byte) error {
-
-	var crmMetadataSchemasValue42 CrmMetadataSchemasValue42 = CrmMetadataSchemasValue42{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemasValue42, "", true, true); err == nil {
-		u.CrmMetadataSchemasValue42 = &crmMetadataSchemasValue42
-		u.Type = CrmMetadataSchemas4TypeCrmMetadataSchemasValue42
-		return nil
-	}
-
-	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
-		u.Boolean = &boolean
-		u.Type = CrmMetadataSchemas4TypeBoolean
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CrmMetadataSchemas4", string(data))
-}
-
-func (u CrmMetadataSchemas4) MarshalJSON() ([]byte, error) {
-	if u.Boolean != nil {
-		return utils.MarshalJSON(u.Boolean, "", true)
-	}
-
-	if u.CrmMetadataSchemasValue42 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemasValue42, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CrmMetadataSchemas4: all fields are null")
-}
-
-type CrmMetadataSchemasValue32 struct {
-}
-
-type CrmMetadataSchemas3Type string
-
-const (
-	CrmMetadataSchemas3TypeNumber                    CrmMetadataSchemas3Type = "number"
-	CrmMetadataSchemas3TypeCrmMetadataSchemasValue32 CrmMetadataSchemas3Type = "CrmMetadata_Schemas_value_3_2"
-)
-
-type CrmMetadataSchemas3 struct {
-	Number                    *float64                   `queryParam:"inline"`
-	CrmMetadataSchemasValue32 *CrmMetadataSchemasValue32 `queryParam:"inline"`
-
-	Type CrmMetadataSchemas3Type
-}
-
-func CreateCrmMetadataSchemas3Number(number float64) CrmMetadataSchemas3 {
-	typ := CrmMetadataSchemas3TypeNumber
-
-	return CrmMetadataSchemas3{
-		Number: &number,
-		Type:   typ,
-	}
-}
-
-func CreateCrmMetadataSchemas3CrmMetadataSchemasValue32(crmMetadataSchemasValue32 CrmMetadataSchemasValue32) CrmMetadataSchemas3 {
-	typ := CrmMetadataSchemas3TypeCrmMetadataSchemasValue32
-
-	return CrmMetadataSchemas3{
-		CrmMetadataSchemasValue32: &crmMetadataSchemasValue32,
-		Type:                      typ,
-	}
-}
-
-func (u *CrmMetadataSchemas3) UnmarshalJSON(data []byte) error {
-
-	var crmMetadataSchemasValue32 CrmMetadataSchemasValue32 = CrmMetadataSchemasValue32{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemasValue32, "", true, true); err == nil {
-		u.CrmMetadataSchemasValue32 = &crmMetadataSchemasValue32
-		u.Type = CrmMetadataSchemas3TypeCrmMetadataSchemasValue32
-		return nil
-	}
-
-	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
-		u.Number = &number
-		u.Type = CrmMetadataSchemas3TypeNumber
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CrmMetadataSchemas3", string(data))
-}
-
-func (u CrmMetadataSchemas3) MarshalJSON() ([]byte, error) {
-	if u.Number != nil {
-		return utils.MarshalJSON(u.Number, "", true)
-	}
-
-	if u.CrmMetadataSchemasValue32 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemasValue32, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CrmMetadataSchemas3: all fields are null")
-}
-
-type CrmMetadataSchemasValue2 struct {
-}
-
-type CrmMetadataSchemas2Type string
-
-const (
-	CrmMetadataSchemas2TypeStr                      CrmMetadataSchemas2Type = "str"
-	CrmMetadataSchemas2TypeCrmMetadataSchemasValue2 CrmMetadataSchemas2Type = "CrmMetadata_Schemas_value_2"
-)
-
-type CrmMetadataSchemas2 struct {
-	Str                      *string                   `queryParam:"inline"`
-	CrmMetadataSchemasValue2 *CrmMetadataSchemasValue2 `queryParam:"inline"`
-
-	Type CrmMetadataSchemas2Type
-}
-
-func CreateCrmMetadataSchemas2Str(str string) CrmMetadataSchemas2 {
-	typ := CrmMetadataSchemas2TypeStr
-
-	return CrmMetadataSchemas2{
+	return CrmMetadataValue{
 		Str:  &str,
 		Type: typ,
 	}
 }
 
-func CreateCrmMetadataSchemas2CrmMetadataSchemasValue2(crmMetadataSchemasValue2 CrmMetadataSchemasValue2) CrmMetadataSchemas2 {
-	typ := CrmMetadataSchemas2TypeCrmMetadataSchemasValue2
+func CreateCrmMetadataValueNumber(number float64) CrmMetadataValue {
+	typ := CrmMetadataValueTypeNumber
 
-	return CrmMetadataSchemas2{
-		CrmMetadataSchemasValue2: &crmMetadataSchemasValue2,
-		Type:                     typ,
+	return CrmMetadataValue{
+		Number: &number,
+		Type:   typ,
 	}
 }
 
-func (u *CrmMetadataSchemas2) UnmarshalJSON(data []byte) error {
+func CreateCrmMetadataValueBoolean(boolean bool) CrmMetadataValue {
+	typ := CrmMetadataValueTypeBoolean
 
-	var crmMetadataSchemasValue2 CrmMetadataSchemasValue2 = CrmMetadataSchemasValue2{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemasValue2, "", true, true); err == nil {
-		u.CrmMetadataSchemasValue2 = &crmMetadataSchemasValue2
-		u.Type = CrmMetadataSchemas2TypeCrmMetadataSchemasValue2
+	return CrmMetadataValue{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateCrmMetadataValueArrayOfCrmMetadataSchemas5(arrayOfCrmMetadataSchemas5 []CrmMetadataSchemas5) CrmMetadataValue {
+	typ := CrmMetadataValueTypeArrayOfCrmMetadataSchemas5
+
+	return CrmMetadataValue{
+		ArrayOfCrmMetadataSchemas5: arrayOfCrmMetadataSchemas5,
+		Type:                       typ,
+	}
+}
+
+func (u *CrmMetadataValue) UnmarshalJSON(data []byte) error {
+
+	var mapOfAny map[string]any = map[string]any{}
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+		u.MapOfAny = mapOfAny
+		u.Type = CrmMetadataValueTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
 	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
 		u.Str = &str
-		u.Type = CrmMetadataSchemas2TypeStr
+		u.Type = CrmMetadataValueTypeStr
 		return nil
 	}
 
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for CrmMetadataSchemas2", string(data))
-}
-
-func (u CrmMetadataSchemas2) MarshalJSON() ([]byte, error) {
-	if u.Str != nil {
-		return utils.MarshalJSON(u.Str, "", true)
-	}
-
-	if u.CrmMetadataSchemasValue2 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemasValue2, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type CrmMetadataSchemas2: all fields are null")
-}
-
-type CrmMetadataSchemas1 struct {
-}
-
-type CrmMetadataValueType string
-
-const (
-	CrmMetadataValueTypeCrmMetadataSchemas1 CrmMetadataValueType = "CrmMetadata_Schemas_1"
-	CrmMetadataValueTypeCrmMetadataSchemas2 CrmMetadataValueType = "CrmMetadata_Schemas_2"
-	CrmMetadataValueTypeCrmMetadataSchemas3 CrmMetadataValueType = "CrmMetadata_Schemas_3"
-	CrmMetadataValueTypeCrmMetadataSchemas4 CrmMetadataValueType = "CrmMetadata_Schemas_4"
-	CrmMetadataValueTypeCrmMetadataSchemas5 CrmMetadataValueType = "CrmMetadata_Schemas_5"
-)
-
-type CrmMetadataValue struct {
-	CrmMetadataSchemas1 *CrmMetadataSchemas1 `queryParam:"inline"`
-	CrmMetadataSchemas2 *CrmMetadataSchemas2 `queryParam:"inline"`
-	CrmMetadataSchemas3 *CrmMetadataSchemas3 `queryParam:"inline"`
-	CrmMetadataSchemas4 *CrmMetadataSchemas4 `queryParam:"inline"`
-	CrmMetadataSchemas5 *CrmMetadataSchemas5 `queryParam:"inline"`
-
-	Type CrmMetadataValueType
-}
-
-func CreateCrmMetadataValueCrmMetadataSchemas1(crmMetadataSchemas1 CrmMetadataSchemas1) CrmMetadataValue {
-	typ := CrmMetadataValueTypeCrmMetadataSchemas1
-
-	return CrmMetadataValue{
-		CrmMetadataSchemas1: &crmMetadataSchemas1,
-		Type:                typ,
-	}
-}
-
-func CreateCrmMetadataValueCrmMetadataSchemas2(crmMetadataSchemas2 CrmMetadataSchemas2) CrmMetadataValue {
-	typ := CrmMetadataValueTypeCrmMetadataSchemas2
-
-	return CrmMetadataValue{
-		CrmMetadataSchemas2: &crmMetadataSchemas2,
-		Type:                typ,
-	}
-}
-
-func CreateCrmMetadataValueCrmMetadataSchemas3(crmMetadataSchemas3 CrmMetadataSchemas3) CrmMetadataValue {
-	typ := CrmMetadataValueTypeCrmMetadataSchemas3
-
-	return CrmMetadataValue{
-		CrmMetadataSchemas3: &crmMetadataSchemas3,
-		Type:                typ,
-	}
-}
-
-func CreateCrmMetadataValueCrmMetadataSchemas4(crmMetadataSchemas4 CrmMetadataSchemas4) CrmMetadataValue {
-	typ := CrmMetadataValueTypeCrmMetadataSchemas4
-
-	return CrmMetadataValue{
-		CrmMetadataSchemas4: &crmMetadataSchemas4,
-		Type:                typ,
-	}
-}
-
-func CreateCrmMetadataValueCrmMetadataSchemas5(crmMetadataSchemas5 CrmMetadataSchemas5) CrmMetadataValue {
-	typ := CrmMetadataValueTypeCrmMetadataSchemas5
-
-	return CrmMetadataValue{
-		CrmMetadataSchemas5: &crmMetadataSchemas5,
-		Type:                typ,
-	}
-}
-
-func (u *CrmMetadataValue) UnmarshalJSON(data []byte) error {
-
-	var crmMetadataSchemas1 CrmMetadataSchemas1 = CrmMetadataSchemas1{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemas1, "", true, true); err == nil {
-		u.CrmMetadataSchemas1 = &crmMetadataSchemas1
-		u.Type = CrmMetadataValueTypeCrmMetadataSchemas1
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+		u.Number = &number
+		u.Type = CrmMetadataValueTypeNumber
 		return nil
 	}
 
-	var crmMetadataSchemas2 CrmMetadataSchemas2 = CrmMetadataSchemas2{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemas2, "", true, true); err == nil {
-		u.CrmMetadataSchemas2 = &crmMetadataSchemas2
-		u.Type = CrmMetadataValueTypeCrmMetadataSchemas2
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+		u.Boolean = &boolean
+		u.Type = CrmMetadataValueTypeBoolean
 		return nil
 	}
 
-	var crmMetadataSchemas3 CrmMetadataSchemas3 = CrmMetadataSchemas3{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemas3, "", true, true); err == nil {
-		u.CrmMetadataSchemas3 = &crmMetadataSchemas3
-		u.Type = CrmMetadataValueTypeCrmMetadataSchemas3
-		return nil
-	}
-
-	var crmMetadataSchemas4 CrmMetadataSchemas4 = CrmMetadataSchemas4{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemas4, "", true, true); err == nil {
-		u.CrmMetadataSchemas4 = &crmMetadataSchemas4
-		u.Type = CrmMetadataValueTypeCrmMetadataSchemas4
-		return nil
-	}
-
-	var crmMetadataSchemas5 CrmMetadataSchemas5 = CrmMetadataSchemas5{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemas5, "", true, true); err == nil {
-		u.CrmMetadataSchemas5 = &crmMetadataSchemas5
-		u.Type = CrmMetadataValueTypeCrmMetadataSchemas5
+	var arrayOfCrmMetadataSchemas5 []CrmMetadataSchemas5 = []CrmMetadataSchemas5{}
+	if err := utils.UnmarshalJSON(data, &arrayOfCrmMetadataSchemas5, "", true, true); err == nil {
+		u.ArrayOfCrmMetadataSchemas5 = arrayOfCrmMetadataSchemas5
+		u.Type = CrmMetadataValueTypeArrayOfCrmMetadataSchemas5
 		return nil
 	}
 
@@ -777,24 +463,24 @@ func (u *CrmMetadataValue) UnmarshalJSON(data []byte) error {
 }
 
 func (u CrmMetadataValue) MarshalJSON() ([]byte, error) {
-	if u.CrmMetadataSchemas1 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemas1, "", true)
+	if u.MapOfAny != nil {
+		return utils.MarshalJSON(u.MapOfAny, "", true)
 	}
 
-	if u.CrmMetadataSchemas2 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemas2, "", true)
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
 	}
 
-	if u.CrmMetadataSchemas3 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemas3, "", true)
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
 	}
 
-	if u.CrmMetadataSchemas4 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemas4, "", true)
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
 	}
 
-	if u.CrmMetadataSchemas5 != nil {
-		return utils.MarshalJSON(u.CrmMetadataSchemas5, "", true)
+	if u.ArrayOfCrmMetadataSchemas5 != nil {
+		return utils.MarshalJSON(u.ArrayOfCrmMetadataSchemas5, "", true)
 	}
 
 	return nil, errors.New("could not marshal union type CrmMetadataValue: all fields are null")

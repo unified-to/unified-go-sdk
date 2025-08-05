@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### HrisMetadataSchemas1
+### 
 
 ```go
-hrisMetadataValue := shared.CreateHrisMetadataValueHrisMetadataSchemas1(shared.HrisMetadataSchemas1{/* values here */})
+hrisMetadataValue := shared.CreateHrisMetadataValueMapOfAny(map[string]any{/* values here */})
 ```
 
-### HrisMetadataSchemas2
+### 
 
 ```go
-hrisMetadataValue := shared.CreateHrisMetadataValueHrisMetadataSchemas2(shared.HrisMetadataSchemas2{/* values here */})
+hrisMetadataValue := shared.CreateHrisMetadataValueStr(string{/* values here */})
 ```
 
-### HrisMetadataSchemas3
+### 
 
 ```go
-hrisMetadataValue := shared.CreateHrisMetadataValueHrisMetadataSchemas3(shared.HrisMetadataSchemas3{/* values here */})
+hrisMetadataValue := shared.CreateHrisMetadataValueNumber(float64{/* values here */})
 ```
 
-### HrisMetadataSchemas4
+### 
 
 ```go
-hrisMetadataValue := shared.CreateHrisMetadataValueHrisMetadataSchemas4(shared.HrisMetadataSchemas4{/* values here */})
+hrisMetadataValue := shared.CreateHrisMetadataValueBoolean(bool{/* values here */})
 ```
 
-### HrisMetadataSchemas5
+### 
 
 ```go
-hrisMetadataValue := shared.CreateHrisMetadataValueHrisMetadataSchemas5(shared.HrisMetadataSchemas5{/* values here */})
+hrisMetadataValue := shared.CreateHrisMetadataValueArrayOfHrisMetadataSchemas5([]shared.HrisMetadataSchemas5{/* values here */})
 ```
 

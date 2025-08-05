@@ -3,15 +3,27 @@
 
 ## Supported Types
 
+### IntegrationSchemas1
+
+```go
+integrationSchemas5 := shared.CreateIntegrationSchemas5IntegrationSchemas1(shared.IntegrationSchemas1{/* values here */})
+```
+
 ### 
 
 ```go
-integrationSchemas5 := shared.CreateIntegrationSchemas5ArrayOfAny([]any{/* values here */})
+integrationSchemas5 := shared.CreateIntegrationSchemas5Str(string{/* values here */})
 ```
 
-### IntegrationSchemasPartnership52
+### 
 
 ```go
-integrationSchemas5 := shared.CreateIntegrationSchemas5IntegrationSchemasPartnership52(shared.IntegrationSchemasPartnership52{/* values here */})
+integrationSchemas5 := shared.CreateIntegrationSchemas5Number(float64{/* values here */})
+```
+
+### 
+
+```go
+integrationSchemas5 := shared.CreateIntegrationSchemas5Boolean(bool{/* values here */})
 ```
 

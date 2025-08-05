@@ -3,15 +3,27 @@
 
 ## Supported Types
 
+### One
+
+```go
+five := shared.CreateFiveOne(shared.One{/* values here */})
+```
+
 ### 
 
 ```go
-five := shared.CreateFiveArrayOfAny([]any{/* values here */})
+five := shared.CreateFiveStr(string{/* values here */})
 ```
 
-### AtsMetadataSchemasExtraData2
+### 
 
 ```go
-five := shared.CreateFiveAtsMetadataSchemasExtraData2(shared.AtsMetadataSchemasExtraData2{/* values here */})
+five := shared.CreateFiveNumber(float64{/* values here */})
+```
+
+### 
+
+```go
+five := shared.CreateFiveBoolean(bool{/* values here */})
 ```
 

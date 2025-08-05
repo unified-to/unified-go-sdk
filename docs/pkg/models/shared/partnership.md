@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### IntegrationSchemas1
+### 
 
 ```go
-partnership := shared.CreatePartnershipIntegrationSchemas1(shared.IntegrationSchemas1{/* values here */})
+partnership := shared.CreatePartnershipMapOfAny(map[string]any{/* values here */})
 ```
 
-### IntegrationSchemas2
+### 
 
 ```go
-partnership := shared.CreatePartnershipIntegrationSchemas2(shared.IntegrationSchemas2{/* values here */})
+partnership := shared.CreatePartnershipStr(string{/* values here */})
 ```
 
-### IntegrationSchemas3
+### 
 
 ```go
-partnership := shared.CreatePartnershipIntegrationSchemas3(shared.IntegrationSchemas3{/* values here */})
+partnership := shared.CreatePartnershipNumber(float64{/* values here */})
 ```
 
-### IntegrationSchemas4
+### 
 
 ```go
-partnership := shared.CreatePartnershipIntegrationSchemas4(shared.IntegrationSchemas4{/* values here */})
+partnership := shared.CreatePartnershipBoolean(bool{/* values here */})
 ```
 
-### IntegrationSchemas5
+### 
 
 ```go
-partnership := shared.CreatePartnershipIntegrationSchemas5(shared.IntegrationSchemas5{/* values here */})
+partnership := shared.CreatePartnershipArrayOfIntegrationSchemas5([]shared.IntegrationSchemas5{/* values here */})
 ```
 

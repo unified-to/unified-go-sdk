@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### One
+### 
 
 ```go
-extraData := shared.CreateExtraDataOne(shared.One{/* values here */})
+extraData := shared.CreateExtraDataMapOfAny(map[string]any{/* values here */})
 ```
 
-### Two
+### 
 
 ```go
-extraData := shared.CreateExtraDataTwo(shared.Two{/* values here */})
+extraData := shared.CreateExtraDataStr(string{/* values here */})
 ```
 
-### Three
+### 
 
 ```go
-extraData := shared.CreateExtraDataThree(shared.Three{/* values here */})
+extraData := shared.CreateExtraDataNumber(float64{/* values here */})
 ```
 
-### Four
+### 
 
 ```go
-extraData := shared.CreateExtraDataFour(shared.Four{/* values here */})
+extraData := shared.CreateExtraDataBoolean(bool{/* values here */})
 ```
 
-### Five
+### 
 
 ```go
-extraData := shared.CreateExtraDataFive(shared.Five{/* values here */})
+extraData := shared.CreateExtraDataArrayOf5([]shared.Five{/* values here */})
 ```
 

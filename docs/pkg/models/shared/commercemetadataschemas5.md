@@ -3,15 +3,27 @@
 
 ## Supported Types
 
+### CommerceMetadataSchemas1
+
+```go
+commerceMetadataSchemas5 := shared.CreateCommerceMetadataSchemas5CommerceMetadataSchemas1(shared.CommerceMetadataSchemas1{/* values here */})
+```
+
 ### 
 
 ```go
-commerceMetadataSchemas5 := shared.CreateCommerceMetadataSchemas5ArrayOfAny([]any{/* values here */})
+commerceMetadataSchemas5 := shared.CreateCommerceMetadataSchemas5Str(string{/* values here */})
 ```
 
-### CommerceMetadataSchemasValue52
+### 
 
 ```go
-commerceMetadataSchemas5 := shared.CreateCommerceMetadataSchemas5CommerceMetadataSchemasValue52(shared.CommerceMetadataSchemasValue52{/* values here */})
+commerceMetadataSchemas5 := shared.CreateCommerceMetadataSchemas5Number(float64{/* values here */})
+```
+
+### 
+
+```go
+commerceMetadataSchemas5 := shared.CreateCommerceMetadataSchemas5Boolean(bool{/* values here */})
 ```
 

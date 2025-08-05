@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### CrmMetadata1
+### 
 
 ```go
-crmMetadataExtraData := shared.CreateCrmMetadataExtraDataCrmMetadata1(shared.CrmMetadata1{/* values here */})
+crmMetadataExtraData := shared.CreateCrmMetadataExtraDataMapOfAny(map[string]any{/* values here */})
 ```
 
-### CrmMetadata2
+### 
 
 ```go
-crmMetadataExtraData := shared.CreateCrmMetadataExtraDataCrmMetadata2(shared.CrmMetadata2{/* values here */})
+crmMetadataExtraData := shared.CreateCrmMetadataExtraDataStr(string{/* values here */})
 ```
 
-### CrmMetadata3
+### 
 
 ```go
-crmMetadataExtraData := shared.CreateCrmMetadataExtraDataCrmMetadata3(shared.CrmMetadata3{/* values here */})
+crmMetadataExtraData := shared.CreateCrmMetadataExtraDataNumber(float64{/* values here */})
 ```
 
-### CrmMetadata4
+### 
 
 ```go
-crmMetadataExtraData := shared.CreateCrmMetadataExtraDataCrmMetadata4(shared.CrmMetadata4{/* values here */})
+crmMetadataExtraData := shared.CreateCrmMetadataExtraDataBoolean(bool{/* values here */})
 ```
 
-### CrmMetadata5
+### 
 
 ```go
-crmMetadataExtraData := shared.CreateCrmMetadataExtraDataCrmMetadata5(shared.CrmMetadata5{/* values here */})
+crmMetadataExtraData := shared.CreateCrmMetadataExtraDataArrayOfCrmMetadata5([]shared.CrmMetadata5{/* values here */})
 ```
 

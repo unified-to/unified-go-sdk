@@ -3,15 +3,27 @@
 
 ## Supported Types
 
+### CrmMetadata1
+
+```go
+crmMetadata5 := shared.CreateCrmMetadata5CrmMetadata1(shared.CrmMetadata1{/* values here */})
+```
+
 ### 
 
 ```go
-crmMetadata5 := shared.CreateCrmMetadata5ArrayOfAny([]any{/* values here */})
+crmMetadata5 := shared.CreateCrmMetadata5Str(string{/* values here */})
 ```
 
-### CrmMetadataSchemasExtraData52
+### 
 
 ```go
-crmMetadata5 := shared.CreateCrmMetadata5CrmMetadataSchemasExtraData52(shared.CrmMetadataSchemasExtraData52{/* values here */})
+crmMetadata5 := shared.CreateCrmMetadata5Number(float64{/* values here */})
+```
+
+### 
+
+```go
+crmMetadata5 := shared.CreateCrmMetadata5Boolean(bool{/* values here */})
 ```
 
