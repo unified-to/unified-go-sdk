@@ -5,8 +5,8 @@ management:
   docVersion: "1.0"
   speakeasyVersion: 1.598.0
   generationVersion: 2.674.1
-  releaseVersion: 0.28.2
-  configChecksum: 9eeb60d812a5490ef5f4dff2a683a57e
+  releaseVersion: 0.28.3
+  configChecksum: adc43b3ca049481b5391aff1ce99e488
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk

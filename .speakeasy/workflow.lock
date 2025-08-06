@@ -6,7 +6,7 @@ sources:
         sourceBlobDigest: sha256:07137fb6d06f33752c478ab7cc620b17b005f9e915d48bffd5d14783a2c14d07
         tags:
             - latest
-            - speakeasy-sdk-regen-1754427653
+            - speakeasy-sdk-regen-1754440345
             - "1.0"
 targets:
     go-terget:
@@ -15,7 +15,7 @@ targets:
         sourceRevisionDigest: sha256:fc5991246a87311eb499b7bf9e542aa25eed86c7dff85d4a7259a3924857574c
         sourceBlobDigest: sha256:07137fb6d06f33752c478ab7cc620b17b005f9e915d48bffd5d14783a2c14d07
         codeSamplesNamespace: my-source-go-code-samples
-        codeSamplesRevisionDigest: sha256:11c682753fb23d0b160ee309bac153e10d5a3119a6ca06e164bbaf2db4d4ad54
+        codeSamplesRevisionDigest: sha256:628fe7e6b6b794716b39b5f042ade77745b25ea814ccd2208189270b219b6a19
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
