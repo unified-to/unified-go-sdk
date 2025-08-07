@@ -12,6 +12,7 @@ type CommerceItem struct {
 	CollectionIds     []string            `json:"collection_ids,omitempty"`
 	CreatedAt         *time.Time          `json:"created_at,omitempty"`
 	Description       *string             `json:"description,omitempty"`
+	GlobalCode        *string             `json:"global_code,omitempty"`
 	ID                *string             `json:"id,omitempty"`
 	IsActive          *bool               `json:"is_active,omitempty"`
 	IsTaxable         *bool               `json:"is_taxable,omitempty"`
@@ -67,6 +68,13 @@ func (o *CommerceItem) GetDescription() *string {
 		return nil
 	}
 	return o.Description
+}
+
+func (o *CommerceItem) GetGlobalCode() *string {
+	if o == nil {
+		return nil
+	}
+	return o.GlobalCode
 }
 
 func (o *CommerceItem) GetID() *string {
