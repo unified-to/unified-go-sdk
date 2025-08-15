@@ -5,7 +5,6 @@
 
 | Name                                                        | Value                                                       |
 | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| `PropertyConnectionPermissionsAuthLogin`                    | auth_login                                                  |
 | `PropertyConnectionPermissionsAccountingAccountRead`        | accounting_account_read                                     |
 | `PropertyConnectionPermissionsAccountingAccountWrite`       | accounting_account_write                                    |
 | `PropertyConnectionPermissionsAccountingTransactionRead`    | accounting_transaction_read                                 |

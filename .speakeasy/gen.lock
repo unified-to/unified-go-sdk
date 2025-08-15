@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 585a933222a93cac4e23b48d062c4a0c
+  docChecksum: 3a5734f3a7c4cfbbb830e6e58476de9b
   docVersion: "1.0"
-  speakeasyVersion: 1.598.3
-  generationVersion: 2.674.3
-  releaseVersion: 0.28.4
-  configChecksum: 00e87edbc434e76701efc75abf16712a
+  speakeasyVersion: 1.604.1
+  generationVersion: 2.683.1
+  releaseVersion: 0.28.5
+  configChecksum: a634dfdc225064c8f438267acb37f18e
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -27,7 +27,7 @@ features:
     intellisenseMarkdownSupport: 0.1.0
     openEnums: 0.1.0
     responseFormat: 0.1.2
-    retries: 2.84.0
+    retries: 2.84.2
     sdkHooks: 0.2.0
     unions: 2.85.12
     uploadStreams: 0.1.0
@@ -6209,7 +6209,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["auth"], "environment": "Production", "integration_type": "<value>", "permissions": ["scim_groups_read", "auth_login"]}
+          application/json: {"categories": ["auth"], "environment": "Production", "integration_type": "<value>", "permissions": ["scim_groups_read", "crm_pipeline_write"]}
   getUnifiedIntegrationAuth:
     speakeasy-default-get-unified-integration-auth:
       parameters:

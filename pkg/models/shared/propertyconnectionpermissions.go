@@ -5,7 +5,6 @@ package shared
 type PropertyConnectionPermissions string
 
 const (
-	PropertyConnectionPermissionsAuthLogin                    PropertyConnectionPermissions = "auth_login"
 	PropertyConnectionPermissionsAccountingAccountRead        PropertyConnectionPermissions = "accounting_account_read"
 	PropertyConnectionPermissionsAccountingAccountWrite       PropertyConnectionPermissions = "accounting_account_write"
 	PropertyConnectionPermissionsAccountingTransactionRead    PropertyConnectionPermissions = "accounting_transaction_read"
