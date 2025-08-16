@@ -328,6 +328,11 @@ func main() {
 * [RemoveAccountingCategory](docs/sdks/category/README.md#removeaccountingcategory) - Remove a category
 * [UpdateAccountingCategory](docs/sdks/category/README.md#updateaccountingcategory) - Update a category
 
+### [Change](docs/sdks/change/README.md)
+
+* [GetTaskChange](docs/sdks/change/README.md#gettaskchange) - Retrieve a change
+* [ListTaskChanges](docs/sdks/change/README.md#listtaskchanges) - List all changes
+
 ### [Channel](docs/sdks/channel/README.md)
 
 * [GetMessagingChannel](docs/sdks/channel/README.md#getmessagingchannel) - Retrieve a channel
@@ -1169,9 +1174,11 @@ func main() {
 * [CreateTaskComment](docs/sdks/task/README.md#createtaskcomment) - Create a comment
 * [CreateTaskProject](docs/sdks/task/README.md#createtaskproject) - Create a project
 * [CreateTaskTask](docs/sdks/task/README.md#createtasktask) - Create a task
+* [GetTaskChange](docs/sdks/task/README.md#gettaskchange) - Retrieve a change
 * [GetTaskComment](docs/sdks/task/README.md#gettaskcomment) - Retrieve a comment
 * [GetTaskProject](docs/sdks/task/README.md#gettaskproject) - Retrieve a project
 * [GetTaskTask](docs/sdks/task/README.md#gettasktask) - Retrieve a task
+* [ListTaskChanges](docs/sdks/task/README.md#listtaskchanges) - List all changes
 * [ListTaskComments](docs/sdks/task/README.md#listtaskcomments) - List all comments
 * [ListTaskProjects](docs/sdks/task/README.md#listtaskprojects) - List all projects
 * [ListTaskTasks](docs/sdks/task/README.md#listtasktasks) - List all tasks

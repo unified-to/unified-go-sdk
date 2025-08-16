@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 3a5734f3a7c4cfbbb830e6e58476de9b
+  docChecksum: 190c325c2a6a2949d578db67163791d8
   docVersion: "1.0"
-  speakeasyVersion: 1.604.1
-  generationVersion: 2.683.1
-  releaseVersion: 0.28.5
-  configChecksum: a634dfdc225064c8f438267acb37f18e
+  speakeasyVersion: 1.605.0
+  generationVersion: 2.684.0
+  releaseVersion: 0.28.6
+  configChecksum: 7ec15e559ea714929122a9b75f5c3f94
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -182,6 +182,7 @@ generatedFiles:
   - /pkg/models/operations/getscimgroups.go
   - /pkg/models/operations/getscimusers.go
   - /pkg/models/operations/getstoragefile.go
+  - /pkg/models/operations/gettaskchange.go
   - /pkg/models/operations/gettaskcomment.go
   - /pkg/models/operations/gettaskproject.go
   - /pkg/models/operations/gettasktask.go
@@ -275,6 +276,7 @@ generatedFiles:
   - /pkg/models/operations/listscimgroups.go
   - /pkg/models/operations/listscimusers.go
   - /pkg/models/operations/liststoragefiles.go
+  - /pkg/models/operations/listtaskchanges.go
   - /pkg/models/operations/listtaskcomments.go
   - /pkg/models/operations/listtaskprojects.go
   - /pkg/models/operations/listtasktasks.go
@@ -733,6 +735,8 @@ generatedFiles:
   - /pkg/models/shared/security.go
   - /pkg/models/shared/storagefile.go
   - /pkg/models/shared/storagepermission.go
+  - /pkg/models/shared/taskchange.go
+  - /pkg/models/shared/taskchangeitem.go
   - /pkg/models/shared/taskcomment.go
   - /pkg/models/shared/taskmetadata.go
   - /pkg/models/shared/taskproject.go
@@ -768,6 +772,7 @@ generatedFiles:
   - call.go
   - candidate.go
   - category.go
+  - change.go
   - channel.go
   - class.go
   - collection.go
@@ -1081,6 +1086,8 @@ generatedFiles:
   - docs/pkg/models/operations/getscimusersresponse.md
   - docs/pkg/models/operations/getstoragefilerequest.md
   - docs/pkg/models/operations/getstoragefileresponse.md
+  - docs/pkg/models/operations/gettaskchangerequest.md
+  - docs/pkg/models/operations/gettaskchangeresponse.md
   - docs/pkg/models/operations/gettaskcommentrequest.md
   - docs/pkg/models/operations/gettaskcommentresponse.md
   - docs/pkg/models/operations/gettaskprojectrequest.md
@@ -1267,6 +1274,8 @@ generatedFiles:
   - docs/pkg/models/operations/listscimusersresponse.md
   - docs/pkg/models/operations/liststoragefilesrequest.md
   - docs/pkg/models/operations/liststoragefilesresponse.md
+  - docs/pkg/models/operations/listtaskchangesrequest.md
+  - docs/pkg/models/operations/listtaskchangesresponse.md
   - docs/pkg/models/operations/listtaskcommentsrequest.md
   - docs/pkg/models/operations/listtaskcommentsresponse.md
   - docs/pkg/models/operations/listtaskprojectsrequest.md
@@ -2115,6 +2124,8 @@ generatedFiles:
   - docs/pkg/models/shared/storagefile.md
   - docs/pkg/models/shared/storagefiletype.md
   - docs/pkg/models/shared/storagepermission.md
+  - docs/pkg/models/shared/taskchange.md
+  - docs/pkg/models/shared/taskchangeitem.md
   - docs/pkg/models/shared/taskcomment.md
   - docs/pkg/models/shared/taskmetadata.md
   - docs/pkg/models/shared/taskmetadata1.md
@@ -2168,6 +2179,7 @@ generatedFiles:
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
   - docs/sdks/category/README.md
+  - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
@@ -6748,5 +6760,28 @@ examples:
       responses:
         "200":
           application/json: {}
+  getTaskChange:
+    speakeasy-default-get-task-change:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listTaskChanges:
+    speakeasy-default-list-task-changes:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: |
+  ## SDK Changes Detected:
+  * `UnifiedTo.Task.GetTaskChange()`: **Added**
+  * `UnifiedTo.Task.ListTaskChanges()`: **Added**
+  * `UnifiedTo.Change.GetTaskChange()`: **Added**
+  * `UnifiedTo.Change.ListTaskChanges()`: **Added**

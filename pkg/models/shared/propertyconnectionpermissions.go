@@ -135,6 +135,7 @@ const (
 	PropertyConnectionPermissionsTaskProjectWrite             PropertyConnectionPermissions = "task_project_write"
 	PropertyConnectionPermissionsTaskTaskRead                 PropertyConnectionPermissions = "task_task_read"
 	PropertyConnectionPermissionsTaskTaskWrite                PropertyConnectionPermissions = "task_task_write"
+	PropertyConnectionPermissionsTaskChangeRead               PropertyConnectionPermissions = "task_change_read"
 	PropertyConnectionPermissionsTaskCommentRead              PropertyConnectionPermissions = "task_comment_read"
 	PropertyConnectionPermissionsTaskCommentWrite             PropertyConnectionPermissions = "task_comment_write"
 	PropertyConnectionPermissionsScimUsersRead                PropertyConnectionPermissions = "scim_users_read"

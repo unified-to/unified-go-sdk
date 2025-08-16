@@ -109,6 +109,7 @@ const (
 	ObjectTypeTaskProject             ObjectType = "task_project"
 	ObjectTypeTaskTask                ObjectType = "task_task"
 	ObjectTypeTaskComment             ObjectType = "task_comment"
+	ObjectTypeTaskChange              ObjectType = "task_change"
 	ObjectTypeScimUsers               ObjectType = "scim_users"
 	ObjectTypeScimGroups              ObjectType = "scim_groups"
 	ObjectTypeLmsCourse               ObjectType = "lms_course"

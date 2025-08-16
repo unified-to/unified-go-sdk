@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.683.1
+// Generated from OpenAPI doc version 1.0 and generator version 2.684.0
 
 import (
 	"context"
@@ -141,6 +141,7 @@ type UnifiedTo struct {
 	Storage           *Storage
 	File              *File
 	Task              *Task
+	Change            *Change
 	Project           *Project
 	Ticketing         *Ticketing
 	Customer          *Customer
@@ -232,9 +233,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.28.5",
+		SDKVersion: "0.28.6",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.28.5 2.683.1 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.28.6 2.684.0 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -341,6 +342,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Storage = newStorage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.File = newFile(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Task = newTask(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Change = newChange(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Project = newProject(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ticketing = newTicketing(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Customer = newCustomer(sdk, sdk.sdkConfiguration, sdk.hooks)

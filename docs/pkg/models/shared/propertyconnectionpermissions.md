@@ -135,6 +135,7 @@
 | `PropertyConnectionPermissionsTaskProjectWrite`             | task_project_write                                          |
 | `PropertyConnectionPermissionsTaskTaskRead`                 | task_task_read                                              |
 | `PropertyConnectionPermissionsTaskTaskWrite`                | task_task_write                                             |
+| `PropertyConnectionPermissionsTaskChangeRead`               | task_change_read                                            |
 | `PropertyConnectionPermissionsTaskCommentRead`              | task_comment_read                                           |
 | `PropertyConnectionPermissionsTaskCommentWrite`             | task_comment_write                                          |
 | `PropertyConnectionPermissionsScimUsersRead`                | scim_users_read                                             |
