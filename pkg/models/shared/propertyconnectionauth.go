@@ -30,6 +30,7 @@ type PropertyConnectionAuth struct {
 	RefreshToken            *string    `json:"refresh_token,omitempty"`
 	RefreshTokenExpiresDate *time.Time `json:"refresh_token_expires_date,omitempty"`
 	RefreshTokenExpiresIn   *float64   `json:"refresh_token_expires_in,omitempty"`
+	RefreshURL              *string    `json:"refresh_url,omitempty"`
 	State                   *string    `json:"state,omitempty"`
 	Token                   *string    `json:"token,omitempty"`
 	TokenURL                *string    `json:"token_url,omitempty"`
@@ -185,6 +186,13 @@ func (o *PropertyConnectionAuth) GetRefreshTokenExpiresIn() *float64 {
 		return nil
 	}
 	return o.RefreshTokenExpiresIn
+}
+
+func (o *PropertyConnectionAuth) GetRefreshURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.RefreshURL
 }
 
 func (o *PropertyConnectionAuth) GetState() *string {

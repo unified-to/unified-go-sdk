@@ -150,6 +150,7 @@ type Webhook struct {
 	ConnectionID    string         `json:"connection_id"`
 	CreatedAt       *time.Time     `json:"created_at,omitempty"`
 	DbNamePrefix    *string        `json:"db_name_prefix,omitempty"`
+	DbSchema        *string        `json:"db_schema,omitempty"`
 	DbType          *DbType        `json:"db_type,omitempty"`
 	DbURL           *string        `json:"db_url,omitempty"`
 	Environment     *string        `default:"Production" json:"environment"`
@@ -209,6 +210,13 @@ func (o *Webhook) GetDbNamePrefix() *string {
 		return nil
 	}
 	return o.DbNamePrefix
+}
+
+func (o *Webhook) GetDbSchema() *string {
+	if o == nil {
+		return nil
+	}
+	return o.DbSchema
 }
 
 func (o *Webhook) GetDbType() *DbType {
