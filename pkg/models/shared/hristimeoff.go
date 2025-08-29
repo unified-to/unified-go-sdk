@@ -51,7 +51,7 @@ func (h HrisTimeoff) MarshalJSON() ([]byte, error) {
 }
 
 func (h *HrisTimeoff) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &h, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"start_at"}); err != nil {
 		return err
 	}
 	return nil

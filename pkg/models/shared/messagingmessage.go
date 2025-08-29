@@ -37,7 +37,7 @@ func (m MessagingMessage) MarshalJSON() ([]byte, error) {
 }
 
 func (m *MessagingMessage) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &m, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &m, "", false, nil); err != nil {
 		return err
 	}
 	return nil

@@ -44,7 +44,7 @@ func (a APICall) MarshalJSON() ([]byte, error) {
 }
 
 func (a *APICall) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"integration_type", "method", "name", "path", "status", "type"}); err != nil {
 		return err
 	}
 	return nil

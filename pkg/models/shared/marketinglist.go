@@ -27,7 +27,7 @@ func (m MarketingList) MarshalJSON() ([]byte, error) {
 }
 
 func (m *MarketingList) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &m, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &m, "", false, nil); err != nil {
 		return err
 	}
 	return nil

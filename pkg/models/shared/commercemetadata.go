@@ -11,6 +11,17 @@ import (
 type CommerceMetadata1 struct {
 }
 
+func (c CommerceMetadata1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CommerceMetadata1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
 type CommerceMetadata5Type string
 
 const (
@@ -68,28 +79,28 @@ func CreateCommerceMetadata5Boolean(boolean bool) CommerceMetadata5 {
 func (u *CommerceMetadata5) UnmarshalJSON(data []byte) error {
 
 	var commerceMetadata1 CommerceMetadata1 = CommerceMetadata1{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadata1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &commerceMetadata1, "", true, nil); err == nil {
 		u.CommerceMetadata1 = &commerceMetadata1
 		u.Type = CommerceMetadata5TypeCommerceMetadata1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = CommerceMetadata5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = CommerceMetadata5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = CommerceMetadata5TypeBoolean
 		return nil
@@ -186,35 +197,35 @@ func CreateCommerceMetadataExtraDataArrayOfCommerceMetadata5(arrayOfCommerceMeta
 func (u *CommerceMetadataExtraData) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = CommerceMetadataExtraDataTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = CommerceMetadataExtraDataTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = CommerceMetadataExtraDataTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = CommerceMetadataExtraDataTypeBoolean
 		return nil
 	}
 
 	var arrayOfCommerceMetadata5 []CommerceMetadata5 = []CommerceMetadata5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfCommerceMetadata5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfCommerceMetadata5, "", true, nil); err == nil {
 		u.ArrayOfCommerceMetadata5 = arrayOfCommerceMetadata5
 		u.Type = CommerceMetadataExtraDataTypeArrayOfCommerceMetadata5
 		return nil
@@ -270,6 +281,17 @@ func (e CommerceMetadataFormat) ToPointer() *CommerceMetadataFormat {
 }
 
 type CommerceMetadataSchemas1 struct {
+}
+
+func (c CommerceMetadataSchemas1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CommerceMetadataSchemas1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 type CommerceMetadataSchemas5Type string
@@ -329,28 +351,28 @@ func CreateCommerceMetadataSchemas5Boolean(boolean bool) CommerceMetadataSchemas
 func (u *CommerceMetadataSchemas5) UnmarshalJSON(data []byte) error {
 
 	var commerceMetadataSchemas1 CommerceMetadataSchemas1 = CommerceMetadataSchemas1{}
-	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemas1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemas1, "", true, nil); err == nil {
 		u.CommerceMetadataSchemas1 = &commerceMetadataSchemas1
 		u.Type = CommerceMetadataSchemas5TypeCommerceMetadataSchemas1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = CommerceMetadataSchemas5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = CommerceMetadataSchemas5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = CommerceMetadataSchemas5TypeBoolean
 		return nil
@@ -447,35 +469,35 @@ func CreateCommerceMetadataValueArrayOfCommerceMetadataSchemas5(arrayOfCommerceM
 func (u *CommerceMetadataValue) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = CommerceMetadataValueTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = CommerceMetadataValueTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = CommerceMetadataValueTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = CommerceMetadataValueTypeBoolean
 		return nil
 	}
 
 	var arrayOfCommerceMetadataSchemas5 []CommerceMetadataSchemas5 = []CommerceMetadataSchemas5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfCommerceMetadataSchemas5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfCommerceMetadataSchemas5, "", true, nil); err == nil {
 		u.ArrayOfCommerceMetadataSchemas5 = arrayOfCommerceMetadataSchemas5
 		u.Type = CommerceMetadataValueTypeArrayOfCommerceMetadataSchemas5
 		return nil

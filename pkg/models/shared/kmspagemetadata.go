@@ -11,6 +11,17 @@ import (
 type KmsPageMetadata1 struct {
 }
 
+func (k KmsPageMetadata1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(k, "", false)
+}
+
+func (k *KmsPageMetadata1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &k, "", false, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
 type KmsPageMetadata5Type string
 
 const (
@@ -68,28 +79,28 @@ func CreateKmsPageMetadata5Boolean(boolean bool) KmsPageMetadata5 {
 func (u *KmsPageMetadata5) UnmarshalJSON(data []byte) error {
 
 	var kmsPageMetadata1 KmsPageMetadata1 = KmsPageMetadata1{}
-	if err := utils.UnmarshalJSON(data, &kmsPageMetadata1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadata1, "", true, nil); err == nil {
 		u.KmsPageMetadata1 = &kmsPageMetadata1
 		u.Type = KmsPageMetadata5TypeKmsPageMetadata1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = KmsPageMetadata5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = KmsPageMetadata5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = KmsPageMetadata5TypeBoolean
 		return nil
@@ -186,35 +197,35 @@ func CreateKmsPageMetadataExtraDataArrayOfKmsPageMetadata5(arrayOfKmsPageMetadat
 func (u *KmsPageMetadataExtraData) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = KmsPageMetadataExtraDataTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = KmsPageMetadataExtraDataTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = KmsPageMetadataExtraDataTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = KmsPageMetadataExtraDataTypeBoolean
 		return nil
 	}
 
 	var arrayOfKmsPageMetadata5 []KmsPageMetadata5 = []KmsPageMetadata5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfKmsPageMetadata5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfKmsPageMetadata5, "", true, nil); err == nil {
 		u.ArrayOfKmsPageMetadata5 = arrayOfKmsPageMetadata5
 		u.Type = KmsPageMetadataExtraDataTypeArrayOfKmsPageMetadata5
 		return nil
@@ -270,6 +281,17 @@ func (e KmsPageMetadataFormat) ToPointer() *KmsPageMetadataFormat {
 }
 
 type KmsPageMetadataSchemas1 struct {
+}
+
+func (k KmsPageMetadataSchemas1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(k, "", false)
+}
+
+func (k *KmsPageMetadataSchemas1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &k, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 type KmsPageMetadataSchemas5Type string
@@ -329,28 +351,28 @@ func CreateKmsPageMetadataSchemas5Boolean(boolean bool) KmsPageMetadataSchemas5 
 func (u *KmsPageMetadataSchemas5) UnmarshalJSON(data []byte) error {
 
 	var kmsPageMetadataSchemas1 KmsPageMetadataSchemas1 = KmsPageMetadataSchemas1{}
-	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemas1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemas1, "", true, nil); err == nil {
 		u.KmsPageMetadataSchemas1 = &kmsPageMetadataSchemas1
 		u.Type = KmsPageMetadataSchemas5TypeKmsPageMetadataSchemas1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = KmsPageMetadataSchemas5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = KmsPageMetadataSchemas5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = KmsPageMetadataSchemas5TypeBoolean
 		return nil
@@ -447,35 +469,35 @@ func CreateKmsPageMetadataValueArrayOfKmsPageMetadataSchemas5(arrayOfKmsPageMeta
 func (u *KmsPageMetadataValue) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = KmsPageMetadataValueTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = KmsPageMetadataValueTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = KmsPageMetadataValueTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = KmsPageMetadataValueTypeBoolean
 		return nil
 	}
 
 	var arrayOfKmsPageMetadataSchemas5 []KmsPageMetadataSchemas5 = []KmsPageMetadataSchemas5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfKmsPageMetadataSchemas5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfKmsPageMetadataSchemas5, "", true, nil); err == nil {
 		u.ArrayOfKmsPageMetadataSchemas5 = arrayOfKmsPageMetadataSchemas5
 		u.Type = KmsPageMetadataValueTypeArrayOfKmsPageMetadataSchemas5
 		return nil

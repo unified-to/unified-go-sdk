@@ -31,7 +31,7 @@ func (a AtsJobOpening) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AtsJobOpening) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, nil); err != nil {
 		return err
 	}
 	return nil

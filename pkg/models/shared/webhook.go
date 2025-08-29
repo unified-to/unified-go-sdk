@@ -63,6 +63,8 @@ const (
 	ObjectTypeCommerceInventory       ObjectType = "commerce_inventory"
 	ObjectTypeCommerceLocation        ObjectType = "commerce_location"
 	ObjectTypeCommerceReview          ObjectType = "commerce_review"
+	ObjectTypeVerificationPackage     ObjectType = "verification_package"
+	ObjectTypeVerificationRequest     ObjectType = "verification_request"
 	ObjectTypeAtsActivity             ObjectType = "ats_activity"
 	ObjectTypeAtsApplication          ObjectType = "ats_application"
 	ObjectTypeAtsApplicationstatus    ObjectType = "ats_applicationstatus"
@@ -178,7 +180,7 @@ func (w Webhook) MarshalJSON() ([]byte, error) {
 }
 
 func (w *Webhook) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &w, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &w, "", false, []string{"connection_id", "event", "object_type"}); err != nil {
 		return err
 	}
 	return nil

@@ -55,7 +55,7 @@ func (a AtsCandidate) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AtsCandidate) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, nil); err != nil {
 		return err
 	}
 	return nil

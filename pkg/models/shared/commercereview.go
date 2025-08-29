@@ -52,7 +52,7 @@ func (c CommerceReview) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CommerceReview) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"item_id"}); err != nil {
 		return err
 	}
 	return nil

@@ -12,6 +12,17 @@ import (
 type Integration1 struct {
 }
 
+func (i Integration1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(i, "", false)
+}
+
+func (i *Integration1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &i, "", false, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
 type Integration5Type string
 
 const (
@@ -69,28 +80,28 @@ func CreateIntegration5Boolean(boolean bool) Integration5 {
 func (u *Integration5) UnmarshalJSON(data []byte) error {
 
 	var integration1 Integration1 = Integration1{}
-	if err := utils.UnmarshalJSON(data, &integration1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &integration1, "", true, nil); err == nil {
 		u.Integration1 = &integration1
 		u.Type = Integration5TypeIntegration1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = Integration5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = Integration5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = Integration5TypeBoolean
 		return nil
@@ -187,35 +198,35 @@ func CreateAPIArrayOfIntegration5(arrayOfIntegration5 []Integration5) API {
 func (u *API) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = APITypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = APITypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = APITypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = APITypeBoolean
 		return nil
 	}
 
 	var arrayOfIntegration5 []Integration5 = []Integration5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfIntegration5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfIntegration5, "", true, nil); err == nil {
 		u.ArrayOfIntegration5 = arrayOfIntegration5
 		u.Type = APITypeArrayOfIntegration5
 		return nil
@@ -249,6 +260,17 @@ func (u API) MarshalJSON() ([]byte, error) {
 }
 
 type IntegrationSchemas1 struct {
+}
+
+func (i IntegrationSchemas1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(i, "", false)
+}
+
+func (i *IntegrationSchemas1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &i, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 type IntegrationSchemas5Type string
@@ -308,28 +330,28 @@ func CreateIntegrationSchemas5Boolean(boolean bool) IntegrationSchemas5 {
 func (u *IntegrationSchemas5) UnmarshalJSON(data []byte) error {
 
 	var integrationSchemas1 IntegrationSchemas1 = IntegrationSchemas1{}
-	if err := utils.UnmarshalJSON(data, &integrationSchemas1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &integrationSchemas1, "", true, nil); err == nil {
 		u.IntegrationSchemas1 = &integrationSchemas1
 		u.Type = IntegrationSchemas5TypeIntegrationSchemas1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = IntegrationSchemas5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = IntegrationSchemas5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = IntegrationSchemas5TypeBoolean
 		return nil
@@ -426,35 +448,35 @@ func CreatePartnershipArrayOfIntegrationSchemas5(arrayOfIntegrationSchemas5 []In
 func (u *Partnership) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = PartnershipTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = PartnershipTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = PartnershipTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = PartnershipTypeBoolean
 		return nil
 	}
 
 	var arrayOfIntegrationSchemas5 []IntegrationSchemas5 = []IntegrationSchemas5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfIntegrationSchemas5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfIntegrationSchemas5, "", true, nil); err == nil {
 		u.ArrayOfIntegrationSchemas5 = arrayOfIntegrationSchemas5
 		u.Type = PartnershipTypeArrayOfIntegrationSchemas5
 		return nil
@@ -488,6 +510,17 @@ func (u Partnership) MarshalJSON() ([]byte, error) {
 }
 
 type IntegrationSchemasSandbox1 struct {
+}
+
+func (i IntegrationSchemasSandbox1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(i, "", false)
+}
+
+func (i *IntegrationSchemasSandbox1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &i, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 type IntegrationSchemasSandbox5Type string
@@ -547,28 +580,28 @@ func CreateIntegrationSchemasSandbox5Boolean(boolean bool) IntegrationSchemasSan
 func (u *IntegrationSchemasSandbox5) UnmarshalJSON(data []byte) error {
 
 	var integrationSchemasSandbox1 IntegrationSchemasSandbox1 = IntegrationSchemasSandbox1{}
-	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox1, "", true, nil); err == nil {
 		u.IntegrationSchemasSandbox1 = &integrationSchemasSandbox1
 		u.Type = IntegrationSchemasSandbox5TypeIntegrationSchemasSandbox1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = IntegrationSchemasSandbox5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = IntegrationSchemasSandbox5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = IntegrationSchemasSandbox5TypeBoolean
 		return nil
@@ -665,35 +698,35 @@ func CreateSandboxArrayOfIntegrationSchemasSandbox5(arrayOfIntegrationSchemasSan
 func (u *Sandbox) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = SandboxTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = SandboxTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = SandboxTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = SandboxTypeBoolean
 		return nil
 	}
 
 	var arrayOfIntegrationSchemasSandbox5 []IntegrationSchemasSandbox5 = []IntegrationSchemasSandbox5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfIntegrationSchemasSandbox5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfIntegrationSchemasSandbox5, "", true, nil); err == nil {
 		u.ArrayOfIntegrationSchemasSandbox5 = arrayOfIntegrationSchemasSandbox5
 		u.Type = SandboxTypeArrayOfIntegrationSchemasSandbox5
 		return nil
@@ -764,7 +797,7 @@ func (i Integration) MarshalJSON() ([]byte, error) {
 }
 
 func (i *Integration) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &i, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &i, "", false, []string{"categories", "name", "type"}); err != nil {
 		return err
 	}
 	return nil

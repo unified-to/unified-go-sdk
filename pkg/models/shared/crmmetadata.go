@@ -11,6 +11,17 @@ import (
 type CrmMetadata1 struct {
 }
 
+func (c CrmMetadata1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CrmMetadata1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
 type CrmMetadata5Type string
 
 const (
@@ -68,28 +79,28 @@ func CreateCrmMetadata5Boolean(boolean bool) CrmMetadata5 {
 func (u *CrmMetadata5) UnmarshalJSON(data []byte) error {
 
 	var crmMetadata1 CrmMetadata1 = CrmMetadata1{}
-	if err := utils.UnmarshalJSON(data, &crmMetadata1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &crmMetadata1, "", true, nil); err == nil {
 		u.CrmMetadata1 = &crmMetadata1
 		u.Type = CrmMetadata5TypeCrmMetadata1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = CrmMetadata5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = CrmMetadata5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = CrmMetadata5TypeBoolean
 		return nil
@@ -186,35 +197,35 @@ func CreateCrmMetadataExtraDataArrayOfCrmMetadata5(arrayOfCrmMetadata5 []CrmMeta
 func (u *CrmMetadataExtraData) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = CrmMetadataExtraDataTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = CrmMetadataExtraDataTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = CrmMetadataExtraDataTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = CrmMetadataExtraDataTypeBoolean
 		return nil
 	}
 
 	var arrayOfCrmMetadata5 []CrmMetadata5 = []CrmMetadata5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfCrmMetadata5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfCrmMetadata5, "", true, nil); err == nil {
 		u.ArrayOfCrmMetadata5 = arrayOfCrmMetadata5
 		u.Type = CrmMetadataExtraDataTypeArrayOfCrmMetadata5
 		return nil
@@ -248,6 +259,17 @@ func (u CrmMetadataExtraData) MarshalJSON() ([]byte, error) {
 }
 
 type CrmMetadataSchemas1 struct {
+}
+
+func (c CrmMetadataSchemas1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CrmMetadataSchemas1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 type CrmMetadataSchemas5Type string
@@ -307,28 +329,28 @@ func CreateCrmMetadataSchemas5Boolean(boolean bool) CrmMetadataSchemas5 {
 func (u *CrmMetadataSchemas5) UnmarshalJSON(data []byte) error {
 
 	var crmMetadataSchemas1 CrmMetadataSchemas1 = CrmMetadataSchemas1{}
-	if err := utils.UnmarshalJSON(data, &crmMetadataSchemas1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &crmMetadataSchemas1, "", true, nil); err == nil {
 		u.CrmMetadataSchemas1 = &crmMetadataSchemas1
 		u.Type = CrmMetadataSchemas5TypeCrmMetadataSchemas1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = CrmMetadataSchemas5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = CrmMetadataSchemas5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = CrmMetadataSchemas5TypeBoolean
 		return nil
@@ -425,35 +447,35 @@ func CreateCrmMetadataValueArrayOfCrmMetadataSchemas5(arrayOfCrmMetadataSchemas5
 func (u *CrmMetadataValue) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = CrmMetadataValueTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = CrmMetadataValueTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = CrmMetadataValueTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = CrmMetadataValueTypeBoolean
 		return nil
 	}
 
 	var arrayOfCrmMetadataSchemas5 []CrmMetadataSchemas5 = []CrmMetadataSchemas5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfCrmMetadataSchemas5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfCrmMetadataSchemas5, "", true, nil); err == nil {
 		u.ArrayOfCrmMetadataSchemas5 = arrayOfCrmMetadataSchemas5
 		u.Type = CrmMetadataValueTypeArrayOfCrmMetadataSchemas5
 		return nil

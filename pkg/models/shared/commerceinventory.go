@@ -23,7 +23,7 @@ func (c CommerceInventory) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CommerceInventory) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"available"}); err != nil {
 		return err
 	}
 	return nil

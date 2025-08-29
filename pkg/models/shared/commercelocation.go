@@ -26,7 +26,7 @@ func (c CommerceLocation) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CommerceLocation) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"name"}); err != nil {
 		return err
 	}
 	return nil

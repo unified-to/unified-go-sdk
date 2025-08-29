@@ -33,7 +33,7 @@ func (a AccountingLineitem) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AccountingLineitem) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, nil); err != nil {
 		return err
 	}
 	return nil

@@ -32,6 +32,8 @@
 | `ObjectTypeCommerceInventory`       | commerce_inventory                  |
 | `ObjectTypeCommerceLocation`        | commerce_location                   |
 | `ObjectTypeCommerceReview`          | commerce_review                     |
+| `ObjectTypeVerificationPackage`     | verification_package                |
+| `ObjectTypeVerificationRequest`     | verification_request                |
 | `ObjectTypeAtsActivity`             | ats_activity                        |
 | `ObjectTypeAtsApplication`          | ats_application                     |
 | `ObjectTypeAtsApplicationstatus`    | ats_applicationstatus               |

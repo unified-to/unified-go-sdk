@@ -28,7 +28,7 @@ func (p PaymentLink) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PaymentLink) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, nil); err != nil {
 		return err
 	}
 	return nil

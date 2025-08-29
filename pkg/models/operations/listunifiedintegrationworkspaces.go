@@ -12,28 +12,29 @@ import (
 type QueryParamCategories string
 
 const (
-	QueryParamCategoriesPassthrough QueryParamCategories = "passthrough"
-	QueryParamCategoriesHris        QueryParamCategories = "hris"
-	QueryParamCategoriesAts         QueryParamCategories = "ats"
-	QueryParamCategoriesAuth        QueryParamCategories = "auth"
-	QueryParamCategoriesCrm         QueryParamCategories = "crm"
-	QueryParamCategoriesEnrich      QueryParamCategories = "enrich"
-	QueryParamCategoriesMartech     QueryParamCategories = "martech"
-	QueryParamCategoriesTicketing   QueryParamCategories = "ticketing"
-	QueryParamCategoriesUc          QueryParamCategories = "uc"
-	QueryParamCategoriesAccounting  QueryParamCategories = "accounting"
-	QueryParamCategoriesStorage     QueryParamCategories = "storage"
-	QueryParamCategoriesCommerce    QueryParamCategories = "commerce"
-	QueryParamCategoriesPayment     QueryParamCategories = "payment"
-	QueryParamCategoriesGenai       QueryParamCategories = "genai"
-	QueryParamCategoriesMessaging   QueryParamCategories = "messaging"
-	QueryParamCategoriesKms         QueryParamCategories = "kms"
-	QueryParamCategoriesTask        QueryParamCategories = "task"
-	QueryParamCategoriesScim        QueryParamCategories = "scim"
-	QueryParamCategoriesLms         QueryParamCategories = "lms"
-	QueryParamCategoriesRepo        QueryParamCategories = "repo"
-	QueryParamCategoriesMetadata    QueryParamCategories = "metadata"
-	QueryParamCategoriesCalendar    QueryParamCategories = "calendar"
+	QueryParamCategoriesPassthrough  QueryParamCategories = "passthrough"
+	QueryParamCategoriesHris         QueryParamCategories = "hris"
+	QueryParamCategoriesAts          QueryParamCategories = "ats"
+	QueryParamCategoriesAuth         QueryParamCategories = "auth"
+	QueryParamCategoriesCrm          QueryParamCategories = "crm"
+	QueryParamCategoriesEnrich       QueryParamCategories = "enrich"
+	QueryParamCategoriesMartech      QueryParamCategories = "martech"
+	QueryParamCategoriesTicketing    QueryParamCategories = "ticketing"
+	QueryParamCategoriesUc           QueryParamCategories = "uc"
+	QueryParamCategoriesAccounting   QueryParamCategories = "accounting"
+	QueryParamCategoriesStorage      QueryParamCategories = "storage"
+	QueryParamCategoriesCommerce     QueryParamCategories = "commerce"
+	QueryParamCategoriesPayment      QueryParamCategories = "payment"
+	QueryParamCategoriesGenai        QueryParamCategories = "genai"
+	QueryParamCategoriesMessaging    QueryParamCategories = "messaging"
+	QueryParamCategoriesKms          QueryParamCategories = "kms"
+	QueryParamCategoriesTask         QueryParamCategories = "task"
+	QueryParamCategoriesScim         QueryParamCategories = "scim"
+	QueryParamCategoriesLms          QueryParamCategories = "lms"
+	QueryParamCategoriesRepo         QueryParamCategories = "repo"
+	QueryParamCategoriesMetadata     QueryParamCategories = "metadata"
+	QueryParamCategoriesCalendar     QueryParamCategories = "calendar"
+	QueryParamCategoriesVerification QueryParamCategories = "verification"
 )
 
 func (e QueryParamCategories) ToPointer() *QueryParamCategories {
@@ -88,6 +89,8 @@ func (e *QueryParamCategories) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "calendar":
+		fallthrough
+	case "verification":
 		*e = QueryParamCategories(v)
 		return nil
 	default:

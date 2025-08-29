@@ -11,6 +11,17 @@ import (
 type HrisMetadata1 struct {
 }
 
+func (h HrisMetadata1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(h, "", false)
+}
+
+func (h *HrisMetadata1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
 type HrisMetadata5Type string
 
 const (
@@ -68,28 +79,28 @@ func CreateHrisMetadata5Boolean(boolean bool) HrisMetadata5 {
 func (u *HrisMetadata5) UnmarshalJSON(data []byte) error {
 
 	var hrisMetadata1 HrisMetadata1 = HrisMetadata1{}
-	if err := utils.UnmarshalJSON(data, &hrisMetadata1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &hrisMetadata1, "", true, nil); err == nil {
 		u.HrisMetadata1 = &hrisMetadata1
 		u.Type = HrisMetadata5TypeHrisMetadata1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = HrisMetadata5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = HrisMetadata5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = HrisMetadata5TypeBoolean
 		return nil
@@ -186,35 +197,35 @@ func CreateHrisMetadataExtraDataArrayOfHrisMetadata5(arrayOfHrisMetadata5 []Hris
 func (u *HrisMetadataExtraData) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = HrisMetadataExtraDataTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = HrisMetadataExtraDataTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = HrisMetadataExtraDataTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = HrisMetadataExtraDataTypeBoolean
 		return nil
 	}
 
 	var arrayOfHrisMetadata5 []HrisMetadata5 = []HrisMetadata5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfHrisMetadata5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfHrisMetadata5, "", true, nil); err == nil {
 		u.ArrayOfHrisMetadata5 = arrayOfHrisMetadata5
 		u.Type = HrisMetadataExtraDataTypeArrayOfHrisMetadata5
 		return nil
@@ -270,6 +281,17 @@ func (e HrisMetadataFormat) ToPointer() *HrisMetadataFormat {
 }
 
 type HrisMetadataSchemas1 struct {
+}
+
+func (h HrisMetadataSchemas1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(h, "", false)
+}
+
+func (h *HrisMetadataSchemas1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 type HrisMetadataSchemas5Type string
@@ -329,28 +351,28 @@ func CreateHrisMetadataSchemas5Boolean(boolean bool) HrisMetadataSchemas5 {
 func (u *HrisMetadataSchemas5) UnmarshalJSON(data []byte) error {
 
 	var hrisMetadataSchemas1 HrisMetadataSchemas1 = HrisMetadataSchemas1{}
-	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemas1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemas1, "", true, nil); err == nil {
 		u.HrisMetadataSchemas1 = &hrisMetadataSchemas1
 		u.Type = HrisMetadataSchemas5TypeHrisMetadataSchemas1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = HrisMetadataSchemas5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = HrisMetadataSchemas5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = HrisMetadataSchemas5TypeBoolean
 		return nil
@@ -447,35 +469,35 @@ func CreateHrisMetadataValueArrayOfHrisMetadataSchemas5(arrayOfHrisMetadataSchem
 func (u *HrisMetadataValue) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = HrisMetadataValueTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = HrisMetadataValueTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = HrisMetadataValueTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = HrisMetadataValueTypeBoolean
 		return nil
 	}
 
 	var arrayOfHrisMetadataSchemas5 []HrisMetadataSchemas5 = []HrisMetadataSchemas5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfHrisMetadataSchemas5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfHrisMetadataSchemas5, "", true, nil); err == nil {
 		u.ArrayOfHrisMetadataSchemas5 = arrayOfHrisMetadataSchemas5
 		u.Type = HrisMetadataValueTypeArrayOfHrisMetadataSchemas5
 		return nil

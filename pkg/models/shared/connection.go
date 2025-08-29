@@ -33,7 +33,7 @@ func (c Connection) MarshalJSON() ([]byte, error) {
 }
 
 func (c *Connection) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"categories", "integration_type", "permissions"}); err != nil {
 		return err
 	}
 	return nil

@@ -62,7 +62,7 @@ func (c CalendarEventRecurrence) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CalendarEventRecurrence) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"frequency"}); err != nil {
 		return err
 	}
 	return nil

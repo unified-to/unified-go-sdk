@@ -21,7 +21,7 @@ func (r RepoBranch) MarshalJSON() ([]byte, error) {
 }
 
 func (r *RepoBranch) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &r, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &r, "", false, []string{"name", "repo_id"}); err != nil {
 		return err
 	}
 	return nil

@@ -11,6 +11,17 @@ import (
 type TaskMetadata1 struct {
 }
 
+func (t TaskMetadata1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *TaskMetadata1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
 type TaskMetadata5Type string
 
 const (
@@ -68,28 +79,28 @@ func CreateTaskMetadata5Boolean(boolean bool) TaskMetadata5 {
 func (u *TaskMetadata5) UnmarshalJSON(data []byte) error {
 
 	var taskMetadata1 TaskMetadata1 = TaskMetadata1{}
-	if err := utils.UnmarshalJSON(data, &taskMetadata1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &taskMetadata1, "", true, nil); err == nil {
 		u.TaskMetadata1 = &taskMetadata1
 		u.Type = TaskMetadata5TypeTaskMetadata1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = TaskMetadata5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = TaskMetadata5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = TaskMetadata5TypeBoolean
 		return nil
@@ -186,35 +197,35 @@ func CreateTaskMetadataExtraDataArrayOfTaskMetadata5(arrayOfTaskMetadata5 []Task
 func (u *TaskMetadataExtraData) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = TaskMetadataExtraDataTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = TaskMetadataExtraDataTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = TaskMetadataExtraDataTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = TaskMetadataExtraDataTypeBoolean
 		return nil
 	}
 
 	var arrayOfTaskMetadata5 []TaskMetadata5 = []TaskMetadata5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfTaskMetadata5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfTaskMetadata5, "", true, nil); err == nil {
 		u.ArrayOfTaskMetadata5 = arrayOfTaskMetadata5
 		u.Type = TaskMetadataExtraDataTypeArrayOfTaskMetadata5
 		return nil
@@ -270,6 +281,17 @@ func (e TaskMetadataFormat) ToPointer() *TaskMetadataFormat {
 }
 
 type TaskMetadataSchemas1 struct {
+}
+
+func (t TaskMetadataSchemas1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *TaskMetadataSchemas1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 type TaskMetadataSchemas5Type string
@@ -329,28 +351,28 @@ func CreateTaskMetadataSchemas5Boolean(boolean bool) TaskMetadataSchemas5 {
 func (u *TaskMetadataSchemas5) UnmarshalJSON(data []byte) error {
 
 	var taskMetadataSchemas1 TaskMetadataSchemas1 = TaskMetadataSchemas1{}
-	if err := utils.UnmarshalJSON(data, &taskMetadataSchemas1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &taskMetadataSchemas1, "", true, nil); err == nil {
 		u.TaskMetadataSchemas1 = &taskMetadataSchemas1
 		u.Type = TaskMetadataSchemas5TypeTaskMetadataSchemas1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = TaskMetadataSchemas5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = TaskMetadataSchemas5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = TaskMetadataSchemas5TypeBoolean
 		return nil
@@ -447,35 +469,35 @@ func CreateTaskMetadataValueArrayOfTaskMetadataSchemas5(arrayOfTaskMetadataSchem
 func (u *TaskMetadataValue) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = TaskMetadataValueTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = TaskMetadataValueTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = TaskMetadataValueTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = TaskMetadataValueTypeBoolean
 		return nil
 	}
 
 	var arrayOfTaskMetadataSchemas5 []TaskMetadataSchemas5 = []TaskMetadataSchemas5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfTaskMetadataSchemas5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfTaskMetadataSchemas5, "", true, nil); err == nil {
 		u.ArrayOfTaskMetadataSchemas5 = arrayOfTaskMetadataSchemas5
 		u.Type = TaskMetadataValueTypeArrayOfTaskMetadataSchemas5
 		return nil

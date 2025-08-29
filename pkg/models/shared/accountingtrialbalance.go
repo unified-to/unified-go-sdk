@@ -26,7 +26,7 @@ func (a AccountingTrialbalance) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AccountingTrialbalance) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, nil); err != nil {
 		return err
 	}
 	return nil

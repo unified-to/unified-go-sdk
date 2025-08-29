@@ -924,6 +924,11 @@ func main() {
 * [RemoveRepoOrganization](docs/sdks/organization/README.md#removerepoorganization) - Remove an organization
 * [UpdateRepoOrganization](docs/sdks/organization/README.md#updaterepoorganization) - Update an organization
 
+### [Package](docs/sdks/package/README.md)
+
+* [GetVerificationPackage](docs/sdks/package/README.md#getverificationpackage) - Retrieve a package
+* [ListVerificationPackages](docs/sdks/package/README.md#listverificationpackages) - List all packages
+
 ### [Page](docs/sdks/page/README.md)
 
 * [CreateKmsPage](docs/sdks/page/README.md#createkmspage) - Create a page
@@ -1090,6 +1095,15 @@ func main() {
 * [PatchRepoRepository](docs/sdks/repository/README.md#patchreporepository) - Update a repository
 * [RemoveRepoRepository](docs/sdks/repository/README.md#removereporepository) - Remove a repository
 * [UpdateRepoRepository](docs/sdks/repository/README.md#updatereporepository) - Update a repository
+
+### [Request](docs/sdks/request/README.md)
+
+* [CreateVerificationRequest](docs/sdks/request/README.md#createverificationrequest) - Create a request
+* [GetVerificationRequest](docs/sdks/request/README.md#getverificationrequest) - Retrieve a request
+* [ListVerificationRequests](docs/sdks/request/README.md#listverificationrequests) - List all requests
+* [PatchVerificationRequest](docs/sdks/request/README.md#patchverificationrequest) - Update a request
+* [RemoveVerificationRequest](docs/sdks/request/README.md#removeverificationrequest) - Remove a request
+* [UpdateVerificationRequest](docs/sdks/request/README.md#updateverificationrequest) - Update a request
 
 ### [Review](docs/sdks/review/README.md)
 
@@ -1313,6 +1327,17 @@ func main() {
 * [PatchScimUsers](docs/sdks/user/README.md#patchscimusers) - Update user
 * [RemoveScimUsers](docs/sdks/user/README.md#removescimusers) - Delete user
 * [UpdateScimUsers](docs/sdks/user/README.md#updatescimusers) - Update user
+
+### [Verification](docs/sdks/verification/README.md)
+
+* [CreateVerificationRequest](docs/sdks/verification/README.md#createverificationrequest) - Create a request
+* [GetVerificationPackage](docs/sdks/verification/README.md#getverificationpackage) - Retrieve a package
+* [GetVerificationRequest](docs/sdks/verification/README.md#getverificationrequest) - Retrieve a request
+* [ListVerificationPackages](docs/sdks/verification/README.md#listverificationpackages) - List all packages
+* [ListVerificationRequests](docs/sdks/verification/README.md#listverificationrequests) - List all requests
+* [PatchVerificationRequest](docs/sdks/verification/README.md#patchverificationrequest) - Update a request
+* [RemoveVerificationRequest](docs/sdks/verification/README.md#removeverificationrequest) - Remove a request
+* [UpdateVerificationRequest](docs/sdks/verification/README.md#updateverificationrequest) - Update a request
 
 ### [Webhook](docs/sdks/webhook/README.md)
 

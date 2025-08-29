@@ -27,7 +27,7 @@ func (u UcContact) MarshalJSON() ([]byte, error) {
 }
 
 func (u *UcContact) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &u, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &u, "", false, nil); err != nil {
 		return err
 	}
 	return nil

@@ -11,6 +11,17 @@ import (
 type One struct {
 }
 
+func (o One) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(o, "", false)
+}
+
+func (o *One) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &o, "", false, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
 type FiveType string
 
 const (
@@ -68,28 +79,28 @@ func CreateFiveBoolean(boolean bool) Five {
 func (u *Five) UnmarshalJSON(data []byte) error {
 
 	var one One = One{}
-	if err := utils.UnmarshalJSON(data, &one, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &one, "", true, nil); err == nil {
 		u.One = &one
 		u.Type = FiveTypeOne
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = FiveTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = FiveTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = FiveTypeBoolean
 		return nil
@@ -186,35 +197,35 @@ func CreateExtraDataArrayOf5(arrayOf5 []Five) ExtraData {
 func (u *ExtraData) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = ExtraDataTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = ExtraDataTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = ExtraDataTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = ExtraDataTypeBoolean
 		return nil
 	}
 
 	var arrayOf5 []Five = []Five{}
-	if err := utils.UnmarshalJSON(data, &arrayOf5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOf5, "", true, nil); err == nil {
 		u.ArrayOf5 = arrayOf5
 		u.Type = ExtraDataTypeArrayOf5
 		return nil
@@ -270,6 +281,17 @@ func (e Format) ToPointer() *Format {
 }
 
 type AtsMetadata1 struct {
+}
+
+func (a AtsMetadata1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AtsMetadata1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 type AtsMetadata5Type string
@@ -329,28 +351,28 @@ func CreateAtsMetadata5Boolean(boolean bool) AtsMetadata5 {
 func (u *AtsMetadata5) UnmarshalJSON(data []byte) error {
 
 	var atsMetadata1 AtsMetadata1 = AtsMetadata1{}
-	if err := utils.UnmarshalJSON(data, &atsMetadata1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &atsMetadata1, "", true, nil); err == nil {
 		u.AtsMetadata1 = &atsMetadata1
 		u.Type = AtsMetadata5TypeAtsMetadata1
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = AtsMetadata5TypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = AtsMetadata5TypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = AtsMetadata5TypeBoolean
 		return nil
@@ -447,35 +469,35 @@ func CreateValueArrayOfAtsMetadata5(arrayOfAtsMetadata5 []AtsMetadata5) Value {
 func (u *Value) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
 		u.Type = ValueTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
 		u.Type = ValueTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
 		u.Type = ValueTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
 		u.Type = ValueTypeBoolean
 		return nil
 	}
 
 	var arrayOfAtsMetadata5 []AtsMetadata5 = []AtsMetadata5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfAtsMetadata5, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &arrayOfAtsMetadata5, "", true, nil); err == nil {
 		u.ArrayOfAtsMetadata5 = arrayOfAtsMetadata5
 		u.Type = ValueTypeArrayOfAtsMetadata5
 		return nil

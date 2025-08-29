@@ -12,28 +12,29 @@ import (
 type Categories string
 
 const (
-	CategoriesPassthrough Categories = "passthrough"
-	CategoriesHris        Categories = "hris"
-	CategoriesAts         Categories = "ats"
-	CategoriesAuth        Categories = "auth"
-	CategoriesCrm         Categories = "crm"
-	CategoriesEnrich      Categories = "enrich"
-	CategoriesMartech     Categories = "martech"
-	CategoriesTicketing   Categories = "ticketing"
-	CategoriesUc          Categories = "uc"
-	CategoriesAccounting  Categories = "accounting"
-	CategoriesStorage     Categories = "storage"
-	CategoriesCommerce    Categories = "commerce"
-	CategoriesPayment     Categories = "payment"
-	CategoriesGenai       Categories = "genai"
-	CategoriesMessaging   Categories = "messaging"
-	CategoriesKms         Categories = "kms"
-	CategoriesTask        Categories = "task"
-	CategoriesScim        Categories = "scim"
-	CategoriesLms         Categories = "lms"
-	CategoriesRepo        Categories = "repo"
-	CategoriesMetadata    Categories = "metadata"
-	CategoriesCalendar    Categories = "calendar"
+	CategoriesPassthrough  Categories = "passthrough"
+	CategoriesHris         Categories = "hris"
+	CategoriesAts          Categories = "ats"
+	CategoriesAuth         Categories = "auth"
+	CategoriesCrm          Categories = "crm"
+	CategoriesEnrich       Categories = "enrich"
+	CategoriesMartech      Categories = "martech"
+	CategoriesTicketing    Categories = "ticketing"
+	CategoriesUc           Categories = "uc"
+	CategoriesAccounting   Categories = "accounting"
+	CategoriesStorage      Categories = "storage"
+	CategoriesCommerce     Categories = "commerce"
+	CategoriesPayment      Categories = "payment"
+	CategoriesGenai        Categories = "genai"
+	CategoriesMessaging    Categories = "messaging"
+	CategoriesKms          Categories = "kms"
+	CategoriesTask         Categories = "task"
+	CategoriesScim         Categories = "scim"
+	CategoriesLms          Categories = "lms"
+	CategoriesRepo         Categories = "repo"
+	CategoriesMetadata     Categories = "metadata"
+	CategoriesCalendar     Categories = "calendar"
+	CategoriesVerification Categories = "verification"
 )
 
 func (e Categories) ToPointer() *Categories {
@@ -88,6 +89,8 @@ func (e *Categories) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "calendar":
+		fallthrough
+	case "verification":
 		*e = Categories(v)
 		return nil
 	default:

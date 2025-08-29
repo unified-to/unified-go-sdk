@@ -12,28 +12,29 @@ import (
 type ListUnifiedIntegrationsQueryParamCategories string
 
 const (
-	ListUnifiedIntegrationsQueryParamCategoriesPassthrough ListUnifiedIntegrationsQueryParamCategories = "passthrough"
-	ListUnifiedIntegrationsQueryParamCategoriesHris        ListUnifiedIntegrationsQueryParamCategories = "hris"
-	ListUnifiedIntegrationsQueryParamCategoriesAts         ListUnifiedIntegrationsQueryParamCategories = "ats"
-	ListUnifiedIntegrationsQueryParamCategoriesAuth        ListUnifiedIntegrationsQueryParamCategories = "auth"
-	ListUnifiedIntegrationsQueryParamCategoriesCrm         ListUnifiedIntegrationsQueryParamCategories = "crm"
-	ListUnifiedIntegrationsQueryParamCategoriesEnrich      ListUnifiedIntegrationsQueryParamCategories = "enrich"
-	ListUnifiedIntegrationsQueryParamCategoriesMartech     ListUnifiedIntegrationsQueryParamCategories = "martech"
-	ListUnifiedIntegrationsQueryParamCategoriesTicketing   ListUnifiedIntegrationsQueryParamCategories = "ticketing"
-	ListUnifiedIntegrationsQueryParamCategoriesUc          ListUnifiedIntegrationsQueryParamCategories = "uc"
-	ListUnifiedIntegrationsQueryParamCategoriesAccounting  ListUnifiedIntegrationsQueryParamCategories = "accounting"
-	ListUnifiedIntegrationsQueryParamCategoriesStorage     ListUnifiedIntegrationsQueryParamCategories = "storage"
-	ListUnifiedIntegrationsQueryParamCategoriesCommerce    ListUnifiedIntegrationsQueryParamCategories = "commerce"
-	ListUnifiedIntegrationsQueryParamCategoriesPayment     ListUnifiedIntegrationsQueryParamCategories = "payment"
-	ListUnifiedIntegrationsQueryParamCategoriesGenai       ListUnifiedIntegrationsQueryParamCategories = "genai"
-	ListUnifiedIntegrationsQueryParamCategoriesMessaging   ListUnifiedIntegrationsQueryParamCategories = "messaging"
-	ListUnifiedIntegrationsQueryParamCategoriesKms         ListUnifiedIntegrationsQueryParamCategories = "kms"
-	ListUnifiedIntegrationsQueryParamCategoriesTask        ListUnifiedIntegrationsQueryParamCategories = "task"
-	ListUnifiedIntegrationsQueryParamCategoriesScim        ListUnifiedIntegrationsQueryParamCategories = "scim"
-	ListUnifiedIntegrationsQueryParamCategoriesLms         ListUnifiedIntegrationsQueryParamCategories = "lms"
-	ListUnifiedIntegrationsQueryParamCategoriesRepo        ListUnifiedIntegrationsQueryParamCategories = "repo"
-	ListUnifiedIntegrationsQueryParamCategoriesMetadata    ListUnifiedIntegrationsQueryParamCategories = "metadata"
-	ListUnifiedIntegrationsQueryParamCategoriesCalendar    ListUnifiedIntegrationsQueryParamCategories = "calendar"
+	ListUnifiedIntegrationsQueryParamCategoriesPassthrough  ListUnifiedIntegrationsQueryParamCategories = "passthrough"
+	ListUnifiedIntegrationsQueryParamCategoriesHris         ListUnifiedIntegrationsQueryParamCategories = "hris"
+	ListUnifiedIntegrationsQueryParamCategoriesAts          ListUnifiedIntegrationsQueryParamCategories = "ats"
+	ListUnifiedIntegrationsQueryParamCategoriesAuth         ListUnifiedIntegrationsQueryParamCategories = "auth"
+	ListUnifiedIntegrationsQueryParamCategoriesCrm          ListUnifiedIntegrationsQueryParamCategories = "crm"
+	ListUnifiedIntegrationsQueryParamCategoriesEnrich       ListUnifiedIntegrationsQueryParamCategories = "enrich"
+	ListUnifiedIntegrationsQueryParamCategoriesMartech      ListUnifiedIntegrationsQueryParamCategories = "martech"
+	ListUnifiedIntegrationsQueryParamCategoriesTicketing    ListUnifiedIntegrationsQueryParamCategories = "ticketing"
+	ListUnifiedIntegrationsQueryParamCategoriesUc           ListUnifiedIntegrationsQueryParamCategories = "uc"
+	ListUnifiedIntegrationsQueryParamCategoriesAccounting   ListUnifiedIntegrationsQueryParamCategories = "accounting"
+	ListUnifiedIntegrationsQueryParamCategoriesStorage      ListUnifiedIntegrationsQueryParamCategories = "storage"
+	ListUnifiedIntegrationsQueryParamCategoriesCommerce     ListUnifiedIntegrationsQueryParamCategories = "commerce"
+	ListUnifiedIntegrationsQueryParamCategoriesPayment      ListUnifiedIntegrationsQueryParamCategories = "payment"
+	ListUnifiedIntegrationsQueryParamCategoriesGenai        ListUnifiedIntegrationsQueryParamCategories = "genai"
+	ListUnifiedIntegrationsQueryParamCategoriesMessaging    ListUnifiedIntegrationsQueryParamCategories = "messaging"
+	ListUnifiedIntegrationsQueryParamCategoriesKms          ListUnifiedIntegrationsQueryParamCategories = "kms"
+	ListUnifiedIntegrationsQueryParamCategoriesTask         ListUnifiedIntegrationsQueryParamCategories = "task"
+	ListUnifiedIntegrationsQueryParamCategoriesScim         ListUnifiedIntegrationsQueryParamCategories = "scim"
+	ListUnifiedIntegrationsQueryParamCategoriesLms          ListUnifiedIntegrationsQueryParamCategories = "lms"
+	ListUnifiedIntegrationsQueryParamCategoriesRepo         ListUnifiedIntegrationsQueryParamCategories = "repo"
+	ListUnifiedIntegrationsQueryParamCategoriesMetadata     ListUnifiedIntegrationsQueryParamCategories = "metadata"
+	ListUnifiedIntegrationsQueryParamCategoriesCalendar     ListUnifiedIntegrationsQueryParamCategories = "calendar"
+	ListUnifiedIntegrationsQueryParamCategoriesVerification ListUnifiedIntegrationsQueryParamCategories = "verification"
 )
 
 func (e ListUnifiedIntegrationsQueryParamCategories) ToPointer() *ListUnifiedIntegrationsQueryParamCategories {
@@ -88,6 +89,8 @@ func (e *ListUnifiedIntegrationsQueryParamCategories) UnmarshalJSON(data []byte)
 	case "metadata":
 		fallthrough
 	case "calendar":
+		fallthrough
+	case "verification":
 		*e = ListUnifiedIntegrationsQueryParamCategories(v)
 		return nil
 	default:

@@ -8,8 +8,12 @@ import (
 )
 
 type ListAccountingBalancesheetsRequest struct {
+	// The category ID to filter by
+	CategoryID *string `queryParam:"style=form,explode=true,name=category_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The contact ID to filter by
+	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// The end date to filter by
 	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
 	// Comma-delimited fields to return
@@ -28,11 +32,25 @@ type ListAccountingBalancesheetsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
+func (o *ListAccountingBalancesheetsRequest) GetCategoryID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CategoryID
+}
+
 func (o *ListAccountingBalancesheetsRequest) GetConnectionID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ConnectionID
+}
+
+func (o *ListAccountingBalancesheetsRequest) GetContactID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ContactID
 }
 
 func (o *ListAccountingBalancesheetsRequest) GetEndLe() *string {

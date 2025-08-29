@@ -20,7 +20,7 @@ func (u UcRecordingTranscript) MarshalJSON() ([]byte, error) {
 }
 
 func (u *UcRecordingTranscript) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &u, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &u, "", false, []string{"text"}); err != nil {
 		return err
 	}
 	return nil

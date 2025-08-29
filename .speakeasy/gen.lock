@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 4f3132855d15c32adf7ca6526ca7469f
+  docChecksum: b7b8f3e6ae3a4420539b46d5e0a59d99
   docVersion: "1.0"
-  speakeasyVersion: 1.606.3
-  generationVersion: 2.687.1
-  releaseVersion: 0.28.7
-  configChecksum: 7ffc3ac1497d308e185e5f463b81702d
+  speakeasyVersion: 1.606.8
+  generationVersion: 2.687.13
+  releaseVersion: 0.28.8
+  configChecksum: 42a5137bdaa84cd06bd7c745314c16c2
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -29,7 +29,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.85.12
+    unions: 2.85.13
     uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
@@ -109,6 +109,7 @@ generatedFiles:
   - /pkg/models/operations/createucrecording.go
   - /pkg/models/operations/createunifiedconnection.go
   - /pkg/models/operations/createunifiedwebhook.go
+  - /pkg/models/operations/createverificationrequest.go
   - /pkg/models/operations/getaccountingaccount.go
   - /pkg/models/operations/getaccountingbalancesheet.go
   - /pkg/models/operations/getaccountingbill.go
@@ -197,6 +198,8 @@ generatedFiles:
   - /pkg/models/operations/getunifiedintegrationauth.go
   - /pkg/models/operations/getunifiedintegrationlogin.go
   - /pkg/models/operations/getunifiedwebhook.go
+  - /pkg/models/operations/getverificationpackage.go
+  - /pkg/models/operations/getverificationrequest.go
   - /pkg/models/operations/listaccountingaccounts.go
   - /pkg/models/operations/listaccountingbalancesheets.go
   - /pkg/models/operations/listaccountingbills.go
@@ -293,6 +296,8 @@ generatedFiles:
   - /pkg/models/operations/listunifiedintegrationworkspaces.go
   - /pkg/models/operations/listunifiedissues.go
   - /pkg/models/operations/listunifiedwebhooks.go
+  - /pkg/models/operations/listverificationpackages.go
+  - /pkg/models/operations/listverificationrequests.go
   - /pkg/models/operations/patchaccountingaccount.go
   - /pkg/models/operations/patchaccountingbill.go
   - /pkg/models/operations/patchaccountingcategory.go
@@ -369,6 +374,7 @@ generatedFiles:
   - /pkg/models/operations/patchunifiedconnection.go
   - /pkg/models/operations/patchunifiedwebhook.go
   - /pkg/models/operations/patchunifiedwebhooktrigger.go
+  - /pkg/models/operations/patchverificationrequest.go
   - /pkg/models/operations/removeaccountingaccount.go
   - /pkg/models/operations/removeaccountingbill.go
   - /pkg/models/operations/removeaccountingcategory.go
@@ -443,6 +449,7 @@ generatedFiles:
   - /pkg/models/operations/removeucrecording.go
   - /pkg/models/operations/removeunifiedconnection.go
   - /pkg/models/operations/removeunifiedwebhook.go
+  - /pkg/models/operations/removeverificationrequest.go
   - /pkg/models/operations/updateaccountingaccount.go
   - /pkg/models/operations/updateaccountingbill.go
   - /pkg/models/operations/updateaccountingcategory.go
@@ -519,6 +526,7 @@ generatedFiles:
   - /pkg/models/operations/updateunifiedconnection.go
   - /pkg/models/operations/updateunifiedwebhook.go
   - /pkg/models/operations/updateunifiedwebhooktrigger.go
+  - /pkg/models/operations/updateverificationrequest.go
   - /pkg/models/shared/accountingaccount.go
   - /pkg/models/shared/accountingassociatedcontact.go
   - /pkg/models/shared/accountingattachment.go
@@ -754,6 +762,13 @@ generatedFiles:
   - /pkg/models/shared/ucrecordingmedia.go
   - /pkg/models/shared/ucrecordingtranscript.go
   - /pkg/models/shared/uctelephone.go
+  - /pkg/models/shared/verificationaddress.go
+  - /pkg/models/shared/verificationpackage.go
+  - /pkg/models/shared/verificationparameter.go
+  - /pkg/models/shared/verificationparameterinput.go
+  - /pkg/models/shared/verificationrequest.go
+  - /pkg/models/shared/verificationresponsedetail.go
+  - /pkg/models/shared/verificationtime.go
   - /pkg/models/shared/webhook.go
   - USAGE.md
   - account.go
@@ -940,6 +955,8 @@ generatedFiles:
   - docs/pkg/models/operations/createunifiedconnectionresponse.md
   - docs/pkg/models/operations/createunifiedwebhookrequest.md
   - docs/pkg/models/operations/createunifiedwebhookresponse.md
+  - docs/pkg/models/operations/createverificationrequestrequest.md
+  - docs/pkg/models/operations/createverificationrequestresponse.md
   - docs/pkg/models/operations/getaccountingaccountrequest.md
   - docs/pkg/models/operations/getaccountingaccountresponse.md
   - docs/pkg/models/operations/getaccountingbalancesheetrequest.md
@@ -1116,6 +1133,10 @@ generatedFiles:
   - docs/pkg/models/operations/getunifiedintegrationloginresponse.md
   - docs/pkg/models/operations/getunifiedwebhookrequest.md
   - docs/pkg/models/operations/getunifiedwebhookresponse.md
+  - docs/pkg/models/operations/getverificationpackagerequest.md
+  - docs/pkg/models/operations/getverificationpackageresponse.md
+  - docs/pkg/models/operations/getverificationrequestrequest.md
+  - docs/pkg/models/operations/getverificationrequestresponse.md
   - docs/pkg/models/operations/listaccountingaccountsrequest.md
   - docs/pkg/models/operations/listaccountingaccountsresponse.md
   - docs/pkg/models/operations/listaccountingbalancesheetsrequest.md
@@ -1309,6 +1330,10 @@ generatedFiles:
   - docs/pkg/models/operations/listunifiedissuesresponse.md
   - docs/pkg/models/operations/listunifiedwebhooksrequest.md
   - docs/pkg/models/operations/listunifiedwebhooksresponse.md
+  - docs/pkg/models/operations/listverificationpackagesrequest.md
+  - docs/pkg/models/operations/listverificationpackagesresponse.md
+  - docs/pkg/models/operations/listverificationrequestsrequest.md
+  - docs/pkg/models/operations/listverificationrequestsresponse.md
   - docs/pkg/models/operations/option.md
   - docs/pkg/models/operations/patchaccountingaccountrequest.md
   - docs/pkg/models/operations/patchaccountingaccountresponse.md
@@ -1462,6 +1487,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchunifiedwebhookresponse.md
   - docs/pkg/models/operations/patchunifiedwebhooktriggerrequest.md
   - docs/pkg/models/operations/patchunifiedwebhooktriggerresponse.md
+  - docs/pkg/models/operations/patchverificationrequestrequest.md
+  - docs/pkg/models/operations/patchverificationrequestresponse.md
   - docs/pkg/models/operations/queryparamcategories.md
   - docs/pkg/models/operations/removeaccountingaccountrequest.md
   - docs/pkg/models/operations/removeaccountingaccountresponse.md
@@ -1611,6 +1638,8 @@ generatedFiles:
   - docs/pkg/models/operations/removeunifiedconnectionresponse.md
   - docs/pkg/models/operations/removeunifiedwebhookrequest.md
   - docs/pkg/models/operations/removeunifiedwebhookresponse.md
+  - docs/pkg/models/operations/removeverificationrequestrequest.md
+  - docs/pkg/models/operations/removeverificationrequestresponse.md
   - docs/pkg/models/operations/updateaccountingaccountrequest.md
   - docs/pkg/models/operations/updateaccountingaccountresponse.md
   - docs/pkg/models/operations/updateaccountingbillrequest.md
@@ -1763,6 +1792,8 @@ generatedFiles:
   - docs/pkg/models/operations/updateunifiedwebhookresponse.md
   - docs/pkg/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/pkg/models/operations/updateunifiedwebhooktriggerresponse.md
+  - docs/pkg/models/operations/updateverificationrequestrequest.md
+  - docs/pkg/models/operations/updateverificationrequestresponse.md
   - docs/pkg/models/shared/accountingaccount.md
   - docs/pkg/models/shared/accountingassociatedcontact.md
   - docs/pkg/models/shared/accountingattachment.md
@@ -2021,6 +2052,7 @@ generatedFiles:
   - docs/pkg/models/shared/paymentsubscriptionstatus.md
   - docs/pkg/models/shared/paymenttype.md
   - docs/pkg/models/shared/priority.md
+  - docs/pkg/models/shared/profilegender.md
   - docs/pkg/models/shared/propertyaccountingbalancesheetitemsubitems.md
   - docs/pkg/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/pkg/models/shared/propertyaccountingcontactshippingaddress.md
@@ -2095,6 +2127,7 @@ generatedFiles:
   - docs/pkg/models/shared/repopullrequeststatus.md
   - docs/pkg/models/shared/reporepository.md
   - docs/pkg/models/shared/resourcetype.md
+  - docs/pkg/models/shared/responsestatus.md
   - docs/pkg/models/shared/role.md
   - docs/pkg/models/shared/sandbox.md
   - docs/pkg/models/shared/scimaddress.md
@@ -2159,6 +2192,15 @@ generatedFiles:
   - docs/pkg/models/shared/uctelephone.md
   - docs/pkg/models/shared/uctelephonetype.md
   - docs/pkg/models/shared/value.md
+  - docs/pkg/models/shared/verificationaddress.md
+  - docs/pkg/models/shared/verificationpackage.md
+  - docs/pkg/models/shared/verificationpackagetype.md
+  - docs/pkg/models/shared/verificationparameter.md
+  - docs/pkg/models/shared/verificationparameterinput.md
+  - docs/pkg/models/shared/verificationparametertype.md
+  - docs/pkg/models/shared/verificationrequest.md
+  - docs/pkg/models/shared/verificationresponsedetail.md
+  - docs/pkg/models/shared/verificationtime.md
   - docs/pkg/models/shared/webhook.md
   - docs/pkg/models/shared/webhooktype.md
   - docs/pkg/models/shared/weekstart.md
@@ -2228,6 +2270,7 @@ generatedFiles:
   - docs/sdks/note/README.md
   - docs/sdks/order/README.md
   - docs/sdks/organization/README.md
+  - docs/sdks/package/README.md
   - docs/sdks/page/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/payment/README.md
@@ -2245,6 +2288,7 @@ generatedFiles:
   - docs/sdks/repo/README.md
   - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
+  - docs/sdks/request/README.md
   - docs/sdks/review/README.md
   - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
@@ -2265,6 +2309,7 @@ generatedFiles:
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
   - docs/sdks/user/README.md
+  - docs/sdks/verification/README.md
   - docs/sdks/webhook/README.md
   - document.go
   - employee.go
@@ -2302,6 +2347,7 @@ generatedFiles:
   - note.go
   - order.go
   - organization.go
+  - package.go
   - page.go
   - passthrough.go
   - payment.go
@@ -2338,6 +2384,7 @@ generatedFiles:
   - repo.go
   - report.go
   - repository.go
+  - request.go
   - review.go
   - salesorder.go
   - scim.go
@@ -2358,6 +2405,7 @@ generatedFiles:
   - unified.go
   - unifiedto.go
   - user.go
+  - verification.go
   - webhook.go
 examples:
   createAccountingAccount:
@@ -6777,6 +6825,78 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  createVerificationRequest:
+    speakeasy-default-create-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getVerificationPackage:
+    speakeasy-default-get-verification-package:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "name": "<value>", "type": "EMPLOYMENT_VERIFICATION"}
+  getVerificationRequest:
+    speakeasy-default-get-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listVerificationPackages:
+    speakeasy-default-list-verification-packages:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "name": "<value>", "type": "FRAUD_PREVENTION"}]
+  listVerificationRequests:
+    speakeasy-default-list-verification-requests:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchVerificationRequest:
+    speakeasy-default-patch-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeVerificationRequest:
+    speakeasy-default-remove-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateVerificationRequest:
+    speakeasy-default-update-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## SDK Changes Detected:\n* `UnifiedTo.Unified.CreateUnifiedConnection()`: \n  *  `request.Request.Auth.RefreshUrl` **Added**\n  *  `response.Auth.RefreshUrl` **Added**\n* `UnifiedTo.Unified.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.DbSchema` **Added**\n  *  `response.DbSchema` **Added**\n* `UnifiedTo.Unified.GetUnifiedConnection()`:  `response.Auth.RefreshUrl` **Added**\n* `UnifiedTo.Unified.GetUnifiedWebhook()`:  `response.DbSchema` **Added**\n* `UnifiedTo.Unified.ListUnifiedConnections()`:  `response.[].Auth.RefreshUrl` **Added**\n* `UnifiedTo.Unified.ListUnifiedWebhooks()`:  `response.[].DbSchema` **Added**\n* `UnifiedTo.Unified.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Auth.RefreshUrl` **Added**\n  *  `response.Auth.RefreshUrl` **Added**\n* `UnifiedTo.Unified.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.DbSchema` **Added**\n  *  `response.DbSchema` **Added**\n* `UnifiedTo.Unified.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Auth.RefreshUrl` **Added**\n  *  `response.Auth.RefreshUrl` **Added**\n* `UnifiedTo.Unified.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.DbSchema` **Added**\n  *  `response.DbSchema` **Added**\n* `UnifiedTo.Connection.CreateUnifiedConnection()`: \n  *  `request.Request.Auth.RefreshUrl` **Added**\n  *  `response.Auth.RefreshUrl` **Added**\n* `UnifiedTo.Connection.GetUnifiedConnection()`:  `response.Auth.RefreshUrl` **Added**\n* `UnifiedTo.Connection.ListUnifiedConnections()`:  `response.[].Auth.RefreshUrl` **Added**\n* `UnifiedTo.Connection.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Auth.RefreshUrl` **Added**\n  *  `response.Auth.RefreshUrl` **Added**\n* `UnifiedTo.Connection.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Auth.RefreshUrl` **Added**\n  *  `response.Auth.RefreshUrl` **Added**\n* `UnifiedTo.Webhook.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.DbSchema` **Added**\n  *  `response.DbSchema` **Added**\n* `UnifiedTo.Webhook.GetUnifiedWebhook()`:  `response.DbSchema` **Added**\n* `UnifiedTo.Webhook.ListUnifiedWebhooks()`:  `response.[].DbSchema` **Added**\n* `UnifiedTo.Webhook.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.DbSchema` **Added**\n  *  `response.DbSchema` **Added**\n* `UnifiedTo.Webhook.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.DbSchema` **Added**\n  *  `response.DbSchema` **Added**\n"
+releaseNotes: "## SDK Changes Detected:\n* `UnifiedTo.Verification.CreateVerificationRequest()`: **Added**\n* `UnifiedTo.Verification.GetVerificationPackage()`: **Added**\n* `UnifiedTo.Verification.GetVerificationRequest()`: **Added**\n* `UnifiedTo.Verification.ListVerificationPackages()`: **Added**\n* `UnifiedTo.Verification.ListVerificationRequests()`: **Added**\n* `UnifiedTo.Verification.PatchVerificationRequest()`: **Added**\n* `UnifiedTo.Verification.RemoveVerificationRequest()`: **Added**\n* `UnifiedTo.Verification.UpdateVerificationRequest()`: **Added**\n* `UnifiedTo.Package.GetVerificationPackage()`: **Added**\n* `UnifiedTo.Package.ListVerificationPackages()`: **Added**\n* `UnifiedTo.Request.CreateVerificationRequest()`: **Added**\n* `UnifiedTo.Request.GetVerificationRequest()`: **Added**\n* `UnifiedTo.Request.ListVerificationRequests()`: **Added**\n* `UnifiedTo.Request.PatchVerificationRequest()`: **Added**\n* `UnifiedTo.Request.RemoveVerificationRequest()`: **Added**\n* `UnifiedTo.Request.UpdateVerificationRequest()`: **Added**\n* `UnifiedTo.Accounting.ListAccountingBalancesheets()`:  `request.Request` **Changed**\n* `UnifiedTo.Accounting.ListAccountingProfitlosses()`:  `request.Request` **Changed**\n* `UnifiedTo.Balancesheet.ListAccountingBalancesheets()`:  `request.Request` **Changed**\n* `UnifiedTo.Profitloss.ListAccountingProfitlosses()`:  `request.Request` **Changed**\n* `UnifiedTo.Unified.ListUnifiedConnections()`: \n  *  `request.Request.Categories` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`: \n  *  `request.Request.Categories` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`: \n  *  `request.Request.Categories` **Changed**\n* `UnifiedTo.Connection.ListUnifiedConnections()`: \n  *  `request.Request.Categories` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`: \n  *  `request.Request.Categories` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`: \n  *  `request.Request.Categories` **Changed**\n"

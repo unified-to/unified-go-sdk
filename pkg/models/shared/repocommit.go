@@ -23,7 +23,7 @@ func (r RepoCommit) MarshalJSON() ([]byte, error) {
 }
 
 func (r *RepoCommit) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &r, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &r, "", false, []string{"repo_id", "user_id"}); err != nil {
 		return err
 	}
 	return nil
