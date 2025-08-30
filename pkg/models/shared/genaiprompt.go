@@ -4,6 +4,7 @@ package shared
 
 type GenaiPrompt struct {
 	MaxTokens   *float64       `json:"max_tokens,omitempty"`
+	McpURL      *string        `json:"mcp_url,omitempty"`
 	Messages    []GenaiContent `json:"messages,omitempty"`
 	ModelID     *string        `json:"model_id,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
@@ -17,6 +18,13 @@ func (o *GenaiPrompt) GetMaxTokens() *float64 {
 		return nil
 	}
 	return o.MaxTokens
+}
+
+func (o *GenaiPrompt) GetMcpURL() *string {
+	if o == nil {
+		return nil
+	}
+	return o.McpURL
 }
 
 func (o *GenaiPrompt) GetMessages() []GenaiContent {
