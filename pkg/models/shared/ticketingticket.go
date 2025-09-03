@@ -20,6 +20,7 @@ func (e TicketingTicketStatus) ToPointer() *TicketingTicketStatus {
 
 type TicketingTicket struct {
 	Category    *string                `json:"category,omitempty"`
+	CategoryID  *string                `json:"category_id,omitempty"`
 	ClosedAt    *time.Time             `json:"closed_at,omitempty"`
 	CreatedAt   *time.Time             `json:"created_at,omitempty"`
 	CustomerID  *string                `json:"customer_id,omitempty"`
@@ -53,6 +54,13 @@ func (o *TicketingTicket) GetCategory() *string {
 		return nil
 	}
 	return o.Category
+}
+
+func (o *TicketingTicket) GetCategoryID() *string {
+	if o == nil {
+		return nil
+	}
+	return o.CategoryID
 }
 
 func (o *TicketingTicket) GetClosedAt() *time.Time {

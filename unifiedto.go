@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.687.13
+// Generated from OpenAPI doc version 1.0 and generator version 2.690.1
 
 import (
 	"context"
@@ -101,6 +101,7 @@ type UnifiedTo struct {
 	Enrich            *Enrich
 	Person            *Person
 	Genai             *Genai
+	Embedding         *Embedding
 	Model             *Model
 	Prompt            *Prompt
 	Hris              *Hris
@@ -236,9 +237,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.28.9",
+		SDKVersion: "0.28.10",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.28.9 2.687.13 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.28.10 2.690.1 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -305,6 +306,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Enrich = newEnrich(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Person = newPerson(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Genai = newGenai(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Embedding = newEmbedding(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Model = newModel(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Prompt = newPrompt(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Hris = newHris(sdk, sdk.sdkConfiguration, sdk.hooks)

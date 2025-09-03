@@ -21,7 +21,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.28.9
+  version: 0.28.10
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: UnifiedToError
@@ -42,5 +42,6 @@ go:
   modulePath: ""
   outputModelSuffix: output
   packageName: github.com/unified-to/unified-go-sdk
+  respectRequiredFields: false
   responseFormat: envelope
   sdkPackageName: ""

@@ -5,24 +5,86 @@
 
 ### Available Operations
 
+* [CreateTicketingCategory](#createticketingcategory) - Create a category
 * [CreateTicketingCustomer](#createticketingcustomer) - Create a customer
 * [CreateTicketingNote](#createticketingnote) - Create a note
 * [CreateTicketingTicket](#createticketingticket) - Create a ticket
+* [GetTicketingCategory](#getticketingcategory) - Retrieve a category
 * [GetTicketingCustomer](#getticketingcustomer) - Retrieve a customer
 * [GetTicketingNote](#getticketingnote) - Retrieve a note
 * [GetTicketingTicket](#getticketingticket) - Retrieve a ticket
+* [ListTicketingCategories](#listticketingcategories) - List all categories
 * [ListTicketingCustomers](#listticketingcustomers) - List all customers
 * [ListTicketingNotes](#listticketingnotes) - List all notes
 * [ListTicketingTickets](#listticketingtickets) - List all tickets
+* [PatchTicketingCategory](#patchticketingcategory) - Update a category
 * [PatchTicketingCustomer](#patchticketingcustomer) - Update a customer
 * [PatchTicketingNote](#patchticketingnote) - Update a note
 * [PatchTicketingTicket](#patchticketingticket) - Update a ticket
+* [RemoveTicketingCategory](#removeticketingcategory) - Remove a category
 * [RemoveTicketingCustomer](#removeticketingcustomer) - Remove a customer
 * [RemoveTicketingNote](#removeticketingnote) - Remove a note
 * [RemoveTicketingTicket](#removeticketingticket) - Remove a ticket
+* [UpdateTicketingCategory](#updateticketingcategory) - Update a category
 * [UpdateTicketingCustomer](#updateticketingcustomer) - Update a customer
 * [UpdateTicketingNote](#updateticketingnote) - Update a note
 * [UpdateTicketingTicket](#updateticketingticket) - Update a ticket
+
+## CreateTicketingCategory
+
+Create a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ticketing.CreateTicketingCategory(ctx, operations.CreateTicketingCategoryRequest{
+        TicketingCategory: shared.TicketingCategory{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.TicketingCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.CreateTicketingCategoryRequest](../../pkg/models/operations/createticketingcategoryrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.CreateTicketingCategoryResponse](../../pkg/models/operations/createticketingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## CreateTicketingCustomer
 
@@ -185,6 +247,61 @@ func main() {
 ### Response
 
 **[*operations.CreateTicketingTicketResponse](../../pkg/models/operations/createticketingticketresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetTicketingCategory
+
+Retrieve a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getTicketingCategory" method="get" path="/ticketing/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ticketing.GetTicketingCategory(ctx, operations.GetTicketingCategoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.TicketingCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetTicketingCategoryRequest](../../pkg/models/operations/getticketingcategoryrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.GetTicketingCategoryResponse](../../pkg/models/operations/getticketingcategoryresponse.md), error**
 
 ### Errors
 
@@ -357,6 +474,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListTicketingCategories
+
+List all categories
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listTicketingCategories" method="get" path="/ticketing/{connection_id}/category" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ticketing.ListTicketingCategories(ctx, operations.ListTicketingCategoriesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.TicketingCategories != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListTicketingCategoriesRequest](../../pkg/models/operations/listticketingcategoriesrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.ListTicketingCategoriesResponse](../../pkg/models/operations/listticketingcategoriesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListTicketingCustomers
 
 List all customers
@@ -512,6 +683,63 @@ func main() {
 ### Response
 
 **[*operations.ListTicketingTicketsResponse](../../pkg/models/operations/listticketingticketsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchTicketingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ticketing.PatchTicketingCategory(ctx, operations.PatchTicketingCategoryRequest{
+        TicketingCategory: shared.TicketingCategory{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.TicketingCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.PatchTicketingCategoryRequest](../../pkg/models/operations/patchticketingcategoryrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+
+### Response
+
+**[*operations.PatchTicketingCategoryResponse](../../pkg/models/operations/patchticketingcategoryresponse.md), error**
 
 ### Errors
 
@@ -690,6 +918,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemoveTicketingCategory
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeTicketingCategory" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ticketing.RemoveTicketingCategory(ctx, operations.RemoveTicketingCategoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.RemoveTicketingCategoryRequest](../../pkg/models/operations/removeticketingcategoryrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.RemoveTicketingCategoryResponse](../../pkg/models/operations/removeticketingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemoveTicketingCustomer
 
 Remove a customer
@@ -848,6 +1131,63 @@ func main() {
 ### Response
 
 **[*operations.RemoveTicketingTicketResponse](../../pkg/models/operations/removeticketingticketresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateTicketingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ticketing.UpdateTicketingCategory(ctx, operations.UpdateTicketingCategoryRequest{
+        TicketingCategory: shared.TicketingCategory{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.TicketingCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.UpdateTicketingCategoryRequest](../../pkg/models/operations/updateticketingcategoryrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.UpdateTicketingCategoryResponse](../../pkg/models/operations/updateticketingcategoryresponse.md), error**
 
 ### Errors
 

@@ -97,6 +97,8 @@
 | `PropertyConnectionPermissionsTicketingTicketWrite`         | ticketing_ticket_write                                      |
 | `PropertyConnectionPermissionsTicketingNoteRead`            | ticketing_note_read                                         |
 | `PropertyConnectionPermissionsTicketingNoteWrite`           | ticketing_note_write                                        |
+| `PropertyConnectionPermissionsTicketingCategoryRead`        | ticketing_category_read                                     |
+| `PropertyConnectionPermissionsTicketingCategoryWrite`       | ticketing_category_write                                    |
 | `PropertyConnectionPermissionsHrisEmployeeRead`             | hris_employee_read                                          |
 | `PropertyConnectionPermissionsHrisEmployeeWrite`            | hris_employee_write                                         |
 | `PropertyConnectionPermissionsHrisGroupRead`                | hris_group_read                                             |
@@ -125,6 +127,8 @@
 | `PropertyConnectionPermissionsGenaiModelRead`               | genai_model_read                                            |
 | `PropertyConnectionPermissionsGenaiPromptRead`              | genai_prompt_read                                           |
 | `PropertyConnectionPermissionsGenaiPromptWrite`             | genai_prompt_write                                          |
+| `PropertyConnectionPermissionsGenaiEmbeddingRead`           | genai_embedding_read                                        |
+| `PropertyConnectionPermissionsGenaiEmbeddingWrite`          | genai_embedding_write                                       |
 | `PropertyConnectionPermissionsMessagingMessageRead`         | messaging_message_read                                      |
 | `PropertyConnectionPermissionsMessagingMessageWrite`        | messaging_message_write                                     |
 | `PropertyConnectionPermissionsMessagingChannelRead`         | messaging_channel_read                                      |

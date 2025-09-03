@@ -63,6 +63,7 @@
 | `ObjectTypeTicketingNote`           | ticketing_note                      |
 | `ObjectTypeTicketingTicket`         | ticketing_ticket                    |
 | `ObjectTypeTicketingCustomer`       | ticketing_customer                  |
+| `ObjectTypeTicketingCategory`       | ticketing_category                  |
 | `ObjectTypeUcContact`               | uc_contact                          |
 | `ObjectTypeUcCall`                  | uc_call                             |
 | `ObjectTypeUcComment`               | uc_comment                          |
@@ -72,6 +73,7 @@
 | `ObjectTypeStorageFile`             | storage_file                        |
 | `ObjectTypeGenaiModel`              | genai_model                         |
 | `ObjectTypeGenaiPrompt`             | genai_prompt                        |
+| `ObjectTypeGenaiEmbedding`          | genai_embedding                     |
 | `ObjectTypeMessagingMessage`        | messaging_message                   |
 | `ObjectTypeMessagingChannel`        | messaging_channel                   |
 | `ObjectTypeKmsSpace`                | kms_space                           |
