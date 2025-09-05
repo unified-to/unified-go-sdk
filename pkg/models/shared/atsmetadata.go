@@ -32,10 +32,10 @@ const (
 )
 
 type Five struct {
-	One     *One     `queryParam:"inline"`
-	Str     *string  `queryParam:"inline"`
-	Number  *float64 `queryParam:"inline"`
-	Boolean *bool    `queryParam:"inline"`
+	One     *One     `queryParam:"inline" name:"five"`
+	Str     *string  `queryParam:"inline" name:"five"`
+	Number  *float64 `queryParam:"inline" name:"five"`
+	Boolean *bool    `queryParam:"inline" name:"five"`
 
 	Type FiveType
 }
@@ -140,11 +140,11 @@ const (
 )
 
 type ExtraData struct {
-	MapOfAny map[string]any `queryParam:"inline"`
-	Str      *string        `queryParam:"inline"`
-	Number   *float64       `queryParam:"inline"`
-	Boolean  *bool          `queryParam:"inline"`
-	ArrayOf5 []Five         `queryParam:"inline"`
+	MapOfAny map[string]any `queryParam:"inline" name:"extra_data"`
+	Str      *string        `queryParam:"inline" name:"extra_data"`
+	Number   *float64       `queryParam:"inline" name:"extra_data"`
+	Boolean  *bool          `queryParam:"inline" name:"extra_data"`
+	ArrayOf5 []Five         `queryParam:"inline" name:"extra_data"`
 
 	Type ExtraDataType
 }
@@ -304,10 +304,10 @@ const (
 )
 
 type AtsMetadata5 struct {
-	AtsMetadata1 *AtsMetadata1 `queryParam:"inline"`
-	Str          *string       `queryParam:"inline"`
-	Number       *float64      `queryParam:"inline"`
-	Boolean      *bool         `queryParam:"inline"`
+	AtsMetadata1 *AtsMetadata1 `queryParam:"inline" name:"five"`
+	Str          *string       `queryParam:"inline" name:"five"`
+	Number       *float64      `queryParam:"inline" name:"five"`
+	Boolean      *bool         `queryParam:"inline" name:"five"`
 
 	Type AtsMetadata5Type
 }
@@ -412,11 +412,11 @@ const (
 )
 
 type Value struct {
-	MapOfAny            map[string]any `queryParam:"inline"`
-	Str                 *string        `queryParam:"inline"`
-	Number              *float64       `queryParam:"inline"`
-	Boolean             *bool          `queryParam:"inline"`
-	ArrayOfAtsMetadata5 []AtsMetadata5 `queryParam:"inline"`
+	MapOfAny            map[string]any `queryParam:"inline" name:"value"`
+	Str                 *string        `queryParam:"inline" name:"value"`
+	Number              *float64       `queryParam:"inline" name:"value"`
+	Boolean             *bool          `queryParam:"inline" name:"value"`
+	ArrayOfAtsMetadata5 []AtsMetadata5 `queryParam:"inline" name:"value"`
 
 	Type ValueType
 }

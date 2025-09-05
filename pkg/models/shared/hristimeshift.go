@@ -13,15 +13,15 @@ type HrisTimeshift struct {
 	CompanyID      *string            `json:"company_id,omitempty"`
 	Compensation   []HrisCompensation `json:"compensation,omitempty"`
 	CreatedAt      *time.Time         `json:"created_at,omitempty"`
-	EmployeeUserID *string            `json:"employee_user_id,omitempty"`
-	EndAt          *time.Time         `json:"end_at,omitempty"`
+	EmployeeUserID string             `json:"employee_user_id"`
+	EndAt          time.Time          `json:"end_at"`
 	GroupID        *string            `json:"group_id,omitempty"`
 	Hours          *float64           `json:"hours,omitempty"`
 	ID             *string            `json:"id,omitempty"`
 	IsApproved     *bool              `json:"is_approved,omitempty"`
 	LocationID     *string            `json:"location_id,omitempty"`
 	Raw            map[string]any     `json:"raw,omitempty"`
-	StartAt        *time.Time         `json:"start_at,omitempty"`
+	StartAt        time.Time          `json:"start_at"`
 	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
 }
 
@@ -30,7 +30,7 @@ func (h HrisTimeshift) MarshalJSON() ([]byte, error) {
 }
 
 func (h *HrisTimeshift) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
+	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"employee_user_id", "end_at", "start_at"}); err != nil {
 		return err
 	}
 	return nil
@@ -71,16 +71,16 @@ func (o *HrisTimeshift) GetCreatedAt() *time.Time {
 	return o.CreatedAt
 }
 
-func (o *HrisTimeshift) GetEmployeeUserID() *string {
+func (o *HrisTimeshift) GetEmployeeUserID() string {
 	if o == nil {
-		return nil
+		return ""
 	}
 	return o.EmployeeUserID
 }
 
-func (o *HrisTimeshift) GetEndAt() *time.Time {
+func (o *HrisTimeshift) GetEndAt() time.Time {
 	if o == nil {
-		return nil
+		return time.Time{}
 	}
 	return o.EndAt
 }
@@ -127,9 +127,9 @@ func (o *HrisTimeshift) GetRaw() map[string]any {
 	return o.Raw
 }
 
-func (o *HrisTimeshift) GetStartAt() *time.Time {
+func (o *HrisTimeshift) GetStartAt() time.Time {
 	if o == nil {
-		return nil
+		return time.Time{}
 	}
 	return o.StartAt
 }

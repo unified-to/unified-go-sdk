@@ -32,10 +32,10 @@ const (
 )
 
 type HrisMetadata5 struct {
-	HrisMetadata1 *HrisMetadata1 `queryParam:"inline"`
-	Str           *string        `queryParam:"inline"`
-	Number        *float64       `queryParam:"inline"`
-	Boolean       *bool          `queryParam:"inline"`
+	HrisMetadata1 *HrisMetadata1 `queryParam:"inline" name:"five"`
+	Str           *string        `queryParam:"inline" name:"five"`
+	Number        *float64       `queryParam:"inline" name:"five"`
+	Boolean       *bool          `queryParam:"inline" name:"five"`
 
 	Type HrisMetadata5Type
 }
@@ -140,11 +140,11 @@ const (
 )
 
 type HrisMetadataExtraData struct {
-	MapOfAny             map[string]any  `queryParam:"inline"`
-	Str                  *string         `queryParam:"inline"`
-	Number               *float64        `queryParam:"inline"`
-	Boolean              *bool           `queryParam:"inline"`
-	ArrayOfHrisMetadata5 []HrisMetadata5 `queryParam:"inline"`
+	MapOfAny             map[string]any  `queryParam:"inline" name:"extra_data"`
+	Str                  *string         `queryParam:"inline" name:"extra_data"`
+	Number               *float64        `queryParam:"inline" name:"extra_data"`
+	Boolean              *bool           `queryParam:"inline" name:"extra_data"`
+	ArrayOfHrisMetadata5 []HrisMetadata5 `queryParam:"inline" name:"extra_data"`
 
 	Type HrisMetadataExtraDataType
 }
@@ -304,10 +304,10 @@ const (
 )
 
 type HrisMetadataSchemas5 struct {
-	HrisMetadataSchemas1 *HrisMetadataSchemas1 `queryParam:"inline"`
-	Str                  *string               `queryParam:"inline"`
-	Number               *float64              `queryParam:"inline"`
-	Boolean              *bool                 `queryParam:"inline"`
+	HrisMetadataSchemas1 *HrisMetadataSchemas1 `queryParam:"inline" name:"five"`
+	Str                  *string               `queryParam:"inline" name:"five"`
+	Number               *float64              `queryParam:"inline" name:"five"`
+	Boolean              *bool                 `queryParam:"inline" name:"five"`
 
 	Type HrisMetadataSchemas5Type
 }
@@ -412,11 +412,11 @@ const (
 )
 
 type HrisMetadataValue struct {
-	MapOfAny                    map[string]any         `queryParam:"inline"`
-	Str                         *string                `queryParam:"inline"`
-	Number                      *float64               `queryParam:"inline"`
-	Boolean                     *bool                  `queryParam:"inline"`
-	ArrayOfHrisMetadataSchemas5 []HrisMetadataSchemas5 `queryParam:"inline"`
+	MapOfAny                    map[string]any         `queryParam:"inline" name:"value"`
+	Str                         *string                `queryParam:"inline" name:"value"`
+	Number                      *float64               `queryParam:"inline" name:"value"`
+	Boolean                     *bool                  `queryParam:"inline" name:"value"`
+	ArrayOfHrisMetadataSchemas5 []HrisMetadataSchemas5 `queryParam:"inline" name:"value"`
 
 	Type HrisMetadataValueType
 }

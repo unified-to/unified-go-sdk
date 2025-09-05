@@ -341,6 +341,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -354,7 +355,11 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisTimeshift(ctx, operations.CreateHrisTimeshiftRequest{
-        HrisTimeshift: shared.HrisTimeshift{},
+        HrisTimeshift: shared.HrisTimeshift{
+            EmployeeUserID: "<id>",
+            EndAt: types.MustTimeFromString("2025-10-18T00:03:45.822Z"),
+            StartAt: types.MustTimeFromString("2024-06-03T05:33:48.715Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1556,6 +1561,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1569,7 +1575,11 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisTimeshift(ctx, operations.PatchHrisTimeshiftRequest{
-        HrisTimeshift: shared.HrisTimeshift{},
+        HrisTimeshift: shared.HrisTimeshift{
+            EmployeeUserID: "<id>",
+            EndAt: types.MustTimeFromString("2023-11-17T18:53:02.172Z"),
+            StartAt: types.MustTimeFromString("2023-01-19T02:48:41.002Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2230,6 +2240,7 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -2243,7 +2254,11 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisTimeshift(ctx, operations.UpdateHrisTimeshiftRequest{
-        HrisTimeshift: shared.HrisTimeshift{},
+        HrisTimeshift: shared.HrisTimeshift{
+            EmployeeUserID: "<id>",
+            EndAt: types.MustTimeFromString("2025-03-03T22:04:09.340Z"),
+            StartAt: types.MustTimeFromString("2024-05-30T21:19:58.772Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

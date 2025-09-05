@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: a9003bf9eba5cb988acee2ba39aeae6f
+  docChecksum: 815d3eb3e63fd66f5050d707713e3c46
   docVersion: "1.0"
-  speakeasyVersion: 1.607.0
-  generationVersion: 2.690.1
-  releaseVersion: 0.28.10
-  configChecksum: c4d0e21b2c4f2ca30e9b68a5a1e9b726
+  speakeasyVersion: 1.609.0
+  generationVersion: 2.692.0
+  releaseVersion: 0.28.11
+  configChecksum: 3a3dea215d5aaa64a7da230ec0f3e433
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.9.5
+    core: 3.9.6
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -29,7 +29,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.85.13
+    unions: 2.85.14
     uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
@@ -6428,10 +6428,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"employee_user_id": "<id>", "end_at": "2025-10-18T00:03:45.822Z", "start_at": "2024-06-03T05:33:48.715Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-04-02T06:29:45.209Z", "start_at": "2025-05-03T19:13:33.398Z"}
   getHrisTimeshift:
     speakeasy-default-get-hris-timeshift:
       parameters:
@@ -6440,7 +6440,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-02-02T20:47:43.029Z", "start_at": "2023-11-12T09:20:44.392Z"}
   listHrisTimeshifts:
     speakeasy-default-list-hris-timeshifts:
       parameters:
@@ -6448,7 +6448,7 @@ examples:
           connection_id: "<id>"
       responses:
         "200":
-          application/json: [{}, {}, {}]
+          application/json: [{"employee_user_id": "<id>", "end_at": "2025-03-16T00:40:56.364Z", "start_at": "2024-03-12T18:17:36.342Z"}, {"employee_user_id": "<id>", "end_at": "2025-10-31T01:56:56.680Z", "start_at": "2023-07-08T03:03:41.246Z"}, {"employee_user_id": "<id>", "end_at": "2025-11-10T18:31:42.272Z", "start_at": "2025-08-21T01:25:29.562Z"}]
   patchHrisTimeshift:
     speakeasy-default-patch-hris-timeshift:
       parameters:
@@ -6456,10 +6456,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"employee_user_id": "<id>", "end_at": "2023-11-17T18:53:02.172Z", "start_at": "2023-01-19T02:48:41.002Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2023-05-16T07:27:26.608Z", "start_at": "2024-07-25T03:16:34.281Z"}
   removeHrisTimeshift:
     speakeasy-default-remove-hris-timeshift:
       parameters:
@@ -6473,10 +6473,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"employee_user_id": "<id>", "end_at": "2025-03-03T22:04:09.340Z", "start_at": "2024-05-30T21:19:58.772Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"employee_user_id": "<id>", "end_at": "2024-05-09T22:44:06.400Z", "start_at": "2023-11-14T18:28:16.870Z"}
   createAtsCompany:
     speakeasy-default-create-ats-company:
       parameters:
@@ -7006,4 +7006,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Category.CreateTicketingCategory()`: **Added**\n* `UnifiedTo.Category.GetTicketingCategory()`: **Added**\n* `UnifiedTo.Category.ListTicketingCategories()`: **Added**\n* `UnifiedTo.Category.PatchTicketingCategory()`: **Added**\n* `UnifiedTo.Category.RemoveTicketingCategory()`: **Added**\n* `UnifiedTo.Category.UpdateTicketingCategory()`: **Added**\n* `UnifiedTo.Genai.CreateGenaiEmbedding()`: **Added**\n* `UnifiedTo.Genai.GetGenaiModel()`: **Added**\n* `UnifiedTo.Embedding.CreateGenaiEmbedding()`: **Added**\n* `UnifiedTo.Model.GetGenaiModel()`: **Added**\n* `UnifiedTo.Ticketing.CreateTicketingCategory()`: **Added**\n* `UnifiedTo.Ticketing.GetTicketingCategory()`: **Added**\n* `UnifiedTo.Ticketing.ListTicketingCategories()`: **Added**\n* `UnifiedTo.Ticketing.PatchTicketingCategory()`: **Added**\n* `UnifiedTo.Ticketing.RemoveTicketingCategory()`: **Added**\n* `UnifiedTo.Ticketing.UpdateTicketingCategory()`: **Added**\n* `UnifiedTo.Ticketing.CreateTicketingTicket()`: \n  *  `request.Request.TicketingTicket.CategoryId` **Added**\n  *  `response.CategoryId` **Added**\n* `UnifiedTo.Ticketing.GetTicketingTicket()`:  `response.CategoryId` **Added**\n* `UnifiedTo.Ticketing.ListTicketingTickets()`:  `response.[].CategoryId` **Added**\n* `UnifiedTo.Ticketing.PatchTicketingTicket()`: \n  *  `request.Request.TicketingTicket.CategoryId` **Added**\n  *  `response.CategoryId` **Added**\n* `UnifiedTo.Ticketing.UpdateTicketingTicket()`: \n  *  `request.Request.TicketingTicket.CategoryId` **Added**\n  *  `response.CategoryId` **Added**\n* `UnifiedTo.Ticket.CreateTicketingTicket()`: \n  *  `request.Request.TicketingTicket.CategoryId` **Added**\n  *  `response.CategoryId` **Added**\n* `UnifiedTo.Ticket.GetTicketingTicket()`:  `response.CategoryId` **Added**\n* `UnifiedTo.Ticket.ListTicketingTickets()`:  `response.[].CategoryId` **Added**\n* `UnifiedTo.Ticket.PatchTicketingTicket()`: \n  *  `request.Request.TicketingTicket.CategoryId` **Added**\n  *  `response.CategoryId` **Added**\n* `UnifiedTo.Ticket.UpdateTicketingTicket()`: \n  *  `request.Request.TicketingTicket.CategoryId` **Added**\n  *  `response.CategoryId` **Added**\n"
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Hris.PatchHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Hris.CreateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Timeshift.UpdateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Timeshift.PatchHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Timeshift.CreateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Hris.UpdateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Hris.ListHrisTimeshifts()`:  `response.[]` **Changed**\n* `UnifiedTo.Employee.PatchHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Hris.UpdateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Hris.CreateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Employee.CreateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Employee.GetHrisEmployee()`:  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Employee.ListHrisEmployees()`:  `response.[].Compensation.[].GroupId` **Added**\n* `UnifiedTo.Hris.PatchHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Employee.UpdateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Hris.ListHrisEmployees()`:  `response.[].Compensation.[].GroupId` **Added**\n* `UnifiedTo.Timeshift.GetHrisTimeshift()`:  `response` **Changed**\n* `UnifiedTo.Timeshift.ListHrisTimeshifts()`:  `response.[]` **Changed**\n* `UnifiedTo.Hris.GetHrisTimeshift()`:  `response` **Changed**\n* `UnifiedTo.Hris.GetHrisEmployee()`:  `response.Compensation.[].GroupId` **Added**\n"
