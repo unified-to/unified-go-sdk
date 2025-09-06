@@ -19,17 +19,6 @@ func (e HrisTimeoffStatus) ToPointer() *HrisTimeoffStatus {
 	return &e
 }
 
-type HrisTimeoffType string
-
-const (
-	HrisTimeoffTypePaid   HrisTimeoffType = "PAID"
-	HrisTimeoffTypeUnpaid HrisTimeoffType = "UNPAID"
-)
-
-func (e HrisTimeoffType) ToPointer() *HrisTimeoffType {
-	return &e
-}
-
 type HrisTimeoff struct {
 	ApprovedAt     *time.Time         `json:"approved_at,omitempty"`
 	ApproverUserID *string            `json:"approver_user_id,omitempty"`
@@ -38,10 +27,11 @@ type HrisTimeoff struct {
 	CreatedAt      *time.Time         `json:"created_at,omitempty"`
 	EndAt          *time.Time         `json:"end_at,omitempty"`
 	ID             *string            `json:"id,omitempty"`
+	IsPaid         *bool              `json:"is_paid,omitempty"`
 	Raw            map[string]any     `json:"raw,omitempty"`
+	Reason         *string            `json:"reason,omitempty"`
 	StartAt        time.Time          `json:"start_at"`
 	Status         *HrisTimeoffStatus `json:"status,omitempty"`
-	Type           *HrisTimeoffType   `json:"type,omitempty"`
 	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
 	UserID         *string            `json:"user_id,omitempty"`
 }
@@ -106,11 +96,25 @@ func (o *HrisTimeoff) GetID() *string {
 	return o.ID
 }
 
+func (o *HrisTimeoff) GetIsPaid() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.IsPaid
+}
+
 func (o *HrisTimeoff) GetRaw() map[string]any {
 	if o == nil {
 		return nil
 	}
 	return o.Raw
+}
+
+func (o *HrisTimeoff) GetReason() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Reason
 }
 
 func (o *HrisTimeoff) GetStartAt() time.Time {
@@ -125,13 +129,6 @@ func (o *HrisTimeoff) GetStatus() *HrisTimeoffStatus {
 		return nil
 	}
 	return o.Status
-}
-
-func (o *HrisTimeoff) GetType() *HrisTimeoffType {
-	if o == nil {
-		return nil
-	}
-	return o.Type
 }
 
 func (o *HrisTimeoff) GetUpdatedAt() *time.Time {

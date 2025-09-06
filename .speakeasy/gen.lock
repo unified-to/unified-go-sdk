@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 815d3eb3e63fd66f5050d707713e3c46
+  docChecksum: 8ed442c273cdb35b6056af069e0583c0
   docVersion: "1.0"
-  speakeasyVersion: 1.609.0
-  generationVersion: 2.692.0
-  releaseVersion: 0.28.11
-  configChecksum: 3a3dea215d5aaa64a7da230ec0f3e433
+  speakeasyVersion: 1.611.0
+  generationVersion: 2.694.1
+  releaseVersion: 0.28.12
+  configChecksum: 62bd1ea79115ca5c334e58bf7c4424a7
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -2019,7 +2019,6 @@ generatedFiles:
   - docs/pkg/models/shared/hristelephonetype.md
   - docs/pkg/models/shared/hristimeoff.md
   - docs/pkg/models/shared/hristimeoffstatus.md
-  - docs/pkg/models/shared/hristimeofftype.md
   - docs/pkg/models/shared/hristimeshift.md
   - docs/pkg/models/shared/integration.md
   - docs/pkg/models/shared/integration1.md
@@ -7006,4 +7005,9 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Hris.PatchHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Hris.CreateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Timeshift.UpdateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Timeshift.PatchHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Timeshift.CreateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Hris.UpdateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `UnifiedTo.Hris.ListHrisTimeshifts()`:  `response.[]` **Changed**\n* `UnifiedTo.Employee.PatchHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Hris.UpdateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Hris.CreateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Employee.CreateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Employee.GetHrisEmployee()`:  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Employee.ListHrisEmployees()`:  `response.[].Compensation.[].GroupId` **Added**\n* `UnifiedTo.Hris.PatchHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Employee.UpdateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Compensation.[].GroupId` **Added**\n  *  `response.Compensation.[].GroupId` **Added**\n* `UnifiedTo.Hris.ListHrisEmployees()`:  `response.[].Compensation.[].GroupId` **Added**\n* `UnifiedTo.Timeshift.GetHrisTimeshift()`:  `response` **Changed**\n* `UnifiedTo.Timeshift.ListHrisTimeshifts()`:  `response.[]` **Changed**\n* `UnifiedTo.Hris.GetHrisTimeshift()`:  `response` **Changed**\n* `UnifiedTo.Hris.GetHrisEmployee()`:  `response.Compensation.[].GroupId` **Added**\n"
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `UnifiedTo.Hris.GetHrisTimeoff()`:  `response` **Changed** **Breaking** :warning:
+  * `UnifiedTo.Hris.ListHrisTimeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
+  * `UnifiedTo.Timeoff.GetHrisTimeoff()`:  `response` **Changed** **Breaking** :warning:
+  * `UnifiedTo.Timeoff.ListHrisTimeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
