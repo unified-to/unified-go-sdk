@@ -29,58 +29,58 @@ func (c *CommerceInventory) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CommerceInventory) GetAvailable() float64 {
-	if o == nil {
+func (c *CommerceInventory) GetAvailable() float64 {
+	if c == nil {
 		return 0.0
 	}
-	return o.Available
+	return c.Available
 }
 
-func (o *CommerceInventory) GetID() *string {
-	if o == nil {
+func (c *CommerceInventory) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommerceInventory) GetItemID() *string {
-	if o == nil {
+func (c *CommerceInventory) GetItemID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ItemID
+	return c.ItemID
 }
 
-func (o *CommerceInventory) GetItemOptionID() *string {
-	if o == nil {
+func (c *CommerceInventory) GetItemOptionID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ItemOptionID
+	return c.ItemOptionID
 }
 
-func (o *CommerceInventory) GetItemVariantID() *string {
-	if o == nil {
+func (c *CommerceInventory) GetItemVariantID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ItemVariantID
+	return c.ItemVariantID
 }
 
-func (o *CommerceInventory) GetLocationID() *string {
-	if o == nil {
+func (c *CommerceInventory) GetLocationID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.LocationID
+	return c.LocationID
 }
 
-func (o *CommerceInventory) GetRaw() map[string]any {
-	if o == nil {
+func (c *CommerceInventory) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CommerceInventory) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CommerceInventory) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }

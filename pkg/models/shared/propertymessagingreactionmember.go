@@ -8,23 +8,23 @@ type PropertyMessagingReactionMember struct {
 	UserID *string `json:"user_id,omitempty"`
 }
 
-func (o *PropertyMessagingReactionMember) GetEmail() *string {
-	if o == nil {
+func (p *PropertyMessagingReactionMember) GetEmail() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Email
+	return p.Email
 }
 
-func (o *PropertyMessagingReactionMember) GetName() *string {
-	if o == nil {
+func (p *PropertyMessagingReactionMember) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyMessagingReactionMember) GetUserID() *string {
-	if o == nil {
+func (p *PropertyMessagingReactionMember) GetUserID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.UserID
+	return p.UserID
 }

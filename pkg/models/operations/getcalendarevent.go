@@ -18,32 +18,32 @@ type GetCalendarEventRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetCalendarEventRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetCalendarEventRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetCalendarEventRequest) GetFields() []string {
-	if o == nil {
+func (g *GetCalendarEventRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetCalendarEventRequest) GetID() string {
-	if o == nil {
+func (g *GetCalendarEventRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetCalendarEventRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetCalendarEventRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetCalendarEventResponse struct {
@@ -57,30 +57,30 @@ type GetCalendarEventResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetCalendarEventResponse) GetCalendarEvent() *shared.CalendarEvent {
-	if o == nil {
+func (g *GetCalendarEventResponse) GetCalendarEvent() *shared.CalendarEvent {
+	if g == nil {
 		return nil
 	}
-	return o.CalendarEvent
+	return g.CalendarEvent
 }
 
-func (o *GetCalendarEventResponse) GetContentType() string {
-	if o == nil {
+func (g *GetCalendarEventResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetCalendarEventResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetCalendarEventResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetCalendarEventResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetCalendarEventResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

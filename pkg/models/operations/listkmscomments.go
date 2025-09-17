@@ -30,88 +30,88 @@ type ListKmsCommentsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListKmsCommentsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListKmsCommentsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListKmsCommentsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListKmsCommentsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListKmsCommentsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListKmsCommentsRequest) GetPageID() *string {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetPageID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.PageID
+	return l.PageID
 }
 
-func (o *ListKmsCommentsRequest) GetParentID() *string {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetParentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ParentID
+	return l.ParentID
 }
 
-func (o *ListKmsCommentsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListKmsCommentsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListKmsCommentsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListKmsCommentsRequest) GetType() *string {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }
 
-func (o *ListKmsCommentsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListKmsCommentsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListKmsCommentsResponse struct {
@@ -125,30 +125,30 @@ type ListKmsCommentsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListKmsCommentsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListKmsCommentsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListKmsCommentsResponse) GetKmsComments() []shared.KmsComment {
-	if o == nil {
+func (l *ListKmsCommentsResponse) GetKmsComments() []shared.KmsComment {
+	if l == nil {
 		return nil
 	}
-	return o.KmsComments
+	return l.KmsComments
 }
 
-func (o *ListKmsCommentsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListKmsCommentsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListKmsCommentsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListKmsCommentsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

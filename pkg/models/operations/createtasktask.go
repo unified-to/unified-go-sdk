@@ -17,32 +17,32 @@ type CreateTaskTaskRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateTaskTaskRequest) GetTaskTask() shared.TaskTask {
-	if o == nil {
+func (c *CreateTaskTaskRequest) GetTaskTask() shared.TaskTask {
+	if c == nil {
 		return shared.TaskTask{}
 	}
-	return o.TaskTask
+	return c.TaskTask
 }
 
-func (o *CreateTaskTaskRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateTaskTaskRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateTaskTaskRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateTaskTaskRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateTaskTaskRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateTaskTaskRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateTaskTaskResponse struct {
@@ -56,30 +56,30 @@ type CreateTaskTaskResponse struct {
 	TaskTask *shared.TaskTask
 }
 
-func (o *CreateTaskTaskResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateTaskTaskResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateTaskTaskResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateTaskTaskResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateTaskTaskResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateTaskTaskResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateTaskTaskResponse) GetTaskTask() *shared.TaskTask {
-	if o == nil {
+func (c *CreateTaskTaskResponse) GetTaskTask() *shared.TaskTask {
+	if c == nil {
 		return nil
 	}
-	return o.TaskTask
+	return c.TaskTask
 }

@@ -17,32 +17,32 @@ type CreateGenaiEmbeddingRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateGenaiEmbeddingRequest) GetGenaiEmbedding() shared.GenaiEmbedding {
-	if o == nil {
+func (c *CreateGenaiEmbeddingRequest) GetGenaiEmbedding() shared.GenaiEmbedding {
+	if c == nil {
 		return shared.GenaiEmbedding{}
 	}
-	return o.GenaiEmbedding
+	return c.GenaiEmbedding
 }
 
-func (o *CreateGenaiEmbeddingRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateGenaiEmbeddingRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateGenaiEmbeddingRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateGenaiEmbeddingRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateGenaiEmbeddingRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateGenaiEmbeddingRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateGenaiEmbeddingResponse struct {
@@ -56,30 +56,30 @@ type CreateGenaiEmbeddingResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateGenaiEmbeddingResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateGenaiEmbeddingResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateGenaiEmbeddingResponse) GetGenaiEmbedding() *shared.GenaiEmbedding {
-	if o == nil {
+func (c *CreateGenaiEmbeddingResponse) GetGenaiEmbedding() *shared.GenaiEmbedding {
+	if c == nil {
 		return nil
 	}
-	return o.GenaiEmbedding
+	return c.GenaiEmbedding
 }
 
-func (o *CreateGenaiEmbeddingResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateGenaiEmbeddingResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateGenaiEmbeddingResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateGenaiEmbeddingResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

@@ -11,44 +11,44 @@ type PropertyScimUserName struct {
 	MiddleName      *string `json:"middleName,omitempty"`
 }
 
-func (o *PropertyScimUserName) GetFamilyName() *string {
-	if o == nil {
+func (p *PropertyScimUserName) GetFamilyName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.FamilyName
+	return p.FamilyName
 }
 
-func (o *PropertyScimUserName) GetFormatted() *string {
-	if o == nil {
+func (p *PropertyScimUserName) GetFormatted() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Formatted
+	return p.Formatted
 }
 
-func (o *PropertyScimUserName) GetGivenName() *string {
-	if o == nil {
+func (p *PropertyScimUserName) GetGivenName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.GivenName
+	return p.GivenName
 }
 
-func (o *PropertyScimUserName) GetHonorificPrefix() *string {
-	if o == nil {
+func (p *PropertyScimUserName) GetHonorificPrefix() *string {
+	if p == nil {
 		return nil
 	}
-	return o.HonorificPrefix
+	return p.HonorificPrefix
 }
 
-func (o *PropertyScimUserName) GetHonorificSuffix() *string {
-	if o == nil {
+func (p *PropertyScimUserName) GetHonorificSuffix() *string {
+	if p == nil {
 		return nil
 	}
-	return o.HonorificSuffix
+	return p.HonorificSuffix
 }
 
-func (o *PropertyScimUserName) GetMiddleName() *string {
-	if o == nil {
+func (p *PropertyScimUserName) GetMiddleName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.MiddleName
+	return p.MiddleName
 }

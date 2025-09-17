@@ -19,39 +19,39 @@ type PatchTicketingCustomerRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchTicketingCustomerRequest) GetTicketingCustomer() shared.TicketingCustomer {
-	if o == nil {
+func (p *PatchTicketingCustomerRequest) GetTicketingCustomer() shared.TicketingCustomer {
+	if p == nil {
 		return shared.TicketingCustomer{}
 	}
-	return o.TicketingCustomer
+	return p.TicketingCustomer
 }
 
-func (o *PatchTicketingCustomerRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchTicketingCustomerRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchTicketingCustomerRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchTicketingCustomerRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchTicketingCustomerRequest) GetID() string {
-	if o == nil {
+func (p *PatchTicketingCustomerRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchTicketingCustomerRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchTicketingCustomerRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchTicketingCustomerResponse struct {
@@ -65,30 +65,30 @@ type PatchTicketingCustomerResponse struct {
 	TicketingCustomer *shared.TicketingCustomer
 }
 
-func (o *PatchTicketingCustomerResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchTicketingCustomerResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchTicketingCustomerResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchTicketingCustomerResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchTicketingCustomerResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchTicketingCustomerResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchTicketingCustomerResponse) GetTicketingCustomer() *shared.TicketingCustomer {
-	if o == nil {
+func (p *PatchTicketingCustomerResponse) GetTicketingCustomer() *shared.TicketingCustomer {
+	if p == nil {
 		return nil
 	}
-	return o.TicketingCustomer
+	return p.TicketingCustomer
 }

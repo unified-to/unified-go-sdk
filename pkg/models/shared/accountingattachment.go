@@ -9,30 +9,30 @@ type AccountingAttachment struct {
 	Name        *string `json:"name,omitempty"`
 }
 
-func (o *AccountingAttachment) GetDownloadURL() *string {
-	if o == nil {
+func (a *AccountingAttachment) GetDownloadURL() *string {
+	if a == nil {
 		return nil
 	}
-	return o.DownloadURL
+	return a.DownloadURL
 }
 
-func (o *AccountingAttachment) GetID() *string {
-	if o == nil {
+func (a *AccountingAttachment) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingAttachment) GetMimeType() *string {
-	if o == nil {
+func (a *AccountingAttachment) GetMimeType() *string {
+	if a == nil {
 		return nil
 	}
-	return o.MimeType
+	return a.MimeType
 }
 
-func (o *AccountingAttachment) GetName() *string {
-	if o == nil {
+func (a *AccountingAttachment) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }

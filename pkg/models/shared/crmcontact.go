@@ -42,107 +42,107 @@ func (c *CrmContact) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CrmContact) GetAddress() *PropertyCrmContactAddress {
-	if o == nil {
+func (c *CrmContact) GetAddress() *PropertyCrmContactAddress {
+	if c == nil {
 		return nil
 	}
-	return o.Address
+	return c.Address
 }
 
-func (o *CrmContact) GetCompany() *string {
-	if o == nil {
+func (c *CrmContact) GetCompany() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Company
+	return c.Company
 }
 
-func (o *CrmContact) GetCompanyIds() []string {
-	if o == nil {
+func (c *CrmContact) GetCompanyIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.CompanyIds
+	return c.CompanyIds
 }
 
-func (o *CrmContact) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CrmContact) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CrmContact) GetDealIds() []string {
-	if o == nil {
+func (c *CrmContact) GetDealIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.DealIds
+	return c.DealIds
 }
 
-func (o *CrmContact) GetEmails() []CrmEmail {
-	if o == nil {
+func (c *CrmContact) GetEmails() []CrmEmail {
+	if c == nil {
 		return nil
 	}
-	return o.Emails
+	return c.Emails
 }
 
-func (o *CrmContact) GetID() *string {
-	if o == nil {
+func (c *CrmContact) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CrmContact) GetLinkUrls() []string {
-	if o == nil {
+func (c *CrmContact) GetLinkUrls() []string {
+	if c == nil {
 		return nil
 	}
-	return o.LinkUrls
+	return c.LinkUrls
 }
 
-func (o *CrmContact) GetMetadata() []CrmMetadata {
-	if o == nil {
+func (c *CrmContact) GetMetadata() []CrmMetadata {
+	if c == nil {
 		return nil
 	}
-	return o.Metadata
+	return c.Metadata
 }
 
-func (o *CrmContact) GetName() *string {
-	if o == nil {
+func (c *CrmContact) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CrmContact) GetRaw() map[string]any {
-	if o == nil {
+func (c *CrmContact) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CrmContact) GetTelephones() []CrmTelephone {
-	if o == nil {
+func (c *CrmContact) GetTelephones() []CrmTelephone {
+	if c == nil {
 		return nil
 	}
-	return o.Telephones
+	return c.Telephones
 }
 
-func (o *CrmContact) GetTitle() *string {
-	if o == nil {
+func (c *CrmContact) GetTitle() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Title
+	return c.Title
 }
 
-func (o *CrmContact) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CrmContact) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *CrmContact) GetUserID() *string {
-	if o == nil {
+func (c *CrmContact) GetUserID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.UserID
+	return c.UserID
 }

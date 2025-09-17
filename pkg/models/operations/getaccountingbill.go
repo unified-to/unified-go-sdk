@@ -18,32 +18,32 @@ type GetAccountingBillRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAccountingBillRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAccountingBillRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAccountingBillRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAccountingBillRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAccountingBillRequest) GetID() string {
-	if o == nil {
+func (g *GetAccountingBillRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAccountingBillRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAccountingBillRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAccountingBillResponse struct {
@@ -57,30 +57,30 @@ type GetAccountingBillResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAccountingBillResponse) GetAccountingBill() *shared.AccountingBill {
-	if o == nil {
+func (g *GetAccountingBillResponse) GetAccountingBill() *shared.AccountingBill {
+	if g == nil {
 		return nil
 	}
-	return o.AccountingBill
+	return g.AccountingBill
 }
 
-func (o *GetAccountingBillResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAccountingBillResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAccountingBillResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAccountingBillResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAccountingBillResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAccountingBillResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

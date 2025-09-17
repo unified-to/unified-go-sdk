@@ -12,11 +12,11 @@ type GetUnifiedConnectionRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *GetUnifiedConnectionRequest) GetID() string {
-	if o == nil {
+func (g *GetUnifiedConnectionRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
 type GetUnifiedConnectionResponse struct {
@@ -30,30 +30,30 @@ type GetUnifiedConnectionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetUnifiedConnectionResponse) GetConnection() *shared.Connection {
-	if o == nil {
+func (g *GetUnifiedConnectionResponse) GetConnection() *shared.Connection {
+	if g == nil {
 		return nil
 	}
-	return o.Connection
+	return g.Connection
 }
 
-func (o *GetUnifiedConnectionResponse) GetContentType() string {
-	if o == nil {
+func (g *GetUnifiedConnectionResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetUnifiedConnectionResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetUnifiedConnectionResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetUnifiedConnectionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetUnifiedConnectionResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

@@ -11,11 +11,11 @@ type PatchUnifiedWebhookTriggerRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchUnifiedWebhookTriggerRequest) GetID() string {
-	if o == nil {
+func (p *PatchUnifiedWebhookTriggerRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
 type PatchUnifiedWebhookTriggerResponse struct {
@@ -28,30 +28,30 @@ type PatchUnifiedWebhookTriggerResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchUnifiedWebhookTriggerResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchUnifiedWebhookTriggerResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchUnifiedWebhookTriggerResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (p *PatchUnifiedWebhookTriggerResponse) GetHeaders() map[string][]string {
+	if p == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return p.Headers
 }
 
-func (o *PatchUnifiedWebhookTriggerResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchUnifiedWebhookTriggerResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchUnifiedWebhookTriggerResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchUnifiedWebhookTriggerResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

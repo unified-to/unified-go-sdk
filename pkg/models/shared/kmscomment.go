@@ -55,72 +55,72 @@ func (k *KmsComment) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *KmsComment) GetContent() string {
-	if o == nil {
+func (k *KmsComment) GetContent() string {
+	if k == nil {
 		return ""
 	}
-	return o.Content
+	return k.Content
 }
 
-func (o *KmsComment) GetContentType() *ContentType {
-	if o == nil {
+func (k *KmsComment) GetContentType() *ContentType {
+	if k == nil {
 		return nil
 	}
-	return o.ContentType
+	return k.ContentType
 }
 
-func (o *KmsComment) GetCreatedAt() *time.Time {
-	if o == nil {
+func (k *KmsComment) GetCreatedAt() *time.Time {
+	if k == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return k.CreatedAt
 }
 
-func (o *KmsComment) GetID() *string {
-	if o == nil {
+func (k *KmsComment) GetID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.ID
+	return k.ID
 }
 
-func (o *KmsComment) GetPageID() *string {
-	if o == nil {
+func (k *KmsComment) GetPageID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.PageID
+	return k.PageID
 }
 
-func (o *KmsComment) GetParentID() *string {
-	if o == nil {
+func (k *KmsComment) GetParentID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.ParentID
+	return k.ParentID
 }
 
-func (o *KmsComment) GetRaw() map[string]any {
-	if o == nil {
+func (k *KmsComment) GetRaw() map[string]any {
+	if k == nil {
 		return nil
 	}
-	return o.Raw
+	return k.Raw
 }
 
-func (o *KmsComment) GetType() *KmsCommentType {
-	if o == nil {
+func (k *KmsComment) GetType() *KmsCommentType {
+	if k == nil {
 		return nil
 	}
-	return o.Type
+	return k.Type
 }
 
-func (o *KmsComment) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (k *KmsComment) GetUpdatedAt() *time.Time {
+	if k == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return k.UpdatedAt
 }
 
-func (o *KmsComment) GetUserID() *string {
-	if o == nil {
+func (k *KmsComment) GetUserID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.UserID
+	return k.UserID
 }

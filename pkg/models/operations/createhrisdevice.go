@@ -17,32 +17,32 @@ type CreateHrisDeviceRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateHrisDeviceRequest) GetHrisDevice() shared.HrisDevice {
-	if o == nil {
+func (c *CreateHrisDeviceRequest) GetHrisDevice() shared.HrisDevice {
+	if c == nil {
 		return shared.HrisDevice{}
 	}
-	return o.HrisDevice
+	return c.HrisDevice
 }
 
-func (o *CreateHrisDeviceRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateHrisDeviceRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateHrisDeviceRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateHrisDeviceRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateHrisDeviceRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateHrisDeviceRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateHrisDeviceResponse struct {
@@ -56,30 +56,30 @@ type CreateHrisDeviceResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateHrisDeviceResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateHrisDeviceResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateHrisDeviceResponse) GetHrisDevice() *shared.HrisDevice {
-	if o == nil {
+func (c *CreateHrisDeviceResponse) GetHrisDevice() *shared.HrisDevice {
+	if c == nil {
 		return nil
 	}
-	return o.HrisDevice
+	return c.HrisDevice
 }
 
-func (o *CreateHrisDeviceResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateHrisDeviceResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateHrisDeviceResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateHrisDeviceResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

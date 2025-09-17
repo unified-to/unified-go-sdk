@@ -19,39 +19,39 @@ type UpdateAccountingOrderRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAccountingOrderRequest) GetAccountingOrder() shared.AccountingOrder {
-	if o == nil {
+func (u *UpdateAccountingOrderRequest) GetAccountingOrder() shared.AccountingOrder {
+	if u == nil {
 		return shared.AccountingOrder{}
 	}
-	return o.AccountingOrder
+	return u.AccountingOrder
 }
 
-func (o *UpdateAccountingOrderRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAccountingOrderRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAccountingOrderRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAccountingOrderRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAccountingOrderRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAccountingOrderRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAccountingOrderRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAccountingOrderRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAccountingOrderResponse struct {
@@ -65,30 +65,30 @@ type UpdateAccountingOrderResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAccountingOrderResponse) GetAccountingOrder() *shared.AccountingOrder {
-	if o == nil {
+func (u *UpdateAccountingOrderResponse) GetAccountingOrder() *shared.AccountingOrder {
+	if u == nil {
 		return nil
 	}
-	return o.AccountingOrder
+	return u.AccountingOrder
 }
 
-func (o *UpdateAccountingOrderResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAccountingOrderResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAccountingOrderResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAccountingOrderResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAccountingOrderResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAccountingOrderResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

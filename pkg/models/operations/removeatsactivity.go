@@ -13,18 +13,18 @@ type RemoveAtsActivityRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveAtsActivityRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveAtsActivityRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveAtsActivityRequest) GetID() string {
-	if o == nil {
+func (r *RemoveAtsActivityRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveAtsActivityResponse struct {
@@ -37,30 +37,30 @@ type RemoveAtsActivityResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveAtsActivityResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveAtsActivityResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveAtsActivityResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveAtsActivityResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveAtsActivityResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveAtsActivityResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveAtsActivityResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveAtsActivityResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

@@ -13,18 +13,18 @@ type RemoveLmsInstructorRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveLmsInstructorRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveLmsInstructorRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveLmsInstructorRequest) GetID() string {
-	if o == nil {
+func (r *RemoveLmsInstructorRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveLmsInstructorResponse struct {
@@ -37,30 +37,30 @@ type RemoveLmsInstructorResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveLmsInstructorResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveLmsInstructorResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveLmsInstructorResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveLmsInstructorResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveLmsInstructorResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveLmsInstructorResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveLmsInstructorResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveLmsInstructorResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

@@ -18,32 +18,32 @@ type GetCrmCompanyRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetCrmCompanyRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetCrmCompanyRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetCrmCompanyRequest) GetFields() []string {
-	if o == nil {
+func (g *GetCrmCompanyRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetCrmCompanyRequest) GetID() string {
-	if o == nil {
+func (g *GetCrmCompanyRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetCrmCompanyRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetCrmCompanyRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetCrmCompanyResponse struct {
@@ -57,30 +57,30 @@ type GetCrmCompanyResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetCrmCompanyResponse) GetContentType() string {
-	if o == nil {
+func (g *GetCrmCompanyResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetCrmCompanyResponse) GetCrmCompany() *shared.CrmCompany {
-	if o == nil {
+func (g *GetCrmCompanyResponse) GetCrmCompany() *shared.CrmCompany {
+	if g == nil {
 		return nil
 	}
-	return o.CrmCompany
+	return g.CrmCompany
 }
 
-func (o *GetCrmCompanyResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetCrmCompanyResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetCrmCompanyResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetCrmCompanyResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

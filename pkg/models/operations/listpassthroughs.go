@@ -14,25 +14,25 @@ type ListPassthroughsRequest struct {
 	Query        map[string]any `queryParam:"style=form,explode=true,name=query"`
 }
 
-func (o *ListPassthroughsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListPassthroughsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListPassthroughsRequest) GetPath() string {
-	if o == nil {
+func (l *ListPassthroughsRequest) GetPath() string {
+	if l == nil {
 		return ""
 	}
-	return o.Path
+	return l.Path
 }
 
-func (o *ListPassthroughsRequest) GetQuery() map[string]any {
-	if o == nil {
+func (l *ListPassthroughsRequest) GetQuery() map[string]any {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
 type ListPassthroughsResponse struct {
@@ -56,65 +56,65 @@ type ListPassthroughsResponse struct {
 	DefaultTextPlainRes *string
 }
 
-func (o *ListPassthroughsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListPassthroughsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListPassthroughsResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (l *ListPassthroughsResponse) GetHeaders() map[string][]string {
+	if l == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return l.Headers
 }
 
-func (o *ListPassthroughsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListPassthroughsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListPassthroughsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListPassthroughsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListPassthroughsResponse) GetDefaultWildcardWildcardResponseStream() io.ReadCloser {
-	if o == nil {
+func (l *ListPassthroughsResponse) GetDefaultWildcardWildcardResponseStream() io.ReadCloser {
+	if l == nil {
 		return nil
 	}
-	return o.DefaultWildcardWildcardResponseStream
+	return l.DefaultWildcardWildcardResponseStream
 }
 
-func (o *ListPassthroughsResponse) GetDefaultApplicationJSONAny() any {
-	if o == nil {
+func (l *ListPassthroughsResponse) GetDefaultApplicationJSONAny() any {
+	if l == nil {
 		return nil
 	}
-	return o.DefaultApplicationJSONAny
+	return l.DefaultApplicationJSONAny
 }
 
-func (o *ListPassthroughsResponse) GetDefaultApplicationXMLRes() *string {
-	if o == nil {
+func (l *ListPassthroughsResponse) GetDefaultApplicationXMLRes() *string {
+	if l == nil {
 		return nil
 	}
-	return o.DefaultApplicationXMLRes
+	return l.DefaultApplicationXMLRes
 }
 
-func (o *ListPassthroughsResponse) GetDefaultTextCsvRes() *string {
-	if o == nil {
+func (l *ListPassthroughsResponse) GetDefaultTextCsvRes() *string {
+	if l == nil {
 		return nil
 	}
-	return o.DefaultTextCsvRes
+	return l.DefaultTextCsvRes
 }
 
-func (o *ListPassthroughsResponse) GetDefaultTextPlainRes() *string {
-	if o == nil {
+func (l *ListPassthroughsResponse) GetDefaultTextPlainRes() *string {
+	if l == nil {
 		return nil
 	}
-	return o.DefaultTextPlainRes
+	return l.DefaultTextPlainRes
 }

@@ -19,39 +19,39 @@ type PatchAccountingJournalRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAccountingJournalRequest) GetAccountingJournal() shared.AccountingJournal {
-	if o == nil {
+func (p *PatchAccountingJournalRequest) GetAccountingJournal() shared.AccountingJournal {
+	if p == nil {
 		return shared.AccountingJournal{}
 	}
-	return o.AccountingJournal
+	return p.AccountingJournal
 }
 
-func (o *PatchAccountingJournalRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAccountingJournalRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAccountingJournalRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAccountingJournalRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAccountingJournalRequest) GetID() string {
-	if o == nil {
+func (p *PatchAccountingJournalRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAccountingJournalRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAccountingJournalRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAccountingJournalResponse struct {
@@ -65,30 +65,30 @@ type PatchAccountingJournalResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAccountingJournalResponse) GetAccountingJournal() *shared.AccountingJournal {
-	if o == nil {
+func (p *PatchAccountingJournalResponse) GetAccountingJournal() *shared.AccountingJournal {
+	if p == nil {
 		return nil
 	}
-	return o.AccountingJournal
+	return p.AccountingJournal
 }
 
-func (o *PatchAccountingJournalResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAccountingJournalResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAccountingJournalResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAccountingJournalResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAccountingJournalResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAccountingJournalResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

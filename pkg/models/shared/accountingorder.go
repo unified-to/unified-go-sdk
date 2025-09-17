@@ -62,100 +62,100 @@ func (a *AccountingOrder) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingOrder) GetAccountID() *string {
-	if o == nil {
+func (a *AccountingOrder) GetAccountID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AccountID
+	return a.AccountID
 }
 
-func (o *AccountingOrder) GetBillingAddress() *PropertyAccountingOrderBillingAddress {
-	if o == nil {
+func (a *AccountingOrder) GetBillingAddress() *PropertyAccountingOrderBillingAddress {
+	if a == nil {
 		return nil
 	}
-	return o.BillingAddress
+	return a.BillingAddress
 }
 
-func (o *AccountingOrder) GetContactID() *string {
-	if o == nil {
+func (a *AccountingOrder) GetContactID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ContactID
+	return a.ContactID
 }
 
-func (o *AccountingOrder) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingOrder) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingOrder) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingOrder) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingOrder) GetID() *string {
-	if o == nil {
+func (a *AccountingOrder) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingOrder) GetLineitems() []AccountingLineitem {
-	if o == nil {
+func (a *AccountingOrder) GetLineitems() []AccountingLineitem {
+	if a == nil {
 		return nil
 	}
-	return o.Lineitems
+	return a.Lineitems
 }
 
-func (o *AccountingOrder) GetPostedAt() *time.Time {
-	if o == nil {
+func (a *AccountingOrder) GetPostedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.PostedAt
+	return a.PostedAt
 }
 
-func (o *AccountingOrder) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingOrder) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingOrder) GetShippingAddress() *PropertyAccountingOrderShippingAddress {
-	if o == nil {
+func (a *AccountingOrder) GetShippingAddress() *PropertyAccountingOrderShippingAddress {
+	if a == nil {
 		return nil
 	}
-	return o.ShippingAddress
+	return a.ShippingAddress
 }
 
-func (o *AccountingOrder) GetStatus() *AccountingOrderStatus {
-	if o == nil {
+func (a *AccountingOrder) GetStatus() *AccountingOrderStatus {
+	if a == nil {
 		return nil
 	}
-	return o.Status
+	return a.Status
 }
 
-func (o *AccountingOrder) GetTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingOrder) GetTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalAmount
+	return a.TotalAmount
 }
 
-func (o *AccountingOrder) GetType() *AccountingOrderType {
-	if o == nil {
+func (a *AccountingOrder) GetType() *AccountingOrderType {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }
 
-func (o *AccountingOrder) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingOrder) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

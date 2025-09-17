@@ -22,16 +22,16 @@ type PropertyUcCallTelephone struct {
 	Type      *PropertyUcCallTelephoneType `json:"type,omitempty"`
 }
 
-func (o *PropertyUcCallTelephone) GetTelephone() string {
-	if o == nil {
+func (p *PropertyUcCallTelephone) GetTelephone() string {
+	if p == nil {
 		return ""
 	}
-	return o.Telephone
+	return p.Telephone
 }
 
-func (o *PropertyUcCallTelephone) GetType() *PropertyUcCallTelephoneType {
-	if o == nil {
+func (p *PropertyUcCallTelephone) GetType() *PropertyUcCallTelephoneType {
+	if p == nil {
 		return nil
 	}
-	return o.Type
+	return p.Type
 }

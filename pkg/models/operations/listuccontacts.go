@@ -26,74 +26,74 @@ type ListUcContactsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListUcContactsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListUcContactsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListUcContactsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListUcContactsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListUcContactsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListUcContactsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListUcContactsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListUcContactsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListUcContactsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListUcContactsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListUcContactsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListUcContactsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListUcContactsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListUcContactsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListUcContactsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListUcContactsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListUcContactsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListUcContactsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListUcContactsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListUcContactsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListUcContactsResponse struct {
@@ -107,30 +107,30 @@ type ListUcContactsResponse struct {
 	UcContacts []shared.UcContact
 }
 
-func (o *ListUcContactsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListUcContactsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListUcContactsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListUcContactsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListUcContactsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListUcContactsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListUcContactsResponse) GetUcContacts() []shared.UcContact {
-	if o == nil {
+func (l *ListUcContactsResponse) GetUcContacts() []shared.UcContact {
+	if l == nil {
 		return nil
 	}
-	return o.UcContacts
+	return l.UcContacts
 }

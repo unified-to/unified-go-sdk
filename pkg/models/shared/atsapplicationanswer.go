@@ -7,16 +7,16 @@ type AtsApplicationAnswer struct {
 	QuestionID string   `json:"question_id"`
 }
 
-func (o *AtsApplicationAnswer) GetAnswers() []string {
-	if o == nil {
+func (a *AtsApplicationAnswer) GetAnswers() []string {
+	if a == nil {
 		return []string{}
 	}
-	return o.Answers
+	return a.Answers
 }
 
-func (o *AtsApplicationAnswer) GetQuestionID() string {
-	if o == nil {
+func (a *AtsApplicationAnswer) GetQuestionID() string {
+	if a == nil {
 		return ""
 	}
-	return o.QuestionID
+	return a.QuestionID
 }

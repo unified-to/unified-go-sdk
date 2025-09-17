@@ -13,58 +13,58 @@ type GenaiPrompt struct {
 	TokensUsed  *float64       `json:"tokens_used,omitempty"`
 }
 
-func (o *GenaiPrompt) GetMaxTokens() *float64 {
-	if o == nil {
+func (g *GenaiPrompt) GetMaxTokens() *float64 {
+	if g == nil {
 		return nil
 	}
-	return o.MaxTokens
+	return g.MaxTokens
 }
 
-func (o *GenaiPrompt) GetMcpURL() *string {
-	if o == nil {
+func (g *GenaiPrompt) GetMcpURL() *string {
+	if g == nil {
 		return nil
 	}
-	return o.McpURL
+	return g.McpURL
 }
 
-func (o *GenaiPrompt) GetMessages() []GenaiContent {
-	if o == nil {
+func (g *GenaiPrompt) GetMessages() []GenaiContent {
+	if g == nil {
 		return nil
 	}
-	return o.Messages
+	return g.Messages
 }
 
-func (o *GenaiPrompt) GetModelID() *string {
-	if o == nil {
+func (g *GenaiPrompt) GetModelID() *string {
+	if g == nil {
 		return nil
 	}
-	return o.ModelID
+	return g.ModelID
 }
 
-func (o *GenaiPrompt) GetRaw() map[string]any {
-	if o == nil {
+func (g *GenaiPrompt) GetRaw() map[string]any {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
-func (o *GenaiPrompt) GetResponses() []string {
-	if o == nil {
+func (g *GenaiPrompt) GetResponses() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Responses
+	return g.Responses
 }
 
-func (o *GenaiPrompt) GetTemperature() *float64 {
-	if o == nil {
+func (g *GenaiPrompt) GetTemperature() *float64 {
+	if g == nil {
 		return nil
 	}
-	return o.Temperature
+	return g.Temperature
 }
 
-func (o *GenaiPrompt) GetTokensUsed() *float64 {
-	if o == nil {
+func (g *GenaiPrompt) GetTokensUsed() *float64 {
+	if g == nil {
 		return nil
 	}
-	return o.TokensUsed
+	return g.TokensUsed
 }

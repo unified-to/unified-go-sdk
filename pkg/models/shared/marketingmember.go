@@ -34,58 +34,58 @@ func (m *MarketingMember) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *MarketingMember) GetCreatedAt() *time.Time {
-	if o == nil {
+func (m *MarketingMember) GetCreatedAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return m.CreatedAt
 }
 
-func (o *MarketingMember) GetEmails() []MarketingEmail {
-	if o == nil {
+func (m *MarketingMember) GetEmails() []MarketingEmail {
+	if m == nil {
 		return nil
 	}
-	return o.Emails
+	return m.Emails
 }
 
-func (o *MarketingMember) GetID() *string {
-	if o == nil {
+func (m *MarketingMember) GetID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ID
+	return m.ID
 }
 
-func (o *MarketingMember) GetListIds() []string {
-	if o == nil {
+func (m *MarketingMember) GetListIds() []string {
+	if m == nil {
 		return nil
 	}
-	return o.ListIds
+	return m.ListIds
 }
 
-func (o *MarketingMember) GetName() *string {
-	if o == nil {
+func (m *MarketingMember) GetName() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Name
+	return m.Name
 }
 
-func (o *MarketingMember) GetRaw() map[string]any {
-	if o == nil {
+func (m *MarketingMember) GetRaw() map[string]any {
+	if m == nil {
 		return nil
 	}
-	return o.Raw
+	return m.Raw
 }
 
-func (o *MarketingMember) GetTags() []string {
-	if o == nil {
+func (m *MarketingMember) GetTags() []string {
+	if m == nil {
 		return nil
 	}
-	return o.Tags
+	return m.Tags
 }
 
-func (o *MarketingMember) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (m *MarketingMember) GetUpdatedAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return m.UpdatedAt
 }

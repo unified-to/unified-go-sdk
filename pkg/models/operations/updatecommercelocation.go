@@ -19,39 +19,39 @@ type UpdateCommerceLocationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateCommerceLocationRequest) GetCommerceLocation() shared.CommerceLocation {
-	if o == nil {
+func (u *UpdateCommerceLocationRequest) GetCommerceLocation() shared.CommerceLocation {
+	if u == nil {
 		return shared.CommerceLocation{}
 	}
-	return o.CommerceLocation
+	return u.CommerceLocation
 }
 
-func (o *UpdateCommerceLocationRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateCommerceLocationRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateCommerceLocationRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateCommerceLocationRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateCommerceLocationRequest) GetID() string {
-	if o == nil {
+func (u *UpdateCommerceLocationRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateCommerceLocationRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateCommerceLocationRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateCommerceLocationResponse struct {
@@ -65,30 +65,30 @@ type UpdateCommerceLocationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateCommerceLocationResponse) GetCommerceLocation() *shared.CommerceLocation {
-	if o == nil {
+func (u *UpdateCommerceLocationResponse) GetCommerceLocation() *shared.CommerceLocation {
+	if u == nil {
 		return nil
 	}
-	return o.CommerceLocation
+	return u.CommerceLocation
 }
 
-func (o *UpdateCommerceLocationResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateCommerceLocationResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateCommerceLocationResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateCommerceLocationResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateCommerceLocationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateCommerceLocationResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

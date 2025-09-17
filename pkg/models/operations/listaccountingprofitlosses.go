@@ -32,95 +32,95 @@ type ListAccountingProfitlossesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAccountingProfitlossesRequest) GetCategoryID() *string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetCategoryID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CategoryID
+	return l.CategoryID
 }
 
-func (o *ListAccountingProfitlossesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAccountingProfitlossesRequest) GetContactID() *string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetContactID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ContactID
+	return l.ContactID
 }
 
-func (o *ListAccountingProfitlossesRequest) GetEndLe() *string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetEndLe() *string {
+	if l == nil {
 		return nil
 	}
-	return o.EndLe
+	return l.EndLe
 }
 
-func (o *ListAccountingProfitlossesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAccountingProfitlossesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAccountingProfitlossesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAccountingProfitlossesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAccountingProfitlossesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAccountingProfitlossesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAccountingProfitlossesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAccountingProfitlossesRequest) GetStartGte() *string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetStartGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.StartGte
+	return l.StartGte
 }
 
-func (o *ListAccountingProfitlossesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAccountingProfitlossesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAccountingProfitlossesResponse struct {
@@ -134,30 +134,30 @@ type ListAccountingProfitlossesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAccountingProfitlossesResponse) GetAccountingProfitlosses() []shared.AccountingProfitloss {
-	if o == nil {
+func (l *ListAccountingProfitlossesResponse) GetAccountingProfitlosses() []shared.AccountingProfitloss {
+	if l == nil {
 		return nil
 	}
-	return o.AccountingProfitlosses
+	return l.AccountingProfitlosses
 }
 
-func (o *ListAccountingProfitlossesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAccountingProfitlossesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAccountingProfitlossesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAccountingProfitlossesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAccountingProfitlossesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAccountingProfitlossesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

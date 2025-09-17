@@ -19,39 +19,39 @@ type UpdateTaskCommentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateTaskCommentRequest) GetTaskComment() shared.TaskComment {
-	if o == nil {
+func (u *UpdateTaskCommentRequest) GetTaskComment() shared.TaskComment {
+	if u == nil {
 		return shared.TaskComment{}
 	}
-	return o.TaskComment
+	return u.TaskComment
 }
 
-func (o *UpdateTaskCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateTaskCommentRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateTaskCommentRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateTaskCommentRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateTaskCommentRequest) GetID() string {
-	if o == nil {
+func (u *UpdateTaskCommentRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateTaskCommentRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateTaskCommentRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateTaskCommentResponse struct {
@@ -65,30 +65,30 @@ type UpdateTaskCommentResponse struct {
 	TaskComment *shared.TaskComment
 }
 
-func (o *UpdateTaskCommentResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateTaskCommentResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateTaskCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateTaskCommentResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateTaskCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateTaskCommentResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }
 
-func (o *UpdateTaskCommentResponse) GetTaskComment() *shared.TaskComment {
-	if o == nil {
+func (u *UpdateTaskCommentResponse) GetTaskComment() *shared.TaskComment {
+	if u == nil {
 		return nil
 	}
-	return o.TaskComment
+	return u.TaskComment
 }

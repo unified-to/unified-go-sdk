@@ -28,81 +28,81 @@ type ListPaymentLinksRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListPaymentLinksRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListPaymentLinksRequest) GetContactID() *string {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetContactID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ContactID
+	return l.ContactID
 }
 
-func (o *ListPaymentLinksRequest) GetFields() []string {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListPaymentLinksRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListPaymentLinksRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListPaymentLinksRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListPaymentLinksRequest) GetPaymentID() *string {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetPaymentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.PaymentID
+	return l.PaymentID
 }
 
-func (o *ListPaymentLinksRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListPaymentLinksRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListPaymentLinksRequest) GetSort() *string {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListPaymentLinksRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListPaymentLinksRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListPaymentLinksResponse struct {
@@ -116,30 +116,30 @@ type ListPaymentLinksResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListPaymentLinksResponse) GetContentType() string {
-	if o == nil {
+func (l *ListPaymentLinksResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListPaymentLinksResponse) GetPaymentLinks() []shared.PaymentLink {
-	if o == nil {
+func (l *ListPaymentLinksResponse) GetPaymentLinks() []shared.PaymentLink {
+	if l == nil {
 		return nil
 	}
-	return o.PaymentLinks
+	return l.PaymentLinks
 }
 
-func (o *ListPaymentLinksResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListPaymentLinksResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListPaymentLinksResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListPaymentLinksResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

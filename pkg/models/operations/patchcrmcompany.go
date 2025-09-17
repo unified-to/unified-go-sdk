@@ -20,39 +20,39 @@ type PatchCrmCompanyRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchCrmCompanyRequest) GetCrmCompany() shared.CrmCompany {
-	if o == nil {
+func (p *PatchCrmCompanyRequest) GetCrmCompany() shared.CrmCompany {
+	if p == nil {
 		return shared.CrmCompany{}
 	}
-	return o.CrmCompany
+	return p.CrmCompany
 }
 
-func (o *PatchCrmCompanyRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchCrmCompanyRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchCrmCompanyRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchCrmCompanyRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchCrmCompanyRequest) GetID() string {
-	if o == nil {
+func (p *PatchCrmCompanyRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchCrmCompanyRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchCrmCompanyRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchCrmCompanyResponse struct {
@@ -66,30 +66,30 @@ type PatchCrmCompanyResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchCrmCompanyResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchCrmCompanyResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchCrmCompanyResponse) GetCrmCompany() *shared.CrmCompany {
-	if o == nil {
+func (p *PatchCrmCompanyResponse) GetCrmCompany() *shared.CrmCompany {
+	if p == nil {
 		return nil
 	}
-	return o.CrmCompany
+	return p.CrmCompany
 }
 
-func (o *PatchCrmCompanyResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchCrmCompanyResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchCrmCompanyResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchCrmCompanyResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

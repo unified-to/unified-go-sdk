@@ -8,23 +8,23 @@ type AccountingTrialbalanceSubItem struct {
 	Amount      *float64 `json:"amount,omitempty"`
 }
 
-func (o *AccountingTrialbalanceSubItem) GetAccountID() *string {
-	if o == nil {
+func (a *AccountingTrialbalanceSubItem) GetAccountID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AccountID
+	return a.AccountID
 }
 
-func (o *AccountingTrialbalanceSubItem) GetAccountName() *string {
-	if o == nil {
+func (a *AccountingTrialbalanceSubItem) GetAccountName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AccountName
+	return a.AccountName
 }
 
-func (o *AccountingTrialbalanceSubItem) GetAmount() *float64 {
-	if o == nil {
+func (a *AccountingTrialbalanceSubItem) GetAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.Amount
+	return a.Amount
 }

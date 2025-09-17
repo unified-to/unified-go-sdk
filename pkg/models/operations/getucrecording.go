@@ -18,32 +18,32 @@ type GetUcRecordingRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetUcRecordingRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetUcRecordingRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetUcRecordingRequest) GetFields() []string {
-	if o == nil {
+func (g *GetUcRecordingRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetUcRecordingRequest) GetID() string {
-	if o == nil {
+func (g *GetUcRecordingRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetUcRecordingRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetUcRecordingRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetUcRecordingResponse struct {
@@ -57,30 +57,30 @@ type GetUcRecordingResponse struct {
 	UcRecording *shared.UcRecording
 }
 
-func (o *GetUcRecordingResponse) GetContentType() string {
-	if o == nil {
+func (g *GetUcRecordingResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetUcRecordingResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetUcRecordingResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetUcRecordingResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetUcRecordingResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetUcRecordingResponse) GetUcRecording() *shared.UcRecording {
-	if o == nil {
+func (g *GetUcRecordingResponse) GetUcRecording() *shared.UcRecording {
+	if g == nil {
 		return nil
 	}
-	return o.UcRecording
+	return g.UcRecording
 }

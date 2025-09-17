@@ -61,170 +61,170 @@ func (a *AtsCandidate) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsCandidate) GetAddress() *PropertyAtsCandidateAddress {
-	if o == nil {
+func (a *AtsCandidate) GetAddress() *PropertyAtsCandidateAddress {
+	if a == nil {
 		return nil
 	}
-	return o.Address
+	return a.Address
 }
 
-func (o *AtsCandidate) GetCompanyID() *string {
-	if o == nil {
+func (a *AtsCandidate) GetCompanyID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CompanyID
+	return a.CompanyID
 }
 
-func (o *AtsCandidate) GetCompanyName() *string {
-	if o == nil {
+func (a *AtsCandidate) GetCompanyName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CompanyName
+	return a.CompanyName
 }
 
-func (o *AtsCandidate) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AtsCandidate) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AtsCandidate) GetDateOfBirth() *time.Time {
-	if o == nil {
+func (a *AtsCandidate) GetDateOfBirth() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.DateOfBirth
+	return a.DateOfBirth
 }
 
-func (o *AtsCandidate) GetEducation() []AtsCandidateEducation {
-	if o == nil {
+func (a *AtsCandidate) GetEducation() []AtsCandidateEducation {
+	if a == nil {
 		return nil
 	}
-	return o.Education
+	return a.Education
 }
 
-func (o *AtsCandidate) GetEmails() []AtsEmail {
-	if o == nil {
+func (a *AtsCandidate) GetEmails() []AtsEmail {
+	if a == nil {
 		return nil
 	}
-	return o.Emails
+	return a.Emails
 }
 
-func (o *AtsCandidate) GetExperiences() []AtsCandidateExperience {
-	if o == nil {
+func (a *AtsCandidate) GetExperiences() []AtsCandidateExperience {
+	if a == nil {
 		return nil
 	}
-	return o.Experiences
+	return a.Experiences
 }
 
-func (o *AtsCandidate) GetExternalIdentifier() *string {
-	if o == nil {
+func (a *AtsCandidate) GetExternalIdentifier() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ExternalIdentifier
+	return a.ExternalIdentifier
 }
 
-func (o *AtsCandidate) GetID() *string {
-	if o == nil {
+func (a *AtsCandidate) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsCandidate) GetImageURL() *string {
-	if o == nil {
+func (a *AtsCandidate) GetImageURL() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ImageURL
+	return a.ImageURL
 }
 
-func (o *AtsCandidate) GetLinkUrls() []string {
-	if o == nil {
+func (a *AtsCandidate) GetLinkUrls() []string {
+	if a == nil {
 		return nil
 	}
-	return o.LinkUrls
+	return a.LinkUrls
 }
 
-func (o *AtsCandidate) GetMetadata() []AtsMetadata {
-	if o == nil {
+func (a *AtsCandidate) GetMetadata() []AtsMetadata {
+	if a == nil {
 		return nil
 	}
-	return o.Metadata
+	return a.Metadata
 }
 
-func (o *AtsCandidate) GetName() *string {
-	if o == nil {
+func (a *AtsCandidate) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AtsCandidate) GetOrigin() *Origin {
-	if o == nil {
+func (a *AtsCandidate) GetOrigin() *Origin {
+	if a == nil {
 		return nil
 	}
-	return o.Origin
+	return a.Origin
 }
 
-func (o *AtsCandidate) GetRaw() map[string]any {
-	if o == nil {
+func (a *AtsCandidate) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AtsCandidate) GetSkills() []string {
-	if o == nil {
+func (a *AtsCandidate) GetSkills() []string {
+	if a == nil {
 		return nil
 	}
-	return o.Skills
+	return a.Skills
 }
 
-func (o *AtsCandidate) GetSources() []string {
-	if o == nil {
+func (a *AtsCandidate) GetSources() []string {
+	if a == nil {
 		return nil
 	}
-	return o.Sources
+	return a.Sources
 }
 
-func (o *AtsCandidate) GetTags() []string {
-	if o == nil {
+func (a *AtsCandidate) GetTags() []string {
+	if a == nil {
 		return nil
 	}
-	return o.Tags
+	return a.Tags
 }
 
-func (o *AtsCandidate) GetTelephones() []AtsTelephone {
-	if o == nil {
+func (a *AtsCandidate) GetTelephones() []AtsTelephone {
+	if a == nil {
 		return nil
 	}
-	return o.Telephones
+	return a.Telephones
 }
 
-func (o *AtsCandidate) GetTitle() *string {
-	if o == nil {
+func (a *AtsCandidate) GetTitle() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Title
+	return a.Title
 }
 
-func (o *AtsCandidate) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AtsCandidate) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }
 
-func (o *AtsCandidate) GetUserID() *string {
-	if o == nil {
+func (a *AtsCandidate) GetUserID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.UserID
+	return a.UserID
 }
 
-func (o *AtsCandidate) GetWebURL() *string {
-	if o == nil {
+func (a *AtsCandidate) GetWebURL() *string {
+	if a == nil {
 		return nil
 	}
-	return o.WebURL
+	return a.WebURL
 }

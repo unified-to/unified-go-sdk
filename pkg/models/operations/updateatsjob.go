@@ -19,39 +19,39 @@ type UpdateAtsJobRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAtsJobRequest) GetAtsJob() shared.AtsJob {
-	if o == nil {
+func (u *UpdateAtsJobRequest) GetAtsJob() shared.AtsJob {
+	if u == nil {
 		return shared.AtsJob{}
 	}
-	return o.AtsJob
+	return u.AtsJob
 }
 
-func (o *UpdateAtsJobRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAtsJobRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAtsJobRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAtsJobRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAtsJobRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAtsJobRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAtsJobRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAtsJobRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAtsJobResponse struct {
@@ -65,30 +65,30 @@ type UpdateAtsJobResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAtsJobResponse) GetAtsJob() *shared.AtsJob {
-	if o == nil {
+func (u *UpdateAtsJobResponse) GetAtsJob() *shared.AtsJob {
+	if u == nil {
 		return nil
 	}
-	return o.AtsJob
+	return u.AtsJob
 }
 
-func (o *UpdateAtsJobResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAtsJobResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAtsJobResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAtsJobResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAtsJobResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAtsJobResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

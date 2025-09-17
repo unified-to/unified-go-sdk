@@ -19,39 +19,39 @@ type UpdateAccountingCategoryRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAccountingCategoryRequest) GetAccountingCategory() shared.AccountingCategory {
-	if o == nil {
+func (u *UpdateAccountingCategoryRequest) GetAccountingCategory() shared.AccountingCategory {
+	if u == nil {
 		return shared.AccountingCategory{}
 	}
-	return o.AccountingCategory
+	return u.AccountingCategory
 }
 
-func (o *UpdateAccountingCategoryRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAccountingCategoryRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAccountingCategoryRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAccountingCategoryRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAccountingCategoryRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAccountingCategoryRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAccountingCategoryRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAccountingCategoryRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAccountingCategoryResponse struct {
@@ -65,30 +65,30 @@ type UpdateAccountingCategoryResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAccountingCategoryResponse) GetAccountingCategory() *shared.AccountingCategory {
-	if o == nil {
+func (u *UpdateAccountingCategoryResponse) GetAccountingCategory() *shared.AccountingCategory {
+	if u == nil {
 		return nil
 	}
-	return o.AccountingCategory
+	return u.AccountingCategory
 }
 
-func (o *UpdateAccountingCategoryResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAccountingCategoryResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAccountingCategoryResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAccountingCategoryResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAccountingCategoryResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAccountingCategoryResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

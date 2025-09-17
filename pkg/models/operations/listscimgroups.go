@@ -17,46 +17,46 @@ type ListScimGroupsRequest struct {
 	StartIndex   *float64 `queryParam:"style=form,explode=true,name=startIndex"`
 }
 
-func (o *ListScimGroupsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListScimGroupsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListScimGroupsRequest) GetCount() *float64 {
-	if o == nil {
+func (l *ListScimGroupsRequest) GetCount() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Count
+	return l.Count
 }
 
-func (o *ListScimGroupsRequest) GetFilter() *string {
-	if o == nil {
+func (l *ListScimGroupsRequest) GetFilter() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Filter
+	return l.Filter
 }
 
-func (o *ListScimGroupsRequest) GetSortBy() *string {
-	if o == nil {
+func (l *ListScimGroupsRequest) GetSortBy() *string {
+	if l == nil {
 		return nil
 	}
-	return o.SortBy
+	return l.SortBy
 }
 
-func (o *ListScimGroupsRequest) GetSortOrder() *string {
-	if o == nil {
+func (l *ListScimGroupsRequest) GetSortOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.SortOrder
+	return l.SortOrder
 }
 
-func (o *ListScimGroupsRequest) GetStartIndex() *float64 {
-	if o == nil {
+func (l *ListScimGroupsRequest) GetStartIndex() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.StartIndex
+	return l.StartIndex
 }
 
 type ListScimGroupsResponse struct {
@@ -70,30 +70,30 @@ type ListScimGroupsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListScimGroupsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListScimGroupsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListScimGroupsResponse) GetScimGroups() []shared.ScimGroup {
-	if o == nil {
+func (l *ListScimGroupsResponse) GetScimGroups() []shared.ScimGroup {
+	if l == nil {
 		return nil
 	}
-	return o.ScimGroups
+	return l.ScimGroups
 }
 
-func (o *ListScimGroupsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListScimGroupsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListScimGroupsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListScimGroupsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

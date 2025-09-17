@@ -19,39 +19,39 @@ type PatchHrisLocationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchHrisLocationRequest) GetHrisLocation() shared.HrisLocation {
-	if o == nil {
+func (p *PatchHrisLocationRequest) GetHrisLocation() shared.HrisLocation {
+	if p == nil {
 		return shared.HrisLocation{}
 	}
-	return o.HrisLocation
+	return p.HrisLocation
 }
 
-func (o *PatchHrisLocationRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchHrisLocationRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchHrisLocationRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchHrisLocationRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchHrisLocationRequest) GetID() string {
-	if o == nil {
+func (p *PatchHrisLocationRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchHrisLocationRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchHrisLocationRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchHrisLocationResponse struct {
@@ -65,30 +65,30 @@ type PatchHrisLocationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchHrisLocationResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchHrisLocationResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchHrisLocationResponse) GetHrisLocation() *shared.HrisLocation {
-	if o == nil {
+func (p *PatchHrisLocationResponse) GetHrisLocation() *shared.HrisLocation {
+	if p == nil {
 		return nil
 	}
-	return o.HrisLocation
+	return p.HrisLocation
 }
 
-func (o *PatchHrisLocationResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchHrisLocationResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchHrisLocationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchHrisLocationResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

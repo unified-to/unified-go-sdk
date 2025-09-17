@@ -19,39 +19,39 @@ type UpdateRepoOrganizationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateRepoOrganizationRequest) GetRepoOrganization() shared.RepoOrganization {
-	if o == nil {
+func (u *UpdateRepoOrganizationRequest) GetRepoOrganization() shared.RepoOrganization {
+	if u == nil {
 		return shared.RepoOrganization{}
 	}
-	return o.RepoOrganization
+	return u.RepoOrganization
 }
 
-func (o *UpdateRepoOrganizationRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateRepoOrganizationRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateRepoOrganizationRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateRepoOrganizationRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateRepoOrganizationRequest) GetID() string {
-	if o == nil {
+func (u *UpdateRepoOrganizationRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateRepoOrganizationRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateRepoOrganizationRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateRepoOrganizationResponse struct {
@@ -65,30 +65,30 @@ type UpdateRepoOrganizationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateRepoOrganizationResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateRepoOrganizationResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateRepoOrganizationResponse) GetRepoOrganization() *shared.RepoOrganization {
-	if o == nil {
+func (u *UpdateRepoOrganizationResponse) GetRepoOrganization() *shared.RepoOrganization {
+	if u == nil {
 		return nil
 	}
-	return o.RepoOrganization
+	return u.RepoOrganization
 }
 
-func (o *UpdateRepoOrganizationResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateRepoOrganizationResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateRepoOrganizationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateRepoOrganizationResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

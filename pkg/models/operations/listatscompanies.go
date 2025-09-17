@@ -24,67 +24,67 @@ type ListAtsCompaniesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAtsCompaniesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAtsCompaniesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAtsCompaniesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAtsCompaniesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAtsCompaniesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAtsCompaniesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAtsCompaniesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAtsCompaniesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAtsCompaniesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAtsCompaniesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAtsCompaniesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAtsCompaniesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAtsCompaniesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAtsCompaniesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAtsCompaniesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAtsCompaniesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAtsCompaniesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAtsCompaniesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAtsCompaniesResponse struct {
@@ -98,30 +98,30 @@ type ListAtsCompaniesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAtsCompaniesResponse) GetAtsCompanies() []shared.AtsCompany {
-	if o == nil {
+func (l *ListAtsCompaniesResponse) GetAtsCompanies() []shared.AtsCompany {
+	if l == nil {
 		return nil
 	}
-	return o.AtsCompanies
+	return l.AtsCompanies
 }
 
-func (o *ListAtsCompaniesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAtsCompaniesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAtsCompaniesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAtsCompaniesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAtsCompaniesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAtsCompaniesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

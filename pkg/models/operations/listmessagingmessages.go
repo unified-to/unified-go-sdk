@@ -32,95 +32,95 @@ type ListMessagingMessagesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListMessagingMessagesRequest) GetChannelID() *string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetChannelID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ChannelID
+	return l.ChannelID
 }
 
-func (o *ListMessagingMessagesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListMessagingMessagesRequest) GetEndLe() *string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetEndLe() *string {
+	if l == nil {
 		return nil
 	}
-	return o.EndLe
+	return l.EndLe
 }
 
-func (o *ListMessagingMessagesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListMessagingMessagesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListMessagingMessagesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListMessagingMessagesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListMessagingMessagesRequest) GetParentID() *string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetParentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ParentID
+	return l.ParentID
 }
 
-func (o *ListMessagingMessagesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListMessagingMessagesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListMessagingMessagesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListMessagingMessagesRequest) GetStartGte() *string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetStartGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.StartGte
+	return l.StartGte
 }
 
-func (o *ListMessagingMessagesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListMessagingMessagesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListMessagingMessagesResponse struct {
@@ -134,30 +134,30 @@ type ListMessagingMessagesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListMessagingMessagesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListMessagingMessagesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListMessagingMessagesResponse) GetMessagingMessages() []shared.MessagingMessage {
-	if o == nil {
+func (l *ListMessagingMessagesResponse) GetMessagingMessages() []shared.MessagingMessage {
+	if l == nil {
 		return nil
 	}
-	return o.MessagingMessages
+	return l.MessagingMessages
 }
 
-func (o *ListMessagingMessagesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListMessagingMessagesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListMessagingMessagesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListMessagingMessagesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

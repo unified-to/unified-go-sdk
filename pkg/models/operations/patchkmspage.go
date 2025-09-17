@@ -19,39 +19,39 @@ type PatchKmsPageRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchKmsPageRequest) GetKmsPage() shared.KmsPage {
-	if o == nil {
+func (p *PatchKmsPageRequest) GetKmsPage() shared.KmsPage {
+	if p == nil {
 		return shared.KmsPage{}
 	}
-	return o.KmsPage
+	return p.KmsPage
 }
 
-func (o *PatchKmsPageRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchKmsPageRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchKmsPageRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchKmsPageRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchKmsPageRequest) GetID() string {
-	if o == nil {
+func (p *PatchKmsPageRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchKmsPageRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchKmsPageRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchKmsPageResponse struct {
@@ -65,30 +65,30 @@ type PatchKmsPageResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchKmsPageResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchKmsPageResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchKmsPageResponse) GetKmsPage() *shared.KmsPage {
-	if o == nil {
+func (p *PatchKmsPageResponse) GetKmsPage() *shared.KmsPage {
+	if p == nil {
 		return nil
 	}
-	return o.KmsPage
+	return p.KmsPage
 }
 
-func (o *PatchKmsPageResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchKmsPageResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchKmsPageResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchKmsPageResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

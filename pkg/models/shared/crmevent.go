@@ -65,128 +65,128 @@ func (c *CrmEvent) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CrmEvent) GetCall() *PropertyCrmEventCall {
-	if o == nil {
+func (c *CrmEvent) GetCall() *PropertyCrmEventCall {
+	if c == nil {
 		return nil
 	}
-	return o.Call
+	return c.Call
 }
 
-func (o *CrmEvent) GetCompanyIds() []string {
-	if o == nil {
+func (c *CrmEvent) GetCompanyIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.CompanyIds
+	return c.CompanyIds
 }
 
-func (o *CrmEvent) GetContactIds() []string {
-	if o == nil {
+func (c *CrmEvent) GetContactIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.ContactIds
+	return c.ContactIds
 }
 
-func (o *CrmEvent) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CrmEvent) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CrmEvent) GetDealIds() []string {
-	if o == nil {
+func (c *CrmEvent) GetDealIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.DealIds
+	return c.DealIds
 }
 
-func (o *CrmEvent) GetEmail() *PropertyCrmEventEmail {
-	if o == nil {
+func (c *CrmEvent) GetEmail() *PropertyCrmEventEmail {
+	if c == nil {
 		return nil
 	}
-	return o.Email
+	return c.Email
 }
 
-func (o *CrmEvent) GetForm() *PropertyCrmEventForm {
-	if o == nil {
+func (c *CrmEvent) GetForm() *PropertyCrmEventForm {
+	if c == nil {
 		return nil
 	}
-	return o.Form
+	return c.Form
 }
 
-func (o *CrmEvent) GetID() *string {
-	if o == nil {
+func (c *CrmEvent) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CrmEvent) GetLeadIds() []string {
-	if o == nil {
+func (c *CrmEvent) GetLeadIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.LeadIds
+	return c.LeadIds
 }
 
-func (o *CrmEvent) GetMarketingEmail() *PropertyCrmEventMarketingEmail {
-	if o == nil {
+func (c *CrmEvent) GetMarketingEmail() *PropertyCrmEventMarketingEmail {
+	if c == nil {
 		return nil
 	}
-	return o.MarketingEmail
+	return c.MarketingEmail
 }
 
-func (o *CrmEvent) GetMeeting() *PropertyCrmEventMeeting {
-	if o == nil {
+func (c *CrmEvent) GetMeeting() *PropertyCrmEventMeeting {
+	if c == nil {
 		return nil
 	}
-	return o.Meeting
+	return c.Meeting
 }
 
-func (o *CrmEvent) GetNote() *PropertyCrmEventNote {
-	if o == nil {
+func (c *CrmEvent) GetNote() *PropertyCrmEventNote {
+	if c == nil {
 		return nil
 	}
-	return o.Note
+	return c.Note
 }
 
-func (o *CrmEvent) GetPageView() *PropertyCrmEventPageView {
-	if o == nil {
+func (c *CrmEvent) GetPageView() *PropertyCrmEventPageView {
+	if c == nil {
 		return nil
 	}
-	return o.PageView
+	return c.PageView
 }
 
-func (o *CrmEvent) GetRaw() map[string]any {
-	if o == nil {
+func (c *CrmEvent) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CrmEvent) GetTask() *PropertyCrmEventTask {
-	if o == nil {
+func (c *CrmEvent) GetTask() *PropertyCrmEventTask {
+	if c == nil {
 		return nil
 	}
-	return o.Task
+	return c.Task
 }
 
-func (o *CrmEvent) GetType() *CrmEventType {
-	if o == nil {
+func (c *CrmEvent) GetType() *CrmEventType {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }
 
-func (o *CrmEvent) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CrmEvent) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *CrmEvent) GetUserID() *string {
-	if o == nil {
+func (c *CrmEvent) GetUserID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.UserID
+	return c.UserID
 }

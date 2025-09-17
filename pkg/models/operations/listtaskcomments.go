@@ -26,74 +26,74 @@ type ListTaskCommentsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListTaskCommentsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListTaskCommentsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListTaskCommentsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListTaskCommentsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListTaskCommentsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListTaskCommentsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListTaskCommentsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListTaskCommentsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListTaskCommentsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListTaskCommentsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListTaskCommentsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListTaskCommentsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListTaskCommentsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListTaskCommentsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListTaskCommentsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListTaskCommentsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListTaskCommentsRequest) GetTaskID() *string {
-	if o == nil {
+func (l *ListTaskCommentsRequest) GetTaskID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.TaskID
+	return l.TaskID
 }
 
-func (o *ListTaskCommentsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListTaskCommentsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListTaskCommentsResponse struct {
@@ -107,30 +107,30 @@ type ListTaskCommentsResponse struct {
 	TaskComments []shared.TaskComment
 }
 
-func (o *ListTaskCommentsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListTaskCommentsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListTaskCommentsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListTaskCommentsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListTaskCommentsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListTaskCommentsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListTaskCommentsResponse) GetTaskComments() []shared.TaskComment {
-	if o == nil {
+func (l *ListTaskCommentsResponse) GetTaskComments() []shared.TaskComment {
+	if l == nil {
 		return nil
 	}
-	return o.TaskComments
+	return l.TaskComments
 }

@@ -19,16 +19,16 @@ type MarketingEmail struct {
 	Type  *MarketingEmailType `json:"type,omitempty"`
 }
 
-func (o *MarketingEmail) GetEmail() string {
-	if o == nil {
+func (m *MarketingEmail) GetEmail() string {
+	if m == nil {
 		return ""
 	}
-	return o.Email
+	return m.Email
 }
 
-func (o *MarketingEmail) GetType() *MarketingEmailType {
-	if o == nil {
+func (m *MarketingEmail) GetType() *MarketingEmailType {
+	if m == nil {
 		return nil
 	}
-	return o.Type
+	return m.Type
 }

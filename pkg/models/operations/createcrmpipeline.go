@@ -17,32 +17,32 @@ type CreateCrmPipelineRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateCrmPipelineRequest) GetCrmPipeline() shared.CrmPipeline {
-	if o == nil {
+func (c *CreateCrmPipelineRequest) GetCrmPipeline() shared.CrmPipeline {
+	if c == nil {
 		return shared.CrmPipeline{}
 	}
-	return o.CrmPipeline
+	return c.CrmPipeline
 }
 
-func (o *CreateCrmPipelineRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateCrmPipelineRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateCrmPipelineRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateCrmPipelineRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateCrmPipelineRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateCrmPipelineRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateCrmPipelineResponse struct {
@@ -56,30 +56,30 @@ type CreateCrmPipelineResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateCrmPipelineResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateCrmPipelineResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateCrmPipelineResponse) GetCrmPipeline() *shared.CrmPipeline {
-	if o == nil {
+func (c *CreateCrmPipelineResponse) GetCrmPipeline() *shared.CrmPipeline {
+	if c == nil {
 		return nil
 	}
-	return o.CrmPipeline
+	return c.CrmPipeline
 }
 
-func (o *CreateCrmPipelineResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateCrmPipelineResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateCrmPipelineResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateCrmPipelineResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

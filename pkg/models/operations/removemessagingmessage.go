@@ -13,18 +13,18 @@ type RemoveMessagingMessageRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveMessagingMessageRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveMessagingMessageRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveMessagingMessageRequest) GetID() string {
-	if o == nil {
+func (r *RemoveMessagingMessageRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveMessagingMessageResponse struct {
@@ -37,30 +37,30 @@ type RemoveMessagingMessageResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveMessagingMessageResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveMessagingMessageResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveMessagingMessageResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveMessagingMessageResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveMessagingMessageResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveMessagingMessageResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveMessagingMessageResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveMessagingMessageResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

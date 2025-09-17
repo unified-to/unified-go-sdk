@@ -18,32 +18,32 @@ type GetMetadataMetadataRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetMetadataMetadataRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetMetadataMetadataRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetMetadataMetadataRequest) GetFields() []string {
-	if o == nil {
+func (g *GetMetadataMetadataRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetMetadataMetadataRequest) GetID() string {
-	if o == nil {
+func (g *GetMetadataMetadataRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetMetadataMetadataRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetMetadataMetadataRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetMetadataMetadataResponse struct {
@@ -57,30 +57,30 @@ type GetMetadataMetadataResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetMetadataMetadataResponse) GetContentType() string {
-	if o == nil {
+func (g *GetMetadataMetadataResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetMetadataMetadataResponse) GetMetadataMetadata() *shared.MetadataMetadata {
-	if o == nil {
+func (g *GetMetadataMetadataResponse) GetMetadataMetadata() *shared.MetadataMetadata {
+	if g == nil {
 		return nil
 	}
-	return o.MetadataMetadata
+	return g.MetadataMetadata
 }
 
-func (o *GetMetadataMetadataResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetMetadataMetadataResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetMetadataMetadataResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetMetadataMetadataResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

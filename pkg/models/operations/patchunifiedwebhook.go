@@ -14,18 +14,18 @@ type PatchUnifiedWebhookRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchUnifiedWebhookRequest) GetWebhook() shared.Webhook {
-	if o == nil {
+func (p *PatchUnifiedWebhookRequest) GetWebhook() shared.Webhook {
+	if p == nil {
 		return shared.Webhook{}
 	}
-	return o.Webhook
+	return p.Webhook
 }
 
-func (o *PatchUnifiedWebhookRequest) GetID() string {
-	if o == nil {
+func (p *PatchUnifiedWebhookRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
 type PatchUnifiedWebhookResponse struct {
@@ -39,30 +39,30 @@ type PatchUnifiedWebhookResponse struct {
 	Webhook *shared.Webhook
 }
 
-func (o *PatchUnifiedWebhookResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchUnifiedWebhookResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchUnifiedWebhookResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchUnifiedWebhookResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchUnifiedWebhookResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchUnifiedWebhookResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchUnifiedWebhookResponse) GetWebhook() *shared.Webhook {
-	if o == nil {
+func (p *PatchUnifiedWebhookResponse) GetWebhook() *shared.Webhook {
+	if p == nil {
 		return nil
 	}
-	return o.Webhook
+	return p.Webhook
 }

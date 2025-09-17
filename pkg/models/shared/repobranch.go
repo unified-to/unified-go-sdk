@@ -27,44 +27,44 @@ func (r *RepoBranch) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *RepoBranch) GetCreatedAt() *time.Time {
-	if o == nil {
+func (r *RepoBranch) GetCreatedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return r.CreatedAt
 }
 
-func (o *RepoBranch) GetID() *string {
-	if o == nil {
+func (r *RepoBranch) GetID() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ID
+	return r.ID
 }
 
-func (o *RepoBranch) GetName() string {
-	if o == nil {
+func (r *RepoBranch) GetName() string {
+	if r == nil {
 		return ""
 	}
-	return o.Name
+	return r.Name
 }
 
-func (o *RepoBranch) GetRaw() map[string]any {
-	if o == nil {
+func (r *RepoBranch) GetRaw() map[string]any {
+	if r == nil {
 		return nil
 	}
-	return o.Raw
+	return r.Raw
 }
 
-func (o *RepoBranch) GetRepoID() string {
-	if o == nil {
+func (r *RepoBranch) GetRepoID() string {
+	if r == nil {
 		return ""
 	}
-	return o.RepoID
+	return r.RepoID
 }
 
-func (o *RepoBranch) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (r *RepoBranch) GetUpdatedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return r.UpdatedAt
 }

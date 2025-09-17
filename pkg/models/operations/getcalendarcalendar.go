@@ -18,32 +18,32 @@ type GetCalendarCalendarRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetCalendarCalendarRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetCalendarCalendarRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetCalendarCalendarRequest) GetFields() []string {
-	if o == nil {
+func (g *GetCalendarCalendarRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetCalendarCalendarRequest) GetID() string {
-	if o == nil {
+func (g *GetCalendarCalendarRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetCalendarCalendarRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetCalendarCalendarRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetCalendarCalendarResponse struct {
@@ -57,30 +57,30 @@ type GetCalendarCalendarResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetCalendarCalendarResponse) GetCalendarCalendar() *shared.CalendarCalendar {
-	if o == nil {
+func (g *GetCalendarCalendarResponse) GetCalendarCalendar() *shared.CalendarCalendar {
+	if g == nil {
 		return nil
 	}
-	return o.CalendarCalendar
+	return g.CalendarCalendar
 }
 
-func (o *GetCalendarCalendarResponse) GetContentType() string {
-	if o == nil {
+func (g *GetCalendarCalendarResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetCalendarCalendarResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetCalendarCalendarResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetCalendarCalendarResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetCalendarCalendarResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

@@ -22,37 +22,37 @@ type CalendarAttendee struct {
 	UserID   *string                 `json:"user_id,omitempty"`
 }
 
-func (o *CalendarAttendee) GetEmail() *string {
-	if o == nil {
+func (c *CalendarAttendee) GetEmail() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Email
+	return c.Email
 }
 
-func (o *CalendarAttendee) GetName() *string {
-	if o == nil {
+func (c *CalendarAttendee) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CalendarAttendee) GetRequired() *bool {
-	if o == nil {
+func (c *CalendarAttendee) GetRequired() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.Required
+	return c.Required
 }
 
-func (o *CalendarAttendee) GetStatus() *CalendarAttendeeStatus {
-	if o == nil {
+func (c *CalendarAttendee) GetStatus() *CalendarAttendeeStatus {
+	if c == nil {
 		return nil
 	}
-	return o.Status
+	return c.Status
 }
 
-func (o *CalendarAttendee) GetUserID() *string {
-	if o == nil {
+func (c *CalendarAttendee) GetUserID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.UserID
+	return c.UserID
 }

@@ -17,32 +17,32 @@ type CreateTicketingCategoryRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateTicketingCategoryRequest) GetTicketingCategory() shared.TicketingCategory {
-	if o == nil {
+func (c *CreateTicketingCategoryRequest) GetTicketingCategory() shared.TicketingCategory {
+	if c == nil {
 		return shared.TicketingCategory{}
 	}
-	return o.TicketingCategory
+	return c.TicketingCategory
 }
 
-func (o *CreateTicketingCategoryRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateTicketingCategoryRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateTicketingCategoryRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateTicketingCategoryRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateTicketingCategoryRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateTicketingCategoryRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateTicketingCategoryResponse struct {
@@ -56,30 +56,30 @@ type CreateTicketingCategoryResponse struct {
 	TicketingCategory *shared.TicketingCategory
 }
 
-func (o *CreateTicketingCategoryResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateTicketingCategoryResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateTicketingCategoryResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateTicketingCategoryResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateTicketingCategoryResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateTicketingCategoryResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateTicketingCategoryResponse) GetTicketingCategory() *shared.TicketingCategory {
-	if o == nil {
+func (c *CreateTicketingCategoryResponse) GetTicketingCategory() *shared.TicketingCategory {
+	if c == nil {
 		return nil
 	}
-	return o.TicketingCategory
+	return c.TicketingCategory
 }

@@ -29,58 +29,58 @@ func (c *CalendarCalendar) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CalendarCalendar) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CalendarCalendar) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CalendarCalendar) GetDescription() *string {
-	if o == nil {
+func (c *CalendarCalendar) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CalendarCalendar) GetID() *string {
-	if o == nil {
+func (c *CalendarCalendar) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CalendarCalendar) GetName() string {
-	if o == nil {
+func (c *CalendarCalendar) GetName() string {
+	if c == nil {
 		return ""
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CalendarCalendar) GetPrimary() *bool {
-	if o == nil {
+func (c *CalendarCalendar) GetPrimary() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.Primary
+	return c.Primary
 }
 
-func (o *CalendarCalendar) GetRaw() map[string]any {
-	if o == nil {
+func (c *CalendarCalendar) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CalendarCalendar) GetTimezone() *string {
-	if o == nil {
+func (c *CalendarCalendar) GetTimezone() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Timezone
+	return c.Timezone
 }
 
-func (o *CalendarCalendar) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CalendarCalendar) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }

@@ -17,32 +17,32 @@ type CreateHrisGroupRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateHrisGroupRequest) GetHrisGroup() shared.HrisGroup {
-	if o == nil {
+func (c *CreateHrisGroupRequest) GetHrisGroup() shared.HrisGroup {
+	if c == nil {
 		return shared.HrisGroup{}
 	}
-	return o.HrisGroup
+	return c.HrisGroup
 }
 
-func (o *CreateHrisGroupRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateHrisGroupRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateHrisGroupRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateHrisGroupRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateHrisGroupRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateHrisGroupRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateHrisGroupResponse struct {
@@ -56,30 +56,30 @@ type CreateHrisGroupResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateHrisGroupResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateHrisGroupResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateHrisGroupResponse) GetHrisGroup() *shared.HrisGroup {
-	if o == nil {
+func (c *CreateHrisGroupResponse) GetHrisGroup() *shared.HrisGroup {
+	if c == nil {
 		return nil
 	}
-	return o.HrisGroup
+	return c.HrisGroup
 }
 
-func (o *CreateHrisGroupResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateHrisGroupResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateHrisGroupResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateHrisGroupResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

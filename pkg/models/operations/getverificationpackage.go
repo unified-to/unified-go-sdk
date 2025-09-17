@@ -18,32 +18,32 @@ type GetVerificationPackageRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetVerificationPackageRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetVerificationPackageRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetVerificationPackageRequest) GetFields() []string {
-	if o == nil {
+func (g *GetVerificationPackageRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetVerificationPackageRequest) GetID() string {
-	if o == nil {
+func (g *GetVerificationPackageRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetVerificationPackageRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetVerificationPackageRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetVerificationPackageResponse struct {
@@ -57,30 +57,30 @@ type GetVerificationPackageResponse struct {
 	VerificationPackage *shared.VerificationPackage
 }
 
-func (o *GetVerificationPackageResponse) GetContentType() string {
-	if o == nil {
+func (g *GetVerificationPackageResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetVerificationPackageResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetVerificationPackageResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetVerificationPackageResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetVerificationPackageResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetVerificationPackageResponse) GetVerificationPackage() *shared.VerificationPackage {
-	if o == nil {
+func (g *GetVerificationPackageResponse) GetVerificationPackage() *shared.VerificationPackage {
+	if g == nil {
 		return nil
 	}
-	return o.VerificationPackage
+	return g.VerificationPackage
 }

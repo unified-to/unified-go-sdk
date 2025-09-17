@@ -19,39 +19,39 @@ type PatchKmsCommentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchKmsCommentRequest) GetKmsComment() shared.KmsComment {
-	if o == nil {
+func (p *PatchKmsCommentRequest) GetKmsComment() shared.KmsComment {
+	if p == nil {
 		return shared.KmsComment{}
 	}
-	return o.KmsComment
+	return p.KmsComment
 }
 
-func (o *PatchKmsCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchKmsCommentRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchKmsCommentRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchKmsCommentRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchKmsCommentRequest) GetID() string {
-	if o == nil {
+func (p *PatchKmsCommentRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchKmsCommentRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchKmsCommentRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchKmsCommentResponse struct {
@@ -65,30 +65,30 @@ type PatchKmsCommentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchKmsCommentResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchKmsCommentResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchKmsCommentResponse) GetKmsComment() *shared.KmsComment {
-	if o == nil {
+func (p *PatchKmsCommentResponse) GetKmsComment() *shared.KmsComment {
+	if p == nil {
 		return nil
 	}
-	return o.KmsComment
+	return p.KmsComment
 }
 
-func (o *PatchKmsCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchKmsCommentResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchKmsCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchKmsCommentResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

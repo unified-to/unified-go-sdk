@@ -18,32 +18,32 @@ type GetRepoPullrequestRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetRepoPullrequestRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetRepoPullrequestRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetRepoPullrequestRequest) GetFields() []string {
-	if o == nil {
+func (g *GetRepoPullrequestRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetRepoPullrequestRequest) GetID() string {
-	if o == nil {
+func (g *GetRepoPullrequestRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetRepoPullrequestRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetRepoPullrequestRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetRepoPullrequestResponse struct {
@@ -57,30 +57,30 @@ type GetRepoPullrequestResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetRepoPullrequestResponse) GetContentType() string {
-	if o == nil {
+func (g *GetRepoPullrequestResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetRepoPullrequestResponse) GetRepoPullrequest() *shared.RepoPullrequest {
-	if o == nil {
+func (g *GetRepoPullrequestResponse) GetRepoPullrequest() *shared.RepoPullrequest {
+	if g == nil {
 		return nil
 	}
-	return o.RepoPullrequest
+	return g.RepoPullrequest
 }
 
-func (o *GetRepoPullrequestResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetRepoPullrequestResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetRepoPullrequestResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetRepoPullrequestResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

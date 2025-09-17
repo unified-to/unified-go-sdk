@@ -13,58 +13,58 @@ type PropertyAccountingSalesorderShippingAddress struct {
 	RegionCode  *string `json:"region_code,omitempty"`
 }
 
-func (o *PropertyAccountingSalesorderShippingAddress) GetAddress1() *string {
-	if o == nil {
+func (p *PropertyAccountingSalesorderShippingAddress) GetAddress1() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address1
+	return p.Address1
 }
 
-func (o *PropertyAccountingSalesorderShippingAddress) GetAddress2() *string {
-	if o == nil {
+func (p *PropertyAccountingSalesorderShippingAddress) GetAddress2() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address2
+	return p.Address2
 }
 
-func (o *PropertyAccountingSalesorderShippingAddress) GetCity() *string {
-	if o == nil {
+func (p *PropertyAccountingSalesorderShippingAddress) GetCity() *string {
+	if p == nil {
 		return nil
 	}
-	return o.City
+	return p.City
 }
 
-func (o *PropertyAccountingSalesorderShippingAddress) GetCountry() *string {
-	if o == nil {
+func (p *PropertyAccountingSalesorderShippingAddress) GetCountry() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Country
+	return p.Country
 }
 
-func (o *PropertyAccountingSalesorderShippingAddress) GetCountryCode() *string {
-	if o == nil {
+func (p *PropertyAccountingSalesorderShippingAddress) GetCountryCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.CountryCode
+	return p.CountryCode
 }
 
-func (o *PropertyAccountingSalesorderShippingAddress) GetPostalCode() *string {
-	if o == nil {
+func (p *PropertyAccountingSalesorderShippingAddress) GetPostalCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.PostalCode
+	return p.PostalCode
 }
 
-func (o *PropertyAccountingSalesorderShippingAddress) GetRegion() *string {
-	if o == nil {
+func (p *PropertyAccountingSalesorderShippingAddress) GetRegion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Region
+	return p.Region
 }
 
-func (o *PropertyAccountingSalesorderShippingAddress) GetRegionCode() *string {
-	if o == nil {
+func (p *PropertyAccountingSalesorderShippingAddress) GetRegionCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.RegionCode
+	return p.RegionCode
 }

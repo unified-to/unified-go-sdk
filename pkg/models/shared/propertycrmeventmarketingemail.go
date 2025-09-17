@@ -14,51 +14,51 @@ type PropertyCrmEventMarketingEmail struct {
 	To []string `json:"to,omitempty"`
 }
 
-func (o *PropertyCrmEventMarketingEmail) GetAttachmentFileIds() []string {
-	if o == nil {
+func (p *PropertyCrmEventMarketingEmail) GetAttachmentFileIds() []string {
+	if p == nil {
 		return nil
 	}
-	return o.AttachmentFileIds
+	return p.AttachmentFileIds
 }
 
-func (o *PropertyCrmEventMarketingEmail) GetBody() *string {
-	if o == nil {
+func (p *PropertyCrmEventMarketingEmail) GetBody() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Body
+	return p.Body
 }
 
-func (o *PropertyCrmEventMarketingEmail) GetCc() []string {
-	if o == nil {
+func (p *PropertyCrmEventMarketingEmail) GetCc() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Cc
+	return p.Cc
 }
 
-func (o *PropertyCrmEventMarketingEmail) GetFrom() *string {
-	if o == nil {
+func (p *PropertyCrmEventMarketingEmail) GetFrom() *string {
+	if p == nil {
 		return nil
 	}
-	return o.From
+	return p.From
 }
 
-func (o *PropertyCrmEventMarketingEmail) GetName() *string {
-	if o == nil {
+func (p *PropertyCrmEventMarketingEmail) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyCrmEventMarketingEmail) GetSubject() *string {
-	if o == nil {
+func (p *PropertyCrmEventMarketingEmail) GetSubject() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Subject
+	return p.Subject
 }
 
-func (o *PropertyCrmEventMarketingEmail) GetTo() []string {
-	if o == nil {
+func (p *PropertyCrmEventMarketingEmail) GetTo() []string {
+	if p == nil {
 		return nil
 	}
-	return o.To
+	return p.To
 }

@@ -541,58 +541,58 @@ type KmsPageMetadata struct {
 	Value     *KmsPageMetadataValue     `json:"value,omitempty"`
 }
 
-func (o *KmsPageMetadata) GetExtraData() *KmsPageMetadataExtraData {
-	if o == nil {
+func (k *KmsPageMetadata) GetExtraData() *KmsPageMetadataExtraData {
+	if k == nil {
 		return nil
 	}
-	return o.ExtraData
+	return k.ExtraData
 }
 
-func (o *KmsPageMetadata) GetFormat() *KmsPageMetadataFormat {
-	if o == nil {
+func (k *KmsPageMetadata) GetFormat() *KmsPageMetadataFormat {
+	if k == nil {
 		return nil
 	}
-	return o.Format
+	return k.Format
 }
 
-func (o *KmsPageMetadata) GetID() *string {
-	if o == nil {
+func (k *KmsPageMetadata) GetID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.ID
+	return k.ID
 }
 
-func (o *KmsPageMetadata) GetKey() *string {
-	if o == nil {
+func (k *KmsPageMetadata) GetKey() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Key
+	return k.Key
 }
 
-func (o *KmsPageMetadata) GetNamespace() *string {
-	if o == nil {
+func (k *KmsPageMetadata) GetNamespace() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Namespace
+	return k.Namespace
 }
 
-func (o *KmsPageMetadata) GetSlug() *string {
-	if o == nil {
+func (k *KmsPageMetadata) GetSlug() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Slug
+	return k.Slug
 }
 
-func (o *KmsPageMetadata) GetType() *string {
-	if o == nil {
+func (k *KmsPageMetadata) GetType() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Type
+	return k.Type
 }
 
-func (o *KmsPageMetadata) GetValue() *KmsPageMetadataValue {
-	if o == nil {
+func (k *KmsPageMetadata) GetValue() *KmsPageMetadataValue {
+	if k == nil {
 		return nil
 	}
-	return o.Value
+	return k.Value
 }

@@ -19,39 +19,39 @@ type UpdateCrmPipelineRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateCrmPipelineRequest) GetCrmPipeline() shared.CrmPipeline {
-	if o == nil {
+func (u *UpdateCrmPipelineRequest) GetCrmPipeline() shared.CrmPipeline {
+	if u == nil {
 		return shared.CrmPipeline{}
 	}
-	return o.CrmPipeline
+	return u.CrmPipeline
 }
 
-func (o *UpdateCrmPipelineRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateCrmPipelineRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateCrmPipelineRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateCrmPipelineRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateCrmPipelineRequest) GetID() string {
-	if o == nil {
+func (u *UpdateCrmPipelineRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateCrmPipelineRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateCrmPipelineRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateCrmPipelineResponse struct {
@@ -65,30 +65,30 @@ type UpdateCrmPipelineResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateCrmPipelineResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateCrmPipelineResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateCrmPipelineResponse) GetCrmPipeline() *shared.CrmPipeline {
-	if o == nil {
+func (u *UpdateCrmPipelineResponse) GetCrmPipeline() *shared.CrmPipeline {
+	if u == nil {
 		return nil
 	}
-	return o.CrmPipeline
+	return u.CrmPipeline
 }
 
-func (o *UpdateCrmPipelineResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateCrmPipelineResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateCrmPipelineResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateCrmPipelineResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

@@ -47,100 +47,100 @@ func (h *HrisTimeoff) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HrisTimeoff) GetApprovedAt() *time.Time {
-	if o == nil {
+func (h *HrisTimeoff) GetApprovedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.ApprovedAt
+	return h.ApprovedAt
 }
 
-func (o *HrisTimeoff) GetApproverUserID() *string {
-	if o == nil {
+func (h *HrisTimeoff) GetApproverUserID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ApproverUserID
+	return h.ApproverUserID
 }
 
-func (o *HrisTimeoff) GetComments() *string {
-	if o == nil {
+func (h *HrisTimeoff) GetComments() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Comments
+	return h.Comments
 }
 
-func (o *HrisTimeoff) GetCompanyID() *string {
-	if o == nil {
+func (h *HrisTimeoff) GetCompanyID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.CompanyID
+	return h.CompanyID
 }
 
-func (o *HrisTimeoff) GetCreatedAt() *time.Time {
-	if o == nil {
+func (h *HrisTimeoff) GetCreatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return h.CreatedAt
 }
 
-func (o *HrisTimeoff) GetEndAt() *time.Time {
-	if o == nil {
+func (h *HrisTimeoff) GetEndAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.EndAt
+	return h.EndAt
 }
 
-func (o *HrisTimeoff) GetID() *string {
-	if o == nil {
+func (h *HrisTimeoff) GetID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ID
+	return h.ID
 }
 
-func (o *HrisTimeoff) GetIsPaid() *bool {
-	if o == nil {
+func (h *HrisTimeoff) GetIsPaid() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.IsPaid
+	return h.IsPaid
 }
 
-func (o *HrisTimeoff) GetRaw() map[string]any {
-	if o == nil {
+func (h *HrisTimeoff) GetRaw() map[string]any {
+	if h == nil {
 		return nil
 	}
-	return o.Raw
+	return h.Raw
 }
 
-func (o *HrisTimeoff) GetReason() *string {
-	if o == nil {
+func (h *HrisTimeoff) GetReason() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Reason
+	return h.Reason
 }
 
-func (o *HrisTimeoff) GetStartAt() time.Time {
-	if o == nil {
+func (h *HrisTimeoff) GetStartAt() time.Time {
+	if h == nil {
 		return time.Time{}
 	}
-	return o.StartAt
+	return h.StartAt
 }
 
-func (o *HrisTimeoff) GetStatus() *HrisTimeoffStatus {
-	if o == nil {
+func (h *HrisTimeoff) GetStatus() *HrisTimeoffStatus {
+	if h == nil {
 		return nil
 	}
-	return o.Status
+	return h.Status
 }
 
-func (o *HrisTimeoff) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (h *HrisTimeoff) GetUpdatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return h.UpdatedAt
 }
 
-func (o *HrisTimeoff) GetUserID() *string {
-	if o == nil {
+func (h *HrisTimeoff) GetUserID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.UserID
+	return h.UserID
 }

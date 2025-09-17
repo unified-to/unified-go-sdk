@@ -18,32 +18,32 @@ type GetAccountingTransactionRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAccountingTransactionRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAccountingTransactionRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAccountingTransactionRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAccountingTransactionRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAccountingTransactionRequest) GetID() string {
-	if o == nil {
+func (g *GetAccountingTransactionRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAccountingTransactionRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAccountingTransactionRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAccountingTransactionResponse struct {
@@ -57,30 +57,30 @@ type GetAccountingTransactionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAccountingTransactionResponse) GetAccountingTransaction() *shared.AccountingTransaction {
-	if o == nil {
+func (g *GetAccountingTransactionResponse) GetAccountingTransaction() *shared.AccountingTransaction {
+	if g == nil {
 		return nil
 	}
-	return o.AccountingTransaction
+	return g.AccountingTransaction
 }
 
-func (o *GetAccountingTransactionResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAccountingTransactionResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAccountingTransactionResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAccountingTransactionResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAccountingTransactionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAccountingTransactionResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

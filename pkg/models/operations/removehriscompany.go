@@ -13,18 +13,18 @@ type RemoveHrisCompanyRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveHrisCompanyRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveHrisCompanyRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveHrisCompanyRequest) GetID() string {
-	if o == nil {
+func (r *RemoveHrisCompanyRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveHrisCompanyResponse struct {
@@ -37,30 +37,30 @@ type RemoveHrisCompanyResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveHrisCompanyResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveHrisCompanyResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveHrisCompanyResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveHrisCompanyResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveHrisCompanyResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveHrisCompanyResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveHrisCompanyResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveHrisCompanyResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

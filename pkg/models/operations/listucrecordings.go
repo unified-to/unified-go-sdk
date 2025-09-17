@@ -34,102 +34,102 @@ type ListUcRecordingsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListUcRecordingsRequest) GetCallID() *string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetCallID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CallID
+	return l.CallID
 }
 
-func (o *ListUcRecordingsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListUcRecordingsRequest) GetContactID() *string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetContactID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ContactID
+	return l.ContactID
 }
 
-func (o *ListUcRecordingsRequest) GetEndLe() *string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetEndLe() *string {
+	if l == nil {
 		return nil
 	}
-	return o.EndLe
+	return l.EndLe
 }
 
-func (o *ListUcRecordingsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListUcRecordingsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListUcRecordingsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListUcRecordingsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListUcRecordingsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListUcRecordingsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListUcRecordingsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListUcRecordingsRequest) GetStartGte() *string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetStartGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.StartGte
+	return l.StartGte
 }
 
-func (o *ListUcRecordingsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListUcRecordingsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListUcRecordingsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListUcRecordingsResponse struct {
@@ -143,30 +143,30 @@ type ListUcRecordingsResponse struct {
 	UcRecordings []shared.UcRecording
 }
 
-func (o *ListUcRecordingsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListUcRecordingsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListUcRecordingsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListUcRecordingsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListUcRecordingsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListUcRecordingsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListUcRecordingsResponse) GetUcRecordings() []shared.UcRecording {
-	if o == nil {
+func (l *ListUcRecordingsResponse) GetUcRecordings() []shared.UcRecording {
+	if l == nil {
 		return nil
 	}
-	return o.UcRecordings
+	return l.UcRecordings
 }

@@ -24,67 +24,67 @@ type ListRepoOrganizationsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListRepoOrganizationsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListRepoOrganizationsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListRepoOrganizationsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListRepoOrganizationsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListRepoOrganizationsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListRepoOrganizationsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListRepoOrganizationsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListRepoOrganizationsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListRepoOrganizationsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListRepoOrganizationsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListRepoOrganizationsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListRepoOrganizationsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListRepoOrganizationsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListRepoOrganizationsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListRepoOrganizationsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListRepoOrganizationsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListRepoOrganizationsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListRepoOrganizationsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListRepoOrganizationsResponse struct {
@@ -98,30 +98,30 @@ type ListRepoOrganizationsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListRepoOrganizationsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListRepoOrganizationsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListRepoOrganizationsResponse) GetRepoOrganizations() []shared.RepoOrganization {
-	if o == nil {
+func (l *ListRepoOrganizationsResponse) GetRepoOrganizations() []shared.RepoOrganization {
+	if l == nil {
 		return nil
 	}
-	return o.RepoOrganizations
+	return l.RepoOrganizations
 }
 
-func (o *ListRepoOrganizationsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListRepoOrganizationsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListRepoOrganizationsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListRepoOrganizationsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

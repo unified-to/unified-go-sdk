@@ -52,37 +52,37 @@ func (p *PropertyCrmEventTask) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PropertyCrmEventTask) GetDescription() *string {
-	if o == nil {
+func (p *PropertyCrmEventTask) GetDescription() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Description
+	return p.Description
 }
 
-func (o *PropertyCrmEventTask) GetDueAt() *time.Time {
-	if o == nil {
+func (p *PropertyCrmEventTask) GetDueAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.DueAt
+	return p.DueAt
 }
 
-func (o *PropertyCrmEventTask) GetName() *string {
-	if o == nil {
+func (p *PropertyCrmEventTask) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyCrmEventTask) GetPriority() *Priority {
-	if o == nil {
+func (p *PropertyCrmEventTask) GetPriority() *Priority {
+	if p == nil {
 		return nil
 	}
-	return o.Priority
+	return p.Priority
 }
 
-func (o *PropertyCrmEventTask) GetStatus() *PropertyCrmEventTaskStatus {
-	if o == nil {
+func (p *PropertyCrmEventTask) GetStatus() *PropertyCrmEventTaskStatus {
+	if p == nil {
 		return nil
 	}
-	return o.Status
+	return p.Status
 }

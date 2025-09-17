@@ -21,30 +21,30 @@ type ScimEmail struct {
 	Value   *string       `json:"value,omitempty"`
 }
 
-func (o *ScimEmail) GetDisplay() *string {
-	if o == nil {
+func (s *ScimEmail) GetDisplay() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Display
+	return s.Display
 }
 
-func (o *ScimEmail) GetPrimary() *bool {
-	if o == nil {
+func (s *ScimEmail) GetPrimary() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Primary
+	return s.Primary
 }
 
-func (o *ScimEmail) GetType() ScimEmailType {
-	if o == nil {
+func (s *ScimEmail) GetType() ScimEmailType {
+	if s == nil {
 		return ScimEmailType("")
 	}
-	return o.Type
+	return s.Type
 }
 
-func (o *ScimEmail) GetValue() *string {
-	if o == nil {
+func (s *ScimEmail) GetValue() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Value
+	return s.Value
 }

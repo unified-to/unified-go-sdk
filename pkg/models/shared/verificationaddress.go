@@ -13,58 +13,58 @@ type VerificationAddress struct {
 	RegionCode  *string `json:"region_code,omitempty"`
 }
 
-func (o *VerificationAddress) GetAddress1() *string {
-	if o == nil {
+func (v *VerificationAddress) GetAddress1() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Address1
+	return v.Address1
 }
 
-func (o *VerificationAddress) GetAddress2() *string {
-	if o == nil {
+func (v *VerificationAddress) GetAddress2() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Address2
+	return v.Address2
 }
 
-func (o *VerificationAddress) GetCity() *string {
-	if o == nil {
+func (v *VerificationAddress) GetCity() *string {
+	if v == nil {
 		return nil
 	}
-	return o.City
+	return v.City
 }
 
-func (o *VerificationAddress) GetCountry() *string {
-	if o == nil {
+func (v *VerificationAddress) GetCountry() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Country
+	return v.Country
 }
 
-func (o *VerificationAddress) GetCountryCode() *string {
-	if o == nil {
+func (v *VerificationAddress) GetCountryCode() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CountryCode
+	return v.CountryCode
 }
 
-func (o *VerificationAddress) GetPostalCode() *string {
-	if o == nil {
+func (v *VerificationAddress) GetPostalCode() *string {
+	if v == nil {
 		return nil
 	}
-	return o.PostalCode
+	return v.PostalCode
 }
 
-func (o *VerificationAddress) GetRegion() *string {
-	if o == nil {
+func (v *VerificationAddress) GetRegion() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Region
+	return v.Region
 }
 
-func (o *VerificationAddress) GetRegionCode() *string {
-	if o == nil {
+func (v *VerificationAddress) GetRegionCode() *string {
+	if v == nil {
 		return nil
 	}
-	return o.RegionCode
+	return v.RegionCode
 }

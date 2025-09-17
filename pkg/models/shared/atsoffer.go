@@ -47,86 +47,86 @@ func (a *AtsOffer) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsOffer) GetAcceptedAt() *time.Time {
-	if o == nil {
+func (a *AtsOffer) GetAcceptedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.AcceptedAt
+	return a.AcceptedAt
 }
 
-func (o *AtsOffer) GetCompensation() []AtsCompensation {
-	if o == nil {
+func (a *AtsOffer) GetCompensation() []AtsCompensation {
+	if a == nil {
 		return nil
 	}
-	return o.Compensation
+	return a.Compensation
 }
 
-func (o *AtsOffer) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AtsOffer) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AtsOffer) GetCreatorUserID() *string {
-	if o == nil {
+func (a *AtsOffer) GetCreatorUserID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CreatorUserID
+	return a.CreatorUserID
 }
 
-func (o *AtsOffer) GetEmployeeUserID() *string {
-	if o == nil {
+func (a *AtsOffer) GetEmployeeUserID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.EmployeeUserID
+	return a.EmployeeUserID
 }
 
-func (o *AtsOffer) GetID() *string {
-	if o == nil {
+func (a *AtsOffer) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsOffer) GetRaw() map[string]any {
-	if o == nil {
+func (a *AtsOffer) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AtsOffer) GetRejectedAt() *time.Time {
-	if o == nil {
+func (a *AtsOffer) GetRejectedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.RejectedAt
+	return a.RejectedAt
 }
 
-func (o *AtsOffer) GetSentAt() *time.Time {
-	if o == nil {
+func (a *AtsOffer) GetSentAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.SentAt
+	return a.SentAt
 }
 
-func (o *AtsOffer) GetStartAt() *time.Time {
-	if o == nil {
+func (a *AtsOffer) GetStartAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.StartAt
+	return a.StartAt
 }
 
-func (o *AtsOffer) GetStatus() *AtsOfferStatus {
-	if o == nil {
+func (a *AtsOffer) GetStatus() *AtsOfferStatus {
+	if a == nil {
 		return nil
 	}
-	return o.Status
+	return a.Status
 }
 
-func (o *AtsOffer) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AtsOffer) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

@@ -27,30 +27,30 @@ type AccountingContactPaymentMethod struct {
 	Type    AccountingContactPaymentMethodType `json:"type"`
 }
 
-func (o *AccountingContactPaymentMethod) GetDefault() *bool {
-	if o == nil {
+func (a *AccountingContactPaymentMethod) GetDefault() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.Default
+	return a.Default
 }
 
-func (o *AccountingContactPaymentMethod) GetID() *string {
-	if o == nil {
+func (a *AccountingContactPaymentMethod) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingContactPaymentMethod) GetName() *string {
-	if o == nil {
+func (a *AccountingContactPaymentMethod) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingContactPaymentMethod) GetType() AccountingContactPaymentMethodType {
-	if o == nil {
+func (a *AccountingContactPaymentMethod) GetType() AccountingContactPaymentMethodType {
+	if a == nil {
 		return AccountingContactPaymentMethodType("")
 	}
-	return o.Type
+	return a.Type
 }

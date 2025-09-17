@@ -17,32 +17,32 @@ type CreateTicketingNoteRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateTicketingNoteRequest) GetTicketingNote() shared.TicketingNote {
-	if o == nil {
+func (c *CreateTicketingNoteRequest) GetTicketingNote() shared.TicketingNote {
+	if c == nil {
 		return shared.TicketingNote{}
 	}
-	return o.TicketingNote
+	return c.TicketingNote
 }
 
-func (o *CreateTicketingNoteRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateTicketingNoteRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateTicketingNoteRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateTicketingNoteRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateTicketingNoteRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateTicketingNoteRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateTicketingNoteResponse struct {
@@ -56,30 +56,30 @@ type CreateTicketingNoteResponse struct {
 	TicketingNote *shared.TicketingNote
 }
 
-func (o *CreateTicketingNoteResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateTicketingNoteResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateTicketingNoteResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateTicketingNoteResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateTicketingNoteResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateTicketingNoteResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateTicketingNoteResponse) GetTicketingNote() *shared.TicketingNote {
-	if o == nil {
+func (c *CreateTicketingNoteResponse) GetTicketingNote() *shared.TicketingNote {
+	if c == nil {
 		return nil
 	}
-	return o.TicketingNote
+	return c.TicketingNote
 }

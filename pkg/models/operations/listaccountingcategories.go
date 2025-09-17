@@ -26,74 +26,74 @@ type ListAccountingCategoriesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAccountingCategoriesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAccountingCategoriesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAccountingCategoriesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAccountingCategoriesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAccountingCategoriesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAccountingCategoriesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAccountingCategoriesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAccountingCategoriesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAccountingCategoriesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAccountingCategoriesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAccountingCategoriesRequest) GetParentID() *string {
-	if o == nil {
+func (l *ListAccountingCategoriesRequest) GetParentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ParentID
+	return l.ParentID
 }
 
-func (o *ListAccountingCategoriesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAccountingCategoriesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAccountingCategoriesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAccountingCategoriesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAccountingCategoriesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAccountingCategoriesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAccountingCategoriesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAccountingCategoriesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAccountingCategoriesResponse struct {
@@ -107,30 +107,30 @@ type ListAccountingCategoriesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAccountingCategoriesResponse) GetAccountingCategories() []shared.AccountingCategory {
-	if o == nil {
+func (l *ListAccountingCategoriesResponse) GetAccountingCategories() []shared.AccountingCategory {
+	if l == nil {
 		return nil
 	}
-	return o.AccountingCategories
+	return l.AccountingCategories
 }
 
-func (o *ListAccountingCategoriesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAccountingCategoriesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAccountingCategoriesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAccountingCategoriesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAccountingCategoriesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAccountingCategoriesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

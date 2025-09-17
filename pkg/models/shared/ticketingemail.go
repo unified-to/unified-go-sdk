@@ -19,16 +19,16 @@ type TicketingEmail struct {
 	Type  *TicketingEmailType `json:"type,omitempty"`
 }
 
-func (o *TicketingEmail) GetEmail() string {
-	if o == nil {
+func (t *TicketingEmail) GetEmail() string {
+	if t == nil {
 		return ""
 	}
-	return o.Email
+	return t.Email
 }
 
-func (o *TicketingEmail) GetType() *TicketingEmailType {
-	if o == nil {
+func (t *TicketingEmail) GetType() *TicketingEmailType {
+	if t == nil {
 		return nil
 	}
-	return o.Type
+	return t.Type
 }

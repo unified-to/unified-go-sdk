@@ -18,32 +18,32 @@ type GetMartechMemberRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetMartechMemberRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetMartechMemberRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetMartechMemberRequest) GetFields() []string {
-	if o == nil {
+func (g *GetMartechMemberRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetMartechMemberRequest) GetID() string {
-	if o == nil {
+func (g *GetMartechMemberRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetMartechMemberRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetMartechMemberRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetMartechMemberResponse struct {
@@ -57,30 +57,30 @@ type GetMartechMemberResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetMartechMemberResponse) GetContentType() string {
-	if o == nil {
+func (g *GetMartechMemberResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetMartechMemberResponse) GetMarketingMember() *shared.MarketingMember {
-	if o == nil {
+func (g *GetMartechMemberResponse) GetMarketingMember() *shared.MarketingMember {
+	if g == nil {
 		return nil
 	}
-	return o.MarketingMember
+	return g.MarketingMember
 }
 
-func (o *GetMartechMemberResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetMartechMemberResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetMartechMemberResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetMartechMemberResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

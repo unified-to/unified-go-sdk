@@ -32,95 +32,95 @@ type ListAtsScorecardsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAtsScorecardsRequest) GetApplicationID() *string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetApplicationID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ApplicationID
+	return l.ApplicationID
 }
 
-func (o *ListAtsScorecardsRequest) GetCandidateID() *string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetCandidateID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CandidateID
+	return l.CandidateID
 }
 
-func (o *ListAtsScorecardsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAtsScorecardsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAtsScorecardsRequest) GetInterviewID() *string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetInterviewID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.InterviewID
+	return l.InterviewID
 }
 
-func (o *ListAtsScorecardsRequest) GetJobID() *string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetJobID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.JobID
+	return l.JobID
 }
 
-func (o *ListAtsScorecardsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAtsScorecardsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAtsScorecardsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAtsScorecardsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAtsScorecardsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAtsScorecardsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAtsScorecardsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAtsScorecardsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAtsScorecardsResponse struct {
@@ -134,30 +134,30 @@ type ListAtsScorecardsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAtsScorecardsResponse) GetAtsScorecards() []shared.AtsScorecard {
-	if o == nil {
+func (l *ListAtsScorecardsResponse) GetAtsScorecards() []shared.AtsScorecard {
+	if l == nil {
 		return nil
 	}
-	return o.AtsScorecards
+	return l.AtsScorecards
 }
 
-func (o *ListAtsScorecardsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAtsScorecardsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAtsScorecardsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAtsScorecardsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAtsScorecardsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAtsScorecardsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

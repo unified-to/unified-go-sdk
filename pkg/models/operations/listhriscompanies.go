@@ -24,67 +24,67 @@ type ListHrisCompaniesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListHrisCompaniesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListHrisCompaniesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListHrisCompaniesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListHrisCompaniesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListHrisCompaniesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListHrisCompaniesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListHrisCompaniesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListHrisCompaniesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListHrisCompaniesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListHrisCompaniesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListHrisCompaniesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListHrisCompaniesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListHrisCompaniesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListHrisCompaniesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListHrisCompaniesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListHrisCompaniesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListHrisCompaniesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListHrisCompaniesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListHrisCompaniesResponse struct {
@@ -98,30 +98,30 @@ type ListHrisCompaniesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListHrisCompaniesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListHrisCompaniesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListHrisCompaniesResponse) GetHrisCompanies() []shared.HrisCompany {
-	if o == nil {
+func (l *ListHrisCompaniesResponse) GetHrisCompanies() []shared.HrisCompany {
+	if l == nil {
 		return nil
 	}
-	return o.HrisCompanies
+	return l.HrisCompanies
 }
 
-func (o *ListHrisCompaniesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListHrisCompaniesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListHrisCompaniesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListHrisCompaniesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

@@ -19,16 +19,16 @@ type CrmEmail struct {
 	Type  *CrmEmailType `json:"type,omitempty"`
 }
 
-func (o *CrmEmail) GetEmail() *string {
-	if o == nil {
+func (c *CrmEmail) GetEmail() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Email
+	return c.Email
 }
 
-func (o *CrmEmail) GetType() *CrmEmailType {
-	if o == nil {
+func (c *CrmEmail) GetType() *CrmEmailType {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }

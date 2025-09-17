@@ -19,39 +19,39 @@ type UpdateAccountingJournalRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAccountingJournalRequest) GetAccountingJournal() shared.AccountingJournal {
-	if o == nil {
+func (u *UpdateAccountingJournalRequest) GetAccountingJournal() shared.AccountingJournal {
+	if u == nil {
 		return shared.AccountingJournal{}
 	}
-	return o.AccountingJournal
+	return u.AccountingJournal
 }
 
-func (o *UpdateAccountingJournalRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAccountingJournalRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAccountingJournalRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAccountingJournalRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAccountingJournalRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAccountingJournalRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAccountingJournalRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAccountingJournalRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAccountingJournalResponse struct {
@@ -65,30 +65,30 @@ type UpdateAccountingJournalResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAccountingJournalResponse) GetAccountingJournal() *shared.AccountingJournal {
-	if o == nil {
+func (u *UpdateAccountingJournalResponse) GetAccountingJournal() *shared.AccountingJournal {
+	if u == nil {
 		return nil
 	}
-	return o.AccountingJournal
+	return u.AccountingJournal
 }
 
-func (o *UpdateAccountingJournalResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAccountingJournalResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAccountingJournalResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAccountingJournalResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAccountingJournalResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAccountingJournalResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

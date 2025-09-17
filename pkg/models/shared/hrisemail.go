@@ -19,16 +19,16 @@ type HrisEmail struct {
 	Type  *HrisEmailType `json:"type,omitempty"`
 }
 
-func (o *HrisEmail) GetEmail() string {
-	if o == nil {
+func (h *HrisEmail) GetEmail() string {
+	if h == nil {
 		return ""
 	}
-	return o.Email
+	return h.Email
 }
 
-func (o *HrisEmail) GetType() *HrisEmailType {
-	if o == nil {
+func (h *HrisEmail) GetType() *HrisEmailType {
+	if h == nil {
 		return nil
 	}
-	return o.Type
+	return h.Type
 }

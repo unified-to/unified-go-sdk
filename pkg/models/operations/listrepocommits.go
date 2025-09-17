@@ -28,81 +28,81 @@ type ListRepoCommitsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListRepoCommitsRequest) GetBranchID() *string {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetBranchID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.BranchID
+	return l.BranchID
 }
 
-func (o *ListRepoCommitsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListRepoCommitsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListRepoCommitsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListRepoCommitsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListRepoCommitsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListRepoCommitsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListRepoCommitsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListRepoCommitsRequest) GetRepoID() *string {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetRepoID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.RepoID
+	return l.RepoID
 }
 
-func (o *ListRepoCommitsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListRepoCommitsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListRepoCommitsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListRepoCommitsResponse struct {
@@ -116,30 +116,30 @@ type ListRepoCommitsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListRepoCommitsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListRepoCommitsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListRepoCommitsResponse) GetRepoCommits() []shared.RepoCommit {
-	if o == nil {
+func (l *ListRepoCommitsResponse) GetRepoCommits() []shared.RepoCommit {
+	if l == nil {
 		return nil
 	}
-	return o.RepoCommits
+	return l.RepoCommits
 }
 
-func (o *ListRepoCommitsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListRepoCommitsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListRepoCommitsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListRepoCommitsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

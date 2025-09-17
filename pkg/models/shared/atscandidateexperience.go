@@ -25,30 +25,30 @@ func (a *AtsCandidateExperience) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsCandidateExperience) GetCompanyName() *string {
-	if o == nil {
+func (a *AtsCandidateExperience) GetCompanyName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CompanyName
+	return a.CompanyName
 }
 
-func (o *AtsCandidateExperience) GetEndAt() *time.Time {
-	if o == nil {
+func (a *AtsCandidateExperience) GetEndAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.EndAt
+	return a.EndAt
 }
 
-func (o *AtsCandidateExperience) GetStartAt() *time.Time {
-	if o == nil {
+func (a *AtsCandidateExperience) GetStartAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.StartAt
+	return a.StartAt
 }
 
-func (o *AtsCandidateExperience) GetTitle() *string {
-	if o == nil {
+func (a *AtsCandidateExperience) GetTitle() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Title
+	return a.Title
 }

@@ -24,67 +24,67 @@ type ListMartechListsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListMartechListsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListMartechListsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListMartechListsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListMartechListsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListMartechListsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListMartechListsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListMartechListsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListMartechListsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListMartechListsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListMartechListsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListMartechListsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListMartechListsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListMartechListsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListMartechListsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListMartechListsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListMartechListsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListMartechListsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListMartechListsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListMartechListsResponse struct {
@@ -98,30 +98,30 @@ type ListMartechListsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListMartechListsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListMartechListsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListMartechListsResponse) GetMarketingLists() []shared.MarketingList {
-	if o == nil {
+func (l *ListMartechListsResponse) GetMarketingLists() []shared.MarketingList {
+	if l == nil {
 		return nil
 	}
-	return o.MarketingLists
+	return l.MarketingLists
 }
 
-func (o *ListMartechListsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListMartechListsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListMartechListsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListMartechListsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

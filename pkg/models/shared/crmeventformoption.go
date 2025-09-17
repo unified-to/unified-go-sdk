@@ -7,16 +7,16 @@ type CrmEventFormOption struct {
 	Value *string `json:"value,omitempty"`
 }
 
-func (o *CrmEventFormOption) GetLabel() *string {
-	if o == nil {
+func (c *CrmEventFormOption) GetLabel() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Label
+	return c.Label
 }
 
-func (o *CrmEventFormOption) GetValue() *string {
-	if o == nil {
+func (c *CrmEventFormOption) GetValue() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Value
+	return c.Value
 }

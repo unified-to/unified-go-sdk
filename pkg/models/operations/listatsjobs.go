@@ -30,88 +30,88 @@ type ListAtsJobsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListAtsJobsRequest) GetCompanyID() *string {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetCompanyID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyID
+	return l.CompanyID
 }
 
-func (o *ListAtsJobsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAtsJobsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAtsJobsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAtsJobsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAtsJobsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAtsJobsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAtsJobsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAtsJobsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAtsJobsRequest) GetStatus() *string {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetStatus() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Status
+	return l.Status
 }
 
-func (o *ListAtsJobsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListAtsJobsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListAtsJobsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListAtsJobsResponse struct {
@@ -125,30 +125,30 @@ type ListAtsJobsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAtsJobsResponse) GetAtsJobs() []shared.AtsJob {
-	if o == nil {
+func (l *ListAtsJobsResponse) GetAtsJobs() []shared.AtsJob {
+	if l == nil {
 		return nil
 	}
-	return o.AtsJobs
+	return l.AtsJobs
 }
 
-func (o *ListAtsJobsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAtsJobsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAtsJobsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAtsJobsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAtsJobsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAtsJobsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

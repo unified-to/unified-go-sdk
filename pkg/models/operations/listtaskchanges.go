@@ -26,74 +26,74 @@ type ListTaskChangesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListTaskChangesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListTaskChangesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListTaskChangesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListTaskChangesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListTaskChangesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListTaskChangesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListTaskChangesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListTaskChangesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListTaskChangesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListTaskChangesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListTaskChangesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListTaskChangesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListTaskChangesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListTaskChangesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListTaskChangesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListTaskChangesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListTaskChangesRequest) GetTaskID() *string {
-	if o == nil {
+func (l *ListTaskChangesRequest) GetTaskID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.TaskID
+	return l.TaskID
 }
 
-func (o *ListTaskChangesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListTaskChangesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListTaskChangesResponse struct {
@@ -107,30 +107,30 @@ type ListTaskChangesResponse struct {
 	TaskChanges []shared.TaskChange
 }
 
-func (o *ListTaskChangesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListTaskChangesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListTaskChangesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListTaskChangesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListTaskChangesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListTaskChangesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListTaskChangesResponse) GetTaskChanges() []shared.TaskChange {
-	if o == nil {
+func (l *ListTaskChangesResponse) GetTaskChanges() []shared.TaskChange {
+	if l == nil {
 		return nil
 	}
-	return o.TaskChanges
+	return l.TaskChanges
 }

@@ -18,32 +18,32 @@ type GetHrisGroupRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetHrisGroupRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetHrisGroupRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetHrisGroupRequest) GetFields() []string {
-	if o == nil {
+func (g *GetHrisGroupRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetHrisGroupRequest) GetID() string {
-	if o == nil {
+func (g *GetHrisGroupRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetHrisGroupRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetHrisGroupRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetHrisGroupResponse struct {
@@ -57,30 +57,30 @@ type GetHrisGroupResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetHrisGroupResponse) GetContentType() string {
-	if o == nil {
+func (g *GetHrisGroupResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetHrisGroupResponse) GetHrisGroup() *shared.HrisGroup {
-	if o == nil {
+func (g *GetHrisGroupResponse) GetHrisGroup() *shared.HrisGroup {
+	if g == nil {
 		return nil
 	}
-	return o.HrisGroup
+	return g.HrisGroup
 }
 
-func (o *GetHrisGroupResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetHrisGroupResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetHrisGroupResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetHrisGroupResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

@@ -13,18 +13,18 @@ type RemovePaymentPaymentRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemovePaymentPaymentRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemovePaymentPaymentRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemovePaymentPaymentRequest) GetID() string {
-	if o == nil {
+func (r *RemovePaymentPaymentRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemovePaymentPaymentResponse struct {
@@ -37,30 +37,30 @@ type RemovePaymentPaymentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemovePaymentPaymentResponse) GetContentType() string {
-	if o == nil {
+func (r *RemovePaymentPaymentResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemovePaymentPaymentResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemovePaymentPaymentResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemovePaymentPaymentResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemovePaymentPaymentResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemovePaymentPaymentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemovePaymentPaymentResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

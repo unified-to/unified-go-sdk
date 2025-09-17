@@ -20,39 +20,39 @@ type PatchAccountingAccountRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAccountingAccountRequest) GetAccountingAccount() shared.AccountingAccount {
-	if o == nil {
+func (p *PatchAccountingAccountRequest) GetAccountingAccount() shared.AccountingAccount {
+	if p == nil {
 		return shared.AccountingAccount{}
 	}
-	return o.AccountingAccount
+	return p.AccountingAccount
 }
 
-func (o *PatchAccountingAccountRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAccountingAccountRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAccountingAccountRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAccountingAccountRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAccountingAccountRequest) GetID() string {
-	if o == nil {
+func (p *PatchAccountingAccountRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAccountingAccountRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAccountingAccountRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAccountingAccountResponse struct {
@@ -66,30 +66,30 @@ type PatchAccountingAccountResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAccountingAccountResponse) GetAccountingAccount() *shared.AccountingAccount {
-	if o == nil {
+func (p *PatchAccountingAccountResponse) GetAccountingAccount() *shared.AccountingAccount {
+	if p == nil {
 		return nil
 	}
-	return o.AccountingAccount
+	return p.AccountingAccount
 }
 
-func (o *PatchAccountingAccountResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAccountingAccountResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAccountingAccountResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAccountingAccountResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAccountingAccountResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAccountingAccountResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

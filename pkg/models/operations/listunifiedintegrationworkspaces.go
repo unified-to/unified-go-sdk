@@ -112,60 +112,60 @@ type ListUnifiedIntegrationWorkspacesRequest struct {
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
 }
 
-func (o *ListUnifiedIntegrationWorkspacesRequest) GetActive() *bool {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesRequest) GetActive() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.Active
+	return l.Active
 }
 
-func (o *ListUnifiedIntegrationWorkspacesRequest) GetCategories() []QueryParamCategories {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesRequest) GetCategories() []QueryParamCategories {
+	if l == nil {
 		return nil
 	}
-	return o.Categories
+	return l.Categories
 }
 
-func (o *ListUnifiedIntegrationWorkspacesRequest) GetEnv() *string {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesRequest) GetEnv() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Env
+	return l.Env
 }
 
-func (o *ListUnifiedIntegrationWorkspacesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListUnifiedIntegrationWorkspacesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListUnifiedIntegrationWorkspacesRequest) GetSummary() *bool {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesRequest) GetSummary() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.Summary
+	return l.Summary
 }
 
-func (o *ListUnifiedIntegrationWorkspacesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListUnifiedIntegrationWorkspacesRequest) GetWorkspaceID() string {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesRequest) GetWorkspaceID() string {
+	if l == nil {
 		return ""
 	}
-	return o.WorkspaceID
+	return l.WorkspaceID
 }
 
 type ListUnifiedIntegrationWorkspacesResponse struct {
@@ -179,30 +179,30 @@ type ListUnifiedIntegrationWorkspacesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListUnifiedIntegrationWorkspacesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListUnifiedIntegrationWorkspacesResponse) GetIntegrations() []shared.Integration {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesResponse) GetIntegrations() []shared.Integration {
+	if l == nil {
 		return nil
 	}
-	return o.Integrations
+	return l.Integrations
 }
 
-func (o *ListUnifiedIntegrationWorkspacesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListUnifiedIntegrationWorkspacesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListUnifiedIntegrationWorkspacesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

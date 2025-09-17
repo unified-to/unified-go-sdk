@@ -6,9 +6,9 @@ type GenaiEmbeddingContent struct {
 	Text string `json:"text"`
 }
 
-func (o *GenaiEmbeddingContent) GetText() string {
-	if o == nil {
+func (g *GenaiEmbeddingContent) GetText() string {
+	if g == nil {
 		return ""
 	}
-	return o.Text
+	return g.Text
 }

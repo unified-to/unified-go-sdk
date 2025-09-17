@@ -24,67 +24,67 @@ type ListVerificationPackagesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListVerificationPackagesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListVerificationPackagesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListVerificationPackagesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListVerificationPackagesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListVerificationPackagesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListVerificationPackagesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListVerificationPackagesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListVerificationPackagesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListVerificationPackagesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListVerificationPackagesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListVerificationPackagesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListVerificationPackagesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListVerificationPackagesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListVerificationPackagesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListVerificationPackagesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListVerificationPackagesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListVerificationPackagesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListVerificationPackagesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListVerificationPackagesResponse struct {
@@ -98,30 +98,30 @@ type ListVerificationPackagesResponse struct {
 	VerificationPackages []shared.VerificationPackage
 }
 
-func (o *ListVerificationPackagesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListVerificationPackagesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListVerificationPackagesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListVerificationPackagesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListVerificationPackagesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListVerificationPackagesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListVerificationPackagesResponse) GetVerificationPackages() []shared.VerificationPackage {
-	if o == nil {
+func (l *ListVerificationPackagesResponse) GetVerificationPackages() []shared.VerificationPackage {
+	if l == nil {
 		return nil
 	}
-	return o.VerificationPackages
+	return l.VerificationPackages
 }

@@ -19,39 +19,39 @@ type UpdateAccountingTransactionRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAccountingTransactionRequest) GetAccountingTransaction() shared.AccountingTransaction {
-	if o == nil {
+func (u *UpdateAccountingTransactionRequest) GetAccountingTransaction() shared.AccountingTransaction {
+	if u == nil {
 		return shared.AccountingTransaction{}
 	}
-	return o.AccountingTransaction
+	return u.AccountingTransaction
 }
 
-func (o *UpdateAccountingTransactionRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAccountingTransactionRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAccountingTransactionRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAccountingTransactionRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAccountingTransactionRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAccountingTransactionRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAccountingTransactionRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAccountingTransactionRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAccountingTransactionResponse struct {
@@ -65,30 +65,30 @@ type UpdateAccountingTransactionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAccountingTransactionResponse) GetAccountingTransaction() *shared.AccountingTransaction {
-	if o == nil {
+func (u *UpdateAccountingTransactionResponse) GetAccountingTransaction() *shared.AccountingTransaction {
+	if u == nil {
 		return nil
 	}
-	return o.AccountingTransaction
+	return u.AccountingTransaction
 }
 
-func (o *UpdateAccountingTransactionResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAccountingTransactionResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAccountingTransactionResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAccountingTransactionResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAccountingTransactionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAccountingTransactionResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

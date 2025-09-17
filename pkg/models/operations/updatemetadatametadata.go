@@ -19,39 +19,39 @@ type UpdateMetadataMetadataRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateMetadataMetadataRequest) GetMetadataMetadata() shared.MetadataMetadata {
-	if o == nil {
+func (u *UpdateMetadataMetadataRequest) GetMetadataMetadata() shared.MetadataMetadata {
+	if u == nil {
 		return shared.MetadataMetadata{}
 	}
-	return o.MetadataMetadata
+	return u.MetadataMetadata
 }
 
-func (o *UpdateMetadataMetadataRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateMetadataMetadataRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateMetadataMetadataRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateMetadataMetadataRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateMetadataMetadataRequest) GetID() string {
-	if o == nil {
+func (u *UpdateMetadataMetadataRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateMetadataMetadataRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateMetadataMetadataRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateMetadataMetadataResponse struct {
@@ -65,30 +65,30 @@ type UpdateMetadataMetadataResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateMetadataMetadataResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateMetadataMetadataResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateMetadataMetadataResponse) GetMetadataMetadata() *shared.MetadataMetadata {
-	if o == nil {
+func (u *UpdateMetadataMetadataResponse) GetMetadataMetadata() *shared.MetadataMetadata {
+	if u == nil {
 		return nil
 	}
-	return o.MetadataMetadata
+	return u.MetadataMetadata
 }
 
-func (o *UpdateMetadataMetadataResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateMetadataMetadataResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateMetadataMetadataResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateMetadataMetadataResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

@@ -60,114 +60,114 @@ func (a *AtsApplication) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsApplication) GetAnswers() []AtsApplicationAnswer {
-	if o == nil {
+func (a *AtsApplication) GetAnswers() []AtsApplicationAnswer {
+	if a == nil {
 		return nil
 	}
-	return o.Answers
+	return a.Answers
 }
 
-func (o *AtsApplication) GetAppliedAt() *time.Time {
-	if o == nil {
+func (a *AtsApplication) GetAppliedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.AppliedAt
+	return a.AppliedAt
 }
 
-func (o *AtsApplication) GetCandidateID() *string {
-	if o == nil {
+func (a *AtsApplication) GetCandidateID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CandidateID
+	return a.CandidateID
 }
 
-func (o *AtsApplication) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AtsApplication) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AtsApplication) GetHiredAt() *time.Time {
-	if o == nil {
+func (a *AtsApplication) GetHiredAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.HiredAt
+	return a.HiredAt
 }
 
-func (o *AtsApplication) GetID() *string {
-	if o == nil {
+func (a *AtsApplication) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsApplication) GetJobID() *string {
-	if o == nil {
+func (a *AtsApplication) GetJobID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.JobID
+	return a.JobID
 }
 
-func (o *AtsApplication) GetMetadata() []AtsMetadata {
-	if o == nil {
+func (a *AtsApplication) GetMetadata() []AtsMetadata {
+	if a == nil {
 		return nil
 	}
-	return o.Metadata
+	return a.Metadata
 }
 
-func (o *AtsApplication) GetOffers() []AtsOffer {
-	if o == nil {
+func (a *AtsApplication) GetOffers() []AtsOffer {
+	if a == nil {
 		return nil
 	}
-	return o.Offers
+	return a.Offers
 }
 
-func (o *AtsApplication) GetOriginalStatus() *string {
-	if o == nil {
+func (a *AtsApplication) GetOriginalStatus() *string {
+	if a == nil {
 		return nil
 	}
-	return o.OriginalStatus
+	return a.OriginalStatus
 }
 
-func (o *AtsApplication) GetRaw() map[string]any {
-	if o == nil {
+func (a *AtsApplication) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AtsApplication) GetRejectedAt() *time.Time {
-	if o == nil {
+func (a *AtsApplication) GetRejectedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.RejectedAt
+	return a.RejectedAt
 }
 
-func (o *AtsApplication) GetRejectedReason() *string {
-	if o == nil {
+func (a *AtsApplication) GetRejectedReason() *string {
+	if a == nil {
 		return nil
 	}
-	return o.RejectedReason
+	return a.RejectedReason
 }
 
-func (o *AtsApplication) GetSource() *string {
-	if o == nil {
+func (a *AtsApplication) GetSource() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Source
+	return a.Source
 }
 
-func (o *AtsApplication) GetStatus() *AtsApplicationStatus {
-	if o == nil {
+func (a *AtsApplication) GetStatus() *AtsApplicationStatus {
+	if a == nil {
 		return nil
 	}
-	return o.Status
+	return a.Status
 }
 
-func (o *AtsApplication) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AtsApplication) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

@@ -29,58 +29,58 @@ func (t *TaskComment) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *TaskComment) GetCreatedAt() *time.Time {
-	if o == nil {
+func (t *TaskComment) GetCreatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return t.CreatedAt
 }
 
-func (o *TaskComment) GetID() *string {
-	if o == nil {
+func (t *TaskComment) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *TaskComment) GetRaw() map[string]any {
-	if o == nil {
+func (t *TaskComment) GetRaw() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Raw
+	return t.Raw
 }
 
-func (o *TaskComment) GetTaskID() string {
-	if o == nil {
+func (t *TaskComment) GetTaskID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TaskID
+	return t.TaskID
 }
 
-func (o *TaskComment) GetText() string {
-	if o == nil {
+func (t *TaskComment) GetText() string {
+	if t == nil {
 		return ""
 	}
-	return o.Text
+	return t.Text
 }
 
-func (o *TaskComment) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (t *TaskComment) GetUpdatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return t.UpdatedAt
 }
 
-func (o *TaskComment) GetUserID() *string {
-	if o == nil {
+func (t *TaskComment) GetUserID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.UserID
+	return t.UserID
 }
 
-func (o *TaskComment) GetUserName() *string {
-	if o == nil {
+func (t *TaskComment) GetUserName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.UserName
+	return t.UserName
 }

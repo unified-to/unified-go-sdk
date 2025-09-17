@@ -31,58 +31,58 @@ type VerificationParameter struct {
 	ValidRegions []string `json:"valid_regions,omitempty"`
 }
 
-func (o *VerificationParameter) GetFileTypes() []string {
-	if o == nil {
+func (v *VerificationParameter) GetFileTypes() []string {
+	if v == nil {
 		return nil
 	}
-	return o.FileTypes
+	return v.FileTypes
 }
 
-func (o *VerificationParameter) GetID() *string {
-	if o == nil {
+func (v *VerificationParameter) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *VerificationParameter) GetIsRequired() *bool {
-	if o == nil {
+func (v *VerificationParameter) GetIsRequired() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsRequired
+	return v.IsRequired
 }
 
-func (o *VerificationParameter) GetName() string {
-	if o == nil {
+func (v *VerificationParameter) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *VerificationParameter) GetOptions() []string {
-	if o == nil {
+func (v *VerificationParameter) GetOptions() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Options
+	return v.Options
 }
 
-func (o *VerificationParameter) GetPublicQuestion() *string {
-	if o == nil {
+func (v *VerificationParameter) GetPublicQuestion() *string {
+	if v == nil {
 		return nil
 	}
-	return o.PublicQuestion
+	return v.PublicQuestion
 }
 
-func (o *VerificationParameter) GetType() *VerificationParameterType {
-	if o == nil {
+func (v *VerificationParameter) GetType() *VerificationParameterType {
+	if v == nil {
 		return nil
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *VerificationParameter) GetValidRegions() []string {
-	if o == nil {
+func (v *VerificationParameter) GetValidRegions() []string {
+	if v == nil {
 		return nil
 	}
-	return o.ValidRegions
+	return v.ValidRegions
 }

@@ -19,39 +19,39 @@ type UpdateAtsScorecardRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAtsScorecardRequest) GetAtsScorecard() shared.AtsScorecard {
-	if o == nil {
+func (u *UpdateAtsScorecardRequest) GetAtsScorecard() shared.AtsScorecard {
+	if u == nil {
 		return shared.AtsScorecard{}
 	}
-	return o.AtsScorecard
+	return u.AtsScorecard
 }
 
-func (o *UpdateAtsScorecardRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAtsScorecardRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAtsScorecardRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAtsScorecardRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAtsScorecardRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAtsScorecardRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAtsScorecardRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAtsScorecardRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAtsScorecardResponse struct {
@@ -65,30 +65,30 @@ type UpdateAtsScorecardResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAtsScorecardResponse) GetAtsScorecard() *shared.AtsScorecard {
-	if o == nil {
+func (u *UpdateAtsScorecardResponse) GetAtsScorecard() *shared.AtsScorecard {
+	if u == nil {
 		return nil
 	}
-	return o.AtsScorecard
+	return u.AtsScorecard
 }
 
-func (o *UpdateAtsScorecardResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAtsScorecardResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAtsScorecardResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAtsScorecardResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAtsScorecardResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAtsScorecardResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

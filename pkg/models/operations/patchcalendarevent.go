@@ -19,39 +19,39 @@ type PatchCalendarEventRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchCalendarEventRequest) GetCalendarEvent() shared.CalendarEvent {
-	if o == nil {
+func (p *PatchCalendarEventRequest) GetCalendarEvent() shared.CalendarEvent {
+	if p == nil {
 		return shared.CalendarEvent{}
 	}
-	return o.CalendarEvent
+	return p.CalendarEvent
 }
 
-func (o *PatchCalendarEventRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchCalendarEventRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchCalendarEventRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchCalendarEventRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchCalendarEventRequest) GetID() string {
-	if o == nil {
+func (p *PatchCalendarEventRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchCalendarEventRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchCalendarEventRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchCalendarEventResponse struct {
@@ -65,30 +65,30 @@ type PatchCalendarEventResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchCalendarEventResponse) GetCalendarEvent() *shared.CalendarEvent {
-	if o == nil {
+func (p *PatchCalendarEventResponse) GetCalendarEvent() *shared.CalendarEvent {
+	if p == nil {
 		return nil
 	}
-	return o.CalendarEvent
+	return p.CalendarEvent
 }
 
-func (o *PatchCalendarEventResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchCalendarEventResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchCalendarEventResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchCalendarEventResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchCalendarEventResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchCalendarEventResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

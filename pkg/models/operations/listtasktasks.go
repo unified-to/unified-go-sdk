@@ -32,95 +32,95 @@ type ListTaskTasksRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListTaskTasksRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListTaskTasksRequest) GetFields() []string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListTaskTasksRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListTaskTasksRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListTaskTasksRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListTaskTasksRequest) GetParentID() *string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetParentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ParentID
+	return l.ParentID
 }
 
-func (o *ListTaskTasksRequest) GetProjectID() *string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetProjectID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ProjectID
+	return l.ProjectID
 }
 
-func (o *ListTaskTasksRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListTaskTasksRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListTaskTasksRequest) GetSort() *string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListTaskTasksRequest) GetStatus() *string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetStatus() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Status
+	return l.Status
 }
 
-func (o *ListTaskTasksRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListTaskTasksRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListTaskTasksRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListTaskTasksResponse struct {
@@ -134,30 +134,30 @@ type ListTaskTasksResponse struct {
 	TaskTasks []shared.TaskTask
 }
 
-func (o *ListTaskTasksResponse) GetContentType() string {
-	if o == nil {
+func (l *ListTaskTasksResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListTaskTasksResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListTaskTasksResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListTaskTasksResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListTaskTasksResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListTaskTasksResponse) GetTaskTasks() []shared.TaskTask {
-	if o == nil {
+func (l *ListTaskTasksResponse) GetTaskTasks() []shared.TaskTask {
+	if l == nil {
 		return nil
 	}
-	return o.TaskTasks
+	return l.TaskTasks
 }

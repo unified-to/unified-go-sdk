@@ -17,32 +17,32 @@ type CreateAccountingBillRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAccountingBillRequest) GetAccountingBill() shared.AccountingBill {
-	if o == nil {
+func (c *CreateAccountingBillRequest) GetAccountingBill() shared.AccountingBill {
+	if c == nil {
 		return shared.AccountingBill{}
 	}
-	return o.AccountingBill
+	return c.AccountingBill
 }
 
-func (o *CreateAccountingBillRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAccountingBillRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAccountingBillRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAccountingBillRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAccountingBillRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAccountingBillRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAccountingBillResponse struct {
@@ -56,30 +56,30 @@ type CreateAccountingBillResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingBillResponse) GetAccountingBill() *shared.AccountingBill {
-	if o == nil {
+func (c *CreateAccountingBillResponse) GetAccountingBill() *shared.AccountingBill {
+	if c == nil {
 		return nil
 	}
-	return o.AccountingBill
+	return c.AccountingBill
 }
 
-func (o *CreateAccountingBillResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAccountingBillResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAccountingBillResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAccountingBillResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAccountingBillResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAccountingBillResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

@@ -48,86 +48,86 @@ func (a *AtsDocument) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsDocument) GetApplicationID() *string {
-	if o == nil {
+func (a *AtsDocument) GetApplicationID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ApplicationID
+	return a.ApplicationID
 }
 
-func (o *AtsDocument) GetCandidateID() *string {
-	if o == nil {
+func (a *AtsDocument) GetCandidateID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CandidateID
+	return a.CandidateID
 }
 
-func (o *AtsDocument) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AtsDocument) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AtsDocument) GetDocumentData() *string {
-	if o == nil {
+func (a *AtsDocument) GetDocumentData() *string {
+	if a == nil {
 		return nil
 	}
-	return o.DocumentData
+	return a.DocumentData
 }
 
-func (o *AtsDocument) GetDocumentURL() *string {
-	if o == nil {
+func (a *AtsDocument) GetDocumentURL() *string {
+	if a == nil {
 		return nil
 	}
-	return o.DocumentURL
+	return a.DocumentURL
 }
 
-func (o *AtsDocument) GetFilename() *string {
-	if o == nil {
+func (a *AtsDocument) GetFilename() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Filename
+	return a.Filename
 }
 
-func (o *AtsDocument) GetID() *string {
-	if o == nil {
+func (a *AtsDocument) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsDocument) GetJobID() *string {
-	if o == nil {
+func (a *AtsDocument) GetJobID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.JobID
+	return a.JobID
 }
 
-func (o *AtsDocument) GetRaw() map[string]any {
-	if o == nil {
+func (a *AtsDocument) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AtsDocument) GetType() *AtsDocumentType {
-	if o == nil {
+func (a *AtsDocument) GetType() *AtsDocumentType {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }
 
-func (o *AtsDocument) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AtsDocument) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }
 
-func (o *AtsDocument) GetUserID() *string {
-	if o == nil {
+func (a *AtsDocument) GetUserID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.UserID
+	return a.UserID
 }

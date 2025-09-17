@@ -37,37 +37,37 @@ func (a *AtsJobOpening) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsJobOpening) GetApplicationID() *string {
-	if o == nil {
+func (a *AtsJobOpening) GetApplicationID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ApplicationID
+	return a.ApplicationID
 }
 
-func (o *AtsJobOpening) GetCloseReason() *string {
-	if o == nil {
+func (a *AtsJobOpening) GetCloseReason() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CloseReason
+	return a.CloseReason
 }
 
-func (o *AtsJobOpening) GetClosedAt() *time.Time {
-	if o == nil {
+func (a *AtsJobOpening) GetClosedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.ClosedAt
+	return a.ClosedAt
 }
 
-func (o *AtsJobOpening) GetOpenedAt() *time.Time {
-	if o == nil {
+func (a *AtsJobOpening) GetOpenedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.OpenedAt
+	return a.OpenedAt
 }
 
-func (o *AtsJobOpening) GetStatus() *AtsJobOpeningStatus {
-	if o == nil {
+func (a *AtsJobOpening) GetStatus() *AtsJobOpeningStatus {
+	if a == nil {
 		return nil
 	}
-	return o.Status
+	return a.Status
 }

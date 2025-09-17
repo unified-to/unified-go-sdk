@@ -15,25 +15,25 @@ type UpdateScimUsersRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateScimUsersRequest) GetScimUser() shared.ScimUser {
-	if o == nil {
+func (u *UpdateScimUsersRequest) GetScimUser() shared.ScimUser {
+	if u == nil {
 		return shared.ScimUser{}
 	}
-	return o.ScimUser
+	return u.ScimUser
 }
 
-func (o *UpdateScimUsersRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateScimUsersRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateScimUsersRequest) GetID() string {
-	if o == nil {
+func (u *UpdateScimUsersRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
 type UpdateScimUsersResponse struct {
@@ -47,30 +47,30 @@ type UpdateScimUsersResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateScimUsersResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateScimUsersResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateScimUsersResponse) GetScimUser() *shared.ScimUser {
-	if o == nil {
+func (u *UpdateScimUsersResponse) GetScimUser() *shared.ScimUser {
+	if u == nil {
 		return nil
 	}
-	return o.ScimUser
+	return u.ScimUser
 }
 
-func (o *UpdateScimUsersResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateScimUsersResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateScimUsersResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateScimUsersResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

@@ -17,32 +17,32 @@ type CreateAccountingJournalRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAccountingJournalRequest) GetAccountingJournal() shared.AccountingJournal {
-	if o == nil {
+func (c *CreateAccountingJournalRequest) GetAccountingJournal() shared.AccountingJournal {
+	if c == nil {
 		return shared.AccountingJournal{}
 	}
-	return o.AccountingJournal
+	return c.AccountingJournal
 }
 
-func (o *CreateAccountingJournalRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAccountingJournalRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAccountingJournalRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAccountingJournalRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAccountingJournalRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAccountingJournalRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAccountingJournalResponse struct {
@@ -56,30 +56,30 @@ type CreateAccountingJournalResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingJournalResponse) GetAccountingJournal() *shared.AccountingJournal {
-	if o == nil {
+func (c *CreateAccountingJournalResponse) GetAccountingJournal() *shared.AccountingJournal {
+	if c == nil {
 		return nil
 	}
-	return o.AccountingJournal
+	return c.AccountingJournal
 }
 
-func (o *CreateAccountingJournalResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAccountingJournalResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAccountingJournalResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAccountingJournalResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAccountingJournalResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAccountingJournalResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

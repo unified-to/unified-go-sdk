@@ -28,51 +28,51 @@ func (c *CrmStage) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CrmStage) GetActive() *bool {
-	if o == nil {
+func (c *CrmStage) GetActive() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.Active
+	return c.Active
 }
 
-func (o *CrmStage) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CrmStage) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CrmStage) GetDealProbability() *float64 {
-	if o == nil {
+func (c *CrmStage) GetDealProbability() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.DealProbability
+	return c.DealProbability
 }
 
-func (o *CrmStage) GetDisplayOrder() *float64 {
-	if o == nil {
+func (c *CrmStage) GetDisplayOrder() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.DisplayOrder
+	return c.DisplayOrder
 }
 
-func (o *CrmStage) GetID() *string {
-	if o == nil {
+func (c *CrmStage) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CrmStage) GetName() *string {
-	if o == nil {
+func (c *CrmStage) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CrmStage) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CrmStage) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }

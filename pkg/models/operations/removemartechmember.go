@@ -13,18 +13,18 @@ type RemoveMartechMemberRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveMartechMemberRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveMartechMemberRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveMartechMemberRequest) GetID() string {
-	if o == nil {
+func (r *RemoveMartechMemberRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveMartechMemberResponse struct {
@@ -37,30 +37,30 @@ type RemoveMartechMemberResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveMartechMemberResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveMartechMemberResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveMartechMemberResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveMartechMemberResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveMartechMemberResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveMartechMemberResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveMartechMemberResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveMartechMemberResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

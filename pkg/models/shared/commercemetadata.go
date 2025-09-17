@@ -541,58 +541,58 @@ type CommerceMetadata struct {
 	Value     *CommerceMetadataValue     `json:"value,omitempty"`
 }
 
-func (o *CommerceMetadata) GetExtraData() *CommerceMetadataExtraData {
-	if o == nil {
+func (c *CommerceMetadata) GetExtraData() *CommerceMetadataExtraData {
+	if c == nil {
 		return nil
 	}
-	return o.ExtraData
+	return c.ExtraData
 }
 
-func (o *CommerceMetadata) GetFormat() *CommerceMetadataFormat {
-	if o == nil {
+func (c *CommerceMetadata) GetFormat() *CommerceMetadataFormat {
+	if c == nil {
 		return nil
 	}
-	return o.Format
+	return c.Format
 }
 
-func (o *CommerceMetadata) GetID() *string {
-	if o == nil {
+func (c *CommerceMetadata) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommerceMetadata) GetKey() *string {
-	if o == nil {
+func (c *CommerceMetadata) GetKey() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Key
+	return c.Key
 }
 
-func (o *CommerceMetadata) GetNamespace() *string {
-	if o == nil {
+func (c *CommerceMetadata) GetNamespace() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Namespace
+	return c.Namespace
 }
 
-func (o *CommerceMetadata) GetSlug() *string {
-	if o == nil {
+func (c *CommerceMetadata) GetSlug() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Slug
+	return c.Slug
 }
 
-func (o *CommerceMetadata) GetType() *string {
-	if o == nil {
+func (c *CommerceMetadata) GetType() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }
 
-func (o *CommerceMetadata) GetValue() *CommerceMetadataValue {
-	if o == nil {
+func (c *CommerceMetadata) GetValue() *CommerceMetadataValue {
+	if c == nil {
 		return nil
 	}
-	return o.Value
+	return c.Value
 }

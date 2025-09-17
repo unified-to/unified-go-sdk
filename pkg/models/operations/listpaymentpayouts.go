@@ -24,67 +24,67 @@ type ListPaymentPayoutsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListPaymentPayoutsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListPaymentPayoutsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListPaymentPayoutsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListPaymentPayoutsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListPaymentPayoutsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListPaymentPayoutsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListPaymentPayoutsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListPaymentPayoutsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListPaymentPayoutsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListPaymentPayoutsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListPaymentPayoutsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListPaymentPayoutsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListPaymentPayoutsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListPaymentPayoutsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListPaymentPayoutsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListPaymentPayoutsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListPaymentPayoutsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListPaymentPayoutsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListPaymentPayoutsResponse struct {
@@ -98,30 +98,30 @@ type ListPaymentPayoutsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListPaymentPayoutsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListPaymentPayoutsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListPaymentPayoutsResponse) GetPaymentPayouts() []shared.PaymentPayout {
-	if o == nil {
+func (l *ListPaymentPayoutsResponse) GetPaymentPayouts() []shared.PaymentPayout {
+	if l == nil {
 		return nil
 	}
-	return o.PaymentPayouts
+	return l.PaymentPayouts
 }
 
-func (o *ListPaymentPayoutsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListPaymentPayoutsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListPaymentPayoutsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListPaymentPayoutsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

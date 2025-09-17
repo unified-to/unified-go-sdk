@@ -17,32 +17,32 @@ type CreateTaskProjectRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateTaskProjectRequest) GetTaskProject() shared.TaskProject {
-	if o == nil {
+func (c *CreateTaskProjectRequest) GetTaskProject() shared.TaskProject {
+	if c == nil {
 		return shared.TaskProject{}
 	}
-	return o.TaskProject
+	return c.TaskProject
 }
 
-func (o *CreateTaskProjectRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateTaskProjectRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateTaskProjectRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateTaskProjectRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateTaskProjectRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateTaskProjectRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateTaskProjectResponse struct {
@@ -56,30 +56,30 @@ type CreateTaskProjectResponse struct {
 	TaskProject *shared.TaskProject
 }
 
-func (o *CreateTaskProjectResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateTaskProjectResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateTaskProjectResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateTaskProjectResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateTaskProjectResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateTaskProjectResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateTaskProjectResponse) GetTaskProject() *shared.TaskProject {
-	if o == nil {
+func (c *CreateTaskProjectResponse) GetTaskProject() *shared.TaskProject {
+	if c == nil {
 		return nil
 	}
-	return o.TaskProject
+	return c.TaskProject
 }

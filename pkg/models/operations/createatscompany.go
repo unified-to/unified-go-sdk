@@ -17,32 +17,32 @@ type CreateAtsCompanyRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAtsCompanyRequest) GetAtsCompany() shared.AtsCompany {
-	if o == nil {
+func (c *CreateAtsCompanyRequest) GetAtsCompany() shared.AtsCompany {
+	if c == nil {
 		return shared.AtsCompany{}
 	}
-	return o.AtsCompany
+	return c.AtsCompany
 }
 
-func (o *CreateAtsCompanyRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAtsCompanyRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAtsCompanyRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAtsCompanyRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAtsCompanyRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAtsCompanyRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAtsCompanyResponse struct {
@@ -56,30 +56,30 @@ type CreateAtsCompanyResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAtsCompanyResponse) GetAtsCompany() *shared.AtsCompany {
-	if o == nil {
+func (c *CreateAtsCompanyResponse) GetAtsCompany() *shared.AtsCompany {
+	if c == nil {
 		return nil
 	}
-	return o.AtsCompany
+	return c.AtsCompany
 }
 
-func (o *CreateAtsCompanyResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAtsCompanyResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAtsCompanyResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAtsCompanyResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAtsCompanyResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAtsCompanyResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

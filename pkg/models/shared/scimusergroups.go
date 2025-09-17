@@ -20,30 +20,30 @@ type ScimUserGroups struct {
 	Value     string              `json:"value"`
 }
 
-func (o *ScimUserGroups) GetDollarRef() *string {
-	if o == nil {
+func (s *ScimUserGroups) GetDollarRef() *string {
+	if s == nil {
 		return nil
 	}
-	return o.DollarRef
+	return s.DollarRef
 }
 
-func (o *ScimUserGroups) GetDisplay() *string {
-	if o == nil {
+func (s *ScimUserGroups) GetDisplay() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Display
+	return s.Display
 }
 
-func (o *ScimUserGroups) GetType() *ScimUserGroupsType {
-	if o == nil {
+func (s *ScimUserGroups) GetType() *ScimUserGroupsType {
+	if s == nil {
 		return nil
 	}
-	return o.Type
+	return s.Type
 }
 
-func (o *ScimUserGroups) GetValue() string {
-	if o == nil {
+func (s *ScimUserGroups) GetValue() string {
+	if s == nil {
 		return ""
 	}
-	return o.Value
+	return s.Value
 }

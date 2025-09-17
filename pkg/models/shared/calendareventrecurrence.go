@@ -68,86 +68,86 @@ func (c *CalendarEventRecurrence) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CalendarEventRecurrence) GetCount() *float64 {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetCount() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Count
+	return c.Count
 }
 
-func (o *CalendarEventRecurrence) GetEndAt() *time.Time {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetEndAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.EndAt
+	return c.EndAt
 }
 
-func (o *CalendarEventRecurrence) GetExcludedDates() []string {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetExcludedDates() []string {
+	if c == nil {
 		return nil
 	}
-	return o.ExcludedDates
+	return c.ExcludedDates
 }
 
-func (o *CalendarEventRecurrence) GetFrequency() CalendarEventRecurrenceFrequency {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetFrequency() CalendarEventRecurrenceFrequency {
+	if c == nil {
 		return CalendarEventRecurrenceFrequency("")
 	}
-	return o.Frequency
+	return c.Frequency
 }
 
-func (o *CalendarEventRecurrence) GetInterval() *float64 {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetInterval() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Interval
+	return c.Interval
 }
 
-func (o *CalendarEventRecurrence) GetOnDays() []PropertyCalendarEventRecurrenceOnDays {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetOnDays() []PropertyCalendarEventRecurrenceOnDays {
+	if c == nil {
 		return nil
 	}
-	return o.OnDays
+	return c.OnDays
 }
 
-func (o *CalendarEventRecurrence) GetOnMonthDays() []float64 {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetOnMonthDays() []float64 {
+	if c == nil {
 		return nil
 	}
-	return o.OnMonthDays
+	return c.OnMonthDays
 }
 
-func (o *CalendarEventRecurrence) GetOnMonths() []float64 {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetOnMonths() []float64 {
+	if c == nil {
 		return nil
 	}
-	return o.OnMonths
+	return c.OnMonths
 }
 
-func (o *CalendarEventRecurrence) GetOnWeeks() []float64 {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetOnWeeks() []float64 {
+	if c == nil {
 		return nil
 	}
-	return o.OnWeeks
+	return c.OnWeeks
 }
 
-func (o *CalendarEventRecurrence) GetOnYearDays() []float64 {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetOnYearDays() []float64 {
+	if c == nil {
 		return nil
 	}
-	return o.OnYearDays
+	return c.OnYearDays
 }
 
-func (o *CalendarEventRecurrence) GetTimezone() *string {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetTimezone() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Timezone
+	return c.Timezone
 }
 
-func (o *CalendarEventRecurrence) GetWeekStart() *WeekStart {
-	if o == nil {
+func (c *CalendarEventRecurrence) GetWeekStart() *WeekStart {
+	if c == nil {
 		return nil
 	}
-	return o.WeekStart
+	return c.WeekStart
 }

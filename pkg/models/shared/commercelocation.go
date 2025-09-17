@@ -32,79 +32,79 @@ func (c *CommerceLocation) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CommerceLocation) GetAddress() *PropertyCommerceLocationAddress {
-	if o == nil {
+func (c *CommerceLocation) GetAddress() *PropertyCommerceLocationAddress {
+	if c == nil {
 		return nil
 	}
-	return o.Address
+	return c.Address
 }
 
-func (o *CommerceLocation) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CommerceLocation) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CommerceLocation) GetCurrency() *string {
-	if o == nil {
+func (c *CommerceLocation) GetCurrency() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Currency
+	return c.Currency
 }
 
-func (o *CommerceLocation) GetDescription() *string {
-	if o == nil {
+func (c *CommerceLocation) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CommerceLocation) GetID() *string {
-	if o == nil {
+func (c *CommerceLocation) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommerceLocation) GetIsActive() *bool {
-	if o == nil {
+func (c *CommerceLocation) GetIsActive() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsActive
+	return c.IsActive
 }
 
-func (o *CommerceLocation) GetLanguageLocale() *string {
-	if o == nil {
+func (c *CommerceLocation) GetLanguageLocale() *string {
+	if c == nil {
 		return nil
 	}
-	return o.LanguageLocale
+	return c.LanguageLocale
 }
 
-func (o *CommerceLocation) GetName() string {
-	if o == nil {
+func (c *CommerceLocation) GetName() string {
+	if c == nil {
 		return ""
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CommerceLocation) GetParentID() *string {
-	if o == nil {
+func (c *CommerceLocation) GetParentID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ParentID
+	return c.ParentID
 }
 
-func (o *CommerceLocation) GetRaw() map[string]any {
-	if o == nil {
+func (c *CommerceLocation) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CommerceLocation) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CommerceLocation) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }

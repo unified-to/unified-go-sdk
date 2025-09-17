@@ -40,163 +40,163 @@ type CalendarEvent struct {
 	WebURL           *string                         `json:"web_url,omitempty"`
 }
 
-func (o *CalendarEvent) GetAttachments() []CalendarAttachment {
-	if o == nil {
+func (c *CalendarEvent) GetAttachments() []CalendarAttachment {
+	if c == nil {
 		return nil
 	}
-	return o.Attachments
+	return c.Attachments
 }
 
-func (o *CalendarEvent) GetAttendees() []CalendarAttendee {
-	if o == nil {
+func (c *CalendarEvent) GetAttendees() []CalendarAttendee {
+	if c == nil {
 		return nil
 	}
-	return o.Attendees
+	return c.Attendees
 }
 
-func (o *CalendarEvent) GetCalendarID() *string {
-	if o == nil {
+func (c *CalendarEvent) GetCalendarID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CalendarID
+	return c.CalendarID
 }
 
-func (o *CalendarEvent) GetConference() []CalendarConference {
-	if o == nil {
+func (c *CalendarEvent) GetConference() []CalendarConference {
+	if c == nil {
 		return nil
 	}
-	return o.Conference
+	return c.Conference
 }
 
-func (o *CalendarEvent) GetCreatedAt() *string {
-	if o == nil {
+func (c *CalendarEvent) GetCreatedAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CalendarEvent) GetEndAt() *string {
-	if o == nil {
+func (c *CalendarEvent) GetEndAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.EndAt
+	return c.EndAt
 }
 
-func (o *CalendarEvent) GetHasConference() *bool {
-	if o == nil {
+func (c *CalendarEvent) GetHasConference() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.HasConference
+	return c.HasConference
 }
 
-func (o *CalendarEvent) GetID() *string {
-	if o == nil {
+func (c *CalendarEvent) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CalendarEvent) GetIsAllDay() *bool {
-	if o == nil {
+func (c *CalendarEvent) GetIsAllDay() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsAllDay
+	return c.IsAllDay
 }
 
-func (o *CalendarEvent) GetIsFree() *bool {
-	if o == nil {
+func (c *CalendarEvent) GetIsFree() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsFree
+	return c.IsFree
 }
 
-func (o *CalendarEvent) GetIsPrivate() *bool {
-	if o == nil {
+func (c *CalendarEvent) GetIsPrivate() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsPrivate
+	return c.IsPrivate
 }
 
-func (o *CalendarEvent) GetLocation() *string {
-	if o == nil {
+func (c *CalendarEvent) GetLocation() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Location
+	return c.Location
 }
 
-func (o *CalendarEvent) GetNotes() *string {
-	if o == nil {
+func (c *CalendarEvent) GetNotes() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Notes
+	return c.Notes
 }
 
-func (o *CalendarEvent) GetOrganizer() *PropertyCalendarEventOrganizer {
-	if o == nil {
+func (c *CalendarEvent) GetOrganizer() *PropertyCalendarEventOrganizer {
+	if c == nil {
 		return nil
 	}
-	return o.Organizer
+	return c.Organizer
 }
 
-func (o *CalendarEvent) GetRaw() map[string]any {
-	if o == nil {
+func (c *CalendarEvent) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CalendarEvent) GetRecurrence() []CalendarEventRecurrence {
-	if o == nil {
+func (c *CalendarEvent) GetRecurrence() []CalendarEventRecurrence {
+	if c == nil {
 		return nil
 	}
-	return o.Recurrence
+	return c.Recurrence
 }
 
-func (o *CalendarEvent) GetRecurringEventID() *string {
-	if o == nil {
+func (c *CalendarEvent) GetRecurringEventID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.RecurringEventID
+	return c.RecurringEventID
 }
 
-func (o *CalendarEvent) GetStartAt() *string {
-	if o == nil {
+func (c *CalendarEvent) GetStartAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.StartAt
+	return c.StartAt
 }
 
-func (o *CalendarEvent) GetStatus() *CalendarEventStatus {
-	if o == nil {
+func (c *CalendarEvent) GetStatus() *CalendarEventStatus {
+	if c == nil {
 		return nil
 	}
-	return o.Status
+	return c.Status
 }
 
-func (o *CalendarEvent) GetSubject() *string {
-	if o == nil {
+func (c *CalendarEvent) GetSubject() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Subject
+	return c.Subject
 }
 
-func (o *CalendarEvent) GetTimezone() *string {
-	if o == nil {
+func (c *CalendarEvent) GetTimezone() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Timezone
+	return c.Timezone
 }
 
-func (o *CalendarEvent) GetUpdatedAt() *string {
-	if o == nil {
+func (c *CalendarEvent) GetUpdatedAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *CalendarEvent) GetWebURL() *string {
-	if o == nil {
+func (c *CalendarEvent) GetWebURL() *string {
+	if c == nil {
 		return nil
 	}
-	return o.WebURL
+	return c.WebURL
 }

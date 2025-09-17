@@ -19,39 +19,39 @@ type PatchCommerceItemRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchCommerceItemRequest) GetCommerceItem() shared.CommerceItem {
-	if o == nil {
+func (p *PatchCommerceItemRequest) GetCommerceItem() shared.CommerceItem {
+	if p == nil {
 		return shared.CommerceItem{}
 	}
-	return o.CommerceItem
+	return p.CommerceItem
 }
 
-func (o *PatchCommerceItemRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchCommerceItemRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchCommerceItemRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchCommerceItemRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchCommerceItemRequest) GetID() string {
-	if o == nil {
+func (p *PatchCommerceItemRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchCommerceItemRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchCommerceItemRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchCommerceItemResponse struct {
@@ -65,30 +65,30 @@ type PatchCommerceItemResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchCommerceItemResponse) GetCommerceItem() *shared.CommerceItem {
-	if o == nil {
+func (p *PatchCommerceItemResponse) GetCommerceItem() *shared.CommerceItem {
+	if p == nil {
 		return nil
 	}
-	return o.CommerceItem
+	return p.CommerceItem
 }
 
-func (o *PatchCommerceItemResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchCommerceItemResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchCommerceItemResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchCommerceItemResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchCommerceItemResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchCommerceItemResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

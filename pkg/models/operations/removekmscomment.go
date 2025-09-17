@@ -13,18 +13,18 @@ type RemoveKmsCommentRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveKmsCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveKmsCommentRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveKmsCommentRequest) GetID() string {
-	if o == nil {
+func (r *RemoveKmsCommentRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveKmsCommentResponse struct {
@@ -37,30 +37,30 @@ type RemoveKmsCommentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveKmsCommentResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveKmsCommentResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveKmsCommentResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveKmsCommentResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveKmsCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveKmsCommentResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveKmsCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveKmsCommentResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

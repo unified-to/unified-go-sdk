@@ -19,39 +19,39 @@ type PatchTicketingTicketRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchTicketingTicketRequest) GetTicketingTicket() shared.TicketingTicket {
-	if o == nil {
+func (p *PatchTicketingTicketRequest) GetTicketingTicket() shared.TicketingTicket {
+	if p == nil {
 		return shared.TicketingTicket{}
 	}
-	return o.TicketingTicket
+	return p.TicketingTicket
 }
 
-func (o *PatchTicketingTicketRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchTicketingTicketRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchTicketingTicketRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchTicketingTicketRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchTicketingTicketRequest) GetID() string {
-	if o == nil {
+func (p *PatchTicketingTicketRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchTicketingTicketRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchTicketingTicketRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchTicketingTicketResponse struct {
@@ -65,30 +65,30 @@ type PatchTicketingTicketResponse struct {
 	TicketingTicket *shared.TicketingTicket
 }
 
-func (o *PatchTicketingTicketResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchTicketingTicketResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchTicketingTicketResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchTicketingTicketResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchTicketingTicketResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchTicketingTicketResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchTicketingTicketResponse) GetTicketingTicket() *shared.TicketingTicket {
-	if o == nil {
+func (p *PatchTicketingTicketResponse) GetTicketingTicket() *shared.TicketingTicket {
+	if p == nil {
 		return nil
 	}
-	return o.TicketingTicket
+	return p.TicketingTicket
 }

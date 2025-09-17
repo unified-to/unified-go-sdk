@@ -20,39 +20,39 @@ type UpdateCommerceCollectionRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateCommerceCollectionRequest) GetCommerceCollection() shared.CommerceCollection {
-	if o == nil {
+func (u *UpdateCommerceCollectionRequest) GetCommerceCollection() shared.CommerceCollection {
+	if u == nil {
 		return shared.CommerceCollection{}
 	}
-	return o.CommerceCollection
+	return u.CommerceCollection
 }
 
-func (o *UpdateCommerceCollectionRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateCommerceCollectionRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateCommerceCollectionRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateCommerceCollectionRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateCommerceCollectionRequest) GetID() string {
-	if o == nil {
+func (u *UpdateCommerceCollectionRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateCommerceCollectionRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateCommerceCollectionRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateCommerceCollectionResponse struct {
@@ -66,30 +66,30 @@ type UpdateCommerceCollectionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateCommerceCollectionResponse) GetCommerceCollection() *shared.CommerceCollection {
-	if o == nil {
+func (u *UpdateCommerceCollectionResponse) GetCommerceCollection() *shared.CommerceCollection {
+	if u == nil {
 		return nil
 	}
-	return o.CommerceCollection
+	return u.CommerceCollection
 }
 
-func (o *UpdateCommerceCollectionResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateCommerceCollectionResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateCommerceCollectionResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateCommerceCollectionResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateCommerceCollectionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateCommerceCollectionResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

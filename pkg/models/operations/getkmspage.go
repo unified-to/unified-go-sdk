@@ -18,32 +18,32 @@ type GetKmsPageRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetKmsPageRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetKmsPageRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetKmsPageRequest) GetFields() []string {
-	if o == nil {
+func (g *GetKmsPageRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetKmsPageRequest) GetID() string {
-	if o == nil {
+func (g *GetKmsPageRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetKmsPageRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetKmsPageRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetKmsPageResponse struct {
@@ -57,30 +57,30 @@ type GetKmsPageResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetKmsPageResponse) GetContentType() string {
-	if o == nil {
+func (g *GetKmsPageResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetKmsPageResponse) GetKmsPage() *shared.KmsPage {
-	if o == nil {
+func (g *GetKmsPageResponse) GetKmsPage() *shared.KmsPage {
+	if g == nil {
 		return nil
 	}
-	return o.KmsPage
+	return g.KmsPage
 }
 
-func (o *GetKmsPageResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetKmsPageResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetKmsPageResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetKmsPageResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

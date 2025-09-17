@@ -19,39 +19,39 @@ type PatchAccountingOrderRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAccountingOrderRequest) GetAccountingOrder() shared.AccountingOrder {
-	if o == nil {
+func (p *PatchAccountingOrderRequest) GetAccountingOrder() shared.AccountingOrder {
+	if p == nil {
 		return shared.AccountingOrder{}
 	}
-	return o.AccountingOrder
+	return p.AccountingOrder
 }
 
-func (o *PatchAccountingOrderRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAccountingOrderRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAccountingOrderRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAccountingOrderRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAccountingOrderRequest) GetID() string {
-	if o == nil {
+func (p *PatchAccountingOrderRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAccountingOrderRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAccountingOrderRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAccountingOrderResponse struct {
@@ -65,30 +65,30 @@ type PatchAccountingOrderResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAccountingOrderResponse) GetAccountingOrder() *shared.AccountingOrder {
-	if o == nil {
+func (p *PatchAccountingOrderResponse) GetAccountingOrder() *shared.AccountingOrder {
+	if p == nil {
 		return nil
 	}
-	return o.AccountingOrder
+	return p.AccountingOrder
 }
 
-func (o *PatchAccountingOrderResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAccountingOrderResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAccountingOrderResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAccountingOrderResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAccountingOrderResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAccountingOrderResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

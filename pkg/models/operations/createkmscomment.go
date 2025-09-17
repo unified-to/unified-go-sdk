@@ -17,32 +17,32 @@ type CreateKmsCommentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateKmsCommentRequest) GetKmsComment() shared.KmsComment {
-	if o == nil {
+func (c *CreateKmsCommentRequest) GetKmsComment() shared.KmsComment {
+	if c == nil {
 		return shared.KmsComment{}
 	}
-	return o.KmsComment
+	return c.KmsComment
 }
 
-func (o *CreateKmsCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateKmsCommentRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateKmsCommentRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateKmsCommentRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateKmsCommentRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateKmsCommentRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateKmsCommentResponse struct {
@@ -56,30 +56,30 @@ type CreateKmsCommentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateKmsCommentResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateKmsCommentResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateKmsCommentResponse) GetKmsComment() *shared.KmsComment {
-	if o == nil {
+func (c *CreateKmsCommentResponse) GetKmsComment() *shared.KmsComment {
+	if c == nil {
 		return nil
 	}
-	return o.KmsComment
+	return c.KmsComment
 }
 
-func (o *CreateKmsCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateKmsCommentResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateKmsCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateKmsCommentResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

@@ -26,74 +26,74 @@ type ListHrisGroupsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListHrisGroupsRequest) GetCompanyID() *string {
-	if o == nil {
+func (l *ListHrisGroupsRequest) GetCompanyID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyID
+	return l.CompanyID
 }
 
-func (o *ListHrisGroupsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListHrisGroupsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListHrisGroupsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListHrisGroupsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListHrisGroupsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListHrisGroupsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListHrisGroupsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListHrisGroupsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListHrisGroupsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListHrisGroupsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListHrisGroupsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListHrisGroupsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListHrisGroupsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListHrisGroupsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListHrisGroupsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListHrisGroupsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListHrisGroupsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListHrisGroupsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListHrisGroupsResponse struct {
@@ -107,30 +107,30 @@ type ListHrisGroupsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListHrisGroupsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListHrisGroupsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListHrisGroupsResponse) GetHrisGroups() []shared.HrisGroup {
-	if o == nil {
+func (l *ListHrisGroupsResponse) GetHrisGroups() []shared.HrisGroup {
+	if l == nil {
 		return nil
 	}
-	return o.HrisGroups
+	return l.HrisGroups
 }
 
-func (o *ListHrisGroupsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListHrisGroupsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListHrisGroupsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListHrisGroupsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

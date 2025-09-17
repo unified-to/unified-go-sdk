@@ -33,51 +33,51 @@ type AtsJobQuestion struct {
 	Type        AtsJobQuestionType `json:"type"`
 }
 
-func (o *AtsJobQuestion) GetDescription() *string {
-	if o == nil {
+func (a *AtsJobQuestion) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AtsJobQuestion) GetID() *string {
-	if o == nil {
+func (a *AtsJobQuestion) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsJobQuestion) GetOptions() []string {
-	if o == nil {
+func (a *AtsJobQuestion) GetOptions() []string {
+	if a == nil {
 		return nil
 	}
-	return o.Options
+	return a.Options
 }
 
-func (o *AtsJobQuestion) GetPrompt() *string {
-	if o == nil {
+func (a *AtsJobQuestion) GetPrompt() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Prompt
+	return a.Prompt
 }
 
-func (o *AtsJobQuestion) GetQuestion() string {
-	if o == nil {
+func (a *AtsJobQuestion) GetQuestion() string {
+	if a == nil {
 		return ""
 	}
-	return o.Question
+	return a.Question
 }
 
-func (o *AtsJobQuestion) GetRequired() *bool {
-	if o == nil {
+func (a *AtsJobQuestion) GetRequired() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.Required
+	return a.Required
 }
 
-func (o *AtsJobQuestion) GetType() AtsJobQuestionType {
-	if o == nil {
+func (a *AtsJobQuestion) GetType() AtsJobQuestionType {
+	if a == nil {
 		return AtsJobQuestionType("")
 	}
-	return o.Type
+	return a.Type
 }

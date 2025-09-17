@@ -19,39 +19,39 @@ type PatchAccountingSalesorderRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAccountingSalesorderRequest) GetAccountingSalesorder() shared.AccountingSalesorder {
-	if o == nil {
+func (p *PatchAccountingSalesorderRequest) GetAccountingSalesorder() shared.AccountingSalesorder {
+	if p == nil {
 		return shared.AccountingSalesorder{}
 	}
-	return o.AccountingSalesorder
+	return p.AccountingSalesorder
 }
 
-func (o *PatchAccountingSalesorderRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAccountingSalesorderRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAccountingSalesorderRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAccountingSalesorderRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAccountingSalesorderRequest) GetID() string {
-	if o == nil {
+func (p *PatchAccountingSalesorderRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAccountingSalesorderRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAccountingSalesorderRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAccountingSalesorderResponse struct {
@@ -65,30 +65,30 @@ type PatchAccountingSalesorderResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAccountingSalesorderResponse) GetAccountingSalesorder() *shared.AccountingSalesorder {
-	if o == nil {
+func (p *PatchAccountingSalesorderResponse) GetAccountingSalesorder() *shared.AccountingSalesorder {
+	if p == nil {
 		return nil
 	}
-	return o.AccountingSalesorder
+	return p.AccountingSalesorder
 }
 
-func (o *PatchAccountingSalesorderResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAccountingSalesorderResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAccountingSalesorderResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAccountingSalesorderResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAccountingSalesorderResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAccountingSalesorderResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

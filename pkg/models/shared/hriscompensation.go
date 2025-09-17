@@ -40,37 +40,37 @@ type HrisCompensation struct {
 	Type      *HrisCompensationType      `json:"type,omitempty"`
 }
 
-func (o *HrisCompensation) GetAmount() *float64 {
-	if o == nil {
+func (h *HrisCompensation) GetAmount() *float64 {
+	if h == nil {
 		return nil
 	}
-	return o.Amount
+	return h.Amount
 }
 
-func (o *HrisCompensation) GetCurrency() *string {
-	if o == nil {
+func (h *HrisCompensation) GetCurrency() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Currency
+	return h.Currency
 }
 
-func (o *HrisCompensation) GetFrequency() *HrisCompensationFrequency {
-	if o == nil {
+func (h *HrisCompensation) GetFrequency() *HrisCompensationFrequency {
+	if h == nil {
 		return nil
 	}
-	return o.Frequency
+	return h.Frequency
 }
 
-func (o *HrisCompensation) GetGroupID() *string {
-	if o == nil {
+func (h *HrisCompensation) GetGroupID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.GroupID
+	return h.GroupID
 }
 
-func (o *HrisCompensation) GetType() *HrisCompensationType {
-	if o == nil {
+func (h *HrisCompensation) GetType() *HrisCompensationType {
+	if h == nil {
 		return nil
 	}
-	return o.Type
+	return h.Type
 }

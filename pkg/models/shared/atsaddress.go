@@ -13,58 +13,58 @@ type AtsAddress struct {
 	RegionCode  *string `json:"region_code,omitempty"`
 }
 
-func (o *AtsAddress) GetAddress1() *string {
-	if o == nil {
+func (a *AtsAddress) GetAddress1() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Address1
+	return a.Address1
 }
 
-func (o *AtsAddress) GetAddress2() *string {
-	if o == nil {
+func (a *AtsAddress) GetAddress2() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Address2
+	return a.Address2
 }
 
-func (o *AtsAddress) GetCity() *string {
-	if o == nil {
+func (a *AtsAddress) GetCity() *string {
+	if a == nil {
 		return nil
 	}
-	return o.City
+	return a.City
 }
 
-func (o *AtsAddress) GetCountry() *string {
-	if o == nil {
+func (a *AtsAddress) GetCountry() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Country
+	return a.Country
 }
 
-func (o *AtsAddress) GetCountryCode() *string {
-	if o == nil {
+func (a *AtsAddress) GetCountryCode() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CountryCode
+	return a.CountryCode
 }
 
-func (o *AtsAddress) GetPostalCode() *string {
-	if o == nil {
+func (a *AtsAddress) GetPostalCode() *string {
+	if a == nil {
 		return nil
 	}
-	return o.PostalCode
+	return a.PostalCode
 }
 
-func (o *AtsAddress) GetRegion() *string {
-	if o == nil {
+func (a *AtsAddress) GetRegion() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Region
+	return a.Region
 }
 
-func (o *AtsAddress) GetRegionCode() *string {
-	if o == nil {
+func (a *AtsAddress) GetRegionCode() *string {
+	if a == nil {
 		return nil
 	}
-	return o.RegionCode
+	return a.RegionCode
 }

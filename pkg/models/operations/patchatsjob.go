@@ -19,39 +19,39 @@ type PatchAtsJobRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAtsJobRequest) GetAtsJob() shared.AtsJob {
-	if o == nil {
+func (p *PatchAtsJobRequest) GetAtsJob() shared.AtsJob {
+	if p == nil {
 		return shared.AtsJob{}
 	}
-	return o.AtsJob
+	return p.AtsJob
 }
 
-func (o *PatchAtsJobRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAtsJobRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAtsJobRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAtsJobRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAtsJobRequest) GetID() string {
-	if o == nil {
+func (p *PatchAtsJobRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAtsJobRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAtsJobRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAtsJobResponse struct {
@@ -65,30 +65,30 @@ type PatchAtsJobResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAtsJobResponse) GetAtsJob() *shared.AtsJob {
-	if o == nil {
+func (p *PatchAtsJobResponse) GetAtsJob() *shared.AtsJob {
+	if p == nil {
 		return nil
 	}
-	return o.AtsJob
+	return p.AtsJob
 }
 
-func (o *PatchAtsJobResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAtsJobResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAtsJobResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAtsJobResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAtsJobResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAtsJobResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

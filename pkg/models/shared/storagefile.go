@@ -49,121 +49,121 @@ func (s *StorageFile) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *StorageFile) GetCreatedAt() *time.Time {
-	if o == nil {
+func (s *StorageFile) GetCreatedAt() *time.Time {
+	if s == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return s.CreatedAt
 }
 
-func (o *StorageFile) GetData() *string {
-	if o == nil {
+func (s *StorageFile) GetData() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Data
+	return s.Data
 }
 
-func (o *StorageFile) GetDescription() *string {
-	if o == nil {
+func (s *StorageFile) GetDescription() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Description
+	return s.Description
 }
 
-func (o *StorageFile) GetDownloadURL() *string {
-	if o == nil {
+func (s *StorageFile) GetDownloadURL() *string {
+	if s == nil {
 		return nil
 	}
-	return o.DownloadURL
+	return s.DownloadURL
 }
 
-func (o *StorageFile) GetHash() *string {
-	if o == nil {
+func (s *StorageFile) GetHash() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Hash
+	return s.Hash
 }
 
-func (o *StorageFile) GetID() *string {
-	if o == nil {
+func (s *StorageFile) GetID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ID
+	return s.ID
 }
 
-func (o *StorageFile) GetMimeType() *string {
-	if o == nil {
+func (s *StorageFile) GetMimeType() *string {
+	if s == nil {
 		return nil
 	}
-	return o.MimeType
+	return s.MimeType
 }
 
-func (o *StorageFile) GetName() *string {
-	if o == nil {
+func (s *StorageFile) GetName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Name
+	return s.Name
 }
 
-func (o *StorageFile) GetParentID() *string {
-	if o == nil {
+func (s *StorageFile) GetParentID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ParentID
+	return s.ParentID
 }
 
-func (o *StorageFile) GetPermissions() []StoragePermission {
-	if o == nil {
+func (s *StorageFile) GetPermissions() []StoragePermission {
+	if s == nil {
 		return nil
 	}
-	return o.Permissions
+	return s.Permissions
 }
 
-func (o *StorageFile) GetRaw() map[string]any {
-	if o == nil {
+func (s *StorageFile) GetRaw() map[string]any {
+	if s == nil {
 		return nil
 	}
-	return o.Raw
+	return s.Raw
 }
 
-func (o *StorageFile) GetSize() *float64 {
-	if o == nil {
+func (s *StorageFile) GetSize() *float64 {
+	if s == nil {
 		return nil
 	}
-	return o.Size
+	return s.Size
 }
 
-func (o *StorageFile) GetType() *StorageFileType {
-	if o == nil {
+func (s *StorageFile) GetType() *StorageFileType {
+	if s == nil {
 		return nil
 	}
-	return o.Type
+	return s.Type
 }
 
-func (o *StorageFile) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (s *StorageFile) GetUpdatedAt() *time.Time {
+	if s == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return s.UpdatedAt
 }
 
-func (o *StorageFile) GetUserID() *string {
-	if o == nil {
+func (s *StorageFile) GetUserID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.UserID
+	return s.UserID
 }
 
-func (o *StorageFile) GetVersion() *string {
-	if o == nil {
+func (s *StorageFile) GetVersion() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Version
+	return s.Version
 }
 
-func (o *StorageFile) GetWebURL() *string {
-	if o == nil {
+func (s *StorageFile) GetWebURL() *string {
+	if s == nil {
 		return nil
 	}
-	return o.WebURL
+	return s.WebURL
 }

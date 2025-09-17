@@ -17,32 +17,32 @@ type CreateLmsStudentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateLmsStudentRequest) GetLmsStudent() shared.LmsStudent {
-	if o == nil {
+func (c *CreateLmsStudentRequest) GetLmsStudent() shared.LmsStudent {
+	if c == nil {
 		return shared.LmsStudent{}
 	}
-	return o.LmsStudent
+	return c.LmsStudent
 }
 
-func (o *CreateLmsStudentRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateLmsStudentRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateLmsStudentRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateLmsStudentRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateLmsStudentRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateLmsStudentRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateLmsStudentResponse struct {
@@ -56,30 +56,30 @@ type CreateLmsStudentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateLmsStudentResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateLmsStudentResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateLmsStudentResponse) GetLmsStudent() *shared.LmsStudent {
-	if o == nil {
+func (c *CreateLmsStudentResponse) GetLmsStudent() *shared.LmsStudent {
+	if c == nil {
 		return nil
 	}
-	return o.LmsStudent
+	return c.LmsStudent
 }
 
-func (o *CreateLmsStudentResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateLmsStudentResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateLmsStudentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateLmsStudentResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

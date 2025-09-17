@@ -24,67 +24,67 @@ type ListCalendarLinksRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListCalendarLinksRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListCalendarLinksRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListCalendarLinksRequest) GetFields() []string {
-	if o == nil {
+func (l *ListCalendarLinksRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListCalendarLinksRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListCalendarLinksRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListCalendarLinksRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListCalendarLinksRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListCalendarLinksRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListCalendarLinksRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListCalendarLinksRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListCalendarLinksRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListCalendarLinksRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListCalendarLinksRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListCalendarLinksRequest) GetSort() *string {
-	if o == nil {
+func (l *ListCalendarLinksRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListCalendarLinksRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListCalendarLinksRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListCalendarLinksResponse struct {
@@ -98,30 +98,30 @@ type ListCalendarLinksResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListCalendarLinksResponse) GetCalendarLinks() []shared.CalendarLink {
-	if o == nil {
+func (l *ListCalendarLinksResponse) GetCalendarLinks() []shared.CalendarLink {
+	if l == nil {
 		return nil
 	}
-	return o.CalendarLinks
+	return l.CalendarLinks
 }
 
-func (o *ListCalendarLinksResponse) GetContentType() string {
-	if o == nil {
+func (l *ListCalendarLinksResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListCalendarLinksResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListCalendarLinksResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListCalendarLinksResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListCalendarLinksResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

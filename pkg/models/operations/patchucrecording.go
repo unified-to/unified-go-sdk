@@ -19,39 +19,39 @@ type PatchUcRecordingRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchUcRecordingRequest) GetUcRecording() shared.UcRecording {
-	if o == nil {
+func (p *PatchUcRecordingRequest) GetUcRecording() shared.UcRecording {
+	if p == nil {
 		return shared.UcRecording{}
 	}
-	return o.UcRecording
+	return p.UcRecording
 }
 
-func (o *PatchUcRecordingRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchUcRecordingRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchUcRecordingRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchUcRecordingRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchUcRecordingRequest) GetID() string {
-	if o == nil {
+func (p *PatchUcRecordingRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchUcRecordingRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchUcRecordingRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchUcRecordingResponse struct {
@@ -65,30 +65,30 @@ type PatchUcRecordingResponse struct {
 	UcRecording *shared.UcRecording
 }
 
-func (o *PatchUcRecordingResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchUcRecordingResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchUcRecordingResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchUcRecordingResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchUcRecordingResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchUcRecordingResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchUcRecordingResponse) GetUcRecording() *shared.UcRecording {
-	if o == nil {
+func (p *PatchUcRecordingResponse) GetUcRecording() *shared.UcRecording {
+	if p == nil {
 		return nil
 	}
-	return o.UcRecording
+	return p.UcRecording
 }

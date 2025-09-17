@@ -54,79 +54,79 @@ func (m *MetadataMetadata) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *MetadataMetadata) GetCreatedAt() *time.Time {
-	if o == nil {
+func (m *MetadataMetadata) GetCreatedAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return m.CreatedAt
 }
 
-func (o *MetadataMetadata) GetFormat() *MetadataMetadataFormat {
-	if o == nil {
+func (m *MetadataMetadata) GetFormat() *MetadataMetadataFormat {
+	if m == nil {
 		return nil
 	}
-	return o.Format
+	return m.Format
 }
 
-func (o *MetadataMetadata) GetID() *string {
-	if o == nil {
+func (m *MetadataMetadata) GetID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ID
+	return m.ID
 }
 
-func (o *MetadataMetadata) GetName() string {
-	if o == nil {
+func (m *MetadataMetadata) GetName() string {
+	if m == nil {
 		return ""
 	}
-	return o.Name
+	return m.Name
 }
 
-func (o *MetadataMetadata) GetObjectType() string {
-	if o == nil {
+func (m *MetadataMetadata) GetObjectType() string {
+	if m == nil {
 		return ""
 	}
-	return o.ObjectType
+	return m.ObjectType
 }
 
-func (o *MetadataMetadata) GetObjects() map[string]any {
-	if o == nil {
+func (m *MetadataMetadata) GetObjects() map[string]any {
+	if m == nil {
 		return nil
 	}
-	return o.Objects
+	return m.Objects
 }
 
-func (o *MetadataMetadata) GetOptions() []string {
-	if o == nil {
+func (m *MetadataMetadata) GetOptions() []string {
+	if m == nil {
 		return nil
 	}
-	return o.Options
+	return m.Options
 }
 
-func (o *MetadataMetadata) GetOriginalFormat() *string {
-	if o == nil {
+func (m *MetadataMetadata) GetOriginalFormat() *string {
+	if m == nil {
 		return nil
 	}
-	return o.OriginalFormat
+	return m.OriginalFormat
 }
 
-func (o *MetadataMetadata) GetRaw() map[string]any {
-	if o == nil {
+func (m *MetadataMetadata) GetRaw() map[string]any {
+	if m == nil {
 		return nil
 	}
-	return o.Raw
+	return m.Raw
 }
 
-func (o *MetadataMetadata) GetSlug() *string {
-	if o == nil {
+func (m *MetadataMetadata) GetSlug() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Slug
+	return m.Slug
 }
 
-func (o *MetadataMetadata) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (m *MetadataMetadata) GetUpdatedAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return m.UpdatedAt
 }

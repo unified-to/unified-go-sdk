@@ -112,60 +112,60 @@ type ListUnifiedIntegrationsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListUnifiedIntegrationsRequest) GetActive() *bool {
-	if o == nil {
+func (l *ListUnifiedIntegrationsRequest) GetActive() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.Active
+	return l.Active
 }
 
-func (o *ListUnifiedIntegrationsRequest) GetCategories() []ListUnifiedIntegrationsQueryParamCategories {
-	if o == nil {
+func (l *ListUnifiedIntegrationsRequest) GetCategories() []ListUnifiedIntegrationsQueryParamCategories {
+	if l == nil {
 		return nil
 	}
-	return o.Categories
+	return l.Categories
 }
 
-func (o *ListUnifiedIntegrationsRequest) GetEnv() *string {
-	if o == nil {
+func (l *ListUnifiedIntegrationsRequest) GetEnv() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Env
+	return l.Env
 }
 
-func (o *ListUnifiedIntegrationsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListUnifiedIntegrationsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListUnifiedIntegrationsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListUnifiedIntegrationsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListUnifiedIntegrationsRequest) GetSummary() *bool {
-	if o == nil {
+func (l *ListUnifiedIntegrationsRequest) GetSummary() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.Summary
+	return l.Summary
 }
 
-func (o *ListUnifiedIntegrationsRequest) GetType() *string {
-	if o == nil {
+func (l *ListUnifiedIntegrationsRequest) GetType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }
 
-func (o *ListUnifiedIntegrationsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListUnifiedIntegrationsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListUnifiedIntegrationsResponse struct {
@@ -179,30 +179,30 @@ type ListUnifiedIntegrationsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListUnifiedIntegrationsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListUnifiedIntegrationsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListUnifiedIntegrationsResponse) GetIntegrations() []shared.Integration {
-	if o == nil {
+func (l *ListUnifiedIntegrationsResponse) GetIntegrations() []shared.Integration {
+	if l == nil {
 		return nil
 	}
-	return o.Integrations
+	return l.Integrations
 }
 
-func (o *ListUnifiedIntegrationsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListUnifiedIntegrationsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListUnifiedIntegrationsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListUnifiedIntegrationsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

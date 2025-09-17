@@ -18,32 +18,32 @@ type GetAccountingOrderRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAccountingOrderRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAccountingOrderRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAccountingOrderRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAccountingOrderRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAccountingOrderRequest) GetID() string {
-	if o == nil {
+func (g *GetAccountingOrderRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAccountingOrderRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAccountingOrderRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAccountingOrderResponse struct {
@@ -57,30 +57,30 @@ type GetAccountingOrderResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAccountingOrderResponse) GetAccountingOrder() *shared.AccountingOrder {
-	if o == nil {
+func (g *GetAccountingOrderResponse) GetAccountingOrder() *shared.AccountingOrder {
+	if g == nil {
 		return nil
 	}
-	return o.AccountingOrder
+	return g.AccountingOrder
 }
 
-func (o *GetAccountingOrderResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAccountingOrderResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAccountingOrderResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAccountingOrderResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAccountingOrderResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAccountingOrderResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

@@ -44,72 +44,72 @@ func (p *PaymentRefund) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PaymentRefund) GetCreatedAt() *time.Time {
-	if o == nil {
+func (p *PaymentRefund) GetCreatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return p.CreatedAt
 }
 
-func (o *PaymentRefund) GetCurrency() *string {
-	if o == nil {
+func (p *PaymentRefund) GetCurrency() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Currency
+	return p.Currency
 }
 
-func (o *PaymentRefund) GetID() *string {
-	if o == nil {
+func (p *PaymentRefund) GetID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PaymentRefund) GetNotes() *string {
-	if o == nil {
+func (p *PaymentRefund) GetNotes() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Notes
+	return p.Notes
 }
 
-func (o *PaymentRefund) GetPaymentID() string {
-	if o == nil {
+func (p *PaymentRefund) GetPaymentID() string {
+	if p == nil {
 		return ""
 	}
-	return o.PaymentID
+	return p.PaymentID
 }
 
-func (o *PaymentRefund) GetRaw() map[string]any {
-	if o == nil {
+func (p *PaymentRefund) GetRaw() map[string]any {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
-func (o *PaymentRefund) GetReference() *string {
-	if o == nil {
+func (p *PaymentRefund) GetReference() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Reference
+	return p.Reference
 }
 
-func (o *PaymentRefund) GetStatus() *PaymentRefundStatus {
-	if o == nil {
+func (p *PaymentRefund) GetStatus() *PaymentRefundStatus {
+	if p == nil {
 		return nil
 	}
-	return o.Status
+	return p.Status
 }
 
-func (o *PaymentRefund) GetTotalAmount() float64 {
-	if o == nil {
+func (p *PaymentRefund) GetTotalAmount() float64 {
+	if p == nil {
 		return 0.0
 	}
-	return o.TotalAmount
+	return p.TotalAmount
 }
 
-func (o *PaymentRefund) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (p *PaymentRefund) GetUpdatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return p.UpdatedAt
 }

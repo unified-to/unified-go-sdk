@@ -13,6 +13,7 @@ type KmsSpace struct {
 	ID            *string        `json:"id,omitempty"`
 	IsActive      *bool          `json:"is_active,omitempty"`
 	Name          string         `json:"name"`
+	ParentID      *string        `json:"parent_id,omitempty"`
 	ParentPageID  *string        `json:"parent_page_id,omitempty"`
 	ParentSpaceID *string        `default:"sp" json:"parent_space_id"`
 	Raw           map[string]any `json:"raw,omitempty"`
@@ -31,72 +32,79 @@ func (k *KmsSpace) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *KmsSpace) GetCreatedAt() *time.Time {
-	if o == nil {
+func (k *KmsSpace) GetCreatedAt() *time.Time {
+	if k == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return k.CreatedAt
 }
 
-func (o *KmsSpace) GetDescription() *string {
-	if o == nil {
+func (k *KmsSpace) GetDescription() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Description
+	return k.Description
 }
 
-func (o *KmsSpace) GetID() *string {
-	if o == nil {
+func (k *KmsSpace) GetID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.ID
+	return k.ID
 }
 
-func (o *KmsSpace) GetIsActive() *bool {
-	if o == nil {
+func (k *KmsSpace) GetIsActive() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.IsActive
+	return k.IsActive
 }
 
-func (o *KmsSpace) GetName() string {
-	if o == nil {
+func (k *KmsSpace) GetName() string {
+	if k == nil {
 		return ""
 	}
-	return o.Name
+	return k.Name
 }
 
-func (o *KmsSpace) GetParentPageID() *string {
-	if o == nil {
+func (k *KmsSpace) GetParentID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.ParentPageID
+	return k.ParentID
 }
 
-func (o *KmsSpace) GetParentSpaceID() *string {
-	if o == nil {
+func (k *KmsSpace) GetParentPageID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.ParentSpaceID
+	return k.ParentPageID
 }
 
-func (o *KmsSpace) GetRaw() map[string]any {
-	if o == nil {
+func (k *KmsSpace) GetParentSpaceID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Raw
+	return k.ParentSpaceID
 }
 
-func (o *KmsSpace) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (k *KmsSpace) GetRaw() map[string]any {
+	if k == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return k.Raw
 }
 
-func (o *KmsSpace) GetUserID() *string {
-	if o == nil {
+func (k *KmsSpace) GetUpdatedAt() *time.Time {
+	if k == nil {
 		return nil
 	}
-	return o.UserID
+	return k.UpdatedAt
+}
+
+func (k *KmsSpace) GetUserID() *string {
+	if k == nil {
+		return nil
+	}
+	return k.UserID
 }

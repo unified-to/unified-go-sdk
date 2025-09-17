@@ -9,30 +9,30 @@ type ScimEntitlement struct {
 	Value   string  `json:"value"`
 }
 
-func (o *ScimEntitlement) GetDisplay() *string {
-	if o == nil {
+func (s *ScimEntitlement) GetDisplay() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Display
+	return s.Display
 }
 
-func (o *ScimEntitlement) GetPrimary() *bool {
-	if o == nil {
+func (s *ScimEntitlement) GetPrimary() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Primary
+	return s.Primary
 }
 
-func (o *ScimEntitlement) GetType() *string {
-	if o == nil {
+func (s *ScimEntitlement) GetType() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Type
+	return s.Type
 }
 
-func (o *ScimEntitlement) GetValue() string {
-	if o == nil {
+func (s *ScimEntitlement) GetValue() string {
+	if s == nil {
 		return ""
 	}
-	return o.Value
+	return s.Value
 }

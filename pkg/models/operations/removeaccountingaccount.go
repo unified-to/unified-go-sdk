@@ -13,18 +13,18 @@ type RemoveAccountingAccountRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveAccountingAccountRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveAccountingAccountRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveAccountingAccountRequest) GetID() string {
-	if o == nil {
+func (r *RemoveAccountingAccountRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveAccountingAccountResponse struct {
@@ -37,30 +37,30 @@ type RemoveAccountingAccountResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveAccountingAccountResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveAccountingAccountResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveAccountingAccountResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveAccountingAccountResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveAccountingAccountResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveAccountingAccountResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveAccountingAccountResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveAccountingAccountResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

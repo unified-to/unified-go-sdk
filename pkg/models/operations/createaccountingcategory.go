@@ -17,32 +17,32 @@ type CreateAccountingCategoryRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAccountingCategoryRequest) GetAccountingCategory() shared.AccountingCategory {
-	if o == nil {
+func (c *CreateAccountingCategoryRequest) GetAccountingCategory() shared.AccountingCategory {
+	if c == nil {
 		return shared.AccountingCategory{}
 	}
-	return o.AccountingCategory
+	return c.AccountingCategory
 }
 
-func (o *CreateAccountingCategoryRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAccountingCategoryRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAccountingCategoryRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAccountingCategoryRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAccountingCategoryRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAccountingCategoryRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAccountingCategoryResponse struct {
@@ -56,30 +56,30 @@ type CreateAccountingCategoryResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingCategoryResponse) GetAccountingCategory() *shared.AccountingCategory {
-	if o == nil {
+func (c *CreateAccountingCategoryResponse) GetAccountingCategory() *shared.AccountingCategory {
+	if c == nil {
 		return nil
 	}
-	return o.AccountingCategory
+	return c.AccountingCategory
 }
 
-func (o *CreateAccountingCategoryResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAccountingCategoryResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAccountingCategoryResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAccountingCategoryResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAccountingCategoryResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAccountingCategoryResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

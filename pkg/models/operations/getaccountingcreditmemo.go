@@ -18,32 +18,32 @@ type GetAccountingCreditmemoRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAccountingCreditmemoRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAccountingCreditmemoRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAccountingCreditmemoRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAccountingCreditmemoRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAccountingCreditmemoRequest) GetID() string {
-	if o == nil {
+func (g *GetAccountingCreditmemoRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAccountingCreditmemoRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAccountingCreditmemoRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAccountingCreditmemoResponse struct {
@@ -57,30 +57,30 @@ type GetAccountingCreditmemoResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAccountingCreditmemoResponse) GetAccountingCreditmemo() *shared.AccountingCreditmemo {
-	if o == nil {
+func (g *GetAccountingCreditmemoResponse) GetAccountingCreditmemo() *shared.AccountingCreditmemo {
+	if g == nil {
 		return nil
 	}
-	return o.AccountingCreditmemo
+	return g.AccountingCreditmemo
 }
 
-func (o *GetAccountingCreditmemoResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAccountingCreditmemoResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAccountingCreditmemoResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAccountingCreditmemoResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAccountingCreditmemoResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAccountingCreditmemoResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

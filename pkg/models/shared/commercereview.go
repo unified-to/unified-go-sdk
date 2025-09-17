@@ -58,163 +58,163 @@ func (c *CommerceReview) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CommerceReview) GetAuthorAvatarURL() *string {
-	if o == nil {
+func (c *CommerceReview) GetAuthorAvatarURL() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AuthorAvatarURL
+	return c.AuthorAvatarURL
 }
 
-func (o *CommerceReview) GetAuthorEmail() *string {
-	if o == nil {
+func (c *CommerceReview) GetAuthorEmail() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AuthorEmail
+	return c.AuthorEmail
 }
 
-func (o *CommerceReview) GetAuthorLocation() *string {
-	if o == nil {
+func (c *CommerceReview) GetAuthorLocation() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AuthorLocation
+	return c.AuthorLocation
 }
 
-func (o *CommerceReview) GetAuthorName() *string {
-	if o == nil {
+func (c *CommerceReview) GetAuthorName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AuthorName
+	return c.AuthorName
 }
 
-func (o *CommerceReview) GetComments() []CommerceReviewComment {
-	if o == nil {
+func (c *CommerceReview) GetComments() []CommerceReviewComment {
+	if c == nil {
 		return nil
 	}
-	return o.Comments
+	return c.Comments
 }
 
-func (o *CommerceReview) GetContent() *string {
-	if o == nil {
+func (c *CommerceReview) GetContent() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Content
+	return c.Content
 }
 
-func (o *CommerceReview) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CommerceReview) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CommerceReview) GetHelpfulVotes() *float64 {
-	if o == nil {
+func (c *CommerceReview) GetHelpfulVotes() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.HelpfulVotes
+	return c.HelpfulVotes
 }
 
-func (o *CommerceReview) GetID() *string {
-	if o == nil {
+func (c *CommerceReview) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommerceReview) GetIsFeatured() *bool {
-	if o == nil {
+func (c *CommerceReview) GetIsFeatured() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsFeatured
+	return c.IsFeatured
 }
 
-func (o *CommerceReview) GetIsPublic() *bool {
-	if o == nil {
+func (c *CommerceReview) GetIsPublic() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsPublic
+	return c.IsPublic
 }
 
-func (o *CommerceReview) GetIsVerified() *bool {
-	if o == nil {
+func (c *CommerceReview) GetIsVerified() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsVerified
+	return c.IsVerified
 }
 
-func (o *CommerceReview) GetItemID() string {
-	if o == nil {
+func (c *CommerceReview) GetItemID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ItemID
+	return c.ItemID
 }
 
-func (o *CommerceReview) GetItemVariantID() *string {
-	if o == nil {
+func (c *CommerceReview) GetItemVariantID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ItemVariantID
+	return c.ItemVariantID
 }
 
-func (o *CommerceReview) GetMedia() []CommerceItemMedia {
-	if o == nil {
+func (c *CommerceReview) GetMedia() []CommerceItemMedia {
+	if c == nil {
 		return nil
 	}
-	return o.Media
+	return c.Media
 }
 
-func (o *CommerceReview) GetMetadata() []CommerceMetadata {
-	if o == nil {
+func (c *CommerceReview) GetMetadata() []CommerceMetadata {
+	if c == nil {
 		return nil
 	}
-	return o.Metadata
+	return c.Metadata
 }
 
-func (o *CommerceReview) GetRating() *float64 {
-	if o == nil {
+func (c *CommerceReview) GetRating() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Rating
+	return c.Rating
 }
 
-func (o *CommerceReview) GetRaw() map[string]any {
-	if o == nil {
+func (c *CommerceReview) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CommerceReview) GetStatus() *CommerceReviewStatus {
-	if o == nil {
+func (c *CommerceReview) GetStatus() *CommerceReviewStatus {
+	if c == nil {
 		return nil
 	}
-	return o.Status
+	return c.Status
 }
 
-func (o *CommerceReview) GetTitle() *string {
-	if o == nil {
+func (c *CommerceReview) GetTitle() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Title
+	return c.Title
 }
 
-func (o *CommerceReview) GetUnhelpfulVotes() *float64 {
-	if o == nil {
+func (c *CommerceReview) GetUnhelpfulVotes() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.UnhelpfulVotes
+	return c.UnhelpfulVotes
 }
 
-func (o *CommerceReview) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CommerceReview) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *CommerceReview) GetVerifiedPurchase() *bool {
-	if o == nil {
+func (c *CommerceReview) GetVerifiedPurchase() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.VerifiedPurchase
+	return c.VerifiedPurchase
 }

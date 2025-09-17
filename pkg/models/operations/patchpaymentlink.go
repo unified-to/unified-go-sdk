@@ -19,39 +19,39 @@ type PatchPaymentLinkRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchPaymentLinkRequest) GetPaymentLink() shared.PaymentLink {
-	if o == nil {
+func (p *PatchPaymentLinkRequest) GetPaymentLink() shared.PaymentLink {
+	if p == nil {
 		return shared.PaymentLink{}
 	}
-	return o.PaymentLink
+	return p.PaymentLink
 }
 
-func (o *PatchPaymentLinkRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchPaymentLinkRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchPaymentLinkRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchPaymentLinkRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchPaymentLinkRequest) GetID() string {
-	if o == nil {
+func (p *PatchPaymentLinkRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchPaymentLinkRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchPaymentLinkRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchPaymentLinkResponse struct {
@@ -65,30 +65,30 @@ type PatchPaymentLinkResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchPaymentLinkResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchPaymentLinkResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchPaymentLinkResponse) GetPaymentLink() *shared.PaymentLink {
-	if o == nil {
+func (p *PatchPaymentLinkResponse) GetPaymentLink() *shared.PaymentLink {
+	if p == nil {
 		return nil
 	}
-	return o.PaymentLink
+	return p.PaymentLink
 }
 
-func (o *PatchPaymentLinkResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchPaymentLinkResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchPaymentLinkResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchPaymentLinkResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

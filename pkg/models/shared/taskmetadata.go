@@ -541,58 +541,58 @@ type TaskMetadata struct {
 	Value     *TaskMetadataValue     `json:"value,omitempty"`
 }
 
-func (o *TaskMetadata) GetExtraData() *TaskMetadataExtraData {
-	if o == nil {
+func (t *TaskMetadata) GetExtraData() *TaskMetadataExtraData {
+	if t == nil {
 		return nil
 	}
-	return o.ExtraData
+	return t.ExtraData
 }
 
-func (o *TaskMetadata) GetFormat() *TaskMetadataFormat {
-	if o == nil {
+func (t *TaskMetadata) GetFormat() *TaskMetadataFormat {
+	if t == nil {
 		return nil
 	}
-	return o.Format
+	return t.Format
 }
 
-func (o *TaskMetadata) GetID() *string {
-	if o == nil {
+func (t *TaskMetadata) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *TaskMetadata) GetKey() *string {
-	if o == nil {
+func (t *TaskMetadata) GetKey() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Key
+	return t.Key
 }
 
-func (o *TaskMetadata) GetNamespace() *string {
-	if o == nil {
+func (t *TaskMetadata) GetNamespace() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Namespace
+	return t.Namespace
 }
 
-func (o *TaskMetadata) GetSlug() *string {
-	if o == nil {
+func (t *TaskMetadata) GetSlug() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Slug
+	return t.Slug
 }
 
-func (o *TaskMetadata) GetType() *string {
-	if o == nil {
+func (t *TaskMetadata) GetType() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Type
+	return t.Type
 }
 
-func (o *TaskMetadata) GetValue() *TaskMetadataValue {
-	if o == nil {
+func (t *TaskMetadata) GetValue() *TaskMetadataValue {
+	if t == nil {
 		return nil
 	}
-	return o.Value
+	return t.Value
 }

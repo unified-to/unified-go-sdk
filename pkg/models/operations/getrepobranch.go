@@ -18,32 +18,32 @@ type GetRepoBranchRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetRepoBranchRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetRepoBranchRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetRepoBranchRequest) GetFields() []string {
-	if o == nil {
+func (g *GetRepoBranchRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetRepoBranchRequest) GetID() string {
-	if o == nil {
+func (g *GetRepoBranchRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetRepoBranchRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetRepoBranchRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetRepoBranchResponse struct {
@@ -57,30 +57,30 @@ type GetRepoBranchResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetRepoBranchResponse) GetContentType() string {
-	if o == nil {
+func (g *GetRepoBranchResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetRepoBranchResponse) GetRepoBranch() *shared.RepoBranch {
-	if o == nil {
+func (g *GetRepoBranchResponse) GetRepoBranch() *shared.RepoBranch {
+	if g == nil {
 		return nil
 	}
-	return o.RepoBranch
+	return g.RepoBranch
 }
 
-func (o *GetRepoBranchResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetRepoBranchResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetRepoBranchResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetRepoBranchResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

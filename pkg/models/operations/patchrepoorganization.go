@@ -19,39 +19,39 @@ type PatchRepoOrganizationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchRepoOrganizationRequest) GetRepoOrganization() shared.RepoOrganization {
-	if o == nil {
+func (p *PatchRepoOrganizationRequest) GetRepoOrganization() shared.RepoOrganization {
+	if p == nil {
 		return shared.RepoOrganization{}
 	}
-	return o.RepoOrganization
+	return p.RepoOrganization
 }
 
-func (o *PatchRepoOrganizationRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchRepoOrganizationRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchRepoOrganizationRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchRepoOrganizationRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchRepoOrganizationRequest) GetID() string {
-	if o == nil {
+func (p *PatchRepoOrganizationRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchRepoOrganizationRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchRepoOrganizationRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchRepoOrganizationResponse struct {
@@ -65,30 +65,30 @@ type PatchRepoOrganizationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchRepoOrganizationResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchRepoOrganizationResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchRepoOrganizationResponse) GetRepoOrganization() *shared.RepoOrganization {
-	if o == nil {
+func (p *PatchRepoOrganizationResponse) GetRepoOrganization() *shared.RepoOrganization {
+	if p == nil {
 		return nil
 	}
-	return o.RepoOrganization
+	return p.RepoOrganization
 }
 
-func (o *PatchRepoOrganizationResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchRepoOrganizationResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchRepoOrganizationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchRepoOrganizationResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

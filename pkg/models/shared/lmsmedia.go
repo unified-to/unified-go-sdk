@@ -25,37 +25,37 @@ type LmsMedia struct {
 	URL          string        `json:"url"`
 }
 
-func (o *LmsMedia) GetDescription() *string {
-	if o == nil {
+func (l *LmsMedia) GetDescription() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Description
+	return l.Description
 }
 
-func (o *LmsMedia) GetName() *string {
-	if o == nil {
+func (l *LmsMedia) GetName() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Name
+	return l.Name
 }
 
-func (o *LmsMedia) GetThumbnailURL() *string {
-	if o == nil {
+func (l *LmsMedia) GetThumbnailURL() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ThumbnailURL
+	return l.ThumbnailURL
 }
 
-func (o *LmsMedia) GetType() *LmsMediaType {
-	if o == nil {
+func (l *LmsMedia) GetType() *LmsMediaType {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }
 
-func (o *LmsMedia) GetURL() string {
-	if o == nil {
+func (l *LmsMedia) GetURL() string {
+	if l == nil {
 		return ""
 	}
-	return o.URL
+	return l.URL
 }

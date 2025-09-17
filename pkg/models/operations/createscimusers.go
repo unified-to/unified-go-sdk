@@ -18,53 +18,53 @@ type CreateScimUsersRequest struct {
 	StartIndex   *float64 `queryParam:"style=form,explode=true,name=startIndex"`
 }
 
-func (o *CreateScimUsersRequest) GetScimUser() shared.ScimUser {
-	if o == nil {
+func (c *CreateScimUsersRequest) GetScimUser() shared.ScimUser {
+	if c == nil {
 		return shared.ScimUser{}
 	}
-	return o.ScimUser
+	return c.ScimUser
 }
 
-func (o *CreateScimUsersRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateScimUsersRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateScimUsersRequest) GetCount() *float64 {
-	if o == nil {
+func (c *CreateScimUsersRequest) GetCount() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Count
+	return c.Count
 }
 
-func (o *CreateScimUsersRequest) GetFilter() *string {
-	if o == nil {
+func (c *CreateScimUsersRequest) GetFilter() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Filter
+	return c.Filter
 }
 
-func (o *CreateScimUsersRequest) GetSortBy() *string {
-	if o == nil {
+func (c *CreateScimUsersRequest) GetSortBy() *string {
+	if c == nil {
 		return nil
 	}
-	return o.SortBy
+	return c.SortBy
 }
 
-func (o *CreateScimUsersRequest) GetSortOrder() *string {
-	if o == nil {
+func (c *CreateScimUsersRequest) GetSortOrder() *string {
+	if c == nil {
 		return nil
 	}
-	return o.SortOrder
+	return c.SortOrder
 }
 
-func (o *CreateScimUsersRequest) GetStartIndex() *float64 {
-	if o == nil {
+func (c *CreateScimUsersRequest) GetStartIndex() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.StartIndex
+	return c.StartIndex
 }
 
 type CreateScimUsersResponse struct {
@@ -78,30 +78,30 @@ type CreateScimUsersResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateScimUsersResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateScimUsersResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateScimUsersResponse) GetScimUser() *shared.ScimUser {
-	if o == nil {
+func (c *CreateScimUsersResponse) GetScimUser() *shared.ScimUser {
+	if c == nil {
 		return nil
 	}
-	return o.ScimUser
+	return c.ScimUser
 }
 
-func (o *CreateScimUsersResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateScimUsersResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateScimUsersResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateScimUsersResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

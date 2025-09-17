@@ -7,16 +7,16 @@ type MessagingReaction struct {
 	Reaction string                          `json:"reaction"`
 }
 
-func (o *MessagingReaction) GetMember() PropertyMessagingReactionMember {
-	if o == nil {
+func (m *MessagingReaction) GetMember() PropertyMessagingReactionMember {
+	if m == nil {
 		return PropertyMessagingReactionMember{}
 	}
-	return o.Member
+	return m.Member
 }
 
-func (o *MessagingReaction) GetReaction() string {
-	if o == nil {
+func (m *MessagingReaction) GetReaction() string {
+	if m == nil {
 		return ""
 	}
-	return o.Reaction
+	return m.Reaction
 }

@@ -27,81 +27,81 @@ type ListAccountingContactsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAccountingContactsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAccountingContactsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAccountingContactsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAccountingContactsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAccountingContactsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAccountingContactsRequest) GetOrgID() *string {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetOrgID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.OrgID
+	return l.OrgID
 }
 
-func (o *ListAccountingContactsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAccountingContactsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAccountingContactsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAccountingContactsRequest) GetType() *string {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }
 
-func (o *ListAccountingContactsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAccountingContactsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAccountingContactsResponse struct {
@@ -115,30 +115,30 @@ type ListAccountingContactsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAccountingContactsResponse) GetAccountingContacts() []shared.AccountingContact {
-	if o == nil {
+func (l *ListAccountingContactsResponse) GetAccountingContacts() []shared.AccountingContact {
+	if l == nil {
 		return nil
 	}
-	return o.AccountingContacts
+	return l.AccountingContacts
 }
 
-func (o *ListAccountingContactsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAccountingContactsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAccountingContactsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAccountingContactsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAccountingContactsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAccountingContactsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

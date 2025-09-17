@@ -28,81 +28,81 @@ type ListHrisPayslipsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListHrisPayslipsRequest) GetCompanyID() *string {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetCompanyID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyID
+	return l.CompanyID
 }
 
-func (o *ListHrisPayslipsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListHrisPayslipsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListHrisPayslipsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListHrisPayslipsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListHrisPayslipsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListHrisPayslipsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListHrisPayslipsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListHrisPayslipsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListHrisPayslipsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListHrisPayslipsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListHrisPayslipsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListHrisPayslipsResponse struct {
@@ -116,30 +116,30 @@ type ListHrisPayslipsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListHrisPayslipsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListHrisPayslipsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListHrisPayslipsResponse) GetHrisPayslips() []shared.HrisPayslip {
-	if o == nil {
+func (l *ListHrisPayslipsResponse) GetHrisPayslips() []shared.HrisPayslip {
+	if l == nil {
 		return nil
 	}
-	return o.HrisPayslips
+	return l.HrisPayslips
 }
 
-func (o *ListHrisPayslipsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListHrisPayslipsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListHrisPayslipsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListHrisPayslipsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

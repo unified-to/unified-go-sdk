@@ -14,65 +14,65 @@ type CalendarConference struct {
 	URL                   *string `json:"url,omitempty"`
 }
 
-func (o *CalendarConference) GetConferenceIdentifier() *string {
-	if o == nil {
+func (c *CalendarConference) GetConferenceIdentifier() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ConferenceIdentifier
+	return c.ConferenceIdentifier
 }
 
-func (o *CalendarConference) GetCountryCode() *string {
-	if o == nil {
+func (c *CalendarConference) GetCountryCode() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CountryCode
+	return c.CountryCode
 }
 
-func (o *CalendarConference) GetHostAccessCode() *string {
-	if o == nil {
+func (c *CalendarConference) GetHostAccessCode() *string {
+	if c == nil {
 		return nil
 	}
-	return o.HostAccessCode
+	return c.HostAccessCode
 }
 
-func (o *CalendarConference) GetLabel() *string {
-	if o == nil {
+func (c *CalendarConference) GetLabel() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Label
+	return c.Label
 }
 
-func (o *CalendarConference) GetNotes() *string {
-	if o == nil {
+func (c *CalendarConference) GetNotes() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Notes
+	return c.Notes
 }
 
-func (o *CalendarConference) GetParticipantAccessCode() *string {
-	if o == nil {
+func (c *CalendarConference) GetParticipantAccessCode() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ParticipantAccessCode
+	return c.ParticipantAccessCode
 }
 
-func (o *CalendarConference) GetRegionCode() *string {
-	if o == nil {
+func (c *CalendarConference) GetRegionCode() *string {
+	if c == nil {
 		return nil
 	}
-	return o.RegionCode
+	return c.RegionCode
 }
 
-func (o *CalendarConference) GetTelephone() *string {
-	if o == nil {
+func (c *CalendarConference) GetTelephone() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Telephone
+	return c.Telephone
 }
 
-func (o *CalendarConference) GetURL() *string {
-	if o == nil {
+func (c *CalendarConference) GetURL() *string {
+	if c == nil {
 		return nil
 	}
-	return o.URL
+	return c.URL
 }

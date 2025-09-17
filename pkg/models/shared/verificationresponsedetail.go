@@ -11,44 +11,44 @@ type VerificationResponseDetail struct {
 	Title          *string `json:"title,omitempty"`
 }
 
-func (o *VerificationResponseDetail) GetDownloadURL() *string {
-	if o == nil {
+func (v *VerificationResponseDetail) GetDownloadURL() *string {
+	if v == nil {
 		return nil
 	}
-	return o.DownloadURL
+	return v.DownloadURL
 }
 
-func (o *VerificationResponseDetail) GetIsFailedReason() *bool {
-	if o == nil {
+func (v *VerificationResponseDetail) GetIsFailedReason() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsFailedReason
+	return v.IsFailedReason
 }
 
-func (o *VerificationResponseDetail) GetIsPrivate() *bool {
-	if o == nil {
+func (v *VerificationResponseDetail) GetIsPrivate() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsPrivate
+	return v.IsPrivate
 }
 
-func (o *VerificationResponseDetail) GetParameterID() *string {
-	if o == nil {
+func (v *VerificationResponseDetail) GetParameterID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ParameterID
+	return v.ParameterID
 }
 
-func (o *VerificationResponseDetail) GetText() *string {
-	if o == nil {
+func (v *VerificationResponseDetail) GetText() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Text
+	return v.Text
 }
 
-func (o *VerificationResponseDetail) GetTitle() *string {
-	if o == nil {
+func (v *VerificationResponseDetail) GetTitle() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Title
+	return v.Title
 }

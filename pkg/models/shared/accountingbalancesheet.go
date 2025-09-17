@@ -33,86 +33,86 @@ func (a *AccountingBalancesheet) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingBalancesheet) GetAssets() []AccountingBalancesheetItem {
-	if o == nil {
+func (a *AccountingBalancesheet) GetAssets() []AccountingBalancesheetItem {
+	if a == nil {
 		return nil
 	}
-	return o.Assets
+	return a.Assets
 }
 
-func (o *AccountingBalancesheet) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingBalancesheet) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingBalancesheet) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingBalancesheet) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingBalancesheet) GetEndAt() *time.Time {
-	if o == nil {
+func (a *AccountingBalancesheet) GetEndAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.EndAt
+	return a.EndAt
 }
 
-func (o *AccountingBalancesheet) GetEquity() []AccountingBalancesheetItem {
-	if o == nil {
+func (a *AccountingBalancesheet) GetEquity() []AccountingBalancesheetItem {
+	if a == nil {
 		return nil
 	}
-	return o.Equity
+	return a.Equity
 }
 
-func (o *AccountingBalancesheet) GetID() *string {
-	if o == nil {
+func (a *AccountingBalancesheet) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingBalancesheet) GetLiabilities() []AccountingBalancesheetItem {
-	if o == nil {
+func (a *AccountingBalancesheet) GetLiabilities() []AccountingBalancesheetItem {
+	if a == nil {
 		return nil
 	}
-	return o.Liabilities
+	return a.Liabilities
 }
 
-func (o *AccountingBalancesheet) GetName() *string {
-	if o == nil {
+func (a *AccountingBalancesheet) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingBalancesheet) GetNetAssetsAmount() *float64 {
-	if o == nil {
+func (a *AccountingBalancesheet) GetNetAssetsAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.NetAssetsAmount
+	return a.NetAssetsAmount
 }
 
-func (o *AccountingBalancesheet) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingBalancesheet) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingBalancesheet) GetStartAt() *time.Time {
-	if o == nil {
+func (a *AccountingBalancesheet) GetStartAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.StartAt
+	return a.StartAt
 }
 
-func (o *AccountingBalancesheet) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingBalancesheet) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

@@ -24,30 +24,30 @@ type ScimPhoneNumber struct {
 	Value   *string              `json:"value,omitempty"`
 }
 
-func (o *ScimPhoneNumber) GetDisplay() *string {
-	if o == nil {
+func (s *ScimPhoneNumber) GetDisplay() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Display
+	return s.Display
 }
 
-func (o *ScimPhoneNumber) GetPrimary() *bool {
-	if o == nil {
+func (s *ScimPhoneNumber) GetPrimary() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Primary
+	return s.Primary
 }
 
-func (o *ScimPhoneNumber) GetType() *ScimPhoneNumberType {
-	if o == nil {
+func (s *ScimPhoneNumber) GetType() *ScimPhoneNumberType {
+	if s == nil {
 		return nil
 	}
-	return o.Type
+	return s.Type
 }
 
-func (o *ScimPhoneNumber) GetValue() *string {
-	if o == nil {
+func (s *ScimPhoneNumber) GetValue() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Value
+	return s.Value
 }

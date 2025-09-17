@@ -32,95 +32,95 @@ type ListCalendarEventsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListCalendarEventsRequest) GetCalendarID() *string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetCalendarID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CalendarID
+	return l.CalendarID
 }
 
-func (o *ListCalendarEventsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListCalendarEventsRequest) GetEndLe() *string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetEndLe() *string {
+	if l == nil {
 		return nil
 	}
-	return o.EndLe
+	return l.EndLe
 }
 
-func (o *ListCalendarEventsRequest) GetExpandRecurringEvents() *string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetExpandRecurringEvents() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ExpandRecurringEvents
+	return l.ExpandRecurringEvents
 }
 
-func (o *ListCalendarEventsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListCalendarEventsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListCalendarEventsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListCalendarEventsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListCalendarEventsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListCalendarEventsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListCalendarEventsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListCalendarEventsRequest) GetStartGte() *string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetStartGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.StartGte
+	return l.StartGte
 }
 
-func (o *ListCalendarEventsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListCalendarEventsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListCalendarEventsResponse struct {
@@ -134,30 +134,30 @@ type ListCalendarEventsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListCalendarEventsResponse) GetCalendarEvents() []shared.CalendarEvent {
-	if o == nil {
+func (l *ListCalendarEventsResponse) GetCalendarEvents() []shared.CalendarEvent {
+	if l == nil {
 		return nil
 	}
-	return o.CalendarEvents
+	return l.CalendarEvents
 }
 
-func (o *ListCalendarEventsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListCalendarEventsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListCalendarEventsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListCalendarEventsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListCalendarEventsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListCalendarEventsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

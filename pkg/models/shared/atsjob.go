@@ -82,170 +82,170 @@ func (a *AtsJob) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsJob) GetAddresses() []AtsAddress {
-	if o == nil {
+func (a *AtsJob) GetAddresses() []AtsAddress {
+	if a == nil {
 		return nil
 	}
-	return o.Addresses
+	return a.Addresses
 }
 
-func (o *AtsJob) GetClosedAt() *time.Time {
-	if o == nil {
+func (a *AtsJob) GetClosedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.ClosedAt
+	return a.ClosedAt
 }
 
-func (o *AtsJob) GetCompanyID() *string {
-	if o == nil {
+func (a *AtsJob) GetCompanyID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CompanyID
+	return a.CompanyID
 }
 
-func (o *AtsJob) GetCompensation() []AtsCompensation {
-	if o == nil {
+func (a *AtsJob) GetCompensation() []AtsCompensation {
+	if a == nil {
 		return nil
 	}
-	return o.Compensation
+	return a.Compensation
 }
 
-func (o *AtsJob) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AtsJob) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AtsJob) GetDepartments() []string {
-	if o == nil {
+func (a *AtsJob) GetDepartments() []string {
+	if a == nil {
 		return nil
 	}
-	return o.Departments
+	return a.Departments
 }
 
-func (o *AtsJob) GetDescription() *string {
-	if o == nil {
+func (a *AtsJob) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AtsJob) GetEmploymentType() *EmploymentType {
-	if o == nil {
+func (a *AtsJob) GetEmploymentType() *EmploymentType {
+	if a == nil {
 		return nil
 	}
-	return o.EmploymentType
+	return a.EmploymentType
 }
 
-func (o *AtsJob) GetGroups() []AtsGroup {
-	if o == nil {
+func (a *AtsJob) GetGroups() []AtsGroup {
+	if a == nil {
 		return nil
 	}
-	return o.Groups
+	return a.Groups
 }
 
-func (o *AtsJob) GetHiringManagerIds() []string {
-	if o == nil {
+func (a *AtsJob) GetHiringManagerIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.HiringManagerIds
+	return a.HiringManagerIds
 }
 
-func (o *AtsJob) GetID() *string {
-	if o == nil {
+func (a *AtsJob) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsJob) GetLanguageLocale() *string {
-	if o == nil {
+func (a *AtsJob) GetLanguageLocale() *string {
+	if a == nil {
 		return nil
 	}
-	return o.LanguageLocale
+	return a.LanguageLocale
 }
 
-func (o *AtsJob) GetMetadata() []AtsMetadata {
-	if o == nil {
+func (a *AtsJob) GetMetadata() []AtsMetadata {
+	if a == nil {
 		return nil
 	}
-	return o.Metadata
+	return a.Metadata
 }
 
-func (o *AtsJob) GetName() *string {
-	if o == nil {
+func (a *AtsJob) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AtsJob) GetNumberOfOpenings() *float64 {
-	if o == nil {
+func (a *AtsJob) GetNumberOfOpenings() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.NumberOfOpenings
+	return a.NumberOfOpenings
 }
 
-func (o *AtsJob) GetOpenings() []AtsJobOpening {
-	if o == nil {
+func (a *AtsJob) GetOpenings() []AtsJobOpening {
+	if a == nil {
 		return nil
 	}
-	return o.Openings
+	return a.Openings
 }
 
-func (o *AtsJob) GetPostings() []AtsJobPosting {
-	if o == nil {
+func (a *AtsJob) GetPostings() []AtsJobPosting {
+	if a == nil {
 		return nil
 	}
-	return o.Postings
+	return a.Postings
 }
 
-func (o *AtsJob) GetPublicJobUrls() []string {
-	if o == nil {
+func (a *AtsJob) GetPublicJobUrls() []string {
+	if a == nil {
 		return nil
 	}
-	return o.PublicJobUrls
+	return a.PublicJobUrls
 }
 
-func (o *AtsJob) GetQuestions() []AtsJobQuestion {
-	if o == nil {
+func (a *AtsJob) GetQuestions() []AtsJobQuestion {
+	if a == nil {
 		return nil
 	}
-	return o.Questions
+	return a.Questions
 }
 
-func (o *AtsJob) GetRaw() map[string]any {
-	if o == nil {
+func (a *AtsJob) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AtsJob) GetRecruiterIds() []string {
-	if o == nil {
+func (a *AtsJob) GetRecruiterIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.RecruiterIds
+	return a.RecruiterIds
 }
 
-func (o *AtsJob) GetRemote() *bool {
-	if o == nil {
+func (a *AtsJob) GetRemote() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.Remote
+	return a.Remote
 }
 
-func (o *AtsJob) GetStatus() *AtsJobStatus {
-	if o == nil {
+func (a *AtsJob) GetStatus() *AtsJobStatus {
+	if a == nil {
 		return nil
 	}
-	return o.Status
+	return a.Status
 }
 
-func (o *AtsJob) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AtsJob) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

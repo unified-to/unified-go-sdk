@@ -17,32 +17,32 @@ type CreateAccountingCreditmemoRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAccountingCreditmemoRequest) GetAccountingCreditmemo() shared.AccountingCreditmemo {
-	if o == nil {
+func (c *CreateAccountingCreditmemoRequest) GetAccountingCreditmemo() shared.AccountingCreditmemo {
+	if c == nil {
 		return shared.AccountingCreditmemo{}
 	}
-	return o.AccountingCreditmemo
+	return c.AccountingCreditmemo
 }
 
-func (o *CreateAccountingCreditmemoRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAccountingCreditmemoRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAccountingCreditmemoRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAccountingCreditmemoRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAccountingCreditmemoRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAccountingCreditmemoRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAccountingCreditmemoResponse struct {
@@ -56,30 +56,30 @@ type CreateAccountingCreditmemoResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingCreditmemoResponse) GetAccountingCreditmemo() *shared.AccountingCreditmemo {
-	if o == nil {
+func (c *CreateAccountingCreditmemoResponse) GetAccountingCreditmemo() *shared.AccountingCreditmemo {
+	if c == nil {
 		return nil
 	}
-	return o.AccountingCreditmemo
+	return c.AccountingCreditmemo
 }
 
-func (o *CreateAccountingCreditmemoResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAccountingCreditmemoResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAccountingCreditmemoResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAccountingCreditmemoResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAccountingCreditmemoResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAccountingCreditmemoResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

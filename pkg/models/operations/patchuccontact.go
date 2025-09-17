@@ -20,39 +20,39 @@ type PatchUcContactRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchUcContactRequest) GetUcContact() shared.UcContact {
-	if o == nil {
+func (p *PatchUcContactRequest) GetUcContact() shared.UcContact {
+	if p == nil {
 		return shared.UcContact{}
 	}
-	return o.UcContact
+	return p.UcContact
 }
 
-func (o *PatchUcContactRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchUcContactRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchUcContactRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchUcContactRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchUcContactRequest) GetID() string {
-	if o == nil {
+func (p *PatchUcContactRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchUcContactRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchUcContactRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchUcContactResponse struct {
@@ -66,30 +66,30 @@ type PatchUcContactResponse struct {
 	UcContact *shared.UcContact
 }
 
-func (o *PatchUcContactResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchUcContactResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchUcContactResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchUcContactResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchUcContactResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchUcContactResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchUcContactResponse) GetUcContact() *shared.UcContact {
-	if o == nil {
+func (p *PatchUcContactResponse) GetUcContact() *shared.UcContact {
+	if p == nil {
 		return nil
 	}
-	return o.UcContact
+	return p.UcContact
 }

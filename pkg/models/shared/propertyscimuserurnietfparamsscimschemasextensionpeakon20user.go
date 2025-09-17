@@ -36,30 +36,30 @@ func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) Unmarsha
 	return nil
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) GetDateOfBirth() *time.Time {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) GetDateOfBirth() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.DateOfBirth
+	return p.DateOfBirth
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) GetGender() *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) GetGender() *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender {
+	if p == nil {
 		return nil
 	}
-	return o.Gender
+	return p.Gender
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) GetManager() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) GetManager() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Manager
+	return p.Manager
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) GetTeam() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) GetTeam() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Team
+	return p.Team
 }

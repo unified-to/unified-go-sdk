@@ -20,39 +20,39 @@ type UpdateMartechListRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateMartechListRequest) GetMarketingList() shared.MarketingList {
-	if o == nil {
+func (u *UpdateMartechListRequest) GetMarketingList() shared.MarketingList {
+	if u == nil {
 		return shared.MarketingList{}
 	}
-	return o.MarketingList
+	return u.MarketingList
 }
 
-func (o *UpdateMartechListRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateMartechListRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateMartechListRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateMartechListRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateMartechListRequest) GetID() string {
-	if o == nil {
+func (u *UpdateMartechListRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateMartechListRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateMartechListRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateMartechListResponse struct {
@@ -66,30 +66,30 @@ type UpdateMartechListResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateMartechListResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateMartechListResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateMartechListResponse) GetMarketingList() *shared.MarketingList {
-	if o == nil {
+func (u *UpdateMartechListResponse) GetMarketingList() *shared.MarketingList {
+	if u == nil {
 		return nil
 	}
-	return o.MarketingList
+	return u.MarketingList
 }
 
-func (o *UpdateMartechListResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateMartechListResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateMartechListResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateMartechListResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

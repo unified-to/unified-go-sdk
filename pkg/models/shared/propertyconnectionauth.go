@@ -48,177 +48,177 @@ func (p *PropertyConnectionAuth) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PropertyConnectionAuth) GetAccessToken() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetAccessToken() *string {
+	if p == nil {
 		return nil
 	}
-	return o.AccessToken
+	return p.AccessToken
 }
 
-func (o *PropertyConnectionAuth) GetAPIURL() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetAPIURL() *string {
+	if p == nil {
 		return nil
 	}
-	return o.APIURL
+	return p.APIURL
 }
 
-func (o *PropertyConnectionAuth) GetAppID() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetAppID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.AppID
+	return p.AppID
 }
 
-func (o *PropertyConnectionAuth) GetAuthorizeURL() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetAuthorizeURL() *string {
+	if p == nil {
 		return nil
 	}
-	return o.AuthorizeURL
+	return p.AuthorizeURL
 }
 
-func (o *PropertyConnectionAuth) GetClientID() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetClientID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ClientID
+	return p.ClientID
 }
 
-func (o *PropertyConnectionAuth) GetClientSecret() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetClientSecret() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ClientSecret
+	return p.ClientSecret
 }
 
-func (o *PropertyConnectionAuth) GetConsumerKey() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetConsumerKey() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ConsumerKey
+	return p.ConsumerKey
 }
 
-func (o *PropertyConnectionAuth) GetConsumerSecret() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetConsumerSecret() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ConsumerSecret
+	return p.ConsumerSecret
 }
 
-func (o *PropertyConnectionAuth) GetDevAPIKey() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetDevAPIKey() *string {
+	if p == nil {
 		return nil
 	}
-	return o.DevAPIKey
+	return p.DevAPIKey
 }
 
-func (o *PropertyConnectionAuth) GetEmails() []string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetEmails() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Emails
+	return p.Emails
 }
 
-func (o *PropertyConnectionAuth) GetExpiresIn() *float64 {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetExpiresIn() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.ExpiresIn
+	return p.ExpiresIn
 }
 
-func (o *PropertyConnectionAuth) GetExpiryDate() *time.Time {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetExpiryDate() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.ExpiryDate
+	return p.ExpiryDate
 }
 
-func (o *PropertyConnectionAuth) GetKey() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetKey() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Key
+	return p.Key
 }
 
-func (o *PropertyConnectionAuth) GetMeta() map[string]any {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetMeta() map[string]any {
+	if p == nil {
 		return nil
 	}
-	return o.Meta
+	return p.Meta
 }
 
-func (o *PropertyConnectionAuth) GetName() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyConnectionAuth) GetOtherAuthInfo() []string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetOtherAuthInfo() []string {
+	if p == nil {
 		return nil
 	}
-	return o.OtherAuthInfo
+	return p.OtherAuthInfo
 }
 
-func (o *PropertyConnectionAuth) GetPem() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetPem() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Pem
+	return p.Pem
 }
 
-func (o *PropertyConnectionAuth) GetRefreshToken() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetRefreshToken() *string {
+	if p == nil {
 		return nil
 	}
-	return o.RefreshToken
+	return p.RefreshToken
 }
 
-func (o *PropertyConnectionAuth) GetRefreshTokenExpiresDate() *time.Time {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetRefreshTokenExpiresDate() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.RefreshTokenExpiresDate
+	return p.RefreshTokenExpiresDate
 }
 
-func (o *PropertyConnectionAuth) GetRefreshTokenExpiresIn() *float64 {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetRefreshTokenExpiresIn() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.RefreshTokenExpiresIn
+	return p.RefreshTokenExpiresIn
 }
 
-func (o *PropertyConnectionAuth) GetRefreshURL() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetRefreshURL() *string {
+	if p == nil {
 		return nil
 	}
-	return o.RefreshURL
+	return p.RefreshURL
 }
 
-func (o *PropertyConnectionAuth) GetState() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetState() *string {
+	if p == nil {
 		return nil
 	}
-	return o.State
+	return p.State
 }
 
-func (o *PropertyConnectionAuth) GetToken() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetToken() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Token
+	return p.Token
 }
 
-func (o *PropertyConnectionAuth) GetTokenURL() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetTokenURL() *string {
+	if p == nil {
 		return nil
 	}
-	return o.TokenURL
+	return p.TokenURL
 }
 
-func (o *PropertyConnectionAuth) GetUserID() *string {
-	if o == nil {
+func (p *PropertyConnectionAuth) GetUserID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.UserID
+	return p.UserID
 }

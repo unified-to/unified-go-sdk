@@ -18,32 +18,32 @@ type GetAccountingOrganizationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAccountingOrganizationRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAccountingOrganizationRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAccountingOrganizationRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAccountingOrganizationRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAccountingOrganizationRequest) GetID() string {
-	if o == nil {
+func (g *GetAccountingOrganizationRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAccountingOrganizationRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAccountingOrganizationRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAccountingOrganizationResponse struct {
@@ -57,30 +57,30 @@ type GetAccountingOrganizationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAccountingOrganizationResponse) GetAccountingOrganization() *shared.AccountingOrganization {
-	if o == nil {
+func (g *GetAccountingOrganizationResponse) GetAccountingOrganization() *shared.AccountingOrganization {
+	if g == nil {
 		return nil
 	}
-	return o.AccountingOrganization
+	return g.AccountingOrganization
 }
 
-func (o *GetAccountingOrganizationResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAccountingOrganizationResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAccountingOrganizationResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAccountingOrganizationResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAccountingOrganizationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAccountingOrganizationResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

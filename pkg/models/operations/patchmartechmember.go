@@ -20,39 +20,39 @@ type PatchMartechMemberRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchMartechMemberRequest) GetMarketingMember() shared.MarketingMember {
-	if o == nil {
+func (p *PatchMartechMemberRequest) GetMarketingMember() shared.MarketingMember {
+	if p == nil {
 		return shared.MarketingMember{}
 	}
-	return o.MarketingMember
+	return p.MarketingMember
 }
 
-func (o *PatchMartechMemberRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchMartechMemberRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchMartechMemberRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchMartechMemberRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchMartechMemberRequest) GetID() string {
-	if o == nil {
+func (p *PatchMartechMemberRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchMartechMemberRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchMartechMemberRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchMartechMemberResponse struct {
@@ -66,30 +66,30 @@ type PatchMartechMemberResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchMartechMemberResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchMartechMemberResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchMartechMemberResponse) GetMarketingMember() *shared.MarketingMember {
-	if o == nil {
+func (p *PatchMartechMemberResponse) GetMarketingMember() *shared.MarketingMember {
+	if p == nil {
 		return nil
 	}
-	return o.MarketingMember
+	return p.MarketingMember
 }
 
-func (o *PatchMartechMemberResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchMartechMemberResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchMartechMemberResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchMartechMemberResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

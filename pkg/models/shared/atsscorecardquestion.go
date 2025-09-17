@@ -8,23 +8,23 @@ type AtsScorecardQuestion struct {
 	Text        string  `json:"text"`
 }
 
-func (o *AtsScorecardQuestion) GetAnswer() *string {
-	if o == nil {
+func (a *AtsScorecardQuestion) GetAnswer() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Answer
+	return a.Answer
 }
 
-func (o *AtsScorecardQuestion) GetDescription() *string {
-	if o == nil {
+func (a *AtsScorecardQuestion) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AtsScorecardQuestion) GetText() string {
-	if o == nil {
+func (a *AtsScorecardQuestion) GetText() string {
+	if a == nil {
 		return ""
 	}
-	return o.Text
+	return a.Text
 }

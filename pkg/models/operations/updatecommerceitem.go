@@ -19,39 +19,39 @@ type UpdateCommerceItemRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateCommerceItemRequest) GetCommerceItem() shared.CommerceItem {
-	if o == nil {
+func (u *UpdateCommerceItemRequest) GetCommerceItem() shared.CommerceItem {
+	if u == nil {
 		return shared.CommerceItem{}
 	}
-	return o.CommerceItem
+	return u.CommerceItem
 }
 
-func (o *UpdateCommerceItemRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateCommerceItemRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateCommerceItemRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateCommerceItemRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateCommerceItemRequest) GetID() string {
-	if o == nil {
+func (u *UpdateCommerceItemRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateCommerceItemRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateCommerceItemRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateCommerceItemResponse struct {
@@ -65,30 +65,30 @@ type UpdateCommerceItemResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateCommerceItemResponse) GetCommerceItem() *shared.CommerceItem {
-	if o == nil {
+func (u *UpdateCommerceItemResponse) GetCommerceItem() *shared.CommerceItem {
+	if u == nil {
 		return nil
 	}
-	return o.CommerceItem
+	return u.CommerceItem
 }
 
-func (o *UpdateCommerceItemResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateCommerceItemResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateCommerceItemResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateCommerceItemResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateCommerceItemResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateCommerceItemResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

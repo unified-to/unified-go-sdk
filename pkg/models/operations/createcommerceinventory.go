@@ -17,32 +17,32 @@ type CreateCommerceInventoryRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateCommerceInventoryRequest) GetCommerceInventory() shared.CommerceInventory {
-	if o == nil {
+func (c *CreateCommerceInventoryRequest) GetCommerceInventory() shared.CommerceInventory {
+	if c == nil {
 		return shared.CommerceInventory{}
 	}
-	return o.CommerceInventory
+	return c.CommerceInventory
 }
 
-func (o *CreateCommerceInventoryRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateCommerceInventoryRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateCommerceInventoryRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateCommerceInventoryRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateCommerceInventoryRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateCommerceInventoryRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateCommerceInventoryResponse struct {
@@ -56,30 +56,30 @@ type CreateCommerceInventoryResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateCommerceInventoryResponse) GetCommerceInventory() *shared.CommerceInventory {
-	if o == nil {
+func (c *CreateCommerceInventoryResponse) GetCommerceInventory() *shared.CommerceInventory {
+	if c == nil {
 		return nil
 	}
-	return o.CommerceInventory
+	return c.CommerceInventory
 }
 
-func (o *CreateCommerceInventoryResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateCommerceInventoryResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateCommerceInventoryResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateCommerceInventoryResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateCommerceInventoryResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateCommerceInventoryResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

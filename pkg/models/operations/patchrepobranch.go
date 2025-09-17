@@ -19,39 +19,39 @@ type PatchRepoBranchRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchRepoBranchRequest) GetRepoBranch() shared.RepoBranch {
-	if o == nil {
+func (p *PatchRepoBranchRequest) GetRepoBranch() shared.RepoBranch {
+	if p == nil {
 		return shared.RepoBranch{}
 	}
-	return o.RepoBranch
+	return p.RepoBranch
 }
 
-func (o *PatchRepoBranchRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchRepoBranchRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchRepoBranchRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchRepoBranchRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchRepoBranchRequest) GetID() string {
-	if o == nil {
+func (p *PatchRepoBranchRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchRepoBranchRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchRepoBranchRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchRepoBranchResponse struct {
@@ -65,30 +65,30 @@ type PatchRepoBranchResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchRepoBranchResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchRepoBranchResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchRepoBranchResponse) GetRepoBranch() *shared.RepoBranch {
-	if o == nil {
+func (p *PatchRepoBranchResponse) GetRepoBranch() *shared.RepoBranch {
+	if p == nil {
 		return nil
 	}
-	return o.RepoBranch
+	return p.RepoBranch
 }
 
-func (o *PatchRepoBranchResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchRepoBranchResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchRepoBranchResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchRepoBranchResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

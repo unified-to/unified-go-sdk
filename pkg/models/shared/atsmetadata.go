@@ -541,58 +541,58 @@ type AtsMetadata struct {
 	Value     *Value     `json:"value,omitempty"`
 }
 
-func (o *AtsMetadata) GetExtraData() *ExtraData {
-	if o == nil {
+func (a *AtsMetadata) GetExtraData() *ExtraData {
+	if a == nil {
 		return nil
 	}
-	return o.ExtraData
+	return a.ExtraData
 }
 
-func (o *AtsMetadata) GetFormat() *Format {
-	if o == nil {
+func (a *AtsMetadata) GetFormat() *Format {
+	if a == nil {
 		return nil
 	}
-	return o.Format
+	return a.Format
 }
 
-func (o *AtsMetadata) GetID() *string {
-	if o == nil {
+func (a *AtsMetadata) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsMetadata) GetKey() *string {
-	if o == nil {
+func (a *AtsMetadata) GetKey() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Key
+	return a.Key
 }
 
-func (o *AtsMetadata) GetNamespace() *string {
-	if o == nil {
+func (a *AtsMetadata) GetNamespace() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Namespace
+	return a.Namespace
 }
 
-func (o *AtsMetadata) GetSlug() *string {
-	if o == nil {
+func (a *AtsMetadata) GetSlug() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Slug
+	return a.Slug
 }
 
-func (o *AtsMetadata) GetType() *string {
-	if o == nil {
+func (a *AtsMetadata) GetType() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }
 
-func (o *AtsMetadata) GetValue() *Value {
-	if o == nil {
+func (a *AtsMetadata) GetValue() *Value {
+	if a == nil {
 		return nil
 	}
-	return o.Value
+	return a.Value
 }

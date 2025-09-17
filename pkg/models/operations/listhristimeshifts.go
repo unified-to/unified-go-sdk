@@ -34,102 +34,102 @@ type ListHrisTimeshiftsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListHrisTimeshiftsRequest) GetCompanyID() *string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetCompanyID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyID
+	return l.CompanyID
 }
 
-func (o *ListHrisTimeshiftsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListHrisTimeshiftsRequest) GetEndLe() *string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetEndLe() *string {
+	if l == nil {
 		return nil
 	}
-	return o.EndLe
+	return l.EndLe
 }
 
-func (o *ListHrisTimeshiftsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListHrisTimeshiftsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListHrisTimeshiftsRequest) GetLocationID() *string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetLocationID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.LocationID
+	return l.LocationID
 }
 
-func (o *ListHrisTimeshiftsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListHrisTimeshiftsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListHrisTimeshiftsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListHrisTimeshiftsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListHrisTimeshiftsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListHrisTimeshiftsRequest) GetStartGte() *string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetStartGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.StartGte
+	return l.StartGte
 }
 
-func (o *ListHrisTimeshiftsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListHrisTimeshiftsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListHrisTimeshiftsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListHrisTimeshiftsResponse struct {
@@ -143,30 +143,30 @@ type ListHrisTimeshiftsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListHrisTimeshiftsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListHrisTimeshiftsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListHrisTimeshiftsResponse) GetHrisTimeshifts() []shared.HrisTimeshift {
-	if o == nil {
+func (l *ListHrisTimeshiftsResponse) GetHrisTimeshifts() []shared.HrisTimeshift {
+	if l == nil {
 		return nil
 	}
-	return o.HrisTimeshifts
+	return l.HrisTimeshifts
 }
 
-func (o *ListHrisTimeshiftsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListHrisTimeshiftsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListHrisTimeshiftsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListHrisTimeshiftsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

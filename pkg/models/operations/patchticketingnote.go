@@ -19,39 +19,39 @@ type PatchTicketingNoteRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchTicketingNoteRequest) GetTicketingNote() shared.TicketingNote {
-	if o == nil {
+func (p *PatchTicketingNoteRequest) GetTicketingNote() shared.TicketingNote {
+	if p == nil {
 		return shared.TicketingNote{}
 	}
-	return o.TicketingNote
+	return p.TicketingNote
 }
 
-func (o *PatchTicketingNoteRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchTicketingNoteRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchTicketingNoteRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchTicketingNoteRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchTicketingNoteRequest) GetID() string {
-	if o == nil {
+func (p *PatchTicketingNoteRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchTicketingNoteRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchTicketingNoteRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchTicketingNoteResponse struct {
@@ -65,30 +65,30 @@ type PatchTicketingNoteResponse struct {
 	TicketingNote *shared.TicketingNote
 }
 
-func (o *PatchTicketingNoteResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchTicketingNoteResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchTicketingNoteResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchTicketingNoteResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchTicketingNoteResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchTicketingNoteResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchTicketingNoteResponse) GetTicketingNote() *shared.TicketingNote {
-	if o == nil {
+func (p *PatchTicketingNoteResponse) GetTicketingNote() *shared.TicketingNote {
+	if p == nil {
 		return nil
 	}
-	return o.TicketingNote
+	return p.TicketingNote
 }

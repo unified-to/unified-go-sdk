@@ -19,39 +19,39 @@ type UpdateKmsCommentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateKmsCommentRequest) GetKmsComment() shared.KmsComment {
-	if o == nil {
+func (u *UpdateKmsCommentRequest) GetKmsComment() shared.KmsComment {
+	if u == nil {
 		return shared.KmsComment{}
 	}
-	return o.KmsComment
+	return u.KmsComment
 }
 
-func (o *UpdateKmsCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateKmsCommentRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateKmsCommentRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateKmsCommentRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateKmsCommentRequest) GetID() string {
-	if o == nil {
+func (u *UpdateKmsCommentRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateKmsCommentRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateKmsCommentRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateKmsCommentResponse struct {
@@ -65,30 +65,30 @@ type UpdateKmsCommentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateKmsCommentResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateKmsCommentResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateKmsCommentResponse) GetKmsComment() *shared.KmsComment {
-	if o == nil {
+func (u *UpdateKmsCommentResponse) GetKmsComment() *shared.KmsComment {
+	if u == nil {
 		return nil
 	}
-	return o.KmsComment
+	return u.KmsComment
 }
 
-func (o *UpdateKmsCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateKmsCommentResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateKmsCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateKmsCommentResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

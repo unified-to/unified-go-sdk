@@ -32,95 +32,95 @@ type ListAccountingBalancesheetsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetCategoryID() *string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetCategoryID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CategoryID
+	return l.CategoryID
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetContactID() *string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetContactID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ContactID
+	return l.ContactID
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetEndLe() *string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetEndLe() *string {
+	if l == nil {
 		return nil
 	}
-	return o.EndLe
+	return l.EndLe
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetStartGte() *string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetStartGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.StartGte
+	return l.StartGte
 }
 
-func (o *ListAccountingBalancesheetsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAccountingBalancesheetsResponse struct {
@@ -134,30 +134,30 @@ type ListAccountingBalancesheetsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAccountingBalancesheetsResponse) GetAccountingBalancesheets() []shared.AccountingBalancesheet {
-	if o == nil {
+func (l *ListAccountingBalancesheetsResponse) GetAccountingBalancesheets() []shared.AccountingBalancesheet {
+	if l == nil {
 		return nil
 	}
-	return o.AccountingBalancesheets
+	return l.AccountingBalancesheets
 }
 
-func (o *ListAccountingBalancesheetsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAccountingBalancesheetsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAccountingBalancesheetsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAccountingBalancesheetsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAccountingBalancesheetsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAccountingBalancesheetsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

@@ -48,100 +48,100 @@ func (k *KmsPage) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *KmsPage) GetCreatedAt() *time.Time {
-	if o == nil {
+func (k *KmsPage) GetCreatedAt() *time.Time {
+	if k == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return k.CreatedAt
 }
 
-func (o *KmsPage) GetDownloadURL() *string {
-	if o == nil {
+func (k *KmsPage) GetDownloadURL() *string {
+	if k == nil {
 		return nil
 	}
-	return o.DownloadURL
+	return k.DownloadURL
 }
 
-func (o *KmsPage) GetHasChildren() *bool {
-	if o == nil {
+func (k *KmsPage) GetHasChildren() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.HasChildren
+	return k.HasChildren
 }
 
-func (o *KmsPage) GetID() *string {
-	if o == nil {
+func (k *KmsPage) GetID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.ID
+	return k.ID
 }
 
-func (o *KmsPage) GetIsActive() *bool {
-	if o == nil {
+func (k *KmsPage) GetIsActive() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.IsActive
+	return k.IsActive
 }
 
-func (o *KmsPage) GetMetadata() []KmsPageMetadata {
-	if o == nil {
+func (k *KmsPage) GetMetadata() []KmsPageMetadata {
+	if k == nil {
 		return nil
 	}
-	return o.Metadata
+	return k.Metadata
 }
 
-func (o *KmsPage) GetParentPageID() *string {
-	if o == nil {
+func (k *KmsPage) GetParentPageID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.ParentPageID
+	return k.ParentPageID
 }
 
-func (o *KmsPage) GetRaw() map[string]any {
-	if o == nil {
+func (k *KmsPage) GetRaw() map[string]any {
+	if k == nil {
 		return nil
 	}
-	return o.Raw
+	return k.Raw
 }
 
-func (o *KmsPage) GetSpaceID() *string {
-	if o == nil {
+func (k *KmsPage) GetSpaceID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.SpaceID
+	return k.SpaceID
 }
 
-func (o *KmsPage) GetTitle() string {
-	if o == nil {
+func (k *KmsPage) GetTitle() string {
+	if k == nil {
 		return ""
 	}
-	return o.Title
+	return k.Title
 }
 
-func (o *KmsPage) GetType() KmsPageType {
-	if o == nil {
+func (k *KmsPage) GetType() KmsPageType {
+	if k == nil {
 		return KmsPageType("")
 	}
-	return o.Type
+	return k.Type
 }
 
-func (o *KmsPage) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (k *KmsPage) GetUpdatedAt() *time.Time {
+	if k == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return k.UpdatedAt
 }
 
-func (o *KmsPage) GetUserID() *string {
-	if o == nil {
+func (k *KmsPage) GetUserID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.UserID
+	return k.UserID
 }
 
-func (o *KmsPage) GetWebURL() *string {
-	if o == nil {
+func (k *KmsPage) GetWebURL() *string {
+	if k == nil {
 		return nil
 	}
-	return o.WebURL
+	return k.WebURL
 }

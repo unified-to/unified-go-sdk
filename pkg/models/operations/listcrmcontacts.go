@@ -30,88 +30,88 @@ type ListCrmContactsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListCrmContactsRequest) GetCompanyID() *string {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetCompanyID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyID
+	return l.CompanyID
 }
 
-func (o *ListCrmContactsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListCrmContactsRequest) GetDealID() *string {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetDealID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.DealID
+	return l.DealID
 }
 
-func (o *ListCrmContactsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListCrmContactsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListCrmContactsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListCrmContactsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListCrmContactsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListCrmContactsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListCrmContactsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListCrmContactsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListCrmContactsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListCrmContactsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListCrmContactsResponse struct {
@@ -125,30 +125,30 @@ type ListCrmContactsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListCrmContactsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListCrmContactsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListCrmContactsResponse) GetCrmContacts() []shared.CrmContact {
-	if o == nil {
+func (l *ListCrmContactsResponse) GetCrmContacts() []shared.CrmContact {
+	if l == nil {
 		return nil
 	}
-	return o.CrmContacts
+	return l.CrmContacts
 }
 
-func (o *ListCrmContactsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListCrmContactsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListCrmContactsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListCrmContactsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

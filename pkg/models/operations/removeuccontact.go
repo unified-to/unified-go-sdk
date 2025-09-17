@@ -13,18 +13,18 @@ type RemoveUcContactRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveUcContactRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveUcContactRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveUcContactRequest) GetID() string {
-	if o == nil {
+func (r *RemoveUcContactRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveUcContactResponse struct {
@@ -37,30 +37,30 @@ type RemoveUcContactResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveUcContactResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveUcContactResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveUcContactResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveUcContactResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveUcContactResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveUcContactResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveUcContactResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveUcContactResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

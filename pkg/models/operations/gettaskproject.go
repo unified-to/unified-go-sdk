@@ -18,32 +18,32 @@ type GetTaskProjectRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetTaskProjectRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetTaskProjectRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetTaskProjectRequest) GetFields() []string {
-	if o == nil {
+func (g *GetTaskProjectRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetTaskProjectRequest) GetID() string {
-	if o == nil {
+func (g *GetTaskProjectRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetTaskProjectRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetTaskProjectRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetTaskProjectResponse struct {
@@ -57,30 +57,30 @@ type GetTaskProjectResponse struct {
 	TaskProject *shared.TaskProject
 }
 
-func (o *GetTaskProjectResponse) GetContentType() string {
-	if o == nil {
+func (g *GetTaskProjectResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetTaskProjectResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetTaskProjectResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetTaskProjectResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetTaskProjectResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetTaskProjectResponse) GetTaskProject() *shared.TaskProject {
-	if o == nil {
+func (g *GetTaskProjectResponse) GetTaskProject() *shared.TaskProject {
+	if g == nil {
 		return nil
 	}
-	return o.TaskProject
+	return g.TaskProject
 }

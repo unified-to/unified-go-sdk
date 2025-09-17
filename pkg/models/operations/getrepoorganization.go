@@ -18,32 +18,32 @@ type GetRepoOrganizationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetRepoOrganizationRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetRepoOrganizationRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetRepoOrganizationRequest) GetFields() []string {
-	if o == nil {
+func (g *GetRepoOrganizationRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetRepoOrganizationRequest) GetID() string {
-	if o == nil {
+func (g *GetRepoOrganizationRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetRepoOrganizationRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetRepoOrganizationRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetRepoOrganizationResponse struct {
@@ -57,30 +57,30 @@ type GetRepoOrganizationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetRepoOrganizationResponse) GetContentType() string {
-	if o == nil {
+func (g *GetRepoOrganizationResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetRepoOrganizationResponse) GetRepoOrganization() *shared.RepoOrganization {
-	if o == nil {
+func (g *GetRepoOrganizationResponse) GetRepoOrganization() *shared.RepoOrganization {
+	if g == nil {
 		return nil
 	}
-	return o.RepoOrganization
+	return g.RepoOrganization
 }
 
-func (o *GetRepoOrganizationResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetRepoOrganizationResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetRepoOrganizationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetRepoOrganizationResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

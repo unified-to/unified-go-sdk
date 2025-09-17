@@ -19,39 +19,39 @@ type UpdateHrisTimeshiftRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateHrisTimeshiftRequest) GetHrisTimeshift() shared.HrisTimeshift {
-	if o == nil {
+func (u *UpdateHrisTimeshiftRequest) GetHrisTimeshift() shared.HrisTimeshift {
+	if u == nil {
 		return shared.HrisTimeshift{}
 	}
-	return o.HrisTimeshift
+	return u.HrisTimeshift
 }
 
-func (o *UpdateHrisTimeshiftRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateHrisTimeshiftRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateHrisTimeshiftRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateHrisTimeshiftRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateHrisTimeshiftRequest) GetID() string {
-	if o == nil {
+func (u *UpdateHrisTimeshiftRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateHrisTimeshiftRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateHrisTimeshiftRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateHrisTimeshiftResponse struct {
@@ -65,30 +65,30 @@ type UpdateHrisTimeshiftResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateHrisTimeshiftResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateHrisTimeshiftResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateHrisTimeshiftResponse) GetHrisTimeshift() *shared.HrisTimeshift {
-	if o == nil {
+func (u *UpdateHrisTimeshiftResponse) GetHrisTimeshift() *shared.HrisTimeshift {
+	if u == nil {
 		return nil
 	}
-	return o.HrisTimeshift
+	return u.HrisTimeshift
 }
 
-func (o *UpdateHrisTimeshiftResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateHrisTimeshiftResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateHrisTimeshiftResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateHrisTimeshiftResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

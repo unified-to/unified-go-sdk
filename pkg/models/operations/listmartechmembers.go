@@ -26,74 +26,74 @@ type ListMartechMembersRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListMartechMembersRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListMartechMembersRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListMartechMembersRequest) GetFields() []string {
-	if o == nil {
+func (l *ListMartechMembersRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListMartechMembersRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListMartechMembersRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListMartechMembersRequest) GetListID() *string {
-	if o == nil {
+func (l *ListMartechMembersRequest) GetListID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ListID
+	return l.ListID
 }
 
-func (o *ListMartechMembersRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListMartechMembersRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListMartechMembersRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListMartechMembersRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListMartechMembersRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListMartechMembersRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListMartechMembersRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListMartechMembersRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListMartechMembersRequest) GetSort() *string {
-	if o == nil {
+func (l *ListMartechMembersRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListMartechMembersRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListMartechMembersRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListMartechMembersResponse struct {
@@ -107,30 +107,30 @@ type ListMartechMembersResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListMartechMembersResponse) GetContentType() string {
-	if o == nil {
+func (l *ListMartechMembersResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListMartechMembersResponse) GetMarketingMembers() []shared.MarketingMember {
-	if o == nil {
+func (l *ListMartechMembersResponse) GetMarketingMembers() []shared.MarketingMember {
+	if l == nil {
 		return nil
 	}
-	return o.MarketingMembers
+	return l.MarketingMembers
 }
 
-func (o *ListMartechMembersResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListMartechMembersResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListMartechMembersResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListMartechMembersResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

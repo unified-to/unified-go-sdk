@@ -26,30 +26,30 @@ func (p *PropertyCrmEventMeeting) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PropertyCrmEventMeeting) GetDescription() *string {
-	if o == nil {
+func (p *PropertyCrmEventMeeting) GetDescription() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Description
+	return p.Description
 }
 
-func (o *PropertyCrmEventMeeting) GetEndAt() *time.Time {
-	if o == nil {
+func (p *PropertyCrmEventMeeting) GetEndAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.EndAt
+	return p.EndAt
 }
 
-func (o *PropertyCrmEventMeeting) GetStartAt() *time.Time {
-	if o == nil {
+func (p *PropertyCrmEventMeeting) GetStartAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.StartAt
+	return p.StartAt
 }
 
-func (o *PropertyCrmEventMeeting) GetTitle() *string {
-	if o == nil {
+func (p *PropertyCrmEventMeeting) GetTitle() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Title
+	return p.Title
 }

@@ -30,65 +30,65 @@ func (c *CrmPipeline) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CrmPipeline) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CrmPipeline) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CrmPipeline) GetDealProbability() *float64 {
-	if o == nil {
+func (c *CrmPipeline) GetDealProbability() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.DealProbability
+	return c.DealProbability
 }
 
-func (o *CrmPipeline) GetDisplayOrder() *float64 {
-	if o == nil {
+func (c *CrmPipeline) GetDisplayOrder() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.DisplayOrder
+	return c.DisplayOrder
 }
 
-func (o *CrmPipeline) GetID() *string {
-	if o == nil {
+func (c *CrmPipeline) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CrmPipeline) GetIsActive() *bool {
-	if o == nil {
+func (c *CrmPipeline) GetIsActive() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsActive
+	return c.IsActive
 }
 
-func (o *CrmPipeline) GetName() *string {
-	if o == nil {
+func (c *CrmPipeline) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CrmPipeline) GetRaw() map[string]any {
-	if o == nil {
+func (c *CrmPipeline) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CrmPipeline) GetStages() []CrmStage {
-	if o == nil {
+func (c *CrmPipeline) GetStages() []CrmStage {
+	if c == nil {
 		return nil
 	}
-	return o.Stages
+	return c.Stages
 }
 
-func (o *CrmPipeline) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CrmPipeline) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }

@@ -34,93 +34,93 @@ func (m *MessagingChannel) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *MessagingChannel) GetCreatedAt() *time.Time {
-	if o == nil {
+func (m *MessagingChannel) GetCreatedAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return m.CreatedAt
 }
 
-func (o *MessagingChannel) GetDescription() *string {
-	if o == nil {
+func (m *MessagingChannel) GetDescription() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Description
+	return m.Description
 }
 
-func (o *MessagingChannel) GetHasSubchannels() *bool {
-	if o == nil {
+func (m *MessagingChannel) GetHasSubchannels() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.HasSubchannels
+	return m.HasSubchannels
 }
 
-func (o *MessagingChannel) GetID() *string {
-	if o == nil {
+func (m *MessagingChannel) GetID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ID
+	return m.ID
 }
 
-func (o *MessagingChannel) GetIsActive() *bool {
-	if o == nil {
+func (m *MessagingChannel) GetIsActive() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.IsActive
+	return m.IsActive
 }
 
-func (o *MessagingChannel) GetIsPrivate() *bool {
-	if o == nil {
+func (m *MessagingChannel) GetIsPrivate() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.IsPrivate
+	return m.IsPrivate
 }
 
-func (o *MessagingChannel) GetMembers() []MessagingMember {
-	if o == nil {
+func (m *MessagingChannel) GetMembers() []MessagingMember {
+	if m == nil {
 		return nil
 	}
-	return o.Members
+	return m.Members
 }
 
-func (o *MessagingChannel) GetName() string {
-	if o == nil {
+func (m *MessagingChannel) GetName() string {
+	if m == nil {
 		return ""
 	}
-	return o.Name
+	return m.Name
 }
 
-func (o *MessagingChannel) GetParentChannelID() *string {
-	if o == nil {
+func (m *MessagingChannel) GetParentChannelID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ParentChannelID
+	return m.ParentChannelID
 }
 
-func (o *MessagingChannel) GetParentID() *string {
-	if o == nil {
+func (m *MessagingChannel) GetParentID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ParentID
+	return m.ParentID
 }
 
-func (o *MessagingChannel) GetRaw() map[string]any {
-	if o == nil {
+func (m *MessagingChannel) GetRaw() map[string]any {
+	if m == nil {
 		return nil
 	}
-	return o.Raw
+	return m.Raw
 }
 
-func (o *MessagingChannel) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (m *MessagingChannel) GetUpdatedAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return m.UpdatedAt
 }
 
-func (o *MessagingChannel) GetWebURL() *string {
-	if o == nil {
+func (m *MessagingChannel) GetWebURL() *string {
+	if m == nil {
 		return nil
 	}
-	return o.WebURL
+	return m.WebURL
 }

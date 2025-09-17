@@ -40,135 +40,135 @@ func (a *AccountingTransaction) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingTransaction) GetAccountID() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetAccountID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AccountID
+	return a.AccountID
 }
 
-func (o *AccountingTransaction) GetContactID() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetContactID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ContactID
+	return a.ContactID
 }
 
-func (o *AccountingTransaction) GetContacts() []AccountingTransactionContact {
-	if o == nil {
+func (a *AccountingTransaction) GetContacts() []AccountingTransactionContact {
+	if a == nil {
 		return nil
 	}
-	return o.Contacts
+	return a.Contacts
 }
 
-func (o *AccountingTransaction) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingTransaction) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingTransaction) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingTransaction) GetCustomerMessage() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetCustomerMessage() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CustomerMessage
+	return a.CustomerMessage
 }
 
-func (o *AccountingTransaction) GetID() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingTransaction) GetLineitems() []AccountingTransactionLineItem {
-	if o == nil {
+func (a *AccountingTransaction) GetLineitems() []AccountingTransactionLineItem {
+	if a == nil {
 		return nil
 	}
-	return o.Lineitems
+	return a.Lineitems
 }
 
-func (o *AccountingTransaction) GetMemo() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetMemo() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Memo
+	return a.Memo
 }
 
-func (o *AccountingTransaction) GetPaymentMethod() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetPaymentMethod() *string {
+	if a == nil {
 		return nil
 	}
-	return o.PaymentMethod
+	return a.PaymentMethod
 }
 
-func (o *AccountingTransaction) GetPaymentTerms() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetPaymentTerms() *string {
+	if a == nil {
 		return nil
 	}
-	return o.PaymentTerms
+	return a.PaymentTerms
 }
 
-func (o *AccountingTransaction) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingTransaction) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingTransaction) GetReference() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetReference() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Reference
+	return a.Reference
 }
 
-func (o *AccountingTransaction) GetSplitAccountID() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetSplitAccountID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.SplitAccountID
+	return a.SplitAccountID
 }
 
-func (o *AccountingTransaction) GetSubTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingTransaction) GetSubTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.SubTotalAmount
+	return a.SubTotalAmount
 }
 
-func (o *AccountingTransaction) GetTaxAmount() *float64 {
-	if o == nil {
+func (a *AccountingTransaction) GetTaxAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TaxAmount
+	return a.TaxAmount
 }
 
-func (o *AccountingTransaction) GetTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingTransaction) GetTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalAmount
+	return a.TotalAmount
 }
 
-func (o *AccountingTransaction) GetType() *string {
-	if o == nil {
+func (a *AccountingTransaction) GetType() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }
 
-func (o *AccountingTransaction) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingTransaction) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

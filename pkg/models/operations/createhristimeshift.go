@@ -17,32 +17,32 @@ type CreateHrisTimeshiftRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateHrisTimeshiftRequest) GetHrisTimeshift() shared.HrisTimeshift {
-	if o == nil {
+func (c *CreateHrisTimeshiftRequest) GetHrisTimeshift() shared.HrisTimeshift {
+	if c == nil {
 		return shared.HrisTimeshift{}
 	}
-	return o.HrisTimeshift
+	return c.HrisTimeshift
 }
 
-func (o *CreateHrisTimeshiftRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateHrisTimeshiftRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateHrisTimeshiftRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateHrisTimeshiftRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateHrisTimeshiftRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateHrisTimeshiftRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateHrisTimeshiftResponse struct {
@@ -56,30 +56,30 @@ type CreateHrisTimeshiftResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateHrisTimeshiftResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateHrisTimeshiftResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateHrisTimeshiftResponse) GetHrisTimeshift() *shared.HrisTimeshift {
-	if o == nil {
+func (c *CreateHrisTimeshiftResponse) GetHrisTimeshift() *shared.HrisTimeshift {
+	if c == nil {
 		return nil
 	}
-	return o.HrisTimeshift
+	return c.HrisTimeshift
 }
 
-func (o *CreateHrisTimeshiftResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateHrisTimeshiftResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateHrisTimeshiftResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateHrisTimeshiftResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

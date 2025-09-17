@@ -16,79 +16,79 @@ type CalendarLink struct {
 	URL           string         `json:"url"`
 }
 
-func (o *CalendarLink) GetCreatedAt() *string {
-	if o == nil {
+func (c *CalendarLink) GetCreatedAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CalendarLink) GetDescription() *string {
-	if o == nil {
+func (c *CalendarLink) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CalendarLink) GetDuration() *float64 {
-	if o == nil {
+func (c *CalendarLink) GetDuration() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Duration
+	return c.Duration
 }
 
-func (o *CalendarLink) GetID() *string {
-	if o == nil {
+func (c *CalendarLink) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CalendarLink) GetIsActive() *bool {
-	if o == nil {
+func (c *CalendarLink) GetIsActive() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsActive
+	return c.IsActive
 }
 
-func (o *CalendarLink) GetName() *string {
-	if o == nil {
+func (c *CalendarLink) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CalendarLink) GetPriceAmount() *float64 {
-	if o == nil {
+func (c *CalendarLink) GetPriceAmount() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.PriceAmount
+	return c.PriceAmount
 }
 
-func (o *CalendarLink) GetPriceCurrency() *string {
-	if o == nil {
+func (c *CalendarLink) GetPriceCurrency() *string {
+	if c == nil {
 		return nil
 	}
-	return o.PriceCurrency
+	return c.PriceCurrency
 }
 
-func (o *CalendarLink) GetRaw() map[string]any {
-	if o == nil {
+func (c *CalendarLink) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CalendarLink) GetUpdatedAt() *string {
-	if o == nil {
+func (c *CalendarLink) GetUpdatedAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *CalendarLink) GetURL() string {
-	if o == nil {
+func (c *CalendarLink) GetURL() string {
+	if c == nil {
 		return ""
 	}
-	return o.URL
+	return c.URL
 }

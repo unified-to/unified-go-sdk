@@ -19,39 +19,39 @@ type PatchAccountingCategoryRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAccountingCategoryRequest) GetAccountingCategory() shared.AccountingCategory {
-	if o == nil {
+func (p *PatchAccountingCategoryRequest) GetAccountingCategory() shared.AccountingCategory {
+	if p == nil {
 		return shared.AccountingCategory{}
 	}
-	return o.AccountingCategory
+	return p.AccountingCategory
 }
 
-func (o *PatchAccountingCategoryRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAccountingCategoryRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAccountingCategoryRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAccountingCategoryRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAccountingCategoryRequest) GetID() string {
-	if o == nil {
+func (p *PatchAccountingCategoryRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAccountingCategoryRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAccountingCategoryRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAccountingCategoryResponse struct {
@@ -65,30 +65,30 @@ type PatchAccountingCategoryResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAccountingCategoryResponse) GetAccountingCategory() *shared.AccountingCategory {
-	if o == nil {
+func (p *PatchAccountingCategoryResponse) GetAccountingCategory() *shared.AccountingCategory {
+	if p == nil {
 		return nil
 	}
-	return o.AccountingCategory
+	return p.AccountingCategory
 }
 
-func (o *PatchAccountingCategoryResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAccountingCategoryResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAccountingCategoryResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAccountingCategoryResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAccountingCategoryResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAccountingCategoryResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

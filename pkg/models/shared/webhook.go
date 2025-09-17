@@ -188,170 +188,170 @@ func (w *Webhook) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *Webhook) GetCheckedAt() *time.Time {
-	if o == nil {
+func (w *Webhook) GetCheckedAt() *time.Time {
+	if w == nil {
 		return nil
 	}
-	return o.CheckedAt
+	return w.CheckedAt
 }
 
-func (o *Webhook) GetConnectionID() string {
-	if o == nil {
+func (w *Webhook) GetConnectionID() string {
+	if w == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return w.ConnectionID
 }
 
-func (o *Webhook) GetCreatedAt() *time.Time {
-	if o == nil {
+func (w *Webhook) GetCreatedAt() *time.Time {
+	if w == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return w.CreatedAt
 }
 
-func (o *Webhook) GetDbNamePrefix() *string {
-	if o == nil {
+func (w *Webhook) GetDbNamePrefix() *string {
+	if w == nil {
 		return nil
 	}
-	return o.DbNamePrefix
+	return w.DbNamePrefix
 }
 
-func (o *Webhook) GetDbSchema() *string {
-	if o == nil {
+func (w *Webhook) GetDbSchema() *string {
+	if w == nil {
 		return nil
 	}
-	return o.DbSchema
+	return w.DbSchema
 }
 
-func (o *Webhook) GetDbType() *DbType {
-	if o == nil {
+func (w *Webhook) GetDbType() *DbType {
+	if w == nil {
 		return nil
 	}
-	return o.DbType
+	return w.DbType
 }
 
-func (o *Webhook) GetDbURL() *string {
-	if o == nil {
+func (w *Webhook) GetDbURL() *string {
+	if w == nil {
 		return nil
 	}
-	return o.DbURL
+	return w.DbURL
 }
 
-func (o *Webhook) GetEnvironment() *string {
-	if o == nil {
+func (w *Webhook) GetEnvironment() *string {
+	if w == nil {
 		return nil
 	}
-	return o.Environment
+	return w.Environment
 }
 
-func (o *Webhook) GetEvent() Event {
-	if o == nil {
+func (w *Webhook) GetEvent() Event {
+	if w == nil {
 		return Event("")
 	}
-	return o.Event
+	return w.Event
 }
 
-func (o *Webhook) GetFields() *string {
-	if o == nil {
+func (w *Webhook) GetFields() *string {
+	if w == nil {
 		return nil
 	}
-	return o.Fields
+	return w.Fields
 }
 
-func (o *Webhook) GetFilters() map[string]any {
-	if o == nil {
+func (w *Webhook) GetFilters() map[string]any {
+	if w == nil {
 		return nil
 	}
-	return o.Filters
+	return w.Filters
 }
 
-func (o *Webhook) GetHookURL() *string {
-	if o == nil {
+func (w *Webhook) GetHookURL() *string {
+	if w == nil {
 		return nil
 	}
-	return o.HookURL
+	return w.HookURL
 }
 
-func (o *Webhook) GetID() *string {
-	if o == nil {
+func (w *Webhook) GetID() *string {
+	if w == nil {
 		return nil
 	}
-	return o.ID
+	return w.ID
 }
 
-func (o *Webhook) GetIntegrationType() *string {
-	if o == nil {
+func (w *Webhook) GetIntegrationType() *string {
+	if w == nil {
 		return nil
 	}
-	return o.IntegrationType
+	return w.IntegrationType
 }
 
-func (o *Webhook) GetInterval() *float64 {
-	if o == nil {
+func (w *Webhook) GetInterval() *float64 {
+	if w == nil {
 		return nil
 	}
-	return o.Interval
+	return w.Interval
 }
 
-func (o *Webhook) GetIsHealthy() *bool {
-	if o == nil {
+func (w *Webhook) GetIsHealthy() *bool {
+	if w == nil {
 		return nil
 	}
-	return o.IsHealthy
+	return w.IsHealthy
 }
 
-func (o *Webhook) GetIsPaused() *bool {
-	if o == nil {
+func (w *Webhook) GetIsPaused() *bool {
+	if w == nil {
 		return nil
 	}
-	return o.IsPaused
+	return w.IsPaused
 }
 
-func (o *Webhook) GetMeta() map[string]any {
-	if o == nil {
+func (w *Webhook) GetMeta() map[string]any {
+	if w == nil {
 		return nil
 	}
-	return o.Meta
+	return w.Meta
 }
 
-func (o *Webhook) GetObjectType() ObjectType {
-	if o == nil {
+func (w *Webhook) GetObjectType() ObjectType {
+	if w == nil {
 		return ObjectType("")
 	}
-	return o.ObjectType
+	return w.ObjectType
 }
 
-func (o *Webhook) GetPageMaxLimit() *float64 {
-	if o == nil {
+func (w *Webhook) GetPageMaxLimit() *float64 {
+	if w == nil {
 		return nil
 	}
-	return o.PageMaxLimit
+	return w.PageMaxLimit
 }
 
-func (o *Webhook) GetRuns() []string {
-	if o == nil {
+func (w *Webhook) GetRuns() []string {
+	if w == nil {
 		return nil
 	}
-	return o.Runs
+	return w.Runs
 }
 
-func (o *Webhook) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (w *Webhook) GetUpdatedAt() *time.Time {
+	if w == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return w.UpdatedAt
 }
 
-func (o *Webhook) GetWebhookType() *WebhookType {
-	if o == nil {
+func (w *Webhook) GetWebhookType() *WebhookType {
+	if w == nil {
 		return nil
 	}
-	return o.WebhookType
+	return w.WebhookType
 }
 
-func (o *Webhook) GetWorkspaceID() *string {
-	if o == nil {
+func (w *Webhook) GetWorkspaceID() *string {
+	if w == nil {
 		return nil
 	}
-	return o.WorkspaceID
+	return w.WorkspaceID
 }

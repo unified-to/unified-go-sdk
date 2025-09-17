@@ -31,72 +31,72 @@ func (r *RepoRepository) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *RepoRepository) GetCreatedAt() *time.Time {
-	if o == nil {
+func (r *RepoRepository) GetCreatedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return r.CreatedAt
 }
 
-func (o *RepoRepository) GetDescription() *string {
-	if o == nil {
+func (r *RepoRepository) GetDescription() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Description
+	return r.Description
 }
 
-func (o *RepoRepository) GetID() *string {
-	if o == nil {
+func (r *RepoRepository) GetID() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ID
+	return r.ID
 }
 
-func (o *RepoRepository) GetIsPrivate() *bool {
-	if o == nil {
+func (r *RepoRepository) GetIsPrivate() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.IsPrivate
+	return r.IsPrivate
 }
 
-func (o *RepoRepository) GetName() string {
-	if o == nil {
+func (r *RepoRepository) GetName() string {
+	if r == nil {
 		return ""
 	}
-	return o.Name
+	return r.Name
 }
 
-func (o *RepoRepository) GetOrgID() *string {
-	if o == nil {
+func (r *RepoRepository) GetOrgID() *string {
+	if r == nil {
 		return nil
 	}
-	return o.OrgID
+	return r.OrgID
 }
 
-func (o *RepoRepository) GetOwner() *string {
-	if o == nil {
+func (r *RepoRepository) GetOwner() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Owner
+	return r.Owner
 }
 
-func (o *RepoRepository) GetRaw() map[string]any {
-	if o == nil {
+func (r *RepoRepository) GetRaw() map[string]any {
+	if r == nil {
 		return nil
 	}
-	return o.Raw
+	return r.Raw
 }
 
-func (o *RepoRepository) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (r *RepoRepository) GetUpdatedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return r.UpdatedAt
 }
 
-func (o *RepoRepository) GetWebURL() *string {
-	if o == nil {
+func (r *RepoRepository) GetWebURL() *string {
+	if r == nil {
 		return nil
 	}
-	return o.WebURL
+	return r.WebURL
 }

@@ -70,128 +70,128 @@ func (a *AccountingAccount) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingAccount) GetBalance() *float64 {
-	if o == nil {
+func (a *AccountingAccount) GetBalance() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.Balance
+	return a.Balance
 }
 
-func (o *AccountingAccount) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingAccount) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingAccount) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingAccount) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingAccount) GetCustomerDefinedCode() *string {
-	if o == nil {
+func (a *AccountingAccount) GetCustomerDefinedCode() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CustomerDefinedCode
+	return a.CustomerDefinedCode
 }
 
-func (o *AccountingAccount) GetDescription() *string {
-	if o == nil {
+func (a *AccountingAccount) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AccountingAccount) GetGroup() *string {
-	if o == nil {
+func (a *AccountingAccount) GetGroup() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Group
+	return a.Group
 }
 
-func (o *AccountingAccount) GetID() *string {
-	if o == nil {
+func (a *AccountingAccount) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingAccount) GetIsPayable() *bool {
-	if o == nil {
+func (a *AccountingAccount) GetIsPayable() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsPayable
+	return a.IsPayable
 }
 
-func (o *AccountingAccount) GetName() *string {
-	if o == nil {
+func (a *AccountingAccount) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingAccount) GetParentAccountID() *string {
-	if o == nil {
+func (a *AccountingAccount) GetParentAccountID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ParentAccountID
+	return a.ParentAccountID
 }
 
-func (o *AccountingAccount) GetParentID() *string {
-	if o == nil {
+func (a *AccountingAccount) GetParentID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ParentID
+	return a.ParentID
 }
 
-func (o *AccountingAccount) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingAccount) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingAccount) GetSection() *string {
-	if o == nil {
+func (a *AccountingAccount) GetSection() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Section
+	return a.Section
 }
 
-func (o *AccountingAccount) GetStatus() *Status {
-	if o == nil {
+func (a *AccountingAccount) GetStatus() *Status {
+	if a == nil {
 		return nil
 	}
-	return o.Status
+	return a.Status
 }
 
-func (o *AccountingAccount) GetSubgroup() *string {
-	if o == nil {
+func (a *AccountingAccount) GetSubgroup() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Subgroup
+	return a.Subgroup
 }
 
-func (o *AccountingAccount) GetSubsection() *string {
-	if o == nil {
+func (a *AccountingAccount) GetSubsection() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Subsection
+	return a.Subsection
 }
 
-func (o *AccountingAccount) GetType() *Type {
-	if o == nil {
+func (a *AccountingAccount) GetType() *Type {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }
 
-func (o *AccountingAccount) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingAccount) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

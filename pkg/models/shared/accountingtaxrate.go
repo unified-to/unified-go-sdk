@@ -29,58 +29,58 @@ func (a *AccountingTaxrate) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingTaxrate) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingTaxrate) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingTaxrate) GetDescription() *string {
-	if o == nil {
+func (a *AccountingTaxrate) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AccountingTaxrate) GetID() *string {
-	if o == nil {
+func (a *AccountingTaxrate) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingTaxrate) GetIsActive() *bool {
-	if o == nil {
+func (a *AccountingTaxrate) GetIsActive() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsActive
+	return a.IsActive
 }
 
-func (o *AccountingTaxrate) GetName() *string {
-	if o == nil {
+func (a *AccountingTaxrate) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingTaxrate) GetRate() *float64 {
-	if o == nil {
+func (a *AccountingTaxrate) GetRate() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.Rate
+	return a.Rate
 }
 
-func (o *AccountingTaxrate) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingTaxrate) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingTaxrate) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingTaxrate) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

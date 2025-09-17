@@ -28,81 +28,81 @@ type ListVerificationRequestsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListVerificationRequestsRequest) GetCandidateID() *string {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetCandidateID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CandidateID
+	return l.CandidateID
 }
 
-func (o *ListVerificationRequestsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListVerificationRequestsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListVerificationRequestsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListVerificationRequestsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListVerificationRequestsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListVerificationRequestsRequest) GetPackageID() *string {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetPackageID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.PackageID
+	return l.PackageID
 }
 
-func (o *ListVerificationRequestsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListVerificationRequestsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListVerificationRequestsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListVerificationRequestsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListVerificationRequestsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListVerificationRequestsResponse struct {
@@ -116,30 +116,30 @@ type ListVerificationRequestsResponse struct {
 	VerificationRequests []shared.VerificationRequest
 }
 
-func (o *ListVerificationRequestsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListVerificationRequestsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListVerificationRequestsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListVerificationRequestsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListVerificationRequestsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListVerificationRequestsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListVerificationRequestsResponse) GetVerificationRequests() []shared.VerificationRequest {
-	if o == nil {
+func (l *ListVerificationRequestsResponse) GetVerificationRequests() []shared.VerificationRequest {
+	if l == nil {
 		return nil
 	}
-	return o.VerificationRequests
+	return l.VerificationRequests
 }

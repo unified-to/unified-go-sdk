@@ -19,39 +19,39 @@ type UpdateAccountingCreditmemoRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAccountingCreditmemoRequest) GetAccountingCreditmemo() shared.AccountingCreditmemo {
-	if o == nil {
+func (u *UpdateAccountingCreditmemoRequest) GetAccountingCreditmemo() shared.AccountingCreditmemo {
+	if u == nil {
 		return shared.AccountingCreditmemo{}
 	}
-	return o.AccountingCreditmemo
+	return u.AccountingCreditmemo
 }
 
-func (o *UpdateAccountingCreditmemoRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAccountingCreditmemoRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAccountingCreditmemoRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAccountingCreditmemoRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAccountingCreditmemoRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAccountingCreditmemoRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAccountingCreditmemoRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAccountingCreditmemoRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAccountingCreditmemoResponse struct {
@@ -65,30 +65,30 @@ type UpdateAccountingCreditmemoResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAccountingCreditmemoResponse) GetAccountingCreditmemo() *shared.AccountingCreditmemo {
-	if o == nil {
+func (u *UpdateAccountingCreditmemoResponse) GetAccountingCreditmemo() *shared.AccountingCreditmemo {
+	if u == nil {
 		return nil
 	}
-	return o.AccountingCreditmemo
+	return u.AccountingCreditmemo
 }
 
-func (o *UpdateAccountingCreditmemoResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAccountingCreditmemoResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAccountingCreditmemoResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAccountingCreditmemoResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAccountingCreditmemoResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAccountingCreditmemoResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

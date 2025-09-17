@@ -17,32 +17,32 @@ type CreateUcCommentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateUcCommentRequest) GetUcComment() shared.UcComment {
-	if o == nil {
+func (c *CreateUcCommentRequest) GetUcComment() shared.UcComment {
+	if c == nil {
 		return shared.UcComment{}
 	}
-	return o.UcComment
+	return c.UcComment
 }
 
-func (o *CreateUcCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateUcCommentRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateUcCommentRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateUcCommentRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateUcCommentRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateUcCommentRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateUcCommentResponse struct {
@@ -56,30 +56,30 @@ type CreateUcCommentResponse struct {
 	UcComment *shared.UcComment
 }
 
-func (o *CreateUcCommentResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateUcCommentResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateUcCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateUcCommentResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateUcCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateUcCommentResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateUcCommentResponse) GetUcComment() *shared.UcComment {
-	if o == nil {
+func (c *CreateUcCommentResponse) GetUcComment() *shared.UcComment {
+	if c == nil {
 		return nil
 	}
-	return o.UcComment
+	return c.UcComment
 }

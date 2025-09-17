@@ -18,32 +18,32 @@ type GetAtsScorecardRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAtsScorecardRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAtsScorecardRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAtsScorecardRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAtsScorecardRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAtsScorecardRequest) GetID() string {
-	if o == nil {
+func (g *GetAtsScorecardRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAtsScorecardRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAtsScorecardRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAtsScorecardResponse struct {
@@ -57,30 +57,30 @@ type GetAtsScorecardResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAtsScorecardResponse) GetAtsScorecard() *shared.AtsScorecard {
-	if o == nil {
+func (g *GetAtsScorecardResponse) GetAtsScorecard() *shared.AtsScorecard {
+	if g == nil {
 		return nil
 	}
-	return o.AtsScorecard
+	return g.AtsScorecard
 }
 
-func (o *GetAtsScorecardResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAtsScorecardResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAtsScorecardResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAtsScorecardResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAtsScorecardResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAtsScorecardResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

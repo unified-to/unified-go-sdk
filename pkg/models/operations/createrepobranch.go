@@ -17,32 +17,32 @@ type CreateRepoBranchRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateRepoBranchRequest) GetRepoBranch() shared.RepoBranch {
-	if o == nil {
+func (c *CreateRepoBranchRequest) GetRepoBranch() shared.RepoBranch {
+	if c == nil {
 		return shared.RepoBranch{}
 	}
-	return o.RepoBranch
+	return c.RepoBranch
 }
 
-func (o *CreateRepoBranchRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateRepoBranchRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateRepoBranchRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateRepoBranchRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateRepoBranchRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateRepoBranchRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateRepoBranchResponse struct {
@@ -56,30 +56,30 @@ type CreateRepoBranchResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateRepoBranchResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateRepoBranchResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateRepoBranchResponse) GetRepoBranch() *shared.RepoBranch {
-	if o == nil {
+func (c *CreateRepoBranchResponse) GetRepoBranch() *shared.RepoBranch {
+	if c == nil {
 		return nil
 	}
-	return o.RepoBranch
+	return c.RepoBranch
 }
 
-func (o *CreateRepoBranchResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateRepoBranchResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateRepoBranchResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateRepoBranchResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

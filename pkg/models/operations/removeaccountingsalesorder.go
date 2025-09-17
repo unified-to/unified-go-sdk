@@ -13,18 +13,18 @@ type RemoveAccountingSalesorderRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveAccountingSalesorderRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveAccountingSalesorderRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveAccountingSalesorderRequest) GetID() string {
-	if o == nil {
+func (r *RemoveAccountingSalesorderRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveAccountingSalesorderResponse struct {
@@ -37,30 +37,30 @@ type RemoveAccountingSalesorderResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveAccountingSalesorderResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveAccountingSalesorderResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveAccountingSalesorderResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveAccountingSalesorderResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveAccountingSalesorderResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveAccountingSalesorderResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveAccountingSalesorderResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveAccountingSalesorderResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

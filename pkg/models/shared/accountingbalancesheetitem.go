@@ -9,30 +9,30 @@ type AccountingBalancesheetItem struct {
 	SubItems  []PropertyAccountingBalancesheetItemSubItems `json:"sub_items,omitempty"`
 }
 
-func (o *AccountingBalancesheetItem) GetAccountID() *string {
-	if o == nil {
+func (a *AccountingBalancesheetItem) GetAccountID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AccountID
+	return a.AccountID
 }
 
-func (o *AccountingBalancesheetItem) GetAmount() *float64 {
-	if o == nil {
+func (a *AccountingBalancesheetItem) GetAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.Amount
+	return a.Amount
 }
 
-func (o *AccountingBalancesheetItem) GetName() *string {
-	if o == nil {
+func (a *AccountingBalancesheetItem) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingBalancesheetItem) GetSubItems() []PropertyAccountingBalancesheetItemSubItems {
-	if o == nil {
+func (a *AccountingBalancesheetItem) GetSubItems() []PropertyAccountingBalancesheetItemSubItems {
+	if a == nil {
 		return nil
 	}
-	return o.SubItems
+	return a.SubItems
 }

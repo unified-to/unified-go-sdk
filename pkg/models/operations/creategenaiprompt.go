@@ -17,32 +17,32 @@ type CreateGenaiPromptRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateGenaiPromptRequest) GetGenaiPrompt() shared.GenaiPrompt {
-	if o == nil {
+func (c *CreateGenaiPromptRequest) GetGenaiPrompt() shared.GenaiPrompt {
+	if c == nil {
 		return shared.GenaiPrompt{}
 	}
-	return o.GenaiPrompt
+	return c.GenaiPrompt
 }
 
-func (o *CreateGenaiPromptRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateGenaiPromptRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateGenaiPromptRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateGenaiPromptRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateGenaiPromptRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateGenaiPromptRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateGenaiPromptResponse struct {
@@ -56,30 +56,30 @@ type CreateGenaiPromptResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateGenaiPromptResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateGenaiPromptResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateGenaiPromptResponse) GetGenaiPrompt() *shared.GenaiPrompt {
-	if o == nil {
+func (c *CreateGenaiPromptResponse) GetGenaiPrompt() *shared.GenaiPrompt {
+	if c == nil {
 		return nil
 	}
-	return o.GenaiPrompt
+	return c.GenaiPrompt
 }
 
-func (o *CreateGenaiPromptResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateGenaiPromptResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateGenaiPromptResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateGenaiPromptResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

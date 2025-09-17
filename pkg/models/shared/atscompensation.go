@@ -40,37 +40,37 @@ type AtsCompensation struct {
 	Type      *AtsCompensationType `json:"type,omitempty"`
 }
 
-func (o *AtsCompensation) GetCurrency() *string {
-	if o == nil {
+func (a *AtsCompensation) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AtsCompensation) GetFrequency() *Frequency {
-	if o == nil {
+func (a *AtsCompensation) GetFrequency() *Frequency {
+	if a == nil {
 		return nil
 	}
-	return o.Frequency
+	return a.Frequency
 }
 
-func (o *AtsCompensation) GetMax() *float64 {
-	if o == nil {
+func (a *AtsCompensation) GetMax() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.Max
+	return a.Max
 }
 
-func (o *AtsCompensation) GetMin() *float64 {
-	if o == nil {
+func (a *AtsCompensation) GetMin() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.Min
+	return a.Min
 }
 
-func (o *AtsCompensation) GetType() *AtsCompensationType {
-	if o == nil {
+func (a *AtsCompensation) GetType() *AtsCompensationType {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }

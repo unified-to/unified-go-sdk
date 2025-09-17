@@ -19,39 +19,39 @@ type UpdateHrisEmployeeRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateHrisEmployeeRequest) GetHrisEmployee() shared.HrisEmployee {
-	if o == nil {
+func (u *UpdateHrisEmployeeRequest) GetHrisEmployee() shared.HrisEmployee {
+	if u == nil {
 		return shared.HrisEmployee{}
 	}
-	return o.HrisEmployee
+	return u.HrisEmployee
 }
 
-func (o *UpdateHrisEmployeeRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateHrisEmployeeRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateHrisEmployeeRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateHrisEmployeeRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateHrisEmployeeRequest) GetID() string {
-	if o == nil {
+func (u *UpdateHrisEmployeeRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateHrisEmployeeRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateHrisEmployeeRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateHrisEmployeeResponse struct {
@@ -65,30 +65,30 @@ type UpdateHrisEmployeeResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateHrisEmployeeResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateHrisEmployeeResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateHrisEmployeeResponse) GetHrisEmployee() *shared.HrisEmployee {
-	if o == nil {
+func (u *UpdateHrisEmployeeResponse) GetHrisEmployee() *shared.HrisEmployee {
+	if u == nil {
 		return nil
 	}
-	return o.HrisEmployee
+	return u.HrisEmployee
 }
 
-func (o *UpdateHrisEmployeeResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateHrisEmployeeResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateHrisEmployeeResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateHrisEmployeeResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

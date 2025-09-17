@@ -19,39 +19,39 @@ type UpdateMessagingMessageRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateMessagingMessageRequest) GetMessagingMessage() shared.MessagingMessage {
-	if o == nil {
+func (u *UpdateMessagingMessageRequest) GetMessagingMessage() shared.MessagingMessage {
+	if u == nil {
 		return shared.MessagingMessage{}
 	}
-	return o.MessagingMessage
+	return u.MessagingMessage
 }
 
-func (o *UpdateMessagingMessageRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateMessagingMessageRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateMessagingMessageRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateMessagingMessageRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateMessagingMessageRequest) GetID() string {
-	if o == nil {
+func (u *UpdateMessagingMessageRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateMessagingMessageRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateMessagingMessageRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateMessagingMessageResponse struct {
@@ -65,30 +65,30 @@ type UpdateMessagingMessageResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateMessagingMessageResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateMessagingMessageResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateMessagingMessageResponse) GetMessagingMessage() *shared.MessagingMessage {
-	if o == nil {
+func (u *UpdateMessagingMessageResponse) GetMessagingMessage() *shared.MessagingMessage {
+	if u == nil {
 		return nil
 	}
-	return o.MessagingMessage
+	return u.MessagingMessage
 }
 
-func (o *UpdateMessagingMessageResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateMessagingMessageResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateMessagingMessageResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateMessagingMessageResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

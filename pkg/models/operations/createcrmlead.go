@@ -17,32 +17,32 @@ type CreateCrmLeadRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateCrmLeadRequest) GetCrmLead() shared.CrmLead {
-	if o == nil {
+func (c *CreateCrmLeadRequest) GetCrmLead() shared.CrmLead {
+	if c == nil {
 		return shared.CrmLead{}
 	}
-	return o.CrmLead
+	return c.CrmLead
 }
 
-func (o *CreateCrmLeadRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateCrmLeadRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateCrmLeadRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateCrmLeadRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateCrmLeadRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateCrmLeadRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateCrmLeadResponse struct {
@@ -56,30 +56,30 @@ type CreateCrmLeadResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateCrmLeadResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateCrmLeadResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateCrmLeadResponse) GetCrmLead() *shared.CrmLead {
-	if o == nil {
+func (c *CreateCrmLeadResponse) GetCrmLead() *shared.CrmLead {
+	if c == nil {
 		return nil
 	}
-	return o.CrmLead
+	return c.CrmLead
 }
 
-func (o *CreateCrmLeadResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateCrmLeadResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateCrmLeadResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateCrmLeadResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

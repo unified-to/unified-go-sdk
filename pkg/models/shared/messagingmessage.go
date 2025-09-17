@@ -43,149 +43,149 @@ func (m *MessagingMessage) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *MessagingMessage) GetAttachments() []MessagingAttachment {
-	if o == nil {
+func (m *MessagingMessage) GetAttachments() []MessagingAttachment {
+	if m == nil {
 		return nil
 	}
-	return o.Attachments
+	return m.Attachments
 }
 
-func (o *MessagingMessage) GetAuthorMember() *PropertyMessagingMessageAuthorMember {
-	if o == nil {
+func (m *MessagingMessage) GetAuthorMember() *PropertyMessagingMessageAuthorMember {
+	if m == nil {
 		return nil
 	}
-	return o.AuthorMember
+	return m.AuthorMember
 }
 
-func (o *MessagingMessage) GetChannelID() *string {
-	if o == nil {
+func (m *MessagingMessage) GetChannelID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ChannelID
+	return m.ChannelID
 }
 
-func (o *MessagingMessage) GetChannelIds() []string {
-	if o == nil {
+func (m *MessagingMessage) GetChannelIds() []string {
+	if m == nil {
 		return nil
 	}
-	return o.ChannelIds
+	return m.ChannelIds
 }
 
-func (o *MessagingMessage) GetCreatedAt() *time.Time {
-	if o == nil {
+func (m *MessagingMessage) GetCreatedAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return m.CreatedAt
 }
 
-func (o *MessagingMessage) GetDestinationMembers() []MessagingMember {
-	if o == nil {
+func (m *MessagingMessage) GetDestinationMembers() []MessagingMember {
+	if m == nil {
 		return nil
 	}
-	return o.DestinationMembers
+	return m.DestinationMembers
 }
 
-func (o *MessagingMessage) GetHasChildren() *bool {
-	if o == nil {
+func (m *MessagingMessage) GetHasChildren() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.HasChildren
+	return m.HasChildren
 }
 
-func (o *MessagingMessage) GetHiddenMembers() []MessagingMember {
-	if o == nil {
+func (m *MessagingMessage) GetHiddenMembers() []MessagingMember {
+	if m == nil {
 		return nil
 	}
-	return o.HiddenMembers
+	return m.HiddenMembers
 }
 
-func (o *MessagingMessage) GetID() *string {
-	if o == nil {
+func (m *MessagingMessage) GetID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ID
+	return m.ID
 }
 
-func (o *MessagingMessage) GetMentionedMembers() []MessagingMember {
-	if o == nil {
+func (m *MessagingMessage) GetMentionedMembers() []MessagingMember {
+	if m == nil {
 		return nil
 	}
-	return o.MentionedMembers
+	return m.MentionedMembers
 }
 
-func (o *MessagingMessage) GetMessage() *string {
-	if o == nil {
+func (m *MessagingMessage) GetMessage() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Message
+	return m.Message
 }
 
-func (o *MessagingMessage) GetMessageHTML() *string {
-	if o == nil {
+func (m *MessagingMessage) GetMessageHTML() *string {
+	if m == nil {
 		return nil
 	}
-	return o.MessageHTML
+	return m.MessageHTML
 }
 
-func (o *MessagingMessage) GetMessageMarkdown() *string {
-	if o == nil {
+func (m *MessagingMessage) GetMessageMarkdown() *string {
+	if m == nil {
 		return nil
 	}
-	return o.MessageMarkdown
+	return m.MessageMarkdown
 }
 
-func (o *MessagingMessage) GetParentMessageID() *string {
-	if o == nil {
+func (m *MessagingMessage) GetParentMessageID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ParentMessageID
+	return m.ParentMessageID
 }
 
-func (o *MessagingMessage) GetRaw() map[string]any {
-	if o == nil {
+func (m *MessagingMessage) GetRaw() map[string]any {
+	if m == nil {
 		return nil
 	}
-	return o.Raw
+	return m.Raw
 }
 
-func (o *MessagingMessage) GetReactions() []MessagingReaction {
-	if o == nil {
+func (m *MessagingMessage) GetReactions() []MessagingReaction {
+	if m == nil {
 		return nil
 	}
-	return o.Reactions
+	return m.Reactions
 }
 
-func (o *MessagingMessage) GetReference() *string {
-	if o == nil {
+func (m *MessagingMessage) GetReference() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Reference
+	return m.Reference
 }
 
-func (o *MessagingMessage) GetRootMessageID() *string {
-	if o == nil {
+func (m *MessagingMessage) GetRootMessageID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.RootMessageID
+	return m.RootMessageID
 }
 
-func (o *MessagingMessage) GetSubject() *string {
-	if o == nil {
+func (m *MessagingMessage) GetSubject() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Subject
+	return m.Subject
 }
 
-func (o *MessagingMessage) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (m *MessagingMessage) GetUpdatedAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return m.UpdatedAt
 }
 
-func (o *MessagingMessage) GetWebURL() *string {
-	if o == nil {
+func (m *MessagingMessage) GetWebURL() *string {
+	if m == nil {
 		return nil
 	}
-	return o.WebURL
+	return m.WebURL
 }

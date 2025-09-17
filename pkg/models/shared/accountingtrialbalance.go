@@ -32,79 +32,79 @@ func (a *AccountingTrialbalance) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingTrialbalance) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingTrialbalance) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingTrialbalance) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingTrialbalance) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingTrialbalance) GetEndAt() *time.Time {
-	if o == nil {
+func (a *AccountingTrialbalance) GetEndAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.EndAt
+	return a.EndAt
 }
 
-func (o *AccountingTrialbalance) GetID() *string {
-	if o == nil {
+func (a *AccountingTrialbalance) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingTrialbalance) GetName() *string {
-	if o == nil {
+func (a *AccountingTrialbalance) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingTrialbalance) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingTrialbalance) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingTrialbalance) GetStartAt() *time.Time {
-	if o == nil {
+func (a *AccountingTrialbalance) GetStartAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.StartAt
+	return a.StartAt
 }
 
-func (o *AccountingTrialbalance) GetSubItems() []AccountingTrialbalanceSubItem {
-	if o == nil {
+func (a *AccountingTrialbalance) GetSubItems() []AccountingTrialbalanceSubItem {
+	if a == nil {
 		return nil
 	}
-	return o.SubItems
+	return a.SubItems
 }
 
-func (o *AccountingTrialbalance) GetTotalCreditAmount() *float64 {
-	if o == nil {
+func (a *AccountingTrialbalance) GetTotalCreditAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalCreditAmount
+	return a.TotalCreditAmount
 }
 
-func (o *AccountingTrialbalance) GetTotalDebitAmount() *float64 {
-	if o == nil {
+func (a *AccountingTrialbalance) GetTotalDebitAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalDebitAmount
+	return a.TotalDebitAmount
 }
 
-func (o *AccountingTrialbalance) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingTrialbalance) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

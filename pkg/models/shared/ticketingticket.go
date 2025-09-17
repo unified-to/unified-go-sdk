@@ -49,121 +49,121 @@ func (t *TicketingTicket) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *TicketingTicket) GetCategory() *string {
-	if o == nil {
+func (t *TicketingTicket) GetCategory() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Category
+	return t.Category
 }
 
-func (o *TicketingTicket) GetCategoryID() *string {
-	if o == nil {
+func (t *TicketingTicket) GetCategoryID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.CategoryID
+	return t.CategoryID
 }
 
-func (o *TicketingTicket) GetClosedAt() *time.Time {
-	if o == nil {
+func (t *TicketingTicket) GetClosedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.ClosedAt
+	return t.ClosedAt
 }
 
-func (o *TicketingTicket) GetCreatedAt() *time.Time {
-	if o == nil {
+func (t *TicketingTicket) GetCreatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return t.CreatedAt
 }
 
-func (o *TicketingTicket) GetCustomerID() *string {
-	if o == nil {
+func (t *TicketingTicket) GetCustomerID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.CustomerID
+	return t.CustomerID
 }
 
-func (o *TicketingTicket) GetDescription() *string {
-	if o == nil {
+func (t *TicketingTicket) GetDescription() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Description
+	return t.Description
 }
 
-func (o *TicketingTicket) GetID() *string {
-	if o == nil {
+func (t *TicketingTicket) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *TicketingTicket) GetPriority() *string {
-	if o == nil {
+func (t *TicketingTicket) GetPriority() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Priority
+	return t.Priority
 }
 
-func (o *TicketingTicket) GetRaw() map[string]any {
-	if o == nil {
+func (t *TicketingTicket) GetRaw() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Raw
+	return t.Raw
 }
 
-func (o *TicketingTicket) GetSource() *string {
-	if o == nil {
+func (t *TicketingTicket) GetSource() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Source
+	return t.Source
 }
 
-func (o *TicketingTicket) GetSourceRef() *string {
-	if o == nil {
+func (t *TicketingTicket) GetSourceRef() *string {
+	if t == nil {
 		return nil
 	}
-	return o.SourceRef
+	return t.SourceRef
 }
 
-func (o *TicketingTicket) GetStatus() *TicketingTicketStatus {
-	if o == nil {
+func (t *TicketingTicket) GetStatus() *TicketingTicketStatus {
+	if t == nil {
 		return nil
 	}
-	return o.Status
+	return t.Status
 }
 
-func (o *TicketingTicket) GetSubject() *string {
-	if o == nil {
+func (t *TicketingTicket) GetSubject() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Subject
+	return t.Subject
 }
 
-func (o *TicketingTicket) GetTags() []string {
-	if o == nil {
+func (t *TicketingTicket) GetTags() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Tags
+	return t.Tags
 }
 
-func (o *TicketingTicket) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (t *TicketingTicket) GetUpdatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return t.UpdatedAt
 }
 
-func (o *TicketingTicket) GetURL() *string {
-	if o == nil {
+func (t *TicketingTicket) GetURL() *string {
+	if t == nil {
 		return nil
 	}
-	return o.URL
+	return t.URL
 }
 
-func (o *TicketingTicket) GetUserID() *string {
-	if o == nil {
+func (t *TicketingTicket) GetUserID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.UserID
+	return t.UserID
 }

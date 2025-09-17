@@ -8,23 +8,23 @@ type AccountingAssociatedContact struct {
 	Name   *string           `json:"name,omitempty"`
 }
 
-func (o *AccountingAssociatedContact) GetEmails() []AccountingEmail {
-	if o == nil {
+func (a *AccountingAssociatedContact) GetEmails() []AccountingEmail {
+	if a == nil {
 		return nil
 	}
-	return o.Emails
+	return a.Emails
 }
 
-func (o *AccountingAssociatedContact) GetID() *string {
-	if o == nil {
+func (a *AccountingAssociatedContact) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingAssociatedContact) GetName() *string {
-	if o == nil {
+func (a *AccountingAssociatedContact) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }

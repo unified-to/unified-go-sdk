@@ -18,32 +18,32 @@ type CreateCommerceCollectionRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateCommerceCollectionRequest) GetCommerceCollection() shared.CommerceCollection {
-	if o == nil {
+func (c *CreateCommerceCollectionRequest) GetCommerceCollection() shared.CommerceCollection {
+	if c == nil {
 		return shared.CommerceCollection{}
 	}
-	return o.CommerceCollection
+	return c.CommerceCollection
 }
 
-func (o *CreateCommerceCollectionRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateCommerceCollectionRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateCommerceCollectionRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateCommerceCollectionRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateCommerceCollectionRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateCommerceCollectionRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateCommerceCollectionResponse struct {
@@ -57,30 +57,30 @@ type CreateCommerceCollectionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateCommerceCollectionResponse) GetCommerceCollection() *shared.CommerceCollection {
-	if o == nil {
+func (c *CreateCommerceCollectionResponse) GetCommerceCollection() *shared.CommerceCollection {
+	if c == nil {
 		return nil
 	}
-	return o.CommerceCollection
+	return c.CommerceCollection
 }
 
-func (o *CreateCommerceCollectionResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateCommerceCollectionResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateCommerceCollectionResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateCommerceCollectionResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateCommerceCollectionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateCommerceCollectionResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

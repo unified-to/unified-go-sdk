@@ -8,23 +8,23 @@ type CommerceItemPrice struct {
 	Price          float64  `json:"price"`
 }
 
-func (o *CommerceItemPrice) GetCompareAtPrice() *float64 {
-	if o == nil {
+func (c *CommerceItemPrice) GetCompareAtPrice() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.CompareAtPrice
+	return c.CompareAtPrice
 }
 
-func (o *CommerceItemPrice) GetCurrency() *string {
-	if o == nil {
+func (c *CommerceItemPrice) GetCurrency() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Currency
+	return c.Currency
 }
 
-func (o *CommerceItemPrice) GetPrice() float64 {
-	if o == nil {
+func (c *CommerceItemPrice) GetPrice() float64 {
+	if c == nil {
 		return 0.0
 	}
-	return o.Price
+	return c.Price
 }

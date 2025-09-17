@@ -19,39 +19,39 @@ type PatchLmsClassRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchLmsClassRequest) GetLmsClass() shared.LmsClass {
-	if o == nil {
+func (p *PatchLmsClassRequest) GetLmsClass() shared.LmsClass {
+	if p == nil {
 		return shared.LmsClass{}
 	}
-	return o.LmsClass
+	return p.LmsClass
 }
 
-func (o *PatchLmsClassRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchLmsClassRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchLmsClassRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchLmsClassRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchLmsClassRequest) GetID() string {
-	if o == nil {
+func (p *PatchLmsClassRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchLmsClassRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchLmsClassRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchLmsClassResponse struct {
@@ -65,30 +65,30 @@ type PatchLmsClassResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchLmsClassResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchLmsClassResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchLmsClassResponse) GetLmsClass() *shared.LmsClass {
-	if o == nil {
+func (p *PatchLmsClassResponse) GetLmsClass() *shared.LmsClass {
+	if p == nil {
 		return nil
 	}
-	return o.LmsClass
+	return p.LmsClass
 }
 
-func (o *PatchLmsClassResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchLmsClassResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchLmsClassResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchLmsClassResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

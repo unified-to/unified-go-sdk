@@ -18,32 +18,32 @@ type GetHrisCompanyRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetHrisCompanyRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetHrisCompanyRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetHrisCompanyRequest) GetFields() []string {
-	if o == nil {
+func (g *GetHrisCompanyRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetHrisCompanyRequest) GetID() string {
-	if o == nil {
+func (g *GetHrisCompanyRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetHrisCompanyRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetHrisCompanyRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetHrisCompanyResponse struct {
@@ -57,30 +57,30 @@ type GetHrisCompanyResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetHrisCompanyResponse) GetContentType() string {
-	if o == nil {
+func (g *GetHrisCompanyResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetHrisCompanyResponse) GetHrisCompany() *shared.HrisCompany {
-	if o == nil {
+func (g *GetHrisCompanyResponse) GetHrisCompany() *shared.HrisCompany {
+	if g == nil {
 		return nil
 	}
-	return o.HrisCompany
+	return g.HrisCompany
 }
 
-func (o *GetHrisCompanyResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetHrisCompanyResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetHrisCompanyResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetHrisCompanyResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

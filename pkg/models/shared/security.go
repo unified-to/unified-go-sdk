@@ -6,9 +6,9 @@ type Security struct {
 	Jwt string `security:"scheme,type=apiKey,subtype=header,name=authorization"`
 }
 
-func (o *Security) GetJwt() string {
-	if o == nil {
+func (s *Security) GetJwt() string {
+	if s == nil {
 		return ""
 	}
-	return o.Jwt
+	return s.Jwt
 }

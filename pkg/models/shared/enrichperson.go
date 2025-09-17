@@ -61,170 +61,170 @@ func (e *EnrichPerson) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *EnrichPerson) GetAddress() *PropertyEnrichPersonAddress {
-	if o == nil {
+func (e *EnrichPerson) GetAddress() *PropertyEnrichPersonAddress {
+	if e == nil {
 		return nil
 	}
-	return o.Address
+	return e.Address
 }
 
-func (o *EnrichPerson) GetBio() *string {
-	if o == nil {
+func (e *EnrichPerson) GetBio() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Bio
+	return e.Bio
 }
 
-func (o *EnrichPerson) GetBirthdate() *string {
-	if o == nil {
+func (e *EnrichPerson) GetBirthdate() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Birthdate
+	return e.Birthdate
 }
 
-func (o *EnrichPerson) GetCompany() *string {
-	if o == nil {
+func (e *EnrichPerson) GetCompany() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Company
+	return e.Company
 }
 
-func (o *EnrichPerson) GetCompanyDomain() *string {
-	if o == nil {
+func (e *EnrichPerson) GetCompanyDomain() *string {
+	if e == nil {
 		return nil
 	}
-	return o.CompanyDomain
+	return e.CompanyDomain
 }
 
-func (o *EnrichPerson) GetCreatedAt() *time.Time {
-	if o == nil {
+func (e *EnrichPerson) GetCreatedAt() *time.Time {
+	if e == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return e.CreatedAt
 }
 
-func (o *EnrichPerson) GetEmails() []EnrichEmail {
-	if o == nil {
+func (e *EnrichPerson) GetEmails() []EnrichEmail {
+	if e == nil {
 		return nil
 	}
-	return o.Emails
+	return e.Emails
 }
 
-func (o *EnrichPerson) GetFacebookURL() *string {
-	if o == nil {
+func (e *EnrichPerson) GetFacebookURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.FacebookURL
+	return e.FacebookURL
 }
 
-func (o *EnrichPerson) GetGender() *Gender {
-	if o == nil {
+func (e *EnrichPerson) GetGender() *Gender {
+	if e == nil {
 		return nil
 	}
-	return o.Gender
+	return e.Gender
 }
 
-func (o *EnrichPerson) GetGithubURL() *string {
-	if o == nil {
+func (e *EnrichPerson) GetGithubURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.GithubURL
+	return e.GithubURL
 }
 
-func (o *EnrichPerson) GetGithubUsername() *string {
-	if o == nil {
+func (e *EnrichPerson) GetGithubUsername() *string {
+	if e == nil {
 		return nil
 	}
-	return o.GithubUsername
+	return e.GithubUsername
 }
 
-func (o *EnrichPerson) GetID() *string {
-	if o == nil {
+func (e *EnrichPerson) GetID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.ID
+	return e.ID
 }
 
-func (o *EnrichPerson) GetImageURL() *string {
-	if o == nil {
+func (e *EnrichPerson) GetImageURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.ImageURL
+	return e.ImageURL
 }
 
-func (o *EnrichPerson) GetLinkedinURL() *string {
-	if o == nil {
+func (e *EnrichPerson) GetLinkedinURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.LinkedinURL
+	return e.LinkedinURL
 }
 
-func (o *EnrichPerson) GetName() *string {
-	if o == nil {
+func (e *EnrichPerson) GetName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Name
+	return e.Name
 }
 
-func (o *EnrichPerson) GetRaw() map[string]any {
-	if o == nil {
+func (e *EnrichPerson) GetRaw() map[string]any {
+	if e == nil {
 		return nil
 	}
-	return o.Raw
+	return e.Raw
 }
 
-func (o *EnrichPerson) GetTelephones() []EnrichTelephone {
-	if o == nil {
+func (e *EnrichPerson) GetTelephones() []EnrichTelephone {
+	if e == nil {
 		return nil
 	}
-	return o.Telephones
+	return e.Telephones
 }
 
-func (o *EnrichPerson) GetTimezone() *string {
-	if o == nil {
+func (e *EnrichPerson) GetTimezone() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Timezone
+	return e.Timezone
 }
 
-func (o *EnrichPerson) GetTitle() *string {
-	if o == nil {
+func (e *EnrichPerson) GetTitle() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Title
+	return e.Title
 }
 
-func (o *EnrichPerson) GetTwitterHandle() *string {
-	if o == nil {
+func (e *EnrichPerson) GetTwitterHandle() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TwitterHandle
+	return e.TwitterHandle
 }
 
-func (o *EnrichPerson) GetTwitterURL() *string {
-	if o == nil {
+func (e *EnrichPerson) GetTwitterURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TwitterURL
+	return e.TwitterURL
 }
 
-func (o *EnrichPerson) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (e *EnrichPerson) GetUpdatedAt() *time.Time {
+	if e == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return e.UpdatedAt
 }
 
-func (o *EnrichPerson) GetUtcOffset() *float64 {
-	if o == nil {
+func (e *EnrichPerson) GetUtcOffset() *float64 {
+	if e == nil {
 		return nil
 	}
-	return o.UtcOffset
+	return e.UtcOffset
 }
 
-func (o *EnrichPerson) GetWorkHistories() []EnrichPersonWorkHistory {
-	if o == nil {
+func (e *EnrichPerson) GetWorkHistories() []EnrichPersonWorkHistory {
+	if e == nil {
 		return nil
 	}
-	return o.WorkHistories
+	return e.WorkHistories
 }

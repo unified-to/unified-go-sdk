@@ -19,39 +19,39 @@ type UpdateRepoCommitRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateRepoCommitRequest) GetRepoCommit() shared.RepoCommit {
-	if o == nil {
+func (u *UpdateRepoCommitRequest) GetRepoCommit() shared.RepoCommit {
+	if u == nil {
 		return shared.RepoCommit{}
 	}
-	return o.RepoCommit
+	return u.RepoCommit
 }
 
-func (o *UpdateRepoCommitRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateRepoCommitRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateRepoCommitRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateRepoCommitRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateRepoCommitRequest) GetID() string {
-	if o == nil {
+func (u *UpdateRepoCommitRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateRepoCommitRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateRepoCommitRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateRepoCommitResponse struct {
@@ -65,30 +65,30 @@ type UpdateRepoCommitResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateRepoCommitResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateRepoCommitResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateRepoCommitResponse) GetRepoCommit() *shared.RepoCommit {
-	if o == nil {
+func (u *UpdateRepoCommitResponse) GetRepoCommit() *shared.RepoCommit {
+	if u == nil {
 		return nil
 	}
-	return o.RepoCommit
+	return u.RepoCommit
 }
 
-func (o *UpdateRepoCommitResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateRepoCommitResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateRepoCommitResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateRepoCommitResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

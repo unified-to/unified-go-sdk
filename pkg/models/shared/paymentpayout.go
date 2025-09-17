@@ -26,58 +26,58 @@ type PaymentPayout struct {
 	UpdatedAt   *string              `json:"updated_at,omitempty"`
 }
 
-func (o *PaymentPayout) GetCreatedAt() *string {
-	if o == nil {
+func (p *PaymentPayout) GetCreatedAt() *string {
+	if p == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return p.CreatedAt
 }
 
-func (o *PaymentPayout) GetCurrency() *string {
-	if o == nil {
+func (p *PaymentPayout) GetCurrency() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Currency
+	return p.Currency
 }
 
-func (o *PaymentPayout) GetID() *string {
-	if o == nil {
+func (p *PaymentPayout) GetID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PaymentPayout) GetNotes() *string {
-	if o == nil {
+func (p *PaymentPayout) GetNotes() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Notes
+	return p.Notes
 }
 
-func (o *PaymentPayout) GetRaw() map[string]any {
-	if o == nil {
+func (p *PaymentPayout) GetRaw() map[string]any {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
-func (o *PaymentPayout) GetStatus() *PaymentPayoutStatus {
-	if o == nil {
+func (p *PaymentPayout) GetStatus() *PaymentPayoutStatus {
+	if p == nil {
 		return nil
 	}
-	return o.Status
+	return p.Status
 }
 
-func (o *PaymentPayout) GetTotalAmount() float64 {
-	if o == nil {
+func (p *PaymentPayout) GetTotalAmount() float64 {
+	if p == nil {
 		return 0.0
 	}
-	return o.TotalAmount
+	return p.TotalAmount
 }
 
-func (o *PaymentPayout) GetUpdatedAt() *string {
-	if o == nil {
+func (p *PaymentPayout) GetUpdatedAt() *string {
+	if p == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return p.UpdatedAt
 }

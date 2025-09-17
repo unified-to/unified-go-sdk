@@ -27,44 +27,44 @@ func (c *CalendarBusy) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CalendarBusy) GetDescription() *string {
-	if o == nil {
+func (c *CalendarBusy) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CalendarBusy) GetEndAt() time.Time {
-	if o == nil {
+func (c *CalendarBusy) GetEndAt() time.Time {
+	if c == nil {
 		return time.Time{}
 	}
-	return o.EndAt
+	return c.EndAt
 }
 
-func (o *CalendarBusy) GetID() *string {
-	if o == nil {
+func (c *CalendarBusy) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CalendarBusy) GetRaw() map[string]any {
-	if o == nil {
+func (c *CalendarBusy) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CalendarBusy) GetStartAt() time.Time {
-	if o == nil {
+func (c *CalendarBusy) GetStartAt() time.Time {
+	if c == nil {
 		return time.Time{}
 	}
-	return o.StartAt
+	return c.StartAt
 }
 
-func (o *CalendarBusy) GetTimezone() *string {
-	if o == nil {
+func (c *CalendarBusy) GetTimezone() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Timezone
+	return c.Timezone
 }

@@ -13,58 +13,58 @@ type PropertyAccountingContactShippingAddress struct {
 	RegionCode  *string `json:"region_code,omitempty"`
 }
 
-func (o *PropertyAccountingContactShippingAddress) GetAddress1() *string {
-	if o == nil {
+func (p *PropertyAccountingContactShippingAddress) GetAddress1() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address1
+	return p.Address1
 }
 
-func (o *PropertyAccountingContactShippingAddress) GetAddress2() *string {
-	if o == nil {
+func (p *PropertyAccountingContactShippingAddress) GetAddress2() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address2
+	return p.Address2
 }
 
-func (o *PropertyAccountingContactShippingAddress) GetCity() *string {
-	if o == nil {
+func (p *PropertyAccountingContactShippingAddress) GetCity() *string {
+	if p == nil {
 		return nil
 	}
-	return o.City
+	return p.City
 }
 
-func (o *PropertyAccountingContactShippingAddress) GetCountry() *string {
-	if o == nil {
+func (p *PropertyAccountingContactShippingAddress) GetCountry() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Country
+	return p.Country
 }
 
-func (o *PropertyAccountingContactShippingAddress) GetCountryCode() *string {
-	if o == nil {
+func (p *PropertyAccountingContactShippingAddress) GetCountryCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.CountryCode
+	return p.CountryCode
 }
 
-func (o *PropertyAccountingContactShippingAddress) GetPostalCode() *string {
-	if o == nil {
+func (p *PropertyAccountingContactShippingAddress) GetPostalCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.PostalCode
+	return p.PostalCode
 }
 
-func (o *PropertyAccountingContactShippingAddress) GetRegion() *string {
-	if o == nil {
+func (p *PropertyAccountingContactShippingAddress) GetRegion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Region
+	return p.Region
 }
 
-func (o *PropertyAccountingContactShippingAddress) GetRegionCode() *string {
-	if o == nil {
+func (p *PropertyAccountingContactShippingAddress) GetRegionCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.RegionCode
+	return p.RegionCode
 }

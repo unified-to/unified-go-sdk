@@ -26,37 +26,37 @@ func (u *UcRecordingTranscript) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *UcRecordingTranscript) GetContactID() *string {
-	if o == nil {
+func (u *UcRecordingTranscript) GetContactID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ContactID
+	return u.ContactID
 }
 
-func (o *UcRecordingTranscript) GetEndAt() *time.Time {
-	if o == nil {
+func (u *UcRecordingTranscript) GetEndAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.EndAt
+	return u.EndAt
 }
 
-func (o *UcRecordingTranscript) GetStartAt() *time.Time {
-	if o == nil {
+func (u *UcRecordingTranscript) GetStartAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.StartAt
+	return u.StartAt
 }
 
-func (o *UcRecordingTranscript) GetText() string {
-	if o == nil {
+func (u *UcRecordingTranscript) GetText() string {
+	if u == nil {
 		return ""
 	}
-	return o.Text
+	return u.Text
 }
 
-func (o *UcRecordingTranscript) GetUserID() *string {
-	if o == nil {
+func (u *UcRecordingTranscript) GetUserID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.UserID
+	return u.UserID
 }

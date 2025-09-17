@@ -32,37 +32,37 @@ type ScimGroupMember struct {
 	Value     string               `json:"value"`
 }
 
-func (o *ScimGroupMember) GetDollarRef() *string {
-	if o == nil {
+func (s *ScimGroupMember) GetDollarRef() *string {
+	if s == nil {
 		return nil
 	}
-	return o.DollarRef
+	return s.DollarRef
 }
 
-func (o *ScimGroupMember) GetDisplay() *string {
-	if o == nil {
+func (s *ScimGroupMember) GetDisplay() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Display
+	return s.Display
 }
 
-func (o *ScimGroupMember) GetOperation() *Operation {
-	if o == nil {
+func (s *ScimGroupMember) GetOperation() *Operation {
+	if s == nil {
 		return nil
 	}
-	return o.Operation
+	return s.Operation
 }
 
-func (o *ScimGroupMember) GetType() *ScimGroupMemberType {
-	if o == nil {
+func (s *ScimGroupMember) GetType() *ScimGroupMemberType {
+	if s == nil {
 		return nil
 	}
-	return o.Type
+	return s.Type
 }
 
-func (o *ScimGroupMember) GetValue() string {
-	if o == nil {
+func (s *ScimGroupMember) GetValue() string {
+	if s == nil {
 		return ""
 	}
-	return o.Value
+	return s.Value
 }

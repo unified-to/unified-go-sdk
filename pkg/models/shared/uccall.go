@@ -31,65 +31,65 @@ func (u *UcCall) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *UcCall) GetContactID() *string {
-	if o == nil {
+func (u *UcCall) GetContactID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ContactID
+	return u.ContactID
 }
 
-func (o *UcCall) GetCreatedAt() *time.Time {
-	if o == nil {
+func (u *UcCall) GetCreatedAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return u.CreatedAt
 }
 
-func (o *UcCall) GetEndAt() *time.Time {
-	if o == nil {
+func (u *UcCall) GetEndAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.EndAt
+	return u.EndAt
 }
 
-func (o *UcCall) GetID() *string {
-	if o == nil {
+func (u *UcCall) GetID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UcCall) GetRaw() map[string]any {
-	if o == nil {
+func (u *UcCall) GetRaw() map[string]any {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
-func (o *UcCall) GetStartAt() *time.Time {
-	if o == nil {
+func (u *UcCall) GetStartAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.StartAt
+	return u.StartAt
 }
 
-func (o *UcCall) GetTelephone() *PropertyUcCallTelephone {
-	if o == nil {
+func (u *UcCall) GetTelephone() *PropertyUcCallTelephone {
+	if u == nil {
 		return nil
 	}
-	return o.Telephone
+	return u.Telephone
 }
 
-func (o *UcCall) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (u *UcCall) GetUpdatedAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return u.UpdatedAt
 }
 
-func (o *UcCall) GetUserID() *string {
-	if o == nil {
+func (u *UcCall) GetUserID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.UserID
+	return u.UserID
 }

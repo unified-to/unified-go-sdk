@@ -26,74 +26,74 @@ type ListMetadataMetadatasRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListMetadataMetadatasRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListMetadataMetadatasRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListMetadataMetadatasRequest) GetFields() []string {
-	if o == nil {
+func (l *ListMetadataMetadatasRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListMetadataMetadatasRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListMetadataMetadatasRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListMetadataMetadatasRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListMetadataMetadatasRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListMetadataMetadatasRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListMetadataMetadatasRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListMetadataMetadatasRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListMetadataMetadatasRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListMetadataMetadatasRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListMetadataMetadatasRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListMetadataMetadatasRequest) GetSort() *string {
-	if o == nil {
+func (l *ListMetadataMetadatasRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListMetadataMetadatasRequest) GetType() *string {
-	if o == nil {
+func (l *ListMetadataMetadatasRequest) GetType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }
 
-func (o *ListMetadataMetadatasRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListMetadataMetadatasRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListMetadataMetadatasResponse struct {
@@ -107,30 +107,30 @@ type ListMetadataMetadatasResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListMetadataMetadatasResponse) GetContentType() string {
-	if o == nil {
+func (l *ListMetadataMetadatasResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListMetadataMetadatasResponse) GetMetadataMetadatas() []shared.MetadataMetadata {
-	if o == nil {
+func (l *ListMetadataMetadatasResponse) GetMetadataMetadatas() []shared.MetadataMetadata {
+	if l == nil {
 		return nil
 	}
-	return o.MetadataMetadatas
+	return l.MetadataMetadatas
 }
 
-func (o *ListMetadataMetadatasResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListMetadataMetadatasResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListMetadataMetadatasResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListMetadataMetadatasResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

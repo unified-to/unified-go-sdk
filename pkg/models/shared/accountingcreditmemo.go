@@ -74,184 +74,184 @@ func (a *AccountingCreditmemo) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingCreditmemo) GetAttachments() []AccountingAttachment {
-	if o == nil {
+func (a *AccountingCreditmemo) GetAttachments() []AccountingAttachment {
+	if a == nil {
 		return nil
 	}
-	return o.Attachments
+	return a.Attachments
 }
 
-func (o *AccountingCreditmemo) GetBalanceAmount() *float64 {
-	if o == nil {
+func (a *AccountingCreditmemo) GetBalanceAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.BalanceAmount
+	return a.BalanceAmount
 }
 
-func (o *AccountingCreditmemo) GetCancelledAt() *time.Time {
-	if o == nil {
+func (a *AccountingCreditmemo) GetCancelledAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CancelledAt
+	return a.CancelledAt
 }
 
-func (o *AccountingCreditmemo) GetContactID() *string {
-	if o == nil {
+func (a *AccountingCreditmemo) GetContactID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ContactID
+	return a.ContactID
 }
 
-func (o *AccountingCreditmemo) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingCreditmemo) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingCreditmemo) GetCreditmemoNumber() *string {
-	if o == nil {
+func (a *AccountingCreditmemo) GetCreditmemoNumber() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CreditmemoNumber
+	return a.CreditmemoNumber
 }
 
-func (o *AccountingCreditmemo) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingCreditmemo) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingCreditmemo) GetDiscountAmount() *float64 {
-	if o == nil {
+func (a *AccountingCreditmemo) GetDiscountAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.DiscountAmount
+	return a.DiscountAmount
 }
 
-func (o *AccountingCreditmemo) GetDueAt() *time.Time {
-	if o == nil {
+func (a *AccountingCreditmemo) GetDueAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.DueAt
+	return a.DueAt
 }
 
-func (o *AccountingCreditmemo) GetID() *string {
-	if o == nil {
+func (a *AccountingCreditmemo) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingCreditmemo) GetLineitems() []AccountingLineitem {
-	if o == nil {
+func (a *AccountingCreditmemo) GetLineitems() []AccountingLineitem {
+	if a == nil {
 		return nil
 	}
-	return o.Lineitems
+	return a.Lineitems
 }
 
-func (o *AccountingCreditmemo) GetNotes() *string {
-	if o == nil {
+func (a *AccountingCreditmemo) GetNotes() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Notes
+	return a.Notes
 }
 
-func (o *AccountingCreditmemo) GetPaidAmount() *float64 {
-	if o == nil {
+func (a *AccountingCreditmemo) GetPaidAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.PaidAmount
+	return a.PaidAmount
 }
 
-func (o *AccountingCreditmemo) GetPaidAt() *time.Time {
-	if o == nil {
+func (a *AccountingCreditmemo) GetPaidAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.PaidAt
+	return a.PaidAt
 }
 
-func (o *AccountingCreditmemo) GetPaymentCollectionMethod() *AccountingCreditmemoPaymentCollectionMethod {
-	if o == nil {
+func (a *AccountingCreditmemo) GetPaymentCollectionMethod() *AccountingCreditmemoPaymentCollectionMethod {
+	if a == nil {
 		return nil
 	}
-	return o.PaymentCollectionMethod
+	return a.PaymentCollectionMethod
 }
 
-func (o *AccountingCreditmemo) GetPostedAt() *time.Time {
-	if o == nil {
+func (a *AccountingCreditmemo) GetPostedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.PostedAt
+	return a.PostedAt
 }
 
-func (o *AccountingCreditmemo) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingCreditmemo) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingCreditmemo) GetRefundAmount() *float64 {
-	if o == nil {
+func (a *AccountingCreditmemo) GetRefundAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.RefundAmount
+	return a.RefundAmount
 }
 
-func (o *AccountingCreditmemo) GetRefundReason() *string {
-	if o == nil {
+func (a *AccountingCreditmemo) GetRefundReason() *string {
+	if a == nil {
 		return nil
 	}
-	return o.RefundReason
+	return a.RefundReason
 }
 
-func (o *AccountingCreditmemo) GetRefundedAt() *time.Time {
-	if o == nil {
+func (a *AccountingCreditmemo) GetRefundedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.RefundedAt
+	return a.RefundedAt
 }
 
-func (o *AccountingCreditmemo) GetSend() *bool {
-	if o == nil {
+func (a *AccountingCreditmemo) GetSend() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.Send
+	return a.Send
 }
 
-func (o *AccountingCreditmemo) GetStatus() *AccountingCreditmemoStatus {
-	if o == nil {
+func (a *AccountingCreditmemo) GetStatus() *AccountingCreditmemoStatus {
+	if a == nil {
 		return nil
 	}
-	return o.Status
+	return a.Status
 }
 
-func (o *AccountingCreditmemo) GetTaxAmount() *float64 {
-	if o == nil {
+func (a *AccountingCreditmemo) GetTaxAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TaxAmount
+	return a.TaxAmount
 }
 
-func (o *AccountingCreditmemo) GetTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingCreditmemo) GetTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalAmount
+	return a.TotalAmount
 }
 
-func (o *AccountingCreditmemo) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingCreditmemo) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }
 
-func (o *AccountingCreditmemo) GetURL() *string {
-	if o == nil {
+func (a *AccountingCreditmemo) GetURL() *string {
+	if a == nil {
 		return nil
 	}
-	return o.URL
+	return a.URL
 }

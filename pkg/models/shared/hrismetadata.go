@@ -541,58 +541,58 @@ type HrisMetadata struct {
 	Value     *HrisMetadataValue     `json:"value,omitempty"`
 }
 
-func (o *HrisMetadata) GetExtraData() *HrisMetadataExtraData {
-	if o == nil {
+func (h *HrisMetadata) GetExtraData() *HrisMetadataExtraData {
+	if h == nil {
 		return nil
 	}
-	return o.ExtraData
+	return h.ExtraData
 }
 
-func (o *HrisMetadata) GetFormat() *HrisMetadataFormat {
-	if o == nil {
+func (h *HrisMetadata) GetFormat() *HrisMetadataFormat {
+	if h == nil {
 		return nil
 	}
-	return o.Format
+	return h.Format
 }
 
-func (o *HrisMetadata) GetID() *string {
-	if o == nil {
+func (h *HrisMetadata) GetID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ID
+	return h.ID
 }
 
-func (o *HrisMetadata) GetKey() *string {
-	if o == nil {
+func (h *HrisMetadata) GetKey() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Key
+	return h.Key
 }
 
-func (o *HrisMetadata) GetNamespace() *string {
-	if o == nil {
+func (h *HrisMetadata) GetNamespace() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Namespace
+	return h.Namespace
 }
 
-func (o *HrisMetadata) GetSlug() *string {
-	if o == nil {
+func (h *HrisMetadata) GetSlug() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Slug
+	return h.Slug
 }
 
-func (o *HrisMetadata) GetType() *string {
-	if o == nil {
+func (h *HrisMetadata) GetType() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Type
+	return h.Type
 }
 
-func (o *HrisMetadata) GetValue() *HrisMetadataValue {
-	if o == nil {
+func (h *HrisMetadata) GetValue() *HrisMetadataValue {
+	if h == nil {
 		return nil
 	}
-	return o.Value
+	return h.Value
 }

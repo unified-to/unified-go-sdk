@@ -33,86 +33,86 @@ type Issue struct {
 	WorkspaceID    string      `json:"workspace_id"`
 }
 
-func (o *Issue) GetCreatedAt() *string {
-	if o == nil {
+func (i *Issue) GetCreatedAt() *string {
+	if i == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return i.CreatedAt
 }
 
-func (o *Issue) GetID() *string {
-	if o == nil {
+func (i *Issue) GetID() *string {
+	if i == nil {
 		return nil
 	}
-	return o.ID
+	return i.ID
 }
 
-func (o *Issue) GetImportance() *float64 {
-	if o == nil {
+func (i *Issue) GetImportance() *float64 {
+	if i == nil {
 		return nil
 	}
-	return o.Importance
+	return i.Importance
 }
 
-func (o *Issue) GetResolutionTime() *float64 {
-	if o == nil {
+func (i *Issue) GetResolutionTime() *float64 {
+	if i == nil {
 		return nil
 	}
-	return o.ResolutionTime
+	return i.ResolutionTime
 }
 
-func (o *Issue) GetSize() *float64 {
-	if o == nil {
+func (i *Issue) GetSize() *float64 {
+	if i == nil {
 		return nil
 	}
-	return o.Size
+	return i.Size
 }
 
-func (o *Issue) GetStatus() IssueStatus {
-	if o == nil {
+func (i *Issue) GetStatus() IssueStatus {
+	if i == nil {
 		return IssueStatus("")
 	}
-	return o.Status
+	return i.Status
 }
 
-func (o *Issue) GetTicketRef() string {
-	if o == nil {
+func (i *Issue) GetTicketRef() string {
+	if i == nil {
 		return ""
 	}
-	return o.TicketRef
+	return i.TicketRef
 }
 
-func (o *Issue) GetTitle() string {
-	if o == nil {
+func (i *Issue) GetTitle() string {
+	if i == nil {
 		return ""
 	}
-	return o.Title
+	return i.Title
 }
 
-func (o *Issue) GetType() []string {
-	if o == nil {
+func (i *Issue) GetType() []string {
+	if i == nil {
 		return nil
 	}
-	return o.Type
+	return i.Type
 }
 
-func (o *Issue) GetUpdatedAt() *string {
-	if o == nil {
+func (i *Issue) GetUpdatedAt() *string {
+	if i == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return i.UpdatedAt
 }
 
-func (o *Issue) GetURL() *string {
-	if o == nil {
+func (i *Issue) GetURL() *string {
+	if i == nil {
 		return nil
 	}
-	return o.URL
+	return i.URL
 }
 
-func (o *Issue) GetWorkspaceID() string {
-	if o == nil {
+func (i *Issue) GetWorkspaceID() string {
+	if i == nil {
 		return ""
 	}
-	return o.WorkspaceID
+	return i.WorkspaceID
 }

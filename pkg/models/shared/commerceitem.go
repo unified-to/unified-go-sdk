@@ -42,142 +42,142 @@ func (c *CommerceItem) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CommerceItem) GetAccountID() *string {
-	if o == nil {
+func (c *CommerceItem) GetAccountID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AccountID
+	return c.AccountID
 }
 
-func (o *CommerceItem) GetCollectionIds() []string {
-	if o == nil {
+func (c *CommerceItem) GetCollectionIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.CollectionIds
+	return c.CollectionIds
 }
 
-func (o *CommerceItem) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CommerceItem) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CommerceItem) GetDescription() *string {
-	if o == nil {
+func (c *CommerceItem) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CommerceItem) GetGlobalCode() *string {
-	if o == nil {
+func (c *CommerceItem) GetGlobalCode() *string {
+	if c == nil {
 		return nil
 	}
-	return o.GlobalCode
+	return c.GlobalCode
 }
 
-func (o *CommerceItem) GetID() *string {
-	if o == nil {
+func (c *CommerceItem) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommerceItem) GetIsActive() *bool {
-	if o == nil {
+func (c *CommerceItem) GetIsActive() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsActive
+	return c.IsActive
 }
 
-func (o *CommerceItem) GetIsTaxable() *bool {
-	if o == nil {
+func (c *CommerceItem) GetIsTaxable() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsTaxable
+	return c.IsTaxable
 }
 
-func (o *CommerceItem) GetMedia() []CommerceItemMedia {
-	if o == nil {
+func (c *CommerceItem) GetMedia() []CommerceItemMedia {
+	if c == nil {
 		return nil
 	}
-	return o.Media
+	return c.Media
 }
 
-func (o *CommerceItem) GetMetadata() []CommerceMetadata {
-	if o == nil {
+func (c *CommerceItem) GetMetadata() []CommerceMetadata {
+	if c == nil {
 		return nil
 	}
-	return o.Metadata
+	return c.Metadata
 }
 
-func (o *CommerceItem) GetName() *string {
-	if o == nil {
+func (c *CommerceItem) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CommerceItem) GetPublicDescription() *string {
-	if o == nil {
+func (c *CommerceItem) GetPublicDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.PublicDescription
+	return c.PublicDescription
 }
 
-func (o *CommerceItem) GetPublicName() *string {
-	if o == nil {
+func (c *CommerceItem) GetPublicName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.PublicName
+	return c.PublicName
 }
 
-func (o *CommerceItem) GetRaw() map[string]any {
-	if o == nil {
+func (c *CommerceItem) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CommerceItem) GetSlug() *string {
-	if o == nil {
+func (c *CommerceItem) GetSlug() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Slug
+	return c.Slug
 }
 
-func (o *CommerceItem) GetTags() []string {
-	if o == nil {
+func (c *CommerceItem) GetTags() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Tags
+	return c.Tags
 }
 
-func (o *CommerceItem) GetType() *string {
-	if o == nil {
+func (c *CommerceItem) GetType() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }
 
-func (o *CommerceItem) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CommerceItem) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *CommerceItem) GetVariants() []CommerceItemVariant {
-	if o == nil {
+func (c *CommerceItem) GetVariants() []CommerceItemVariant {
+	if c == nil {
 		return nil
 	}
-	return o.Variants
+	return c.Variants
 }
 
-func (o *CommerceItem) GetVendorName() *string {
-	if o == nil {
+func (c *CommerceItem) GetVendorName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.VendorName
+	return c.VendorName
 }

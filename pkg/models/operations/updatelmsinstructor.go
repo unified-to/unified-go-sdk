@@ -19,39 +19,39 @@ type UpdateLmsInstructorRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateLmsInstructorRequest) GetLmsInstructor() shared.LmsInstructor {
-	if o == nil {
+func (u *UpdateLmsInstructorRequest) GetLmsInstructor() shared.LmsInstructor {
+	if u == nil {
 		return shared.LmsInstructor{}
 	}
-	return o.LmsInstructor
+	return u.LmsInstructor
 }
 
-func (o *UpdateLmsInstructorRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateLmsInstructorRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateLmsInstructorRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateLmsInstructorRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateLmsInstructorRequest) GetID() string {
-	if o == nil {
+func (u *UpdateLmsInstructorRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateLmsInstructorRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateLmsInstructorRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateLmsInstructorResponse struct {
@@ -65,30 +65,30 @@ type UpdateLmsInstructorResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateLmsInstructorResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateLmsInstructorResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateLmsInstructorResponse) GetLmsInstructor() *shared.LmsInstructor {
-	if o == nil {
+func (u *UpdateLmsInstructorResponse) GetLmsInstructor() *shared.LmsInstructor {
+	if u == nil {
 		return nil
 	}
-	return o.LmsInstructor
+	return u.LmsInstructor
 }
 
-func (o *UpdateLmsInstructorResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateLmsInstructorResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateLmsInstructorResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateLmsInstructorResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

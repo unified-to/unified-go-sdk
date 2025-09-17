@@ -33,86 +33,86 @@ func (p *PaymentPayment) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PaymentPayment) GetAccountID() *string {
-	if o == nil {
+func (p *PaymentPayment) GetAccountID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.AccountID
+	return p.AccountID
 }
 
-func (o *PaymentPayment) GetContactID() *string {
-	if o == nil {
+func (p *PaymentPayment) GetContactID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ContactID
+	return p.ContactID
 }
 
-func (o *PaymentPayment) GetCreatedAt() *time.Time {
-	if o == nil {
+func (p *PaymentPayment) GetCreatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return p.CreatedAt
 }
 
-func (o *PaymentPayment) GetCurrency() *string {
-	if o == nil {
+func (p *PaymentPayment) GetCurrency() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Currency
+	return p.Currency
 }
 
-func (o *PaymentPayment) GetID() *string {
-	if o == nil {
+func (p *PaymentPayment) GetID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PaymentPayment) GetInvoiceID() *string {
-	if o == nil {
+func (p *PaymentPayment) GetInvoiceID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.InvoiceID
+	return p.InvoiceID
 }
 
-func (o *PaymentPayment) GetNotes() *string {
-	if o == nil {
+func (p *PaymentPayment) GetNotes() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Notes
+	return p.Notes
 }
 
-func (o *PaymentPayment) GetPaymentMethod() *string {
-	if o == nil {
+func (p *PaymentPayment) GetPaymentMethod() *string {
+	if p == nil {
 		return nil
 	}
-	return o.PaymentMethod
+	return p.PaymentMethod
 }
 
-func (o *PaymentPayment) GetRaw() map[string]any {
-	if o == nil {
+func (p *PaymentPayment) GetRaw() map[string]any {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
-func (o *PaymentPayment) GetReference() *string {
-	if o == nil {
+func (p *PaymentPayment) GetReference() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Reference
+	return p.Reference
 }
 
-func (o *PaymentPayment) GetTotalAmount() *float64 {
-	if o == nil {
+func (p *PaymentPayment) GetTotalAmount() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.TotalAmount
+	return p.TotalAmount
 }
 
-func (o *PaymentPayment) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (p *PaymentPayment) GetUpdatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return p.UpdatedAt
 }

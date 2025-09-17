@@ -18,32 +18,32 @@ type GetHrisDeviceRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetHrisDeviceRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetHrisDeviceRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetHrisDeviceRequest) GetFields() []string {
-	if o == nil {
+func (g *GetHrisDeviceRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetHrisDeviceRequest) GetID() string {
-	if o == nil {
+func (g *GetHrisDeviceRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetHrisDeviceRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetHrisDeviceRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetHrisDeviceResponse struct {
@@ -57,30 +57,30 @@ type GetHrisDeviceResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetHrisDeviceResponse) GetContentType() string {
-	if o == nil {
+func (g *GetHrisDeviceResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetHrisDeviceResponse) GetHrisDevice() *shared.HrisDevice {
-	if o == nil {
+func (g *GetHrisDeviceResponse) GetHrisDevice() *shared.HrisDevice {
+	if g == nil {
 		return nil
 	}
-	return o.HrisDevice
+	return g.HrisDevice
 }
 
-func (o *GetHrisDeviceResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetHrisDeviceResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetHrisDeviceResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetHrisDeviceResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

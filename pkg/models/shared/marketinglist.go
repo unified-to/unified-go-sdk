@@ -33,72 +33,72 @@ func (m *MarketingList) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *MarketingList) GetCreatedAt() *time.Time {
-	if o == nil {
+func (m *MarketingList) GetCreatedAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return m.CreatedAt
 }
 
-func (o *MarketingList) GetDescription() *string {
-	if o == nil {
+func (m *MarketingList) GetDescription() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Description
+	return m.Description
 }
 
-func (o *MarketingList) GetEndAt() *time.Time {
-	if o == nil {
+func (m *MarketingList) GetEndAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.EndAt
+	return m.EndAt
 }
 
-func (o *MarketingList) GetID() *string {
-	if o == nil {
+func (m *MarketingList) GetID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ID
+	return m.ID
 }
 
-func (o *MarketingList) GetIsActive() *bool {
-	if o == nil {
+func (m *MarketingList) GetIsActive() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.IsActive
+	return m.IsActive
 }
 
-func (o *MarketingList) GetName() *string {
-	if o == nil {
+func (m *MarketingList) GetName() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Name
+	return m.Name
 }
 
-func (o *MarketingList) GetRaw() map[string]any {
-	if o == nil {
+func (m *MarketingList) GetRaw() map[string]any {
+	if m == nil {
 		return nil
 	}
-	return o.Raw
+	return m.Raw
 }
 
-func (o *MarketingList) GetStartAt() *time.Time {
-	if o == nil {
+func (m *MarketingList) GetStartAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.StartAt
+	return m.StartAt
 }
 
-func (o *MarketingList) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (m *MarketingList) GetUpdatedAt() *time.Time {
+	if m == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return m.UpdatedAt
 }
 
-func (o *MarketingList) GetUserID() *string {
-	if o == nil {
+func (m *MarketingList) GetUserID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.UserID
+	return m.UserID
 }

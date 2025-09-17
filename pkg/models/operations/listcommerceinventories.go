@@ -28,81 +28,81 @@ type ListCommerceInventoriesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListCommerceInventoriesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListCommerceInventoriesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListCommerceInventoriesRequest) GetItemVariantID() *string {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetItemVariantID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ItemVariantID
+	return l.ItemVariantID
 }
 
-func (o *ListCommerceInventoriesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListCommerceInventoriesRequest) GetLocationID() *string {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetLocationID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.LocationID
+	return l.LocationID
 }
 
-func (o *ListCommerceInventoriesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListCommerceInventoriesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListCommerceInventoriesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListCommerceInventoriesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListCommerceInventoriesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListCommerceInventoriesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListCommerceInventoriesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListCommerceInventoriesResponse struct {
@@ -116,30 +116,30 @@ type ListCommerceInventoriesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListCommerceInventoriesResponse) GetCommerceInventories() []shared.CommerceInventory {
-	if o == nil {
+func (l *ListCommerceInventoriesResponse) GetCommerceInventories() []shared.CommerceInventory {
+	if l == nil {
 		return nil
 	}
-	return o.CommerceInventories
+	return l.CommerceInventories
 }
 
-func (o *ListCommerceInventoriesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListCommerceInventoriesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListCommerceInventoriesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListCommerceInventoriesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListCommerceInventoriesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListCommerceInventoriesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

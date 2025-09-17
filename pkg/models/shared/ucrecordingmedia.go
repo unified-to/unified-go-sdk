@@ -27,44 +27,44 @@ func (u *UcRecordingMedia) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *UcRecordingMedia) GetEndAt() *time.Time {
-	if o == nil {
+func (u *UcRecordingMedia) GetEndAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.EndAt
+	return u.EndAt
 }
 
-func (o *UcRecordingMedia) GetLanguage() *string {
-	if o == nil {
+func (u *UcRecordingMedia) GetLanguage() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Language
+	return u.Language
 }
 
-func (o *UcRecordingMedia) GetRecordingDownloadURL() *string {
-	if o == nil {
+func (u *UcRecordingMedia) GetRecordingDownloadURL() *string {
+	if u == nil {
 		return nil
 	}
-	return o.RecordingDownloadURL
+	return u.RecordingDownloadURL
 }
 
-func (o *UcRecordingMedia) GetStartAt() *time.Time {
-	if o == nil {
+func (u *UcRecordingMedia) GetStartAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.StartAt
+	return u.StartAt
 }
 
-func (o *UcRecordingMedia) GetTranscriptDownloadURL() *string {
-	if o == nil {
+func (u *UcRecordingMedia) GetTranscriptDownloadURL() *string {
+	if u == nil {
 		return nil
 	}
-	return o.TranscriptDownloadURL
+	return u.TranscriptDownloadURL
 }
 
-func (o *UcRecordingMedia) GetTranscripts() []UcRecordingTranscript {
-	if o == nil {
+func (u *UcRecordingMedia) GetTranscripts() []UcRecordingTranscript {
+	if u == nil {
 		return nil
 	}
-	return o.Transcripts
+	return u.Transcripts
 }

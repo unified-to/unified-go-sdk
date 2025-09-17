@@ -10,37 +10,37 @@ type StoragePermission struct {
 	UserID   *string                          `json:"user_id,omitempty"`
 }
 
-func (o *StoragePermission) GetGroupID() *string {
-	if o == nil {
+func (s *StoragePermission) GetGroupID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.GroupID
+	return s.GroupID
 }
 
-func (o *StoragePermission) GetIsHidden() *bool {
-	if o == nil {
+func (s *StoragePermission) GetIsHidden() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.IsHidden
+	return s.IsHidden
 }
 
-func (o *StoragePermission) GetIsPublic() *bool {
-	if o == nil {
+func (s *StoragePermission) GetIsPublic() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.IsPublic
+	return s.IsPublic
 }
 
-func (o *StoragePermission) GetRoles() []PropertyStoragePermissionRoles {
-	if o == nil {
+func (s *StoragePermission) GetRoles() []PropertyStoragePermissionRoles {
+	if s == nil {
 		return []PropertyStoragePermissionRoles{}
 	}
-	return o.Roles
+	return s.Roles
 }
 
-func (o *StoragePermission) GetUserID() *string {
-	if o == nil {
+func (s *StoragePermission) GetUserID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.UserID
+	return s.UserID
 }

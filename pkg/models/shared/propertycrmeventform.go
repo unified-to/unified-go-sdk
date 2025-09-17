@@ -25,30 +25,30 @@ func (p *PropertyCrmEventForm) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PropertyCrmEventForm) GetArchivedAt() *time.Time {
-	if o == nil {
+func (p *PropertyCrmEventForm) GetArchivedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.ArchivedAt
+	return p.ArchivedAt
 }
 
-func (o *PropertyCrmEventForm) GetFields() []CrmEventFormField {
-	if o == nil {
+func (p *PropertyCrmEventForm) GetFields() []CrmEventFormField {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PropertyCrmEventForm) GetName() *string {
-	if o == nil {
+func (p *PropertyCrmEventForm) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyCrmEventForm) GetRedirectURL() *string {
-	if o == nil {
+func (p *PropertyCrmEventForm) GetRedirectURL() *string {
+	if p == nil {
 		return nil
 	}
-	return o.RedirectURL
+	return p.RedirectURL
 }

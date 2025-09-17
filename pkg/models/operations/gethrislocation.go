@@ -18,32 +18,32 @@ type GetHrisLocationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetHrisLocationRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetHrisLocationRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetHrisLocationRequest) GetFields() []string {
-	if o == nil {
+func (g *GetHrisLocationRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetHrisLocationRequest) GetID() string {
-	if o == nil {
+func (g *GetHrisLocationRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetHrisLocationRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetHrisLocationRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetHrisLocationResponse struct {
@@ -57,30 +57,30 @@ type GetHrisLocationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetHrisLocationResponse) GetContentType() string {
-	if o == nil {
+func (g *GetHrisLocationResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetHrisLocationResponse) GetHrisLocation() *shared.HrisLocation {
-	if o == nil {
+func (g *GetHrisLocationResponse) GetHrisLocation() *shared.HrisLocation {
+	if g == nil {
 		return nil
 	}
-	return o.HrisLocation
+	return g.HrisLocation
 }
 
-func (o *GetHrisLocationResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetHrisLocationResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetHrisLocationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetHrisLocationResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

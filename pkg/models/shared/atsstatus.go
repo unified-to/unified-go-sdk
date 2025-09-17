@@ -33,37 +33,37 @@ type AtsStatus struct {
 	Status         *AtsStatusStatus `json:"status,omitempty"`
 }
 
-func (o *AtsStatus) GetDescription() *string {
-	if o == nil {
+func (a *AtsStatus) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AtsStatus) GetID() *string {
-	if o == nil {
+func (a *AtsStatus) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsStatus) GetOriginalStatus() *string {
-	if o == nil {
+func (a *AtsStatus) GetOriginalStatus() *string {
+	if a == nil {
 		return nil
 	}
-	return o.OriginalStatus
+	return a.OriginalStatus
 }
 
-func (o *AtsStatus) GetRaw() map[string]any {
-	if o == nil {
+func (a *AtsStatus) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AtsStatus) GetStatus() *AtsStatusStatus {
-	if o == nil {
+func (a *AtsStatus) GetStatus() *AtsStatusStatus {
+	if a == nil {
 		return nil
 	}
-	return o.Status
+	return a.Status
 }

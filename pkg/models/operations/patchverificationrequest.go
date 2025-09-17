@@ -19,39 +19,39 @@ type PatchVerificationRequestRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchVerificationRequestRequest) GetVerificationRequest() shared.VerificationRequest {
-	if o == nil {
+func (p *PatchVerificationRequestRequest) GetVerificationRequest() shared.VerificationRequest {
+	if p == nil {
 		return shared.VerificationRequest{}
 	}
-	return o.VerificationRequest
+	return p.VerificationRequest
 }
 
-func (o *PatchVerificationRequestRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchVerificationRequestRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchVerificationRequestRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchVerificationRequestRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchVerificationRequestRequest) GetID() string {
-	if o == nil {
+func (p *PatchVerificationRequestRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchVerificationRequestRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchVerificationRequestRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchVerificationRequestResponse struct {
@@ -65,30 +65,30 @@ type PatchVerificationRequestResponse struct {
 	VerificationRequest *shared.VerificationRequest
 }
 
-func (o *PatchVerificationRequestResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchVerificationRequestResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchVerificationRequestResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchVerificationRequestResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchVerificationRequestResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchVerificationRequestResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchVerificationRequestResponse) GetVerificationRequest() *shared.VerificationRequest {
-	if o == nil {
+func (p *PatchVerificationRequestResponse) GetVerificationRequest() *shared.VerificationRequest {
+	if p == nil {
 		return nil
 	}
-	return o.VerificationRequest
+	return p.VerificationRequest
 }

@@ -19,39 +19,39 @@ type PatchCalendarLinkRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchCalendarLinkRequest) GetCalendarLink() shared.CalendarLink {
-	if o == nil {
+func (p *PatchCalendarLinkRequest) GetCalendarLink() shared.CalendarLink {
+	if p == nil {
 		return shared.CalendarLink{}
 	}
-	return o.CalendarLink
+	return p.CalendarLink
 }
 
-func (o *PatchCalendarLinkRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchCalendarLinkRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchCalendarLinkRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchCalendarLinkRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchCalendarLinkRequest) GetID() string {
-	if o == nil {
+func (p *PatchCalendarLinkRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchCalendarLinkRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchCalendarLinkRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchCalendarLinkResponse struct {
@@ -65,30 +65,30 @@ type PatchCalendarLinkResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchCalendarLinkResponse) GetCalendarLink() *shared.CalendarLink {
-	if o == nil {
+func (p *PatchCalendarLinkResponse) GetCalendarLink() *shared.CalendarLink {
+	if p == nil {
 		return nil
 	}
-	return o.CalendarLink
+	return p.CalendarLink
 }
 
-func (o *PatchCalendarLinkResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchCalendarLinkResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchCalendarLinkResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchCalendarLinkResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchCalendarLinkResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchCalendarLinkResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

@@ -52,191 +52,191 @@ func (e *EnrichCompany) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *EnrichCompany) GetAddress() *PropertyEnrichCompanyAddress {
-	if o == nil {
+func (e *EnrichCompany) GetAddress() *PropertyEnrichCompanyAddress {
+	if e == nil {
 		return nil
 	}
-	return o.Address
+	return e.Address
 }
 
-func (o *EnrichCompany) GetAlexaRank() *float64 {
-	if o == nil {
+func (e *EnrichCompany) GetAlexaRank() *float64 {
+	if e == nil {
 		return nil
 	}
-	return o.AlexaRank
+	return e.AlexaRank
 }
 
-func (o *EnrichCompany) GetCreatedAt() *time.Time {
-	if o == nil {
+func (e *EnrichCompany) GetCreatedAt() *time.Time {
+	if e == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return e.CreatedAt
 }
 
-func (o *EnrichCompany) GetCrunchbaseURL() *string {
-	if o == nil {
+func (e *EnrichCompany) GetCrunchbaseURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.CrunchbaseURL
+	return e.CrunchbaseURL
 }
 
-func (o *EnrichCompany) GetDescription() *string {
-	if o == nil {
+func (e *EnrichCompany) GetDescription() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Description
+	return e.Description
 }
 
-func (o *EnrichCompany) GetDomain() *string {
-	if o == nil {
+func (e *EnrichCompany) GetDomain() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Domain
+	return e.Domain
 }
 
-func (o *EnrichCompany) GetEmployees() *string {
-	if o == nil {
+func (e *EnrichCompany) GetEmployees() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Employees
+	return e.Employees
 }
 
-func (o *EnrichCompany) GetExchange() *string {
-	if o == nil {
+func (e *EnrichCompany) GetExchange() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Exchange
+	return e.Exchange
 }
 
-func (o *EnrichCompany) GetFacebookURL() *string {
-	if o == nil {
+func (e *EnrichCompany) GetFacebookURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.FacebookURL
+	return e.FacebookURL
 }
 
-func (o *EnrichCompany) GetID() *string {
-	if o == nil {
+func (e *EnrichCompany) GetID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.ID
+	return e.ID
 }
 
-func (o *EnrichCompany) GetIndustry() *string {
-	if o == nil {
+func (e *EnrichCompany) GetIndustry() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Industry
+	return e.Industry
 }
 
-func (o *EnrichCompany) GetInstagramURL() *string {
-	if o == nil {
+func (e *EnrichCompany) GetInstagramURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.InstagramURL
+	return e.InstagramURL
 }
 
-func (o *EnrichCompany) GetLinkedinURL() *string {
-	if o == nil {
+func (e *EnrichCompany) GetLinkedinURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.LinkedinURL
+	return e.LinkedinURL
 }
 
-func (o *EnrichCompany) GetLogoURL() *string {
-	if o == nil {
+func (e *EnrichCompany) GetLogoURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.LogoURL
+	return e.LogoURL
 }
 
-func (o *EnrichCompany) GetNaicsCode() *float64 {
-	if o == nil {
+func (e *EnrichCompany) GetNaicsCode() *float64 {
+	if e == nil {
 		return nil
 	}
-	return o.NaicsCode
+	return e.NaicsCode
 }
 
-func (o *EnrichCompany) GetName() *string {
-	if o == nil {
+func (e *EnrichCompany) GetName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Name
+	return e.Name
 }
 
-func (o *EnrichCompany) GetRaw() map[string]any {
-	if o == nil {
+func (e *EnrichCompany) GetRaw() map[string]any {
+	if e == nil {
 		return nil
 	}
-	return o.Raw
+	return e.Raw
 }
 
-func (o *EnrichCompany) GetRevenue() *string {
-	if o == nil {
+func (e *EnrichCompany) GetRevenue() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Revenue
+	return e.Revenue
 }
 
-func (o *EnrichCompany) GetSicCode() *float64 {
-	if o == nil {
+func (e *EnrichCompany) GetSicCode() *float64 {
+	if e == nil {
 		return nil
 	}
-	return o.SicCode
+	return e.SicCode
 }
 
-func (o *EnrichCompany) GetStock() *string {
-	if o == nil {
+func (e *EnrichCompany) GetStock() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Stock
+	return e.Stock
 }
 
-func (o *EnrichCompany) GetTelephones() []EnrichTelephone {
-	if o == nil {
+func (e *EnrichCompany) GetTelephones() []EnrichTelephone {
+	if e == nil {
 		return nil
 	}
-	return o.Telephones
+	return e.Telephones
 }
 
-func (o *EnrichCompany) GetTwitterHandle() *string {
-	if o == nil {
+func (e *EnrichCompany) GetTwitterHandle() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TwitterHandle
+	return e.TwitterHandle
 }
 
-func (o *EnrichCompany) GetTwitterURL() *string {
-	if o == nil {
+func (e *EnrichCompany) GetTwitterURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TwitterURL
+	return e.TwitterURL
 }
 
-func (o *EnrichCompany) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (e *EnrichCompany) GetUpdatedAt() *time.Time {
+	if e == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return e.UpdatedAt
 }
 
-func (o *EnrichCompany) GetYearFounded() *float64 {
-	if o == nil {
+func (e *EnrichCompany) GetYearFounded() *float64 {
+	if e == nil {
 		return nil
 	}
-	return o.YearFounded
+	return e.YearFounded
 }
 
-func (o *EnrichCompany) GetYelpURL() *string {
-	if o == nil {
+func (e *EnrichCompany) GetYelpURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.YelpURL
+	return e.YelpURL
 }
 
-func (o *EnrichCompany) GetYoutubeURL() *string {
-	if o == nil {
+func (e *EnrichCompany) GetYoutubeURL() *string {
+	if e == nil {
 		return nil
 	}
-	return o.YoutubeURL
+	return e.YoutubeURL
 }

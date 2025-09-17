@@ -49,86 +49,86 @@ func (h *HrisGroup) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HrisGroup) GetCompanyID() *string {
-	if o == nil {
+func (h *HrisGroup) GetCompanyID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.CompanyID
+	return h.CompanyID
 }
 
-func (o *HrisGroup) GetCreatedAt() *time.Time {
-	if o == nil {
+func (h *HrisGroup) GetCreatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return h.CreatedAt
 }
 
-func (o *HrisGroup) GetDescription() *string {
-	if o == nil {
+func (h *HrisGroup) GetDescription() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Description
+	return h.Description
 }
 
-func (o *HrisGroup) GetID() *string {
-	if o == nil {
+func (h *HrisGroup) GetID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ID
+	return h.ID
 }
 
-func (o *HrisGroup) GetIsActive() *bool {
-	if o == nil {
+func (h *HrisGroup) GetIsActive() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.IsActive
+	return h.IsActive
 }
 
-func (o *HrisGroup) GetManagerIds() []string {
-	if o == nil {
+func (h *HrisGroup) GetManagerIds() []string {
+	if h == nil {
 		return nil
 	}
-	return o.ManagerIds
+	return h.ManagerIds
 }
 
-func (o *HrisGroup) GetName() *string {
-	if o == nil {
+func (h *HrisGroup) GetName() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Name
+	return h.Name
 }
 
-func (o *HrisGroup) GetParentID() *string {
-	if o == nil {
+func (h *HrisGroup) GetParentID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ParentID
+	return h.ParentID
 }
 
-func (o *HrisGroup) GetRaw() map[string]any {
-	if o == nil {
+func (h *HrisGroup) GetRaw() map[string]any {
+	if h == nil {
 		return nil
 	}
-	return o.Raw
+	return h.Raw
 }
 
-func (o *HrisGroup) GetType() *HrisGroupType {
-	if o == nil {
+func (h *HrisGroup) GetType() *HrisGroupType {
+	if h == nil {
 		return nil
 	}
-	return o.Type
+	return h.Type
 }
 
-func (o *HrisGroup) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (h *HrisGroup) GetUpdatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return h.UpdatedAt
 }
 
-func (o *HrisGroup) GetUserIds() []string {
-	if o == nil {
+func (h *HrisGroup) GetUserIds() []string {
+	if h == nil {
 		return nil
 	}
-	return o.UserIds
+	return h.UserIds
 }

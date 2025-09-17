@@ -19,39 +19,39 @@ type PatchLmsStudentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchLmsStudentRequest) GetLmsStudent() shared.LmsStudent {
-	if o == nil {
+func (p *PatchLmsStudentRequest) GetLmsStudent() shared.LmsStudent {
+	if p == nil {
 		return shared.LmsStudent{}
 	}
-	return o.LmsStudent
+	return p.LmsStudent
 }
 
-func (o *PatchLmsStudentRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchLmsStudentRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchLmsStudentRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchLmsStudentRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchLmsStudentRequest) GetID() string {
-	if o == nil {
+func (p *PatchLmsStudentRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchLmsStudentRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchLmsStudentRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchLmsStudentResponse struct {
@@ -65,30 +65,30 @@ type PatchLmsStudentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchLmsStudentResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchLmsStudentResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchLmsStudentResponse) GetLmsStudent() *shared.LmsStudent {
-	if o == nil {
+func (p *PatchLmsStudentResponse) GetLmsStudent() *shared.LmsStudent {
+	if p == nil {
 		return nil
 	}
-	return o.LmsStudent
+	return p.LmsStudent
 }
 
-func (o *PatchLmsStudentResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchLmsStudentResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchLmsStudentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchLmsStudentResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

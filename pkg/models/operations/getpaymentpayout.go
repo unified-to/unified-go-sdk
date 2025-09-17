@@ -18,32 +18,32 @@ type GetPaymentPayoutRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetPaymentPayoutRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetPaymentPayoutRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetPaymentPayoutRequest) GetFields() []string {
-	if o == nil {
+func (g *GetPaymentPayoutRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetPaymentPayoutRequest) GetID() string {
-	if o == nil {
+func (g *GetPaymentPayoutRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetPaymentPayoutRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetPaymentPayoutRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetPaymentPayoutResponse struct {
@@ -57,30 +57,30 @@ type GetPaymentPayoutResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetPaymentPayoutResponse) GetContentType() string {
-	if o == nil {
+func (g *GetPaymentPayoutResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetPaymentPayoutResponse) GetPaymentPayout() *shared.PaymentPayout {
-	if o == nil {
+func (g *GetPaymentPayoutResponse) GetPaymentPayout() *shared.PaymentPayout {
+	if g == nil {
 		return nil
 	}
-	return o.PaymentPayout
+	return g.PaymentPayout
 }
 
-func (o *GetPaymentPayoutResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetPaymentPayoutResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetPaymentPayoutResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetPaymentPayoutResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

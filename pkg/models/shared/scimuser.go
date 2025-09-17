@@ -35,198 +35,198 @@ type ScimUser struct {
 	X509Certificates                                         []ScimRole                                                                `json:"x509Certificates,omitempty"`
 }
 
-func (o *ScimUser) GetActive() *bool {
-	if o == nil {
+func (s *ScimUser) GetActive() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Active
+	return s.Active
 }
 
-func (o *ScimUser) GetAddresses() []ScimAddress {
-	if o == nil {
+func (s *ScimUser) GetAddresses() []ScimAddress {
+	if s == nil {
 		return nil
 	}
-	return o.Addresses
+	return s.Addresses
 }
 
-func (o *ScimUser) GetDisplayName() *string {
-	if o == nil {
+func (s *ScimUser) GetDisplayName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.DisplayName
+	return s.DisplayName
 }
 
-func (o *ScimUser) GetEmails() []ScimEmail {
-	if o == nil {
+func (s *ScimUser) GetEmails() []ScimEmail {
+	if s == nil {
 		return nil
 	}
-	return o.Emails
+	return s.Emails
 }
 
-func (o *ScimUser) GetEntitlements() []ScimEntitlement {
-	if o == nil {
+func (s *ScimUser) GetEntitlements() []ScimEntitlement {
+	if s == nil {
 		return nil
 	}
-	return o.Entitlements
+	return s.Entitlements
 }
 
-func (o *ScimUser) GetExternalID() *string {
-	if o == nil {
+func (s *ScimUser) GetExternalID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ExternalID
+	return s.ExternalID
 }
 
-func (o *ScimUser) GetGroups() []ScimUserGroups {
-	if o == nil {
+func (s *ScimUser) GetGroups() []ScimUserGroups {
+	if s == nil {
 		return nil
 	}
-	return o.Groups
+	return s.Groups
 }
 
-func (o *ScimUser) GetID() *string {
-	if o == nil {
+func (s *ScimUser) GetID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ID
+	return s.ID
 }
 
-func (o *ScimUser) GetIms() []ScimIms {
-	if o == nil {
+func (s *ScimUser) GetIms() []ScimIms {
+	if s == nil {
 		return nil
 	}
-	return o.Ims
+	return s.Ims
 }
 
-func (o *ScimUser) GetLocale() *string {
-	if o == nil {
+func (s *ScimUser) GetLocale() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Locale
+	return s.Locale
 }
 
-func (o *ScimUser) GetMeta() *PropertyScimUserMeta {
-	if o == nil {
+func (s *ScimUser) GetMeta() *PropertyScimUserMeta {
+	if s == nil {
 		return nil
 	}
-	return o.Meta
+	return s.Meta
 }
 
-func (o *ScimUser) GetName() *PropertyScimUserName {
-	if o == nil {
+func (s *ScimUser) GetName() *PropertyScimUserName {
+	if s == nil {
 		return nil
 	}
-	return o.Name
+	return s.Name
 }
 
-func (o *ScimUser) GetNickName() *string {
-	if o == nil {
+func (s *ScimUser) GetNickName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.NickName
+	return s.NickName
 }
 
-func (o *ScimUser) GetPassword() *string {
-	if o == nil {
+func (s *ScimUser) GetPassword() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Password
+	return s.Password
 }
 
-func (o *ScimUser) GetPhoneNumbers() []ScimPhoneNumber {
-	if o == nil {
+func (s *ScimUser) GetPhoneNumbers() []ScimPhoneNumber {
+	if s == nil {
 		return nil
 	}
-	return o.PhoneNumbers
+	return s.PhoneNumbers
 }
 
-func (o *ScimUser) GetPhotos() []ScimPhoto {
-	if o == nil {
+func (s *ScimUser) GetPhotos() []ScimPhoto {
+	if s == nil {
 		return nil
 	}
-	return o.Photos
+	return s.Photos
 }
 
-func (o *ScimUser) GetPreferredLanguage() *string {
-	if o == nil {
+func (s *ScimUser) GetPreferredLanguage() *string {
+	if s == nil {
 		return nil
 	}
-	return o.PreferredLanguage
+	return s.PreferredLanguage
 }
 
-func (o *ScimUser) GetProfileURL() *string {
-	if o == nil {
+func (s *ScimUser) GetProfileURL() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ProfileURL
+	return s.ProfileURL
 }
 
-func (o *ScimUser) GetRoles() []ScimRole {
-	if o == nil {
+func (s *ScimUser) GetRoles() []ScimRole {
+	if s == nil {
 		return nil
 	}
-	return o.Roles
+	return s.Roles
 }
 
-func (o *ScimUser) GetSchemas() []PropertyScimUserSchemas {
-	if o == nil {
+func (s *ScimUser) GetSchemas() []PropertyScimUserSchemas {
+	if s == nil {
 		return nil
 	}
-	return o.Schemas
+	return s.Schemas
 }
 
-func (o *ScimUser) GetTimezone() *string {
-	if o == nil {
+func (s *ScimUser) GetTimezone() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Timezone
+	return s.Timezone
 }
 
-func (o *ScimUser) GetTitle() *string {
-	if o == nil {
+func (s *ScimUser) GetTitle() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Title
+	return s.Title
 }
 
-func (o *ScimUser) GetUrnIetfParamsScimSchemasExtensionEnterprise20User() *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
-	if o == nil {
+func (s *ScimUser) GetUrnIetfParamsScimSchemasExtensionEnterprise20User() *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
+	if s == nil {
 		return nil
 	}
-	return o.UrnIetfParamsScimSchemasExtensionEnterprise20User
+	return s.UrnIetfParamsScimSchemasExtensionEnterprise20User
 }
 
-func (o *ScimUser) GetUrnIetfParamsScimSchemasExtensionLatticeAttributes10User() *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User {
-	if o == nil {
+func (s *ScimUser) GetUrnIetfParamsScimSchemasExtensionLatticeAttributes10User() *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User {
+	if s == nil {
 		return nil
 	}
-	return o.UrnIetfParamsScimSchemasExtensionLatticeAttributes10User
+	return s.UrnIetfParamsScimSchemasExtensionLatticeAttributes10User
 }
 
-func (o *ScimUser) GetUrnIetfParamsScimSchemasExtensionPeakon20User() *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
-	if o == nil {
+func (s *ScimUser) GetUrnIetfParamsScimSchemasExtensionPeakon20User() *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User {
+	if s == nil {
 		return nil
 	}
-	return o.UrnIetfParamsScimSchemasExtensionPeakon20User
+	return s.UrnIetfParamsScimSchemasExtensionPeakon20User
 }
 
-func (o *ScimUser) GetUserName() *string {
-	if o == nil {
+func (s *ScimUser) GetUserName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.UserName
+	return s.UserName
 }
 
-func (o *ScimUser) GetUserType() *string {
-	if o == nil {
+func (s *ScimUser) GetUserType() *string {
+	if s == nil {
 		return nil
 	}
-	return o.UserType
+	return s.UserType
 }
 
-func (o *ScimUser) GetX509Certificates() []ScimRole {
-	if o == nil {
+func (s *ScimUser) GetX509Certificates() []ScimRole {
+	if s == nil {
 		return nil
 	}
-	return o.X509Certificates
+	return s.X509Certificates
 }

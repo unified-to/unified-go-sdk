@@ -26,74 +26,74 @@ type ListHrisEmployeesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListHrisEmployeesRequest) GetCompanyID() *string {
-	if o == nil {
+func (l *ListHrisEmployeesRequest) GetCompanyID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyID
+	return l.CompanyID
 }
 
-func (o *ListHrisEmployeesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListHrisEmployeesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListHrisEmployeesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListHrisEmployeesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListHrisEmployeesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListHrisEmployeesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListHrisEmployeesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListHrisEmployeesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListHrisEmployeesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListHrisEmployeesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListHrisEmployeesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListHrisEmployeesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListHrisEmployeesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListHrisEmployeesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListHrisEmployeesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListHrisEmployeesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListHrisEmployeesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListHrisEmployeesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListHrisEmployeesResponse struct {
@@ -107,30 +107,30 @@ type ListHrisEmployeesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListHrisEmployeesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListHrisEmployeesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListHrisEmployeesResponse) GetHrisEmployees() []shared.HrisEmployee {
-	if o == nil {
+func (l *ListHrisEmployeesResponse) GetHrisEmployees() []shared.HrisEmployee {
+	if l == nil {
 		return nil
 	}
-	return o.HrisEmployees
+	return l.HrisEmployees
 }
 
-func (o *ListHrisEmployeesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListHrisEmployeesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListHrisEmployeesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListHrisEmployeesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

@@ -8,16 +8,16 @@ type VerificationTime struct {
 	ValidRegions []string `json:"valid_regions,omitempty"`
 }
 
-func (o *VerificationTime) GetMilliseconds() *float64 {
-	if o == nil {
+func (v *VerificationTime) GetMilliseconds() *float64 {
+	if v == nil {
 		return nil
 	}
-	return o.Milliseconds
+	return v.Milliseconds
 }
 
-func (o *VerificationTime) GetValidRegions() []string {
-	if o == nil {
+func (v *VerificationTime) GetValidRegions() []string {
+	if v == nil {
 		return nil
 	}
-	return o.ValidRegions
+	return v.ValidRegions
 }

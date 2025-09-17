@@ -34,93 +34,93 @@ func (p *PaymentLink) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PaymentLink) GetAmount() *float64 {
-	if o == nil {
+func (p *PaymentLink) GetAmount() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.Amount
+	return p.Amount
 }
 
-func (o *PaymentLink) GetContactID() *string {
-	if o == nil {
+func (p *PaymentLink) GetContactID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ContactID
+	return p.ContactID
 }
 
-func (o *PaymentLink) GetCreatedAt() *time.Time {
-	if o == nil {
+func (p *PaymentLink) GetCreatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return p.CreatedAt
 }
 
-func (o *PaymentLink) GetCurrency() *string {
-	if o == nil {
+func (p *PaymentLink) GetCurrency() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Currency
+	return p.Currency
 }
 
-func (o *PaymentLink) GetID() *string {
-	if o == nil {
+func (p *PaymentLink) GetID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PaymentLink) GetIsActive() *bool {
-	if o == nil {
+func (p *PaymentLink) GetIsActive() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.IsActive
+	return p.IsActive
 }
 
-func (o *PaymentLink) GetIsChargeableNow() *bool {
-	if o == nil {
+func (p *PaymentLink) GetIsChargeableNow() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.IsChargeableNow
+	return p.IsChargeableNow
 }
 
-func (o *PaymentLink) GetLineitems() []PaymentLineitem {
-	if o == nil {
+func (p *PaymentLink) GetLineitems() []PaymentLineitem {
+	if p == nil {
 		return nil
 	}
-	return o.Lineitems
+	return p.Lineitems
 }
 
-func (o *PaymentLink) GetPaymentID() *string {
-	if o == nil {
+func (p *PaymentLink) GetPaymentID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.PaymentID
+	return p.PaymentID
 }
 
-func (o *PaymentLink) GetRaw() map[string]any {
-	if o == nil {
+func (p *PaymentLink) GetRaw() map[string]any {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
-func (o *PaymentLink) GetSuccessURL() *string {
-	if o == nil {
+func (p *PaymentLink) GetSuccessURL() *string {
+	if p == nil {
 		return nil
 	}
-	return o.SuccessURL
+	return p.SuccessURL
 }
 
-func (o *PaymentLink) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (p *PaymentLink) GetUpdatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return p.UpdatedAt
 }
 
-func (o *PaymentLink) GetURL() *string {
-	if o == nil {
+func (p *PaymentLink) GetURL() *string {
+	if p == nil {
 		return nil
 	}
-	return o.URL
+	return p.URL
 }

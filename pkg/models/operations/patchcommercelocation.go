@@ -19,39 +19,39 @@ type PatchCommerceLocationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchCommerceLocationRequest) GetCommerceLocation() shared.CommerceLocation {
-	if o == nil {
+func (p *PatchCommerceLocationRequest) GetCommerceLocation() shared.CommerceLocation {
+	if p == nil {
 		return shared.CommerceLocation{}
 	}
-	return o.CommerceLocation
+	return p.CommerceLocation
 }
 
-func (o *PatchCommerceLocationRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchCommerceLocationRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchCommerceLocationRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchCommerceLocationRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchCommerceLocationRequest) GetID() string {
-	if o == nil {
+func (p *PatchCommerceLocationRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchCommerceLocationRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchCommerceLocationRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchCommerceLocationResponse struct {
@@ -65,30 +65,30 @@ type PatchCommerceLocationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchCommerceLocationResponse) GetCommerceLocation() *shared.CommerceLocation {
-	if o == nil {
+func (p *PatchCommerceLocationResponse) GetCommerceLocation() *shared.CommerceLocation {
+	if p == nil {
 		return nil
 	}
-	return o.CommerceLocation
+	return p.CommerceLocation
 }
 
-func (o *PatchCommerceLocationResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchCommerceLocationResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchCommerceLocationResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchCommerceLocationResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchCommerceLocationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchCommerceLocationResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

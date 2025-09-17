@@ -19,39 +19,39 @@ type UpdateAccountingTaxrateRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAccountingTaxrateRequest) GetAccountingTaxrate() shared.AccountingTaxrate {
-	if o == nil {
+func (u *UpdateAccountingTaxrateRequest) GetAccountingTaxrate() shared.AccountingTaxrate {
+	if u == nil {
 		return shared.AccountingTaxrate{}
 	}
-	return o.AccountingTaxrate
+	return u.AccountingTaxrate
 }
 
-func (o *UpdateAccountingTaxrateRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAccountingTaxrateRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAccountingTaxrateRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAccountingTaxrateRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAccountingTaxrateRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAccountingTaxrateRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAccountingTaxrateRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAccountingTaxrateRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAccountingTaxrateResponse struct {
@@ -65,30 +65,30 @@ type UpdateAccountingTaxrateResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAccountingTaxrateResponse) GetAccountingTaxrate() *shared.AccountingTaxrate {
-	if o == nil {
+func (u *UpdateAccountingTaxrateResponse) GetAccountingTaxrate() *shared.AccountingTaxrate {
+	if u == nil {
 		return nil
 	}
-	return o.AccountingTaxrate
+	return u.AccountingTaxrate
 }
 
-func (o *UpdateAccountingTaxrateResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAccountingTaxrateResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAccountingTaxrateResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAccountingTaxrateResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAccountingTaxrateResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAccountingTaxrateResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

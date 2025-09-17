@@ -74,177 +74,177 @@ func (v *VerificationRequest) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *VerificationRequest) GetCandidateID() *string {
-	if o == nil {
+func (v *VerificationRequest) GetCandidateID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CandidateID
+	return v.CandidateID
 }
 
-func (o *VerificationRequest) GetCreatedAt() *time.Time {
-	if o == nil {
+func (v *VerificationRequest) GetCreatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *VerificationRequest) GetID() *string {
-	if o == nil {
+func (v *VerificationRequest) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *VerificationRequest) GetPackageID() *string {
-	if o == nil {
+func (v *VerificationRequest) GetPackageID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.PackageID
+	return v.PackageID
 }
 
-func (o *VerificationRequest) GetParameters() []VerificationParameterInput {
-	if o == nil {
+func (v *VerificationRequest) GetParameters() []VerificationParameterInput {
+	if v == nil {
 		return nil
 	}
-	return o.Parameters
+	return v.Parameters
 }
 
-func (o *VerificationRequest) GetProfileAddresses() []VerificationAddress {
-	if o == nil {
+func (v *VerificationRequest) GetProfileAddresses() []VerificationAddress {
+	if v == nil {
 		return nil
 	}
-	return o.ProfileAddresses
+	return v.ProfileAddresses
 }
 
-func (o *VerificationRequest) GetProfileDateOfBirth() *string {
-	if o == nil {
+func (v *VerificationRequest) GetProfileDateOfBirth() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ProfileDateOfBirth
+	return v.ProfileDateOfBirth
 }
 
-func (o *VerificationRequest) GetProfileEmails() []string {
-	if o == nil {
+func (v *VerificationRequest) GetProfileEmails() []string {
+	if v == nil {
 		return nil
 	}
-	return o.ProfileEmails
+	return v.ProfileEmails
 }
 
-func (o *VerificationRequest) GetProfileGender() *ProfileGender {
-	if o == nil {
+func (v *VerificationRequest) GetProfileGender() *ProfileGender {
+	if v == nil {
 		return nil
 	}
-	return o.ProfileGender
+	return v.ProfileGender
 }
 
-func (o *VerificationRequest) GetProfileIPAddress() *string {
-	if o == nil {
+func (v *VerificationRequest) GetProfileIPAddress() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ProfileIPAddress
+	return v.ProfileIPAddress
 }
 
-func (o *VerificationRequest) GetProfileName() *string {
-	if o == nil {
+func (v *VerificationRequest) GetProfileName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ProfileName
+	return v.ProfileName
 }
 
-func (o *VerificationRequest) GetProfileNationalIdentifier() *string {
-	if o == nil {
+func (v *VerificationRequest) GetProfileNationalIdentifier() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ProfileNationalIdentifier
+	return v.ProfileNationalIdentifier
 }
 
-func (o *VerificationRequest) GetProfileTelephones() []string {
-	if o == nil {
+func (v *VerificationRequest) GetProfileTelephones() []string {
+	if v == nil {
 		return nil
 	}
-	return o.ProfileTelephones
+	return v.ProfileTelephones
 }
 
-func (o *VerificationRequest) GetRaw() map[string]any {
-	if o == nil {
+func (v *VerificationRequest) GetRaw() map[string]any {
+	if v == nil {
 		return nil
 	}
-	return o.Raw
+	return v.Raw
 }
 
-func (o *VerificationRequest) GetResponseCompletedAt() *time.Time {
-	if o == nil {
+func (v *VerificationRequest) GetResponseCompletedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseCompletedAt
+	return v.ResponseCompletedAt
 }
 
-func (o *VerificationRequest) GetResponseDetails() []VerificationResponseDetail {
-	if o == nil {
+func (v *VerificationRequest) GetResponseDetails() []VerificationResponseDetail {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseDetails
+	return v.ResponseDetails
 }
 
-func (o *VerificationRequest) GetResponseDownloadUrls() []string {
-	if o == nil {
+func (v *VerificationRequest) GetResponseDownloadUrls() []string {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseDownloadUrls
+	return v.ResponseDownloadUrls
 }
 
-func (o *VerificationRequest) GetResponseExpiresAt() *time.Time {
-	if o == nil {
+func (v *VerificationRequest) GetResponseExpiresAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseExpiresAt
+	return v.ResponseExpiresAt
 }
 
-func (o *VerificationRequest) GetResponseIssuedAt() *time.Time {
-	if o == nil {
+func (v *VerificationRequest) GetResponseIssuedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseIssuedAt
+	return v.ResponseIssuedAt
 }
 
-func (o *VerificationRequest) GetResponseRedirectURL() *string {
-	if o == nil {
+func (v *VerificationRequest) GetResponseRedirectURL() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseRedirectURL
+	return v.ResponseRedirectURL
 }
 
-func (o *VerificationRequest) GetResponseScore() *float64 {
-	if o == nil {
+func (v *VerificationRequest) GetResponseScore() *float64 {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseScore
+	return v.ResponseScore
 }
 
-func (o *VerificationRequest) GetResponseSource() *string {
-	if o == nil {
+func (v *VerificationRequest) GetResponseSource() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseSource
+	return v.ResponseSource
 }
 
-func (o *VerificationRequest) GetResponseStatus() *ResponseStatus {
-	if o == nil {
+func (v *VerificationRequest) GetResponseStatus() *ResponseStatus {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseStatus
+	return v.ResponseStatus
 }
 
-func (o *VerificationRequest) GetTargetURL() *string {
-	if o == nil {
+func (v *VerificationRequest) GetTargetURL() *string {
+	if v == nil {
 		return nil
 	}
-	return o.TargetURL
+	return v.TargetURL
 }
 
-func (o *VerificationRequest) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (v *VerificationRequest) GetUpdatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }

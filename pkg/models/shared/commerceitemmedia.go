@@ -24,58 +24,58 @@ type CommerceItemMedia struct {
 	Width    *float64               `json:"width,omitempty"`
 }
 
-func (o *CommerceItemMedia) GetAlt() *string {
-	if o == nil {
+func (c *CommerceItemMedia) GetAlt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Alt
+	return c.Alt
 }
 
-func (o *CommerceItemMedia) GetHeight() *float64 {
-	if o == nil {
+func (c *CommerceItemMedia) GetHeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Height
+	return c.Height
 }
 
-func (o *CommerceItemMedia) GetID() *string {
-	if o == nil {
+func (c *CommerceItemMedia) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommerceItemMedia) GetMetadata() []CommerceMetadata {
-	if o == nil {
+func (c *CommerceItemMedia) GetMetadata() []CommerceMetadata {
+	if c == nil {
 		return nil
 	}
-	return o.Metadata
+	return c.Metadata
 }
 
-func (o *CommerceItemMedia) GetPosition() *float64 {
-	if o == nil {
+func (c *CommerceItemMedia) GetPosition() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Position
+	return c.Position
 }
 
-func (o *CommerceItemMedia) GetType() *CommerceItemMediaType {
-	if o == nil {
+func (c *CommerceItemMedia) GetType() *CommerceItemMediaType {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }
 
-func (o *CommerceItemMedia) GetURL() string {
-	if o == nil {
+func (c *CommerceItemMedia) GetURL() string {
+	if c == nil {
 		return ""
 	}
-	return o.URL
+	return c.URL
 }
 
-func (o *CommerceItemMedia) GetWidth() *float64 {
-	if o == nil {
+func (c *CommerceItemMedia) GetWidth() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Width
+	return c.Width
 }

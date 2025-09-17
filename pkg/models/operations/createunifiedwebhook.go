@@ -14,18 +14,18 @@ type CreateUnifiedWebhookRequest struct {
 	IncludeAll *bool `queryParam:"style=form,explode=true,name=include_all"`
 }
 
-func (o *CreateUnifiedWebhookRequest) GetWebhook() shared.Webhook {
-	if o == nil {
+func (c *CreateUnifiedWebhookRequest) GetWebhook() shared.Webhook {
+	if c == nil {
 		return shared.Webhook{}
 	}
-	return o.Webhook
+	return c.Webhook
 }
 
-func (o *CreateUnifiedWebhookRequest) GetIncludeAll() *bool {
-	if o == nil {
+func (c *CreateUnifiedWebhookRequest) GetIncludeAll() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IncludeAll
+	return c.IncludeAll
 }
 
 type CreateUnifiedWebhookResponse struct {
@@ -39,30 +39,30 @@ type CreateUnifiedWebhookResponse struct {
 	Webhook *shared.Webhook
 }
 
-func (o *CreateUnifiedWebhookResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateUnifiedWebhookResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateUnifiedWebhookResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateUnifiedWebhookResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateUnifiedWebhookResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateUnifiedWebhookResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateUnifiedWebhookResponse) GetWebhook() *shared.Webhook {
-	if o == nil {
+func (c *CreateUnifiedWebhookResponse) GetWebhook() *shared.Webhook {
+	if c == nil {
 		return nil
 	}
-	return o.Webhook
+	return c.Webhook
 }

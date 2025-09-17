@@ -26,74 +26,74 @@ type ListPaymentRefundsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListPaymentRefundsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListPaymentRefundsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListPaymentRefundsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListPaymentRefundsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListPaymentRefundsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListPaymentRefundsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListPaymentRefundsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListPaymentRefundsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListPaymentRefundsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListPaymentRefundsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListPaymentRefundsRequest) GetPaymentID() *string {
-	if o == nil {
+func (l *ListPaymentRefundsRequest) GetPaymentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.PaymentID
+	return l.PaymentID
 }
 
-func (o *ListPaymentRefundsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListPaymentRefundsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListPaymentRefundsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListPaymentRefundsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListPaymentRefundsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListPaymentRefundsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListPaymentRefundsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListPaymentRefundsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListPaymentRefundsResponse struct {
@@ -107,30 +107,30 @@ type ListPaymentRefundsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListPaymentRefundsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListPaymentRefundsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListPaymentRefundsResponse) GetPaymentRefunds() []shared.PaymentRefund {
-	if o == nil {
+func (l *ListPaymentRefundsResponse) GetPaymentRefunds() []shared.PaymentRefund {
+	if l == nil {
 		return nil
 	}
-	return o.PaymentRefunds
+	return l.PaymentRefunds
 }
 
-func (o *ListPaymentRefundsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListPaymentRefundsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListPaymentRefundsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListPaymentRefundsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

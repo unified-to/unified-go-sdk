@@ -37,44 +37,44 @@ type HrisPayslipDetail struct {
 	Type           *HrisPayslipDetailType `json:"type,omitempty"`
 }
 
-func (o *HrisPayslipDetail) GetAmount() float64 {
-	if o == nil {
+func (h *HrisPayslipDetail) GetAmount() float64 {
+	if h == nil {
 		return 0.0
 	}
-	return o.Amount
+	return h.Amount
 }
 
-func (o *HrisPayslipDetail) GetCompanyAmount() *float64 {
-	if o == nil {
+func (h *HrisPayslipDetail) GetCompanyAmount() *float64 {
+	if h == nil {
 		return nil
 	}
-	return o.CompanyAmount
+	return h.CompanyAmount
 }
 
-func (o *HrisPayslipDetail) GetDescription() *string {
-	if o == nil {
+func (h *HrisPayslipDetail) GetDescription() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Description
+	return h.Description
 }
 
-func (o *HrisPayslipDetail) GetEmployeeAmount() *float64 {
-	if o == nil {
+func (h *HrisPayslipDetail) GetEmployeeAmount() *float64 {
+	if h == nil {
 		return nil
 	}
-	return o.EmployeeAmount
+	return h.EmployeeAmount
 }
 
-func (o *HrisPayslipDetail) GetName() *string {
-	if o == nil {
+func (h *HrisPayslipDetail) GetName() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Name
+	return h.Name
 }
 
-func (o *HrisPayslipDetail) GetType() *HrisPayslipDetailType {
-	if o == nil {
+func (h *HrisPayslipDetail) GetType() *HrisPayslipDetailType {
+	if h == nil {
 		return nil
 	}
-	return o.Type
+	return h.Type
 }

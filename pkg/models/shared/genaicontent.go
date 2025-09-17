@@ -18,16 +18,16 @@ type GenaiContent struct {
 	Role    *Role  `json:"role,omitempty"`
 }
 
-func (o *GenaiContent) GetContent() string {
-	if o == nil {
+func (g *GenaiContent) GetContent() string {
+	if g == nil {
 		return ""
 	}
-	return o.Content
+	return g.Content
 }
 
-func (o *GenaiContent) GetRole() *Role {
-	if o == nil {
+func (g *GenaiContent) GetRole() *Role {
+	if g == nil {
 		return nil
 	}
-	return o.Role
+	return g.Role
 }

@@ -18,32 +18,32 @@ type GetAccountingSalesorderRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAccountingSalesorderRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAccountingSalesorderRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAccountingSalesorderRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAccountingSalesorderRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAccountingSalesorderRequest) GetID() string {
-	if o == nil {
+func (g *GetAccountingSalesorderRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAccountingSalesorderRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAccountingSalesorderRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAccountingSalesorderResponse struct {
@@ -57,30 +57,30 @@ type GetAccountingSalesorderResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAccountingSalesorderResponse) GetAccountingSalesorder() *shared.AccountingSalesorder {
-	if o == nil {
+func (g *GetAccountingSalesorderResponse) GetAccountingSalesorder() *shared.AccountingSalesorder {
+	if g == nil {
 		return nil
 	}
-	return o.AccountingSalesorder
+	return g.AccountingSalesorder
 }
 
-func (o *GetAccountingSalesorderResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAccountingSalesorderResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAccountingSalesorderResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAccountingSalesorderResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAccountingSalesorderResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAccountingSalesorderResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

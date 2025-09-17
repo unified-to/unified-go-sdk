@@ -26,74 +26,74 @@ type ListHrisDevicesRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListHrisDevicesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListHrisDevicesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListHrisDevicesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListHrisDevicesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListHrisDevicesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListHrisDevicesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListHrisDevicesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListHrisDevicesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListHrisDevicesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListHrisDevicesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListHrisDevicesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListHrisDevicesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListHrisDevicesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListHrisDevicesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListHrisDevicesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListHrisDevicesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListHrisDevicesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListHrisDevicesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListHrisDevicesRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListHrisDevicesRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListHrisDevicesResponse struct {
@@ -107,30 +107,30 @@ type ListHrisDevicesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListHrisDevicesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListHrisDevicesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListHrisDevicesResponse) GetHrisDevices() []shared.HrisDevice {
-	if o == nil {
+func (l *ListHrisDevicesResponse) GetHrisDevices() []shared.HrisDevice {
+	if l == nil {
 		return nil
 	}
-	return o.HrisDevices
+	return l.HrisDevices
 }
 
-func (o *ListHrisDevicesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListHrisDevicesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListHrisDevicesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListHrisDevicesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

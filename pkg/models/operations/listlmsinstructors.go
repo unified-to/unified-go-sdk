@@ -32,95 +32,95 @@ type ListLmsInstructorsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListLmsInstructorsRequest) GetClassID() *string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetClassID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ClassID
+	return l.ClassID
 }
 
-func (o *ListLmsInstructorsRequest) GetCompanyID() *string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetCompanyID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyID
+	return l.CompanyID
 }
 
-func (o *ListLmsInstructorsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListLmsInstructorsRequest) GetCourseID() *string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetCourseID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CourseID
+	return l.CourseID
 }
 
-func (o *ListLmsInstructorsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListLmsInstructorsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListLmsInstructorsRequest) GetLocationID() *string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetLocationID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.LocationID
+	return l.LocationID
 }
 
-func (o *ListLmsInstructorsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListLmsInstructorsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListLmsInstructorsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListLmsInstructorsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListLmsInstructorsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListLmsInstructorsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListLmsInstructorsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListLmsInstructorsResponse struct {
@@ -134,30 +134,30 @@ type ListLmsInstructorsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListLmsInstructorsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListLmsInstructorsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListLmsInstructorsResponse) GetLmsInstructors() []shared.LmsInstructor {
-	if o == nil {
+func (l *ListLmsInstructorsResponse) GetLmsInstructors() []shared.LmsInstructor {
+	if l == nil {
 		return nil
 	}
-	return o.LmsInstructors
+	return l.LmsInstructors
 }
 
-func (o *ListLmsInstructorsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListLmsInstructorsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListLmsInstructorsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListLmsInstructorsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

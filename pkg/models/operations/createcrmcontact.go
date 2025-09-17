@@ -18,32 +18,32 @@ type CreateCrmContactRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateCrmContactRequest) GetCrmContact() shared.CrmContact {
-	if o == nil {
+func (c *CreateCrmContactRequest) GetCrmContact() shared.CrmContact {
+	if c == nil {
 		return shared.CrmContact{}
 	}
-	return o.CrmContact
+	return c.CrmContact
 }
 
-func (o *CreateCrmContactRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateCrmContactRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateCrmContactRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateCrmContactRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateCrmContactRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateCrmContactRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateCrmContactResponse struct {
@@ -57,30 +57,30 @@ type CreateCrmContactResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateCrmContactResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateCrmContactResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateCrmContactResponse) GetCrmContact() *shared.CrmContact {
-	if o == nil {
+func (c *CreateCrmContactResponse) GetCrmContact() *shared.CrmContact {
+	if c == nil {
 		return nil
 	}
-	return o.CrmContact
+	return c.CrmContact
 }
 
-func (o *CreateCrmContactResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateCrmContactResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateCrmContactResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateCrmContactResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

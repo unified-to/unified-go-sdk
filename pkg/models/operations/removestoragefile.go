@@ -13,18 +13,18 @@ type RemoveStorageFileRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveStorageFileRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveStorageFileRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveStorageFileRequest) GetID() string {
-	if o == nil {
+func (r *RemoveStorageFileRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveStorageFileResponse struct {
@@ -37,30 +37,30 @@ type RemoveStorageFileResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveStorageFileResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveStorageFileResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveStorageFileResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveStorageFileResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveStorageFileResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveStorageFileResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveStorageFileResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveStorageFileResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

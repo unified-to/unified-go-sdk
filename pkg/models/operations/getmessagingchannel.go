@@ -18,32 +18,32 @@ type GetMessagingChannelRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetMessagingChannelRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetMessagingChannelRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetMessagingChannelRequest) GetFields() []string {
-	if o == nil {
+func (g *GetMessagingChannelRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetMessagingChannelRequest) GetID() string {
-	if o == nil {
+func (g *GetMessagingChannelRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetMessagingChannelRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetMessagingChannelRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetMessagingChannelResponse struct {
@@ -57,30 +57,30 @@ type GetMessagingChannelResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetMessagingChannelResponse) GetContentType() string {
-	if o == nil {
+func (g *GetMessagingChannelResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetMessagingChannelResponse) GetMessagingChannel() *shared.MessagingChannel {
-	if o == nil {
+func (g *GetMessagingChannelResponse) GetMessagingChannel() *shared.MessagingChannel {
+	if g == nil {
 		return nil
 	}
-	return o.MessagingChannel
+	return g.MessagingChannel
 }
 
-func (o *GetMessagingChannelResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetMessagingChannelResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetMessagingChannelResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetMessagingChannelResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

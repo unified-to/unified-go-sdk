@@ -19,39 +19,39 @@ type PatchAccountingContactRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAccountingContactRequest) GetAccountingContact() shared.AccountingContact {
-	if o == nil {
+func (p *PatchAccountingContactRequest) GetAccountingContact() shared.AccountingContact {
+	if p == nil {
 		return shared.AccountingContact{}
 	}
-	return o.AccountingContact
+	return p.AccountingContact
 }
 
-func (o *PatchAccountingContactRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAccountingContactRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAccountingContactRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAccountingContactRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAccountingContactRequest) GetID() string {
-	if o == nil {
+func (p *PatchAccountingContactRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAccountingContactRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAccountingContactRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAccountingContactResponse struct {
@@ -65,30 +65,30 @@ type PatchAccountingContactResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAccountingContactResponse) GetAccountingContact() *shared.AccountingContact {
-	if o == nil {
+func (p *PatchAccountingContactResponse) GetAccountingContact() *shared.AccountingContact {
+	if p == nil {
 		return nil
 	}
-	return o.AccountingContact
+	return p.AccountingContact
 }
 
-func (o *PatchAccountingContactResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAccountingContactResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAccountingContactResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAccountingContactResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAccountingContactResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAccountingContactResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

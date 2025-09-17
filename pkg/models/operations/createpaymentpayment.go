@@ -17,32 +17,32 @@ type CreatePaymentPaymentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreatePaymentPaymentRequest) GetPaymentPayment() shared.PaymentPayment {
-	if o == nil {
+func (c *CreatePaymentPaymentRequest) GetPaymentPayment() shared.PaymentPayment {
+	if c == nil {
 		return shared.PaymentPayment{}
 	}
-	return o.PaymentPayment
+	return c.PaymentPayment
 }
 
-func (o *CreatePaymentPaymentRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreatePaymentPaymentRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreatePaymentPaymentRequest) GetFields() []string {
-	if o == nil {
+func (c *CreatePaymentPaymentRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreatePaymentPaymentRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreatePaymentPaymentRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreatePaymentPaymentResponse struct {
@@ -56,30 +56,30 @@ type CreatePaymentPaymentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreatePaymentPaymentResponse) GetContentType() string {
-	if o == nil {
+func (c *CreatePaymentPaymentResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreatePaymentPaymentResponse) GetPaymentPayment() *shared.PaymentPayment {
-	if o == nil {
+func (c *CreatePaymentPaymentResponse) GetPaymentPayment() *shared.PaymentPayment {
+	if c == nil {
 		return nil
 	}
-	return o.PaymentPayment
+	return c.PaymentPayment
 }
 
-func (o *CreatePaymentPaymentResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreatePaymentPaymentResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreatePaymentPaymentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreatePaymentPaymentResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

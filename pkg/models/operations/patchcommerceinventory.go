@@ -19,39 +19,39 @@ type PatchCommerceInventoryRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchCommerceInventoryRequest) GetCommerceInventory() shared.CommerceInventory {
-	if o == nil {
+func (p *PatchCommerceInventoryRequest) GetCommerceInventory() shared.CommerceInventory {
+	if p == nil {
 		return shared.CommerceInventory{}
 	}
-	return o.CommerceInventory
+	return p.CommerceInventory
 }
 
-func (o *PatchCommerceInventoryRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchCommerceInventoryRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchCommerceInventoryRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchCommerceInventoryRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchCommerceInventoryRequest) GetID() string {
-	if o == nil {
+func (p *PatchCommerceInventoryRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchCommerceInventoryRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchCommerceInventoryRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchCommerceInventoryResponse struct {
@@ -65,30 +65,30 @@ type PatchCommerceInventoryResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchCommerceInventoryResponse) GetCommerceInventory() *shared.CommerceInventory {
-	if o == nil {
+func (p *PatchCommerceInventoryResponse) GetCommerceInventory() *shared.CommerceInventory {
+	if p == nil {
 		return nil
 	}
-	return o.CommerceInventory
+	return p.CommerceInventory
 }
 
-func (o *PatchCommerceInventoryResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchCommerceInventoryResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchCommerceInventoryResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchCommerceInventoryResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchCommerceInventoryResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchCommerceInventoryResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

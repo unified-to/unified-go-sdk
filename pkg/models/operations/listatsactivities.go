@@ -38,116 +38,116 @@ type ListAtsActivitiesRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListAtsActivitiesRequest) GetApplicationID() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetApplicationID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ApplicationID
+	return l.ApplicationID
 }
 
-func (o *ListAtsActivitiesRequest) GetCandidateID() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetCandidateID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CandidateID
+	return l.CandidateID
 }
 
-func (o *ListAtsActivitiesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAtsActivitiesRequest) GetDocumentID() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetDocumentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.DocumentID
+	return l.DocumentID
 }
 
-func (o *ListAtsActivitiesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAtsActivitiesRequest) GetInterviewID() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetInterviewID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.InterviewID
+	return l.InterviewID
 }
 
-func (o *ListAtsActivitiesRequest) GetJobID() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetJobID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.JobID
+	return l.JobID
 }
 
-func (o *ListAtsActivitiesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAtsActivitiesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAtsActivitiesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAtsActivitiesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAtsActivitiesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAtsActivitiesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAtsActivitiesRequest) GetType() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }
 
-func (o *ListAtsActivitiesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListAtsActivitiesRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListAtsActivitiesRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListAtsActivitiesResponse struct {
@@ -161,30 +161,30 @@ type ListAtsActivitiesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAtsActivitiesResponse) GetAtsActivities() []shared.AtsActivity {
-	if o == nil {
+func (l *ListAtsActivitiesResponse) GetAtsActivities() []shared.AtsActivity {
+	if l == nil {
 		return nil
 	}
-	return o.AtsActivities
+	return l.AtsActivities
 }
 
-func (o *ListAtsActivitiesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAtsActivitiesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAtsActivitiesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAtsActivitiesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAtsActivitiesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAtsActivitiesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

@@ -14,25 +14,25 @@ type RemovePassthroughRequest struct {
 	Query        map[string]any `queryParam:"style=form,explode=true,name=query"`
 }
 
-func (o *RemovePassthroughRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemovePassthroughRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemovePassthroughRequest) GetPath() string {
-	if o == nil {
+func (r *RemovePassthroughRequest) GetPath() string {
+	if r == nil {
 		return ""
 	}
-	return o.Path
+	return r.Path
 }
 
-func (o *RemovePassthroughRequest) GetQuery() map[string]any {
-	if o == nil {
+func (r *RemovePassthroughRequest) GetQuery() map[string]any {
+	if r == nil {
 		return nil
 	}
-	return o.Query
+	return r.Query
 }
 
 type RemovePassthroughResponse struct {
@@ -56,65 +56,65 @@ type RemovePassthroughResponse struct {
 	DefaultTextPlainRes *string
 }
 
-func (o *RemovePassthroughResponse) GetContentType() string {
-	if o == nil {
+func (r *RemovePassthroughResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemovePassthroughResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemovePassthroughResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemovePassthroughResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemovePassthroughResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemovePassthroughResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemovePassthroughResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }
 
-func (o *RemovePassthroughResponse) GetDefaultWildcardWildcardResponseStream() io.ReadCloser {
-	if o == nil {
+func (r *RemovePassthroughResponse) GetDefaultWildcardWildcardResponseStream() io.ReadCloser {
+	if r == nil {
 		return nil
 	}
-	return o.DefaultWildcardWildcardResponseStream
+	return r.DefaultWildcardWildcardResponseStream
 }
 
-func (o *RemovePassthroughResponse) GetDefaultApplicationJSONAny() any {
-	if o == nil {
+func (r *RemovePassthroughResponse) GetDefaultApplicationJSONAny() any {
+	if r == nil {
 		return nil
 	}
-	return o.DefaultApplicationJSONAny
+	return r.DefaultApplicationJSONAny
 }
 
-func (o *RemovePassthroughResponse) GetDefaultApplicationXMLRes() *string {
-	if o == nil {
+func (r *RemovePassthroughResponse) GetDefaultApplicationXMLRes() *string {
+	if r == nil {
 		return nil
 	}
-	return o.DefaultApplicationXMLRes
+	return r.DefaultApplicationXMLRes
 }
 
-func (o *RemovePassthroughResponse) GetDefaultTextCsvRes() *string {
-	if o == nil {
+func (r *RemovePassthroughResponse) GetDefaultTextCsvRes() *string {
+	if r == nil {
 		return nil
 	}
-	return o.DefaultTextCsvRes
+	return r.DefaultTextCsvRes
 }
 
-func (o *RemovePassthroughResponse) GetDefaultTextPlainRes() *string {
-	if o == nil {
+func (r *RemovePassthroughResponse) GetDefaultTextPlainRes() *string {
+	if r == nil {
 		return nil
 	}
-	return o.DefaultTextPlainRes
+	return r.DefaultTextPlainRes
 }

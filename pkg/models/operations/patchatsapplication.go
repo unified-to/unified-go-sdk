@@ -19,39 +19,39 @@ type PatchAtsApplicationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAtsApplicationRequest) GetAtsApplication() shared.AtsApplication {
-	if o == nil {
+func (p *PatchAtsApplicationRequest) GetAtsApplication() shared.AtsApplication {
+	if p == nil {
 		return shared.AtsApplication{}
 	}
-	return o.AtsApplication
+	return p.AtsApplication
 }
 
-func (o *PatchAtsApplicationRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAtsApplicationRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAtsApplicationRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAtsApplicationRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAtsApplicationRequest) GetID() string {
-	if o == nil {
+func (p *PatchAtsApplicationRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAtsApplicationRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAtsApplicationRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAtsApplicationResponse struct {
@@ -65,30 +65,30 @@ type PatchAtsApplicationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAtsApplicationResponse) GetAtsApplication() *shared.AtsApplication {
-	if o == nil {
+func (p *PatchAtsApplicationResponse) GetAtsApplication() *shared.AtsApplication {
+	if p == nil {
 		return nil
 	}
-	return o.AtsApplication
+	return p.AtsApplication
 }
 
-func (o *PatchAtsApplicationResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAtsApplicationResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAtsApplicationResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAtsApplicationResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAtsApplicationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAtsApplicationResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

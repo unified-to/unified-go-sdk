@@ -19,39 +19,39 @@ type PatchUcCommentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchUcCommentRequest) GetUcComment() shared.UcComment {
-	if o == nil {
+func (p *PatchUcCommentRequest) GetUcComment() shared.UcComment {
+	if p == nil {
 		return shared.UcComment{}
 	}
-	return o.UcComment
+	return p.UcComment
 }
 
-func (o *PatchUcCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchUcCommentRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchUcCommentRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchUcCommentRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchUcCommentRequest) GetID() string {
-	if o == nil {
+func (p *PatchUcCommentRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchUcCommentRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchUcCommentRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchUcCommentResponse struct {
@@ -65,30 +65,30 @@ type PatchUcCommentResponse struct {
 	UcComment *shared.UcComment
 }
 
-func (o *PatchUcCommentResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchUcCommentResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchUcCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchUcCommentResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchUcCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchUcCommentResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchUcCommentResponse) GetUcComment() *shared.UcComment {
-	if o == nil {
+func (p *PatchUcCommentResponse) GetUcComment() *shared.UcComment {
+	if p == nil {
 		return nil
 	}
-	return o.UcComment
+	return p.UcComment
 }

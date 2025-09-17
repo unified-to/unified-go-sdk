@@ -19,39 +19,39 @@ type UpdateVerificationRequestRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateVerificationRequestRequest) GetVerificationRequest() shared.VerificationRequest {
-	if o == nil {
+func (u *UpdateVerificationRequestRequest) GetVerificationRequest() shared.VerificationRequest {
+	if u == nil {
 		return shared.VerificationRequest{}
 	}
-	return o.VerificationRequest
+	return u.VerificationRequest
 }
 
-func (o *UpdateVerificationRequestRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateVerificationRequestRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateVerificationRequestRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateVerificationRequestRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateVerificationRequestRequest) GetID() string {
-	if o == nil {
+func (u *UpdateVerificationRequestRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateVerificationRequestRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateVerificationRequestRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateVerificationRequestResponse struct {
@@ -65,30 +65,30 @@ type UpdateVerificationRequestResponse struct {
 	VerificationRequest *shared.VerificationRequest
 }
 
-func (o *UpdateVerificationRequestResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateVerificationRequestResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateVerificationRequestResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateVerificationRequestResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateVerificationRequestResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateVerificationRequestResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }
 
-func (o *UpdateVerificationRequestResponse) GetVerificationRequest() *shared.VerificationRequest {
-	if o == nil {
+func (u *UpdateVerificationRequestResponse) GetVerificationRequest() *shared.VerificationRequest {
+	if u == nil {
 		return nil
 	}
-	return o.VerificationRequest
+	return u.VerificationRequest
 }

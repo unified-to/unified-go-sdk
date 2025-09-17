@@ -21,16 +21,16 @@ type LmsTelephone struct {
 	Type      *LmsTelephoneType `json:"type,omitempty"`
 }
 
-func (o *LmsTelephone) GetTelephone() string {
-	if o == nil {
+func (l *LmsTelephone) GetTelephone() string {
+	if l == nil {
 		return ""
 	}
-	return o.Telephone
+	return l.Telephone
 }
 
-func (o *LmsTelephone) GetType() *LmsTelephoneType {
-	if o == nil {
+func (l *LmsTelephone) GetType() *LmsTelephoneType {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }

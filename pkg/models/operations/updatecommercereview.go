@@ -19,39 +19,39 @@ type UpdateCommerceReviewRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateCommerceReviewRequest) GetCommerceReview() shared.CommerceReview {
-	if o == nil {
+func (u *UpdateCommerceReviewRequest) GetCommerceReview() shared.CommerceReview {
+	if u == nil {
 		return shared.CommerceReview{}
 	}
-	return o.CommerceReview
+	return u.CommerceReview
 }
 
-func (o *UpdateCommerceReviewRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateCommerceReviewRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateCommerceReviewRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateCommerceReviewRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateCommerceReviewRequest) GetID() string {
-	if o == nil {
+func (u *UpdateCommerceReviewRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateCommerceReviewRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateCommerceReviewRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateCommerceReviewResponse struct {
@@ -65,30 +65,30 @@ type UpdateCommerceReviewResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateCommerceReviewResponse) GetCommerceReview() *shared.CommerceReview {
-	if o == nil {
+func (u *UpdateCommerceReviewResponse) GetCommerceReview() *shared.CommerceReview {
+	if u == nil {
 		return nil
 	}
-	return o.CommerceReview
+	return u.CommerceReview
 }
 
-func (o *UpdateCommerceReviewResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateCommerceReviewResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateCommerceReviewResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateCommerceReviewResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateCommerceReviewResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateCommerceReviewResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

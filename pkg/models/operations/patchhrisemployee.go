@@ -19,39 +19,39 @@ type PatchHrisEmployeeRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchHrisEmployeeRequest) GetHrisEmployee() shared.HrisEmployee {
-	if o == nil {
+func (p *PatchHrisEmployeeRequest) GetHrisEmployee() shared.HrisEmployee {
+	if p == nil {
 		return shared.HrisEmployee{}
 	}
-	return o.HrisEmployee
+	return p.HrisEmployee
 }
 
-func (o *PatchHrisEmployeeRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchHrisEmployeeRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchHrisEmployeeRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchHrisEmployeeRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchHrisEmployeeRequest) GetID() string {
-	if o == nil {
+func (p *PatchHrisEmployeeRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchHrisEmployeeRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchHrisEmployeeRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchHrisEmployeeResponse struct {
@@ -65,30 +65,30 @@ type PatchHrisEmployeeResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchHrisEmployeeResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchHrisEmployeeResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchHrisEmployeeResponse) GetHrisEmployee() *shared.HrisEmployee {
-	if o == nil {
+func (p *PatchHrisEmployeeResponse) GetHrisEmployee() *shared.HrisEmployee {
+	if p == nil {
 		return nil
 	}
-	return o.HrisEmployee
+	return p.HrisEmployee
 }
 
-func (o *PatchHrisEmployeeResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchHrisEmployeeResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchHrisEmployeeResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchHrisEmployeeResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

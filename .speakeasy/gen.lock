@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 8ed442c273cdb35b6056af069e0583c0
+  docChecksum: ff3e18b39b0a3be1adfdaeecd26778b0
   docVersion: "1.0"
-  speakeasyVersion: 1.611.0
-  generationVersion: 2.694.1
-  releaseVersion: 0.28.12
-  configChecksum: 62bd1ea79115ca5c334e58bf7c4424a7
+  speakeasyVersion: 1.617.1
+  generationVersion: 2.701.8
+  releaseVersion: 0.29.0
+  configChecksum: c003a63632518aa1f2e26f7d12ef189e
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,11 +16,11 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.9.6
+    core: 3.10.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
-    globalSecurity: 2.82.11
+    globalSecurity: 2.82.12
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.3
@@ -2389,6 +2389,8 @@ generatedFiles:
   - pipeline.go
   - pkg/models/operations/options.go
   - pkg/models/sdkerrors/sdkerror.go
+  - pkg/optionalnullable/optionalnullable.go
+  - pkg/optionalnullable/optionalnullable_test.go
   - pkg/retry/config.go
   - pkg/types/bigint.go
   - pkg/types/date.go
@@ -7005,9 +7007,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `UnifiedTo.Hris.GetHrisTimeoff()`:  `response` **Changed** **Breaking** :warning:
-  * `UnifiedTo.Hris.ListHrisTimeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
-  * `UnifiedTo.Timeoff.GetHrisTimeoff()`:  `response` **Changed** **Breaking** :warning:
-  * `UnifiedTo.Timeoff.ListHrisTimeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Kms.CreateKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Kms.GetKmsSpace()`:  `response.ParentId` **Added**\n* `UnifiedTo.Kms.ListKmsSpaces()`:  `response.[].ParentId` **Added**\n* `UnifiedTo.Kms.PatchKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Kms.UpdateKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Comment.CreateUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n* `UnifiedTo.Comment.GetUcComment()`:  `response.CallId` **Added**\n* `UnifiedTo.Comment.ListUcComments()`:  `response.[].CallId` **Added**\n* `UnifiedTo.Comment.PatchUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n* `UnifiedTo.Comment.UpdateUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n* `UnifiedTo.Space.CreateKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Space.GetKmsSpace()`:  `response.ParentId` **Added**\n* `UnifiedTo.Space.ListKmsSpaces()`:  `response.[].ParentId` **Added**\n* `UnifiedTo.Space.PatchKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Space.UpdateKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Uc.CreateUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n* `UnifiedTo.Uc.GetUcComment()`:  `response.CallId` **Added**\n* `UnifiedTo.Uc.ListUcComments()`:  `response.[].CallId` **Added**\n* `UnifiedTo.Uc.PatchUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n* `UnifiedTo.Uc.UpdateUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n"

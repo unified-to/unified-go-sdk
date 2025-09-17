@@ -17,32 +17,32 @@ type CreateCalendarCalendarRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateCalendarCalendarRequest) GetCalendarCalendar() shared.CalendarCalendar {
-	if o == nil {
+func (c *CreateCalendarCalendarRequest) GetCalendarCalendar() shared.CalendarCalendar {
+	if c == nil {
 		return shared.CalendarCalendar{}
 	}
-	return o.CalendarCalendar
+	return c.CalendarCalendar
 }
 
-func (o *CreateCalendarCalendarRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateCalendarCalendarRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateCalendarCalendarRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateCalendarCalendarRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateCalendarCalendarRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateCalendarCalendarRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateCalendarCalendarResponse struct {
@@ -56,30 +56,30 @@ type CreateCalendarCalendarResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateCalendarCalendarResponse) GetCalendarCalendar() *shared.CalendarCalendar {
-	if o == nil {
+func (c *CreateCalendarCalendarResponse) GetCalendarCalendar() *shared.CalendarCalendar {
+	if c == nil {
 		return nil
 	}
-	return o.CalendarCalendar
+	return c.CalendarCalendar
 }
 
-func (o *CreateCalendarCalendarResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateCalendarCalendarResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateCalendarCalendarResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateCalendarCalendarResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateCalendarCalendarResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateCalendarCalendarResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

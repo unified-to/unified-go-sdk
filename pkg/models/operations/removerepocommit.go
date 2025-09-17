@@ -13,18 +13,18 @@ type RemoveRepoCommitRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveRepoCommitRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveRepoCommitRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveRepoCommitRequest) GetID() string {
-	if o == nil {
+func (r *RemoveRepoCommitRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveRepoCommitResponse struct {
@@ -37,30 +37,30 @@ type RemoveRepoCommitResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveRepoCommitResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveRepoCommitResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveRepoCommitResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveRepoCommitResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveRepoCommitResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveRepoCommitResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveRepoCommitResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveRepoCommitResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

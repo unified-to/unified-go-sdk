@@ -35,100 +35,100 @@ func (u *UcRecording) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *UcRecording) GetCallID() *string {
-	if o == nil {
+func (u *UcRecording) GetCallID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.CallID
+	return u.CallID
 }
 
-func (o *UcRecording) GetContactID() *string {
-	if o == nil {
+func (u *UcRecording) GetContactID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ContactID
+	return u.ContactID
 }
 
-func (o *UcRecording) GetContactName() *string {
-	if o == nil {
+func (u *UcRecording) GetContactName() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ContactName
+	return u.ContactName
 }
 
-func (o *UcRecording) GetContactPhone() *string {
-	if o == nil {
+func (u *UcRecording) GetContactPhone() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ContactPhone
+	return u.ContactPhone
 }
 
-func (o *UcRecording) GetCreatedAt() *time.Time {
-	if o == nil {
+func (u *UcRecording) GetCreatedAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return u.CreatedAt
 }
 
-func (o *UcRecording) GetEndAt() *time.Time {
-	if o == nil {
+func (u *UcRecording) GetEndAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.EndAt
+	return u.EndAt
 }
 
-func (o *UcRecording) GetExpiresAt() *time.Time {
-	if o == nil {
+func (u *UcRecording) GetExpiresAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.ExpiresAt
+	return u.ExpiresAt
 }
 
-func (o *UcRecording) GetID() *string {
-	if o == nil {
+func (u *UcRecording) GetID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UcRecording) GetMedia() []UcRecordingMedia {
-	if o == nil {
+func (u *UcRecording) GetMedia() []UcRecordingMedia {
+	if u == nil {
 		return nil
 	}
-	return o.Media
+	return u.Media
 }
 
-func (o *UcRecording) GetRaw() map[string]any {
-	if o == nil {
+func (u *UcRecording) GetRaw() map[string]any {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
-func (o *UcRecording) GetStartAt() *time.Time {
-	if o == nil {
+func (u *UcRecording) GetStartAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.StartAt
+	return u.StartAt
 }
 
-func (o *UcRecording) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (u *UcRecording) GetUpdatedAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return u.UpdatedAt
 }
 
-func (o *UcRecording) GetUserID() *string {
-	if o == nil {
+func (u *UcRecording) GetUserID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.UserID
+	return u.UserID
 }
 
-func (o *UcRecording) GetWebURL() *string {
-	if o == nil {
+func (u *UcRecording) GetWebURL() *string {
+	if u == nil {
 		return nil
 	}
-	return o.WebURL
+	return u.WebURL
 }

@@ -30,65 +30,65 @@ func (l *LmsStudent) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *LmsStudent) GetAddress() *PropertyLmsStudentAddress {
-	if o == nil {
+func (l *LmsStudent) GetAddress() *PropertyLmsStudentAddress {
+	if l == nil {
 		return nil
 	}
-	return o.Address
+	return l.Address
 }
 
-func (o *LmsStudent) GetCreatedAt() *time.Time {
-	if o == nil {
+func (l *LmsStudent) GetCreatedAt() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return l.CreatedAt
 }
 
-func (o *LmsStudent) GetEmails() []LmsEmail {
-	if o == nil {
+func (l *LmsStudent) GetEmails() []LmsEmail {
+	if l == nil {
 		return nil
 	}
-	return o.Emails
+	return l.Emails
 }
 
-func (o *LmsStudent) GetID() *string {
-	if o == nil {
+func (l *LmsStudent) GetID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ID
+	return l.ID
 }
 
-func (o *LmsStudent) GetImageURL() *string {
-	if o == nil {
+func (l *LmsStudent) GetImageURL() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ImageURL
+	return l.ImageURL
 }
 
-func (o *LmsStudent) GetName() *string {
-	if o == nil {
+func (l *LmsStudent) GetName() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Name
+	return l.Name
 }
 
-func (o *LmsStudent) GetRaw() map[string]any {
-	if o == nil {
+func (l *LmsStudent) GetRaw() map[string]any {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *LmsStudent) GetTelephones() []LmsTelephone {
-	if o == nil {
+func (l *LmsStudent) GetTelephones() []LmsTelephone {
+	if l == nil {
 		return nil
 	}
-	return o.Telephones
+	return l.Telephones
 }
 
-func (o *LmsStudent) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (l *LmsStudent) GetUpdatedAt() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return l.UpdatedAt
 }

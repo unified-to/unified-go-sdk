@@ -24,67 +24,67 @@ type ListGenaiModelsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListGenaiModelsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListGenaiModelsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListGenaiModelsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListGenaiModelsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListGenaiModelsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListGenaiModelsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListGenaiModelsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListGenaiModelsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListGenaiModelsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListGenaiModelsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListGenaiModelsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListGenaiModelsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListGenaiModelsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListGenaiModelsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListGenaiModelsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListGenaiModelsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListGenaiModelsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListGenaiModelsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListGenaiModelsResponse struct {
@@ -98,30 +98,30 @@ type ListGenaiModelsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListGenaiModelsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListGenaiModelsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListGenaiModelsResponse) GetGenaiModels() []shared.GenaiModel {
-	if o == nil {
+func (l *ListGenaiModelsResponse) GetGenaiModels() []shared.GenaiModel {
+	if l == nil {
 		return nil
 	}
-	return o.GenaiModels
+	return l.GenaiModels
 }
 
-func (o *ListGenaiModelsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListGenaiModelsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListGenaiModelsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListGenaiModelsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

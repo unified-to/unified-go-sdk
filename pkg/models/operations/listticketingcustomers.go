@@ -24,67 +24,67 @@ type ListTicketingCustomersRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListTicketingCustomersRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListTicketingCustomersRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListTicketingCustomersRequest) GetFields() []string {
-	if o == nil {
+func (l *ListTicketingCustomersRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListTicketingCustomersRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListTicketingCustomersRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListTicketingCustomersRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListTicketingCustomersRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListTicketingCustomersRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListTicketingCustomersRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListTicketingCustomersRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListTicketingCustomersRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListTicketingCustomersRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListTicketingCustomersRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListTicketingCustomersRequest) GetSort() *string {
-	if o == nil {
+func (l *ListTicketingCustomersRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListTicketingCustomersRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListTicketingCustomersRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListTicketingCustomersResponse struct {
@@ -98,30 +98,30 @@ type ListTicketingCustomersResponse struct {
 	TicketingCustomers []shared.TicketingCustomer
 }
 
-func (o *ListTicketingCustomersResponse) GetContentType() string {
-	if o == nil {
+func (l *ListTicketingCustomersResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListTicketingCustomersResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListTicketingCustomersResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListTicketingCustomersResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListTicketingCustomersResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListTicketingCustomersResponse) GetTicketingCustomers() []shared.TicketingCustomer {
-	if o == nil {
+func (l *ListTicketingCustomersResponse) GetTicketingCustomers() []shared.TicketingCustomer {
+	if l == nil {
 		return nil
 	}
-	return o.TicketingCustomers
+	return l.TicketingCustomers
 }

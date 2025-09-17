@@ -36,107 +36,107 @@ func (h *HrisLocation) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HrisLocation) GetAddress() *PropertyHrisLocationAddress {
-	if o == nil {
+func (h *HrisLocation) GetAddress() *PropertyHrisLocationAddress {
+	if h == nil {
 		return nil
 	}
-	return o.Address
+	return h.Address
 }
 
-func (o *HrisLocation) GetCreatedAt() *time.Time {
-	if o == nil {
+func (h *HrisLocation) GetCreatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return h.CreatedAt
 }
 
-func (o *HrisLocation) GetCurrency() *string {
-	if o == nil {
+func (h *HrisLocation) GetCurrency() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Currency
+	return h.Currency
 }
 
-func (o *HrisLocation) GetDescription() *string {
-	if o == nil {
+func (h *HrisLocation) GetDescription() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Description
+	return h.Description
 }
 
-func (o *HrisLocation) GetExternalIdentifier() *string {
-	if o == nil {
+func (h *HrisLocation) GetExternalIdentifier() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ExternalIdentifier
+	return h.ExternalIdentifier
 }
 
-func (o *HrisLocation) GetID() *string {
-	if o == nil {
+func (h *HrisLocation) GetID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ID
+	return h.ID
 }
 
-func (o *HrisLocation) GetIsActive() *bool {
-	if o == nil {
+func (h *HrisLocation) GetIsActive() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.IsActive
+	return h.IsActive
 }
 
-func (o *HrisLocation) GetIsHq() *bool {
-	if o == nil {
+func (h *HrisLocation) GetIsHq() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.IsHq
+	return h.IsHq
 }
 
-func (o *HrisLocation) GetLanguageLocale() *string {
-	if o == nil {
+func (h *HrisLocation) GetLanguageLocale() *string {
+	if h == nil {
 		return nil
 	}
-	return o.LanguageLocale
+	return h.LanguageLocale
 }
 
-func (o *HrisLocation) GetName() *string {
-	if o == nil {
+func (h *HrisLocation) GetName() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Name
+	return h.Name
 }
 
-func (o *HrisLocation) GetParentID() *string {
-	if o == nil {
+func (h *HrisLocation) GetParentID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ParentID
+	return h.ParentID
 }
 
-func (o *HrisLocation) GetRaw() map[string]any {
-	if o == nil {
+func (h *HrisLocation) GetRaw() map[string]any {
+	if h == nil {
 		return nil
 	}
-	return o.Raw
+	return h.Raw
 }
 
-func (o *HrisLocation) GetTelephones() []HrisTelephone {
-	if o == nil {
+func (h *HrisLocation) GetTelephones() []HrisTelephone {
+	if h == nil {
 		return nil
 	}
-	return o.Telephones
+	return h.Telephones
 }
 
-func (o *HrisLocation) GetTimezone() *string {
-	if o == nil {
+func (h *HrisLocation) GetTimezone() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Timezone
+	return h.Timezone
 }
 
-func (o *HrisLocation) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (h *HrisLocation) GetUpdatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return h.UpdatedAt
 }

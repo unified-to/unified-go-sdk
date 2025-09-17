@@ -45,86 +45,86 @@ func (a *AccountingReport) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingReport) GetBalanceSheet() *PropertyAccountingReportBalanceSheet {
-	if o == nil {
+func (a *AccountingReport) GetBalanceSheet() *PropertyAccountingReportBalanceSheet {
+	if a == nil {
 		return nil
 	}
-	return o.BalanceSheet
+	return a.BalanceSheet
 }
 
-func (o *AccountingReport) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingReport) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingReport) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingReport) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingReport) GetEndAt() *time.Time {
-	if o == nil {
+func (a *AccountingReport) GetEndAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.EndAt
+	return a.EndAt
 }
 
-func (o *AccountingReport) GetID() *string {
-	if o == nil {
+func (a *AccountingReport) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingReport) GetName() *string {
-	if o == nil {
+func (a *AccountingReport) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingReport) GetProfitAndLoss() *PropertyAccountingReportProfitAndLoss {
-	if o == nil {
+func (a *AccountingReport) GetProfitAndLoss() *PropertyAccountingReportProfitAndLoss {
+	if a == nil {
 		return nil
 	}
-	return o.ProfitAndLoss
+	return a.ProfitAndLoss
 }
 
-func (o *AccountingReport) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingReport) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingReport) GetStartAt() *time.Time {
-	if o == nil {
+func (a *AccountingReport) GetStartAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.StartAt
+	return a.StartAt
 }
 
-func (o *AccountingReport) GetTrialBalance() *PropertyAccountingReportTrialBalance {
-	if o == nil {
+func (a *AccountingReport) GetTrialBalance() *PropertyAccountingReportTrialBalance {
+	if a == nil {
 		return nil
 	}
-	return o.TrialBalance
+	return a.TrialBalance
 }
 
-func (o *AccountingReport) GetType() *AccountingReportType {
-	if o == nil {
+func (a *AccountingReport) GetType() *AccountingReportType {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }
 
-func (o *AccountingReport) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingReport) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

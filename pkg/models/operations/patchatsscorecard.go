@@ -19,39 +19,39 @@ type PatchAtsScorecardRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAtsScorecardRequest) GetAtsScorecard() shared.AtsScorecard {
-	if o == nil {
+func (p *PatchAtsScorecardRequest) GetAtsScorecard() shared.AtsScorecard {
+	if p == nil {
 		return shared.AtsScorecard{}
 	}
-	return o.AtsScorecard
+	return p.AtsScorecard
 }
 
-func (o *PatchAtsScorecardRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAtsScorecardRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAtsScorecardRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAtsScorecardRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAtsScorecardRequest) GetID() string {
-	if o == nil {
+func (p *PatchAtsScorecardRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAtsScorecardRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAtsScorecardRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAtsScorecardResponse struct {
@@ -65,30 +65,30 @@ type PatchAtsScorecardResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAtsScorecardResponse) GetAtsScorecard() *shared.AtsScorecard {
-	if o == nil {
+func (p *PatchAtsScorecardResponse) GetAtsScorecard() *shared.AtsScorecard {
+	if p == nil {
 		return nil
 	}
-	return o.AtsScorecard
+	return p.AtsScorecard
 }
 
-func (o *PatchAtsScorecardResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAtsScorecardResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAtsScorecardResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAtsScorecardResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAtsScorecardResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAtsScorecardResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

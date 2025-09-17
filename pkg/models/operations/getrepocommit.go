@@ -18,32 +18,32 @@ type GetRepoCommitRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetRepoCommitRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetRepoCommitRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetRepoCommitRequest) GetFields() []string {
-	if o == nil {
+func (g *GetRepoCommitRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetRepoCommitRequest) GetID() string {
-	if o == nil {
+func (g *GetRepoCommitRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetRepoCommitRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetRepoCommitRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetRepoCommitResponse struct {
@@ -57,30 +57,30 @@ type GetRepoCommitResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetRepoCommitResponse) GetContentType() string {
-	if o == nil {
+func (g *GetRepoCommitResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetRepoCommitResponse) GetRepoCommit() *shared.RepoCommit {
-	if o == nil {
+func (g *GetRepoCommitResponse) GetRepoCommit() *shared.RepoCommit {
+	if g == nil {
 		return nil
 	}
-	return o.RepoCommit
+	return g.RepoCommit
 }
 
-func (o *GetRepoCommitResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetRepoCommitResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetRepoCommitResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetRepoCommitResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

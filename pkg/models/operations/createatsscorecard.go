@@ -17,32 +17,32 @@ type CreateAtsScorecardRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAtsScorecardRequest) GetAtsScorecard() shared.AtsScorecard {
-	if o == nil {
+func (c *CreateAtsScorecardRequest) GetAtsScorecard() shared.AtsScorecard {
+	if c == nil {
 		return shared.AtsScorecard{}
 	}
-	return o.AtsScorecard
+	return c.AtsScorecard
 }
 
-func (o *CreateAtsScorecardRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAtsScorecardRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAtsScorecardRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAtsScorecardRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAtsScorecardRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAtsScorecardRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAtsScorecardResponse struct {
@@ -56,30 +56,30 @@ type CreateAtsScorecardResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAtsScorecardResponse) GetAtsScorecard() *shared.AtsScorecard {
-	if o == nil {
+func (c *CreateAtsScorecardResponse) GetAtsScorecard() *shared.AtsScorecard {
+	if c == nil {
 		return nil
 	}
-	return o.AtsScorecard
+	return c.AtsScorecard
 }
 
-func (o *CreateAtsScorecardResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAtsScorecardResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAtsScorecardResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAtsScorecardResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAtsScorecardResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAtsScorecardResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

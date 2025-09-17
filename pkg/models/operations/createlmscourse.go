@@ -17,32 +17,32 @@ type CreateLmsCourseRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateLmsCourseRequest) GetLmsCourse() shared.LmsCourse {
-	if o == nil {
+func (c *CreateLmsCourseRequest) GetLmsCourse() shared.LmsCourse {
+	if c == nil {
 		return shared.LmsCourse{}
 	}
-	return o.LmsCourse
+	return c.LmsCourse
 }
 
-func (o *CreateLmsCourseRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateLmsCourseRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateLmsCourseRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateLmsCourseRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateLmsCourseRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateLmsCourseRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateLmsCourseResponse struct {
@@ -56,30 +56,30 @@ type CreateLmsCourseResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateLmsCourseResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateLmsCourseResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateLmsCourseResponse) GetLmsCourse() *shared.LmsCourse {
-	if o == nil {
+func (c *CreateLmsCourseResponse) GetLmsCourse() *shared.LmsCourse {
+	if c == nil {
 		return nil
 	}
-	return o.LmsCourse
+	return c.LmsCourse
 }
 
-func (o *CreateLmsCourseResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateLmsCourseResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateLmsCourseResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateLmsCourseResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

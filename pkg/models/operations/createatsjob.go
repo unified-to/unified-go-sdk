@@ -17,32 +17,32 @@ type CreateAtsJobRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAtsJobRequest) GetAtsJob() shared.AtsJob {
-	if o == nil {
+func (c *CreateAtsJobRequest) GetAtsJob() shared.AtsJob {
+	if c == nil {
 		return shared.AtsJob{}
 	}
-	return o.AtsJob
+	return c.AtsJob
 }
 
-func (o *CreateAtsJobRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAtsJobRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAtsJobRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAtsJobRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAtsJobRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAtsJobRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAtsJobResponse struct {
@@ -56,30 +56,30 @@ type CreateAtsJobResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAtsJobResponse) GetAtsJob() *shared.AtsJob {
-	if o == nil {
+func (c *CreateAtsJobResponse) GetAtsJob() *shared.AtsJob {
+	if c == nil {
 		return nil
 	}
-	return o.AtsJob
+	return c.AtsJob
 }
 
-func (o *CreateAtsJobResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAtsJobResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAtsJobResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAtsJobResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAtsJobResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAtsJobResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

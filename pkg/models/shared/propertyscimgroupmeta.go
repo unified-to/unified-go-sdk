@@ -21,37 +21,37 @@ type PropertyScimGroupMeta struct {
 	Version      *string       `json:"version,omitempty"`
 }
 
-func (o *PropertyScimGroupMeta) GetCreated() *string {
-	if o == nil {
+func (p *PropertyScimGroupMeta) GetCreated() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Created
+	return p.Created
 }
 
-func (o *PropertyScimGroupMeta) GetLastModified() *string {
-	if o == nil {
+func (p *PropertyScimGroupMeta) GetLastModified() *string {
+	if p == nil {
 		return nil
 	}
-	return o.LastModified
+	return p.LastModified
 }
 
-func (o *PropertyScimGroupMeta) GetLocation() *string {
-	if o == nil {
+func (p *PropertyScimGroupMeta) GetLocation() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Location
+	return p.Location
 }
 
-func (o *PropertyScimGroupMeta) GetResourceType() *ResourceType {
-	if o == nil {
+func (p *PropertyScimGroupMeta) GetResourceType() *ResourceType {
+	if p == nil {
 		return nil
 	}
-	return o.ResourceType
+	return p.ResourceType
 }
 
-func (o *PropertyScimGroupMeta) GetVersion() *string {
-	if o == nil {
+func (p *PropertyScimGroupMeta) GetVersion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Version
+	return p.Version
 }

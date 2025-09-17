@@ -69,170 +69,170 @@ func (c *CommerceItemVariant) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CommerceItemVariant) GetAvailableAt() *time.Time {
-	if o == nil {
+func (c *CommerceItemVariant) GetAvailableAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.AvailableAt
+	return c.AvailableAt
 }
 
-func (o *CommerceItemVariant) GetDescription() *string {
-	if o == nil {
+func (c *CommerceItemVariant) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CommerceItemVariant) GetHeight() *float64 {
-	if o == nil {
+func (c *CommerceItemVariant) GetHeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Height
+	return c.Height
 }
 
-func (o *CommerceItemVariant) GetID() *string {
-	if o == nil {
+func (c *CommerceItemVariant) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommerceItemVariant) GetInventoryID() *string {
-	if o == nil {
+func (c *CommerceItemVariant) GetInventoryID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.InventoryID
+	return c.InventoryID
 }
 
-func (o *CommerceItemVariant) GetIsActive() *bool {
-	if o == nil {
+func (c *CommerceItemVariant) GetIsActive() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsActive
+	return c.IsActive
 }
 
-func (o *CommerceItemVariant) GetIsFeatured() *bool {
-	if o == nil {
+func (c *CommerceItemVariant) GetIsFeatured() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsFeatured
+	return c.IsFeatured
 }
 
-func (o *CommerceItemVariant) GetIsVisible() *bool {
-	if o == nil {
+func (c *CommerceItemVariant) GetIsVisible() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsVisible
+	return c.IsVisible
 }
 
-func (o *CommerceItemVariant) GetLength() *float64 {
-	if o == nil {
+func (c *CommerceItemVariant) GetLength() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Length
+	return c.Length
 }
 
-func (o *CommerceItemVariant) GetMedia() []CommerceItemMedia {
-	if o == nil {
+func (c *CommerceItemVariant) GetMedia() []CommerceItemMedia {
+	if c == nil {
 		return nil
 	}
-	return o.Media
+	return c.Media
 }
 
-func (o *CommerceItemVariant) GetMetadata() []CommerceMetadata {
-	if o == nil {
+func (c *CommerceItemVariant) GetMetadata() []CommerceMetadata {
+	if c == nil {
 		return nil
 	}
-	return o.Metadata
+	return c.Metadata
 }
 
-func (o *CommerceItemVariant) GetName() *string {
-	if o == nil {
+func (c *CommerceItemVariant) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CommerceItemVariant) GetOptions() []CommerceItemOption {
-	if o == nil {
+func (c *CommerceItemVariant) GetOptions() []CommerceItemOption {
+	if c == nil {
 		return nil
 	}
-	return o.Options
+	return c.Options
 }
 
-func (o *CommerceItemVariant) GetPrices() []CommerceItemPrice {
-	if o == nil {
+func (c *CommerceItemVariant) GetPrices() []CommerceItemPrice {
+	if c == nil {
 		return nil
 	}
-	return o.Prices
+	return c.Prices
 }
 
-func (o *CommerceItemVariant) GetPublicDescription() *string {
-	if o == nil {
+func (c *CommerceItemVariant) GetPublicDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.PublicDescription
+	return c.PublicDescription
 }
 
-func (o *CommerceItemVariant) GetPublicName() *string {
-	if o == nil {
+func (c *CommerceItemVariant) GetPublicName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.PublicName
+	return c.PublicName
 }
 
-func (o *CommerceItemVariant) GetRequiresShipping() *bool {
-	if o == nil {
+func (c *CommerceItemVariant) GetRequiresShipping() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.RequiresShipping
+	return c.RequiresShipping
 }
 
-func (o *CommerceItemVariant) GetSizeUnit() *SizeUnit {
-	if o == nil {
+func (c *CommerceItemVariant) GetSizeUnit() *SizeUnit {
+	if c == nil {
 		return nil
 	}
-	return o.SizeUnit
+	return c.SizeUnit
 }
 
-func (o *CommerceItemVariant) GetSku() *string {
-	if o == nil {
+func (c *CommerceItemVariant) GetSku() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Sku
+	return c.Sku
 }
 
-func (o *CommerceItemVariant) GetTags() []string {
-	if o == nil {
+func (c *CommerceItemVariant) GetTags() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Tags
+	return c.Tags
 }
 
-func (o *CommerceItemVariant) GetTotalStock() *float64 {
-	if o == nil {
+func (c *CommerceItemVariant) GetTotalStock() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.TotalStock
+	return c.TotalStock
 }
 
-func (o *CommerceItemVariant) GetWeight() *float64 {
-	if o == nil {
+func (c *CommerceItemVariant) GetWeight() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Weight
+	return c.Weight
 }
 
-func (o *CommerceItemVariant) GetWeightUnit() *WeightUnit {
-	if o == nil {
+func (c *CommerceItemVariant) GetWeightUnit() *WeightUnit {
+	if c == nil {
 		return nil
 	}
-	return o.WeightUnit
+	return c.WeightUnit
 }
 
-func (o *CommerceItemVariant) GetWidth() *float64 {
-	if o == nil {
+func (c *CommerceItemVariant) GetWidth() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Width
+	return c.Width
 }

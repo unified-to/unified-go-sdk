@@ -22,37 +22,37 @@ type PropertyCalendarEventOrganizer struct {
 	UserID   *string                               `json:"user_id,omitempty"`
 }
 
-func (o *PropertyCalendarEventOrganizer) GetEmail() *string {
-	if o == nil {
+func (p *PropertyCalendarEventOrganizer) GetEmail() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Email
+	return p.Email
 }
 
-func (o *PropertyCalendarEventOrganizer) GetName() *string {
-	if o == nil {
+func (p *PropertyCalendarEventOrganizer) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyCalendarEventOrganizer) GetRequired() *bool {
-	if o == nil {
+func (p *PropertyCalendarEventOrganizer) GetRequired() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.Required
+	return p.Required
 }
 
-func (o *PropertyCalendarEventOrganizer) GetStatus() *PropertyCalendarEventOrganizerStatus {
-	if o == nil {
+func (p *PropertyCalendarEventOrganizer) GetStatus() *PropertyCalendarEventOrganizerStatus {
+	if p == nil {
 		return nil
 	}
-	return o.Status
+	return p.Status
 }
 
-func (o *PropertyCalendarEventOrganizer) GetUserID() *string {
-	if o == nil {
+func (p *PropertyCalendarEventOrganizer) GetUserID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.UserID
+	return p.UserID
 }

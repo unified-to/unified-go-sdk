@@ -17,46 +17,46 @@ type ListScimUsersRequest struct {
 	StartIndex   *float64 `queryParam:"style=form,explode=true,name=startIndex"`
 }
 
-func (o *ListScimUsersRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListScimUsersRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListScimUsersRequest) GetCount() *float64 {
-	if o == nil {
+func (l *ListScimUsersRequest) GetCount() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Count
+	return l.Count
 }
 
-func (o *ListScimUsersRequest) GetFilter() *string {
-	if o == nil {
+func (l *ListScimUsersRequest) GetFilter() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Filter
+	return l.Filter
 }
 
-func (o *ListScimUsersRequest) GetSortBy() *string {
-	if o == nil {
+func (l *ListScimUsersRequest) GetSortBy() *string {
+	if l == nil {
 		return nil
 	}
-	return o.SortBy
+	return l.SortBy
 }
 
-func (o *ListScimUsersRequest) GetSortOrder() *string {
-	if o == nil {
+func (l *ListScimUsersRequest) GetSortOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.SortOrder
+	return l.SortOrder
 }
 
-func (o *ListScimUsersRequest) GetStartIndex() *float64 {
-	if o == nil {
+func (l *ListScimUsersRequest) GetStartIndex() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.StartIndex
+	return l.StartIndex
 }
 
 type ListScimUsersResponse struct {
@@ -70,30 +70,30 @@ type ListScimUsersResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListScimUsersResponse) GetContentType() string {
-	if o == nil {
+func (l *ListScimUsersResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListScimUsersResponse) GetScimUsers() []shared.ScimUser {
-	if o == nil {
+func (l *ListScimUsersResponse) GetScimUsers() []shared.ScimUser {
+	if l == nil {
 		return nil
 	}
-	return o.ScimUsers
+	return l.ScimUsers
 }
 
-func (o *ListScimUsersResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListScimUsersResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListScimUsersResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListScimUsersResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

@@ -32,95 +32,95 @@ type ListHrisTimeoffsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListHrisTimeoffsRequest) GetCompanyID() *string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetCompanyID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyID
+	return l.CompanyID
 }
 
-func (o *ListHrisTimeoffsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListHrisTimeoffsRequest) GetEndLe() *string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetEndLe() *string {
+	if l == nil {
 		return nil
 	}
-	return o.EndLe
+	return l.EndLe
 }
 
-func (o *ListHrisTimeoffsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListHrisTimeoffsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListHrisTimeoffsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListHrisTimeoffsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListHrisTimeoffsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListHrisTimeoffsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListHrisTimeoffsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListHrisTimeoffsRequest) GetStartGte() *string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetStartGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.StartGte
+	return l.StartGte
 }
 
-func (o *ListHrisTimeoffsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListHrisTimeoffsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListHrisTimeoffsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListHrisTimeoffsResponse struct {
@@ -134,30 +134,30 @@ type ListHrisTimeoffsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListHrisTimeoffsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListHrisTimeoffsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListHrisTimeoffsResponse) GetHrisTimeoffs() []shared.HrisTimeoff {
-	if o == nil {
+func (l *ListHrisTimeoffsResponse) GetHrisTimeoffs() []shared.HrisTimeoff {
+	if l == nil {
 		return nil
 	}
-	return o.HrisTimeoffs
+	return l.HrisTimeoffs
 }
 
-func (o *ListHrisTimeoffsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListHrisTimeoffsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListHrisTimeoffsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListHrisTimeoffsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

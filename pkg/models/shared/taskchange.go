@@ -28,51 +28,51 @@ func (t *TaskChange) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *TaskChange) GetCreatedAt() *time.Time {
-	if o == nil {
+func (t *TaskChange) GetCreatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return t.CreatedAt
 }
 
-func (o *TaskChange) GetID() *string {
-	if o == nil {
+func (t *TaskChange) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *TaskChange) GetItems() []TaskChangeItem {
-	if o == nil {
+func (t *TaskChange) GetItems() []TaskChangeItem {
+	if t == nil {
 		return nil
 	}
-	return o.Items
+	return t.Items
 }
 
-func (o *TaskChange) GetRaw() map[string]any {
-	if o == nil {
+func (t *TaskChange) GetRaw() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Raw
+	return t.Raw
 }
 
-func (o *TaskChange) GetTaskID() *string {
-	if o == nil {
+func (t *TaskChange) GetTaskID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.TaskID
+	return t.TaskID
 }
 
-func (o *TaskChange) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (t *TaskChange) GetUpdatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return t.UpdatedAt
 }
 
-func (o *TaskChange) GetUserID() *string {
-	if o == nil {
+func (t *TaskChange) GetUserID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.UserID
+	return t.UserID
 }

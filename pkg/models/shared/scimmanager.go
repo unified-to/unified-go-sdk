@@ -22,37 +22,37 @@ type ScimManager struct {
 	Value       *string          `json:"value,omitempty"`
 }
 
-func (o *ScimManager) GetDollarRef() *string {
-	if o == nil {
+func (s *ScimManager) GetDollarRef() *string {
+	if s == nil {
 		return nil
 	}
-	return o.DollarRef
+	return s.DollarRef
 }
 
-func (o *ScimManager) GetDisplayName() *string {
-	if o == nil {
+func (s *ScimManager) GetDisplayName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.DisplayName
+	return s.DisplayName
 }
 
-func (o *ScimManager) GetManagerID() *string {
-	if o == nil {
+func (s *ScimManager) GetManagerID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ManagerID
+	return s.ManagerID
 }
 
-func (o *ScimManager) GetType() *ScimManagerType {
-	if o == nil {
+func (s *ScimManager) GetType() *ScimManagerType {
+	if s == nil {
 		return nil
 	}
-	return o.Type
+	return s.Type
 }
 
-func (o *ScimManager) GetValue() *string {
-	if o == nil {
+func (s *ScimManager) GetValue() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Value
+	return s.Value
 }

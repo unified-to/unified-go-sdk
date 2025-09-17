@@ -17,32 +17,32 @@ type CreateMessagingMessageRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateMessagingMessageRequest) GetMessagingMessage() shared.MessagingMessage {
-	if o == nil {
+func (c *CreateMessagingMessageRequest) GetMessagingMessage() shared.MessagingMessage {
+	if c == nil {
 		return shared.MessagingMessage{}
 	}
-	return o.MessagingMessage
+	return c.MessagingMessage
 }
 
-func (o *CreateMessagingMessageRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateMessagingMessageRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateMessagingMessageRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateMessagingMessageRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateMessagingMessageRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateMessagingMessageRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateMessagingMessageResponse struct {
@@ -56,30 +56,30 @@ type CreateMessagingMessageResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateMessagingMessageResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateMessagingMessageResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateMessagingMessageResponse) GetMessagingMessage() *shared.MessagingMessage {
-	if o == nil {
+func (c *CreateMessagingMessageResponse) GetMessagingMessage() *shared.MessagingMessage {
+	if c == nil {
 		return nil
 	}
-	return o.MessagingMessage
+	return c.MessagingMessage
 }
 
-func (o *CreateMessagingMessageResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateMessagingMessageResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateMessagingMessageResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateMessagingMessageResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

@@ -13,18 +13,18 @@ type RemoveAccountingCreditmemoRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveAccountingCreditmemoRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveAccountingCreditmemoRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveAccountingCreditmemoRequest) GetID() string {
-	if o == nil {
+func (r *RemoveAccountingCreditmemoRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveAccountingCreditmemoResponse struct {
@@ -37,30 +37,30 @@ type RemoveAccountingCreditmemoResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveAccountingCreditmemoResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveAccountingCreditmemoResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveAccountingCreditmemoResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveAccountingCreditmemoResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveAccountingCreditmemoResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveAccountingCreditmemoResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveAccountingCreditmemoResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveAccountingCreditmemoResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

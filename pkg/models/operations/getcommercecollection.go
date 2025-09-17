@@ -18,32 +18,32 @@ type GetCommerceCollectionRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetCommerceCollectionRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetCommerceCollectionRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetCommerceCollectionRequest) GetFields() []string {
-	if o == nil {
+func (g *GetCommerceCollectionRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetCommerceCollectionRequest) GetID() string {
-	if o == nil {
+func (g *GetCommerceCollectionRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetCommerceCollectionRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetCommerceCollectionRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetCommerceCollectionResponse struct {
@@ -57,30 +57,30 @@ type GetCommerceCollectionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetCommerceCollectionResponse) GetCommerceCollection() *shared.CommerceCollection {
-	if o == nil {
+func (g *GetCommerceCollectionResponse) GetCommerceCollection() *shared.CommerceCollection {
+	if g == nil {
 		return nil
 	}
-	return o.CommerceCollection
+	return g.CommerceCollection
 }
 
-func (o *GetCommerceCollectionResponse) GetContentType() string {
-	if o == nil {
+func (g *GetCommerceCollectionResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetCommerceCollectionResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetCommerceCollectionResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetCommerceCollectionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetCommerceCollectionResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

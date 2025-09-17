@@ -18,32 +18,32 @@ type GetHrisTimeshiftRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetHrisTimeshiftRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetHrisTimeshiftRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetHrisTimeshiftRequest) GetFields() []string {
-	if o == nil {
+func (g *GetHrisTimeshiftRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetHrisTimeshiftRequest) GetID() string {
-	if o == nil {
+func (g *GetHrisTimeshiftRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetHrisTimeshiftRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetHrisTimeshiftRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetHrisTimeshiftResponse struct {
@@ -57,30 +57,30 @@ type GetHrisTimeshiftResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetHrisTimeshiftResponse) GetContentType() string {
-	if o == nil {
+func (g *GetHrisTimeshiftResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetHrisTimeshiftResponse) GetHrisTimeshift() *shared.HrisTimeshift {
-	if o == nil {
+func (g *GetHrisTimeshiftResponse) GetHrisTimeshift() *shared.HrisTimeshift {
+	if g == nil {
 		return nil
 	}
-	return o.HrisTimeshift
+	return g.HrisTimeshift
 }
 
-func (o *GetHrisTimeshiftResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetHrisTimeshiftResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetHrisTimeshiftResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetHrisTimeshiftResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

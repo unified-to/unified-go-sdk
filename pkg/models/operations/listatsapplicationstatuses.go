@@ -24,67 +24,67 @@ type ListAtsApplicationstatusesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAtsApplicationstatusesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAtsApplicationstatusesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAtsApplicationstatusesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAtsApplicationstatusesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAtsApplicationstatusesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAtsApplicationstatusesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAtsApplicationstatusesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAtsApplicationstatusesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAtsApplicationstatusesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAtsApplicationstatusesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAtsApplicationstatusesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAtsApplicationstatusesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAtsApplicationstatusesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAtsApplicationstatusesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAtsApplicationstatusesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAtsApplicationstatusesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAtsApplicationstatusesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAtsApplicationstatusesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAtsApplicationstatusesResponse struct {
@@ -98,30 +98,30 @@ type ListAtsApplicationstatusesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAtsApplicationstatusesResponse) GetAtsStatuses() []shared.AtsStatus {
-	if o == nil {
+func (l *ListAtsApplicationstatusesResponse) GetAtsStatuses() []shared.AtsStatus {
+	if l == nil {
 		return nil
 	}
-	return o.AtsStatuses
+	return l.AtsStatuses
 }
 
-func (o *ListAtsApplicationstatusesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAtsApplicationstatusesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAtsApplicationstatusesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAtsApplicationstatusesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAtsApplicationstatusesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAtsApplicationstatusesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

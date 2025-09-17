@@ -20,39 +20,39 @@ type UpdateCrmCompanyRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateCrmCompanyRequest) GetCrmCompany() shared.CrmCompany {
-	if o == nil {
+func (u *UpdateCrmCompanyRequest) GetCrmCompany() shared.CrmCompany {
+	if u == nil {
 		return shared.CrmCompany{}
 	}
-	return o.CrmCompany
+	return u.CrmCompany
 }
 
-func (o *UpdateCrmCompanyRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateCrmCompanyRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateCrmCompanyRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateCrmCompanyRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateCrmCompanyRequest) GetID() string {
-	if o == nil {
+func (u *UpdateCrmCompanyRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateCrmCompanyRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateCrmCompanyRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateCrmCompanyResponse struct {
@@ -66,30 +66,30 @@ type UpdateCrmCompanyResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateCrmCompanyResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateCrmCompanyResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateCrmCompanyResponse) GetCrmCompany() *shared.CrmCompany {
-	if o == nil {
+func (u *UpdateCrmCompanyResponse) GetCrmCompany() *shared.CrmCompany {
+	if u == nil {
 		return nil
 	}
-	return o.CrmCompany
+	return u.CrmCompany
 }
 
-func (o *UpdateCrmCompanyResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateCrmCompanyResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateCrmCompanyResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateCrmCompanyResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

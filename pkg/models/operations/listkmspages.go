@@ -28,81 +28,81 @@ type ListKmsPagesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListKmsPagesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListKmsPagesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListKmsPagesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListKmsPagesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListKmsPagesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListKmsPagesRequest) GetParentID() *string {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetParentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ParentID
+	return l.ParentID
 }
 
-func (o *ListKmsPagesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListKmsPagesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListKmsPagesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListKmsPagesRequest) GetSpaceID() *string {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetSpaceID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.SpaceID
+	return l.SpaceID
 }
 
-func (o *ListKmsPagesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListKmsPagesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListKmsPagesResponse struct {
@@ -116,30 +116,30 @@ type ListKmsPagesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListKmsPagesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListKmsPagesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListKmsPagesResponse) GetKmsPages() []shared.KmsPage {
-	if o == nil {
+func (l *ListKmsPagesResponse) GetKmsPages() []shared.KmsPage {
+	if l == nil {
 		return nil
 	}
-	return o.KmsPages
+	return l.KmsPages
 }
 
-func (o *ListKmsPagesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListKmsPagesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListKmsPagesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListKmsPagesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

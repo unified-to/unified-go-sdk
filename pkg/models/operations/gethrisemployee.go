@@ -18,32 +18,32 @@ type GetHrisEmployeeRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetHrisEmployeeRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetHrisEmployeeRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetHrisEmployeeRequest) GetFields() []string {
-	if o == nil {
+func (g *GetHrisEmployeeRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetHrisEmployeeRequest) GetID() string {
-	if o == nil {
+func (g *GetHrisEmployeeRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetHrisEmployeeRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetHrisEmployeeRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetHrisEmployeeResponse struct {
@@ -57,30 +57,30 @@ type GetHrisEmployeeResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetHrisEmployeeResponse) GetContentType() string {
-	if o == nil {
+func (g *GetHrisEmployeeResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetHrisEmployeeResponse) GetHrisEmployee() *shared.HrisEmployee {
-	if o == nil {
+func (g *GetHrisEmployeeResponse) GetHrisEmployee() *shared.HrisEmployee {
+	if g == nil {
 		return nil
 	}
-	return o.HrisEmployee
+	return g.HrisEmployee
 }
 
-func (o *GetHrisEmployeeResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetHrisEmployeeResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetHrisEmployeeResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetHrisEmployeeResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

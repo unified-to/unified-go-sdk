@@ -19,39 +19,39 @@ type UpdateHrisCompanyRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateHrisCompanyRequest) GetHrisCompany() shared.HrisCompany {
-	if o == nil {
+func (u *UpdateHrisCompanyRequest) GetHrisCompany() shared.HrisCompany {
+	if u == nil {
 		return shared.HrisCompany{}
 	}
-	return o.HrisCompany
+	return u.HrisCompany
 }
 
-func (o *UpdateHrisCompanyRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateHrisCompanyRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateHrisCompanyRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateHrisCompanyRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateHrisCompanyRequest) GetID() string {
-	if o == nil {
+func (u *UpdateHrisCompanyRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateHrisCompanyRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateHrisCompanyRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateHrisCompanyResponse struct {
@@ -65,30 +65,30 @@ type UpdateHrisCompanyResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateHrisCompanyResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateHrisCompanyResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateHrisCompanyResponse) GetHrisCompany() *shared.HrisCompany {
-	if o == nil {
+func (u *UpdateHrisCompanyResponse) GetHrisCompany() *shared.HrisCompany {
+	if u == nil {
 		return nil
 	}
-	return o.HrisCompany
+	return u.HrisCompany
 }
 
-func (o *UpdateHrisCompanyResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateHrisCompanyResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateHrisCompanyResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateHrisCompanyResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

@@ -29,58 +29,58 @@ func (r *RepoCommit) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *RepoCommit) GetBranchID() *string {
-	if o == nil {
+func (r *RepoCommit) GetBranchID() *string {
+	if r == nil {
 		return nil
 	}
-	return o.BranchID
+	return r.BranchID
 }
 
-func (o *RepoCommit) GetCreatedAt() *time.Time {
-	if o == nil {
+func (r *RepoCommit) GetCreatedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return r.CreatedAt
 }
 
-func (o *RepoCommit) GetID() *string {
-	if o == nil {
+func (r *RepoCommit) GetID() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ID
+	return r.ID
 }
 
-func (o *RepoCommit) GetMessage() *string {
-	if o == nil {
+func (r *RepoCommit) GetMessage() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Message
+	return r.Message
 }
 
-func (o *RepoCommit) GetRaw() map[string]any {
-	if o == nil {
+func (r *RepoCommit) GetRaw() map[string]any {
+	if r == nil {
 		return nil
 	}
-	return o.Raw
+	return r.Raw
 }
 
-func (o *RepoCommit) GetRepoID() string {
-	if o == nil {
+func (r *RepoCommit) GetRepoID() string {
+	if r == nil {
 		return ""
 	}
-	return o.RepoID
+	return r.RepoID
 }
 
-func (o *RepoCommit) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (r *RepoCommit) GetUpdatedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return r.UpdatedAt
 }
 
-func (o *RepoCommit) GetUserID() string {
-	if o == nil {
+func (r *RepoCommit) GetUserID() string {
+	if r == nil {
 		return ""
 	}
-	return o.UserID
+	return r.UserID
 }

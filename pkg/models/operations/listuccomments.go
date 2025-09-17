@@ -28,81 +28,81 @@ type ListUcCommentsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListUcCommentsRequest) GetCallID() *string {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetCallID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CallID
+	return l.CallID
 }
 
-func (o *ListUcCommentsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListUcCommentsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListUcCommentsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListUcCommentsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListUcCommentsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListUcCommentsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListUcCommentsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListUcCommentsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListUcCommentsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListUcCommentsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListUcCommentsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListUcCommentsResponse struct {
@@ -116,30 +116,30 @@ type ListUcCommentsResponse struct {
 	UcComments []shared.UcComment
 }
 
-func (o *ListUcCommentsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListUcCommentsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListUcCommentsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListUcCommentsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListUcCommentsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListUcCommentsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListUcCommentsResponse) GetUcComments() []shared.UcComment {
-	if o == nil {
+func (l *ListUcCommentsResponse) GetUcComments() []shared.UcComment {
+	if l == nil {
 		return nil
 	}
-	return o.UcComments
+	return l.UcComments
 }

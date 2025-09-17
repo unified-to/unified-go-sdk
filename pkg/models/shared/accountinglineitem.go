@@ -39,128 +39,128 @@ func (a *AccountingLineitem) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingLineitem) GetAccountID() *string {
-	if o == nil {
+func (a *AccountingLineitem) GetAccountID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AccountID
+	return a.AccountID
 }
 
-func (o *AccountingLineitem) GetCategoryIds() []string {
-	if o == nil {
+func (a *AccountingLineitem) GetCategoryIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.CategoryIds
+	return a.CategoryIds
 }
 
-func (o *AccountingLineitem) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingLineitem) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingLineitem) GetDiscountAmount() *float64 {
-	if o == nil {
+func (a *AccountingLineitem) GetDiscountAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.DiscountAmount
+	return a.DiscountAmount
 }
 
-func (o *AccountingLineitem) GetID() *string {
-	if o == nil {
+func (a *AccountingLineitem) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingLineitem) GetItemDescription() *string {
-	if o == nil {
+func (a *AccountingLineitem) GetItemDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ItemDescription
+	return a.ItemDescription
 }
 
-func (o *AccountingLineitem) GetItemID() *string {
-	if o == nil {
+func (a *AccountingLineitem) GetItemID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ItemID
+	return a.ItemID
 }
 
-func (o *AccountingLineitem) GetItemName() *string {
-	if o == nil {
+func (a *AccountingLineitem) GetItemName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ItemName
+	return a.ItemName
 }
 
-func (o *AccountingLineitem) GetItemSku() *string {
-	if o == nil {
+func (a *AccountingLineitem) GetItemSku() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ItemSku
+	return a.ItemSku
 }
 
-func (o *AccountingLineitem) GetNotes() *string {
-	if o == nil {
+func (a *AccountingLineitem) GetNotes() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Notes
+	return a.Notes
 }
 
-func (o *AccountingLineitem) GetRefundAmount() *float64 {
-	if o == nil {
+func (a *AccountingLineitem) GetRefundAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.RefundAmount
+	return a.RefundAmount
 }
 
-func (o *AccountingLineitem) GetRefundedAt() *time.Time {
-	if o == nil {
+func (a *AccountingLineitem) GetRefundedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.RefundedAt
+	return a.RefundedAt
 }
 
-func (o *AccountingLineitem) GetTaxAmount() *float64 {
-	if o == nil {
+func (a *AccountingLineitem) GetTaxAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TaxAmount
+	return a.TaxAmount
 }
 
-func (o *AccountingLineitem) GetTaxrateID() *string {
-	if o == nil {
+func (a *AccountingLineitem) GetTaxrateID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.TaxrateID
+	return a.TaxrateID
 }
 
-func (o *AccountingLineitem) GetTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingLineitem) GetTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalAmount
+	return a.TotalAmount
 }
 
-func (o *AccountingLineitem) GetUnitAmount() *float64 {
-	if o == nil {
+func (a *AccountingLineitem) GetUnitAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.UnitAmount
+	return a.UnitAmount
 }
 
-func (o *AccountingLineitem) GetUnitQuantity() *float64 {
-	if o == nil {
+func (a *AccountingLineitem) GetUnitQuantity() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.UnitQuantity
+	return a.UnitQuantity
 }
 
-func (o *AccountingLineitem) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingLineitem) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

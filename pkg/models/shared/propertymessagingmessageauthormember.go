@@ -8,23 +8,23 @@ type PropertyMessagingMessageAuthorMember struct {
 	UserID *string `json:"user_id,omitempty"`
 }
 
-func (o *PropertyMessagingMessageAuthorMember) GetEmail() *string {
-	if o == nil {
+func (p *PropertyMessagingMessageAuthorMember) GetEmail() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Email
+	return p.Email
 }
 
-func (o *PropertyMessagingMessageAuthorMember) GetName() *string {
-	if o == nil {
+func (p *PropertyMessagingMessageAuthorMember) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyMessagingMessageAuthorMember) GetUserID() *string {
-	if o == nil {
+func (p *PropertyMessagingMessageAuthorMember) GetUserID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.UserID
+	return p.UserID
 }

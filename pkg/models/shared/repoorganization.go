@@ -31,65 +31,65 @@ func (r *RepoOrganization) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *RepoOrganization) GetAvatarURL() *string {
-	if o == nil {
+func (r *RepoOrganization) GetAvatarURL() *string {
+	if r == nil {
 		return nil
 	}
-	return o.AvatarURL
+	return r.AvatarURL
 }
 
-func (o *RepoOrganization) GetCreatedAt() *time.Time {
-	if o == nil {
+func (r *RepoOrganization) GetCreatedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return r.CreatedAt
 }
 
-func (o *RepoOrganization) GetDescription() *string {
-	if o == nil {
+func (r *RepoOrganization) GetDescription() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Description
+	return r.Description
 }
 
-func (o *RepoOrganization) GetID() *string {
-	if o == nil {
+func (r *RepoOrganization) GetID() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ID
+	return r.ID
 }
 
-func (o *RepoOrganization) GetName() *string {
-	if o == nil {
+func (r *RepoOrganization) GetName() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Name
+	return r.Name
 }
 
-func (o *RepoOrganization) GetRaw() map[string]any {
-	if o == nil {
+func (r *RepoOrganization) GetRaw() map[string]any {
+	if r == nil {
 		return nil
 	}
-	return o.Raw
+	return r.Raw
 }
 
-func (o *RepoOrganization) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (r *RepoOrganization) GetUpdatedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return r.UpdatedAt
 }
 
-func (o *RepoOrganization) GetUserIds() []string {
-	if o == nil {
+func (r *RepoOrganization) GetUserIds() []string {
+	if r == nil {
 		return nil
 	}
-	return o.UserIds
+	return r.UserIds
 }
 
-func (o *RepoOrganization) GetWebURL() *string {
-	if o == nil {
+func (r *RepoOrganization) GetWebURL() *string {
+	if r == nil {
 		return nil
 	}
-	return o.WebURL
+	return r.WebURL
 }

@@ -13,18 +13,18 @@ type RemoveUcRecordingRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveUcRecordingRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveUcRecordingRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveUcRecordingRequest) GetID() string {
-	if o == nil {
+func (r *RemoveUcRecordingRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveUcRecordingResponse struct {
@@ -37,30 +37,30 @@ type RemoveUcRecordingResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveUcRecordingResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveUcRecordingResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveUcRecordingResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveUcRecordingResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveUcRecordingResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveUcRecordingResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveUcRecordingResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveUcRecordingResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

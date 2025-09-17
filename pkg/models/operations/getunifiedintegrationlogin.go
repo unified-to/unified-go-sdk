@@ -21,53 +21,53 @@ type GetUnifiedIntegrationLoginRequest struct {
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
 }
 
-func (o *GetUnifiedIntegrationLoginRequest) GetEnv() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginRequest) GetEnv() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Env
+	return g.Env
 }
 
-func (o *GetUnifiedIntegrationLoginRequest) GetFailureRedirect() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginRequest) GetFailureRedirect() *string {
+	if g == nil {
 		return nil
 	}
-	return o.FailureRedirect
+	return g.FailureRedirect
 }
 
-func (o *GetUnifiedIntegrationLoginRequest) GetIntegrationType() string {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginRequest) GetIntegrationType() string {
+	if g == nil {
 		return ""
 	}
-	return o.IntegrationType
+	return g.IntegrationType
 }
 
-func (o *GetUnifiedIntegrationLoginRequest) GetRedirect() *bool {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginRequest) GetRedirect() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.Redirect
+	return g.Redirect
 }
 
-func (o *GetUnifiedIntegrationLoginRequest) GetState() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginRequest) GetState() *string {
+	if g == nil {
 		return nil
 	}
-	return o.State
+	return g.State
 }
 
-func (o *GetUnifiedIntegrationLoginRequest) GetSuccessRedirect() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginRequest) GetSuccessRedirect() *string {
+	if g == nil {
 		return nil
 	}
-	return o.SuccessRedirect
+	return g.SuccessRedirect
 }
 
-func (o *GetUnifiedIntegrationLoginRequest) GetWorkspaceID() string {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginRequest) GetWorkspaceID() string {
+	if g == nil {
 		return ""
 	}
-	return o.WorkspaceID
+	return g.WorkspaceID
 }
 
 type GetUnifiedIntegrationLoginResponse struct {
@@ -81,30 +81,30 @@ type GetUnifiedIntegrationLoginResponse struct {
 	Res *string
 }
 
-func (o *GetUnifiedIntegrationLoginResponse) GetContentType() string {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetUnifiedIntegrationLoginResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetUnifiedIntegrationLoginResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetUnifiedIntegrationLoginResponse) GetRes() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationLoginResponse) GetRes() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Res
+	return g.Res
 }

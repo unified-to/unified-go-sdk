@@ -18,32 +18,32 @@ type GetAccountingReportRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAccountingReportRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAccountingReportRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAccountingReportRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAccountingReportRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAccountingReportRequest) GetID() string {
-	if o == nil {
+func (g *GetAccountingReportRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAccountingReportRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAccountingReportRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAccountingReportResponse struct {
@@ -57,30 +57,30 @@ type GetAccountingReportResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAccountingReportResponse) GetAccountingReport() *shared.AccountingReport {
-	if o == nil {
+func (g *GetAccountingReportResponse) GetAccountingReport() *shared.AccountingReport {
+	if g == nil {
 		return nil
 	}
-	return o.AccountingReport
+	return g.AccountingReport
 }
 
-func (o *GetAccountingReportResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAccountingReportResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAccountingReportResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAccountingReportResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAccountingReportResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAccountingReportResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

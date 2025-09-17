@@ -17,32 +17,32 @@ type CreateAccountingOrderRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAccountingOrderRequest) GetAccountingOrder() shared.AccountingOrder {
-	if o == nil {
+func (c *CreateAccountingOrderRequest) GetAccountingOrder() shared.AccountingOrder {
+	if c == nil {
 		return shared.AccountingOrder{}
 	}
-	return o.AccountingOrder
+	return c.AccountingOrder
 }
 
-func (o *CreateAccountingOrderRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAccountingOrderRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAccountingOrderRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAccountingOrderRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAccountingOrderRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAccountingOrderRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAccountingOrderResponse struct {
@@ -56,30 +56,30 @@ type CreateAccountingOrderResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingOrderResponse) GetAccountingOrder() *shared.AccountingOrder {
-	if o == nil {
+func (c *CreateAccountingOrderResponse) GetAccountingOrder() *shared.AccountingOrder {
+	if c == nil {
 		return nil
 	}
-	return o.AccountingOrder
+	return c.AccountingOrder
 }
 
-func (o *CreateAccountingOrderResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAccountingOrderResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAccountingOrderResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAccountingOrderResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAccountingOrderResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAccountingOrderResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

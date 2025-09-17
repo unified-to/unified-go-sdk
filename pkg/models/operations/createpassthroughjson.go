@@ -16,32 +16,32 @@ type CreatePassthroughJSONRequest struct {
 	Query        map[string]any `queryParam:"style=form,explode=true,name=query"`
 }
 
-func (o *CreatePassthroughJSONRequest) GetRequestBody() any {
-	if o == nil {
+func (c *CreatePassthroughJSONRequest) GetRequestBody() any {
+	if c == nil {
 		return nil
 	}
-	return o.RequestBody
+	return c.RequestBody
 }
 
-func (o *CreatePassthroughJSONRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreatePassthroughJSONRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreatePassthroughJSONRequest) GetPath() string {
-	if o == nil {
+func (c *CreatePassthroughJSONRequest) GetPath() string {
+	if c == nil {
 		return ""
 	}
-	return o.Path
+	return c.Path
 }
 
-func (o *CreatePassthroughJSONRequest) GetQuery() map[string]any {
-	if o == nil {
+func (c *CreatePassthroughJSONRequest) GetQuery() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Query
+	return c.Query
 }
 
 type CreatePassthroughJSONResponse struct {
@@ -65,65 +65,65 @@ type CreatePassthroughJSONResponse struct {
 	DefaultTextPlainRes *string
 }
 
-func (o *CreatePassthroughJSONResponse) GetContentType() string {
-	if o == nil {
+func (c *CreatePassthroughJSONResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreatePassthroughJSONResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (c *CreatePassthroughJSONResponse) GetHeaders() map[string][]string {
+	if c == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return c.Headers
 }
 
-func (o *CreatePassthroughJSONResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreatePassthroughJSONResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreatePassthroughJSONResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreatePassthroughJSONResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreatePassthroughJSONResponse) GetDefaultWildcardWildcardResponseStream() io.ReadCloser {
-	if o == nil {
+func (c *CreatePassthroughJSONResponse) GetDefaultWildcardWildcardResponseStream() io.ReadCloser {
+	if c == nil {
 		return nil
 	}
-	return o.DefaultWildcardWildcardResponseStream
+	return c.DefaultWildcardWildcardResponseStream
 }
 
-func (o *CreatePassthroughJSONResponse) GetDefaultApplicationJSONAny() any {
-	if o == nil {
+func (c *CreatePassthroughJSONResponse) GetDefaultApplicationJSONAny() any {
+	if c == nil {
 		return nil
 	}
-	return o.DefaultApplicationJSONAny
+	return c.DefaultApplicationJSONAny
 }
 
-func (o *CreatePassthroughJSONResponse) GetDefaultApplicationXMLRes() *string {
-	if o == nil {
+func (c *CreatePassthroughJSONResponse) GetDefaultApplicationXMLRes() *string {
+	if c == nil {
 		return nil
 	}
-	return o.DefaultApplicationXMLRes
+	return c.DefaultApplicationXMLRes
 }
 
-func (o *CreatePassthroughJSONResponse) GetDefaultTextCsvRes() *string {
-	if o == nil {
+func (c *CreatePassthroughJSONResponse) GetDefaultTextCsvRes() *string {
+	if c == nil {
 		return nil
 	}
-	return o.DefaultTextCsvRes
+	return c.DefaultTextCsvRes
 }
 
-func (o *CreatePassthroughJSONResponse) GetDefaultTextPlainRes() *string {
-	if o == nil {
+func (c *CreatePassthroughJSONResponse) GetDefaultTextPlainRes() *string {
+	if c == nil {
 		return nil
 	}
-	return o.DefaultTextPlainRes
+	return c.DefaultTextPlainRes
 }

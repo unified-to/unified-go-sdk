@@ -18,32 +18,32 @@ type GetCalendarLinkRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetCalendarLinkRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetCalendarLinkRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetCalendarLinkRequest) GetFields() []string {
-	if o == nil {
+func (g *GetCalendarLinkRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetCalendarLinkRequest) GetID() string {
-	if o == nil {
+func (g *GetCalendarLinkRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetCalendarLinkRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetCalendarLinkRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetCalendarLinkResponse struct {
@@ -57,30 +57,30 @@ type GetCalendarLinkResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetCalendarLinkResponse) GetCalendarLink() *shared.CalendarLink {
-	if o == nil {
+func (g *GetCalendarLinkResponse) GetCalendarLink() *shared.CalendarLink {
+	if g == nil {
 		return nil
 	}
-	return o.CalendarLink
+	return g.CalendarLink
 }
 
-func (o *GetCalendarLinkResponse) GetContentType() string {
-	if o == nil {
+func (g *GetCalendarLinkResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetCalendarLinkResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetCalendarLinkResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetCalendarLinkResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetCalendarLinkResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

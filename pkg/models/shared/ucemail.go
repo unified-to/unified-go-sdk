@@ -19,16 +19,16 @@ type UcEmail struct {
 	Type  *UcEmailType `json:"type,omitempty"`
 }
 
-func (o *UcEmail) GetEmail() string {
-	if o == nil {
+func (u *UcEmail) GetEmail() string {
+	if u == nil {
 		return ""
 	}
-	return o.Email
+	return u.Email
 }
 
-func (o *UcEmail) GetType() *UcEmailType {
-	if o == nil {
+func (u *UcEmail) GetType() *UcEmailType {
+	if u == nil {
 		return nil
 	}
-	return o.Type
+	return u.Type
 }

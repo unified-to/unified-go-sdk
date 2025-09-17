@@ -17,32 +17,32 @@ type CreateHrisLocationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateHrisLocationRequest) GetHrisLocation() shared.HrisLocation {
-	if o == nil {
+func (c *CreateHrisLocationRequest) GetHrisLocation() shared.HrisLocation {
+	if c == nil {
 		return shared.HrisLocation{}
 	}
-	return o.HrisLocation
+	return c.HrisLocation
 }
 
-func (o *CreateHrisLocationRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateHrisLocationRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateHrisLocationRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateHrisLocationRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateHrisLocationRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateHrisLocationRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateHrisLocationResponse struct {
@@ -56,30 +56,30 @@ type CreateHrisLocationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateHrisLocationResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateHrisLocationResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateHrisLocationResponse) GetHrisLocation() *shared.HrisLocation {
-	if o == nil {
+func (c *CreateHrisLocationResponse) GetHrisLocation() *shared.HrisLocation {
+	if c == nil {
 		return nil
 	}
-	return o.HrisLocation
+	return c.HrisLocation
 }
 
-func (o *CreateHrisLocationResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateHrisLocationResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateHrisLocationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateHrisLocationResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

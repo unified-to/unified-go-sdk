@@ -13,18 +13,18 @@ type RemoveCalendarCalendarRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveCalendarCalendarRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveCalendarCalendarRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveCalendarCalendarRequest) GetID() string {
-	if o == nil {
+func (r *RemoveCalendarCalendarRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveCalendarCalendarResponse struct {
@@ -37,30 +37,30 @@ type RemoveCalendarCalendarResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveCalendarCalendarResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveCalendarCalendarResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveCalendarCalendarResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveCalendarCalendarResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveCalendarCalendarResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveCalendarCalendarResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveCalendarCalendarResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveCalendarCalendarResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

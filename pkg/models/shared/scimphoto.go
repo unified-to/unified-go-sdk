@@ -20,30 +20,30 @@ type ScimPhoto struct {
 	Value   *string        `json:"value,omitempty"`
 }
 
-func (o *ScimPhoto) GetDisplay() *string {
-	if o == nil {
+func (s *ScimPhoto) GetDisplay() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Display
+	return s.Display
 }
 
-func (o *ScimPhoto) GetPrimary() *bool {
-	if o == nil {
+func (s *ScimPhoto) GetPrimary() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Primary
+	return s.Primary
 }
 
-func (o *ScimPhoto) GetType() *ScimPhotoType {
-	if o == nil {
+func (s *ScimPhoto) GetType() *ScimPhotoType {
+	if s == nil {
 		return nil
 	}
-	return o.Type
+	return s.Type
 }
 
-func (o *ScimPhoto) GetValue() *string {
-	if o == nil {
+func (s *ScimPhoto) GetValue() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Value
+	return s.Value
 }

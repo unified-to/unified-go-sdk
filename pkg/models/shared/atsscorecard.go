@@ -46,86 +46,86 @@ func (a *AtsScorecard) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsScorecard) GetApplicationID() *string {
-	if o == nil {
+func (a *AtsScorecard) GetApplicationID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ApplicationID
+	return a.ApplicationID
 }
 
-func (o *AtsScorecard) GetCandidateID() *string {
-	if o == nil {
+func (a *AtsScorecard) GetCandidateID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CandidateID
+	return a.CandidateID
 }
 
-func (o *AtsScorecard) GetComment() *string {
-	if o == nil {
+func (a *AtsScorecard) GetComment() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Comment
+	return a.Comment
 }
 
-func (o *AtsScorecard) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AtsScorecard) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AtsScorecard) GetID() *string {
-	if o == nil {
+func (a *AtsScorecard) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsScorecard) GetInterviewID() *string {
-	if o == nil {
+func (a *AtsScorecard) GetInterviewID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.InterviewID
+	return a.InterviewID
 }
 
-func (o *AtsScorecard) GetInterviewerID() *string {
-	if o == nil {
+func (a *AtsScorecard) GetInterviewerID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.InterviewerID
+	return a.InterviewerID
 }
 
-func (o *AtsScorecard) GetJobID() *string {
-	if o == nil {
+func (a *AtsScorecard) GetJobID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.JobID
+	return a.JobID
 }
 
-func (o *AtsScorecard) GetQuestions() []AtsScorecardQuestion {
-	if o == nil {
+func (a *AtsScorecard) GetQuestions() []AtsScorecardQuestion {
+	if a == nil {
 		return nil
 	}
-	return o.Questions
+	return a.Questions
 }
 
-func (o *AtsScorecard) GetRaw() map[string]any {
-	if o == nil {
+func (a *AtsScorecard) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AtsScorecard) GetRecommendation() *Recommendation {
-	if o == nil {
+func (a *AtsScorecard) GetRecommendation() *Recommendation {
+	if a == nil {
 		return nil
 	}
-	return o.Recommendation
+	return a.Recommendation
 }
 
-func (o *AtsScorecard) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AtsScorecard) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

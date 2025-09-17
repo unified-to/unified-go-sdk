@@ -18,32 +18,32 @@ type GetHrisTimeoffRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetHrisTimeoffRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetHrisTimeoffRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetHrisTimeoffRequest) GetFields() []string {
-	if o == nil {
+func (g *GetHrisTimeoffRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetHrisTimeoffRequest) GetID() string {
-	if o == nil {
+func (g *GetHrisTimeoffRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetHrisTimeoffRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetHrisTimeoffRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetHrisTimeoffResponse struct {
@@ -57,30 +57,30 @@ type GetHrisTimeoffResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetHrisTimeoffResponse) GetContentType() string {
-	if o == nil {
+func (g *GetHrisTimeoffResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetHrisTimeoffResponse) GetHrisTimeoff() *shared.HrisTimeoff {
-	if o == nil {
+func (g *GetHrisTimeoffResponse) GetHrisTimeoff() *shared.HrisTimeoff {
+	if g == nil {
 		return nil
 	}
-	return o.HrisTimeoff
+	return g.HrisTimeoff
 }
 
-func (o *GetHrisTimeoffResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetHrisTimeoffResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetHrisTimeoffResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetHrisTimeoffResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

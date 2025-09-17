@@ -14,18 +14,18 @@ type PatchUnifiedConnectionRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *PatchUnifiedConnectionRequest) GetConnection() shared.Connection {
-	if o == nil {
+func (p *PatchUnifiedConnectionRequest) GetConnection() shared.Connection {
+	if p == nil {
 		return shared.Connection{}
 	}
-	return o.Connection
+	return p.Connection
 }
 
-func (o *PatchUnifiedConnectionRequest) GetID() string {
-	if o == nil {
+func (p *PatchUnifiedConnectionRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
 type PatchUnifiedConnectionResponse struct {
@@ -39,30 +39,30 @@ type PatchUnifiedConnectionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchUnifiedConnectionResponse) GetConnection() *shared.Connection {
-	if o == nil {
+func (p *PatchUnifiedConnectionResponse) GetConnection() *shared.Connection {
+	if p == nil {
 		return nil
 	}
-	return o.Connection
+	return p.Connection
 }
 
-func (o *PatchUnifiedConnectionResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchUnifiedConnectionResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchUnifiedConnectionResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchUnifiedConnectionResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchUnifiedConnectionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchUnifiedConnectionResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

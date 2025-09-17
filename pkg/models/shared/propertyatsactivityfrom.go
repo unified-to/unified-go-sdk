@@ -20,23 +20,23 @@ type PropertyAtsActivityFrom struct {
 	Type  *PropertyAtsActivityFromType `json:"type,omitempty"`
 }
 
-func (o *PropertyAtsActivityFrom) GetEmail() string {
-	if o == nil {
+func (p *PropertyAtsActivityFrom) GetEmail() string {
+	if p == nil {
 		return ""
 	}
-	return o.Email
+	return p.Email
 }
 
-func (o *PropertyAtsActivityFrom) GetName() *string {
-	if o == nil {
+func (p *PropertyAtsActivityFrom) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyAtsActivityFrom) GetType() *PropertyAtsActivityFromType {
-	if o == nil {
+func (p *PropertyAtsActivityFrom) GetType() *PropertyAtsActivityFromType {
+	if p == nil {
 		return nil
 	}
-	return o.Type
+	return p.Type
 }

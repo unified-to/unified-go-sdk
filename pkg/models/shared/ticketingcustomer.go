@@ -29,58 +29,58 @@ func (t *TicketingCustomer) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *TicketingCustomer) GetCreatedAt() *time.Time {
-	if o == nil {
+func (t *TicketingCustomer) GetCreatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return t.CreatedAt
 }
 
-func (o *TicketingCustomer) GetEmails() []TicketingEmail {
-	if o == nil {
+func (t *TicketingCustomer) GetEmails() []TicketingEmail {
+	if t == nil {
 		return nil
 	}
-	return o.Emails
+	return t.Emails
 }
 
-func (o *TicketingCustomer) GetID() *string {
-	if o == nil {
+func (t *TicketingCustomer) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *TicketingCustomer) GetName() *string {
-	if o == nil {
+func (t *TicketingCustomer) GetName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Name
+	return t.Name
 }
 
-func (o *TicketingCustomer) GetRaw() map[string]any {
-	if o == nil {
+func (t *TicketingCustomer) GetRaw() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Raw
+	return t.Raw
 }
 
-func (o *TicketingCustomer) GetTags() []string {
-	if o == nil {
+func (t *TicketingCustomer) GetTags() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Tags
+	return t.Tags
 }
 
-func (o *TicketingCustomer) GetTelephones() []TicketingTelephone {
-	if o == nil {
+func (t *TicketingCustomer) GetTelephones() []TicketingTelephone {
+	if t == nil {
 		return nil
 	}
-	return o.Telephones
+	return t.Telephones
 }
 
-func (o *TicketingCustomer) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (t *TicketingCustomer) GetUpdatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return t.UpdatedAt
 }

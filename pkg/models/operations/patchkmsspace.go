@@ -19,39 +19,39 @@ type PatchKmsSpaceRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchKmsSpaceRequest) GetKmsSpace() shared.KmsSpace {
-	if o == nil {
+func (p *PatchKmsSpaceRequest) GetKmsSpace() shared.KmsSpace {
+	if p == nil {
 		return shared.KmsSpace{}
 	}
-	return o.KmsSpace
+	return p.KmsSpace
 }
 
-func (o *PatchKmsSpaceRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchKmsSpaceRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchKmsSpaceRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchKmsSpaceRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchKmsSpaceRequest) GetID() string {
-	if o == nil {
+func (p *PatchKmsSpaceRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchKmsSpaceRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchKmsSpaceRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchKmsSpaceResponse struct {
@@ -65,30 +65,30 @@ type PatchKmsSpaceResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchKmsSpaceResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchKmsSpaceResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchKmsSpaceResponse) GetKmsSpace() *shared.KmsSpace {
-	if o == nil {
+func (p *PatchKmsSpaceResponse) GetKmsSpace() *shared.KmsSpace {
+	if p == nil {
 		return nil
 	}
-	return o.KmsSpace
+	return p.KmsSpace
 }
 
-func (o *PatchKmsSpaceResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchKmsSpaceResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchKmsSpaceResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchKmsSpaceResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

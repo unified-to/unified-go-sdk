@@ -26,74 +26,74 @@ type ListMessagingChannelsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListMessagingChannelsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListMessagingChannelsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListMessagingChannelsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListMessagingChannelsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListMessagingChannelsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListMessagingChannelsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListMessagingChannelsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListMessagingChannelsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListMessagingChannelsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListMessagingChannelsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListMessagingChannelsRequest) GetParentID() *string {
-	if o == nil {
+func (l *ListMessagingChannelsRequest) GetParentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ParentID
+	return l.ParentID
 }
 
-func (o *ListMessagingChannelsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListMessagingChannelsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListMessagingChannelsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListMessagingChannelsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListMessagingChannelsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListMessagingChannelsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListMessagingChannelsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListMessagingChannelsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListMessagingChannelsResponse struct {
@@ -107,30 +107,30 @@ type ListMessagingChannelsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListMessagingChannelsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListMessagingChannelsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListMessagingChannelsResponse) GetMessagingChannels() []shared.MessagingChannel {
-	if o == nil {
+func (l *ListMessagingChannelsResponse) GetMessagingChannels() []shared.MessagingChannel {
+	if l == nil {
 		return nil
 	}
-	return o.MessagingChannels
+	return l.MessagingChannels
 }
 
-func (o *ListMessagingChannelsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListMessagingChannelsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListMessagingChannelsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListMessagingChannelsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

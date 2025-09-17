@@ -24,67 +24,67 @@ type ListCrmPipelinesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListCrmPipelinesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListCrmPipelinesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListCrmPipelinesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListCrmPipelinesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListCrmPipelinesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListCrmPipelinesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListCrmPipelinesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListCrmPipelinesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListCrmPipelinesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListCrmPipelinesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListCrmPipelinesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListCrmPipelinesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListCrmPipelinesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListCrmPipelinesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListCrmPipelinesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListCrmPipelinesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListCrmPipelinesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListCrmPipelinesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListCrmPipelinesResponse struct {
@@ -98,30 +98,30 @@ type ListCrmPipelinesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListCrmPipelinesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListCrmPipelinesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListCrmPipelinesResponse) GetCrmPipelines() []shared.CrmPipeline {
-	if o == nil {
+func (l *ListCrmPipelinesResponse) GetCrmPipelines() []shared.CrmPipeline {
+	if l == nil {
 		return nil
 	}
-	return o.CrmPipelines
+	return l.CrmPipelines
 }
 
-func (o *ListCrmPipelinesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListCrmPipelinesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListCrmPipelinesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListCrmPipelinesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

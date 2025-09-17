@@ -17,32 +17,32 @@ type CreateKmsSpaceRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateKmsSpaceRequest) GetKmsSpace() shared.KmsSpace {
-	if o == nil {
+func (c *CreateKmsSpaceRequest) GetKmsSpace() shared.KmsSpace {
+	if c == nil {
 		return shared.KmsSpace{}
 	}
-	return o.KmsSpace
+	return c.KmsSpace
 }
 
-func (o *CreateKmsSpaceRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateKmsSpaceRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateKmsSpaceRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateKmsSpaceRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateKmsSpaceRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateKmsSpaceRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateKmsSpaceResponse struct {
@@ -56,30 +56,30 @@ type CreateKmsSpaceResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateKmsSpaceResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateKmsSpaceResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateKmsSpaceResponse) GetKmsSpace() *shared.KmsSpace {
-	if o == nil {
+func (c *CreateKmsSpaceResponse) GetKmsSpace() *shared.KmsSpace {
+	if c == nil {
 		return nil
 	}
-	return o.KmsSpace
+	return c.KmsSpace
 }
 
-func (o *CreateKmsSpaceResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateKmsSpaceResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateKmsSpaceResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateKmsSpaceResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

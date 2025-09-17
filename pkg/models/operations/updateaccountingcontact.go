@@ -19,39 +19,39 @@ type UpdateAccountingContactRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAccountingContactRequest) GetAccountingContact() shared.AccountingContact {
-	if o == nil {
+func (u *UpdateAccountingContactRequest) GetAccountingContact() shared.AccountingContact {
+	if u == nil {
 		return shared.AccountingContact{}
 	}
-	return o.AccountingContact
+	return u.AccountingContact
 }
 
-func (o *UpdateAccountingContactRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAccountingContactRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAccountingContactRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAccountingContactRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAccountingContactRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAccountingContactRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAccountingContactRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAccountingContactRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAccountingContactResponse struct {
@@ -65,30 +65,30 @@ type UpdateAccountingContactResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAccountingContactResponse) GetAccountingContact() *shared.AccountingContact {
-	if o == nil {
+func (u *UpdateAccountingContactResponse) GetAccountingContact() *shared.AccountingContact {
+	if u == nil {
 		return nil
 	}
-	return o.AccountingContact
+	return u.AccountingContact
 }
 
-func (o *UpdateAccountingContactResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAccountingContactResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAccountingContactResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAccountingContactResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAccountingContactResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAccountingContactResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

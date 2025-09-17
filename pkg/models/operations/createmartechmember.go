@@ -18,32 +18,32 @@ type CreateMartechMemberRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateMartechMemberRequest) GetMarketingMember() shared.MarketingMember {
-	if o == nil {
+func (c *CreateMartechMemberRequest) GetMarketingMember() shared.MarketingMember {
+	if c == nil {
 		return shared.MarketingMember{}
 	}
-	return o.MarketingMember
+	return c.MarketingMember
 }
 
-func (o *CreateMartechMemberRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateMartechMemberRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateMartechMemberRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateMartechMemberRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateMartechMemberRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateMartechMemberRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateMartechMemberResponse struct {
@@ -57,30 +57,30 @@ type CreateMartechMemberResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateMartechMemberResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateMartechMemberResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateMartechMemberResponse) GetMarketingMember() *shared.MarketingMember {
-	if o == nil {
+func (c *CreateMartechMemberResponse) GetMarketingMember() *shared.MarketingMember {
+	if c == nil {
 		return nil
 	}
-	return o.MarketingMember
+	return c.MarketingMember
 }
 
-func (o *CreateMartechMemberResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateMartechMemberResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateMartechMemberResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateMartechMemberResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

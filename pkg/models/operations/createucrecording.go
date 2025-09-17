@@ -17,32 +17,32 @@ type CreateUcRecordingRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateUcRecordingRequest) GetUcRecording() shared.UcRecording {
-	if o == nil {
+func (c *CreateUcRecordingRequest) GetUcRecording() shared.UcRecording {
+	if c == nil {
 		return shared.UcRecording{}
 	}
-	return o.UcRecording
+	return c.UcRecording
 }
 
-func (o *CreateUcRecordingRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateUcRecordingRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateUcRecordingRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateUcRecordingRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateUcRecordingRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateUcRecordingRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateUcRecordingResponse struct {
@@ -56,30 +56,30 @@ type CreateUcRecordingResponse struct {
 	UcRecording *shared.UcRecording
 }
 
-func (o *CreateUcRecordingResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateUcRecordingResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateUcRecordingResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateUcRecordingResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateUcRecordingResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateUcRecordingResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateUcRecordingResponse) GetUcRecording() *shared.UcRecording {
-	if o == nil {
+func (c *CreateUcRecordingResponse) GetUcRecording() *shared.UcRecording {
+	if c == nil {
 		return nil
 	}
-	return o.UcRecording
+	return c.UcRecording
 }

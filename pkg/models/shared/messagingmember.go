@@ -8,23 +8,23 @@ type MessagingMember struct {
 	UserID *string `json:"user_id,omitempty"`
 }
 
-func (o *MessagingMember) GetEmail() *string {
-	if o == nil {
+func (m *MessagingMember) GetEmail() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Email
+	return m.Email
 }
 
-func (o *MessagingMember) GetName() *string {
-	if o == nil {
+func (m *MessagingMember) GetName() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Name
+	return m.Name
 }
 
-func (o *MessagingMember) GetUserID() *string {
-	if o == nil {
+func (m *MessagingMember) GetUserID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.UserID
+	return m.UserID
 }

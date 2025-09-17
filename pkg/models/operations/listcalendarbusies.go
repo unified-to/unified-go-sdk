@@ -32,95 +32,95 @@ type ListCalendarBusiesRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListCalendarBusiesRequest) GetCalendarID() *string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetCalendarID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CalendarID
+	return l.CalendarID
 }
 
-func (o *ListCalendarBusiesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListCalendarBusiesRequest) GetEndLe() *string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetEndLe() *string {
+	if l == nil {
 		return nil
 	}
-	return o.EndLe
+	return l.EndLe
 }
 
-func (o *ListCalendarBusiesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListCalendarBusiesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListCalendarBusiesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListCalendarBusiesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListCalendarBusiesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListCalendarBusiesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListCalendarBusiesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListCalendarBusiesRequest) GetStartGte() *string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetStartGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.StartGte
+	return l.StartGte
 }
 
-func (o *ListCalendarBusiesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListCalendarBusiesRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListCalendarBusiesRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListCalendarBusiesResponse struct {
@@ -134,30 +134,30 @@ type ListCalendarBusiesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListCalendarBusiesResponse) GetCalendarBusies() []shared.CalendarBusy {
-	if o == nil {
+func (l *ListCalendarBusiesResponse) GetCalendarBusies() []shared.CalendarBusy {
+	if l == nil {
 		return nil
 	}
-	return o.CalendarBusies
+	return l.CalendarBusies
 }
 
-func (o *ListCalendarBusiesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListCalendarBusiesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListCalendarBusiesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListCalendarBusiesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListCalendarBusiesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListCalendarBusiesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

@@ -33,86 +33,86 @@ func (p *PropertyAccountingReportBalanceSheet) UnmarshalJSON(data []byte) error 
 	return nil
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetAssets() []AccountingBalancesheetItem {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetAssets() []AccountingBalancesheetItem {
+	if p == nil {
 		return nil
 	}
-	return o.Assets
+	return p.Assets
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetCreatedAt() *time.Time {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetCreatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return p.CreatedAt
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetCurrency() *string {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetCurrency() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Currency
+	return p.Currency
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetEndAt() *time.Time {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetEndAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.EndAt
+	return p.EndAt
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetEquity() []AccountingBalancesheetItem {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetEquity() []AccountingBalancesheetItem {
+	if p == nil {
 		return nil
 	}
-	return o.Equity
+	return p.Equity
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetID() *string {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetLiabilities() []AccountingBalancesheetItem {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetLiabilities() []AccountingBalancesheetItem {
+	if p == nil {
 		return nil
 	}
-	return o.Liabilities
+	return p.Liabilities
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetName() *string {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetNetAssetsAmount() *float64 {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetNetAssetsAmount() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.NetAssetsAmount
+	return p.NetAssetsAmount
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetRaw() map[string]any {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetRaw() map[string]any {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetStartAt() *time.Time {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetStartAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.StartAt
+	return p.StartAt
 }
 
-func (o *PropertyAccountingReportBalanceSheet) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (p *PropertyAccountingReportBalanceSheet) GetUpdatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return p.UpdatedAt
 }

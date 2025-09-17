@@ -28,51 +28,51 @@ func (h *HrisCompany) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HrisCompany) GetAddress() *PropertyHrisCompanyAddress {
-	if o == nil {
+func (h *HrisCompany) GetAddress() *PropertyHrisCompanyAddress {
+	if h == nil {
 		return nil
 	}
-	return o.Address
+	return h.Address
 }
 
-func (o *HrisCompany) GetCreatedAt() *time.Time {
-	if o == nil {
+func (h *HrisCompany) GetCreatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return h.CreatedAt
 }
 
-func (o *HrisCompany) GetID() *string {
-	if o == nil {
+func (h *HrisCompany) GetID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ID
+	return h.ID
 }
 
-func (o *HrisCompany) GetLegalName() *string {
-	if o == nil {
+func (h *HrisCompany) GetLegalName() *string {
+	if h == nil {
 		return nil
 	}
-	return o.LegalName
+	return h.LegalName
 }
 
-func (o *HrisCompany) GetName() *string {
-	if o == nil {
+func (h *HrisCompany) GetName() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Name
+	return h.Name
 }
 
-func (o *HrisCompany) GetRaw() map[string]any {
-	if o == nil {
+func (h *HrisCompany) GetRaw() map[string]any {
+	if h == nil {
 		return nil
 	}
-	return o.Raw
+	return h.Raw
 }
 
-func (o *HrisCompany) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (h *HrisCompany) GetUpdatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return h.UpdatedAt
 }

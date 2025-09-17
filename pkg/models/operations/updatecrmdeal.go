@@ -20,39 +20,39 @@ type UpdateCrmDealRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateCrmDealRequest) GetCrmDeal() shared.CrmDeal {
-	if o == nil {
+func (u *UpdateCrmDealRequest) GetCrmDeal() shared.CrmDeal {
+	if u == nil {
 		return shared.CrmDeal{}
 	}
-	return o.CrmDeal
+	return u.CrmDeal
 }
 
-func (o *UpdateCrmDealRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateCrmDealRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateCrmDealRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateCrmDealRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateCrmDealRequest) GetID() string {
-	if o == nil {
+func (u *UpdateCrmDealRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateCrmDealRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateCrmDealRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateCrmDealResponse struct {
@@ -66,30 +66,30 @@ type UpdateCrmDealResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateCrmDealResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateCrmDealResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateCrmDealResponse) GetCrmDeal() *shared.CrmDeal {
-	if o == nil {
+func (u *UpdateCrmDealResponse) GetCrmDeal() *shared.CrmDeal {
+	if u == nil {
 		return nil
 	}
-	return o.CrmDeal
+	return u.CrmDeal
 }
 
-func (o *UpdateCrmDealResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateCrmDealResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateCrmDealResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateCrmDealResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

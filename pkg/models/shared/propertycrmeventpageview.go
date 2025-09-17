@@ -8,23 +8,23 @@ type PropertyCrmEventPageView struct {
 	URL     *string  `json:"url,omitempty"`
 }
 
-func (o *PropertyCrmEventPageView) GetAverage() *float64 {
-	if o == nil {
+func (p *PropertyCrmEventPageView) GetAverage() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.Average
+	return p.Average
 }
 
-func (o *PropertyCrmEventPageView) GetCount() *float64 {
-	if o == nil {
+func (p *PropertyCrmEventPageView) GetCount() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.Count
+	return p.Count
 }
 
-func (o *PropertyCrmEventPageView) GetURL() *string {
-	if o == nil {
+func (p *PropertyCrmEventPageView) GetURL() *string {
+	if p == nil {
 		return nil
 	}
-	return o.URL
+	return p.URL
 }

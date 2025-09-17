@@ -18,32 +18,32 @@ type GetAtsDocumentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAtsDocumentRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAtsDocumentRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAtsDocumentRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAtsDocumentRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAtsDocumentRequest) GetID() string {
-	if o == nil {
+func (g *GetAtsDocumentRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAtsDocumentRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAtsDocumentRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAtsDocumentResponse struct {
@@ -57,30 +57,30 @@ type GetAtsDocumentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAtsDocumentResponse) GetAtsDocument() *shared.AtsDocument {
-	if o == nil {
+func (g *GetAtsDocumentResponse) GetAtsDocument() *shared.AtsDocument {
+	if g == nil {
 		return nil
 	}
-	return o.AtsDocument
+	return g.AtsDocument
 }
 
-func (o *GetAtsDocumentResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAtsDocumentResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAtsDocumentResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAtsDocumentResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAtsDocumentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAtsDocumentResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

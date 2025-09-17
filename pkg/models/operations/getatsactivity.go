@@ -18,32 +18,32 @@ type GetAtsActivityRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAtsActivityRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAtsActivityRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAtsActivityRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAtsActivityRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAtsActivityRequest) GetID() string {
-	if o == nil {
+func (g *GetAtsActivityRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAtsActivityRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAtsActivityRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAtsActivityResponse struct {
@@ -57,30 +57,30 @@ type GetAtsActivityResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAtsActivityResponse) GetAtsActivity() *shared.AtsActivity {
-	if o == nil {
+func (g *GetAtsActivityResponse) GetAtsActivity() *shared.AtsActivity {
+	if g == nil {
 		return nil
 	}
-	return o.AtsActivity
+	return g.AtsActivity
 }
 
-func (o *GetAtsActivityResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAtsActivityResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAtsActivityResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAtsActivityResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAtsActivityResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAtsActivityResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

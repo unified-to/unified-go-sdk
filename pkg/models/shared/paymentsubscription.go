@@ -67,142 +67,142 @@ func (p *PaymentSubscription) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PaymentSubscription) GetCanceledAt() *time.Time {
-	if o == nil {
+func (p *PaymentSubscription) GetCanceledAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.CanceledAt
+	return p.CanceledAt
 }
 
-func (o *PaymentSubscription) GetContactID() *string {
-	if o == nil {
+func (p *PaymentSubscription) GetContactID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ContactID
+	return p.ContactID
 }
 
-func (o *PaymentSubscription) GetCreatedAt() *time.Time {
-	if o == nil {
+func (p *PaymentSubscription) GetCreatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return p.CreatedAt
 }
 
-func (o *PaymentSubscription) GetCurrency() *string {
-	if o == nil {
+func (p *PaymentSubscription) GetCurrency() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Currency
+	return p.Currency
 }
 
-func (o *PaymentSubscription) GetCurrentPeriodEndAt() *time.Time {
-	if o == nil {
+func (p *PaymentSubscription) GetCurrentPeriodEndAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.CurrentPeriodEndAt
+	return p.CurrentPeriodEndAt
 }
 
-func (o *PaymentSubscription) GetCurrentPeriodStartAt() *time.Time {
-	if o == nil {
+func (p *PaymentSubscription) GetCurrentPeriodStartAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.CurrentPeriodStartAt
+	return p.CurrentPeriodStartAt
 }
 
-func (o *PaymentSubscription) GetDayOfMonth() *float64 {
-	if o == nil {
+func (p *PaymentSubscription) GetDayOfMonth() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.DayOfMonth
+	return p.DayOfMonth
 }
 
-func (o *PaymentSubscription) GetDayOfWeek() *float64 {
-	if o == nil {
+func (p *PaymentSubscription) GetDayOfWeek() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.DayOfWeek
+	return p.DayOfWeek
 }
 
-func (o *PaymentSubscription) GetDescription() *string {
-	if o == nil {
+func (p *PaymentSubscription) GetDescription() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Description
+	return p.Description
 }
 
-func (o *PaymentSubscription) GetEndAt() *time.Time {
-	if o == nil {
+func (p *PaymentSubscription) GetEndAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.EndAt
+	return p.EndAt
 }
 
-func (o *PaymentSubscription) GetID() *string {
-	if o == nil {
+func (p *PaymentSubscription) GetID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PaymentSubscription) GetInterval() *float64 {
-	if o == nil {
+func (p *PaymentSubscription) GetInterval() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.Interval
+	return p.Interval
 }
 
-func (o *PaymentSubscription) GetIntervalUnit() *IntervalUnit {
-	if o == nil {
+func (p *PaymentSubscription) GetIntervalUnit() *IntervalUnit {
+	if p == nil {
 		return nil
 	}
-	return o.IntervalUnit
+	return p.IntervalUnit
 }
 
-func (o *PaymentSubscription) GetInvoiceID() *string {
-	if o == nil {
+func (p *PaymentSubscription) GetInvoiceID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.InvoiceID
+	return p.InvoiceID
 }
 
-func (o *PaymentSubscription) GetLineitems() []PaymentLineitem {
-	if o == nil {
+func (p *PaymentSubscription) GetLineitems() []PaymentLineitem {
+	if p == nil {
 		return nil
 	}
-	return o.Lineitems
+	return p.Lineitems
 }
 
-func (o *PaymentSubscription) GetMonth() *float64 {
-	if o == nil {
+func (p *PaymentSubscription) GetMonth() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.Month
+	return p.Month
 }
 
-func (o *PaymentSubscription) GetRaw() map[string]any {
-	if o == nil {
+func (p *PaymentSubscription) GetRaw() map[string]any {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
-func (o *PaymentSubscription) GetStartAt() *time.Time {
-	if o == nil {
+func (p *PaymentSubscription) GetStartAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.StartAt
+	return p.StartAt
 }
 
-func (o *PaymentSubscription) GetStatus() *PaymentSubscriptionStatus {
-	if o == nil {
+func (p *PaymentSubscription) GetStatus() *PaymentSubscriptionStatus {
+	if p == nil {
 		return nil
 	}
-	return o.Status
+	return p.Status
 }
 
-func (o *PaymentSubscription) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (p *PaymentSubscription) GetUpdatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return p.UpdatedAt
 }

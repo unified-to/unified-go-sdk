@@ -3,6 +3,7 @@
 package shared
 
 type UcComment struct {
+	CallID    *string        `json:"call_id,omitempty"`
 	Content   string         `json:"content"`
 	CreatedAt *string        `json:"created_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
@@ -11,44 +12,51 @@ type UcComment struct {
 	UserID    *string        `json:"user_id,omitempty"`
 }
 
-func (o *UcComment) GetContent() string {
-	if o == nil {
+func (u *UcComment) GetCallID() *string {
+	if u == nil {
+		return nil
+	}
+	return u.CallID
+}
+
+func (u *UcComment) GetContent() string {
+	if u == nil {
 		return ""
 	}
-	return o.Content
+	return u.Content
 }
 
-func (o *UcComment) GetCreatedAt() *string {
-	if o == nil {
+func (u *UcComment) GetCreatedAt() *string {
+	if u == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return u.CreatedAt
 }
 
-func (o *UcComment) GetID() *string {
-	if o == nil {
+func (u *UcComment) GetID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UcComment) GetRaw() map[string]any {
-	if o == nil {
+func (u *UcComment) GetRaw() map[string]any {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
-func (o *UcComment) GetUpdatedAt() *string {
-	if o == nil {
+func (u *UcComment) GetUpdatedAt() *string {
+	if u == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return u.UpdatedAt
 }
 
-func (o *UcComment) GetUserID() *string {
-	if o == nil {
+func (u *UcComment) GetUserID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.UserID
+	return u.UserID
 }

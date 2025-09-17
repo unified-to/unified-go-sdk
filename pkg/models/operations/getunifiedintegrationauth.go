@@ -27,81 +27,81 @@ type GetUnifiedIntegrationAuthRequest struct {
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetEnv() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetEnv() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Env
+	return g.Env
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetExternalXref() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetExternalXref() *string {
+	if g == nil {
 		return nil
 	}
-	return o.ExternalXref
+	return g.ExternalXref
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetFailureRedirect() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetFailureRedirect() *string {
+	if g == nil {
 		return nil
 	}
-	return o.FailureRedirect
+	return g.FailureRedirect
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetIntegrationType() string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetIntegrationType() string {
+	if g == nil {
 		return ""
 	}
-	return o.IntegrationType
+	return g.IntegrationType
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetLang() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetLang() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Lang
+	return g.Lang
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetRedirect() *bool {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetRedirect() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.Redirect
+	return g.Redirect
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetScopes() []string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetScopes() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Scopes
+	return g.Scopes
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetState() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetState() *string {
+	if g == nil {
 		return nil
 	}
-	return o.State
+	return g.State
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetSubdomain() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetSubdomain() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Subdomain
+	return g.Subdomain
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetSuccessRedirect() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetSuccessRedirect() *string {
+	if g == nil {
 		return nil
 	}
-	return o.SuccessRedirect
+	return g.SuccessRedirect
 }
 
-func (o *GetUnifiedIntegrationAuthRequest) GetWorkspaceID() string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthRequest) GetWorkspaceID() string {
+	if g == nil {
 		return ""
 	}
-	return o.WorkspaceID
+	return g.WorkspaceID
 }
 
 type GetUnifiedIntegrationAuthResponse struct {
@@ -115,30 +115,30 @@ type GetUnifiedIntegrationAuthResponse struct {
 	Res *string
 }
 
-func (o *GetUnifiedIntegrationAuthResponse) GetContentType() string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetUnifiedIntegrationAuthResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetUnifiedIntegrationAuthResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetUnifiedIntegrationAuthResponse) GetRes() *string {
-	if o == nil {
+func (g *GetUnifiedIntegrationAuthResponse) GetRes() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Res
+	return g.Res
 }

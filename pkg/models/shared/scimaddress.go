@@ -24,51 +24,51 @@ type ScimAddress struct {
 	Type          *ScimAddressType `json:"type,omitempty"`
 }
 
-func (o *ScimAddress) GetCountry() *string {
-	if o == nil {
+func (s *ScimAddress) GetCountry() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Country
+	return s.Country
 }
 
-func (o *ScimAddress) GetFormatted() *string {
-	if o == nil {
+func (s *ScimAddress) GetFormatted() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Formatted
+	return s.Formatted
 }
 
-func (o *ScimAddress) GetLocality() *string {
-	if o == nil {
+func (s *ScimAddress) GetLocality() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Locality
+	return s.Locality
 }
 
-func (o *ScimAddress) GetPostalCode() *string {
-	if o == nil {
+func (s *ScimAddress) GetPostalCode() *string {
+	if s == nil {
 		return nil
 	}
-	return o.PostalCode
+	return s.PostalCode
 }
 
-func (o *ScimAddress) GetRegion() *string {
-	if o == nil {
+func (s *ScimAddress) GetRegion() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Region
+	return s.Region
 }
 
-func (o *ScimAddress) GetStreetAddress() *string {
-	if o == nil {
+func (s *ScimAddress) GetStreetAddress() *string {
+	if s == nil {
 		return nil
 	}
-	return o.StreetAddress
+	return s.StreetAddress
 }
 
-func (o *ScimAddress) GetType() *ScimAddressType {
-	if o == nil {
+func (s *ScimAddress) GetType() *ScimAddressType {
+	if s == nil {
 		return nil
 	}
-	return o.Type
+	return s.Type
 }

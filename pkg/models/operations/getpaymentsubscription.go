@@ -18,32 +18,32 @@ type GetPaymentSubscriptionRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetPaymentSubscriptionRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetPaymentSubscriptionRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetPaymentSubscriptionRequest) GetFields() []string {
-	if o == nil {
+func (g *GetPaymentSubscriptionRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetPaymentSubscriptionRequest) GetID() string {
-	if o == nil {
+func (g *GetPaymentSubscriptionRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetPaymentSubscriptionRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetPaymentSubscriptionRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetPaymentSubscriptionResponse struct {
@@ -57,30 +57,30 @@ type GetPaymentSubscriptionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetPaymentSubscriptionResponse) GetContentType() string {
-	if o == nil {
+func (g *GetPaymentSubscriptionResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetPaymentSubscriptionResponse) GetPaymentSubscription() *shared.PaymentSubscription {
-	if o == nil {
+func (g *GetPaymentSubscriptionResponse) GetPaymentSubscription() *shared.PaymentSubscription {
+	if g == nil {
 		return nil
 	}
-	return o.PaymentSubscription
+	return g.PaymentSubscription
 }
 
-func (o *GetPaymentSubscriptionResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetPaymentSubscriptionResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetPaymentSubscriptionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetPaymentSubscriptionResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

@@ -18,32 +18,32 @@ type GetAccountingProfitlossRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAccountingProfitlossRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAccountingProfitlossRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAccountingProfitlossRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAccountingProfitlossRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAccountingProfitlossRequest) GetID() string {
-	if o == nil {
+func (g *GetAccountingProfitlossRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAccountingProfitlossRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAccountingProfitlossRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAccountingProfitlossResponse struct {
@@ -57,30 +57,30 @@ type GetAccountingProfitlossResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAccountingProfitlossResponse) GetAccountingProfitloss() *shared.AccountingProfitloss {
-	if o == nil {
+func (g *GetAccountingProfitlossResponse) GetAccountingProfitloss() *shared.AccountingProfitloss {
+	if g == nil {
 		return nil
 	}
-	return o.AccountingProfitloss
+	return g.AccountingProfitloss
 }
 
-func (o *GetAccountingProfitlossResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAccountingProfitlossResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAccountingProfitlossResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAccountingProfitlossResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAccountingProfitlossResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAccountingProfitlossResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

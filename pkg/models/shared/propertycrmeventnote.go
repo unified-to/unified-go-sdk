@@ -8,16 +8,16 @@ type PropertyCrmEventNote struct {
 	Title       *string `json:"title,omitempty"`
 }
 
-func (o *PropertyCrmEventNote) GetDescription() *string {
-	if o == nil {
+func (p *PropertyCrmEventNote) GetDescription() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Description
+	return p.Description
 }
 
-func (o *PropertyCrmEventNote) GetTitle() *string {
-	if o == nil {
+func (p *PropertyCrmEventNote) GetTitle() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Title
+	return p.Title
 }

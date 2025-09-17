@@ -32,79 +32,79 @@ func (p *PropertyAccountingReportTrialBalance) UnmarshalJSON(data []byte) error 
 	return nil
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetCreatedAt() *time.Time {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetCreatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return p.CreatedAt
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetCurrency() *string {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetCurrency() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Currency
+	return p.Currency
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetEndAt() *time.Time {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetEndAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.EndAt
+	return p.EndAt
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetID() *string {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetName() *string {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetRaw() map[string]any {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetRaw() map[string]any {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetStartAt() *time.Time {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetStartAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.StartAt
+	return p.StartAt
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetSubItems() []AccountingTrialbalanceSubItem {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetSubItems() []AccountingTrialbalanceSubItem {
+	if p == nil {
 		return nil
 	}
-	return o.SubItems
+	return p.SubItems
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetTotalCreditAmount() *float64 {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetTotalCreditAmount() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.TotalCreditAmount
+	return p.TotalCreditAmount
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetTotalDebitAmount() *float64 {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetTotalDebitAmount() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.TotalDebitAmount
+	return p.TotalDebitAmount
 }
 
-func (o *PropertyAccountingReportTrialBalance) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (p *PropertyAccountingReportTrialBalance) GetUpdatedAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return p.UpdatedAt
 }

@@ -34,93 +34,93 @@ func (a *AccountingOrganization) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingOrganization) GetAddress() *PropertyAccountingOrganizationAddress {
-	if o == nil {
+func (a *AccountingOrganization) GetAddress() *PropertyAccountingOrganizationAddress {
+	if a == nil {
 		return nil
 	}
-	return o.Address
+	return a.Address
 }
 
-func (o *AccountingOrganization) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingOrganization) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingOrganization) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingOrganization) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingOrganization) GetFiscalYearEndMonth() *float64 {
-	if o == nil {
+func (a *AccountingOrganization) GetFiscalYearEndMonth() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.FiscalYearEndMonth
+	return a.FiscalYearEndMonth
 }
 
-func (o *AccountingOrganization) GetID() *string {
-	if o == nil {
+func (a *AccountingOrganization) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingOrganization) GetLegalName() *string {
-	if o == nil {
+func (a *AccountingOrganization) GetLegalName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.LegalName
+	return a.LegalName
 }
 
-func (o *AccountingOrganization) GetName() string {
-	if o == nil {
+func (a *AccountingOrganization) GetName() string {
+	if a == nil {
 		return ""
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingOrganization) GetOrganizationCode() *string {
-	if o == nil {
+func (a *AccountingOrganization) GetOrganizationCode() *string {
+	if a == nil {
 		return nil
 	}
-	return o.OrganizationCode
+	return a.OrganizationCode
 }
 
-func (o *AccountingOrganization) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingOrganization) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingOrganization) GetTaxNumber() *string {
-	if o == nil {
+func (a *AccountingOrganization) GetTaxNumber() *string {
+	if a == nil {
 		return nil
 	}
-	return o.TaxNumber
+	return a.TaxNumber
 }
 
-func (o *AccountingOrganization) GetTimezone() *string {
-	if o == nil {
+func (a *AccountingOrganization) GetTimezone() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Timezone
+	return a.Timezone
 }
 
-func (o *AccountingOrganization) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingOrganization) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }
 
-func (o *AccountingOrganization) GetWebsite() *string {
-	if o == nil {
+func (a *AccountingOrganization) GetWebsite() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Website
+	return a.Website
 }

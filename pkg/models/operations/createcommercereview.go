@@ -17,32 +17,32 @@ type CreateCommerceReviewRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateCommerceReviewRequest) GetCommerceReview() shared.CommerceReview {
-	if o == nil {
+func (c *CreateCommerceReviewRequest) GetCommerceReview() shared.CommerceReview {
+	if c == nil {
 		return shared.CommerceReview{}
 	}
-	return o.CommerceReview
+	return c.CommerceReview
 }
 
-func (o *CreateCommerceReviewRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateCommerceReviewRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateCommerceReviewRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateCommerceReviewRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateCommerceReviewRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateCommerceReviewRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateCommerceReviewResponse struct {
@@ -56,30 +56,30 @@ type CreateCommerceReviewResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateCommerceReviewResponse) GetCommerceReview() *shared.CommerceReview {
-	if o == nil {
+func (c *CreateCommerceReviewResponse) GetCommerceReview() *shared.CommerceReview {
+	if c == nil {
 		return nil
 	}
-	return o.CommerceReview
+	return c.CommerceReview
 }
 
-func (o *CreateCommerceReviewResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateCommerceReviewResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateCommerceReviewResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateCommerceReviewResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateCommerceReviewResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateCommerceReviewResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

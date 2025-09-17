@@ -518,51 +518,51 @@ type CrmMetadata struct {
 	Value     *CrmMetadataValue     `json:"value,omitempty"`
 }
 
-func (o *CrmMetadata) GetExtraData() *CrmMetadataExtraData {
-	if o == nil {
+func (c *CrmMetadata) GetExtraData() *CrmMetadataExtraData {
+	if c == nil {
 		return nil
 	}
-	return o.ExtraData
+	return c.ExtraData
 }
 
-func (o *CrmMetadata) GetID() *string {
-	if o == nil {
+func (c *CrmMetadata) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CrmMetadata) GetKey() *string {
-	if o == nil {
+func (c *CrmMetadata) GetKey() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Key
+	return c.Key
 }
 
-func (o *CrmMetadata) GetNamespace() *string {
-	if o == nil {
+func (c *CrmMetadata) GetNamespace() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Namespace
+	return c.Namespace
 }
 
-func (o *CrmMetadata) GetSlug() *string {
-	if o == nil {
+func (c *CrmMetadata) GetSlug() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Slug
+	return c.Slug
 }
 
-func (o *CrmMetadata) GetType() *string {
-	if o == nil {
+func (c *CrmMetadata) GetType() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }
 
-func (o *CrmMetadata) GetValue() *CrmMetadataValue {
-	if o == nil {
+func (c *CrmMetadata) GetValue() *CrmMetadataValue {
+	if c == nil {
 		return nil
 	}
-	return o.Value
+	return c.Value
 }

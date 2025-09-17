@@ -17,32 +17,32 @@ type CreateRepoRepositoryRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateRepoRepositoryRequest) GetRepoRepository() shared.RepoRepository {
-	if o == nil {
+func (c *CreateRepoRepositoryRequest) GetRepoRepository() shared.RepoRepository {
+	if c == nil {
 		return shared.RepoRepository{}
 	}
-	return o.RepoRepository
+	return c.RepoRepository
 }
 
-func (o *CreateRepoRepositoryRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateRepoRepositoryRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateRepoRepositoryRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateRepoRepositoryRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateRepoRepositoryRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateRepoRepositoryRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateRepoRepositoryResponse struct {
@@ -56,30 +56,30 @@ type CreateRepoRepositoryResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateRepoRepositoryResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateRepoRepositoryResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateRepoRepositoryResponse) GetRepoRepository() *shared.RepoRepository {
-	if o == nil {
+func (c *CreateRepoRepositoryResponse) GetRepoRepository() *shared.RepoRepository {
+	if c == nil {
 		return nil
 	}
-	return o.RepoRepository
+	return c.RepoRepository
 }
 
-func (o *CreateRepoRepositoryResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateRepoRepositoryResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateRepoRepositoryResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateRepoRepositoryResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

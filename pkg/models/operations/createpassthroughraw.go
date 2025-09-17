@@ -17,32 +17,32 @@ type CreatePassthroughRawRequest struct {
 	Query        map[string]any `queryParam:"style=form,explode=true,name=query"`
 }
 
-func (o *CreatePassthroughRawRequest) GetRequestBody() *any {
-	if o == nil {
+func (c *CreatePassthroughRawRequest) GetRequestBody() *any {
+	if c == nil {
 		return nil
 	}
-	return o.RequestBody
+	return c.RequestBody
 }
 
-func (o *CreatePassthroughRawRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreatePassthroughRawRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreatePassthroughRawRequest) GetPath() string {
-	if o == nil {
+func (c *CreatePassthroughRawRequest) GetPath() string {
+	if c == nil {
 		return ""
 	}
-	return o.Path
+	return c.Path
 }
 
-func (o *CreatePassthroughRawRequest) GetQuery() map[string]any {
-	if o == nil {
+func (c *CreatePassthroughRawRequest) GetQuery() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Query
+	return c.Query
 }
 
 type CreatePassthroughRawResponse struct {
@@ -66,65 +66,65 @@ type CreatePassthroughRawResponse struct {
 	DefaultTextPlainRes *string
 }
 
-func (o *CreatePassthroughRawResponse) GetContentType() string {
-	if o == nil {
+func (c *CreatePassthroughRawResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreatePassthroughRawResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (c *CreatePassthroughRawResponse) GetHeaders() map[string][]string {
+	if c == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return c.Headers
 }
 
-func (o *CreatePassthroughRawResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreatePassthroughRawResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreatePassthroughRawResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreatePassthroughRawResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreatePassthroughRawResponse) GetDefaultWildcardWildcardResponseStream() io.ReadCloser {
-	if o == nil {
+func (c *CreatePassthroughRawResponse) GetDefaultWildcardWildcardResponseStream() io.ReadCloser {
+	if c == nil {
 		return nil
 	}
-	return o.DefaultWildcardWildcardResponseStream
+	return c.DefaultWildcardWildcardResponseStream
 }
 
-func (o *CreatePassthroughRawResponse) GetDefaultApplicationJSONAny() any {
-	if o == nil {
+func (c *CreatePassthroughRawResponse) GetDefaultApplicationJSONAny() any {
+	if c == nil {
 		return nil
 	}
-	return o.DefaultApplicationJSONAny
+	return c.DefaultApplicationJSONAny
 }
 
-func (o *CreatePassthroughRawResponse) GetDefaultApplicationXMLRes() *string {
-	if o == nil {
+func (c *CreatePassthroughRawResponse) GetDefaultApplicationXMLRes() *string {
+	if c == nil {
 		return nil
 	}
-	return o.DefaultApplicationXMLRes
+	return c.DefaultApplicationXMLRes
 }
 
-func (o *CreatePassthroughRawResponse) GetDefaultTextCsvRes() *string {
-	if o == nil {
+func (c *CreatePassthroughRawResponse) GetDefaultTextCsvRes() *string {
+	if c == nil {
 		return nil
 	}
-	return o.DefaultTextCsvRes
+	return c.DefaultTextCsvRes
 }
 
-func (o *CreatePassthroughRawResponse) GetDefaultTextPlainRes() *string {
-	if o == nil {
+func (c *CreatePassthroughRawResponse) GetDefaultTextPlainRes() *string {
+	if c == nil {
 		return nil
 	}
-	return o.DefaultTextPlainRes
+	return c.DefaultTextPlainRes
 }

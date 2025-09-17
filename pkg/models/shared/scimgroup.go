@@ -14,51 +14,51 @@ type ScimGroup struct {
 	Schemas []PropertyScimGroupSchemas `json:"schemas,omitempty"`
 }
 
-func (o *ScimGroup) GetDisplayName() string {
-	if o == nil {
+func (s *ScimGroup) GetDisplayName() string {
+	if s == nil {
 		return ""
 	}
-	return o.DisplayName
+	return s.DisplayName
 }
 
-func (o *ScimGroup) GetExternalID() *string {
-	if o == nil {
+func (s *ScimGroup) GetExternalID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ExternalID
+	return s.ExternalID
 }
 
-func (o *ScimGroup) GetGroupType() *string {
-	if o == nil {
+func (s *ScimGroup) GetGroupType() *string {
+	if s == nil {
 		return nil
 	}
-	return o.GroupType
+	return s.GroupType
 }
 
-func (o *ScimGroup) GetID() *string {
-	if o == nil {
+func (s *ScimGroup) GetID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ID
+	return s.ID
 }
 
-func (o *ScimGroup) GetMembers() []ScimGroupMember {
-	if o == nil {
+func (s *ScimGroup) GetMembers() []ScimGroupMember {
+	if s == nil {
 		return nil
 	}
-	return o.Members
+	return s.Members
 }
 
-func (o *ScimGroup) GetMeta() *PropertyScimGroupMeta {
-	if o == nil {
+func (s *ScimGroup) GetMeta() *PropertyScimGroupMeta {
+	if s == nil {
 		return nil
 	}
-	return o.Meta
+	return s.Meta
 }
 
-func (o *ScimGroup) GetSchemas() []PropertyScimGroupSchemas {
-	if o == nil {
+func (s *ScimGroup) GetSchemas() []PropertyScimGroupSchemas {
+	if s == nil {
 		return nil
 	}
-	return o.Schemas
+	return s.Schemas
 }

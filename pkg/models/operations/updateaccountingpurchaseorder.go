@@ -19,39 +19,39 @@ type UpdateAccountingPurchaseorderRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAccountingPurchaseorderRequest) GetAccountingPurchaseorder() shared.AccountingPurchaseorder {
-	if o == nil {
+func (u *UpdateAccountingPurchaseorderRequest) GetAccountingPurchaseorder() shared.AccountingPurchaseorder {
+	if u == nil {
 		return shared.AccountingPurchaseorder{}
 	}
-	return o.AccountingPurchaseorder
+	return u.AccountingPurchaseorder
 }
 
-func (o *UpdateAccountingPurchaseorderRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAccountingPurchaseorderRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAccountingPurchaseorderRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAccountingPurchaseorderRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAccountingPurchaseorderRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAccountingPurchaseorderRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAccountingPurchaseorderRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAccountingPurchaseorderRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAccountingPurchaseorderResponse struct {
@@ -65,30 +65,30 @@ type UpdateAccountingPurchaseorderResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAccountingPurchaseorderResponse) GetAccountingPurchaseorder() *shared.AccountingPurchaseorder {
-	if o == nil {
+func (u *UpdateAccountingPurchaseorderResponse) GetAccountingPurchaseorder() *shared.AccountingPurchaseorder {
+	if u == nil {
 		return nil
 	}
-	return o.AccountingPurchaseorder
+	return u.AccountingPurchaseorder
 }
 
-func (o *UpdateAccountingPurchaseorderResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAccountingPurchaseorderResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAccountingPurchaseorderResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAccountingPurchaseorderResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAccountingPurchaseorderResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAccountingPurchaseorderResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

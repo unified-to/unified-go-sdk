@@ -28,81 +28,81 @@ type ListAccountingCreditmemoesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetContactID() *string {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetContactID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ContactID
+	return l.ContactID
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetOrgID() *string {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetOrgID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.OrgID
+	return l.OrgID
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAccountingCreditmemoesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAccountingCreditmemoesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAccountingCreditmemoesResponse struct {
@@ -116,30 +116,30 @@ type ListAccountingCreditmemoesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAccountingCreditmemoesResponse) GetAccountingCreditmemoes() []shared.AccountingCreditmemo {
-	if o == nil {
+func (l *ListAccountingCreditmemoesResponse) GetAccountingCreditmemoes() []shared.AccountingCreditmemo {
+	if l == nil {
 		return nil
 	}
-	return o.AccountingCreditmemoes
+	return l.AccountingCreditmemoes
 }
 
-func (o *ListAccountingCreditmemoesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAccountingCreditmemoesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAccountingCreditmemoesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAccountingCreditmemoesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAccountingCreditmemoesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAccountingCreditmemoesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

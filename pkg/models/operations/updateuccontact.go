@@ -20,39 +20,39 @@ type UpdateUcContactRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateUcContactRequest) GetUcContact() shared.UcContact {
-	if o == nil {
+func (u *UpdateUcContactRequest) GetUcContact() shared.UcContact {
+	if u == nil {
 		return shared.UcContact{}
 	}
-	return o.UcContact
+	return u.UcContact
 }
 
-func (o *UpdateUcContactRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateUcContactRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateUcContactRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateUcContactRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateUcContactRequest) GetID() string {
-	if o == nil {
+func (u *UpdateUcContactRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateUcContactRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateUcContactRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateUcContactResponse struct {
@@ -66,30 +66,30 @@ type UpdateUcContactResponse struct {
 	UcContact *shared.UcContact
 }
 
-func (o *UpdateUcContactResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateUcContactResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateUcContactResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateUcContactResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateUcContactResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateUcContactResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }
 
-func (o *UpdateUcContactResponse) GetUcContact() *shared.UcContact {
-	if o == nil {
+func (u *UpdateUcContactResponse) GetUcContact() *shared.UcContact {
+	if u == nil {
 		return nil
 	}
-	return o.UcContact
+	return u.UcContact
 }

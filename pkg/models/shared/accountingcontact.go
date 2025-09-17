@@ -61,142 +61,142 @@ func (a *AccountingContact) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingContact) GetAssociatedContacts() []AccountingAssociatedContact {
-	if o == nil {
+func (a *AccountingContact) GetAssociatedContacts() []AccountingAssociatedContact {
+	if a == nil {
 		return nil
 	}
-	return o.AssociatedContacts
+	return a.AssociatedContacts
 }
 
-func (o *AccountingContact) GetBillingAddress() *PropertyAccountingContactBillingAddress {
-	if o == nil {
+func (a *AccountingContact) GetBillingAddress() *PropertyAccountingContactBillingAddress {
+	if a == nil {
 		return nil
 	}
-	return o.BillingAddress
+	return a.BillingAddress
 }
 
-func (o *AccountingContact) GetCompanyName() *string {
-	if o == nil {
+func (a *AccountingContact) GetCompanyName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CompanyName
+	return a.CompanyName
 }
 
-func (o *AccountingContact) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingContact) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingContact) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingContact) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingContact) GetEmails() []AccountingEmail {
-	if o == nil {
+func (a *AccountingContact) GetEmails() []AccountingEmail {
+	if a == nil {
 		return nil
 	}
-	return o.Emails
+	return a.Emails
 }
 
-func (o *AccountingContact) GetID() *string {
-	if o == nil {
+func (a *AccountingContact) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingContact) GetIdentification() *string {
-	if o == nil {
+func (a *AccountingContact) GetIdentification() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Identification
+	return a.Identification
 }
 
-func (o *AccountingContact) GetIsActive() *bool {
-	if o == nil {
+func (a *AccountingContact) GetIsActive() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsActive
+	return a.IsActive
 }
 
-func (o *AccountingContact) GetIsCustomer() *bool {
-	if o == nil {
+func (a *AccountingContact) GetIsCustomer() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsCustomer
+	return a.IsCustomer
 }
 
-func (o *AccountingContact) GetIsSupplier() *bool {
-	if o == nil {
+func (a *AccountingContact) GetIsSupplier() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsSupplier
+	return a.IsSupplier
 }
 
-func (o *AccountingContact) GetName() *string {
-	if o == nil {
+func (a *AccountingContact) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingContact) GetPaymentMethods() []AccountingContactPaymentMethod {
-	if o == nil {
+func (a *AccountingContact) GetPaymentMethods() []AccountingContactPaymentMethod {
+	if a == nil {
 		return nil
 	}
-	return o.PaymentMethods
+	return a.PaymentMethods
 }
 
-func (o *AccountingContact) GetPortalURL() *string {
-	if o == nil {
+func (a *AccountingContact) GetPortalURL() *string {
+	if a == nil {
 		return nil
 	}
-	return o.PortalURL
+	return a.PortalURL
 }
 
-func (o *AccountingContact) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingContact) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingContact) GetShippingAddress() *PropertyAccountingContactShippingAddress {
-	if o == nil {
+func (a *AccountingContact) GetShippingAddress() *PropertyAccountingContactShippingAddress {
+	if a == nil {
 		return nil
 	}
-	return o.ShippingAddress
+	return a.ShippingAddress
 }
 
-func (o *AccountingContact) GetTaxExemption() *TaxExemption {
-	if o == nil {
+func (a *AccountingContact) GetTaxExemption() *TaxExemption {
+	if a == nil {
 		return nil
 	}
-	return o.TaxExemption
+	return a.TaxExemption
 }
 
-func (o *AccountingContact) GetTaxNumber() *string {
-	if o == nil {
+func (a *AccountingContact) GetTaxNumber() *string {
+	if a == nil {
 		return nil
 	}
-	return o.TaxNumber
+	return a.TaxNumber
 }
 
-func (o *AccountingContact) GetTelephones() []AccountingTelephone {
-	if o == nil {
+func (a *AccountingContact) GetTelephones() []AccountingTelephone {
+	if a == nil {
 		return nil
 	}
-	return o.Telephones
+	return a.Telephones
 }
 
-func (o *AccountingContact) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingContact) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

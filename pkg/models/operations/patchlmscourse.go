@@ -19,39 +19,39 @@ type PatchLmsCourseRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchLmsCourseRequest) GetLmsCourse() shared.LmsCourse {
-	if o == nil {
+func (p *PatchLmsCourseRequest) GetLmsCourse() shared.LmsCourse {
+	if p == nil {
 		return shared.LmsCourse{}
 	}
-	return o.LmsCourse
+	return p.LmsCourse
 }
 
-func (o *PatchLmsCourseRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchLmsCourseRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchLmsCourseRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchLmsCourseRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchLmsCourseRequest) GetID() string {
-	if o == nil {
+func (p *PatchLmsCourseRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchLmsCourseRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchLmsCourseRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchLmsCourseResponse struct {
@@ -65,30 +65,30 @@ type PatchLmsCourseResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchLmsCourseResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchLmsCourseResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchLmsCourseResponse) GetLmsCourse() *shared.LmsCourse {
-	if o == nil {
+func (p *PatchLmsCourseResponse) GetLmsCourse() *shared.LmsCourse {
+	if p == nil {
 		return nil
 	}
-	return o.LmsCourse
+	return p.LmsCourse
 }
 
-func (o *PatchLmsCourseResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchLmsCourseResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchLmsCourseResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchLmsCourseResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

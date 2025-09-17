@@ -18,32 +18,32 @@ type GetStorageFileRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetStorageFileRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetStorageFileRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetStorageFileRequest) GetFields() []string {
-	if o == nil {
+func (g *GetStorageFileRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetStorageFileRequest) GetID() string {
-	if o == nil {
+func (g *GetStorageFileRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetStorageFileRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetStorageFileRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetStorageFileResponse struct {
@@ -57,30 +57,30 @@ type GetStorageFileResponse struct {
 	StorageFile *shared.StorageFile
 }
 
-func (o *GetStorageFileResponse) GetContentType() string {
-	if o == nil {
+func (g *GetStorageFileResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetStorageFileResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetStorageFileResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetStorageFileResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetStorageFileResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetStorageFileResponse) GetStorageFile() *shared.StorageFile {
-	if o == nil {
+func (g *GetStorageFileResponse) GetStorageFile() *shared.StorageFile {
+	if g == nil {
 		return nil
 	}
-	return o.StorageFile
+	return g.StorageFile
 }

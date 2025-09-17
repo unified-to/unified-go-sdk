@@ -14,58 +14,58 @@ type PropertyEnrichPersonAddress struct {
 	RegionCode  *string `json:"region_code,omitempty"`
 }
 
-func (o *PropertyEnrichPersonAddress) GetAddress1() *string {
-	if o == nil {
+func (p *PropertyEnrichPersonAddress) GetAddress1() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address1
+	return p.Address1
 }
 
-func (o *PropertyEnrichPersonAddress) GetAddress2() *string {
-	if o == nil {
+func (p *PropertyEnrichPersonAddress) GetAddress2() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address2
+	return p.Address2
 }
 
-func (o *PropertyEnrichPersonAddress) GetCity() *string {
-	if o == nil {
+func (p *PropertyEnrichPersonAddress) GetCity() *string {
+	if p == nil {
 		return nil
 	}
-	return o.City
+	return p.City
 }
 
-func (o *PropertyEnrichPersonAddress) GetCountry() *string {
-	if o == nil {
+func (p *PropertyEnrichPersonAddress) GetCountry() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Country
+	return p.Country
 }
 
-func (o *PropertyEnrichPersonAddress) GetCountryCode() *string {
-	if o == nil {
+func (p *PropertyEnrichPersonAddress) GetCountryCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.CountryCode
+	return p.CountryCode
 }
 
-func (o *PropertyEnrichPersonAddress) GetPostalCode() *string {
-	if o == nil {
+func (p *PropertyEnrichPersonAddress) GetPostalCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.PostalCode
+	return p.PostalCode
 }
 
-func (o *PropertyEnrichPersonAddress) GetRegion() *string {
-	if o == nil {
+func (p *PropertyEnrichPersonAddress) GetRegion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Region
+	return p.Region
 }
 
-func (o *PropertyEnrichPersonAddress) GetRegionCode() *string {
-	if o == nil {
+func (p *PropertyEnrichPersonAddress) GetRegionCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.RegionCode
+	return p.RegionCode
 }

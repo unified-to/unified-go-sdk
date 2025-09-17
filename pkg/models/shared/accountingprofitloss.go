@@ -44,142 +44,142 @@ func (a *AccountingProfitloss) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingProfitloss) GetCostOfGoodsSold() []AccountingProfitlossCategory {
-	if o == nil {
+func (a *AccountingProfitloss) GetCostOfGoodsSold() []AccountingProfitlossCategory {
+	if a == nil {
 		return nil
 	}
-	return o.CostOfGoodsSold
+	return a.CostOfGoodsSold
 }
 
-func (o *AccountingProfitloss) GetCostOfGoodsSoldSections() []AccountingProfitlossSection {
-	if o == nil {
+func (a *AccountingProfitloss) GetCostOfGoodsSoldSections() []AccountingProfitlossSection {
+	if a == nil {
 		return nil
 	}
-	return o.CostOfGoodsSoldSections
+	return a.CostOfGoodsSoldSections
 }
 
-func (o *AccountingProfitloss) GetCostOfGoodsSoldTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingProfitloss) GetCostOfGoodsSoldTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.CostOfGoodsSoldTotalAmount
+	return a.CostOfGoodsSoldTotalAmount
 }
 
-func (o *AccountingProfitloss) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingProfitloss) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingProfitloss) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingProfitloss) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingProfitloss) GetEndAt() *time.Time {
-	if o == nil {
+func (a *AccountingProfitloss) GetEndAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.EndAt
+	return a.EndAt
 }
 
-func (o *AccountingProfitloss) GetExpenses() []AccountingProfitlossCategory {
-	if o == nil {
+func (a *AccountingProfitloss) GetExpenses() []AccountingProfitlossCategory {
+	if a == nil {
 		return nil
 	}
-	return o.Expenses
+	return a.Expenses
 }
 
-func (o *AccountingProfitloss) GetExpensesSections() []AccountingProfitlossSection {
-	if o == nil {
+func (a *AccountingProfitloss) GetExpensesSections() []AccountingProfitlossSection {
+	if a == nil {
 		return nil
 	}
-	return o.ExpensesSections
+	return a.ExpensesSections
 }
 
-func (o *AccountingProfitloss) GetExpensesTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingProfitloss) GetExpensesTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.ExpensesTotalAmount
+	return a.ExpensesTotalAmount
 }
 
-func (o *AccountingProfitloss) GetGrossProfitAmount() *float64 {
-	if o == nil {
+func (a *AccountingProfitloss) GetGrossProfitAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.GrossProfitAmount
+	return a.GrossProfitAmount
 }
 
-func (o *AccountingProfitloss) GetID() *string {
-	if o == nil {
+func (a *AccountingProfitloss) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingProfitloss) GetIncome() []AccountingProfitlossCategory {
-	if o == nil {
+func (a *AccountingProfitloss) GetIncome() []AccountingProfitlossCategory {
+	if a == nil {
 		return nil
 	}
-	return o.Income
+	return a.Income
 }
 
-func (o *AccountingProfitloss) GetIncomeSections() []AccountingProfitlossSection {
-	if o == nil {
+func (a *AccountingProfitloss) GetIncomeSections() []AccountingProfitlossSection {
+	if a == nil {
 		return nil
 	}
-	return o.IncomeSections
+	return a.IncomeSections
 }
 
-func (o *AccountingProfitloss) GetIncomeTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingProfitloss) GetIncomeTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.IncomeTotalAmount
+	return a.IncomeTotalAmount
 }
 
-func (o *AccountingProfitloss) GetName() *string {
-	if o == nil {
+func (a *AccountingProfitloss) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingProfitloss) GetNetIncomeAmount() *float64 {
-	if o == nil {
+func (a *AccountingProfitloss) GetNetIncomeAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.NetIncomeAmount
+	return a.NetIncomeAmount
 }
 
-func (o *AccountingProfitloss) GetNetProfitAmount() *float64 {
-	if o == nil {
+func (a *AccountingProfitloss) GetNetProfitAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.NetProfitAmount
+	return a.NetProfitAmount
 }
 
-func (o *AccountingProfitloss) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingProfitloss) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingProfitloss) GetStartAt() *time.Time {
-	if o == nil {
+func (a *AccountingProfitloss) GetStartAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.StartAt
+	return a.StartAt
 }
 
-func (o *AccountingProfitloss) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingProfitloss) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

@@ -20,39 +20,39 @@ type PatchCrmContactRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchCrmContactRequest) GetCrmContact() shared.CrmContact {
-	if o == nil {
+func (p *PatchCrmContactRequest) GetCrmContact() shared.CrmContact {
+	if p == nil {
 		return shared.CrmContact{}
 	}
-	return o.CrmContact
+	return p.CrmContact
 }
 
-func (o *PatchCrmContactRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchCrmContactRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchCrmContactRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchCrmContactRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchCrmContactRequest) GetID() string {
-	if o == nil {
+func (p *PatchCrmContactRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchCrmContactRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchCrmContactRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchCrmContactResponse struct {
@@ -66,30 +66,30 @@ type PatchCrmContactResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchCrmContactResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchCrmContactResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchCrmContactResponse) GetCrmContact() *shared.CrmContact {
-	if o == nil {
+func (p *PatchCrmContactResponse) GetCrmContact() *shared.CrmContact {
+	if p == nil {
 		return nil
 	}
-	return o.CrmContact
+	return p.CrmContact
 }
 
-func (o *PatchCrmContactResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchCrmContactResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchCrmContactResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchCrmContactResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

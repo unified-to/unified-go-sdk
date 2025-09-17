@@ -19,39 +19,39 @@ type PatchTaskCommentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchTaskCommentRequest) GetTaskComment() shared.TaskComment {
-	if o == nil {
+func (p *PatchTaskCommentRequest) GetTaskComment() shared.TaskComment {
+	if p == nil {
 		return shared.TaskComment{}
 	}
-	return o.TaskComment
+	return p.TaskComment
 }
 
-func (o *PatchTaskCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchTaskCommentRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchTaskCommentRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchTaskCommentRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchTaskCommentRequest) GetID() string {
-	if o == nil {
+func (p *PatchTaskCommentRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchTaskCommentRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchTaskCommentRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchTaskCommentResponse struct {
@@ -65,30 +65,30 @@ type PatchTaskCommentResponse struct {
 	TaskComment *shared.TaskComment
 }
 
-func (o *PatchTaskCommentResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchTaskCommentResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchTaskCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchTaskCommentResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchTaskCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchTaskCommentResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchTaskCommentResponse) GetTaskComment() *shared.TaskComment {
-	if o == nil {
+func (p *PatchTaskCommentResponse) GetTaskComment() *shared.TaskComment {
+	if p == nil {
 		return nil
 	}
-	return o.TaskComment
+	return p.TaskComment
 }

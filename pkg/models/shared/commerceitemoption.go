@@ -9,30 +9,30 @@ type CommerceItemOption struct {
 	Values   []string `json:"values"`
 }
 
-func (o *CommerceItemOption) GetID() *string {
-	if o == nil {
+func (c *CommerceItemOption) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommerceItemOption) GetName() string {
-	if o == nil {
+func (c *CommerceItemOption) GetName() string {
+	if c == nil {
 		return ""
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CommerceItemOption) GetPosition() *float64 {
-	if o == nil {
+func (c *CommerceItemOption) GetPosition() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Position
+	return c.Position
 }
 
-func (o *CommerceItemOption) GetValues() []string {
-	if o == nil {
+func (c *CommerceItemOption) GetValues() []string {
+	if c == nil {
 		return []string{}
 	}
-	return o.Values
+	return c.Values
 }

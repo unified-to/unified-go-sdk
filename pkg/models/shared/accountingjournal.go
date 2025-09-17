@@ -33,79 +33,79 @@ func (a *AccountingJournal) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingJournal) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingJournal) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingJournal) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingJournal) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingJournal) GetDescription() *string {
-	if o == nil {
+func (a *AccountingJournal) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AccountingJournal) GetID() *string {
-	if o == nil {
+func (a *AccountingJournal) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingJournal) GetLineitems() []AccountingJournalLineitem {
-	if o == nil {
+func (a *AccountingJournal) GetLineitems() []AccountingJournalLineitem {
+	if a == nil {
 		return nil
 	}
-	return o.Lineitems
+	return a.Lineitems
 }
 
-func (o *AccountingJournal) GetPostedAt() *time.Time {
-	if o == nil {
+func (a *AccountingJournal) GetPostedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.PostedAt
+	return a.PostedAt
 }
 
-func (o *AccountingJournal) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingJournal) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingJournal) GetReference() *string {
-	if o == nil {
+func (a *AccountingJournal) GetReference() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Reference
+	return a.Reference
 }
 
-func (o *AccountingJournal) GetTaxAmount() *float64 {
-	if o == nil {
+func (a *AccountingJournal) GetTaxAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TaxAmount
+	return a.TaxAmount
 }
 
-func (o *AccountingJournal) GetTaxrateID() *string {
-	if o == nil {
+func (a *AccountingJournal) GetTaxrateID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.TaxrateID
+	return a.TaxrateID
 }
 
-func (o *AccountingJournal) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingJournal) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

@@ -17,32 +17,32 @@ type CreateAccountingPurchaseorderRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAccountingPurchaseorderRequest) GetAccountingPurchaseorder() shared.AccountingPurchaseorder {
-	if o == nil {
+func (c *CreateAccountingPurchaseorderRequest) GetAccountingPurchaseorder() shared.AccountingPurchaseorder {
+	if c == nil {
 		return shared.AccountingPurchaseorder{}
 	}
-	return o.AccountingPurchaseorder
+	return c.AccountingPurchaseorder
 }
 
-func (o *CreateAccountingPurchaseorderRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAccountingPurchaseorderRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAccountingPurchaseorderRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAccountingPurchaseorderRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAccountingPurchaseorderRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAccountingPurchaseorderRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAccountingPurchaseorderResponse struct {
@@ -56,30 +56,30 @@ type CreateAccountingPurchaseorderResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingPurchaseorderResponse) GetAccountingPurchaseorder() *shared.AccountingPurchaseorder {
-	if o == nil {
+func (c *CreateAccountingPurchaseorderResponse) GetAccountingPurchaseorder() *shared.AccountingPurchaseorder {
+	if c == nil {
 		return nil
 	}
-	return o.AccountingPurchaseorder
+	return c.AccountingPurchaseorder
 }
 
-func (o *CreateAccountingPurchaseorderResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAccountingPurchaseorderResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAccountingPurchaseorderResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAccountingPurchaseorderResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAccountingPurchaseorderResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAccountingPurchaseorderResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

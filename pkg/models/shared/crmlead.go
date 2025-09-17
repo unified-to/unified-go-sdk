@@ -39,128 +39,128 @@ func (c *CrmLead) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CrmLead) GetAddress() *PropertyCrmLeadAddress {
-	if o == nil {
+func (c *CrmLead) GetAddress() *PropertyCrmLeadAddress {
+	if c == nil {
 		return nil
 	}
-	return o.Address
+	return c.Address
 }
 
-func (o *CrmLead) GetCompanyID() *string {
-	if o == nil {
+func (c *CrmLead) GetCompanyID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CompanyID
+	return c.CompanyID
 }
 
-func (o *CrmLead) GetCompanyName() *string {
-	if o == nil {
+func (c *CrmLead) GetCompanyName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CompanyName
+	return c.CompanyName
 }
 
-func (o *CrmLead) GetContactID() *string {
-	if o == nil {
+func (c *CrmLead) GetContactID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ContactID
+	return c.ContactID
 }
 
-func (o *CrmLead) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CrmLead) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CrmLead) GetCreatorUserID() *string {
-	if o == nil {
+func (c *CrmLead) GetCreatorUserID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CreatorUserID
+	return c.CreatorUserID
 }
 
-func (o *CrmLead) GetEmails() []CrmEmail {
-	if o == nil {
+func (c *CrmLead) GetEmails() []CrmEmail {
+	if c == nil {
 		return nil
 	}
-	return o.Emails
+	return c.Emails
 }
 
-func (o *CrmLead) GetID() *string {
-	if o == nil {
+func (c *CrmLead) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CrmLead) GetIsActive() *bool {
-	if o == nil {
+func (c *CrmLead) GetIsActive() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsActive
+	return c.IsActive
 }
 
-func (o *CrmLead) GetLinkUrls() []string {
-	if o == nil {
+func (c *CrmLead) GetLinkUrls() []string {
+	if c == nil {
 		return nil
 	}
-	return o.LinkUrls
+	return c.LinkUrls
 }
 
-func (o *CrmLead) GetMetadata() []CrmMetadata {
-	if o == nil {
+func (c *CrmLead) GetMetadata() []CrmMetadata {
+	if c == nil {
 		return nil
 	}
-	return o.Metadata
+	return c.Metadata
 }
 
-func (o *CrmLead) GetName() *string {
-	if o == nil {
+func (c *CrmLead) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CrmLead) GetRaw() map[string]any {
-	if o == nil {
+func (c *CrmLead) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CrmLead) GetSource() *string {
-	if o == nil {
+func (c *CrmLead) GetSource() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Source
+	return c.Source
 }
 
-func (o *CrmLead) GetStatus() *string {
-	if o == nil {
+func (c *CrmLead) GetStatus() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Status
+	return c.Status
 }
 
-func (o *CrmLead) GetTelephones() []CrmTelephone {
-	if o == nil {
+func (c *CrmLead) GetTelephones() []CrmTelephone {
+	if c == nil {
 		return nil
 	}
-	return o.Telephones
+	return c.Telephones
 }
 
-func (o *CrmLead) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CrmLead) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *CrmLead) GetUserID() *string {
-	if o == nil {
+func (c *CrmLead) GetUserID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.UserID
+	return c.UserID
 }

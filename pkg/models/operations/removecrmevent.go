@@ -13,18 +13,18 @@ type RemoveCrmEventRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveCrmEventRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveCrmEventRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveCrmEventRequest) GetID() string {
-	if o == nil {
+func (r *RemoveCrmEventRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveCrmEventResponse struct {
@@ -37,30 +37,30 @@ type RemoveCrmEventResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveCrmEventResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveCrmEventResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveCrmEventResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveCrmEventResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveCrmEventResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveCrmEventResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveCrmEventResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveCrmEventResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

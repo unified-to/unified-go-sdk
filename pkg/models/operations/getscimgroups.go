@@ -14,18 +14,18 @@ type GetScimGroupsRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *GetScimGroupsRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetScimGroupsRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetScimGroupsRequest) GetID() string {
-	if o == nil {
+func (g *GetScimGroupsRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
 type GetScimGroupsResponse struct {
@@ -39,30 +39,30 @@ type GetScimGroupsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetScimGroupsResponse) GetContentType() string {
-	if o == nil {
+func (g *GetScimGroupsResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetScimGroupsResponse) GetScimGroup() *shared.ScimGroup {
-	if o == nil {
+func (g *GetScimGroupsResponse) GetScimGroup() *shared.ScimGroup {
+	if g == nil {
 		return nil
 	}
-	return o.ScimGroup
+	return g.ScimGroup
 }
 
-func (o *GetScimGroupsResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetScimGroupsResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetScimGroupsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetScimGroupsResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

@@ -48,93 +48,93 @@ func (a *AtsInterview) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsInterview) GetApplicationID() *string {
-	if o == nil {
+func (a *AtsInterview) GetApplicationID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ApplicationID
+	return a.ApplicationID
 }
 
-func (o *AtsInterview) GetCandidateID() *string {
-	if o == nil {
+func (a *AtsInterview) GetCandidateID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CandidateID
+	return a.CandidateID
 }
 
-func (o *AtsInterview) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AtsInterview) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AtsInterview) GetEndAt() *time.Time {
-	if o == nil {
+func (a *AtsInterview) GetEndAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.EndAt
+	return a.EndAt
 }
 
-func (o *AtsInterview) GetExternalEventXref() *string {
-	if o == nil {
+func (a *AtsInterview) GetExternalEventXref() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ExternalEventXref
+	return a.ExternalEventXref
 }
 
-func (o *AtsInterview) GetID() *string {
-	if o == nil {
+func (a *AtsInterview) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsInterview) GetJobID() *string {
-	if o == nil {
+func (a *AtsInterview) GetJobID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.JobID
+	return a.JobID
 }
 
-func (o *AtsInterview) GetLocation() *string {
-	if o == nil {
+func (a *AtsInterview) GetLocation() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Location
+	return a.Location
 }
 
-func (o *AtsInterview) GetRaw() map[string]any {
-	if o == nil {
+func (a *AtsInterview) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AtsInterview) GetStartAt() *time.Time {
-	if o == nil {
+func (a *AtsInterview) GetStartAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.StartAt
+	return a.StartAt
 }
 
-func (o *AtsInterview) GetStatus() *AtsInterviewStatus {
-	if o == nil {
+func (a *AtsInterview) GetStatus() *AtsInterviewStatus {
+	if a == nil {
 		return nil
 	}
-	return o.Status
+	return a.Status
 }
 
-func (o *AtsInterview) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AtsInterview) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }
 
-func (o *AtsInterview) GetUserIds() []string {
-	if o == nil {
+func (a *AtsInterview) GetUserIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.UserIds
+	return a.UserIds
 }

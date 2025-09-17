@@ -30,72 +30,72 @@ type GenaiEmbedding struct {
 	Type            *string                 `json:"type,omitempty"`
 }
 
-func (o *GenaiEmbedding) GetContent() []GenaiEmbeddingContent {
-	if o == nil {
+func (g *GenaiEmbedding) GetContent() []GenaiEmbeddingContent {
+	if g == nil {
 		return nil
 	}
-	return o.Content
+	return g.Content
 }
 
-func (o *GenaiEmbedding) GetDimension() *float64 {
-	if o == nil {
+func (g *GenaiEmbedding) GetDimension() *float64 {
+	if g == nil {
 		return nil
 	}
-	return o.Dimension
+	return g.Dimension
 }
 
-func (o *GenaiEmbedding) GetEmbeddings() *string {
-	if o == nil {
+func (g *GenaiEmbedding) GetEmbeddings() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Embeddings
+	return g.Embeddings
 }
 
-func (o *GenaiEmbedding) GetEncondingFormat() *EncondingFormat {
-	if o == nil {
+func (g *GenaiEmbedding) GetEncondingFormat() *EncondingFormat {
+	if g == nil {
 		return nil
 	}
-	return o.EncondingFormat
+	return g.EncondingFormat
 }
 
-func (o *GenaiEmbedding) GetID() *string {
-	if o == nil {
+func (g *GenaiEmbedding) GetID() *string {
+	if g == nil {
 		return nil
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GenaiEmbedding) GetMaxTokens() *float64 {
-	if o == nil {
+func (g *GenaiEmbedding) GetMaxTokens() *float64 {
+	if g == nil {
 		return nil
 	}
-	return o.MaxTokens
+	return g.MaxTokens
 }
 
-func (o *GenaiEmbedding) GetModelID() *string {
-	if o == nil {
+func (g *GenaiEmbedding) GetModelID() *string {
+	if g == nil {
 		return nil
 	}
-	return o.ModelID
+	return g.ModelID
 }
 
-func (o *GenaiEmbedding) GetRaw() map[string]any {
-	if o == nil {
+func (g *GenaiEmbedding) GetRaw() map[string]any {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
-func (o *GenaiEmbedding) GetTokensUsed() *float64 {
-	if o == nil {
+func (g *GenaiEmbedding) GetTokensUsed() *float64 {
+	if g == nil {
 		return nil
 	}
-	return o.TokensUsed
+	return g.TokensUsed
 }
 
-func (o *GenaiEmbedding) GetType() *string {
-	if o == nil {
+func (g *GenaiEmbedding) GetType() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Type
+	return g.Type
 }

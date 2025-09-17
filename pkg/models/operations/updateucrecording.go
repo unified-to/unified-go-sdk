@@ -19,39 +19,39 @@ type UpdateUcRecordingRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateUcRecordingRequest) GetUcRecording() shared.UcRecording {
-	if o == nil {
+func (u *UpdateUcRecordingRequest) GetUcRecording() shared.UcRecording {
+	if u == nil {
 		return shared.UcRecording{}
 	}
-	return o.UcRecording
+	return u.UcRecording
 }
 
-func (o *UpdateUcRecordingRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateUcRecordingRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateUcRecordingRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateUcRecordingRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateUcRecordingRequest) GetID() string {
-	if o == nil {
+func (u *UpdateUcRecordingRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateUcRecordingRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateUcRecordingRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateUcRecordingResponse struct {
@@ -65,30 +65,30 @@ type UpdateUcRecordingResponse struct {
 	UcRecording *shared.UcRecording
 }
 
-func (o *UpdateUcRecordingResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateUcRecordingResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateUcRecordingResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateUcRecordingResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateUcRecordingResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateUcRecordingResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }
 
-func (o *UpdateUcRecordingResponse) GetUcRecording() *shared.UcRecording {
-	if o == nil {
+func (u *UpdateUcRecordingResponse) GetUcRecording() *shared.UcRecording {
+	if u == nil {
 		return nil
 	}
-	return o.UcRecording
+	return u.UcRecording
 }

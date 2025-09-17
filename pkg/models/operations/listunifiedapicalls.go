@@ -31,95 +31,95 @@ type ListUnifiedApicallsRequest struct {
 	WebhookID *string `queryParam:"style=form,explode=true,name=webhook_id"`
 }
 
-func (o *ListUnifiedApicallsRequest) GetConnectionID() *string {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetConnectionID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListUnifiedApicallsRequest) GetEnv() *string {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetEnv() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Env
+	return l.Env
 }
 
-func (o *ListUnifiedApicallsRequest) GetError() *bool {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetError() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.Error
+	return l.Error
 }
 
-func (o *ListUnifiedApicallsRequest) GetExternalXref() *string {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetExternalXref() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ExternalXref
+	return l.ExternalXref
 }
 
-func (o *ListUnifiedApicallsRequest) GetIntegrationType() *string {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetIntegrationType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.IntegrationType
+	return l.IntegrationType
 }
 
-func (o *ListUnifiedApicallsRequest) GetIsBillable() *bool {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetIsBillable() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.IsBillable
+	return l.IsBillable
 }
 
-func (o *ListUnifiedApicallsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListUnifiedApicallsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListUnifiedApicallsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListUnifiedApicallsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListUnifiedApicallsRequest) GetType() *string {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }
 
-func (o *ListUnifiedApicallsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListUnifiedApicallsRequest) GetWebhookID() *string {
-	if o == nil {
+func (l *ListUnifiedApicallsRequest) GetWebhookID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.WebhookID
+	return l.WebhookID
 }
 
 type ListUnifiedApicallsResponse struct {
@@ -133,30 +133,30 @@ type ListUnifiedApicallsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListUnifiedApicallsResponse) GetAPICalls() []shared.APICall {
-	if o == nil {
+func (l *ListUnifiedApicallsResponse) GetAPICalls() []shared.APICall {
+	if l == nil {
 		return nil
 	}
-	return o.APICalls
+	return l.APICalls
 }
 
-func (o *ListUnifiedApicallsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListUnifiedApicallsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListUnifiedApicallsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListUnifiedApicallsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListUnifiedApicallsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListUnifiedApicallsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

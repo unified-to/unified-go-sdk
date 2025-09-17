@@ -14,18 +14,18 @@ type UpdateUnifiedConnectionRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateUnifiedConnectionRequest) GetConnection() shared.Connection {
-	if o == nil {
+func (u *UpdateUnifiedConnectionRequest) GetConnection() shared.Connection {
+	if u == nil {
 		return shared.Connection{}
 	}
-	return o.Connection
+	return u.Connection
 }
 
-func (o *UpdateUnifiedConnectionRequest) GetID() string {
-	if o == nil {
+func (u *UpdateUnifiedConnectionRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
 type UpdateUnifiedConnectionResponse struct {
@@ -39,30 +39,30 @@ type UpdateUnifiedConnectionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateUnifiedConnectionResponse) GetConnection() *shared.Connection {
-	if o == nil {
+func (u *UpdateUnifiedConnectionResponse) GetConnection() *shared.Connection {
+	if u == nil {
 		return nil
 	}
-	return o.Connection
+	return u.Connection
 }
 
-func (o *UpdateUnifiedConnectionResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateUnifiedConnectionResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateUnifiedConnectionResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateUnifiedConnectionResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateUnifiedConnectionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateUnifiedConnectionResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

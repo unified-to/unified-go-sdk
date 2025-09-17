@@ -18,32 +18,32 @@ type GetTicketingCategoryRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetTicketingCategoryRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetTicketingCategoryRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetTicketingCategoryRequest) GetFields() []string {
-	if o == nil {
+func (g *GetTicketingCategoryRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetTicketingCategoryRequest) GetID() string {
-	if o == nil {
+func (g *GetTicketingCategoryRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetTicketingCategoryRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetTicketingCategoryRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetTicketingCategoryResponse struct {
@@ -57,30 +57,30 @@ type GetTicketingCategoryResponse struct {
 	TicketingCategory *shared.TicketingCategory
 }
 
-func (o *GetTicketingCategoryResponse) GetContentType() string {
-	if o == nil {
+func (g *GetTicketingCategoryResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetTicketingCategoryResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetTicketingCategoryResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetTicketingCategoryResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetTicketingCategoryResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetTicketingCategoryResponse) GetTicketingCategory() *shared.TicketingCategory {
-	if o == nil {
+func (g *GetTicketingCategoryResponse) GetTicketingCategory() *shared.TicketingCategory {
+	if g == nil {
 		return nil
 	}
-	return o.TicketingCategory
+	return g.TicketingCategory
 }

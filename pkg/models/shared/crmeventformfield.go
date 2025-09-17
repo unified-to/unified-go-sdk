@@ -32,30 +32,30 @@ type CrmEventFormField struct {
 	Type     *CrmEventFormFieldType `json:"type,omitempty"`
 }
 
-func (o *CrmEventFormField) GetName() *string {
-	if o == nil {
+func (c *CrmEventFormField) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CrmEventFormField) GetOptions() []CrmEventFormOption {
-	if o == nil {
+func (c *CrmEventFormField) GetOptions() []CrmEventFormOption {
+	if c == nil {
 		return nil
 	}
-	return o.Options
+	return c.Options
 }
 
-func (o *CrmEventFormField) GetRequired() *bool {
-	if o == nil {
+func (c *CrmEventFormField) GetRequired() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.Required
+	return c.Required
 }
 
-func (o *CrmEventFormField) GetType() *CrmEventFormFieldType {
-	if o == nil {
+func (c *CrmEventFormField) GetType() *CrmEventFormFieldType {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }

@@ -13,18 +13,18 @@ type RemoveMetadataMetadataRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveMetadataMetadataRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveMetadataMetadataRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveMetadataMetadataRequest) GetID() string {
-	if o == nil {
+func (r *RemoveMetadataMetadataRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveMetadataMetadataResponse struct {
@@ -37,30 +37,30 @@ type RemoveMetadataMetadataResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveMetadataMetadataResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveMetadataMetadataResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveMetadataMetadataResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveMetadataMetadataResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveMetadataMetadataResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveMetadataMetadataResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveMetadataMetadataResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveMetadataMetadataResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

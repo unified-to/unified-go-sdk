@@ -13,58 +13,58 @@ type AccountingTransactionLineItem struct {
 	UnitQuantity *float64 `json:"unit_quantity,omitempty"`
 }
 
-func (o *AccountingTransactionLineItem) GetAccountID() *string {
-	if o == nil {
+func (a *AccountingTransactionLineItem) GetAccountID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AccountID
+	return a.AccountID
 }
 
-func (o *AccountingTransactionLineItem) GetDescription() *string {
-	if o == nil {
+func (a *AccountingTransactionLineItem) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AccountingTransactionLineItem) GetID() *string {
-	if o == nil {
+func (a *AccountingTransactionLineItem) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingTransactionLineItem) GetName() *string {
-	if o == nil {
+func (a *AccountingTransactionLineItem) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingTransactionLineItem) GetObjectType() *string {
-	if o == nil {
+func (a *AccountingTransactionLineItem) GetObjectType() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ObjectType
+	return a.ObjectType
 }
 
-func (o *AccountingTransactionLineItem) GetTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingTransactionLineItem) GetTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalAmount
+	return a.TotalAmount
 }
 
-func (o *AccountingTransactionLineItem) GetUnitAmount() *float64 {
-	if o == nil {
+func (a *AccountingTransactionLineItem) GetUnitAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.UnitAmount
+	return a.UnitAmount
 }
 
-func (o *AccountingTransactionLineItem) GetUnitQuantity() *float64 {
-	if o == nil {
+func (a *AccountingTransactionLineItem) GetUnitQuantity() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.UnitQuantity
+	return a.UnitQuantity
 }

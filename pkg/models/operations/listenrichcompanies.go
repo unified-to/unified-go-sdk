@@ -16,25 +16,25 @@ type ListEnrichCompaniesRequest struct {
 	Name *string `queryParam:"style=form,explode=true,name=name"`
 }
 
-func (o *ListEnrichCompaniesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListEnrichCompaniesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListEnrichCompaniesRequest) GetDomain() *string {
-	if o == nil {
+func (l *ListEnrichCompaniesRequest) GetDomain() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Domain
+	return l.Domain
 }
 
-func (o *ListEnrichCompaniesRequest) GetName() *string {
-	if o == nil {
+func (l *ListEnrichCompaniesRequest) GetName() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Name
+	return l.Name
 }
 
 type ListEnrichCompaniesResponse struct {
@@ -48,30 +48,30 @@ type ListEnrichCompaniesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListEnrichCompaniesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListEnrichCompaniesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListEnrichCompaniesResponse) GetEnrichCompany() *shared.EnrichCompany {
-	if o == nil {
+func (l *ListEnrichCompaniesResponse) GetEnrichCompany() *shared.EnrichCompany {
+	if l == nil {
 		return nil
 	}
-	return o.EnrichCompany
+	return l.EnrichCompany
 }
 
-func (o *ListEnrichCompaniesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListEnrichCompaniesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListEnrichCompaniesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListEnrichCompaniesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

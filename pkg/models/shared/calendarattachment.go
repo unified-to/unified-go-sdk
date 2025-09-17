@@ -9,30 +9,30 @@ type CalendarAttachment struct {
 	Name        *string `json:"name,omitempty"`
 }
 
-func (o *CalendarAttachment) GetDownloadURL() *string {
-	if o == nil {
+func (c *CalendarAttachment) GetDownloadURL() *string {
+	if c == nil {
 		return nil
 	}
-	return o.DownloadURL
+	return c.DownloadURL
 }
 
-func (o *CalendarAttachment) GetID() *string {
-	if o == nil {
+func (c *CalendarAttachment) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CalendarAttachment) GetMimeType() *string {
-	if o == nil {
+func (c *CalendarAttachment) GetMimeType() *string {
+	if c == nil {
 		return nil
 	}
-	return o.MimeType
+	return c.MimeType
 }
 
-func (o *CalendarAttachment) GetName() *string {
-	if o == nil {
+func (c *CalendarAttachment) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }

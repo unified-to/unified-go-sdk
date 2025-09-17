@@ -18,32 +18,32 @@ type GetAtsInterviewRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAtsInterviewRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAtsInterviewRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAtsInterviewRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAtsInterviewRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAtsInterviewRequest) GetID() string {
-	if o == nil {
+func (g *GetAtsInterviewRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAtsInterviewRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAtsInterviewRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAtsInterviewResponse struct {
@@ -57,30 +57,30 @@ type GetAtsInterviewResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAtsInterviewResponse) GetAtsInterview() *shared.AtsInterview {
-	if o == nil {
+func (g *GetAtsInterviewResponse) GetAtsInterview() *shared.AtsInterview {
+	if g == nil {
 		return nil
 	}
-	return o.AtsInterview
+	return g.AtsInterview
 }
 
-func (o *GetAtsInterviewResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAtsInterviewResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAtsInterviewResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAtsInterviewResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAtsInterviewResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAtsInterviewResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

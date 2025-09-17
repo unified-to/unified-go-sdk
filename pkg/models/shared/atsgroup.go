@@ -24,23 +24,23 @@ type AtsGroup struct {
 	Type *AtsGroupType `json:"type,omitempty"`
 }
 
-func (o *AtsGroup) GetID() *string {
-	if o == nil {
+func (a *AtsGroup) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsGroup) GetName() *string {
-	if o == nil {
+func (a *AtsGroup) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AtsGroup) GetType() *AtsGroupType {
-	if o == nil {
+func (a *AtsGroup) GetType() *AtsGroupType {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }

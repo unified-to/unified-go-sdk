@@ -14,44 +14,44 @@ type PropertyCrmEventEmail struct {
 	To []string `json:"to,omitempty"`
 }
 
-func (o *PropertyCrmEventEmail) GetAttachmentFileIds() []string {
-	if o == nil {
+func (p *PropertyCrmEventEmail) GetAttachmentFileIds() []string {
+	if p == nil {
 		return nil
 	}
-	return o.AttachmentFileIds
+	return p.AttachmentFileIds
 }
 
-func (o *PropertyCrmEventEmail) GetBody() *string {
-	if o == nil {
+func (p *PropertyCrmEventEmail) GetBody() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Body
+	return p.Body
 }
 
-func (o *PropertyCrmEventEmail) GetCc() []string {
-	if o == nil {
+func (p *PropertyCrmEventEmail) GetCc() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Cc
+	return p.Cc
 }
 
-func (o *PropertyCrmEventEmail) GetFrom() *string {
-	if o == nil {
+func (p *PropertyCrmEventEmail) GetFrom() *string {
+	if p == nil {
 		return nil
 	}
-	return o.From
+	return p.From
 }
 
-func (o *PropertyCrmEventEmail) GetSubject() *string {
-	if o == nil {
+func (p *PropertyCrmEventEmail) GetSubject() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Subject
+	return p.Subject
 }
 
-func (o *PropertyCrmEventEmail) GetTo() []string {
-	if o == nil {
+func (p *PropertyCrmEventEmail) GetTo() []string {
+	if p == nil {
 		return nil
 	}
-	return o.To
+	return p.To
 }

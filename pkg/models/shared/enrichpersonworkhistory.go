@@ -28,51 +28,51 @@ func (e *EnrichPersonWorkHistory) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *EnrichPersonWorkHistory) GetCompanyDomain() *string {
-	if o == nil {
+func (e *EnrichPersonWorkHistory) GetCompanyDomain() *string {
+	if e == nil {
 		return nil
 	}
-	return o.CompanyDomain
+	return e.CompanyDomain
 }
 
-func (o *EnrichPersonWorkHistory) GetCompanyID() *string {
-	if o == nil {
+func (e *EnrichPersonWorkHistory) GetCompanyID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.CompanyID
+	return e.CompanyID
 }
 
-func (o *EnrichPersonWorkHistory) GetCompanyName() *string {
-	if o == nil {
+func (e *EnrichPersonWorkHistory) GetCompanyName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.CompanyName
+	return e.CompanyName
 }
 
-func (o *EnrichPersonWorkHistory) GetEndAt() *time.Time {
-	if o == nil {
+func (e *EnrichPersonWorkHistory) GetEndAt() *time.Time {
+	if e == nil {
 		return nil
 	}
-	return o.EndAt
+	return e.EndAt
 }
 
-func (o *EnrichPersonWorkHistory) GetLocation() *string {
-	if o == nil {
+func (e *EnrichPersonWorkHistory) GetLocation() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Location
+	return e.Location
 }
 
-func (o *EnrichPersonWorkHistory) GetStartAt() *time.Time {
-	if o == nil {
+func (e *EnrichPersonWorkHistory) GetStartAt() *time.Time {
+	if e == nil {
 		return nil
 	}
-	return o.StartAt
+	return e.StartAt
 }
 
-func (o *EnrichPersonWorkHistory) GetTitle() string {
-	if o == nil {
+func (e *EnrichPersonWorkHistory) GetTitle() string {
+	if e == nil {
 		return ""
 	}
-	return o.Title
+	return e.Title
 }

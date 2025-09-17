@@ -17,32 +17,32 @@ type CreateStorageFileRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateStorageFileRequest) GetStorageFile() shared.StorageFile {
-	if o == nil {
+func (c *CreateStorageFileRequest) GetStorageFile() shared.StorageFile {
+	if c == nil {
 		return shared.StorageFile{}
 	}
-	return o.StorageFile
+	return c.StorageFile
 }
 
-func (o *CreateStorageFileRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateStorageFileRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateStorageFileRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateStorageFileRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateStorageFileRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateStorageFileRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateStorageFileResponse struct {
@@ -56,30 +56,30 @@ type CreateStorageFileResponse struct {
 	StorageFile *shared.StorageFile
 }
 
-func (o *CreateStorageFileResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateStorageFileResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateStorageFileResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateStorageFileResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateStorageFileResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateStorageFileResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateStorageFileResponse) GetStorageFile() *shared.StorageFile {
-	if o == nil {
+func (c *CreateStorageFileResponse) GetStorageFile() *shared.StorageFile {
+	if c == nil {
 		return nil
 	}
-	return o.StorageFile
+	return c.StorageFile
 }

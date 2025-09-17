@@ -112,60 +112,60 @@ type ListUnifiedConnectionsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListUnifiedConnectionsRequest) GetCategories() []Categories {
-	if o == nil {
+func (l *ListUnifiedConnectionsRequest) GetCategories() []Categories {
+	if l == nil {
 		return nil
 	}
-	return o.Categories
+	return l.Categories
 }
 
-func (o *ListUnifiedConnectionsRequest) GetEnv() *string {
-	if o == nil {
+func (l *ListUnifiedConnectionsRequest) GetEnv() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Env
+	return l.Env
 }
 
-func (o *ListUnifiedConnectionsRequest) GetExternalXref() *string {
-	if o == nil {
+func (l *ListUnifiedConnectionsRequest) GetExternalXref() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ExternalXref
+	return l.ExternalXref
 }
 
-func (o *ListUnifiedConnectionsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListUnifiedConnectionsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListUnifiedConnectionsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListUnifiedConnectionsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListUnifiedConnectionsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListUnifiedConnectionsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListUnifiedConnectionsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListUnifiedConnectionsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListUnifiedConnectionsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListUnifiedConnectionsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListUnifiedConnectionsResponse struct {
@@ -179,30 +179,30 @@ type ListUnifiedConnectionsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListUnifiedConnectionsResponse) GetConnections() []shared.Connection {
-	if o == nil {
+func (l *ListUnifiedConnectionsResponse) GetConnections() []shared.Connection {
+	if l == nil {
 		return nil
 	}
-	return o.Connections
+	return l.Connections
 }
 
-func (o *ListUnifiedConnectionsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListUnifiedConnectionsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListUnifiedConnectionsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListUnifiedConnectionsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListUnifiedConnectionsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListUnifiedConnectionsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

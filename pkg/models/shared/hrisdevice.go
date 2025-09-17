@@ -42,142 +42,142 @@ func (h *HrisDevice) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HrisDevice) GetAdminUserIds() []string {
-	if o == nil {
+func (h *HrisDevice) GetAdminUserIds() []string {
+	if h == nil {
 		return nil
 	}
-	return o.AdminUserIds
+	return h.AdminUserIds
 }
 
-func (o *HrisDevice) GetAssetTag() *string {
-	if o == nil {
+func (h *HrisDevice) GetAssetTag() *string {
+	if h == nil {
 		return nil
 	}
-	return o.AssetTag
+	return h.AssetTag
 }
 
-func (o *HrisDevice) GetCreatedAt() *time.Time {
-	if o == nil {
+func (h *HrisDevice) GetCreatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return h.CreatedAt
 }
 
-func (o *HrisDevice) GetHasAntivirus() *bool {
-	if o == nil {
+func (h *HrisDevice) GetHasAntivirus() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.HasAntivirus
+	return h.HasAntivirus
 }
 
-func (o *HrisDevice) GetHasFirewall() *bool {
-	if o == nil {
+func (h *HrisDevice) GetHasFirewall() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.HasFirewall
+	return h.HasFirewall
 }
 
-func (o *HrisDevice) GetHasHdEncrypted() *bool {
-	if o == nil {
+func (h *HrisDevice) GetHasHdEncrypted() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.HasHdEncrypted
+	return h.HasHdEncrypted
 }
 
-func (o *HrisDevice) GetHasPasswordManager() *bool {
-	if o == nil {
+func (h *HrisDevice) GetHasPasswordManager() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.HasPasswordManager
+	return h.HasPasswordManager
 }
 
-func (o *HrisDevice) GetHasScreenlock() *bool {
-	if o == nil {
+func (h *HrisDevice) GetHasScreenlock() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.HasScreenlock
+	return h.HasScreenlock
 }
 
-func (o *HrisDevice) GetID() *string {
-	if o == nil {
+func (h *HrisDevice) GetID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ID
+	return h.ID
 }
 
-func (o *HrisDevice) GetIsMissing() *bool {
-	if o == nil {
+func (h *HrisDevice) GetIsMissing() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.IsMissing
+	return h.IsMissing
 }
 
-func (o *HrisDevice) GetLocationID() *string {
-	if o == nil {
+func (h *HrisDevice) GetLocationID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.LocationID
+	return h.LocationID
 }
 
-func (o *HrisDevice) GetManufacturer() *string {
-	if o == nil {
+func (h *HrisDevice) GetManufacturer() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Manufacturer
+	return h.Manufacturer
 }
 
-func (o *HrisDevice) GetModel() *string {
-	if o == nil {
+func (h *HrisDevice) GetModel() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Model
+	return h.Model
 }
 
-func (o *HrisDevice) GetName() string {
-	if o == nil {
+func (h *HrisDevice) GetName() string {
+	if h == nil {
 		return ""
 	}
-	return o.Name
+	return h.Name
 }
 
-func (o *HrisDevice) GetOs() *string {
-	if o == nil {
+func (h *HrisDevice) GetOs() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Os
+	return h.Os
 }
 
-func (o *HrisDevice) GetOsVersion() *string {
-	if o == nil {
+func (h *HrisDevice) GetOsVersion() *string {
+	if h == nil {
 		return nil
 	}
-	return o.OsVersion
+	return h.OsVersion
 }
 
-func (o *HrisDevice) GetRaw() map[string]any {
-	if o == nil {
+func (h *HrisDevice) GetRaw() map[string]any {
+	if h == nil {
 		return nil
 	}
-	return o.Raw
+	return h.Raw
 }
 
-func (o *HrisDevice) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (h *HrisDevice) GetUpdatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return h.UpdatedAt
 }
 
-func (o *HrisDevice) GetUserIds() []string {
-	if o == nil {
+func (h *HrisDevice) GetUserIds() []string {
+	if h == nil {
 		return nil
 	}
-	return o.UserIds
+	return h.UserIds
 }
 
-func (o *HrisDevice) GetVersion() *string {
-	if o == nil {
+func (h *HrisDevice) GetVersion() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Version
+	return h.Version
 }

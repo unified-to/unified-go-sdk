@@ -9,23 +9,23 @@ type AccountingProfitlossCategory struct {
 	SubItems []AccountingProfitlossSubcategory `json:"sub_items,omitempty"`
 }
 
-func (o *AccountingProfitlossCategory) GetAmount() *float64 {
-	if o == nil {
+func (a *AccountingProfitlossCategory) GetAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.Amount
+	return a.Amount
 }
 
-func (o *AccountingProfitlossCategory) GetName() *string {
-	if o == nil {
+func (a *AccountingProfitlossCategory) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AccountingProfitlossCategory) GetSubItems() []AccountingProfitlossSubcategory {
-	if o == nil {
+func (a *AccountingProfitlossCategory) GetSubItems() []AccountingProfitlossSubcategory {
+	if a == nil {
 		return nil
 	}
-	return o.SubItems
+	return a.SubItems
 }

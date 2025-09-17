@@ -47,100 +47,100 @@ func (h *HrisPayslip) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HrisPayslip) GetCompanyID() *string {
-	if o == nil {
+func (h *HrisPayslip) GetCompanyID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.CompanyID
+	return h.CompanyID
 }
 
-func (o *HrisPayslip) GetCreatedAt() *time.Time {
-	if o == nil {
+func (h *HrisPayslip) GetCreatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return h.CreatedAt
 }
 
-func (o *HrisPayslip) GetCurrency() *string {
-	if o == nil {
+func (h *HrisPayslip) GetCurrency() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Currency
+	return h.Currency
 }
 
-func (o *HrisPayslip) GetDetails() []HrisPayslipDetail {
-	if o == nil {
+func (h *HrisPayslip) GetDetails() []HrisPayslipDetail {
+	if h == nil {
 		return nil
 	}
-	return o.Details
+	return h.Details
 }
 
-func (o *HrisPayslip) GetEndAt() *time.Time {
-	if o == nil {
+func (h *HrisPayslip) GetEndAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.EndAt
+	return h.EndAt
 }
 
-func (o *HrisPayslip) GetGrossAmount() *float64 {
-	if o == nil {
+func (h *HrisPayslip) GetGrossAmount() *float64 {
+	if h == nil {
 		return nil
 	}
-	return o.GrossAmount
+	return h.GrossAmount
 }
 
-func (o *HrisPayslip) GetID() *string {
-	if o == nil {
+func (h *HrisPayslip) GetID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ID
+	return h.ID
 }
 
-func (o *HrisPayslip) GetNetAmount() *float64 {
-	if o == nil {
+func (h *HrisPayslip) GetNetAmount() *float64 {
+	if h == nil {
 		return nil
 	}
-	return o.NetAmount
+	return h.NetAmount
 }
 
-func (o *HrisPayslip) GetPaidAt() *time.Time {
-	if o == nil {
+func (h *HrisPayslip) GetPaidAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.PaidAt
+	return h.PaidAt
 }
 
-func (o *HrisPayslip) GetPaymentType() *PaymentType {
-	if o == nil {
+func (h *HrisPayslip) GetPaymentType() *PaymentType {
+	if h == nil {
 		return nil
 	}
-	return o.PaymentType
+	return h.PaymentType
 }
 
-func (o *HrisPayslip) GetRaw() map[string]any {
-	if o == nil {
+func (h *HrisPayslip) GetRaw() map[string]any {
+	if h == nil {
 		return map[string]any{}
 	}
-	return o.Raw
+	return h.Raw
 }
 
-func (o *HrisPayslip) GetStartAt() *time.Time {
-	if o == nil {
+func (h *HrisPayslip) GetStartAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.StartAt
+	return h.StartAt
 }
 
-func (o *HrisPayslip) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (h *HrisPayslip) GetUpdatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return h.UpdatedAt
 }
 
-func (o *HrisPayslip) GetUserID() *string {
-	if o == nil {
+func (h *HrisPayslip) GetUserID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.UserID
+	return h.UserID
 }

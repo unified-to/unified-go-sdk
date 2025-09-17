@@ -19,39 +19,39 @@ type PatchCrmLeadRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchCrmLeadRequest) GetCrmLead() shared.CrmLead {
-	if o == nil {
+func (p *PatchCrmLeadRequest) GetCrmLead() shared.CrmLead {
+	if p == nil {
 		return shared.CrmLead{}
 	}
-	return o.CrmLead
+	return p.CrmLead
 }
 
-func (o *PatchCrmLeadRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchCrmLeadRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchCrmLeadRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchCrmLeadRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchCrmLeadRequest) GetID() string {
-	if o == nil {
+func (p *PatchCrmLeadRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchCrmLeadRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchCrmLeadRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchCrmLeadResponse struct {
@@ -65,30 +65,30 @@ type PatchCrmLeadResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchCrmLeadResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchCrmLeadResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchCrmLeadResponse) GetCrmLead() *shared.CrmLead {
-	if o == nil {
+func (p *PatchCrmLeadResponse) GetCrmLead() *shared.CrmLead {
+	if p == nil {
 		return nil
 	}
-	return o.CrmLead
+	return p.CrmLead
 }
 
-func (o *PatchCrmLeadResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchCrmLeadResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchCrmLeadResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchCrmLeadResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

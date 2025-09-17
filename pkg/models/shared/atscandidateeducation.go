@@ -27,44 +27,44 @@ func (a *AtsCandidateEducation) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsCandidateEducation) GetDegree() *string {
-	if o == nil {
+func (a *AtsCandidateEducation) GetDegree() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Degree
+	return a.Degree
 }
 
-func (o *AtsCandidateEducation) GetEndAt() *time.Time {
-	if o == nil {
+func (a *AtsCandidateEducation) GetEndAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.EndAt
+	return a.EndAt
 }
 
-func (o *AtsCandidateEducation) GetFieldOfStudy() *string {
-	if o == nil {
+func (a *AtsCandidateEducation) GetFieldOfStudy() *string {
+	if a == nil {
 		return nil
 	}
-	return o.FieldOfStudy
+	return a.FieldOfStudy
 }
 
-func (o *AtsCandidateEducation) GetInstitution() *string {
-	if o == nil {
+func (a *AtsCandidateEducation) GetInstitution() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Institution
+	return a.Institution
 }
 
-func (o *AtsCandidateEducation) GetLevel() *string {
-	if o == nil {
+func (a *AtsCandidateEducation) GetLevel() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Level
+	return a.Level
 }
 
-func (o *AtsCandidateEducation) GetStartAt() *time.Time {
-	if o == nil {
+func (a *AtsCandidateEducation) GetStartAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.StartAt
+	return a.StartAt
 }

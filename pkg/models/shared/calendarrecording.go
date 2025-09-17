@@ -31,72 +31,72 @@ func (c *CalendarRecording) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CalendarRecording) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CalendarRecording) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CalendarRecording) GetEndAt() *time.Time {
-	if o == nil {
+func (c *CalendarRecording) GetEndAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.EndAt
+	return c.EndAt
 }
 
-func (o *CalendarRecording) GetEventID() *string {
-	if o == nil {
+func (c *CalendarRecording) GetEventID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.EventID
+	return c.EventID
 }
 
-func (o *CalendarRecording) GetExpiresAt() *time.Time {
-	if o == nil {
+func (c *CalendarRecording) GetExpiresAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.ExpiresAt
+	return c.ExpiresAt
 }
 
-func (o *CalendarRecording) GetID() *string {
-	if o == nil {
+func (c *CalendarRecording) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CalendarRecording) GetMedia() []CalendarRecordingMedia {
-	if o == nil {
+func (c *CalendarRecording) GetMedia() []CalendarRecordingMedia {
+	if c == nil {
 		return nil
 	}
-	return o.Media
+	return c.Media
 }
 
-func (o *CalendarRecording) GetRaw() map[string]any {
-	if o == nil {
+func (c *CalendarRecording) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CalendarRecording) GetStartAt() *time.Time {
-	if o == nil {
+func (c *CalendarRecording) GetStartAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.StartAt
+	return c.StartAt
 }
 
-func (o *CalendarRecording) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CalendarRecording) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *CalendarRecording) GetWebURL() *string {
-	if o == nil {
+func (c *CalendarRecording) GetWebURL() *string {
+	if c == nil {
 		return nil
 	}
-	return o.WebURL
+	return c.WebURL
 }

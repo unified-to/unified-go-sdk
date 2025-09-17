@@ -19,39 +19,39 @@ type PatchHrisTimeshiftRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchHrisTimeshiftRequest) GetHrisTimeshift() shared.HrisTimeshift {
-	if o == nil {
+func (p *PatchHrisTimeshiftRequest) GetHrisTimeshift() shared.HrisTimeshift {
+	if p == nil {
 		return shared.HrisTimeshift{}
 	}
-	return o.HrisTimeshift
+	return p.HrisTimeshift
 }
 
-func (o *PatchHrisTimeshiftRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchHrisTimeshiftRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchHrisTimeshiftRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchHrisTimeshiftRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchHrisTimeshiftRequest) GetID() string {
-	if o == nil {
+func (p *PatchHrisTimeshiftRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchHrisTimeshiftRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchHrisTimeshiftRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchHrisTimeshiftResponse struct {
@@ -65,30 +65,30 @@ type PatchHrisTimeshiftResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchHrisTimeshiftResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchHrisTimeshiftResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchHrisTimeshiftResponse) GetHrisTimeshift() *shared.HrisTimeshift {
-	if o == nil {
+func (p *PatchHrisTimeshiftResponse) GetHrisTimeshift() *shared.HrisTimeshift {
+	if p == nil {
 		return nil
 	}
-	return o.HrisTimeshift
+	return p.HrisTimeshift
 }
 
-func (o *PatchHrisTimeshiftResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchHrisTimeshiftResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchHrisTimeshiftResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchHrisTimeshiftResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

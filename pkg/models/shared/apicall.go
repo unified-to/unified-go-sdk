@@ -50,121 +50,121 @@ func (a *APICall) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *APICall) GetConnectionID() *string {
-	if o == nil {
+func (a *APICall) GetConnectionID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ConnectionID
+	return a.ConnectionID
 }
 
-func (o *APICall) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *APICall) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *APICall) GetEnvironment() *string {
-	if o == nil {
+func (a *APICall) GetEnvironment() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Environment
+	return a.Environment
 }
 
-func (o *APICall) GetError() *string {
-	if o == nil {
+func (a *APICall) GetError() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Error
+	return a.Error
 }
 
-func (o *APICall) GetExternalXref() *string {
-	if o == nil {
+func (a *APICall) GetExternalXref() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ExternalXref
+	return a.ExternalXref
 }
 
-func (o *APICall) GetID() *string {
-	if o == nil {
+func (a *APICall) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *APICall) GetIntegrationType() string {
-	if o == nil {
+func (a *APICall) GetIntegrationType() string {
+	if a == nil {
 		return ""
 	}
-	return o.IntegrationType
+	return a.IntegrationType
 }
 
-func (o *APICall) GetIPAddress() *string {
-	if o == nil {
+func (a *APICall) GetIPAddress() *string {
+	if a == nil {
 		return nil
 	}
-	return o.IPAddress
+	return a.IPAddress
 }
 
-func (o *APICall) GetIsBillable() *bool {
-	if o == nil {
+func (a *APICall) GetIsBillable() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsBillable
+	return a.IsBillable
 }
 
-func (o *APICall) GetMethod() string {
-	if o == nil {
+func (a *APICall) GetMethod() string {
+	if a == nil {
 		return ""
 	}
-	return o.Method
+	return a.Method
 }
 
-func (o *APICall) GetName() string {
-	if o == nil {
+func (a *APICall) GetName() string {
+	if a == nil {
 		return ""
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *APICall) GetPath() string {
-	if o == nil {
+func (a *APICall) GetPath() string {
+	if a == nil {
 		return ""
 	}
-	return o.Path
+	return a.Path
 }
 
-func (o *APICall) GetSize() *float64 {
-	if o == nil {
+func (a *APICall) GetSize() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.Size
+	return a.Size
 }
 
-func (o *APICall) GetStatus() string {
-	if o == nil {
+func (a *APICall) GetStatus() string {
+	if a == nil {
 		return ""
 	}
-	return o.Status
+	return a.Status
 }
 
-func (o *APICall) GetType() APICallType {
-	if o == nil {
+func (a *APICall) GetType() APICallType {
+	if a == nil {
 		return APICallType("")
 	}
-	return o.Type
+	return a.Type
 }
 
-func (o *APICall) GetWebhookID() *string {
-	if o == nil {
+func (a *APICall) GetWebhookID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.WebhookID
+	return a.WebhookID
 }
 
-func (o *APICall) GetWorkspaceID() *string {
-	if o == nil {
+func (a *APICall) GetWorkspaceID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.WorkspaceID
+	return a.WorkspaceID
 }

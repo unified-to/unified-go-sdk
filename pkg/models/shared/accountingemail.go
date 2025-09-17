@@ -19,16 +19,16 @@ type AccountingEmail struct {
 	Type  *AccountingEmailType `json:"type,omitempty"`
 }
 
-func (o *AccountingEmail) GetEmail() *string {
-	if o == nil {
+func (a *AccountingEmail) GetEmail() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Email
+	return a.Email
 }
 
-func (o *AccountingEmail) GetType() *AccountingEmailType {
-	if o == nil {
+func (a *AccountingEmail) GetType() *AccountingEmailType {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }

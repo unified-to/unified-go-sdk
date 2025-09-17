@@ -25,74 +25,74 @@ type ListUnifiedWebhooksRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListUnifiedWebhooksRequest) GetConnectionID() *string {
-	if o == nil {
+func (l *ListUnifiedWebhooksRequest) GetConnectionID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListUnifiedWebhooksRequest) GetCreatedLte() *string {
-	if o == nil {
+func (l *ListUnifiedWebhooksRequest) GetCreatedLte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CreatedLte
+	return l.CreatedLte
 }
 
-func (o *ListUnifiedWebhooksRequest) GetEnv() *string {
-	if o == nil {
+func (l *ListUnifiedWebhooksRequest) GetEnv() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Env
+	return l.Env
 }
 
-func (o *ListUnifiedWebhooksRequest) GetIntegrationType() *string {
-	if o == nil {
+func (l *ListUnifiedWebhooksRequest) GetIntegrationType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.IntegrationType
+	return l.IntegrationType
 }
 
-func (o *ListUnifiedWebhooksRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListUnifiedWebhooksRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListUnifiedWebhooksRequest) GetObject() *string {
-	if o == nil {
+func (l *ListUnifiedWebhooksRequest) GetObject() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Object
+	return l.Object
 }
 
-func (o *ListUnifiedWebhooksRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListUnifiedWebhooksRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListUnifiedWebhooksRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListUnifiedWebhooksRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListUnifiedWebhooksRequest) GetSort() *string {
-	if o == nil {
+func (l *ListUnifiedWebhooksRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListUnifiedWebhooksRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListUnifiedWebhooksRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListUnifiedWebhooksResponse struct {
@@ -106,30 +106,30 @@ type ListUnifiedWebhooksResponse struct {
 	Webhooks []shared.Webhook
 }
 
-func (o *ListUnifiedWebhooksResponse) GetContentType() string {
-	if o == nil {
+func (l *ListUnifiedWebhooksResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListUnifiedWebhooksResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListUnifiedWebhooksResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListUnifiedWebhooksResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListUnifiedWebhooksResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListUnifiedWebhooksResponse) GetWebhooks() []shared.Webhook {
-	if o == nil {
+func (l *ListUnifiedWebhooksResponse) GetWebhooks() []shared.Webhook {
+	if l == nil {
 		return nil
 	}
-	return o.Webhooks
+	return l.Webhooks
 }

@@ -36,107 +36,107 @@ func (l *LmsCourse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *LmsCourse) GetCategories() []string {
-	if o == nil {
+func (l *LmsCourse) GetCategories() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Categories
+	return l.Categories
 }
 
-func (o *LmsCourse) GetCreatedAt() *time.Time {
-	if o == nil {
+func (l *LmsCourse) GetCreatedAt() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return l.CreatedAt
 }
 
-func (o *LmsCourse) GetCurrency() *string {
-	if o == nil {
+func (l *LmsCourse) GetCurrency() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Currency
+	return l.Currency
 }
 
-func (o *LmsCourse) GetDescription() *string {
-	if o == nil {
+func (l *LmsCourse) GetDescription() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Description
+	return l.Description
 }
 
-func (o *LmsCourse) GetID() *string {
-	if o == nil {
+func (l *LmsCourse) GetID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ID
+	return l.ID
 }
 
-func (o *LmsCourse) GetInstructorIds() []string {
-	if o == nil {
+func (l *LmsCourse) GetInstructorIds() []string {
+	if l == nil {
 		return nil
 	}
-	return o.InstructorIds
+	return l.InstructorIds
 }
 
-func (o *LmsCourse) GetIsActive() *bool {
-	if o == nil {
+func (l *LmsCourse) GetIsActive() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.IsActive
+	return l.IsActive
 }
 
-func (o *LmsCourse) GetIsPrivate() *bool {
-	if o == nil {
+func (l *LmsCourse) GetIsPrivate() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.IsPrivate
+	return l.IsPrivate
 }
 
-func (o *LmsCourse) GetLanguages() []string {
-	if o == nil {
+func (l *LmsCourse) GetLanguages() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Languages
+	return l.Languages
 }
 
-func (o *LmsCourse) GetMedia() []LmsMedia {
-	if o == nil {
+func (l *LmsCourse) GetMedia() []LmsMedia {
+	if l == nil {
 		return nil
 	}
-	return o.Media
+	return l.Media
 }
 
-func (o *LmsCourse) GetName() string {
-	if o == nil {
+func (l *LmsCourse) GetName() string {
+	if l == nil {
 		return ""
 	}
-	return o.Name
+	return l.Name
 }
 
-func (o *LmsCourse) GetPriceAmount() *float64 {
-	if o == nil {
+func (l *LmsCourse) GetPriceAmount() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.PriceAmount
+	return l.PriceAmount
 }
 
-func (o *LmsCourse) GetRaw() map[string]any {
-	if o == nil {
+func (l *LmsCourse) GetRaw() map[string]any {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *LmsCourse) GetStudentIds() []string {
-	if o == nil {
+func (l *LmsCourse) GetStudentIds() []string {
+	if l == nil {
 		return nil
 	}
-	return o.StudentIds
+	return l.StudentIds
 }
 
-func (o *LmsCourse) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (l *LmsCourse) GetUpdatedAt() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return l.UpdatedAt
 }

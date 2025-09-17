@@ -36,107 +36,107 @@ func (h *HrisTimeshift) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HrisTimeshift) GetApprovedAt() *time.Time {
-	if o == nil {
+func (h *HrisTimeshift) GetApprovedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.ApprovedAt
+	return h.ApprovedAt
 }
 
-func (o *HrisTimeshift) GetApproverUserID() *string {
-	if o == nil {
+func (h *HrisTimeshift) GetApproverUserID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ApproverUserID
+	return h.ApproverUserID
 }
 
-func (o *HrisTimeshift) GetCompanyID() *string {
-	if o == nil {
+func (h *HrisTimeshift) GetCompanyID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.CompanyID
+	return h.CompanyID
 }
 
-func (o *HrisTimeshift) GetCompensation() []HrisCompensation {
-	if o == nil {
+func (h *HrisTimeshift) GetCompensation() []HrisCompensation {
+	if h == nil {
 		return nil
 	}
-	return o.Compensation
+	return h.Compensation
 }
 
-func (o *HrisTimeshift) GetCreatedAt() *time.Time {
-	if o == nil {
+func (h *HrisTimeshift) GetCreatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return h.CreatedAt
 }
 
-func (o *HrisTimeshift) GetEmployeeUserID() string {
-	if o == nil {
+func (h *HrisTimeshift) GetEmployeeUserID() string {
+	if h == nil {
 		return ""
 	}
-	return o.EmployeeUserID
+	return h.EmployeeUserID
 }
 
-func (o *HrisTimeshift) GetEndAt() time.Time {
-	if o == nil {
+func (h *HrisTimeshift) GetEndAt() time.Time {
+	if h == nil {
 		return time.Time{}
 	}
-	return o.EndAt
+	return h.EndAt
 }
 
-func (o *HrisTimeshift) GetGroupID() *string {
-	if o == nil {
+func (h *HrisTimeshift) GetGroupID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.GroupID
+	return h.GroupID
 }
 
-func (o *HrisTimeshift) GetHours() *float64 {
-	if o == nil {
+func (h *HrisTimeshift) GetHours() *float64 {
+	if h == nil {
 		return nil
 	}
-	return o.Hours
+	return h.Hours
 }
 
-func (o *HrisTimeshift) GetID() *string {
-	if o == nil {
+func (h *HrisTimeshift) GetID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ID
+	return h.ID
 }
 
-func (o *HrisTimeshift) GetIsApproved() *bool {
-	if o == nil {
+func (h *HrisTimeshift) GetIsApproved() *bool {
+	if h == nil {
 		return nil
 	}
-	return o.IsApproved
+	return h.IsApproved
 }
 
-func (o *HrisTimeshift) GetLocationID() *string {
-	if o == nil {
+func (h *HrisTimeshift) GetLocationID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.LocationID
+	return h.LocationID
 }
 
-func (o *HrisTimeshift) GetRaw() map[string]any {
-	if o == nil {
+func (h *HrisTimeshift) GetRaw() map[string]any {
+	if h == nil {
 		return nil
 	}
-	return o.Raw
+	return h.Raw
 }
 
-func (o *HrisTimeshift) GetStartAt() time.Time {
-	if o == nil {
+func (h *HrisTimeshift) GetStartAt() time.Time {
+	if h == nil {
 		return time.Time{}
 	}
-	return o.StartAt
+	return h.StartAt
 }
 
-func (o *HrisTimeshift) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (h *HrisTimeshift) GetUpdatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return h.UpdatedAt
 }

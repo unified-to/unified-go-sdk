@@ -8,23 +8,23 @@ type VerificationParameterInput struct {
 	Name   *string  `json:"name,omitempty"`
 }
 
-func (o *VerificationParameterInput) GetID() *string {
-	if o == nil {
+func (v *VerificationParameterInput) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *VerificationParameterInput) GetInputs() []string {
-	if o == nil {
+func (v *VerificationParameterInput) GetInputs() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Inputs
+	return v.Inputs
 }
 
-func (o *VerificationParameterInput) GetName() *string {
-	if o == nil {
+func (v *VerificationParameterInput) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }

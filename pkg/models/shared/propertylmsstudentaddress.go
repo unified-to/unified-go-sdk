@@ -13,58 +13,58 @@ type PropertyLmsStudentAddress struct {
 	RegionCode  *string `json:"region_code,omitempty"`
 }
 
-func (o *PropertyLmsStudentAddress) GetAddress1() *string {
-	if o == nil {
+func (p *PropertyLmsStudentAddress) GetAddress1() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address1
+	return p.Address1
 }
 
-func (o *PropertyLmsStudentAddress) GetAddress2() *string {
-	if o == nil {
+func (p *PropertyLmsStudentAddress) GetAddress2() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address2
+	return p.Address2
 }
 
-func (o *PropertyLmsStudentAddress) GetCity() *string {
-	if o == nil {
+func (p *PropertyLmsStudentAddress) GetCity() *string {
+	if p == nil {
 		return nil
 	}
-	return o.City
+	return p.City
 }
 
-func (o *PropertyLmsStudentAddress) GetCountry() *string {
-	if o == nil {
+func (p *PropertyLmsStudentAddress) GetCountry() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Country
+	return p.Country
 }
 
-func (o *PropertyLmsStudentAddress) GetCountryCode() *string {
-	if o == nil {
+func (p *PropertyLmsStudentAddress) GetCountryCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.CountryCode
+	return p.CountryCode
 }
 
-func (o *PropertyLmsStudentAddress) GetPostalCode() *string {
-	if o == nil {
+func (p *PropertyLmsStudentAddress) GetPostalCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.PostalCode
+	return p.PostalCode
 }
 
-func (o *PropertyLmsStudentAddress) GetRegion() *string {
-	if o == nil {
+func (p *PropertyLmsStudentAddress) GetRegion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Region
+	return p.Region
 }
 
-func (o *PropertyLmsStudentAddress) GetRegionCode() *string {
-	if o == nil {
+func (p *PropertyLmsStudentAddress) GetRegionCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.RegionCode
+	return p.RegionCode
 }

@@ -17,32 +17,32 @@ type CreateRepoOrganizationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateRepoOrganizationRequest) GetRepoOrganization() shared.RepoOrganization {
-	if o == nil {
+func (c *CreateRepoOrganizationRequest) GetRepoOrganization() shared.RepoOrganization {
+	if c == nil {
 		return shared.RepoOrganization{}
 	}
-	return o.RepoOrganization
+	return c.RepoOrganization
 }
 
-func (o *CreateRepoOrganizationRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateRepoOrganizationRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateRepoOrganizationRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateRepoOrganizationRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateRepoOrganizationRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateRepoOrganizationRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateRepoOrganizationResponse struct {
@@ -56,30 +56,30 @@ type CreateRepoOrganizationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateRepoOrganizationResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateRepoOrganizationResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateRepoOrganizationResponse) GetRepoOrganization() *shared.RepoOrganization {
-	if o == nil {
+func (c *CreateRepoOrganizationResponse) GetRepoOrganization() *shared.RepoOrganization {
+	if c == nil {
 		return nil
 	}
-	return o.RepoOrganization
+	return c.RepoOrganization
 }
 
-func (o *CreateRepoOrganizationResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateRepoOrganizationResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateRepoOrganizationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateRepoOrganizationResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

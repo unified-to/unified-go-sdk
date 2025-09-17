@@ -32,79 +32,79 @@ func (l *LmsClass) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *LmsClass) GetCourseID() string {
-	if o == nil {
+func (l *LmsClass) GetCourseID() string {
+	if l == nil {
 		return ""
 	}
-	return o.CourseID
+	return l.CourseID
 }
 
-func (o *LmsClass) GetCreatedAt() *time.Time {
-	if o == nil {
+func (l *LmsClass) GetCreatedAt() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return l.CreatedAt
 }
 
-func (o *LmsClass) GetDescription() *string {
-	if o == nil {
+func (l *LmsClass) GetDescription() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Description
+	return l.Description
 }
 
-func (o *LmsClass) GetID() *string {
-	if o == nil {
+func (l *LmsClass) GetID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ID
+	return l.ID
 }
 
-func (o *LmsClass) GetInstructorIds() []string {
-	if o == nil {
+func (l *LmsClass) GetInstructorIds() []string {
+	if l == nil {
 		return nil
 	}
-	return o.InstructorIds
+	return l.InstructorIds
 }
 
-func (o *LmsClass) GetLanguages() []string {
-	if o == nil {
+func (l *LmsClass) GetLanguages() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Languages
+	return l.Languages
 }
 
-func (o *LmsClass) GetMedia() []LmsMedia {
-	if o == nil {
+func (l *LmsClass) GetMedia() []LmsMedia {
+	if l == nil {
 		return nil
 	}
-	return o.Media
+	return l.Media
 }
 
-func (o *LmsClass) GetName() string {
-	if o == nil {
+func (l *LmsClass) GetName() string {
+	if l == nil {
 		return ""
 	}
-	return o.Name
+	return l.Name
 }
 
-func (o *LmsClass) GetRaw() map[string]any {
-	if o == nil {
+func (l *LmsClass) GetRaw() map[string]any {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *LmsClass) GetStudentIds() []string {
-	if o == nil {
+func (l *LmsClass) GetStudentIds() []string {
+	if l == nil {
 		return nil
 	}
-	return o.StudentIds
+	return l.StudentIds
 }
 
-func (o *LmsClass) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (l *LmsClass) GetUpdatedAt() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return l.UpdatedAt
 }

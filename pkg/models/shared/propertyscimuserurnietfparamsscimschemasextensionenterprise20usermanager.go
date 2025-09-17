@@ -22,37 +22,37 @@ type PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager st
 	Value       *string                                                                       `json:"value,omitempty"`
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetDollarRef() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetDollarRef() *string {
+	if p == nil {
 		return nil
 	}
-	return o.DollarRef
+	return p.DollarRef
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetDisplayName() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetDisplayName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.DisplayName
+	return p.DisplayName
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetManagerID() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetManagerID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ManagerID
+	return p.ManagerID
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetType() *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetType() *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType {
+	if p == nil {
 		return nil
 	}
-	return o.Type
+	return p.Type
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetValue() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetValue() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Value
+	return p.Value
 }

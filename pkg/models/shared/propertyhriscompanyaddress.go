@@ -13,58 +13,58 @@ type PropertyHrisCompanyAddress struct {
 	RegionCode  *string `json:"region_code,omitempty"`
 }
 
-func (o *PropertyHrisCompanyAddress) GetAddress1() *string {
-	if o == nil {
+func (p *PropertyHrisCompanyAddress) GetAddress1() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address1
+	return p.Address1
 }
 
-func (o *PropertyHrisCompanyAddress) GetAddress2() *string {
-	if o == nil {
+func (p *PropertyHrisCompanyAddress) GetAddress2() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address2
+	return p.Address2
 }
 
-func (o *PropertyHrisCompanyAddress) GetCity() *string {
-	if o == nil {
+func (p *PropertyHrisCompanyAddress) GetCity() *string {
+	if p == nil {
 		return nil
 	}
-	return o.City
+	return p.City
 }
 
-func (o *PropertyHrisCompanyAddress) GetCountry() *string {
-	if o == nil {
+func (p *PropertyHrisCompanyAddress) GetCountry() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Country
+	return p.Country
 }
 
-func (o *PropertyHrisCompanyAddress) GetCountryCode() *string {
-	if o == nil {
+func (p *PropertyHrisCompanyAddress) GetCountryCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.CountryCode
+	return p.CountryCode
 }
 
-func (o *PropertyHrisCompanyAddress) GetPostalCode() *string {
-	if o == nil {
+func (p *PropertyHrisCompanyAddress) GetPostalCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.PostalCode
+	return p.PostalCode
 }
 
-func (o *PropertyHrisCompanyAddress) GetRegion() *string {
-	if o == nil {
+func (p *PropertyHrisCompanyAddress) GetRegion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Region
+	return p.Region
 }
 
-func (o *PropertyHrisCompanyAddress) GetRegionCode() *string {
-	if o == nil {
+func (p *PropertyHrisCompanyAddress) GetRegionCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.RegionCode
+	return p.RegionCode
 }

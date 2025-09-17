@@ -18,32 +18,32 @@ type CreateCrmDealRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateCrmDealRequest) GetCrmDeal() shared.CrmDeal {
-	if o == nil {
+func (c *CreateCrmDealRequest) GetCrmDeal() shared.CrmDeal {
+	if c == nil {
 		return shared.CrmDeal{}
 	}
-	return o.CrmDeal
+	return c.CrmDeal
 }
 
-func (o *CreateCrmDealRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateCrmDealRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateCrmDealRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateCrmDealRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateCrmDealRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateCrmDealRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateCrmDealResponse struct {
@@ -57,30 +57,30 @@ type CreateCrmDealResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateCrmDealResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateCrmDealResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateCrmDealResponse) GetCrmDeal() *shared.CrmDeal {
-	if o == nil {
+func (c *CreateCrmDealResponse) GetCrmDeal() *shared.CrmDeal {
+	if c == nil {
 		return nil
 	}
-	return o.CrmDeal
+	return c.CrmDeal
 }
 
-func (o *CreateCrmDealResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateCrmDealResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateCrmDealResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateCrmDealResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

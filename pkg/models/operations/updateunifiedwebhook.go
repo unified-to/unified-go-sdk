@@ -14,18 +14,18 @@ type UpdateUnifiedWebhookRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateUnifiedWebhookRequest) GetWebhook() shared.Webhook {
-	if o == nil {
+func (u *UpdateUnifiedWebhookRequest) GetWebhook() shared.Webhook {
+	if u == nil {
 		return shared.Webhook{}
 	}
-	return o.Webhook
+	return u.Webhook
 }
 
-func (o *UpdateUnifiedWebhookRequest) GetID() string {
-	if o == nil {
+func (u *UpdateUnifiedWebhookRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
 type UpdateUnifiedWebhookResponse struct {
@@ -39,30 +39,30 @@ type UpdateUnifiedWebhookResponse struct {
 	Webhook *shared.Webhook
 }
 
-func (o *UpdateUnifiedWebhookResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateUnifiedWebhookResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateUnifiedWebhookResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateUnifiedWebhookResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateUnifiedWebhookResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateUnifiedWebhookResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }
 
-func (o *UpdateUnifiedWebhookResponse) GetWebhook() *shared.Webhook {
-	if o == nil {
+func (u *UpdateUnifiedWebhookResponse) GetWebhook() *shared.Webhook {
+	if u == nil {
 		return nil
 	}
-	return o.Webhook
+	return u.Webhook
 }

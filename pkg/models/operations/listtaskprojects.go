@@ -28,81 +28,81 @@ type ListTaskProjectsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListTaskProjectsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListTaskProjectsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListTaskProjectsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListTaskProjectsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListTaskProjectsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListTaskProjectsRequest) GetOrgID() *string {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetOrgID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.OrgID
+	return l.OrgID
 }
 
-func (o *ListTaskProjectsRequest) GetParentID() *string {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetParentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ParentID
+	return l.ParentID
 }
 
-func (o *ListTaskProjectsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListTaskProjectsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListTaskProjectsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListTaskProjectsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListTaskProjectsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListTaskProjectsResponse struct {
@@ -116,30 +116,30 @@ type ListTaskProjectsResponse struct {
 	TaskProjects []shared.TaskProject
 }
 
-func (o *ListTaskProjectsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListTaskProjectsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListTaskProjectsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListTaskProjectsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListTaskProjectsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListTaskProjectsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListTaskProjectsResponse) GetTaskProjects() []shared.TaskProject {
-	if o == nil {
+func (l *ListTaskProjectsResponse) GetTaskProjects() []shared.TaskProject {
+	if l == nil {
 		return nil
 	}
-	return o.TaskProjects
+	return l.TaskProjects
 }

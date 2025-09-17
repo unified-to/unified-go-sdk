@@ -17,32 +17,32 @@ type CreatePaymentSubscriptionRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreatePaymentSubscriptionRequest) GetPaymentSubscription() shared.PaymentSubscription {
-	if o == nil {
+func (c *CreatePaymentSubscriptionRequest) GetPaymentSubscription() shared.PaymentSubscription {
+	if c == nil {
 		return shared.PaymentSubscription{}
 	}
-	return o.PaymentSubscription
+	return c.PaymentSubscription
 }
 
-func (o *CreatePaymentSubscriptionRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreatePaymentSubscriptionRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreatePaymentSubscriptionRequest) GetFields() []string {
-	if o == nil {
+func (c *CreatePaymentSubscriptionRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreatePaymentSubscriptionRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreatePaymentSubscriptionRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreatePaymentSubscriptionResponse struct {
@@ -56,30 +56,30 @@ type CreatePaymentSubscriptionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreatePaymentSubscriptionResponse) GetContentType() string {
-	if o == nil {
+func (c *CreatePaymentSubscriptionResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreatePaymentSubscriptionResponse) GetPaymentSubscription() *shared.PaymentSubscription {
-	if o == nil {
+func (c *CreatePaymentSubscriptionResponse) GetPaymentSubscription() *shared.PaymentSubscription {
+	if c == nil {
 		return nil
 	}
-	return o.PaymentSubscription
+	return c.PaymentSubscription
 }
 
-func (o *CreatePaymentSubscriptionResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreatePaymentSubscriptionResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreatePaymentSubscriptionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreatePaymentSubscriptionResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

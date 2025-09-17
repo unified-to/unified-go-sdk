@@ -19,39 +19,39 @@ type UpdateRepoPullrequestRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateRepoPullrequestRequest) GetRepoPullrequest() shared.RepoPullrequest {
-	if o == nil {
+func (u *UpdateRepoPullrequestRequest) GetRepoPullrequest() shared.RepoPullrequest {
+	if u == nil {
 		return shared.RepoPullrequest{}
 	}
-	return o.RepoPullrequest
+	return u.RepoPullrequest
 }
 
-func (o *UpdateRepoPullrequestRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateRepoPullrequestRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateRepoPullrequestRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateRepoPullrequestRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateRepoPullrequestRequest) GetID() string {
-	if o == nil {
+func (u *UpdateRepoPullrequestRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateRepoPullrequestRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateRepoPullrequestRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateRepoPullrequestResponse struct {
@@ -65,30 +65,30 @@ type UpdateRepoPullrequestResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateRepoPullrequestResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateRepoPullrequestResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateRepoPullrequestResponse) GetRepoPullrequest() *shared.RepoPullrequest {
-	if o == nil {
+func (u *UpdateRepoPullrequestResponse) GetRepoPullrequest() *shared.RepoPullrequest {
+	if u == nil {
 		return nil
 	}
-	return o.RepoPullrequest
+	return u.RepoPullrequest
 }
 
-func (o *UpdateRepoPullrequestResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateRepoPullrequestResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateRepoPullrequestResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateRepoPullrequestResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

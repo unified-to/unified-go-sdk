@@ -18,32 +18,32 @@ type GetLmsInstructorRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetLmsInstructorRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetLmsInstructorRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetLmsInstructorRequest) GetFields() []string {
-	if o == nil {
+func (g *GetLmsInstructorRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetLmsInstructorRequest) GetID() string {
-	if o == nil {
+func (g *GetLmsInstructorRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetLmsInstructorRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetLmsInstructorRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetLmsInstructorResponse struct {
@@ -57,30 +57,30 @@ type GetLmsInstructorResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetLmsInstructorResponse) GetContentType() string {
-	if o == nil {
+func (g *GetLmsInstructorResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetLmsInstructorResponse) GetLmsInstructor() *shared.LmsInstructor {
-	if o == nil {
+func (g *GetLmsInstructorResponse) GetLmsInstructor() *shared.LmsInstructor {
+	if g == nil {
 		return nil
 	}
-	return o.LmsInstructor
+	return g.LmsInstructor
 }
 
-func (o *GetLmsInstructorResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetLmsInstructorResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetLmsInstructorResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetLmsInstructorResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

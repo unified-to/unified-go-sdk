@@ -26,74 +26,74 @@ type ListAccountingJournalsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAccountingJournalsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAccountingJournalsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAccountingJournalsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAccountingJournalsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAccountingJournalsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAccountingJournalsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAccountingJournalsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAccountingJournalsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAccountingJournalsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAccountingJournalsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAccountingJournalsRequest) GetOrgID() *string {
-	if o == nil {
+func (l *ListAccountingJournalsRequest) GetOrgID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.OrgID
+	return l.OrgID
 }
 
-func (o *ListAccountingJournalsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAccountingJournalsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAccountingJournalsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAccountingJournalsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAccountingJournalsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAccountingJournalsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAccountingJournalsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAccountingJournalsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAccountingJournalsResponse struct {
@@ -107,30 +107,30 @@ type ListAccountingJournalsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAccountingJournalsResponse) GetAccountingJournals() []shared.AccountingJournal {
-	if o == nil {
+func (l *ListAccountingJournalsResponse) GetAccountingJournals() []shared.AccountingJournal {
+	if l == nil {
 		return nil
 	}
-	return o.AccountingJournals
+	return l.AccountingJournals
 }
 
-func (o *ListAccountingJournalsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAccountingJournalsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAccountingJournalsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAccountingJournalsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAccountingJournalsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAccountingJournalsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

@@ -13,18 +13,18 @@ type RemoveTicketingTicketRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveTicketingTicketRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveTicketingTicketRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveTicketingTicketRequest) GetID() string {
-	if o == nil {
+func (r *RemoveTicketingTicketRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveTicketingTicketResponse struct {
@@ -37,30 +37,30 @@ type RemoveTicketingTicketResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveTicketingTicketResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveTicketingTicketResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveTicketingTicketResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveTicketingTicketResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveTicketingTicketResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveTicketingTicketResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveTicketingTicketResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveTicketingTicketResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

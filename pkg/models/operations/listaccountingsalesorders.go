@@ -26,74 +26,74 @@ type ListAccountingSalesordersRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAccountingSalesordersRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAccountingSalesordersRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAccountingSalesordersRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAccountingSalesordersRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAccountingSalesordersRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAccountingSalesordersRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAccountingSalesordersRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAccountingSalesordersRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAccountingSalesordersRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAccountingSalesordersRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAccountingSalesordersRequest) GetOrgID() *string {
-	if o == nil {
+func (l *ListAccountingSalesordersRequest) GetOrgID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.OrgID
+	return l.OrgID
 }
 
-func (o *ListAccountingSalesordersRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAccountingSalesordersRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAccountingSalesordersRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAccountingSalesordersRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAccountingSalesordersRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAccountingSalesordersRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAccountingSalesordersRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAccountingSalesordersRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAccountingSalesordersResponse struct {
@@ -107,30 +107,30 @@ type ListAccountingSalesordersResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAccountingSalesordersResponse) GetAccountingSalesorders() []shared.AccountingSalesorder {
-	if o == nil {
+func (l *ListAccountingSalesordersResponse) GetAccountingSalesorders() []shared.AccountingSalesorder {
+	if l == nil {
 		return nil
 	}
-	return o.AccountingSalesorders
+	return l.AccountingSalesorders
 }
 
-func (o *ListAccountingSalesordersResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAccountingSalesordersResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAccountingSalesordersResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAccountingSalesordersResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAccountingSalesordersResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAccountingSalesordersResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

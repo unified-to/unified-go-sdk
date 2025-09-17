@@ -32,95 +32,95 @@ type ListCrmDealsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListCrmDealsRequest) GetCompanyID() *string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetCompanyID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyID
+	return l.CompanyID
 }
 
-func (o *ListCrmDealsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListCrmDealsRequest) GetContactID() *string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetContactID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ContactID
+	return l.ContactID
 }
 
-func (o *ListCrmDealsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListCrmDealsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListCrmDealsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListCrmDealsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListCrmDealsRequest) GetPipelineID() *string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetPipelineID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.PipelineID
+	return l.PipelineID
 }
 
-func (o *ListCrmDealsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListCrmDealsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListCrmDealsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListCrmDealsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListCrmDealsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListCrmDealsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListCrmDealsResponse struct {
@@ -134,30 +134,30 @@ type ListCrmDealsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListCrmDealsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListCrmDealsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListCrmDealsResponse) GetCrmDeals() []shared.CrmDeal {
-	if o == nil {
+func (l *ListCrmDealsResponse) GetCrmDeals() []shared.CrmDeal {
+	if l == nil {
 		return nil
 	}
-	return o.CrmDeals
+	return l.CrmDeals
 }
 
-func (o *ListCrmDealsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListCrmDealsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListCrmDealsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListCrmDealsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

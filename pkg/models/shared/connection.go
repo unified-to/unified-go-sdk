@@ -39,107 +39,107 @@ func (c *Connection) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *Connection) GetAuth() *PropertyConnectionAuth {
-	if o == nil {
+func (c *Connection) GetAuth() *PropertyConnectionAuth {
+	if c == nil {
 		return nil
 	}
-	return o.Auth
+	return c.Auth
 }
 
-func (o *Connection) GetAuthAwsArn() *string {
-	if o == nil {
+func (c *Connection) GetAuthAwsArn() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AuthAwsArn
+	return c.AuthAwsArn
 }
 
-func (o *Connection) GetCategories() []PropertyConnectionCategories {
-	if o == nil {
+func (c *Connection) GetCategories() []PropertyConnectionCategories {
+	if c == nil {
 		return []PropertyConnectionCategories{}
 	}
-	return o.Categories
+	return c.Categories
 }
 
-func (o *Connection) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *Connection) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *Connection) GetEnvironment() *string {
-	if o == nil {
+func (c *Connection) GetEnvironment() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Environment
+	return c.Environment
 }
 
-func (o *Connection) GetExternalXref() *string {
-	if o == nil {
+func (c *Connection) GetExternalXref() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ExternalXref
+	return c.ExternalXref
 }
 
-func (o *Connection) GetID() *string {
-	if o == nil {
+func (c *Connection) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *Connection) GetIntegrationName() *string {
-	if o == nil {
+func (c *Connection) GetIntegrationName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.IntegrationName
+	return c.IntegrationName
 }
 
-func (o *Connection) GetIntegrationType() string {
-	if o == nil {
+func (c *Connection) GetIntegrationType() string {
+	if c == nil {
 		return ""
 	}
-	return o.IntegrationType
+	return c.IntegrationType
 }
 
-func (o *Connection) GetIsPaused() *bool {
-	if o == nil {
+func (c *Connection) GetIsPaused() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsPaused
+	return c.IsPaused
 }
 
-func (o *Connection) GetLastHealthyAt() *time.Time {
-	if o == nil {
+func (c *Connection) GetLastHealthyAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.LastHealthyAt
+	return c.LastHealthyAt
 }
 
-func (o *Connection) GetLastUnhealthyAt() *time.Time {
-	if o == nil {
+func (c *Connection) GetLastUnhealthyAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.LastUnhealthyAt
+	return c.LastUnhealthyAt
 }
 
-func (o *Connection) GetPermissions() []PropertyConnectionPermissions {
-	if o == nil {
+func (c *Connection) GetPermissions() []PropertyConnectionPermissions {
+	if c == nil {
 		return []PropertyConnectionPermissions{}
 	}
-	return o.Permissions
+	return c.Permissions
 }
 
-func (o *Connection) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *Connection) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *Connection) GetWorkspaceID() *string {
-	if o == nil {
+func (c *Connection) GetWorkspaceID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.WorkspaceID
+	return c.WorkspaceID
 }

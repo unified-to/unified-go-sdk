@@ -19,39 +19,39 @@ type UpdateAtsCompanyRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAtsCompanyRequest) GetAtsCompany() shared.AtsCompany {
-	if o == nil {
+func (u *UpdateAtsCompanyRequest) GetAtsCompany() shared.AtsCompany {
+	if u == nil {
 		return shared.AtsCompany{}
 	}
-	return o.AtsCompany
+	return u.AtsCompany
 }
 
-func (o *UpdateAtsCompanyRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAtsCompanyRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAtsCompanyRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAtsCompanyRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAtsCompanyRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAtsCompanyRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAtsCompanyRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAtsCompanyRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAtsCompanyResponse struct {
@@ -65,30 +65,30 @@ type UpdateAtsCompanyResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAtsCompanyResponse) GetAtsCompany() *shared.AtsCompany {
-	if o == nil {
+func (u *UpdateAtsCompanyResponse) GetAtsCompany() *shared.AtsCompany {
+	if u == nil {
 		return nil
 	}
-	return o.AtsCompany
+	return u.AtsCompany
 }
 
-func (o *UpdateAtsCompanyResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAtsCompanyResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAtsCompanyResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAtsCompanyResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAtsCompanyResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAtsCompanyResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

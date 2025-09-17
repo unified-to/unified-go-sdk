@@ -803,184 +803,184 @@ func (i *Integration) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *Integration) GetActiveHealthyConnections() *float64 {
-	if o == nil {
+func (i *Integration) GetActiveHealthyConnections() *float64 {
+	if i == nil {
 		return nil
 	}
-	return o.ActiveHealthyConnections
+	return i.ActiveHealthyConnections
 }
 
-func (o *Integration) GetAPI() *API {
-	if o == nil {
+func (i *Integration) GetAPI() *API {
+	if i == nil {
 		return nil
 	}
-	return o.API
+	return i.API
 }
 
-func (o *Integration) GetAPIDocsURL() *string {
-	if o == nil {
+func (i *Integration) GetAPIDocsURL() *string {
+	if i == nil {
 		return nil
 	}
-	return o.APIDocsURL
+	return i.APIDocsURL
 }
 
-func (o *Integration) GetBeta() *bool {
-	if o == nil {
+func (i *Integration) GetBeta() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.Beta
+	return i.Beta
 }
 
-func (o *Integration) GetCategories() []PropertyIntegrationCategories {
-	if o == nil {
+func (i *Integration) GetCategories() []PropertyIntegrationCategories {
+	if i == nil {
 		return []PropertyIntegrationCategories{}
 	}
-	return o.Categories
+	return i.Categories
 }
 
-func (o *Integration) GetColor() *string {
-	if o == nil {
+func (i *Integration) GetColor() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Color
+	return i.Color
 }
 
-func (o *Integration) GetCreatedAt() *string {
-	if o == nil {
+func (i *Integration) GetCreatedAt() *string {
+	if i == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return i.CreatedAt
 }
 
-func (o *Integration) GetDescription() *string {
-	if o == nil {
+func (i *Integration) GetDescription() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Description
+	return i.Description
 }
 
-func (o *Integration) GetFaIcon() *string {
-	if o == nil {
+func (i *Integration) GetFaIcon() *string {
+	if i == nil {
 		return nil
 	}
-	return o.FaIcon
+	return i.FaIcon
 }
 
-func (o *Integration) GetFeatured() *bool {
-	if o == nil {
+func (i *Integration) GetFeatured() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.Featured
+	return i.Featured
 }
 
-func (o *Integration) GetInProgress() *bool {
-	if o == nil {
+func (i *Integration) GetInProgress() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.InProgress
+	return i.InProgress
 }
 
-func (o *Integration) GetIsActive() *bool {
-	if o == nil {
+func (i *Integration) GetIsActive() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.IsActive
+	return i.IsActive
 }
 
-func (o *Integration) GetLogoURL() *string {
-	if o == nil {
+func (i *Integration) GetLogoURL() *string {
+	if i == nil {
 		return nil
 	}
-	return o.LogoURL
+	return i.LogoURL
 }
 
-func (o *Integration) GetName() string {
-	if o == nil {
+func (i *Integration) GetName() string {
+	if i == nil {
 		return ""
 	}
-	return o.Name
+	return i.Name
 }
 
-func (o *Integration) GetPartnership() *Partnership {
-	if o == nil {
+func (i *Integration) GetPartnership() *Partnership {
+	if i == nil {
 		return nil
 	}
-	return o.Partnership
+	return i.Partnership
 }
 
-func (o *Integration) GetPopularity() *float64 {
-	if o == nil {
+func (i *Integration) GetPopularity() *float64 {
+	if i == nil {
 		return nil
 	}
-	return o.Popularity
+	return i.Popularity
 }
 
-func (o *Integration) GetRateLimitDescription() *string {
-	if o == nil {
+func (i *Integration) GetRateLimitDescription() *string {
+	if i == nil {
 		return nil
 	}
-	return o.RateLimitDescription
+	return i.RateLimitDescription
 }
 
-func (o *Integration) GetSandbox() *Sandbox {
-	if o == nil {
+func (i *Integration) GetSandbox() *Sandbox {
+	if i == nil {
 		return nil
 	}
-	return o.Sandbox
+	return i.Sandbox
 }
 
-func (o *Integration) GetSupport() map[string]any {
-	if o == nil {
+func (i *Integration) GetSupport() map[string]any {
+	if i == nil {
 		return nil
 	}
-	return o.Support
+	return i.Support
 }
 
-func (o *Integration) GetTestedAt() *time.Time {
-	if o == nil {
+func (i *Integration) GetTestedAt() *time.Time {
+	if i == nil {
 		return nil
 	}
-	return o.TestedAt
+	return i.TestedAt
 }
 
-func (o *Integration) GetTextColor() *string {
-	if o == nil {
+func (i *Integration) GetTextColor() *string {
+	if i == nil {
 		return nil
 	}
-	return o.TextColor
+	return i.TextColor
 }
 
-func (o *Integration) GetTokenInstructions() []string {
-	if o == nil {
+func (i *Integration) GetTokenInstructions() []string {
+	if i == nil {
 		return nil
 	}
-	return o.TokenInstructions
+	return i.TokenInstructions
 }
 
-func (o *Integration) GetTokenNames() []string {
-	if o == nil {
+func (i *Integration) GetTokenNames() []string {
+	if i == nil {
 		return nil
 	}
-	return o.TokenNames
+	return i.TokenNames
 }
 
-func (o *Integration) GetType() string {
-	if o == nil {
+func (i *Integration) GetType() string {
+	if i == nil {
 		return ""
 	}
-	return o.Type
+	return i.Type
 }
 
-func (o *Integration) GetUpdatedAt() *string {
-	if o == nil {
+func (i *Integration) GetUpdatedAt() *string {
+	if i == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return i.UpdatedAt
 }
 
-func (o *Integration) GetWebURL() *string {
-	if o == nil {
+func (i *Integration) GetWebURL() *string {
+	if i == nil {
 		return nil
 	}
-	return o.WebURL
+	return i.WebURL
 }

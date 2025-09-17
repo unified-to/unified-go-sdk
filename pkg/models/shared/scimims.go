@@ -26,30 +26,30 @@ type ScimIms struct {
 	Value   *string      `json:"value,omitempty"`
 }
 
-func (o *ScimIms) GetDisplay() *string {
-	if o == nil {
+func (s *ScimIms) GetDisplay() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Display
+	return s.Display
 }
 
-func (o *ScimIms) GetPrimary() *bool {
-	if o == nil {
+func (s *ScimIms) GetPrimary() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Primary
+	return s.Primary
 }
 
-func (o *ScimIms) GetType() *ScimImsType {
-	if o == nil {
+func (s *ScimIms) GetType() *ScimImsType {
+	if s == nil {
 		return nil
 	}
-	return o.Type
+	return s.Type
 }
 
-func (o *ScimIms) GetValue() *string {
-	if o == nil {
+func (s *ScimIms) GetValue() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Value
+	return s.Value
 }

@@ -13,58 +13,58 @@ type AccountingJournalLineitem struct {
 	TotalAmount *float64 `json:"total_amount,omitempty"`
 }
 
-func (o *AccountingJournalLineitem) GetAccountID() *string {
-	if o == nil {
+func (a *AccountingJournalLineitem) GetAccountID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AccountID
+	return a.AccountID
 }
 
-func (o *AccountingJournalLineitem) GetContactID() *string {
-	if o == nil {
+func (a *AccountingJournalLineitem) GetContactID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ContactID
+	return a.ContactID
 }
 
-func (o *AccountingJournalLineitem) GetDescription() *string {
-	if o == nil {
+func (a *AccountingJournalLineitem) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AccountingJournalLineitem) GetID() *string {
-	if o == nil {
+func (a *AccountingJournalLineitem) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingJournalLineitem) GetInvoiceID() *string {
-	if o == nil {
+func (a *AccountingJournalLineitem) GetInvoiceID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.InvoiceID
+	return a.InvoiceID
 }
 
-func (o *AccountingJournalLineitem) GetPaymentID() *string {
-	if o == nil {
+func (a *AccountingJournalLineitem) GetPaymentID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.PaymentID
+	return a.PaymentID
 }
 
-func (o *AccountingJournalLineitem) GetTaxAmount() *float64 {
-	if o == nil {
+func (a *AccountingJournalLineitem) GetTaxAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TaxAmount
+	return a.TaxAmount
 }
 
-func (o *AccountingJournalLineitem) GetTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingJournalLineitem) GetTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalAmount
+	return a.TotalAmount
 }

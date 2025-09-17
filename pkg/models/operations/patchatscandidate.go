@@ -19,39 +19,39 @@ type PatchAtsCandidateRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAtsCandidateRequest) GetAtsCandidate() shared.AtsCandidate {
-	if o == nil {
+func (p *PatchAtsCandidateRequest) GetAtsCandidate() shared.AtsCandidate {
+	if p == nil {
 		return shared.AtsCandidate{}
 	}
-	return o.AtsCandidate
+	return p.AtsCandidate
 }
 
-func (o *PatchAtsCandidateRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAtsCandidateRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAtsCandidateRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAtsCandidateRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAtsCandidateRequest) GetID() string {
-	if o == nil {
+func (p *PatchAtsCandidateRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAtsCandidateRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAtsCandidateRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAtsCandidateResponse struct {
@@ -65,30 +65,30 @@ type PatchAtsCandidateResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAtsCandidateResponse) GetAtsCandidate() *shared.AtsCandidate {
-	if o == nil {
+func (p *PatchAtsCandidateResponse) GetAtsCandidate() *shared.AtsCandidate {
+	if p == nil {
 		return nil
 	}
-	return o.AtsCandidate
+	return p.AtsCandidate
 }
 
-func (o *PatchAtsCandidateResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAtsCandidateResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAtsCandidateResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAtsCandidateResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAtsCandidateResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAtsCandidateResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

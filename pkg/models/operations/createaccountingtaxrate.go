@@ -17,32 +17,32 @@ type CreateAccountingTaxrateRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAccountingTaxrateRequest) GetAccountingTaxrate() shared.AccountingTaxrate {
-	if o == nil {
+func (c *CreateAccountingTaxrateRequest) GetAccountingTaxrate() shared.AccountingTaxrate {
+	if c == nil {
 		return shared.AccountingTaxrate{}
 	}
-	return o.AccountingTaxrate
+	return c.AccountingTaxrate
 }
 
-func (o *CreateAccountingTaxrateRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAccountingTaxrateRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAccountingTaxrateRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAccountingTaxrateRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAccountingTaxrateRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAccountingTaxrateRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAccountingTaxrateResponse struct {
@@ -56,30 +56,30 @@ type CreateAccountingTaxrateResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingTaxrateResponse) GetAccountingTaxrate() *shared.AccountingTaxrate {
-	if o == nil {
+func (c *CreateAccountingTaxrateResponse) GetAccountingTaxrate() *shared.AccountingTaxrate {
+	if c == nil {
 		return nil
 	}
-	return o.AccountingTaxrate
+	return c.AccountingTaxrate
 }
 
-func (o *CreateAccountingTaxrateResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAccountingTaxrateResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAccountingTaxrateResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAccountingTaxrateResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAccountingTaxrateResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAccountingTaxrateResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

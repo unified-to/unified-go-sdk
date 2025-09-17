@@ -11,44 +11,44 @@ type MessagingAttachment struct {
 	Size              *float64 `json:"size,omitempty"`
 }
 
-func (o *MessagingAttachment) GetContentIdentifier() *string {
-	if o == nil {
+func (m *MessagingAttachment) GetContentIdentifier() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ContentIdentifier
+	return m.ContentIdentifier
 }
 
-func (o *MessagingAttachment) GetContentType() *string {
-	if o == nil {
+func (m *MessagingAttachment) GetContentType() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ContentType
+	return m.ContentType
 }
 
-func (o *MessagingAttachment) GetDownloadURL() *string {
-	if o == nil {
+func (m *MessagingAttachment) GetDownloadURL() *string {
+	if m == nil {
 		return nil
 	}
-	return o.DownloadURL
+	return m.DownloadURL
 }
 
-func (o *MessagingAttachment) GetFilename() *string {
-	if o == nil {
+func (m *MessagingAttachment) GetFilename() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Filename
+	return m.Filename
 }
 
-func (o *MessagingAttachment) GetMessageID() *string {
-	if o == nil {
+func (m *MessagingAttachment) GetMessageID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.MessageID
+	return m.MessageID
 }
 
-func (o *MessagingAttachment) GetSize() *float64 {
-	if o == nil {
+func (m *MessagingAttachment) GetSize() *float64 {
+	if m == nil {
 		return nil
 	}
-	return o.Size
+	return m.Size
 }

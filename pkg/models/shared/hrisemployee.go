@@ -115,268 +115,268 @@ func (h *HrisEmployee) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HrisEmployee) GetAddress() *PropertyHrisEmployeeAddress {
-	if o == nil {
+func (h *HrisEmployee) GetAddress() *PropertyHrisEmployeeAddress {
+	if h == nil {
 		return nil
 	}
-	return o.Address
+	return h.Address
 }
 
-func (o *HrisEmployee) GetBio() *string {
-	if o == nil {
+func (h *HrisEmployee) GetBio() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Bio
+	return h.Bio
 }
 
-func (o *HrisEmployee) GetCompanyID() *string {
-	if o == nil {
+func (h *HrisEmployee) GetCompanyID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.CompanyID
+	return h.CompanyID
 }
 
-func (o *HrisEmployee) GetCompensation() []HrisCompensation {
-	if o == nil {
+func (h *HrisEmployee) GetCompensation() []HrisCompensation {
+	if h == nil {
 		return nil
 	}
-	return o.Compensation
+	return h.Compensation
 }
 
-func (o *HrisEmployee) GetCreatedAt() *time.Time {
-	if o == nil {
+func (h *HrisEmployee) GetCreatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return h.CreatedAt
 }
 
-func (o *HrisEmployee) GetCurrency() *string {
-	if o == nil {
+func (h *HrisEmployee) GetCurrency() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Currency
+	return h.Currency
 }
 
-func (o *HrisEmployee) GetDateOfBirth() *time.Time {
-	if o == nil {
+func (h *HrisEmployee) GetDateOfBirth() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.DateOfBirth
+	return h.DateOfBirth
 }
 
-func (o *HrisEmployee) GetDepartment() *string {
-	if o == nil {
+func (h *HrisEmployee) GetDepartment() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Department
+	return h.Department
 }
 
-func (o *HrisEmployee) GetDivision() *string {
-	if o == nil {
+func (h *HrisEmployee) GetDivision() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Division
+	return h.Division
 }
 
-func (o *HrisEmployee) GetEmails() []HrisEmail {
-	if o == nil {
+func (h *HrisEmployee) GetEmails() []HrisEmail {
+	if h == nil {
 		return nil
 	}
-	return o.Emails
+	return h.Emails
 }
 
-func (o *HrisEmployee) GetEmployeeNumber() *string {
-	if o == nil {
+func (h *HrisEmployee) GetEmployeeNumber() *string {
+	if h == nil {
 		return nil
 	}
-	return o.EmployeeNumber
+	return h.EmployeeNumber
 }
 
-func (o *HrisEmployee) GetEmployeeRoles() []PropertyHrisEmployeeEmployeeRoles {
-	if o == nil {
+func (h *HrisEmployee) GetEmployeeRoles() []PropertyHrisEmployeeEmployeeRoles {
+	if h == nil {
 		return nil
 	}
-	return o.EmployeeRoles
+	return h.EmployeeRoles
 }
 
-func (o *HrisEmployee) GetEmploymentStatus() *EmploymentStatus {
-	if o == nil {
+func (h *HrisEmployee) GetEmploymentStatus() *EmploymentStatus {
+	if h == nil {
 		return nil
 	}
-	return o.EmploymentStatus
+	return h.EmploymentStatus
 }
 
-func (o *HrisEmployee) GetEmploymentType() *HrisEmployeeEmploymentType {
-	if o == nil {
+func (h *HrisEmployee) GetEmploymentType() *HrisEmployeeEmploymentType {
+	if h == nil {
 		return nil
 	}
-	return o.EmploymentType
+	return h.EmploymentType
 }
 
-func (o *HrisEmployee) GetGender() *HrisEmployeeGender {
-	if o == nil {
+func (h *HrisEmployee) GetGender() *HrisEmployeeGender {
+	if h == nil {
 		return nil
 	}
-	return o.Gender
+	return h.Gender
 }
 
-func (o *HrisEmployee) GetGroups() []HrisGroup {
-	if o == nil {
+func (h *HrisEmployee) GetGroups() []HrisGroup {
+	if h == nil {
 		return nil
 	}
-	return o.Groups
+	return h.Groups
 }
 
-func (o *HrisEmployee) GetHiredAt() *time.Time {
-	if o == nil {
+func (h *HrisEmployee) GetHiredAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.HiredAt
+	return h.HiredAt
 }
 
-func (o *HrisEmployee) GetID() *string {
-	if o == nil {
+func (h *HrisEmployee) GetID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ID
+	return h.ID
 }
 
-func (o *HrisEmployee) GetImageURL() *string {
-	if o == nil {
+func (h *HrisEmployee) GetImageURL() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ImageURL
+	return h.ImageURL
 }
 
-func (o *HrisEmployee) GetLanguageLocale() *string {
-	if o == nil {
+func (h *HrisEmployee) GetLanguageLocale() *string {
+	if h == nil {
 		return nil
 	}
-	return o.LanguageLocale
+	return h.LanguageLocale
 }
 
-func (o *HrisEmployee) GetLocation() *string {
-	if o == nil {
+func (h *HrisEmployee) GetLocation() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Location
+	return h.Location
 }
 
-func (o *HrisEmployee) GetLocations() []HrisLocation {
-	if o == nil {
+func (h *HrisEmployee) GetLocations() []HrisLocation {
+	if h == nil {
 		return nil
 	}
-	return o.Locations
+	return h.Locations
 }
 
-func (o *HrisEmployee) GetManagerID() *string {
-	if o == nil {
+func (h *HrisEmployee) GetManagerID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ManagerID
+	return h.ManagerID
 }
 
-func (o *HrisEmployee) GetMaritalStatus() *MaritalStatus {
-	if o == nil {
+func (h *HrisEmployee) GetMaritalStatus() *MaritalStatus {
+	if h == nil {
 		return nil
 	}
-	return o.MaritalStatus
+	return h.MaritalStatus
 }
 
-func (o *HrisEmployee) GetMetadata() []HrisMetadata {
-	if o == nil {
+func (h *HrisEmployee) GetMetadata() []HrisMetadata {
+	if h == nil {
 		return nil
 	}
-	return o.Metadata
+	return h.Metadata
 }
 
-func (o *HrisEmployee) GetName() *string {
-	if o == nil {
+func (h *HrisEmployee) GetName() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Name
+	return h.Name
 }
 
-func (o *HrisEmployee) GetPronouns() *string {
-	if o == nil {
+func (h *HrisEmployee) GetPronouns() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Pronouns
+	return h.Pronouns
 }
 
-func (o *HrisEmployee) GetRaw() map[string]any {
-	if o == nil {
+func (h *HrisEmployee) GetRaw() map[string]any {
+	if h == nil {
 		return nil
 	}
-	return o.Raw
+	return h.Raw
 }
 
-func (o *HrisEmployee) GetSalutation() *string {
-	if o == nil {
+func (h *HrisEmployee) GetSalutation() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Salutation
+	return h.Salutation
 }
 
-func (o *HrisEmployee) GetSsnSin() *string {
-	if o == nil {
+func (h *HrisEmployee) GetSsnSin() *string {
+	if h == nil {
 		return nil
 	}
-	return o.SsnSin
+	return h.SsnSin
 }
 
-func (o *HrisEmployee) GetStorageQuotaAllocated() *float64 {
-	if o == nil {
+func (h *HrisEmployee) GetStorageQuotaAllocated() *float64 {
+	if h == nil {
 		return nil
 	}
-	return o.StorageQuotaAllocated
+	return h.StorageQuotaAllocated
 }
 
-func (o *HrisEmployee) GetStorageQuotaAvailable() *float64 {
-	if o == nil {
+func (h *HrisEmployee) GetStorageQuotaAvailable() *float64 {
+	if h == nil {
 		return nil
 	}
-	return o.StorageQuotaAvailable
+	return h.StorageQuotaAvailable
 }
 
-func (o *HrisEmployee) GetStorageQuotaUsed() *float64 {
-	if o == nil {
+func (h *HrisEmployee) GetStorageQuotaUsed() *float64 {
+	if h == nil {
 		return nil
 	}
-	return o.StorageQuotaUsed
+	return h.StorageQuotaUsed
 }
 
-func (o *HrisEmployee) GetTelephones() []HrisTelephone {
-	if o == nil {
+func (h *HrisEmployee) GetTelephones() []HrisTelephone {
+	if h == nil {
 		return nil
 	}
-	return o.Telephones
+	return h.Telephones
 }
 
-func (o *HrisEmployee) GetTerminatedAt() *time.Time {
-	if o == nil {
+func (h *HrisEmployee) GetTerminatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.TerminatedAt
+	return h.TerminatedAt
 }
 
-func (o *HrisEmployee) GetTimezone() *string {
-	if o == nil {
+func (h *HrisEmployee) GetTimezone() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Timezone
+	return h.Timezone
 }
 
-func (o *HrisEmployee) GetTitle() *string {
-	if o == nil {
+func (h *HrisEmployee) GetTitle() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Title
+	return h.Title
 }
 
-func (o *HrisEmployee) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (h *HrisEmployee) GetUpdatedAt() *time.Time {
+	if h == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return h.UpdatedAt
 }

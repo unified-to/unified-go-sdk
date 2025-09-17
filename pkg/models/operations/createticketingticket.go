@@ -17,32 +17,32 @@ type CreateTicketingTicketRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateTicketingTicketRequest) GetTicketingTicket() shared.TicketingTicket {
-	if o == nil {
+func (c *CreateTicketingTicketRequest) GetTicketingTicket() shared.TicketingTicket {
+	if c == nil {
 		return shared.TicketingTicket{}
 	}
-	return o.TicketingTicket
+	return c.TicketingTicket
 }
 
-func (o *CreateTicketingTicketRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateTicketingTicketRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateTicketingTicketRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateTicketingTicketRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateTicketingTicketRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateTicketingTicketRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateTicketingTicketResponse struct {
@@ -56,30 +56,30 @@ type CreateTicketingTicketResponse struct {
 	TicketingTicket *shared.TicketingTicket
 }
 
-func (o *CreateTicketingTicketResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateTicketingTicketResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateTicketingTicketResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateTicketingTicketResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateTicketingTicketResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateTicketingTicketResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateTicketingTicketResponse) GetTicketingTicket() *shared.TicketingTicket {
-	if o == nil {
+func (c *CreateTicketingTicketResponse) GetTicketingTicket() *shared.TicketingTicket {
+	if c == nil {
 		return nil
 	}
-	return o.TicketingTicket
+	return c.TicketingTicket
 }

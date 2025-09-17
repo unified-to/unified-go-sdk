@@ -19,39 +19,39 @@ type PatchAtsInterviewRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAtsInterviewRequest) GetAtsInterview() shared.AtsInterview {
-	if o == nil {
+func (p *PatchAtsInterviewRequest) GetAtsInterview() shared.AtsInterview {
+	if p == nil {
 		return shared.AtsInterview{}
 	}
-	return o.AtsInterview
+	return p.AtsInterview
 }
 
-func (o *PatchAtsInterviewRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAtsInterviewRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAtsInterviewRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAtsInterviewRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAtsInterviewRequest) GetID() string {
-	if o == nil {
+func (p *PatchAtsInterviewRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAtsInterviewRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAtsInterviewRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAtsInterviewResponse struct {
@@ -65,30 +65,30 @@ type PatchAtsInterviewResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAtsInterviewResponse) GetAtsInterview() *shared.AtsInterview {
-	if o == nil {
+func (p *PatchAtsInterviewResponse) GetAtsInterview() *shared.AtsInterview {
+	if p == nil {
 		return nil
 	}
-	return o.AtsInterview
+	return p.AtsInterview
 }
 
-func (o *PatchAtsInterviewResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAtsInterviewResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAtsInterviewResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAtsInterviewResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAtsInterviewResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAtsInterviewResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

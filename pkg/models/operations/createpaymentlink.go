@@ -17,32 +17,32 @@ type CreatePaymentLinkRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreatePaymentLinkRequest) GetPaymentLink() shared.PaymentLink {
-	if o == nil {
+func (c *CreatePaymentLinkRequest) GetPaymentLink() shared.PaymentLink {
+	if c == nil {
 		return shared.PaymentLink{}
 	}
-	return o.PaymentLink
+	return c.PaymentLink
 }
 
-func (o *CreatePaymentLinkRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreatePaymentLinkRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreatePaymentLinkRequest) GetFields() []string {
-	if o == nil {
+func (c *CreatePaymentLinkRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreatePaymentLinkRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreatePaymentLinkRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreatePaymentLinkResponse struct {
@@ -56,30 +56,30 @@ type CreatePaymentLinkResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreatePaymentLinkResponse) GetContentType() string {
-	if o == nil {
+func (c *CreatePaymentLinkResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreatePaymentLinkResponse) GetPaymentLink() *shared.PaymentLink {
-	if o == nil {
+func (c *CreatePaymentLinkResponse) GetPaymentLink() *shared.PaymentLink {
+	if c == nil {
 		return nil
 	}
-	return o.PaymentLink
+	return c.PaymentLink
 }
 
-func (o *CreatePaymentLinkResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreatePaymentLinkResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreatePaymentLinkResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreatePaymentLinkResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

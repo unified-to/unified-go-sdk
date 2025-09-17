@@ -17,32 +17,32 @@ type CreateAtsApplicationRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAtsApplicationRequest) GetAtsApplication() shared.AtsApplication {
-	if o == nil {
+func (c *CreateAtsApplicationRequest) GetAtsApplication() shared.AtsApplication {
+	if c == nil {
 		return shared.AtsApplication{}
 	}
-	return o.AtsApplication
+	return c.AtsApplication
 }
 
-func (o *CreateAtsApplicationRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAtsApplicationRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAtsApplicationRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAtsApplicationRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAtsApplicationRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAtsApplicationRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAtsApplicationResponse struct {
@@ -56,30 +56,30 @@ type CreateAtsApplicationResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAtsApplicationResponse) GetAtsApplication() *shared.AtsApplication {
-	if o == nil {
+func (c *CreateAtsApplicationResponse) GetAtsApplication() *shared.AtsApplication {
+	if c == nil {
 		return nil
 	}
-	return o.AtsApplication
+	return c.AtsApplication
 }
 
-func (o *CreateAtsApplicationResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAtsApplicationResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAtsApplicationResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAtsApplicationResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAtsApplicationResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAtsApplicationResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

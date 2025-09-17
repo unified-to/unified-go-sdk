@@ -19,39 +19,39 @@ type UpdateCalendarLinkRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateCalendarLinkRequest) GetCalendarLink() shared.CalendarLink {
-	if o == nil {
+func (u *UpdateCalendarLinkRequest) GetCalendarLink() shared.CalendarLink {
+	if u == nil {
 		return shared.CalendarLink{}
 	}
-	return o.CalendarLink
+	return u.CalendarLink
 }
 
-func (o *UpdateCalendarLinkRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateCalendarLinkRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateCalendarLinkRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateCalendarLinkRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateCalendarLinkRequest) GetID() string {
-	if o == nil {
+func (u *UpdateCalendarLinkRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateCalendarLinkRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateCalendarLinkRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateCalendarLinkResponse struct {
@@ -65,30 +65,30 @@ type UpdateCalendarLinkResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateCalendarLinkResponse) GetCalendarLink() *shared.CalendarLink {
-	if o == nil {
+func (u *UpdateCalendarLinkResponse) GetCalendarLink() *shared.CalendarLink {
+	if u == nil {
 		return nil
 	}
-	return o.CalendarLink
+	return u.CalendarLink
 }
 
-func (o *UpdateCalendarLinkResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateCalendarLinkResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateCalendarLinkResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateCalendarLinkResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateCalendarLinkResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateCalendarLinkResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

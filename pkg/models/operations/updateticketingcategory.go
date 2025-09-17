@@ -19,39 +19,39 @@ type UpdateTicketingCategoryRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateTicketingCategoryRequest) GetTicketingCategory() shared.TicketingCategory {
-	if o == nil {
+func (u *UpdateTicketingCategoryRequest) GetTicketingCategory() shared.TicketingCategory {
+	if u == nil {
 		return shared.TicketingCategory{}
 	}
-	return o.TicketingCategory
+	return u.TicketingCategory
 }
 
-func (o *UpdateTicketingCategoryRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateTicketingCategoryRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateTicketingCategoryRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateTicketingCategoryRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateTicketingCategoryRequest) GetID() string {
-	if o == nil {
+func (u *UpdateTicketingCategoryRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateTicketingCategoryRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateTicketingCategoryRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateTicketingCategoryResponse struct {
@@ -65,30 +65,30 @@ type UpdateTicketingCategoryResponse struct {
 	TicketingCategory *shared.TicketingCategory
 }
 
-func (o *UpdateTicketingCategoryResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateTicketingCategoryResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateTicketingCategoryResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateTicketingCategoryResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateTicketingCategoryResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateTicketingCategoryResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }
 
-func (o *UpdateTicketingCategoryResponse) GetTicketingCategory() *shared.TicketingCategory {
-	if o == nil {
+func (u *UpdateTicketingCategoryResponse) GetTicketingCategory() *shared.TicketingCategory {
+	if u == nil {
 		return nil
 	}
-	return o.TicketingCategory
+	return u.TicketingCategory
 }

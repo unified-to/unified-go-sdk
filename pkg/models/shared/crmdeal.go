@@ -43,149 +43,149 @@ func (c *CrmDeal) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CrmDeal) GetAmount() *float64 {
-	if o == nil {
+func (c *CrmDeal) GetAmount() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Amount
+	return c.Amount
 }
 
-func (o *CrmDeal) GetClosedAt() *time.Time {
-	if o == nil {
+func (c *CrmDeal) GetClosedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.ClosedAt
+	return c.ClosedAt
 }
 
-func (o *CrmDeal) GetCompanyIds() []string {
-	if o == nil {
+func (c *CrmDeal) GetCompanyIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.CompanyIds
+	return c.CompanyIds
 }
 
-func (o *CrmDeal) GetContactIds() []string {
-	if o == nil {
+func (c *CrmDeal) GetContactIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.ContactIds
+	return c.ContactIds
 }
 
-func (o *CrmDeal) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CrmDeal) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CrmDeal) GetCurrency() *string {
-	if o == nil {
+func (c *CrmDeal) GetCurrency() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Currency
+	return c.Currency
 }
 
-func (o *CrmDeal) GetID() *string {
-	if o == nil {
+func (c *CrmDeal) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CrmDeal) GetLostReason() *string {
-	if o == nil {
+func (c *CrmDeal) GetLostReason() *string {
+	if c == nil {
 		return nil
 	}
-	return o.LostReason
+	return c.LostReason
 }
 
-func (o *CrmDeal) GetMetadata() []CrmMetadata {
-	if o == nil {
+func (c *CrmDeal) GetMetadata() []CrmMetadata {
+	if c == nil {
 		return nil
 	}
-	return o.Metadata
+	return c.Metadata
 }
 
-func (o *CrmDeal) GetName() *string {
-	if o == nil {
+func (c *CrmDeal) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CrmDeal) GetPipeline() *string {
-	if o == nil {
+func (c *CrmDeal) GetPipeline() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Pipeline
+	return c.Pipeline
 }
 
-func (o *CrmDeal) GetPipelineID() *string {
-	if o == nil {
+func (c *CrmDeal) GetPipelineID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.PipelineID
+	return c.PipelineID
 }
 
-func (o *CrmDeal) GetProbability() *float64 {
-	if o == nil {
+func (c *CrmDeal) GetProbability() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Probability
+	return c.Probability
 }
 
-func (o *CrmDeal) GetRaw() map[string]any {
-	if o == nil {
+func (c *CrmDeal) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CrmDeal) GetSource() *string {
-	if o == nil {
+func (c *CrmDeal) GetSource() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Source
+	return c.Source
 }
 
-func (o *CrmDeal) GetStage() *string {
-	if o == nil {
+func (c *CrmDeal) GetStage() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Stage
+	return c.Stage
 }
 
-func (o *CrmDeal) GetStageID() *string {
-	if o == nil {
+func (c *CrmDeal) GetStageID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.StageID
+	return c.StageID
 }
 
-func (o *CrmDeal) GetTags() []string {
-	if o == nil {
+func (c *CrmDeal) GetTags() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Tags
+	return c.Tags
 }
 
-func (o *CrmDeal) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CrmDeal) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *CrmDeal) GetUserID() *string {
-	if o == nil {
+func (c *CrmDeal) GetUserID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.UserID
+	return c.UserID
 }
 
-func (o *CrmDeal) GetWonReason() *string {
-	if o == nil {
+func (c *CrmDeal) GetWonReason() *string {
+	if c == nil {
 		return nil
 	}
-	return o.WonReason
+	return c.WonReason
 }

@@ -33,65 +33,65 @@ func (u *UcContact) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *UcContact) GetCompany() *string {
-	if o == nil {
+func (u *UcContact) GetCompany() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Company
+	return u.Company
 }
 
-func (o *UcContact) GetCreatedAt() *time.Time {
-	if o == nil {
+func (u *UcContact) GetCreatedAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return u.CreatedAt
 }
 
-func (o *UcContact) GetEmails() []UcEmail {
-	if o == nil {
+func (u *UcContact) GetEmails() []UcEmail {
+	if u == nil {
 		return nil
 	}
-	return o.Emails
+	return u.Emails
 }
 
-func (o *UcContact) GetID() *string {
-	if o == nil {
+func (u *UcContact) GetID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UcContact) GetName() *string {
-	if o == nil {
+func (u *UcContact) GetName() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Name
+	return u.Name
 }
 
-func (o *UcContact) GetRaw() map[string]any {
-	if o == nil {
+func (u *UcContact) GetRaw() map[string]any {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
-func (o *UcContact) GetTelephones() []UcTelephone {
-	if o == nil {
+func (u *UcContact) GetTelephones() []UcTelephone {
+	if u == nil {
 		return nil
 	}
-	return o.Telephones
+	return u.Telephones
 }
 
-func (o *UcContact) GetTitle() *string {
-	if o == nil {
+func (u *UcContact) GetTitle() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Title
+	return u.Title
 }
 
-func (o *UcContact) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (u *UcContact) GetUpdatedAt() *time.Time {
+	if u == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return u.UpdatedAt
 }

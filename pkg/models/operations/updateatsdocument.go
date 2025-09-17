@@ -19,39 +19,39 @@ type UpdateAtsDocumentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAtsDocumentRequest) GetAtsDocument() shared.AtsDocument {
-	if o == nil {
+func (u *UpdateAtsDocumentRequest) GetAtsDocument() shared.AtsDocument {
+	if u == nil {
 		return shared.AtsDocument{}
 	}
-	return o.AtsDocument
+	return u.AtsDocument
 }
 
-func (o *UpdateAtsDocumentRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAtsDocumentRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAtsDocumentRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAtsDocumentRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAtsDocumentRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAtsDocumentRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAtsDocumentRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAtsDocumentRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAtsDocumentResponse struct {
@@ -65,30 +65,30 @@ type UpdateAtsDocumentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAtsDocumentResponse) GetAtsDocument() *shared.AtsDocument {
-	if o == nil {
+func (u *UpdateAtsDocumentResponse) GetAtsDocument() *shared.AtsDocument {
+	if u == nil {
 		return nil
 	}
-	return o.AtsDocument
+	return u.AtsDocument
 }
 
-func (o *UpdateAtsDocumentResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAtsDocumentResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAtsDocumentResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAtsDocumentResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAtsDocumentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAtsDocumentResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

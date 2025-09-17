@@ -47,93 +47,93 @@ func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) Unma
 	return nil
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetAdditionalManagers() []ScimManager {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetAdditionalManagers() []ScimManager {
+	if p == nil {
 		return nil
 	}
-	return o.AdditionalManagers
+	return p.AdditionalManagers
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetBirthday() *time.Time {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetBirthday() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.Birthday
+	return p.Birthday
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetCostCenter() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetCostCenter() *string {
+	if p == nil {
 		return nil
 	}
-	return o.CostCenter
+	return p.CostCenter
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetDepartment() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetDepartment() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Department
+	return p.Department
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetDivision() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetDivision() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Division
+	return p.Division
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetEmployeeNumber() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetEmployeeNumber() *string {
+	if p == nil {
 		return nil
 	}
-	return o.EmployeeNumber
+	return p.EmployeeNumber
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetEndDate() *time.Time {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetEndDate() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.EndDate
+	return p.EndDate
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetGender() *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetGender() *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender {
+	if p == nil {
 		return nil
 	}
-	return o.Gender
+	return p.Gender
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetLevel() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetLevel() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Level
+	return p.Level
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetLocation() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetLocation() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Location
+	return p.Location
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetManager() *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetManager() *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager {
+	if p == nil {
 		return nil
 	}
-	return o.Manager
+	return p.Manager
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetOrganization() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetOrganization() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Organization
+	return p.Organization
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetStartDate() *time.Time {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetStartDate() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.StartDate
+	return p.StartDate
 }

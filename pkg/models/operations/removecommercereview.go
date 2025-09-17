@@ -13,18 +13,18 @@ type RemoveCommerceReviewRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveCommerceReviewRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveCommerceReviewRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveCommerceReviewRequest) GetID() string {
-	if o == nil {
+func (r *RemoveCommerceReviewRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveCommerceReviewResponse struct {
@@ -37,30 +37,30 @@ type RemoveCommerceReviewResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveCommerceReviewResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveCommerceReviewResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveCommerceReviewResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveCommerceReviewResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveCommerceReviewResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveCommerceReviewResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveCommerceReviewResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveCommerceReviewResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

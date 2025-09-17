@@ -19,39 +19,39 @@ type PatchAtsDocumentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAtsDocumentRequest) GetAtsDocument() shared.AtsDocument {
-	if o == nil {
+func (p *PatchAtsDocumentRequest) GetAtsDocument() shared.AtsDocument {
+	if p == nil {
 		return shared.AtsDocument{}
 	}
-	return o.AtsDocument
+	return p.AtsDocument
 }
 
-func (o *PatchAtsDocumentRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAtsDocumentRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAtsDocumentRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAtsDocumentRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAtsDocumentRequest) GetID() string {
-	if o == nil {
+func (p *PatchAtsDocumentRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAtsDocumentRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAtsDocumentRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAtsDocumentResponse struct {
@@ -65,30 +65,30 @@ type PatchAtsDocumentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAtsDocumentResponse) GetAtsDocument() *shared.AtsDocument {
-	if o == nil {
+func (p *PatchAtsDocumentResponse) GetAtsDocument() *shared.AtsDocument {
+	if p == nil {
 		return nil
 	}
-	return o.AtsDocument
+	return p.AtsDocument
 }
 
-func (o *PatchAtsDocumentResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAtsDocumentResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAtsDocumentResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAtsDocumentResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAtsDocumentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAtsDocumentResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

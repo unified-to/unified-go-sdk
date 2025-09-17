@@ -13,18 +13,18 @@ type RemoveAtsScorecardRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveAtsScorecardRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveAtsScorecardRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveAtsScorecardRequest) GetID() string {
-	if o == nil {
+func (r *RemoveAtsScorecardRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveAtsScorecardResponse struct {
@@ -37,30 +37,30 @@ type RemoveAtsScorecardResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveAtsScorecardResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveAtsScorecardResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveAtsScorecardResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveAtsScorecardResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveAtsScorecardResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveAtsScorecardResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveAtsScorecardResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveAtsScorecardResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

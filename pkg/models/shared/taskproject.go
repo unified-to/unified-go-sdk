@@ -32,79 +32,79 @@ func (t *TaskProject) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *TaskProject) GetCreatedAt() *time.Time {
-	if o == nil {
+func (t *TaskProject) GetCreatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return t.CreatedAt
 }
 
-func (o *TaskProject) GetDescription() *string {
-	if o == nil {
+func (t *TaskProject) GetDescription() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Description
+	return t.Description
 }
 
-func (o *TaskProject) GetGroupIds() []string {
-	if o == nil {
+func (t *TaskProject) GetGroupIds() []string {
+	if t == nil {
 		return nil
 	}
-	return o.GroupIds
+	return t.GroupIds
 }
 
-func (o *TaskProject) GetHasChildren() *bool {
-	if o == nil {
+func (t *TaskProject) GetHasChildren() *bool {
+	if t == nil {
 		return nil
 	}
-	return o.HasChildren
+	return t.HasChildren
 }
 
-func (o *TaskProject) GetHasTasks() *bool {
-	if o == nil {
+func (t *TaskProject) GetHasTasks() *bool {
+	if t == nil {
 		return nil
 	}
-	return o.HasTasks
+	return t.HasTasks
 }
 
-func (o *TaskProject) GetID() *string {
-	if o == nil {
+func (t *TaskProject) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *TaskProject) GetName() *string {
-	if o == nil {
+func (t *TaskProject) GetName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Name
+	return t.Name
 }
 
-func (o *TaskProject) GetParentID() *string {
-	if o == nil {
+func (t *TaskProject) GetParentID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ParentID
+	return t.ParentID
 }
 
-func (o *TaskProject) GetRaw() map[string]any {
-	if o == nil {
+func (t *TaskProject) GetRaw() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Raw
+	return t.Raw
 }
 
-func (o *TaskProject) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (t *TaskProject) GetUpdatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return t.UpdatedAt
 }
 
-func (o *TaskProject) GetUserIds() []string {
-	if o == nil {
+func (t *TaskProject) GetUserIds() []string {
+	if t == nil {
 		return nil
 	}
-	return o.UserIds
+	return t.UserIds
 }

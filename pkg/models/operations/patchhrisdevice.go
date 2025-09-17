@@ -19,39 +19,39 @@ type PatchHrisDeviceRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchHrisDeviceRequest) GetHrisDevice() shared.HrisDevice {
-	if o == nil {
+func (p *PatchHrisDeviceRequest) GetHrisDevice() shared.HrisDevice {
+	if p == nil {
 		return shared.HrisDevice{}
 	}
-	return o.HrisDevice
+	return p.HrisDevice
 }
 
-func (o *PatchHrisDeviceRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchHrisDeviceRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchHrisDeviceRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchHrisDeviceRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchHrisDeviceRequest) GetID() string {
-	if o == nil {
+func (p *PatchHrisDeviceRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchHrisDeviceRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchHrisDeviceRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchHrisDeviceResponse struct {
@@ -65,30 +65,30 @@ type PatchHrisDeviceResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchHrisDeviceResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchHrisDeviceResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchHrisDeviceResponse) GetHrisDevice() *shared.HrisDevice {
-	if o == nil {
+func (p *PatchHrisDeviceResponse) GetHrisDevice() *shared.HrisDevice {
+	if p == nil {
 		return nil
 	}
-	return o.HrisDevice
+	return p.HrisDevice
 }
 
-func (o *PatchHrisDeviceResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchHrisDeviceResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchHrisDeviceResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchHrisDeviceResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

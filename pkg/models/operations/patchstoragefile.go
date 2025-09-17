@@ -19,39 +19,39 @@ type PatchStorageFileRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchStorageFileRequest) GetStorageFile() shared.StorageFile {
-	if o == nil {
+func (p *PatchStorageFileRequest) GetStorageFile() shared.StorageFile {
+	if p == nil {
 		return shared.StorageFile{}
 	}
-	return o.StorageFile
+	return p.StorageFile
 }
 
-func (o *PatchStorageFileRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchStorageFileRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchStorageFileRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchStorageFileRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchStorageFileRequest) GetID() string {
-	if o == nil {
+func (p *PatchStorageFileRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchStorageFileRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchStorageFileRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchStorageFileResponse struct {
@@ -65,30 +65,30 @@ type PatchStorageFileResponse struct {
 	StorageFile *shared.StorageFile
 }
 
-func (o *PatchStorageFileResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchStorageFileResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchStorageFileResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchStorageFileResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchStorageFileResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchStorageFileResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchStorageFileResponse) GetStorageFile() *shared.StorageFile {
-	if o == nil {
+func (p *PatchStorageFileResponse) GetStorageFile() *shared.StorageFile {
+	if p == nil {
 		return nil
 	}
-	return o.StorageFile
+	return p.StorageFile
 }

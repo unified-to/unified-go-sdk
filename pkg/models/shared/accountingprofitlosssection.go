@@ -9,30 +9,30 @@ type AccountingProfitlossSection struct {
 	TotalAmount *float64                      `json:"total_amount,omitempty"`
 }
 
-func (o *AccountingProfitlossSection) GetAccounts() []AccountingProfitlossAccount {
-	if o == nil {
+func (a *AccountingProfitlossSection) GetAccounts() []AccountingProfitlossAccount {
+	if a == nil {
 		return nil
 	}
-	return o.Accounts
+	return a.Accounts
 }
 
-func (o *AccountingProfitlossSection) GetSectionName() *string {
-	if o == nil {
+func (a *AccountingProfitlossSection) GetSectionName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.SectionName
+	return a.SectionName
 }
 
-func (o *AccountingProfitlossSection) GetSectionType() *string {
-	if o == nil {
+func (a *AccountingProfitlossSection) GetSectionType() *string {
+	if a == nil {
 		return nil
 	}
-	return o.SectionType
+	return a.SectionType
 }
 
-func (o *AccountingProfitlossSection) GetTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingProfitlossSection) GetTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalAmount
+	return a.TotalAmount
 }

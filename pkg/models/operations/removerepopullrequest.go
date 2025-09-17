@@ -13,18 +13,18 @@ type RemoveRepoPullrequestRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveRepoPullrequestRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveRepoPullrequestRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveRepoPullrequestRequest) GetID() string {
-	if o == nil {
+func (r *RemoveRepoPullrequestRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveRepoPullrequestResponse struct {
@@ -37,30 +37,30 @@ type RemoveRepoPullrequestResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveRepoPullrequestResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveRepoPullrequestResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveRepoPullrequestResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveRepoPullrequestResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveRepoPullrequestResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveRepoPullrequestResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveRepoPullrequestResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveRepoPullrequestResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

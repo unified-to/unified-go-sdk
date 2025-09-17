@@ -26,74 +26,74 @@ type ListPaymentSubscriptionsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListPaymentSubscriptionsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListPaymentSubscriptionsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListPaymentSubscriptionsRequest) GetContactID() *string {
-	if o == nil {
+func (l *ListPaymentSubscriptionsRequest) GetContactID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ContactID
+	return l.ContactID
 }
 
-func (o *ListPaymentSubscriptionsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListPaymentSubscriptionsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListPaymentSubscriptionsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListPaymentSubscriptionsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListPaymentSubscriptionsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListPaymentSubscriptionsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListPaymentSubscriptionsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListPaymentSubscriptionsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListPaymentSubscriptionsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListPaymentSubscriptionsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListPaymentSubscriptionsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListPaymentSubscriptionsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListPaymentSubscriptionsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListPaymentSubscriptionsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListPaymentSubscriptionsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListPaymentSubscriptionsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListPaymentSubscriptionsResponse struct {
@@ -107,30 +107,30 @@ type ListPaymentSubscriptionsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListPaymentSubscriptionsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListPaymentSubscriptionsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListPaymentSubscriptionsResponse) GetPaymentSubscriptions() []shared.PaymentSubscription {
-	if o == nil {
+func (l *ListPaymentSubscriptionsResponse) GetPaymentSubscriptions() []shared.PaymentSubscription {
+	if l == nil {
 		return nil
 	}
-	return o.PaymentSubscriptions
+	return l.PaymentSubscriptions
 }
 
-func (o *ListPaymentSubscriptionsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListPaymentSubscriptionsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListPaymentSubscriptionsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListPaymentSubscriptionsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

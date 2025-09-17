@@ -13,18 +13,18 @@ type RemoveCrmDealRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveCrmDealRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveCrmDealRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveCrmDealRequest) GetID() string {
-	if o == nil {
+func (r *RemoveCrmDealRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveCrmDealResponse struct {
@@ -37,30 +37,30 @@ type RemoveCrmDealResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveCrmDealResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveCrmDealResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveCrmDealResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveCrmDealResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveCrmDealResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveCrmDealResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveCrmDealResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveCrmDealResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

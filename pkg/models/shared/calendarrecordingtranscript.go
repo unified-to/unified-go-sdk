@@ -26,37 +26,37 @@ func (c *CalendarRecordingTranscript) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CalendarRecordingTranscript) GetAttendee() *PropertyCalendarRecordingTranscriptAttendee {
-	if o == nil {
+func (c *CalendarRecordingTranscript) GetAttendee() *PropertyCalendarRecordingTranscriptAttendee {
+	if c == nil {
 		return nil
 	}
-	return o.Attendee
+	return c.Attendee
 }
 
-func (o *CalendarRecordingTranscript) GetEndAt() *time.Time {
-	if o == nil {
+func (c *CalendarRecordingTranscript) GetEndAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.EndAt
+	return c.EndAt
 }
 
-func (o *CalendarRecordingTranscript) GetLanguage() *string {
-	if o == nil {
+func (c *CalendarRecordingTranscript) GetLanguage() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Language
+	return c.Language
 }
 
-func (o *CalendarRecordingTranscript) GetStartAt() *time.Time {
-	if o == nil {
+func (c *CalendarRecordingTranscript) GetStartAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.StartAt
+	return c.StartAt
 }
 
-func (o *CalendarRecordingTranscript) GetText() string {
-	if o == nil {
+func (c *CalendarRecordingTranscript) GetText() string {
+	if c == nil {
 		return ""
 	}
-	return o.Text
+	return c.Text
 }

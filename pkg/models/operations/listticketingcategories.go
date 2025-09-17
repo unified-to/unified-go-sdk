@@ -26,74 +26,74 @@ type ListTicketingCategoriesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListTicketingCategoriesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListTicketingCategoriesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListTicketingCategoriesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListTicketingCategoriesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListTicketingCategoriesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListTicketingCategoriesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListTicketingCategoriesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListTicketingCategoriesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListTicketingCategoriesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListTicketingCategoriesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListTicketingCategoriesRequest) GetParentID() *string {
-	if o == nil {
+func (l *ListTicketingCategoriesRequest) GetParentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ParentID
+	return l.ParentID
 }
 
-func (o *ListTicketingCategoriesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListTicketingCategoriesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListTicketingCategoriesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListTicketingCategoriesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListTicketingCategoriesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListTicketingCategoriesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListTicketingCategoriesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListTicketingCategoriesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListTicketingCategoriesResponse struct {
@@ -107,30 +107,30 @@ type ListTicketingCategoriesResponse struct {
 	TicketingCategories []shared.TicketingCategory
 }
 
-func (o *ListTicketingCategoriesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListTicketingCategoriesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListTicketingCategoriesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListTicketingCategoriesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListTicketingCategoriesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListTicketingCategoriesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListTicketingCategoriesResponse) GetTicketingCategories() []shared.TicketingCategory {
-	if o == nil {
+func (l *ListTicketingCategoriesResponse) GetTicketingCategories() []shared.TicketingCategory {
+	if l == nil {
 		return nil
 	}
-	return o.TicketingCategories
+	return l.TicketingCategories
 }

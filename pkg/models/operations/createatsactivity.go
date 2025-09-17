@@ -17,32 +17,32 @@ type CreateAtsActivityRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAtsActivityRequest) GetAtsActivity() shared.AtsActivity {
-	if o == nil {
+func (c *CreateAtsActivityRequest) GetAtsActivity() shared.AtsActivity {
+	if c == nil {
 		return shared.AtsActivity{}
 	}
-	return o.AtsActivity
+	return c.AtsActivity
 }
 
-func (o *CreateAtsActivityRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAtsActivityRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAtsActivityRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAtsActivityRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAtsActivityRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAtsActivityRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAtsActivityResponse struct {
@@ -56,30 +56,30 @@ type CreateAtsActivityResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAtsActivityResponse) GetAtsActivity() *shared.AtsActivity {
-	if o == nil {
+func (c *CreateAtsActivityResponse) GetAtsActivity() *shared.AtsActivity {
+	if c == nil {
 		return nil
 	}
-	return o.AtsActivity
+	return c.AtsActivity
 }
 
-func (o *CreateAtsActivityResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAtsActivityResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAtsActivityResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAtsActivityResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAtsActivityResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAtsActivityResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

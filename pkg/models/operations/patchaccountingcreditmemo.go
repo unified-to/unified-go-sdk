@@ -19,39 +19,39 @@ type PatchAccountingCreditmemoRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAccountingCreditmemoRequest) GetAccountingCreditmemo() shared.AccountingCreditmemo {
-	if o == nil {
+func (p *PatchAccountingCreditmemoRequest) GetAccountingCreditmemo() shared.AccountingCreditmemo {
+	if p == nil {
 		return shared.AccountingCreditmemo{}
 	}
-	return o.AccountingCreditmemo
+	return p.AccountingCreditmemo
 }
 
-func (o *PatchAccountingCreditmemoRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAccountingCreditmemoRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAccountingCreditmemoRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAccountingCreditmemoRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAccountingCreditmemoRequest) GetID() string {
-	if o == nil {
+func (p *PatchAccountingCreditmemoRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAccountingCreditmemoRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAccountingCreditmemoRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAccountingCreditmemoResponse struct {
@@ -65,30 +65,30 @@ type PatchAccountingCreditmemoResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAccountingCreditmemoResponse) GetAccountingCreditmemo() *shared.AccountingCreditmemo {
-	if o == nil {
+func (p *PatchAccountingCreditmemoResponse) GetAccountingCreditmemo() *shared.AccountingCreditmemo {
+	if p == nil {
 		return nil
 	}
-	return o.AccountingCreditmemo
+	return p.AccountingCreditmemo
 }
 
-func (o *PatchAccountingCreditmemoResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAccountingCreditmemoResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAccountingCreditmemoResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAccountingCreditmemoResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAccountingCreditmemoResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAccountingCreditmemoResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

@@ -20,39 +20,39 @@ type PatchMartechListRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchMartechListRequest) GetMarketingList() shared.MarketingList {
-	if o == nil {
+func (p *PatchMartechListRequest) GetMarketingList() shared.MarketingList {
+	if p == nil {
 		return shared.MarketingList{}
 	}
-	return o.MarketingList
+	return p.MarketingList
 }
 
-func (o *PatchMartechListRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchMartechListRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchMartechListRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchMartechListRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchMartechListRequest) GetID() string {
-	if o == nil {
+func (p *PatchMartechListRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchMartechListRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchMartechListRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchMartechListResponse struct {
@@ -66,30 +66,30 @@ type PatchMartechListResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchMartechListResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchMartechListResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchMartechListResponse) GetMarketingList() *shared.MarketingList {
-	if o == nil {
+func (p *PatchMartechListResponse) GetMarketingList() *shared.MarketingList {
+	if p == nil {
 		return nil
 	}
-	return o.MarketingList
+	return p.MarketingList
 }
 
-func (o *PatchMartechListResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchMartechListResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchMartechListResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchMartechListResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

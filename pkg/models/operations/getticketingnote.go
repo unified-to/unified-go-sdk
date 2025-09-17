@@ -18,32 +18,32 @@ type GetTicketingNoteRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetTicketingNoteRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetTicketingNoteRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetTicketingNoteRequest) GetFields() []string {
-	if o == nil {
+func (g *GetTicketingNoteRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetTicketingNoteRequest) GetID() string {
-	if o == nil {
+func (g *GetTicketingNoteRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetTicketingNoteRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetTicketingNoteRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetTicketingNoteResponse struct {
@@ -57,30 +57,30 @@ type GetTicketingNoteResponse struct {
 	TicketingNote *shared.TicketingNote
 }
 
-func (o *GetTicketingNoteResponse) GetContentType() string {
-	if o == nil {
+func (g *GetTicketingNoteResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetTicketingNoteResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetTicketingNoteResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetTicketingNoteResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetTicketingNoteResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetTicketingNoteResponse) GetTicketingNote() *shared.TicketingNote {
-	if o == nil {
+func (g *GetTicketingNoteResponse) GetTicketingNote() *shared.TicketingNote {
+	if g == nil {
 		return nil
 	}
-	return o.TicketingNote
+	return g.TicketingNote
 }

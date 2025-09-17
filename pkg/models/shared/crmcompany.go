@@ -45,142 +45,142 @@ func (c *CrmCompany) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CrmCompany) GetAddress() *PropertyCrmCompanyAddress {
-	if o == nil {
+func (c *CrmCompany) GetAddress() *PropertyCrmCompanyAddress {
+	if c == nil {
 		return nil
 	}
-	return o.Address
+	return c.Address
 }
 
-func (o *CrmCompany) GetContactIds() []string {
-	if o == nil {
+func (c *CrmCompany) GetContactIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.ContactIds
+	return c.ContactIds
 }
 
-func (o *CrmCompany) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CrmCompany) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CrmCompany) GetDealIds() []string {
-	if o == nil {
+func (c *CrmCompany) GetDealIds() []string {
+	if c == nil {
 		return nil
 	}
-	return o.DealIds
+	return c.DealIds
 }
 
-func (o *CrmCompany) GetDescription() *string {
-	if o == nil {
+func (c *CrmCompany) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CrmCompany) GetEmails() []CrmEmail {
-	if o == nil {
+func (c *CrmCompany) GetEmails() []CrmEmail {
+	if c == nil {
 		return nil
 	}
-	return o.Emails
+	return c.Emails
 }
 
-func (o *CrmCompany) GetEmployees() *float64 {
-	if o == nil {
+func (c *CrmCompany) GetEmployees() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Employees
+	return c.Employees
 }
 
-func (o *CrmCompany) GetID() *string {
-	if o == nil {
+func (c *CrmCompany) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CrmCompany) GetIndustry() *string {
-	if o == nil {
+func (c *CrmCompany) GetIndustry() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Industry
+	return c.Industry
 }
 
-func (o *CrmCompany) GetIsActive() *bool {
-	if o == nil {
+func (c *CrmCompany) GetIsActive() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsActive
+	return c.IsActive
 }
 
-func (o *CrmCompany) GetLinkUrls() []string {
-	if o == nil {
+func (c *CrmCompany) GetLinkUrls() []string {
+	if c == nil {
 		return nil
 	}
-	return o.LinkUrls
+	return c.LinkUrls
 }
 
-func (o *CrmCompany) GetMetadata() []CrmMetadata {
-	if o == nil {
+func (c *CrmCompany) GetMetadata() []CrmMetadata {
+	if c == nil {
 		return nil
 	}
-	return o.Metadata
+	return c.Metadata
 }
 
-func (o *CrmCompany) GetName() *string {
-	if o == nil {
+func (c *CrmCompany) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CrmCompany) GetRaw() map[string]any {
-	if o == nil {
+func (c *CrmCompany) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CrmCompany) GetTags() []string {
-	if o == nil {
+func (c *CrmCompany) GetTags() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Tags
+	return c.Tags
 }
 
-func (o *CrmCompany) GetTelephones() []CrmTelephone {
-	if o == nil {
+func (c *CrmCompany) GetTelephones() []CrmTelephone {
+	if c == nil {
 		return nil
 	}
-	return o.Telephones
+	return c.Telephones
 }
 
-func (o *CrmCompany) GetTimezone() *string {
-	if o == nil {
+func (c *CrmCompany) GetTimezone() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Timezone
+	return c.Timezone
 }
 
-func (o *CrmCompany) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CrmCompany) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }
 
-func (o *CrmCompany) GetUserID() *string {
-	if o == nil {
+func (c *CrmCompany) GetUserID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.UserID
+	return c.UserID
 }
 
-func (o *CrmCompany) GetWebsites() []string {
-	if o == nil {
+func (c *CrmCompany) GetWebsites() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Websites
+	return c.Websites
 }

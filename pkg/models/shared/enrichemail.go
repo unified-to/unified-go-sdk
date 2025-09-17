@@ -20,23 +20,23 @@ type EnrichEmail struct {
 	Type       *EnrichEmailType `json:"type,omitempty"`
 }
 
-func (o *EnrichEmail) GetEmail() string {
-	if o == nil {
+func (e *EnrichEmail) GetEmail() string {
+	if e == nil {
 		return ""
 	}
-	return o.Email
+	return e.Email
 }
 
-func (o *EnrichEmail) GetIsVerified() *bool {
-	if o == nil {
+func (e *EnrichEmail) GetIsVerified() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.IsVerified
+	return e.IsVerified
 }
 
-func (o *EnrichEmail) GetType() *EnrichEmailType {
-	if o == nil {
+func (e *EnrichEmail) GetType() *EnrichEmailType {
+	if e == nil {
 		return nil
 	}
-	return o.Type
+	return e.Type
 }

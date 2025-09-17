@@ -19,39 +19,39 @@ type UpdateUcCommentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateUcCommentRequest) GetUcComment() shared.UcComment {
-	if o == nil {
+func (u *UpdateUcCommentRequest) GetUcComment() shared.UcComment {
+	if u == nil {
 		return shared.UcComment{}
 	}
-	return o.UcComment
+	return u.UcComment
 }
 
-func (o *UpdateUcCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateUcCommentRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateUcCommentRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateUcCommentRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateUcCommentRequest) GetID() string {
-	if o == nil {
+func (u *UpdateUcCommentRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateUcCommentRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateUcCommentRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateUcCommentResponse struct {
@@ -65,30 +65,30 @@ type UpdateUcCommentResponse struct {
 	UcComment *shared.UcComment
 }
 
-func (o *UpdateUcCommentResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateUcCommentResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateUcCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateUcCommentResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateUcCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateUcCommentResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }
 
-func (o *UpdateUcCommentResponse) GetUcComment() *shared.UcComment {
-	if o == nil {
+func (u *UpdateUcCommentResponse) GetUcComment() *shared.UcComment {
+	if u == nil {
 		return nil
 	}
-	return o.UcComment
+	return u.UcComment
 }

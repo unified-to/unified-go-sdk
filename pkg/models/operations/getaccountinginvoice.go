@@ -18,32 +18,32 @@ type GetAccountingInvoiceRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAccountingInvoiceRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAccountingInvoiceRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAccountingInvoiceRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAccountingInvoiceRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAccountingInvoiceRequest) GetID() string {
-	if o == nil {
+func (g *GetAccountingInvoiceRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAccountingInvoiceRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAccountingInvoiceRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAccountingInvoiceResponse struct {
@@ -57,30 +57,30 @@ type GetAccountingInvoiceResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAccountingInvoiceResponse) GetAccountingInvoice() *shared.AccountingInvoice {
-	if o == nil {
+func (g *GetAccountingInvoiceResponse) GetAccountingInvoice() *shared.AccountingInvoice {
+	if g == nil {
 		return nil
 	}
-	return o.AccountingInvoice
+	return g.AccountingInvoice
 }
 
-func (o *GetAccountingInvoiceResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAccountingInvoiceResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAccountingInvoiceResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAccountingInvoiceResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAccountingInvoiceResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAccountingInvoiceResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

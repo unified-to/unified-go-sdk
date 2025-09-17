@@ -19,39 +19,39 @@ type UpdateRepoBranchRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateRepoBranchRequest) GetRepoBranch() shared.RepoBranch {
-	if o == nil {
+func (u *UpdateRepoBranchRequest) GetRepoBranch() shared.RepoBranch {
+	if u == nil {
 		return shared.RepoBranch{}
 	}
-	return o.RepoBranch
+	return u.RepoBranch
 }
 
-func (o *UpdateRepoBranchRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateRepoBranchRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateRepoBranchRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateRepoBranchRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateRepoBranchRequest) GetID() string {
-	if o == nil {
+func (u *UpdateRepoBranchRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateRepoBranchRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateRepoBranchRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateRepoBranchResponse struct {
@@ -65,30 +65,30 @@ type UpdateRepoBranchResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateRepoBranchResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateRepoBranchResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateRepoBranchResponse) GetRepoBranch() *shared.RepoBranch {
-	if o == nil {
+func (u *UpdateRepoBranchResponse) GetRepoBranch() *shared.RepoBranch {
+	if u == nil {
 		return nil
 	}
-	return o.RepoBranch
+	return u.RepoBranch
 }
 
-func (o *UpdateRepoBranchResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateRepoBranchResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateRepoBranchResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateRepoBranchResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

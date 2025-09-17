@@ -35,109 +35,109 @@ type ListCrmEventsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListCrmEventsRequest) GetCompanyID() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetCompanyID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyID
+	return l.CompanyID
 }
 
-func (o *ListCrmEventsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListCrmEventsRequest) GetContactID() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetContactID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ContactID
+	return l.ContactID
 }
 
-func (o *ListCrmEventsRequest) GetDealID() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetDealID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.DealID
+	return l.DealID
 }
 
-func (o *ListCrmEventsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListCrmEventsRequest) GetLeadID() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetLeadID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.LeadID
+	return l.LeadID
 }
 
-func (o *ListCrmEventsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListCrmEventsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListCrmEventsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListCrmEventsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListCrmEventsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListCrmEventsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListCrmEventsRequest) GetType() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }
 
-func (o *ListCrmEventsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListCrmEventsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListCrmEventsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListCrmEventsResponse struct {
@@ -151,30 +151,30 @@ type ListCrmEventsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListCrmEventsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListCrmEventsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListCrmEventsResponse) GetCrmEvents() []shared.CrmEvent {
-	if o == nil {
+func (l *ListCrmEventsResponse) GetCrmEvents() []shared.CrmEvent {
+	if l == nil {
 		return nil
 	}
-	return o.CrmEvents
+	return l.CrmEvents
 }
 
-func (o *ListCrmEventsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListCrmEventsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListCrmEventsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListCrmEventsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

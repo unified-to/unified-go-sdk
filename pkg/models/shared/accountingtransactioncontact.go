@@ -8,23 +8,23 @@ type AccountingTransactionContact struct {
 	IsSupplier *bool  `json:"is_supplier,omitempty"`
 }
 
-func (o *AccountingTransactionContact) GetID() string {
-	if o == nil {
+func (a *AccountingTransactionContact) GetID() string {
+	if a == nil {
 		return ""
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingTransactionContact) GetIsCustomer() *bool {
-	if o == nil {
+func (a *AccountingTransactionContact) GetIsCustomer() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsCustomer
+	return a.IsCustomer
 }
 
-func (o *AccountingTransactionContact) GetIsSupplier() *bool {
-	if o == nil {
+func (a *AccountingTransactionContact) GetIsSupplier() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsSupplier
+	return a.IsSupplier
 }

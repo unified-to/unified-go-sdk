@@ -16,39 +16,39 @@ type ListUnifiedIssuesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListUnifiedIssuesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListUnifiedIssuesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListUnifiedIssuesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListUnifiedIssuesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListUnifiedIssuesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListUnifiedIssuesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListUnifiedIssuesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListUnifiedIssuesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListUnifiedIssuesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListUnifiedIssuesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListUnifiedIssuesResponse struct {
@@ -62,30 +62,30 @@ type ListUnifiedIssuesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListUnifiedIssuesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListUnifiedIssuesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListUnifiedIssuesResponse) GetIssues() []shared.Issue {
-	if o == nil {
+func (l *ListUnifiedIssuesResponse) GetIssues() []shared.Issue {
+	if l == nil {
 		return nil
 	}
-	return o.Issues
+	return l.Issues
 }
 
-func (o *ListUnifiedIssuesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListUnifiedIssuesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListUnifiedIssuesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListUnifiedIssuesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

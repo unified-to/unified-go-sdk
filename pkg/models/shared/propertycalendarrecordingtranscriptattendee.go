@@ -22,37 +22,37 @@ type PropertyCalendarRecordingTranscriptAttendee struct {
 	UserID   *string                                            `json:"user_id,omitempty"`
 }
 
-func (o *PropertyCalendarRecordingTranscriptAttendee) GetEmail() *string {
-	if o == nil {
+func (p *PropertyCalendarRecordingTranscriptAttendee) GetEmail() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Email
+	return p.Email
 }
 
-func (o *PropertyCalendarRecordingTranscriptAttendee) GetName() *string {
-	if o == nil {
+func (p *PropertyCalendarRecordingTranscriptAttendee) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PropertyCalendarRecordingTranscriptAttendee) GetRequired() *bool {
-	if o == nil {
+func (p *PropertyCalendarRecordingTranscriptAttendee) GetRequired() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.Required
+	return p.Required
 }
 
-func (o *PropertyCalendarRecordingTranscriptAttendee) GetStatus() *PropertyCalendarRecordingTranscriptAttendeeStatus {
-	if o == nil {
+func (p *PropertyCalendarRecordingTranscriptAttendee) GetStatus() *PropertyCalendarRecordingTranscriptAttendeeStatus {
+	if p == nil {
 		return nil
 	}
-	return o.Status
+	return p.Status
 }
 
-func (o *PropertyCalendarRecordingTranscriptAttendee) GetUserID() *string {
-	if o == nil {
+func (p *PropertyCalendarRecordingTranscriptAttendee) GetUserID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.UserID
+	return p.UserID
 }

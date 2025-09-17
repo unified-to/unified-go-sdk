@@ -18,32 +18,32 @@ type CreateUcContactRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateUcContactRequest) GetUcContact() shared.UcContact {
-	if o == nil {
+func (c *CreateUcContactRequest) GetUcContact() shared.UcContact {
+	if c == nil {
 		return shared.UcContact{}
 	}
-	return o.UcContact
+	return c.UcContact
 }
 
-func (o *CreateUcContactRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateUcContactRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateUcContactRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateUcContactRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateUcContactRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateUcContactRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateUcContactResponse struct {
@@ -57,30 +57,30 @@ type CreateUcContactResponse struct {
 	UcContact *shared.UcContact
 }
 
-func (o *CreateUcContactResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateUcContactResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateUcContactResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateUcContactResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateUcContactResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateUcContactResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateUcContactResponse) GetUcContact() *shared.UcContact {
-	if o == nil {
+func (c *CreateUcContactResponse) GetUcContact() *shared.UcContact {
+	if c == nil {
 		return nil
 	}
-	return o.UcContact
+	return c.UcContact
 }

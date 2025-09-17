@@ -18,32 +18,32 @@ type CreateCrmEventRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateCrmEventRequest) GetCrmEvent() shared.CrmEvent {
-	if o == nil {
+func (c *CreateCrmEventRequest) GetCrmEvent() shared.CrmEvent {
+	if c == nil {
 		return shared.CrmEvent{}
 	}
-	return o.CrmEvent
+	return c.CrmEvent
 }
 
-func (o *CreateCrmEventRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateCrmEventRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateCrmEventRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateCrmEventRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateCrmEventRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateCrmEventRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateCrmEventResponse struct {
@@ -57,30 +57,30 @@ type CreateCrmEventResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateCrmEventResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateCrmEventResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateCrmEventResponse) GetCrmEvent() *shared.CrmEvent {
-	if o == nil {
+func (c *CreateCrmEventResponse) GetCrmEvent() *shared.CrmEvent {
+	if c == nil {
 		return nil
 	}
-	return o.CrmEvent
+	return c.CrmEvent
 }
 
-func (o *CreateCrmEventResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateCrmEventResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateCrmEventResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateCrmEventResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

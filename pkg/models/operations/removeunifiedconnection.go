@@ -11,11 +11,11 @@ type RemoveUnifiedConnectionRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveUnifiedConnectionRequest) GetID() string {
-	if o == nil {
+func (r *RemoveUnifiedConnectionRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveUnifiedConnectionResponse struct {
@@ -28,30 +28,30 @@ type RemoveUnifiedConnectionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveUnifiedConnectionResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveUnifiedConnectionResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveUnifiedConnectionResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveUnifiedConnectionResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveUnifiedConnectionResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveUnifiedConnectionResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveUnifiedConnectionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveUnifiedConnectionResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

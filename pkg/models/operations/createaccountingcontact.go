@@ -17,32 +17,32 @@ type CreateAccountingContactRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAccountingContactRequest) GetAccountingContact() shared.AccountingContact {
-	if o == nil {
+func (c *CreateAccountingContactRequest) GetAccountingContact() shared.AccountingContact {
+	if c == nil {
 		return shared.AccountingContact{}
 	}
-	return o.AccountingContact
+	return c.AccountingContact
 }
 
-func (o *CreateAccountingContactRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAccountingContactRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAccountingContactRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAccountingContactRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAccountingContactRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAccountingContactRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAccountingContactResponse struct {
@@ -56,30 +56,30 @@ type CreateAccountingContactResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingContactResponse) GetAccountingContact() *shared.AccountingContact {
-	if o == nil {
+func (c *CreateAccountingContactResponse) GetAccountingContact() *shared.AccountingContact {
+	if c == nil {
 		return nil
 	}
-	return o.AccountingContact
+	return c.AccountingContact
 }
 
-func (o *CreateAccountingContactResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAccountingContactResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAccountingContactResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAccountingContactResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAccountingContactResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAccountingContactResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

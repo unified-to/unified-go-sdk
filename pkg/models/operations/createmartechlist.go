@@ -18,32 +18,32 @@ type CreateMartechListRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateMartechListRequest) GetMarketingList() shared.MarketingList {
-	if o == nil {
+func (c *CreateMartechListRequest) GetMarketingList() shared.MarketingList {
+	if c == nil {
 		return shared.MarketingList{}
 	}
-	return o.MarketingList
+	return c.MarketingList
 }
 
-func (o *CreateMartechListRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateMartechListRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateMartechListRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateMartechListRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateMartechListRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateMartechListRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateMartechListResponse struct {
@@ -57,30 +57,30 @@ type CreateMartechListResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateMartechListResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateMartechListResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateMartechListResponse) GetMarketingList() *shared.MarketingList {
-	if o == nil {
+func (c *CreateMartechListResponse) GetMarketingList() *shared.MarketingList {
+	if c == nil {
 		return nil
 	}
-	return o.MarketingList
+	return c.MarketingList
 }
 
-func (o *CreateMartechListResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateMartechListResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateMartechListResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateMartechListResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

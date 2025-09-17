@@ -19,39 +19,39 @@ type UpdateAtsActivityRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAtsActivityRequest) GetAtsActivity() shared.AtsActivity {
-	if o == nil {
+func (u *UpdateAtsActivityRequest) GetAtsActivity() shared.AtsActivity {
+	if u == nil {
 		return shared.AtsActivity{}
 	}
-	return o.AtsActivity
+	return u.AtsActivity
 }
 
-func (o *UpdateAtsActivityRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAtsActivityRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAtsActivityRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAtsActivityRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAtsActivityRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAtsActivityRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAtsActivityRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAtsActivityRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAtsActivityResponse struct {
@@ -65,30 +65,30 @@ type UpdateAtsActivityResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAtsActivityResponse) GetAtsActivity() *shared.AtsActivity {
-	if o == nil {
+func (u *UpdateAtsActivityResponse) GetAtsActivity() *shared.AtsActivity {
+	if u == nil {
 		return nil
 	}
-	return o.AtsActivity
+	return u.AtsActivity
 }
 
-func (o *UpdateAtsActivityResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAtsActivityResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAtsActivityResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAtsActivityResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAtsActivityResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAtsActivityResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

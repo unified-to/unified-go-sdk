@@ -28,81 +28,81 @@ type ListStorageFilesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListStorageFilesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListStorageFilesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListStorageFilesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListStorageFilesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListStorageFilesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListStorageFilesRequest) GetParentID() *string {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetParentID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ParentID
+	return l.ParentID
 }
 
-func (o *ListStorageFilesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListStorageFilesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListStorageFilesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListStorageFilesRequest) GetType() *string {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }
 
-func (o *ListStorageFilesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListStorageFilesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListStorageFilesResponse struct {
@@ -116,30 +116,30 @@ type ListStorageFilesResponse struct {
 	StorageFiles []shared.StorageFile
 }
 
-func (o *ListStorageFilesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListStorageFilesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListStorageFilesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListStorageFilesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListStorageFilesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListStorageFilesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListStorageFilesResponse) GetStorageFiles() []shared.StorageFile {
-	if o == nil {
+func (l *ListStorageFilesResponse) GetStorageFiles() []shared.StorageFile {
+	if l == nil {
 		return nil
 	}
-	return o.StorageFiles
+	return l.StorageFiles
 }

@@ -19,39 +19,39 @@ type PatchTicketingCategoryRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchTicketingCategoryRequest) GetTicketingCategory() shared.TicketingCategory {
-	if o == nil {
+func (p *PatchTicketingCategoryRequest) GetTicketingCategory() shared.TicketingCategory {
+	if p == nil {
 		return shared.TicketingCategory{}
 	}
-	return o.TicketingCategory
+	return p.TicketingCategory
 }
 
-func (o *PatchTicketingCategoryRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchTicketingCategoryRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchTicketingCategoryRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchTicketingCategoryRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchTicketingCategoryRequest) GetID() string {
-	if o == nil {
+func (p *PatchTicketingCategoryRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchTicketingCategoryRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchTicketingCategoryRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchTicketingCategoryResponse struct {
@@ -65,30 +65,30 @@ type PatchTicketingCategoryResponse struct {
 	TicketingCategory *shared.TicketingCategory
 }
 
-func (o *PatchTicketingCategoryResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchTicketingCategoryResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchTicketingCategoryResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchTicketingCategoryResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchTicketingCategoryResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchTicketingCategoryResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchTicketingCategoryResponse) GetTicketingCategory() *shared.TicketingCategory {
-	if o == nil {
+func (p *PatchTicketingCategoryResponse) GetTicketingCategory() *shared.TicketingCategory {
+	if p == nil {
 		return nil
 	}
-	return o.TicketingCategory
+	return p.TicketingCategory
 }

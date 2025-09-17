@@ -19,39 +19,39 @@ type PatchAccountingBillRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchAccountingBillRequest) GetAccountingBill() shared.AccountingBill {
-	if o == nil {
+func (p *PatchAccountingBillRequest) GetAccountingBill() shared.AccountingBill {
+	if p == nil {
 		return shared.AccountingBill{}
 	}
-	return o.AccountingBill
+	return p.AccountingBill
 }
 
-func (o *PatchAccountingBillRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchAccountingBillRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchAccountingBillRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchAccountingBillRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchAccountingBillRequest) GetID() string {
-	if o == nil {
+func (p *PatchAccountingBillRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchAccountingBillRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchAccountingBillRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchAccountingBillResponse struct {
@@ -65,30 +65,30 @@ type PatchAccountingBillResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchAccountingBillResponse) GetAccountingBill() *shared.AccountingBill {
-	if o == nil {
+func (p *PatchAccountingBillResponse) GetAccountingBill() *shared.AccountingBill {
+	if p == nil {
 		return nil
 	}
-	return o.AccountingBill
+	return p.AccountingBill
 }
 
-func (o *PatchAccountingBillResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchAccountingBillResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchAccountingBillResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchAccountingBillResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchAccountingBillResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchAccountingBillResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

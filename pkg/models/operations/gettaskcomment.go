@@ -18,32 +18,32 @@ type GetTaskCommentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetTaskCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetTaskCommentRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetTaskCommentRequest) GetFields() []string {
-	if o == nil {
+func (g *GetTaskCommentRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetTaskCommentRequest) GetID() string {
-	if o == nil {
+func (g *GetTaskCommentRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetTaskCommentRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetTaskCommentRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetTaskCommentResponse struct {
@@ -57,30 +57,30 @@ type GetTaskCommentResponse struct {
 	TaskComment *shared.TaskComment
 }
 
-func (o *GetTaskCommentResponse) GetContentType() string {
-	if o == nil {
+func (g *GetTaskCommentResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetTaskCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetTaskCommentResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetTaskCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetTaskCommentResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetTaskCommentResponse) GetTaskComment() *shared.TaskComment {
-	if o == nil {
+func (g *GetTaskCommentResponse) GetTaskComment() *shared.TaskComment {
+	if g == nil {
 		return nil
 	}
-	return o.TaskComment
+	return g.TaskComment
 }

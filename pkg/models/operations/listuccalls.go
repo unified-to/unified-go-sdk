@@ -28,81 +28,81 @@ type ListUcCallsRequest struct {
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
-func (o *ListUcCallsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListUcCallsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListUcCallsRequest) GetContactID() *string {
-	if o == nil {
+func (l *ListUcCallsRequest) GetContactID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ContactID
+	return l.ContactID
 }
 
-func (o *ListUcCallsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListUcCallsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListUcCallsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListUcCallsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListUcCallsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListUcCallsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListUcCallsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListUcCallsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListUcCallsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListUcCallsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListUcCallsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListUcCallsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListUcCallsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListUcCallsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListUcCallsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListUcCallsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
-func (o *ListUcCallsRequest) GetUserID() *string {
-	if o == nil {
+func (l *ListUcCallsRequest) GetUserID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UserID
+	return l.UserID
 }
 
 type ListUcCallsResponse struct {
@@ -116,30 +116,30 @@ type ListUcCallsResponse struct {
 	UcCalls []shared.UcCall
 }
 
-func (o *ListUcCallsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListUcCallsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListUcCallsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListUcCallsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListUcCallsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListUcCallsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
 
-func (o *ListUcCallsResponse) GetUcCalls() []shared.UcCall {
-	if o == nil {
+func (l *ListUcCallsResponse) GetUcCalls() []shared.UcCall {
+	if l == nil {
 		return nil
 	}
-	return o.UcCalls
+	return l.UcCalls
 }

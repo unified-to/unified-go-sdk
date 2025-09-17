@@ -18,32 +18,32 @@ type GetLmsStudentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetLmsStudentRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetLmsStudentRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetLmsStudentRequest) GetFields() []string {
-	if o == nil {
+func (g *GetLmsStudentRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetLmsStudentRequest) GetID() string {
-	if o == nil {
+func (g *GetLmsStudentRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetLmsStudentRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetLmsStudentRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetLmsStudentResponse struct {
@@ -57,30 +57,30 @@ type GetLmsStudentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetLmsStudentResponse) GetContentType() string {
-	if o == nil {
+func (g *GetLmsStudentResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetLmsStudentResponse) GetLmsStudent() *shared.LmsStudent {
-	if o == nil {
+func (g *GetLmsStudentResponse) GetLmsStudent() *shared.LmsStudent {
+	if g == nil {
 		return nil
 	}
-	return o.LmsStudent
+	return g.LmsStudent
 }
 
-func (o *GetLmsStudentResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetLmsStudentResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetLmsStudentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetLmsStudentResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

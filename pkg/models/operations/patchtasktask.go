@@ -19,39 +19,39 @@ type PatchTaskTaskRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchTaskTaskRequest) GetTaskTask() shared.TaskTask {
-	if o == nil {
+func (p *PatchTaskTaskRequest) GetTaskTask() shared.TaskTask {
+	if p == nil {
 		return shared.TaskTask{}
 	}
-	return o.TaskTask
+	return p.TaskTask
 }
 
-func (o *PatchTaskTaskRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchTaskTaskRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchTaskTaskRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchTaskTaskRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchTaskTaskRequest) GetID() string {
-	if o == nil {
+func (p *PatchTaskTaskRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchTaskTaskRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchTaskTaskRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchTaskTaskResponse struct {
@@ -65,30 +65,30 @@ type PatchTaskTaskResponse struct {
 	TaskTask *shared.TaskTask
 }
 
-func (o *PatchTaskTaskResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchTaskTaskResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchTaskTaskResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchTaskTaskResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchTaskTaskResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchTaskTaskResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }
 
-func (o *PatchTaskTaskResponse) GetTaskTask() *shared.TaskTask {
-	if o == nil {
+func (p *PatchTaskTaskResponse) GetTaskTask() *shared.TaskTask {
+	if p == nil {
 		return nil
 	}
-	return o.TaskTask
+	return p.TaskTask
 }

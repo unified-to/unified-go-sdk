@@ -19,39 +19,39 @@ type UpdatePaymentPaymentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdatePaymentPaymentRequest) GetPaymentPayment() shared.PaymentPayment {
-	if o == nil {
+func (u *UpdatePaymentPaymentRequest) GetPaymentPayment() shared.PaymentPayment {
+	if u == nil {
 		return shared.PaymentPayment{}
 	}
-	return o.PaymentPayment
+	return u.PaymentPayment
 }
 
-func (o *UpdatePaymentPaymentRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdatePaymentPaymentRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdatePaymentPaymentRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdatePaymentPaymentRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdatePaymentPaymentRequest) GetID() string {
-	if o == nil {
+func (u *UpdatePaymentPaymentRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdatePaymentPaymentRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdatePaymentPaymentRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdatePaymentPaymentResponse struct {
@@ -65,30 +65,30 @@ type UpdatePaymentPaymentResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdatePaymentPaymentResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdatePaymentPaymentResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdatePaymentPaymentResponse) GetPaymentPayment() *shared.PaymentPayment {
-	if o == nil {
+func (u *UpdatePaymentPaymentResponse) GetPaymentPayment() *shared.PaymentPayment {
+	if u == nil {
 		return nil
 	}
-	return o.PaymentPayment
+	return u.PaymentPayment
 }
 
-func (o *UpdatePaymentPaymentResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdatePaymentPaymentResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdatePaymentPaymentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdatePaymentPaymentResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

@@ -74,184 +74,184 @@ func (a *AccountingBill) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AccountingBill) GetAttachments() []AccountingAttachment {
-	if o == nil {
+func (a *AccountingBill) GetAttachments() []AccountingAttachment {
+	if a == nil {
 		return nil
 	}
-	return o.Attachments
+	return a.Attachments
 }
 
-func (o *AccountingBill) GetBalanceAmount() *float64 {
-	if o == nil {
+func (a *AccountingBill) GetBalanceAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.BalanceAmount
+	return a.BalanceAmount
 }
 
-func (o *AccountingBill) GetBillNumber() *string {
-	if o == nil {
+func (a *AccountingBill) GetBillNumber() *string {
+	if a == nil {
 		return nil
 	}
-	return o.BillNumber
+	return a.BillNumber
 }
 
-func (o *AccountingBill) GetCancelledAt() *time.Time {
-	if o == nil {
+func (a *AccountingBill) GetCancelledAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CancelledAt
+	return a.CancelledAt
 }
 
-func (o *AccountingBill) GetContactID() *string {
-	if o == nil {
+func (a *AccountingBill) GetContactID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ContactID
+	return a.ContactID
 }
 
-func (o *AccountingBill) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingBill) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AccountingBill) GetCurrency() *string {
-	if o == nil {
+func (a *AccountingBill) GetCurrency() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Currency
+	return a.Currency
 }
 
-func (o *AccountingBill) GetDiscountAmount() *float64 {
-	if o == nil {
+func (a *AccountingBill) GetDiscountAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.DiscountAmount
+	return a.DiscountAmount
 }
 
-func (o *AccountingBill) GetDueAt() *time.Time {
-	if o == nil {
+func (a *AccountingBill) GetDueAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.DueAt
+	return a.DueAt
 }
 
-func (o *AccountingBill) GetID() *string {
-	if o == nil {
+func (a *AccountingBill) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountingBill) GetLineitems() []AccountingLineitem {
-	if o == nil {
+func (a *AccountingBill) GetLineitems() []AccountingLineitem {
+	if a == nil {
 		return nil
 	}
-	return o.Lineitems
+	return a.Lineitems
 }
 
-func (o *AccountingBill) GetNotes() *string {
-	if o == nil {
+func (a *AccountingBill) GetNotes() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Notes
+	return a.Notes
 }
 
-func (o *AccountingBill) GetPaidAmount() *float64 {
-	if o == nil {
+func (a *AccountingBill) GetPaidAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.PaidAmount
+	return a.PaidAmount
 }
 
-func (o *AccountingBill) GetPaidAt() *time.Time {
-	if o == nil {
+func (a *AccountingBill) GetPaidAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.PaidAt
+	return a.PaidAt
 }
 
-func (o *AccountingBill) GetPaymentCollectionMethod() *PaymentCollectionMethod {
-	if o == nil {
+func (a *AccountingBill) GetPaymentCollectionMethod() *PaymentCollectionMethod {
+	if a == nil {
 		return nil
 	}
-	return o.PaymentCollectionMethod
+	return a.PaymentCollectionMethod
 }
 
-func (o *AccountingBill) GetPostedAt() *time.Time {
-	if o == nil {
+func (a *AccountingBill) GetPostedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.PostedAt
+	return a.PostedAt
 }
 
-func (o *AccountingBill) GetRaw() map[string]any {
-	if o == nil {
+func (a *AccountingBill) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AccountingBill) GetRefundAmount() *float64 {
-	if o == nil {
+func (a *AccountingBill) GetRefundAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.RefundAmount
+	return a.RefundAmount
 }
 
-func (o *AccountingBill) GetRefundReason() *string {
-	if o == nil {
+func (a *AccountingBill) GetRefundReason() *string {
+	if a == nil {
 		return nil
 	}
-	return o.RefundReason
+	return a.RefundReason
 }
 
-func (o *AccountingBill) GetRefundedAt() *time.Time {
-	if o == nil {
+func (a *AccountingBill) GetRefundedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.RefundedAt
+	return a.RefundedAt
 }
 
-func (o *AccountingBill) GetSend() *bool {
-	if o == nil {
+func (a *AccountingBill) GetSend() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.Send
+	return a.Send
 }
 
-func (o *AccountingBill) GetStatus() *AccountingBillStatus {
-	if o == nil {
+func (a *AccountingBill) GetStatus() *AccountingBillStatus {
+	if a == nil {
 		return nil
 	}
-	return o.Status
+	return a.Status
 }
 
-func (o *AccountingBill) GetTaxAmount() *float64 {
-	if o == nil {
+func (a *AccountingBill) GetTaxAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TaxAmount
+	return a.TaxAmount
 }
 
-func (o *AccountingBill) GetTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingBill) GetTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalAmount
+	return a.TotalAmount
 }
 
-func (o *AccountingBill) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AccountingBill) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }
 
-func (o *AccountingBill) GetURL() *string {
-	if o == nil {
+func (a *AccountingBill) GetURL() *string {
+	if a == nil {
 		return nil
 	}
-	return o.URL
+	return a.URL
 }

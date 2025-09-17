@@ -13,18 +13,18 @@ type RemoveTaskProjectRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveTaskProjectRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveTaskProjectRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveTaskProjectRequest) GetID() string {
-	if o == nil {
+func (r *RemoveTaskProjectRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveTaskProjectResponse struct {
@@ -37,30 +37,30 @@ type RemoveTaskProjectResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveTaskProjectResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveTaskProjectResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveTaskProjectResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveTaskProjectResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveTaskProjectResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveTaskProjectResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveTaskProjectResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveTaskProjectResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

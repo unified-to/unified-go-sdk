@@ -73,72 +73,72 @@ func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10Use
 	return nil
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetJobLevel() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetJobLevel() *string {
+	if p == nil {
 		return nil
 	}
-	return o.JobLevel
+	return p.JobLevel
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetPeopleManagerReviews() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetPeopleManagerReviews() *string {
+	if p == nil {
 		return nil
 	}
-	return o.PeopleManagerReviews
+	return p.PeopleManagerReviews
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetRemoteWorkLocation() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetRemoteWorkLocation() *string {
+	if p == nil {
 		return nil
 	}
-	return o.RemoteWorkLocation
+	return p.RemoteWorkLocation
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetSalaryInformation() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetSalaryInformation() *string {
+	if p == nil {
 		return nil
 	}
-	return o.SalaryInformation
+	return p.SalaryInformation
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetSubDepartments() *string {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetSubDepartments() *string {
+	if p == nil {
 		return nil
 	}
-	return o.SubDepartments
+	return p.SubDepartments
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetBirthDate() *time.Time {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetBirthDate() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.BirthDate
+	return p.BirthDate
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetEthnicity() *Ethnicity {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetEthnicity() *Ethnicity {
+	if p == nil {
 		return nil
 	}
-	return o.Ethnicity
+	return p.Ethnicity
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetGender() *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetGender() *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender {
+	if p == nil {
 		return nil
 	}
-	return o.Gender
+	return p.Gender
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetSexualOrientation() *SexualOrientation {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetSexualOrientation() *SexualOrientation {
+	if p == nil {
 		return nil
 	}
-	return o.SexualOrientation
+	return p.SexualOrientation
 }
 
-func (o *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetStartDate() *time.Time {
-	if o == nil {
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) GetStartDate() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.StartDate
+	return p.StartDate
 }

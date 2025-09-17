@@ -18,32 +18,32 @@ type GetAtsCandidateRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAtsCandidateRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAtsCandidateRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAtsCandidateRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAtsCandidateRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAtsCandidateRequest) GetID() string {
-	if o == nil {
+func (g *GetAtsCandidateRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAtsCandidateRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAtsCandidateRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAtsCandidateResponse struct {
@@ -57,30 +57,30 @@ type GetAtsCandidateResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAtsCandidateResponse) GetAtsCandidate() *shared.AtsCandidate {
-	if o == nil {
+func (g *GetAtsCandidateResponse) GetAtsCandidate() *shared.AtsCandidate {
+	if g == nil {
 		return nil
 	}
-	return o.AtsCandidate
+	return g.AtsCandidate
 }
 
-func (o *GetAtsCandidateResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAtsCandidateResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAtsCandidateResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAtsCandidateResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAtsCandidateResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAtsCandidateResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

@@ -9,30 +9,30 @@ type ScimRole struct {
 	Value   string  `json:"value"`
 }
 
-func (o *ScimRole) GetDisplay() *string {
-	if o == nil {
+func (s *ScimRole) GetDisplay() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Display
+	return s.Display
 }
 
-func (o *ScimRole) GetPrimary() *bool {
-	if o == nil {
+func (s *ScimRole) GetPrimary() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Primary
+	return s.Primary
 }
 
-func (o *ScimRole) GetType() *string {
-	if o == nil {
+func (s *ScimRole) GetType() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Type
+	return s.Type
 }
 
-func (o *ScimRole) GetValue() string {
-	if o == nil {
+func (s *ScimRole) GetValue() string {
+	if s == nil {
 		return ""
 	}
-	return o.Value
+	return s.Value
 }

@@ -55,149 +55,149 @@ func (t *TaskTask) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *TaskTask) GetAssignedUserIds() []string {
-	if o == nil {
+func (t *TaskTask) GetAssignedUserIds() []string {
+	if t == nil {
 		return nil
 	}
-	return o.AssignedUserIds
+	return t.AssignedUserIds
 }
 
-func (o *TaskTask) GetAttachmentIds() []string {
-	if o == nil {
+func (t *TaskTask) GetAttachmentIds() []string {
+	if t == nil {
 		return nil
 	}
-	return o.AttachmentIds
+	return t.AttachmentIds
 }
 
-func (o *TaskTask) GetCompletedAt() *time.Time {
-	if o == nil {
+func (t *TaskTask) GetCompletedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.CompletedAt
+	return t.CompletedAt
 }
 
-func (o *TaskTask) GetCreatedAt() *time.Time {
-	if o == nil {
+func (t *TaskTask) GetCreatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return t.CreatedAt
 }
 
-func (o *TaskTask) GetCreatorUserID() *string {
-	if o == nil {
+func (t *TaskTask) GetCreatorUserID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.CreatorUserID
+	return t.CreatorUserID
 }
 
-func (o *TaskTask) GetDueAt() *time.Time {
-	if o == nil {
+func (t *TaskTask) GetDueAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.DueAt
+	return t.DueAt
 }
 
-func (o *TaskTask) GetFollowerUserIds() []string {
-	if o == nil {
+func (t *TaskTask) GetFollowerUserIds() []string {
+	if t == nil {
 		return nil
 	}
-	return o.FollowerUserIds
+	return t.FollowerUserIds
 }
 
-func (o *TaskTask) GetGroupIds() []string {
-	if o == nil {
+func (t *TaskTask) GetGroupIds() []string {
+	if t == nil {
 		return nil
 	}
-	return o.GroupIds
+	return t.GroupIds
 }
 
-func (o *TaskTask) GetHasChildren() *bool {
-	if o == nil {
+func (t *TaskTask) GetHasChildren() *bool {
+	if t == nil {
 		return nil
 	}
-	return o.HasChildren
+	return t.HasChildren
 }
 
-func (o *TaskTask) GetID() *string {
-	if o == nil {
+func (t *TaskTask) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *TaskTask) GetMetadata() []TaskMetadata {
-	if o == nil {
+func (t *TaskTask) GetMetadata() []TaskMetadata {
+	if t == nil {
 		return nil
 	}
-	return o.Metadata
+	return t.Metadata
 }
 
-func (o *TaskTask) GetName() *string {
-	if o == nil {
+func (t *TaskTask) GetName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Name
+	return t.Name
 }
 
-func (o *TaskTask) GetNotes() *string {
-	if o == nil {
+func (t *TaskTask) GetNotes() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Notes
+	return t.Notes
 }
 
-func (o *TaskTask) GetParentID() *string {
-	if o == nil {
+func (t *TaskTask) GetParentID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ParentID
+	return t.ParentID
 }
 
-func (o *TaskTask) GetPriority() *string {
-	if o == nil {
+func (t *TaskTask) GetPriority() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Priority
+	return t.Priority
 }
 
-func (o *TaskTask) GetProjectID() *string {
-	if o == nil {
+func (t *TaskTask) GetProjectID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ProjectID
+	return t.ProjectID
 }
 
-func (o *TaskTask) GetRaw() map[string]any {
-	if o == nil {
+func (t *TaskTask) GetRaw() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Raw
+	return t.Raw
 }
 
-func (o *TaskTask) GetStatus() *TaskTaskStatus {
-	if o == nil {
+func (t *TaskTask) GetStatus() *TaskTaskStatus {
+	if t == nil {
 		return nil
 	}
-	return o.Status
+	return t.Status
 }
 
-func (o *TaskTask) GetTags() []string {
-	if o == nil {
+func (t *TaskTask) GetTags() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Tags
+	return t.Tags
 }
 
-func (o *TaskTask) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (t *TaskTask) GetUpdatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return t.UpdatedAt
 }
 
-func (o *TaskTask) GetURL() *string {
-	if o == nil {
+func (t *TaskTask) GetURL() *string {
+	if t == nil {
 		return nil
 	}
-	return o.URL
+	return t.URL
 }

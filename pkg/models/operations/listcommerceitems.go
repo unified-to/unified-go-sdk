@@ -26,74 +26,74 @@ type ListCommerceItemsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListCommerceItemsRequest) GetCollectionID() *string {
-	if o == nil {
+func (l *ListCommerceItemsRequest) GetCollectionID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CollectionID
+	return l.CollectionID
 }
 
-func (o *ListCommerceItemsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListCommerceItemsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListCommerceItemsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListCommerceItemsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListCommerceItemsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListCommerceItemsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListCommerceItemsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListCommerceItemsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListCommerceItemsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListCommerceItemsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListCommerceItemsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListCommerceItemsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListCommerceItemsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListCommerceItemsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListCommerceItemsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListCommerceItemsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListCommerceItemsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListCommerceItemsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListCommerceItemsResponse struct {
@@ -107,30 +107,30 @@ type ListCommerceItemsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListCommerceItemsResponse) GetCommerceItems() []shared.CommerceItem {
-	if o == nil {
+func (l *ListCommerceItemsResponse) GetCommerceItems() []shared.CommerceItem {
+	if l == nil {
 		return nil
 	}
-	return o.CommerceItems
+	return l.CommerceItems
 }
 
-func (o *ListCommerceItemsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListCommerceItemsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListCommerceItemsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListCommerceItemsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListCommerceItemsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListCommerceItemsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

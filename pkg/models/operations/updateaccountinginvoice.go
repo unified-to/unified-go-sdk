@@ -19,39 +19,39 @@ type UpdateAccountingInvoiceRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateAccountingInvoiceRequest) GetAccountingInvoice() shared.AccountingInvoice {
-	if o == nil {
+func (u *UpdateAccountingInvoiceRequest) GetAccountingInvoice() shared.AccountingInvoice {
+	if u == nil {
 		return shared.AccountingInvoice{}
 	}
-	return o.AccountingInvoice
+	return u.AccountingInvoice
 }
 
-func (o *UpdateAccountingInvoiceRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateAccountingInvoiceRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateAccountingInvoiceRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateAccountingInvoiceRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateAccountingInvoiceRequest) GetID() string {
-	if o == nil {
+func (u *UpdateAccountingInvoiceRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateAccountingInvoiceRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateAccountingInvoiceRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateAccountingInvoiceResponse struct {
@@ -65,30 +65,30 @@ type UpdateAccountingInvoiceResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateAccountingInvoiceResponse) GetAccountingInvoice() *shared.AccountingInvoice {
-	if o == nil {
+func (u *UpdateAccountingInvoiceResponse) GetAccountingInvoice() *shared.AccountingInvoice {
+	if u == nil {
 		return nil
 	}
-	return o.AccountingInvoice
+	return u.AccountingInvoice
 }
 
-func (o *UpdateAccountingInvoiceResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateAccountingInvoiceResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateAccountingInvoiceResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateAccountingInvoiceResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateAccountingInvoiceResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateAccountingInvoiceResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

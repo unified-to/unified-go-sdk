@@ -55,142 +55,142 @@ func (a *AtsActivity) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsActivity) GetApplicationID() *string {
-	if o == nil {
+func (a *AtsActivity) GetApplicationID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ApplicationID
+	return a.ApplicationID
 }
 
-func (o *AtsActivity) GetBcc() []AtsEmail {
-	if o == nil {
+func (a *AtsActivity) GetBcc() []AtsEmail {
+	if a == nil {
 		return nil
 	}
-	return o.Bcc
+	return a.Bcc
 }
 
-func (o *AtsActivity) GetCandidateID() *string {
-	if o == nil {
+func (a *AtsActivity) GetCandidateID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CandidateID
+	return a.CandidateID
 }
 
-func (o *AtsActivity) GetCc() []AtsEmail {
-	if o == nil {
+func (a *AtsActivity) GetCc() []AtsEmail {
+	if a == nil {
 		return nil
 	}
-	return o.Cc
+	return a.Cc
 }
 
-func (o *AtsActivity) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AtsActivity) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AtsActivity) GetDescription() *string {
-	if o == nil {
+func (a *AtsActivity) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AtsActivity) GetDocumentID() *string {
-	if o == nil {
+func (a *AtsActivity) GetDocumentID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.DocumentID
+	return a.DocumentID
 }
 
-func (o *AtsActivity) GetDocumentIds() []string {
-	if o == nil {
+func (a *AtsActivity) GetDocumentIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.DocumentIds
+	return a.DocumentIds
 }
 
-func (o *AtsActivity) GetFrom() *PropertyAtsActivityFrom {
-	if o == nil {
+func (a *AtsActivity) GetFrom() *PropertyAtsActivityFrom {
+	if a == nil {
 		return nil
 	}
-	return o.From
+	return a.From
 }
 
-func (o *AtsActivity) GetID() *string {
-	if o == nil {
+func (a *AtsActivity) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsActivity) GetInterviewID() *string {
-	if o == nil {
+func (a *AtsActivity) GetInterviewID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.InterviewID
+	return a.InterviewID
 }
 
-func (o *AtsActivity) GetIsPrivate() *bool {
-	if o == nil {
+func (a *AtsActivity) GetIsPrivate() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsPrivate
+	return a.IsPrivate
 }
 
-func (o *AtsActivity) GetJobID() *string {
-	if o == nil {
+func (a *AtsActivity) GetJobID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.JobID
+	return a.JobID
 }
 
-func (o *AtsActivity) GetRaw() map[string]any {
-	if o == nil {
+func (a *AtsActivity) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AtsActivity) GetSubType() *string {
-	if o == nil {
+func (a *AtsActivity) GetSubType() *string {
+	if a == nil {
 		return nil
 	}
-	return o.SubType
+	return a.SubType
 }
 
-func (o *AtsActivity) GetTitle() *string {
-	if o == nil {
+func (a *AtsActivity) GetTitle() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Title
+	return a.Title
 }
 
-func (o *AtsActivity) GetTo() []AtsEmail {
-	if o == nil {
+func (a *AtsActivity) GetTo() []AtsEmail {
+	if a == nil {
 		return nil
 	}
-	return o.To
+	return a.To
 }
 
-func (o *AtsActivity) GetType() *AtsActivityType {
-	if o == nil {
+func (a *AtsActivity) GetType() *AtsActivityType {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }
 
-func (o *AtsActivity) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AtsActivity) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }
 
-func (o *AtsActivity) GetUserIds() []string {
-	if o == nil {
+func (a *AtsActivity) GetUserIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.UserIds
+	return a.UserIds
 }

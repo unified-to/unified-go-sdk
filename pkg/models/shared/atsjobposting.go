@@ -31,65 +31,65 @@ func (a *AtsJobPosting) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsJobPosting) GetAddress() *PropertyAtsJobPostingAddress {
-	if o == nil {
+func (a *AtsJobPosting) GetAddress() *PropertyAtsJobPostingAddress {
+	if a == nil {
 		return nil
 	}
-	return o.Address
+	return a.Address
 }
 
-func (o *AtsJobPosting) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AtsJobPosting) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AtsJobPosting) GetDescription() *string {
-	if o == nil {
+func (a *AtsJobPosting) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AtsJobPosting) GetID() *string {
-	if o == nil {
+func (a *AtsJobPosting) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsJobPosting) GetIsActive() *bool {
-	if o == nil {
+func (a *AtsJobPosting) GetIsActive() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.IsActive
+	return a.IsActive
 }
 
-func (o *AtsJobPosting) GetLocation() *string {
-	if o == nil {
+func (a *AtsJobPosting) GetLocation() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Location
+	return a.Location
 }
 
-func (o *AtsJobPosting) GetName() *string {
-	if o == nil {
+func (a *AtsJobPosting) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AtsJobPosting) GetPostingURL() *string {
-	if o == nil {
+func (a *AtsJobPosting) GetPostingURL() *string {
+	if a == nil {
 		return nil
 	}
-	return o.PostingURL
+	return a.PostingURL
 }
 
-func (o *AtsJobPosting) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AtsJobPosting) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }

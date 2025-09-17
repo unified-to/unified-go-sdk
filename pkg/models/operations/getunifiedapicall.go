@@ -12,11 +12,11 @@ type GetUnifiedApicallRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *GetUnifiedApicallRequest) GetID() string {
-	if o == nil {
+func (g *GetUnifiedApicallRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
 type GetUnifiedApicallResponse struct {
@@ -30,30 +30,30 @@ type GetUnifiedApicallResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetUnifiedApicallResponse) GetAPICall() *shared.APICall {
-	if o == nil {
+func (g *GetUnifiedApicallResponse) GetAPICall() *shared.APICall {
+	if g == nil {
 		return nil
 	}
-	return o.APICall
+	return g.APICall
 }
 
-func (o *GetUnifiedApicallResponse) GetContentType() string {
-	if o == nil {
+func (g *GetUnifiedApicallResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetUnifiedApicallResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetUnifiedApicallResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetUnifiedApicallResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetUnifiedApicallResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

@@ -19,39 +19,39 @@ type PatchLmsInstructorRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchLmsInstructorRequest) GetLmsInstructor() shared.LmsInstructor {
-	if o == nil {
+func (p *PatchLmsInstructorRequest) GetLmsInstructor() shared.LmsInstructor {
+	if p == nil {
 		return shared.LmsInstructor{}
 	}
-	return o.LmsInstructor
+	return p.LmsInstructor
 }
 
-func (o *PatchLmsInstructorRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchLmsInstructorRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchLmsInstructorRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchLmsInstructorRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchLmsInstructorRequest) GetID() string {
-	if o == nil {
+func (p *PatchLmsInstructorRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchLmsInstructorRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchLmsInstructorRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchLmsInstructorResponse struct {
@@ -65,30 +65,30 @@ type PatchLmsInstructorResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchLmsInstructorResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchLmsInstructorResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchLmsInstructorResponse) GetLmsInstructor() *shared.LmsInstructor {
-	if o == nil {
+func (p *PatchLmsInstructorResponse) GetLmsInstructor() *shared.LmsInstructor {
+	if p == nil {
 		return nil
 	}
-	return o.LmsInstructor
+	return p.LmsInstructor
 }
 
-func (o *PatchLmsInstructorResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchLmsInstructorResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchLmsInstructorResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchLmsInstructorResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

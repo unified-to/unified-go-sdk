@@ -43,72 +43,72 @@ func (r *RepoPullrequest) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *RepoPullrequest) GetClosedAt() *time.Time {
-	if o == nil {
+func (r *RepoPullrequest) GetClosedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.ClosedAt
+	return r.ClosedAt
 }
 
-func (o *RepoPullrequest) GetCommitIds() []string {
-	if o == nil {
+func (r *RepoPullrequest) GetCommitIds() []string {
+	if r == nil {
 		return nil
 	}
-	return o.CommitIds
+	return r.CommitIds
 }
 
-func (o *RepoPullrequest) GetCreatedAt() *time.Time {
-	if o == nil {
+func (r *RepoPullrequest) GetCreatedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return r.CreatedAt
 }
 
-func (o *RepoPullrequest) GetID() *string {
-	if o == nil {
+func (r *RepoPullrequest) GetID() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ID
+	return r.ID
 }
 
-func (o *RepoPullrequest) GetLabels() []string {
-	if o == nil {
+func (r *RepoPullrequest) GetLabels() []string {
+	if r == nil {
 		return nil
 	}
-	return o.Labels
+	return r.Labels
 }
 
-func (o *RepoPullrequest) GetRaw() map[string]any {
-	if o == nil {
+func (r *RepoPullrequest) GetRaw() map[string]any {
+	if r == nil {
 		return nil
 	}
-	return o.Raw
+	return r.Raw
 }
 
-func (o *RepoPullrequest) GetRepoID() *string {
-	if o == nil {
+func (r *RepoPullrequest) GetRepoID() *string {
+	if r == nil {
 		return nil
 	}
-	return o.RepoID
+	return r.RepoID
 }
 
-func (o *RepoPullrequest) GetStatus() *RepoPullrequestStatus {
-	if o == nil {
+func (r *RepoPullrequest) GetStatus() *RepoPullrequestStatus {
+	if r == nil {
 		return nil
 	}
-	return o.Status
+	return r.Status
 }
 
-func (o *RepoPullrequest) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (r *RepoPullrequest) GetUpdatedAt() *time.Time {
+	if r == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return r.UpdatedAt
 }
 
-func (o *RepoPullrequest) GetUserIds() []string {
-	if o == nil {
+func (r *RepoPullrequest) GetUserIds() []string {
+	if r == nil {
 		return nil
 	}
-	return o.UserIds
+	return r.UserIds
 }

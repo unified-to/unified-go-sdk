@@ -21,16 +21,16 @@ type EnrichTelephone struct {
 	Type      *EnrichTelephoneType `json:"type,omitempty"`
 }
 
-func (o *EnrichTelephone) GetTelephone() string {
-	if o == nil {
+func (e *EnrichTelephone) GetTelephone() string {
+	if e == nil {
 		return ""
 	}
-	return o.Telephone
+	return e.Telephone
 }
 
-func (o *EnrichTelephone) GetType() *EnrichTelephoneType {
-	if o == nil {
+func (e *EnrichTelephone) GetType() *EnrichTelephoneType {
+	if e == nil {
 		return nil
 	}
-	return o.Type
+	return e.Type
 }

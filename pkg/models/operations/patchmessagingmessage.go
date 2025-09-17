@@ -19,39 +19,39 @@ type PatchMessagingMessageRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchMessagingMessageRequest) GetMessagingMessage() shared.MessagingMessage {
-	if o == nil {
+func (p *PatchMessagingMessageRequest) GetMessagingMessage() shared.MessagingMessage {
+	if p == nil {
 		return shared.MessagingMessage{}
 	}
-	return o.MessagingMessage
+	return p.MessagingMessage
 }
 
-func (o *PatchMessagingMessageRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchMessagingMessageRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchMessagingMessageRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchMessagingMessageRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchMessagingMessageRequest) GetID() string {
-	if o == nil {
+func (p *PatchMessagingMessageRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchMessagingMessageRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchMessagingMessageRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchMessagingMessageResponse struct {
@@ -65,30 +65,30 @@ type PatchMessagingMessageResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchMessagingMessageResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchMessagingMessageResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchMessagingMessageResponse) GetMessagingMessage() *shared.MessagingMessage {
-	if o == nil {
+func (p *PatchMessagingMessageResponse) GetMessagingMessage() *shared.MessagingMessage {
+	if p == nil {
 		return nil
 	}
-	return o.MessagingMessage
+	return p.MessagingMessage
 }
 
-func (o *PatchMessagingMessageResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchMessagingMessageResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchMessagingMessageResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchMessagingMessageResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

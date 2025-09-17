@@ -19,39 +19,39 @@ type PatchMetadataMetadataRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *PatchMetadataMetadataRequest) GetMetadataMetadata() shared.MetadataMetadata {
-	if o == nil {
+func (p *PatchMetadataMetadataRequest) GetMetadataMetadata() shared.MetadataMetadata {
+	if p == nil {
 		return shared.MetadataMetadata{}
 	}
-	return o.MetadataMetadata
+	return p.MetadataMetadata
 }
 
-func (o *PatchMetadataMetadataRequest) GetConnectionID() string {
-	if o == nil {
+func (p *PatchMetadataMetadataRequest) GetConnectionID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return p.ConnectionID
 }
 
-func (o *PatchMetadataMetadataRequest) GetFields() []string {
-	if o == nil {
+func (p *PatchMetadataMetadataRequest) GetFields() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Fields
+	return p.Fields
 }
 
-func (o *PatchMetadataMetadataRequest) GetID() string {
-	if o == nil {
+func (p *PatchMetadataMetadataRequest) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PatchMetadataMetadataRequest) GetRaw() *string {
-	if o == nil {
+func (p *PatchMetadataMetadataRequest) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }
 
 type PatchMetadataMetadataResponse struct {
@@ -65,30 +65,30 @@ type PatchMetadataMetadataResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *PatchMetadataMetadataResponse) GetContentType() string {
-	if o == nil {
+func (p *PatchMetadataMetadataResponse) GetContentType() string {
+	if p == nil {
 		return ""
 	}
-	return o.ContentType
+	return p.ContentType
 }
 
-func (o *PatchMetadataMetadataResponse) GetMetadataMetadata() *shared.MetadataMetadata {
-	if o == nil {
+func (p *PatchMetadataMetadataResponse) GetMetadataMetadata() *shared.MetadataMetadata {
+	if p == nil {
 		return nil
 	}
-	return o.MetadataMetadata
+	return p.MetadataMetadata
 }
 
-func (o *PatchMetadataMetadataResponse) GetStatusCode() int {
-	if o == nil {
+func (p *PatchMetadataMetadataResponse) GetStatusCode() int {
+	if p == nil {
 		return 0
 	}
-	return o.StatusCode
+	return p.StatusCode
 }
 
-func (o *PatchMetadataMetadataResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (p *PatchMetadataMetadataResponse) GetRawResponse() *http.Response {
+	if p == nil {
 		return nil
 	}
-	return o.RawResponse
+	return p.RawResponse
 }

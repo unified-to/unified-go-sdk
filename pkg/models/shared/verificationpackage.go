@@ -59,128 +59,128 @@ func (v *VerificationPackage) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *VerificationPackage) GetAliases() []string {
-	if o == nil {
+func (v *VerificationPackage) GetAliases() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Aliases
+	return v.Aliases
 }
 
-func (o *VerificationPackage) GetAverageProcessingTimes() []VerificationTime {
-	if o == nil {
+func (v *VerificationPackage) GetAverageProcessingTimes() []VerificationTime {
+	if v == nil {
 		return nil
 	}
-	return o.AverageProcessingTimes
+	return v.AverageProcessingTimes
 }
 
-func (o *VerificationPackage) GetCostAmount() *float64 {
-	if o == nil {
+func (v *VerificationPackage) GetCostAmount() *float64 {
+	if v == nil {
 		return nil
 	}
-	return o.CostAmount
+	return v.CostAmount
 }
 
-func (o *VerificationPackage) GetCreatedAt() *time.Time {
-	if o == nil {
+func (v *VerificationPackage) GetCreatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *VerificationPackage) GetCurrency() *string {
-	if o == nil {
+func (v *VerificationPackage) GetCurrency() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Currency
+	return v.Currency
 }
 
-func (o *VerificationPackage) GetDescription() *string {
-	if o == nil {
+func (v *VerificationPackage) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *VerificationPackage) GetHasRedirectURL() *bool {
-	if o == nil {
+func (v *VerificationPackage) GetHasRedirectURL() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.HasRedirectURL
+	return v.HasRedirectURL
 }
 
-func (o *VerificationPackage) GetHasTargetURL() *bool {
-	if o == nil {
+func (v *VerificationPackage) GetHasTargetURL() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.HasTargetURL
+	return v.HasTargetURL
 }
 
-func (o *VerificationPackage) GetID() string {
-	if o == nil {
+func (v *VerificationPackage) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *VerificationPackage) GetInfoURL() *string {
-	if o == nil {
+func (v *VerificationPackage) GetInfoURL() *string {
+	if v == nil {
 		return nil
 	}
-	return o.InfoURL
+	return v.InfoURL
 }
 
-func (o *VerificationPackage) GetMaxScore() *float64 {
-	if o == nil {
+func (v *VerificationPackage) GetMaxScore() *float64 {
+	if v == nil {
 		return nil
 	}
-	return o.MaxScore
+	return v.MaxScore
 }
 
-func (o *VerificationPackage) GetName() string {
-	if o == nil {
+func (v *VerificationPackage) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *VerificationPackage) GetNeedsIPAddress() *bool {
-	if o == nil {
+func (v *VerificationPackage) GetNeedsIPAddress() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.NeedsIPAddress
+	return v.NeedsIPAddress
 }
 
-func (o *VerificationPackage) GetParameters() []VerificationParameter {
-	if o == nil {
+func (v *VerificationPackage) GetParameters() []VerificationParameter {
+	if v == nil {
 		return nil
 	}
-	return o.Parameters
+	return v.Parameters
 }
 
-func (o *VerificationPackage) GetRaw() map[string]any {
-	if o == nil {
+func (v *VerificationPackage) GetRaw() map[string]any {
+	if v == nil {
 		return nil
 	}
-	return o.Raw
+	return v.Raw
 }
 
-func (o *VerificationPackage) GetTags() []string {
-	if o == nil {
+func (v *VerificationPackage) GetTags() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *VerificationPackage) GetType() VerificationPackageType {
-	if o == nil {
+func (v *VerificationPackage) GetType() VerificationPackageType {
+	if v == nil {
 		return VerificationPackageType("")
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *VerificationPackage) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (v *VerificationPackage) GetUpdatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }

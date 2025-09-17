@@ -28,81 +28,81 @@ type ListAccountingTrialbalancesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetEndLe() *string {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetEndLe() *string {
+	if l == nil {
 		return nil
 	}
-	return o.EndLe
+	return l.EndLe
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetStartGte() *string {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetStartGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.StartGte
+	return l.StartGte
 }
 
-func (o *ListAccountingTrialbalancesRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAccountingTrialbalancesRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAccountingTrialbalancesResponse struct {
@@ -116,30 +116,30 @@ type ListAccountingTrialbalancesResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAccountingTrialbalancesResponse) GetAccountingTrialbalances() []shared.AccountingTrialbalance {
-	if o == nil {
+func (l *ListAccountingTrialbalancesResponse) GetAccountingTrialbalances() []shared.AccountingTrialbalance {
+	if l == nil {
 		return nil
 	}
-	return o.AccountingTrialbalances
+	return l.AccountingTrialbalances
 }
 
-func (o *ListAccountingTrialbalancesResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAccountingTrialbalancesResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAccountingTrialbalancesResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAccountingTrialbalancesResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAccountingTrialbalancesResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAccountingTrialbalancesResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

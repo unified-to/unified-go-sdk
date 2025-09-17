@@ -20,39 +20,39 @@ type UpdateMartechMemberRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateMartechMemberRequest) GetMarketingMember() shared.MarketingMember {
-	if o == nil {
+func (u *UpdateMartechMemberRequest) GetMarketingMember() shared.MarketingMember {
+	if u == nil {
 		return shared.MarketingMember{}
 	}
-	return o.MarketingMember
+	return u.MarketingMember
 }
 
-func (o *UpdateMartechMemberRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateMartechMemberRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateMartechMemberRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateMartechMemberRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateMartechMemberRequest) GetID() string {
-	if o == nil {
+func (u *UpdateMartechMemberRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateMartechMemberRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateMartechMemberRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateMartechMemberResponse struct {
@@ -66,30 +66,30 @@ type UpdateMartechMemberResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateMartechMemberResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateMartechMemberResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateMartechMemberResponse) GetMarketingMember() *shared.MarketingMember {
-	if o == nil {
+func (u *UpdateMartechMemberResponse) GetMarketingMember() *shared.MarketingMember {
+	if u == nil {
 		return nil
 	}
-	return o.MarketingMember
+	return u.MarketingMember
 }
 
-func (o *UpdateMartechMemberResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateMartechMemberResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateMartechMemberResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateMartechMemberResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

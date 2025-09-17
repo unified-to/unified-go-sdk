@@ -9,30 +9,30 @@ type AccountingProfitlossAccount struct {
 	TransactionIds []string `json:"transaction_ids,omitempty"`
 }
 
-func (o *AccountingProfitlossAccount) GetAccountID() *string {
-	if o == nil {
+func (a *AccountingProfitlossAccount) GetAccountID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AccountID
+	return a.AccountID
 }
 
-func (o *AccountingProfitlossAccount) GetAccountName() *string {
-	if o == nil {
+func (a *AccountingProfitlossAccount) GetAccountName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.AccountName
+	return a.AccountName
 }
 
-func (o *AccountingProfitlossAccount) GetTotalAmount() *float64 {
-	if o == nil {
+func (a *AccountingProfitlossAccount) GetTotalAmount() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.TotalAmount
+	return a.TotalAmount
 }
 
-func (o *AccountingProfitlossAccount) GetTransactionIds() []string {
-	if o == nil {
+func (a *AccountingProfitlossAccount) GetTransactionIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.TransactionIds
+	return a.TransactionIds
 }

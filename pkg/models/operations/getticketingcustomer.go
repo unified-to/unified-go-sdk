@@ -18,32 +18,32 @@ type GetTicketingCustomerRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetTicketingCustomerRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetTicketingCustomerRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetTicketingCustomerRequest) GetFields() []string {
-	if o == nil {
+func (g *GetTicketingCustomerRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetTicketingCustomerRequest) GetID() string {
-	if o == nil {
+func (g *GetTicketingCustomerRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetTicketingCustomerRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetTicketingCustomerRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetTicketingCustomerResponse struct {
@@ -57,30 +57,30 @@ type GetTicketingCustomerResponse struct {
 	TicketingCustomer *shared.TicketingCustomer
 }
 
-func (o *GetTicketingCustomerResponse) GetContentType() string {
-	if o == nil {
+func (g *GetTicketingCustomerResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetTicketingCustomerResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetTicketingCustomerResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetTicketingCustomerResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetTicketingCustomerResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }
 
-func (o *GetTicketingCustomerResponse) GetTicketingCustomer() *shared.TicketingCustomer {
-	if o == nil {
+func (g *GetTicketingCustomerResponse) GetTicketingCustomer() *shared.TicketingCustomer {
+	if g == nil {
 		return nil
 	}
-	return o.TicketingCustomer
+	return g.TicketingCustomer
 }

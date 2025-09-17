@@ -50,114 +50,114 @@ func (c *CommerceCollection) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CommerceCollection) GetCreatedAt() *time.Time {
-	if o == nil {
+func (c *CommerceCollection) GetCreatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return c.CreatedAt
 }
 
-func (o *CommerceCollection) GetDescription() *string {
-	if o == nil {
+func (c *CommerceCollection) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CommerceCollection) GetID() *string {
-	if o == nil {
+func (c *CommerceCollection) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommerceCollection) GetIsActive() *bool {
-	if o == nil {
+func (c *CommerceCollection) GetIsActive() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsActive
+	return c.IsActive
 }
 
-func (o *CommerceCollection) GetIsFeatured() *bool {
-	if o == nil {
+func (c *CommerceCollection) GetIsFeatured() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsFeatured
+	return c.IsFeatured
 }
 
-func (o *CommerceCollection) GetIsVisible() *bool {
-	if o == nil {
+func (c *CommerceCollection) GetIsVisible() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsVisible
+	return c.IsVisible
 }
 
-func (o *CommerceCollection) GetMedia() []CommerceItemMedia {
-	if o == nil {
+func (c *CommerceCollection) GetMedia() []CommerceItemMedia {
+	if c == nil {
 		return nil
 	}
-	return o.Media
+	return c.Media
 }
 
-func (o *CommerceCollection) GetMetadata() []CommerceMetadata {
-	if o == nil {
+func (c *CommerceCollection) GetMetadata() []CommerceMetadata {
+	if c == nil {
 		return nil
 	}
-	return o.Metadata
+	return c.Metadata
 }
 
-func (o *CommerceCollection) GetName() string {
-	if o == nil {
+func (c *CommerceCollection) GetName() string {
+	if c == nil {
 		return ""
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CommerceCollection) GetParentID() *string {
-	if o == nil {
+func (c *CommerceCollection) GetParentID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ParentID
+	return c.ParentID
 }
 
-func (o *CommerceCollection) GetPublicDescription() *string {
-	if o == nil {
+func (c *CommerceCollection) GetPublicDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.PublicDescription
+	return c.PublicDescription
 }
 
-func (o *CommerceCollection) GetPublicName() *string {
-	if o == nil {
+func (c *CommerceCollection) GetPublicName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.PublicName
+	return c.PublicName
 }
 
-func (o *CommerceCollection) GetRaw() map[string]any {
-	if o == nil {
+func (c *CommerceCollection) GetRaw() map[string]any {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
-func (o *CommerceCollection) GetTags() []string {
-	if o == nil {
+func (c *CommerceCollection) GetTags() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Tags
+	return c.Tags
 }
 
-func (o *CommerceCollection) GetType() *CommerceCollectionType {
-	if o == nil {
+func (c *CommerceCollection) GetType() *CommerceCollectionType {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }
 
-func (o *CommerceCollection) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (c *CommerceCollection) GetUpdatedAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return c.UpdatedAt
 }

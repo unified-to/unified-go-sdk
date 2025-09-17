@@ -20,23 +20,23 @@ type AtsEmail struct {
 	Type  *AtsEmailType `json:"type,omitempty"`
 }
 
-func (o *AtsEmail) GetEmail() string {
-	if o == nil {
+func (a *AtsEmail) GetEmail() string {
+	if a == nil {
 		return ""
 	}
-	return o.Email
+	return a.Email
 }
 
-func (o *AtsEmail) GetName() *string {
-	if o == nil {
+func (a *AtsEmail) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AtsEmail) GetType() *AtsEmailType {
-	if o == nil {
+func (a *AtsEmail) GetType() *AtsEmailType {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }

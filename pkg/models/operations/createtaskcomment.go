@@ -17,32 +17,32 @@ type CreateTaskCommentRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateTaskCommentRequest) GetTaskComment() shared.TaskComment {
-	if o == nil {
+func (c *CreateTaskCommentRequest) GetTaskComment() shared.TaskComment {
+	if c == nil {
 		return shared.TaskComment{}
 	}
-	return o.TaskComment
+	return c.TaskComment
 }
 
-func (o *CreateTaskCommentRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateTaskCommentRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateTaskCommentRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateTaskCommentRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateTaskCommentRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateTaskCommentRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateTaskCommentResponse struct {
@@ -56,30 +56,30 @@ type CreateTaskCommentResponse struct {
 	TaskComment *shared.TaskComment
 }
 
-func (o *CreateTaskCommentResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateTaskCommentResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateTaskCommentResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateTaskCommentResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateTaskCommentResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateTaskCommentResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }
 
-func (o *CreateTaskCommentResponse) GetTaskComment() *shared.TaskComment {
-	if o == nil {
+func (c *CreateTaskCommentResponse) GetTaskComment() *shared.TaskComment {
+	if c == nil {
 		return nil
 	}
-	return o.TaskComment
+	return c.TaskComment
 }

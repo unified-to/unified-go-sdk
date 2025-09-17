@@ -18,32 +18,32 @@ type GetCrmContactRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetCrmContactRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetCrmContactRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetCrmContactRequest) GetFields() []string {
-	if o == nil {
+func (g *GetCrmContactRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetCrmContactRequest) GetID() string {
-	if o == nil {
+func (g *GetCrmContactRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetCrmContactRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetCrmContactRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetCrmContactResponse struct {
@@ -57,30 +57,30 @@ type GetCrmContactResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetCrmContactResponse) GetContentType() string {
-	if o == nil {
+func (g *GetCrmContactResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetCrmContactResponse) GetCrmContact() *shared.CrmContact {
-	if o == nil {
+func (g *GetCrmContactResponse) GetCrmContact() *shared.CrmContact {
+	if g == nil {
 		return nil
 	}
-	return o.CrmContact
+	return g.CrmContact
 }
 
-func (o *GetCrmContactResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetCrmContactResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetCrmContactResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetCrmContactResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

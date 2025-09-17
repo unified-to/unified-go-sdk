@@ -12,51 +12,51 @@ type GenaiModel struct {
 	WebURL         *string        `json:"web_url,omitempty"`
 }
 
-func (o *GenaiModel) GetDescription() *string {
-	if o == nil {
+func (g *GenaiModel) GetDescription() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Description
+	return g.Description
 }
 
-func (o *GenaiModel) GetHasTemperature() *bool {
-	if o == nil {
+func (g *GenaiModel) GetHasTemperature() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.HasTemperature
+	return g.HasTemperature
 }
 
-func (o *GenaiModel) GetID() *string {
-	if o == nil {
+func (g *GenaiModel) GetID() *string {
+	if g == nil {
 		return nil
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GenaiModel) GetMaxTokens() *float64 {
-	if o == nil {
+func (g *GenaiModel) GetMaxTokens() *float64 {
+	if g == nil {
 		return nil
 	}
-	return o.MaxTokens
+	return g.MaxTokens
 }
 
-func (o *GenaiModel) GetName() *string {
-	if o == nil {
+func (g *GenaiModel) GetName() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Name
+	return g.Name
 }
 
-func (o *GenaiModel) GetRaw() map[string]any {
-	if o == nil {
+func (g *GenaiModel) GetRaw() map[string]any {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
-func (o *GenaiModel) GetWebURL() *string {
-	if o == nil {
+func (g *GenaiModel) GetWebURL() *string {
+	if g == nil {
 		return nil
 	}
-	return o.WebURL
+	return g.WebURL
 }

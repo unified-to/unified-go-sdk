@@ -21,37 +21,37 @@ type PropertyScimUserMeta struct {
 	Version      *string                           `json:"version,omitempty"`
 }
 
-func (o *PropertyScimUserMeta) GetCreated() *string {
-	if o == nil {
+func (p *PropertyScimUserMeta) GetCreated() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Created
+	return p.Created
 }
 
-func (o *PropertyScimUserMeta) GetLastModified() *string {
-	if o == nil {
+func (p *PropertyScimUserMeta) GetLastModified() *string {
+	if p == nil {
 		return nil
 	}
-	return o.LastModified
+	return p.LastModified
 }
 
-func (o *PropertyScimUserMeta) GetLocation() *string {
-	if o == nil {
+func (p *PropertyScimUserMeta) GetLocation() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Location
+	return p.Location
 }
 
-func (o *PropertyScimUserMeta) GetResourceType() *PropertyScimUserMetaResourceType {
-	if o == nil {
+func (p *PropertyScimUserMeta) GetResourceType() *PropertyScimUserMetaResourceType {
+	if p == nil {
 		return nil
 	}
-	return o.ResourceType
+	return p.ResourceType
 }
 
-func (o *PropertyScimUserMeta) GetVersion() *string {
-	if o == nil {
+func (p *PropertyScimUserMeta) GetVersion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Version
+	return p.Version
 }

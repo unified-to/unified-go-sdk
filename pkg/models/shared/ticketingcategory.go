@@ -29,58 +29,58 @@ func (t *TicketingCategory) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *TicketingCategory) GetCreatedAt() *time.Time {
-	if o == nil {
+func (t *TicketingCategory) GetCreatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return t.CreatedAt
 }
 
-func (o *TicketingCategory) GetDescription() *string {
-	if o == nil {
+func (t *TicketingCategory) GetDescription() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Description
+	return t.Description
 }
 
-func (o *TicketingCategory) GetID() *string {
-	if o == nil {
+func (t *TicketingCategory) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *TicketingCategory) GetIsActive() *bool {
-	if o == nil {
+func (t *TicketingCategory) GetIsActive() *bool {
+	if t == nil {
 		return nil
 	}
-	return o.IsActive
+	return t.IsActive
 }
 
-func (o *TicketingCategory) GetName() *string {
-	if o == nil {
+func (t *TicketingCategory) GetName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Name
+	return t.Name
 }
 
-func (o *TicketingCategory) GetParentID() *string {
-	if o == nil {
+func (t *TicketingCategory) GetParentID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ParentID
+	return t.ParentID
 }
 
-func (o *TicketingCategory) GetRaw() map[string]any {
-	if o == nil {
+func (t *TicketingCategory) GetRaw() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Raw
+	return t.Raw
 }
 
-func (o *TicketingCategory) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (t *TicketingCategory) GetUpdatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return t.UpdatedAt
 }

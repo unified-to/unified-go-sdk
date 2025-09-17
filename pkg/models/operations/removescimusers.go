@@ -13,18 +13,18 @@ type RemoveScimUsersRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *RemoveScimUsersRequest) GetConnectionID() string {
-	if o == nil {
+func (r *RemoveScimUsersRequest) GetConnectionID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return r.ConnectionID
 }
 
-func (o *RemoveScimUsersRequest) GetID() string {
-	if o == nil {
+func (r *RemoveScimUsersRequest) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
 type RemoveScimUsersResponse struct {
@@ -37,30 +37,30 @@ type RemoveScimUsersResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *RemoveScimUsersResponse) GetContentType() string {
-	if o == nil {
+func (r *RemoveScimUsersResponse) GetContentType() string {
+	if r == nil {
 		return ""
 	}
-	return o.ContentType
+	return r.ContentType
 }
 
-func (o *RemoveScimUsersResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (r *RemoveScimUsersResponse) GetHeaders() map[string][]string {
+	if r == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return r.Headers
 }
 
-func (o *RemoveScimUsersResponse) GetStatusCode() int {
-	if o == nil {
+func (r *RemoveScimUsersResponse) GetStatusCode() int {
+	if r == nil {
 		return 0
 	}
-	return o.StatusCode
+	return r.StatusCode
 }
 
-func (o *RemoveScimUsersResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (r *RemoveScimUsersResponse) GetRawResponse() *http.Response {
+	if r == nil {
 		return nil
 	}
-	return o.RawResponse
+	return r.RawResponse
 }

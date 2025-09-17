@@ -8,23 +8,23 @@ type TaskChangeItem struct {
 	To    *string `json:"to,omitempty"`
 }
 
-func (o *TaskChangeItem) GetField() string {
-	if o == nil {
+func (t *TaskChangeItem) GetField() string {
+	if t == nil {
 		return ""
 	}
-	return o.Field
+	return t.Field
 }
 
-func (o *TaskChangeItem) GetFrom() *string {
-	if o == nil {
+func (t *TaskChangeItem) GetFrom() *string {
+	if t == nil {
 		return nil
 	}
-	return o.From
+	return t.From
 }
 
-func (o *TaskChangeItem) GetTo() *string {
-	if o == nil {
+func (t *TaskChangeItem) GetTo() *string {
+	if t == nil {
 		return nil
 	}
-	return o.To
+	return t.To
 }

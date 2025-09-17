@@ -22,46 +22,46 @@ type ListEnrichPeopleRequest struct {
 	Twitter *string `queryParam:"style=form,explode=true,name=twitter"`
 }
 
-func (o *ListEnrichPeopleRequest) GetCompanyName() *string {
-	if o == nil {
+func (l *ListEnrichPeopleRequest) GetCompanyName() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CompanyName
+	return l.CompanyName
 }
 
-func (o *ListEnrichPeopleRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListEnrichPeopleRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListEnrichPeopleRequest) GetEmail() *string {
-	if o == nil {
+func (l *ListEnrichPeopleRequest) GetEmail() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Email
+	return l.Email
 }
 
-func (o *ListEnrichPeopleRequest) GetLinkedinURL() *string {
-	if o == nil {
+func (l *ListEnrichPeopleRequest) GetLinkedinURL() *string {
+	if l == nil {
 		return nil
 	}
-	return o.LinkedinURL
+	return l.LinkedinURL
 }
 
-func (o *ListEnrichPeopleRequest) GetName() *string {
-	if o == nil {
+func (l *ListEnrichPeopleRequest) GetName() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Name
+	return l.Name
 }
 
-func (o *ListEnrichPeopleRequest) GetTwitter() *string {
-	if o == nil {
+func (l *ListEnrichPeopleRequest) GetTwitter() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Twitter
+	return l.Twitter
 }
 
 type ListEnrichPeopleResponse struct {
@@ -75,30 +75,30 @@ type ListEnrichPeopleResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListEnrichPeopleResponse) GetContentType() string {
-	if o == nil {
+func (l *ListEnrichPeopleResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListEnrichPeopleResponse) GetEnrichPerson() *shared.EnrichPerson {
-	if o == nil {
+func (l *ListEnrichPeopleResponse) GetEnrichPerson() *shared.EnrichPerson {
+	if l == nil {
 		return nil
 	}
-	return o.EnrichPerson
+	return l.EnrichPerson
 }
 
-func (o *ListEnrichPeopleResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListEnrichPeopleResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListEnrichPeopleResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListEnrichPeopleResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

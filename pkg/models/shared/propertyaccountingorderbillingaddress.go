@@ -13,58 +13,58 @@ type PropertyAccountingOrderBillingAddress struct {
 	RegionCode  *string `json:"region_code,omitempty"`
 }
 
-func (o *PropertyAccountingOrderBillingAddress) GetAddress1() *string {
-	if o == nil {
+func (p *PropertyAccountingOrderBillingAddress) GetAddress1() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address1
+	return p.Address1
 }
 
-func (o *PropertyAccountingOrderBillingAddress) GetAddress2() *string {
-	if o == nil {
+func (p *PropertyAccountingOrderBillingAddress) GetAddress2() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address2
+	return p.Address2
 }
 
-func (o *PropertyAccountingOrderBillingAddress) GetCity() *string {
-	if o == nil {
+func (p *PropertyAccountingOrderBillingAddress) GetCity() *string {
+	if p == nil {
 		return nil
 	}
-	return o.City
+	return p.City
 }
 
-func (o *PropertyAccountingOrderBillingAddress) GetCountry() *string {
-	if o == nil {
+func (p *PropertyAccountingOrderBillingAddress) GetCountry() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Country
+	return p.Country
 }
 
-func (o *PropertyAccountingOrderBillingAddress) GetCountryCode() *string {
-	if o == nil {
+func (p *PropertyAccountingOrderBillingAddress) GetCountryCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.CountryCode
+	return p.CountryCode
 }
 
-func (o *PropertyAccountingOrderBillingAddress) GetPostalCode() *string {
-	if o == nil {
+func (p *PropertyAccountingOrderBillingAddress) GetPostalCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.PostalCode
+	return p.PostalCode
 }
 
-func (o *PropertyAccountingOrderBillingAddress) GetRegion() *string {
-	if o == nil {
+func (p *PropertyAccountingOrderBillingAddress) GetRegion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Region
+	return p.Region
 }
 
-func (o *PropertyAccountingOrderBillingAddress) GetRegionCode() *string {
-	if o == nil {
+func (p *PropertyAccountingOrderBillingAddress) GetRegionCode() *string {
+	if p == nil {
 		return nil
 	}
-	return o.RegionCode
+	return p.RegionCode
 }

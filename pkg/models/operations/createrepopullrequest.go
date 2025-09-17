@@ -17,32 +17,32 @@ type CreateRepoPullrequestRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateRepoPullrequestRequest) GetRepoPullrequest() shared.RepoPullrequest {
-	if o == nil {
+func (c *CreateRepoPullrequestRequest) GetRepoPullrequest() shared.RepoPullrequest {
+	if c == nil {
 		return shared.RepoPullrequest{}
 	}
-	return o.RepoPullrequest
+	return c.RepoPullrequest
 }
 
-func (o *CreateRepoPullrequestRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateRepoPullrequestRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateRepoPullrequestRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateRepoPullrequestRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateRepoPullrequestRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateRepoPullrequestRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateRepoPullrequestResponse struct {
@@ -56,30 +56,30 @@ type CreateRepoPullrequestResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateRepoPullrequestResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateRepoPullrequestResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateRepoPullrequestResponse) GetRepoPullrequest() *shared.RepoPullrequest {
-	if o == nil {
+func (c *CreateRepoPullrequestResponse) GetRepoPullrequest() *shared.RepoPullrequest {
+	if c == nil {
 		return nil
 	}
-	return o.RepoPullrequest
+	return c.RepoPullrequest
 }
 
-func (o *CreateRepoPullrequestResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateRepoPullrequestResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateRepoPullrequestResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateRepoPullrequestResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

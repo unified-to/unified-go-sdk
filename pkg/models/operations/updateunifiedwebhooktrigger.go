@@ -11,11 +11,11 @@ type UpdateUnifiedWebhookTriggerRequest struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-func (o *UpdateUnifiedWebhookTriggerRequest) GetID() string {
-	if o == nil {
+func (u *UpdateUnifiedWebhookTriggerRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
 type UpdateUnifiedWebhookTriggerResponse struct {
@@ -28,30 +28,30 @@ type UpdateUnifiedWebhookTriggerResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *UpdateUnifiedWebhookTriggerResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateUnifiedWebhookTriggerResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateUnifiedWebhookTriggerResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (u *UpdateUnifiedWebhookTriggerResponse) GetHeaders() map[string][]string {
+	if u == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return u.Headers
 }
 
-func (o *UpdateUnifiedWebhookTriggerResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateUnifiedWebhookTriggerResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateUnifiedWebhookTriggerResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateUnifiedWebhookTriggerResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }

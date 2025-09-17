@@ -28,51 +28,51 @@ func (c *CalendarRecordingMedia) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CalendarRecordingMedia) GetAttendees() []CalendarAttendee {
-	if o == nil {
+func (c *CalendarRecordingMedia) GetAttendees() []CalendarAttendee {
+	if c == nil {
 		return nil
 	}
-	return o.Attendees
+	return c.Attendees
 }
 
-func (o *CalendarRecordingMedia) GetEndAt() *time.Time {
-	if o == nil {
+func (c *CalendarRecordingMedia) GetEndAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.EndAt
+	return c.EndAt
 }
 
-func (o *CalendarRecordingMedia) GetLanguage() *string {
-	if o == nil {
+func (c *CalendarRecordingMedia) GetLanguage() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Language
+	return c.Language
 }
 
-func (o *CalendarRecordingMedia) GetRecordingDownloadURL() *string {
-	if o == nil {
+func (c *CalendarRecordingMedia) GetRecordingDownloadURL() *string {
+	if c == nil {
 		return nil
 	}
-	return o.RecordingDownloadURL
+	return c.RecordingDownloadURL
 }
 
-func (o *CalendarRecordingMedia) GetStartAt() *time.Time {
-	if o == nil {
+func (c *CalendarRecordingMedia) GetStartAt() *time.Time {
+	if c == nil {
 		return nil
 	}
-	return o.StartAt
+	return c.StartAt
 }
 
-func (o *CalendarRecordingMedia) GetTranscriptDownloadURL() *string {
-	if o == nil {
+func (c *CalendarRecordingMedia) GetTranscriptDownloadURL() *string {
+	if c == nil {
 		return nil
 	}
-	return o.TranscriptDownloadURL
+	return c.TranscriptDownloadURL
 }
 
-func (o *CalendarRecordingMedia) GetTranscripts() []CalendarRecordingTranscript {
-	if o == nil {
+func (c *CalendarRecordingMedia) GetTranscripts() []CalendarRecordingTranscript {
+	if c == nil {
 		return nil
 	}
-	return o.Transcripts
+	return c.Transcripts
 }

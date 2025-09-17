@@ -29,58 +29,58 @@ func (t *TicketingNote) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *TicketingNote) GetCreatedAt() *time.Time {
-	if o == nil {
+func (t *TicketingNote) GetCreatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return t.CreatedAt
 }
 
-func (o *TicketingNote) GetCustomerID() *string {
-	if o == nil {
+func (t *TicketingNote) GetCustomerID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.CustomerID
+	return t.CustomerID
 }
 
-func (o *TicketingNote) GetDescription() *string {
-	if o == nil {
+func (t *TicketingNote) GetDescription() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Description
+	return t.Description
 }
 
-func (o *TicketingNote) GetID() *string {
-	if o == nil {
+func (t *TicketingNote) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *TicketingNote) GetRaw() map[string]any {
-	if o == nil {
+func (t *TicketingNote) GetRaw() map[string]any {
+	if t == nil {
 		return nil
 	}
-	return o.Raw
+	return t.Raw
 }
 
-func (o *TicketingNote) GetTicketID() *string {
-	if o == nil {
+func (t *TicketingNote) GetTicketID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.TicketID
+	return t.TicketID
 }
 
-func (o *TicketingNote) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (t *TicketingNote) GetUpdatedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return t.UpdatedAt
 }
 
-func (o *TicketingNote) GetUserID() *string {
-	if o == nil {
+func (t *TicketingNote) GetUserID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.UserID
+	return t.UserID
 }

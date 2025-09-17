@@ -18,32 +18,32 @@ type GetAtsCompanyRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *GetAtsCompanyRequest) GetConnectionID() string {
-	if o == nil {
+func (g *GetAtsCompanyRequest) GetConnectionID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return g.ConnectionID
 }
 
-func (o *GetAtsCompanyRequest) GetFields() []string {
-	if o == nil {
+func (g *GetAtsCompanyRequest) GetFields() []string {
+	if g == nil {
 		return nil
 	}
-	return o.Fields
+	return g.Fields
 }
 
-func (o *GetAtsCompanyRequest) GetID() string {
-	if o == nil {
+func (g *GetAtsCompanyRequest) GetID() string {
+	if g == nil {
 		return ""
 	}
-	return o.ID
+	return g.ID
 }
 
-func (o *GetAtsCompanyRequest) GetRaw() *string {
-	if o == nil {
+func (g *GetAtsCompanyRequest) GetRaw() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Raw
+	return g.Raw
 }
 
 type GetAtsCompanyResponse struct {
@@ -57,30 +57,30 @@ type GetAtsCompanyResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *GetAtsCompanyResponse) GetAtsCompany() *shared.AtsCompany {
-	if o == nil {
+func (g *GetAtsCompanyResponse) GetAtsCompany() *shared.AtsCompany {
+	if g == nil {
 		return nil
 	}
-	return o.AtsCompany
+	return g.AtsCompany
 }
 
-func (o *GetAtsCompanyResponse) GetContentType() string {
-	if o == nil {
+func (g *GetAtsCompanyResponse) GetContentType() string {
+	if g == nil {
 		return ""
 	}
-	return o.ContentType
+	return g.ContentType
 }
 
-func (o *GetAtsCompanyResponse) GetStatusCode() int {
-	if o == nil {
+func (g *GetAtsCompanyResponse) GetStatusCode() int {
+	if g == nil {
 		return 0
 	}
-	return o.StatusCode
+	return g.StatusCode
 }
 
-func (o *GetAtsCompanyResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (g *GetAtsCompanyResponse) GetRawResponse() *http.Response {
+	if g == nil {
 		return nil
 	}
-	return o.RawResponse
+	return g.RawResponse
 }

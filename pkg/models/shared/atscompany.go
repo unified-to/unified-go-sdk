@@ -32,79 +32,79 @@ func (a *AtsCompany) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *AtsCompany) GetAddress() *PropertyAtsCompanyAddress {
-	if o == nil {
+func (a *AtsCompany) GetAddress() *PropertyAtsCompanyAddress {
+	if a == nil {
 		return nil
 	}
-	return o.Address
+	return a.Address
 }
 
-func (o *AtsCompany) GetCreatedAt() *time.Time {
-	if o == nil {
+func (a *AtsCompany) GetCreatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return a.CreatedAt
 }
 
-func (o *AtsCompany) GetID() *string {
-	if o == nil {
+func (a *AtsCompany) GetID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AtsCompany) GetMetadata() []AtsMetadata {
-	if o == nil {
+func (a *AtsCompany) GetMetadata() []AtsMetadata {
+	if a == nil {
 		return nil
 	}
-	return o.Metadata
+	return a.Metadata
 }
 
-func (o *AtsCompany) GetName() string {
-	if o == nil {
+func (a *AtsCompany) GetName() string {
+	if a == nil {
 		return ""
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AtsCompany) GetParentID() *string {
-	if o == nil {
+func (a *AtsCompany) GetParentID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ParentID
+	return a.ParentID
 }
 
-func (o *AtsCompany) GetPhone() *string {
-	if o == nil {
+func (a *AtsCompany) GetPhone() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Phone
+	return a.Phone
 }
 
-func (o *AtsCompany) GetRaw() map[string]any {
-	if o == nil {
+func (a *AtsCompany) GetRaw() map[string]any {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AtsCompany) GetRecruiterIds() []string {
-	if o == nil {
+func (a *AtsCompany) GetRecruiterIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.RecruiterIds
+	return a.RecruiterIds
 }
 
-func (o *AtsCompany) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (a *AtsCompany) GetUpdatedAt() *time.Time {
+	if a == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return a.UpdatedAt
 }
 
-func (o *AtsCompany) GetWebsiteURL() *string {
-	if o == nil {
+func (a *AtsCompany) GetWebsiteURL() *string {
+	if a == nil {
 		return nil
 	}
-	return o.WebsiteURL
+	return a.WebsiteURL
 }

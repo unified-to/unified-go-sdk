@@ -25,23 +25,23 @@ func (p *PropertyCrmEventCall) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *PropertyCrmEventCall) GetDescription() *string {
-	if o == nil {
+func (p *PropertyCrmEventCall) GetDescription() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Description
+	return p.Description
 }
 
-func (o *PropertyCrmEventCall) GetDuration() *float64 {
-	if o == nil {
+func (p *PropertyCrmEventCall) GetDuration() *float64 {
+	if p == nil {
 		return nil
 	}
-	return o.Duration
+	return p.Duration
 }
 
-func (o *PropertyCrmEventCall) GetStartAt() *time.Time {
-	if o == nil {
+func (p *PropertyCrmEventCall) GetStartAt() *time.Time {
+	if p == nil {
 		return nil
 	}
-	return o.StartAt
+	return p.StartAt
 }

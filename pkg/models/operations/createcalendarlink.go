@@ -17,32 +17,32 @@ type CreateCalendarLinkRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateCalendarLinkRequest) GetCalendarLink() shared.CalendarLink {
-	if o == nil {
+func (c *CreateCalendarLinkRequest) GetCalendarLink() shared.CalendarLink {
+	if c == nil {
 		return shared.CalendarLink{}
 	}
-	return o.CalendarLink
+	return c.CalendarLink
 }
 
-func (o *CreateCalendarLinkRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateCalendarLinkRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateCalendarLinkRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateCalendarLinkRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateCalendarLinkRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateCalendarLinkRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateCalendarLinkResponse struct {
@@ -56,30 +56,30 @@ type CreateCalendarLinkResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateCalendarLinkResponse) GetCalendarLink() *shared.CalendarLink {
-	if o == nil {
+func (c *CreateCalendarLinkResponse) GetCalendarLink() *shared.CalendarLink {
+	if c == nil {
 		return nil
 	}
-	return o.CalendarLink
+	return c.CalendarLink
 }
 
-func (o *CreateCalendarLinkResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateCalendarLinkResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateCalendarLinkResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateCalendarLinkResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateCalendarLinkResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateCalendarLinkResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

@@ -26,74 +26,74 @@ type ListAtsInterviewsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAtsInterviewsRequest) GetApplicationID() *string {
-	if o == nil {
+func (l *ListAtsInterviewsRequest) GetApplicationID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ApplicationID
+	return l.ApplicationID
 }
 
-func (o *ListAtsInterviewsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAtsInterviewsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAtsInterviewsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAtsInterviewsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAtsInterviewsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAtsInterviewsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAtsInterviewsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAtsInterviewsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAtsInterviewsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAtsInterviewsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAtsInterviewsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAtsInterviewsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAtsInterviewsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAtsInterviewsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAtsInterviewsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAtsInterviewsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAtsInterviewsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAtsInterviewsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAtsInterviewsResponse struct {
@@ -107,30 +107,30 @@ type ListAtsInterviewsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAtsInterviewsResponse) GetAtsInterviews() []shared.AtsInterview {
-	if o == nil {
+func (l *ListAtsInterviewsResponse) GetAtsInterviews() []shared.AtsInterview {
+	if l == nil {
 		return nil
 	}
-	return o.AtsInterviews
+	return l.AtsInterviews
 }
 
-func (o *ListAtsInterviewsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAtsInterviewsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAtsInterviewsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAtsInterviewsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAtsInterviewsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAtsInterviewsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }

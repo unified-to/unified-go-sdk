@@ -19,39 +19,39 @@ type UpdateTaskProjectRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *UpdateTaskProjectRequest) GetTaskProject() shared.TaskProject {
-	if o == nil {
+func (u *UpdateTaskProjectRequest) GetTaskProject() shared.TaskProject {
+	if u == nil {
 		return shared.TaskProject{}
 	}
-	return o.TaskProject
+	return u.TaskProject
 }
 
-func (o *UpdateTaskProjectRequest) GetConnectionID() string {
-	if o == nil {
+func (u *UpdateTaskProjectRequest) GetConnectionID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return u.ConnectionID
 }
 
-func (o *UpdateTaskProjectRequest) GetFields() []string {
-	if o == nil {
+func (u *UpdateTaskProjectRequest) GetFields() []string {
+	if u == nil {
 		return nil
 	}
-	return o.Fields
+	return u.Fields
 }
 
-func (o *UpdateTaskProjectRequest) GetID() string {
-	if o == nil {
+func (u *UpdateTaskProjectRequest) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpdateTaskProjectRequest) GetRaw() *string {
-	if o == nil {
+func (u *UpdateTaskProjectRequest) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }
 
 type UpdateTaskProjectResponse struct {
@@ -65,30 +65,30 @@ type UpdateTaskProjectResponse struct {
 	TaskProject *shared.TaskProject
 }
 
-func (o *UpdateTaskProjectResponse) GetContentType() string {
-	if o == nil {
+func (u *UpdateTaskProjectResponse) GetContentType() string {
+	if u == nil {
 		return ""
 	}
-	return o.ContentType
+	return u.ContentType
 }
 
-func (o *UpdateTaskProjectResponse) GetStatusCode() int {
-	if o == nil {
+func (u *UpdateTaskProjectResponse) GetStatusCode() int {
+	if u == nil {
 		return 0
 	}
-	return o.StatusCode
+	return u.StatusCode
 }
 
-func (o *UpdateTaskProjectResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (u *UpdateTaskProjectResponse) GetRawResponse() *http.Response {
+	if u == nil {
 		return nil
 	}
-	return o.RawResponse
+	return u.RawResponse
 }
 
-func (o *UpdateTaskProjectResponse) GetTaskProject() *shared.TaskProject {
-	if o == nil {
+func (u *UpdateTaskProjectResponse) GetTaskProject() *shared.TaskProject {
+	if u == nil {
 		return nil
 	}
-	return o.TaskProject
+	return u.TaskProject
 }

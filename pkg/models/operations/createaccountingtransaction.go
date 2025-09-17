@@ -17,32 +17,32 @@ type CreateAccountingTransactionRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAccountingTransactionRequest) GetAccountingTransaction() shared.AccountingTransaction {
-	if o == nil {
+func (c *CreateAccountingTransactionRequest) GetAccountingTransaction() shared.AccountingTransaction {
+	if c == nil {
 		return shared.AccountingTransaction{}
 	}
-	return o.AccountingTransaction
+	return c.AccountingTransaction
 }
 
-func (o *CreateAccountingTransactionRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAccountingTransactionRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAccountingTransactionRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAccountingTransactionRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAccountingTransactionRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAccountingTransactionRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAccountingTransactionResponse struct {
@@ -56,30 +56,30 @@ type CreateAccountingTransactionResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingTransactionResponse) GetAccountingTransaction() *shared.AccountingTransaction {
-	if o == nil {
+func (c *CreateAccountingTransactionResponse) GetAccountingTransaction() *shared.AccountingTransaction {
+	if c == nil {
 		return nil
 	}
-	return o.AccountingTransaction
+	return c.AccountingTransaction
 }
 
-func (o *CreateAccountingTransactionResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAccountingTransactionResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAccountingTransactionResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAccountingTransactionResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAccountingTransactionResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAccountingTransactionResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

@@ -17,32 +17,32 @@ type CreateAccountingSalesorderRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (o *CreateAccountingSalesorderRequest) GetAccountingSalesorder() shared.AccountingSalesorder {
-	if o == nil {
+func (c *CreateAccountingSalesorderRequest) GetAccountingSalesorder() shared.AccountingSalesorder {
+	if c == nil {
 		return shared.AccountingSalesorder{}
 	}
-	return o.AccountingSalesorder
+	return c.AccountingSalesorder
 }
 
-func (o *CreateAccountingSalesorderRequest) GetConnectionID() string {
-	if o == nil {
+func (c *CreateAccountingSalesorderRequest) GetConnectionID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return c.ConnectionID
 }
 
-func (o *CreateAccountingSalesorderRequest) GetFields() []string {
-	if o == nil {
+func (c *CreateAccountingSalesorderRequest) GetFields() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Fields
+	return c.Fields
 }
 
-func (o *CreateAccountingSalesorderRequest) GetRaw() *string {
-	if o == nil {
+func (c *CreateAccountingSalesorderRequest) GetRaw() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Raw
+	return c.Raw
 }
 
 type CreateAccountingSalesorderResponse struct {
@@ -56,30 +56,30 @@ type CreateAccountingSalesorderResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *CreateAccountingSalesorderResponse) GetAccountingSalesorder() *shared.AccountingSalesorder {
-	if o == nil {
+func (c *CreateAccountingSalesorderResponse) GetAccountingSalesorder() *shared.AccountingSalesorder {
+	if c == nil {
 		return nil
 	}
-	return o.AccountingSalesorder
+	return c.AccountingSalesorder
 }
 
-func (o *CreateAccountingSalesorderResponse) GetContentType() string {
-	if o == nil {
+func (c *CreateAccountingSalesorderResponse) GetContentType() string {
+	if c == nil {
 		return ""
 	}
-	return o.ContentType
+	return c.ContentType
 }
 
-func (o *CreateAccountingSalesorderResponse) GetStatusCode() int {
-	if o == nil {
+func (c *CreateAccountingSalesorderResponse) GetStatusCode() int {
+	if c == nil {
 		return 0
 	}
-	return o.StatusCode
+	return c.StatusCode
 }
 
-func (o *CreateAccountingSalesorderResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (c *CreateAccountingSalesorderResponse) GetRawResponse() *http.Response {
+	if c == nil {
 		return nil
 	}
-	return o.RawResponse
+	return c.RawResponse
 }

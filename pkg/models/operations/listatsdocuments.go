@@ -32,95 +32,95 @@ type ListAtsDocumentsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (o *ListAtsDocumentsRequest) GetApplicationID() *string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetApplicationID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ApplicationID
+	return l.ApplicationID
 }
 
-func (o *ListAtsDocumentsRequest) GetCandidateID() *string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetCandidateID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CandidateID
+	return l.CandidateID
 }
 
-func (o *ListAtsDocumentsRequest) GetConnectionID() string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetConnectionID() string {
+	if l == nil {
 		return ""
 	}
-	return o.ConnectionID
+	return l.ConnectionID
 }
 
-func (o *ListAtsDocumentsRequest) GetFields() []string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetFields() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Fields
+	return l.Fields
 }
 
-func (o *ListAtsDocumentsRequest) GetJobID() *string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetJobID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.JobID
+	return l.JobID
 }
 
-func (o *ListAtsDocumentsRequest) GetLimit() *float64 {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetLimit() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Limit
+	return l.Limit
 }
 
-func (o *ListAtsDocumentsRequest) GetOffset() *float64 {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetOffset() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Offset
+	return l.Offset
 }
 
-func (o *ListAtsDocumentsRequest) GetOrder() *string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetOrder() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Order
+	return l.Order
 }
 
-func (o *ListAtsDocumentsRequest) GetQuery() *string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetQuery() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Query
+	return l.Query
 }
 
-func (o *ListAtsDocumentsRequest) GetRaw() *string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *ListAtsDocumentsRequest) GetSort() *string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetSort() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Sort
+	return l.Sort
 }
 
-func (o *ListAtsDocumentsRequest) GetType() *string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetType() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Type
+	return l.Type
 }
 
-func (o *ListAtsDocumentsRequest) GetUpdatedGte() *string {
-	if o == nil {
+func (l *ListAtsDocumentsRequest) GetUpdatedGte() *string {
+	if l == nil {
 		return nil
 	}
-	return o.UpdatedGte
+	return l.UpdatedGte
 }
 
 type ListAtsDocumentsResponse struct {
@@ -134,30 +134,30 @@ type ListAtsDocumentsResponse struct {
 	RawResponse *http.Response
 }
 
-func (o *ListAtsDocumentsResponse) GetAtsDocuments() []shared.AtsDocument {
-	if o == nil {
+func (l *ListAtsDocumentsResponse) GetAtsDocuments() []shared.AtsDocument {
+	if l == nil {
 		return nil
 	}
-	return o.AtsDocuments
+	return l.AtsDocuments
 }
 
-func (o *ListAtsDocumentsResponse) GetContentType() string {
-	if o == nil {
+func (l *ListAtsDocumentsResponse) GetContentType() string {
+	if l == nil {
 		return ""
 	}
-	return o.ContentType
+	return l.ContentType
 }
 
-func (o *ListAtsDocumentsResponse) GetStatusCode() int {
-	if o == nil {
+func (l *ListAtsDocumentsResponse) GetStatusCode() int {
+	if l == nil {
 		return 0
 	}
-	return o.StatusCode
+	return l.StatusCode
 }
 
-func (o *ListAtsDocumentsResponse) GetRawResponse() *http.Response {
-	if o == nil {
+func (l *ListAtsDocumentsResponse) GetRawResponse() *http.Response {
+	if l == nil {
 		return nil
 	}
-	return o.RawResponse
+	return l.RawResponse
 }
