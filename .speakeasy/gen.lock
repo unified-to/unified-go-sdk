@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: ff3e18b39b0a3be1adfdaeecd26778b0
+  docChecksum: 8eb07aa570ffe05397d47efd8d0eb6b7
   docVersion: "1.0"
-  speakeasyVersion: 1.617.1
-  generationVersion: 2.701.8
-  releaseVersion: 0.29.0
-  configChecksum: c003a63632518aa1f2e26f7d12ef189e
+  speakeasyVersion: 1.618.1
+  generationVersion: 2.702.0
+  releaseVersion: 0.29.1
+  configChecksum: fe209bea14b6ce7fcef25f108b3b05d0
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -7007,4 +7007,13 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Kms.CreateKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Kms.GetKmsSpace()`:  `response.ParentId` **Added**\n* `UnifiedTo.Kms.ListKmsSpaces()`:  `response.[].ParentId` **Added**\n* `UnifiedTo.Kms.PatchKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Kms.UpdateKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Comment.CreateUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n* `UnifiedTo.Comment.GetUcComment()`:  `response.CallId` **Added**\n* `UnifiedTo.Comment.ListUcComments()`:  `response.[].CallId` **Added**\n* `UnifiedTo.Comment.PatchUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n* `UnifiedTo.Comment.UpdateUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n* `UnifiedTo.Space.CreateKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Space.GetKmsSpace()`:  `response.ParentId` **Added**\n* `UnifiedTo.Space.ListKmsSpaces()`:  `response.[].ParentId` **Added**\n* `UnifiedTo.Space.PatchKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Space.UpdateKmsSpace()`: \n  *  `request.Request.KmsSpace.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Uc.CreateUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n* `UnifiedTo.Uc.GetUcComment()`:  `response.CallId` **Added**\n* `UnifiedTo.Uc.ListUcComments()`:  `response.[].CallId` **Added**\n* `UnifiedTo.Uc.PatchUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n* `UnifiedTo.Uc.UpdateUcComment()`: \n  *  `request.Request.UcComment.CallId` **Added**\n  *  `response.CallId` **Added**\n"
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `UnifiedTo.Accounting.GetAccountingProfitloss()`:  `response.CategoryIds` **Added**
+  * `UnifiedTo.Accounting.GetAccountingReport()`:  `response.ProfitAndLoss.CategoryIds` **Added**
+  * `UnifiedTo.Accounting.ListAccountingProfitlosses()`:  `response.[].CategoryIds` **Added**
+  * `UnifiedTo.Accounting.ListAccountingReports()`:  `response.[].ProfitAndLoss.CategoryIds` **Added**
+  * `UnifiedTo.Profitloss.GetAccountingProfitloss()`:  `response.CategoryIds` **Added**
+  * `UnifiedTo.Profitloss.ListAccountingProfitlosses()`:  `response.[].CategoryIds` **Added**
+  * `UnifiedTo.Report.GetAccountingReport()`:  `response.ProfitAndLoss.CategoryIds` **Added**
+  * `UnifiedTo.Report.ListAccountingReports()`:  `response.[].ProfitAndLoss.CategoryIds` **Added**

@@ -8,6 +8,7 @@ import (
 )
 
 type PropertyAccountingReportProfitAndLoss struct {
+	CategoryIds []string `json:"category_ids,omitempty"`
 	// @deprecated – use cost_of_goods_sold_sections instead
 	CostOfGoodsSold            []AccountingProfitlossCategory `json:"cost_of_goods_sold,omitempty"`
 	CostOfGoodsSoldSections    []AccountingProfitlossSection  `json:"cost_of_goods_sold_sections,omitempty"`
@@ -42,6 +43,13 @@ func (p *PropertyAccountingReportProfitAndLoss) UnmarshalJSON(data []byte) error
 		return err
 	}
 	return nil
+}
+
+func (p *PropertyAccountingReportProfitAndLoss) GetCategoryIds() []string {
+	if p == nil {
+		return nil
+	}
+	return p.CategoryIds
 }
 
 func (p *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSold() []AccountingProfitlossCategory {

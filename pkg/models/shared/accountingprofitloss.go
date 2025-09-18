@@ -8,6 +8,7 @@ import (
 )
 
 type AccountingProfitloss struct {
+	CategoryIds []string `json:"category_ids,omitempty"`
 	// @deprecated – use cost_of_goods_sold_sections instead
 	CostOfGoodsSold            []AccountingProfitlossCategory `json:"cost_of_goods_sold,omitempty"`
 	CostOfGoodsSoldSections    []AccountingProfitlossSection  `json:"cost_of_goods_sold_sections,omitempty"`
@@ -42,6 +43,13 @@ func (a *AccountingProfitloss) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (a *AccountingProfitloss) GetCategoryIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.CategoryIds
 }
 
 func (a *AccountingProfitloss) GetCostOfGoodsSold() []AccountingProfitlossCategory {
