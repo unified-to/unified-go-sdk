@@ -13,7 +13,8 @@ type ListCalendarEventsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The end date to filter by
-	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
+	EndLe  *string `queryParam:"style=form,explode=true,name=end_le"`
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 	// Whether to expand recurring calendar events
 	ExpandRecurringEvents *string `queryParam:"style=form,explode=true,name=expand_recurring_events"`
 	// Comma-delimited fields to return
@@ -51,6 +52,13 @@ func (l *ListCalendarEventsRequest) GetEndLe() *string {
 		return nil
 	}
 	return l.EndLe
+}
+
+func (l *ListCalendarEventsRequest) GetExpand() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Expand
 }
 
 func (l *ListCalendarEventsRequest) GetExpandRecurringEvents() *string {

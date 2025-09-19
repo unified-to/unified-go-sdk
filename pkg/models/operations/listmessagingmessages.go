@@ -13,7 +13,8 @@ type ListMessagingMessagesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The end date to filter by
-	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
+	EndLe  *string `queryParam:"style=form,explode=true,name=end_le"`
+	Expand *string `queryParam:"style=form,explode=true,name=expand"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -51,6 +52,13 @@ func (l *ListMessagingMessagesRequest) GetEndLe() *string {
 		return nil
 	}
 	return l.EndLe
+}
+
+func (l *ListMessagingMessagesRequest) GetExpand() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Expand
 }
 
 func (l *ListMessagingMessagesRequest) GetFields() []string {

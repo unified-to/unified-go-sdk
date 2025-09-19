@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 8eb07aa570ffe05397d47efd8d0eb6b7
+  docChecksum: 6ba38662f570a477a5eacdaf583b3b85
   docVersion: "1.0"
-  speakeasyVersion: 1.618.1
-  generationVersion: 2.702.0
-  releaseVersion: 0.29.1
-  configChecksum: fe209bea14b6ce7fcef25f108b3b05d0
+  speakeasyVersion: 1.621.0
+  generationVersion: 2.707.0
+  releaseVersion: 0.30.0
+  configChecksum: eaca36e821d4944f6f71bc4dab05aaed
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.10.0
+    core: 3.11.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -7007,13 +7007,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `UnifiedTo.Accounting.GetAccountingProfitloss()`:  `response.CategoryIds` **Added**
-  * `UnifiedTo.Accounting.GetAccountingReport()`:  `response.ProfitAndLoss.CategoryIds` **Added**
-  * `UnifiedTo.Accounting.ListAccountingProfitlosses()`:  `response.[].CategoryIds` **Added**
-  * `UnifiedTo.Accounting.ListAccountingReports()`:  `response.[].ProfitAndLoss.CategoryIds` **Added**
-  * `UnifiedTo.Profitloss.GetAccountingProfitloss()`:  `response.CategoryIds` **Added**
-  * `UnifiedTo.Profitloss.ListAccountingProfitlosses()`:  `response.[].CategoryIds` **Added**
-  * `UnifiedTo.Report.GetAccountingReport()`:  `response.ProfitAndLoss.CategoryIds` **Added**
-  * `UnifiedTo.Report.ListAccountingReports()`:  `response.[].ProfitAndLoss.CategoryIds` **Added**
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Calendar.ListCalendarEvents()`: \n  *  `request.Request.Expand` **Added**\n* `UnifiedTo.Event.ListCalendarEvents()`: \n  *  `request.Request.Expand` **Added**\n* `UnifiedTo.Messaging.ListMessagingMessages()`: \n  *  `request.Request.Expand` **Added**\n* `UnifiedTo.Message.ListMessagingMessages()`: \n  *  `request.Request.Expand` **Added**\n"
