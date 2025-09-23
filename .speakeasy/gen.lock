@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 6ba38662f570a477a5eacdaf583b3b85
+  docChecksum: 3a2b9f42726c5dfd24761ce463b8da0d
   docVersion: "1.0"
-  speakeasyVersion: 1.621.0
-  generationVersion: 2.707.0
-  releaseVersion: 0.30.0
-  configChecksum: eaca36e821d4944f6f71bc4dab05aaed
+  speakeasyVersion: 1.622.1
+  generationVersion: 2.709.0
+  releaseVersion: 0.30.1
+  configChecksum: 3794033c9025ee81568418d075075b70
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -7007,4 +7007,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Calendar.ListCalendarEvents()`: \n  *  `request.Request.Expand` **Added**\n* `UnifiedTo.Event.ListCalendarEvents()`: \n  *  `request.Request.Expand` **Added**\n* `UnifiedTo.Messaging.ListMessagingMessages()`: \n  *  `request.Request.Expand` **Added**\n* `UnifiedTo.Message.ListMessagingMessages()`: \n  *  `request.Request.Expand` **Added**\n"
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Calendar.ListCalendarEvents()`:  `request.Request` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.ListCalendarEvents()`:  `request.Request` **Changed** **Breaking** :warning:\n* `UnifiedTo.Messaging.ListMessagingMessages()`: \n  *  `request.Request.Expand` **Changed** **Breaking** :warning:\n* `UnifiedTo.Message.ListMessagingMessages()`: \n  *  `request.Request.Expand` **Changed** **Breaking** :warning:\n"
