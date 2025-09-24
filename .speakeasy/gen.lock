@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 3a2b9f42726c5dfd24761ce463b8da0d
+  docChecksum: c7b234a89c45d96ea050dc7c9d6d4030
   docVersion: "1.0"
-  speakeasyVersion: 1.622.1
-  generationVersion: 2.709.0
-  releaseVersion: 0.30.1
-  configChecksum: 3794033c9025ee81568418d075075b70
+  speakeasyVersion: 1.623.0
+  generationVersion: 2.713.0
+  releaseVersion: 0.30.2
+  configChecksum: b16392859528c60bf2d8ddde21171f1f
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.11.0
+    core: 3.11.1
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -7007,4 +7007,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Calendar.ListCalendarEvents()`:  `request.Request` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.ListCalendarEvents()`:  `request.Request` **Changed** **Breaking** :warning:\n* `UnifiedTo.Messaging.ListMessagingMessages()`: \n  *  `request.Request.Expand` **Changed** **Breaking** :warning:\n* `UnifiedTo.Message.ListMessagingMessages()`: \n  *  `request.Request.Expand` **Changed** **Breaking** :warning:\n"
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Messaging.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Messaging.GetMessagingMessage()`:  `response.ParentId` **Added**\n* `UnifiedTo.Messaging.ListMessagingMessages()`:  `response.[].ParentId` **Added**\n* `UnifiedTo.Messaging.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Messaging.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Message.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Message.GetMessagingMessage()`:  `response.ParentId` **Added**\n* `UnifiedTo.Message.ListMessagingMessages()`:  `response.[].ParentId` **Added**\n* `UnifiedTo.Message.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Message.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n"

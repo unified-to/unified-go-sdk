@@ -22,6 +22,7 @@ type MessagingMessage struct {
 	Message            *string             `json:"message,omitempty"`
 	MessageHTML        *string             `json:"message_html,omitempty"`
 	MessageMarkdown    *string             `json:"message_markdown,omitempty"`
+	ParentID           *string             `json:"parent_id,omitempty"`
 	ParentMessageID    *string             `json:"parent_message_id,omitempty"`
 	Raw                map[string]any      `json:"raw,omitempty"`
 	Reactions          []MessagingReaction `json:"reactions,omitempty"`
@@ -132,6 +133,13 @@ func (m *MessagingMessage) GetMessageMarkdown() *string {
 		return nil
 	}
 	return m.MessageMarkdown
+}
+
+func (m *MessagingMessage) GetParentID() *string {
+	if m == nil {
+		return nil
+	}
+	return m.ParentID
 }
 
 func (m *MessagingMessage) GetParentMessageID() *string {

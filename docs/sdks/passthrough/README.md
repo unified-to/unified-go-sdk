@@ -45,7 +45,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res != nil {
+    if res.DefaultApplicationJSONAny != nil {
         // handle response
     }
 }
@@ -100,7 +100,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res != nil {
+    if res.DefaultApplicationJSONAny != nil {
         // handle response
     }
 }
@@ -155,7 +155,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res != nil {
+    if res.DefaultApplicationJSONAny != nil {
         // handle response
     }
 }
@@ -210,7 +210,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res != nil {
+    if res.DefaultApplicationJSONAny != nil {
         // handle response
     }
 }
@@ -265,7 +265,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res != nil {
+    if res.DefaultApplicationJSONAny != nil {
         // handle response
     }
 }
@@ -320,7 +320,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res != nil {
+    if res.DefaultApplicationJSONAny != nil {
         // handle response
     }
 }
@@ -375,7 +375,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res != nil {
+    if res.DefaultApplicationJSONAny != nil {
         // handle response
     }
 }
@@ -430,7 +430,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res != nil {
+    if res.DefaultApplicationJSONAny != nil {
         // handle response
     }
 }

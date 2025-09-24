@@ -32,10 +32,10 @@ const (
 )
 
 type CommerceMetadata5 struct {
-	CommerceMetadata1 *CommerceMetadata1 `queryParam:"inline" name:"five"`
-	Str               *string            `queryParam:"inline" name:"five"`
-	Number            *float64           `queryParam:"inline" name:"five"`
-	Boolean           *bool              `queryParam:"inline" name:"five"`
+	CommerceMetadata1 *CommerceMetadata1 `queryParam:"inline,name=five"`
+	Str               *string            `queryParam:"inline,name=five"`
+	Number            *float64           `queryParam:"inline,name=five"`
+	Boolean           *bool              `queryParam:"inline,name=five"`
 
 	Type CommerceMetadata5Type
 }
@@ -140,11 +140,11 @@ const (
 )
 
 type CommerceMetadataExtraData struct {
-	MapOfAny                 map[string]any      `queryParam:"inline" name:"extra_data"`
-	Str                      *string             `queryParam:"inline" name:"extra_data"`
-	Number                   *float64            `queryParam:"inline" name:"extra_data"`
-	Boolean                  *bool               `queryParam:"inline" name:"extra_data"`
-	ArrayOfCommerceMetadata5 []CommerceMetadata5 `queryParam:"inline" name:"extra_data"`
+	MapOfAny                 map[string]any      `queryParam:"inline,name=extra_data"`
+	Str                      *string             `queryParam:"inline,name=extra_data"`
+	Number                   *float64            `queryParam:"inline,name=extra_data"`
+	Boolean                  *bool               `queryParam:"inline,name=extra_data"`
+	ArrayOfCommerceMetadata5 []CommerceMetadata5 `queryParam:"inline,name=extra_data"`
 
 	Type CommerceMetadataExtraDataType
 }
@@ -304,10 +304,10 @@ const (
 )
 
 type CommerceMetadataSchemas5 struct {
-	CommerceMetadataSchemas1 *CommerceMetadataSchemas1 `queryParam:"inline" name:"five"`
-	Str                      *string                   `queryParam:"inline" name:"five"`
-	Number                   *float64                  `queryParam:"inline" name:"five"`
-	Boolean                  *bool                     `queryParam:"inline" name:"five"`
+	CommerceMetadataSchemas1 *CommerceMetadataSchemas1 `queryParam:"inline,name=five"`
+	Str                      *string                   `queryParam:"inline,name=five"`
+	Number                   *float64                  `queryParam:"inline,name=five"`
+	Boolean                  *bool                     `queryParam:"inline,name=five"`
 
 	Type CommerceMetadataSchemas5Type
 }
@@ -412,11 +412,11 @@ const (
 )
 
 type CommerceMetadataValue struct {
-	MapOfAny                        map[string]any             `queryParam:"inline" name:"value"`
-	Str                             *string                    `queryParam:"inline" name:"value"`
-	Number                          *float64                   `queryParam:"inline" name:"value"`
-	Boolean                         *bool                      `queryParam:"inline" name:"value"`
-	ArrayOfCommerceMetadataSchemas5 []CommerceMetadataSchemas5 `queryParam:"inline" name:"value"`
+	MapOfAny                        map[string]any             `queryParam:"inline,name=value"`
+	Str                             *string                    `queryParam:"inline,name=value"`
+	Number                          *float64                   `queryParam:"inline,name=value"`
+	Boolean                         *bool                      `queryParam:"inline,name=value"`
+	ArrayOfCommerceMetadataSchemas5 []CommerceMetadataSchemas5 `queryParam:"inline,name=value"`
 
 	Type CommerceMetadataValueType
 }
