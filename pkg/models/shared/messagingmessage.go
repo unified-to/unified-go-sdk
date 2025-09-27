@@ -18,6 +18,7 @@ type MessagingMessage struct {
 	HasChildren        *bool               `json:"has_children,omitempty"`
 	HiddenMembers      []MessagingMember   `json:"hidden_members,omitempty"`
 	ID                 *string             `json:"id,omitempty"`
+	IsUnread           *bool               `json:"is_unread,omitempty"`
 	MentionedMembers   []MessagingMember   `json:"mentioned_members,omitempty"`
 	Message            *string             `json:"message,omitempty"`
 	MessageHTML        *string             `json:"message_html,omitempty"`
@@ -105,6 +106,13 @@ func (m *MessagingMessage) GetID() *string {
 		return nil
 	}
 	return m.ID
+}
+
+func (m *MessagingMessage) GetIsUnread() *bool {
+	if m == nil {
+		return nil
+	}
+	return m.IsUnread
 }
 
 func (m *MessagingMessage) GetMentionedMembers() []MessagingMember {

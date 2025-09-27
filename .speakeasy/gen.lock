@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: c7b234a89c45d96ea050dc7c9d6d4030
+  docChecksum: e9e9a75ee0b8df9aa855f2c91936efbd
   docVersion: "1.0"
-  speakeasyVersion: 1.623.0
-  generationVersion: 2.713.0
-  releaseVersion: 0.30.2
-  configChecksum: b16392859528c60bf2d8ddde21171f1f
+  speakeasyVersion: 1.631.0
+  generationVersion: 2.716.10
+  releaseVersion: 0.30.3
+  configChecksum: 399a73fb473d3149f5486550b61d80eb
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -2395,7 +2395,6 @@ generatedFiles:
   - pkg/types/bigint.go
   - pkg/types/date.go
   - pkg/types/datetime.go
-  - pkg/types/decimal.go
   - pkg/types/pointers.go
   - pkg/utils/contenttype.go
   - pkg/utils/env.go
@@ -7007,4 +7006,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Messaging.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Messaging.GetMessagingMessage()`:  `response.ParentId` **Added**\n* `UnifiedTo.Messaging.ListMessagingMessages()`:  `response.[].ParentId` **Added**\n* `UnifiedTo.Messaging.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Messaging.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Message.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Message.GetMessagingMessage()`:  `response.ParentId` **Added**\n* `UnifiedTo.Message.ListMessagingMessages()`:  `response.[].ParentId` **Added**\n* `UnifiedTo.Message.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Message.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.ParentId` **Added**\n  *  `response.ParentId` **Added**\n"
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Messaging.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n* `UnifiedTo.Messaging.GetMessagingMessage()`:  `response.IsUnread` **Added**\n* `UnifiedTo.Messaging.ListMessagingMessages()`:  `response.[].IsUnread` **Added**\n* `UnifiedTo.Messaging.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n* `UnifiedTo.Messaging.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n* `UnifiedTo.Message.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n* `UnifiedTo.Message.GetMessagingMessage()`:  `response.IsUnread` **Added**\n* `UnifiedTo.Message.ListMessagingMessages()`:  `response.[].IsUnread` **Added**\n* `UnifiedTo.Message.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n* `UnifiedTo.Message.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n"
