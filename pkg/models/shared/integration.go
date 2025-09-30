@@ -509,6 +509,256 @@ func (u Partnership) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type Partnership: all fields are null")
 }
 
+type IntegrationSchemasSaml1 struct {
+}
+
+func (i IntegrationSchemasSaml1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(i, "", false)
+}
+
+func (i *IntegrationSchemasSaml1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &i, "", false, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
+type IntegrationSchemasSaml5Type string
+
+const (
+	IntegrationSchemasSaml5TypeIntegrationSchemasSaml1 IntegrationSchemasSaml5Type = "Integration_Schemas_saml_1"
+	IntegrationSchemasSaml5TypeStr                     IntegrationSchemasSaml5Type = "str"
+	IntegrationSchemasSaml5TypeNumber                  IntegrationSchemasSaml5Type = "number"
+	IntegrationSchemasSaml5TypeBoolean                 IntegrationSchemasSaml5Type = "boolean"
+)
+
+type IntegrationSchemasSaml5 struct {
+	IntegrationSchemasSaml1 *IntegrationSchemasSaml1 `queryParam:"inline,name=five"`
+	Str                     *string                  `queryParam:"inline,name=five"`
+	Number                  *float64                 `queryParam:"inline,name=five"`
+	Boolean                 *bool                    `queryParam:"inline,name=five"`
+
+	Type IntegrationSchemasSaml5Type
+}
+
+func CreateIntegrationSchemasSaml5IntegrationSchemasSaml1(integrationSchemasSaml1 IntegrationSchemasSaml1) IntegrationSchemasSaml5 {
+	typ := IntegrationSchemasSaml5TypeIntegrationSchemasSaml1
+
+	return IntegrationSchemasSaml5{
+		IntegrationSchemasSaml1: &integrationSchemasSaml1,
+		Type:                    typ,
+	}
+}
+
+func CreateIntegrationSchemasSaml5Str(str string) IntegrationSchemasSaml5 {
+	typ := IntegrationSchemasSaml5TypeStr
+
+	return IntegrationSchemasSaml5{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateIntegrationSchemasSaml5Number(number float64) IntegrationSchemasSaml5 {
+	typ := IntegrationSchemasSaml5TypeNumber
+
+	return IntegrationSchemasSaml5{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateIntegrationSchemasSaml5Boolean(boolean bool) IntegrationSchemasSaml5 {
+	typ := IntegrationSchemasSaml5TypeBoolean
+
+	return IntegrationSchemasSaml5{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func (u *IntegrationSchemasSaml5) UnmarshalJSON(data []byte) error {
+
+	var integrationSchemasSaml1 IntegrationSchemasSaml1 = IntegrationSchemasSaml1{}
+	if err := utils.UnmarshalJSON(data, &integrationSchemasSaml1, "", true, nil); err == nil {
+		u.IntegrationSchemasSaml1 = &integrationSchemasSaml1
+		u.Type = IntegrationSchemasSaml5TypeIntegrationSchemasSaml1
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
+		u.Str = &str
+		u.Type = IntegrationSchemasSaml5TypeStr
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
+		u.Number = &number
+		u.Type = IntegrationSchemasSaml5TypeNumber
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
+		u.Boolean = &boolean
+		u.Type = IntegrationSchemasSaml5TypeBoolean
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSchemasSaml5", string(data))
+}
+
+func (u IntegrationSchemasSaml5) MarshalJSON() ([]byte, error) {
+	if u.IntegrationSchemasSaml1 != nil {
+		return utils.MarshalJSON(u.IntegrationSchemasSaml1, "", true)
+	}
+
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type IntegrationSchemasSaml5: all fields are null")
+}
+
+type SamlType string
+
+const (
+	SamlTypeMapOfAny                       SamlType = "mapOfAny"
+	SamlTypeStr                            SamlType = "str"
+	SamlTypeNumber                         SamlType = "number"
+	SamlTypeBoolean                        SamlType = "boolean"
+	SamlTypeArrayOfIntegrationSchemasSaml5 SamlType = "arrayOfIntegrationSchemasSaml5"
+)
+
+type Saml struct {
+	MapOfAny                       map[string]any            `queryParam:"inline,name=saml"`
+	Str                            *string                   `queryParam:"inline,name=saml"`
+	Number                         *float64                  `queryParam:"inline,name=saml"`
+	Boolean                        *bool                     `queryParam:"inline,name=saml"`
+	ArrayOfIntegrationSchemasSaml5 []IntegrationSchemasSaml5 `queryParam:"inline,name=saml"`
+
+	Type SamlType
+}
+
+func CreateSamlMapOfAny(mapOfAny map[string]any) Saml {
+	typ := SamlTypeMapOfAny
+
+	return Saml{
+		MapOfAny: mapOfAny,
+		Type:     typ,
+	}
+}
+
+func CreateSamlStr(str string) Saml {
+	typ := SamlTypeStr
+
+	return Saml{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateSamlNumber(number float64) Saml {
+	typ := SamlTypeNumber
+
+	return Saml{
+		Number: &number,
+		Type:   typ,
+	}
+}
+
+func CreateSamlBoolean(boolean bool) Saml {
+	typ := SamlTypeBoolean
+
+	return Saml{
+		Boolean: &boolean,
+		Type:    typ,
+	}
+}
+
+func CreateSamlArrayOfIntegrationSchemasSaml5(arrayOfIntegrationSchemasSaml5 []IntegrationSchemasSaml5) Saml {
+	typ := SamlTypeArrayOfIntegrationSchemasSaml5
+
+	return Saml{
+		ArrayOfIntegrationSchemasSaml5: arrayOfIntegrationSchemasSaml5,
+		Type:                           typ,
+	}
+}
+
+func (u *Saml) UnmarshalJSON(data []byte) error {
+
+	var mapOfAny map[string]any = map[string]any{}
+	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
+		u.MapOfAny = mapOfAny
+		u.Type = SamlTypeMapOfAny
+		return nil
+	}
+
+	var str string = ""
+	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
+		u.Str = &str
+		u.Type = SamlTypeStr
+		return nil
+	}
+
+	var number float64 = float64(0)
+	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
+		u.Number = &number
+		u.Type = SamlTypeNumber
+		return nil
+	}
+
+	var boolean bool = false
+	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
+		u.Boolean = &boolean
+		u.Type = SamlTypeBoolean
+		return nil
+	}
+
+	var arrayOfIntegrationSchemasSaml5 []IntegrationSchemasSaml5 = []IntegrationSchemasSaml5{}
+	if err := utils.UnmarshalJSON(data, &arrayOfIntegrationSchemasSaml5, "", true, nil); err == nil {
+		u.ArrayOfIntegrationSchemasSaml5 = arrayOfIntegrationSchemasSaml5
+		u.Type = SamlTypeArrayOfIntegrationSchemasSaml5
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Saml", string(data))
+}
+
+func (u Saml) MarshalJSON() ([]byte, error) {
+	if u.MapOfAny != nil {
+		return utils.MarshalJSON(u.MapOfAny, "", true)
+	}
+
+	if u.Str != nil {
+		return utils.MarshalJSON(u.Str, "", true)
+	}
+
+	if u.Number != nil {
+		return utils.MarshalJSON(u.Number, "", true)
+	}
+
+	if u.Boolean != nil {
+		return utils.MarshalJSON(u.Boolean, "", true)
+	}
+
+	if u.ArrayOfIntegrationSchemasSaml5 != nil {
+		return utils.MarshalJSON(u.ArrayOfIntegrationSchemasSaml5, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type Saml: all fields are null")
+}
+
 type IntegrationSchemasSandbox1 struct {
 }
 
@@ -779,6 +1029,7 @@ type Integration struct {
 	Partnership          *Partnership                    `json:"partnership,omitempty"`
 	Popularity           *float64                        `json:"popularity,omitempty"`
 	RateLimitDescription *string                         `json:"rate_limit_description,omitempty"`
+	Saml                 *Saml                           `json:"saml,omitempty"`
 	Sandbox              *Sandbox                        `json:"sandbox,omitempty"`
 	Support              map[string]any                  `json:"support,omitempty"`
 	TestedAt             *time.Time                      `json:"tested_at,omitempty"`
@@ -920,6 +1171,13 @@ func (i *Integration) GetRateLimitDescription() *string {
 		return nil
 	}
 	return i.RateLimitDescription
+}
+
+func (i *Integration) GetSaml() *Saml {
+	if i == nil {
+		return nil
+	}
+	return i.Saml
 }
 
 func (i *Integration) GetSandbox() *Sandbox {

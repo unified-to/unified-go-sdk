@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: e9e9a75ee0b8df9aa855f2c91936efbd
+  docChecksum: 877b52162b06392093c3efbd89172e36
   docVersion: "1.0"
-  speakeasyVersion: 1.631.0
-  generationVersion: 2.716.10
-  releaseVersion: 0.30.3
-  configChecksum: 399a73fb473d3149f5486550b61d80eb
+  speakeasyVersion: 1.631.5
+  generationVersion: 2.716.16
+  releaseVersion: 0.30.4
+  configChecksum: b2a350279715d5103f1bea41041240d0
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -2025,6 +2025,8 @@ generatedFiles:
   - docs/pkg/models/shared/integration5.md
   - docs/pkg/models/shared/integrationschemas1.md
   - docs/pkg/models/shared/integrationschemas5.md
+  - docs/pkg/models/shared/integrationschemassaml1.md
+  - docs/pkg/models/shared/integrationschemassaml5.md
   - docs/pkg/models/shared/integrationschemassandbox1.md
   - docs/pkg/models/shared/integrationschemassandbox5.md
   - docs/pkg/models/shared/intervalunit.md
@@ -2158,6 +2160,7 @@ generatedFiles:
   - docs/pkg/models/shared/resourcetype.md
   - docs/pkg/models/shared/responsestatus.md
   - docs/pkg/models/shared/role.md
+  - docs/pkg/models/shared/saml.md
   - docs/pkg/models/shared/sandbox.md
   - docs/pkg/models/shared/scimaddress.md
   - docs/pkg/models/shared/scimaddresstype.md
@@ -7006,4 +7009,9 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Messaging.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n* `UnifiedTo.Messaging.GetMessagingMessage()`:  `response.IsUnread` **Added**\n* `UnifiedTo.Messaging.ListMessagingMessages()`:  `response.[].IsUnread` **Added**\n* `UnifiedTo.Messaging.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n* `UnifiedTo.Messaging.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n* `UnifiedTo.Message.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n* `UnifiedTo.Message.GetMessagingMessage()`:  `response.IsUnread` **Added**\n* `UnifiedTo.Message.ListMessagingMessages()`:  `response.[].IsUnread` **Added**\n* `UnifiedTo.Message.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n* `UnifiedTo.Message.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.IsUnread` **Added**\n  *  `response.IsUnread` **Added**\n"
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Saml` **Added**
+  * `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Saml` **Added**
+  * `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Saml` **Added**
+  * `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Saml` **Added**
