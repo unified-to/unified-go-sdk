@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 877b52162b06392093c3efbd89172e36
+  docChecksum: 93627d104d7b0fff5c900b54ba7421e8
   docVersion: "1.0"
   speakeasyVersion: 1.631.5
   generationVersion: 2.716.16
-  releaseVersion: 0.30.4
-  configChecksum: b2a350279715d5103f1bea41041240d0
+  releaseVersion: 0.30.5
+  configChecksum: 3ec8731caec659cb300c172bcc0f0f17
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -201,6 +201,7 @@ generatedFiles:
   - /pkg/models/operations/getunifiedconnection.go
   - /pkg/models/operations/getunifiedintegrationauth.go
   - /pkg/models/operations/getunifiedintegrationlogin.go
+  - /pkg/models/operations/getunifiedissue.go
   - /pkg/models/operations/getunifiedwebhook.go
   - /pkg/models/operations/getverificationpackage.go
   - /pkg/models/operations/getverificationrequest.go
@@ -1150,6 +1151,8 @@ generatedFiles:
   - docs/pkg/models/operations/getunifiedintegrationauthresponse.md
   - docs/pkg/models/operations/getunifiedintegrationloginrequest.md
   - docs/pkg/models/operations/getunifiedintegrationloginresponse.md
+  - docs/pkg/models/operations/getunifiedissuerequest.md
+  - docs/pkg/models/operations/getunifiedissueresponse.md
   - docs/pkg/models/operations/getunifiedwebhookrequest.md
   - docs/pkg/models/operations/getunifiedwebhookresponse.md
   - docs/pkg/models/operations/getverificationpackagerequest.md
@@ -7007,11 +7010,17 @@ examples:
       responses:
         "200":
           application/json: {}
+  getUnifiedIssue:
+    speakeasy-default-get-unified-issue:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
 releaseNotes: |
   ## Go SDK Changes Detected:
-  * `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Saml` **Added**
-  * `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Saml` **Added**
-  * `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Saml` **Added**
-  * `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Saml` **Added**
+  * `UnifiedTo.Unified.GetUnifiedIssue()`: **Added**
+  * `UnifiedTo.Issue.GetUnifiedIssue()`: **Added**
