@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 93627d104d7b0fff5c900b54ba7421e8
+  docChecksum: 0b33a55547cf2ac860e6a35542823995
   docVersion: "1.0"
-  speakeasyVersion: 1.631.5
-  generationVersion: 2.716.16
-  releaseVersion: 0.30.5
-  configChecksum: 3ec8731caec659cb300c172bcc0f0f17
+  speakeasyVersion: 1.634.2
+  generationVersion: 2.721.3
+  releaseVersion: 0.31.0
+  configChecksum: b0287f823fa8500a0473aace39812b8b
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -29,7 +29,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.85.14
+    unions: 2.86.0
     uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
@@ -7020,7 +7020,3 @@ examples:
           application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `UnifiedTo.Unified.GetUnifiedIssue()`: **Added**
-  * `UnifiedTo.Issue.GetUnifiedIssue()`: **Added**

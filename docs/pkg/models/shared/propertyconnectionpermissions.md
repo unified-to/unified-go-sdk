@@ -71,6 +71,7 @@
 | `PropertyConnectionPermissionsAtsJobRead`                   | ats_job_read                                                |
 | `PropertyConnectionPermissionsAtsJobWrite`                  | ats_job_write                                               |
 | `PropertyConnectionPermissionsAtsCompanyRead`               | ats_company_read                                            |
+| `PropertyConnectionPermissionsAtsCompanyWrite`              | ats_company_write                                           |
 | `PropertyConnectionPermissionsAtsDocumentRead`              | ats_document_read                                           |
 | `PropertyConnectionPermissionsAtsDocumentWrite`             | ats_document_write                                          |
 | `PropertyConnectionPermissionsAtsScorecardRead`             | ats_scorecard_read                                          |

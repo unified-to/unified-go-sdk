@@ -71,6 +71,7 @@ const (
 	PropertyConnectionPermissionsAtsJobRead                   PropertyConnectionPermissions = "ats_job_read"
 	PropertyConnectionPermissionsAtsJobWrite                  PropertyConnectionPermissions = "ats_job_write"
 	PropertyConnectionPermissionsAtsCompanyRead               PropertyConnectionPermissions = "ats_company_read"
+	PropertyConnectionPermissionsAtsCompanyWrite              PropertyConnectionPermissions = "ats_company_write"
 	PropertyConnectionPermissionsAtsDocumentRead              PropertyConnectionPermissions = "ats_document_read"
 	PropertyConnectionPermissionsAtsDocumentWrite             PropertyConnectionPermissions = "ats_document_write"
 	PropertyConnectionPermissionsAtsScorecardRead             PropertyConnectionPermissions = "ats_scorecard_read"
