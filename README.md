@@ -1339,7 +1339,6 @@ func main() {
 * [UpdateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
-
 ### [User](docs/sdks/user/README.md)
 
 * [CreateScimUsers](docs/sdks/user/README.md#createscimusers) - Create user

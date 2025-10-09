@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 0b33a55547cf2ac860e6a35542823995
+  docChecksum: dc91eeac96415353b77e357c69ab74d6
   docVersion: "1.0"
-  speakeasyVersion: 1.634.2
-  generationVersion: 2.721.3
-  releaseVersion: 0.31.0
-  configChecksum: b0287f823fa8500a0473aace39812b8b
+  speakeasyVersion: 1.636.2
+  generationVersion: 2.723.8
+  releaseVersion: 0.31.1
+  configChecksum: 577a924515f55ceac475e52ae970d086
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -668,6 +668,7 @@ generatedFiles:
   - /pkg/models/shared/marketingmember.go
   - /pkg/models/shared/messagingattachment.go
   - /pkg/models/shared/messagingchannel.go
+  - /pkg/models/shared/messagingchannelmessage.go
   - /pkg/models/shared/messagingmember.go
   - /pkg/models/shared/messagingmessage.go
   - /pkg/models/shared/messagingreaction.go
@@ -2064,6 +2065,7 @@ generatedFiles:
   - docs/pkg/models/shared/marketingmember.md
   - docs/pkg/models/shared/messagingattachment.md
   - docs/pkg/models/shared/messagingchannel.md
+  - docs/pkg/models/shared/messagingchannelmessage.md
   - docs/pkg/models/shared/messagingmember.md
   - docs/pkg/models/shared/messagingmessage.md
   - docs/pkg/models/shared/messagingreaction.md
@@ -2344,7 +2346,6 @@ generatedFiles:
   - docs/sdks/trialbalance/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
-  - docs/sdks/unifiedto/README.md
   - docs/sdks/user/README.md
   - docs/sdks/verification/README.md
   - docs/sdks/webhook/README.md
@@ -7020,3 +7021,4 @@ examples:
           application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Accounting.CreateAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.SalesChannel` **Added**\n  *  `response.SalesChannel` **Added**\n* `UnifiedTo.Accounting.GetAccountingSalesorder()`:  `response.SalesChannel` **Added**\n* `UnifiedTo.Accounting.ListAccountingSalesorders()`:  `response.[].SalesChannel` **Added**\n* `UnifiedTo.Accounting.PatchAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.SalesChannel` **Added**\n  *  `response.SalesChannel` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.SalesChannel` **Added**\n  *  `response.SalesChannel` **Added**\n* `UnifiedTo.Salesorder.CreateAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.SalesChannel` **Added**\n  *  `response.SalesChannel` **Added**\n* `UnifiedTo.Salesorder.GetAccountingSalesorder()`:  `response.SalesChannel` **Added**\n* `UnifiedTo.Salesorder.ListAccountingSalesorders()`:  `response.[].SalesChannel` **Added**\n* `UnifiedTo.Salesorder.PatchAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.SalesChannel` **Added**\n  *  `response.SalesChannel` **Added**\n* `UnifiedTo.Salesorder.UpdateAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.SalesChannel` **Added**\n  *  `response.SalesChannel` **Added**\n* `UnifiedTo.Messaging.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Messaging.GetMessagingChannel()`:  `response.Members.[].ImageUrl` **Added**\n* `UnifiedTo.Messaging.GetMessagingMessage()`:  `response` **Changed**\n* `UnifiedTo.Messaging.ListMessagingChannels()`:  `response.[].Members.[].ImageUrl` **Added**\n* `UnifiedTo.Messaging.ListMessagingMessages()`:  `response.[]` **Changed**\n* `UnifiedTo.Messaging.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Messaging.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Channel.GetMessagingChannel()`:  `response.Members.[].ImageUrl` **Added**\n* `UnifiedTo.Channel.ListMessagingChannels()`:  `response.[].Members.[].ImageUrl` **Added**\n* `UnifiedTo.Message.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Message.GetMessagingMessage()`:  `response` **Changed**\n* `UnifiedTo.Message.ListMessagingMessages()`:  `response.[]` **Changed**\n* `UnifiedTo.Message.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Message.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage` **Changed**\n  *  `response` **Changed**\n"

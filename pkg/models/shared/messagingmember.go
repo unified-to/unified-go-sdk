@@ -3,9 +3,10 @@
 package shared
 
 type MessagingMember struct {
-	Email  *string `json:"email,omitempty"`
-	Name   *string `json:"name,omitempty"`
-	UserID *string `json:"user_id,omitempty"`
+	Email    *string `json:"email,omitempty"`
+	ImageURL *string `json:"image_url,omitempty"`
+	Name     *string `json:"name,omitempty"`
+	UserID   *string `json:"user_id,omitempty"`
 }
 
 func (m *MessagingMember) GetEmail() *string {
@@ -13,6 +14,13 @@ func (m *MessagingMember) GetEmail() *string {
 		return nil
 	}
 	return m.Email
+}
+
+func (m *MessagingMember) GetImageURL() *string {
+	if m == nil {
+		return nil
+	}
+	return m.ImageURL
 }
 
 func (m *MessagingMember) GetName() *string {

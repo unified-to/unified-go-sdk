@@ -3,9 +3,10 @@
 package shared
 
 type PropertyMessagingMessageAuthorMember struct {
-	Email  *string `json:"email,omitempty"`
-	Name   *string `json:"name,omitempty"`
-	UserID *string `json:"user_id,omitempty"`
+	Email    *string `json:"email,omitempty"`
+	ImageURL *string `json:"image_url,omitempty"`
+	Name     *string `json:"name,omitempty"`
+	UserID   *string `json:"user_id,omitempty"`
 }
 
 func (p *PropertyMessagingMessageAuthorMember) GetEmail() *string {
@@ -13,6 +14,13 @@ func (p *PropertyMessagingMessageAuthorMember) GetEmail() *string {
 		return nil
 	}
 	return p.Email
+}
+
+func (p *PropertyMessagingMessageAuthorMember) GetImageURL() *string {
+	if p == nil {
+		return nil
+	}
+	return p.ImageURL
 }
 
 func (p *PropertyMessagingMessageAuthorMember) GetName() *string {
