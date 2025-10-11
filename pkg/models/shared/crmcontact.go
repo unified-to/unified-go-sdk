@@ -15,10 +15,12 @@ type CrmContact struct {
 	CompanyIds []string   `json:"company_ids,omitempty"`
 	CreatedAt  *time.Time `json:"created_at,omitempty"`
 	// An array of deal IDs associated with this contact
-	DealIds []string `json:"deal_ids,omitempty"`
+	DealIds    []string `json:"deal_ids,omitempty"`
+	Department *string  `json:"department,omitempty"`
 	// An array of email addresses for this contact
-	Emails []CrmEmail `json:"emails,omitempty"`
-	ID     *string    `json:"id,omitempty"`
+	Emails   []CrmEmail `json:"emails,omitempty"`
+	ID       *string    `json:"id,omitempty"`
+	ImageURL *string    `json:"image_url,omitempty"`
 	// Additional URLs associated with the contact e.g., LinkedIn, website, etc
 	LinkUrls []string       `json:"link_urls,omitempty"`
 	Metadata []CrmMetadata  `json:"metadata,omitempty"`
@@ -77,6 +79,13 @@ func (c *CrmContact) GetDealIds() []string {
 	return c.DealIds
 }
 
+func (c *CrmContact) GetDepartment() *string {
+	if c == nil {
+		return nil
+	}
+	return c.Department
+}
+
 func (c *CrmContact) GetEmails() []CrmEmail {
 	if c == nil {
 		return nil
@@ -89,6 +98,13 @@ func (c *CrmContact) GetID() *string {
 		return nil
 	}
 	return c.ID
+}
+
+func (c *CrmContact) GetImageURL() *string {
+	if c == nil {
+		return nil
+	}
+	return c.ImageURL
 }
 
 func (c *CrmContact) GetLinkUrls() []string {

@@ -258,6 +258,28 @@ func (u CrmMetadataExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type CrmMetadataExtraData: all fields are null")
 }
 
+type CrmMetadataFormat string
+
+const (
+	CrmMetadataFormatText           CrmMetadataFormat = "TEXT"
+	CrmMetadataFormatNumber         CrmMetadataFormat = "NUMBER"
+	CrmMetadataFormatDate           CrmMetadataFormat = "DATE"
+	CrmMetadataFormatBoolean        CrmMetadataFormat = "BOOLEAN"
+	CrmMetadataFormatFile           CrmMetadataFormat = "FILE"
+	CrmMetadataFormatTextarea       CrmMetadataFormat = "TEXTAREA"
+	CrmMetadataFormatSingleSelect   CrmMetadataFormat = "SINGLE_SELECT"
+	CrmMetadataFormatMultipleSelect CrmMetadataFormat = "MULTIPLE_SELECT"
+	CrmMetadataFormatMeasurement    CrmMetadataFormat = "MEASUREMENT"
+	CrmMetadataFormatPrice          CrmMetadataFormat = "PRICE"
+	CrmMetadataFormatYesNo          CrmMetadataFormat = "YES_NO"
+	CrmMetadataFormatCurrency       CrmMetadataFormat = "CURRENCY"
+	CrmMetadataFormatURL            CrmMetadataFormat = "URL"
+)
+
+func (e CrmMetadataFormat) ToPointer() *CrmMetadataFormat {
+	return &e
+}
+
 type CrmMetadataSchemas1 struct {
 }
 
@@ -510,6 +532,7 @@ func (u CrmMetadataValue) MarshalJSON() ([]byte, error) {
 
 type CrmMetadata struct {
 	ExtraData *CrmMetadataExtraData `json:"extra_data,omitempty"`
+	Format    *CrmMetadataFormat    `json:"format,omitempty"`
 	ID        *string               `json:"id,omitempty"`
 	Key       *string               `json:"key,omitempty"`
 	Namespace *string               `json:"namespace,omitempty"`
@@ -523,6 +546,13 @@ func (c *CrmMetadata) GetExtraData() *CrmMetadataExtraData {
 		return nil
 	}
 	return c.ExtraData
+}
+
+func (c *CrmMetadata) GetFormat() *CrmMetadataFormat {
+	if c == nil {
+		return nil
+	}
+	return c.Format
 }
 
 func (c *CrmMetadata) GetID() *string {
