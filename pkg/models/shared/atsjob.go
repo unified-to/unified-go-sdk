@@ -51,14 +51,16 @@ type AtsJob struct {
 	Description    *string         `json:"description,omitempty"`
 	EmploymentType *EmploymentType `json:"employment_type,omitempty"`
 	// The departments/divisions/teams that this job belongs to
-	Groups           []AtsGroup      `json:"groups,omitempty"`
-	HiringManagerIds []string        `json:"hiring_manager_ids,omitempty"`
-	ID               *string         `json:"id,omitempty"`
-	LanguageLocale   *string         `json:"language_locale,omitempty"`
-	Metadata         []AtsMetadata   `json:"metadata,omitempty"`
-	Name             *string         `json:"name,omitempty"`
-	NumberOfOpenings *float64        `json:"number_of_openings,omitempty"`
-	Openings         []AtsJobOpening `json:"openings,omitempty"`
+	Groups                 []AtsGroup      `json:"groups,omitempty"`
+	HiringManagerIds       []string        `json:"hiring_manager_ids,omitempty"`
+	ID                     *string         `json:"id,omitempty"`
+	LanguageLocale         *string         `json:"language_locale,omitempty"`
+	Metadata               []AtsMetadata   `json:"metadata,omitempty"`
+	MinimumDegree          *string         `json:"minimum_degree,omitempty"`
+	MinimumExperienceYears *float64        `json:"minimum_experience_years,omitempty"`
+	Name                   *string         `json:"name,omitempty"`
+	NumberOfOpenings       *float64        `json:"number_of_openings,omitempty"`
+	Openings               []AtsJobOpening `json:"openings,omitempty"`
 	// Public job postings
 	Postings []AtsJobPosting `json:"postings,omitempty"`
 	// URLs for pages containing public listings for the job
@@ -171,6 +173,20 @@ func (a *AtsJob) GetMetadata() []AtsMetadata {
 		return nil
 	}
 	return a.Metadata
+}
+
+func (a *AtsJob) GetMinimumDegree() *string {
+	if a == nil {
+		return nil
+	}
+	return a.MinimumDegree
+}
+
+func (a *AtsJob) GetMinimumExperienceYears() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.MinimumExperienceYears
 }
 
 func (a *AtsJob) GetName() *string {
