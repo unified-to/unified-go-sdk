@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: a340dff9ff9a611e83b0ac8c9df95754
+  docChecksum: 5e991f57774a394989eb351c469cc219
   docVersion: "1.0"
-  speakeasyVersion: 1.636.3
-  generationVersion: 2.723.11
-  releaseVersion: 0.31.3
-  configChecksum: dcd9f28e00bb930f05b7c906cb102046
+  speakeasyVersion: 1.637.0
+  generationVersion: 2.727.4
+  releaseVersion: 0.32.0
+  configChecksum: 488728b6c396d3167efb28b9bb20c63b
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.11.1
+    core: 3.12.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -38,6 +38,7 @@ generatedFiles:
   - /pkg/models/operations/createaccountingcategory.go
   - /pkg/models/operations/createaccountingcontact.go
   - /pkg/models/operations/createaccountingcreditmemo.go
+  - /pkg/models/operations/createaccountingexpense.go
   - /pkg/models/operations/createaccountinginvoice.go
   - /pkg/models/operations/createaccountingjournal.go
   - /pkg/models/operations/createaccountingorder.go
@@ -118,6 +119,7 @@ generatedFiles:
   - /pkg/models/operations/getaccountingcategory.go
   - /pkg/models/operations/getaccountingcontact.go
   - /pkg/models/operations/getaccountingcreditmemo.go
+  - /pkg/models/operations/getaccountingexpense.go
   - /pkg/models/operations/getaccountinginvoice.go
   - /pkg/models/operations/getaccountingjournal.go
   - /pkg/models/operations/getaccountingorder.go
@@ -211,6 +213,7 @@ generatedFiles:
   - /pkg/models/operations/listaccountingcategories.go
   - /pkg/models/operations/listaccountingcontacts.go
   - /pkg/models/operations/listaccountingcreditmemoes.go
+  - /pkg/models/operations/listaccountingexpenses.go
   - /pkg/models/operations/listaccountinginvoices.go
   - /pkg/models/operations/listaccountingjournals.go
   - /pkg/models/operations/listaccountingorders.go
@@ -309,6 +312,7 @@ generatedFiles:
   - /pkg/models/operations/patchaccountingcategory.go
   - /pkg/models/operations/patchaccountingcontact.go
   - /pkg/models/operations/patchaccountingcreditmemo.go
+  - /pkg/models/operations/patchaccountingexpense.go
   - /pkg/models/operations/patchaccountinginvoice.go
   - /pkg/models/operations/patchaccountingjournal.go
   - /pkg/models/operations/patchaccountingorder.go
@@ -387,6 +391,7 @@ generatedFiles:
   - /pkg/models/operations/removeaccountingcategory.go
   - /pkg/models/operations/removeaccountingcontact.go
   - /pkg/models/operations/removeaccountingcreditmemo.go
+  - /pkg/models/operations/removeaccountingexpense.go
   - /pkg/models/operations/removeaccountinginvoice.go
   - /pkg/models/operations/removeaccountingjournal.go
   - /pkg/models/operations/removeaccountingorder.go
@@ -463,6 +468,7 @@ generatedFiles:
   - /pkg/models/operations/updateaccountingcategory.go
   - /pkg/models/operations/updateaccountingcontact.go
   - /pkg/models/operations/updateaccountingcreditmemo.go
+  - /pkg/models/operations/updateaccountingexpense.go
   - /pkg/models/operations/updateaccountinginvoice.go
   - /pkg/models/operations/updateaccountingjournal.go
   - /pkg/models/operations/updateaccountingorder.go
@@ -547,6 +553,7 @@ generatedFiles:
   - /pkg/models/shared/accountingcontactpaymentmethod.go
   - /pkg/models/shared/accountingcreditmemo.go
   - /pkg/models/shared/accountingemail.go
+  - /pkg/models/shared/accountingexpense.go
   - /pkg/models/shared/accountinginvoice.go
   - /pkg/models/shared/accountingjournal.go
   - /pkg/models/shared/accountingjournallineitem.go
@@ -827,6 +834,8 @@ generatedFiles:
   - docs/pkg/models/operations/createaccountingcontactresponse.md
   - docs/pkg/models/operations/createaccountingcreditmemorequest.md
   - docs/pkg/models/operations/createaccountingcreditmemoresponse.md
+  - docs/pkg/models/operations/createaccountingexpenserequest.md
+  - docs/pkg/models/operations/createaccountingexpenseresponse.md
   - docs/pkg/models/operations/createaccountinginvoicerequest.md
   - docs/pkg/models/operations/createaccountinginvoiceresponse.md
   - docs/pkg/models/operations/createaccountingjournalrequest.md
@@ -986,6 +995,8 @@ generatedFiles:
   - docs/pkg/models/operations/getaccountingcontactresponse.md
   - docs/pkg/models/operations/getaccountingcreditmemorequest.md
   - docs/pkg/models/operations/getaccountingcreditmemoresponse.md
+  - docs/pkg/models/operations/getaccountingexpenserequest.md
+  - docs/pkg/models/operations/getaccountingexpenseresponse.md
   - docs/pkg/models/operations/getaccountinginvoicerequest.md
   - docs/pkg/models/operations/getaccountinginvoiceresponse.md
   - docs/pkg/models/operations/getaccountingjournalrequest.md
@@ -1172,6 +1183,8 @@ generatedFiles:
   - docs/pkg/models/operations/listaccountingcontactsresponse.md
   - docs/pkg/models/operations/listaccountingcreditmemoesrequest.md
   - docs/pkg/models/operations/listaccountingcreditmemoesresponse.md
+  - docs/pkg/models/operations/listaccountingexpensesrequest.md
+  - docs/pkg/models/operations/listaccountingexpensesresponse.md
   - docs/pkg/models/operations/listaccountinginvoicesrequest.md
   - docs/pkg/models/operations/listaccountinginvoicesresponse.md
   - docs/pkg/models/operations/listaccountingjournalsrequest.md
@@ -1370,6 +1383,8 @@ generatedFiles:
   - docs/pkg/models/operations/patchaccountingcontactresponse.md
   - docs/pkg/models/operations/patchaccountingcreditmemorequest.md
   - docs/pkg/models/operations/patchaccountingcreditmemoresponse.md
+  - docs/pkg/models/operations/patchaccountingexpenserequest.md
+  - docs/pkg/models/operations/patchaccountingexpenseresponse.md
   - docs/pkg/models/operations/patchaccountinginvoicerequest.md
   - docs/pkg/models/operations/patchaccountinginvoiceresponse.md
   - docs/pkg/models/operations/patchaccountingjournalrequest.md
@@ -1527,6 +1542,8 @@ generatedFiles:
   - docs/pkg/models/operations/removeaccountingcontactresponse.md
   - docs/pkg/models/operations/removeaccountingcreditmemorequest.md
   - docs/pkg/models/operations/removeaccountingcreditmemoresponse.md
+  - docs/pkg/models/operations/removeaccountingexpenserequest.md
+  - docs/pkg/models/operations/removeaccountingexpenseresponse.md
   - docs/pkg/models/operations/removeaccountinginvoicerequest.md
   - docs/pkg/models/operations/removeaccountinginvoiceresponse.md
   - docs/pkg/models/operations/removeaccountingjournalrequest.md
@@ -1679,6 +1696,8 @@ generatedFiles:
   - docs/pkg/models/operations/updateaccountingcontactresponse.md
   - docs/pkg/models/operations/updateaccountingcreditmemorequest.md
   - docs/pkg/models/operations/updateaccountingcreditmemoresponse.md
+  - docs/pkg/models/operations/updateaccountingexpenserequest.md
+  - docs/pkg/models/operations/updateaccountingexpenseresponse.md
   - docs/pkg/models/operations/updateaccountinginvoicerequest.md
   - docs/pkg/models/operations/updateaccountinginvoiceresponse.md
   - docs/pkg/models/operations/updateaccountingjournalrequest.md
@@ -1841,6 +1860,7 @@ generatedFiles:
   - docs/pkg/models/shared/accountingcreditmemostatus.md
   - docs/pkg/models/shared/accountingemail.md
   - docs/pkg/models/shared/accountingemailtype.md
+  - docs/pkg/models/shared/accountingexpense.md
   - docs/pkg/models/shared/accountinginvoice.md
   - docs/pkg/models/shared/accountinginvoicepaymentcollectionmethod.md
   - docs/pkg/models/shared/accountinginvoicestatus.md
@@ -2281,6 +2301,7 @@ generatedFiles:
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/event/README.md
+  - docs/sdks/expense/README.md
   - docs/sdks/file/README.md
   - docs/sdks/genai/README.md
   - docs/sdks/group/README.md
@@ -2355,6 +2376,7 @@ generatedFiles:
   - employee.go
   - enrich.go
   - event.go
+  - expense.go
   - file.go
   - genai.go
   - go.mod
@@ -7020,6 +7042,61 @@ examples:
       responses:
         "200":
           application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
+  createAccountingExpense:
+    speakeasy-default-create-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingExpense:
+    speakeasy-default-get-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingExpenses:
+    speakeasy-default-list-accounting-expenses:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingExpense:
+    speakeasy-default-patch-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingExpense:
+    speakeasy-default-remove-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingExpense:
+    speakeasy-default-update-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Ats.CreateAtsJob()`: \n  *  `request.Request.AtsJob` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ats.GetAtsJob()`:  `response` **Changed**\n* `UnifiedTo.Ats.ListAtsJobs()`:  `response.[]` **Changed**\n* `UnifiedTo.Ats.PatchAtsJob()`: \n  *  `request.Request.AtsJob` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ats.UpdateAtsJob()`: \n  *  `request.Request.AtsJob` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Job.CreateAtsJob()`: \n  *  `request.Request.AtsJob` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Job.GetAtsJob()`:  `response` **Changed**\n* `UnifiedTo.Job.ListAtsJobs()`:  `response.[]` **Changed**\n* `UnifiedTo.Job.PatchAtsJob()`: \n  *  `request.Request.AtsJob` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Job.UpdateAtsJob()`: \n  *  `request.Request.AtsJob` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Accounting.CreateAccountingExpense()`: **Added**\n* `UnifiedTo.Accounting.GetAccountingExpense()`: **Added**\n* `UnifiedTo.Accounting.ListAccountingExpenses()`: **Added**\n* `UnifiedTo.Accounting.PatchAccountingExpense()`: **Added**\n* `UnifiedTo.Accounting.RemoveAccountingExpense()`: **Added**\n* `UnifiedTo.Accounting.UpdateAccountingExpense()`: **Added**\n* `UnifiedTo.Expense.CreateAccountingExpense()`: **Added**\n* `UnifiedTo.Expense.GetAccountingExpense()`: **Added**\n* `UnifiedTo.Expense.ListAccountingExpenses()`: **Added**\n* `UnifiedTo.Expense.PatchAccountingExpense()`: **Added**\n* `UnifiedTo.Expense.RemoveAccountingExpense()`: **Added**\n* `UnifiedTo.Expense.UpdateAccountingExpense()`: **Added**\n* `UnifiedTo.Messaging.ListMessagingMessages()`: \n  *  `request.Request.UserId` **Added**\n* `UnifiedTo.Message.ListMessagingMessages()`: \n  *  `request.Request.UserId` **Added**\n"

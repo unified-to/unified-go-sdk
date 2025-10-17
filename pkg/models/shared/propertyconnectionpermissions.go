@@ -19,6 +19,8 @@ const (
 	PropertyConnectionPermissionsAccountingCreditmemoWrite    PropertyConnectionPermissions = "accounting_creditmemo_write"
 	PropertyConnectionPermissionsAccountingContactRead        PropertyConnectionPermissions = "accounting_contact_read"
 	PropertyConnectionPermissionsAccountingContactWrite       PropertyConnectionPermissions = "accounting_contact_write"
+	PropertyConnectionPermissionsAccountingExpenseRead        PropertyConnectionPermissions = "accounting_expense_read"
+	PropertyConnectionPermissionsAccountingExpenseWrite       PropertyConnectionPermissions = "accounting_expense_write"
 	PropertyConnectionPermissionsAccountingTaxrateRead        PropertyConnectionPermissions = "accounting_taxrate_read"
 	PropertyConnectionPermissionsAccountingTaxrateWrite       PropertyConnectionPermissions = "accounting_taxrate_write"
 	PropertyConnectionPermissionsAccountingOrganizationRead   PropertyConnectionPermissions = "accounting_organization_read"

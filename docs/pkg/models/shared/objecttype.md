@@ -22,6 +22,7 @@
 | `ObjectTypeAccountingProfitloss`    | accounting_profitloss               |
 | `ObjectTypeAccountingTrialbalance`  | accounting_trialbalance             |
 | `ObjectTypeAccountingCategory`      | accounting_category                 |
+| `ObjectTypeAccountingExpense`       | accounting_expense                  |
 | `ObjectTypePaymentPayment`          | payment_payment                     |
 | `ObjectTypePaymentLink`             | payment_link                        |
 | `ObjectTypePaymentPayout`           | payment_payout                      |

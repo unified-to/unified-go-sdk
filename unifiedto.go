@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.723.11
+// Generated from OpenAPI doc version 1.0 and generator version 2.727.4
 
 import (
 	"context"
@@ -62,6 +62,7 @@ type UnifiedTo struct {
 	Category          *Category
 	Contact           *Contact
 	Creditmemo        *Creditmemo
+	Expense           *Expense
 	Invoice           *Invoice
 	Journal           *Journal
 	Order             *Order
@@ -237,9 +238,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.31.3",
+		SDKVersion: "0.32.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.31.3 2.723.11 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.32.0 2.727.4 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -267,6 +268,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Category = newCategory(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Contact = newContact(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Creditmemo = newCreditmemo(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Expense = newExpense(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Invoice = newInvoice(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Journal = newJournal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Order = newOrder(sdk, sdk.sdkConfiguration, sdk.hooks)

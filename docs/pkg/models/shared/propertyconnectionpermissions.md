@@ -19,6 +19,8 @@
 | `PropertyConnectionPermissionsAccountingCreditmemoWrite`    | accounting_creditmemo_write                                 |
 | `PropertyConnectionPermissionsAccountingContactRead`        | accounting_contact_read                                     |
 | `PropertyConnectionPermissionsAccountingContactWrite`       | accounting_contact_write                                    |
+| `PropertyConnectionPermissionsAccountingExpenseRead`        | accounting_expense_read                                     |
+| `PropertyConnectionPermissionsAccountingExpenseWrite`       | accounting_expense_write                                    |
 | `PropertyConnectionPermissionsAccountingTaxrateRead`        | accounting_taxrate_read                                     |
 | `PropertyConnectionPermissionsAccountingTaxrateWrite`       | accounting_taxrate_write                                    |
 | `PropertyConnectionPermissionsAccountingOrganizationRead`   | accounting_organization_read                                |

@@ -93,6 +93,7 @@ func main() {
 * [CreateAccountingCategory](docs/sdks/accounting/README.md#createaccountingcategory) - Create a category
 * [CreateAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
 * [CreateAccountingCreditmemo](docs/sdks/accounting/README.md#createaccountingcreditmemo) - Create a creditmemo
+* [CreateAccountingExpense](docs/sdks/accounting/README.md#createaccountingexpense) - Create an expense
 * [CreateAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [CreateAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
 * [CreateAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
@@ -106,6 +107,7 @@ func main() {
 * [GetAccountingCategory](docs/sdks/accounting/README.md#getaccountingcategory) - Retrieve a category
 * [GetAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [GetAccountingCreditmemo](docs/sdks/accounting/README.md#getaccountingcreditmemo) - Retrieve a creditmemo
+* [GetAccountingExpense](docs/sdks/accounting/README.md#getaccountingexpense) - Retrieve an expense
 * [GetAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
 * [GetAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
 * [GetAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
@@ -123,6 +125,7 @@ func main() {
 * [ListAccountingCategories](docs/sdks/accounting/README.md#listaccountingcategories) - List all categories
 * [ListAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [ListAccountingCreditmemoes](docs/sdks/accounting/README.md#listaccountingcreditmemoes) - List all creditmemoes
+* [ListAccountingExpenses](docs/sdks/accounting/README.md#listaccountingexpenses) - List all expenses
 * [ListAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [ListAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
 * [ListAccountingOrders](docs/sdks/accounting/README.md#listaccountingorders) - List all orders
@@ -139,6 +142,7 @@ func main() {
 * [PatchAccountingCategory](docs/sdks/accounting/README.md#patchaccountingcategory) - Update a category
 * [PatchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
 * [PatchAccountingCreditmemo](docs/sdks/accounting/README.md#patchaccountingcreditmemo) - Update a creditmemo
+* [PatchAccountingExpense](docs/sdks/accounting/README.md#patchaccountingexpense) - Update an expense
 * [PatchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [PatchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
 * [PatchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
@@ -151,6 +155,7 @@ func main() {
 * [RemoveAccountingCategory](docs/sdks/accounting/README.md#removeaccountingcategory) - Remove a category
 * [RemoveAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
 * [RemoveAccountingCreditmemo](docs/sdks/accounting/README.md#removeaccountingcreditmemo) - Remove a creditmemo
+* [RemoveAccountingExpense](docs/sdks/accounting/README.md#removeaccountingexpense) - Remove an expense
 * [RemoveAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [RemoveAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
 * [RemoveAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
@@ -163,6 +168,7 @@ func main() {
 * [UpdateAccountingCategory](docs/sdks/accounting/README.md#updateaccountingcategory) - Update a category
 * [UpdateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
 * [UpdateAccountingCreditmemo](docs/sdks/accounting/README.md#updateaccountingcreditmemo) - Update a creditmemo
+* [UpdateAccountingExpense](docs/sdks/accounting/README.md#updateaccountingexpense) - Update an expense
 * [UpdateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [UpdateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
 * [UpdateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
@@ -602,6 +608,15 @@ func main() {
 * [RemoveCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove an event
 * [UpdateCalendarEvent](docs/sdks/event/README.md#updatecalendarevent) - Update an event
 * [UpdateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update an event
+
+### [Expense](docs/sdks/expense/README.md)
+
+* [CreateAccountingExpense](docs/sdks/expense/README.md#createaccountingexpense) - Create an expense
+* [GetAccountingExpense](docs/sdks/expense/README.md#getaccountingexpense) - Retrieve an expense
+* [ListAccountingExpenses](docs/sdks/expense/README.md#listaccountingexpenses) - List all expenses
+* [PatchAccountingExpense](docs/sdks/expense/README.md#patchaccountingexpense) - Update an expense
+* [RemoveAccountingExpense](docs/sdks/expense/README.md#removeaccountingexpense) - Remove an expense
+* [UpdateAccountingExpense](docs/sdks/expense/README.md#updateaccountingexpense) - Update an expense
 
 ### [File](docs/sdks/file/README.md)
 

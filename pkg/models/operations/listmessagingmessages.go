@@ -32,6 +32,8 @@ type ListMessagingMessagesRequest struct {
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
+	// The user/employee ID to filter by
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l *ListMessagingMessagesRequest) GetChannelID() *string {
@@ -130,6 +132,13 @@ func (l *ListMessagingMessagesRequest) GetUpdatedGte() *string {
 		return nil
 	}
 	return l.UpdatedGte
+}
+
+func (l *ListMessagingMessagesRequest) GetUserID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.UserID
 }
 
 type ListMessagingMessagesResponse struct {
