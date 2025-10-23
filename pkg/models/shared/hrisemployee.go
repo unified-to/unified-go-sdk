@@ -77,6 +77,7 @@ type HrisEmployee struct {
 	EmployeeRoles    []PropertyHrisEmployeeEmployeeRoles `json:"employee_roles,omitempty"`
 	EmploymentStatus *EmploymentStatus                   `json:"employment_status,omitempty"`
 	EmploymentType   *HrisEmployeeEmploymentType         `json:"employment_type,omitempty"`
+	FirstName        *string                             `json:"first_name,omitempty"`
 	Gender           *HrisEmployeeGender                 `json:"gender,omitempty"`
 	// Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
 	Groups                []HrisGroup     `json:"groups,omitempty"`
@@ -84,6 +85,7 @@ type HrisEmployee struct {
 	ID                    *string         `json:"id,omitempty"`
 	ImageURL              *string         `json:"image_url,omitempty"`
 	LanguageLocale        *string         `json:"language_locale,omitempty"`
+	LastName              *string         `json:"last_name,omitempty"`
 	Location              *string         `json:"location,omitempty"`
 	Locations             []HrisLocation  `json:"locations,omitempty"`
 	ManagerID             *string         `json:"manager_id,omitempty"`
@@ -213,6 +215,13 @@ func (h *HrisEmployee) GetEmploymentType() *HrisEmployeeEmploymentType {
 	return h.EmploymentType
 }
 
+func (h *HrisEmployee) GetFirstName() *string {
+	if h == nil {
+		return nil
+	}
+	return h.FirstName
+}
+
 func (h *HrisEmployee) GetGender() *HrisEmployeeGender {
 	if h == nil {
 		return nil
@@ -253,6 +262,13 @@ func (h *HrisEmployee) GetLanguageLocale() *string {
 		return nil
 	}
 	return h.LanguageLocale
+}
+
+func (h *HrisEmployee) GetLastName() *string {
+	if h == nil {
+		return nil
+	}
+	return h.LastName
 }
 
 func (h *HrisEmployee) GetLocation() *string {

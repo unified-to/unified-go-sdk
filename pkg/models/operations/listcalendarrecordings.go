@@ -10,8 +10,10 @@ import (
 type ListCalendarRecordingsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The end date to filter by
+	// The end date to filter by (deprecated)
 	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
+	// The end date to filter by
+	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// The event ID to filter by
 	EventID *string `queryParam:"style=form,explode=true,name=event_id"`
 	// Comma-delimited fields to return
@@ -42,6 +44,13 @@ func (l *ListCalendarRecordingsRequest) GetEndLe() *string {
 		return nil
 	}
 	return l.EndLe
+}
+
+func (l *ListCalendarRecordingsRequest) GetEndLt() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EndLt
 }
 
 func (l *ListCalendarRecordingsRequest) GetEventID() *string {

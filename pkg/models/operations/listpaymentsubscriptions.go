@@ -12,6 +12,10 @@ type ListPaymentSubscriptionsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
+	// The end date to filter by (deprecated)
+	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
+	// The end date to filter by
+	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -22,6 +26,8 @@ type ListPaymentSubscriptionsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The start date to filter by
+	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -38,6 +44,20 @@ func (l *ListPaymentSubscriptionsRequest) GetContactID() *string {
 		return nil
 	}
 	return l.ContactID
+}
+
+func (l *ListPaymentSubscriptionsRequest) GetEndLe() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EndLe
+}
+
+func (l *ListPaymentSubscriptionsRequest) GetEndLt() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EndLt
 }
 
 func (l *ListPaymentSubscriptionsRequest) GetFields() []string {
@@ -87,6 +107,13 @@ func (l *ListPaymentSubscriptionsRequest) GetSort() *string {
 		return nil
 	}
 	return l.Sort
+}
+
+func (l *ListPaymentSubscriptionsRequest) GetStartGte() *string {
+	if l == nil {
+		return nil
+	}
+	return l.StartGte
 }
 
 func (l *ListPaymentSubscriptionsRequest) GetUpdatedGte() *string {

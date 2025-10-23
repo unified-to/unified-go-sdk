@@ -10,8 +10,10 @@ import (
 type LmsInstructor struct {
 	CreatedAt  *time.Time     `json:"created_at,omitempty"`
 	Emails     []LmsEmail     `json:"emails,omitempty"`
+	FirstName  *string        `json:"first_name,omitempty"`
 	ID         *string        `json:"id,omitempty"`
 	ImageURL   *string        `json:"image_url,omitempty"`
+	LastName   *string        `json:"last_name,omitempty"`
 	Name       *string        `json:"name,omitempty"`
 	Raw        map[string]any `json:"raw,omitempty"`
 	Telephones []LmsTelephone `json:"telephones,omitempty"`
@@ -44,6 +46,13 @@ func (l *LmsInstructor) GetEmails() []LmsEmail {
 	return l.Emails
 }
 
+func (l *LmsInstructor) GetFirstName() *string {
+	if l == nil {
+		return nil
+	}
+	return l.FirstName
+}
+
 func (l *LmsInstructor) GetID() *string {
 	if l == nil {
 		return nil
@@ -56,6 +65,13 @@ func (l *LmsInstructor) GetImageURL() *string {
 		return nil
 	}
 	return l.ImageURL
+}
+
+func (l *LmsInstructor) GetLastName() *string {
+	if l == nil {
+		return nil
+	}
+	return l.LastName
 }
 
 func (l *LmsInstructor) GetName() *string {

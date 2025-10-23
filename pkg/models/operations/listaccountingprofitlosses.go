@@ -14,8 +14,10 @@ type ListAccountingProfitlossesRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// The end date to filter by
+	// The end date to filter by (deprecated)
 	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
+	// The end date to filter by
+	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -58,6 +60,13 @@ func (l *ListAccountingProfitlossesRequest) GetEndLe() *string {
 		return nil
 	}
 	return l.EndLe
+}
+
+func (l *ListAccountingProfitlossesRequest) GetEndLt() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EndLt
 }
 
 func (l *ListAccountingProfitlossesRequest) GetFields() []string {

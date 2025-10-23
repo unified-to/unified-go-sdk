@@ -10,8 +10,10 @@ import (
 type ListAccountingTrialbalancesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The end date to filter by
+	// The end date to filter by (deprecated)
 	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
+	// The end date to filter by
+	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -40,6 +42,13 @@ func (l *ListAccountingTrialbalancesRequest) GetEndLe() *string {
 		return nil
 	}
 	return l.EndLe
+}
+
+func (l *ListAccountingTrialbalancesRequest) GetEndLt() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EndLt
 }
 
 func (l *ListAccountingTrialbalancesRequest) GetFields() []string {

@@ -9,17 +9,16 @@ import (
 
 // MarketingList - Mailing List
 type MarketingList struct {
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	EndAt       *time.Time `json:"end_at,omitempty"`
-	ID          *string    `json:"id,omitempty"`
-	IsActive    *bool      `json:"is_active,omitempty"`
-	Name        *string    `json:"name,omitempty"`
-	// The raw data returned by the integration for this list
-	Raw       map[string]any `json:"raw,omitempty"`
-	StartAt   *time.Time     `json:"start_at,omitempty"`
-	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
-	UserID    *string        `json:"user_id,omitempty"`
+	CreatedAt   *time.Time     `json:"created_at,omitempty"`
+	Description *string        `json:"description,omitempty"`
+	EndAt       *time.Time     `json:"end_at,omitempty"`
+	ID          *string        `json:"id,omitempty"`
+	IsActive    *bool          `json:"is_active,omitempty"`
+	Name        *string        `json:"name,omitempty"`
+	Raw         map[string]any `json:"raw,omitempty"`
+	StartAt     *time.Time     `json:"start_at,omitempty"`
+	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
+	UserID      *string        `json:"user_id,omitempty"`
 }
 
 func (m MarketingList) MarshalJSON() ([]byte, error) {

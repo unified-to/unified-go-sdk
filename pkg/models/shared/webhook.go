@@ -168,7 +168,6 @@ type Webhook struct {
 	Interval        *float64       `json:"interval,omitempty"`
 	IsHealthy       *bool          `json:"is_healthy,omitempty"`
 	IsPaused        *bool          `json:"is_paused,omitempty"`
-	Meta            map[string]any `json:"meta,omitempty"`
 	ObjectType      ObjectType     `json:"object_type"`
 	PageMaxLimit    *float64       `json:"page_max_limit,omitempty"`
 	// An array of the most revent virtual webhook runs
@@ -306,13 +305,6 @@ func (w *Webhook) GetIsPaused() *bool {
 		return nil
 	}
 	return w.IsPaused
-}
-
-func (w *Webhook) GetMeta() map[string]any {
-	if w == nil {
-		return nil
-	}
-	return w.Meta
 }
 
 func (w *Webhook) GetObjectType() ObjectType {

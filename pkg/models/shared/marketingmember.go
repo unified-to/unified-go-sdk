@@ -11,13 +11,14 @@ import (
 type MarketingMember struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of email addresses for this member
-	Emails []MarketingEmail `json:"emails,omitempty"`
-	ID     *string          `json:"id,omitempty"`
+	Emails    []MarketingEmail `json:"emails,omitempty"`
+	FirstName *string          `json:"first_name,omitempty"`
+	ID        *string          `json:"id,omitempty"`
+	LastName  *string          `json:"last_name,omitempty"`
 	// An array of list IDs associated with this member
-	ListIds []string `json:"list_ids,omitempty"`
-	Name    *string  `json:"name,omitempty"`
-	// The raw data returned by the integration for this member
-	Raw map[string]any `json:"raw,omitempty"`
+	ListIds []string       `json:"list_ids,omitempty"`
+	Name    *string        `json:"name,omitempty"`
+	Raw     map[string]any `json:"raw,omitempty"`
 	// An array of tags associated with this member
 	Tags      []string   `json:"tags,omitempty"`
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
@@ -48,11 +49,25 @@ func (m *MarketingMember) GetEmails() []MarketingEmail {
 	return m.Emails
 }
 
+func (m *MarketingMember) GetFirstName() *string {
+	if m == nil {
+		return nil
+	}
+	return m.FirstName
+}
+
 func (m *MarketingMember) GetID() *string {
 	if m == nil {
 		return nil
 	}
 	return m.ID
+}
+
+func (m *MarketingMember) GetLastName() *string {
+	if m == nil {
+		return nil
+	}
+	return m.LastName
 }
 
 func (m *MarketingMember) GetListIds() []string {

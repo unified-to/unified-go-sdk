@@ -32,8 +32,10 @@ type AtsCandidate struct {
 	Emails             []AtsEmail                   `json:"emails,omitempty"`
 	Experiences        []AtsCandidateExperience     `json:"experiences,omitempty"`
 	ExternalIdentifier *string                      `json:"external_identifier,omitempty"`
+	FirstName          *string                      `json:"first_name,omitempty"`
 	ID                 *string                      `json:"id,omitempty"`
 	ImageURL           *string                      `json:"image_url,omitempty"`
+	LastName           *string                      `json:"last_name,omitempty"`
 	// URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
 	LinkUrls   []string       `json:"link_urls,omitempty"`
 	Metadata   []AtsMetadata  `json:"metadata,omitempty"`
@@ -124,6 +126,13 @@ func (a *AtsCandidate) GetExternalIdentifier() *string {
 	return a.ExternalIdentifier
 }
 
+func (a *AtsCandidate) GetFirstName() *string {
+	if a == nil {
+		return nil
+	}
+	return a.FirstName
+}
+
 func (a *AtsCandidate) GetID() *string {
 	if a == nil {
 		return nil
@@ -136,6 +145,13 @@ func (a *AtsCandidate) GetImageURL() *string {
 		return nil
 	}
 	return a.ImageURL
+}
+
+func (a *AtsCandidate) GetLastName() *string {
+	if a == nil {
+		return nil
+	}
+	return a.LastName
 }
 
 func (a *AtsCandidate) GetLinkUrls() []string {

@@ -34,11 +34,13 @@ type AccountingContact struct {
 	CreatedAt          *time.Time                                `json:"created_at,omitempty"`
 	Currency           *string                                   `default:"USD" json:"currency"`
 	Emails             []AccountingEmail                         `json:"emails,omitempty"`
+	FirstName          *string                                   `json:"first_name,omitempty"`
 	ID                 *string                                   `json:"id,omitempty"`
 	Identification     *string                                   `json:"identification,omitempty"`
 	IsActive           *bool                                     `json:"is_active,omitempty"`
 	IsCustomer         *bool                                     `json:"is_customer,omitempty"`
 	IsSupplier         *bool                                     `json:"is_supplier,omitempty"`
+	LastName           *string                                   `json:"last_name,omitempty"`
 	Name               *string                                   `json:"name,omitempty"`
 	PaymentMethods     []AccountingContactPaymentMethod          `json:"payment_methods,omitempty"`
 	PortalURL          *string                                   `json:"portal_url,omitempty"`
@@ -103,6 +105,13 @@ func (a *AccountingContact) GetEmails() []AccountingEmail {
 	return a.Emails
 }
 
+func (a *AccountingContact) GetFirstName() *string {
+	if a == nil {
+		return nil
+	}
+	return a.FirstName
+}
+
 func (a *AccountingContact) GetID() *string {
 	if a == nil {
 		return nil
@@ -136,6 +145,13 @@ func (a *AccountingContact) GetIsSupplier() *bool {
 		return nil
 	}
 	return a.IsSupplier
+}
+
+func (a *AccountingContact) GetLastName() *string {
+	if a == nil {
+		return nil
+	}
+	return a.LastName
 }
 
 func (a *AccountingContact) GetName() *string {

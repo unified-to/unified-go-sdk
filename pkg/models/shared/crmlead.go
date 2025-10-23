@@ -15,8 +15,10 @@ type CrmLead struct {
 	CreatedAt     *time.Time              `json:"created_at,omitempty"`
 	CreatorUserID *string                 `json:"creator_user_id,omitempty"`
 	Emails        []CrmEmail              `json:"emails,omitempty"`
+	FirstName     *string                 `json:"first_name,omitempty"`
 	ID            *string                 `json:"id,omitempty"`
 	IsActive      *bool                   `json:"is_active,omitempty"`
+	LastName      *string                 `json:"last_name,omitempty"`
 	LinkUrls      []string                `json:"link_urls,omitempty"`
 	Metadata      []CrmMetadata           `json:"metadata,omitempty"`
 	Name          *string                 `json:"name,omitempty"`
@@ -88,6 +90,13 @@ func (c *CrmLead) GetEmails() []CrmEmail {
 	return c.Emails
 }
 
+func (c *CrmLead) GetFirstName() *string {
+	if c == nil {
+		return nil
+	}
+	return c.FirstName
+}
+
 func (c *CrmLead) GetID() *string {
 	if c == nil {
 		return nil
@@ -100,6 +109,13 @@ func (c *CrmLead) GetIsActive() *bool {
 		return nil
 	}
 	return c.IsActive
+}
+
+func (c *CrmLead) GetLastName() *string {
+	if c == nil {
+		return nil
+	}
+	return c.LastName
 }
 
 func (c *CrmLead) GetLinkUrls() []string {

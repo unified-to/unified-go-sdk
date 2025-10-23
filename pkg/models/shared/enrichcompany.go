@@ -26,11 +26,10 @@ type EnrichCompany struct {
 	LogoURL       *string                       `json:"logo_url,omitempty"`
 	NaicsCode     *float64                      `json:"naics_code,omitempty"`
 	Name          *string                       `json:"name,omitempty"`
-	// The raw data returned by the integration for this company
-	Raw     map[string]any `json:"raw,omitempty"`
-	Revenue *string        `json:"revenue,omitempty"`
-	SicCode *float64       `json:"sic_code,omitempty"`
-	Stock   *string        `json:"stock,omitempty"`
+	Raw           map[string]any                `json:"raw,omitempty"`
+	Revenue       *string                       `json:"revenue,omitempty"`
+	SicCode       *float64                      `json:"sic_code,omitempty"`
+	Stock         *string                       `json:"stock,omitempty"`
 	// An array of telephones for this company
 	Telephones    []EnrichTelephone `json:"telephones,omitempty"`
 	TwitterHandle *string           `json:"twitter_handle,omitempty"`

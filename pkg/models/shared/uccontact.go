@@ -12,10 +12,12 @@ type UcContact struct {
 	Company   *string    `json:"company,omitempty"`
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of email addresses for this contact
-	Emails []UcEmail      `json:"emails,omitempty"`
-	ID     *string        `json:"id,omitempty"`
-	Name   *string        `json:"name,omitempty"`
-	Raw    map[string]any `json:"raw,omitempty"`
+	Emails    []UcEmail      `json:"emails,omitempty"`
+	FirstName *string        `json:"first_name,omitempty"`
+	ID        *string        `json:"id,omitempty"`
+	LastName  *string        `json:"last_name,omitempty"`
+	Name      *string        `json:"name,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
 	// An array of telephones for this contact
 	Telephones []UcTelephone `json:"telephones,omitempty"`
 	Title      *string       `json:"title,omitempty"`
@@ -54,11 +56,25 @@ func (u *UcContact) GetEmails() []UcEmail {
 	return u.Emails
 }
 
+func (u *UcContact) GetFirstName() *string {
+	if u == nil {
+		return nil
+	}
+	return u.FirstName
+}
+
 func (u *UcContact) GetID() *string {
 	if u == nil {
 		return nil
 	}
 	return u.ID
+}
+
+func (u *UcContact) GetLastName() *string {
+	if u == nil {
+		return nil
+	}
+	return u.LastName
 }
 
 func (u *UcContact) GetName() *string {

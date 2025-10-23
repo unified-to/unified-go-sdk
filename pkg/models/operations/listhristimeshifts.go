@@ -12,8 +12,10 @@ type ListHrisTimeshiftsRequest struct {
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The end date to filter by
+	// The end date to filter by (deprecated)
 	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
+	// The end date to filter by
+	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Comma-delimited fields to return
 	Fields []string `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -53,6 +55,13 @@ func (l *ListHrisTimeshiftsRequest) GetEndLe() *string {
 		return nil
 	}
 	return l.EndLe
+}
+
+func (l *ListHrisTimeshiftsRequest) GetEndLt() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EndLt
 }
 
 func (l *ListHrisTimeshiftsRequest) GetFields() []string {

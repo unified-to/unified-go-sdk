@@ -28,17 +28,18 @@ type EnrichPerson struct {
 	CompanyDomain *string                      `json:"company_domain,omitempty"`
 	CreatedAt     *time.Time                   `json:"created_at,omitempty"`
 	// An array of email addresses for this person
-	Emails         []EnrichEmail `json:"emails,omitempty"`
-	FacebookURL    *string       `json:"facebook_url,omitempty"`
-	Gender         *Gender       `json:"gender,omitempty"`
-	GithubURL      *string       `json:"github_url,omitempty"`
-	GithubUsername *string       `json:"github_username,omitempty"`
-	ID             *string       `json:"id,omitempty"`
-	ImageURL       *string       `json:"image_url,omitempty"`
-	LinkedinURL    *string       `json:"linkedin_url,omitempty"`
-	Name           *string       `json:"name,omitempty"`
-	// The raw data returned by the integration for this person
-	Raw map[string]any `json:"raw,omitempty"`
+	Emails         []EnrichEmail  `json:"emails,omitempty"`
+	FacebookURL    *string        `json:"facebook_url,omitempty"`
+	FirstName      *string        `json:"first_name,omitempty"`
+	Gender         *Gender        `json:"gender,omitempty"`
+	GithubURL      *string        `json:"github_url,omitempty"`
+	GithubUsername *string        `json:"github_username,omitempty"`
+	ID             *string        `json:"id,omitempty"`
+	ImageURL       *string        `json:"image_url,omitempty"`
+	LastName       *string        `json:"last_name,omitempty"`
+	LinkedinURL    *string        `json:"linkedin_url,omitempty"`
+	Name           *string        `json:"name,omitempty"`
+	Raw            map[string]any `json:"raw,omitempty"`
 	// An array of telephones for this person
 	Telephones    []EnrichTelephone         `json:"telephones,omitempty"`
 	Timezone      *string                   `json:"timezone,omitempty"`
@@ -117,6 +118,13 @@ func (e *EnrichPerson) GetFacebookURL() *string {
 	return e.FacebookURL
 }
 
+func (e *EnrichPerson) GetFirstName() *string {
+	if e == nil {
+		return nil
+	}
+	return e.FirstName
+}
+
 func (e *EnrichPerson) GetGender() *Gender {
 	if e == nil {
 		return nil
@@ -150,6 +158,13 @@ func (e *EnrichPerson) GetImageURL() *string {
 		return nil
 	}
 	return e.ImageURL
+}
+
+func (e *EnrichPerson) GetLastName() *string {
+	if e == nil {
+		return nil
+	}
+	return e.LastName
 }
 
 func (e *EnrichPerson) GetLinkedinURL() *string {
