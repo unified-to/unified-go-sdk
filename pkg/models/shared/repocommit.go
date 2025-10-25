@@ -15,7 +15,7 @@ type RepoCommit struct {
 	Raw       map[string]any `json:"raw,omitempty"`
 	RepoID    string         `json:"repo_id"`
 	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
-	UserID    string         `json:"user_id"`
+	UserID    *string        `json:"user_id,omitempty"`
 }
 
 func (r RepoCommit) MarshalJSON() ([]byte, error) {
@@ -23,7 +23,7 @@ func (r RepoCommit) MarshalJSON() ([]byte, error) {
 }
 
 func (r *RepoCommit) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &r, "", false, []string{"repo_id", "user_id"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &r, "", false, []string{"repo_id"}); err != nil {
 		return err
 	}
 	return nil
@@ -78,9 +78,9 @@ func (r *RepoCommit) GetUpdatedAt() *time.Time {
 	return r.UpdatedAt
 }
 
-func (r *RepoCommit) GetUserID() string {
+func (r *RepoCommit) GetUserID() *string {
 	if r == nil {
-		return ""
+		return nil
 	}
 	return r.UserID
 }

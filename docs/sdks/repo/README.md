@@ -123,7 +123,6 @@ func main() {
     res, err := s.Repo.CreateRepoCommit(ctx, operations.CreateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             RepoID: "<id>",
-            UserID: "<id>",
         },
         ConnectionID: "<id>",
     })
@@ -957,7 +956,6 @@ func main() {
     res, err := s.Repo.PatchRepoCommit(ctx, operations.PatchRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             RepoID: "<id>",
-            UserID: "<id>",
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1525,7 +1523,6 @@ func main() {
     res, err := s.Repo.UpdateRepoCommit(ctx, operations.UpdateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             RepoID: "<id>",
-            UserID: "<id>",
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -24,7 +24,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.32.1
+  version: 0.33.0
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: UnifiedToError
@@ -49,3 +49,4 @@ go:
   respectRequiredFields: false
   responseFormat: envelope
   sdkPackageName: ""
+  unionDeserializationStrategy: left-to-right
