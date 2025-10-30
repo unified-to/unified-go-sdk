@@ -42,6 +42,8 @@
 | `PropertyConnectionPermissionsAccountingCategoryWrite`      | accounting_category_write                                   |
 | `PropertyConnectionPermissionsPaymentPaymentRead`           | payment_payment_read                                        |
 | `PropertyConnectionPermissionsPaymentPaymentWrite`          | payment_payment_write                                       |
+| `PropertyConnectionPermissionsAccountingCashflowRead`       | accounting_cashflow_read                                    |
+| `PropertyConnectionPermissionsAccountingCashflowWrite`      | accounting_cashflow_write                                   |
 | `PropertyConnectionPermissionsPaymentPayoutRead`            | payment_payout_read                                         |
 | `PropertyConnectionPermissionsPaymentRefundRead`            | payment_refund_read                                         |
 | `PropertyConnectionPermissionsPaymentLinkRead`              | payment_link_read                                           |

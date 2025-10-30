@@ -1,0 +1,10 @@
+# AccountingCashflowSection
+
+
+## Fields
+
+| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `Items`                                                                                 | [][shared.AccountingCashflowItem](../../../pkg/models/shared/accountingcashflowitem.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `SectionName`                                                                           | **string*                                                                               | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `TotalAmount`                                                                           | **float64*                                                                              | :heavy_minus_sign:                                                                      | N/A                                                                                     |

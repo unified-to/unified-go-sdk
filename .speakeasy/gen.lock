@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 018de8bfc3ab59a73a1c069f241e60a4
+  docChecksum: 488263b38991bc1af62a3a84968ffb52
   docVersion: "1.0"
-  speakeasyVersion: 1.639.3
-  generationVersion: 2.730.5
-  releaseVersion: 0.33.0
-  configChecksum: a69cf6ad5d1de0e24a294288c7a902de
+  speakeasyVersion: 1.642.2
+  generationVersion: 2.731.6
+  releaseVersion: 0.33.1
+  configChecksum: 6056e165adcd4f19acc1da03cf18ba0f
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -116,6 +116,7 @@ generatedFiles:
   - /pkg/models/operations/getaccountingaccount.go
   - /pkg/models/operations/getaccountingbalancesheet.go
   - /pkg/models/operations/getaccountingbill.go
+  - /pkg/models/operations/getaccountingcashflow.go
   - /pkg/models/operations/getaccountingcategory.go
   - /pkg/models/operations/getaccountingcontact.go
   - /pkg/models/operations/getaccountingcreditmemo.go
@@ -210,6 +211,7 @@ generatedFiles:
   - /pkg/models/operations/listaccountingaccounts.go
   - /pkg/models/operations/listaccountingbalancesheets.go
   - /pkg/models/operations/listaccountingbills.go
+  - /pkg/models/operations/listaccountingcashflows.go
   - /pkg/models/operations/listaccountingcategories.go
   - /pkg/models/operations/listaccountingcontacts.go
   - /pkg/models/operations/listaccountingcreditmemoes.go
@@ -548,6 +550,9 @@ generatedFiles:
   - /pkg/models/shared/accountingbalancesheet.go
   - /pkg/models/shared/accountingbalancesheetitem.go
   - /pkg/models/shared/accountingbill.go
+  - /pkg/models/shared/accountingcashflow.go
+  - /pkg/models/shared/accountingcashflowitem.go
+  - /pkg/models/shared/accountingcashflowsection.go
   - /pkg/models/shared/accountingcategory.go
   - /pkg/models/shared/accountingcontact.go
   - /pkg/models/shared/accountingcontactpaymentmethod.go
@@ -687,6 +692,7 @@ generatedFiles:
   - /pkg/models/shared/paymentrefund.go
   - /pkg/models/shared/paymentsubscription.go
   - /pkg/models/shared/propertyaccountingbalancesheetitemsubitems.go
+  - /pkg/models/shared/propertyaccountingcashflowitemsubitems.go
   - /pkg/models/shared/propertyaccountingcontactbillingaddress.go
   - /pkg/models/shared/propertyaccountingcontactshippingaddress.go
   - /pkg/models/shared/propertyaccountingorderbillingaddress.go
@@ -806,6 +812,7 @@ generatedFiles:
   - calendar.go
   - call.go
   - candidate.go
+  - cashflow.go
   - category.go
   - change.go
   - channel.go
@@ -989,6 +996,8 @@ generatedFiles:
   - docs/pkg/models/operations/getaccountingbalancesheetresponse.md
   - docs/pkg/models/operations/getaccountingbillrequest.md
   - docs/pkg/models/operations/getaccountingbillresponse.md
+  - docs/pkg/models/operations/getaccountingcashflowrequest.md
+  - docs/pkg/models/operations/getaccountingcashflowresponse.md
   - docs/pkg/models/operations/getaccountingcategoryrequest.md
   - docs/pkg/models/operations/getaccountingcategoryresponse.md
   - docs/pkg/models/operations/getaccountingcontactrequest.md
@@ -1177,6 +1186,8 @@ generatedFiles:
   - docs/pkg/models/operations/listaccountingbalancesheetsresponse.md
   - docs/pkg/models/operations/listaccountingbillsrequest.md
   - docs/pkg/models/operations/listaccountingbillsresponse.md
+  - docs/pkg/models/operations/listaccountingcashflowsrequest.md
+  - docs/pkg/models/operations/listaccountingcashflowsresponse.md
   - docs/pkg/models/operations/listaccountingcategoriesrequest.md
   - docs/pkg/models/operations/listaccountingcategoriesresponse.md
   - docs/pkg/models/operations/listaccountingcontactsrequest.md
@@ -1851,6 +1862,9 @@ generatedFiles:
   - docs/pkg/models/shared/accountingbalancesheetitem.md
   - docs/pkg/models/shared/accountingbill.md
   - docs/pkg/models/shared/accountingbillstatus.md
+  - docs/pkg/models/shared/accountingcashflow.md
+  - docs/pkg/models/shared/accountingcashflowitem.md
+  - docs/pkg/models/shared/accountingcashflowsection.md
   - docs/pkg/models/shared/accountingcategory.md
   - docs/pkg/models/shared/accountingcontact.md
   - docs/pkg/models/shared/accountingcontactpaymentmethod.md
@@ -2111,6 +2125,7 @@ generatedFiles:
   - docs/pkg/models/shared/priority.md
   - docs/pkg/models/shared/profilegender.md
   - docs/pkg/models/shared/propertyaccountingbalancesheetitemsubitems.md
+  - docs/pkg/models/shared/propertyaccountingcashflowitemsubitems.md
   - docs/pkg/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/pkg/models/shared/propertyaccountingcontactshippingaddress.md
   - docs/pkg/models/shared/propertyaccountingorderbillingaddress.md
@@ -2279,6 +2294,7 @@ generatedFiles:
   - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/cashflow/README.md
   - docs/sdks/category/README.md
   - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
@@ -7097,6 +7113,28 @@ examples:
       responses:
         "200":
           application/json: {}
+  getAccountingCashflow:
+    speakeasy-default-get-accounting-cashflow:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingCashflows:
+    speakeasy-default-list-accounting-cashflows:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Accounting.CreateAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems.[]` **Changed**\n  *  `response.Lineitems.[]` **Changed**\n* `UnifiedTo.Accounting.GetAccountingJournal()`:  `response.Lineitems.[]` **Changed**\n* `UnifiedTo.Accounting.ListAccountingJournals()`:  `response.[].Lineitems.[]` **Changed**\n* `UnifiedTo.Accounting.PatchAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems.[]` **Changed**\n  *  `response.Lineitems.[]` **Changed**\n* `UnifiedTo.Accounting.UpdateAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems.[]` **Changed**\n  *  `response.Lineitems.[]` **Changed**\n* `UnifiedTo.Journal.CreateAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems.[]` **Changed**\n  *  `response.Lineitems.[]` **Changed**\n* `UnifiedTo.Journal.GetAccountingJournal()`:  `response.Lineitems.[]` **Changed**\n* `UnifiedTo.Journal.ListAccountingJournals()`:  `response.[].Lineitems.[]` **Changed**\n* `UnifiedTo.Journal.PatchAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems.[]` **Changed**\n  *  `response.Lineitems.[]` **Changed**\n* `UnifiedTo.Journal.UpdateAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems.[]` **Changed**\n  *  `response.Lineitems.[]` **Changed**\n* `UnifiedTo.Repo.CreateRepoCommit()`: \n  *  `request.Request.RepoCommit.UserId` **Changed**\n  *  `response.UserId` **Changed**\n* `UnifiedTo.Repo.GetRepoCommit()`:  `response.UserId` **Changed**\n* `UnifiedTo.Repo.ListRepoCommits()`:  `response.[].UserId` **Changed**\n* `UnifiedTo.Repo.PatchRepoCommit()`: \n  *  `request.Request.RepoCommit.UserId` **Changed**\n  *  `response.UserId` **Changed**\n* `UnifiedTo.Repo.UpdateRepoCommit()`: \n  *  `request.Request.RepoCommit.UserId` **Changed**\n  *  `response.UserId` **Changed**\n* `UnifiedTo.Commit.CreateRepoCommit()`: \n  *  `request.Request.RepoCommit.UserId` **Changed**\n  *  `response.UserId` **Changed**\n* `UnifiedTo.Commit.GetRepoCommit()`:  `response.UserId` **Changed**\n* `UnifiedTo.Commit.ListRepoCommits()`:  `response.[].UserId` **Changed**\n* `UnifiedTo.Commit.PatchRepoCommit()`: \n  *  `request.Request.RepoCommit.UserId` **Changed**\n  *  `response.UserId` **Changed**\n* `UnifiedTo.Commit.UpdateRepoCommit()`: \n  *  `request.Request.RepoCommit.UserId` **Changed**\n  *  `response.UserId` **Changed**\n"
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `UnifiedTo.Accounting.GetAccountingCashflow()`: **Added**
+  * `UnifiedTo.Accounting.ListAccountingCashflows()`: **Added**
+  * `UnifiedTo.Cashflow.GetAccountingCashflow()`: **Added**
+  * `UnifiedTo.Cashflow.ListAccountingCashflows()`: **Added**

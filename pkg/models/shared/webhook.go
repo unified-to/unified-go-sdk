@@ -54,6 +54,7 @@ const (
 	ObjectTypeAccountingTrialbalance  ObjectType = "accounting_trialbalance"
 	ObjectTypeAccountingCategory      ObjectType = "accounting_category"
 	ObjectTypeAccountingExpense       ObjectType = "accounting_expense"
+	ObjectTypeAccountingCashflow      ObjectType = "accounting_cashflow"
 	ObjectTypePaymentPayment          ObjectType = "payment_payment"
 	ObjectTypePaymentLink             ObjectType = "payment_link"
 	ObjectTypePaymentPayout           ObjectType = "payment_payout"

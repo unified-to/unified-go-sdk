@@ -1,21 +1,21 @@
-speakeasyVersion: 1.639.3
+speakeasyVersion: 1.642.2
 sources:
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:10e098988b1b5fdda6e51ce97f961d11830be219121b89401e113f4ea20ee62a
-        sourceBlobDigest: sha256:191a671ff090d2417f6bd61c0e3aef66793fa85d46dae4c857f844fc9d2411e9
+        sourceRevisionDigest: sha256:d0ae4d23b07c5c3e51f64d60748afe93efce784b176818375059a42508ccc4bb
+        sourceBlobDigest: sha256:6b0a453b22b4a8a0526b858c94facf49fbd7bbd0bf73e2ca83d4ca6c1811ba82
         tags:
             - latest
-            - speakeasy-sdk-regen-1761352071
+            - speakeasy-sdk-regen-1761784176
             - "1.0"
 targets:
     go-terget:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:10e098988b1b5fdda6e51ce97f961d11830be219121b89401e113f4ea20ee62a
-        sourceBlobDigest: sha256:191a671ff090d2417f6bd61c0e3aef66793fa85d46dae4c857f844fc9d2411e9
+        sourceRevisionDigest: sha256:d0ae4d23b07c5c3e51f64d60748afe93efce784b176818375059a42508ccc4bb
+        sourceBlobDigest: sha256:6b0a453b22b4a8a0526b858c94facf49fbd7bbd0bf73e2ca83d4ca6c1811ba82
         codeSamplesNamespace: my-source-go-code-samples
-        codeSamplesRevisionDigest: sha256:f638a4e74175456c9ae4050728b0236901e84c27c2e342d924ced3b8f2d51bac
+        codeSamplesRevisionDigest: sha256:1c343d14f95dff07705ebe0cbf80eccd7965c1e557ea9e98f55521d84a7406b7
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -23,7 +23,6 @@ workflow:
         my-source:
             inputs:
                 - location: https://api.unified.to/openapi.json
-                  authSecret: $openapi_doc_auth_token
             registry:
                 location: registry.speakeasyapi.dev/unified/unified/my-source
     targets:
