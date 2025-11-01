@@ -18,3 +18,8 @@
 | `KmsPageMetadataFormatYesNo`          | YES_NO                                |
 | `KmsPageMetadataFormatCurrency`       | CURRENCY                              |
 | `KmsPageMetadataFormatURL`            | URL                                   |
+| `KmsPageMetadataFormatPercent`        | PERCENT                               |
+| `KmsPageMetadataFormatEmail`          | EMAIL                                 |
+| `KmsPageMetadataFormatPhone`          | PHONE                                 |
+| `KmsPageMetadataFormatReference`      | REFERENCE                             |
+| `KmsPageMetadataFormatTime`           | TIME                                  |

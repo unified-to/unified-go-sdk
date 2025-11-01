@@ -1487,7 +1487,7 @@ func main() {
 	ctx := context.Background()
 
 	s := unifiedgosdk.New(
-		unifiedgosdk.WithServerIndex(2),
+		unifiedgosdk.WithServerIndex(0),
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 

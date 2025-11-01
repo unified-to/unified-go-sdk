@@ -274,6 +274,11 @@ const (
 	KmsPageMetadataFormatYesNo          KmsPageMetadataFormat = "YES_NO"
 	KmsPageMetadataFormatCurrency       KmsPageMetadataFormat = "CURRENCY"
 	KmsPageMetadataFormatURL            KmsPageMetadataFormat = "URL"
+	KmsPageMetadataFormatPercent        KmsPageMetadataFormat = "PERCENT"
+	KmsPageMetadataFormatEmail          KmsPageMetadataFormat = "EMAIL"
+	KmsPageMetadataFormatPhone          KmsPageMetadataFormat = "PHONE"
+	KmsPageMetadataFormatReference      KmsPageMetadataFormat = "REFERENCE"
+	KmsPageMetadataFormatTime           KmsPageMetadataFormat = "TIME"
 )
 
 func (e KmsPageMetadataFormat) ToPointer() *KmsPageMetadataFormat {

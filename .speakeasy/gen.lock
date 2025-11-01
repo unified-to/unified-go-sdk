@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 488263b38991bc1af62a3a84968ffb52
+  docChecksum: 2cae2cbd3b5100db6145386c7734d017
   docVersion: "1.0"
-  speakeasyVersion: 1.642.2
-  generationVersion: 2.731.6
-  releaseVersion: 0.33.1
-  configChecksum: 6056e165adcd4f19acc1da03cf18ba0f
+  speakeasyVersion: 1.645.1
+  generationVersion: 2.735.1
+  releaseVersion: 0.34.0
+  configChecksum: 8b0bc345726a23b758e130c684474bd7
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,14 +16,14 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.12.0
+    core: 3.13.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
     globalSecurity: 2.82.12
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
-    globalServerURLs: 2.82.3
+    globalServerURLs: 2.83.0
     intellisenseMarkdownSupport: 0.1.0
     openEnums: 0.1.0
     responseFormat: 0.1.2
@@ -7132,9 +7132,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `UnifiedTo.Accounting.GetAccountingCashflow()`: **Added**
-  * `UnifiedTo.Accounting.ListAccountingCashflows()`: **Added**
-  * `UnifiedTo.Cashflow.GetAccountingCashflow()`: **Added**
-  * `UnifiedTo.Cashflow.ListAccountingCashflows()`: **Added**
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Calendar.CreateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.GetCalendarEvent()`:  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.ListCalendarEvents()`:  `response.[].Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.PatchCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.UpdateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.CreateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.GetCalendarEvent()`:  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.ListCalendarEvents()`:  `response.[].Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.PatchCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.UpdateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n"

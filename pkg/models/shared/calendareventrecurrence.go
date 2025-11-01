@@ -40,9 +40,11 @@ type CalendarEventRecurrence struct {
 	Count *float64   `json:"count,omitempty"`
 	EndAt *time.Time `json:"end_at,omitempty"`
 	// dates to exclude from the recurrence, defaults to undefined (no exclusions)
-	ExcludedDates []string                         `json:"excluded_dates,omitempty"`
-	Frequency     CalendarEventRecurrenceFrequency `json:"frequency"`
-	Interval      *float64                         `json:"interval,omitempty"`
+	ExcludedDates []string                          `json:"excluded_dates,omitempty"`
+	Frequency     *CalendarEventRecurrenceFrequency `json:"frequency,omitempty"`
+	// dates to include in the recurrence, defaults to undefined (no inclusions)
+	IncludedDates []string `json:"included_dates,omitempty"`
+	Interval      *float64 `json:"interval,omitempty"`
 	// days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
 	OnDays []PropertyCalendarEventRecurrenceOnDays `json:"on_days,omitempty"`
 	// days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY
@@ -52,9 +54,10 @@ type CalendarEventRecurrence struct {
 	// week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
 	OnWeeks []float64 `json:"on_weeks,omitempty"`
 	// days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
-	OnYearDays []float64  `json:"on_year_days,omitempty"`
-	Timezone   *string    `json:"timezone,omitempty"`
-	WeekStart  *WeekStart `json:"week_start,omitempty"`
+	OnYearDays []float64 `json:"on_year_days,omitempty"`
+	// timezone, defaults to undefined (no timezone)
+	Timezone  []string   `json:"timezone,omitempty"`
+	WeekStart *WeekStart `json:"week_start,omitempty"`
 }
 
 func (c CalendarEventRecurrence) MarshalJSON() ([]byte, error) {
@@ -62,7 +65,7 @@ func (c CalendarEventRecurrence) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CalendarEventRecurrence) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"frequency"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil
@@ -89,11 +92,18 @@ func (c *CalendarEventRecurrence) GetExcludedDates() []string {
 	return c.ExcludedDates
 }
 
-func (c *CalendarEventRecurrence) GetFrequency() CalendarEventRecurrenceFrequency {
+func (c *CalendarEventRecurrence) GetFrequency() *CalendarEventRecurrenceFrequency {
 	if c == nil {
-		return CalendarEventRecurrenceFrequency("")
+		return nil
 	}
 	return c.Frequency
+}
+
+func (c *CalendarEventRecurrence) GetIncludedDates() []string {
+	if c == nil {
+		return nil
+	}
+	return c.IncludedDates
 }
 
 func (c *CalendarEventRecurrence) GetInterval() *float64 {
@@ -138,7 +148,7 @@ func (c *CalendarEventRecurrence) GetOnYearDays() []float64 {
 	return c.OnYearDays
 }
 
-func (c *CalendarEventRecurrence) GetTimezone() *string {
+func (c *CalendarEventRecurrence) GetTimezone() []string {
 	if c == nil {
 		return nil
 	}
