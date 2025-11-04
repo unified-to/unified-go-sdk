@@ -54,10 +54,9 @@ type CalendarEventRecurrence struct {
 	// week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
 	OnWeeks []float64 `json:"on_weeks,omitempty"`
 	// days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
-	OnYearDays []float64 `json:"on_year_days,omitempty"`
-	// timezone, defaults to undefined (no timezone)
-	Timezone  []string   `json:"timezone,omitempty"`
-	WeekStart *WeekStart `json:"week_start,omitempty"`
+	OnYearDays []float64  `json:"on_year_days,omitempty"`
+	Timezone   *string    `json:"timezone,omitempty"`
+	WeekStart  *WeekStart `json:"week_start,omitempty"`
 }
 
 func (c CalendarEventRecurrence) MarshalJSON() ([]byte, error) {
@@ -148,7 +147,7 @@ func (c *CalendarEventRecurrence) GetOnYearDays() []float64 {
 	return c.OnYearDays
 }
 
-func (c *CalendarEventRecurrence) GetTimezone() []string {
+func (c *CalendarEventRecurrence) GetTimezone() *string {
 	if c == nil {
 		return nil
 	}

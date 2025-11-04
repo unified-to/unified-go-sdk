@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 2cae2cbd3b5100db6145386c7734d017
+  docChecksum: 05e6e4d2a4d7ca37f46c06db114a0eac
   docVersion: "1.0"
-  speakeasyVersion: 1.645.1
-  generationVersion: 2.735.1
-  releaseVersion: 0.34.0
-  configChecksum: 8b0bc345726a23b758e130c684474bd7
+  speakeasyVersion: 1.648.0
+  generationVersion: 2.737.0
+  releaseVersion: 0.34.1
+  configChecksum: d773d9fe762d362c64b77fc247f48401
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -663,6 +663,7 @@ generatedFiles:
   - /pkg/models/shared/hristimeoff.go
   - /pkg/models/shared/hristimeshift.go
   - /pkg/models/shared/integration.go
+  - /pkg/models/shared/integrationsupport.go
   - /pkg/models/shared/issue.go
   - /pkg/models/shared/kmscomment.go
   - /pkg/models/shared/kmspage.go
@@ -734,6 +735,10 @@ generatedFiles:
   - /pkg/models/shared/propertyhrisemployeeemployeeroles.go
   - /pkg/models/shared/propertyhrislocationaddress.go
   - /pkg/models/shared/propertyintegrationcategories.go
+  - /pkg/models/shared/propertyintegrationsupportwebhookevents.go
+  - /pkg/models/shared/propertyintegrationsupportwebhookeventscreated.go
+  - /pkg/models/shared/propertyintegrationsupportwebhookeventsdeleted.go
+  - /pkg/models/shared/propertyintegrationsupportwebhookeventsupdated.go
   - /pkg/models/shared/propertylmsstudentaddress.go
   - /pkg/models/shared/propertymessagingmessageauthormember.go
   - /pkg/models/shared/propertymessagingreactionmember.go
@@ -2024,6 +2029,7 @@ generatedFiles:
   - docs/pkg/models/shared/five.md
   - docs/pkg/models/shared/format.md
   - docs/pkg/models/shared/frequency.md
+  - docs/pkg/models/shared/fromwebhook.md
   - docs/pkg/models/shared/genaicontent.md
   - docs/pkg/models/shared/genaiembedding.md
   - docs/pkg/models/shared/genaiembeddingcontent.md
@@ -2068,6 +2074,7 @@ generatedFiles:
   - docs/pkg/models/shared/integrationschemassaml5.md
   - docs/pkg/models/shared/integrationschemassandbox1.md
   - docs/pkg/models/shared/integrationschemassandbox5.md
+  - docs/pkg/models/shared/integrationsupport.md
   - docs/pkg/models/shared/intervalunit.md
   - docs/pkg/models/shared/issue.md
   - docs/pkg/models/shared/issuestatus.md
@@ -2084,6 +2091,64 @@ generatedFiles:
   - docs/pkg/models/shared/kmspagemetadatavalue.md
   - docs/pkg/models/shared/kmspagetype.md
   - docs/pkg/models/shared/kmsspace.md
+  - docs/pkg/models/shared/listaccountid.md
+  - docs/pkg/models/shared/listapplicationid.md
+  - docs/pkg/models/shared/listbranchid.md
+  - docs/pkg/models/shared/listcalendarid.md
+  - docs/pkg/models/shared/listcallid.md
+  - docs/pkg/models/shared/listcandidateid.md
+  - docs/pkg/models/shared/listcategoryid.md
+  - docs/pkg/models/shared/listchannelid.md
+  - docs/pkg/models/shared/listclassid.md
+  - docs/pkg/models/shared/listcollectionid.md
+  - docs/pkg/models/shared/listcompanyid.md
+  - docs/pkg/models/shared/listcontactid.md
+  - docs/pkg/models/shared/listcourseid.md
+  - docs/pkg/models/shared/listcustomerid.md
+  - docs/pkg/models/shared/listdealid.md
+  - docs/pkg/models/shared/listdocumentid.md
+  - docs/pkg/models/shared/listendle.md
+  - docs/pkg/models/shared/listendlt.md
+  - docs/pkg/models/shared/listeventid.md
+  - docs/pkg/models/shared/listexpand.md
+  - docs/pkg/models/shared/listexpandrecurringevents.md
+  - docs/pkg/models/shared/listinstructorid.md
+  - docs/pkg/models/shared/listinterviewid.md
+  - docs/pkg/models/shared/listinvoiceid.md
+  - docs/pkg/models/shared/listitemid.md
+  - docs/pkg/models/shared/listitemvariantid.md
+  - docs/pkg/models/shared/listjobid.md
+  - docs/pkg/models/shared/listleadid.md
+  - docs/pkg/models/shared/listlimit.md
+  - docs/pkg/models/shared/listlinkid.md
+  - docs/pkg/models/shared/listlistid.md
+  - docs/pkg/models/shared/listlocationid.md
+  - docs/pkg/models/shared/listoffset.md
+  - docs/pkg/models/shared/listorder.md
+  - docs/pkg/models/shared/listorgid.md
+  - docs/pkg/models/shared/listpackageid.md
+  - docs/pkg/models/shared/listpageid.md
+  - docs/pkg/models/shared/listparentid.md
+  - docs/pkg/models/shared/listpaymentid.md
+  - docs/pkg/models/shared/listpipelineid.md
+  - docs/pkg/models/shared/listprojectid.md
+  - docs/pkg/models/shared/listquery.md
+  - docs/pkg/models/shared/listrawfields.md
+  - docs/pkg/models/shared/listrepoid.md
+  - docs/pkg/models/shared/listrootid.md
+  - docs/pkg/models/shared/listsortbycreatedat.md
+  - docs/pkg/models/shared/listsortbyname.md
+  - docs/pkg/models/shared/listsortbyupdatedat.md
+  - docs/pkg/models/shared/listspaceid.md
+  - docs/pkg/models/shared/liststartgte.md
+  - docs/pkg/models/shared/liststatus.md
+  - docs/pkg/models/shared/liststudentid.md
+  - docs/pkg/models/shared/listtaskid.md
+  - docs/pkg/models/shared/listteacherid.md
+  - docs/pkg/models/shared/listticketid.md
+  - docs/pkg/models/shared/listtype.md
+  - docs/pkg/models/shared/listupdatedgte.md
+  - docs/pkg/models/shared/listuserid.md
   - docs/pkg/models/shared/lmsclass.md
   - docs/pkg/models/shared/lmscourse.md
   - docs/pkg/models/shared/lmsemail.md
@@ -2106,6 +2171,13 @@ generatedFiles:
   - docs/pkg/models/shared/messagingreaction.md
   - docs/pkg/models/shared/metadatametadata.md
   - docs/pkg/models/shared/metadatametadataformat.md
+  - docs/pkg/models/shared/nativewebhookcalendarid.md
+  - docs/pkg/models/shared/nativewebhookchannelid.md
+  - docs/pkg/models/shared/nativewebhookcompanyid.md
+  - docs/pkg/models/shared/nativewebhookeventid.md
+  - docs/pkg/models/shared/nativewebhookparentid.md
+  - docs/pkg/models/shared/nativewebhookprojectid.md
+  - docs/pkg/models/shared/nativewebhooktaskid.md
   - docs/pkg/models/shared/objecttype.md
   - docs/pkg/models/shared/one.md
   - docs/pkg/models/shared/operation.md
@@ -2171,6 +2243,10 @@ generatedFiles:
   - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/pkg/models/shared/propertyhrislocationaddress.md
   - docs/pkg/models/shared/propertyintegrationcategories.md
+  - docs/pkg/models/shared/propertyintegrationsupportwebhookevents.md
+  - docs/pkg/models/shared/propertyintegrationsupportwebhookeventscreated.md
+  - docs/pkg/models/shared/propertyintegrationsupportwebhookeventsdeleted.md
+  - docs/pkg/models/shared/propertyintegrationsupportwebhookeventsupdated.md
   - docs/pkg/models/shared/propertylmsstudentaddress.md
   - docs/pkg/models/shared/propertymessagingmessageauthormember.md
   - docs/pkg/models/shared/propertymessagingreactionmember.md
@@ -2223,6 +2299,11 @@ generatedFiles:
   - docs/pkg/models/shared/scimuser.md
   - docs/pkg/models/shared/scimusergroups.md
   - docs/pkg/models/shared/scimusergroupstype.md
+  - docs/pkg/models/shared/searchdomain.md
+  - docs/pkg/models/shared/searchemail.md
+  - docs/pkg/models/shared/searchlinkedinurl.md
+  - docs/pkg/models/shared/searchname.md
+  - docs/pkg/models/shared/searchtwitter.md
   - docs/pkg/models/shared/security.md
   - docs/pkg/models/shared/sexualorientation.md
   - docs/pkg/models/shared/sizeunit.md
@@ -2275,6 +2356,42 @@ generatedFiles:
   - docs/pkg/models/shared/verificationrequest.md
   - docs/pkg/models/shared/verificationresponsedetail.md
   - docs/pkg/models/shared/verificationtime.md
+  - docs/pkg/models/shared/virtualwebhookapplicationid.md
+  - docs/pkg/models/shared/virtualwebhookbranchid.md
+  - docs/pkg/models/shared/virtualwebhookcalendarid.md
+  - docs/pkg/models/shared/virtualwebhookcallid.md
+  - docs/pkg/models/shared/virtualwebhookcandidateid.md
+  - docs/pkg/models/shared/virtualwebhookchannelid.md
+  - docs/pkg/models/shared/virtualwebhookcollectionid.md
+  - docs/pkg/models/shared/virtualwebhookcompanyid.md
+  - docs/pkg/models/shared/virtualwebhookcontactid.md
+  - docs/pkg/models/shared/virtualwebhookcustomerid.md
+  - docs/pkg/models/shared/virtualwebhookdealid.md
+  - docs/pkg/models/shared/virtualwebhookendle.md
+  - docs/pkg/models/shared/virtualwebhookendlt.md
+  - docs/pkg/models/shared/virtualwebhookeventid.md
+  - docs/pkg/models/shared/virtualwebhookexpand.md
+  - docs/pkg/models/shared/virtualwebhookfields.md
+  - docs/pkg/models/shared/virtualwebhookitemid.md
+  - docs/pkg/models/shared/virtualwebhookitemvariantid.md
+  - docs/pkg/models/shared/virtualwebhookjobid.md
+  - docs/pkg/models/shared/virtualwebhooklimit.md
+  - docs/pkg/models/shared/virtualwebhooklistid.md
+  - docs/pkg/models/shared/virtualwebhooklocationid.md
+  - docs/pkg/models/shared/virtualwebhookorgid.md
+  - docs/pkg/models/shared/virtualwebhookpageid.md
+  - docs/pkg/models/shared/virtualwebhookparentid.md
+  - docs/pkg/models/shared/virtualwebhookpipelineid.md
+  - docs/pkg/models/shared/virtualwebhookprojectid.md
+  - docs/pkg/models/shared/virtualwebhookrepoid.md
+  - docs/pkg/models/shared/virtualwebhookspaceid.md
+  - docs/pkg/models/shared/virtualwebhookstartgte.md
+  - docs/pkg/models/shared/virtualwebhookstatus.md
+  - docs/pkg/models/shared/virtualwebhooktaskid.md
+  - docs/pkg/models/shared/virtualwebhookticketid.md
+  - docs/pkg/models/shared/virtualwebhooktype.md
+  - docs/pkg/models/shared/virtualwebhookupdatedgte.md
+  - docs/pkg/models/shared/virtualwebhookuserid.md
   - docs/pkg/models/shared/webhook.md
   - docs/pkg/models/shared/webhooktype.md
   - docs/pkg/models/shared/weekstart.md
@@ -7132,4 +7249,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Calendar.CreateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.GetCalendarEvent()`:  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.ListCalendarEvents()`:  `response.[].Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.PatchCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.UpdateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.CreateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.GetCalendarEvent()`:  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.ListCalendarEvents()`:  `response.[].Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.PatchCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.UpdateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[]` **Changed** **Breaking** :warning:\n"
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Calendar.CreateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.GetCalendarEvent()`:  `response.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.ListCalendarEvents()`:  `response.[].Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.PatchCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n* `UnifiedTo.Calendar.UpdateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.CreateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.GetCalendarEvent()`:  `response.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.ListCalendarEvents()`:  `response.[].Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.PatchCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n* `UnifiedTo.Event.UpdateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n  *  `response.Recurrence.[].Timezone` **Changed** **Breaking** :warning:\n* `UnifiedTo.Unified.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.Filters.{}` **Changed** **Breaking** :warning:\n  *  `response.Filters.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Unified.GetUnifiedWebhook()`:  `response.Filters.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Unified.ListUnifiedWebhooks()`:  `response.[].Filters.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Unified.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.Filters.{}` **Changed** **Breaking** :warning:\n  *  `response.Filters.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Unified.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.Filters.{}` **Changed** **Breaking** :warning:\n  *  `response.Filters.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Webhook.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.Filters.{}` **Changed** **Breaking** :warning:\n  *  `response.Filters.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Webhook.GetUnifiedWebhook()`:  `response.Filters.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Webhook.ListUnifiedWebhooks()`:  `response.[].Filters.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Webhook.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.Filters.{}` **Changed** **Breaking** :warning:\n  *  `response.Filters.{}` **Changed** **Breaking** :warning:\n* `UnifiedTo.Webhook.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.Filters.{}` **Changed** **Breaking** :warning:\n  *  `response.Filters.{}` **Changed** **Breaking** :warning:\n"

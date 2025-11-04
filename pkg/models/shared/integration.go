@@ -1031,7 +1031,7 @@ type Integration struct {
 	RateLimitDescription *string                         `json:"rate_limit_description,omitempty"`
 	Saml                 *Saml                           `json:"saml,omitempty"`
 	Sandbox              *Sandbox                        `json:"sandbox,omitempty"`
-	Support              map[string]any                  `json:"support,omitempty"`
+	Support              map[string]IntegrationSupport   `json:"support,omitempty"`
 	TestedAt             *time.Time                      `json:"tested_at,omitempty"`
 	TextColor            *string                         `json:"text_color,omitempty"`
 	// instructions for the user on how to find the token/key
@@ -1187,7 +1187,7 @@ func (i *Integration) GetSandbox() *Sandbox {
 	return i.Sandbox
 }
 
-func (i *Integration) GetSupport() map[string]any {
+func (i *Integration) GetSupport() map[string]IntegrationSupport {
 	if i == nil {
 		return nil
 	}
