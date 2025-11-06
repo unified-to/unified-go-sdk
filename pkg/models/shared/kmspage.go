@@ -27,6 +27,7 @@ type KmsPage struct {
 	ID           *string           `json:"id,omitempty"`
 	IsActive     *bool             `json:"is_active,omitempty"`
 	Metadata     []KmsPageMetadata `json:"metadata,omitempty"`
+	ParentID     *string           `json:"parent_id,omitempty"`
 	ParentPageID *string           `json:"parent_page_id,omitempty"`
 	Raw          map[string]any    `json:"raw,omitempty"`
 	SpaceID      *string           `json:"space_id,omitempty"`
@@ -88,6 +89,13 @@ func (k *KmsPage) GetMetadata() []KmsPageMetadata {
 		return nil
 	}
 	return k.Metadata
+}
+
+func (k *KmsPage) GetParentID() *string {
+	if k == nil {
+		return nil
+	}
+	return k.ParentID
 }
 
 func (k *KmsPage) GetParentPageID() *string {
