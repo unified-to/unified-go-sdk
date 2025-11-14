@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 44e3c827bc1f0ba4a6b13ebfe4c949dc
+  docChecksum: 5c2a3f40eea3f879043c36a4d45e9686
   docVersion: "1.0"
-  speakeasyVersion: 1.651.0
-  generationVersion: 2.745.2
-  releaseVersion: 0.34.3
-  configChecksum: 24669c25edee428efb79bbf04552fd88
+  speakeasyVersion: 1.656.2
+  generationVersion: 2.753.6
+  releaseVersion: 0.34.4
+  configChecksum: f039edddb0ce993264fd911e3a031f43
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.13.1
+    core: 3.13.2
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -29,7 +29,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.87.0
+    unions: 2.87.1
     uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
@@ -7249,4 +7249,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Commerce.CreateCommerceCollection()`: \n  *  `request.Request.CommerceCollection` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.CreateCommerceItem()`: \n  *  `request.Request.CommerceItem.Media.[].Metadata.[]` **Changed**\n  *  `response.Media.[].Metadata.[]` **Changed**\n* `UnifiedTo.Commerce.CreateCommerceReview()`: \n  *  `request.Request.CommerceReview.Comments.[].Metadata.[]` **Changed**\n  *  `response.Comments.[].Metadata.[]` **Changed**\n* `UnifiedTo.Commerce.GetCommerceCollection()`:  `response` **Changed**\n* `UnifiedTo.Commerce.GetCommerceItem()`:  `response.Media.[].Metadata.[]` **Changed**\n* `UnifiedTo.Commerce.GetCommerceReview()`:  `response.Comments.[].Metadata.[]` **Changed**\n* `UnifiedTo.Commerce.ListCommerceCollections()`:  `response.[]` **Changed**\n* `UnifiedTo.Commerce.ListCommerceItems()`:  `response.[].Media.[].Metadata.[]` **Changed**\n* `UnifiedTo.Commerce.ListCommerceReviews()`:  `response.[].Comments.[].Metadata.[]` **Changed**\n* `UnifiedTo.Commerce.PatchCommerceCollection()`: \n  *  `request.Request.CommerceCollection` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.PatchCommerceItem()`: \n  *  `request.Request.CommerceItem.Media.[].Metadata.[]` **Changed**\n  *  `response.Media.[].Metadata.[]` **Changed**\n* `UnifiedTo.Commerce.PatchCommerceReview()`: \n  *  `request.Request.CommerceReview.Comments.[].Metadata.[]` **Changed**\n  *  `response.Comments.[].Metadata.[]` **Changed**\n* `UnifiedTo.Commerce.UpdateCommerceCollection()`: \n  *  `request.Request.CommerceCollection` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.UpdateCommerceItem()`: \n  *  `request.Request.CommerceItem.Media.[].Metadata.[]` **Changed**\n  *  `response.Media.[].Metadata.[]` **Changed**\n* `UnifiedTo.Commerce.UpdateCommerceReview()`: \n  *  `request.Request.CommerceReview.Comments.[].Metadata.[]` **Changed**\n  *  `response.Comments.[].Metadata.[]` **Changed**\n* `UnifiedTo.Collection.CreateCommerceCollection()`: \n  *  `request.Request.CommerceCollection` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Collection.GetCommerceCollection()`:  `response` **Changed**\n* `UnifiedTo.Collection.ListCommerceCollections()`:  `response.[]` **Changed**\n* `UnifiedTo.Collection.PatchCommerceCollection()`: \n  *  `request.Request.CommerceCollection` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Collection.UpdateCommerceCollection()`: \n  *  `request.Request.CommerceCollection` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Item.CreateCommerceItem()`: \n  *  `request.Request.CommerceItem.Media.[].Metadata.[]` **Changed**\n  *  `response.Media.[].Metadata.[]` **Changed**\n* `UnifiedTo.Item.GetCommerceItem()`:  `response.Media.[].Metadata.[]` **Changed**\n* `UnifiedTo.Item.ListCommerceItems()`:  `response.[].Media.[].Metadata.[]` **Changed**\n* `UnifiedTo.Item.PatchCommerceItem()`: \n  *  `request.Request.CommerceItem.Media.[].Metadata.[]` **Changed**\n  *  `response.Media.[].Metadata.[]` **Changed**\n* `UnifiedTo.Item.UpdateCommerceItem()`: \n  *  `request.Request.CommerceItem.Media.[].Metadata.[]` **Changed**\n  *  `response.Media.[].Metadata.[]` **Changed**\n* `UnifiedTo.Review.CreateCommerceReview()`: \n  *  `request.Request.CommerceReview.Comments.[].Metadata.[]` **Changed**\n  *  `response.Comments.[].Metadata.[]` **Changed**\n* `UnifiedTo.Review.GetCommerceReview()`:  `response.Comments.[].Metadata.[]` **Changed**\n* `UnifiedTo.Review.ListCommerceReviews()`:  `response.[].Comments.[].Metadata.[]` **Changed**\n* `UnifiedTo.Review.PatchCommerceReview()`: \n  *  `request.Request.CommerceReview.Comments.[].Metadata.[]` **Changed**\n  *  `response.Comments.[].Metadata.[]` **Changed**\n* `UnifiedTo.Review.UpdateCommerceReview()`: \n  *  `request.Request.CommerceReview.Comments.[].Metadata.[]` **Changed**\n  *  `response.Comments.[].Metadata.[]` **Changed**\n"
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Ats.CreateAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n* `UnifiedTo.Ats.GetAtsApplication()`:  `response.UserId` **Added**\n* `UnifiedTo.Ats.ListAtsApplications()`:  `response.[].UserId` **Added**\n* `UnifiedTo.Ats.PatchAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n* `UnifiedTo.Ats.UpdateAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n* `UnifiedTo.Application.CreateAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n* `UnifiedTo.Application.GetAtsApplication()`:  `response.UserId` **Added**\n* `UnifiedTo.Application.ListAtsApplications()`:  `response.[].UserId` **Added**\n* `UnifiedTo.Application.PatchAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n* `UnifiedTo.Application.UpdateAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n"

@@ -47,6 +47,7 @@ type AtsApplication struct {
 	Source         *string                `json:"source,omitempty"`
 	Status         *AtsApplicationStatus  `json:"status,omitempty"`
 	UpdatedAt      *time.Time             `json:"updated_at,omitempty"`
+	UserID         *string                `json:"user_id,omitempty"`
 }
 
 func (a AtsApplication) MarshalJSON() ([]byte, error) {
@@ -170,4 +171,11 @@ func (a *AtsApplication) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return a.UpdatedAt
+}
+
+func (a *AtsApplication) GetUserID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.UserID
 }
