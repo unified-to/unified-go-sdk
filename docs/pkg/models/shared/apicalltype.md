@@ -8,3 +8,4 @@
 | `APICallTypeLogin`   | login                |
 | `APICallTypeWebhook` | webhook              |
 | `APICallTypeInbound` | inbound              |
+| `APICallTypeMcp`     | mcp                  |

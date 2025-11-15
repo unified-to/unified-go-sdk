@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 5c2a3f40eea3f879043c36a4d45e9686
+  docChecksum: 8e0da3e048dab0529dab732bc1eb6105
   docVersion: "1.0"
-  speakeasyVersion: 1.656.2
-  generationVersion: 2.753.6
-  releaseVersion: 0.34.4
-  configChecksum: f039edddb0ce993264fd911e3a031f43
+  speakeasyVersion: 1.657.0
+  generationVersion: 2.755.0
+  releaseVersion: 0.34.5
+  configChecksum: 5c4a6c627f8ba336ae1099c72d9a5de2
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -2375,6 +2375,7 @@ generatedFiles:
   - docs/pkg/models/shared/virtualwebhookitemid.md
   - docs/pkg/models/shared/virtualwebhookitemvariantid.md
   - docs/pkg/models/shared/virtualwebhookjobid.md
+  - docs/pkg/models/shared/virtualwebhookleadid.md
   - docs/pkg/models/shared/virtualwebhooklimit.md
   - docs/pkg/models/shared/virtualwebhooklistid.md
   - docs/pkg/models/shared/virtualwebhooklocationid.md
@@ -7249,4 +7250,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Ats.CreateAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n* `UnifiedTo.Ats.GetAtsApplication()`:  `response.UserId` **Added**\n* `UnifiedTo.Ats.ListAtsApplications()`:  `response.[].UserId` **Added**\n* `UnifiedTo.Ats.PatchAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n* `UnifiedTo.Ats.UpdateAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n* `UnifiedTo.Application.CreateAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n* `UnifiedTo.Application.GetAtsApplication()`:  `response.UserId` **Added**\n* `UnifiedTo.Application.ListAtsApplications()`:  `response.[].UserId` **Added**\n* `UnifiedTo.Application.PatchAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n* `UnifiedTo.Application.UpdateAtsApplication()`: \n  *  `request.Request.AtsApplication.UserId` **Added**\n  *  `response.UserId` **Added**\n"
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Ats.CreateAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Ats.GetAtsJob()`:  `response.Skills` **Added**\n* `UnifiedTo.Ats.ListAtsJobs()`:  `response.[].Skills` **Added**\n* `UnifiedTo.Ats.PatchAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Ats.UpdateAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Job.CreateAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Job.GetAtsJob()`:  `response.Skills` **Added**\n* `UnifiedTo.Job.ListAtsJobs()`:  `response.[].Skills` **Added**\n* `UnifiedTo.Job.PatchAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Job.UpdateAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Calendar.CreateCalendarCalendar()`: \n  *  `request.Request.CalendarCalendar.IsPrimary` **Added**\n  *  `response.IsPrimary` **Added**\n* `UnifiedTo.Calendar.GetCalendarCalendar()`:  `response.IsPrimary` **Added**\n* `UnifiedTo.Calendar.ListCalendarCalendars()`:  `response.[].IsPrimary` **Added**\n* `UnifiedTo.Calendar.PatchCalendarCalendar()`: \n  *  `request.Request.CalendarCalendar.IsPrimary` **Added**\n  *  `response.IsPrimary` **Added**\n* `UnifiedTo.Calendar.UpdateCalendarCalendar()`: \n  *  `request.Request.CalendarCalendar.IsPrimary` **Added**\n  *  `response.IsPrimary` **Added**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.{}.VirtualWebhookLeadId` **Added**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.{}.VirtualWebhookLeadId` **Added**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.{}.VirtualWebhookLeadId` **Added**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.{}.VirtualWebhookLeadId` **Added**\n"

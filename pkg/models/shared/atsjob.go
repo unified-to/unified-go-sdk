@@ -69,6 +69,7 @@ type AtsJob struct {
 	Raw           map[string]any   `json:"raw,omitempty"`
 	RecruiterIds  []string         `json:"recruiter_ids,omitempty"`
 	Remote        *bool            `json:"remote,omitempty"`
+	Skills        []string         `json:"skills,omitempty"`
 	Status        *AtsJobStatus    `json:"status,omitempty"`
 	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
 }
@@ -250,6 +251,13 @@ func (a *AtsJob) GetRemote() *bool {
 		return nil
 	}
 	return a.Remote
+}
+
+func (a *AtsJob) GetSkills() []string {
+	if a == nil {
+		return nil
+	}
+	return a.Skills
 }
 
 func (a *AtsJob) GetStatus() *AtsJobStatus {

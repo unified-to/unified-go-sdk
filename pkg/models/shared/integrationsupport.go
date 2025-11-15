@@ -1082,6 +1082,18 @@ func (e VirtualWebhookJobID) ToPointer() *VirtualWebhookJobID {
 	return &e
 }
 
+type VirtualWebhookLeadID string
+
+const (
+	VirtualWebhookLeadIDSupportedRequired VirtualWebhookLeadID = "supported-required"
+	VirtualWebhookLeadIDSupported         VirtualWebhookLeadID = "supported"
+	VirtualWebhookLeadIDNotSupported      VirtualWebhookLeadID = "not-supported"
+)
+
+func (e VirtualWebhookLeadID) ToPointer() *VirtualWebhookLeadID {
+	return &e
+}
+
 type VirtualWebhookLimit string
 
 const (
@@ -1383,6 +1395,7 @@ type IntegrationSupport struct {
 	VirtualWebhookItemID        *VirtualWebhookItemID                    `json:"virtual_webhook_item_id,omitempty"`
 	VirtualWebhookItemVariantID *VirtualWebhookItemVariantID             `json:"virtual_webhook_item_variant_id,omitempty"`
 	VirtualWebhookJobID         *VirtualWebhookJobID                     `json:"virtual_webhook_job_id,omitempty"`
+	VirtualWebhookLeadID        *VirtualWebhookLeadID                    `json:"virtual_webhook_lead_id,omitempty"`
 	VirtualWebhookLimit         *VirtualWebhookLimit                     `json:"virtual_webhook_limit,omitempty"`
 	VirtualWebhookListID        *VirtualWebhookListID                    `json:"virtual_webhook_list_id,omitempty"`
 	VirtualWebhookLocationID    *VirtualWebhookLocationID                `json:"virtual_webhook_location_id,omitempty"`
@@ -2066,6 +2079,13 @@ func (i *IntegrationSupport) GetVirtualWebhookJobID() *VirtualWebhookJobID {
 		return nil
 	}
 	return i.VirtualWebhookJobID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookLeadID() *VirtualWebhookLeadID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookLeadID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookLimit() *VirtualWebhookLimit {

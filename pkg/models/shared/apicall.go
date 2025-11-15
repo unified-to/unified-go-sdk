@@ -13,6 +13,7 @@ const (
 	APICallTypeLogin   APICallType = "login"
 	APICallTypeWebhook APICallType = "webhook"
 	APICallTypeInbound APICallType = "inbound"
+	APICallTypeMcp     APICallType = "mcp"
 )
 
 func (e APICallType) ToPointer() *APICallType {

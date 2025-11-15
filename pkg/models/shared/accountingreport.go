@@ -19,6 +19,7 @@ func (e AccountingReportType) ToPointer() *AccountingReportType {
 	return &e
 }
 
+// AccountingReport - @deprecated; use either AccountingProfitandloss, AccountingTrialbalance, AccountingBalancesheet, or AccountingCashflow instead
 type AccountingReport struct {
 	BalanceSheet  *PropertyAccountingReportBalanceSheet  `json:"balance_sheet,omitempty"`
 	CreatedAt     *time.Time                             `json:"created_at,omitempty"`

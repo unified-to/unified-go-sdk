@@ -11,6 +11,7 @@ type CalendarCalendar struct {
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
+	IsPrimary   *bool          `json:"is_primary,omitempty"`
 	Name        string         `json:"name"`
 	Primary     *bool          `json:"primary,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
@@ -48,6 +49,13 @@ func (c *CalendarCalendar) GetID() *string {
 		return nil
 	}
 	return c.ID
+}
+
+func (c *CalendarCalendar) GetIsPrimary() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.IsPrimary
 }
 
 func (c *CalendarCalendar) GetName() string {
