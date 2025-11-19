@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 8e0da3e048dab0529dab732bc1eb6105
+  docChecksum: fa8f7d5197bb46b9818ca5a0bf429fe1
   docVersion: "1.0"
-  speakeasyVersion: 1.657.0
-  generationVersion: 2.755.0
-  releaseVersion: 0.34.5
-  configChecksum: 5c4a6c627f8ba336ae1099c72d9a5de2
+  speakeasyVersion: 1.658.2
+  generationVersion: 2.755.9
+  releaseVersion: 0.34.6
+  configChecksum: 2c4fe82698442170ef2ca88f6b44c77e
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -7250,4 +7250,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Ats.CreateAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Ats.GetAtsJob()`:  `response.Skills` **Added**\n* `UnifiedTo.Ats.ListAtsJobs()`:  `response.[].Skills` **Added**\n* `UnifiedTo.Ats.PatchAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Ats.UpdateAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Job.CreateAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Job.GetAtsJob()`:  `response.Skills` **Added**\n* `UnifiedTo.Job.ListAtsJobs()`:  `response.[].Skills` **Added**\n* `UnifiedTo.Job.PatchAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Job.UpdateAtsJob()`: \n  *  `request.Request.AtsJob.Skills` **Added**\n  *  `response.Skills` **Added**\n* `UnifiedTo.Calendar.CreateCalendarCalendar()`: \n  *  `request.Request.CalendarCalendar.IsPrimary` **Added**\n  *  `response.IsPrimary` **Added**\n* `UnifiedTo.Calendar.GetCalendarCalendar()`:  `response.IsPrimary` **Added**\n* `UnifiedTo.Calendar.ListCalendarCalendars()`:  `response.[].IsPrimary` **Added**\n* `UnifiedTo.Calendar.PatchCalendarCalendar()`: \n  *  `request.Request.CalendarCalendar.IsPrimary` **Added**\n  *  `response.IsPrimary` **Added**\n* `UnifiedTo.Calendar.UpdateCalendarCalendar()`: \n  *  `request.Request.CalendarCalendar.IsPrimary` **Added**\n  *  `response.IsPrimary` **Added**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.{}.VirtualWebhookLeadId` **Added**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.{}.VirtualWebhookLeadId` **Added**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.{}.VirtualWebhookLeadId` **Added**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.{}.VirtualWebhookLeadId` **Added**\n"
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Company.CreateCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n* `UnifiedTo.Company.GetCrmCompany()`:  `response.Domains` **Added**\n* `UnifiedTo.Company.ListCrmCompanies()`:  `response.[].Domains` **Added**\n* `UnifiedTo.Company.PatchCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n* `UnifiedTo.Company.UpdateCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n* `UnifiedTo.Crm.CreateCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n* `UnifiedTo.Crm.GetCrmCompany()`:  `response.Domains` **Added**\n* `UnifiedTo.Crm.ListCrmCompanies()`:  `response.[].Domains` **Added**\n* `UnifiedTo.Crm.PatchCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n* `UnifiedTo.Crm.UpdateCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n"

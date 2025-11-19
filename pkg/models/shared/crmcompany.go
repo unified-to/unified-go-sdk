@@ -16,6 +16,7 @@ type CrmCompany struct {
 	// An array of deal IDs associated with this contact
 	DealIds     []string   `json:"deal_ids,omitempty"`
 	Description *string    `json:"description,omitempty"`
+	Domains     []string   `json:"domains,omitempty"`
 	Emails      []CrmEmail `json:"emails,omitempty"`
 	Employees   *float64   `json:"employees,omitempty"`
 	ID          *string    `json:"id,omitempty"`
@@ -78,6 +79,13 @@ func (c *CrmCompany) GetDescription() *string {
 		return nil
 	}
 	return c.Description
+}
+
+func (c *CrmCompany) GetDomains() []string {
+	if c == nil {
+		return nil
+	}
+	return c.Domains
 }
 
 func (c *CrmCompany) GetEmails() []CrmEmail {
