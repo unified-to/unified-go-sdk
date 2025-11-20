@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: fa8f7d5197bb46b9818ca5a0bf429fe1
+  docChecksum: d3236800ede7509df7bab0e934cc59f0
   docVersion: "1.0"
   speakeasyVersion: 1.658.2
   generationVersion: 2.755.9
-  releaseVersion: 0.34.6
-  configChecksum: 2c4fe82698442170ef2ca88f6b44c77e
+  releaseVersion: 0.34.7
+  configChecksum: d3b04692854ab436254cffd53a0351b9
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -197,6 +197,7 @@ generatedFiles:
   - /pkg/models/operations/getticketingcustomer.go
   - /pkg/models/operations/getticketingnote.go
   - /pkg/models/operations/getticketingticket.go
+  - /pkg/models/operations/getuccall.go
   - /pkg/models/operations/getuccomment.go
   - /pkg/models/operations/getuccontact.go
   - /pkg/models/operations/getucrecording.go
@@ -1163,6 +1164,8 @@ generatedFiles:
   - docs/pkg/models/operations/getticketingnoteresponse.md
   - docs/pkg/models/operations/getticketingticketrequest.md
   - docs/pkg/models/operations/getticketingticketresponse.md
+  - docs/pkg/models/operations/getuccallrequest.md
+  - docs/pkg/models/operations/getuccallresponse.md
   - docs/pkg/models/operations/getuccommentrequest.md
   - docs/pkg/models/operations/getuccommentresponse.md
   - docs/pkg/models/operations/getuccontactrequest.md
@@ -7248,6 +7251,18 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  getUcCall:
+    speakeasy-default-get-uc-call:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Company.CreateCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n* `UnifiedTo.Company.GetCrmCompany()`:  `response.Domains` **Added**\n* `UnifiedTo.Company.ListCrmCompanies()`:  `response.[].Domains` **Added**\n* `UnifiedTo.Company.PatchCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n* `UnifiedTo.Company.UpdateCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n* `UnifiedTo.Crm.CreateCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n* `UnifiedTo.Crm.GetCrmCompany()`:  `response.Domains` **Added**\n* `UnifiedTo.Crm.ListCrmCompanies()`:  `response.[].Domains` **Added**\n* `UnifiedTo.Crm.PatchCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n* `UnifiedTo.Crm.UpdateCrmCompany()`: \n  *  `request.Request.CrmCompany.Domains` **Added**\n  *  `response.Domains` **Added**\n"
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `UnifiedTo.Uc.GetUcCall()`: **Added**
+  * `UnifiedTo.Call.GetUcCall()`: **Added**
