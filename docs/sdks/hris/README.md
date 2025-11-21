@@ -5,13 +5,17 @@
 
 ### Available Operations
 
+* [CreateHrisBenefit](#createhrisbenefit) - Create a benefit
 * [CreateHrisCompany](#createhriscompany) - Create a company
+* [CreateHrisDeduction](#createhrisdeduction) - Create a deduction
 * [CreateHrisDevice](#createhrisdevice) - Create a device
 * [CreateHrisEmployee](#createhrisemployee) - Create an employee
 * [CreateHrisGroup](#createhrisgroup) - Create a group
 * [CreateHrisLocation](#createhrislocation) - Create a location
 * [CreateHrisTimeshift](#createhristimeshift) - Create a timeshift
+* [GetHrisBenefit](#gethrisbenefit) - Retrieve a benefit
 * [GetHrisCompany](#gethriscompany) - Retrieve a company
+* [GetHrisDeduction](#gethrisdeduction) - Retrieve a deduction
 * [GetHrisDevice](#gethrisdevice) - Retrieve a device
 * [GetHrisEmployee](#gethrisemployee) - Retrieve an employee
 * [GetHrisGroup](#gethrisgroup) - Retrieve a group
@@ -19,7 +23,9 @@
 * [GetHrisPayslip](#gethrispayslip) - Retrieve a payslip
 * [GetHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [GetHrisTimeshift](#gethristimeshift) - Retrieve a timeshift
+* [ListHrisBenefits](#listhrisbenefits) - List all benefits
 * [ListHrisCompanies](#listhriscompanies) - List all companies
+* [ListHrisDeductions](#listhrisdeductions) - List all deductions
 * [ListHrisDevices](#listhrisdevices) - List all devices
 * [ListHrisEmployees](#listhrisemployees) - List all employees
 * [ListHrisGroups](#listhrisgroups) - List all groups
@@ -27,24 +33,86 @@
 * [ListHrisPayslips](#listhrispayslips) - List all payslips
 * [ListHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [ListHrisTimeshifts](#listhristimeshifts) - List all timeshifts
+* [PatchHrisBenefit](#patchhrisbenefit) - Update a benefit
 * [PatchHrisCompany](#patchhriscompany) - Update a company
+* [PatchHrisDeduction](#patchhrisdeduction) - Update a deduction
 * [PatchHrisDevice](#patchhrisdevice) - Update a device
 * [PatchHrisEmployee](#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](#patchhrisgroup) - Update a group
 * [PatchHrisLocation](#patchhrislocation) - Update a location
 * [PatchHrisTimeshift](#patchhristimeshift) - Update a timeshift
+* [RemoveHrisBenefit](#removehrisbenefit) - Remove a benefit
 * [RemoveHrisCompany](#removehriscompany) - Remove a company
+* [RemoveHrisDeduction](#removehrisdeduction) - Remove a deduction
 * [RemoveHrisDevice](#removehrisdevice) - Remove a device
 * [RemoveHrisEmployee](#removehrisemployee) - Remove an employee
 * [RemoveHrisGroup](#removehrisgroup) - Remove a group
 * [RemoveHrisLocation](#removehrislocation) - Remove a location
 * [RemoveHrisTimeshift](#removehristimeshift) - Remove a timeshift
+* [UpdateHrisBenefit](#updatehrisbenefit) - Update a benefit
 * [UpdateHrisCompany](#updatehriscompany) - Update a company
+* [UpdateHrisDeduction](#updatehrisdeduction) - Update a deduction
 * [UpdateHrisDevice](#updatehrisdevice) - Update a device
 * [UpdateHrisEmployee](#updatehrisemployee) - Update an employee
 * [UpdateHrisGroup](#updatehrisgroup) - Update a group
 * [UpdateHrisLocation](#updatehrislocation) - Update a location
 * [UpdateHrisTimeshift](#updatehristimeshift) - Update a timeshift
+
+## CreateHrisBenefit
+
+Create a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.CreateHrisBenefit(ctx, operations.CreateHrisBenefitRequest{
+        HrisBenefit: shared.HrisBenefit{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisBenefit != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateHrisBenefitRequest](../../pkg/models/operations/createhrisbenefitrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.CreateHrisBenefitResponse](../../pkg/models/operations/createhrisbenefitresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## CreateHrisCompany
 
@@ -95,6 +163,62 @@ func main() {
 ### Response
 
 **[*operations.CreateHrisCompanyResponse](../../pkg/models/operations/createhriscompanyresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateHrisDeduction
+
+Create a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.CreateHrisDeduction(ctx, operations.CreateHrisDeductionRequest{
+        HrisDeduction: shared.HrisDeduction{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisDeduction != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.CreateHrisDeductionRequest](../../pkg/models/operations/createhrisdeductionrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.CreateHrisDeductionResponse](../../pkg/models/operations/createhrisdeductionresponse.md), error**
 
 ### Errors
 
@@ -389,6 +513,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetHrisBenefit
+
+Retrieve a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHrisBenefit" method="get" path="/hris/{connection_id}/benefit/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.GetHrisBenefit(ctx, operations.GetHrisBenefitRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisBenefit != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetHrisBenefitRequest](../../pkg/models/operations/gethrisbenefitrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.GetHrisBenefitResponse](../../pkg/models/operations/gethrisbenefitresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetHrisCompany
 
 Retrieve a company
@@ -437,6 +616,61 @@ func main() {
 ### Response
 
 **[*operations.GetHrisCompanyResponse](../../pkg/models/operations/gethriscompanyresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetHrisDeduction
+
+Retrieve a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHrisDeduction" method="get" path="/hris/{connection_id}/deduction/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.GetHrisDeduction(ctx, operations.GetHrisDeductionRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisDeduction != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetHrisDeductionRequest](../../pkg/models/operations/gethrisdeductionrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.GetHrisDeductionResponse](../../pkg/models/operations/gethrisdeductionresponse.md), error**
 
 ### Errors
 
@@ -829,6 +1063,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListHrisBenefits
+
+List all benefits
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHrisBenefits" method="get" path="/hris/{connection_id}/benefit" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.ListHrisBenefits(ctx, operations.ListHrisBenefitsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisBenefits != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListHrisBenefitsRequest](../../pkg/models/operations/listhrisbenefitsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.ListHrisBenefitsResponse](../../pkg/models/operations/listhrisbenefitsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListHrisCompanies
 
 List all companies
@@ -876,6 +1164,60 @@ func main() {
 ### Response
 
 **[*operations.ListHrisCompaniesResponse](../../pkg/models/operations/listhriscompaniesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListHrisDeductions
+
+List all deductions
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHrisDeductions" method="get" path="/hris/{connection_id}/deduction" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.ListHrisDeductions(ctx, operations.ListHrisDeductionsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisDeductions != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListHrisDeductionsRequest](../../pkg/models/operations/listhrisdeductionsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.ListHrisDeductionsResponse](../../pkg/models/operations/listhrisdeductionsresponse.md), error**
 
 ### Errors
 
@@ -1261,6 +1603,63 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## PatchHrisBenefit
+
+Update a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.PatchHrisBenefit(ctx, operations.PatchHrisBenefitRequest{
+        HrisBenefit: shared.HrisBenefit{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisBenefit != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchHrisBenefitRequest](../../pkg/models/operations/patchhrisbenefitrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.PatchHrisBenefitResponse](../../pkg/models/operations/patchhrisbenefitresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchHrisCompany
 
 Update a company
@@ -1311,6 +1710,63 @@ func main() {
 ### Response
 
 **[*operations.PatchHrisCompanyResponse](../../pkg/models/operations/patchhriscompanyresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchHrisDeduction
+
+Update a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.PatchHrisDeduction(ctx, operations.PatchHrisDeductionRequest{
+        HrisDeduction: shared.HrisDeduction{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisDeduction != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.PatchHrisDeductionRequest](../../pkg/models/operations/patchhrisdeductionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.PatchHrisDeductionResponse](../../pkg/models/operations/patchhrisdeductionresponse.md), error**
 
 ### Errors
 
@@ -1610,6 +2066,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemoveHrisBenefit
+
+Remove a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeHrisBenefit" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.RemoveHrisBenefit(ctx, operations.RemoveHrisBenefitRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveHrisBenefitRequest](../../pkg/models/operations/removehrisbenefitrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.RemoveHrisBenefitResponse](../../pkg/models/operations/removehrisbenefitresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemoveHrisCompany
 
 Remove a company
@@ -1658,6 +2169,61 @@ func main() {
 ### Response
 
 **[*operations.RemoveHrisCompanyResponse](../../pkg/models/operations/removehriscompanyresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveHrisDeduction
+
+Remove a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeHrisDeduction" method="delete" path="/hris/{connection_id}/deduction/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.RemoveHrisDeduction(ctx, operations.RemoveHrisDeductionRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.RemoveHrisDeductionRequest](../../pkg/models/operations/removehrisdeductionrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.RemoveHrisDeductionResponse](../../pkg/models/operations/removehrisdeductionresponse.md), error**
 
 ### Errors
 
@@ -1940,6 +2506,63 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## UpdateHrisBenefit
+
+Update a benefit
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.UpdateHrisBenefit(ctx, operations.UpdateHrisBenefitRequest{
+        HrisBenefit: shared.HrisBenefit{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisBenefit != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.UpdateHrisBenefitRequest](../../pkg/models/operations/updatehrisbenefitrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.UpdateHrisBenefitResponse](../../pkg/models/operations/updatehrisbenefitresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## UpdateHrisCompany
 
 Update a company
@@ -1990,6 +2613,63 @@ func main() {
 ### Response
 
 **[*operations.UpdateHrisCompanyResponse](../../pkg/models/operations/updatehriscompanyresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateHrisDeduction
+
+Update a deduction
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Hris.UpdateHrisDeduction(ctx, operations.UpdateHrisDeductionRequest{
+        HrisDeduction: shared.HrisDeduction{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisDeduction != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.UpdateHrisDeductionRequest](../../pkg/models/operations/updatehrisdeductionrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.UpdateHrisDeductionResponse](../../pkg/models/operations/updatehrisdeductionresponse.md), error**
 
 ### Errors
 

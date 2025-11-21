@@ -268,6 +268,15 @@ func main() {
 * [GetAccountingBalancesheet](docs/sdks/balancesheet/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
 * [ListAccountingBalancesheets](docs/sdks/balancesheet/README.md#listaccountingbalancesheets) - List all balancesheets
 
+### [Benefit](docs/sdks/benefit/README.md)
+
+* [CreateHrisBenefit](docs/sdks/benefit/README.md#createhrisbenefit) - Create a benefit
+* [GetHrisBenefit](docs/sdks/benefit/README.md#gethrisbenefit) - Retrieve a benefit
+* [ListHrisBenefits](docs/sdks/benefit/README.md#listhrisbenefits) - List all benefits
+* [PatchHrisBenefit](docs/sdks/benefit/README.md#patchhrisbenefit) - Update a benefit
+* [RemoveHrisBenefit](docs/sdks/benefit/README.md#removehrisbenefit) - Remove a benefit
+* [UpdateHrisBenefit](docs/sdks/benefit/README.md#updatehrisbenefit) - Update a benefit
+
 ### [Bill](docs/sdks/bill/README.md)
 
 * [CreateAccountingBill](docs/sdks/bill/README.md#createaccountingbill) - Create a bill
@@ -566,6 +575,15 @@ func main() {
 * [RemoveCrmDeal](docs/sdks/deal/README.md#removecrmdeal) - Remove a deal
 * [UpdateCrmDeal](docs/sdks/deal/README.md#updatecrmdeal) - Update a deal
 
+### [Deduction](docs/sdks/deduction/README.md)
+
+* [CreateHrisDeduction](docs/sdks/deduction/README.md#createhrisdeduction) - Create a deduction
+* [GetHrisDeduction](docs/sdks/deduction/README.md#gethrisdeduction) - Retrieve a deduction
+* [ListHrisDeductions](docs/sdks/deduction/README.md#listhrisdeductions) - List all deductions
+* [PatchHrisDeduction](docs/sdks/deduction/README.md#patchhrisdeduction) - Update a deduction
+* [RemoveHrisDeduction](docs/sdks/deduction/README.md#removehrisdeduction) - Remove a deduction
+* [UpdateHrisDeduction](docs/sdks/deduction/README.md#updatehrisdeduction) - Update a deduction
+
 ### [Device](docs/sdks/device/README.md)
 
 * [CreateHrisDevice](docs/sdks/device/README.md#createhrisdevice) - Create a device
@@ -659,13 +677,17 @@ func main() {
 
 ### [Hris](docs/sdks/hris/README.md)
 
+* [CreateHrisBenefit](docs/sdks/hris/README.md#createhrisbenefit) - Create a benefit
 * [CreateHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
+* [CreateHrisDeduction](docs/sdks/hris/README.md#createhrisdeduction) - Create a deduction
 * [CreateHrisDevice](docs/sdks/hris/README.md#createhrisdevice) - Create a device
 * [CreateHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [CreateHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [CreateHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
+* [GetHrisBenefit](docs/sdks/hris/README.md#gethrisbenefit) - Retrieve a benefit
 * [GetHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
+* [GetHrisDeduction](docs/sdks/hris/README.md#gethrisdeduction) - Retrieve a deduction
 * [GetHrisDevice](docs/sdks/hris/README.md#gethrisdevice) - Retrieve a device
 * [GetHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [GetHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
@@ -673,7 +695,9 @@ func main() {
 * [GetHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [GetHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [GetHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
+* [ListHrisBenefits](docs/sdks/hris/README.md#listhrisbenefits) - List all benefits
 * [ListHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
+* [ListHrisDeductions](docs/sdks/hris/README.md#listhrisdeductions) - List all deductions
 * [ListHrisDevices](docs/sdks/hris/README.md#listhrisdevices) - List all devices
 * [ListHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [ListHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
@@ -681,19 +705,25 @@ func main() {
 * [ListHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [ListHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [ListHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
+* [PatchHrisBenefit](docs/sdks/hris/README.md#patchhrisbenefit) - Update a benefit
 * [PatchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
+* [PatchHrisDeduction](docs/sdks/hris/README.md#patchhrisdeduction) - Update a deduction
 * [PatchHrisDevice](docs/sdks/hris/README.md#patchhrisdevice) - Update a device
 * [PatchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [PatchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [PatchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
+* [RemoveHrisBenefit](docs/sdks/hris/README.md#removehrisbenefit) - Remove a benefit
 * [RemoveHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
+* [RemoveHrisDeduction](docs/sdks/hris/README.md#removehrisdeduction) - Remove a deduction
 * [RemoveHrisDevice](docs/sdks/hris/README.md#removehrisdevice) - Remove a device
 * [RemoveHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [RemoveHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [RemoveHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [RemoveHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
+* [UpdateHrisBenefit](docs/sdks/hris/README.md#updatehrisbenefit) - Update a benefit
 * [UpdateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
+* [UpdateHrisDeduction](docs/sdks/hris/README.md#updatehrisdeduction) - Update a deduction
 * [UpdateHrisDevice](docs/sdks/hris/README.md#updatehrisdevice) - Update a device
 * [UpdateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group

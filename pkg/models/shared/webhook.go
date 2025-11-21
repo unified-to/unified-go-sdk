@@ -90,6 +90,8 @@ const (
 	ObjectTypeHrisLocation            ObjectType = "hris_location"
 	ObjectTypeHrisDevice              ObjectType = "hris_device"
 	ObjectTypeHrisTimeshift           ObjectType = "hris_timeshift"
+	ObjectTypeHrisDeduction           ObjectType = "hris_deduction"
+	ObjectTypeHrisBenefit             ObjectType = "hris_benefit"
 	ObjectTypeMartechList             ObjectType = "martech_list"
 	ObjectTypeMartechMember           ObjectType = "martech_member"
 	ObjectTypePassthrough             ObjectType = "passthrough"

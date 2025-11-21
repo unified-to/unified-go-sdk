@@ -120,6 +120,10 @@
 | `PropertyConnectionPermissionsHrisLocationWrite`            | hris_location_write                                         |
 | `PropertyConnectionPermissionsHrisDeviceRead`               | hris_device_read                                            |
 | `PropertyConnectionPermissionsHrisDeviceWrite`              | hris_device_write                                           |
+| `PropertyConnectionPermissionsHrisDeductionRead`            | hris_deduction_read                                         |
+| `PropertyConnectionPermissionsHrisDeductionWrite`           | hris_deduction_write                                        |
+| `PropertyConnectionPermissionsHrisBenefitRead`              | hris_benefit_read                                           |
+| `PropertyConnectionPermissionsHrisBenefitWrite`             | hris_benefit_write                                          |
 | `PropertyConnectionPermissionsUcCallRead`                   | uc_call_read                                                |
 | `PropertyConnectionPermissionsUcContactRead`                | uc_contact_read                                             |
 | `PropertyConnectionPermissionsUcContactWrite`               | uc_contact_write                                            |

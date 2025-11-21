@@ -20,20 +20,22 @@ func (e PaymentType) ToPointer() *PaymentType {
 }
 
 type HrisPayslip struct {
-	CompanyID   *string             `json:"company_id,omitempty"`
-	CreatedAt   *time.Time          `json:"created_at,omitempty"`
-	Currency    *string             `json:"currency,omitempty"`
-	Details     []HrisPayslipDetail `json:"details,omitempty"`
-	EndAt       *time.Time          `json:"end_at,omitempty"`
-	GrossAmount *float64            `json:"gross_amount,omitempty"`
-	ID          *string             `json:"id,omitempty"`
-	NetAmount   *float64            `json:"net_amount,omitempty"`
-	PaidAt      *time.Time          `json:"paid_at,omitempty"`
-	PaymentType *PaymentType        `json:"payment_type,omitempty"`
-	Raw         map[string]any      `json:"raw"`
-	StartAt     *time.Time          `json:"start_at,omitempty"`
-	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
-	UserID      *string             `json:"user_id,omitempty"`
+	CompanyID *string    `json:"company_id,omitempty"`
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+	Deduction   *PropertyHrisPayslipDeduction `json:"deduction,omitempty"`
+	Details     []HrisPayslipDetail           `json:"details,omitempty"`
+	EndAt       *time.Time                    `json:"end_at,omitempty"`
+	GrossAmount *float64                      `json:"gross_amount,omitempty"`
+	ID          *string                       `json:"id,omitempty"`
+	NetAmount   *float64                      `json:"net_amount,omitempty"`
+	PaidAt      *time.Time                    `json:"paid_at,omitempty"`
+	PaymentType *PaymentType                  `json:"payment_type,omitempty"`
+	Raw         map[string]any                `json:"raw"`
+	StartAt     *time.Time                    `json:"start_at,omitempty"`
+	UpdatedAt   *time.Time                    `json:"updated_at,omitempty"`
+	UserID      *string                       `json:"user_id,omitempty"`
 }
 
 func (h HrisPayslip) MarshalJSON() ([]byte, error) {
@@ -66,6 +68,13 @@ func (h *HrisPayslip) GetCurrency() *string {
 		return nil
 	}
 	return h.Currency
+}
+
+func (h *HrisPayslip) GetDeduction() *PropertyHrisPayslipDeduction {
+	if h == nil {
+		return nil
+	}
+	return h.Deduction
 }
 
 func (h *HrisPayslip) GetDetails() []HrisPayslipDetail {

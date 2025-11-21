@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: d3236800ede7509df7bab0e934cc59f0
+  docChecksum: 67f7d6d0c66da74ba7cdc2b88db1c97d
   docVersion: "1.0"
-  speakeasyVersion: 1.658.2
+  speakeasyVersion: 1.659.0
   generationVersion: 2.755.9
-  releaseVersion: 0.34.7
-  configChecksum: d3b04692854ab436254cffd53a0351b9
+  releaseVersion: 0.34.8
+  configChecksum: 8e8841ac454df60d08981506bb72ae0d
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -70,7 +70,9 @@ generatedFiles:
   - /pkg/models/operations/createcrmpipeline.go
   - /pkg/models/operations/creategenaiembedding.go
   - /pkg/models/operations/creategenaiprompt.go
+  - /pkg/models/operations/createhrisbenefit.go
   - /pkg/models/operations/createhriscompany.go
+  - /pkg/models/operations/createhrisdeduction.go
   - /pkg/models/operations/createhrisdevice.go
   - /pkg/models/operations/createhrisemployee.go
   - /pkg/models/operations/createhrisgroup.go
@@ -156,7 +158,9 @@ generatedFiles:
   - /pkg/models/operations/getcrmlead.go
   - /pkg/models/operations/getcrmpipeline.go
   - /pkg/models/operations/getgenaimodel.go
+  - /pkg/models/operations/gethrisbenefit.go
   - /pkg/models/operations/gethriscompany.go
+  - /pkg/models/operations/gethrisdeduction.go
   - /pkg/models/operations/gethrisdevice.go
   - /pkg/models/operations/gethrisemployee.go
   - /pkg/models/operations/gethrisgroup.go
@@ -256,7 +260,9 @@ generatedFiles:
   - /pkg/models/operations/listenrichcompanies.go
   - /pkg/models/operations/listenrichpeople.go
   - /pkg/models/operations/listgenaimodels.go
+  - /pkg/models/operations/listhrisbenefits.go
   - /pkg/models/operations/listhriscompanies.go
+  - /pkg/models/operations/listhrisdeductions.go
   - /pkg/models/operations/listhrisdevices.go
   - /pkg/models/operations/listhrisemployees.go
   - /pkg/models/operations/listhrisgroups.go
@@ -345,7 +351,9 @@ generatedFiles:
   - /pkg/models/operations/patchcrmevent.go
   - /pkg/models/operations/patchcrmlead.go
   - /pkg/models/operations/patchcrmpipeline.go
+  - /pkg/models/operations/patchhrisbenefit.go
   - /pkg/models/operations/patchhriscompany.go
+  - /pkg/models/operations/patchhrisdeduction.go
   - /pkg/models/operations/patchhrisdevice.go
   - /pkg/models/operations/patchhrisemployee.go
   - /pkg/models/operations/patchhrisgroup.go
@@ -424,7 +432,9 @@ generatedFiles:
   - /pkg/models/operations/removecrmevent.go
   - /pkg/models/operations/removecrmlead.go
   - /pkg/models/operations/removecrmpipeline.go
+  - /pkg/models/operations/removehrisbenefit.go
   - /pkg/models/operations/removehriscompany.go
+  - /pkg/models/operations/removehrisdeduction.go
   - /pkg/models/operations/removehrisdevice.go
   - /pkg/models/operations/removehrisemployee.go
   - /pkg/models/operations/removehrisgroup.go
@@ -501,7 +511,9 @@ generatedFiles:
   - /pkg/models/operations/updatecrmevent.go
   - /pkg/models/operations/updatecrmlead.go
   - /pkg/models/operations/updatecrmpipeline.go
+  - /pkg/models/operations/updatehrisbenefit.go
   - /pkg/models/operations/updatehriscompany.go
+  - /pkg/models/operations/updatehrisdeduction.go
   - /pkg/models/operations/updatehrisdevice.go
   - /pkg/models/operations/updatehrisemployee.go
   - /pkg/models/operations/updatehrisgroup.go
@@ -572,6 +584,7 @@ generatedFiles:
   - /pkg/models/shared/accountingprofitlosssection.go
   - /pkg/models/shared/accountingprofitlosssubcategory.go
   - /pkg/models/shared/accountingpurchaseorder.go
+  - /pkg/models/shared/accountingreference.go
   - /pkg/models/shared/accountingreport.go
   - /pkg/models/shared/accountingsalesorder.go
   - /pkg/models/shared/accountingtaxrate.go
@@ -650,8 +663,10 @@ generatedFiles:
   - /pkg/models/shared/genaiembeddingcontent.go
   - /pkg/models/shared/genaimodel.go
   - /pkg/models/shared/genaiprompt.go
+  - /pkg/models/shared/hrisbenefit.go
   - /pkg/models/shared/hriscompany.go
   - /pkg/models/shared/hriscompensation.go
+  - /pkg/models/shared/hrisdeduction.go
   - /pkg/models/shared/hrisdevice.go
   - /pkg/models/shared/hrisemail.go
   - /pkg/models/shared/hrisemployee.go
@@ -735,6 +750,7 @@ generatedFiles:
   - /pkg/models/shared/propertyhrisemployeeaddress.go
   - /pkg/models/shared/propertyhrisemployeeemployeeroles.go
   - /pkg/models/shared/propertyhrislocationaddress.go
+  - /pkg/models/shared/propertyhrispayslipdeduction.go
   - /pkg/models/shared/propertyintegrationcategories.go
   - /pkg/models/shared/propertyintegrationsupportwebhookevents.go
   - /pkg/models/shared/propertyintegrationsupportwebhookeventscreated.go
@@ -812,6 +828,7 @@ generatedFiles:
   - ats.go
   - auth.go
   - balancesheet.go
+  - benefit.go
   - bill.go
   - branch.go
   - busy.go
@@ -835,6 +852,7 @@ generatedFiles:
   - crm.go
   - customer.go
   - deal.go
+  - deduction.go
   - device.go
   - docs/pkg/models/operations/categories.md
   - docs/pkg/models/operations/createaccountingaccountrequest.md
@@ -911,8 +929,12 @@ generatedFiles:
   - docs/pkg/models/operations/creategenaiembeddingresponse.md
   - docs/pkg/models/operations/creategenaipromptrequest.md
   - docs/pkg/models/operations/creategenaipromptresponse.md
+  - docs/pkg/models/operations/createhrisbenefitrequest.md
+  - docs/pkg/models/operations/createhrisbenefitresponse.md
   - docs/pkg/models/operations/createhriscompanyrequest.md
   - docs/pkg/models/operations/createhriscompanyresponse.md
+  - docs/pkg/models/operations/createhrisdeductionrequest.md
+  - docs/pkg/models/operations/createhrisdeductionresponse.md
   - docs/pkg/models/operations/createhrisdevicerequest.md
   - docs/pkg/models/operations/createhrisdeviceresponse.md
   - docs/pkg/models/operations/createhrisemployeerequest.md
@@ -1082,8 +1104,12 @@ generatedFiles:
   - docs/pkg/models/operations/getcrmpipelineresponse.md
   - docs/pkg/models/operations/getgenaimodelrequest.md
   - docs/pkg/models/operations/getgenaimodelresponse.md
+  - docs/pkg/models/operations/gethrisbenefitrequest.md
+  - docs/pkg/models/operations/gethrisbenefitresponse.md
   - docs/pkg/models/operations/gethriscompanyrequest.md
   - docs/pkg/models/operations/gethriscompanyresponse.md
+  - docs/pkg/models/operations/gethrisdeductionrequest.md
+  - docs/pkg/models/operations/gethrisdeductionresponse.md
   - docs/pkg/models/operations/gethrisdevicerequest.md
   - docs/pkg/models/operations/gethrisdeviceresponse.md
   - docs/pkg/models/operations/gethrisemployeerequest.md
@@ -1282,8 +1308,12 @@ generatedFiles:
   - docs/pkg/models/operations/listenrichpeopleresponse.md
   - docs/pkg/models/operations/listgenaimodelsrequest.md
   - docs/pkg/models/operations/listgenaimodelsresponse.md
+  - docs/pkg/models/operations/listhrisbenefitsrequest.md
+  - docs/pkg/models/operations/listhrisbenefitsresponse.md
   - docs/pkg/models/operations/listhriscompaniesrequest.md
   - docs/pkg/models/operations/listhriscompaniesresponse.md
+  - docs/pkg/models/operations/listhrisdeductionsrequest.md
+  - docs/pkg/models/operations/listhrisdeductionsresponse.md
   - docs/pkg/models/operations/listhrisdevicesrequest.md
   - docs/pkg/models/operations/listhrisdevicesresponse.md
   - docs/pkg/models/operations/listhrisemployeesrequest.md
@@ -1462,8 +1492,12 @@ generatedFiles:
   - docs/pkg/models/operations/patchcrmleadresponse.md
   - docs/pkg/models/operations/patchcrmpipelinerequest.md
   - docs/pkg/models/operations/patchcrmpipelineresponse.md
+  - docs/pkg/models/operations/patchhrisbenefitrequest.md
+  - docs/pkg/models/operations/patchhrisbenefitresponse.md
   - docs/pkg/models/operations/patchhriscompanyrequest.md
   - docs/pkg/models/operations/patchhriscompanyresponse.md
+  - docs/pkg/models/operations/patchhrisdeductionrequest.md
+  - docs/pkg/models/operations/patchhrisdeductionresponse.md
   - docs/pkg/models/operations/patchhrisdevicerequest.md
   - docs/pkg/models/operations/patchhrisdeviceresponse.md
   - docs/pkg/models/operations/patchhrisemployeerequest.md
@@ -1621,8 +1655,12 @@ generatedFiles:
   - docs/pkg/models/operations/removecrmleadresponse.md
   - docs/pkg/models/operations/removecrmpipelinerequest.md
   - docs/pkg/models/operations/removecrmpipelineresponse.md
+  - docs/pkg/models/operations/removehrisbenefitrequest.md
+  - docs/pkg/models/operations/removehrisbenefitresponse.md
   - docs/pkg/models/operations/removehriscompanyrequest.md
   - docs/pkg/models/operations/removehriscompanyresponse.md
+  - docs/pkg/models/operations/removehrisdeductionrequest.md
+  - docs/pkg/models/operations/removehrisdeductionresponse.md
   - docs/pkg/models/operations/removehrisdevicerequest.md
   - docs/pkg/models/operations/removehrisdeviceresponse.md
   - docs/pkg/models/operations/removehrisemployeerequest.md
@@ -1775,8 +1813,12 @@ generatedFiles:
   - docs/pkg/models/operations/updatecrmleadresponse.md
   - docs/pkg/models/operations/updatecrmpipelinerequest.md
   - docs/pkg/models/operations/updatecrmpipelineresponse.md
+  - docs/pkg/models/operations/updatehrisbenefitrequest.md
+  - docs/pkg/models/operations/updatehrisbenefitresponse.md
   - docs/pkg/models/operations/updatehriscompanyrequest.md
   - docs/pkg/models/operations/updatehriscompanyresponse.md
+  - docs/pkg/models/operations/updatehrisdeductionrequest.md
+  - docs/pkg/models/operations/updatehrisdeductionresponse.md
   - docs/pkg/models/operations/updatehrisdevicerequest.md
   - docs/pkg/models/operations/updatehrisdeviceresponse.md
   - docs/pkg/models/operations/updatehrisemployeerequest.md
@@ -1901,6 +1943,7 @@ generatedFiles:
   - docs/pkg/models/shared/accountingprofitlosssubcategory.md
   - docs/pkg/models/shared/accountingpurchaseorder.md
   - docs/pkg/models/shared/accountingpurchaseorderstatus.md
+  - docs/pkg/models/shared/accountingreference.md
   - docs/pkg/models/shared/accountingreport.md
   - docs/pkg/models/shared/accountingreporttype.md
   - docs/pkg/models/shared/accountingsalesorder.md
@@ -1992,6 +2035,7 @@ generatedFiles:
   - docs/pkg/models/shared/commercereviewstatus.md
   - docs/pkg/models/shared/connection.md
   - docs/pkg/models/shared/contenttype.md
+  - docs/pkg/models/shared/coveragelevel.md
   - docs/pkg/models/shared/crmcompany.md
   - docs/pkg/models/shared/crmcontact.md
   - docs/pkg/models/shared/crmdeal.md
@@ -2016,6 +2060,7 @@ generatedFiles:
   - docs/pkg/models/shared/crmtelephone.md
   - docs/pkg/models/shared/crmtelephonetype.md
   - docs/pkg/models/shared/dbtype.md
+  - docs/pkg/models/shared/employercontributiontype.md
   - docs/pkg/models/shared/employmentstatus.md
   - docs/pkg/models/shared/employmenttype.md
   - docs/pkg/models/shared/encondingformat.md
@@ -2039,10 +2084,17 @@ generatedFiles:
   - docs/pkg/models/shared/genaimodel.md
   - docs/pkg/models/shared/genaiprompt.md
   - docs/pkg/models/shared/gender.md
+  - docs/pkg/models/shared/hrisbenefit.md
+  - docs/pkg/models/shared/hrisbenefitfrequency.md
+  - docs/pkg/models/shared/hrisbenefittype.md
   - docs/pkg/models/shared/hriscompany.md
   - docs/pkg/models/shared/hriscompensation.md
   - docs/pkg/models/shared/hriscompensationfrequency.md
   - docs/pkg/models/shared/hriscompensationtype.md
+  - docs/pkg/models/shared/hrisdeduction.md
+  - docs/pkg/models/shared/hrisdeductioncoveragelevel.md
+  - docs/pkg/models/shared/hrisdeductionfrequency.md
+  - docs/pkg/models/shared/hrisdeductiontype.md
   - docs/pkg/models/shared/hrisdevice.md
   - docs/pkg/models/shared/hrisemail.md
   - docs/pkg/models/shared/hrisemailtype.md
@@ -2133,6 +2185,7 @@ generatedFiles:
   - docs/pkg/models/shared/listpageid.md
   - docs/pkg/models/shared/listparentid.md
   - docs/pkg/models/shared/listpaymentid.md
+  - docs/pkg/models/shared/listpayslipid.md
   - docs/pkg/models/shared/listpipelineid.md
   - docs/pkg/models/shared/listprojectid.md
   - docs/pkg/models/shared/listquery.md
@@ -2152,6 +2205,7 @@ generatedFiles:
   - docs/pkg/models/shared/listtype.md
   - docs/pkg/models/shared/listupdatedgte.md
   - docs/pkg/models/shared/listuserid.md
+  - docs/pkg/models/shared/listusermentionedid.md
   - docs/pkg/models/shared/lmsclass.md
   - docs/pkg/models/shared/lmscourse.md
   - docs/pkg/models/shared/lmsemail.md
@@ -2245,6 +2299,10 @@ generatedFiles:
   - docs/pkg/models/shared/propertyhrisemployeeaddress.md
   - docs/pkg/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/pkg/models/shared/propertyhrislocationaddress.md
+  - docs/pkg/models/shared/propertyhrispayslipdeduction.md
+  - docs/pkg/models/shared/propertyhrispayslipdeductioncoveragelevel.md
+  - docs/pkg/models/shared/propertyhrispayslipdeductionfrequency.md
+  - docs/pkg/models/shared/propertyhrispayslipdeductiontype.md
   - docs/pkg/models/shared/propertyintegrationcategories.md
   - docs/pkg/models/shared/propertyintegrationsupportwebhookevents.md
   - docs/pkg/models/shared/propertyintegrationsupportwebhookeventscreated.md
@@ -2328,6 +2386,7 @@ generatedFiles:
   - docs/pkg/models/shared/taskproject.md
   - docs/pkg/models/shared/tasktask.md
   - docs/pkg/models/shared/tasktaskstatus.md
+  - docs/pkg/models/shared/tax.md
   - docs/pkg/models/shared/taxexemption.md
   - docs/pkg/models/shared/ticketingcategory.md
   - docs/pkg/models/shared/ticketingcustomer.md
@@ -2396,6 +2455,7 @@ generatedFiles:
   - docs/pkg/models/shared/virtualwebhooktype.md
   - docs/pkg/models/shared/virtualwebhookupdatedgte.md
   - docs/pkg/models/shared/virtualwebhookuserid.md
+  - docs/pkg/models/shared/virtualwebhookusermentionedid.md
   - docs/pkg/models/shared/webhook.md
   - docs/pkg/models/shared/webhooktype.md
   - docs/pkg/models/shared/weekstart.md
@@ -2409,6 +2469,7 @@ generatedFiles:
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
   - docs/sdks/balancesheet/README.md
+  - docs/sdks/benefit/README.md
   - docs/sdks/bill/README.md
   - docs/sdks/branch/README.md
   - docs/sdks/busy/README.md
@@ -2432,6 +2493,7 @@ generatedFiles:
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/deal/README.md
+  - docs/sdks/deduction/README.md
   - docs/sdks/device/README.md
   - docs/sdks/document/README.md
   - docs/sdks/embedding/README.md
@@ -7260,9 +7322,116 @@ examples:
       responses:
         "200":
           application/json: {}
+  createHrisBenefit:
+    speakeasy-default-create-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createHrisDeduction:
+    speakeasy-default-create-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getHrisBenefit:
+    speakeasy-default-get-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getHrisDeduction:
+    speakeasy-default-get-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listHrisBenefits:
+    speakeasy-default-list-hris-benefits:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listHrisDeductions:
+    speakeasy-default-list-hris-deductions:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchHrisBenefit:
+    speakeasy-default-patch-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchHrisDeduction:
+    speakeasy-default-patch-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeHrisBenefit:
+    speakeasy-default-remove-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeHrisDeduction:
+    speakeasy-default-remove-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisBenefit:
+    speakeasy-default-update-hris-benefit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateHrisDeduction:
+    speakeasy-default-update-hris-deduction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `UnifiedTo.Uc.GetUcCall()`: **Added**
-  * `UnifiedTo.Call.GetUcCall()`: **Added**
+releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Hris.CreateHrisBenefit()`: **Added**\n* `UnifiedTo.Hris.CreateHrisDeduction()`: **Added**\n* `UnifiedTo.Hris.GetHrisBenefit()`: **Added**\n* `UnifiedTo.Hris.GetHrisDeduction()`: **Added**\n* `UnifiedTo.Hris.ListHrisBenefits()`: **Added**\n* `UnifiedTo.Hris.ListHrisDeductions()`: **Added**\n* `UnifiedTo.Hris.PatchHrisBenefit()`: **Added**\n* `UnifiedTo.Hris.PatchHrisDeduction()`: **Added**\n* `UnifiedTo.Hris.RemoveHrisBenefit()`: **Added**\n* `UnifiedTo.Hris.RemoveHrisDeduction()`: **Added**\n* `UnifiedTo.Hris.UpdateHrisBenefit()`: **Added**\n* `UnifiedTo.Hris.UpdateHrisDeduction()`: **Added**\n* `UnifiedTo.Benefit.CreateHrisBenefit()`: **Added**\n* `UnifiedTo.Benefit.GetHrisBenefit()`: **Added**\n* `UnifiedTo.Benefit.ListHrisBenefits()`: **Added**\n* `UnifiedTo.Benefit.PatchHrisBenefit()`: **Added**\n* `UnifiedTo.Benefit.RemoveHrisBenefit()`: **Added**\n* `UnifiedTo.Benefit.UpdateHrisBenefit()`: **Added**\n* `UnifiedTo.Deduction.CreateHrisDeduction()`: **Added**\n* `UnifiedTo.Deduction.GetHrisDeduction()`: **Added**\n* `UnifiedTo.Deduction.ListHrisDeductions()`: **Added**\n* `UnifiedTo.Deduction.PatchHrisDeduction()`: **Added**\n* `UnifiedTo.Deduction.RemoveHrisDeduction()`: **Added**\n* `UnifiedTo.Deduction.UpdateHrisDeduction()`: **Added**\n* `UnifiedTo.Accounting.CreateAccountingBill()`: \n  *  `request.Request.AccountingBill.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.CreateAccountingCreditmemo()`: \n  *  `request.Request.AccountingCreditmemo.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.CreateAccountingExpense()`: \n  *  `request.Request.AccountingExpense.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.CreateAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.CreateAccountingOrder()`: \n  *  `request.Request.AccountingOrder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.CreateAccountingPurchaseorder()`: \n  *  `request.Request.AccountingPurchaseorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.CreateAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.GetAccountingBill()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.GetAccountingCreditmemo()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.GetAccountingExpense()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.GetAccountingInvoice()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.GetAccountingOrder()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.GetAccountingPurchaseorder()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.GetAccountingSalesorder()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.ListAccountingBills()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.ListAccountingCreditmemoes()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.ListAccountingExpenses()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.ListAccountingInvoices()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.ListAccountingOrders()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.ListAccountingPurchaseorders()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.ListAccountingSalesorders()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.PatchAccountingBill()`: \n  *  `request.Request.AccountingBill.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.PatchAccountingCreditmemo()`: \n  *  `request.Request.AccountingCreditmemo.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.PatchAccountingExpense()`: \n  *  `request.Request.AccountingExpense.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.PatchAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.PatchAccountingOrder()`: \n  *  `request.Request.AccountingOrder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.PatchAccountingPurchaseorder()`: \n  *  `request.Request.AccountingPurchaseorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.PatchAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingBill()`: \n  *  `request.Request.AccountingBill.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingCreditmemo()`: \n  *  `request.Request.AccountingCreditmemo.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingExpense()`: \n  *  `request.Request.AccountingExpense.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingOrder()`: \n  *  `request.Request.AccountingOrder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingPurchaseorder()`: \n  *  `request.Request.AccountingPurchaseorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Bill.CreateAccountingBill()`: \n  *  `request.Request.AccountingBill.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Bill.GetAccountingBill()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Bill.ListAccountingBills()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Bill.PatchAccountingBill()`: \n  *  `request.Request.AccountingBill.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Bill.UpdateAccountingBill()`: \n  *  `request.Request.AccountingBill.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Creditmemo.CreateAccountingCreditmemo()`: \n  *  `request.Request.AccountingCreditmemo.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Creditmemo.GetAccountingCreditmemo()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Creditmemo.ListAccountingCreditmemoes()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Creditmemo.PatchAccountingCreditmemo()`: \n  *  `request.Request.AccountingCreditmemo.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Creditmemo.UpdateAccountingCreditmemo()`: \n  *  `request.Request.AccountingCreditmemo.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Expense.CreateAccountingExpense()`: \n  *  `request.Request.AccountingExpense.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Expense.GetAccountingExpense()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Expense.ListAccountingExpenses()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Expense.PatchAccountingExpense()`: \n  *  `request.Request.AccountingExpense.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Expense.UpdateAccountingExpense()`: \n  *  `request.Request.AccountingExpense.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Invoice.CreateAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Invoice.GetAccountingInvoice()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Invoice.ListAccountingInvoices()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Invoice.PatchAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Invoice.UpdateAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Order.CreateAccountingOrder()`: \n  *  `request.Request.AccountingOrder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Order.GetAccountingOrder()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Order.ListAccountingOrders()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Order.PatchAccountingOrder()`: \n  *  `request.Request.AccountingOrder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Order.UpdateAccountingOrder()`: \n  *  `request.Request.AccountingOrder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Purchaseorder.CreateAccountingPurchaseorder()`: \n  *  `request.Request.AccountingPurchaseorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Purchaseorder.GetAccountingPurchaseorder()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Purchaseorder.ListAccountingPurchaseorders()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Purchaseorder.PatchAccountingPurchaseorder()`: \n  *  `request.Request.AccountingPurchaseorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Purchaseorder.UpdateAccountingPurchaseorder()`: \n  *  `request.Request.AccountingPurchaseorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Salesorder.CreateAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Salesorder.GetAccountingSalesorder()`:  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Salesorder.ListAccountingSalesorders()`:  `response.[].Lineitems.[].Locations` **Added**\n* `UnifiedTo.Salesorder.PatchAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Salesorder.UpdateAccountingSalesorder()`: \n  *  `request.Request.AccountingSalesorder.Lineitems.[].Locations` **Added**\n  *  `response.Lineitems.[].Locations` **Added**\n* `UnifiedTo.Hris.GetHrisPayslip()`:  `response.Deduction` **Added**\n* `UnifiedTo.Hris.ListHrisPayslips()`:  `response.[].Deduction` **Added**\n* `UnifiedTo.Payslip.GetHrisPayslip()`:  `response.Deduction` **Added**\n* `UnifiedTo.Payslip.ListHrisPayslips()`:  `response.[].Deduction` **Added**\n* `UnifiedTo.Messaging.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.MessageThreadIdentifier` **Added**\n  *  `response.MessageThreadIdentifier` **Added**\n* `UnifiedTo.Messaging.GetMessagingMessage()`:  `response.MessageThreadIdentifier` **Added**\n* `UnifiedTo.Messaging.ListMessagingMessages()`: \n  *  `request.Request.UserMentionedId` **Added**\n  *  `response.[].MessageThreadIdentifier` **Added**\n* `UnifiedTo.Messaging.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.MessageThreadIdentifier` **Added**\n  *  `response.MessageThreadIdentifier` **Added**\n* `UnifiedTo.Messaging.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.MessageThreadIdentifier` **Added**\n  *  `response.MessageThreadIdentifier` **Added**\n* `UnifiedTo.Message.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.MessageThreadIdentifier` **Added**\n  *  `response.MessageThreadIdentifier` **Added**\n* `UnifiedTo.Message.GetMessagingMessage()`:  `response.MessageThreadIdentifier` **Added**\n* `UnifiedTo.Message.ListMessagingMessages()`: \n  *  `request.Request.UserMentionedId` **Added**\n  *  `response.[].MessageThreadIdentifier` **Added**\n* `UnifiedTo.Message.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.MessageThreadIdentifier` **Added**\n  *  `response.MessageThreadIdentifier` **Added**\n* `UnifiedTo.Message.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.MessageThreadIdentifier` **Added**\n  *  `response.MessageThreadIdentifier` **Added**\n* `UnifiedTo.Uc.GetUcCall()`:  `response` **Changed**\n* `UnifiedTo.Uc.ListUcCalls()`:  `response.[]` **Changed**\n* `UnifiedTo.Call.GetUcCall()`:  `response` **Changed**\n* `UnifiedTo.Call.ListUcCalls()`:  `response.[]` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.{}` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.{}` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.{}` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.{}` **Changed**\n"

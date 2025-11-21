@@ -59,6 +59,8 @@
 | `ObjectTypeHrisLocation`            | hris_location                       |
 | `ObjectTypeHrisDevice`              | hris_device                         |
 | `ObjectTypeHrisTimeshift`           | hris_timeshift                      |
+| `ObjectTypeHrisDeduction`           | hris_deduction                      |
+| `ObjectTypeHrisBenefit`             | hris_benefit                        |
 | `ObjectTypeMartechList`             | martech_list                        |
 | `ObjectTypeMartechMember`           | martech_member                      |
 | `ObjectTypePassthrough`             | passthrough                         |

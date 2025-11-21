@@ -9,9 +9,11 @@ import (
 
 type UcCall struct {
 	ContactID *string        `json:"contact_id,omitempty"`
+	Contacts  []UcContact    `json:"contacts,omitempty"`
 	CreatedAt *time.Time     `json:"created_at,omitempty"`
 	EndAt     *time.Time     `json:"end_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
+	IsPrivate *bool          `json:"is_private,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
 	StartAt   *time.Time     `json:"start_at,omitempty"`
 	// The telephone number called
@@ -38,6 +40,13 @@ func (u *UcCall) GetContactID() *string {
 	return u.ContactID
 }
 
+func (u *UcCall) GetContacts() []UcContact {
+	if u == nil {
+		return nil
+	}
+	return u.Contacts
+}
+
 func (u *UcCall) GetCreatedAt() *time.Time {
 	if u == nil {
 		return nil
@@ -57,6 +66,13 @@ func (u *UcCall) GetID() *string {
 		return nil
 	}
 	return u.ID
+}
+
+func (u *UcCall) GetIsPrivate() *bool {
+	if u == nil {
+		return nil
+	}
+	return u.IsPrivate
 }
 
 func (u *UcCall) GetRaw() map[string]any {

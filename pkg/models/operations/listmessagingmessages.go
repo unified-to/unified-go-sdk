@@ -8,7 +8,7 @@ import (
 )
 
 type ListMessagingMessagesRequest struct {
-	// The channel ID to filter by
+	// The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
 	ChannelID *string `queryParam:"style=form,explode=true,name=channel_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
@@ -36,6 +36,8 @@ type ListMessagingMessagesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
+	// The user/employee ID to filter by
+	UserMentionedID *string `queryParam:"style=form,explode=true,name=user_mentioned_id"`
 }
 
 func (l *ListMessagingMessagesRequest) GetChannelID() *string {
@@ -148,6 +150,13 @@ func (l *ListMessagingMessagesRequest) GetUserID() *string {
 		return nil
 	}
 	return l.UserID
+}
+
+func (l *ListMessagingMessagesRequest) GetUserMentionedID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.UserMentionedID
 }
 
 type ListMessagingMessagesResponse struct {
