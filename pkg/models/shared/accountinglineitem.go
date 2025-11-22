@@ -17,6 +17,7 @@ type AccountingLineitem struct {
 	ItemID          *string               `json:"item_id,omitempty"`
 	ItemName        *string               `json:"item_name,omitempty"`
 	ItemSku         *string               `json:"item_sku,omitempty"`
+	ItemVariants    []AccountingReference `json:"item_variants,omitempty"`
 	Locations       []AccountingReference `json:"locations,omitempty"`
 	Notes           *string               `json:"notes,omitempty"`
 	RefundAmount    *float64              `json:"refund_amount,omitempty"`
@@ -101,6 +102,13 @@ func (a *AccountingLineitem) GetItemSku() *string {
 		return nil
 	}
 	return a.ItemSku
+}
+
+func (a *AccountingLineitem) GetItemVariants() []AccountingReference {
+	if a == nil {
+		return nil
+	}
+	return a.ItemVariants
 }
 
 func (a *AccountingLineitem) GetLocations() []AccountingReference {
