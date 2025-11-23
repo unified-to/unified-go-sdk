@@ -60,6 +60,8 @@
 | `PropertyConnectionPermissionsCommerceLocationWrite`        | commerce_location_write                                     |
 | `PropertyConnectionPermissionsCommerceReviewRead`           | commerce_review_read                                        |
 | `PropertyConnectionPermissionsCommerceReviewWrite`          | commerce_review_write                                       |
+| `PropertyConnectionPermissionsCommerceSaleschannelRead`     | commerce_saleschannel_read                                  |
+| `PropertyConnectionPermissionsCommerceSaleschannelWrite`    | commerce_saleschannel_write                                 |
 | `PropertyConnectionPermissionsVerificationPackageRead`      | verification_package_read                                   |
 | `PropertyConnectionPermissionsVerificationRequestRead`      | verification_request_read                                   |
 | `PropertyConnectionPermissionsVerificationRequestWrite`     | verification_request_write                                  |

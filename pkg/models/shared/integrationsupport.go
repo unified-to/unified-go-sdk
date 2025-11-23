@@ -38,6 +38,18 @@ func (e ListApplicationID) ToPointer() *ListApplicationID {
 	return &e
 }
 
+type ListBenefitID string
+
+const (
+	ListBenefitIDSupportedRequired ListBenefitID = "supported-required"
+	ListBenefitIDSupported         ListBenefitID = "supported"
+	ListBenefitIDNotSupported      ListBenefitID = "not-supported"
+)
+
+func (e ListBenefitID) ToPointer() *ListBenefitID {
+	return &e
+}
+
 type ListBranchID string
 
 const (
@@ -563,6 +575,18 @@ const (
 )
 
 func (e ListRootID) ToPointer() *ListRootID {
+	return &e
+}
+
+type ListSaleschannelID string
+
+const (
+	ListSaleschannelIDSupportedRequired ListSaleschannelID = "supported-required"
+	ListSaleschannelIDSupported         ListSaleschannelID = "supported"
+	ListSaleschannelIDNotSupported      ListSaleschannelID = "not-supported"
+)
+
+func (e ListSaleschannelID) ToPointer() *ListSaleschannelID {
 	return &e
 }
 
@@ -1226,6 +1250,18 @@ func (e VirtualWebhookRepoID) ToPointer() *VirtualWebhookRepoID {
 	return &e
 }
 
+type VirtualWebhookSaleschannelID string
+
+const (
+	VirtualWebhookSaleschannelIDSupportedRequired VirtualWebhookSaleschannelID = "supported-required"
+	VirtualWebhookSaleschannelIDSupported         VirtualWebhookSaleschannelID = "supported"
+	VirtualWebhookSaleschannelIDNotSupported      VirtualWebhookSaleschannelID = "not-supported"
+)
+
+func (e VirtualWebhookSaleschannelID) ToPointer() *VirtualWebhookSaleschannelID {
+	return &e
+}
+
 type VirtualWebhookSpaceID string
 
 const (
@@ -1339,6 +1375,7 @@ type IntegrationSupport struct {
 	InboundFields             map[string]string          `json:"inbound_fields,omitempty"`
 	ListAccountID             *ListAccountID             `json:"list_account_id,omitempty"`
 	ListApplicationID         *ListApplicationID         `json:"list_application_id,omitempty"`
+	ListBenefitID             *ListBenefitID             `json:"list_benefit_id,omitempty"`
 	ListBranchID              *ListBranchID              `json:"list_branch_id,omitempty"`
 	ListCalendarID            *ListCalendarID            `json:"list_calendar_id,omitempty"`
 	ListCallID                *ListCallID                `json:"list_call_id,omitempty"`
@@ -1383,6 +1420,7 @@ type IntegrationSupport struct {
 	ListRawFields             *ListRawFields             `json:"list_raw_fields,omitempty"`
 	ListRepoID                *ListRepoID                `json:"list_repo_id,omitempty"`
 	ListRootID                *ListRootID                `json:"list_root_id,omitempty"`
+	ListSaleschannelID        *ListSaleschannelID        `json:"list_saleschannel_id,omitempty"`
 	ListSortByCreatedAt       *ListSortByCreatedAt       `json:"list_sort_by_created_at,omitempty"`
 	ListSortByName            *ListSortByName            `json:"list_sort_by_name,omitempty"`
 	ListSortByUpdatedAt       *ListSortByUpdatedAt       `json:"list_sort_by_updated_at,omitempty"`
@@ -1443,6 +1481,7 @@ type IntegrationSupport struct {
 	VirtualWebhookPipelineID      *VirtualWebhookPipelineID                `json:"virtual_webhook_pipeline_id,omitempty"`
 	VirtualWebhookProjectID       *VirtualWebhookProjectID                 `json:"virtual_webhook_project_id,omitempty"`
 	VirtualWebhookRepoID          *VirtualWebhookRepoID                    `json:"virtual_webhook_repo_id,omitempty"`
+	VirtualWebhookSaleschannelID  *VirtualWebhookSaleschannelID            `json:"virtual_webhook_saleschannel_id,omitempty"`
 	VirtualWebhookSpaceID         *VirtualWebhookSpaceID                   `json:"virtual_webhook_space_id,omitempty"`
 	VirtualWebhookStartGte        *VirtualWebhookStartGte                  `json:"virtual_webhook_start_gte,omitempty"`
 	VirtualWebhookStatus          *VirtualWebhookStatus                    `json:"virtual_webhook_status,omitempty"`
@@ -1481,6 +1520,13 @@ func (i *IntegrationSupport) GetListApplicationID() *ListApplicationID {
 		return nil
 	}
 	return i.ListApplicationID
+}
+
+func (i *IntegrationSupport) GetListBenefitID() *ListBenefitID {
+	if i == nil {
+		return nil
+	}
+	return i.ListBenefitID
 }
 
 func (i *IntegrationSupport) GetListBranchID() *ListBranchID {
@@ -1789,6 +1835,13 @@ func (i *IntegrationSupport) GetListRootID() *ListRootID {
 		return nil
 	}
 	return i.ListRootID
+}
+
+func (i *IntegrationSupport) GetListSaleschannelID() *ListSaleschannelID {
+	if i == nil {
+		return nil
+	}
+	return i.ListSaleschannelID
 }
 
 func (i *IntegrationSupport) GetListSortByCreatedAt() *ListSortByCreatedAt {
@@ -2202,6 +2255,13 @@ func (i *IntegrationSupport) GetVirtualWebhookRepoID() *VirtualWebhookRepoID {
 		return nil
 	}
 	return i.VirtualWebhookRepoID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookSaleschannelID() *VirtualWebhookSaleschannelID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookSaleschannelID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookSpaceID() *VirtualWebhookSpaceID {

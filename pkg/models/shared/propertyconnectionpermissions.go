@@ -60,6 +60,8 @@ const (
 	PropertyConnectionPermissionsCommerceLocationWrite        PropertyConnectionPermissions = "commerce_location_write"
 	PropertyConnectionPermissionsCommerceReviewRead           PropertyConnectionPermissions = "commerce_review_read"
 	PropertyConnectionPermissionsCommerceReviewWrite          PropertyConnectionPermissions = "commerce_review_write"
+	PropertyConnectionPermissionsCommerceSaleschannelRead     PropertyConnectionPermissions = "commerce_saleschannel_read"
+	PropertyConnectionPermissionsCommerceSaleschannelWrite    PropertyConnectionPermissions = "commerce_saleschannel_write"
 	PropertyConnectionPermissionsVerificationPackageRead      PropertyConnectionPermissions = "verification_package_read"
 	PropertyConnectionPermissionsVerificationRequestRead      PropertyConnectionPermissions = "verification_request_read"
 	PropertyConnectionPermissionsVerificationRequestWrite     PropertyConnectionPermissions = "verification_request_write"

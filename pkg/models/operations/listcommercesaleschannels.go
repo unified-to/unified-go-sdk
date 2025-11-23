@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-type ListCommerceCollectionsRequest struct {
+type ListCommerceSaleschannelsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
@@ -15,107 +15,81 @@ type ListCommerceCollectionsRequest struct {
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The parent ID to filter by
-	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-	Raw *string `queryParam:"style=form,explode=true,name=raw"`
-	// The saleschannel ID to filter by
-	SaleschannelID *string `queryParam:"style=form,explode=true,name=saleschannel_id"`
-	Sort           *string `queryParam:"style=form,explode=true,name=sort"`
-	Type           *string `queryParam:"style=form,explode=true,name=type"`
+	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (l *ListCommerceCollectionsRequest) GetConnectionID() string {
+func (l *ListCommerceSaleschannelsRequest) GetConnectionID() string {
 	if l == nil {
 		return ""
 	}
 	return l.ConnectionID
 }
 
-func (l *ListCommerceCollectionsRequest) GetFields() []string {
+func (l *ListCommerceSaleschannelsRequest) GetFields() []string {
 	if l == nil {
 		return nil
 	}
 	return l.Fields
 }
 
-func (l *ListCommerceCollectionsRequest) GetLimit() *float64 {
+func (l *ListCommerceSaleschannelsRequest) GetLimit() *float64 {
 	if l == nil {
 		return nil
 	}
 	return l.Limit
 }
 
-func (l *ListCommerceCollectionsRequest) GetOffset() *float64 {
+func (l *ListCommerceSaleschannelsRequest) GetOffset() *float64 {
 	if l == nil {
 		return nil
 	}
 	return l.Offset
 }
 
-func (l *ListCommerceCollectionsRequest) GetOrder() *string {
+func (l *ListCommerceSaleschannelsRequest) GetOrder() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Order
 }
 
-func (l *ListCommerceCollectionsRequest) GetParentID() *string {
-	if l == nil {
-		return nil
-	}
-	return l.ParentID
-}
-
-func (l *ListCommerceCollectionsRequest) GetQuery() *string {
+func (l *ListCommerceSaleschannelsRequest) GetQuery() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Query
 }
 
-func (l *ListCommerceCollectionsRequest) GetRaw() *string {
+func (l *ListCommerceSaleschannelsRequest) GetRaw() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Raw
 }
 
-func (l *ListCommerceCollectionsRequest) GetSaleschannelID() *string {
-	if l == nil {
-		return nil
-	}
-	return l.SaleschannelID
-}
-
-func (l *ListCommerceCollectionsRequest) GetSort() *string {
+func (l *ListCommerceSaleschannelsRequest) GetSort() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Sort
 }
 
-func (l *ListCommerceCollectionsRequest) GetType() *string {
-	if l == nil {
-		return nil
-	}
-	return l.Type
-}
-
-func (l *ListCommerceCollectionsRequest) GetUpdatedGte() *string {
+func (l *ListCommerceSaleschannelsRequest) GetUpdatedGte() *string {
 	if l == nil {
 		return nil
 	}
 	return l.UpdatedGte
 }
 
-type ListCommerceCollectionsResponse struct {
+type ListCommerceSaleschannelsResponse struct {
 	// Successful
-	CommerceCollections []shared.CommerceCollection
+	CommerceSaleschannels []shared.CommerceSaleschannel
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -124,28 +98,28 @@ type ListCommerceCollectionsResponse struct {
 	RawResponse *http.Response
 }
 
-func (l *ListCommerceCollectionsResponse) GetCommerceCollections() []shared.CommerceCollection {
+func (l *ListCommerceSaleschannelsResponse) GetCommerceSaleschannels() []shared.CommerceSaleschannel {
 	if l == nil {
 		return nil
 	}
-	return l.CommerceCollections
+	return l.CommerceSaleschannels
 }
 
-func (l *ListCommerceCollectionsResponse) GetContentType() string {
+func (l *ListCommerceSaleschannelsResponse) GetContentType() string {
 	if l == nil {
 		return ""
 	}
 	return l.ContentType
 }
 
-func (l *ListCommerceCollectionsResponse) GetStatusCode() int {
+func (l *ListCommerceSaleschannelsResponse) GetStatusCode() int {
 	if l == nil {
 		return 0
 	}
 	return l.StatusCode
 }
 
-func (l *ListCommerceCollectionsResponse) GetRawResponse() *http.Response {
+func (l *ListCommerceSaleschannelsResponse) GetRawResponse() *http.Response {
 	if l == nil {
 		return nil
 	}

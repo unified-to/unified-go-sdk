@@ -21,14 +21,12 @@ func (e CommerceCollectionType) ToPointer() *CommerceCollectionType {
 
 // CommerceCollection - A collection of items/products/services
 type CommerceCollection struct {
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	ID          *string    `json:"id,omitempty"`
-	IsActive    *bool      `json:"is_active,omitempty"`
-	IsFeatured  *bool      `json:"is_featured,omitempty"`
-	IsVisible   *bool      `json:"is_visible,omitempty"`
-	// includes the list of metadata_metadata required to create a commerce_item under the respective commerce_collection
-	ItemMetadata      []CommerceMetadata      `json:"item_metadata,omitempty"`
+	CreatedAt         *time.Time              `json:"created_at,omitempty"`
+	Description       *string                 `json:"description,omitempty"`
+	ID                *string                 `json:"id,omitempty"`
+	IsActive          *bool                   `json:"is_active,omitempty"`
+	IsFeatured        *bool                   `json:"is_featured,omitempty"`
+	IsVisible         *bool                   `json:"is_visible,omitempty"`
 	Media             []CommerceItemMedia     `json:"media,omitempty"`
 	Metadata          []CommerceMetadata      `json:"metadata,omitempty"`
 	Name              string                  `json:"name"`
@@ -92,13 +90,6 @@ func (c *CommerceCollection) GetIsVisible() *bool {
 		return nil
 	}
 	return c.IsVisible
-}
-
-func (c *CommerceCollection) GetItemMetadata() []CommerceMetadata {
-	if c == nil {
-		return nil
-	}
-	return c.ItemMetadata
 }
 
 func (c *CommerceCollection) GetMedia() []CommerceItemMedia {

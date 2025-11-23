@@ -96,6 +96,7 @@ type UnifiedTo struct {
 	Item              *Item
 	Location          *Location
 	Review            *Review
+	Saleschannel      *Saleschannel
 	Crm               *Crm
 	Deal              *Deal
 	Lead              *Lead
@@ -241,9 +242,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.34.9",
+		SDKVersion: "0.34.10",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.34.9 2.760.2 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.34.10 2.760.2 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -305,6 +306,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Item = newItem(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Location = newLocation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Review = newReview(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Saleschannel = newSaleschannel(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Crm = newCrm(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Deal = newDeal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Lead = newLead(sdk, sdk.sdkConfiguration, sdk.hooks)

@@ -65,6 +65,7 @@ const (
 	ObjectTypeCommerceInventory       ObjectType = "commerce_inventory"
 	ObjectTypeCommerceLocation        ObjectType = "commerce_location"
 	ObjectTypeCommerceReview          ObjectType = "commerce_review"
+	ObjectTypeCommerceSaleschannel    ObjectType = "commerce_saleschannel"
 	ObjectTypeVerificationPackage     ObjectType = "verification_package"
 	ObjectTypeVerificationRequest     ObjectType = "verification_request"
 	ObjectTypeAtsActivity             ObjectType = "ats_activity"
