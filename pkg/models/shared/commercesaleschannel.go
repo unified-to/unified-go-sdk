@@ -9,15 +9,14 @@ import (
 
 type CommerceSaleschannel struct {
 	// points to a CommerceCollection
-	Collections  []CommerceReference `json:"collections,omitempty"`
-	CreatedAt    *time.Time          `json:"created_at,omitempty"`
-	Description  *string             `json:"description,omitempty"`
-	ID           *string             `json:"id,omitempty"`
-	IsActive     *bool               `json:"is_active,omitempty"`
-	ItemMetadata []CommerceMetadata  `json:"item_metadata,omitempty"`
-	Raw          map[string]any      `json:"raw,omitempty"`
-	Slug         *string             `json:"slug,omitempty"`
-	UpdatedAt    *time.Time          `json:"updated_at,omitempty"`
+	Collections []CommerceReference `json:"collections,omitempty"`
+	CreatedAt   *time.Time          `json:"created_at,omitempty"`
+	Description *string             `json:"description,omitempty"`
+	ID          *string             `json:"id,omitempty"`
+	IsActive    *bool               `json:"is_active,omitempty"`
+	Raw         map[string]any      `json:"raw,omitempty"`
+	Slug        *string             `json:"slug,omitempty"`
+	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
 }
 
 func (c CommerceSaleschannel) MarshalJSON() ([]byte, error) {
@@ -64,13 +63,6 @@ func (c *CommerceSaleschannel) GetIsActive() *bool {
 		return nil
 	}
 	return c.IsActive
-}
-
-func (c *CommerceSaleschannel) GetItemMetadata() []CommerceMetadata {
-	if c == nil {
-		return nil
-	}
-	return c.ItemMetadata
 }
 
 func (c *CommerceSaleschannel) GetRaw() map[string]any {

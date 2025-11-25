@@ -531,14 +531,23 @@ func (u CommerceMetadataValue) MarshalJSON() ([]byte, error) {
 }
 
 type CommerceMetadata struct {
-	ExtraData *CommerceMetadataExtraData `json:"extra_data,omitempty"`
-	Format    *CommerceMetadataFormat    `json:"format,omitempty"`
-	ID        *string                    `json:"id,omitempty"`
-	Key       *string                    `json:"key,omitempty"`
-	Namespace *string                    `json:"namespace,omitempty"`
-	Slug      *string                    `json:"slug,omitempty"`
-	Type      *string                    `json:"type,omitempty"`
-	Value     *CommerceMetadataValue     `json:"value,omitempty"`
+	Description *string                    `json:"description,omitempty"`
+	ExtraData   *CommerceMetadataExtraData `json:"extra_data,omitempty"`
+	Format      *CommerceMetadataFormat    `json:"format,omitempty"`
+	ID          *string                    `json:"id,omitempty"`
+	IsRequired  *bool                      `json:"is_required,omitempty"`
+	Key         *string                    `json:"key,omitempty"`
+	Namespace   *string                    `json:"namespace,omitempty"`
+	Slug        *string                    `json:"slug,omitempty"`
+	Type        *string                    `json:"type,omitempty"`
+	Value       *CommerceMetadataValue     `json:"value,omitempty"`
+}
+
+func (c *CommerceMetadata) GetDescription() *string {
+	if c == nil {
+		return nil
+	}
+	return c.Description
 }
 
 func (c *CommerceMetadata) GetExtraData() *CommerceMetadataExtraData {
@@ -560,6 +569,13 @@ func (c *CommerceMetadata) GetID() *string {
 		return nil
 	}
 	return c.ID
+}
+
+func (c *CommerceMetadata) GetIsRequired() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.IsRequired
 }
 
 func (c *CommerceMetadata) GetKey() *string {
