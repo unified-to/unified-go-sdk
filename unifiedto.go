@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.760.2
+// Generated from OpenAPI doc version 1.0 and generator version 2.763.3
 
 import (
 	"context"
@@ -158,6 +158,7 @@ type UnifiedTo struct {
 	Unified           *Unified
 	Apicall           *Apicall
 	Connection        *Connection
+	Environment       *Environment
 	Integration       *Integration
 	Auth              *Auth
 	Login             *Login
@@ -242,9 +243,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.34.11",
+		SDKVersion: "0.34.12",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.34.11 2.760.2 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.34.12 2.763.3 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -368,6 +369,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Unified = newUnified(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Apicall = newApicall(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Connection = newConnection(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Environment = newEnvironment(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Integration = newIntegration(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Auth = newAuth(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Login = newLogin(sdk, sdk.sdkConfiguration, sdk.hooks)

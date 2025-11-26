@@ -13,6 +13,17 @@ func (e ScimPhotoType) ToPointer() *ScimPhotoType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ScimPhotoType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "photo", "thumbnail":
+			return true
+		}
+	}
+	return false
+}
+
 type ScimPhoto struct {
 	Display *string        `json:"display,omitempty"`
 	Primary *bool          `json:"primary,omitempty"`

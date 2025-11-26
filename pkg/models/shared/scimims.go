@@ -19,6 +19,17 @@ func (e ScimImsType) ToPointer() *ScimImsType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ScimImsType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "aim", "qtalk", "icq", "xmpp", "msn", "skype", "qq", "yahoo":
+			return true
+		}
+	}
+	return false
+}
+
 type ScimIms struct {
 	Display *string      `json:"display,omitempty"`
 	Primary *bool        `json:"primary,omitempty"`

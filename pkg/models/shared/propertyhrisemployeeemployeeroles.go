@@ -15,3 +15,14 @@ const (
 func (e PropertyHrisEmployeeEmployeeRoles) ToPointer() *PropertyHrisEmployeeEmployeeRoles {
 	return &e
 }
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyHrisEmployeeEmployeeRoles) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ADMIN", "MANAGER", "RECRUITER", "SALESREP", "INTERVIEWER":
+			return true
+		}
+	}
+	return false
+}

@@ -16,6 +16,17 @@ func (e EnrichTelephoneType) ToPointer() *EnrichTelephoneType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *EnrichTelephoneType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "WORK", "HOME", "OTHER", "FAX", "MOBILE":
+			return true
+		}
+	}
+	return false
+}
+
 type EnrichTelephone struct {
 	Telephone string               `json:"telephone"`
 	Type      *EnrichTelephoneType `json:"type,omitempty"`

@@ -14,6 +14,17 @@ func (e PropertyCalendarEventOrganizerStatus) ToPointer() *PropertyCalendarEvent
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyCalendarEventOrganizerStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ACCEPTED", "REJECTED", "TENTATIVE":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyCalendarEventOrganizer struct {
 	Email    *string                               `json:"email,omitempty"`
 	Name     *string                               `json:"name,omitempty"`

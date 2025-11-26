@@ -23,6 +23,17 @@ func (e HrisDeductionCoverageLevel) ToPointer() *HrisDeductionCoverageLevel {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisDeductionCoverageLevel) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "EMPLOYEE_ONLY", "EMPLOYEE_SPOUSE", "EMPLOYEE_CHILD", "EMPLOYEE_CHILDREN", "EMPLOYEE_FAMILY", "FAMILY", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisDeductionFrequency string
 
 const (
@@ -39,6 +50,17 @@ func (e HrisDeductionFrequency) ToPointer() *HrisDeductionFrequency {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisDeductionFrequency) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisDeductionType string
 
 const (
@@ -48,6 +70,17 @@ const (
 
 func (e HrisDeductionType) ToPointer() *HrisDeductionType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisDeductionType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "FIXED", "PERCENTAGE":
+			return true
+		}
+	}
+	return false
 }
 
 // HrisDeduction - Employee-specific deduction/benefit enrolment.

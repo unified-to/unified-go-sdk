@@ -29,6 +29,17 @@ func (e MetadataMetadataFormat) ToPointer() *MetadataMetadataFormat {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *MetadataMetadataFormat) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TEXT", "NUMBER", "DATE", "BOOLEAN", "FILE", "TEXTAREA", "SINGLE_SELECT", "MULTIPLE_SELECT", "MEASUREMENT", "PRICE", "YES_NO", "CURRENCY", "URL":
+			return true
+		}
+	}
+	return false
+}
+
 type MetadataMetadata struct {
 	CreatedAt      *time.Time              `json:"created_at,omitempty"`
 	Format         *MetadataMetadataFormat `json:"format,omitempty"`

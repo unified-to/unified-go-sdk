@@ -18,6 +18,17 @@ func (e HrisCompensationFrequency) ToPointer() *HrisCompensationFrequency {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisCompensationFrequency) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisCompensationType string
 
 const (
@@ -30,6 +41,17 @@ const (
 
 func (e HrisCompensationType) ToPointer() *HrisCompensationType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisCompensationType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SALARY", "BONUS", "STOCK_OPTIONS", "EQUITY", "OTHER":
+			return true
+		}
+	}
+	return false
 }
 
 type HrisCompensation struct {

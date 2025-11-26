@@ -16,6 +16,17 @@ func (e PropertyUcCallTelephoneType) ToPointer() *PropertyUcCallTelephoneType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyUcCallTelephoneType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "WORK", "HOME", "OTHER", "FAX", "MOBILE":
+			return true
+		}
+	}
+	return false
+}
+
 // PropertyUcCallTelephone - The telephone number called
 type PropertyUcCallTelephone struct {
 	Telephone string                       `json:"telephone"`

@@ -14,6 +14,17 @@ func (e ScimAddressType) ToPointer() *ScimAddressType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ScimAddressType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "work", "home", "other":
+			return true
+		}
+	}
+	return false
+}
+
 type ScimAddress struct {
 	Country       *string          `json:"country,omitempty"`
 	Formatted     *string          `json:"formatted,omitempty"`

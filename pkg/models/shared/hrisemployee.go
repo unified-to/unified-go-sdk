@@ -18,6 +18,17 @@ func (e EmploymentStatus) ToPointer() *EmploymentStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *EmploymentStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ACTIVE", "INACTIVE":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisEmployeeEmploymentType string
 
 const (
@@ -37,6 +48,17 @@ func (e HrisEmployeeEmploymentType) ToPointer() *HrisEmployeeEmploymentType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisEmployeeEmploymentType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "FULL_TIME", "PART_TIME", "CONTRACTOR", "INTERN", "CONSULTANT", "VOLUNTEER", "CASUAL", "SEASONAL", "FREELANCE", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisEmployeeGender string
 
 const (
@@ -51,6 +73,17 @@ func (e HrisEmployeeGender) ToPointer() *HrisEmployeeGender {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisEmployeeGender) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "MALE", "FEMALE", "INTERSEX", "TRANS", "NON_BINARY":
+			return true
+		}
+	}
+	return false
+}
+
 type MaritalStatus string
 
 const (
@@ -60,6 +93,17 @@ const (
 
 func (e MaritalStatus) ToPointer() *MaritalStatus {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *MaritalStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "MARRIED", "SINGLE":
+			return true
+		}
+	}
+	return false
 }
 
 type HrisEmployee struct {

@@ -23,6 +23,17 @@ func (e AccountingPurchaseorderStatus) ToPointer() *AccountingPurchaseorderStatu
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingPurchaseorderStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingPurchaseorder struct {
 	AccountID       *string                                         `json:"account_id,omitempty"`
 	BillingAddress  *PropertyAccountingPurchaseorderBillingAddress  `json:"billing_address,omitempty"`

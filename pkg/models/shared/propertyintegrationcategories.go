@@ -33,3 +33,14 @@ const (
 func (e PropertyIntegrationCategories) ToPointer() *PropertyIntegrationCategories {
 	return &e
 }
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyIntegrationCategories) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "passthrough", "hris", "ats", "auth", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification":
+			return true
+		}
+	}
+	return false
+}

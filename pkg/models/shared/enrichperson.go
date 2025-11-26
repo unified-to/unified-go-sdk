@@ -18,6 +18,17 @@ func (e Gender) ToPointer() *Gender {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Gender) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "MALE", "FEMALE":
+			return true
+		}
+	}
+	return false
+}
+
 // EnrichPerson - A person object from an enrichment integration
 type EnrichPerson struct {
 	// The address of the person

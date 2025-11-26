@@ -20,6 +20,17 @@ func (e AtsOfferStatus) ToPointer() *AtsOfferStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AtsOfferStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "CREATED", "SENT", "ACCEPTED", "REJECTED":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsOffer struct {
 	AcceptedAt *time.Time `json:"accepted_at,omitempty"`
 	// compensation details for the offer

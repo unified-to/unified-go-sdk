@@ -20,6 +20,17 @@ func (e KmsPageType) ToPointer() *KmsPageType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *KmsPageType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "HTML", "MARKDOWN", "TEXT", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type KmsPage struct {
 	CreatedAt    *time.Time        `json:"created_at,omitempty"`
 	DownloadURL  *string           `json:"download_url,omitempty"`

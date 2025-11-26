@@ -18,6 +18,17 @@ func (e Frequency) ToPointer() *Frequency {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Frequency) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsCompensationType string
 
 const (
@@ -30,6 +41,17 @@ const (
 
 func (e AtsCompensationType) ToPointer() *AtsCompensationType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AtsCompensationType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SALARY", "BONUS", "STOCK_OPTIONS", "EQUITY", "OTHER":
+			return true
+		}
+	}
+	return false
 }
 
 type AtsCompensation struct {

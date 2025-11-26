@@ -14,6 +14,17 @@ func (e CalendarEventStatus) ToPointer() *CalendarEventStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CalendarEventStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "CANCELED", "CONFIRMED", "TENTATIVE":
+			return true
+		}
+	}
+	return false
+}
+
 type CalendarEvent struct {
 	Attachments      []CalendarAttachment            `json:"attachments,omitempty"`
 	Attendees        []CalendarAttendee              `json:"attendees,omitempty"`

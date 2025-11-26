@@ -17,6 +17,17 @@ func (e VerificationParameterType) ToPointer() *VerificationParameterType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VerificationParameterType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TEXT", "NUMBER", "MULTIPLE_CHOICE", "MULTIPLE_SELECT", "DATE", "FILE":
+			return true
+		}
+	}
+	return false
+}
+
 type VerificationParameter struct {
 	// valid file mime types
 	FileTypes  []string `json:"file_types,omitempty"`

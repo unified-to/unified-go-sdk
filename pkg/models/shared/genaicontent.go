@@ -13,6 +13,17 @@ func (e Role) ToPointer() *Role {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Role) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SYSTEM", "USER":
+			return true
+		}
+	}
+	return false
+}
+
 type GenaiContent struct {
 	Content string `json:"content"`
 	Role    *Role  `json:"role,omitempty"`

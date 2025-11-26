@@ -20,6 +20,17 @@ func (e Recommendation) ToPointer() *Recommendation {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Recommendation) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DEFINITELY_NO", "NO", "YES", "STRONG_YES":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsScorecard struct {
 	ApplicationID  *string                `json:"application_id,omitempty"`
 	CandidateID    *string                `json:"candidate_id,omitempty"`

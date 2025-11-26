@@ -21,6 +21,17 @@ func (e ProfileGender) ToPointer() *ProfileGender {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ProfileGender) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "MALE", "FEMALE", "INTERSEX", "TRANS", "NON_BINARY":
+			return true
+		}
+	}
+	return false
+}
+
 type ResponseStatus string
 
 const (
@@ -32,6 +43,17 @@ const (
 
 func (e ResponseStatus) ToPointer() *ResponseStatus {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ResponseStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "COMPLETED", "FAILED", "PASSED", "PENDING":
+			return true
+		}
+	}
+	return false
 }
 
 type VerificationRequest struct {

@@ -19,6 +19,17 @@ func (e PaymentType) ToPointer() *PaymentType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PaymentType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DIRECT", "CHEQUE", "CASH":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisPayslip struct {
 	CompanyID *string    `json:"company_id,omitempty"`
 	CreatedAt *time.Time `json:"created_at,omitempty"`

@@ -18,6 +18,17 @@ func (e PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender)
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "male", "female":
+			return true
+		}
+	}
+	return false
+}
+
 // PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User - an organization.
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User struct {
 	AdditionalManagers []ScimManager                                                            `json:"additionalManagers,omitempty"`

@@ -22,6 +22,17 @@ func (e Origin) ToPointer() *Origin {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Origin) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "AGENCY", "APPLIED", "INTERNAL", "REFERRED", "SOURCED", "UNIVERSITY":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsCandidate struct {
 	Address            *PropertyAtsCandidateAddress `json:"address,omitempty"`
 	CompanyID          *string                      `json:"company_id,omitempty"`

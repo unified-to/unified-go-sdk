@@ -18,6 +18,17 @@ func (e AtsGroupType) ToPointer() *AtsGroupType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AtsGroupType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TEAM", "GROUP", "DEPARTMENT", "DIVISION", "BUSINESS_UNIT", "BRANCH", "SUB_DEPARTMENT":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsGroup struct {
 	ID   *string       `json:"id,omitempty"`
 	Name *string       `json:"name,omitempty"`

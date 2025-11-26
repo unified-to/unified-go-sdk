@@ -17,6 +17,17 @@ func (e EncondingFormat) ToPointer() *EncondingFormat {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *EncondingFormat) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "FLOAT", "UINT8", "INT8", "BINARY", "UBINARY", "BASE64":
+			return true
+		}
+	}
+	return false
+}
+
 type GenaiEmbedding struct {
 	Content         []GenaiEmbeddingContent `json:"content,omitempty"`
 	Dimension       *float64                `json:"dimension,omitempty"`

@@ -18,6 +18,17 @@ func (e AccountingCreditmemoPaymentCollectionMethod) ToPointer() *AccountingCred
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingCreditmemoPaymentCollectionMethod) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "send_invoice", "charge_automatically":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingCreditmemoStatus string
 
 const (
@@ -32,6 +43,17 @@ const (
 
 func (e AccountingCreditmemoStatus) ToPointer() *AccountingCreditmemoStatus {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingCreditmemoStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED":
+			return true
+		}
+	}
+	return false
 }
 
 type AccountingCreditmemo struct {

@@ -14,6 +14,17 @@ func (e EnrichEmailType) ToPointer() *EnrichEmailType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *EnrichEmailType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "WORK", "HOME", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type EnrichEmail struct {
 	Email      string           `json:"email"`
 	IsVerified *bool            `json:"is_verified,omitempty"`

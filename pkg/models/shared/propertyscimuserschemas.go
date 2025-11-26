@@ -14,3 +14,14 @@ const (
 func (e PropertyScimUserSchemas) ToPointer() *PropertyScimUserSchemas {
 	return &e
 }
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyScimUserSchemas) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "urn:ietf:params:scim:schemas:core:2.0:User", "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User", "urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User", "urn:ietf:params:scim:schemas:extension:peakon:2.0:User":
+			return true
+		}
+	}
+	return false
+}

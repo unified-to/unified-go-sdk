@@ -19,6 +19,17 @@ func (e RepoPullrequestStatus) ToPointer() *RepoPullrequestStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *RepoPullrequestStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "PENDING", "APPROVED", "REJECTED":
+			return true
+		}
+	}
+	return false
+}
+
 type RepoPullrequest struct {
 	ClosedAt  *time.Time             `json:"closed_at,omitempty"`
 	CommitIds []string               `json:"commit_ids,omitempty"`

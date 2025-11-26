@@ -27,6 +27,17 @@ func (e TaxExemption) ToPointer() *TaxExemption {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *TaxExemption) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "FEDERAL_GOV", "REGION_GOV", "LOCAL_GOV", "TRIBAL_GOV", "CHARITABLE_ORG", "RELIGIOUS_ORG", "EDUCATIONAL_ORG", "MEDICAL_ORG", "RESALE", "FOREIGN", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingContact struct {
 	AssociatedContacts []AccountingAssociatedContact             `json:"associated_contacts,omitempty"`
 	BillingAddress     *PropertyAccountingContactBillingAddress  `json:"billing_address,omitempty"`

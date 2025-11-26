@@ -14,6 +14,17 @@ func (e MarketingEmailType) ToPointer() *MarketingEmailType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *MarketingEmailType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "WORK", "HOME", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type MarketingEmail struct {
 	Email string              `json:"email"`
 	Type  *MarketingEmailType `json:"type,omitempty"`

@@ -626,6 +626,12 @@ func main() {
 * [ListEnrichCompanies](docs/sdks/enrich/README.md#listenrichcompanies) - Retrieve enrichment information for a company
 * [ListEnrichPeople](docs/sdks/enrich/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
+### [Environment](docs/sdks/environment/README.md)
+
+* [CreateUnifiedEnvironment](docs/sdks/environment/README.md#createunifiedenvironment)
+* [ListUnifiedEnvironments](docs/sdks/environment/README.md#listunifiedenvironments)
+* [RemoveUnifiedEnvironment](docs/sdks/environment/README.md#removeunifiedenvironment)
+
 ### [Event](docs/sdks/event/README.md)
 
 * [CreateCalendarEvent](docs/sdks/event/README.md#createcalendarevent) - Create an event
@@ -1387,6 +1393,7 @@ func main() {
 ### [Unified](docs/sdks/unified/README.md)
 
 * [CreateUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
+* [CreateUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment)
 * [CreateUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
 * [GetUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [GetUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
@@ -1395,6 +1402,7 @@ func main() {
 * [GetUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [ListUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [ListUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
+* [ListUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments)
 * [ListUnifiedIntegrationWorkspaces](docs/sdks/unified/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [ListUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [ListUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
@@ -1403,6 +1411,7 @@ func main() {
 * [PatchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [PatchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [RemoveUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
+* [RemoveUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment)
 * [RemoveUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [UpdateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [UpdateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription

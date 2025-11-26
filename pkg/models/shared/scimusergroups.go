@@ -13,6 +13,17 @@ func (e ScimUserGroupsType) ToPointer() *ScimUserGroupsType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ScimUserGroupsType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "direct", "indirect":
+			return true
+		}
+	}
+	return false
+}
+
 type ScimUserGroups struct {
 	DollarRef *string             `json:"$ref,omitempty"`
 	Display   *string             `json:"display,omitempty"`

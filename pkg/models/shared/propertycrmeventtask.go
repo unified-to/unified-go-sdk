@@ -19,6 +19,17 @@ func (e Priority) ToPointer() *Priority {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Priority) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "HIGH", "MEDIUM", "LOW":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyCrmEventTaskStatus string
 
 const (
@@ -30,6 +41,17 @@ const (
 
 func (e PropertyCrmEventTaskStatus) ToPointer() *PropertyCrmEventTaskStatus {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyCrmEventTaskStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "COMPLETED", "NOT_STARTED", "WORK_IN_PROGRESS", "DEFERRED":
+			return true
+		}
+	}
+	return false
 }
 
 // PropertyCrmEventTask - The task object, when type = task

@@ -19,6 +19,17 @@ func (e AtsActivityType) ToPointer() *AtsActivityType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AtsActivityType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "NOTE", "TASK", "EMAIL":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsActivity struct {
 	ApplicationID *string    `json:"application_id,omitempty"`
 	Bcc           []AtsEmail `json:"bcc,omitempty"`

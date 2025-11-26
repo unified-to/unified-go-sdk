@@ -18,6 +18,17 @@ func (e PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender) ToP
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "Female", "Male":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User struct {
 	DateOfBirth *time.Time                                                           `json:"Date of Birth,omitempty"`
 	Gender      *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender `json:"Gender,omitempty"`

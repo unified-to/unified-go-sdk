@@ -17,3 +17,14 @@ const (
 func (e PropertyCalendarEventRecurrenceOnDays) ToPointer() *PropertyCalendarEventRecurrenceOnDays {
 	return &e
 }
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyCalendarEventRecurrenceOnDays) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SU", "MO", "TU", "WE", "TH", "FR", "SA":
+			return true
+		}
+	}
+	return false
+}

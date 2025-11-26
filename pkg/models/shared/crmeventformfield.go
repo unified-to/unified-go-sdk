@@ -25,6 +25,17 @@ func (e CrmEventFormFieldType) ToPointer() *CrmEventFormFieldType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CrmEventFormFieldType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TEXT", "NUMBER", "DATE", "BOOLEAN", "MULTIPLE_CHOICE", "FILE", "TEXTAREA", "SINGLE_SELECT", "MULTIPLE_SELECT", "EMAIL", "PHONE", "YES_NO", "CURRENCY", "URL":
+			return true
+		}
+	}
+	return false
+}
+
 type CrmEventFormField struct {
 	Name     *string                `json:"name,omitempty"`
 	Options  []CrmEventFormOption   `json:"options,omitempty"`

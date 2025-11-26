@@ -18,6 +18,17 @@ func (e IssueStatus) ToPointer() *IssueStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *IssueStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "COMPLETED", "NEW", "ROADMAP", "IN_PROGRESS", "ON_HOLD", "VALIDATING", "REJECTED":
+			return true
+		}
+	}
+	return false
+}
+
 type Issue struct {
 	CreatedAt      *string     `json:"created_at,omitempty"`
 	ID             *string     `json:"id,omitempty"`

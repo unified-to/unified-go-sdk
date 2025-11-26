@@ -13,6 +13,17 @@ func (e CommerceItemMediaType) ToPointer() *CommerceItemMediaType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CommerceItemMediaType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "image", "video":
+			return true
+		}
+	}
+	return false
+}
+
 type CommerceItemMedia struct {
 	Alt      *string                `json:"alt,omitempty"`
 	Height   *float64               `json:"height,omitempty"`

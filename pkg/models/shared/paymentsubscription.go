@@ -20,6 +20,17 @@ func (e IntervalUnit) ToPointer() *IntervalUnit {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *IntervalUnit) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "YEAR", "MONTH", "WEEK", "DAY":
+			return true
+		}
+	}
+	return false
+}
+
 type PaymentSubscriptionStatus string
 
 const (
@@ -31,6 +42,17 @@ const (
 
 func (e PaymentSubscriptionStatus) ToPointer() *PaymentSubscriptionStatus {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PaymentSubscriptionStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ACTIVE", "INACTIVE", "CANCELED", "PAUSED":
+			return true
+		}
+	}
+	return false
 }
 
 type PaymentSubscription struct {

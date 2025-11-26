@@ -14,6 +14,17 @@ func (e CalendarAttendeeStatus) ToPointer() *CalendarAttendeeStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CalendarAttendeeStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ACCEPTED", "REJECTED", "TENTATIVE":
+			return true
+		}
+	}
+	return false
+}
+
 type CalendarAttendee struct {
 	Email    *string                 `json:"email,omitempty"`
 	Name     *string                 `json:"name,omitempty"`

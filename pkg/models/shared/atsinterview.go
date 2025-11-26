@@ -21,6 +21,17 @@ func (e AtsInterviewStatus) ToPointer() *AtsInterviewStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AtsInterviewStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SCHEDULED", "AWAITING_FEEDBACK", "COMPLETE", "CANCELED", "NEEDS_SCHEDULING":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsInterview struct {
 	ApplicationID     *string             `json:"application_id,omitempty"`
 	CandidateID       *string             `json:"candidate_id,omitempty"`

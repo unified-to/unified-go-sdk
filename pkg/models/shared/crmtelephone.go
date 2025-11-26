@@ -16,6 +16,17 @@ func (e CrmTelephoneType) ToPointer() *CrmTelephoneType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CrmTelephoneType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "WORK", "HOME", "OTHER", "FAX", "MOBILE":
+			return true
+		}
+	}
+	return false
+}
+
 type CrmTelephone struct {
 	Telephone string            `json:"telephone"`
 	Type      *CrmTelephoneType `json:"type,omitempty"`

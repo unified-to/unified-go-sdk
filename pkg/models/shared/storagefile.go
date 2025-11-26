@@ -18,6 +18,17 @@ func (e StorageFileType) ToPointer() *StorageFileType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *StorageFileType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "FILE", "FOLDER":
+			return true
+		}
+	}
+	return false
+}
+
 type StorageFile struct {
 	CreatedAt   *time.Time          `json:"created_at,omitempty"`
 	Data        *string             `json:"data,omitempty"`

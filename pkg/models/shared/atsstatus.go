@@ -25,6 +25,17 @@ func (e AtsStatusStatus) ToPointer() *AtsStatusStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AtsStatusStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "NEW", "REVIEWING", "SCREENING", "SUBMITTED", "FIRST_INTERVIEW", "SECOND_INTERVIEW", "THIRD_INTERVIEW", "BACKGROUND_CHECK", "OFFERED", "ACCEPTED", "HIRED", "REJECTED", "DECLINED", "WITHDRAWN":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsStatus struct {
 	Description    *string          `json:"description,omitempty"`
 	ID             *string          `json:"id,omitempty"`

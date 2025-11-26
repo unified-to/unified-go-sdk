@@ -18,6 +18,17 @@ func (e Status) ToPointer() *Status {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Status) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ACTIVE", "ARCHIVED":
+			return true
+		}
+	}
+	return false
+}
+
 type Type string
 
 const (
@@ -35,6 +46,17 @@ const (
 
 func (e Type) ToPointer() *Type {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Type) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ACCOUNTS_PAYABLE", "ACCOUNTS_RECEIVABLE", "BANK", "CREDIT_CARD", "FIXED_ASSET", "LIABILITY", "EQUITY", "EXPENSE", "REVENUE", "OTHER":
+			return true
+		}
+	}
+	return false
 }
 
 // AccountingAccount - Chart of accounts

@@ -19,6 +19,17 @@ func (e TaskTaskStatus) ToPointer() *TaskTaskStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *TaskTaskStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "OPENED", "IN_PROGRESS", "COMPLETED":
+			return true
+		}
+	}
+	return false
+}
+
 type TaskTask struct {
 	AssignedUserIds []string `json:"assigned_user_ids,omitempty"`
 	// Array of attachment IDs retrieved from StorageFile.Get endpoint

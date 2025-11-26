@@ -23,6 +23,17 @@ func (e PropertyHrisPayslipDeductionCoverageLevel) ToPointer() *PropertyHrisPays
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyHrisPayslipDeductionCoverageLevel) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "EMPLOYEE_ONLY", "EMPLOYEE_SPOUSE", "EMPLOYEE_CHILD", "EMPLOYEE_CHILDREN", "EMPLOYEE_FAMILY", "FAMILY", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyHrisPayslipDeductionFrequency string
 
 const (
@@ -39,6 +50,17 @@ func (e PropertyHrisPayslipDeductionFrequency) ToPointer() *PropertyHrisPayslipD
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyHrisPayslipDeductionFrequency) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyHrisPayslipDeductionType string
 
 const (
@@ -48,6 +70,17 @@ const (
 
 func (e PropertyHrisPayslipDeductionType) ToPointer() *PropertyHrisPayslipDeductionType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyHrisPayslipDeductionType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "FIXED", "PERCENTAGE":
+			return true
+		}
+	}
+	return false
 }
 
 // PropertyHrisPayslipDeduction - // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)

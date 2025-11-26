@@ -19,6 +19,17 @@ func (e HrisTimeoffStatus) ToPointer() *HrisTimeoffStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisTimeoffStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "APPROVED", "PENDING", "DENIED":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisTimeoff struct {
 	ApprovedAt     *time.Time         `json:"approved_at,omitempty"`
 	ApproverUserID *string            `json:"approver_user_id,omitempty"`

@@ -12,3 +12,14 @@ const (
 func (e PropertyIntegrationSupportWebhookEventsUpdated) ToPointer() *PropertyIntegrationSupportWebhookEventsUpdated {
 	return &e
 }
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyIntegrationSupportWebhookEventsUpdated) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "virtual", "native":
+			return true
+		}
+	}
+	return false
+}

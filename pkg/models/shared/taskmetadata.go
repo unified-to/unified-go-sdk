@@ -280,6 +280,17 @@ func (e TaskMetadataFormat) ToPointer() *TaskMetadataFormat {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *TaskMetadataFormat) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TEXT", "NUMBER", "DATE", "BOOLEAN", "FILE", "TEXTAREA", "SINGLE_SELECT", "MULTIPLE_SELECT", "MEASUREMENT", "PRICE", "YES_NO", "CURRENCY", "URL":
+			return true
+		}
+	}
+	return false
+}
+
 type TaskMetadataSchemas1 struct {
 }
 

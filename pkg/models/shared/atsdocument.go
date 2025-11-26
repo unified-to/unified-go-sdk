@@ -22,6 +22,17 @@ func (e AtsDocumentType) ToPointer() *AtsDocumentType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AtsDocumentType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "RESUME", "COVER_LETTER", "OFFER_PACKET", "OFFER_LETTER", "TAKE_HOME_TEST", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsDocument struct {
 	ApplicationID *string          `json:"application_id,omitempty"`
 	CandidateID   *string          `json:"candidate_id,omitempty"`

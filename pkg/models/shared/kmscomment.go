@@ -20,6 +20,17 @@ func (e ContentType) ToPointer() *ContentType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ContentType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "HTML", "MARKDOWN", "TEXT", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type KmsCommentType string
 
 const (
@@ -29,6 +40,17 @@ const (
 
 func (e KmsCommentType) ToPointer() *KmsCommentType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *KmsCommentType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "PAGE_INLINE", "PAGE":
+			return true
+		}
+	}
+	return false
 }
 
 type KmsComment struct {

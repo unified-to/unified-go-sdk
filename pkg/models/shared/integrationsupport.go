@@ -14,6 +14,17 @@ func (e FromWebhook) ToPointer() *FromWebhook {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *FromWebhook) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListAccountID string
 
 const (
@@ -24,6 +35,17 @@ const (
 
 func (e ListAccountID) ToPointer() *ListAccountID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListAccountID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListApplicationID string
@@ -38,6 +60,17 @@ func (e ListApplicationID) ToPointer() *ListApplicationID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListApplicationID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListBenefitID string
 
 const (
@@ -48,6 +81,17 @@ const (
 
 func (e ListBenefitID) ToPointer() *ListBenefitID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListBenefitID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListBranchID string
@@ -62,6 +106,17 @@ func (e ListBranchID) ToPointer() *ListBranchID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListBranchID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListCalendarID string
 
 const (
@@ -72,6 +127,17 @@ const (
 
 func (e ListCalendarID) ToPointer() *ListCalendarID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCalendarID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListCallID string
@@ -86,6 +152,17 @@ func (e ListCallID) ToPointer() *ListCallID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCallID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListCandidateID string
 
 const (
@@ -96,6 +173,17 @@ const (
 
 func (e ListCandidateID) ToPointer() *ListCandidateID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCandidateID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListCategoryID string
@@ -110,6 +198,17 @@ func (e ListCategoryID) ToPointer() *ListCategoryID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCategoryID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListChannelID string
 
 const (
@@ -120,6 +219,17 @@ const (
 
 func (e ListChannelID) ToPointer() *ListChannelID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListChannelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListClassID string
@@ -134,6 +244,17 @@ func (e ListClassID) ToPointer() *ListClassID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListClassID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListCollectionID string
 
 const (
@@ -144,6 +265,17 @@ const (
 
 func (e ListCollectionID) ToPointer() *ListCollectionID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCollectionID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListCompanyID string
@@ -158,6 +290,17 @@ func (e ListCompanyID) ToPointer() *ListCompanyID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCompanyID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListContactID string
 
 const (
@@ -168,6 +311,17 @@ const (
 
 func (e ListContactID) ToPointer() *ListContactID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListContactID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListCourseID string
@@ -182,6 +336,17 @@ func (e ListCourseID) ToPointer() *ListCourseID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCourseID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListCustomerID string
 
 const (
@@ -192,6 +357,17 @@ const (
 
 func (e ListCustomerID) ToPointer() *ListCustomerID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCustomerID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListDealID string
@@ -206,6 +382,17 @@ func (e ListDealID) ToPointer() *ListDealID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListDealID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListDocumentID string
 
 const (
@@ -216,6 +403,17 @@ const (
 
 func (e ListDocumentID) ToPointer() *ListDocumentID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListDocumentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListEndLe string
@@ -230,6 +428,17 @@ func (e ListEndLe) ToPointer() *ListEndLe {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListEndLe) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListEndLt string
 
 const (
@@ -240,6 +449,17 @@ const (
 
 func (e ListEndLt) ToPointer() *ListEndLt {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListEndLt) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListEventID string
@@ -254,6 +474,17 @@ func (e ListEventID) ToPointer() *ListEventID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListEventID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListExpand string
 
 const (
@@ -264,6 +495,17 @@ const (
 
 func (e ListExpand) ToPointer() *ListExpand {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListExpand) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListExpandRecurringEvents string
@@ -278,6 +520,17 @@ func (e ListExpandRecurringEvents) ToPointer() *ListExpandRecurringEvents {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListExpandRecurringEvents) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListInstructorID string
 
 const (
@@ -288,6 +541,17 @@ const (
 
 func (e ListInstructorID) ToPointer() *ListInstructorID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListInstructorID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListInterviewID string
@@ -302,6 +566,17 @@ func (e ListInterviewID) ToPointer() *ListInterviewID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListInterviewID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListInvoiceID string
 
 const (
@@ -312,6 +587,17 @@ const (
 
 func (e ListInvoiceID) ToPointer() *ListInvoiceID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListInvoiceID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListItemID string
@@ -326,6 +612,17 @@ func (e ListItemID) ToPointer() *ListItemID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListItemID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListItemVariantID string
 
 const (
@@ -336,6 +633,17 @@ const (
 
 func (e ListItemVariantID) ToPointer() *ListItemVariantID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListItemVariantID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListJobID string
@@ -350,6 +658,17 @@ func (e ListJobID) ToPointer() *ListJobID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListJobID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListLeadID string
 
 const (
@@ -360,6 +679,17 @@ const (
 
 func (e ListLeadID) ToPointer() *ListLeadID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListLeadID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListLimit string
@@ -374,6 +704,17 @@ func (e ListLimit) ToPointer() *ListLimit {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListLimit) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListLinkID string
 
 const (
@@ -384,6 +725,17 @@ const (
 
 func (e ListLinkID) ToPointer() *ListLinkID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListLinkID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListListID string
@@ -398,6 +750,17 @@ func (e ListListID) ToPointer() *ListListID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListListID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListLocationID string
 
 const (
@@ -408,6 +771,17 @@ const (
 
 func (e ListLocationID) ToPointer() *ListLocationID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListLocationID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListOffset string
@@ -422,6 +796,17 @@ func (e ListOffset) ToPointer() *ListOffset {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListOffset) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListOrder string
 
 const (
@@ -432,6 +817,17 @@ const (
 
 func (e ListOrder) ToPointer() *ListOrder {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListOrder) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListOrgID string
@@ -446,6 +842,17 @@ func (e ListOrgID) ToPointer() *ListOrgID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListOrgID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListPackageID string
 
 const (
@@ -456,6 +863,17 @@ const (
 
 func (e ListPackageID) ToPointer() *ListPackageID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListPackageID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListPageID string
@@ -470,6 +888,17 @@ func (e ListPageID) ToPointer() *ListPageID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListPageID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListParentID string
 
 const (
@@ -480,6 +909,17 @@ const (
 
 func (e ListParentID) ToPointer() *ListParentID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListParentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListPaymentID string
@@ -494,6 +934,17 @@ func (e ListPaymentID) ToPointer() *ListPaymentID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListPaymentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListPayslipID string
 
 const (
@@ -504,6 +955,17 @@ const (
 
 func (e ListPayslipID) ToPointer() *ListPayslipID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListPayslipID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListPipelineID string
@@ -518,6 +980,17 @@ func (e ListPipelineID) ToPointer() *ListPipelineID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListPipelineID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListProjectID string
 
 const (
@@ -528,6 +1001,17 @@ const (
 
 func (e ListProjectID) ToPointer() *ListProjectID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListProjectID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListQuery string
@@ -542,6 +1026,17 @@ func (e ListQuery) ToPointer() *ListQuery {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListQuery) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListRawFields string
 
 const (
@@ -552,6 +1047,17 @@ const (
 
 func (e ListRawFields) ToPointer() *ListRawFields {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListRawFields) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListRepoID string
@@ -566,6 +1072,17 @@ func (e ListRepoID) ToPointer() *ListRepoID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListRepoID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListRootID string
 
 const (
@@ -576,6 +1093,17 @@ const (
 
 func (e ListRootID) ToPointer() *ListRootID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListRootID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListSaleschannelID string
@@ -590,6 +1118,17 @@ func (e ListSaleschannelID) ToPointer() *ListSaleschannelID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListSaleschannelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListSortByCreatedAt string
 
 const (
@@ -600,6 +1139,17 @@ const (
 
 func (e ListSortByCreatedAt) ToPointer() *ListSortByCreatedAt {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListSortByCreatedAt) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListSortByName string
@@ -614,6 +1164,17 @@ func (e ListSortByName) ToPointer() *ListSortByName {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListSortByName) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListSortByUpdatedAt string
 
 const (
@@ -624,6 +1185,17 @@ const (
 
 func (e ListSortByUpdatedAt) ToPointer() *ListSortByUpdatedAt {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListSortByUpdatedAt) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListSpaceID string
@@ -638,6 +1210,17 @@ func (e ListSpaceID) ToPointer() *ListSpaceID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListSpaceID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListStartGte string
 
 const (
@@ -648,6 +1231,17 @@ const (
 
 func (e ListStartGte) ToPointer() *ListStartGte {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListStartGte) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListStatus string
@@ -662,6 +1256,17 @@ func (e ListStatus) ToPointer() *ListStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListStudentID string
 
 const (
@@ -672,6 +1277,17 @@ const (
 
 func (e ListStudentID) ToPointer() *ListStudentID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListStudentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListTaskID string
@@ -686,6 +1302,17 @@ func (e ListTaskID) ToPointer() *ListTaskID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListTaskID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListTeacherID string
 
 const (
@@ -696,6 +1323,17 @@ const (
 
 func (e ListTeacherID) ToPointer() *ListTeacherID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListTeacherID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListTicketID string
@@ -710,6 +1348,17 @@ func (e ListTicketID) ToPointer() *ListTicketID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListTicketID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListType string
 
 const (
@@ -720,6 +1369,17 @@ const (
 
 func (e ListType) ToPointer() *ListType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListUpdatedGte string
@@ -734,6 +1394,17 @@ func (e ListUpdatedGte) ToPointer() *ListUpdatedGte {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListUpdatedGte) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListUserID string
 
 const (
@@ -744,6 +1415,17 @@ const (
 
 func (e ListUserID) ToPointer() *ListUserID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListUserID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type ListUserMentionedID string
@@ -758,6 +1440,17 @@ func (e ListUserMentionedID) ToPointer() *ListUserMentionedID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListUserMentionedID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookCalendarID string
 
 const (
@@ -768,6 +1461,17 @@ const (
 
 func (e NativeWebhookCalendarID) ToPointer() *NativeWebhookCalendarID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookCalendarID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type NativeWebhookChannelID string
@@ -782,6 +1486,17 @@ func (e NativeWebhookChannelID) ToPointer() *NativeWebhookChannelID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookChannelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookCompanyID string
 
 const (
@@ -792,6 +1507,17 @@ const (
 
 func (e NativeWebhookCompanyID) ToPointer() *NativeWebhookCompanyID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookCompanyID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type NativeWebhookEventID string
@@ -806,6 +1532,17 @@ func (e NativeWebhookEventID) ToPointer() *NativeWebhookEventID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookEventID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookParentID string
 
 const (
@@ -816,6 +1553,17 @@ const (
 
 func (e NativeWebhookParentID) ToPointer() *NativeWebhookParentID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookParentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type NativeWebhookProjectID string
@@ -830,6 +1578,17 @@ func (e NativeWebhookProjectID) ToPointer() *NativeWebhookProjectID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookProjectID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookTaskID string
 
 const (
@@ -840,6 +1599,17 @@ const (
 
 func (e NativeWebhookTaskID) ToPointer() *NativeWebhookTaskID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookTaskID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type SearchDomain string
@@ -854,6 +1624,17 @@ func (e SearchDomain) ToPointer() *SearchDomain {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *SearchDomain) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type SearchEmail string
 
 const (
@@ -864,6 +1645,17 @@ const (
 
 func (e SearchEmail) ToPointer() *SearchEmail {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *SearchEmail) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type SearchLinkedinurl string
@@ -878,6 +1670,17 @@ func (e SearchLinkedinurl) ToPointer() *SearchLinkedinurl {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *SearchLinkedinurl) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type SearchName string
 
 const (
@@ -888,6 +1691,17 @@ const (
 
 func (e SearchName) ToPointer() *SearchName {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *SearchName) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type SearchTwitter string
@@ -902,6 +1716,17 @@ func (e SearchTwitter) ToPointer() *SearchTwitter {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *SearchTwitter) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookApplicationID string
 
 const (
@@ -912,6 +1737,17 @@ const (
 
 func (e VirtualWebhookApplicationID) ToPointer() *VirtualWebhookApplicationID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookApplicationID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookBranchID string
@@ -926,6 +1762,17 @@ func (e VirtualWebhookBranchID) ToPointer() *VirtualWebhookBranchID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookBranchID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookCalendarID string
 
 const (
@@ -936,6 +1783,17 @@ const (
 
 func (e VirtualWebhookCalendarID) ToPointer() *VirtualWebhookCalendarID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCalendarID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookCallID string
@@ -950,6 +1808,17 @@ func (e VirtualWebhookCallID) ToPointer() *VirtualWebhookCallID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCallID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookCandidateID string
 
 const (
@@ -960,6 +1829,17 @@ const (
 
 func (e VirtualWebhookCandidateID) ToPointer() *VirtualWebhookCandidateID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCandidateID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookChannelID string
@@ -974,6 +1854,17 @@ func (e VirtualWebhookChannelID) ToPointer() *VirtualWebhookChannelID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookChannelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookCollectionID string
 
 const (
@@ -984,6 +1875,17 @@ const (
 
 func (e VirtualWebhookCollectionID) ToPointer() *VirtualWebhookCollectionID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCollectionID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookCompanyID string
@@ -998,6 +1900,17 @@ func (e VirtualWebhookCompanyID) ToPointer() *VirtualWebhookCompanyID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCompanyID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookContactID string
 
 const (
@@ -1008,6 +1921,17 @@ const (
 
 func (e VirtualWebhookContactID) ToPointer() *VirtualWebhookContactID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookContactID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookCustomerID string
@@ -1022,6 +1946,17 @@ func (e VirtualWebhookCustomerID) ToPointer() *VirtualWebhookCustomerID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCustomerID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookDealID string
 
 const (
@@ -1032,6 +1967,17 @@ const (
 
 func (e VirtualWebhookDealID) ToPointer() *VirtualWebhookDealID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookDealID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookEndLe string
@@ -1046,6 +1992,17 @@ func (e VirtualWebhookEndLe) ToPointer() *VirtualWebhookEndLe {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookEndLe) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookEndLt string
 
 const (
@@ -1056,6 +2013,17 @@ const (
 
 func (e VirtualWebhookEndLt) ToPointer() *VirtualWebhookEndLt {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookEndLt) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookEventID string
@@ -1070,6 +2038,17 @@ func (e VirtualWebhookEventID) ToPointer() *VirtualWebhookEventID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookEventID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookExpand string
 
 const (
@@ -1080,6 +2059,17 @@ const (
 
 func (e VirtualWebhookExpand) ToPointer() *VirtualWebhookExpand {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookExpand) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookFields string
@@ -1094,6 +2084,17 @@ func (e VirtualWebhookFields) ToPointer() *VirtualWebhookFields {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookFields) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookItemID string
 
 const (
@@ -1104,6 +2105,17 @@ const (
 
 func (e VirtualWebhookItemID) ToPointer() *VirtualWebhookItemID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookItemID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookItemVariantID string
@@ -1118,6 +2130,17 @@ func (e VirtualWebhookItemVariantID) ToPointer() *VirtualWebhookItemVariantID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookItemVariantID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookJobID string
 
 const (
@@ -1128,6 +2151,17 @@ const (
 
 func (e VirtualWebhookJobID) ToPointer() *VirtualWebhookJobID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookJobID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookLeadID string
@@ -1142,6 +2176,17 @@ func (e VirtualWebhookLeadID) ToPointer() *VirtualWebhookLeadID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookLeadID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookLimit string
 
 const (
@@ -1152,6 +2197,17 @@ const (
 
 func (e VirtualWebhookLimit) ToPointer() *VirtualWebhookLimit {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookLimit) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookListID string
@@ -1166,6 +2222,17 @@ func (e VirtualWebhookListID) ToPointer() *VirtualWebhookListID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookListID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookLocationID string
 
 const (
@@ -1176,6 +2243,17 @@ const (
 
 func (e VirtualWebhookLocationID) ToPointer() *VirtualWebhookLocationID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookLocationID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookOrgID string
@@ -1190,6 +2268,17 @@ func (e VirtualWebhookOrgID) ToPointer() *VirtualWebhookOrgID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookOrgID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookPageID string
 
 const (
@@ -1200,6 +2289,17 @@ const (
 
 func (e VirtualWebhookPageID) ToPointer() *VirtualWebhookPageID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookPageID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookParentID string
@@ -1214,6 +2314,17 @@ func (e VirtualWebhookParentID) ToPointer() *VirtualWebhookParentID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookParentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookPipelineID string
 
 const (
@@ -1224,6 +2335,17 @@ const (
 
 func (e VirtualWebhookPipelineID) ToPointer() *VirtualWebhookPipelineID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookPipelineID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookProjectID string
@@ -1238,6 +2360,17 @@ func (e VirtualWebhookProjectID) ToPointer() *VirtualWebhookProjectID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookProjectID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookRepoID string
 
 const (
@@ -1248,6 +2381,17 @@ const (
 
 func (e VirtualWebhookRepoID) ToPointer() *VirtualWebhookRepoID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookRepoID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookSaleschannelID string
@@ -1262,6 +2406,17 @@ func (e VirtualWebhookSaleschannelID) ToPointer() *VirtualWebhookSaleschannelID 
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookSaleschannelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookSpaceID string
 
 const (
@@ -1272,6 +2427,17 @@ const (
 
 func (e VirtualWebhookSpaceID) ToPointer() *VirtualWebhookSpaceID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookSpaceID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookStartGte string
@@ -1286,6 +2452,17 @@ func (e VirtualWebhookStartGte) ToPointer() *VirtualWebhookStartGte {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookStartGte) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookStatus string
 
 const (
@@ -1296,6 +2473,17 @@ const (
 
 func (e VirtualWebhookStatus) ToPointer() *VirtualWebhookStatus {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookTaskID string
@@ -1310,6 +2498,17 @@ func (e VirtualWebhookTaskID) ToPointer() *VirtualWebhookTaskID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookTaskID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookTicketID string
 
 const (
@@ -1320,6 +2519,17 @@ const (
 
 func (e VirtualWebhookTicketID) ToPointer() *VirtualWebhookTicketID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookTicketID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookType string
@@ -1334,6 +2544,17 @@ func (e VirtualWebhookType) ToPointer() *VirtualWebhookType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookUpdatedGte string
 
 const (
@@ -1344,6 +2565,17 @@ const (
 
 func (e VirtualWebhookUpdatedGte) ToPointer() *VirtualWebhookUpdatedGte {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookUpdatedGte) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type VirtualWebhookUserID string
@@ -1358,6 +2590,17 @@ func (e VirtualWebhookUserID) ToPointer() *VirtualWebhookUserID {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookUserID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookUserMentionedID string
 
 const (
@@ -1368,6 +2611,17 @@ const (
 
 func (e VirtualWebhookUserMentionedID) ToPointer() *VirtualWebhookUserMentionedID {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookUserMentionedID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
 }
 
 type IntegrationSupport struct {

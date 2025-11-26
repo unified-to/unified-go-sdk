@@ -13,6 +13,17 @@ func (e PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "direct", "indirect":
+			return true
+		}
+	}
+	return false
+}
+
 // PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager - "id" attribute of another User.
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager struct {
 	DollarRef   *string                                                                       `json:"$ref,omitempty"`

@@ -13,3 +13,14 @@ const (
 func (e PropertyStoragePermissionRoles) ToPointer() *PropertyStoragePermissionRoles {
 	return &e
 }
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyStoragePermissionRoles) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "OWNER", "READ", "WRITE":
+			return true
+		}
+	}
+	return false
+}

@@ -16,6 +16,17 @@ func (e TicketingTelephoneType) ToPointer() *TicketingTelephoneType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *TicketingTelephoneType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "WORK", "HOME", "OTHER", "FAX", "MOBILE":
+			return true
+		}
+	}
+	return false
+}
+
 type TicketingTelephone struct {
 	Telephone string                  `json:"telephone"`
 	Type      *TicketingTelephoneType `json:"type,omitempty"`

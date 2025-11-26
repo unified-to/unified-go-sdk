@@ -18,6 +18,17 @@ func (e AccountingInvoicePaymentCollectionMethod) ToPointer() *AccountingInvoice
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingInvoicePaymentCollectionMethod) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "send_invoice", "charge_automatically":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingInvoiceStatus string
 
 const (
@@ -34,6 +45,17 @@ func (e AccountingInvoiceStatus) ToPointer() *AccountingInvoiceStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingInvoiceStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingInvoiceType string
 
 const (
@@ -44,6 +66,17 @@ const (
 
 func (e AccountingInvoiceType) ToPointer() *AccountingInvoiceType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingInvoiceType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "BILL", "INVOICE", "CREDITMEMO":
+			return true
+		}
+	}
+	return false
 }
 
 type AccountingInvoice struct {

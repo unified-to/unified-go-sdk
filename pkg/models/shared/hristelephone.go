@@ -16,6 +16,17 @@ func (e HrisTelephoneType) ToPointer() *HrisTelephoneType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisTelephoneType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "WORK", "HOME", "OTHER", "FAX", "MOBILE":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisTelephone struct {
 	Telephone string             `json:"telephone"`
 	Type      *HrisTelephoneType `json:"type,omitempty"`

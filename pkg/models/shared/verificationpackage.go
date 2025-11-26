@@ -24,6 +24,17 @@ func (e VerificationPackageType) ToPointer() *VerificationPackageType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VerificationPackageType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "IDENTITY_VERIFICATION", "SCREENING", "BACKGROUND_CHECK", "EMPLOYMENT_VERIFICATION", "EDUCATION_VERIFICATION", "CREDIT_CHECK", "FRAUD_PREVENTION", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type VerificationPackage struct {
 	Aliases []string `json:"aliases,omitempty"`
 	// average processing time in minutes

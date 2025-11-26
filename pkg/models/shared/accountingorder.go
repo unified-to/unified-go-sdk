@@ -23,6 +23,17 @@ func (e AccountingOrderStatus) ToPointer() *AccountingOrderStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingOrderStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingOrderType string
 
 const (
@@ -32,6 +43,17 @@ const (
 
 func (e AccountingOrderType) ToPointer() *AccountingOrderType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingOrderType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SALES", "PURCHASE":
+			return true
+		}
+	}
+	return false
 }
 
 type AccountingOrder struct {

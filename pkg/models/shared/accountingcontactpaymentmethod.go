@@ -20,6 +20,17 @@ func (e AccountingContactPaymentMethodType) ToPointer() *AccountingContactPaymen
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingContactPaymentMethodType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ACH", "ALIPAY", "CARD", "GIROPAY", "IDEAL", "OTHER", "PAYPAL", "WIRE", "CHECK":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingContactPaymentMethod struct {
 	Default *bool                              `json:"default,omitempty"`
 	ID      *string                            `json:"id,omitempty"`

@@ -23,6 +23,17 @@ func (e AtsJobQuestionType) ToPointer() *AtsJobQuestionType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AtsJobQuestionType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TEXT", "NUMBER", "DATE", "BOOLEAN", "MULTIPLE_CHOICE", "FILE", "TEXTAREA", "MULTIPLE_SELECT", "UNIVERSITY", "YES_NO", "CURRENCY", "URL":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsJobQuestion struct {
 	Description *string            `json:"description,omitempty"`
 	ID          *string            `json:"id,omitempty"`

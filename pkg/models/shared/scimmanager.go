@@ -13,6 +13,17 @@ func (e ScimManagerType) ToPointer() *ScimManagerType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ScimManagerType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "direct", "indirect":
+			return true
+		}
+	}
+	return false
+}
+
 // ScimManager - "id" attribute of another User.
 type ScimManager struct {
 	DollarRef   *string          `json:"$ref,omitempty"`

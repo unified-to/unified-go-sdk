@@ -18,6 +18,17 @@ func (e AtsJobOpeningStatus) ToPointer() *AtsJobOpeningStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AtsJobOpeningStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "OPEN", "CLOSED":
+			return true
+		}
+	}
+	return false
+}
+
 type AtsJobOpening struct {
 	ApplicationID *string              `json:"application_id,omitempty"`
 	CloseReason   *string              `json:"close_reason,omitempty"`

@@ -17,6 +17,17 @@ func (e LmsMediaType) ToPointer() *LmsMediaType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *LmsMediaType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "IMAGE", "HEADSHOT", "VIDEO", "WEB", "DOCUMENT", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type LmsMedia struct {
 	Description  *string       `json:"description,omitempty"`
 	Name         *string       `json:"name,omitempty"`

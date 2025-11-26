@@ -20,6 +20,17 @@ func (e CalendarEventRecurrenceFrequency) ToPointer() *CalendarEventRecurrenceFr
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CalendarEventRecurrenceFrequency) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DAILY", "WEEKLY", "MONTHLY", "YEARLY":
+			return true
+		}
+	}
+	return false
+}
+
 type WeekStart string
 
 const (
@@ -34,6 +45,17 @@ const (
 
 func (e WeekStart) ToPointer() *WeekStart {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *WeekStart) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SU", "MO", "TU", "WE", "TH", "FR", "SA":
+			return true
+		}
+	}
+	return false
 }
 
 type CalendarEventRecurrence struct {

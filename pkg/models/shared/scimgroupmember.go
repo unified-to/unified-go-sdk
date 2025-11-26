@@ -13,6 +13,17 @@ func (e Operation) ToPointer() *Operation {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Operation) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "add", "delete":
+			return true
+		}
+	}
+	return false
+}
+
 type ScimGroupMemberType string
 
 const (
@@ -22,6 +33,17 @@ const (
 
 func (e ScimGroupMemberType) ToPointer() *ScimGroupMemberType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ScimGroupMemberType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "User", "Group":
+			return true
+		}
+	}
+	return false
 }
 
 type ScimGroupMember struct {

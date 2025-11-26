@@ -23,6 +23,17 @@ func (e CoverageLevel) ToPointer() *CoverageLevel {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CoverageLevel) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "EMPLOYEE_ONLY", "EMPLOYEE_SPOUSE", "EMPLOYEE_CHILD", "EMPLOYEE_CHILDREN", "EMPLOYEE_FAMILY", "FAMILY", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type EmployerContributionType string
 
 const (
@@ -32,6 +43,17 @@ const (
 
 func (e EmployerContributionType) ToPointer() *EmployerContributionType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *EmployerContributionType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "PERCENTAGE", "FIXED":
+			return true
+		}
+	}
+	return false
 }
 
 type HrisBenefitFrequency string
@@ -50,6 +72,17 @@ func (e HrisBenefitFrequency) ToPointer() *HrisBenefitFrequency {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisBenefitFrequency) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK":
+			return true
+		}
+	}
+	return false
+}
+
 type Tax string
 
 const (
@@ -62,6 +95,17 @@ const (
 
 func (e Tax) ToPointer() *Tax {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Tax) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "PRE_TAX", "POST_TAX", "TAXABLE", "NON_TAXABLE", "TAX":
+			return true
+		}
+	}
+	return false
 }
 
 type HrisBenefitType string
@@ -87,6 +131,17 @@ const (
 
 func (e HrisBenefitType) ToPointer() *HrisBenefitType {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisBenefitType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "RETIREMENT", "HEALTH", "DENTAL", "VISION", "LIFE", "HSA", "FSA", "SHORT_TERM_DISABILITY", "LONG_TERM_DISABILITY", "WORKERS_COMP", "HOUSING_STIPEND", "EMPLOYER_TAX_CONTRIBUTION", "GARNISHMENT", "LOAN_REPAYMENT", "CHARITABLE_CONTRIBUTION", "OTHER":
+			return true
+		}
+	}
+	return false
 }
 
 // HrisBenefit - Company-wide benefit plans available to employees.

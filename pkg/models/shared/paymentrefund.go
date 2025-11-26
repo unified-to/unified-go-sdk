@@ -20,6 +20,17 @@ func (e PaymentRefundStatus) ToPointer() *PaymentRefundStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PaymentRefundStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SUCCEEDED", "PENDING", "FAILED", "CANCELED":
+			return true
+		}
+	}
+	return false
+}
+
 type PaymentRefund struct {
 	CreatedAt   *time.Time           `json:"created_at,omitempty"`
 	Currency    *string              `json:"currency,omitempty"`

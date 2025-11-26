@@ -26,6 +26,17 @@ func (e Ethnicity) ToPointer() *Ethnicity {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Ethnicity) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "Caucasian", "East Asian", "Middle Eastern", "Black", "Biracial (South Asian & Caucasian)", "Filipino", "South Asian", "Indian", "White", "Asian":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender string
 
 const (
@@ -35,6 +46,17 @@ const (
 
 func (e PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender) ToPointer() *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "male", "female":
+			return true
+		}
+	}
+	return false
 }
 
 type SexualOrientation string
@@ -47,6 +69,17 @@ const (
 
 func (e SexualOrientation) ToPointer() *SexualOrientation {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *SexualOrientation) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "Queer", "Heterosexual", "Straight":
+			return true
+		}
+	}
+	return false
 }
 
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User struct {

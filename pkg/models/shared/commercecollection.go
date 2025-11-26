@@ -19,6 +19,17 @@ func (e CommerceCollectionType) ToPointer() *CommerceCollectionType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CommerceCollectionType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "COLLECTION", "SAVED_SEARCH", "CATEGORY":
+			return true
+		}
+	}
+	return false
+}
+
 // CommerceCollection - A collection of items/products/services
 type CommerceCollection struct {
 	CreatedAt         *time.Time              `json:"created_at,omitempty"`

@@ -13,6 +13,17 @@ func (e PropertyScimUserMetaResourceType) ToPointer() *PropertyScimUserMetaResou
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyScimUserMetaResourceType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "User", "Group":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyScimUserMeta struct {
 	Created      *string                           `json:"created,omitempty"`
 	LastModified *string                           `json:"lastModified,omitempty"`

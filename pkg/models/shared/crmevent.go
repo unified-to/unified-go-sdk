@@ -24,6 +24,17 @@ func (e CrmEventType) ToPointer() *CrmEventType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CrmEventType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "NOTE", "EMAIL", "TASK", "MEETING", "CALL", "MARKETING_EMAIL", "FORM", "PAGE_VIEW":
+			return true
+		}
+	}
+	return false
+}
+
 // CrmEvent - An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
 type CrmEvent struct {
 	// The call object, when type = call

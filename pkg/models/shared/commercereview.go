@@ -20,6 +20,17 @@ func (e CommerceReviewStatus) ToPointer() *CommerceReviewStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CommerceReviewStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "PENDING", "APPROVED", "REJECTED", "SPAM":
+			return true
+		}
+	}
+	return false
+}
+
 type CommerceReview struct {
 	AuthorAvatarURL *string                 `json:"author_avatar_url,omitempty"`
 	AuthorEmail     *string                 `json:"author_email,omitempty"`

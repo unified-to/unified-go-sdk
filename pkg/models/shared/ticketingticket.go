@@ -18,6 +18,17 @@ func (e TicketingTicketStatus) ToPointer() *TicketingTicketStatus {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *TicketingTicketStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ACTIVE", "CLOSED":
+			return true
+		}
+	}
+	return false
+}
+
 type TicketingTicket struct {
 	Category    *string                `json:"category,omitempty"`
 	CategoryID  *string                `json:"category_id,omitempty"`

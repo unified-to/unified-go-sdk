@@ -17,6 +17,17 @@ func (e ScimPhoneNumberType) ToPointer() *ScimPhoneNumberType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ScimPhoneNumberType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "work", "home", "other", "mobile", "fax", "pager":
+			return true
+		}
+	}
+	return false
+}
+
 type ScimPhoneNumber struct {
 	Display *string              `json:"display,omitempty"`
 	Primary *bool                `json:"primary,omitempty"`

@@ -28,6 +28,17 @@ func (e HrisPayslipDetailType) ToPointer() *HrisPayslipDetailType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisPayslipDetailType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "EARNING_SALARY", "EARNING_OVERTIME", "EARNING_TIP", "EARNING_BONUS", "EARNING_COMMISSION", "EARNING_ADJUSTMENT", "EARNING", "PRETAX_DEDUCTION", "PRETAX_DEDUCTION_HEALTH_INSURANCE", "PRETAX_DEDUCTION_RETIREMENT", "PRETAX_DEDUCTION_HRA", "TAX_FEDERAL", "TAX_REGION", "TAX_LOCAL", "POSTTAX_BENEFIT", "POSTTAX_GARNISHMENT", "REIMBURSEMENT":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisPayslipDetail struct {
 	Amount         float64                `json:"amount"`
 	CompanyAmount  *float64               `json:"company_amount,omitempty"`

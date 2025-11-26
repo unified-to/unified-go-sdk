@@ -14,6 +14,17 @@ func (e PropertyAtsActivityFromType) ToPointer() *PropertyAtsActivityFromType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAtsActivityFromType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "WORK", "HOME", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyAtsActivityFrom struct {
 	Email string                       `json:"email"`
 	Name  *string                      `json:"name,omitempty"`

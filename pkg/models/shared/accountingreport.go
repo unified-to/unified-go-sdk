@@ -19,6 +19,17 @@ func (e AccountingReportType) ToPointer() *AccountingReportType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingReportType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TRIAL_BALANCE", "BALANCE_SHEET", "PROFIT_AND_LOSS":
+			return true
+		}
+	}
+	return false
+}
+
 // AccountingReport - @deprecated; use either AccountingProfitandloss, AccountingTrialbalance, AccountingBalancesheet, or AccountingCashflow instead
 type AccountingReport struct {
 	BalanceSheet  *PropertyAccountingReportBalanceSheet  `json:"balance_sheet,omitempty"`

@@ -14,6 +14,17 @@ func (e HrisEmailType) ToPointer() *HrisEmailType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisEmailType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "WORK", "HOME", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisEmail struct {
 	Email string         `json:"email"`
 	Type  *HrisEmailType `json:"type,omitempty"`

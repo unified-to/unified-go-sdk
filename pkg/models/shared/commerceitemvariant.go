@@ -18,6 +18,17 @@ func (e SizeUnit) ToPointer() *SizeUnit {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *SizeUnit) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "cm", "inch":
+			return true
+		}
+	}
+	return false
+}
+
 type WeightUnit string
 
 const (
@@ -29,6 +40,17 @@ const (
 
 func (e WeightUnit) ToPointer() *WeightUnit {
 	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *WeightUnit) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "g", "kg", "oz", "lb":
+			return true
+		}
+	}
+	return false
 }
 
 type CommerceItemVariant struct {

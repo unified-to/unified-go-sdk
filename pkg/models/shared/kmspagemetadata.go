@@ -285,6 +285,17 @@ func (e KmsPageMetadataFormat) ToPointer() *KmsPageMetadataFormat {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *KmsPageMetadataFormat) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TEXT", "NUMBER", "DATE", "BOOLEAN", "FILE", "TEXTAREA", "SINGLE_SELECT", "MULTIPLE_SELECT", "MEASUREMENT", "PRICE", "YES_NO", "CURRENCY", "URL", "PERCENT", "EMAIL", "PHONE", "REFERENCE", "TIME":
+			return true
+		}
+	}
+	return false
+}
+
 type KmsPageMetadataSchemas1 struct {
 }
 

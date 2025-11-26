@@ -11,3 +11,14 @@ const (
 func (e PropertyScimGroupSchemas) ToPointer() *PropertyScimGroupSchemas {
 	return &e
 }
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyScimGroupSchemas) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "urn:ietf:params:scim:schemas:core:2.0:Group":
+			return true
+		}
+	}
+	return false
+}

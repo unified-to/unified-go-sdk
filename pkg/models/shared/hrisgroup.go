@@ -23,6 +23,17 @@ func (e HrisGroupType) ToPointer() *HrisGroupType {
 	return &e
 }
 
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisGroupType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TEAM", "GROUP", "DEPARTMENT", "DIVISION", "BUSINESS_UNIT", "BRANCH", "SUB_DEPARTMENT":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisGroup struct {
 	CompanyID   *string        `json:"company_id,omitempty"`
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
