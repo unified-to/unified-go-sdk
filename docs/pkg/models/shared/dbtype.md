@@ -10,3 +10,4 @@
 | `DbTypePostgres` | postgres         |
 | `DbTypeMssql`    | mssql            |
 | `DbTypeMariadb`  | mariadb          |
+| `DbTypeSupabase` | supabase         |

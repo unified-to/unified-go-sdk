@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 312aee283a626a1a256d39c734a429ac
+  docChecksum: 0b28d8593f165fb3de853a45b8c6ab17
   docVersion: "1.0"
-  speakeasyVersion: 1.662.0
-  generationVersion: 2.763.3
-  releaseVersion: 0.34.13
-  configChecksum: 00a242aad06a4295fd921e072831e14e
+  speakeasyVersion: 1.665.0
+  generationVersion: 2.767.2
+  releaseVersion: 0.35.0
+  configChecksum: 8471e6a3e0a7c6b44f10f4afbe99f3a3
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.13.3
+    core: 3.13.5
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -28,7 +28,7 @@ features:
     openEnums: 0.1.0
     responseFormat: 0.1.2
     retries: 2.84.2
-    sdkHooks: 0.2.0
+    sdkHooks: 0.3.0
     unions: 2.87.2
     uploadStreams: 0.1.0
 generatedFiles:
@@ -7545,4 +7545,3 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes Detected:\n* `UnifiedTo.Calendar.CreateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.SendNotifications` **Added**\n  *  `response.SendNotifications` **Added**\n* `UnifiedTo.Calendar.GetCalendarEvent()`:  `response.SendNotifications` **Added**\n* `UnifiedTo.Calendar.ListCalendarEvents()`:  `response.[].SendNotifications` **Added**\n* `UnifiedTo.Calendar.PatchCalendarEvent()`: \n  *  `request.Request.CalendarEvent.SendNotifications` **Added**\n  *  `response.SendNotifications` **Added**\n* `UnifiedTo.Calendar.UpdateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.SendNotifications` **Added**\n  *  `response.SendNotifications` **Added**\n* `UnifiedTo.Event.CreateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.SendNotifications` **Added**\n  *  `response.SendNotifications` **Added**\n* `UnifiedTo.Event.GetCalendarEvent()`:  `response.SendNotifications` **Added**\n* `UnifiedTo.Event.ListCalendarEvents()`:  `response.[].SendNotifications` **Added**\n* `UnifiedTo.Event.PatchCalendarEvent()`: \n  *  `request.Request.CalendarEvent.SendNotifications` **Added**\n  *  `response.SendNotifications` **Added**\n* `UnifiedTo.Event.UpdateCalendarEvent()`: \n  *  `request.Request.CalendarEvent.SendNotifications` **Added**\n  *  `response.SendNotifications` **Added**\n"

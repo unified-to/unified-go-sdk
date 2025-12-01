@@ -15,6 +15,7 @@ const (
 	DbTypePostgres DbType = "postgres"
 	DbTypeMssql    DbType = "mssql"
 	DbTypeMariadb  DbType = "mariadb"
+	DbTypeSupabase DbType = "supabase"
 )
 
 func (e DbType) ToPointer() *DbType {
@@ -25,7 +26,7 @@ func (e DbType) ToPointer() *DbType {
 func (e *DbType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "mongodb", "mysql", "postgres", "mssql", "mariadb":
+		case "mongodb", "mysql", "postgres", "mssql", "mariadb", "supabase":
 			return true
 		}
 	}

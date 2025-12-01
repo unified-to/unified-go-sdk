@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.763.3
+// Generated from OpenAPI doc version 1.0 and generator version 2.767.2
 
 import (
 	"context"
@@ -52,7 +52,9 @@ func Float64(f float64) *float64 { return &f }
 // Pointer provides a helper function to return a pointer to a type
 func Pointer[T any](v T) *T { return &v }
 
-// UnifiedTo - Unified.to API: One API to Rule Them All
+// UnifiedTo - Unified.to  API: One API to Rule Them All
+//
+// https://docs.unified.to - API Documentation
 type UnifiedTo struct {
 	SDKVersion        string
 	Accounting        *Accounting
@@ -243,9 +245,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.34.13",
+		SDKVersion: "0.35.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.34.13 2.763.3 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.35.0 2.767.2 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
