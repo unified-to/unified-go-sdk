@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 5cc9bd003a02a42d13a2683d5b08bc71
+  docChecksum: 24772a040a22188e844daea3d8d85bf5
   docVersion: "1.0"
-  speakeasyVersion: 1.666.2
-  generationVersion: 2.768.1
-  releaseVersion: 0.35.1
-  configChecksum: 682001c1c1248ac966d2d8f42c1679bd
+  speakeasyVersion: 1.667.0
+  generationVersion: 2.769.1
+  releaseVersion: 0.36.0
+  configChecksum: 89277c87cb364b00147b002712e8d43c
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
@@ -24,6 +24,7 @@ features:
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.83.0
+    inputOutputModels: 2.83.0
     intellisenseMarkdownSupport: 0.1.0
     openEnums: 0.1.0
     responseFormat: 0.1.2
@@ -719,8 +720,6 @@ generatedFiles:
   - /pkg/models/shared/paymentpayout.go
   - /pkg/models/shared/paymentrefund.go
   - /pkg/models/shared/paymentsubscription.go
-  - /pkg/models/shared/propertyaccountingbalancesheetitemsubitems.go
-  - /pkg/models/shared/propertyaccountingcashflowitemsubitems.go
   - /pkg/models/shared/propertyaccountingcontactbillingaddress.go
   - /pkg/models/shared/propertyaccountingcontactshippingaddress.go
   - /pkg/models/shared/propertyaccountingorderbillingaddress.go
@@ -2284,8 +2283,6 @@ generatedFiles:
   - docs/pkg/models/shared/paymenttype.md
   - docs/pkg/models/shared/priority.md
   - docs/pkg/models/shared/profilegender.md
-  - docs/pkg/models/shared/propertyaccountingbalancesheetitemsubitems.md
-  - docs/pkg/models/shared/propertyaccountingcashflowitemsubitems.md
   - docs/pkg/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/pkg/models/shared/propertyaccountingcontactshippingaddress.md
   - docs/pkg/models/shared/propertyaccountingorderbillingaddress.md
@@ -7545,4 +7542,17 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Commerce.CreateCommerceItem()`: \n  *  `request.Request.CommerceItem.Collections` **Added**\n  *  `response.Collections` **Added**\n* `UnifiedTo.Commerce.CreateCommerceSaleschannel()`: \n  *  `request.Request.CommerceSaleschannel.Collections.[].Type` **Added**\n  *  `response.Collections.[].Type` **Added**\n* `UnifiedTo.Commerce.GetCommerceItem()`:  `response.Collections` **Added**\n* `UnifiedTo.Commerce.GetCommerceSaleschannel()`:  `response.Collections.[].Type` **Added**\n* `UnifiedTo.Commerce.ListCommerceItems()`:  `response.[].Collections` **Added**\n* `UnifiedTo.Commerce.ListCommerceSaleschannels()`:  `response.[].Collections.[].Type` **Added**\n* `UnifiedTo.Commerce.PatchCommerceItem()`: \n  *  `request.Request.CommerceItem.Collections` **Added**\n  *  `response.Collections` **Added**\n* `UnifiedTo.Commerce.PatchCommerceSaleschannel()`: \n  *  `request.Request.CommerceSaleschannel.Collections.[].Type` **Added**\n  *  `response.Collections.[].Type` **Added**\n* `UnifiedTo.Commerce.UpdateCommerceItem()`: \n  *  `request.Request.CommerceItem.Collections` **Added**\n  *  `response.Collections` **Added**\n* `UnifiedTo.Commerce.UpdateCommerceSaleschannel()`: \n  *  `request.Request.CommerceSaleschannel.Collections.[].Type` **Added**\n  *  `response.Collections.[].Type` **Added**\n* `UnifiedTo.Item.CreateCommerceItem()`: \n  *  `request.Request.CommerceItem.Collections` **Added**\n  *  `response.Collections` **Added**\n* `UnifiedTo.Item.GetCommerceItem()`:  `response.Collections` **Added**\n* `UnifiedTo.Item.ListCommerceItems()`:  `response.[].Collections` **Added**\n* `UnifiedTo.Item.PatchCommerceItem()`: \n  *  `request.Request.CommerceItem.Collections` **Added**\n  *  `response.Collections` **Added**\n* `UnifiedTo.Item.UpdateCommerceItem()`: \n  *  `request.Request.CommerceItem.Collections` **Added**\n  *  `response.Collections` **Added**\n* `UnifiedTo.Saleschannel.CreateCommerceSaleschannel()`: \n  *  `request.Request.CommerceSaleschannel.Collections.[].Type` **Added**\n  *  `response.Collections.[].Type` **Added**\n* `UnifiedTo.Saleschannel.GetCommerceSaleschannel()`:  `response.Collections.[].Type` **Added**\n* `UnifiedTo.Saleschannel.ListCommerceSaleschannels()`:  `response.[].Collections.[].Type` **Added**\n* `UnifiedTo.Saleschannel.PatchCommerceSaleschannel()`: \n  *  `request.Request.CommerceSaleschannel.Collections.[].Type` **Added**\n  *  `response.Collections.[].Type` **Added**\n* `UnifiedTo.Saleschannel.UpdateCommerceSaleschannel()`: \n  *  `request.Request.CommerceSaleschannel.Collections.[].Type` **Added**\n  *  `response.Collections.[].Type` **Added**\n"
+releaseNotes: |
+  ## Go SDK Changes:
+  * `UnifiedTo.Accounting.GetAccountingBalancesheet()`:  `response.Assets.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Accounting.GetAccountingCashflow()`:  `response.FinancingSections.[].Items.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Accounting.GetAccountingReport()`:  `response.BalanceSheet.Assets.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Accounting.ListAccountingBalancesheets()`:  `response.[].Assets.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Accounting.ListAccountingCashflows()`:  `response.[].FinancingSections.[].Items.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Accounting.ListAccountingReports()`:  `response.[].BalanceSheet.Assets.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Balancesheet.GetAccountingBalancesheet()`:  `response.Assets.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Balancesheet.ListAccountingBalancesheets()`:  `response.[].Assets.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Cashflow.GetAccountingCashflow()`:  `response.FinancingSections.[].Items.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Cashflow.ListAccountingCashflows()`:  `response.[].FinancingSections.[].Items.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Report.GetAccountingReport()`:  `response.BalanceSheet.Assets.[].SubItems.[]` **Changed**
+  * `UnifiedTo.Report.ListAccountingReports()`:  `response.[].BalanceSheet.Assets.[].SubItems.[]` **Changed**

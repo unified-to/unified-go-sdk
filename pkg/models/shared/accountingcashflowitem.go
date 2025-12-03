@@ -3,10 +3,10 @@
 package shared
 
 type AccountingCashflowItem struct {
-	AccountID *string                                  `json:"account_id,omitempty"`
-	Amount    *float64                                 `json:"amount,omitempty"`
-	Name      *string                                  `json:"name,omitempty"`
-	SubItems  []PropertyAccountingCashflowItemSubItems `json:"sub_items,omitempty"`
+	AccountID *string                  `json:"account_id,omitempty"`
+	Amount    *float64                 `json:"amount,omitempty"`
+	Name      *string                  `json:"name,omitempty"`
+	SubItems  []AccountingCashflowItem `json:"sub_items,omitempty"`
 	// Optional linkage to transactions
 	TransactionIds []string `json:"transaction_ids,omitempty"`
 }
@@ -32,7 +32,7 @@ func (a *AccountingCashflowItem) GetName() *string {
 	return a.Name
 }
 
-func (a *AccountingCashflowItem) GetSubItems() []PropertyAccountingCashflowItemSubItems {
+func (a *AccountingCashflowItem) GetSubItems() []AccountingCashflowItem {
 	if a == nil {
 		return nil
 	}

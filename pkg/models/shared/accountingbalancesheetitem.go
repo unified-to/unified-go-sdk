@@ -3,10 +3,10 @@
 package shared
 
 type AccountingBalancesheetItem struct {
-	AccountID *string                                      `json:"account_id,omitempty"`
-	Amount    *float64                                     `json:"amount,omitempty"`
-	Name      *string                                      `json:"name,omitempty"`
-	SubItems  []PropertyAccountingBalancesheetItemSubItems `json:"sub_items,omitempty"`
+	AccountID *string                      `json:"account_id,omitempty"`
+	Amount    *float64                     `json:"amount,omitempty"`
+	Name      *string                      `json:"name,omitempty"`
+	SubItems  []AccountingBalancesheetItem `json:"sub_items,omitempty"`
 }
 
 func (a *AccountingBalancesheetItem) GetAccountID() *string {
@@ -30,7 +30,7 @@ func (a *AccountingBalancesheetItem) GetName() *string {
 	return a.Name
 }
 
-func (a *AccountingBalancesheetItem) GetSubItems() []PropertyAccountingBalancesheetItemSubItems {
+func (a *AccountingBalancesheetItem) GetSubItems() []AccountingBalancesheetItem {
 	if a == nil {
 		return nil
 	}
