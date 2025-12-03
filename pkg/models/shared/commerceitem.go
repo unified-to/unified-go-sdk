@@ -8,8 +8,11 @@ import (
 )
 
 type CommerceItem struct {
-	AccountID         *string             `json:"account_id,omitempty"`
-	CollectionIds     []string            `json:"collection_ids,omitempty"`
+	AccountID *string `json:"account_id,omitempty"`
+	//  @deprecated; use collections instead
+	CollectionIds []string `json:"collection_ids,omitempty"`
+	// points to Collection with id, name, and type fields
+	Collections       []CommerceReference `json:"collections,omitempty"`
 	CreatedAt         *time.Time          `json:"created_at,omitempty"`
 	Description       *string             `json:"description,omitempty"`
 	GlobalCode        *string             `json:"global_code,omitempty"`
@@ -54,6 +57,13 @@ func (c *CommerceItem) GetCollectionIds() []string {
 		return nil
 	}
 	return c.CollectionIds
+}
+
+func (c *CommerceItem) GetCollections() []CommerceReference {
+	if c == nil {
+		return nil
+	}
+	return c.Collections
 }
 
 func (c *CommerceItem) GetCreatedAt() *time.Time {

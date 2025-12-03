@@ -5,6 +5,7 @@ package shared
 type CommerceReference struct {
 	ID   *string `json:"id,omitempty"`
 	Name *string `json:"name,omitempty"`
+	Type *string `json:"type,omitempty"`
 }
 
 func (c *CommerceReference) GetID() *string {
@@ -19,4 +20,11 @@ func (c *CommerceReference) GetName() *string {
 		return nil
 	}
 	return c.Name
+}
+
+func (c *CommerceReference) GetType() *string {
+	if c == nil {
+		return nil
+	}
+	return c.Type
 }
