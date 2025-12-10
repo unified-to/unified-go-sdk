@@ -1,5 +1,4 @@
 # Member
-(*Member*)
 
 ## Overview
 

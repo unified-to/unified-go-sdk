@@ -54,7 +54,7 @@ func (c CommerceReviewComment) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CommerceReviewComment) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"content"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil

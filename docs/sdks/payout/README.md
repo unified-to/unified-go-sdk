@@ -1,5 +1,4 @@
 # Payout
-(*Payout*)
 
 ## Overview
 

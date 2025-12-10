@@ -1,5 +1,4 @@
 # Messaging
-(*Messaging*)
 
 ## Overview
 

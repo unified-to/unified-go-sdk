@@ -54,7 +54,7 @@ func (h HrisPayslip) MarshalJSON() ([]byte, error) {
 }
 
 func (h *HrisPayslip) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"raw"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
 		return err
 	}
 	return nil

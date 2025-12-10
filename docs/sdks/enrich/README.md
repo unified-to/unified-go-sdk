@@ -1,5 +1,4 @@
 # Enrich
-(*Enrich*)
 
 ## Overview
 

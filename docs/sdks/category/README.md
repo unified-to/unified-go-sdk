@@ -1,5 +1,4 @@
 # Category
-(*Category*)
 
 ## Overview
 

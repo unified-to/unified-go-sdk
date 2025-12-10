@@ -36,7 +36,7 @@ func (h HrisDevice) MarshalJSON() ([]byte, error) {
 }
 
 func (h *HrisDevice) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"name"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
 		return err
 	}
 	return nil

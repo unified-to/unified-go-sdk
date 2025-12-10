@@ -33,10 +33,10 @@ const (
 )
 
 type Integration5 struct {
-	Integration1 *Integration1 `queryParam:"inline,name=five"`
-	Str          *string       `queryParam:"inline,name=five"`
-	Number       *float64      `queryParam:"inline,name=five"`
-	Boolean      *bool         `queryParam:"inline,name=five"`
+	Integration1 *Integration1 `queryParam:"inline,name=five" union:"member"`
+	Str          *string       `queryParam:"inline,name=five" union:"member"`
+	Number       *float64      `queryParam:"inline,name=five" union:"member"`
+	Boolean      *bool         `queryParam:"inline,name=five" union:"member"`
 
 	Type Integration5Type
 }
@@ -141,11 +141,11 @@ const (
 )
 
 type API struct {
-	MapOfAny            map[string]any `queryParam:"inline,name=api"`
-	Str                 *string        `queryParam:"inline,name=api"`
-	Number              *float64       `queryParam:"inline,name=api"`
-	Boolean             *bool          `queryParam:"inline,name=api"`
-	ArrayOfIntegration5 []Integration5 `queryParam:"inline,name=api"`
+	MapOfAny            map[string]any `queryParam:"inline,name=api" union:"member"`
+	Str                 *string        `queryParam:"inline,name=api" union:"member"`
+	Number              *float64       `queryParam:"inline,name=api" union:"member"`
+	Boolean             *bool          `queryParam:"inline,name=api" union:"member"`
+	ArrayOfIntegration5 []Integration5 `queryParam:"inline,name=api" union:"member"`
 
 	Type APIType
 }
@@ -283,10 +283,10 @@ const (
 )
 
 type IntegrationSchemas5 struct {
-	IntegrationSchemas1 *IntegrationSchemas1 `queryParam:"inline,name=five"`
-	Str                 *string              `queryParam:"inline,name=five"`
-	Number              *float64             `queryParam:"inline,name=five"`
-	Boolean             *bool                `queryParam:"inline,name=five"`
+	IntegrationSchemas1 *IntegrationSchemas1 `queryParam:"inline,name=five" union:"member"`
+	Str                 *string              `queryParam:"inline,name=five" union:"member"`
+	Number              *float64             `queryParam:"inline,name=five" union:"member"`
+	Boolean             *bool                `queryParam:"inline,name=five" union:"member"`
 
 	Type IntegrationSchemas5Type
 }
@@ -391,11 +391,11 @@ const (
 )
 
 type Partnership struct {
-	MapOfAny                   map[string]any        `queryParam:"inline,name=partnership"`
-	Str                        *string               `queryParam:"inline,name=partnership"`
-	Number                     *float64              `queryParam:"inline,name=partnership"`
-	Boolean                    *bool                 `queryParam:"inline,name=partnership"`
-	ArrayOfIntegrationSchemas5 []IntegrationSchemas5 `queryParam:"inline,name=partnership"`
+	MapOfAny                   map[string]any        `queryParam:"inline,name=partnership" union:"member"`
+	Str                        *string               `queryParam:"inline,name=partnership" union:"member"`
+	Number                     *float64              `queryParam:"inline,name=partnership" union:"member"`
+	Boolean                    *bool                 `queryParam:"inline,name=partnership" union:"member"`
+	ArrayOfIntegrationSchemas5 []IntegrationSchemas5 `queryParam:"inline,name=partnership" union:"member"`
 
 	Type PartnershipType
 }
@@ -533,10 +533,10 @@ const (
 )
 
 type IntegrationSchemasSaml5 struct {
-	IntegrationSchemasSaml1 *IntegrationSchemasSaml1 `queryParam:"inline,name=five"`
-	Str                     *string                  `queryParam:"inline,name=five"`
-	Number                  *float64                 `queryParam:"inline,name=five"`
-	Boolean                 *bool                    `queryParam:"inline,name=five"`
+	IntegrationSchemasSaml1 *IntegrationSchemasSaml1 `queryParam:"inline,name=five" union:"member"`
+	Str                     *string                  `queryParam:"inline,name=five" union:"member"`
+	Number                  *float64                 `queryParam:"inline,name=five" union:"member"`
+	Boolean                 *bool                    `queryParam:"inline,name=five" union:"member"`
 
 	Type IntegrationSchemasSaml5Type
 }
@@ -641,11 +641,11 @@ const (
 )
 
 type Saml struct {
-	MapOfAny                       map[string]any            `queryParam:"inline,name=saml"`
-	Str                            *string                   `queryParam:"inline,name=saml"`
-	Number                         *float64                  `queryParam:"inline,name=saml"`
-	Boolean                        *bool                     `queryParam:"inline,name=saml"`
-	ArrayOfIntegrationSchemasSaml5 []IntegrationSchemasSaml5 `queryParam:"inline,name=saml"`
+	MapOfAny                       map[string]any            `queryParam:"inline,name=saml" union:"member"`
+	Str                            *string                   `queryParam:"inline,name=saml" union:"member"`
+	Number                         *float64                  `queryParam:"inline,name=saml" union:"member"`
+	Boolean                        *bool                     `queryParam:"inline,name=saml" union:"member"`
+	ArrayOfIntegrationSchemasSaml5 []IntegrationSchemasSaml5 `queryParam:"inline,name=saml" union:"member"`
 
 	Type SamlType
 }
@@ -783,10 +783,10 @@ const (
 )
 
 type IntegrationSchemasSandbox5 struct {
-	IntegrationSchemasSandbox1 *IntegrationSchemasSandbox1 `queryParam:"inline,name=five"`
-	Str                        *string                     `queryParam:"inline,name=five"`
-	Number                     *float64                    `queryParam:"inline,name=five"`
-	Boolean                    *bool                       `queryParam:"inline,name=five"`
+	IntegrationSchemasSandbox1 *IntegrationSchemasSandbox1 `queryParam:"inline,name=five" union:"member"`
+	Str                        *string                     `queryParam:"inline,name=five" union:"member"`
+	Number                     *float64                    `queryParam:"inline,name=five" union:"member"`
+	Boolean                    *bool                       `queryParam:"inline,name=five" union:"member"`
 
 	Type IntegrationSchemasSandbox5Type
 }
@@ -891,11 +891,11 @@ const (
 )
 
 type Sandbox struct {
-	MapOfAny                          map[string]any               `queryParam:"inline,name=sandbox"`
-	Str                               *string                      `queryParam:"inline,name=sandbox"`
-	Number                            *float64                     `queryParam:"inline,name=sandbox"`
-	Boolean                           *bool                        `queryParam:"inline,name=sandbox"`
-	ArrayOfIntegrationSchemasSandbox5 []IntegrationSchemasSandbox5 `queryParam:"inline,name=sandbox"`
+	MapOfAny                          map[string]any               `queryParam:"inline,name=sandbox" union:"member"`
+	Str                               *string                      `queryParam:"inline,name=sandbox" union:"member"`
+	Number                            *float64                     `queryParam:"inline,name=sandbox" union:"member"`
+	Boolean                           *bool                        `queryParam:"inline,name=sandbox" union:"member"`
+	ArrayOfIntegrationSchemasSandbox5 []IntegrationSchemasSandbox5 `queryParam:"inline,name=sandbox" union:"member"`
 
 	Type SandboxType
 }
@@ -1048,7 +1048,7 @@ func (i Integration) MarshalJSON() ([]byte, error) {
 }
 
 func (i *Integration) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &i, "", false, []string{"categories", "name", "type"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &i, "", false, nil); err != nil {
 		return err
 	}
 	return nil

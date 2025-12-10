@@ -1,5 +1,4 @@
 # Timeshift
-(*Timeshift*)
 
 ## Overview
 

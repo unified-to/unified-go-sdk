@@ -98,6 +98,7 @@ type AccountingInvoice struct {
 	PaymentCollectionMethod *AccountingInvoicePaymentCollectionMethod `json:"payment_collection_method,omitempty"`
 	PostedAt                *time.Time                                `json:"posted_at,omitempty"`
 	Raw                     map[string]any                            `json:"raw,omitempty"`
+	Reference               *string                                   `json:"reference,omitempty"`
 	RefundAmount            *float64                                  `json:"refund_amount,omitempty"`
 	RefundReason            *string                                   `json:"refund_reason,omitempty"`
 	RefundedAt              *time.Time                                `json:"refunded_at,omitempty"`
@@ -245,6 +246,13 @@ func (a *AccountingInvoice) GetRaw() map[string]any {
 		return nil
 	}
 	return a.Raw
+}
+
+func (a *AccountingInvoice) GetReference() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Reference
 }
 
 func (a *AccountingInvoice) GetRefundAmount() *float64 {

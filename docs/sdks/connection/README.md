@@ -1,5 +1,4 @@
 # Connection
-(*Connection*)
 
 ## Overview
 

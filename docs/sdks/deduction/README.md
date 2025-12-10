@@ -1,5 +1,4 @@
 # Deduction
-(*Deduction*)
 
 ## Overview
 

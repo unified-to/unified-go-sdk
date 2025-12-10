@@ -1,5 +1,4 @@
 # Issue
-(*Issue*)
 
 ## Overview
 

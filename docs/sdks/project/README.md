@@ -1,5 +1,4 @@
 # Project
-(*Project*)
 
 ## Overview
 

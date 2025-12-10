@@ -32,10 +32,10 @@ const (
 )
 
 type TaskMetadata5 struct {
-	TaskMetadata1 *TaskMetadata1 `queryParam:"inline,name=five"`
-	Str           *string        `queryParam:"inline,name=five"`
-	Number        *float64       `queryParam:"inline,name=five"`
-	Boolean       *bool          `queryParam:"inline,name=five"`
+	TaskMetadata1 *TaskMetadata1 `queryParam:"inline,name=five" union:"member"`
+	Str           *string        `queryParam:"inline,name=five" union:"member"`
+	Number        *float64       `queryParam:"inline,name=five" union:"member"`
+	Boolean       *bool          `queryParam:"inline,name=five" union:"member"`
 
 	Type TaskMetadata5Type
 }
@@ -140,11 +140,11 @@ const (
 )
 
 type TaskMetadataExtraData struct {
-	MapOfAny             map[string]any  `queryParam:"inline,name=extra_data"`
-	Str                  *string         `queryParam:"inline,name=extra_data"`
-	Number               *float64        `queryParam:"inline,name=extra_data"`
-	Boolean              *bool           `queryParam:"inline,name=extra_data"`
-	ArrayOfTaskMetadata5 []TaskMetadata5 `queryParam:"inline,name=extra_data"`
+	MapOfAny             map[string]any  `queryParam:"inline,name=extra_data" union:"member"`
+	Str                  *string         `queryParam:"inline,name=extra_data" union:"member"`
+	Number               *float64        `queryParam:"inline,name=extra_data" union:"member"`
+	Boolean              *bool           `queryParam:"inline,name=extra_data" union:"member"`
+	ArrayOfTaskMetadata5 []TaskMetadata5 `queryParam:"inline,name=extra_data" union:"member"`
 
 	Type TaskMetadataExtraDataType
 }
@@ -315,10 +315,10 @@ const (
 )
 
 type TaskMetadataSchemas5 struct {
-	TaskMetadataSchemas1 *TaskMetadataSchemas1 `queryParam:"inline,name=five"`
-	Str                  *string               `queryParam:"inline,name=five"`
-	Number               *float64              `queryParam:"inline,name=five"`
-	Boolean              *bool                 `queryParam:"inline,name=five"`
+	TaskMetadataSchemas1 *TaskMetadataSchemas1 `queryParam:"inline,name=five" union:"member"`
+	Str                  *string               `queryParam:"inline,name=five" union:"member"`
+	Number               *float64              `queryParam:"inline,name=five" union:"member"`
+	Boolean              *bool                 `queryParam:"inline,name=five" union:"member"`
 
 	Type TaskMetadataSchemas5Type
 }
@@ -423,11 +423,11 @@ const (
 )
 
 type TaskMetadataValue struct {
-	MapOfAny                    map[string]any         `queryParam:"inline,name=value"`
-	Str                         *string                `queryParam:"inline,name=value"`
-	Number                      *float64               `queryParam:"inline,name=value"`
-	Boolean                     *bool                  `queryParam:"inline,name=value"`
-	ArrayOfTaskMetadataSchemas5 []TaskMetadataSchemas5 `queryParam:"inline,name=value"`
+	MapOfAny                    map[string]any         `queryParam:"inline,name=value" union:"member"`
+	Str                         *string                `queryParam:"inline,name=value" union:"member"`
+	Number                      *float64               `queryParam:"inline,name=value" union:"member"`
+	Boolean                     *bool                  `queryParam:"inline,name=value" union:"member"`
+	ArrayOfTaskMetadataSchemas5 []TaskMetadataSchemas5 `queryParam:"inline,name=value" union:"member"`
 
 	Type TaskMetadataValueType
 }

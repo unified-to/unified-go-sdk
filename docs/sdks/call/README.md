@@ -1,5 +1,4 @@
 # Call
-(*Call*)
 
 ## Overview
 

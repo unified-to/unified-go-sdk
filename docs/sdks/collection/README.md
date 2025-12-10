@@ -1,5 +1,4 @@
 # Collection
-(*Collection*)
 
 ## Overview
 

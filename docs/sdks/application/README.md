@@ -1,5 +1,4 @@
 # Application
-(*Application*)
 
 ## Overview
 

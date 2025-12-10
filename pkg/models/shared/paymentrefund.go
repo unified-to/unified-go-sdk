@@ -49,7 +49,7 @@ func (p PaymentRefund) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PaymentRefund) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"payment_id", "total_amount"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, nil); err != nil {
 		return err
 	}
 	return nil

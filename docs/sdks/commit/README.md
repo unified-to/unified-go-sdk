@@ -1,5 +1,4 @@
 # Commit
-(*Commit*)
 
 ## Overview
 

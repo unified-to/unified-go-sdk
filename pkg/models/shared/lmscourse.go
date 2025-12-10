@@ -30,7 +30,7 @@ func (l LmsCourse) MarshalJSON() ([]byte, error) {
 }
 
 func (l *LmsCourse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, []string{"name"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
 		return err
 	}
 	return nil

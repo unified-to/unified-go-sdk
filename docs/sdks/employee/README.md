@@ -1,5 +1,4 @@
 # Employee
-(*Employee*)
 
 ## Overview
 

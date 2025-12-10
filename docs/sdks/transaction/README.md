@@ -1,5 +1,4 @@
 # Transaction
-(*Transaction*)
 
 ## Overview
 

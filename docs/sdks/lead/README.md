@@ -1,5 +1,4 @@
 # Lead
-(*Lead*)
 
 ## Overview
 

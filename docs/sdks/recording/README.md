@@ -1,5 +1,4 @@
 # Recording
-(*Recording*)
 
 ## Overview
 

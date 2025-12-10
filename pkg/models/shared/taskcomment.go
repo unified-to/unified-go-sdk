@@ -23,7 +23,7 @@ func (t TaskComment) MarshalJSON() ([]byte, error) {
 }
 
 func (t *TaskComment) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"task_id", "text"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &t, "", false, nil); err != nil {
 		return err
 	}
 	return nil

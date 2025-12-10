@@ -1,5 +1,4 @@
 # List
-(*List*)
 
 ## Overview
 

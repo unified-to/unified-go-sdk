@@ -22,7 +22,7 @@ func (e EnrichPersonWorkHistory) MarshalJSON() ([]byte, error) {
 }
 
 func (e *EnrichPersonWorkHistory) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &e, "", false, []string{"title"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &e, "", false, nil); err != nil {
 		return err
 	}
 	return nil

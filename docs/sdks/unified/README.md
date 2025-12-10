@@ -1,5 +1,4 @@
 # Unified
-(*Unified*)
 
 ## Overview
 

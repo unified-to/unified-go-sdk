@@ -64,7 +64,7 @@ func (v VerificationPackage) MarshalJSON() ([]byte, error) {
 }
 
 func (v *VerificationPackage) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "name", "type"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

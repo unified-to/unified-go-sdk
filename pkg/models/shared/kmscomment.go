@@ -71,7 +71,7 @@ func (k KmsComment) MarshalJSON() ([]byte, error) {
 }
 
 func (k *KmsComment) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &k, "", false, []string{"content"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &k, "", false, nil); err != nil {
 		return err
 	}
 	return nil

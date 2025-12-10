@@ -21,7 +21,7 @@ func (c CalendarBusy) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CalendarBusy) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"end_at", "start_at"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil

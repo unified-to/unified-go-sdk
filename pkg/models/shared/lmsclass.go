@@ -26,7 +26,7 @@ func (l LmsClass) MarshalJSON() ([]byte, error) {
 }
 
 func (l *LmsClass) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, []string{"course_id", "name"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
 		return err
 	}
 	return nil

@@ -32,10 +32,10 @@ const (
 )
 
 type CrmMetadata5 struct {
-	CrmMetadata1 *CrmMetadata1 `queryParam:"inline,name=five"`
-	Str          *string       `queryParam:"inline,name=five"`
-	Number       *float64      `queryParam:"inline,name=five"`
-	Boolean      *bool         `queryParam:"inline,name=five"`
+	CrmMetadata1 *CrmMetadata1 `queryParam:"inline,name=five" union:"member"`
+	Str          *string       `queryParam:"inline,name=five" union:"member"`
+	Number       *float64      `queryParam:"inline,name=five" union:"member"`
+	Boolean      *bool         `queryParam:"inline,name=five" union:"member"`
 
 	Type CrmMetadata5Type
 }
@@ -140,11 +140,11 @@ const (
 )
 
 type CrmMetadataExtraData struct {
-	MapOfAny            map[string]any `queryParam:"inline,name=extra_data"`
-	Str                 *string        `queryParam:"inline,name=extra_data"`
-	Number              *float64       `queryParam:"inline,name=extra_data"`
-	Boolean             *bool          `queryParam:"inline,name=extra_data"`
-	ArrayOfCrmMetadata5 []CrmMetadata5 `queryParam:"inline,name=extra_data"`
+	MapOfAny            map[string]any `queryParam:"inline,name=extra_data" union:"member"`
+	Str                 *string        `queryParam:"inline,name=extra_data" union:"member"`
+	Number              *float64       `queryParam:"inline,name=extra_data" union:"member"`
+	Boolean             *bool          `queryParam:"inline,name=extra_data" union:"member"`
+	ArrayOfCrmMetadata5 []CrmMetadata5 `queryParam:"inline,name=extra_data" union:"member"`
 
 	Type CrmMetadataExtraDataType
 }
@@ -315,10 +315,10 @@ const (
 )
 
 type CrmMetadataSchemas5 struct {
-	CrmMetadataSchemas1 *CrmMetadataSchemas1 `queryParam:"inline,name=five"`
-	Str                 *string              `queryParam:"inline,name=five"`
-	Number              *float64             `queryParam:"inline,name=five"`
-	Boolean             *bool                `queryParam:"inline,name=five"`
+	CrmMetadataSchemas1 *CrmMetadataSchemas1 `queryParam:"inline,name=five" union:"member"`
+	Str                 *string              `queryParam:"inline,name=five" union:"member"`
+	Number              *float64             `queryParam:"inline,name=five" union:"member"`
+	Boolean             *bool                `queryParam:"inline,name=five" union:"member"`
 
 	Type CrmMetadataSchemas5Type
 }
@@ -423,11 +423,11 @@ const (
 )
 
 type CrmMetadataValue struct {
-	MapOfAny                   map[string]any        `queryParam:"inline,name=value"`
-	Str                        *string               `queryParam:"inline,name=value"`
-	Number                     *float64              `queryParam:"inline,name=value"`
-	Boolean                    *bool                 `queryParam:"inline,name=value"`
-	ArrayOfCrmMetadataSchemas5 []CrmMetadataSchemas5 `queryParam:"inline,name=value"`
+	MapOfAny                   map[string]any        `queryParam:"inline,name=value" union:"member"`
+	Str                        *string               `queryParam:"inline,name=value" union:"member"`
+	Number                     *float64              `queryParam:"inline,name=value" union:"member"`
+	Boolean                    *bool                 `queryParam:"inline,name=value" union:"member"`
+	ArrayOfCrmMetadataSchemas5 []CrmMetadataSchemas5 `queryParam:"inline,name=value" union:"member"`
 
 	Type CrmMetadataValueType
 }

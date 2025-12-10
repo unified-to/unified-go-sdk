@@ -30,7 +30,7 @@ func (h HrisTimeshift) MarshalJSON() ([]byte, error) {
 }
 
 func (h *HrisTimeshift) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"employee_user_id", "end_at", "start_at"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
 		return err
 	}
 	return nil

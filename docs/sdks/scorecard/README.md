@@ -1,5 +1,4 @@
 # Scorecard
-(*Scorecard*)
 
 ## Overview
 

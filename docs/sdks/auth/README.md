@@ -1,5 +1,4 @@
 # Auth
-(*Auth*)
 
 ## Overview
 

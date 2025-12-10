@@ -1,5 +1,4 @@
 # Verification
-(*Verification*)
 
 ## Overview
 

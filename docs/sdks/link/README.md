@@ -1,5 +1,4 @@
 # Link
-(*Link*)
 
 ## Overview
 

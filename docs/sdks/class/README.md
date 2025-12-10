@@ -1,5 +1,4 @@
 # Class
-(*Class*)
 
 ## Overview
 

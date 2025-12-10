@@ -1,5 +1,4 @@
 # Prompt
-(*Prompt*)
 
 ## Overview
 

@@ -1,5 +1,4 @@
 # Creditmemo
-(*Creditmemo*)
 
 ## Overview
 

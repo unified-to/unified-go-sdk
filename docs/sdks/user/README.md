@@ -1,5 +1,4 @@
 # User
-(*User*)
 
 ## Overview
 

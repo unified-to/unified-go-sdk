@@ -1,5 +1,4 @@
 # Calendar
-(*Calendar*)
 
 ## Overview
 

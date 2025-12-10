@@ -26,7 +26,7 @@ func (k KmsSpace) MarshalJSON() ([]byte, error) {
 }
 
 func (k *KmsSpace) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &k, "", false, []string{"name"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &k, "", false, nil); err != nil {
 		return err
 	}
 	return nil

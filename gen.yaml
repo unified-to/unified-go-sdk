@@ -18,6 +18,7 @@ generation:
   schemas:
     allOfMergeStrategy: shallowMerge
   requestBodyFieldName: ""
+  persistentEdits: {}
   tests:
     generateTests: true
     generateNewTests: false
@@ -25,7 +26,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.36.0
+  version: 0.36.1
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: UnifiedToError

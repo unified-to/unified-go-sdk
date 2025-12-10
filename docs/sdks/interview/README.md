@@ -1,5 +1,4 @@
 # Interview
-(*Interview*)
 
 ## Overview
 
