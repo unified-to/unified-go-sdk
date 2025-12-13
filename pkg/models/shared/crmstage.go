@@ -13,6 +13,7 @@ type CrmStage struct {
 	DealProbability *float64   `json:"deal_probability,omitempty"`
 	DisplayOrder    *float64   `json:"display_order,omitempty"`
 	ID              *string    `json:"id,omitempty"`
+	IsClosed        *bool      `json:"is_closed,omitempty"`
 	Name            *string    `json:"name,omitempty"`
 	UpdatedAt       *time.Time `json:"updated_at,omitempty"`
 }
@@ -61,6 +62,13 @@ func (c *CrmStage) GetID() *string {
 		return nil
 	}
 	return c.ID
+}
+
+func (c *CrmStage) GetIsClosed() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.IsClosed
 }
 
 func (c *CrmStage) GetName() *string {

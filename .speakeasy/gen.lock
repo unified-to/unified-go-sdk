@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 7ef3d1caec75891711e5e81373e284c3
+  docChecksum: dbaf8b38742d89e3249fbd4c5a4e2a74
   docVersion: "1.0"
-  speakeasyVersion: 1.674.0
-  generationVersion: 2.778.0
-  releaseVersion: 0.36.1
-  configChecksum: 3ea52a424fd6432367fc4412deff5fb8
+  speakeasyVersion: 1.676.1
+  generationVersion: 2.781.2
+  releaseVersion: 0.36.2
+  configChecksum: 9374709a0b98856bf6c4615be4b1bc92
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 0036279d-de4a-4d22-90e5-c512ebd81a02
-  pristine_commit_hash: 4eb61e88558bfd65ae78c2a0f667b5529b9af9ac
-  pristine_tree_hash: 28910efbc80d3e9b0d84dc75c67ac139eeb02f3f
+  generation_id: e4e45dad-b51c-4558-82eb-137fbe52717d
+  pristine_commit_hash: 9411ab015fd9ea64ec39c3ca6266a1ba6db999d0
+  pristine_tree_hash: 0361ed63482e18905a19df42987722e5872e99b2
 features:
   go:
     acceptHeaders: 2.81.2
@@ -5067,8 +5067,8 @@ trackedFiles:
     pristine_git_object: 7b886d483983c2df83cc4e93652df7fba77d332c
   docs/pkg/models/shared/crmstage.md:
     id: 804f358afa1e
-    last_write_checksum: sha1:76dbb602fc57d8eae61372814db45be3dde06291
-    pristine_git_object: 34757b09b1a0e21fb1a9980ecbec7adef2c4beae
+    last_write_checksum: sha1:0b6acfb9851d0e7a2b5ba0ffca87c3a370eb5998
+    pristine_git_object: 03b96051efaeddd2363e065ab1e6eaae6d8bb6be
   docs/pkg/models/shared/crmtelephone.md:
     id: 01f357569f4f
     last_write_checksum: sha1:26053d5cd7d81d6cdccfa16c5588d8eb83d5cbe6
@@ -7171,8 +7171,8 @@ trackedFiles:
     pristine_git_object: e32237b71b9c54af00a2495e5d2d7a9b3aa38c00
   go.mod:
     id: c47645c391ad
-    last_write_checksum: sha1:216658d9936c2e11c75b069084c5403f2318d2a2
-    pristine_git_object: 666948d329bba4c9e673c8c576620ad6ae97d2cd
+    last_write_checksum: sha1:a59de011d863bf02f6c527763eb523c53f8f4645
+    pristine_git_object: 5e9dd37751b79208a919370e2308032a772910b0
   group.go:
     id: ebc493ea8cf9
     last_write_checksum: sha1:8ad5bc236ac44787d5e3c08ad773017eca116a9d
@@ -9847,8 +9847,8 @@ trackedFiles:
     pristine_git_object: 585c5e87034777477d8e3a5a803f9ab1fe1d1829
   pkg/models/shared/crmstage.go:
     id: 711d53d16a1b
-    last_write_checksum: sha1:63839df37e7e661dbeb1045449488492dbc7d571
-    pristine_git_object: 7dd5b67c08b1c9c8b4c7bc4f07b24942b36dce4d
+    last_write_checksum: sha1:57ba0053179b32aaf60cb497bd74a084d34885f6
+    pristine_git_object: 9823add55630dbba84cee6cf0bc13ee75c4c6f33
   pkg/models/shared/crmtelephone.go:
     id: a7838a6a5802
     last_write_checksum: sha1:cca3820675b897c6d35eeb74f064001e289a64de
@@ -10707,8 +10707,8 @@ trackedFiles:
     pristine_git_object: 4b20fb365c076f7b22e57f5b25ee451c4aa733c9
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:0499afcace0d59800f0166faab667c512f7470ff
-    pristine_git_object: d8fb0d74363c6c5e264267fbc9cb6d0cafb14997
+    last_write_checksum: sha1:a2a4ecfca742ff7fbd290ce48c8b65b2046c5913
+    pristine_git_object: 1ee639c03890e1d6f80f7d53160562fd1313264d
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -15561,7 +15561,7 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Accounting.CreateAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Reference` **Added**\n  *  `response.Reference` **Added**\n* `UnifiedTo.Accounting.GetAccountingInvoice()`:  `response.Reference` **Added**\n* `UnifiedTo.Accounting.ListAccountingInvoices()`:  `response.[].Reference` **Added**\n* `UnifiedTo.Accounting.PatchAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Reference` **Added**\n  *  `response.Reference` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Reference` **Added**\n  *  `response.Reference` **Added**\n* `UnifiedTo.Invoice.CreateAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Reference` **Added**\n  *  `response.Reference` **Added**\n* `UnifiedTo.Invoice.GetAccountingInvoice()`:  `response.Reference` **Added**\n* `UnifiedTo.Invoice.ListAccountingInvoices()`:  `response.[].Reference` **Added**\n* `UnifiedTo.Invoice.PatchAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Reference` **Added**\n  *  `response.Reference` **Added**\n* `UnifiedTo.Invoice.UpdateAccountingInvoice()`: \n  *  `request.Request.AccountingInvoice.Reference` **Added**\n  *  `response.Reference` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Crm.CreateCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Crm.GetCrmPipeline()`:  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Crm.ListCrmPipelines()`:  `response.[].Stages.[].IsClosed` **Added**\n* `UnifiedTo.Crm.PatchCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Crm.UpdateCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Pipeline.CreateCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Pipeline.GetCrmPipeline()`:  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Pipeline.ListCrmPipelines()`:  `response.[].Stages.[].IsClosed` **Added**\n* `UnifiedTo.Pipeline.PatchCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Pipeline.UpdateCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
