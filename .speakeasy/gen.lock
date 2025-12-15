@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: dbaf8b38742d89e3249fbd4c5a4e2a74
+  docChecksum: 4b755486531295c10ba7a2e07a4c42c1
   docVersion: "1.0"
   speakeasyVersion: 1.676.1
   generationVersion: 2.781.2
-  releaseVersion: 0.36.2
-  configChecksum: 9374709a0b98856bf6c4615be4b1bc92
+  releaseVersion: 0.36.3
+  configChecksum: 9520c8eebc9f1f6eef7ee7ecdd68e7fc
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: e4e45dad-b51c-4558-82eb-137fbe52717d
-  pristine_commit_hash: 9411ab015fd9ea64ec39c3ca6266a1ba6db999d0
-  pristine_tree_hash: 0361ed63482e18905a19df42987722e5872e99b2
+  generation_id: 4addbcf5-d5e2-44d0-ad43-83b52706c976
+  pristine_commit_hash: fd961a3b4d583e372ee0567e193c8dd60bd922d9
+  pristine_tree_hash: b2449163fb37f84f03156f70932ddc3a98e21a6e
 features:
   go:
     acceptHeaders: 2.81.2
@@ -5235,8 +5235,8 @@ trackedFiles:
     pristine_git_object: 8bba67b5d091ea424567914b1a4f2bed963de843
   docs/pkg/models/shared/hrisemployee.md:
     id: 90ca1896f3ff
-    last_write_checksum: sha1:3859099618b1de73f2e51fecc4ad42be1b2e7d2f
-    pristine_git_object: 90cb9813e9486a9f34d01a0756ee16dfaa553486
+    last_write_checksum: sha1:b072f0ee8629bcb484d7676f71fbfb31fb64b03d
+    pristine_git_object: 82b0c54e324c43dbb3ecc427109a33ba1ddc29c2
   docs/pkg/models/shared/hrisemployeeemploymenttype.md:
     id: 29247021685e
     last_write_checksum: sha1:b7f2e9b43df6b4f106d6733bf984276c7de3bfaa
@@ -5245,6 +5245,14 @@ trackedFiles:
     id: d773861b32d8
     last_write_checksum: sha1:f60dec0d082f9bed378f876c1e0826040162eaa7
     pristine_git_object: 0ec6f76d94838e906a667bc411668b681a905ff1
+  docs/pkg/models/shared/hrisemployeerelationship.md:
+    id: d8acd6ff2df6
+    last_write_checksum: sha1:1b204af37bbf67a35b7c7958de639bcbe7c276a0
+    pristine_git_object: 738a0d0371a1cbd2de9e8cff9ad67f305456f8d7
+  docs/pkg/models/shared/hrisemployeerelationshiptype.md:
+    id: dbc1741cc79f
+    last_write_checksum: sha1:2d6fc7cf62ca65f66145823f976fd4b520acc856
+    pristine_git_object: 90b204067973588028cca3df57dcdd7318076eed
   docs/pkg/models/shared/hrisgroup.md:
     id: 794fff96caa3
     last_write_checksum: sha1:f2e90729f228656c44e118ccf67d914cd49b960c
@@ -6033,6 +6041,10 @@ trackedFiles:
     id: 20730af23f24
     last_write_checksum: sha1:e1c1d90473a723750dfc74281d708df18a9ccacd
     pristine_git_object: b1c55891c6d0e7a7d443265a055e655e1c627727
+  docs/pkg/models/shared/propertyhrisemployeerelationshipaddress.md:
+    id: 8f8c60d9b265
+    last_write_checksum: sha1:55c0b68f644aa77d0bd5c8dc4002086ad1114bb3
+    pristine_git_object: 036b4dfb26a27543cfe4ed2b2a0ba15694f6feda
   docs/pkg/models/shared/propertyhrislocationaddress.md:
     id: e72fc6361779
     last_write_checksum: sha1:42c97a1698befa0d0069e431902ee63ae73f2286
@@ -9919,8 +9931,12 @@ trackedFiles:
     pristine_git_object: f4b7a8447eb460594fd1be272444237dce939a86
   pkg/models/shared/hrisemployee.go:
     id: dcfd18dc81cb
-    last_write_checksum: sha1:50611cd80f281854681db606d59e4fb3cbd1ccdb
-    pristine_git_object: 35be9a8bb2bce41f422142c86b1c6acbee7ccca7
+    last_write_checksum: sha1:ef0925fd55eaf99ba4b30fd7ef9ac80ac34dcd87
+    pristine_git_object: 91edd4eaae9ac5ab620d372dddace47b9436791d
+  pkg/models/shared/hrisemployeerelationship.go:
+    id: be4f8d449ecb
+    last_write_checksum: sha1:3f41fea0564cd2127b566f499f2d8a8e7a6a5323
+    pristine_git_object: a0ebcec95a321447ebb78cef40280d197fdcc8cf
   pkg/models/shared/hrisgroup.go:
     id: 0aebd7ef4df0
     last_write_checksum: sha1:0bf323eddc60027b20995786576ec079c4143495
@@ -10229,6 +10245,10 @@ trackedFiles:
     id: 8e1326bbc9cd
     last_write_checksum: sha1:01ac3c19cd8d5a0fdb57ddf862dae306df58b842
     pristine_git_object: 41d100ba0754d9d45e68c12f96a03b776d53c3e7
+  pkg/models/shared/propertyhrisemployeerelationshipaddress.go:
+    id: 667ec95136b6
+    last_write_checksum: sha1:8630b314f7bbc649c9216e6d9d7cf11e07713fac
+    pristine_git_object: d6853b7a00af964c9ca8704848d33a36a0e98c21
   pkg/models/shared/propertyhrislocationaddress.go:
     id: 81e1ff000ff6
     last_write_checksum: sha1:709a9edbb27a3cbbd285a7bf54c177d0ae84c484
@@ -10707,8 +10727,8 @@ trackedFiles:
     pristine_git_object: 4b20fb365c076f7b22e57f5b25ee451c4aa733c9
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:a2a4ecfca742ff7fbd290ce48c8b65b2046c5913
-    pristine_git_object: 1ee639c03890e1d6f80f7d53160562fd1313264d
+    last_write_checksum: sha1:571a54b7c5f1fa20956b3425fb46b30e2dc2aa81
+    pristine_git_object: 1d13f3028b95b0528ad2b9ab7bfaf14425bdc7fb
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -15561,7 +15581,7 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Crm.CreateCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Crm.GetCrmPipeline()`:  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Crm.ListCrmPipelines()`:  `response.[].Stages.[].IsClosed` **Added**\n* `UnifiedTo.Crm.PatchCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Crm.UpdateCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Pipeline.CreateCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Pipeline.GetCrmPipeline()`:  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Pipeline.ListCrmPipelines()`:  `response.[].Stages.[].IsClosed` **Added**\n* `UnifiedTo.Pipeline.PatchCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n* `UnifiedTo.Pipeline.UpdateCrmPipeline()`: \n  *  `request.Request.CrmPipeline.Stages.[].IsClosed` **Added**\n  *  `response.Stages.[].IsClosed` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Hris.CreateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n* `UnifiedTo.Hris.GetHrisEmployee()`:  `response.Relationships` **Added**\n* `UnifiedTo.Hris.ListHrisEmployees()`:  `response.[].Relationships` **Added**\n* `UnifiedTo.Hris.PatchHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n* `UnifiedTo.Hris.UpdateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n* `UnifiedTo.Employee.CreateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n* `UnifiedTo.Employee.GetHrisEmployee()`:  `response.Relationships` **Added**\n* `UnifiedTo.Employee.ListHrisEmployees()`:  `response.[].Relationships` **Added**\n* `UnifiedTo.Employee.PatchHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n* `UnifiedTo.Employee.UpdateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
