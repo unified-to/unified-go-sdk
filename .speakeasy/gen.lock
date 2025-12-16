@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 4b755486531295c10ba7a2e07a4c42c1
+  docChecksum: 72dca536fc3e4387cdd9f33a075cc801
   docVersion: "1.0"
   speakeasyVersion: 1.676.1
   generationVersion: 2.781.2
-  releaseVersion: 0.36.3
-  configChecksum: 9520c8eebc9f1f6eef7ee7ecdd68e7fc
+  releaseVersion: 0.36.4
+  configChecksum: 5df6da46a7518546a56ec17f10059d6a
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 4addbcf5-d5e2-44d0-ad43-83b52706c976
-  pristine_commit_hash: fd961a3b4d583e372ee0567e193c8dd60bd922d9
-  pristine_tree_hash: b2449163fb37f84f03156f70932ddc3a98e21a6e
+  generation_id: 9251c77a-da72-479c-b65a-0035419def2e
+  pristine_commit_hash: 7b13d19355ff46bd7d7ef8298770f47fd8f5b5a8
+  pristine_tree_hash: 943eb1b6a81e489f95b97976bc6bb0154c617483
 features:
   go:
     acceptHeaders: 2.81.2
@@ -5263,8 +5263,8 @@ trackedFiles:
     pristine_git_object: 8e72a869d77567552eafcd59af0d0baf99ecf735
   docs/pkg/models/shared/hrislocation.md:
     id: c79e5bd74962
-    last_write_checksum: sha1:1ceac3222a405968a13eede5eda4203ad8479620
-    pristine_git_object: a102cbbd0664f7d27d06563682e2c11577799400
+    last_write_checksum: sha1:09aa456539d33106665b73f345c519b4976d384d
+    pristine_git_object: 9964266d44bfa94af3ff2f2ad1bbfde28d711532
   docs/pkg/models/shared/hrismetadata.md:
     id: f3da1fe1427c
     last_write_checksum: sha1:2454b5121cf5b010b7fdc72a17ce6817c2755dad
@@ -9943,8 +9943,8 @@ trackedFiles:
     pristine_git_object: 68a2e406b749b020992c3bf47af90919629e3518
   pkg/models/shared/hrislocation.go:
     id: 9019db6377a1
-    last_write_checksum: sha1:0d5d53f4b2816d6fc155c3b2e8ac12328ec936df
-    pristine_git_object: 67e36bfd6c3ec2211eab185e65af7a2566327558
+    last_write_checksum: sha1:e35f05f1497107e11b60e80fc0228182ac492a68
+    pristine_git_object: e13a8c7f78223ee96d00c9ae36eecc543a94a155
   pkg/models/shared/hrismetadata.go:
     id: 44e4ae5d7937
     last_write_checksum: sha1:0ae7aef6ac0d28e2614a5296fdd4b924d1fb0907
@@ -10727,8 +10727,8 @@ trackedFiles:
     pristine_git_object: 4b20fb365c076f7b22e57f5b25ee451c4aa733c9
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:571a54b7c5f1fa20956b3425fb46b30e2dc2aa81
-    pristine_git_object: 1d13f3028b95b0528ad2b9ab7bfaf14425bdc7fb
+    last_write_checksum: sha1:69b5484fd65704357e8e1d0ca9d87ebce806002e
+    pristine_git_object: b43d733dae69162c4d800901b6c912c51f79b512
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -15581,7 +15581,7 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Hris.CreateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n* `UnifiedTo.Hris.GetHrisEmployee()`:  `response.Relationships` **Added**\n* `UnifiedTo.Hris.ListHrisEmployees()`:  `response.[].Relationships` **Added**\n* `UnifiedTo.Hris.PatchHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n* `UnifiedTo.Hris.UpdateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n* `UnifiedTo.Employee.CreateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n* `UnifiedTo.Employee.GetHrisEmployee()`:  `response.Relationships` **Added**\n* `UnifiedTo.Employee.ListHrisEmployees()`:  `response.[].Relationships` **Added**\n* `UnifiedTo.Employee.PatchHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n* `UnifiedTo.Employee.UpdateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Relationships` **Added**\n  *  `response.Relationships` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Location.CreateHrisLocation()`: \n  *  `request.Request.HrisLocation.CompanyId` **Added**\n  *  `response.CompanyId` **Added**\n* `UnifiedTo.Location.GetHrisLocation()`:  `response.CompanyId` **Added**\n* `UnifiedTo.Location.ListHrisLocations()`:  `response.[].CompanyId` **Added**\n* `UnifiedTo.Location.PatchHrisLocation()`: \n  *  `request.Request.HrisLocation.CompanyId` **Added**\n  *  `response.CompanyId` **Added**\n* `UnifiedTo.Location.UpdateHrisLocation()`: \n  *  `request.Request.HrisLocation.CompanyId` **Added**\n  *  `response.CompanyId` **Added**\n* `UnifiedTo.Hris.CreateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Locations.[].CompanyId` **Added**\n  *  `response.Locations.[].CompanyId` **Added**\n* `UnifiedTo.Hris.CreateHrisLocation()`: \n  *  `request.Request.HrisLocation.CompanyId` **Added**\n  *  `response.CompanyId` **Added**\n* `UnifiedTo.Hris.GetHrisEmployee()`:  `response.Locations.[].CompanyId` **Added**\n* `UnifiedTo.Hris.GetHrisLocation()`:  `response.CompanyId` **Added**\n* `UnifiedTo.Hris.ListHrisEmployees()`:  `response.[].Locations.[].CompanyId` **Added**\n* `UnifiedTo.Hris.ListHrisLocations()`:  `response.[].CompanyId` **Added**\n* `UnifiedTo.Hris.PatchHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Locations.[].CompanyId` **Added**\n  *  `response.Locations.[].CompanyId` **Added**\n* `UnifiedTo.Hris.PatchHrisLocation()`: \n  *  `request.Request.HrisLocation.CompanyId` **Added**\n  *  `response.CompanyId` **Added**\n* `UnifiedTo.Hris.UpdateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Locations.[].CompanyId` **Added**\n  *  `response.Locations.[].CompanyId` **Added**\n* `UnifiedTo.Hris.UpdateHrisLocation()`: \n  *  `request.Request.HrisLocation.CompanyId` **Added**\n  *  `response.CompanyId` **Added**\n* `UnifiedTo.Employee.CreateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Locations.[].CompanyId` **Added**\n  *  `response.Locations.[].CompanyId` **Added**\n* `UnifiedTo.Employee.GetHrisEmployee()`:  `response.Locations.[].CompanyId` **Added**\n* `UnifiedTo.Employee.ListHrisEmployees()`:  `response.[].Locations.[].CompanyId` **Added**\n* `UnifiedTo.Employee.PatchHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Locations.[].CompanyId` **Added**\n  *  `response.Locations.[].CompanyId` **Added**\n* `UnifiedTo.Employee.UpdateHrisEmployee()`: \n  *  `request.Request.HrisEmployee.Locations.[].CompanyId` **Added**\n  *  `response.Locations.[].CompanyId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

@@ -9,6 +9,7 @@ import (
 
 type HrisLocation struct {
 	Address            *PropertyHrisLocationAddress `json:"address,omitempty"`
+	CompanyID          *string                      `json:"company_id,omitempty"`
 	CreatedAt          *time.Time                   `json:"created_at,omitempty"`
 	Currency           *string                      `json:"currency,omitempty"`
 	Description        *string                      `json:"description,omitempty"`
@@ -41,6 +42,13 @@ func (h *HrisLocation) GetAddress() *PropertyHrisLocationAddress {
 		return nil
 	}
 	return h.Address
+}
+
+func (h *HrisLocation) GetCompanyID() *string {
+	if h == nil {
+		return nil
+	}
+	return h.CompanyID
 }
 
 func (h *HrisLocation) GetCreatedAt() *time.Time {
