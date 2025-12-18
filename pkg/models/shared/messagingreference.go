@@ -2,19 +2,19 @@
 
 package shared
 
-type MessagingChannelMessage struct {
+type MessagingReference struct {
 	ID   *string `json:"id,omitempty"`
 	Name *string `json:"name,omitempty"`
 }
 
-func (m *MessagingChannelMessage) GetID() *string {
+func (m *MessagingReference) GetID() *string {
 	if m == nil {
 		return nil
 	}
 	return m.ID
 }
 
-func (m *MessagingChannelMessage) GetName() *string {
+func (m *MessagingReference) GetName() *string {
 	if m == nil {
 		return nil
 	}

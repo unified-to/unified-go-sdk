@@ -9,8 +9,10 @@
 * [GetMessagingMessage](#getmessagingmessage) - Retrieve a message
 * [ListMessagingChannels](#listmessagingchannels) - List all channels
 * [ListMessagingMessages](#listmessagingmessages) - List all messages
+* [PatchMessagingEvent](#patchmessagingevent) - Update an event
 * [PatchMessagingMessage](#patchmessagingmessage) - Update a message
 * [RemoveMessagingMessage](#removemessagingmessage) - Remove a message
+* [UpdateMessagingEvent](#updatemessagingevent) - Update an event
 * [UpdateMessagingMessage](#updatemessagingmessage) - Update a message
 
 ## CreateMessagingMessage
@@ -287,6 +289,65 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## PatchMessagingEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Messaging.PatchMessagingEvent(ctx, operations.PatchMessagingEventRequest{
+        MessagingEvent: shared.MessagingEvent{
+            Type: shared.MessagingEventTypeChannelJoined,
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.MessagingEvent != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.PatchMessagingEventRequest](../../pkg/models/operations/patchmessagingeventrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.PatchMessagingEventResponse](../../pkg/models/operations/patchmessagingeventresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchMessagingMessage
 
 Update a message
@@ -392,6 +453,65 @@ func main() {
 ### Response
 
 **[*operations.RemoveMessagingMessageResponse](../../pkg/models/operations/removemessagingmessageresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateMessagingEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Messaging.UpdateMessagingEvent(ctx, operations.UpdateMessagingEventRequest{
+        MessagingEvent: shared.MessagingEvent{
+            Type: shared.MessagingEventTypeChannelJoined,
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.MessagingEvent != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.UpdateMessagingEventRequest](../../pkg/models/operations/updatemessagingeventrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.UpdateMessagingEventResponse](../../pkg/models/operations/updatemessagingeventresponse.md), error**
 
 ### Errors
 
