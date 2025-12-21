@@ -39,6 +39,7 @@ const (
 	AccountingCreditmemoStatusPartiallyPaid     AccountingCreditmemoStatus = "PARTIALLY_PAID"
 	AccountingCreditmemoStatusPartiallyRefunded AccountingCreditmemoStatus = "PARTIALLY_REFUNDED"
 	AccountingCreditmemoStatusRefunded          AccountingCreditmemoStatus = "REFUNDED"
+	AccountingCreditmemoStatusOverdue           AccountingCreditmemoStatus = "OVERDUE"
 )
 
 func (e AccountingCreditmemoStatus) ToPointer() *AccountingCreditmemoStatus {
@@ -49,7 +50,7 @@ func (e AccountingCreditmemoStatus) ToPointer() *AccountingCreditmemoStatus {
 func (e *AccountingCreditmemoStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED":
+		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED", "OVERDUE":
 			return true
 		}
 	}

@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 1a896c50bc225151e4415d9bcea95f29
+  docChecksum: 333cdf57ecb8fc0562c8da2e5dd0fd38
   docVersion: "1.0"
-  speakeasyVersion: 1.680.0
-  generationVersion: 2.788.4
-  releaseVersion: 0.36.5
-  configChecksum: 4df36dc455c849d32ab8ae3702349a1a
+  speakeasyVersion: 1.680.3
+  generationVersion: 2.788.5
+  releaseVersion: 0.36.6
+  configChecksum: 9b21debc2fef372e36bdc218ad8c3a75
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 30ba1a24-d8c9-4371-b9e2-2f817178dc4e
-  pristine_commit_hash: 0b060b69d3ed0765515a846626de23677494cc6d
-  pristine_tree_hash: 4e074c7ae38f2527fc999c4202c9ca1164baa155
+  generation_id: bfc76774-6827-474a-92d6-0bb7779596c4
+  pristine_commit_hash: 9ba0a7c7eabf50980e81818eb6aa82db90372137
+  pristine_tree_hash: 06bd1f2a658e81b94acf789e73e0f5f1ab7ce69a
 features:
   go:
     acceptHeaders: 2.81.2
@@ -4495,8 +4495,8 @@ trackedFiles:
     pristine_git_object: 4f15389295fb7149f03a9969fbbc9315d7cd20c3
   docs/pkg/models/shared/accountingbillstatus.md:
     id: 7edf685cd9fd
-    last_write_checksum: sha1:b764b738e60a165df443183d8ecc10c55cefbe74
-    pristine_git_object: 685aba35acc4269e1b1706c3f0ecd700019d7059
+    last_write_checksum: sha1:1f5307f818b458c3829c32831874121e7374d3b3
+    pristine_git_object: 85cddc7ae56dad850e28c5b00083cd72087dd1f8
   docs/pkg/models/shared/accountingcashflow.md:
     id: 49277892a768
     last_write_checksum: sha1:59f47f44a599081861699c0c9078fe507ae13612
@@ -4535,8 +4535,8 @@ trackedFiles:
     pristine_git_object: b9c61eb7748eeec4ed04956cf217c4e6d5cbb865
   docs/pkg/models/shared/accountingcreditmemostatus.md:
     id: 0b175c4e589a
-    last_write_checksum: sha1:dc89545ac69e6f98a548467513652a7cab5a1183
-    pristine_git_object: 5f2a940e6db797a9355080438d6226535eb2a9b8
+    last_write_checksum: sha1:50bda4d2104917f8b6196e0c4ac94a0601630b6e
+    pristine_git_object: 3c70fc049135299ec0f670aa416bc927abfc4808
   docs/pkg/models/shared/accountingemail.md:
     id: 541bf7d12aad
     last_write_checksum: sha1:0fd7c718f90aa20ac11b0945eabd90202f75ebfb
@@ -4559,8 +4559,8 @@ trackedFiles:
     pristine_git_object: 4ee79df104af3c0d887e84a2bb7f1712e766eb41
   docs/pkg/models/shared/accountinginvoicestatus.md:
     id: 362997f40539
-    last_write_checksum: sha1:df8707f2250eb492ecb4c50d6af23d157dec2e3e
-    pristine_git_object: 7cf2c813fbf5c239afe99ef622954372fdda1111
+    last_write_checksum: sha1:7d78b2bd13ffb8c71cbac15853251ed9c71de61b
+    pristine_git_object: b62be25a4966696e4a5933add6ea71a624d3be44
   docs/pkg/models/shared/accountinginvoicetype.md:
     id: b4e59372d0b3
     last_write_checksum: sha1:5059018d6609b34e108a04ad49754bac670cf877
@@ -9551,8 +9551,8 @@ trackedFiles:
     pristine_git_object: db5867ecd71a43ae6d6df527587b4c47fdd20d1d
   pkg/models/shared/accountingbill.go:
     id: 3a3db9a4cbbd
-    last_write_checksum: sha1:42300fad039218a01e4e13c13925e2568d94e5a0
-    pristine_git_object: 93fcbbaf0f7dd7fdb49c18e9166e0edefe0cace0
+    last_write_checksum: sha1:496a0dca19b71fc71232c97deb7deb4f7fa548f4
+    pristine_git_object: 5f8481efbc4390eacdf21bb69ae8ccc6dff18a05
   pkg/models/shared/accountingcashflow.go:
     id: 6ce41c145005
     last_write_checksum: sha1:095db745fa39914de240ab1d4c67e34a57beceef
@@ -9579,8 +9579,8 @@ trackedFiles:
     pristine_git_object: 6513a0d1ea1c823f14d4251334485409ad255f0b
   pkg/models/shared/accountingcreditmemo.go:
     id: 00d8a1832ed5
-    last_write_checksum: sha1:811e642ffdbf476eda81e4b0ea1d627516240454
-    pristine_git_object: 54578241651c7e4edcb4c3f3bc1fe6fca90467ec
+    last_write_checksum: sha1:25b78f053bb1583749f03973634232288118e710
+    pristine_git_object: 9204022b4905baf3ab53dae1c0593b6b30b19b90
   pkg/models/shared/accountingemail.go:
     id: bf2ea6894b1a
     last_write_checksum: sha1:0539b0e95ce5e3797b63c6555fdf84a367b463bd
@@ -9591,8 +9591,8 @@ trackedFiles:
     pristine_git_object: f86738f24bd32aeec9e58d636738691c827ab915
   pkg/models/shared/accountinginvoice.go:
     id: d99d2f160acd
-    last_write_checksum: sha1:0fa0ad43037239a875382b257fcbf71558ea6872
-    pristine_git_object: 735dea3da1486a87cdfaea16bbe5b12f297299a3
+    last_write_checksum: sha1:446f9c6229f3b614371efeeda2bbe41dace05dee
+    pristine_git_object: 567da8046308790bdcd7bf46bb39ea47e5fc4b59
   pkg/models/shared/accountingjournal.go:
     id: 5a2946880b4d
     last_write_checksum: sha1:adf53bf5314e03574e7bcfe564cbfd2264e2f610
@@ -10811,8 +10811,8 @@ trackedFiles:
     pristine_git_object: 4b20fb365c076f7b22e57f5b25ee451c4aa733c9
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:37cc9e61820488684ccf133146f70404c85c8247
-    pristine_git_object: df1db490c3b30fd7613cf0e7f51f3e5e412c6664
+    last_write_checksum: sha1:f2c51d1c9db76d270ee6bb1727454682bc7392c5
+    pristine_git_object: 1c892e021cc509d898f9b6c1e3603c6d981d29bb
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -15687,7 +15687,6 @@ examples:
           application/json: {"type": "CHANNEL_LEFT"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Event.PatchMessagingEvent()`: **Added**\n* `UnifiedTo.Event.UpdateMessagingEvent()`: **Added**\n* `UnifiedTo.Messaging.PatchMessagingEvent()`: **Added**\n* `UnifiedTo.Messaging.UpdateMessagingEvent()`: **Added**\n* `UnifiedTo.Messaging.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.Buttons` **Added**\n  *  `response.Buttons` **Added**\n* `UnifiedTo.Messaging.GetMessagingMessage()`:  `response.Buttons` **Added**\n* `UnifiedTo.Messaging.ListMessagingMessages()`:  `response.[].Buttons` **Added**\n* `UnifiedTo.Messaging.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.Buttons` **Added**\n  *  `response.Buttons` **Added**\n* `UnifiedTo.Messaging.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.Buttons` **Added**\n  *  `response.Buttons` **Added**\n* `UnifiedTo.Message.CreateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.Buttons` **Added**\n  *  `response.Buttons` **Added**\n* `UnifiedTo.Message.GetMessagingMessage()`:  `response.Buttons` **Added**\n* `UnifiedTo.Message.ListMessagingMessages()`:  `response.[].Buttons` **Added**\n* `UnifiedTo.Message.PatchMessagingMessage()`: \n  *  `request.Request.MessagingMessage.Buttons` **Added**\n  *  `response.Buttons` **Added**\n* `UnifiedTo.Message.UpdateMessagingMessage()`: \n  *  `request.Request.MessagingMessage.Buttons` **Added**\n  *  `response.Buttons` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
