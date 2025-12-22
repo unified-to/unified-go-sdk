@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 333cdf57ecb8fc0562c8da2e5dd0fd38
+  docChecksum: 33d600247d6caaa9557a7dac72257357
   docVersion: "1.0"
   speakeasyVersion: 1.680.3
   generationVersion: 2.788.5
-  releaseVersion: 0.36.6
-  configChecksum: 9b21debc2fef372e36bdc218ad8c3a75
+  releaseVersion: 0.36.7
+  configChecksum: 93e4dffd1b5432618ca3a422835aefee
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: bfc76774-6827-474a-92d6-0bb7779596c4
-  pristine_commit_hash: 9ba0a7c7eabf50980e81818eb6aa82db90372137
-  pristine_tree_hash: 06bd1f2a658e81b94acf789e73e0f5f1ab7ce69a
+  generation_id: 74b5906a-335a-4fb7-8f48-7c5a789763bc
+  pristine_commit_hash: 69e88c3ddbe6a9537095fa56707e02e027c24c9a
+  pristine_tree_hash: 65ff142fe1a836c58cc2972b2c8c121f5d39f482
 features:
   go:
     acceptHeaders: 2.81.2
@@ -5827,8 +5827,8 @@ trackedFiles:
     pristine_git_object: 449f189dc375fb8362db67e81aee5cf716110c9d
   docs/pkg/models/shared/objecttype.md:
     id: 96128d2f63b1
-    last_write_checksum: sha1:b9bbbd25a37103a36f8ff5e489dbdd09a46ac75a
-    pristine_git_object: 7597e39ffe31d70d7738ba3f949fb75afcd3f41b
+    last_write_checksum: sha1:bccc53899a3e1c271ed67072ec42d3de5206572b
+    pristine_git_object: d0b9da34c40797b59a7c481eba236c264e9cb4ce
   docs/pkg/models/shared/one.md:
     id: f0c52d1947e2
     last_write_checksum: sha1:cf4c9b7629bdfb5a4196cf3446928735be87767d
@@ -5999,8 +5999,8 @@ trackedFiles:
     pristine_git_object: 4e219c5ee1b9b226d19fd5c5fd190f900f7dc45f
   docs/pkg/models/shared/propertyconnectionpermissions.md:
     id: 91ecc1edb2f8
-    last_write_checksum: sha1:0acb7a3410195b0a1c67d143cb0d8916180cfb46
-    pristine_git_object: 3a844439bce6a34ed745bd971e50e2e8341a4786
+    last_write_checksum: sha1:253f4e012bfd104c30dc1003917ee39ff2fcb29c
+    pristine_git_object: ba0bb6c59356e0a5b2d9806b5797cf4547dd459a
   docs/pkg/models/shared/propertycrmcompanyaddress.md:
     id: 4e66f1e6e9ae
     last_write_checksum: sha1:59a19830b38f85fd656846d053784aa6268d180e
@@ -10243,8 +10243,8 @@ trackedFiles:
     pristine_git_object: d63d14129a61a92228a79f004097dd54bd7a2e30
   pkg/models/shared/propertyconnectionpermissions.go:
     id: 88ab9d7b79f5
-    last_write_checksum: sha1:24e0d53230b52eb853e153d3e6202b060b25a03f
-    pristine_git_object: 0d4f642e7a72b78c554487b70de1c3362c2fa23e
+    last_write_checksum: sha1:ab18a8b630f845ac4c51ed047e1d0d37abc46998
+    pristine_git_object: 7e2289372f2549ceb0a3086160b2f935ac82b8b0
   pkg/models/shared/propertycrmcompanyaddress.go:
     id: 3f96e587bede
     last_write_checksum: sha1:bc8a562133a28ecf7f82a04f5827fb21b9bf0d46
@@ -10607,8 +10607,8 @@ trackedFiles:
     pristine_git_object: c959f88d1389aa538d9eca96874fefa11a23aeea
   pkg/models/shared/webhook.go:
     id: 5ade8debb6cb
-    last_write_checksum: sha1:9c4391d861090d0517a6ece09b0d273414344467
-    pristine_git_object: 36a9e4e077dcc117bc1e8dcad8872e3fcc8b5747
+    last_write_checksum: sha1:0c7d576d260ee3bb46034ab2e418d80787094ece
+    pristine_git_object: 61a17dca3c5e12369147cfbceeb6baab0dee8bf5
   pkg/optionalnullable/optionalnullable.go:
     id: 7520d2c4b109
     last_write_checksum: sha1:d6aff1a420c31e025ea21d46cf056e305ae76fe8
@@ -10811,8 +10811,8 @@ trackedFiles:
     pristine_git_object: 4b20fb365c076f7b22e57f5b25ee451c4aa733c9
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:f2c51d1c9db76d270ee6bb1727454682bc7392c5
-    pristine_git_object: 1c892e021cc509d898f9b6c1e3603c6d981d29bb
+    last_write_checksum: sha1:a1d90fd89a4721e1e91bd4f1c5d694c3094017cb
+    pristine_git_object: e6b3bfac1e387027b3dbc7cbdcf633b3682b6c4c
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6

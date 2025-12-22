@@ -81,6 +81,7 @@
 | `ObjectTypeGenaiEmbedding`          | genai_embedding                     |
 | `ObjectTypeMessagingMessage`        | messaging_message                   |
 | `ObjectTypeMessagingChannel`        | messaging_channel                   |
+| `ObjectTypeMessagingEvent`          | messaging_event                     |
 | `ObjectTypeKmsSpace`                | kms_space                           |
 | `ObjectTypeKmsPage`                 | kms_page                            |
 | `ObjectTypeKmsComment`              | kms_comment                         |

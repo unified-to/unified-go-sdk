@@ -143,6 +143,8 @@
 | `PropertyConnectionPermissionsMessagingMessageRead`         | messaging_message_read                                      |
 | `PropertyConnectionPermissionsMessagingMessageWrite`        | messaging_message_write                                     |
 | `PropertyConnectionPermissionsMessagingChannelRead`         | messaging_channel_read                                      |
+| `PropertyConnectionPermissionsMessagingEventRead`           | messaging_event_read                                        |
+| `PropertyConnectionPermissionsMessagingEventWrite`          | messaging_event_write                                       |
 | `PropertyConnectionPermissionsKmsSpaceRead`                 | kms_space_read                                              |
 | `PropertyConnectionPermissionsKmsSpaceWrite`                | kms_space_write                                             |
 | `PropertyConnectionPermissionsKmsPageRead`                  | kms_page_read                                               |
