@@ -12,4 +12,6 @@
 | `AccountingInvoiceStatusPartiallyPaid`     | PARTIALLY_PAID                             |
 | `AccountingInvoiceStatusPartiallyRefunded` | PARTIALLY_REFUNDED                         |
 | `AccountingInvoiceStatusRefunded`          | REFUNDED                                   |
+| `AccountingInvoiceStatusSubmitted`         | SUBMITTED                                  |
+| `AccountingInvoiceStatusDeleted`           | DELETED                                    |
 | `AccountingInvoiceStatusOverdue`           | OVERDUE                                    |

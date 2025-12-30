@@ -12,4 +12,6 @@
 | `AccountingCreditmemoStatusPartiallyPaid`     | PARTIALLY_PAID                                |
 | `AccountingCreditmemoStatusPartiallyRefunded` | PARTIALLY_REFUNDED                            |
 | `AccountingCreditmemoStatusRefunded`          | REFUNDED                                      |
+| `AccountingCreditmemoStatusSubmitted`         | SUBMITTED                                     |
+| `AccountingCreditmemoStatusDeleted`           | DELETED                                       |
 | `AccountingCreditmemoStatusOverdue`           | OVERDUE                                       |

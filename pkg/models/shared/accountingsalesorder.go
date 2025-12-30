@@ -17,6 +17,8 @@ const (
 	AccountingSalesorderStatusPartiallyPaid     AccountingSalesorderStatus = "PARTIALLY_PAID"
 	AccountingSalesorderStatusPartiallyRefunded AccountingSalesorderStatus = "PARTIALLY_REFUNDED"
 	AccountingSalesorderStatusRefunded          AccountingSalesorderStatus = "REFUNDED"
+	AccountingSalesorderStatusSubmitted         AccountingSalesorderStatus = "SUBMITTED"
+	AccountingSalesorderStatusDeleted           AccountingSalesorderStatus = "DELETED"
 )
 
 func (e AccountingSalesorderStatus) ToPointer() *AccountingSalesorderStatus {
@@ -27,7 +29,7 @@ func (e AccountingSalesorderStatus) ToPointer() *AccountingSalesorderStatus {
 func (e *AccountingSalesorderStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED":
+		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED", "SUBMITTED", "DELETED":
 			return true
 		}
 	}

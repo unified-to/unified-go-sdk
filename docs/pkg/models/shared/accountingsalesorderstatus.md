@@ -12,3 +12,5 @@
 | `AccountingSalesorderStatusPartiallyPaid`     | PARTIALLY_PAID                                |
 | `AccountingSalesorderStatusPartiallyRefunded` | PARTIALLY_REFUNDED                            |
 | `AccountingSalesorderStatusRefunded`          | REFUNDED                                      |
+| `AccountingSalesorderStatusSubmitted`         | SUBMITTED                                     |
+| `AccountingSalesorderStatusDeleted`           | DELETED                                       |

@@ -12,3 +12,5 @@
 | `AccountingOrderStatusPartiallyPaid`     | PARTIALLY_PAID                           |
 | `AccountingOrderStatusPartiallyRefunded` | PARTIALLY_REFUNDED                       |
 | `AccountingOrderStatusRefunded`          | REFUNDED                                 |
+| `AccountingOrderStatusSubmitted`         | SUBMITTED                                |
+| `AccountingOrderStatusDeleted`           | DELETED                                  |
