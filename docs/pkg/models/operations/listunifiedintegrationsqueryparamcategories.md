@@ -28,3 +28,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesMetadata`     | metadata                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesCalendar`     | calendar                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesVerification` | verification                                              |
+| `ListUnifiedIntegrationsQueryParamCategoriesAds`          | ads                                                       |

@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.788.7
+// Generated from OpenAPI doc version 1.0 and generator version 2.788.15
 
 import (
 	"context"
@@ -77,6 +77,10 @@ type UnifiedTo struct {
 	Taxrate           *Taxrate
 	Transaction       *Transaction
 	Trialbalance      *Trialbalance
+	Ads               *Ads
+	Ad                *Ad
+	Campaign          *Campaign
+	Group             *Group
 	Ats               *Ats
 	Activity          *Activity
 	Application       *Application
@@ -114,7 +118,6 @@ type UnifiedTo struct {
 	Deduction         *Deduction
 	Device            *Device
 	Employee          *Employee
-	Group             *Group
 	Payslip           *Payslip
 	Timeoff           *Timeoff
 	Timeshift         *Timeshift
@@ -245,9 +248,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.8",
+		SDKVersion: "0.36.9",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.8 2.788.7 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.9 2.788.15 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -288,6 +291,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Taxrate = newTaxrate(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Transaction = newTransaction(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Trialbalance = newTrialbalance(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Ads = newAds(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Ad = newAd(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Campaign = newCampaign(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Group = newGroup(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ats = newAts(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Activity = newActivity(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Application = newApplication(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -325,7 +332,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Deduction = newDeduction(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Device = newDevice(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Employee = newEmployee(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Group = newGroup(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Payslip = newPayslip(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Timeoff = newTimeoff(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Timeshift = newTimeshift(sdk, sdk.sdkConfiguration, sdk.hooks)

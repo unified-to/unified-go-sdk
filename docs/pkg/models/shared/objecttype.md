@@ -106,3 +106,8 @@
 | `ObjectTypeCalendarBusy`            | calendar_busy                       |
 | `ObjectTypeCalendarLink`            | calendar_link                       |
 | `ObjectTypeCalendarRecording`       | calendar_recording                  |
+| `ObjectTypeAdsOrganization`         | ads_organization                    |
+| `ObjectTypeAdsAd`                   | ads_ad                              |
+| `ObjectTypeAdsCampaign`             | ads_campaign                        |
+| `ObjectTypeAdsReport`               | ads_report                          |
+| `ObjectTypeAdsGroup`                | ads_group                           |

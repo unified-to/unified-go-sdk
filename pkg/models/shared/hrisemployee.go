@@ -125,6 +125,7 @@ type HrisEmployee struct {
 	Gender           *HrisEmployeeGender                 `json:"gender,omitempty"`
 	// Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
 	Groups         []HrisGroup    `json:"groups,omitempty"`
+	HasMfa         *bool          `json:"has_mfa,omitempty"`
 	HiredAt        *time.Time     `json:"hired_at,omitempty"`
 	ID             *string        `json:"id,omitempty"`
 	ImageURL       *string        `json:"image_url,omitempty"`
@@ -280,6 +281,13 @@ func (h *HrisEmployee) GetGroups() []HrisGroup {
 		return nil
 	}
 	return h.Groups
+}
+
+func (h *HrisEmployee) GetHasMfa() *bool {
+	if h == nil {
+		return nil
+	}
+	return h.HasMfa
 }
 
 func (h *HrisEmployee) GetHiredAt() *time.Time {

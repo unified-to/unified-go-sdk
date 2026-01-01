@@ -190,6 +190,43 @@ func main() {
 * [RemoveAtsActivity](docs/sdks/activity/README.md#removeatsactivity) - Remove an activity
 * [UpdateAtsActivity](docs/sdks/activity/README.md#updateatsactivity) - Update an activity
 
+### [Ad](docs/sdks/ad/README.md)
+
+* [CreateAdsAd](docs/sdks/ad/README.md#createadsad) - Create an ad
+* [GetAdsAd](docs/sdks/ad/README.md#getadsad) - Retrieve an ad
+* [ListAdsAds](docs/sdks/ad/README.md#listadsads) - List all ads
+* [PatchAdsAd](docs/sdks/ad/README.md#patchadsad) - Update an ad
+* [RemoveAdsAd](docs/sdks/ad/README.md#removeadsad) - Remove an ad
+* [UpdateAdsAd](docs/sdks/ad/README.md#updateadsad) - Update an ad
+
+### [Ads](docs/sdks/ads/README.md)
+
+* [CreateAdsAd](docs/sdks/ads/README.md#createadsad) - Create an ad
+* [CreateAdsCampaign](docs/sdks/ads/README.md#createadscampaign) - Create a campaign
+* [CreateAdsGroup](docs/sdks/ads/README.md#createadsgroup) - Create a group
+* [CreateAdsOrganization](docs/sdks/ads/README.md#createadsorganization) - Create an organization
+* [GetAdsAd](docs/sdks/ads/README.md#getadsad) - Retrieve an ad
+* [GetAdsCampaign](docs/sdks/ads/README.md#getadscampaign) - Retrieve a campaign
+* [GetAdsGroup](docs/sdks/ads/README.md#getadsgroup) - Retrieve a group
+* [GetAdsOrganization](docs/sdks/ads/README.md#getadsorganization) - Retrieve an organization
+* [ListAdsAds](docs/sdks/ads/README.md#listadsads) - List all ads
+* [ListAdsCampaigns](docs/sdks/ads/README.md#listadscampaigns) - List all campaigns
+* [ListAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
+* [ListAdsOrganizations](docs/sdks/ads/README.md#listadsorganizations) - List all organizations
+* [ListAdsReports](docs/sdks/ads/README.md#listadsreports) - List all reports
+* [PatchAdsAd](docs/sdks/ads/README.md#patchadsad) - Update an ad
+* [PatchAdsCampaign](docs/sdks/ads/README.md#patchadscampaign) - Update a campaign
+* [PatchAdsGroup](docs/sdks/ads/README.md#patchadsgroup) - Update a group
+* [PatchAdsOrganization](docs/sdks/ads/README.md#patchadsorganization) - Update an organization
+* [RemoveAdsAd](docs/sdks/ads/README.md#removeadsad) - Remove an ad
+* [RemoveAdsCampaign](docs/sdks/ads/README.md#removeadscampaign) - Remove a campaign
+* [RemoveAdsGroup](docs/sdks/ads/README.md#removeadsgroup) - Remove a group
+* [RemoveAdsOrganization](docs/sdks/ads/README.md#removeadsorganization) - Remove an organization
+* [UpdateAdsAd](docs/sdks/ads/README.md#updateadsad) - Update an ad
+* [UpdateAdsCampaign](docs/sdks/ads/README.md#updateadscampaign) - Update a campaign
+* [UpdateAdsGroup](docs/sdks/ads/README.md#updateadsgroup) - Update a group
+* [UpdateAdsOrganization](docs/sdks/ads/README.md#updateadsorganization) - Update an organization
+
 ### [Apicall](docs/sdks/apicall/README.md)
 
 * [GetUnifiedApicall](docs/sdks/apicall/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
@@ -329,6 +366,15 @@ func main() {
 
 * [GetUcCall](docs/sdks/call/README.md#getuccall) - Retrieve a call
 * [ListUcCalls](docs/sdks/call/README.md#listuccalls) - List all calls
+
+### [Campaign](docs/sdks/campaign/README.md)
+
+* [CreateAdsCampaign](docs/sdks/campaign/README.md#createadscampaign) - Create a campaign
+* [GetAdsCampaign](docs/sdks/campaign/README.md#getadscampaign) - Retrieve a campaign
+* [ListAdsCampaigns](docs/sdks/campaign/README.md#listadscampaigns) - List all campaigns
+* [PatchAdsCampaign](docs/sdks/campaign/README.md#patchadscampaign) - Update a campaign
+* [RemoveAdsCampaign](docs/sdks/campaign/README.md#removeadscampaign) - Remove a campaign
+* [UpdateAdsCampaign](docs/sdks/campaign/README.md#updateadscampaign) - Update a campaign
 
 ### [Candidate](docs/sdks/candidate/README.md)
 
@@ -678,16 +724,22 @@ func main() {
 
 ### [Group](docs/sdks/group/README.md)
 
+* [CreateAdsGroup](docs/sdks/group/README.md#createadsgroup) - Create a group
 * [CreateHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
 * [CreateScimGroups](docs/sdks/group/README.md#createscimgroups) - Create group
+* [GetAdsGroup](docs/sdks/group/README.md#getadsgroup) - Retrieve a group
 * [GetHrisGroup](docs/sdks/group/README.md#gethrisgroup) - Retrieve a group
 * [GetScimGroups](docs/sdks/group/README.md#getscimgroups) - Get group
+* [ListAdsGroups](docs/sdks/group/README.md#listadsgroups) - List all groups
 * [ListHrisGroups](docs/sdks/group/README.md#listhrisgroups) - List all groups
 * [ListScimGroups](docs/sdks/group/README.md#listscimgroups) - List groups
+* [PatchAdsGroup](docs/sdks/group/README.md#patchadsgroup) - Update a group
 * [PatchHrisGroup](docs/sdks/group/README.md#patchhrisgroup) - Update a group
 * [PatchScimGroups](docs/sdks/group/README.md#patchscimgroups) - Update group
+* [RemoveAdsGroup](docs/sdks/group/README.md#removeadsgroup) - Remove a group
 * [RemoveHrisGroup](docs/sdks/group/README.md#removehrisgroup) - Remove a group
 * [RemoveScimGroups](docs/sdks/group/README.md#removescimgroups) - Delete group
+* [UpdateAdsGroup](docs/sdks/group/README.md#updateadsgroup) - Update a group
 * [UpdateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
 * [UpdateScimGroups](docs/sdks/group/README.md#updatescimgroups) - Update group
 
@@ -1000,13 +1052,19 @@ func main() {
 
 ### [Organization](docs/sdks/organization/README.md)
 
+* [CreateAdsOrganization](docs/sdks/organization/README.md#createadsorganization) - Create an organization
 * [CreateRepoOrganization](docs/sdks/organization/README.md#createrepoorganization) - Create an organization
 * [GetAccountingOrganization](docs/sdks/organization/README.md#getaccountingorganization) - Retrieve an organization
+* [GetAdsOrganization](docs/sdks/organization/README.md#getadsorganization) - Retrieve an organization
 * [GetRepoOrganization](docs/sdks/organization/README.md#getrepoorganization) - Retrieve an organization
 * [ListAccountingOrganizations](docs/sdks/organization/README.md#listaccountingorganizations) - List all organizations
+* [ListAdsOrganizations](docs/sdks/organization/README.md#listadsorganizations) - List all organizations
 * [ListRepoOrganizations](docs/sdks/organization/README.md#listrepoorganizations) - List all organizations
+* [PatchAdsOrganization](docs/sdks/organization/README.md#patchadsorganization) - Update an organization
 * [PatchRepoOrganization](docs/sdks/organization/README.md#patchrepoorganization) - Update an organization
+* [RemoveAdsOrganization](docs/sdks/organization/README.md#removeadsorganization) - Remove an organization
 * [RemoveRepoOrganization](docs/sdks/organization/README.md#removerepoorganization) - Remove an organization
+* [UpdateAdsOrganization](docs/sdks/organization/README.md#updateadsorganization) - Update an organization
 * [UpdateRepoOrganization](docs/sdks/organization/README.md#updaterepoorganization) - Update an organization
 
 ### [Package](docs/sdks/package/README.md)
@@ -1171,6 +1229,7 @@ func main() {
 
 * [GetAccountingReport](docs/sdks/report/README.md#getaccountingreport) - Retrieve a report
 * [ListAccountingReports](docs/sdks/report/README.md#listaccountingreports) - List all reports
+* [ListAdsReports](docs/sdks/report/README.md#listadsreports) - List all reports
 
 ### [Repository](docs/sdks/repository/README.md)
 

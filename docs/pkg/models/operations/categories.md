@@ -28,3 +28,4 @@
 | `CategoriesMetadata`     | metadata                 |
 | `CategoriesCalendar`     | calendar                 |
 | `CategoriesVerification` | verification             |
+| `CategoriesAds`          | ads                      |

@@ -28,3 +28,4 @@
 | `QueryParamCategoriesMetadata`     | metadata                           |
 | `QueryParamCategoriesCalendar`     | calendar                           |
 | `QueryParamCategoriesVerification` | verification                       |
+| `QueryParamCategoriesAds`          | ads                                |

@@ -48,6 +48,29 @@ func (e *ListAccountID) IsExact() bool {
 	return false
 }
 
+type ListAdID string
+
+const (
+	ListAdIDSupportedRequired ListAdID = "supported-required"
+	ListAdIDSupported         ListAdID = "supported"
+	ListAdIDNotSupported      ListAdID = "not-supported"
+)
+
+func (e ListAdID) ToPointer() *ListAdID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListAdID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListApplicationID string
 
 const (
@@ -154,6 +177,29 @@ func (e ListCallID) ToPointer() *ListCallID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListCallID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type ListCampaignID string
+
+const (
+	ListCampaignIDSupportedRequired ListCampaignID = "supported-required"
+	ListCampaignIDSupported         ListCampaignID = "supported"
+	ListCampaignIDNotSupported      ListCampaignID = "not-supported"
+)
+
+func (e ListCampaignID) ToPointer() *ListCampaignID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCampaignID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -522,6 +568,29 @@ func (e ListExpandRecurringEvents) ToPointer() *ListExpandRecurringEvents {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListExpandRecurringEvents) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type ListGroupID string
+
+const (
+	ListGroupIDSupportedRequired ListGroupID = "supported-required"
+	ListGroupIDSupported         ListGroupID = "supported"
+	ListGroupIDNotSupported      ListGroupID = "not-supported"
+)
+
+func (e ListGroupID) ToPointer() *ListGroupID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListGroupID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -1727,6 +1796,29 @@ func (e *SearchTwitter) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookAdID string
+
+const (
+	VirtualWebhookAdIDSupportedRequired VirtualWebhookAdID = "supported-required"
+	VirtualWebhookAdIDSupported         VirtualWebhookAdID = "supported"
+	VirtualWebhookAdIDNotSupported      VirtualWebhookAdID = "not-supported"
+)
+
+func (e VirtualWebhookAdID) ToPointer() *VirtualWebhookAdID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookAdID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookApplicationID string
 
 const (
@@ -1810,6 +1902,29 @@ func (e VirtualWebhookCallID) ToPointer() *VirtualWebhookCallID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookCallID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type VirtualWebhookCampaignID string
+
+const (
+	VirtualWebhookCampaignIDSupportedRequired VirtualWebhookCampaignID = "supported-required"
+	VirtualWebhookCampaignIDSupported         VirtualWebhookCampaignID = "supported"
+	VirtualWebhookCampaignIDNotSupported      VirtualWebhookCampaignID = "not-supported"
+)
+
+func (e VirtualWebhookCampaignID) ToPointer() *VirtualWebhookCampaignID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCampaignID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -2086,6 +2201,29 @@ func (e VirtualWebhookFields) ToPointer() *VirtualWebhookFields {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookFields) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type VirtualWebhookGroupID string
+
+const (
+	VirtualWebhookGroupIDSupportedRequired VirtualWebhookGroupID = "supported-required"
+	VirtualWebhookGroupIDSupported         VirtualWebhookGroupID = "supported"
+	VirtualWebhookGroupIDNotSupported      VirtualWebhookGroupID = "not-supported"
+)
+
+func (e VirtualWebhookGroupID) ToPointer() *VirtualWebhookGroupID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookGroupID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -2628,11 +2766,13 @@ type IntegrationSupport struct {
 	FromWebhook               *FromWebhook               `json:"from_webhook,omitempty"`
 	InboundFields             map[string]string          `json:"inbound_fields,omitempty"`
 	ListAccountID             *ListAccountID             `json:"list_account_id,omitempty"`
+	ListAdID                  *ListAdID                  `json:"list_ad_id,omitempty"`
 	ListApplicationID         *ListApplicationID         `json:"list_application_id,omitempty"`
 	ListBenefitID             *ListBenefitID             `json:"list_benefit_id,omitempty"`
 	ListBranchID              *ListBranchID              `json:"list_branch_id,omitempty"`
 	ListCalendarID            *ListCalendarID            `json:"list_calendar_id,omitempty"`
 	ListCallID                *ListCallID                `json:"list_call_id,omitempty"`
+	ListCampaignID            *ListCampaignID            `json:"list_campaign_id,omitempty"`
 	ListCandidateID           *ListCandidateID           `json:"list_candidate_id,omitempty"`
 	ListCategoryID            *ListCategoryID            `json:"list_category_id,omitempty"`
 	ListChannelID             *ListChannelID             `json:"list_channel_id,omitempty"`
@@ -2649,6 +2789,7 @@ type IntegrationSupport struct {
 	ListEventID               *ListEventID               `json:"list_event_id,omitempty"`
 	ListExpand                *ListExpand                `json:"list_expand,omitempty"`
 	ListExpandRecurringEvents *ListExpandRecurringEvents `json:"list_expand_recurring_events,omitempty"`
+	ListGroupID               *ListGroupID               `json:"list_group_id,omitempty"`
 	ListInstructorID          *ListInstructorID          `json:"list_instructor_id,omitempty"`
 	ListInterviewID           *ListInterviewID           `json:"list_interview_id,omitempty"`
 	ListInvoiceID             *ListInvoiceID             `json:"list_invoice_id,omitempty"`
@@ -2706,10 +2847,12 @@ type IntegrationSupport struct {
 	SearchName                    *SearchName                              `json:"search_name,omitempty"`
 	SearchTwitter                 *SearchTwitter                           `json:"search_twitter,omitempty"`
 	SlowFields                    []string                                 `json:"slow_fields,omitempty"`
+	VirtualWebhookAdID            *VirtualWebhookAdID                      `json:"virtual_webhook_ad_id,omitempty"`
 	VirtualWebhookApplicationID   *VirtualWebhookApplicationID             `json:"virtual_webhook_application_id,omitempty"`
 	VirtualWebhookBranchID        *VirtualWebhookBranchID                  `json:"virtual_webhook_branch_id,omitempty"`
 	VirtualWebhookCalendarID      *VirtualWebhookCalendarID                `json:"virtual_webhook_calendar_id,omitempty"`
 	VirtualWebhookCallID          *VirtualWebhookCallID                    `json:"virtual_webhook_call_id,omitempty"`
+	VirtualWebhookCampaignID      *VirtualWebhookCampaignID                `json:"virtual_webhook_campaign_id,omitempty"`
 	VirtualWebhookCandidateID     *VirtualWebhookCandidateID               `json:"virtual_webhook_candidate_id,omitempty"`
 	VirtualWebhookChannelID       *VirtualWebhookChannelID                 `json:"virtual_webhook_channel_id,omitempty"`
 	VirtualWebhookCollectionID    *VirtualWebhookCollectionID              `json:"virtual_webhook_collection_id,omitempty"`
@@ -2722,6 +2865,7 @@ type IntegrationSupport struct {
 	VirtualWebhookEventID         *VirtualWebhookEventID                   `json:"virtual_webhook_event_id,omitempty"`
 	VirtualWebhookExpand          *VirtualWebhookExpand                    `json:"virtual_webhook_expand,omitempty"`
 	VirtualWebhookFields          *VirtualWebhookFields                    `json:"virtual_webhook_fields,omitempty"`
+	VirtualWebhookGroupID         *VirtualWebhookGroupID                   `json:"virtual_webhook_group_id,omitempty"`
 	VirtualWebhookItemID          *VirtualWebhookItemID                    `json:"virtual_webhook_item_id,omitempty"`
 	VirtualWebhookItemVariantID   *VirtualWebhookItemVariantID             `json:"virtual_webhook_item_variant_id,omitempty"`
 	VirtualWebhookJobID           *VirtualWebhookJobID                     `json:"virtual_webhook_job_id,omitempty"`
@@ -2769,6 +2913,13 @@ func (i *IntegrationSupport) GetListAccountID() *ListAccountID {
 	return i.ListAccountID
 }
 
+func (i *IntegrationSupport) GetListAdID() *ListAdID {
+	if i == nil {
+		return nil
+	}
+	return i.ListAdID
+}
+
 func (i *IntegrationSupport) GetListApplicationID() *ListApplicationID {
 	if i == nil {
 		return nil
@@ -2802,6 +2953,13 @@ func (i *IntegrationSupport) GetListCallID() *ListCallID {
 		return nil
 	}
 	return i.ListCallID
+}
+
+func (i *IntegrationSupport) GetListCampaignID() *ListCampaignID {
+	if i == nil {
+		return nil
+	}
+	return i.ListCampaignID
 }
 
 func (i *IntegrationSupport) GetListCandidateID() *ListCandidateID {
@@ -2914,6 +3072,13 @@ func (i *IntegrationSupport) GetListExpandRecurringEvents() *ListExpandRecurring
 		return nil
 	}
 	return i.ListExpandRecurringEvents
+}
+
+func (i *IntegrationSupport) GetListGroupID() *ListGroupID {
+	if i == nil {
+		return nil
+	}
+	return i.ListGroupID
 }
 
 func (i *IntegrationSupport) GetListInstructorID() *ListInstructorID {
@@ -3308,6 +3473,13 @@ func (i *IntegrationSupport) GetSlowFields() []string {
 	return i.SlowFields
 }
 
+func (i *IntegrationSupport) GetVirtualWebhookAdID() *VirtualWebhookAdID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookAdID
+}
+
 func (i *IntegrationSupport) GetVirtualWebhookApplicationID() *VirtualWebhookApplicationID {
 	if i == nil {
 		return nil
@@ -3334,6 +3506,13 @@ func (i *IntegrationSupport) GetVirtualWebhookCallID() *VirtualWebhookCallID {
 		return nil
 	}
 	return i.VirtualWebhookCallID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookCampaignID() *VirtualWebhookCampaignID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookCampaignID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookCandidateID() *VirtualWebhookCandidateID {
@@ -3418,6 +3597,13 @@ func (i *IntegrationSupport) GetVirtualWebhookFields() *VirtualWebhookFields {
 		return nil
 	}
 	return i.VirtualWebhookFields
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookGroupID() *VirtualWebhookGroupID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookGroupID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookItemID() *VirtualWebhookItemID {

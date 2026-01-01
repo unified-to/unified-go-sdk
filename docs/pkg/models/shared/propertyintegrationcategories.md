@@ -28,3 +28,4 @@
 | `PropertyIntegrationCategoriesMetadata`     | metadata                                    |
 | `PropertyIntegrationCategoriesCalendar`     | calendar                                    |
 | `PropertyIntegrationCategoriesVerification` | verification                                |
+| `PropertyIntegrationCategoriesAds`          | ads                                         |

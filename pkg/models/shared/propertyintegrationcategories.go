@@ -28,6 +28,7 @@ const (
 	PropertyIntegrationCategoriesMetadata     PropertyIntegrationCategories = "metadata"
 	PropertyIntegrationCategoriesCalendar     PropertyIntegrationCategories = "calendar"
 	PropertyIntegrationCategoriesVerification PropertyIntegrationCategories = "verification"
+	PropertyIntegrationCategoriesAds          PropertyIntegrationCategories = "ads"
 )
 
 func (e PropertyIntegrationCategories) ToPointer() *PropertyIntegrationCategories {
@@ -38,7 +39,7 @@ func (e PropertyIntegrationCategories) ToPointer() *PropertyIntegrationCategorie
 func (e *PropertyIntegrationCategories) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "passthrough", "hris", "ats", "auth", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification":
+		case "passthrough", "hris", "ats", "auth", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification", "ads":
 			return true
 		}
 	}

@@ -193,3 +193,12 @@
 | `PropertyConnectionPermissionsCalendarRecordingWrite`       | calendar_recording_write                                    |
 | `PropertyConnectionPermissionsEnrichPersonRead`             | enrich_person_read                                          |
 | `PropertyConnectionPermissionsEnrichCompanyRead`            | enrich_company_read                                         |
+| `PropertyConnectionPermissionsAdsAdRead`                    | ads_ad_read                                                 |
+| `PropertyConnectionPermissionsAdsAdWrite`                   | ads_ad_write                                                |
+| `PropertyConnectionPermissionsAdsCampaignRead`              | ads_campaign_read                                           |
+| `PropertyConnectionPermissionsAdsCampaignWrite`             | ads_campaign_write                                          |
+| `PropertyConnectionPermissionsAdsGroupRead`                 | ads_group_read                                              |
+| `PropertyConnectionPermissionsAdsGroupWrite`                | ads_group_write                                             |
+| `PropertyConnectionPermissionsAdsReportRead`                | ads_report_read                                             |
+| `PropertyConnectionPermissionsAdsOrganizationRead`          | ads_organization_read                                       |
+| `PropertyConnectionPermissionsAdsOrganizationWrite`         | ads_organization_write                                      |
