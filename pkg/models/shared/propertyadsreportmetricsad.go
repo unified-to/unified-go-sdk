@@ -17,6 +17,8 @@ const (
 	PropertyAdsReportMetricsAdAdTypeShopping   PropertyAdsReportMetricsAdAdType = "SHOPPING"
 	PropertyAdsReportMetricsAdAdTypeApp        PropertyAdsReportMetricsAdAdType = "APP"
 	PropertyAdsReportMetricsAdAdTypeCall       PropertyAdsReportMetricsAdAdType = "CALL"
+	PropertyAdsReportMetricsAdAdTypeCarousel   PropertyAdsReportMetricsAdAdType = "CAROUSEL"
+	PropertyAdsReportMetricsAdAdTypeSocial     PropertyAdsReportMetricsAdAdType = "SOCIAL"
 )
 
 func (e PropertyAdsReportMetricsAdAdType) ToPointer() *PropertyAdsReportMetricsAdAdType {
@@ -27,7 +29,7 @@ func (e PropertyAdsReportMetricsAdAdType) ToPointer() *PropertyAdsReportMetricsA
 func (e *PropertyAdsReportMetricsAdAdType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL":
 			return true
 		}
 	}

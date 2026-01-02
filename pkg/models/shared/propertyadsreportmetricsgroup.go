@@ -7,16 +7,45 @@ import (
 	"time"
 )
 
+type PropertyAdsReportMetricsGroupBudgetPeriod string
+
+const (
+	PropertyAdsReportMetricsGroupBudgetPeriodDaily    PropertyAdsReportMetricsGroupBudgetPeriod = "DAILY"
+	PropertyAdsReportMetricsGroupBudgetPeriodMonthly  PropertyAdsReportMetricsGroupBudgetPeriod = "MONTHLY"
+	PropertyAdsReportMetricsGroupBudgetPeriodTotal    PropertyAdsReportMetricsGroupBudgetPeriod = "TOTAL"
+	PropertyAdsReportMetricsGroupBudgetPeriodLifetime PropertyAdsReportMetricsGroupBudgetPeriod = "LIFETIME"
+)
+
+func (e PropertyAdsReportMetricsGroupBudgetPeriod) ToPointer() *PropertyAdsReportMetricsGroupBudgetPeriod {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsGroupBudgetPeriod) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DAILY", "MONTHLY", "TOTAL", "LIFETIME":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyAdsReportMetricsGroup struct {
-	CampaignID     *string                                 `json:"campaign_id,omitempty"`
-	CreatedAt      *time.Time                              `json:"created_at,omitempty"`
-	ID             *string                                 `json:"id,omitempty"`
-	IsActive       *bool                                   `json:"is_active,omitempty"`
-	Name           *string                                 `json:"name,omitempty"`
-	OrganizationID *string                                 `json:"organization_id,omitempty"`
-	Raw            map[string]any                          `json:"raw,omitempty"`
-	Targeting      *PropertyAdsReportMetricsGroupTargeting `json:"targeting,omitempty"`
-	UpdatedAt      *time.Time                              `json:"updated_at,omitempty"`
+	BidAmount      *float64                                   `json:"bid_amount,omitempty"`
+	BudgetAmount   *float64                                   `json:"budget_amount,omitempty"`
+	BudgetPeriod   *PropertyAdsReportMetricsGroupBudgetPeriod `json:"budget_period,omitempty"`
+	CampaignID     *string                                    `json:"campaign_id,omitempty"`
+	CreatedAt      *time.Time                                 `json:"created_at,omitempty"`
+	EndAt          *time.Time                                 `json:"end_at,omitempty"`
+	ID             *string                                    `json:"id,omitempty"`
+	IsActive       *bool                                      `json:"is_active,omitempty"`
+	Name           *string                                    `json:"name,omitempty"`
+	OrganizationID *string                                    `json:"organization_id,omitempty"`
+	Raw            map[string]any                             `json:"raw,omitempty"`
+	StartAt        *time.Time                                 `json:"start_at,omitempty"`
+	Targeting      *PropertyAdsReportMetricsGroupTargeting    `json:"targeting,omitempty"`
+	UpdatedAt      *time.Time                                 `json:"updated_at,omitempty"`
 }
 
 func (p PropertyAdsReportMetricsGroup) MarshalJSON() ([]byte, error) {
@@ -28,6 +57,27 @@ func (p *PropertyAdsReportMetricsGroup) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetBidAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.BidAmount
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetBudgetAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.BudgetAmount
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetBudgetPeriod() *PropertyAdsReportMetricsGroupBudgetPeriod {
+	if p == nil {
+		return nil
+	}
+	return p.BudgetPeriod
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetCampaignID() *string {
@@ -42,6 +92,13 @@ func (p *PropertyAdsReportMetricsGroup) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return p.CreatedAt
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetEndAt() *time.Time {
+	if p == nil {
+		return nil
+	}
+	return p.EndAt
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetID() *string {
@@ -77,6 +134,13 @@ func (p *PropertyAdsReportMetricsGroup) GetRaw() map[string]any {
 		return nil
 	}
 	return p.Raw
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetStartAt() *time.Time {
+	if p == nil {
+		return nil
+	}
+	return p.StartAt
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetTargeting() *PropertyAdsReportMetricsGroupTargeting {

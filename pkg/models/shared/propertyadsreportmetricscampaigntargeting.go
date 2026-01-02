@@ -3,14 +3,24 @@
 package shared
 
 type PropertyAdsReportMetricsCampaignTargeting struct {
-	AgeRanges  []string `json:"age_ranges,omitempty"`
-	Audiences  []string `json:"audiences,omitempty"`
-	Devices    []string `json:"devices,omitempty"`
-	Genders    []string `json:"genders,omitempty"`
-	Keywords   []string `json:"keywords,omitempty"`
-	Languages  []string `json:"languages,omitempty"`
-	Locations  []string `json:"locations,omitempty"`
-	Placements []string `json:"placements,omitempty"`
+	AgeRanges    []string `json:"age_ranges,omitempty"`
+	Audiences    []string `json:"audiences,omitempty"`
+	Companies    []string `json:"companies,omitempty"`
+	CompanySizes []string `json:"company_sizes,omitempty"`
+	Degrees      []string `json:"degrees,omitempty"`
+	Devices      []string `json:"devices,omitempty"`
+	Genders      []string `json:"genders,omitempty"`
+	Industries   []string `json:"industries,omitempty"`
+	Interests    []string `json:"interests,omitempty"`
+	JobFunctions []string `json:"job_functions,omitempty"`
+	JobTitles    []string `json:"job_titles,omitempty"`
+	Keywords     []string `json:"keywords,omitempty"`
+	Languages    []string `json:"languages,omitempty"`
+	Locations    []string `json:"locations,omitempty"`
+	Placements   []string `json:"placements,omitempty"`
+	Schools      []string `json:"schools,omitempty"`
+	Seniorities  []string `json:"seniorities,omitempty"`
+	Skills       []string `json:"skills,omitempty"`
 }
 
 func (p *PropertyAdsReportMetricsCampaignTargeting) GetAgeRanges() []string {
@@ -27,6 +37,27 @@ func (p *PropertyAdsReportMetricsCampaignTargeting) GetAudiences() []string {
 	return p.Audiences
 }
 
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetCompanies() []string {
+	if p == nil {
+		return nil
+	}
+	return p.Companies
+}
+
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetCompanySizes() []string {
+	if p == nil {
+		return nil
+	}
+	return p.CompanySizes
+}
+
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetDegrees() []string {
+	if p == nil {
+		return nil
+	}
+	return p.Degrees
+}
+
 func (p *PropertyAdsReportMetricsCampaignTargeting) GetDevices() []string {
 	if p == nil {
 		return nil
@@ -39,6 +70,34 @@ func (p *PropertyAdsReportMetricsCampaignTargeting) GetGenders() []string {
 		return nil
 	}
 	return p.Genders
+}
+
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetIndustries() []string {
+	if p == nil {
+		return nil
+	}
+	return p.Industries
+}
+
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetInterests() []string {
+	if p == nil {
+		return nil
+	}
+	return p.Interests
+}
+
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetJobFunctions() []string {
+	if p == nil {
+		return nil
+	}
+	return p.JobFunctions
+}
+
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetJobTitles() []string {
+	if p == nil {
+		return nil
+	}
+	return p.JobTitles
 }
 
 func (p *PropertyAdsReportMetricsCampaignTargeting) GetKeywords() []string {
@@ -67,4 +126,25 @@ func (p *PropertyAdsReportMetricsCampaignTargeting) GetPlacements() []string {
 		return nil
 	}
 	return p.Placements
+}
+
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetSchools() []string {
+	if p == nil {
+		return nil
+	}
+	return p.Schools
+}
+
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetSeniorities() []string {
+	if p == nil {
+		return nil
+	}
+	return p.Seniorities
+}
+
+func (p *PropertyAdsReportMetricsCampaignTargeting) GetSkills() []string {
+	if p == nil {
+		return nil
+	}
+	return p.Skills
 }

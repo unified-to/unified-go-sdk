@@ -5,15 +5,23 @@ package shared
 type AdsReportMetricsType string
 
 const (
-	AdsReportMetricsTypeClicks          AdsReportMetricsType = "CLICKS"
-	AdsReportMetricsTypeImpressions     AdsReportMetricsType = "IMPRESSIONS"
-	AdsReportMetricsTypeConversions     AdsReportMetricsType = "CONVERSIONS"
-	AdsReportMetricsTypeCost            AdsReportMetricsType = "COST"
-	AdsReportMetricsTypeCtr             AdsReportMetricsType = "CTR"
-	AdsReportMetricsTypeCpc             AdsReportMetricsType = "CPC"
-	AdsReportMetricsTypeConversionValue AdsReportMetricsType = "CONVERSION_VALUE"
-	AdsReportMetricsTypeCpa             AdsReportMetricsType = "CPA"
-	AdsReportMetricsTypeRoas            AdsReportMetricsType = "ROAS"
+	AdsReportMetricsTypeClicks           AdsReportMetricsType = "CLICKS"
+	AdsReportMetricsTypeImpressions      AdsReportMetricsType = "IMPRESSIONS"
+	AdsReportMetricsTypeConversions      AdsReportMetricsType = "CONVERSIONS"
+	AdsReportMetricsTypeCost             AdsReportMetricsType = "COST"
+	AdsReportMetricsTypeCtr              AdsReportMetricsType = "CTR"
+	AdsReportMetricsTypeCpc              AdsReportMetricsType = "CPC"
+	AdsReportMetricsTypeConversionValue  AdsReportMetricsType = "CONVERSION_VALUE"
+	AdsReportMetricsTypeCpa              AdsReportMetricsType = "CPA"
+	AdsReportMetricsTypeRoas             AdsReportMetricsType = "ROAS"
+	AdsReportMetricsTypeCpm              AdsReportMetricsType = "CPM"
+	AdsReportMetricsTypeEcpm             AdsReportMetricsType = "ECPM"
+	AdsReportMetricsTypeEngagement       AdsReportMetricsType = "ENGAGEMENT"
+	AdsReportMetricsTypeVideoCompletions AdsReportMetricsType = "VIDEO_COMPLETIONS"
+	AdsReportMetricsTypeVideoViews       AdsReportMetricsType = "VIDEO_VIEWS"
+	AdsReportMetricsTypeLeads            AdsReportMetricsType = "LEADS"
+	AdsReportMetricsTypeEngagements      AdsReportMetricsType = "ENGAGEMENTS"
+	AdsReportMetricsTypeSaves            AdsReportMetricsType = "SAVES"
 )
 
 func (e AdsReportMetricsType) ToPointer() *AdsReportMetricsType {
@@ -24,7 +32,7 @@ func (e AdsReportMetricsType) ToPointer() *AdsReportMetricsType {
 func (e *AdsReportMetricsType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "CLICKS", "IMPRESSIONS", "CONVERSIONS", "COST", "CTR", "CPC", "CONVERSION_VALUE", "CPA", "ROAS":
+		case "CLICKS", "IMPRESSIONS", "CONVERSIONS", "COST", "CTR", "CPC", "CONVERSION_VALUE", "CPA", "ROAS", "CPM", "ECPM", "ENGAGEMENT", "VIDEO_COMPLETIONS", "VIDEO_VIEWS", "LEADS", "ENGAGEMENTS", "SAVES":
 			return true
 		}
 	}

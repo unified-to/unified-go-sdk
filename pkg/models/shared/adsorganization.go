@@ -9,9 +9,11 @@ import (
 
 type AdsOrganization struct {
 	CreatedAt *time.Time     `json:"created_at,omitempty"`
+	Currency  *string        `json:"currency,omitempty"`
 	ID        *string        `json:"id,omitempty"`
 	Name      *string        `json:"name,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
+	Timezone  *string        `json:"timezone,omitempty"`
 	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
 }
 
@@ -33,6 +35,13 @@ func (a *AdsOrganization) GetCreatedAt() *time.Time {
 	return a.CreatedAt
 }
 
+func (a *AdsOrganization) GetCurrency() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Currency
+}
+
 func (a *AdsOrganization) GetID() *string {
 	if a == nil {
 		return nil
@@ -52,6 +61,13 @@ func (a *AdsOrganization) GetRaw() map[string]any {
 		return nil
 	}
 	return a.Raw
+}
+
+func (a *AdsOrganization) GetTimezone() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Timezone
 }
 
 func (a *AdsOrganization) GetUpdatedAt() *time.Time {

@@ -7,14 +7,43 @@ import (
 	"time"
 )
 
+type AdsGroupBudgetPeriod string
+
+const (
+	AdsGroupBudgetPeriodDaily    AdsGroupBudgetPeriod = "DAILY"
+	AdsGroupBudgetPeriodMonthly  AdsGroupBudgetPeriod = "MONTHLY"
+	AdsGroupBudgetPeriodTotal    AdsGroupBudgetPeriod = "TOTAL"
+	AdsGroupBudgetPeriodLifetime AdsGroupBudgetPeriod = "LIFETIME"
+)
+
+func (e AdsGroupBudgetPeriod) ToPointer() *AdsGroupBudgetPeriod {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AdsGroupBudgetPeriod) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DAILY", "MONTHLY", "TOTAL", "LIFETIME":
+			return true
+		}
+	}
+	return false
+}
+
 type AdsGroup struct {
+	BidAmount      *float64                   `json:"bid_amount,omitempty"`
+	BudgetAmount   *float64                   `json:"budget_amount,omitempty"`
+	BudgetPeriod   *AdsGroupBudgetPeriod      `json:"budget_period,omitempty"`
 	CampaignID     *string                    `json:"campaign_id,omitempty"`
 	CreatedAt      *time.Time                 `json:"created_at,omitempty"`
+	EndAt          *time.Time                 `json:"end_at,omitempty"`
 	ID             *string                    `json:"id,omitempty"`
 	IsActive       *bool                      `json:"is_active,omitempty"`
 	Name           *string                    `json:"name,omitempty"`
 	OrganizationID *string                    `json:"organization_id,omitempty"`
 	Raw            map[string]any             `json:"raw,omitempty"`
+	StartAt        *time.Time                 `json:"start_at,omitempty"`
 	Targeting      *PropertyAdsGroupTargeting `json:"targeting,omitempty"`
 	UpdatedAt      *time.Time                 `json:"updated_at,omitempty"`
 }
@@ -30,6 +59,27 @@ func (a *AdsGroup) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+func (a *AdsGroup) GetBidAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.BidAmount
+}
+
+func (a *AdsGroup) GetBudgetAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.BudgetAmount
+}
+
+func (a *AdsGroup) GetBudgetPeriod() *AdsGroupBudgetPeriod {
+	if a == nil {
+		return nil
+	}
+	return a.BudgetPeriod
+}
+
 func (a *AdsGroup) GetCampaignID() *string {
 	if a == nil {
 		return nil
@@ -42,6 +92,13 @@ func (a *AdsGroup) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return a.CreatedAt
+}
+
+func (a *AdsGroup) GetEndAt() *time.Time {
+	if a == nil {
+		return nil
+	}
+	return a.EndAt
 }
 
 func (a *AdsGroup) GetID() *string {
@@ -77,6 +134,13 @@ func (a *AdsGroup) GetRaw() map[string]any {
 		return nil
 	}
 	return a.Raw
+}
+
+func (a *AdsGroup) GetStartAt() *time.Time {
+	if a == nil {
+		return nil
+	}
+	return a.StartAt
 }
 
 func (a *AdsGroup) GetTargeting() *PropertyAdsGroupTargeting {

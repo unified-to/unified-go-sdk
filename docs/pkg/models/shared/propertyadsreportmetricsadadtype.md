@@ -12,3 +12,5 @@
 | `PropertyAdsReportMetricsAdAdTypeShopping`   | SHOPPING                                     |
 | `PropertyAdsReportMetricsAdAdTypeApp`        | APP                                          |
 | `PropertyAdsReportMetricsAdAdTypeCall`       | CALL                                         |
+| `PropertyAdsReportMetricsAdAdTypeCarousel`   | CAROUSEL                                     |
+| `PropertyAdsReportMetricsAdAdTypeSocial`     | SOCIAL                                       |

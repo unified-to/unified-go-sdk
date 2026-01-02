@@ -11,6 +11,7 @@ import (
 type CrmDeal struct {
 	Amount      *float64       `json:"amount,omitempty"`
 	ClosedAt    *time.Time     `json:"closed_at,omitempty"`
+	ClosingAt   *time.Time     `json:"closing_at,omitempty"`
 	CompanyIds  []string       `json:"company_ids,omitempty"`
 	ContactIds  []string       `json:"contact_ids,omitempty"`
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
@@ -55,6 +56,13 @@ func (c *CrmDeal) GetClosedAt() *time.Time {
 		return nil
 	}
 	return c.ClosedAt
+}
+
+func (c *CrmDeal) GetClosingAt() *time.Time {
+	if c == nil {
+		return nil
+	}
+	return c.ClosingAt
 }
 
 func (c *CrmDeal) GetCompanyIds() []string {

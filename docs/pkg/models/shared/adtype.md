@@ -12,3 +12,5 @@
 | `AdTypeShopping`   | SHOPPING           |
 | `AdTypeApp`        | APP                |
 | `AdTypeCall`       | CALL               |
+| `AdTypeCarousel`   | CAROUSEL           |
+| `AdTypeSocial`     | SOCIAL             |
