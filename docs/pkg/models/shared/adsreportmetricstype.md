@@ -22,3 +22,7 @@
 | `AdsReportMetricsTypeLeads`            | LEADS                                  |
 | `AdsReportMetricsTypeEngagements`      | ENGAGEMENTS                            |
 | `AdsReportMetricsTypeSaves`            | SAVES                                  |
+| `AdsReportMetricsTypeLikes`            | LIKES                                  |
+| `AdsReportMetricsTypeShares`           | SHARES                                 |
+| `AdsReportMetricsTypeComments`         | COMMENTS                               |
+| `AdsReportMetricsTypeFollows`          | FOLLOWS                                |

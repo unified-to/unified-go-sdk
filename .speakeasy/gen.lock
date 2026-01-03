@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: d5538ef43fd6a3e8fce04581401301de
+  docChecksum: e45c93544cf7d6ca65291c066f9ced13
   docVersion: "1.0"
   speakeasyVersion: 1.680.11
   generationVersion: 2.788.15
-  releaseVersion: 0.36.10
-  configChecksum: fbc3a9c9cf2daacec2a371fe188157bc
+  releaseVersion: 0.36.11
+  configChecksum: 94516aaa54e877699bdde8f1af453ca5
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: f826c978-ae5a-4ac9-83a9-089c561d7b34
-  pristine_commit_hash: 0c7ef86fbe023cee5cf572049e2264f05550ced0
-  pristine_tree_hash: a8bf62b5195b1007be9ec4914bd4b3a84f53bd1b
+  generation_id: 73f9034c-0172-4f02-9f19-0614e2ecb267
+  pristine_commit_hash: 397d5eae4df5e7bb12d8775169f81dc2d76eab22
+  pristine_tree_hash: 006bc8f9d6383d673d393ba8385139ad5b8ee8d6
 features:
   go:
     acceptHeaders: 2.81.2
@@ -4903,8 +4903,8 @@ trackedFiles:
     pristine_git_object: 852db248490289176352357be03e2e4b0dbdc53a
   docs/pkg/models/shared/adsorganization.md:
     id: c9c47f453dde
-    last_write_checksum: sha1:84dadda47e2d35c0fa3aca92e0931789d2632631
-    pristine_git_object: c90570414236b92a793124acecd9c3fba380d36d
+    last_write_checksum: sha1:bf5ee3f91dca142c85983dcdb6828f940bd5fddf
+    pristine_git_object: a9df074f17e13eb37f4dbeee6b26a40685767088
   docs/pkg/models/shared/adsreport.md:
     id: 3decf9ca3c32
     last_write_checksum: sha1:a8e91f883c8349442759e5c3a83636c17bc6216f
@@ -4915,8 +4915,8 @@ trackedFiles:
     pristine_git_object: 83918fce92d5755017b76b9e91292e9b04a7d50a
   docs/pkg/models/shared/adsreportmetricstype.md:
     id: a3be9d158474
-    last_write_checksum: sha1:76ec23a97995589b54ced7d8eba9fd21f7bf683c
-    pristine_git_object: d1f51e510d9b36508f4383b61065da32bf7b1695
+    last_write_checksum: sha1:8a0410b9f2a2c68bc478e00f731e873585b285a6
+    pristine_git_object: 9a2bdb974339c821a35cc8ea192d424af2079e9d
   docs/pkg/models/shared/adtype.md:
     id: 5a1ed4bc9b5f
     last_write_checksum: sha1:07f5b9364fff5277c23a47cfe58d6437326ab1ef
@@ -10127,16 +10127,16 @@ trackedFiles:
     pristine_git_object: b877f01d979c2ecb4b35f9859128913b46b61abd
   pkg/models/shared/adsorganization.go:
     id: 5b522f308316
-    last_write_checksum: sha1:f2adf092c216945afb501e68a39d71db3ca944ad
-    pristine_git_object: 5338c8a841ea0e7f6cc3fb331a55b7cefc616890
+    last_write_checksum: sha1:553b0eb05c23f558a0b3bfd72db36f75304a1cf3
+    pristine_git_object: 3c2be18d7726236986a74d4ebe57a99d4c7b020d
   pkg/models/shared/adsreport.go:
     id: 005e483fed87
     last_write_checksum: sha1:7abb6cec2bc2bdd1c8c26fd48b3b2f6d8a9ea829
     pristine_git_object: 61b2b354251e316313e5b9a96f36874bc0bbf0ee
   pkg/models/shared/adsreportmetrics.go:
     id: 24a43281f110
-    last_write_checksum: sha1:bfbdcda26ddf9e9b8011b25590c243840a067192
-    pristine_git_object: 5bfe72b4e014d07ce9cd06efc358e1274a5c49d3
+    last_write_checksum: sha1:e84698de9a1775c2230446c04fcdb35f6c44f275
+    pristine_git_object: bad3a8d447e38bed0e5679a368a3187071612053
   pkg/models/shared/apicall.go:
     id: 40c59b73f4a6
     last_write_checksum: sha1:c89d09b43f28225e752bf5f1af380af172801523
@@ -11307,8 +11307,8 @@ trackedFiles:
     pristine_git_object: 4b20fb365c076f7b22e57f5b25ee451c4aa733c9
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:fbc43b7651e80e76e96cd1b3e47a4c65802b1c64
-    pristine_git_object: f33bd960bc6dada6e7d41a9711780ca853a193e2
+    last_write_checksum: sha1:ae357eee2f9f027f258e62925e7a1975e166c76e
+    pristine_git_object: 817b7d7e4b2d5735b15a87efde2a416775e65c2c
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -16411,7 +16411,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Organization.CreateAdsOrganization()`: \n  *  `request.Request.AdsOrganization` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Organization.GetAdsOrganization()`:  `response` **Changed**\n* `UnifiedTo.Organization.ListAdsOrganizations()`: \n  *  `request.Request.ParentId` **Added**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Organization.PatchAdsOrganization()`: \n  *  `request.Request.AdsOrganization` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Organization.UpdateAdsOrganization()`: \n  *  `request.Request.AdsOrganization` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Report.ListAdsReports()`:  `response.[].Metrics.[]` **Changed**\n* `UnifiedTo.Ads.CreateAdsAd()`: \n  *  `request.Request.AdsAd.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Ads.CreateAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Ads.CreateAdsGroup()`: \n  *  `request.Request.AdsGroup` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.CreateAdsOrganization()`: \n  *  `request.Request.AdsOrganization` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.GetAdsAd()`:  `response.Targeting` **Changed**\n* `UnifiedTo.Ads.GetAdsCampaign()`:  `response.Targeting` **Changed**\n* `UnifiedTo.Ads.GetAdsGroup()`:  `response` **Changed**\n* `UnifiedTo.Ads.GetAdsOrganization()`:  `response` **Changed**\n* `UnifiedTo.Ads.ListAdsAds()`:  `response.[].Targeting` **Changed**\n* `UnifiedTo.Ads.ListAdsCampaigns()`:  `response.[].Targeting` **Changed**\n* `UnifiedTo.Ads.ListAdsGroups()`:  `response.[]` **Changed**\n* `UnifiedTo.Ads.ListAdsOrganizations()`: \n  *  `request.Request.ParentId` **Added**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Ads.ListAdsReports()`:  `response.[].Metrics.[]` **Changed**\n* `UnifiedTo.Ads.PatchAdsAd()`: \n  *  `request.Request.AdsAd.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Ads.PatchAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Ads.PatchAdsGroup()`: \n  *  `request.Request.AdsGroup` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.PatchAdsOrganization()`: \n  *  `request.Request.AdsOrganization` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.UpdateAdsAd()`: \n  *  `request.Request.AdsAd.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Ads.UpdateAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Ads.UpdateAdsGroup()`: \n  *  `request.Request.AdsGroup` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.UpdateAdsOrganization()`: \n  *  `request.Request.AdsOrganization` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ad.CreateAdsAd()`: \n  *  `request.Request.AdsAd.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Ad.GetAdsAd()`:  `response.Targeting` **Changed**\n* `UnifiedTo.Ad.ListAdsAds()`:  `response.[].Targeting` **Changed**\n* `UnifiedTo.Ad.PatchAdsAd()`: \n  *  `request.Request.AdsAd.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Ad.UpdateAdsAd()`: \n  *  `request.Request.AdsAd.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Campaign.CreateAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Campaign.GetAdsCampaign()`:  `response.Targeting` **Changed**\n* `UnifiedTo.Campaign.ListAdsCampaigns()`:  `response.[].Targeting` **Changed**\n* `UnifiedTo.Campaign.PatchAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Campaign.UpdateAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed**\n  *  `response.Targeting` **Changed**\n* `UnifiedTo.Group.CreateAdsGroup()`: \n  *  `request.Request.AdsGroup` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Group.GetAdsGroup()`:  `response` **Changed**\n* `UnifiedTo.Group.ListAdsGroups()`:  `response.[]` **Changed**\n* `UnifiedTo.Group.PatchAdsGroup()`: \n  *  `request.Request.AdsGroup` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Group.UpdateAdsGroup()`: \n  *  `request.Request.AdsGroup` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Crm.CreateCrmDeal()`: \n  *  `request.Request.CrmDeal.ClosingAt` **Added**\n  *  `response.ClosingAt` **Added**\n* `UnifiedTo.Crm.GetCrmDeal()`:  `response.ClosingAt` **Added**\n* `UnifiedTo.Crm.ListCrmDeals()`:  `response.[].ClosingAt` **Added**\n* `UnifiedTo.Crm.PatchCrmDeal()`: \n  *  `request.Request.CrmDeal.ClosingAt` **Added**\n  *  `response.ClosingAt` **Added**\n* `UnifiedTo.Crm.UpdateCrmDeal()`: \n  *  `request.Request.CrmDeal.ClosingAt` **Added**\n  *  `response.ClosingAt` **Added**\n* `UnifiedTo.Deal.CreateCrmDeal()`: \n  *  `request.Request.CrmDeal.ClosingAt` **Added**\n  *  `response.ClosingAt` **Added**\n* `UnifiedTo.Deal.GetCrmDeal()`:  `response.ClosingAt` **Added**\n* `UnifiedTo.Deal.ListCrmDeals()`:  `response.[].ClosingAt` **Added**\n* `UnifiedTo.Deal.PatchCrmDeal()`: \n  *  `request.Request.CrmDeal.ClosingAt` **Added**\n  *  `response.ClosingAt` **Added**\n* `UnifiedTo.Deal.UpdateCrmDeal()`: \n  *  `request.Request.CrmDeal.ClosingAt` **Added**\n  *  `response.ClosingAt` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Organization.CreateAdsOrganization()`: \n  *  `request.Request.AdsOrganization.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Organization.GetAdsOrganization()`:  `response.ParentId` **Added**\n* `UnifiedTo.Organization.ListAdsOrganizations()`:  `response.[].ParentId` **Added**\n* `UnifiedTo.Organization.PatchAdsOrganization()`: \n  *  `request.Request.AdsOrganization.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Organization.UpdateAdsOrganization()`: \n  *  `request.Request.AdsOrganization.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Ads.CreateAdsOrganization()`: \n  *  `request.Request.AdsOrganization.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Ads.GetAdsOrganization()`:  `response.ParentId` **Added**\n* `UnifiedTo.Ads.ListAdsOrganizations()`:  `response.[].ParentId` **Added**\n* `UnifiedTo.Ads.PatchAdsOrganization()`: \n  *  `request.Request.AdsOrganization.ParentId` **Added**\n  *  `response.ParentId` **Added**\n* `UnifiedTo.Ads.UpdateAdsOrganization()`: \n  *  `request.Request.AdsOrganization.ParentId` **Added**\n  *  `response.ParentId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

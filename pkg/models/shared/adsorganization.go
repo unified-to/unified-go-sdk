@@ -12,6 +12,7 @@ type AdsOrganization struct {
 	Currency  *string        `json:"currency,omitempty"`
 	ID        *string        `json:"id,omitempty"`
 	Name      *string        `json:"name,omitempty"`
+	ParentID  *string        `json:"parent_id,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
 	Timezone  *string        `json:"timezone,omitempty"`
 	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
@@ -54,6 +55,13 @@ func (a *AdsOrganization) GetName() *string {
 		return nil
 	}
 	return a.Name
+}
+
+func (a *AdsOrganization) GetParentID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ParentID
 }
 
 func (a *AdsOrganization) GetRaw() map[string]any {

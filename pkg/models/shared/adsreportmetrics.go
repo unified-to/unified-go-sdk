@@ -22,6 +22,10 @@ const (
 	AdsReportMetricsTypeLeads            AdsReportMetricsType = "LEADS"
 	AdsReportMetricsTypeEngagements      AdsReportMetricsType = "ENGAGEMENTS"
 	AdsReportMetricsTypeSaves            AdsReportMetricsType = "SAVES"
+	AdsReportMetricsTypeLikes            AdsReportMetricsType = "LIKES"
+	AdsReportMetricsTypeShares           AdsReportMetricsType = "SHARES"
+	AdsReportMetricsTypeComments         AdsReportMetricsType = "COMMENTS"
+	AdsReportMetricsTypeFollows          AdsReportMetricsType = "FOLLOWS"
 )
 
 func (e AdsReportMetricsType) ToPointer() *AdsReportMetricsType {
@@ -32,7 +36,7 @@ func (e AdsReportMetricsType) ToPointer() *AdsReportMetricsType {
 func (e *AdsReportMetricsType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "CLICKS", "IMPRESSIONS", "CONVERSIONS", "COST", "CTR", "CPC", "CONVERSION_VALUE", "CPA", "ROAS", "CPM", "ECPM", "ENGAGEMENT", "VIDEO_COMPLETIONS", "VIDEO_VIEWS", "LEADS", "ENGAGEMENTS", "SAVES":
+		case "CLICKS", "IMPRESSIONS", "CONVERSIONS", "COST", "CTR", "CPC", "CONVERSION_VALUE", "CPA", "ROAS", "CPM", "ECPM", "ENGAGEMENT", "VIDEO_COMPLETIONS", "VIDEO_VIEWS", "LEADS", "ENGAGEMENTS", "SAVES", "LIKES", "SHARES", "COMMENTS", "FOLLOWS":
 			return true
 		}
 	}
