@@ -29,3 +29,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesCalendar`     | calendar                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesVerification` | verification                                              |
 | `ListUnifiedIntegrationsQueryParamCategoriesAds`          | ads                                                       |
+| `ListUnifiedIntegrationsQueryParamCategoriesForms`        | forms                                                     |

@@ -111,3 +111,5 @@
 | `ObjectTypeAdsCampaign`             | ads_campaign                        |
 | `ObjectTypeAdsReport`               | ads_report                          |
 | `ObjectTypeAdsGroup`                | ads_group                           |
+| `ObjectTypeFormsForm`               | forms_form                          |
+| `ObjectTypeFormsSubmission`         | forms_submission                    |

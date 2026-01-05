@@ -29,3 +29,4 @@
 | `CategoriesCalendar`     | calendar                 |
 | `CategoriesVerification` | verification             |
 | `CategoriesAds`          | ads                      |
+| `CategoriesForms`        | forms                    |

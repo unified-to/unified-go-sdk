@@ -577,6 +577,29 @@ func (e *ListExpandRecurringEvents) IsExact() bool {
 	return false
 }
 
+type ListFormID string
+
+const (
+	ListFormIDSupportedRequired ListFormID = "supported-required"
+	ListFormIDSupported         ListFormID = "supported"
+	ListFormIDNotSupported      ListFormID = "not-supported"
+)
+
+func (e ListFormID) ToPointer() *ListFormID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListFormID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListGroupID string
 
 const (
@@ -1612,6 +1635,29 @@ func (e *NativeWebhookEventID) IsExact() bool {
 	return false
 }
 
+type NativeWebhookFormID string
+
+const (
+	NativeWebhookFormIDSupportedRequired NativeWebhookFormID = "supported-required"
+	NativeWebhookFormIDSupported         NativeWebhookFormID = "supported"
+	NativeWebhookFormIDNotSupported      NativeWebhookFormID = "not-supported"
+)
+
+func (e NativeWebhookFormID) ToPointer() *NativeWebhookFormID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookFormID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookParentID string
 
 const (
@@ -2210,6 +2256,29 @@ func (e *VirtualWebhookFields) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookFormID string
+
+const (
+	VirtualWebhookFormIDSupportedRequired VirtualWebhookFormID = "supported-required"
+	VirtualWebhookFormIDSupported         VirtualWebhookFormID = "supported"
+	VirtualWebhookFormIDNotSupported      VirtualWebhookFormID = "not-supported"
+)
+
+func (e VirtualWebhookFormID) ToPointer() *VirtualWebhookFormID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookFormID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookGroupID string
 
 const (
@@ -2789,6 +2858,7 @@ type IntegrationSupport struct {
 	ListEventID               *ListEventID               `json:"list_event_id,omitempty"`
 	ListExpand                *ListExpand                `json:"list_expand,omitempty"`
 	ListExpandRecurringEvents *ListExpandRecurringEvents `json:"list_expand_recurring_events,omitempty"`
+	ListFormID                *ListFormID                `json:"list_form_id,omitempty"`
 	ListGroupID               *ListGroupID               `json:"list_group_id,omitempty"`
 	ListInstructorID          *ListInstructorID          `json:"list_instructor_id,omitempty"`
 	ListInterviewID           *ListInterviewID           `json:"list_interview_id,omitempty"`
@@ -2835,6 +2905,7 @@ type IntegrationSupport struct {
 	NativeWebhookChannelID    *NativeWebhookChannelID    `json:"native_webhook_channel_id,omitempty"`
 	NativeWebhookCompanyID    *NativeWebhookCompanyID    `json:"native_webhook_company_id,omitempty"`
 	NativeWebhookEventID      *NativeWebhookEventID      `json:"native_webhook_event_id,omitempty"`
+	NativeWebhookFormID       *NativeWebhookFormID       `json:"native_webhook_form_id,omitempty"`
 	NativeWebhookParentID     *NativeWebhookParentID     `json:"native_webhook_parent_id,omitempty"`
 	NativeWebhookProjectID    *NativeWebhookProjectID    `json:"native_webhook_project_id,omitempty"`
 	NativeWebhookTaskID       *NativeWebhookTaskID       `json:"native_webhook_task_id,omitempty"`
@@ -2865,6 +2936,7 @@ type IntegrationSupport struct {
 	VirtualWebhookEventID         *VirtualWebhookEventID                   `json:"virtual_webhook_event_id,omitempty"`
 	VirtualWebhookExpand          *VirtualWebhookExpand                    `json:"virtual_webhook_expand,omitempty"`
 	VirtualWebhookFields          *VirtualWebhookFields                    `json:"virtual_webhook_fields,omitempty"`
+	VirtualWebhookFormID          *VirtualWebhookFormID                    `json:"virtual_webhook_form_id,omitempty"`
 	VirtualWebhookGroupID         *VirtualWebhookGroupID                   `json:"virtual_webhook_group_id,omitempty"`
 	VirtualWebhookItemID          *VirtualWebhookItemID                    `json:"virtual_webhook_item_id,omitempty"`
 	VirtualWebhookItemVariantID   *VirtualWebhookItemVariantID             `json:"virtual_webhook_item_variant_id,omitempty"`
@@ -3072,6 +3144,13 @@ func (i *IntegrationSupport) GetListExpandRecurringEvents() *ListExpandRecurring
 		return nil
 	}
 	return i.ListExpandRecurringEvents
+}
+
+func (i *IntegrationSupport) GetListFormID() *ListFormID {
+	if i == nil {
+		return nil
+	}
+	return i.ListFormID
 }
 
 func (i *IntegrationSupport) GetListGroupID() *ListGroupID {
@@ -3396,6 +3475,13 @@ func (i *IntegrationSupport) GetNativeWebhookEventID() *NativeWebhookEventID {
 	return i.NativeWebhookEventID
 }
 
+func (i *IntegrationSupport) GetNativeWebhookFormID() *NativeWebhookFormID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookFormID
+}
+
 func (i *IntegrationSupport) GetNativeWebhookParentID() *NativeWebhookParentID {
 	if i == nil {
 		return nil
@@ -3597,6 +3683,13 @@ func (i *IntegrationSupport) GetVirtualWebhookFields() *VirtualWebhookFields {
 		return nil
 	}
 	return i.VirtualWebhookFields
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookFormID() *VirtualWebhookFormID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookFormID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookGroupID() *VirtualWebhookGroupID {

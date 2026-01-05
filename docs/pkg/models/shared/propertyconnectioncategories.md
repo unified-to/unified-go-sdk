@@ -29,3 +29,4 @@
 | `PropertyConnectionCategoriesCalendar`     | calendar                                   |
 | `PropertyConnectionCategoriesVerification` | verification                               |
 | `PropertyConnectionCategoriesAds`          | ads                                        |
+| `PropertyConnectionCategoriesForms`        | forms                                      |

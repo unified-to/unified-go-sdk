@@ -109,6 +109,9 @@ type UnifiedTo struct {
 	Pipeline          *Pipeline
 	Enrich            *Enrich
 	Person            *Person
+	Forms             *Forms
+	Form              *Form
+	Submission        *Submission
 	Genai             *Genai
 	Embedding         *Embedding
 	Model             *Model
@@ -248,9 +251,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.11",
+		SDKVersion: "0.36.12",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.11 2.788.15 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.12 2.788.15 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -323,6 +326,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Pipeline = newPipeline(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Enrich = newEnrich(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Person = newPerson(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Forms = newForms(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Form = newForm(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Submission = newSubmission(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Genai = newGenai(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Embedding = newEmbedding(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Model = newModel(sdk, sdk.sdkConfiguration, sdk.hooks)

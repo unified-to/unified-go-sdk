@@ -715,6 +715,26 @@ func main() {
 * [RemoveStorageFile](docs/sdks/file/README.md#removestoragefile) - Remove a file
 * [UpdateStorageFile](docs/sdks/file/README.md#updatestoragefile) - Update a file
 
+### [Form](docs/sdks/form/README.md)
+
+* [CreateFormsForm](docs/sdks/form/README.md#createformsform) - Create a form
+* [GetFormsForm](docs/sdks/form/README.md#getformsform) - Retrieve a form
+* [ListFormsForms](docs/sdks/form/README.md#listformsforms) - List all forms
+* [PatchFormsForm](docs/sdks/form/README.md#patchformsform) - Update a form
+* [RemoveFormsForm](docs/sdks/form/README.md#removeformsform) - Remove a form
+* [UpdateFormsForm](docs/sdks/form/README.md#updateformsform) - Update a form
+
+### [Forms](docs/sdks/forms/README.md)
+
+* [CreateFormsForm](docs/sdks/forms/README.md#createformsform) - Create a form
+* [GetFormsForm](docs/sdks/forms/README.md#getformsform) - Retrieve a form
+* [GetFormsSubmission](docs/sdks/forms/README.md#getformssubmission) - Retrieve a submission
+* [ListFormsForms](docs/sdks/forms/README.md#listformsforms) - List all forms
+* [ListFormsSubmissions](docs/sdks/forms/README.md#listformssubmissions) - List all submissions
+* [PatchFormsForm](docs/sdks/forms/README.md#patchformsform) - Update a form
+* [RemoveFormsForm](docs/sdks/forms/README.md#removeformsform) - Remove a form
+* [UpdateFormsForm](docs/sdks/forms/README.md#updateformsform) - Update a form
+
 ### [Genai](docs/sdks/genai/README.md)
 
 * [CreateGenaiEmbedding](docs/sdks/genai/README.md#creategenaiembedding) - Create an embedding
@@ -1326,6 +1346,11 @@ func main() {
 * [PatchLmsStudent](docs/sdks/student/README.md#patchlmsstudent) - Update a student
 * [RemoveLmsStudent](docs/sdks/student/README.md#removelmsstudent) - Remove a student
 * [UpdateLmsStudent](docs/sdks/student/README.md#updatelmsstudent) - Update a student
+
+### [Submission](docs/sdks/submission/README.md)
+
+* [GetFormsSubmission](docs/sdks/submission/README.md#getformssubmission) - Retrieve a submission
+* [ListFormsSubmissions](docs/sdks/submission/README.md#listformssubmissions) - List all submissions
 
 ### [Subscription](docs/sdks/subscription/README.md)
 

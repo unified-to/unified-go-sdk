@@ -29,3 +29,4 @@
 | `QueryParamCategoriesCalendar`     | calendar                           |
 | `QueryParamCategoriesVerification` | verification                       |
 | `QueryParamCategoriesAds`          | ads                                |
+| `QueryParamCategoriesForms`        | forms                              |

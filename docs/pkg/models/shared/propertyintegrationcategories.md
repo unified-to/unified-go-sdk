@@ -29,3 +29,4 @@
 | `PropertyIntegrationCategoriesCalendar`     | calendar                                    |
 | `PropertyIntegrationCategoriesVerification` | verification                                |
 | `PropertyIntegrationCategoriesAds`          | ads                                         |
+| `PropertyIntegrationCategoriesForms`        | forms                                       |

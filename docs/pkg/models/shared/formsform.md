@@ -1,0 +1,22 @@
+# FormsForm
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `ConfirmationMessage`                                         | **string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `ConfirmationRedirectURL`                                     | **string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `CreatedAt`                                                   | [*time.Time](https://pkg.go.dev/time#Time)                    | :heavy_minus_sign:                                            | N/A                                                           |
+| `Description`                                                 | **string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `Fields`                                                      | [][shared.FormField](../../../pkg/models/shared/formfield.md) | :heavy_minus_sign:                                            | N/A                                                           |
+| `HasMultipleSubmissions`                                      | **bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `HasProgressBar`                                              | **bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `HasShuffleQuestions`                                         | **bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `ID`                                                          | **string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `IsActive`                                                    | **bool*                                                       | :heavy_minus_sign:                                            | N/A                                                           |
+| `Name`                                                        | *string*                                                      | :heavy_check_mark:                                            | N/A                                                           |
+| `PublishedURL`                                                | **string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `Raw`                                                         | map[string]*any*                                              | :heavy_minus_sign:                                            | N/A                                                           |
+| `ResponseCount`                                               | **float64*                                                    | :heavy_minus_sign:                                            | N/A                                                           |
+| `UpdatedAt`                                                   | [*time.Time](https://pkg.go.dev/time#Time)                    | :heavy_minus_sign:                                            | N/A                                                           |

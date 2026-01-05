@@ -202,3 +202,7 @@
 | `PropertyConnectionPermissionsAdsReportRead`                | ads_report_read                                             |
 | `PropertyConnectionPermissionsAdsOrganizationRead`          | ads_organization_read                                       |
 | `PropertyConnectionPermissionsAdsOrganizationWrite`         | ads_organization_write                                      |
+| `PropertyConnectionPermissionsFormsFormRead`                | forms_form_read                                             |
+| `PropertyConnectionPermissionsFormsFormWrite`               | forms_form_write                                            |
+| `PropertyConnectionPermissionsFormsSubmissionRead`          | forms_submission_read                                       |
+| `PropertyConnectionPermissionsFormsSubmissionWrite`         | forms_submission_write                                      |
