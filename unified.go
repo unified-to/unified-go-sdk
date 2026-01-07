@@ -242,6 +242,7 @@ func (s *Unified) CreateUnifiedConnection(ctx context.Context, request shared.Co
 
 }
 
+// CreateUnifiedEnvironment - Create new environments
 func (s *Unified) CreateUnifiedEnvironment(ctx context.Context, request []string, opts ...operations.Option) (*operations.CreateUnifiedEnvironmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -419,7 +420,7 @@ func (s *Unified) CreateUnifiedEnvironment(ctx context.Context, request []string
 				return nil, err
 			}
 
-			res.S = out
+			res.Environments = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -2096,6 +2097,7 @@ func (s *Unified) ListUnifiedConnections(ctx context.Context, request operations
 
 }
 
+// ListUnifiedEnvironments - Returns all environments
 func (s *Unified) ListUnifiedEnvironments(ctx context.Context, opts ...operations.Option) (*operations.ListUnifiedEnvironmentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2266,7 +2268,7 @@ func (s *Unified) ListUnifiedEnvironments(ctx context.Context, opts ...operation
 				return nil, err
 			}
 
-			res.S = out
+			res.Environments = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -3907,6 +3909,7 @@ func (s *Unified) RemoveUnifiedConnection(ctx context.Context, request operation
 
 }
 
+// RemoveUnifiedEnvironment - Remove an environment
 func (s *Unified) RemoveUnifiedEnvironment(ctx context.Context, request operations.RemoveUnifiedEnvironmentRequest, opts ...operations.Option) (*operations.RemoveUnifiedEnvironmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -4077,7 +4080,7 @@ func (s *Unified) RemoveUnifiedEnvironment(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.S = out
+			res.Environments = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {

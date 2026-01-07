@@ -20,12 +20,12 @@ func (r *RemoveUnifiedEnvironmentRequest) GetEnv() string {
 type RemoveUnifiedEnvironmentResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	// Successful
+	Environments []string
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	S []string
 }
 
 func (r *RemoveUnifiedEnvironmentResponse) GetContentType() string {
@@ -33,6 +33,13 @@ func (r *RemoveUnifiedEnvironmentResponse) GetContentType() string {
 		return ""
 	}
 	return r.ContentType
+}
+
+func (r *RemoveUnifiedEnvironmentResponse) GetEnvironments() []string {
+	if r == nil {
+		return nil
+	}
+	return r.Environments
 }
 
 func (r *RemoveUnifiedEnvironmentResponse) GetStatusCode() int {
@@ -47,11 +54,4 @@ func (r *RemoveUnifiedEnvironmentResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return r.RawResponse
-}
-
-func (r *RemoveUnifiedEnvironmentResponse) GetS() []string {
-	if r == nil {
-		return nil
-	}
-	return r.S
 }

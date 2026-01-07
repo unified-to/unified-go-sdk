@@ -32,10 +32,10 @@ const (
 )
 
 type KmsPageMetadata5 struct {
-	KmsPageMetadata1 *KmsPageMetadata1 `queryParam:"inline,name=five" union:"member"`
-	Str              *string           `queryParam:"inline,name=five" union:"member"`
-	Number           *float64          `queryParam:"inline,name=five" union:"member"`
-	Boolean          *bool             `queryParam:"inline,name=five" union:"member"`
+	KmsPageMetadata1 *KmsPageMetadata1 `queryParam:"inline" union:"member"`
+	Str              *string           `queryParam:"inline" union:"member"`
+	Number           *float64          `queryParam:"inline" union:"member"`
+	Boolean          *bool             `queryParam:"inline" union:"member"`
 
 	Type KmsPageMetadata5Type
 }
@@ -140,11 +140,11 @@ const (
 )
 
 type KmsPageMetadataExtraData struct {
-	MapOfAny                map[string]any     `queryParam:"inline,name=extra_data" union:"member"`
-	Str                     *string            `queryParam:"inline,name=extra_data" union:"member"`
-	Number                  *float64           `queryParam:"inline,name=extra_data" union:"member"`
-	Boolean                 *bool              `queryParam:"inline,name=extra_data" union:"member"`
-	ArrayOfKmsPageMetadata5 []KmsPageMetadata5 `queryParam:"inline,name=extra_data" union:"member"`
+	MapOfAny                map[string]any     `queryParam:"inline" union:"member"`
+	Str                     *string            `queryParam:"inline" union:"member"`
+	Number                  *float64           `queryParam:"inline" union:"member"`
+	Boolean                 *bool              `queryParam:"inline" union:"member"`
+	ArrayOfKmsPageMetadata5 []KmsPageMetadata5 `queryParam:"inline" union:"member"`
 
 	Type KmsPageMetadataExtraDataType
 }
@@ -320,10 +320,10 @@ const (
 )
 
 type KmsPageMetadataSchemas5 struct {
-	KmsPageMetadataSchemas1 *KmsPageMetadataSchemas1 `queryParam:"inline,name=five" union:"member"`
-	Str                     *string                  `queryParam:"inline,name=five" union:"member"`
-	Number                  *float64                 `queryParam:"inline,name=five" union:"member"`
-	Boolean                 *bool                    `queryParam:"inline,name=five" union:"member"`
+	KmsPageMetadataSchemas1 *KmsPageMetadataSchemas1 `queryParam:"inline" union:"member"`
+	Str                     *string                  `queryParam:"inline" union:"member"`
+	Number                  *float64                 `queryParam:"inline" union:"member"`
+	Boolean                 *bool                    `queryParam:"inline" union:"member"`
 
 	Type KmsPageMetadataSchemas5Type
 }
@@ -428,11 +428,11 @@ const (
 )
 
 type KmsPageMetadataValue struct {
-	MapOfAny                       map[string]any            `queryParam:"inline,name=value" union:"member"`
-	Str                            *string                   `queryParam:"inline,name=value" union:"member"`
-	Number                         *float64                  `queryParam:"inline,name=value" union:"member"`
-	Boolean                        *bool                     `queryParam:"inline,name=value" union:"member"`
-	ArrayOfKmsPageMetadataSchemas5 []KmsPageMetadataSchemas5 `queryParam:"inline,name=value" union:"member"`
+	MapOfAny                       map[string]any            `queryParam:"inline" union:"member"`
+	Str                            *string                   `queryParam:"inline" union:"member"`
+	Number                         *float64                  `queryParam:"inline" union:"member"`
+	Boolean                        *bool                     `queryParam:"inline" union:"member"`
+	ArrayOfKmsPageMetadataSchemas5 []KmsPageMetadataSchemas5 `queryParam:"inline" union:"member"`
 
 	Type KmsPageMetadataValueType
 }

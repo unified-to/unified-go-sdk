@@ -32,10 +32,10 @@ const (
 )
 
 type CommerceMetadata5 struct {
-	CommerceMetadata1 *CommerceMetadata1 `queryParam:"inline,name=five" union:"member"`
-	Str               *string            `queryParam:"inline,name=five" union:"member"`
-	Number            *float64           `queryParam:"inline,name=five" union:"member"`
-	Boolean           *bool              `queryParam:"inline,name=five" union:"member"`
+	CommerceMetadata1 *CommerceMetadata1 `queryParam:"inline" union:"member"`
+	Str               *string            `queryParam:"inline" union:"member"`
+	Number            *float64           `queryParam:"inline" union:"member"`
+	Boolean           *bool              `queryParam:"inline" union:"member"`
 
 	Type CommerceMetadata5Type
 }
@@ -140,11 +140,11 @@ const (
 )
 
 type CommerceMetadataExtraData struct {
-	MapOfAny                 map[string]any      `queryParam:"inline,name=extra_data" union:"member"`
-	Str                      *string             `queryParam:"inline,name=extra_data" union:"member"`
-	Number                   *float64            `queryParam:"inline,name=extra_data" union:"member"`
-	Boolean                  *bool               `queryParam:"inline,name=extra_data" union:"member"`
-	ArrayOfCommerceMetadata5 []CommerceMetadata5 `queryParam:"inline,name=extra_data" union:"member"`
+	MapOfAny                 map[string]any      `queryParam:"inline" union:"member"`
+	Str                      *string             `queryParam:"inline" union:"member"`
+	Number                   *float64            `queryParam:"inline" union:"member"`
+	Boolean                  *bool               `queryParam:"inline" union:"member"`
+	ArrayOfCommerceMetadata5 []CommerceMetadata5 `queryParam:"inline" union:"member"`
 
 	Type CommerceMetadataExtraDataType
 }
@@ -315,10 +315,10 @@ const (
 )
 
 type CommerceMetadataSchemas5 struct {
-	CommerceMetadataSchemas1 *CommerceMetadataSchemas1 `queryParam:"inline,name=five" union:"member"`
-	Str                      *string                   `queryParam:"inline,name=five" union:"member"`
-	Number                   *float64                  `queryParam:"inline,name=five" union:"member"`
-	Boolean                  *bool                     `queryParam:"inline,name=five" union:"member"`
+	CommerceMetadataSchemas1 *CommerceMetadataSchemas1 `queryParam:"inline" union:"member"`
+	Str                      *string                   `queryParam:"inline" union:"member"`
+	Number                   *float64                  `queryParam:"inline" union:"member"`
+	Boolean                  *bool                     `queryParam:"inline" union:"member"`
 
 	Type CommerceMetadataSchemas5Type
 }
@@ -423,11 +423,11 @@ const (
 )
 
 type CommerceMetadataValue struct {
-	MapOfAny                        map[string]any             `queryParam:"inline,name=value" union:"member"`
-	Str                             *string                    `queryParam:"inline,name=value" union:"member"`
-	Number                          *float64                   `queryParam:"inline,name=value" union:"member"`
-	Boolean                         *bool                      `queryParam:"inline,name=value" union:"member"`
-	ArrayOfCommerceMetadataSchemas5 []CommerceMetadataSchemas5 `queryParam:"inline,name=value" union:"member"`
+	MapOfAny                        map[string]any             `queryParam:"inline" union:"member"`
+	Str                             *string                    `queryParam:"inline" union:"member"`
+	Number                          *float64                   `queryParam:"inline" union:"member"`
+	Boolean                         *bool                      `queryParam:"inline" union:"member"`
+	ArrayOfCommerceMetadataSchemas5 []CommerceMetadataSchemas5 `queryParam:"inline" union:"member"`
 
 	Type CommerceMetadataValueType
 }

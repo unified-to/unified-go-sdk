@@ -5,7 +5,7 @@
 ### Available Operations
 
 * [CreateUnifiedConnection](#createunifiedconnection) - Create connection
-* [CreateUnifiedEnvironment](#createunifiedenvironment)
+* [CreateUnifiedEnvironment](#createunifiedenvironment) - Create new environments
 * [CreateUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
 * [GetUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [GetUnifiedConnection](#getunifiedconnection) - Retrieve connection
@@ -14,7 +14,7 @@
 * [GetUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [ListUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [ListUnifiedConnections](#listunifiedconnections) - List all connections
-* [ListUnifiedEnvironments](#listunifiedenvironments)
+* [ListUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
 * [ListUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [ListUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [ListUnifiedIssues](#listunifiedissues) - List support issues
@@ -23,7 +23,7 @@
 * [PatchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [PatchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
 * [RemoveUnifiedConnection](#removeunifiedconnection) - Remove connection
-* [RemoveUnifiedEnvironment](#removeunifiedenvironment)
+* [RemoveUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
 * [RemoveUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [UpdateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [UpdateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
@@ -89,6 +89,8 @@ func main() {
 
 ## CreateUnifiedEnvironment
 
+Create new environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="go" operationID="createUnifiedEnvironment" method="post" path="/unified/environment" -->
@@ -112,7 +114,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.S != nil {
+    if res.Environments != nil {
         // handle response
     }
 }
@@ -572,6 +574,8 @@ func main() {
 
 ## ListUnifiedEnvironments
 
+Returns all environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="go" operationID="listUnifiedEnvironments" method="get" path="/unified/environment" -->
@@ -595,7 +599,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.S != nil {
+    if res.Environments != nil {
         // handle response
     }
 }
@@ -1062,6 +1066,8 @@ func main() {
 
 ## RemoveUnifiedEnvironment
 
+Remove an environment
+
 ### Example Usage
 
 <!-- UsageSnippet language="go" operationID="removeUnifiedEnvironment" method="delete" path="/unified/environment/{env}" -->
@@ -1088,7 +1094,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.S != nil {
+    if res.Environments != nil {
         // handle response
     }
 }

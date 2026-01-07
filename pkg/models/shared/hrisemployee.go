@@ -148,6 +148,7 @@ type HrisEmployee struct {
 	StorageQuotaUsed      *float64                   `json:"storage_quota_used,omitempty"`
 	Telephones            []HrisTelephone            `json:"telephones,omitempty"`
 	TerminatedAt          *time.Time                 `json:"terminated_at,omitempty"`
+	TerminationReason     *string                    `json:"termination_reason,omitempty"`
 	Timezone              *string                    `json:"timezone,omitempty"`
 	Title                 *string                    `json:"title,omitempty"`
 	UpdatedAt             *time.Time                 `json:"updated_at,omitempty"`
@@ -435,6 +436,13 @@ func (h *HrisEmployee) GetTerminatedAt() *time.Time {
 		return nil
 	}
 	return h.TerminatedAt
+}
+
+func (h *HrisEmployee) GetTerminationReason() *string {
+	if h == nil {
+		return nil
+	}
+	return h.TerminationReason
 }
 
 func (h *HrisEmployee) GetTimezone() *string {

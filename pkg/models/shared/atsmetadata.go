@@ -32,10 +32,10 @@ const (
 )
 
 type Five struct {
-	One     *One     `queryParam:"inline,name=five" union:"member"`
-	Str     *string  `queryParam:"inline,name=five" union:"member"`
-	Number  *float64 `queryParam:"inline,name=five" union:"member"`
-	Boolean *bool    `queryParam:"inline,name=five" union:"member"`
+	One     *One     `queryParam:"inline" union:"member"`
+	Str     *string  `queryParam:"inline" union:"member"`
+	Number  *float64 `queryParam:"inline" union:"member"`
+	Boolean *bool    `queryParam:"inline" union:"member"`
 
 	Type FiveType
 }
@@ -140,11 +140,11 @@ const (
 )
 
 type ExtraData struct {
-	MapOfAny map[string]any `queryParam:"inline,name=extra_data" union:"member"`
-	Str      *string        `queryParam:"inline,name=extra_data" union:"member"`
-	Number   *float64       `queryParam:"inline,name=extra_data" union:"member"`
-	Boolean  *bool          `queryParam:"inline,name=extra_data" union:"member"`
-	ArrayOf5 []Five         `queryParam:"inline,name=extra_data" union:"member"`
+	MapOfAny map[string]any `queryParam:"inline" union:"member"`
+	Str      *string        `queryParam:"inline" union:"member"`
+	Number   *float64       `queryParam:"inline" union:"member"`
+	Boolean  *bool          `queryParam:"inline" union:"member"`
+	ArrayOf5 []Five         `queryParam:"inline" union:"member"`
 
 	Type ExtraDataType
 }
@@ -315,10 +315,10 @@ const (
 )
 
 type AtsMetadata5 struct {
-	AtsMetadata1 *AtsMetadata1 `queryParam:"inline,name=five" union:"member"`
-	Str          *string       `queryParam:"inline,name=five" union:"member"`
-	Number       *float64      `queryParam:"inline,name=five" union:"member"`
-	Boolean      *bool         `queryParam:"inline,name=five" union:"member"`
+	AtsMetadata1 *AtsMetadata1 `queryParam:"inline" union:"member"`
+	Str          *string       `queryParam:"inline" union:"member"`
+	Number       *float64      `queryParam:"inline" union:"member"`
+	Boolean      *bool         `queryParam:"inline" union:"member"`
 
 	Type AtsMetadata5Type
 }
@@ -423,11 +423,11 @@ const (
 )
 
 type Value struct {
-	MapOfAny            map[string]any `queryParam:"inline,name=value" union:"member"`
-	Str                 *string        `queryParam:"inline,name=value" union:"member"`
-	Number              *float64       `queryParam:"inline,name=value" union:"member"`
-	Boolean             *bool          `queryParam:"inline,name=value" union:"member"`
-	ArrayOfAtsMetadata5 []AtsMetadata5 `queryParam:"inline,name=value" union:"member"`
+	MapOfAny            map[string]any `queryParam:"inline" union:"member"`
+	Str                 *string        `queryParam:"inline" union:"member"`
+	Number              *float64       `queryParam:"inline" union:"member"`
+	Boolean             *bool          `queryParam:"inline" union:"member"`
+	ArrayOfAtsMetadata5 []AtsMetadata5 `queryParam:"inline" union:"member"`
 
 	Type ValueType
 }

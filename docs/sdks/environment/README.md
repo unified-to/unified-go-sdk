@@ -4,11 +4,13 @@
 
 ### Available Operations
 
-* [CreateUnifiedEnvironment](#createunifiedenvironment)
-* [ListUnifiedEnvironments](#listunifiedenvironments)
-* [RemoveUnifiedEnvironment](#removeunifiedenvironment)
+* [CreateUnifiedEnvironment](#createunifiedenvironment) - Create new environments
+* [ListUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
+* [RemoveUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
 
 ## CreateUnifiedEnvironment
+
+Create new environments
 
 ### Example Usage
 
@@ -33,7 +35,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.S != nil {
+    if res.Environments != nil {
         // handle response
     }
 }
@@ -59,6 +61,8 @@ func main() {
 
 ## ListUnifiedEnvironments
 
+Returns all environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="go" operationID="listUnifiedEnvironments" method="get" path="/unified/environment" -->
@@ -82,7 +86,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.S != nil {
+    if res.Environments != nil {
         // handle response
     }
 }
@@ -106,6 +110,8 @@ func main() {
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## RemoveUnifiedEnvironment
+
+Remove an environment
 
 ### Example Usage
 
@@ -133,7 +139,7 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    if res.S != nil {
+    if res.Environments != nil {
         // handle response
     }
 }

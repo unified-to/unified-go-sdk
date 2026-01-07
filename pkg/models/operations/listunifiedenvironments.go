@@ -9,12 +9,12 @@ import (
 type ListUnifiedEnvironmentsResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
+	// Successful
+	Environments []string
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
-	// Successful
-	S []string
 }
 
 func (l *ListUnifiedEnvironmentsResponse) GetContentType() string {
@@ -22,6 +22,13 @@ func (l *ListUnifiedEnvironmentsResponse) GetContentType() string {
 		return ""
 	}
 	return l.ContentType
+}
+
+func (l *ListUnifiedEnvironmentsResponse) GetEnvironments() []string {
+	if l == nil {
+		return nil
+	}
+	return l.Environments
 }
 
 func (l *ListUnifiedEnvironmentsResponse) GetStatusCode() int {
@@ -36,11 +43,4 @@ func (l *ListUnifiedEnvironmentsResponse) GetRawResponse() *http.Response {
 		return nil
 	}
 	return l.RawResponse
-}
-
-func (l *ListUnifiedEnvironmentsResponse) GetS() []string {
-	if l == nil {
-		return nil
-	}
-	return l.S
 }

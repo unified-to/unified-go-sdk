@@ -30,6 +30,7 @@ func newEnvironment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
+// CreateUnifiedEnvironment - Create new environments
 func (s *Environment) CreateUnifiedEnvironment(ctx context.Context, request []string, opts ...operations.Option) (*operations.CreateUnifiedEnvironmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -207,7 +208,7 @@ func (s *Environment) CreateUnifiedEnvironment(ctx context.Context, request []st
 				return nil, err
 			}
 
-			res.S = out
+			res.Environments = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -239,6 +240,7 @@ func (s *Environment) CreateUnifiedEnvironment(ctx context.Context, request []st
 
 }
 
+// ListUnifiedEnvironments - Returns all environments
 func (s *Environment) ListUnifiedEnvironments(ctx context.Context, opts ...operations.Option) (*operations.ListUnifiedEnvironmentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -409,7 +411,7 @@ func (s *Environment) ListUnifiedEnvironments(ctx context.Context, opts ...opera
 				return nil, err
 			}
 
-			res.S = out
+			res.Environments = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -441,6 +443,7 @@ func (s *Environment) ListUnifiedEnvironments(ctx context.Context, opts ...opera
 
 }
 
+// RemoveUnifiedEnvironment - Remove an environment
 func (s *Environment) RemoveUnifiedEnvironment(ctx context.Context, request operations.RemoveUnifiedEnvironmentRequest, opts ...operations.Option) (*operations.RemoveUnifiedEnvironmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -611,7 +614,7 @@ func (s *Environment) RemoveUnifiedEnvironment(ctx context.Context, request oper
 				return nil, err
 			}
 
-			res.S = out
+			res.Environments = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {

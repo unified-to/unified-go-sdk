@@ -32,10 +32,10 @@ const (
 )
 
 type HrisMetadata5 struct {
-	HrisMetadata1 *HrisMetadata1 `queryParam:"inline,name=five" union:"member"`
-	Str           *string        `queryParam:"inline,name=five" union:"member"`
-	Number        *float64       `queryParam:"inline,name=five" union:"member"`
-	Boolean       *bool          `queryParam:"inline,name=five" union:"member"`
+	HrisMetadata1 *HrisMetadata1 `queryParam:"inline" union:"member"`
+	Str           *string        `queryParam:"inline" union:"member"`
+	Number        *float64       `queryParam:"inline" union:"member"`
+	Boolean       *bool          `queryParam:"inline" union:"member"`
 
 	Type HrisMetadata5Type
 }
@@ -140,11 +140,11 @@ const (
 )
 
 type HrisMetadataExtraData struct {
-	MapOfAny             map[string]any  `queryParam:"inline,name=extra_data" union:"member"`
-	Str                  *string         `queryParam:"inline,name=extra_data" union:"member"`
-	Number               *float64        `queryParam:"inline,name=extra_data" union:"member"`
-	Boolean              *bool           `queryParam:"inline,name=extra_data" union:"member"`
-	ArrayOfHrisMetadata5 []HrisMetadata5 `queryParam:"inline,name=extra_data" union:"member"`
+	MapOfAny             map[string]any  `queryParam:"inline" union:"member"`
+	Str                  *string         `queryParam:"inline" union:"member"`
+	Number               *float64        `queryParam:"inline" union:"member"`
+	Boolean              *bool           `queryParam:"inline" union:"member"`
+	ArrayOfHrisMetadata5 []HrisMetadata5 `queryParam:"inline" union:"member"`
 
 	Type HrisMetadataExtraDataType
 }
@@ -315,10 +315,10 @@ const (
 )
 
 type HrisMetadataSchemas5 struct {
-	HrisMetadataSchemas1 *HrisMetadataSchemas1 `queryParam:"inline,name=five" union:"member"`
-	Str                  *string               `queryParam:"inline,name=five" union:"member"`
-	Number               *float64              `queryParam:"inline,name=five" union:"member"`
-	Boolean              *bool                 `queryParam:"inline,name=five" union:"member"`
+	HrisMetadataSchemas1 *HrisMetadataSchemas1 `queryParam:"inline" union:"member"`
+	Str                  *string               `queryParam:"inline" union:"member"`
+	Number               *float64              `queryParam:"inline" union:"member"`
+	Boolean              *bool                 `queryParam:"inline" union:"member"`
 
 	Type HrisMetadataSchemas5Type
 }
@@ -423,11 +423,11 @@ const (
 )
 
 type HrisMetadataValue struct {
-	MapOfAny                    map[string]any         `queryParam:"inline,name=value" union:"member"`
-	Str                         *string                `queryParam:"inline,name=value" union:"member"`
-	Number                      *float64               `queryParam:"inline,name=value" union:"member"`
-	Boolean                     *bool                  `queryParam:"inline,name=value" union:"member"`
-	ArrayOfHrisMetadataSchemas5 []HrisMetadataSchemas5 `queryParam:"inline,name=value" union:"member"`
+	MapOfAny                    map[string]any         `queryParam:"inline" union:"member"`
+	Str                         *string                `queryParam:"inline" union:"member"`
+	Number                      *float64               `queryParam:"inline" union:"member"`
+	Boolean                     *bool                  `queryParam:"inline" union:"member"`
+	ArrayOfHrisMetadataSchemas5 []HrisMetadataSchemas5 `queryParam:"inline" union:"member"`
 
 	Type HrisMetadataValueType
 }
