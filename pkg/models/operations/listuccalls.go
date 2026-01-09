@@ -3,28 +3,83 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListUcCallsQueryParamFields string
+
+const (
+	ListUcCallsQueryParamFieldsID        ListUcCallsQueryParamFields = "id"
+	ListUcCallsQueryParamFieldsCreatedAt ListUcCallsQueryParamFields = "created_at"
+	ListUcCallsQueryParamFieldsUpdatedAt ListUcCallsQueryParamFields = "updated_at"
+	ListUcCallsQueryParamFieldsContactID ListUcCallsQueryParamFields = "contact_id"
+	ListUcCallsQueryParamFieldsTelephone ListUcCallsQueryParamFields = "telephone"
+	ListUcCallsQueryParamFieldsStartAt   ListUcCallsQueryParamFields = "start_at"
+	ListUcCallsQueryParamFieldsEndAt     ListUcCallsQueryParamFields = "end_at"
+	ListUcCallsQueryParamFieldsUserID    ListUcCallsQueryParamFields = "user_id"
+	ListUcCallsQueryParamFieldsContacts  ListUcCallsQueryParamFields = "contacts"
+	ListUcCallsQueryParamFieldsIsPrivate ListUcCallsQueryParamFields = "is_private"
+	ListUcCallsQueryParamFieldsRaw       ListUcCallsQueryParamFields = "raw"
+)
+
+func (e ListUcCallsQueryParamFields) ToPointer() *ListUcCallsQueryParamFields {
+	return &e
+}
+func (e *ListUcCallsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "telephone":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "contacts":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "raw":
+		*e = ListUcCallsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListUcCallsQueryParamFields: %v", v)
+	}
+}
+
 type ListUcCallsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to UcContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListUcCallsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                      `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                      `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                       `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -42,7 +97,7 @@ func (l *ListUcCallsRequest) GetContactID() *string {
 	return l.ContactID
 }
 
-func (l *ListUcCallsRequest) GetFields() []string {
+func (l *ListUcCallsRequest) GetFields() []ListUcCallsQueryParamFields {
 	if l == nil {
 		return nil
 	}

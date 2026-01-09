@@ -3,16 +3,95 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateAccountingTransactionQueryParamFields string
+
+const (
+	UpdateAccountingTransactionQueryParamFieldsID              UpdateAccountingTransactionQueryParamFields = "id"
+	UpdateAccountingTransactionQueryParamFieldsCreatedAt       UpdateAccountingTransactionQueryParamFields = "created_at"
+	UpdateAccountingTransactionQueryParamFieldsUpdatedAt       UpdateAccountingTransactionQueryParamFields = "updated_at"
+	UpdateAccountingTransactionQueryParamFieldsMemo            UpdateAccountingTransactionQueryParamFields = "memo"
+	UpdateAccountingTransactionQueryParamFieldsTotalAmount     UpdateAccountingTransactionQueryParamFields = "total_amount"
+	UpdateAccountingTransactionQueryParamFieldsTaxAmount       UpdateAccountingTransactionQueryParamFields = "tax_amount"
+	UpdateAccountingTransactionQueryParamFieldsAccountID       UpdateAccountingTransactionQueryParamFields = "account_id"
+	UpdateAccountingTransactionQueryParamFieldsContactID       UpdateAccountingTransactionQueryParamFields = "contact_id"
+	UpdateAccountingTransactionQueryParamFieldsReference       UpdateAccountingTransactionQueryParamFields = "reference"
+	UpdateAccountingTransactionQueryParamFieldsSubTotalAmount  UpdateAccountingTransactionQueryParamFields = "sub_total_amount"
+	UpdateAccountingTransactionQueryParamFieldsSplitAccountID  UpdateAccountingTransactionQueryParamFields = "split_account_id"
+	UpdateAccountingTransactionQueryParamFieldsPaymentMethod   UpdateAccountingTransactionQueryParamFields = "payment_method"
+	UpdateAccountingTransactionQueryParamFieldsPaymentTerms    UpdateAccountingTransactionQueryParamFields = "payment_terms"
+	UpdateAccountingTransactionQueryParamFieldsCustomerMessage UpdateAccountingTransactionQueryParamFields = "customer_message"
+	UpdateAccountingTransactionQueryParamFieldsType            UpdateAccountingTransactionQueryParamFields = "type"
+	UpdateAccountingTransactionQueryParamFieldsLineitems       UpdateAccountingTransactionQueryParamFields = "lineitems"
+	UpdateAccountingTransactionQueryParamFieldsCurrency        UpdateAccountingTransactionQueryParamFields = "currency"
+	UpdateAccountingTransactionQueryParamFieldsContacts        UpdateAccountingTransactionQueryParamFields = "contacts"
+	UpdateAccountingTransactionQueryParamFieldsRaw             UpdateAccountingTransactionQueryParamFields = "raw"
+)
+
+func (e UpdateAccountingTransactionQueryParamFields) ToPointer() *UpdateAccountingTransactionQueryParamFields {
+	return &e
+}
+func (e *UpdateAccountingTransactionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "memo":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "sub_total_amount":
+		fallthrough
+	case "split_account_id":
+		fallthrough
+	case "payment_method":
+		fallthrough
+	case "payment_terms":
+		fallthrough
+	case "customer_message":
+		fallthrough
+	case "type":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "contacts":
+		fallthrough
+	case "raw":
+		*e = UpdateAccountingTransactionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateAccountingTransactionQueryParamFields: %v", v)
+	}
+}
 
 type UpdateAccountingTransactionRequest struct {
 	AccountingTransaction shared.AccountingTransaction `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateAccountingTransactionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Transaction
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +112,7 @@ func (u *UpdateAccountingTransactionRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateAccountingTransactionRequest) GetFields() []string {
+func (u *UpdateAccountingTransactionRequest) GetFields() []UpdateAccountingTransactionQueryParamFields {
 	if u == nil {
 		return nil
 	}

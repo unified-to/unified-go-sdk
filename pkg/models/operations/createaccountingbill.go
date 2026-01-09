@@ -3,16 +3,116 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateAccountingBillQueryParamFields string
+
+const (
+	CreateAccountingBillQueryParamFieldsID                      CreateAccountingBillQueryParamFields = "id"
+	CreateAccountingBillQueryParamFieldsBillNumber              CreateAccountingBillQueryParamFields = "bill_number"
+	CreateAccountingBillQueryParamFieldsCreatedAt               CreateAccountingBillQueryParamFields = "created_at"
+	CreateAccountingBillQueryParamFieldsUpdatedAt               CreateAccountingBillQueryParamFields = "updated_at"
+	CreateAccountingBillQueryParamFieldsDueAt                   CreateAccountingBillQueryParamFields = "due_at"
+	CreateAccountingBillQueryParamFieldsPaidAt                  CreateAccountingBillQueryParamFields = "paid_at"
+	CreateAccountingBillQueryParamFieldsRefundedAt              CreateAccountingBillQueryParamFields = "refunded_at"
+	CreateAccountingBillQueryParamFieldsCancelledAt             CreateAccountingBillQueryParamFields = "cancelled_at"
+	CreateAccountingBillQueryParamFieldsPostedAt                CreateAccountingBillQueryParamFields = "posted_at"
+	CreateAccountingBillQueryParamFieldsTotalAmount             CreateAccountingBillQueryParamFields = "total_amount"
+	CreateAccountingBillQueryParamFieldsPaidAmount              CreateAccountingBillQueryParamFields = "paid_amount"
+	CreateAccountingBillQueryParamFieldsRefundAmount            CreateAccountingBillQueryParamFields = "refund_amount"
+	CreateAccountingBillQueryParamFieldsTaxAmount               CreateAccountingBillQueryParamFields = "tax_amount"
+	CreateAccountingBillQueryParamFieldsDiscountAmount          CreateAccountingBillQueryParamFields = "discount_amount"
+	CreateAccountingBillQueryParamFieldsBalanceAmount           CreateAccountingBillQueryParamFields = "balance_amount"
+	CreateAccountingBillQueryParamFieldsContactID               CreateAccountingBillQueryParamFields = "contact_id"
+	CreateAccountingBillQueryParamFieldsCurrency                CreateAccountingBillQueryParamFields = "currency"
+	CreateAccountingBillQueryParamFieldsNotes                   CreateAccountingBillQueryParamFields = "notes"
+	CreateAccountingBillQueryParamFieldsRefundReason            CreateAccountingBillQueryParamFields = "refund_reason"
+	CreateAccountingBillQueryParamFieldsLineitems               CreateAccountingBillQueryParamFields = "lineitems"
+	CreateAccountingBillQueryParamFieldsStatus                  CreateAccountingBillQueryParamFields = "status"
+	CreateAccountingBillQueryParamFieldsURL                     CreateAccountingBillQueryParamFields = "url"
+	CreateAccountingBillQueryParamFieldsPaymentCollectionMethod CreateAccountingBillQueryParamFields = "payment_collection_method"
+	CreateAccountingBillQueryParamFieldsAttachments             CreateAccountingBillQueryParamFields = "attachments"
+	CreateAccountingBillQueryParamFieldsSend                    CreateAccountingBillQueryParamFields = "send"
+	CreateAccountingBillQueryParamFieldsRaw                     CreateAccountingBillQueryParamFields = "raw"
+)
+
+func (e CreateAccountingBillQueryParamFields) ToPointer() *CreateAccountingBillQueryParamFields {
+	return &e
+}
+func (e *CreateAccountingBillQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "bill_number":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "refunded_at":
+		fallthrough
+	case "cancelled_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "paid_amount":
+		fallthrough
+	case "refund_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "discount_amount":
+		fallthrough
+	case "balance_amount":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "refund_reason":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "status":
+		fallthrough
+	case "url":
+		fallthrough
+	case "payment_collection_method":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "send":
+		fallthrough
+	case "raw":
+		*e = CreateAccountingBillQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateAccountingBillQueryParamFields: %v", v)
+	}
+}
 
 type CreateAccountingBillRequest struct {
 	AccountingBill shared.AccountingBill `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateAccountingBillQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +131,7 @@ func (c *CreateAccountingBillRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAccountingBillRequest) GetFields() []string {
+func (c *CreateAccountingBillRequest) GetFields() []CreateAccountingBillQueryParamFields {
 	if c == nil {
 		return nil
 	}

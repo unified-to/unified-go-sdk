@@ -3,16 +3,98 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchPaymentSubscriptionQueryParamFields string
+
+const (
+	PatchPaymentSubscriptionQueryParamFieldsID                   PatchPaymentSubscriptionQueryParamFields = "id"
+	PatchPaymentSubscriptionQueryParamFieldsCreatedAt            PatchPaymentSubscriptionQueryParamFields = "created_at"
+	PatchPaymentSubscriptionQueryParamFieldsUpdatedAt            PatchPaymentSubscriptionQueryParamFields = "updated_at"
+	PatchPaymentSubscriptionQueryParamFieldsDescription          PatchPaymentSubscriptionQueryParamFields = "description"
+	PatchPaymentSubscriptionQueryParamFieldsContactID            PatchPaymentSubscriptionQueryParamFields = "contact_id"
+	PatchPaymentSubscriptionQueryParamFieldsInvoiceID            PatchPaymentSubscriptionQueryParamFields = "invoice_id"
+	PatchPaymentSubscriptionQueryParamFieldsCurrentPeriodEndAt   PatchPaymentSubscriptionQueryParamFields = "current_period_end_at"
+	PatchPaymentSubscriptionQueryParamFieldsCurrentPeriodStartAt PatchPaymentSubscriptionQueryParamFields = "current_period_start_at"
+	PatchPaymentSubscriptionQueryParamFieldsCanceledAt           PatchPaymentSubscriptionQueryParamFields = "canceled_at"
+	PatchPaymentSubscriptionQueryParamFieldsCurrency             PatchPaymentSubscriptionQueryParamFields = "currency"
+	PatchPaymentSubscriptionQueryParamFieldsStartAt              PatchPaymentSubscriptionQueryParamFields = "start_at"
+	PatchPaymentSubscriptionQueryParamFieldsEndAt                PatchPaymentSubscriptionQueryParamFields = "end_at"
+	PatchPaymentSubscriptionQueryParamFieldsStatus               PatchPaymentSubscriptionQueryParamFields = "status"
+	PatchPaymentSubscriptionQueryParamFieldsMonth                PatchPaymentSubscriptionQueryParamFields = "month"
+	PatchPaymentSubscriptionQueryParamFieldsIntervalUnit         PatchPaymentSubscriptionQueryParamFields = "interval_unit"
+	PatchPaymentSubscriptionQueryParamFieldsDayOfMonth           PatchPaymentSubscriptionQueryParamFields = "day_of_month"
+	PatchPaymentSubscriptionQueryParamFieldsDayOfWeek            PatchPaymentSubscriptionQueryParamFields = "day_of_week"
+	PatchPaymentSubscriptionQueryParamFieldsInterval             PatchPaymentSubscriptionQueryParamFields = "interval"
+	PatchPaymentSubscriptionQueryParamFieldsLineitems            PatchPaymentSubscriptionQueryParamFields = "lineitems"
+	PatchPaymentSubscriptionQueryParamFieldsRaw                  PatchPaymentSubscriptionQueryParamFields = "raw"
+)
+
+func (e PatchPaymentSubscriptionQueryParamFields) ToPointer() *PatchPaymentSubscriptionQueryParamFields {
+	return &e
+}
+func (e *PatchPaymentSubscriptionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "description":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "invoice_id":
+		fallthrough
+	case "current_period_end_at":
+		fallthrough
+	case "current_period_start_at":
+		fallthrough
+	case "canceled_at":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "status":
+		fallthrough
+	case "month":
+		fallthrough
+	case "interval_unit":
+		fallthrough
+	case "day_of_month":
+		fallthrough
+	case "day_of_week":
+		fallthrough
+	case "interval":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "raw":
+		*e = PatchPaymentSubscriptionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchPaymentSubscriptionQueryParamFields: %v", v)
+	}
+}
 
 type PatchPaymentSubscriptionRequest struct {
 	PaymentSubscription shared.PaymentSubscription `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchPaymentSubscriptionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Subscription
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +115,7 @@ func (p *PatchPaymentSubscriptionRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchPaymentSubscriptionRequest) GetFields() []string {
+func (p *PatchPaymentSubscriptionRequest) GetFields() []PatchPaymentSubscriptionQueryParamFields {
 	if p == nil {
 		return nil
 	}

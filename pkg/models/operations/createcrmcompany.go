@@ -3,9 +3,94 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateCrmCompanyQueryParamFields string
+
+const (
+	CreateCrmCompanyQueryParamFieldsID          CreateCrmCompanyQueryParamFields = "id"
+	CreateCrmCompanyQueryParamFieldsCreatedAt   CreateCrmCompanyQueryParamFields = "created_at"
+	CreateCrmCompanyQueryParamFieldsUpdatedAt   CreateCrmCompanyQueryParamFields = "updated_at"
+	CreateCrmCompanyQueryParamFieldsName        CreateCrmCompanyQueryParamFields = "name"
+	CreateCrmCompanyQueryParamFieldsDealIds     CreateCrmCompanyQueryParamFields = "deal_ids"
+	CreateCrmCompanyQueryParamFieldsContactIds  CreateCrmCompanyQueryParamFields = "contact_ids"
+	CreateCrmCompanyQueryParamFieldsEmails      CreateCrmCompanyQueryParamFields = "emails"
+	CreateCrmCompanyQueryParamFieldsTelephones  CreateCrmCompanyQueryParamFields = "telephones"
+	CreateCrmCompanyQueryParamFieldsWebsites    CreateCrmCompanyQueryParamFields = "websites"
+	CreateCrmCompanyQueryParamFieldsAddress     CreateCrmCompanyQueryParamFields = "address"
+	CreateCrmCompanyQueryParamFieldsIsActive    CreateCrmCompanyQueryParamFields = "is_active"
+	CreateCrmCompanyQueryParamFieldsTags        CreateCrmCompanyQueryParamFields = "tags"
+	CreateCrmCompanyQueryParamFieldsDescription CreateCrmCompanyQueryParamFields = "description"
+	CreateCrmCompanyQueryParamFieldsIndustry    CreateCrmCompanyQueryParamFields = "industry"
+	CreateCrmCompanyQueryParamFieldsLinkUrls    CreateCrmCompanyQueryParamFields = "link_urls"
+	CreateCrmCompanyQueryParamFieldsEmployees   CreateCrmCompanyQueryParamFields = "employees"
+	CreateCrmCompanyQueryParamFieldsTimezone    CreateCrmCompanyQueryParamFields = "timezone"
+	CreateCrmCompanyQueryParamFieldsUserID      CreateCrmCompanyQueryParamFields = "user_id"
+	CreateCrmCompanyQueryParamFieldsMetadata    CreateCrmCompanyQueryParamFields = "metadata"
+	CreateCrmCompanyQueryParamFieldsDomains     CreateCrmCompanyQueryParamFields = "domains"
+	CreateCrmCompanyQueryParamFieldsRaw         CreateCrmCompanyQueryParamFields = "raw"
+)
+
+func (e CreateCrmCompanyQueryParamFields) ToPointer() *CreateCrmCompanyQueryParamFields {
+	return &e
+}
+func (e *CreateCrmCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "deal_ids":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "websites":
+		fallthrough
+	case "address":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "description":
+		fallthrough
+	case "industry":
+		fallthrough
+	case "link_urls":
+		fallthrough
+	case "employees":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "domains":
+		fallthrough
+	case "raw":
+		*e = CreateCrmCompanyQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateCrmCompanyQueryParamFields: %v", v)
+	}
+}
 
 type CreateCrmCompanyRequest struct {
 	// A company represents an organization that optionally is associated with a deal and/or contacts
@@ -13,7 +98,7 @@ type CreateCrmCompanyRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateCrmCompanyQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -32,7 +117,7 @@ func (c *CreateCrmCompanyRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateCrmCompanyRequest) GetFields() []string {
+func (c *CreateCrmCompanyRequest) GetFields() []CreateCrmCompanyQueryParamFields {
 	if c == nil {
 		return nil
 	}

@@ -3,36 +3,126 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListCalendarEventsQueryParamFields string
+
+const (
+	ListCalendarEventsQueryParamFieldsID                ListCalendarEventsQueryParamFields = "id"
+	ListCalendarEventsQueryParamFieldsCreatedAt         ListCalendarEventsQueryParamFields = "created_at"
+	ListCalendarEventsQueryParamFieldsUpdatedAt         ListCalendarEventsQueryParamFields = "updated_at"
+	ListCalendarEventsQueryParamFieldsCalendarID        ListCalendarEventsQueryParamFields = "calendar_id"
+	ListCalendarEventsQueryParamFieldsSubject           ListCalendarEventsQueryParamFields = "subject"
+	ListCalendarEventsQueryParamFieldsStartAt           ListCalendarEventsQueryParamFields = "start_at"
+	ListCalendarEventsQueryParamFieldsEndAt             ListCalendarEventsQueryParamFields = "end_at"
+	ListCalendarEventsQueryParamFieldsIsAllDay          ListCalendarEventsQueryParamFields = "is_all_day"
+	ListCalendarEventsQueryParamFieldsTimezone          ListCalendarEventsQueryParamFields = "timezone"
+	ListCalendarEventsQueryParamFieldsNotes             ListCalendarEventsQueryParamFields = "notes"
+	ListCalendarEventsQueryParamFieldsLocation          ListCalendarEventsQueryParamFields = "location"
+	ListCalendarEventsQueryParamFieldsIsFree            ListCalendarEventsQueryParamFields = "is_free"
+	ListCalendarEventsQueryParamFieldsIsPrivate         ListCalendarEventsQueryParamFields = "is_private"
+	ListCalendarEventsQueryParamFieldsStatus            ListCalendarEventsQueryParamFields = "status"
+	ListCalendarEventsQueryParamFieldsOrganizer         ListCalendarEventsQueryParamFields = "organizer"
+	ListCalendarEventsQueryParamFieldsAttendees         ListCalendarEventsQueryParamFields = "attendees"
+	ListCalendarEventsQueryParamFieldsRecurringEventID  ListCalendarEventsQueryParamFields = "recurring_event_id"
+	ListCalendarEventsQueryParamFieldsRecurrence        ListCalendarEventsQueryParamFields = "recurrence"
+	ListCalendarEventsQueryParamFieldsWebURL            ListCalendarEventsQueryParamFields = "web_url"
+	ListCalendarEventsQueryParamFieldsHasConference     ListCalendarEventsQueryParamFields = "has_conference"
+	ListCalendarEventsQueryParamFieldsConference        ListCalendarEventsQueryParamFields = "conference"
+	ListCalendarEventsQueryParamFieldsAttachments       ListCalendarEventsQueryParamFields = "attachments"
+	ListCalendarEventsQueryParamFieldsSendNotifications ListCalendarEventsQueryParamFields = "send_notifications"
+	ListCalendarEventsQueryParamFieldsRaw               ListCalendarEventsQueryParamFields = "raw"
+)
+
+func (e ListCalendarEventsQueryParamFields) ToPointer() *ListCalendarEventsQueryParamFields {
+	return &e
+}
+func (e *ListCalendarEventsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "calendar_id":
+		fallthrough
+	case "subject":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "is_all_day":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "location":
+		fallthrough
+	case "is_free":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "status":
+		fallthrough
+	case "organizer":
+		fallthrough
+	case "attendees":
+		fallthrough
+	case "recurring_event_id":
+		fallthrough
+	case "recurrence":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "has_conference":
+		fallthrough
+	case "conference":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "send_notifications":
+		fallthrough
+	case "raw":
+		*e = ListCalendarEventsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCalendarEventsQueryParamFields: %v", v)
+	}
+}
+
 type ListCalendarEventsRequest struct {
-	// The calendar ID to filter by
+	// The calendar ID to filter by (reference to CalendarCalendar)
 	CalendarID *string `queryParam:"style=form,explode=true,name=calendar_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The end date to filter by (deprecated)
-	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
-	// The end date to filter by
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Whether to flatten grouped or recurring items into individual entries.
 	Expand *bool `queryParam:"style=form,explode=true,name=expand"`
-	// Whether to expand recurring calendar events
-	ExpandRecurringEvents *bool `queryParam:"style=form,explode=true,name=expand_recurring_events"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListCalendarEventsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                             `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                             `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                              `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// The start date to filter by
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -50,13 +140,6 @@ func (l *ListCalendarEventsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListCalendarEventsRequest) GetEndLe() *string {
-	if l == nil {
-		return nil
-	}
-	return l.EndLe
-}
-
 func (l *ListCalendarEventsRequest) GetEndLt() *string {
 	if l == nil {
 		return nil
@@ -71,14 +154,7 @@ func (l *ListCalendarEventsRequest) GetExpand() *bool {
 	return l.Expand
 }
 
-func (l *ListCalendarEventsRequest) GetExpandRecurringEvents() *bool {
-	if l == nil {
-		return nil
-	}
-	return l.ExpandRecurringEvents
-}
-
-func (l *ListCalendarEventsRequest) GetFields() []string {
+func (l *ListCalendarEventsRequest) GetFields() []ListCalendarEventsQueryParamFields {
 	if l == nil {
 		return nil
 	}

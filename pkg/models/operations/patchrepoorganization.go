@@ -3,16 +3,65 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchRepoOrganizationQueryParamFields string
+
+const (
+	PatchRepoOrganizationQueryParamFieldsID          PatchRepoOrganizationQueryParamFields = "id"
+	PatchRepoOrganizationQueryParamFieldsCreatedAt   PatchRepoOrganizationQueryParamFields = "created_at"
+	PatchRepoOrganizationQueryParamFieldsUpdatedAt   PatchRepoOrganizationQueryParamFields = "updated_at"
+	PatchRepoOrganizationQueryParamFieldsName        PatchRepoOrganizationQueryParamFields = "name"
+	PatchRepoOrganizationQueryParamFieldsDescription PatchRepoOrganizationQueryParamFields = "description"
+	PatchRepoOrganizationQueryParamFieldsAvatarURL   PatchRepoOrganizationQueryParamFields = "avatar_url"
+	PatchRepoOrganizationQueryParamFieldsWebURL      PatchRepoOrganizationQueryParamFields = "web_url"
+	PatchRepoOrganizationQueryParamFieldsUserIds     PatchRepoOrganizationQueryParamFields = "user_ids"
+	PatchRepoOrganizationQueryParamFieldsRaw         PatchRepoOrganizationQueryParamFields = "raw"
+)
+
+func (e PatchRepoOrganizationQueryParamFields) ToPointer() *PatchRepoOrganizationQueryParamFields {
+	return &e
+}
+func (e *PatchRepoOrganizationQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "avatar_url":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "raw":
+		*e = PatchRepoOrganizationQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchRepoOrganizationQueryParamFields: %v", v)
+	}
+}
 
 type PatchRepoOrganizationRequest struct {
 	RepoOrganization shared.RepoOrganization `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchRepoOrganizationQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Organization
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +82,7 @@ func (p *PatchRepoOrganizationRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchRepoOrganizationRequest) GetFields() []string {
+func (p *PatchRepoOrganizationRequest) GetFields() []PatchRepoOrganizationQueryParamFields {
 	if p == nil {
 		return nil
 	}

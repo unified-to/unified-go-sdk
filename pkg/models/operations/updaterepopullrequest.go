@@ -3,16 +3,68 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateRepoPullrequestQueryParamFields string
+
+const (
+	UpdateRepoPullrequestQueryParamFieldsID        UpdateRepoPullrequestQueryParamFields = "id"
+	UpdateRepoPullrequestQueryParamFieldsCreatedAt UpdateRepoPullrequestQueryParamFields = "created_at"
+	UpdateRepoPullrequestQueryParamFieldsUpdatedAt UpdateRepoPullrequestQueryParamFields = "updated_at"
+	UpdateRepoPullrequestQueryParamFieldsUserIds   UpdateRepoPullrequestQueryParamFields = "user_ids"
+	UpdateRepoPullrequestQueryParamFieldsRepoID    UpdateRepoPullrequestQueryParamFields = "repo_id"
+	UpdateRepoPullrequestQueryParamFieldsStatus    UpdateRepoPullrequestQueryParamFields = "status"
+	UpdateRepoPullrequestQueryParamFieldsLabels    UpdateRepoPullrequestQueryParamFields = "labels"
+	UpdateRepoPullrequestQueryParamFieldsClosedAt  UpdateRepoPullrequestQueryParamFields = "closed_at"
+	UpdateRepoPullrequestQueryParamFieldsCommitIds UpdateRepoPullrequestQueryParamFields = "commit_ids"
+	UpdateRepoPullrequestQueryParamFieldsRaw       UpdateRepoPullrequestQueryParamFields = "raw"
+)
+
+func (e UpdateRepoPullrequestQueryParamFields) ToPointer() *UpdateRepoPullrequestQueryParamFields {
+	return &e
+}
+func (e *UpdateRepoPullrequestQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "repo_id":
+		fallthrough
+	case "status":
+		fallthrough
+	case "labels":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "commit_ids":
+		fallthrough
+	case "raw":
+		*e = UpdateRepoPullrequestQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateRepoPullrequestQueryParamFields: %v", v)
+	}
+}
 
 type UpdateRepoPullrequestRequest struct {
 	RepoPullrequest shared.RepoPullrequest `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateRepoPullrequestQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Pullrequest
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +85,7 @@ func (u *UpdateRepoPullrequestRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateRepoPullrequestRequest) GetFields() []string {
+func (u *UpdateRepoPullrequestRequest) GetFields() []UpdateRepoPullrequestQueryParamFields {
 	if u == nil {
 		return nil
 	}

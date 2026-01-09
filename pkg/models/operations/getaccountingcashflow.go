@@ -3,15 +3,85 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAccountingCashflowQueryParamFields string
+
+const (
+	GetAccountingCashflowQueryParamFieldsID                    GetAccountingCashflowQueryParamFields = "id"
+	GetAccountingCashflowQueryParamFieldsCreatedAt             GetAccountingCashflowQueryParamFields = "created_at"
+	GetAccountingCashflowQueryParamFieldsUpdatedAt             GetAccountingCashflowQueryParamFields = "updated_at"
+	GetAccountingCashflowQueryParamFieldsStartAt               GetAccountingCashflowQueryParamFields = "start_at"
+	GetAccountingCashflowQueryParamFieldsEndAt                 GetAccountingCashflowQueryParamFields = "end_at"
+	GetAccountingCashflowQueryParamFieldsCategoryIds           GetAccountingCashflowQueryParamFields = "category_ids"
+	GetAccountingCashflowQueryParamFieldsContactID             GetAccountingCashflowQueryParamFields = "contact_id"
+	GetAccountingCashflowQueryParamFieldsName                  GetAccountingCashflowQueryParamFields = "name"
+	GetAccountingCashflowQueryParamFieldsCurrency              GetAccountingCashflowQueryParamFields = "currency"
+	GetAccountingCashflowQueryParamFieldsCashBeginningAmount   GetAccountingCashflowQueryParamFields = "cash_beginning_amount"
+	GetAccountingCashflowQueryParamFieldsCashEndingAmount      GetAccountingCashflowQueryParamFields = "cash_ending_amount"
+	GetAccountingCashflowQueryParamFieldsNetChangeInCashAmount GetAccountingCashflowQueryParamFields = "net_change_in_cash_amount"
+	GetAccountingCashflowQueryParamFieldsOperatingSections     GetAccountingCashflowQueryParamFields = "operating_sections"
+	GetAccountingCashflowQueryParamFieldsInvestingSections     GetAccountingCashflowQueryParamFields = "investing_sections"
+	GetAccountingCashflowQueryParamFieldsFinancingSections     GetAccountingCashflowQueryParamFields = "financing_sections"
+	GetAccountingCashflowQueryParamFieldsRaw                   GetAccountingCashflowQueryParamFields = "raw"
+)
+
+func (e GetAccountingCashflowQueryParamFields) ToPointer() *GetAccountingCashflowQueryParamFields {
+	return &e
+}
+func (e *GetAccountingCashflowQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "category_ids":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "cash_beginning_amount":
+		fallthrough
+	case "cash_ending_amount":
+		fallthrough
+	case "net_change_in_cash_amount":
+		fallthrough
+	case "operating_sections":
+		fallthrough
+	case "investing_sections":
+		fallthrough
+	case "financing_sections":
+		fallthrough
+	case "raw":
+		*e = GetAccountingCashflowQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAccountingCashflowQueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingCashflowRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAccountingCashflowQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Cashflow
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +95,7 @@ func (g *GetAccountingCashflowRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingCashflowRequest) GetFields() []string {
+func (g *GetAccountingCashflowRequest) GetFields() []GetAccountingCashflowQueryParamFields {
 	if g == nil {
 		return nil
 	}

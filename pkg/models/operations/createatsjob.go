@@ -3,16 +3,116 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateAtsJobQueryParamFields string
+
+const (
+	CreateAtsJobQueryParamFieldsID                     CreateAtsJobQueryParamFields = "id"
+	CreateAtsJobQueryParamFieldsCreatedAt              CreateAtsJobQueryParamFields = "created_at"
+	CreateAtsJobQueryParamFieldsUpdatedAt              CreateAtsJobQueryParamFields = "updated_at"
+	CreateAtsJobQueryParamFieldsName                   CreateAtsJobQueryParamFields = "name"
+	CreateAtsJobQueryParamFieldsDescription            CreateAtsJobQueryParamFields = "description"
+	CreateAtsJobQueryParamFieldsRecruiterIds           CreateAtsJobQueryParamFields = "recruiter_ids"
+	CreateAtsJobQueryParamFieldsHiringManagerIds       CreateAtsJobQueryParamFields = "hiring_manager_ids"
+	CreateAtsJobQueryParamFieldsStatus                 CreateAtsJobQueryParamFields = "status"
+	CreateAtsJobQueryParamFieldsClosedAt               CreateAtsJobQueryParamFields = "closed_at"
+	CreateAtsJobQueryParamFieldsAddresses              CreateAtsJobQueryParamFields = "addresses"
+	CreateAtsJobQueryParamFieldsCompensation           CreateAtsJobQueryParamFields = "compensation"
+	CreateAtsJobQueryParamFieldsEmploymentType         CreateAtsJobQueryParamFields = "employment_type"
+	CreateAtsJobQueryParamFieldsRemote                 CreateAtsJobQueryParamFields = "remote"
+	CreateAtsJobQueryParamFieldsLanguageLocale         CreateAtsJobQueryParamFields = "language_locale"
+	CreateAtsJobQueryParamFieldsPublicJobUrls          CreateAtsJobQueryParamFields = "public_job_urls"
+	CreateAtsJobQueryParamFieldsNumberOfOpenings       CreateAtsJobQueryParamFields = "number_of_openings"
+	CreateAtsJobQueryParamFieldsCompanyID              CreateAtsJobQueryParamFields = "company_id"
+	CreateAtsJobQueryParamFieldsQuestions              CreateAtsJobQueryParamFields = "questions"
+	CreateAtsJobQueryParamFieldsPostings               CreateAtsJobQueryParamFields = "postings"
+	CreateAtsJobQueryParamFieldsGroups                 CreateAtsJobQueryParamFields = "groups"
+	CreateAtsJobQueryParamFieldsOpenings               CreateAtsJobQueryParamFields = "openings"
+	CreateAtsJobQueryParamFieldsMinimumExperienceYears CreateAtsJobQueryParamFields = "minimum_experience_years"
+	CreateAtsJobQueryParamFieldsMinimumDegree          CreateAtsJobQueryParamFields = "minimum_degree"
+	CreateAtsJobQueryParamFieldsSkills                 CreateAtsJobQueryParamFields = "skills"
+	CreateAtsJobQueryParamFieldsMetadata               CreateAtsJobQueryParamFields = "metadata"
+	CreateAtsJobQueryParamFieldsRaw                    CreateAtsJobQueryParamFields = "raw"
+)
+
+func (e CreateAtsJobQueryParamFields) ToPointer() *CreateAtsJobQueryParamFields {
+	return &e
+}
+func (e *CreateAtsJobQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "recruiter_ids":
+		fallthrough
+	case "hiring_manager_ids":
+		fallthrough
+	case "status":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "addresses":
+		fallthrough
+	case "compensation":
+		fallthrough
+	case "employment_type":
+		fallthrough
+	case "remote":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "public_job_urls":
+		fallthrough
+	case "number_of_openings":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "questions":
+		fallthrough
+	case "postings":
+		fallthrough
+	case "groups":
+		fallthrough
+	case "openings":
+		fallthrough
+	case "minimum_experience_years":
+		fallthrough
+	case "minimum_degree":
+		fallthrough
+	case "skills":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = CreateAtsJobQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateAtsJobQueryParamFields: %v", v)
+	}
+}
 
 type CreateAtsJobRequest struct {
 	AtsJob shared.AtsJob `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateAtsJobQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +131,7 @@ func (c *CreateAtsJobRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAtsJobRequest) GetFields() []string {
+func (c *CreateAtsJobRequest) GetFields() []CreateAtsJobQueryParamFields {
 	if c == nil {
 		return nil
 	}

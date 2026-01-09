@@ -3,18 +3,73 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListMetadataMetadatasQueryParamFields string
+
+const (
+	ListMetadataMetadatasQueryParamFieldsID             ListMetadataMetadatasQueryParamFields = "id"
+	ListMetadataMetadatasQueryParamFieldsCreatedAt      ListMetadataMetadatasQueryParamFields = "created_at"
+	ListMetadataMetadatasQueryParamFieldsUpdatedAt      ListMetadataMetadatasQueryParamFields = "updated_at"
+	ListMetadataMetadatasQueryParamFieldsName           ListMetadataMetadatasQueryParamFields = "name"
+	ListMetadataMetadatasQueryParamFieldsSlug           ListMetadataMetadatasQueryParamFields = "slug"
+	ListMetadataMetadatasQueryParamFieldsFormat         ListMetadataMetadatasQueryParamFields = "format"
+	ListMetadataMetadatasQueryParamFieldsOriginalFormat ListMetadataMetadatasQueryParamFields = "original_format"
+	ListMetadataMetadatasQueryParamFieldsOptions        ListMetadataMetadatasQueryParamFields = "options"
+	ListMetadataMetadatasQueryParamFieldsObjectType     ListMetadataMetadatasQueryParamFields = "object_type"
+	ListMetadataMetadatasQueryParamFieldsObjects        ListMetadataMetadatasQueryParamFields = "objects"
+	ListMetadataMetadatasQueryParamFieldsRaw            ListMetadataMetadatasQueryParamFields = "raw"
+)
+
+func (e ListMetadataMetadatasQueryParamFields) ToPointer() *ListMetadataMetadatasQueryParamFields {
+	return &e
+}
+func (e *ListMetadataMetadatasQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "slug":
+		fallthrough
+	case "format":
+		fallthrough
+	case "original_format":
+		fallthrough
+	case "options":
+		fallthrough
+	case "object_type":
+		fallthrough
+	case "objects":
+		fallthrough
+	case "raw":
+		*e = ListMetadataMetadatasQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListMetadataMetadatasQueryParamFields: %v", v)
+	}
+}
 
 type ListMetadataMetadatasRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListMetadataMetadatasQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                 `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -22,7 +77,7 @@ type ListMetadataMetadatasRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The type to filter by
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -33,7 +88,7 @@ func (l *ListMetadataMetadatasRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListMetadataMetadatasRequest) GetFields() []string {
+func (l *ListMetadataMetadatasRequest) GetFields() []ListMetadataMetadatasQueryParamFields {
 	if l == nil {
 		return nil
 	}

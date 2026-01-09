@@ -3,15 +3,61 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAdsOrganizationQueryParamFields string
+
+const (
+	GetAdsOrganizationQueryParamFieldsID        GetAdsOrganizationQueryParamFields = "id"
+	GetAdsOrganizationQueryParamFieldsCreatedAt GetAdsOrganizationQueryParamFields = "created_at"
+	GetAdsOrganizationQueryParamFieldsUpdatedAt GetAdsOrganizationQueryParamFields = "updated_at"
+	GetAdsOrganizationQueryParamFieldsName      GetAdsOrganizationQueryParamFields = "name"
+	GetAdsOrganizationQueryParamFieldsCurrency  GetAdsOrganizationQueryParamFields = "currency"
+	GetAdsOrganizationQueryParamFieldsTimezone  GetAdsOrganizationQueryParamFields = "timezone"
+	GetAdsOrganizationQueryParamFieldsParentID  GetAdsOrganizationQueryParamFields = "parent_id"
+	GetAdsOrganizationQueryParamFieldsRaw       GetAdsOrganizationQueryParamFields = "raw"
+)
+
+func (e GetAdsOrganizationQueryParamFields) ToPointer() *GetAdsOrganizationQueryParamFields {
+	return &e
+}
+func (e *GetAdsOrganizationQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = GetAdsOrganizationQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAdsOrganizationQueryParamFields: %v", v)
+	}
+}
 
 type GetAdsOrganizationRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAdsOrganizationQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Organization
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +71,7 @@ func (g *GetAdsOrganizationRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAdsOrganizationRequest) GetFields() []string {
+func (g *GetAdsOrganizationRequest) GetFields() []GetAdsOrganizationQueryParamFields {
 	if g == nil {
 		return nil
 	}

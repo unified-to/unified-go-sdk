@@ -3,26 +3,124 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListMessagingMessagesQueryParamFields string
+
+const (
+	ListMessagingMessagesQueryParamFieldsID                      ListMessagingMessagesQueryParamFields = "id"
+	ListMessagingMessagesQueryParamFieldsCreatedAt               ListMessagingMessagesQueryParamFields = "created_at"
+	ListMessagingMessagesQueryParamFieldsUpdatedAt               ListMessagingMessagesQueryParamFields = "updated_at"
+	ListMessagingMessagesQueryParamFieldsChannelID               ListMessagingMessagesQueryParamFields = "channel_id"
+	ListMessagingMessagesQueryParamFieldsChannelIds              ListMessagingMessagesQueryParamFields = "channel_ids"
+	ListMessagingMessagesQueryParamFieldsChannels                ListMessagingMessagesQueryParamFields = "channels"
+	ListMessagingMessagesQueryParamFieldsParentID                ListMessagingMessagesQueryParamFields = "parent_id"
+	ListMessagingMessagesQueryParamFieldsParentMessageID         ListMessagingMessagesQueryParamFields = "parent_message_id"
+	ListMessagingMessagesQueryParamFieldsRootMessageID           ListMessagingMessagesQueryParamFields = "root_message_id"
+	ListMessagingMessagesQueryParamFieldsMessageThreadIdentifier ListMessagingMessagesQueryParamFields = "message_thread_identifier"
+	ListMessagingMessagesQueryParamFieldsAuthorMember            ListMessagingMessagesQueryParamFields = "author_member"
+	ListMessagingMessagesQueryParamFieldsDestinationMembers      ListMessagingMessagesQueryParamFields = "destination_members"
+	ListMessagingMessagesQueryParamFieldsHiddenMembers           ListMessagingMessagesQueryParamFields = "hidden_members"
+	ListMessagingMessagesQueryParamFieldsMentionedMembers        ListMessagingMessagesQueryParamFields = "mentioned_members"
+	ListMessagingMessagesQueryParamFieldsReactions               ListMessagingMessagesQueryParamFields = "reactions"
+	ListMessagingMessagesQueryParamFieldsSubject                 ListMessagingMessagesQueryParamFields = "subject"
+	ListMessagingMessagesQueryParamFieldsMessage                 ListMessagingMessagesQueryParamFields = "message"
+	ListMessagingMessagesQueryParamFieldsMessageHTML             ListMessagingMessagesQueryParamFields = "message_html"
+	ListMessagingMessagesQueryParamFieldsMessageMarkdown         ListMessagingMessagesQueryParamFields = "message_markdown"
+	ListMessagingMessagesQueryParamFieldsAttachments             ListMessagingMessagesQueryParamFields = "attachments"
+	ListMessagingMessagesQueryParamFieldsWebURL                  ListMessagingMessagesQueryParamFields = "web_url"
+	ListMessagingMessagesQueryParamFieldsReference               ListMessagingMessagesQueryParamFields = "reference"
+	ListMessagingMessagesQueryParamFieldsHasChildren             ListMessagingMessagesQueryParamFields = "has_children"
+	ListMessagingMessagesQueryParamFieldsIsUnread                ListMessagingMessagesQueryParamFields = "is_unread"
+	ListMessagingMessagesQueryParamFieldsButtons                 ListMessagingMessagesQueryParamFields = "buttons"
+	ListMessagingMessagesQueryParamFieldsRaw                     ListMessagingMessagesQueryParamFields = "raw"
+)
+
+func (e ListMessagingMessagesQueryParamFields) ToPointer() *ListMessagingMessagesQueryParamFields {
+	return &e
+}
+func (e *ListMessagingMessagesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "channel_id":
+		fallthrough
+	case "channel_ids":
+		fallthrough
+	case "channels":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "parent_message_id":
+		fallthrough
+	case "root_message_id":
+		fallthrough
+	case "message_thread_identifier":
+		fallthrough
+	case "author_member":
+		fallthrough
+	case "destination_members":
+		fallthrough
+	case "hidden_members":
+		fallthrough
+	case "mentioned_members":
+		fallthrough
+	case "reactions":
+		fallthrough
+	case "subject":
+		fallthrough
+	case "message":
+		fallthrough
+	case "message_html":
+		fallthrough
+	case "message_markdown":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "is_unread":
+		fallthrough
+	case "buttons":
+		fallthrough
+	case "raw":
+		*e = ListMessagingMessagesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListMessagingMessagesQueryParamFields: %v", v)
+	}
+}
+
 type ListMessagingMessagesRequest struct {
-	// The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT
+	// The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT (reference to MessagingChannel)
 	ChannelID *string `queryParam:"style=form,explode=true,name=channel_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The end date to filter by (deprecated)
-	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
-	// The end date to filter by
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Whether to flatten grouped or recurring items into individual entries.
 	Expand *bool `queryParam:"style=form,explode=true,name=expand"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListMessagingMessagesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                 `queryParam:"style=form,explode=true,name=order"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
@@ -30,12 +128,12 @@ type ListMessagingMessagesRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// The start date to filter by
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	Type     *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 	// The user/employee ID to filter by
 	UserMentionedID *string `queryParam:"style=form,explode=true,name=user_mentioned_id"`
@@ -55,13 +153,6 @@ func (l *ListMessagingMessagesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListMessagingMessagesRequest) GetEndLe() *string {
-	if l == nil {
-		return nil
-	}
-	return l.EndLe
-}
-
 func (l *ListMessagingMessagesRequest) GetEndLt() *string {
 	if l == nil {
 		return nil
@@ -76,7 +167,7 @@ func (l *ListMessagingMessagesRequest) GetExpand() *bool {
 	return l.Expand
 }
 
-func (l *ListMessagingMessagesRequest) GetFields() []string {
+func (l *ListMessagingMessagesRequest) GetFields() []ListMessagingMessagesQueryParamFields {
 	if l == nil {
 		return nil
 	}

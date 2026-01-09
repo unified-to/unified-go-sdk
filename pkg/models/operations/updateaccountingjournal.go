@@ -3,16 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateAccountingJournalQueryParamFields string
+
+const (
+	UpdateAccountingJournalQueryParamFieldsID          UpdateAccountingJournalQueryParamFields = "id"
+	UpdateAccountingJournalQueryParamFieldsCreatedAt   UpdateAccountingJournalQueryParamFields = "created_at"
+	UpdateAccountingJournalQueryParamFieldsUpdatedAt   UpdateAccountingJournalQueryParamFields = "updated_at"
+	UpdateAccountingJournalQueryParamFieldsReference   UpdateAccountingJournalQueryParamFields = "reference"
+	UpdateAccountingJournalQueryParamFieldsTaxAmount   UpdateAccountingJournalQueryParamFields = "tax_amount"
+	UpdateAccountingJournalQueryParamFieldsCurrency    UpdateAccountingJournalQueryParamFields = "currency"
+	UpdateAccountingJournalQueryParamFieldsLineitems   UpdateAccountingJournalQueryParamFields = "lineitems"
+	UpdateAccountingJournalQueryParamFieldsTaxrateID   UpdateAccountingJournalQueryParamFields = "taxrate_id"
+	UpdateAccountingJournalQueryParamFieldsDescription UpdateAccountingJournalQueryParamFields = "description"
+	UpdateAccountingJournalQueryParamFieldsPostedAt    UpdateAccountingJournalQueryParamFields = "posted_at"
+	UpdateAccountingJournalQueryParamFieldsRaw         UpdateAccountingJournalQueryParamFields = "raw"
+)
+
+func (e UpdateAccountingJournalQueryParamFields) ToPointer() *UpdateAccountingJournalQueryParamFields {
+	return &e
+}
+func (e *UpdateAccountingJournalQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "taxrate_id":
+		fallthrough
+	case "description":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "raw":
+		*e = UpdateAccountingJournalQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateAccountingJournalQueryParamFields: %v", v)
+	}
+}
 
 type UpdateAccountingJournalRequest struct {
 	AccountingJournal shared.AccountingJournal `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateAccountingJournalQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Journal
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +88,7 @@ func (u *UpdateAccountingJournalRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateAccountingJournalRequest) GetFields() []string {
+func (u *UpdateAccountingJournalRequest) GetFields() []UpdateAccountingJournalQueryParamFields {
 	if u == nil {
 		return nil
 	}

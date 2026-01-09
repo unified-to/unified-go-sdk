@@ -3,15 +3,76 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAtsInterviewQueryParamFields string
+
+const (
+	GetAtsInterviewQueryParamFieldsID                GetAtsInterviewQueryParamFields = "id"
+	GetAtsInterviewQueryParamFieldsCreatedAt         GetAtsInterviewQueryParamFields = "created_at"
+	GetAtsInterviewQueryParamFieldsUpdatedAt         GetAtsInterviewQueryParamFields = "updated_at"
+	GetAtsInterviewQueryParamFieldsCandidateID       GetAtsInterviewQueryParamFields = "candidate_id"
+	GetAtsInterviewQueryParamFieldsJobID             GetAtsInterviewQueryParamFields = "job_id"
+	GetAtsInterviewQueryParamFieldsApplicationID     GetAtsInterviewQueryParamFields = "application_id"
+	GetAtsInterviewQueryParamFieldsUserIds           GetAtsInterviewQueryParamFields = "user_ids"
+	GetAtsInterviewQueryParamFieldsStatus            GetAtsInterviewQueryParamFields = "status"
+	GetAtsInterviewQueryParamFieldsStartAt           GetAtsInterviewQueryParamFields = "start_at"
+	GetAtsInterviewQueryParamFieldsEndAt             GetAtsInterviewQueryParamFields = "end_at"
+	GetAtsInterviewQueryParamFieldsLocation          GetAtsInterviewQueryParamFields = "location"
+	GetAtsInterviewQueryParamFieldsExternalEventXref GetAtsInterviewQueryParamFields = "external_event_xref"
+	GetAtsInterviewQueryParamFieldsRaw               GetAtsInterviewQueryParamFields = "raw"
+)
+
+func (e GetAtsInterviewQueryParamFields) ToPointer() *GetAtsInterviewQueryParamFields {
+	return &e
+}
+func (e *GetAtsInterviewQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "application_id":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "status":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "location":
+		fallthrough
+	case "external_event_xref":
+		fallthrough
+	case "raw":
+		*e = GetAtsInterviewQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAtsInterviewQueryParamFields: %v", v)
+	}
+}
 
 type GetAtsInterviewRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAtsInterviewQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Interview
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +86,7 @@ func (g *GetAtsInterviewRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAtsInterviewRequest) GetFields() []string {
+func (g *GetAtsInterviewRequest) GetFields() []GetAtsInterviewQueryParamFields {
 	if g == nil {
 		return nil
 	}

@@ -3,15 +3,103 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAccountingContactQueryParamFields string
+
+const (
+	GetAccountingContactQueryParamFieldsID                 GetAccountingContactQueryParamFields = "id"
+	GetAccountingContactQueryParamFieldsCreatedAt          GetAccountingContactQueryParamFields = "created_at"
+	GetAccountingContactQueryParamFieldsUpdatedAt          GetAccountingContactQueryParamFields = "updated_at"
+	GetAccountingContactQueryParamFieldsName               GetAccountingContactQueryParamFields = "name"
+	GetAccountingContactQueryParamFieldsFirstName          GetAccountingContactQueryParamFields = "first_name"
+	GetAccountingContactQueryParamFieldsLastName           GetAccountingContactQueryParamFields = "last_name"
+	GetAccountingContactQueryParamFieldsEmails             GetAccountingContactQueryParamFields = "emails"
+	GetAccountingContactQueryParamFieldsTelephones         GetAccountingContactQueryParamFields = "telephones"
+	GetAccountingContactQueryParamFieldsCurrency           GetAccountingContactQueryParamFields = "currency"
+	GetAccountingContactQueryParamFieldsBillingAddress     GetAccountingContactQueryParamFields = "billing_address"
+	GetAccountingContactQueryParamFieldsShippingAddress    GetAccountingContactQueryParamFields = "shipping_address"
+	GetAccountingContactQueryParamFieldsIsActive           GetAccountingContactQueryParamFields = "is_active"
+	GetAccountingContactQueryParamFieldsTaxExemption       GetAccountingContactQueryParamFields = "tax_exemption"
+	GetAccountingContactQueryParamFieldsTaxNumber          GetAccountingContactQueryParamFields = "tax_number"
+	GetAccountingContactQueryParamFieldsIsCustomer         GetAccountingContactQueryParamFields = "is_customer"
+	GetAccountingContactQueryParamFieldsIsSupplier         GetAccountingContactQueryParamFields = "is_supplier"
+	GetAccountingContactQueryParamFieldsPortalURL          GetAccountingContactQueryParamFields = "portal_url"
+	GetAccountingContactQueryParamFieldsPaymentMethods     GetAccountingContactQueryParamFields = "payment_methods"
+	GetAccountingContactQueryParamFieldsCompanyName        GetAccountingContactQueryParamFields = "company_name"
+	GetAccountingContactQueryParamFieldsIdentification     GetAccountingContactQueryParamFields = "identification"
+	GetAccountingContactQueryParamFieldsAssociatedContacts GetAccountingContactQueryParamFields = "associated_contacts"
+	GetAccountingContactQueryParamFieldsRaw                GetAccountingContactQueryParamFields = "raw"
+)
+
+func (e GetAccountingContactQueryParamFields) ToPointer() *GetAccountingContactQueryParamFields {
+	return &e
+}
+func (e *GetAccountingContactQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "billing_address":
+		fallthrough
+	case "shipping_address":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "tax_exemption":
+		fallthrough
+	case "tax_number":
+		fallthrough
+	case "is_customer":
+		fallthrough
+	case "is_supplier":
+		fallthrough
+	case "portal_url":
+		fallthrough
+	case "payment_methods":
+		fallthrough
+	case "company_name":
+		fallthrough
+	case "identification":
+		fallthrough
+	case "associated_contacts":
+		fallthrough
+	case "raw":
+		*e = GetAccountingContactQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAccountingContactQueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingContactRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAccountingContactQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Contact
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +113,7 @@ func (g *GetAccountingContactRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingContactRequest) GetFields() []string {
+func (g *GetAccountingContactRequest) GetFields() []GetAccountingContactQueryParamFields {
 	if g == nil {
 		return nil
 	}

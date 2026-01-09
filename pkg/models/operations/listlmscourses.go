@@ -3,30 +3,95 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListLmsCoursesQueryParamFields string
+
+const (
+	ListLmsCoursesQueryParamFieldsID            ListLmsCoursesQueryParamFields = "id"
+	ListLmsCoursesQueryParamFieldsCreatedAt     ListLmsCoursesQueryParamFields = "created_at"
+	ListLmsCoursesQueryParamFieldsUpdatedAt     ListLmsCoursesQueryParamFields = "updated_at"
+	ListLmsCoursesQueryParamFieldsName          ListLmsCoursesQueryParamFields = "name"
+	ListLmsCoursesQueryParamFieldsDescription   ListLmsCoursesQueryParamFields = "description"
+	ListLmsCoursesQueryParamFieldsIsPrivate     ListLmsCoursesQueryParamFields = "is_private"
+	ListLmsCoursesQueryParamFieldsIsActive      ListLmsCoursesQueryParamFields = "is_active"
+	ListLmsCoursesQueryParamFieldsPriceAmount   ListLmsCoursesQueryParamFields = "price_amount"
+	ListLmsCoursesQueryParamFieldsLanguages     ListLmsCoursesQueryParamFields = "languages"
+	ListLmsCoursesQueryParamFieldsCategories    ListLmsCoursesQueryParamFields = "categories"
+	ListLmsCoursesQueryParamFieldsCurrency      ListLmsCoursesQueryParamFields = "currency"
+	ListLmsCoursesQueryParamFieldsMedia         ListLmsCoursesQueryParamFields = "media"
+	ListLmsCoursesQueryParamFieldsInstructorIds ListLmsCoursesQueryParamFields = "instructor_ids"
+	ListLmsCoursesQueryParamFieldsStudentIds    ListLmsCoursesQueryParamFields = "student_ids"
+	ListLmsCoursesQueryParamFieldsRaw           ListLmsCoursesQueryParamFields = "raw"
+)
+
+func (e ListLmsCoursesQueryParamFields) ToPointer() *ListLmsCoursesQueryParamFields {
+	return &e
+}
+func (e *ListLmsCoursesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "price_amount":
+		fallthrough
+	case "languages":
+		fallthrough
+	case "categories":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "media":
+		fallthrough
+	case "instructor_ids":
+		fallthrough
+	case "student_ids":
+		fallthrough
+	case "raw":
+		*e = ListLmsCoursesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListLmsCoursesQueryParamFields: %v", v)
+	}
+}
+
 type ListLmsCoursesRequest struct {
-	// The class ID to filter by
+	// The class ID to filter by (reference to LmsClass)
 	ClassID *string `queryParam:"style=form,explode=true,name=class_id"`
-	// The company ID to filter by
+	// The company ID to filter by (reference to HrisCompany)
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The course ID to filter by
-	CourseID *string `queryParam:"style=form,explode=true,name=course_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListLmsCoursesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                         `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                         `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                          `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -51,14 +116,7 @@ func (l *ListLmsCoursesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListLmsCoursesRequest) GetCourseID() *string {
-	if l == nil {
-		return nil
-	}
-	return l.CourseID
-}
-
-func (l *ListLmsCoursesRequest) GetFields() []string {
+func (l *ListLmsCoursesRequest) GetFields() []ListLmsCoursesQueryParamFields {
 	if l == nil {
 		return nil
 	}

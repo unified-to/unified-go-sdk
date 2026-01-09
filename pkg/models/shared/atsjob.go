@@ -63,15 +63,13 @@ func (e *AtsJobStatus) IsExact() bool {
 }
 
 type AtsJob struct {
-	Addresses    []AtsAddress      `json:"addresses,omitempty"`
-	ClosedAt     *time.Time        `json:"closed_at,omitempty"`
-	CompanyID    *string           `json:"company_id,omitempty"`
-	Compensation []AtsCompensation `json:"compensation,omitempty"`
-	CreatedAt    *time.Time        `json:"created_at,omitempty"`
-	// @deprecated Use `groups` instead
-	Departments    []string        `json:"departments,omitempty"`
-	Description    *string         `json:"description,omitempty"`
-	EmploymentType *EmploymentType `json:"employment_type,omitempty"`
+	Addresses      []AtsAddress      `json:"addresses,omitempty"`
+	ClosedAt       *time.Time        `json:"closed_at,omitempty"`
+	CompanyID      *string           `json:"company_id,omitempty"`
+	Compensation   []AtsCompensation `json:"compensation,omitempty"`
+	CreatedAt      *time.Time        `json:"created_at,omitempty"`
+	Description    *string           `json:"description,omitempty"`
+	EmploymentType *EmploymentType   `json:"employment_type,omitempty"`
 	// The departments/divisions/teams that this job belongs to
 	Groups                 []AtsGroup      `json:"groups,omitempty"`
 	HiringManagerIds       []string        `json:"hiring_manager_ids,omitempty"`
@@ -140,13 +138,6 @@ func (a *AtsJob) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return a.CreatedAt
-}
-
-func (a *AtsJob) GetDepartments() []string {
-	if a == nil {
-		return nil
-	}
-	return a.Departments
 }
 
 func (a *AtsJob) GetDescription() *string {

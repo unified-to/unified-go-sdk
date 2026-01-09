@@ -3,19 +3,92 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListAtsApplicationsQueryParamFields string
+
+const (
+	ListAtsApplicationsQueryParamFieldsID             ListAtsApplicationsQueryParamFields = "id"
+	ListAtsApplicationsQueryParamFieldsCandidateID    ListAtsApplicationsQueryParamFields = "candidate_id"
+	ListAtsApplicationsQueryParamFieldsJobID          ListAtsApplicationsQueryParamFields = "job_id"
+	ListAtsApplicationsQueryParamFieldsCreatedAt      ListAtsApplicationsQueryParamFields = "created_at"
+	ListAtsApplicationsQueryParamFieldsUpdatedAt      ListAtsApplicationsQueryParamFields = "updated_at"
+	ListAtsApplicationsQueryParamFieldsAppliedAt      ListAtsApplicationsQueryParamFields = "applied_at"
+	ListAtsApplicationsQueryParamFieldsHiredAt        ListAtsApplicationsQueryParamFields = "hired_at"
+	ListAtsApplicationsQueryParamFieldsRejectedAt     ListAtsApplicationsQueryParamFields = "rejected_at"
+	ListAtsApplicationsQueryParamFieldsRejectedReason ListAtsApplicationsQueryParamFields = "rejected_reason"
+	ListAtsApplicationsQueryParamFieldsSource         ListAtsApplicationsQueryParamFields = "source"
+	ListAtsApplicationsQueryParamFieldsStatus         ListAtsApplicationsQueryParamFields = "status"
+	ListAtsApplicationsQueryParamFieldsOriginalStatus ListAtsApplicationsQueryParamFields = "original_status"
+	ListAtsApplicationsQueryParamFieldsAnswers        ListAtsApplicationsQueryParamFields = "answers"
+	ListAtsApplicationsQueryParamFieldsOffers         ListAtsApplicationsQueryParamFields = "offers"
+	ListAtsApplicationsQueryParamFieldsUserID         ListAtsApplicationsQueryParamFields = "user_id"
+	ListAtsApplicationsQueryParamFieldsMetadata       ListAtsApplicationsQueryParamFields = "metadata"
+	ListAtsApplicationsQueryParamFieldsRaw            ListAtsApplicationsQueryParamFields = "raw"
+)
+
+func (e ListAtsApplicationsQueryParamFields) ToPointer() *ListAtsApplicationsQueryParamFields {
+	return &e
+}
+func (e *ListAtsApplicationsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "applied_at":
+		fallthrough
+	case "hired_at":
+		fallthrough
+	case "rejected_at":
+		fallthrough
+	case "rejected_reason":
+		fallthrough
+	case "source":
+		fallthrough
+	case "status":
+		fallthrough
+	case "original_status":
+		fallthrough
+	case "answers":
+		fallthrough
+	case "offers":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = ListAtsApplicationsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAtsApplicationsQueryParamFields: %v", v)
+	}
+}
+
 type ListAtsApplicationsRequest struct {
 	// The candidate ID to filter by
 	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`
-	// The company ID to filter by
+	// The company ID to filter by (reference to AtsCompany)
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []ListAtsApplicationsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The job ID to filter by
 	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -26,7 +99,7 @@ type ListAtsApplicationsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -51,7 +124,7 @@ func (l *ListAtsApplicationsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAtsApplicationsRequest) GetFields() []string {
+func (l *ListAtsApplicationsRequest) GetFields() []ListAtsApplicationsQueryParamFields {
 	if l == nil {
 		return nil
 	}

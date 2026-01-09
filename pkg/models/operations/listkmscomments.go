@@ -3,19 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListKmsCommentsQueryParamFields string
+
+const (
+	ListKmsCommentsQueryParamFieldsID          ListKmsCommentsQueryParamFields = "id"
+	ListKmsCommentsQueryParamFieldsCreatedAt   ListKmsCommentsQueryParamFields = "created_at"
+	ListKmsCommentsQueryParamFieldsUpdatedAt   ListKmsCommentsQueryParamFields = "updated_at"
+	ListKmsCommentsQueryParamFieldsType        ListKmsCommentsQueryParamFields = "type"
+	ListKmsCommentsQueryParamFieldsContentType ListKmsCommentsQueryParamFields = "content_type"
+	ListKmsCommentsQueryParamFieldsContent     ListKmsCommentsQueryParamFields = "content"
+	ListKmsCommentsQueryParamFieldsUserID      ListKmsCommentsQueryParamFields = "user_id"
+	ListKmsCommentsQueryParamFieldsPageID      ListKmsCommentsQueryParamFields = "page_id"
+	ListKmsCommentsQueryParamFieldsParentID    ListKmsCommentsQueryParamFields = "parent_id"
+	ListKmsCommentsQueryParamFieldsRaw         ListKmsCommentsQueryParamFields = "raw"
+)
+
+func (e ListKmsCommentsQueryParamFields) ToPointer() *ListKmsCommentsQueryParamFields {
+	return &e
+}
+func (e *ListKmsCommentsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "type":
+		fallthrough
+	case "content_type":
+		fallthrough
+	case "content":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "page_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = ListKmsCommentsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListKmsCommentsQueryParamFields: %v", v)
+	}
+}
 
 type ListKmsCommentsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The page ID to filter by
+	Fields []ListKmsCommentsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                          `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                          `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                           `queryParam:"style=form,explode=true,name=order"`
+	// The page ID to filter by (reference to KmsPage)
 	PageID *string `queryParam:"style=form,explode=true,name=page_id"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
@@ -26,7 +78,7 @@ type ListKmsCommentsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The type to filter by
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -37,7 +89,7 @@ func (l *ListKmsCommentsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListKmsCommentsRequest) GetFields() []string {
+func (l *ListKmsCommentsRequest) GetFields() []ListKmsCommentsQueryParamFields {
 	if l == nil {
 		return nil
 	}

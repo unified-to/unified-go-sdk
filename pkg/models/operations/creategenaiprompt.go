@@ -3,16 +3,65 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateGenaiPromptQueryParamFields string
+
+const (
+	CreateGenaiPromptQueryParamFieldsModelID          CreateGenaiPromptQueryParamFields = "model_id"
+	CreateGenaiPromptQueryParamFieldsMessages         CreateGenaiPromptQueryParamFields = "messages"
+	CreateGenaiPromptQueryParamFieldsTemperature      CreateGenaiPromptQueryParamFields = "temperature"
+	CreateGenaiPromptQueryParamFieldsMaxTokens        CreateGenaiPromptQueryParamFields = "max_tokens"
+	CreateGenaiPromptQueryParamFieldsResponses        CreateGenaiPromptQueryParamFields = "responses"
+	CreateGenaiPromptQueryParamFieldsTokensUsed       CreateGenaiPromptQueryParamFields = "tokens_used"
+	CreateGenaiPromptQueryParamFieldsMcpURL           CreateGenaiPromptQueryParamFields = "mcp_url"
+	CreateGenaiPromptQueryParamFieldsMcpDeferredTools CreateGenaiPromptQueryParamFields = "mcp_deferred_tools"
+	CreateGenaiPromptQueryParamFieldsRaw              CreateGenaiPromptQueryParamFields = "raw"
+)
+
+func (e CreateGenaiPromptQueryParamFields) ToPointer() *CreateGenaiPromptQueryParamFields {
+	return &e
+}
+func (e *CreateGenaiPromptQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "model_id":
+		fallthrough
+	case "messages":
+		fallthrough
+	case "temperature":
+		fallthrough
+	case "max_tokens":
+		fallthrough
+	case "responses":
+		fallthrough
+	case "tokens_used":
+		fallthrough
+	case "mcp_url":
+		fallthrough
+	case "mcp_deferred_tools":
+		fallthrough
+	case "raw":
+		*e = CreateGenaiPromptQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateGenaiPromptQueryParamFields: %v", v)
+	}
+}
 
 type CreateGenaiPromptRequest struct {
 	GenaiPrompt shared.GenaiPrompt `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateGenaiPromptQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +80,7 @@ func (c *CreateGenaiPromptRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateGenaiPromptRequest) GetFields() []string {
+func (c *CreateGenaiPromptRequest) GetFields() []CreateGenaiPromptQueryParamFields {
 	if c == nil {
 		return nil
 	}

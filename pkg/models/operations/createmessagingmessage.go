@@ -3,16 +3,116 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateMessagingMessageQueryParamFields string
+
+const (
+	CreateMessagingMessageQueryParamFieldsID                      CreateMessagingMessageQueryParamFields = "id"
+	CreateMessagingMessageQueryParamFieldsCreatedAt               CreateMessagingMessageQueryParamFields = "created_at"
+	CreateMessagingMessageQueryParamFieldsUpdatedAt               CreateMessagingMessageQueryParamFields = "updated_at"
+	CreateMessagingMessageQueryParamFieldsChannelID               CreateMessagingMessageQueryParamFields = "channel_id"
+	CreateMessagingMessageQueryParamFieldsChannelIds              CreateMessagingMessageQueryParamFields = "channel_ids"
+	CreateMessagingMessageQueryParamFieldsChannels                CreateMessagingMessageQueryParamFields = "channels"
+	CreateMessagingMessageQueryParamFieldsParentID                CreateMessagingMessageQueryParamFields = "parent_id"
+	CreateMessagingMessageQueryParamFieldsParentMessageID         CreateMessagingMessageQueryParamFields = "parent_message_id"
+	CreateMessagingMessageQueryParamFieldsRootMessageID           CreateMessagingMessageQueryParamFields = "root_message_id"
+	CreateMessagingMessageQueryParamFieldsMessageThreadIdentifier CreateMessagingMessageQueryParamFields = "message_thread_identifier"
+	CreateMessagingMessageQueryParamFieldsAuthorMember            CreateMessagingMessageQueryParamFields = "author_member"
+	CreateMessagingMessageQueryParamFieldsDestinationMembers      CreateMessagingMessageQueryParamFields = "destination_members"
+	CreateMessagingMessageQueryParamFieldsHiddenMembers           CreateMessagingMessageQueryParamFields = "hidden_members"
+	CreateMessagingMessageQueryParamFieldsMentionedMembers        CreateMessagingMessageQueryParamFields = "mentioned_members"
+	CreateMessagingMessageQueryParamFieldsReactions               CreateMessagingMessageQueryParamFields = "reactions"
+	CreateMessagingMessageQueryParamFieldsSubject                 CreateMessagingMessageQueryParamFields = "subject"
+	CreateMessagingMessageQueryParamFieldsMessage                 CreateMessagingMessageQueryParamFields = "message"
+	CreateMessagingMessageQueryParamFieldsMessageHTML             CreateMessagingMessageQueryParamFields = "message_html"
+	CreateMessagingMessageQueryParamFieldsMessageMarkdown         CreateMessagingMessageQueryParamFields = "message_markdown"
+	CreateMessagingMessageQueryParamFieldsAttachments             CreateMessagingMessageQueryParamFields = "attachments"
+	CreateMessagingMessageQueryParamFieldsWebURL                  CreateMessagingMessageQueryParamFields = "web_url"
+	CreateMessagingMessageQueryParamFieldsReference               CreateMessagingMessageQueryParamFields = "reference"
+	CreateMessagingMessageQueryParamFieldsHasChildren             CreateMessagingMessageQueryParamFields = "has_children"
+	CreateMessagingMessageQueryParamFieldsIsUnread                CreateMessagingMessageQueryParamFields = "is_unread"
+	CreateMessagingMessageQueryParamFieldsButtons                 CreateMessagingMessageQueryParamFields = "buttons"
+	CreateMessagingMessageQueryParamFieldsRaw                     CreateMessagingMessageQueryParamFields = "raw"
+)
+
+func (e CreateMessagingMessageQueryParamFields) ToPointer() *CreateMessagingMessageQueryParamFields {
+	return &e
+}
+func (e *CreateMessagingMessageQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "channel_id":
+		fallthrough
+	case "channel_ids":
+		fallthrough
+	case "channels":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "parent_message_id":
+		fallthrough
+	case "root_message_id":
+		fallthrough
+	case "message_thread_identifier":
+		fallthrough
+	case "author_member":
+		fallthrough
+	case "destination_members":
+		fallthrough
+	case "hidden_members":
+		fallthrough
+	case "mentioned_members":
+		fallthrough
+	case "reactions":
+		fallthrough
+	case "subject":
+		fallthrough
+	case "message":
+		fallthrough
+	case "message_html":
+		fallthrough
+	case "message_markdown":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "is_unread":
+		fallthrough
+	case "buttons":
+		fallthrough
+	case "raw":
+		*e = CreateMessagingMessageQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateMessagingMessageQueryParamFields: %v", v)
+	}
+}
 
 type CreateMessagingMessageRequest struct {
 	MessagingMessage shared.MessagingMessage `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateMessagingMessageQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +131,7 @@ func (c *CreateMessagingMessageRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateMessagingMessageRequest) GetFields() []string {
+func (c *CreateMessagingMessageRequest) GetFields() []CreateMessagingMessageQueryParamFields {
 	if c == nil {
 		return nil
 	}

@@ -3,9 +3,61 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateMartechMemberQueryParamFields string
+
+const (
+	UpdateMartechMemberQueryParamFieldsID        UpdateMartechMemberQueryParamFields = "id"
+	UpdateMartechMemberQueryParamFieldsCreatedAt UpdateMartechMemberQueryParamFields = "created_at"
+	UpdateMartechMemberQueryParamFieldsUpdatedAt UpdateMartechMemberQueryParamFields = "updated_at"
+	UpdateMartechMemberQueryParamFieldsName      UpdateMartechMemberQueryParamFields = "name"
+	UpdateMartechMemberQueryParamFieldsFirstName UpdateMartechMemberQueryParamFields = "first_name"
+	UpdateMartechMemberQueryParamFieldsLastName  UpdateMartechMemberQueryParamFields = "last_name"
+	UpdateMartechMemberQueryParamFieldsEmails    UpdateMartechMemberQueryParamFields = "emails"
+	UpdateMartechMemberQueryParamFieldsListIds   UpdateMartechMemberQueryParamFields = "list_ids"
+	UpdateMartechMemberQueryParamFieldsTags      UpdateMartechMemberQueryParamFields = "tags"
+	UpdateMartechMemberQueryParamFieldsRaw       UpdateMartechMemberQueryParamFields = "raw"
+)
+
+func (e UpdateMartechMemberQueryParamFields) ToPointer() *UpdateMartechMemberQueryParamFields {
+	return &e
+}
+func (e *UpdateMartechMemberQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "list_ids":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "raw":
+		*e = UpdateMartechMemberQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateMartechMemberQueryParamFields: %v", v)
+	}
+}
 
 type UpdateMartechMemberRequest struct {
 	// A member represents a person
@@ -13,7 +65,7 @@ type UpdateMartechMemberRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateMartechMemberQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Member
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +86,7 @@ func (u *UpdateMartechMemberRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateMartechMemberRequest) GetFields() []string {
+func (u *UpdateMartechMemberRequest) GetFields() []UpdateMartechMemberQueryParamFields {
 	if u == nil {
 		return nil
 	}

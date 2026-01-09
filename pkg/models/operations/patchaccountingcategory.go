@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchAccountingCategoryQueryParamFields string
+
+const (
+	PatchAccountingCategoryQueryParamFieldsID          PatchAccountingCategoryQueryParamFields = "id"
+	PatchAccountingCategoryQueryParamFieldsCreatedAt   PatchAccountingCategoryQueryParamFields = "created_at"
+	PatchAccountingCategoryQueryParamFieldsUpdatedAt   PatchAccountingCategoryQueryParamFields = "updated_at"
+	PatchAccountingCategoryQueryParamFieldsName        PatchAccountingCategoryQueryParamFields = "name"
+	PatchAccountingCategoryQueryParamFieldsDescription PatchAccountingCategoryQueryParamFields = "description"
+	PatchAccountingCategoryQueryParamFieldsIsActive    PatchAccountingCategoryQueryParamFields = "is_active"
+	PatchAccountingCategoryQueryParamFieldsParentID    PatchAccountingCategoryQueryParamFields = "parent_id"
+	PatchAccountingCategoryQueryParamFieldsRaw         PatchAccountingCategoryQueryParamFields = "raw"
+)
+
+func (e PatchAccountingCategoryQueryParamFields) ToPointer() *PatchAccountingCategoryQueryParamFields {
+	return &e
+}
+func (e *PatchAccountingCategoryQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = PatchAccountingCategoryQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchAccountingCategoryQueryParamFields: %v", v)
+	}
+}
 
 type PatchAccountingCategoryRequest struct {
 	AccountingCategory shared.AccountingCategory `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchAccountingCategoryQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Category
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +79,7 @@ func (p *PatchAccountingCategoryRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchAccountingCategoryRequest) GetFields() []string {
+func (p *PatchAccountingCategoryRequest) GetFields() []PatchAccountingCategoryQueryParamFields {
 	if p == nil {
 		return nil
 	}

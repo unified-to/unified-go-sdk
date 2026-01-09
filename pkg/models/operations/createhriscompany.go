@@ -3,16 +3,59 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateHrisCompanyQueryParamFields string
+
+const (
+	CreateHrisCompanyQueryParamFieldsID        CreateHrisCompanyQueryParamFields = "id"
+	CreateHrisCompanyQueryParamFieldsCreatedAt CreateHrisCompanyQueryParamFields = "created_at"
+	CreateHrisCompanyQueryParamFieldsUpdatedAt CreateHrisCompanyQueryParamFields = "updated_at"
+	CreateHrisCompanyQueryParamFieldsName      CreateHrisCompanyQueryParamFields = "name"
+	CreateHrisCompanyQueryParamFieldsLegalName CreateHrisCompanyQueryParamFields = "legal_name"
+	CreateHrisCompanyQueryParamFieldsAddress   CreateHrisCompanyQueryParamFields = "address"
+	CreateHrisCompanyQueryParamFieldsRaw       CreateHrisCompanyQueryParamFields = "raw"
+)
+
+func (e CreateHrisCompanyQueryParamFields) ToPointer() *CreateHrisCompanyQueryParamFields {
+	return &e
+}
+func (e *CreateHrisCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "legal_name":
+		fallthrough
+	case "address":
+		fallthrough
+	case "raw":
+		*e = CreateHrisCompanyQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateHrisCompanyQueryParamFields: %v", v)
+	}
+}
 
 type CreateHrisCompanyRequest struct {
 	HrisCompany shared.HrisCompany `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateHrisCompanyQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +74,7 @@ func (c *CreateHrisCompanyRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateHrisCompanyRequest) GetFields() []string {
+func (c *CreateHrisCompanyRequest) GetFields() []CreateHrisCompanyQueryParamFields {
 	if c == nil {
 		return nil
 	}

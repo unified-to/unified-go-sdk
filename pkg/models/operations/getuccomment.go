@@ -3,15 +3,58 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetUcCommentQueryParamFields string
+
+const (
+	GetUcCommentQueryParamFieldsID        GetUcCommentQueryParamFields = "id"
+	GetUcCommentQueryParamFieldsCreatedAt GetUcCommentQueryParamFields = "created_at"
+	GetUcCommentQueryParamFieldsUpdatedAt GetUcCommentQueryParamFields = "updated_at"
+	GetUcCommentQueryParamFieldsContent   GetUcCommentQueryParamFields = "content"
+	GetUcCommentQueryParamFieldsUserID    GetUcCommentQueryParamFields = "user_id"
+	GetUcCommentQueryParamFieldsCallID    GetUcCommentQueryParamFields = "call_id"
+	GetUcCommentQueryParamFieldsRaw       GetUcCommentQueryParamFields = "raw"
+)
+
+func (e GetUcCommentQueryParamFields) ToPointer() *GetUcCommentQueryParamFields {
+	return &e
+}
+func (e *GetUcCommentQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "content":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "call_id":
+		fallthrough
+	case "raw":
+		*e = GetUcCommentQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetUcCommentQueryParamFields: %v", v)
+	}
+}
 
 type GetUcCommentRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetUcCommentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Comment
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +68,7 @@ func (g *GetUcCommentRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetUcCommentRequest) GetFields() []string {
+func (g *GetUcCommentRequest) GetFields() []GetUcCommentQueryParamFields {
 	if g == nil {
 		return nil
 	}

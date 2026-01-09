@@ -3,16 +3,59 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchUcCommentQueryParamFields string
+
+const (
+	PatchUcCommentQueryParamFieldsID        PatchUcCommentQueryParamFields = "id"
+	PatchUcCommentQueryParamFieldsCreatedAt PatchUcCommentQueryParamFields = "created_at"
+	PatchUcCommentQueryParamFieldsUpdatedAt PatchUcCommentQueryParamFields = "updated_at"
+	PatchUcCommentQueryParamFieldsContent   PatchUcCommentQueryParamFields = "content"
+	PatchUcCommentQueryParamFieldsUserID    PatchUcCommentQueryParamFields = "user_id"
+	PatchUcCommentQueryParamFieldsCallID    PatchUcCommentQueryParamFields = "call_id"
+	PatchUcCommentQueryParamFieldsRaw       PatchUcCommentQueryParamFields = "raw"
+)
+
+func (e PatchUcCommentQueryParamFields) ToPointer() *PatchUcCommentQueryParamFields {
+	return &e
+}
+func (e *PatchUcCommentQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "content":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "call_id":
+		fallthrough
+	case "raw":
+		*e = PatchUcCommentQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchUcCommentQueryParamFields: %v", v)
+	}
+}
 
 type PatchUcCommentRequest struct {
 	UcComment shared.UcComment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchUcCommentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Comment
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +76,7 @@ func (p *PatchUcCommentRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchUcCommentRequest) GetFields() []string {
+func (p *PatchUcCommentRequest) GetFields() []PatchUcCommentQueryParamFields {
 	if p == nil {
 		return nil
 	}

@@ -3,16 +3,56 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateRepoBranchQueryParamFields string
+
+const (
+	UpdateRepoBranchQueryParamFieldsID        UpdateRepoBranchQueryParamFields = "id"
+	UpdateRepoBranchQueryParamFieldsCreatedAt UpdateRepoBranchQueryParamFields = "created_at"
+	UpdateRepoBranchQueryParamFieldsUpdatedAt UpdateRepoBranchQueryParamFields = "updated_at"
+	UpdateRepoBranchQueryParamFieldsName      UpdateRepoBranchQueryParamFields = "name"
+	UpdateRepoBranchQueryParamFieldsRepoID    UpdateRepoBranchQueryParamFields = "repo_id"
+	UpdateRepoBranchQueryParamFieldsRaw       UpdateRepoBranchQueryParamFields = "raw"
+)
+
+func (e UpdateRepoBranchQueryParamFields) ToPointer() *UpdateRepoBranchQueryParamFields {
+	return &e
+}
+func (e *UpdateRepoBranchQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "repo_id":
+		fallthrough
+	case "raw":
+		*e = UpdateRepoBranchQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateRepoBranchQueryParamFields: %v", v)
+	}
+}
 
 type UpdateRepoBranchRequest struct {
 	RepoBranch shared.RepoBranch `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateRepoBranchQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Branch
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +73,7 @@ func (u *UpdateRepoBranchRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateRepoBranchRequest) GetFields() []string {
+func (u *UpdateRepoBranchRequest) GetFields() []UpdateRepoBranchQueryParamFields {
 	if u == nil {
 		return nil
 	}

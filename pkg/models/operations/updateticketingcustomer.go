@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateTicketingCustomerQueryParamFields string
+
+const (
+	UpdateTicketingCustomerQueryParamFieldsID         UpdateTicketingCustomerQueryParamFields = "id"
+	UpdateTicketingCustomerQueryParamFieldsCreatedAt  UpdateTicketingCustomerQueryParamFields = "created_at"
+	UpdateTicketingCustomerQueryParamFieldsUpdatedAt  UpdateTicketingCustomerQueryParamFields = "updated_at"
+	UpdateTicketingCustomerQueryParamFieldsName       UpdateTicketingCustomerQueryParamFields = "name"
+	UpdateTicketingCustomerQueryParamFieldsEmails     UpdateTicketingCustomerQueryParamFields = "emails"
+	UpdateTicketingCustomerQueryParamFieldsTelephones UpdateTicketingCustomerQueryParamFields = "telephones"
+	UpdateTicketingCustomerQueryParamFieldsTags       UpdateTicketingCustomerQueryParamFields = "tags"
+	UpdateTicketingCustomerQueryParamFieldsRaw        UpdateTicketingCustomerQueryParamFields = "raw"
+)
+
+func (e UpdateTicketingCustomerQueryParamFields) ToPointer() *UpdateTicketingCustomerQueryParamFields {
+	return &e
+}
+func (e *UpdateTicketingCustomerQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "raw":
+		*e = UpdateTicketingCustomerQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateTicketingCustomerQueryParamFields: %v", v)
+	}
+}
 
 type UpdateTicketingCustomerRequest struct {
 	TicketingCustomer shared.TicketingCustomer `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateTicketingCustomerQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Customer
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +79,7 @@ func (u *UpdateTicketingCustomerRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateTicketingCustomerRequest) GetFields() []string {
+func (u *UpdateTicketingCustomerRequest) GetFields() []UpdateTicketingCustomerQueryParamFields {
 	if u == nil {
 		return nil
 	}

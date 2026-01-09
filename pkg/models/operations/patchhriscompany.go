@@ -3,16 +3,59 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchHrisCompanyQueryParamFields string
+
+const (
+	PatchHrisCompanyQueryParamFieldsID        PatchHrisCompanyQueryParamFields = "id"
+	PatchHrisCompanyQueryParamFieldsCreatedAt PatchHrisCompanyQueryParamFields = "created_at"
+	PatchHrisCompanyQueryParamFieldsUpdatedAt PatchHrisCompanyQueryParamFields = "updated_at"
+	PatchHrisCompanyQueryParamFieldsName      PatchHrisCompanyQueryParamFields = "name"
+	PatchHrisCompanyQueryParamFieldsLegalName PatchHrisCompanyQueryParamFields = "legal_name"
+	PatchHrisCompanyQueryParamFieldsAddress   PatchHrisCompanyQueryParamFields = "address"
+	PatchHrisCompanyQueryParamFieldsRaw       PatchHrisCompanyQueryParamFields = "raw"
+)
+
+func (e PatchHrisCompanyQueryParamFields) ToPointer() *PatchHrisCompanyQueryParamFields {
+	return &e
+}
+func (e *PatchHrisCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "legal_name":
+		fallthrough
+	case "address":
+		fallthrough
+	case "raw":
+		*e = PatchHrisCompanyQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchHrisCompanyQueryParamFields: %v", v)
+	}
+}
 
 type PatchHrisCompanyRequest struct {
 	HrisCompany shared.HrisCompany `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchHrisCompanyQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Company
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +76,7 @@ func (p *PatchHrisCompanyRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchHrisCompanyRequest) GetFields() []string {
+func (p *PatchHrisCompanyRequest) GetFields() []PatchHrisCompanyQueryParamFields {
 	if p == nil {
 		return nil
 	}

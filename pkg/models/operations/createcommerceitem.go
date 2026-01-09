@@ -3,16 +3,101 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateCommerceItemQueryParamFields string
+
+const (
+	CreateCommerceItemQueryParamFieldsID                CreateCommerceItemQueryParamFields = "id"
+	CreateCommerceItemQueryParamFieldsCreatedAt         CreateCommerceItemQueryParamFields = "created_at"
+	CreateCommerceItemQueryParamFieldsUpdatedAt         CreateCommerceItemQueryParamFields = "updated_at"
+	CreateCommerceItemQueryParamFieldsName              CreateCommerceItemQueryParamFields = "name"
+	CreateCommerceItemQueryParamFieldsPublicName        CreateCommerceItemQueryParamFields = "public_name"
+	CreateCommerceItemQueryParamFieldsSlug              CreateCommerceItemQueryParamFields = "slug"
+	CreateCommerceItemQueryParamFieldsDescription       CreateCommerceItemQueryParamFields = "description"
+	CreateCommerceItemQueryParamFieldsGlobalCode        CreateCommerceItemQueryParamFields = "global_code"
+	CreateCommerceItemQueryParamFieldsPublicDescription CreateCommerceItemQueryParamFields = "public_description"
+	CreateCommerceItemQueryParamFieldsIsActive          CreateCommerceItemQueryParamFields = "is_active"
+	CreateCommerceItemQueryParamFieldsIsTaxable         CreateCommerceItemQueryParamFields = "is_taxable"
+	CreateCommerceItemQueryParamFieldsVendorName        CreateCommerceItemQueryParamFields = "vendor_name"
+	CreateCommerceItemQueryParamFieldsType              CreateCommerceItemQueryParamFields = "type"
+	CreateCommerceItemQueryParamFieldsVariants          CreateCommerceItemQueryParamFields = "variants"
+	CreateCommerceItemQueryParamFieldsTags              CreateCommerceItemQueryParamFields = "tags"
+	CreateCommerceItemQueryParamFieldsMedia             CreateCommerceItemQueryParamFields = "media"
+	CreateCommerceItemQueryParamFieldsCollectionIds     CreateCommerceItemQueryParamFields = "collection_ids"
+	CreateCommerceItemQueryParamFieldsAccountID         CreateCommerceItemQueryParamFields = "account_id"
+	CreateCommerceItemQueryParamFieldsMetadata          CreateCommerceItemQueryParamFields = "metadata"
+	CreateCommerceItemQueryParamFieldsRaw               CreateCommerceItemQueryParamFields = "raw"
+	CreateCommerceItemQueryParamFieldsCollections       CreateCommerceItemQueryParamFields = "collections"
+)
+
+func (e CreateCommerceItemQueryParamFields) ToPointer() *CreateCommerceItemQueryParamFields {
+	return &e
+}
+func (e *CreateCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "public_name":
+		fallthrough
+	case "slug":
+		fallthrough
+	case "description":
+		fallthrough
+	case "global_code":
+		fallthrough
+	case "public_description":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_taxable":
+		fallthrough
+	case "vendor_name":
+		fallthrough
+	case "type":
+		fallthrough
+	case "variants":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "media":
+		fallthrough
+	case "collection_ids":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		fallthrough
+	case "collections":
+		*e = CreateCommerceItemQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateCommerceItemQueryParamFields: %v", v)
+	}
+}
 
 type CreateCommerceItemRequest struct {
 	CommerceItem shared.CommerceItem `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateCommerceItemQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +116,7 @@ func (c *CreateCommerceItemRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateCommerceItemRequest) GetFields() []string {
+func (c *CreateCommerceItemRequest) GetFields() []CreateCommerceItemQueryParamFields {
 	if c == nil {
 		return nil
 	}

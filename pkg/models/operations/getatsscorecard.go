@@ -3,15 +3,73 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAtsScorecardQueryParamFields string
+
+const (
+	GetAtsScorecardQueryParamFieldsID             GetAtsScorecardQueryParamFields = "id"
+	GetAtsScorecardQueryParamFieldsCreatedAt      GetAtsScorecardQueryParamFields = "created_at"
+	GetAtsScorecardQueryParamFieldsUpdatedAt      GetAtsScorecardQueryParamFields = "updated_at"
+	GetAtsScorecardQueryParamFieldsApplicationID  GetAtsScorecardQueryParamFields = "application_id"
+	GetAtsScorecardQueryParamFieldsInterviewerID  GetAtsScorecardQueryParamFields = "interviewer_id"
+	GetAtsScorecardQueryParamFieldsInterviewID    GetAtsScorecardQueryParamFields = "interview_id"
+	GetAtsScorecardQueryParamFieldsCandidateID    GetAtsScorecardQueryParamFields = "candidate_id"
+	GetAtsScorecardQueryParamFieldsJobID          GetAtsScorecardQueryParamFields = "job_id"
+	GetAtsScorecardQueryParamFieldsRecommendation GetAtsScorecardQueryParamFields = "recommendation"
+	GetAtsScorecardQueryParamFieldsComment        GetAtsScorecardQueryParamFields = "comment"
+	GetAtsScorecardQueryParamFieldsQuestions      GetAtsScorecardQueryParamFields = "questions"
+	GetAtsScorecardQueryParamFieldsRaw            GetAtsScorecardQueryParamFields = "raw"
+)
+
+func (e GetAtsScorecardQueryParamFields) ToPointer() *GetAtsScorecardQueryParamFields {
+	return &e
+}
+func (e *GetAtsScorecardQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "application_id":
+		fallthrough
+	case "interviewer_id":
+		fallthrough
+	case "interview_id":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "recommendation":
+		fallthrough
+	case "comment":
+		fallthrough
+	case "questions":
+		fallthrough
+	case "raw":
+		*e = GetAtsScorecardQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAtsScorecardQueryParamFields: %v", v)
+	}
+}
 
 type GetAtsScorecardRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAtsScorecardQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Scorecard
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +83,7 @@ func (g *GetAtsScorecardRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAtsScorecardRequest) GetFields() []string {
+func (g *GetAtsScorecardRequest) GetFields() []GetAtsScorecardQueryParamFields {
 	if g == nil {
 		return nil
 	}

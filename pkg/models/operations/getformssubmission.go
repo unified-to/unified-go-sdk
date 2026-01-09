@@ -3,15 +3,61 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetFormsSubmissionQueryParamFields string
+
+const (
+	GetFormsSubmissionQueryParamFieldsID              GetFormsSubmissionQueryParamFields = "id"
+	GetFormsSubmissionQueryParamFieldsCreatedAt       GetFormsSubmissionQueryParamFields = "created_at"
+	GetFormsSubmissionQueryParamFieldsUpdatedAt       GetFormsSubmissionQueryParamFields = "updated_at"
+	GetFormsSubmissionQueryParamFieldsFormID          GetFormsSubmissionQueryParamFields = "form_id"
+	GetFormsSubmissionQueryParamFieldsRespondentEmail GetFormsSubmissionQueryParamFields = "respondent_email"
+	GetFormsSubmissionQueryParamFieldsRespondentName  GetFormsSubmissionQueryParamFields = "respondent_name"
+	GetFormsSubmissionQueryParamFieldsAnswers         GetFormsSubmissionQueryParamFields = "answers"
+	GetFormsSubmissionQueryParamFieldsRaw             GetFormsSubmissionQueryParamFields = "raw"
+)
+
+func (e GetFormsSubmissionQueryParamFields) ToPointer() *GetFormsSubmissionQueryParamFields {
+	return &e
+}
+func (e *GetFormsSubmissionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "form_id":
+		fallthrough
+	case "respondent_email":
+		fallthrough
+	case "respondent_name":
+		fallthrough
+	case "answers":
+		fallthrough
+	case "raw":
+		*e = GetFormsSubmissionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetFormsSubmissionQueryParamFields: %v", v)
+	}
+}
 
 type GetFormsSubmissionRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetFormsSubmissionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Submission
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +71,7 @@ func (g *GetFormsSubmissionRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetFormsSubmissionRequest) GetFields() []string {
+func (g *GetFormsSubmissionRequest) GetFields() []GetFormsSubmissionQueryParamFields {
 	if g == nil {
 		return nil
 	}

@@ -3,15 +3,88 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetCommerceCollectionQueryParamFields string
+
+const (
+	GetCommerceCollectionQueryParamFieldsID                GetCommerceCollectionQueryParamFields = "id"
+	GetCommerceCollectionQueryParamFieldsCreatedAt         GetCommerceCollectionQueryParamFields = "created_at"
+	GetCommerceCollectionQueryParamFieldsUpdatedAt         GetCommerceCollectionQueryParamFields = "updated_at"
+	GetCommerceCollectionQueryParamFieldsName              GetCommerceCollectionQueryParamFields = "name"
+	GetCommerceCollectionQueryParamFieldsPublicName        GetCommerceCollectionQueryParamFields = "public_name"
+	GetCommerceCollectionQueryParamFieldsDescription       GetCommerceCollectionQueryParamFields = "description"
+	GetCommerceCollectionQueryParamFieldsPublicDescription GetCommerceCollectionQueryParamFields = "public_description"
+	GetCommerceCollectionQueryParamFieldsMedia             GetCommerceCollectionQueryParamFields = "media"
+	GetCommerceCollectionQueryParamFieldsIsVisible         GetCommerceCollectionQueryParamFields = "is_visible"
+	GetCommerceCollectionQueryParamFieldsIsActive          GetCommerceCollectionQueryParamFields = "is_active"
+	GetCommerceCollectionQueryParamFieldsIsFeatured        GetCommerceCollectionQueryParamFields = "is_featured"
+	GetCommerceCollectionQueryParamFieldsTags              GetCommerceCollectionQueryParamFields = "tags"
+	GetCommerceCollectionQueryParamFieldsType              GetCommerceCollectionQueryParamFields = "type"
+	GetCommerceCollectionQueryParamFieldsParentID          GetCommerceCollectionQueryParamFields = "parent_id"
+	GetCommerceCollectionQueryParamFieldsMetadata          GetCommerceCollectionQueryParamFields = "metadata"
+	GetCommerceCollectionQueryParamFieldsItemMetadata      GetCommerceCollectionQueryParamFields = "item_metadata"
+	GetCommerceCollectionQueryParamFieldsRaw               GetCommerceCollectionQueryParamFields = "raw"
+)
+
+func (e GetCommerceCollectionQueryParamFields) ToPointer() *GetCommerceCollectionQueryParamFields {
+	return &e
+}
+func (e *GetCommerceCollectionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "public_name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "public_description":
+		fallthrough
+	case "media":
+		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "type":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "item_metadata":
+		fallthrough
+	case "raw":
+		*e = GetCommerceCollectionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetCommerceCollectionQueryParamFields: %v", v)
+	}
+}
 
 type GetCommerceCollectionRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetCommerceCollectionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Collection
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +98,7 @@ func (g *GetCommerceCollectionRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetCommerceCollectionRequest) GetFields() []string {
+func (g *GetCommerceCollectionRequest) GetFields() []GetCommerceCollectionQueryParamFields {
 	if g == nil {
 		return nil
 	}

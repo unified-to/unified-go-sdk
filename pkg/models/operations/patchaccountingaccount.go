@@ -3,9 +3,85 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchAccountingAccountQueryParamFields string
+
+const (
+	PatchAccountingAccountQueryParamFieldsID                  PatchAccountingAccountQueryParamFields = "id"
+	PatchAccountingAccountQueryParamFieldsCreatedAt           PatchAccountingAccountQueryParamFields = "created_at"
+	PatchAccountingAccountQueryParamFieldsUpdatedAt           PatchAccountingAccountQueryParamFields = "updated_at"
+	PatchAccountingAccountQueryParamFieldsName                PatchAccountingAccountQueryParamFields = "name"
+	PatchAccountingAccountQueryParamFieldsDescription         PatchAccountingAccountQueryParamFields = "description"
+	PatchAccountingAccountQueryParamFieldsType                PatchAccountingAccountQueryParamFields = "type"
+	PatchAccountingAccountQueryParamFieldsStatus              PatchAccountingAccountQueryParamFields = "status"
+	PatchAccountingAccountQueryParamFieldsBalance             PatchAccountingAccountQueryParamFields = "balance"
+	PatchAccountingAccountQueryParamFieldsCurrency            PatchAccountingAccountQueryParamFields = "currency"
+	PatchAccountingAccountQueryParamFieldsCustomerDefinedCode PatchAccountingAccountQueryParamFields = "customer_defined_code"
+	PatchAccountingAccountQueryParamFieldsIsPayable           PatchAccountingAccountQueryParamFields = "is_payable"
+	PatchAccountingAccountQueryParamFieldsParentAccountID     PatchAccountingAccountQueryParamFields = "parent_account_id"
+	PatchAccountingAccountQueryParamFieldsSection             PatchAccountingAccountQueryParamFields = "section"
+	PatchAccountingAccountQueryParamFieldsSubsection          PatchAccountingAccountQueryParamFields = "subsection"
+	PatchAccountingAccountQueryParamFieldsGroup               PatchAccountingAccountQueryParamFields = "group"
+	PatchAccountingAccountQueryParamFieldsSubgroup            PatchAccountingAccountQueryParamFields = "subgroup"
+	PatchAccountingAccountQueryParamFieldsParentID            PatchAccountingAccountQueryParamFields = "parent_id"
+	PatchAccountingAccountQueryParamFieldsRaw                 PatchAccountingAccountQueryParamFields = "raw"
+)
+
+func (e PatchAccountingAccountQueryParamFields) ToPointer() *PatchAccountingAccountQueryParamFields {
+	return &e
+}
+func (e *PatchAccountingAccountQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "type":
+		fallthrough
+	case "status":
+		fallthrough
+	case "balance":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "customer_defined_code":
+		fallthrough
+	case "is_payable":
+		fallthrough
+	case "parent_account_id":
+		fallthrough
+	case "section":
+		fallthrough
+	case "subsection":
+		fallthrough
+	case "group":
+		fallthrough
+	case "subgroup":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = PatchAccountingAccountQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchAccountingAccountQueryParamFields: %v", v)
+	}
+}
 
 type PatchAccountingAccountRequest struct {
 	// Chart of accounts
@@ -13,7 +89,7 @@ type PatchAccountingAccountRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchAccountingAccountQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Account
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +110,7 @@ func (p *PatchAccountingAccountRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchAccountingAccountRequest) GetFields() []string {
+func (p *PatchAccountingAccountRequest) GetFields() []PatchAccountingAccountQueryParamFields {
 	if p == nil {
 		return nil
 	}

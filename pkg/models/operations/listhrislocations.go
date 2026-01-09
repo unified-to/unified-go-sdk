@@ -3,26 +3,96 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListHrisLocationsQueryParamFields string
+
+const (
+	ListHrisLocationsQueryParamFieldsID                 ListHrisLocationsQueryParamFields = "id"
+	ListHrisLocationsQueryParamFieldsCreatedAt          ListHrisLocationsQueryParamFields = "created_at"
+	ListHrisLocationsQueryParamFieldsUpdatedAt          ListHrisLocationsQueryParamFields = "updated_at"
+	ListHrisLocationsQueryParamFieldsName               ListHrisLocationsQueryParamFields = "name"
+	ListHrisLocationsQueryParamFieldsDescription        ListHrisLocationsQueryParamFields = "description"
+	ListHrisLocationsQueryParamFieldsAddress            ListHrisLocationsQueryParamFields = "address"
+	ListHrisLocationsQueryParamFieldsParentID           ListHrisLocationsQueryParamFields = "parent_id"
+	ListHrisLocationsQueryParamFieldsExternalIdentifier ListHrisLocationsQueryParamFields = "external_identifier"
+	ListHrisLocationsQueryParamFieldsTelephones         ListHrisLocationsQueryParamFields = "telephones"
+	ListHrisLocationsQueryParamFieldsTimezone           ListHrisLocationsQueryParamFields = "timezone"
+	ListHrisLocationsQueryParamFieldsCurrency           ListHrisLocationsQueryParamFields = "currency"
+	ListHrisLocationsQueryParamFieldsLanguageLocale     ListHrisLocationsQueryParamFields = "language_locale"
+	ListHrisLocationsQueryParamFieldsIsActive           ListHrisLocationsQueryParamFields = "is_active"
+	ListHrisLocationsQueryParamFieldsIsHq               ListHrisLocationsQueryParamFields = "is_hq"
+	ListHrisLocationsQueryParamFieldsCompanyID          ListHrisLocationsQueryParamFields = "company_id"
+	ListHrisLocationsQueryParamFieldsRaw                ListHrisLocationsQueryParamFields = "raw"
+)
+
+func (e ListHrisLocationsQueryParamFields) ToPointer() *ListHrisLocationsQueryParamFields {
+	return &e
+}
+func (e *ListHrisLocationsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "address":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "external_identifier":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_hq":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "raw":
+		*e = ListHrisLocationsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListHrisLocationsQueryParamFields: %v", v)
+	}
+}
+
 type ListHrisLocationsRequest struct {
-	// The company ID to filter by
+	// The company ID to filter by (reference to HrisCompany)
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListHrisLocationsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                            `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                            `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                             `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -40,7 +110,7 @@ func (l *ListHrisLocationsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListHrisLocationsRequest) GetFields() []string {
+func (l *ListHrisLocationsRequest) GetFields() []ListHrisLocationsQueryParamFields {
 	if l == nil {
 		return nil
 	}

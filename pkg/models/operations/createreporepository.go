@@ -3,16 +3,68 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateRepoRepositoryQueryParamFields string
+
+const (
+	CreateRepoRepositoryQueryParamFieldsID          CreateRepoRepositoryQueryParamFields = "id"
+	CreateRepoRepositoryQueryParamFieldsCreatedAt   CreateRepoRepositoryQueryParamFields = "created_at"
+	CreateRepoRepositoryQueryParamFieldsUpdatedAt   CreateRepoRepositoryQueryParamFields = "updated_at"
+	CreateRepoRepositoryQueryParamFieldsName        CreateRepoRepositoryQueryParamFields = "name"
+	CreateRepoRepositoryQueryParamFieldsDescription CreateRepoRepositoryQueryParamFields = "description"
+	CreateRepoRepositoryQueryParamFieldsOwner       CreateRepoRepositoryQueryParamFields = "owner"
+	CreateRepoRepositoryQueryParamFieldsIsPrivate   CreateRepoRepositoryQueryParamFields = "is_private"
+	CreateRepoRepositoryQueryParamFieldsWebURL      CreateRepoRepositoryQueryParamFields = "web_url"
+	CreateRepoRepositoryQueryParamFieldsOrgID       CreateRepoRepositoryQueryParamFields = "org_id"
+	CreateRepoRepositoryQueryParamFieldsRaw         CreateRepoRepositoryQueryParamFields = "raw"
+)
+
+func (e CreateRepoRepositoryQueryParamFields) ToPointer() *CreateRepoRepositoryQueryParamFields {
+	return &e
+}
+func (e *CreateRepoRepositoryQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "owner":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "org_id":
+		fallthrough
+	case "raw":
+		*e = CreateRepoRepositoryQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateRepoRepositoryQueryParamFields: %v", v)
+	}
+}
 
 type CreateRepoRepositoryRequest struct {
 	RepoRepository shared.RepoRepository `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateRepoRepositoryQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +83,7 @@ func (c *CreateRepoRepositoryRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateRepoRepositoryRequest) GetFields() []string {
+func (c *CreateRepoRepositoryRequest) GetFields() []CreateRepoRepositoryQueryParamFields {
 	if c == nil {
 		return nil
 	}

@@ -3,15 +3,61 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetRepoCommitQueryParamFields string
+
+const (
+	GetRepoCommitQueryParamFieldsID        GetRepoCommitQueryParamFields = "id"
+	GetRepoCommitQueryParamFieldsCreatedAt GetRepoCommitQueryParamFields = "created_at"
+	GetRepoCommitQueryParamFieldsUpdatedAt GetRepoCommitQueryParamFields = "updated_at"
+	GetRepoCommitQueryParamFieldsUserID    GetRepoCommitQueryParamFields = "user_id"
+	GetRepoCommitQueryParamFieldsRepoID    GetRepoCommitQueryParamFields = "repo_id"
+	GetRepoCommitQueryParamFieldsMessage   GetRepoCommitQueryParamFields = "message"
+	GetRepoCommitQueryParamFieldsBranchID  GetRepoCommitQueryParamFields = "branch_id"
+	GetRepoCommitQueryParamFieldsRaw       GetRepoCommitQueryParamFields = "raw"
+)
+
+func (e GetRepoCommitQueryParamFields) ToPointer() *GetRepoCommitQueryParamFields {
+	return &e
+}
+func (e *GetRepoCommitQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "repo_id":
+		fallthrough
+	case "message":
+		fallthrough
+	case "branch_id":
+		fallthrough
+	case "raw":
+		*e = GetRepoCommitQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetRepoCommitQueryParamFields: %v", v)
+	}
+}
 
 type GetRepoCommitRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetRepoCommitQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Commit
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +71,7 @@ func (g *GetRepoCommitRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetRepoCommitRequest) GetFields() []string {
+func (g *GetRepoCommitRequest) GetFields() []GetRepoCommitQueryParamFields {
 	if g == nil {
 		return nil
 	}

@@ -3,20 +3,75 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListTaskProjectsQueryParamFields string
+
+const (
+	ListTaskProjectsQueryParamFieldsID          ListTaskProjectsQueryParamFields = "id"
+	ListTaskProjectsQueryParamFieldsCreatedAt   ListTaskProjectsQueryParamFields = "created_at"
+	ListTaskProjectsQueryParamFieldsUpdatedAt   ListTaskProjectsQueryParamFields = "updated_at"
+	ListTaskProjectsQueryParamFieldsName        ListTaskProjectsQueryParamFields = "name"
+	ListTaskProjectsQueryParamFieldsParentID    ListTaskProjectsQueryParamFields = "parent_id"
+	ListTaskProjectsQueryParamFieldsUserIds     ListTaskProjectsQueryParamFields = "user_ids"
+	ListTaskProjectsQueryParamFieldsGroupIds    ListTaskProjectsQueryParamFields = "group_ids"
+	ListTaskProjectsQueryParamFieldsDescription ListTaskProjectsQueryParamFields = "description"
+	ListTaskProjectsQueryParamFieldsHasTasks    ListTaskProjectsQueryParamFields = "has_tasks"
+	ListTaskProjectsQueryParamFieldsHasChildren ListTaskProjectsQueryParamFields = "has_children"
+	ListTaskProjectsQueryParamFieldsRaw         ListTaskProjectsQueryParamFields = "raw"
+)
+
+func (e ListTaskProjectsQueryParamFields) ToPointer() *ListTaskProjectsQueryParamFields {
+	return &e
+}
+func (e *ListTaskProjectsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "group_ids":
+		fallthrough
+	case "description":
+		fallthrough
+	case "has_tasks":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "raw":
+		*e = ListTaskProjectsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListTaskProjectsQueryParamFields: %v", v)
+	}
+}
+
 type ListTaskProjectsRequest struct {
+	// The company ID to filter by (reference to HrisCompany)
+	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The org ID to filter by
-	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
+	Fields []ListTaskProjectsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
@@ -24,8 +79,17 @@ type ListTaskProjectsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
+	// The user/employee ID to filter by (reference to HrisEmployee)
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
+}
+
+func (l *ListTaskProjectsRequest) GetCompanyID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.CompanyID
 }
 
 func (l *ListTaskProjectsRequest) GetConnectionID() string {
@@ -35,7 +99,7 @@ func (l *ListTaskProjectsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListTaskProjectsRequest) GetFields() []string {
+func (l *ListTaskProjectsRequest) GetFields() []ListTaskProjectsQueryParamFields {
 	if l == nil {
 		return nil
 	}
@@ -61,13 +125,6 @@ func (l *ListTaskProjectsRequest) GetOrder() *string {
 		return nil
 	}
 	return l.Order
-}
-
-func (l *ListTaskProjectsRequest) GetOrgID() *string {
-	if l == nil {
-		return nil
-	}
-	return l.OrgID
 }
 
 func (l *ListTaskProjectsRequest) GetParentID() *string {
@@ -103,6 +160,13 @@ func (l *ListTaskProjectsRequest) GetUpdatedGte() *string {
 		return nil
 	}
 	return l.UpdatedGte
+}
+
+func (l *ListTaskProjectsRequest) GetUserID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.UserID
 }
 
 type ListTaskProjectsResponse struct {

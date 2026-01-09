@@ -3,9 +3,106 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListVerificationRequestsQueryParamFields string
+
+const (
+	ListVerificationRequestsQueryParamFieldsID                        ListVerificationRequestsQueryParamFields = "id"
+	ListVerificationRequestsQueryParamFieldsCreatedAt                 ListVerificationRequestsQueryParamFields = "created_at"
+	ListVerificationRequestsQueryParamFieldsUpdatedAt                 ListVerificationRequestsQueryParamFields = "updated_at"
+	ListVerificationRequestsQueryParamFieldsPackageID                 ListVerificationRequestsQueryParamFields = "package_id"
+	ListVerificationRequestsQueryParamFieldsParameters                ListVerificationRequestsQueryParamFields = "parameters"
+	ListVerificationRequestsQueryParamFieldsTargetURL                 ListVerificationRequestsQueryParamFields = "target_url"
+	ListVerificationRequestsQueryParamFieldsCandidateID               ListVerificationRequestsQueryParamFields = "candidate_id"
+	ListVerificationRequestsQueryParamFieldsProfileIPAddress          ListVerificationRequestsQueryParamFields = "profile_ip_address"
+	ListVerificationRequestsQueryParamFieldsProfileName               ListVerificationRequestsQueryParamFields = "profile_name"
+	ListVerificationRequestsQueryParamFieldsProfileDateOfBirth        ListVerificationRequestsQueryParamFields = "profile_date_of_birth"
+	ListVerificationRequestsQueryParamFieldsProfileAddresses          ListVerificationRequestsQueryParamFields = "profile_addresses"
+	ListVerificationRequestsQueryParamFieldsProfileGender             ListVerificationRequestsQueryParamFields = "profile_gender"
+	ListVerificationRequestsQueryParamFieldsProfileEmails             ListVerificationRequestsQueryParamFields = "profile_emails"
+	ListVerificationRequestsQueryParamFieldsProfileTelephones         ListVerificationRequestsQueryParamFields = "profile_telephones"
+	ListVerificationRequestsQueryParamFieldsProfileNationalIdentifier ListVerificationRequestsQueryParamFields = "profile_national_identifier"
+	ListVerificationRequestsQueryParamFieldsResponseCompletedAt       ListVerificationRequestsQueryParamFields = "response_completed_at"
+	ListVerificationRequestsQueryParamFieldsResponseExpiresAt         ListVerificationRequestsQueryParamFields = "response_expires_at"
+	ListVerificationRequestsQueryParamFieldsResponseIssuedAt          ListVerificationRequestsQueryParamFields = "response_issued_at"
+	ListVerificationRequestsQueryParamFieldsResponseStatus            ListVerificationRequestsQueryParamFields = "response_status"
+	ListVerificationRequestsQueryParamFieldsResponseScore             ListVerificationRequestsQueryParamFields = "response_score"
+	ListVerificationRequestsQueryParamFieldsResponseRedirectURL       ListVerificationRequestsQueryParamFields = "response_redirect_url"
+	ListVerificationRequestsQueryParamFieldsResponseDownloadUrls      ListVerificationRequestsQueryParamFields = "response_download_urls"
+	ListVerificationRequestsQueryParamFieldsResponseDetails           ListVerificationRequestsQueryParamFields = "response_details"
+	ListVerificationRequestsQueryParamFieldsResponseSource            ListVerificationRequestsQueryParamFields = "response_source"
+	ListVerificationRequestsQueryParamFieldsRaw                       ListVerificationRequestsQueryParamFields = "raw"
+)
+
+func (e ListVerificationRequestsQueryParamFields) ToPointer() *ListVerificationRequestsQueryParamFields {
+	return &e
+}
+func (e *ListVerificationRequestsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "package_id":
+		fallthrough
+	case "parameters":
+		fallthrough
+	case "target_url":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "profile_ip_address":
+		fallthrough
+	case "profile_name":
+		fallthrough
+	case "profile_date_of_birth":
+		fallthrough
+	case "profile_addresses":
+		fallthrough
+	case "profile_gender":
+		fallthrough
+	case "profile_emails":
+		fallthrough
+	case "profile_telephones":
+		fallthrough
+	case "profile_national_identifier":
+		fallthrough
+	case "response_completed_at":
+		fallthrough
+	case "response_expires_at":
+		fallthrough
+	case "response_issued_at":
+		fallthrough
+	case "response_status":
+		fallthrough
+	case "response_score":
+		fallthrough
+	case "response_redirect_url":
+		fallthrough
+	case "response_download_urls":
+		fallthrough
+	case "response_details":
+		fallthrough
+	case "response_source":
+		fallthrough
+	case "raw":
+		*e = ListVerificationRequestsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListVerificationRequestsQueryParamFields: %v", v)
+	}
+}
 
 type ListVerificationRequestsRequest struct {
 	// The candidate ID to filter by
@@ -13,10 +110,10 @@ type ListVerificationRequestsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListVerificationRequestsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                   `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                   `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                    `queryParam:"style=form,explode=true,name=order"`
 	// The package ID to filter by
 	PackageID *string `queryParam:"style=form,explode=true,name=package_id"`
 	// Query string to search. eg. email address or name
@@ -24,7 +121,7 @@ type ListVerificationRequestsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -42,7 +139,7 @@ func (l *ListVerificationRequestsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListVerificationRequestsRequest) GetFields() []string {
+func (l *ListVerificationRequestsRequest) GetFields() []ListVerificationRequestsQueryParamFields {
 	if l == nil {
 		return nil
 	}

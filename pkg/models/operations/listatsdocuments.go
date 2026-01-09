@@ -3,9 +3,67 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAtsDocumentsQueryParamFields string
+
+const (
+	ListAtsDocumentsQueryParamFieldsID            ListAtsDocumentsQueryParamFields = "id"
+	ListAtsDocumentsQueryParamFieldsCreatedAt     ListAtsDocumentsQueryParamFields = "created_at"
+	ListAtsDocumentsQueryParamFieldsUpdatedAt     ListAtsDocumentsQueryParamFields = "updated_at"
+	ListAtsDocumentsQueryParamFieldsDocumentURL   ListAtsDocumentsQueryParamFields = "document_url"
+	ListAtsDocumentsQueryParamFieldsDocumentData  ListAtsDocumentsQueryParamFields = "document_data"
+	ListAtsDocumentsQueryParamFieldsFilename      ListAtsDocumentsQueryParamFields = "filename"
+	ListAtsDocumentsQueryParamFieldsType          ListAtsDocumentsQueryParamFields = "type"
+	ListAtsDocumentsQueryParamFieldsCandidateID   ListAtsDocumentsQueryParamFields = "candidate_id"
+	ListAtsDocumentsQueryParamFieldsApplicationID ListAtsDocumentsQueryParamFields = "application_id"
+	ListAtsDocumentsQueryParamFieldsJobID         ListAtsDocumentsQueryParamFields = "job_id"
+	ListAtsDocumentsQueryParamFieldsUserID        ListAtsDocumentsQueryParamFields = "user_id"
+	ListAtsDocumentsQueryParamFieldsRaw           ListAtsDocumentsQueryParamFields = "raw"
+)
+
+func (e ListAtsDocumentsQueryParamFields) ToPointer() *ListAtsDocumentsQueryParamFields {
+	return &e
+}
+func (e *ListAtsDocumentsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "document_url":
+		fallthrough
+	case "document_data":
+		fallthrough
+	case "filename":
+		fallthrough
+	case "type":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "application_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "raw":
+		*e = ListAtsDocumentsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAtsDocumentsQueryParamFields: %v", v)
+	}
+}
 
 type ListAtsDocumentsRequest struct {
 	// The application ID to filter by
@@ -15,7 +73,7 @@ type ListAtsDocumentsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []ListAtsDocumentsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The job ID to filter by
 	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
@@ -28,7 +86,7 @@ type ListAtsDocumentsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The type to filter by
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -53,7 +111,7 @@ func (l *ListAtsDocumentsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAtsDocumentsRequest) GetFields() []string {
+func (l *ListAtsDocumentsRequest) GetFields() []ListAtsDocumentsQueryParamFields {
 	if l == nil {
 		return nil
 	}

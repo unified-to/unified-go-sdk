@@ -3,15 +3,112 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetVerificationRequestQueryParamFields string
+
+const (
+	GetVerificationRequestQueryParamFieldsID                        GetVerificationRequestQueryParamFields = "id"
+	GetVerificationRequestQueryParamFieldsCreatedAt                 GetVerificationRequestQueryParamFields = "created_at"
+	GetVerificationRequestQueryParamFieldsUpdatedAt                 GetVerificationRequestQueryParamFields = "updated_at"
+	GetVerificationRequestQueryParamFieldsPackageID                 GetVerificationRequestQueryParamFields = "package_id"
+	GetVerificationRequestQueryParamFieldsParameters                GetVerificationRequestQueryParamFields = "parameters"
+	GetVerificationRequestQueryParamFieldsTargetURL                 GetVerificationRequestQueryParamFields = "target_url"
+	GetVerificationRequestQueryParamFieldsCandidateID               GetVerificationRequestQueryParamFields = "candidate_id"
+	GetVerificationRequestQueryParamFieldsProfileIPAddress          GetVerificationRequestQueryParamFields = "profile_ip_address"
+	GetVerificationRequestQueryParamFieldsProfileName               GetVerificationRequestQueryParamFields = "profile_name"
+	GetVerificationRequestQueryParamFieldsProfileDateOfBirth        GetVerificationRequestQueryParamFields = "profile_date_of_birth"
+	GetVerificationRequestQueryParamFieldsProfileAddresses          GetVerificationRequestQueryParamFields = "profile_addresses"
+	GetVerificationRequestQueryParamFieldsProfileGender             GetVerificationRequestQueryParamFields = "profile_gender"
+	GetVerificationRequestQueryParamFieldsProfileEmails             GetVerificationRequestQueryParamFields = "profile_emails"
+	GetVerificationRequestQueryParamFieldsProfileTelephones         GetVerificationRequestQueryParamFields = "profile_telephones"
+	GetVerificationRequestQueryParamFieldsProfileNationalIdentifier GetVerificationRequestQueryParamFields = "profile_national_identifier"
+	GetVerificationRequestQueryParamFieldsResponseCompletedAt       GetVerificationRequestQueryParamFields = "response_completed_at"
+	GetVerificationRequestQueryParamFieldsResponseExpiresAt         GetVerificationRequestQueryParamFields = "response_expires_at"
+	GetVerificationRequestQueryParamFieldsResponseIssuedAt          GetVerificationRequestQueryParamFields = "response_issued_at"
+	GetVerificationRequestQueryParamFieldsResponseStatus            GetVerificationRequestQueryParamFields = "response_status"
+	GetVerificationRequestQueryParamFieldsResponseScore             GetVerificationRequestQueryParamFields = "response_score"
+	GetVerificationRequestQueryParamFieldsResponseRedirectURL       GetVerificationRequestQueryParamFields = "response_redirect_url"
+	GetVerificationRequestQueryParamFieldsResponseDownloadUrls      GetVerificationRequestQueryParamFields = "response_download_urls"
+	GetVerificationRequestQueryParamFieldsResponseDetails           GetVerificationRequestQueryParamFields = "response_details"
+	GetVerificationRequestQueryParamFieldsResponseSource            GetVerificationRequestQueryParamFields = "response_source"
+	GetVerificationRequestQueryParamFieldsRaw                       GetVerificationRequestQueryParamFields = "raw"
+)
+
+func (e GetVerificationRequestQueryParamFields) ToPointer() *GetVerificationRequestQueryParamFields {
+	return &e
+}
+func (e *GetVerificationRequestQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "package_id":
+		fallthrough
+	case "parameters":
+		fallthrough
+	case "target_url":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "profile_ip_address":
+		fallthrough
+	case "profile_name":
+		fallthrough
+	case "profile_date_of_birth":
+		fallthrough
+	case "profile_addresses":
+		fallthrough
+	case "profile_gender":
+		fallthrough
+	case "profile_emails":
+		fallthrough
+	case "profile_telephones":
+		fallthrough
+	case "profile_national_identifier":
+		fallthrough
+	case "response_completed_at":
+		fallthrough
+	case "response_expires_at":
+		fallthrough
+	case "response_issued_at":
+		fallthrough
+	case "response_status":
+		fallthrough
+	case "response_score":
+		fallthrough
+	case "response_redirect_url":
+		fallthrough
+	case "response_download_urls":
+		fallthrough
+	case "response_details":
+		fallthrough
+	case "response_source":
+		fallthrough
+	case "raw":
+		*e = GetVerificationRequestQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetVerificationRequestQueryParamFields: %v", v)
+	}
+}
 
 type GetVerificationRequestRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetVerificationRequestQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Request
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +122,7 @@ func (g *GetVerificationRequestRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetVerificationRequestRequest) GetFields() []string {
+func (g *GetVerificationRequestRequest) GetFields() []GetVerificationRequestQueryParamFields {
 	if g == nil {
 		return nil
 	}

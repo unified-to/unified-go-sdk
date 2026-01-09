@@ -3,16 +3,158 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateHrisEmployeeQueryParamFields string
+
+const (
+	UpdateHrisEmployeeQueryParamFieldsID                    UpdateHrisEmployeeQueryParamFields = "id"
+	UpdateHrisEmployeeQueryParamFieldsCreatedAt             UpdateHrisEmployeeQueryParamFields = "created_at"
+	UpdateHrisEmployeeQueryParamFieldsUpdatedAt             UpdateHrisEmployeeQueryParamFields = "updated_at"
+	UpdateHrisEmployeeQueryParamFieldsName                  UpdateHrisEmployeeQueryParamFields = "name"
+	UpdateHrisEmployeeQueryParamFieldsFirstName             UpdateHrisEmployeeQueryParamFields = "first_name"
+	UpdateHrisEmployeeQueryParamFieldsLastName              UpdateHrisEmployeeQueryParamFields = "last_name"
+	UpdateHrisEmployeeQueryParamFieldsEmails                UpdateHrisEmployeeQueryParamFields = "emails"
+	UpdateHrisEmployeeQueryParamFieldsTitle                 UpdateHrisEmployeeQueryParamFields = "title"
+	UpdateHrisEmployeeQueryParamFieldsManagerID             UpdateHrisEmployeeQueryParamFields = "manager_id"
+	UpdateHrisEmployeeQueryParamFieldsEmploymentStatus      UpdateHrisEmployeeQueryParamFields = "employment_status"
+	UpdateHrisEmployeeQueryParamFieldsGender                UpdateHrisEmployeeQueryParamFields = "gender"
+	UpdateHrisEmployeeQueryParamFieldsTelephones            UpdateHrisEmployeeQueryParamFields = "telephones"
+	UpdateHrisEmployeeQueryParamFieldsDateOfBirth           UpdateHrisEmployeeQueryParamFields = "date_of_birth"
+	UpdateHrisEmployeeQueryParamFieldsEmployeeNumber        UpdateHrisEmployeeQueryParamFields = "employee_number"
+	UpdateHrisEmployeeQueryParamFieldsHiredAt               UpdateHrisEmployeeQueryParamFields = "hired_at"
+	UpdateHrisEmployeeQueryParamFieldsTerminatedAt          UpdateHrisEmployeeQueryParamFields = "terminated_at"
+	UpdateHrisEmployeeQueryParamFieldsTerminationReason     UpdateHrisEmployeeQueryParamFields = "termination_reason"
+	UpdateHrisEmployeeQueryParamFieldsMaritalStatus         UpdateHrisEmployeeQueryParamFields = "marital_status"
+	UpdateHrisEmployeeQueryParamFieldsEmploymentType        UpdateHrisEmployeeQueryParamFields = "employment_type"
+	UpdateHrisEmployeeQueryParamFieldsAddress               UpdateHrisEmployeeQueryParamFields = "address"
+	UpdateHrisEmployeeQueryParamFieldsLanguageLocale        UpdateHrisEmployeeQueryParamFields = "language_locale"
+	UpdateHrisEmployeeQueryParamFieldsCurrency              UpdateHrisEmployeeQueryParamFields = "currency"
+	UpdateHrisEmployeeQueryParamFieldsTimezone              UpdateHrisEmployeeQueryParamFields = "timezone"
+	UpdateHrisEmployeeQueryParamFieldsImageURL              UpdateHrisEmployeeQueryParamFields = "image_url"
+	UpdateHrisEmployeeQueryParamFieldsCompanyID             UpdateHrisEmployeeQueryParamFields = "company_id"
+	UpdateHrisEmployeeQueryParamFieldsPronouns              UpdateHrisEmployeeQueryParamFields = "pronouns"
+	UpdateHrisEmployeeQueryParamFieldsEmployeeRoles         UpdateHrisEmployeeQueryParamFields = "employee_roles"
+	UpdateHrisEmployeeQueryParamFieldsCompensation          UpdateHrisEmployeeQueryParamFields = "compensation"
+	UpdateHrisEmployeeQueryParamFieldsSalutation            UpdateHrisEmployeeQueryParamFields = "salutation"
+	UpdateHrisEmployeeQueryParamFieldsBio                   UpdateHrisEmployeeQueryParamFields = "bio"
+	UpdateHrisEmployeeQueryParamFieldsSsnSin                UpdateHrisEmployeeQueryParamFields = "ssn_sin"
+	UpdateHrisEmployeeQueryParamFieldsGroups                UpdateHrisEmployeeQueryParamFields = "groups"
+	UpdateHrisEmployeeQueryParamFieldsLocations             UpdateHrisEmployeeQueryParamFields = "locations"
+	UpdateHrisEmployeeQueryParamFieldsMetadata              UpdateHrisEmployeeQueryParamFields = "metadata"
+	UpdateHrisEmployeeQueryParamFieldsStorageQuotaAllocated UpdateHrisEmployeeQueryParamFields = "storage_quota_allocated"
+	UpdateHrisEmployeeQueryParamFieldsStorageQuotaUsed      UpdateHrisEmployeeQueryParamFields = "storage_quota_used"
+	UpdateHrisEmployeeQueryParamFieldsStorageQuotaAvailable UpdateHrisEmployeeQueryParamFields = "storage_quota_available"
+	UpdateHrisEmployeeQueryParamFieldsRelationships         UpdateHrisEmployeeQueryParamFields = "relationships"
+	UpdateHrisEmployeeQueryParamFieldsHasMfa                UpdateHrisEmployeeQueryParamFields = "has_mfa"
+	UpdateHrisEmployeeQueryParamFieldsRaw                   UpdateHrisEmployeeQueryParamFields = "raw"
+)
+
+func (e UpdateHrisEmployeeQueryParamFields) ToPointer() *UpdateHrisEmployeeQueryParamFields {
+	return &e
+}
+func (e *UpdateHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "title":
+		fallthrough
+	case "manager_id":
+		fallthrough
+	case "employment_status":
+		fallthrough
+	case "gender":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "date_of_birth":
+		fallthrough
+	case "employee_number":
+		fallthrough
+	case "hired_at":
+		fallthrough
+	case "terminated_at":
+		fallthrough
+	case "termination_reason":
+		fallthrough
+	case "marital_status":
+		fallthrough
+	case "employment_type":
+		fallthrough
+	case "address":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "pronouns":
+		fallthrough
+	case "employee_roles":
+		fallthrough
+	case "compensation":
+		fallthrough
+	case "salutation":
+		fallthrough
+	case "bio":
+		fallthrough
+	case "ssn_sin":
+		fallthrough
+	case "groups":
+		fallthrough
+	case "locations":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "storage_quota_allocated":
+		fallthrough
+	case "storage_quota_used":
+		fallthrough
+	case "storage_quota_available":
+		fallthrough
+	case "relationships":
+		fallthrough
+	case "has_mfa":
+		fallthrough
+	case "raw":
+		*e = UpdateHrisEmployeeQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateHrisEmployeeQueryParamFields: %v", v)
+	}
+}
 
 type UpdateHrisEmployeeRequest struct {
 	HrisEmployee shared.HrisEmployee `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateHrisEmployeeQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Employee
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +175,7 @@ func (u *UpdateHrisEmployeeRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateHrisEmployeeRequest) GetFields() []string {
+func (u *UpdateHrisEmployeeRequest) GetFields() []UpdateHrisEmployeeQueryParamFields {
 	if u == nil {
 		return nil
 	}

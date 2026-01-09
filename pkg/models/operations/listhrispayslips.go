@@ -3,28 +3,95 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListHrisPayslipsQueryParamFields string
+
+const (
+	ListHrisPayslipsQueryParamFieldsID          ListHrisPayslipsQueryParamFields = "id"
+	ListHrisPayslipsQueryParamFieldsCreatedAt   ListHrisPayslipsQueryParamFields = "created_at"
+	ListHrisPayslipsQueryParamFieldsUpdatedAt   ListHrisPayslipsQueryParamFields = "updated_at"
+	ListHrisPayslipsQueryParamFieldsUserID      ListHrisPayslipsQueryParamFields = "user_id"
+	ListHrisPayslipsQueryParamFieldsCompanyID   ListHrisPayslipsQueryParamFields = "company_id"
+	ListHrisPayslipsQueryParamFieldsPaymentType ListHrisPayslipsQueryParamFields = "payment_type"
+	ListHrisPayslipsQueryParamFieldsPaidAt      ListHrisPayslipsQueryParamFields = "paid_at"
+	ListHrisPayslipsQueryParamFieldsStartAt     ListHrisPayslipsQueryParamFields = "start_at"
+	ListHrisPayslipsQueryParamFieldsEndAt       ListHrisPayslipsQueryParamFields = "end_at"
+	ListHrisPayslipsQueryParamFieldsCurrency    ListHrisPayslipsQueryParamFields = "currency"
+	ListHrisPayslipsQueryParamFieldsGrossAmount ListHrisPayslipsQueryParamFields = "gross_amount"
+	ListHrisPayslipsQueryParamFieldsNetAmount   ListHrisPayslipsQueryParamFields = "net_amount"
+	ListHrisPayslipsQueryParamFieldsDetails     ListHrisPayslipsQueryParamFields = "details"
+	ListHrisPayslipsQueryParamFieldsRaw         ListHrisPayslipsQueryParamFields = "raw"
+	ListHrisPayslipsQueryParamFieldsDeduction   ListHrisPayslipsQueryParamFields = "deduction"
+)
+
+func (e ListHrisPayslipsQueryParamFields) ToPointer() *ListHrisPayslipsQueryParamFields {
+	return &e
+}
+func (e *ListHrisPayslipsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "payment_type":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "gross_amount":
+		fallthrough
+	case "net_amount":
+		fallthrough
+	case "details":
+		fallthrough
+	case "raw":
+		fallthrough
+	case "deduction":
+		*e = ListHrisPayslipsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListHrisPayslipsQueryParamFields: %v", v)
+	}
+}
+
 type ListHrisPayslipsRequest struct {
-	// The company ID to filter by
+	// The company ID to filter by (reference to HrisCompany)
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListHrisPayslipsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -42,7 +109,7 @@ func (l *ListHrisPayslipsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListHrisPayslipsRequest) GetFields() []string {
+func (l *ListHrisPayslipsRequest) GetFields() []ListHrisPayslipsQueryParamFields {
 	if l == nil {
 		return nil
 	}

@@ -25,7 +25,7 @@ type ListUnifiedApicallsRequest struct {
 	Sort       *string  `queryParam:"style=form,explode=true,name=sort"`
 	// Filter the results to just this type
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// Filter the results to just this webhook
 	WebhookID *string `queryParam:"style=form,explode=true,name=webhook_id"`

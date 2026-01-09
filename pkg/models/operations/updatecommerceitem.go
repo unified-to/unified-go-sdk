@@ -3,16 +3,101 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateCommerceItemQueryParamFields string
+
+const (
+	UpdateCommerceItemQueryParamFieldsID                UpdateCommerceItemQueryParamFields = "id"
+	UpdateCommerceItemQueryParamFieldsCreatedAt         UpdateCommerceItemQueryParamFields = "created_at"
+	UpdateCommerceItemQueryParamFieldsUpdatedAt         UpdateCommerceItemQueryParamFields = "updated_at"
+	UpdateCommerceItemQueryParamFieldsName              UpdateCommerceItemQueryParamFields = "name"
+	UpdateCommerceItemQueryParamFieldsPublicName        UpdateCommerceItemQueryParamFields = "public_name"
+	UpdateCommerceItemQueryParamFieldsSlug              UpdateCommerceItemQueryParamFields = "slug"
+	UpdateCommerceItemQueryParamFieldsDescription       UpdateCommerceItemQueryParamFields = "description"
+	UpdateCommerceItemQueryParamFieldsGlobalCode        UpdateCommerceItemQueryParamFields = "global_code"
+	UpdateCommerceItemQueryParamFieldsPublicDescription UpdateCommerceItemQueryParamFields = "public_description"
+	UpdateCommerceItemQueryParamFieldsIsActive          UpdateCommerceItemQueryParamFields = "is_active"
+	UpdateCommerceItemQueryParamFieldsIsTaxable         UpdateCommerceItemQueryParamFields = "is_taxable"
+	UpdateCommerceItemQueryParamFieldsVendorName        UpdateCommerceItemQueryParamFields = "vendor_name"
+	UpdateCommerceItemQueryParamFieldsType              UpdateCommerceItemQueryParamFields = "type"
+	UpdateCommerceItemQueryParamFieldsVariants          UpdateCommerceItemQueryParamFields = "variants"
+	UpdateCommerceItemQueryParamFieldsTags              UpdateCommerceItemQueryParamFields = "tags"
+	UpdateCommerceItemQueryParamFieldsMedia             UpdateCommerceItemQueryParamFields = "media"
+	UpdateCommerceItemQueryParamFieldsCollectionIds     UpdateCommerceItemQueryParamFields = "collection_ids"
+	UpdateCommerceItemQueryParamFieldsAccountID         UpdateCommerceItemQueryParamFields = "account_id"
+	UpdateCommerceItemQueryParamFieldsMetadata          UpdateCommerceItemQueryParamFields = "metadata"
+	UpdateCommerceItemQueryParamFieldsRaw               UpdateCommerceItemQueryParamFields = "raw"
+	UpdateCommerceItemQueryParamFieldsCollections       UpdateCommerceItemQueryParamFields = "collections"
+)
+
+func (e UpdateCommerceItemQueryParamFields) ToPointer() *UpdateCommerceItemQueryParamFields {
+	return &e
+}
+func (e *UpdateCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "public_name":
+		fallthrough
+	case "slug":
+		fallthrough
+	case "description":
+		fallthrough
+	case "global_code":
+		fallthrough
+	case "public_description":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_taxable":
+		fallthrough
+	case "vendor_name":
+		fallthrough
+	case "type":
+		fallthrough
+	case "variants":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "media":
+		fallthrough
+	case "collection_ids":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		fallthrough
+	case "collections":
+		*e = UpdateCommerceItemQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateCommerceItemQueryParamFields: %v", v)
+	}
+}
 
 type UpdateCommerceItemRequest struct {
 	CommerceItem shared.CommerceItem `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateCommerceItemQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Item
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +118,7 @@ func (u *UpdateCommerceItemRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateCommerceItemRequest) GetFields() []string {
+func (u *UpdateCommerceItemRequest) GetFields() []UpdateCommerceItemQueryParamFields {
 	if u == nil {
 		return nil
 	}

@@ -3,9 +3,73 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateHrisDeductionQueryParamFields string
+
+const (
+	UpdateHrisDeductionQueryParamFieldsID            UpdateHrisDeductionQueryParamFields = "id"
+	UpdateHrisDeductionQueryParamFieldsCreatedAt     UpdateHrisDeductionQueryParamFields = "created_at"
+	UpdateHrisDeductionQueryParamFieldsUpdatedAt     UpdateHrisDeductionQueryParamFields = "updated_at"
+	UpdateHrisDeductionQueryParamFieldsUserID        UpdateHrisDeductionQueryParamFields = "user_id"
+	UpdateHrisDeductionQueryParamFieldsCompanyID     UpdateHrisDeductionQueryParamFields = "company_id"
+	UpdateHrisDeductionQueryParamFieldsBenefitID     UpdateHrisDeductionQueryParamFields = "benefit_id"
+	UpdateHrisDeductionQueryParamFieldsAmount        UpdateHrisDeductionQueryParamFields = "amount"
+	UpdateHrisDeductionQueryParamFieldsType          UpdateHrisDeductionQueryParamFields = "type"
+	UpdateHrisDeductionQueryParamFieldsCoverageLevel UpdateHrisDeductionQueryParamFields = "coverage_level"
+	UpdateHrisDeductionQueryParamFieldsFrequency     UpdateHrisDeductionQueryParamFields = "frequency"
+	UpdateHrisDeductionQueryParamFieldsStartAt       UpdateHrisDeductionQueryParamFields = "start_at"
+	UpdateHrisDeductionQueryParamFieldsEndAt         UpdateHrisDeductionQueryParamFields = "end_at"
+	UpdateHrisDeductionQueryParamFieldsIsActive      UpdateHrisDeductionQueryParamFields = "is_active"
+	UpdateHrisDeductionQueryParamFieldsRaw           UpdateHrisDeductionQueryParamFields = "raw"
+)
+
+func (e UpdateHrisDeductionQueryParamFields) ToPointer() *UpdateHrisDeductionQueryParamFields {
+	return &e
+}
+func (e *UpdateHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "benefit_id":
+		fallthrough
+	case "amount":
+		fallthrough
+	case "type":
+		fallthrough
+	case "coverage_level":
+		fallthrough
+	case "frequency":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "raw":
+		*e = UpdateHrisDeductionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateHrisDeductionQueryParamFields: %v", v)
+	}
+}
 
 type UpdateHrisDeductionRequest struct {
 	// Employee-specific deduction/benefit enrolment.
@@ -13,7 +77,7 @@ type UpdateHrisDeductionRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateHrisDeductionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Deduction
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +98,7 @@ func (u *UpdateHrisDeductionRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateHrisDeductionRequest) GetFields() []string {
+func (u *UpdateHrisDeductionRequest) GetFields() []UpdateHrisDeductionQueryParamFields {
 	if u == nil {
 		return nil
 	}

@@ -3,9 +3,61 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchMartechListQueryParamFields string
+
+const (
+	PatchMartechListQueryParamFieldsID          PatchMartechListQueryParamFields = "id"
+	PatchMartechListQueryParamFieldsCreatedAt   PatchMartechListQueryParamFields = "created_at"
+	PatchMartechListQueryParamFieldsUpdatedAt   PatchMartechListQueryParamFields = "updated_at"
+	PatchMartechListQueryParamFieldsName        PatchMartechListQueryParamFields = "name"
+	PatchMartechListQueryParamFieldsDescription PatchMartechListQueryParamFields = "description"
+	PatchMartechListQueryParamFieldsStartAt     PatchMartechListQueryParamFields = "start_at"
+	PatchMartechListQueryParamFieldsEndAt       PatchMartechListQueryParamFields = "end_at"
+	PatchMartechListQueryParamFieldsUserID      PatchMartechListQueryParamFields = "user_id"
+	PatchMartechListQueryParamFieldsIsActive    PatchMartechListQueryParamFields = "is_active"
+	PatchMartechListQueryParamFieldsRaw         PatchMartechListQueryParamFields = "raw"
+)
+
+func (e PatchMartechListQueryParamFields) ToPointer() *PatchMartechListQueryParamFields {
+	return &e
+}
+func (e *PatchMartechListQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "raw":
+		*e = PatchMartechListQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchMartechListQueryParamFields: %v", v)
+	}
+}
 
 type PatchMartechListRequest struct {
 	// Mailing List
@@ -13,7 +65,7 @@ type PatchMartechListRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchMartechListQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the List
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +86,7 @@ func (p *PatchMartechListRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchMartechListRequest) GetFields() []string {
+func (p *PatchMartechListRequest) GetFields() []PatchMartechListQueryParamFields {
 	if p == nil {
 		return nil
 	}

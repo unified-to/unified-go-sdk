@@ -3,26 +3,168 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListHrisEmployeesQueryParamFields string
+
+const (
+	ListHrisEmployeesQueryParamFieldsID                    ListHrisEmployeesQueryParamFields = "id"
+	ListHrisEmployeesQueryParamFieldsCreatedAt             ListHrisEmployeesQueryParamFields = "created_at"
+	ListHrisEmployeesQueryParamFieldsUpdatedAt             ListHrisEmployeesQueryParamFields = "updated_at"
+	ListHrisEmployeesQueryParamFieldsName                  ListHrisEmployeesQueryParamFields = "name"
+	ListHrisEmployeesQueryParamFieldsFirstName             ListHrisEmployeesQueryParamFields = "first_name"
+	ListHrisEmployeesQueryParamFieldsLastName              ListHrisEmployeesQueryParamFields = "last_name"
+	ListHrisEmployeesQueryParamFieldsEmails                ListHrisEmployeesQueryParamFields = "emails"
+	ListHrisEmployeesQueryParamFieldsTitle                 ListHrisEmployeesQueryParamFields = "title"
+	ListHrisEmployeesQueryParamFieldsManagerID             ListHrisEmployeesQueryParamFields = "manager_id"
+	ListHrisEmployeesQueryParamFieldsEmploymentStatus      ListHrisEmployeesQueryParamFields = "employment_status"
+	ListHrisEmployeesQueryParamFieldsGender                ListHrisEmployeesQueryParamFields = "gender"
+	ListHrisEmployeesQueryParamFieldsTelephones            ListHrisEmployeesQueryParamFields = "telephones"
+	ListHrisEmployeesQueryParamFieldsDateOfBirth           ListHrisEmployeesQueryParamFields = "date_of_birth"
+	ListHrisEmployeesQueryParamFieldsEmployeeNumber        ListHrisEmployeesQueryParamFields = "employee_number"
+	ListHrisEmployeesQueryParamFieldsHiredAt               ListHrisEmployeesQueryParamFields = "hired_at"
+	ListHrisEmployeesQueryParamFieldsTerminatedAt          ListHrisEmployeesQueryParamFields = "terminated_at"
+	ListHrisEmployeesQueryParamFieldsTerminationReason     ListHrisEmployeesQueryParamFields = "termination_reason"
+	ListHrisEmployeesQueryParamFieldsMaritalStatus         ListHrisEmployeesQueryParamFields = "marital_status"
+	ListHrisEmployeesQueryParamFieldsEmploymentType        ListHrisEmployeesQueryParamFields = "employment_type"
+	ListHrisEmployeesQueryParamFieldsAddress               ListHrisEmployeesQueryParamFields = "address"
+	ListHrisEmployeesQueryParamFieldsLanguageLocale        ListHrisEmployeesQueryParamFields = "language_locale"
+	ListHrisEmployeesQueryParamFieldsCurrency              ListHrisEmployeesQueryParamFields = "currency"
+	ListHrisEmployeesQueryParamFieldsTimezone              ListHrisEmployeesQueryParamFields = "timezone"
+	ListHrisEmployeesQueryParamFieldsImageURL              ListHrisEmployeesQueryParamFields = "image_url"
+	ListHrisEmployeesQueryParamFieldsCompanyID             ListHrisEmployeesQueryParamFields = "company_id"
+	ListHrisEmployeesQueryParamFieldsPronouns              ListHrisEmployeesQueryParamFields = "pronouns"
+	ListHrisEmployeesQueryParamFieldsEmployeeRoles         ListHrisEmployeesQueryParamFields = "employee_roles"
+	ListHrisEmployeesQueryParamFieldsCompensation          ListHrisEmployeesQueryParamFields = "compensation"
+	ListHrisEmployeesQueryParamFieldsSalutation            ListHrisEmployeesQueryParamFields = "salutation"
+	ListHrisEmployeesQueryParamFieldsBio                   ListHrisEmployeesQueryParamFields = "bio"
+	ListHrisEmployeesQueryParamFieldsSsnSin                ListHrisEmployeesQueryParamFields = "ssn_sin"
+	ListHrisEmployeesQueryParamFieldsGroups                ListHrisEmployeesQueryParamFields = "groups"
+	ListHrisEmployeesQueryParamFieldsLocations             ListHrisEmployeesQueryParamFields = "locations"
+	ListHrisEmployeesQueryParamFieldsMetadata              ListHrisEmployeesQueryParamFields = "metadata"
+	ListHrisEmployeesQueryParamFieldsStorageQuotaAllocated ListHrisEmployeesQueryParamFields = "storage_quota_allocated"
+	ListHrisEmployeesQueryParamFieldsStorageQuotaUsed      ListHrisEmployeesQueryParamFields = "storage_quota_used"
+	ListHrisEmployeesQueryParamFieldsStorageQuotaAvailable ListHrisEmployeesQueryParamFields = "storage_quota_available"
+	ListHrisEmployeesQueryParamFieldsRelationships         ListHrisEmployeesQueryParamFields = "relationships"
+	ListHrisEmployeesQueryParamFieldsHasMfa                ListHrisEmployeesQueryParamFields = "has_mfa"
+	ListHrisEmployeesQueryParamFieldsRaw                   ListHrisEmployeesQueryParamFields = "raw"
+)
+
+func (e ListHrisEmployeesQueryParamFields) ToPointer() *ListHrisEmployeesQueryParamFields {
+	return &e
+}
+func (e *ListHrisEmployeesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "title":
+		fallthrough
+	case "manager_id":
+		fallthrough
+	case "employment_status":
+		fallthrough
+	case "gender":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "date_of_birth":
+		fallthrough
+	case "employee_number":
+		fallthrough
+	case "hired_at":
+		fallthrough
+	case "terminated_at":
+		fallthrough
+	case "termination_reason":
+		fallthrough
+	case "marital_status":
+		fallthrough
+	case "employment_type":
+		fallthrough
+	case "address":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "pronouns":
+		fallthrough
+	case "employee_roles":
+		fallthrough
+	case "compensation":
+		fallthrough
+	case "salutation":
+		fallthrough
+	case "bio":
+		fallthrough
+	case "ssn_sin":
+		fallthrough
+	case "groups":
+		fallthrough
+	case "locations":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "storage_quota_allocated":
+		fallthrough
+	case "storage_quota_used":
+		fallthrough
+	case "storage_quota_available":
+		fallthrough
+	case "relationships":
+		fallthrough
+	case "has_mfa":
+		fallthrough
+	case "raw":
+		*e = ListHrisEmployeesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListHrisEmployeesQueryParamFields: %v", v)
+	}
+}
+
 type ListHrisEmployeesRequest struct {
-	// The company ID to filter by
+	// The company ID to filter by (reference to HrisCompany)
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListHrisEmployeesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                            `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                            `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                             `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -40,7 +182,7 @@ func (l *ListHrisEmployeesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListHrisEmployeesRequest) GetFields() []string {
+func (l *ListHrisEmployeesRequest) GetFields() []ListHrisEmployeesQueryParamFields {
 	if l == nil {
 		return nil
 	}

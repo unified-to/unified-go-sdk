@@ -3,9 +3,85 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateAccountingAccountQueryParamFields string
+
+const (
+	UpdateAccountingAccountQueryParamFieldsID                  UpdateAccountingAccountQueryParamFields = "id"
+	UpdateAccountingAccountQueryParamFieldsCreatedAt           UpdateAccountingAccountQueryParamFields = "created_at"
+	UpdateAccountingAccountQueryParamFieldsUpdatedAt           UpdateAccountingAccountQueryParamFields = "updated_at"
+	UpdateAccountingAccountQueryParamFieldsName                UpdateAccountingAccountQueryParamFields = "name"
+	UpdateAccountingAccountQueryParamFieldsDescription         UpdateAccountingAccountQueryParamFields = "description"
+	UpdateAccountingAccountQueryParamFieldsType                UpdateAccountingAccountQueryParamFields = "type"
+	UpdateAccountingAccountQueryParamFieldsStatus              UpdateAccountingAccountQueryParamFields = "status"
+	UpdateAccountingAccountQueryParamFieldsBalance             UpdateAccountingAccountQueryParamFields = "balance"
+	UpdateAccountingAccountQueryParamFieldsCurrency            UpdateAccountingAccountQueryParamFields = "currency"
+	UpdateAccountingAccountQueryParamFieldsCustomerDefinedCode UpdateAccountingAccountQueryParamFields = "customer_defined_code"
+	UpdateAccountingAccountQueryParamFieldsIsPayable           UpdateAccountingAccountQueryParamFields = "is_payable"
+	UpdateAccountingAccountQueryParamFieldsParentAccountID     UpdateAccountingAccountQueryParamFields = "parent_account_id"
+	UpdateAccountingAccountQueryParamFieldsSection             UpdateAccountingAccountQueryParamFields = "section"
+	UpdateAccountingAccountQueryParamFieldsSubsection          UpdateAccountingAccountQueryParamFields = "subsection"
+	UpdateAccountingAccountQueryParamFieldsGroup               UpdateAccountingAccountQueryParamFields = "group"
+	UpdateAccountingAccountQueryParamFieldsSubgroup            UpdateAccountingAccountQueryParamFields = "subgroup"
+	UpdateAccountingAccountQueryParamFieldsParentID            UpdateAccountingAccountQueryParamFields = "parent_id"
+	UpdateAccountingAccountQueryParamFieldsRaw                 UpdateAccountingAccountQueryParamFields = "raw"
+)
+
+func (e UpdateAccountingAccountQueryParamFields) ToPointer() *UpdateAccountingAccountQueryParamFields {
+	return &e
+}
+func (e *UpdateAccountingAccountQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "type":
+		fallthrough
+	case "status":
+		fallthrough
+	case "balance":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "customer_defined_code":
+		fallthrough
+	case "is_payable":
+		fallthrough
+	case "parent_account_id":
+		fallthrough
+	case "section":
+		fallthrough
+	case "subsection":
+		fallthrough
+	case "group":
+		fallthrough
+	case "subgroup":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = UpdateAccountingAccountQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateAccountingAccountQueryParamFields: %v", v)
+	}
+}
 
 type UpdateAccountingAccountRequest struct {
 	// Chart of accounts
@@ -13,7 +89,7 @@ type UpdateAccountingAccountRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateAccountingAccountQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Account
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +110,7 @@ func (u *UpdateAccountingAccountRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateAccountingAccountRequest) GetFields() []string {
+func (u *UpdateAccountingAccountRequest) GetFields() []UpdateAccountingAccountQueryParamFields {
 	if u == nil {
 		return nil
 	}

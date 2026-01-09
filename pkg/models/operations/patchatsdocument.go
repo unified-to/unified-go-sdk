@@ -3,16 +3,74 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchAtsDocumentQueryParamFields string
+
+const (
+	PatchAtsDocumentQueryParamFieldsID            PatchAtsDocumentQueryParamFields = "id"
+	PatchAtsDocumentQueryParamFieldsCreatedAt     PatchAtsDocumentQueryParamFields = "created_at"
+	PatchAtsDocumentQueryParamFieldsUpdatedAt     PatchAtsDocumentQueryParamFields = "updated_at"
+	PatchAtsDocumentQueryParamFieldsDocumentURL   PatchAtsDocumentQueryParamFields = "document_url"
+	PatchAtsDocumentQueryParamFieldsDocumentData  PatchAtsDocumentQueryParamFields = "document_data"
+	PatchAtsDocumentQueryParamFieldsFilename      PatchAtsDocumentQueryParamFields = "filename"
+	PatchAtsDocumentQueryParamFieldsType          PatchAtsDocumentQueryParamFields = "type"
+	PatchAtsDocumentQueryParamFieldsCandidateID   PatchAtsDocumentQueryParamFields = "candidate_id"
+	PatchAtsDocumentQueryParamFieldsApplicationID PatchAtsDocumentQueryParamFields = "application_id"
+	PatchAtsDocumentQueryParamFieldsJobID         PatchAtsDocumentQueryParamFields = "job_id"
+	PatchAtsDocumentQueryParamFieldsUserID        PatchAtsDocumentQueryParamFields = "user_id"
+	PatchAtsDocumentQueryParamFieldsRaw           PatchAtsDocumentQueryParamFields = "raw"
+)
+
+func (e PatchAtsDocumentQueryParamFields) ToPointer() *PatchAtsDocumentQueryParamFields {
+	return &e
+}
+func (e *PatchAtsDocumentQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "document_url":
+		fallthrough
+	case "document_data":
+		fallthrough
+	case "filename":
+		fallthrough
+	case "type":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "application_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "raw":
+		*e = PatchAtsDocumentQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchAtsDocumentQueryParamFields: %v", v)
+	}
+}
 
 type PatchAtsDocumentRequest struct {
 	AtsDocument shared.AtsDocument `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchAtsDocumentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Document
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +91,7 @@ func (p *PatchAtsDocumentRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchAtsDocumentRequest) GetFields() []string {
+func (p *PatchAtsDocumentRequest) GetFields() []PatchAtsDocumentQueryParamFields {
 	if p == nil {
 		return nil
 	}

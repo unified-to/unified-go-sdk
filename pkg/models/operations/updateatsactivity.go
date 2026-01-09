@@ -3,16 +3,95 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateAtsActivityQueryParamFields string
+
+const (
+	UpdateAtsActivityQueryParamFieldsID            UpdateAtsActivityQueryParamFields = "id"
+	UpdateAtsActivityQueryParamFieldsCreatedAt     UpdateAtsActivityQueryParamFields = "created_at"
+	UpdateAtsActivityQueryParamFieldsUpdatedAt     UpdateAtsActivityQueryParamFields = "updated_at"
+	UpdateAtsActivityQueryParamFieldsCandidateID   UpdateAtsActivityQueryParamFields = "candidate_id"
+	UpdateAtsActivityQueryParamFieldsApplicationID UpdateAtsActivityQueryParamFields = "application_id"
+	UpdateAtsActivityQueryParamFieldsJobID         UpdateAtsActivityQueryParamFields = "job_id"
+	UpdateAtsActivityQueryParamFieldsInterviewID   UpdateAtsActivityQueryParamFields = "interview_id"
+	UpdateAtsActivityQueryParamFieldsDocumentIds   UpdateAtsActivityQueryParamFields = "document_ids"
+	UpdateAtsActivityQueryParamFieldsTitle         UpdateAtsActivityQueryParamFields = "title"
+	UpdateAtsActivityQueryParamFieldsDescription   UpdateAtsActivityQueryParamFields = "description"
+	UpdateAtsActivityQueryParamFieldsIsPrivate     UpdateAtsActivityQueryParamFields = "is_private"
+	UpdateAtsActivityQueryParamFieldsUserIds       UpdateAtsActivityQueryParamFields = "user_ids"
+	UpdateAtsActivityQueryParamFieldsType          UpdateAtsActivityQueryParamFields = "type"
+	UpdateAtsActivityQueryParamFieldsFrom          UpdateAtsActivityQueryParamFields = "from"
+	UpdateAtsActivityQueryParamFieldsTo            UpdateAtsActivityQueryParamFields = "to"
+	UpdateAtsActivityQueryParamFieldsCc            UpdateAtsActivityQueryParamFields = "cc"
+	UpdateAtsActivityQueryParamFieldsBcc           UpdateAtsActivityQueryParamFields = "bcc"
+	UpdateAtsActivityQueryParamFieldsSubType       UpdateAtsActivityQueryParamFields = "sub_type"
+	UpdateAtsActivityQueryParamFieldsRaw           UpdateAtsActivityQueryParamFields = "raw"
+)
+
+func (e UpdateAtsActivityQueryParamFields) ToPointer() *UpdateAtsActivityQueryParamFields {
+	return &e
+}
+func (e *UpdateAtsActivityQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "application_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "interview_id":
+		fallthrough
+	case "document_ids":
+		fallthrough
+	case "title":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "type":
+		fallthrough
+	case "from":
+		fallthrough
+	case "to":
+		fallthrough
+	case "cc":
+		fallthrough
+	case "bcc":
+		fallthrough
+	case "sub_type":
+		fallthrough
+	case "raw":
+		*e = UpdateAtsActivityQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateAtsActivityQueryParamFields: %v", v)
+	}
+}
 
 type UpdateAtsActivityRequest struct {
 	AtsActivity shared.AtsActivity `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateAtsActivityQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Activity
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +112,7 @@ func (u *UpdateAtsActivityRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateAtsActivityRequest) GetFields() []string {
+func (u *UpdateAtsActivityRequest) GetFields() []UpdateAtsActivityQueryParamFields {
 	if u == nil {
 		return nil
 	}

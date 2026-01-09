@@ -3,16 +3,74 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdatePaymentPaymentQueryParamFields string
+
+const (
+	UpdatePaymentPaymentQueryParamFieldsID            UpdatePaymentPaymentQueryParamFields = "id"
+	UpdatePaymentPaymentQueryParamFieldsCreatedAt     UpdatePaymentPaymentQueryParamFields = "created_at"
+	UpdatePaymentPaymentQueryParamFieldsUpdatedAt     UpdatePaymentPaymentQueryParamFields = "updated_at"
+	UpdatePaymentPaymentQueryParamFieldsTotalAmount   UpdatePaymentPaymentQueryParamFields = "total_amount"
+	UpdatePaymentPaymentQueryParamFieldsContactID     UpdatePaymentPaymentQueryParamFields = "contact_id"
+	UpdatePaymentPaymentQueryParamFieldsPaymentMethod UpdatePaymentPaymentQueryParamFields = "payment_method"
+	UpdatePaymentPaymentQueryParamFieldsCurrency      UpdatePaymentPaymentQueryParamFields = "currency"
+	UpdatePaymentPaymentQueryParamFieldsNotes         UpdatePaymentPaymentQueryParamFields = "notes"
+	UpdatePaymentPaymentQueryParamFieldsInvoiceID     UpdatePaymentPaymentQueryParamFields = "invoice_id"
+	UpdatePaymentPaymentQueryParamFieldsAccountID     UpdatePaymentPaymentQueryParamFields = "account_id"
+	UpdatePaymentPaymentQueryParamFieldsReference     UpdatePaymentPaymentQueryParamFields = "reference"
+	UpdatePaymentPaymentQueryParamFieldsRaw           UpdatePaymentPaymentQueryParamFields = "raw"
+)
+
+func (e UpdatePaymentPaymentQueryParamFields) ToPointer() *UpdatePaymentPaymentQueryParamFields {
+	return &e
+}
+func (e *UpdatePaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "payment_method":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "invoice_id":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "raw":
+		*e = UpdatePaymentPaymentQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdatePaymentPaymentQueryParamFields: %v", v)
+	}
+}
 
 type UpdatePaymentPaymentRequest struct {
 	PaymentPayment shared.PaymentPayment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdatePaymentPaymentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Payment
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +91,7 @@ func (u *UpdatePaymentPaymentRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdatePaymentPaymentRequest) GetFields() []string {
+func (u *UpdatePaymentPaymentRequest) GetFields() []UpdatePaymentPaymentQueryParamFields {
 	if u == nil {
 		return nil
 	}

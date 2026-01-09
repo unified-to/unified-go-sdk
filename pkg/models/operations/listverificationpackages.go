@@ -3,24 +3,100 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListVerificationPackagesQueryParamFields string
+
+const (
+	ListVerificationPackagesQueryParamFieldsID                     ListVerificationPackagesQueryParamFields = "id"
+	ListVerificationPackagesQueryParamFieldsCreatedAt              ListVerificationPackagesQueryParamFields = "created_at"
+	ListVerificationPackagesQueryParamFieldsUpdatedAt              ListVerificationPackagesQueryParamFields = "updated_at"
+	ListVerificationPackagesQueryParamFieldsName                   ListVerificationPackagesQueryParamFields = "name"
+	ListVerificationPackagesQueryParamFieldsType                   ListVerificationPackagesQueryParamFields = "type"
+	ListVerificationPackagesQueryParamFieldsAliases                ListVerificationPackagesQueryParamFields = "aliases"
+	ListVerificationPackagesQueryParamFieldsTags                   ListVerificationPackagesQueryParamFields = "tags"
+	ListVerificationPackagesQueryParamFieldsDescription            ListVerificationPackagesQueryParamFields = "description"
+	ListVerificationPackagesQueryParamFieldsParameters             ListVerificationPackagesQueryParamFields = "parameters"
+	ListVerificationPackagesQueryParamFieldsAverageProcessingTimes ListVerificationPackagesQueryParamFields = "average_processing_times"
+	ListVerificationPackagesQueryParamFieldsHasRedirectURL         ListVerificationPackagesQueryParamFields = "has_redirect_url"
+	ListVerificationPackagesQueryParamFieldsHasTargetURL           ListVerificationPackagesQueryParamFields = "has_target_url"
+	ListVerificationPackagesQueryParamFieldsNeedsIPAddress         ListVerificationPackagesQueryParamFields = "needs_ip_address"
+	ListVerificationPackagesQueryParamFieldsCostAmount             ListVerificationPackagesQueryParamFields = "cost_amount"
+	ListVerificationPackagesQueryParamFieldsCurrency               ListVerificationPackagesQueryParamFields = "currency"
+	ListVerificationPackagesQueryParamFieldsMaxScore               ListVerificationPackagesQueryParamFields = "max_score"
+	ListVerificationPackagesQueryParamFieldsInfoURL                ListVerificationPackagesQueryParamFields = "info_url"
+	ListVerificationPackagesQueryParamFieldsRaw                    ListVerificationPackagesQueryParamFields = "raw"
+)
+
+func (e ListVerificationPackagesQueryParamFields) ToPointer() *ListVerificationPackagesQueryParamFields {
+	return &e
+}
+func (e *ListVerificationPackagesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "type":
+		fallthrough
+	case "aliases":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parameters":
+		fallthrough
+	case "average_processing_times":
+		fallthrough
+	case "has_redirect_url":
+		fallthrough
+	case "has_target_url":
+		fallthrough
+	case "needs_ip_address":
+		fallthrough
+	case "cost_amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "max_score":
+		fallthrough
+	case "info_url":
+		fallthrough
+	case "raw":
+		*e = ListVerificationPackagesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListVerificationPackagesQueryParamFields: %v", v)
+	}
+}
 
 type ListVerificationPackagesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListVerificationPackagesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                   `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                   `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                    `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -31,7 +107,7 @@ func (l *ListVerificationPackagesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListVerificationPackagesRequest) GetFields() []string {
+func (l *ListVerificationPackagesRequest) GetFields() []ListVerificationPackagesQueryParamFields {
 	if l == nil {
 		return nil
 	}

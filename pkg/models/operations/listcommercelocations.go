@@ -3,24 +3,79 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListCommerceLocationsQueryParamFields string
+
+const (
+	ListCommerceLocationsQueryParamFieldsID             ListCommerceLocationsQueryParamFields = "id"
+	ListCommerceLocationsQueryParamFieldsCreatedAt      ListCommerceLocationsQueryParamFields = "created_at"
+	ListCommerceLocationsQueryParamFieldsUpdatedAt      ListCommerceLocationsQueryParamFields = "updated_at"
+	ListCommerceLocationsQueryParamFieldsName           ListCommerceLocationsQueryParamFields = "name"
+	ListCommerceLocationsQueryParamFieldsAddress        ListCommerceLocationsQueryParamFields = "address"
+	ListCommerceLocationsQueryParamFieldsDescription    ListCommerceLocationsQueryParamFields = "description"
+	ListCommerceLocationsQueryParamFieldsIsActive       ListCommerceLocationsQueryParamFields = "is_active"
+	ListCommerceLocationsQueryParamFieldsLanguageLocale ListCommerceLocationsQueryParamFields = "language_locale"
+	ListCommerceLocationsQueryParamFieldsParentID       ListCommerceLocationsQueryParamFields = "parent_id"
+	ListCommerceLocationsQueryParamFieldsCurrency       ListCommerceLocationsQueryParamFields = "currency"
+	ListCommerceLocationsQueryParamFieldsRaw            ListCommerceLocationsQueryParamFields = "raw"
+)
+
+func (e ListCommerceLocationsQueryParamFields) ToPointer() *ListCommerceLocationsQueryParamFields {
+	return &e
+}
+func (e *ListCommerceLocationsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "address":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "raw":
+		*e = ListCommerceLocationsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCommerceLocationsQueryParamFields: %v", v)
+	}
+}
 
 type ListCommerceLocationsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListCommerceLocationsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                 `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -31,7 +86,7 @@ func (l *ListCommerceLocationsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListCommerceLocationsRequest) GetFields() []string {
+func (l *ListCommerceLocationsRequest) GetFields() []ListCommerceLocationsQueryParamFields {
 	if l == nil {
 		return nil
 	}

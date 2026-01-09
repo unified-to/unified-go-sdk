@@ -3,15 +3,58 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetHrisCompanyQueryParamFields string
+
+const (
+	GetHrisCompanyQueryParamFieldsID        GetHrisCompanyQueryParamFields = "id"
+	GetHrisCompanyQueryParamFieldsCreatedAt GetHrisCompanyQueryParamFields = "created_at"
+	GetHrisCompanyQueryParamFieldsUpdatedAt GetHrisCompanyQueryParamFields = "updated_at"
+	GetHrisCompanyQueryParamFieldsName      GetHrisCompanyQueryParamFields = "name"
+	GetHrisCompanyQueryParamFieldsLegalName GetHrisCompanyQueryParamFields = "legal_name"
+	GetHrisCompanyQueryParamFieldsAddress   GetHrisCompanyQueryParamFields = "address"
+	GetHrisCompanyQueryParamFieldsRaw       GetHrisCompanyQueryParamFields = "raw"
+)
+
+func (e GetHrisCompanyQueryParamFields) ToPointer() *GetHrisCompanyQueryParamFields {
+	return &e
+}
+func (e *GetHrisCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "legal_name":
+		fallthrough
+	case "address":
+		fallthrough
+	case "raw":
+		*e = GetHrisCompanyQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetHrisCompanyQueryParamFields: %v", v)
+	}
+}
 
 type GetHrisCompanyRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetHrisCompanyQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Company
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +68,7 @@ func (g *GetHrisCompanyRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetHrisCompanyRequest) GetFields() []string {
+func (g *GetHrisCompanyRequest) GetFields() []GetHrisCompanyQueryParamFields {
 	if g == nil {
 		return nil
 	}

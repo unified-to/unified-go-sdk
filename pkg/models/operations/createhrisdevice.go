@@ -3,16 +3,98 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateHrisDeviceQueryParamFields string
+
+const (
+	CreateHrisDeviceQueryParamFieldsID                 CreateHrisDeviceQueryParamFields = "id"
+	CreateHrisDeviceQueryParamFieldsCreatedAt          CreateHrisDeviceQueryParamFields = "created_at"
+	CreateHrisDeviceQueryParamFieldsUpdatedAt          CreateHrisDeviceQueryParamFields = "updated_at"
+	CreateHrisDeviceQueryParamFieldsName               CreateHrisDeviceQueryParamFields = "name"
+	CreateHrisDeviceQueryParamFieldsAssetTag           CreateHrisDeviceQueryParamFields = "asset_tag"
+	CreateHrisDeviceQueryParamFieldsVersion            CreateHrisDeviceQueryParamFields = "version"
+	CreateHrisDeviceQueryParamFieldsManufacturer       CreateHrisDeviceQueryParamFields = "manufacturer"
+	CreateHrisDeviceQueryParamFieldsModel              CreateHrisDeviceQueryParamFields = "model"
+	CreateHrisDeviceQueryParamFieldsOs                 CreateHrisDeviceQueryParamFields = "os"
+	CreateHrisDeviceQueryParamFieldsOsVersion          CreateHrisDeviceQueryParamFields = "os_version"
+	CreateHrisDeviceQueryParamFieldsUserIds            CreateHrisDeviceQueryParamFields = "user_ids"
+	CreateHrisDeviceQueryParamFieldsAdminUserIds       CreateHrisDeviceQueryParamFields = "admin_user_ids"
+	CreateHrisDeviceQueryParamFieldsLocationID         CreateHrisDeviceQueryParamFields = "location_id"
+	CreateHrisDeviceQueryParamFieldsHasAntivirus       CreateHrisDeviceQueryParamFields = "has_antivirus"
+	CreateHrisDeviceQueryParamFieldsHasPasswordManager CreateHrisDeviceQueryParamFields = "has_password_manager"
+	CreateHrisDeviceQueryParamFieldsHasFirewall        CreateHrisDeviceQueryParamFields = "has_firewall"
+	CreateHrisDeviceQueryParamFieldsHasHdEncrypted     CreateHrisDeviceQueryParamFields = "has_hd_encrypted"
+	CreateHrisDeviceQueryParamFieldsHasScreenlock      CreateHrisDeviceQueryParamFields = "has_screenlock"
+	CreateHrisDeviceQueryParamFieldsIsMissing          CreateHrisDeviceQueryParamFields = "is_missing"
+	CreateHrisDeviceQueryParamFieldsRaw                CreateHrisDeviceQueryParamFields = "raw"
+)
+
+func (e CreateHrisDeviceQueryParamFields) ToPointer() *CreateHrisDeviceQueryParamFields {
+	return &e
+}
+func (e *CreateHrisDeviceQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "asset_tag":
+		fallthrough
+	case "version":
+		fallthrough
+	case "manufacturer":
+		fallthrough
+	case "model":
+		fallthrough
+	case "os":
+		fallthrough
+	case "os_version":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "admin_user_ids":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "has_antivirus":
+		fallthrough
+	case "has_password_manager":
+		fallthrough
+	case "has_firewall":
+		fallthrough
+	case "has_hd_encrypted":
+		fallthrough
+	case "has_screenlock":
+		fallthrough
+	case "is_missing":
+		fallthrough
+	case "raw":
+		*e = CreateHrisDeviceQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateHrisDeviceQueryParamFields: %v", v)
+	}
+}
 
 type CreateHrisDeviceRequest struct {
 	HrisDevice shared.HrisDevice `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateHrisDeviceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +113,7 @@ func (c *CreateHrisDeviceRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateHrisDeviceRequest) GetFields() []string {
+func (c *CreateHrisDeviceRequest) GetFields() []CreateHrisDeviceQueryParamFields {
 	if c == nil {
 		return nil
 	}

@@ -3,15 +3,100 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetCommerceItemQueryParamFields string
+
+const (
+	GetCommerceItemQueryParamFieldsID                GetCommerceItemQueryParamFields = "id"
+	GetCommerceItemQueryParamFieldsCreatedAt         GetCommerceItemQueryParamFields = "created_at"
+	GetCommerceItemQueryParamFieldsUpdatedAt         GetCommerceItemQueryParamFields = "updated_at"
+	GetCommerceItemQueryParamFieldsName              GetCommerceItemQueryParamFields = "name"
+	GetCommerceItemQueryParamFieldsPublicName        GetCommerceItemQueryParamFields = "public_name"
+	GetCommerceItemQueryParamFieldsSlug              GetCommerceItemQueryParamFields = "slug"
+	GetCommerceItemQueryParamFieldsDescription       GetCommerceItemQueryParamFields = "description"
+	GetCommerceItemQueryParamFieldsGlobalCode        GetCommerceItemQueryParamFields = "global_code"
+	GetCommerceItemQueryParamFieldsPublicDescription GetCommerceItemQueryParamFields = "public_description"
+	GetCommerceItemQueryParamFieldsIsActive          GetCommerceItemQueryParamFields = "is_active"
+	GetCommerceItemQueryParamFieldsIsTaxable         GetCommerceItemQueryParamFields = "is_taxable"
+	GetCommerceItemQueryParamFieldsVendorName        GetCommerceItemQueryParamFields = "vendor_name"
+	GetCommerceItemQueryParamFieldsType              GetCommerceItemQueryParamFields = "type"
+	GetCommerceItemQueryParamFieldsVariants          GetCommerceItemQueryParamFields = "variants"
+	GetCommerceItemQueryParamFieldsTags              GetCommerceItemQueryParamFields = "tags"
+	GetCommerceItemQueryParamFieldsMedia             GetCommerceItemQueryParamFields = "media"
+	GetCommerceItemQueryParamFieldsCollectionIds     GetCommerceItemQueryParamFields = "collection_ids"
+	GetCommerceItemQueryParamFieldsAccountID         GetCommerceItemQueryParamFields = "account_id"
+	GetCommerceItemQueryParamFieldsMetadata          GetCommerceItemQueryParamFields = "metadata"
+	GetCommerceItemQueryParamFieldsRaw               GetCommerceItemQueryParamFields = "raw"
+	GetCommerceItemQueryParamFieldsCollections       GetCommerceItemQueryParamFields = "collections"
+)
+
+func (e GetCommerceItemQueryParamFields) ToPointer() *GetCommerceItemQueryParamFields {
+	return &e
+}
+func (e *GetCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "public_name":
+		fallthrough
+	case "slug":
+		fallthrough
+	case "description":
+		fallthrough
+	case "global_code":
+		fallthrough
+	case "public_description":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_taxable":
+		fallthrough
+	case "vendor_name":
+		fallthrough
+	case "type":
+		fallthrough
+	case "variants":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "media":
+		fallthrough
+	case "collection_ids":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		fallthrough
+	case "collections":
+		*e = GetCommerceItemQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetCommerceItemQueryParamFields: %v", v)
+	}
+}
 
 type GetCommerceItemRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetCommerceItemQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Item
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +110,7 @@ func (g *GetCommerceItemRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetCommerceItemRequest) GetFields() []string {
+func (g *GetCommerceItemRequest) GetFields() []GetCommerceItemQueryParamFields {
 	if g == nil {
 		return nil
 	}

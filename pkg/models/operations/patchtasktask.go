@@ -3,16 +3,101 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchTaskTaskQueryParamFields string
+
+const (
+	PatchTaskTaskQueryParamFieldsID              PatchTaskTaskQueryParamFields = "id"
+	PatchTaskTaskQueryParamFieldsCreatedAt       PatchTaskTaskQueryParamFields = "created_at"
+	PatchTaskTaskQueryParamFieldsUpdatedAt       PatchTaskTaskQueryParamFields = "updated_at"
+	PatchTaskTaskQueryParamFieldsName            PatchTaskTaskQueryParamFields = "name"
+	PatchTaskTaskQueryParamFieldsProjectID       PatchTaskTaskQueryParamFields = "project_id"
+	PatchTaskTaskQueryParamFieldsParentID        PatchTaskTaskQueryParamFields = "parent_id"
+	PatchTaskTaskQueryParamFieldsCompletedAt     PatchTaskTaskQueryParamFields = "completed_at"
+	PatchTaskTaskQueryParamFieldsStatus          PatchTaskTaskQueryParamFields = "status"
+	PatchTaskTaskQueryParamFieldsNotes           PatchTaskTaskQueryParamFields = "notes"
+	PatchTaskTaskQueryParamFieldsDueAt           PatchTaskTaskQueryParamFields = "due_at"
+	PatchTaskTaskQueryParamFieldsPriority        PatchTaskTaskQueryParamFields = "priority"
+	PatchTaskTaskQueryParamFieldsAssignedUserIds PatchTaskTaskQueryParamFields = "assigned_user_ids"
+	PatchTaskTaskQueryParamFieldsCreatorUserID   PatchTaskTaskQueryParamFields = "creator_user_id"
+	PatchTaskTaskQueryParamFieldsFollowerUserIds PatchTaskTaskQueryParamFields = "follower_user_ids"
+	PatchTaskTaskQueryParamFieldsGroupIds        PatchTaskTaskQueryParamFields = "group_ids"
+	PatchTaskTaskQueryParamFieldsTags            PatchTaskTaskQueryParamFields = "tags"
+	PatchTaskTaskQueryParamFieldsURL             PatchTaskTaskQueryParamFields = "url"
+	PatchTaskTaskQueryParamFieldsAttachmentIds   PatchTaskTaskQueryParamFields = "attachment_ids"
+	PatchTaskTaskQueryParamFieldsMetadata        PatchTaskTaskQueryParamFields = "metadata"
+	PatchTaskTaskQueryParamFieldsHasChildren     PatchTaskTaskQueryParamFields = "has_children"
+	PatchTaskTaskQueryParamFieldsRaw             PatchTaskTaskQueryParamFields = "raw"
+)
+
+func (e PatchTaskTaskQueryParamFields) ToPointer() *PatchTaskTaskQueryParamFields {
+	return &e
+}
+func (e *PatchTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "project_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "completed_at":
+		fallthrough
+	case "status":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "priority":
+		fallthrough
+	case "assigned_user_ids":
+		fallthrough
+	case "creator_user_id":
+		fallthrough
+	case "follower_user_ids":
+		fallthrough
+	case "group_ids":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "url":
+		fallthrough
+	case "attachment_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "raw":
+		*e = PatchTaskTaskQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchTaskTaskQueryParamFields: %v", v)
+	}
+}
 
 type PatchTaskTaskRequest struct {
 	TaskTask shared.TaskTask `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchTaskTaskQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Task
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +118,7 @@ func (p *PatchTaskTaskRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchTaskTaskRequest) GetFields() []string {
+func (p *PatchTaskTaskRequest) GetFields() []PatchTaskTaskQueryParamFields {
 	if p == nil {
 		return nil
 	}

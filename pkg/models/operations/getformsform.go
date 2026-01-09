@@ -3,15 +3,82 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetFormsFormQueryParamFields string
+
+const (
+	GetFormsFormQueryParamFieldsID                      GetFormsFormQueryParamFields = "id"
+	GetFormsFormQueryParamFieldsCreatedAt               GetFormsFormQueryParamFields = "created_at"
+	GetFormsFormQueryParamFieldsUpdatedAt               GetFormsFormQueryParamFields = "updated_at"
+	GetFormsFormQueryParamFieldsName                    GetFormsFormQueryParamFields = "name"
+	GetFormsFormQueryParamFieldsDescription             GetFormsFormQueryParamFields = "description"
+	GetFormsFormQueryParamFieldsFields                  GetFormsFormQueryParamFields = "fields"
+	GetFormsFormQueryParamFieldsIsActive                GetFormsFormQueryParamFields = "is_active"
+	GetFormsFormQueryParamFieldsPublishedURL            GetFormsFormQueryParamFields = "published_url"
+	GetFormsFormQueryParamFieldsResponseCount           GetFormsFormQueryParamFields = "response_count"
+	GetFormsFormQueryParamFieldsHasMultipleSubmissions  GetFormsFormQueryParamFields = "has_multiple_submissions"
+	GetFormsFormQueryParamFieldsHasProgressBar          GetFormsFormQueryParamFields = "has_progress_bar"
+	GetFormsFormQueryParamFieldsHasShuffleQuestions     GetFormsFormQueryParamFields = "has_shuffle_questions"
+	GetFormsFormQueryParamFieldsConfirmationMessage     GetFormsFormQueryParamFields = "confirmation_message"
+	GetFormsFormQueryParamFieldsConfirmationRedirectURL GetFormsFormQueryParamFields = "confirmation_redirect_url"
+	GetFormsFormQueryParamFieldsRaw                     GetFormsFormQueryParamFields = "raw"
+)
+
+func (e GetFormsFormQueryParamFields) ToPointer() *GetFormsFormQueryParamFields {
+	return &e
+}
+func (e *GetFormsFormQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "fields":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "published_url":
+		fallthrough
+	case "response_count":
+		fallthrough
+	case "has_multiple_submissions":
+		fallthrough
+	case "has_progress_bar":
+		fallthrough
+	case "has_shuffle_questions":
+		fallthrough
+	case "confirmation_message":
+		fallthrough
+	case "confirmation_redirect_url":
+		fallthrough
+	case "raw":
+		*e = GetFormsFormQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetFormsFormQueryParamFields: %v", v)
+	}
+}
 
 type GetFormsFormRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetFormsFormQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Form
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +92,7 @@ func (g *GetFormsFormRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetFormsFormRequest) GetFields() []string {
+func (g *GetFormsFormRequest) GetFields() []GetFormsFormQueryParamFields {
 	if g == nil {
 		return nil
 	}

@@ -3,16 +3,68 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateKmsCommentQueryParamFields string
+
+const (
+	UpdateKmsCommentQueryParamFieldsID          UpdateKmsCommentQueryParamFields = "id"
+	UpdateKmsCommentQueryParamFieldsCreatedAt   UpdateKmsCommentQueryParamFields = "created_at"
+	UpdateKmsCommentQueryParamFieldsUpdatedAt   UpdateKmsCommentQueryParamFields = "updated_at"
+	UpdateKmsCommentQueryParamFieldsType        UpdateKmsCommentQueryParamFields = "type"
+	UpdateKmsCommentQueryParamFieldsContentType UpdateKmsCommentQueryParamFields = "content_type"
+	UpdateKmsCommentQueryParamFieldsContent     UpdateKmsCommentQueryParamFields = "content"
+	UpdateKmsCommentQueryParamFieldsUserID      UpdateKmsCommentQueryParamFields = "user_id"
+	UpdateKmsCommentQueryParamFieldsPageID      UpdateKmsCommentQueryParamFields = "page_id"
+	UpdateKmsCommentQueryParamFieldsParentID    UpdateKmsCommentQueryParamFields = "parent_id"
+	UpdateKmsCommentQueryParamFieldsRaw         UpdateKmsCommentQueryParamFields = "raw"
+)
+
+func (e UpdateKmsCommentQueryParamFields) ToPointer() *UpdateKmsCommentQueryParamFields {
+	return &e
+}
+func (e *UpdateKmsCommentQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "type":
+		fallthrough
+	case "content_type":
+		fallthrough
+	case "content":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "page_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = UpdateKmsCommentQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateKmsCommentQueryParamFields: %v", v)
+	}
+}
 
 type UpdateKmsCommentRequest struct {
 	KmsComment shared.KmsComment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateKmsCommentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Comment
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +85,7 @@ func (u *UpdateKmsCommentRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateKmsCommentRequest) GetFields() []string {
+func (u *UpdateKmsCommentRequest) GetFields() []UpdateKmsCommentQueryParamFields {
 	if u == nil {
 		return nil
 	}

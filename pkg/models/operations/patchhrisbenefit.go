@@ -3,9 +3,79 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchHrisBenefitQueryParamFields string
+
+const (
+	PatchHrisBenefitQueryParamFieldsID                            PatchHrisBenefitQueryParamFields = "id"
+	PatchHrisBenefitQueryParamFieldsCreatedAt                     PatchHrisBenefitQueryParamFields = "created_at"
+	PatchHrisBenefitQueryParamFieldsUpdatedAt                     PatchHrisBenefitQueryParamFields = "updated_at"
+	PatchHrisBenefitQueryParamFieldsName                          PatchHrisBenefitQueryParamFields = "name"
+	PatchHrisBenefitQueryParamFieldsDescription                   PatchHrisBenefitQueryParamFields = "description"
+	PatchHrisBenefitQueryParamFieldsCompanyID                     PatchHrisBenefitQueryParamFields = "company_id"
+	PatchHrisBenefitQueryParamFieldsType                          PatchHrisBenefitQueryParamFields = "type"
+	PatchHrisBenefitQueryParamFieldsTax                           PatchHrisBenefitQueryParamFields = "tax"
+	PatchHrisBenefitQueryParamFieldsFrequency                     PatchHrisBenefitQueryParamFields = "frequency"
+	PatchHrisBenefitQueryParamFieldsIsActive                      PatchHrisBenefitQueryParamFields = "is_active"
+	PatchHrisBenefitQueryParamFieldsEmployerContributionType      PatchHrisBenefitQueryParamFields = "employer_contribution_type"
+	PatchHrisBenefitQueryParamFieldsEmployerContributionAmount    PatchHrisBenefitQueryParamFields = "employer_contribution_amount"
+	PatchHrisBenefitQueryParamFieldsEmployerContributionMaxAmount PatchHrisBenefitQueryParamFields = "employer_contribution_max_amount"
+	PatchHrisBenefitQueryParamFieldsCoverageLevel                 PatchHrisBenefitQueryParamFields = "coverage_level"
+	PatchHrisBenefitQueryParamFieldsCurrency                      PatchHrisBenefitQueryParamFields = "currency"
+	PatchHrisBenefitQueryParamFieldsRaw                           PatchHrisBenefitQueryParamFields = "raw"
+)
+
+func (e PatchHrisBenefitQueryParamFields) ToPointer() *PatchHrisBenefitQueryParamFields {
+	return &e
+}
+func (e *PatchHrisBenefitQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "type":
+		fallthrough
+	case "tax":
+		fallthrough
+	case "frequency":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "employer_contribution_type":
+		fallthrough
+	case "employer_contribution_amount":
+		fallthrough
+	case "employer_contribution_max_amount":
+		fallthrough
+	case "coverage_level":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "raw":
+		*e = PatchHrisBenefitQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchHrisBenefitQueryParamFields: %v", v)
+	}
+}
 
 type PatchHrisBenefitRequest struct {
 	// Company-wide benefit plans available to employees.
@@ -13,7 +83,7 @@ type PatchHrisBenefitRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchHrisBenefitQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Benefit
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +104,7 @@ func (p *PatchHrisBenefitRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchHrisBenefitRequest) GetFields() []string {
+func (p *PatchHrisBenefitRequest) GetFields() []PatchHrisBenefitQueryParamFields {
 	if p == nil {
 		return nil
 	}

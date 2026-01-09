@@ -3,15 +3,115 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAccountingCreditmemoQueryParamFields string
+
+const (
+	GetAccountingCreditmemoQueryParamFieldsID                      GetAccountingCreditmemoQueryParamFields = "id"
+	GetAccountingCreditmemoQueryParamFieldsCreatedAt               GetAccountingCreditmemoQueryParamFields = "created_at"
+	GetAccountingCreditmemoQueryParamFieldsUpdatedAt               GetAccountingCreditmemoQueryParamFields = "updated_at"
+	GetAccountingCreditmemoQueryParamFieldsDueAt                   GetAccountingCreditmemoQueryParamFields = "due_at"
+	GetAccountingCreditmemoQueryParamFieldsPaidAt                  GetAccountingCreditmemoQueryParamFields = "paid_at"
+	GetAccountingCreditmemoQueryParamFieldsRefundedAt              GetAccountingCreditmemoQueryParamFields = "refunded_at"
+	GetAccountingCreditmemoQueryParamFieldsCancelledAt             GetAccountingCreditmemoQueryParamFields = "cancelled_at"
+	GetAccountingCreditmemoQueryParamFieldsPostedAt                GetAccountingCreditmemoQueryParamFields = "posted_at"
+	GetAccountingCreditmemoQueryParamFieldsTotalAmount             GetAccountingCreditmemoQueryParamFields = "total_amount"
+	GetAccountingCreditmemoQueryParamFieldsPaidAmount              GetAccountingCreditmemoQueryParamFields = "paid_amount"
+	GetAccountingCreditmemoQueryParamFieldsRefundAmount            GetAccountingCreditmemoQueryParamFields = "refund_amount"
+	GetAccountingCreditmemoQueryParamFieldsTaxAmount               GetAccountingCreditmemoQueryParamFields = "tax_amount"
+	GetAccountingCreditmemoQueryParamFieldsDiscountAmount          GetAccountingCreditmemoQueryParamFields = "discount_amount"
+	GetAccountingCreditmemoQueryParamFieldsBalanceAmount           GetAccountingCreditmemoQueryParamFields = "balance_amount"
+	GetAccountingCreditmemoQueryParamFieldsCreditmemoNumber        GetAccountingCreditmemoQueryParamFields = "creditmemo_number"
+	GetAccountingCreditmemoQueryParamFieldsContactID               GetAccountingCreditmemoQueryParamFields = "contact_id"
+	GetAccountingCreditmemoQueryParamFieldsCurrency                GetAccountingCreditmemoQueryParamFields = "currency"
+	GetAccountingCreditmemoQueryParamFieldsNotes                   GetAccountingCreditmemoQueryParamFields = "notes"
+	GetAccountingCreditmemoQueryParamFieldsRefundReason            GetAccountingCreditmemoQueryParamFields = "refund_reason"
+	GetAccountingCreditmemoQueryParamFieldsLineitems               GetAccountingCreditmemoQueryParamFields = "lineitems"
+	GetAccountingCreditmemoQueryParamFieldsStatus                  GetAccountingCreditmemoQueryParamFields = "status"
+	GetAccountingCreditmemoQueryParamFieldsURL                     GetAccountingCreditmemoQueryParamFields = "url"
+	GetAccountingCreditmemoQueryParamFieldsPaymentCollectionMethod GetAccountingCreditmemoQueryParamFields = "payment_collection_method"
+	GetAccountingCreditmemoQueryParamFieldsAttachments             GetAccountingCreditmemoQueryParamFields = "attachments"
+	GetAccountingCreditmemoQueryParamFieldsSend                    GetAccountingCreditmemoQueryParamFields = "send"
+	GetAccountingCreditmemoQueryParamFieldsRaw                     GetAccountingCreditmemoQueryParamFields = "raw"
+)
+
+func (e GetAccountingCreditmemoQueryParamFields) ToPointer() *GetAccountingCreditmemoQueryParamFields {
+	return &e
+}
+func (e *GetAccountingCreditmemoQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "refunded_at":
+		fallthrough
+	case "cancelled_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "paid_amount":
+		fallthrough
+	case "refund_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "discount_amount":
+		fallthrough
+	case "balance_amount":
+		fallthrough
+	case "creditmemo_number":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "refund_reason":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "status":
+		fallthrough
+	case "url":
+		fallthrough
+	case "payment_collection_method":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "send":
+		fallthrough
+	case "raw":
+		*e = GetAccountingCreditmemoQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAccountingCreditmemoQueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingCreditmemoRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAccountingCreditmemoQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Creditmemo
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +125,7 @@ func (g *GetAccountingCreditmemoRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingCreditmemoRequest) GetFields() []string {
+func (g *GetAccountingCreditmemoRequest) GetFields() []GetAccountingCreditmemoQueryParamFields {
 	if g == nil {
 		return nil
 	}

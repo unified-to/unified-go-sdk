@@ -3,15 +3,124 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAccountingInvoiceQueryParamFields string
+
+const (
+	GetAccountingInvoiceQueryParamFieldsID                      GetAccountingInvoiceQueryParamFields = "id"
+	GetAccountingInvoiceQueryParamFieldsCreatedAt               GetAccountingInvoiceQueryParamFields = "created_at"
+	GetAccountingInvoiceQueryParamFieldsUpdatedAt               GetAccountingInvoiceQueryParamFields = "updated_at"
+	GetAccountingInvoiceQueryParamFieldsDueAt                   GetAccountingInvoiceQueryParamFields = "due_at"
+	GetAccountingInvoiceQueryParamFieldsPaidAt                  GetAccountingInvoiceQueryParamFields = "paid_at"
+	GetAccountingInvoiceQueryParamFieldsRefundedAt              GetAccountingInvoiceQueryParamFields = "refunded_at"
+	GetAccountingInvoiceQueryParamFieldsCancelledAt             GetAccountingInvoiceQueryParamFields = "cancelled_at"
+	GetAccountingInvoiceQueryParamFieldsPostedAt                GetAccountingInvoiceQueryParamFields = "posted_at"
+	GetAccountingInvoiceQueryParamFieldsTotalAmount             GetAccountingInvoiceQueryParamFields = "total_amount"
+	GetAccountingInvoiceQueryParamFieldsPaidAmount              GetAccountingInvoiceQueryParamFields = "paid_amount"
+	GetAccountingInvoiceQueryParamFieldsRefundAmount            GetAccountingInvoiceQueryParamFields = "refund_amount"
+	GetAccountingInvoiceQueryParamFieldsTaxAmount               GetAccountingInvoiceQueryParamFields = "tax_amount"
+	GetAccountingInvoiceQueryParamFieldsDiscountAmount          GetAccountingInvoiceQueryParamFields = "discount_amount"
+	GetAccountingInvoiceQueryParamFieldsBalanceAmount           GetAccountingInvoiceQueryParamFields = "balance_amount"
+	GetAccountingInvoiceQueryParamFieldsInvoiceNumber           GetAccountingInvoiceQueryParamFields = "invoice_number"
+	GetAccountingInvoiceQueryParamFieldsReference               GetAccountingInvoiceQueryParamFields = "reference"
+	GetAccountingInvoiceQueryParamFieldsContactID               GetAccountingInvoiceQueryParamFields = "contact_id"
+	GetAccountingInvoiceQueryParamFieldsCurrency                GetAccountingInvoiceQueryParamFields = "currency"
+	GetAccountingInvoiceQueryParamFieldsNotes                   GetAccountingInvoiceQueryParamFields = "notes"
+	GetAccountingInvoiceQueryParamFieldsRefundReason            GetAccountingInvoiceQueryParamFields = "refund_reason"
+	GetAccountingInvoiceQueryParamFieldsLineitems               GetAccountingInvoiceQueryParamFields = "lineitems"
+	GetAccountingInvoiceQueryParamFieldsStatus                  GetAccountingInvoiceQueryParamFields = "status"
+	GetAccountingInvoiceQueryParamFieldsURL                     GetAccountingInvoiceQueryParamFields = "url"
+	GetAccountingInvoiceQueryParamFieldsPaymentCollectionMethod GetAccountingInvoiceQueryParamFields = "payment_collection_method"
+	GetAccountingInvoiceQueryParamFieldsInvoiceAt               GetAccountingInvoiceQueryParamFields = "invoice_at"
+	GetAccountingInvoiceQueryParamFieldsType                    GetAccountingInvoiceQueryParamFields = "type"
+	GetAccountingInvoiceQueryParamFieldsAttachments             GetAccountingInvoiceQueryParamFields = "attachments"
+	GetAccountingInvoiceQueryParamFieldsSend                    GetAccountingInvoiceQueryParamFields = "send"
+	GetAccountingInvoiceQueryParamFieldsRaw                     GetAccountingInvoiceQueryParamFields = "raw"
+)
+
+func (e GetAccountingInvoiceQueryParamFields) ToPointer() *GetAccountingInvoiceQueryParamFields {
+	return &e
+}
+func (e *GetAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "refunded_at":
+		fallthrough
+	case "cancelled_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "paid_amount":
+		fallthrough
+	case "refund_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "discount_amount":
+		fallthrough
+	case "balance_amount":
+		fallthrough
+	case "invoice_number":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "refund_reason":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "status":
+		fallthrough
+	case "url":
+		fallthrough
+	case "payment_collection_method":
+		fallthrough
+	case "invoice_at":
+		fallthrough
+	case "type":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "send":
+		fallthrough
+	case "raw":
+		*e = GetAccountingInvoiceQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAccountingInvoiceQueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingInvoiceRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAccountingInvoiceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Invoice
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +134,7 @@ func (g *GetAccountingInvoiceRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingInvoiceRequest) GetFields() []string {
+func (g *GetAccountingInvoiceRequest) GetFields() []GetAccountingInvoiceQueryParamFields {
 	if g == nil {
 		return nil
 	}

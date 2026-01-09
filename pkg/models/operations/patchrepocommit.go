@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchRepoCommitQueryParamFields string
+
+const (
+	PatchRepoCommitQueryParamFieldsID        PatchRepoCommitQueryParamFields = "id"
+	PatchRepoCommitQueryParamFieldsCreatedAt PatchRepoCommitQueryParamFields = "created_at"
+	PatchRepoCommitQueryParamFieldsUpdatedAt PatchRepoCommitQueryParamFields = "updated_at"
+	PatchRepoCommitQueryParamFieldsUserID    PatchRepoCommitQueryParamFields = "user_id"
+	PatchRepoCommitQueryParamFieldsRepoID    PatchRepoCommitQueryParamFields = "repo_id"
+	PatchRepoCommitQueryParamFieldsMessage   PatchRepoCommitQueryParamFields = "message"
+	PatchRepoCommitQueryParamFieldsBranchID  PatchRepoCommitQueryParamFields = "branch_id"
+	PatchRepoCommitQueryParamFieldsRaw       PatchRepoCommitQueryParamFields = "raw"
+)
+
+func (e PatchRepoCommitQueryParamFields) ToPointer() *PatchRepoCommitQueryParamFields {
+	return &e
+}
+func (e *PatchRepoCommitQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "repo_id":
+		fallthrough
+	case "message":
+		fallthrough
+	case "branch_id":
+		fallthrough
+	case "raw":
+		*e = PatchRepoCommitQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchRepoCommitQueryParamFields: %v", v)
+	}
+}
 
 type PatchRepoCommitRequest struct {
 	RepoCommit shared.RepoCommit `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchRepoCommitQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Commit
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +79,7 @@ func (p *PatchRepoCommitRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchRepoCommitRequest) GetFields() []string {
+func (p *PatchRepoCommitRequest) GetFields() []PatchRepoCommitQueryParamFields {
 	if p == nil {
 		return nil
 	}

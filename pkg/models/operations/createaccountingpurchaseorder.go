@@ -3,16 +3,77 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateAccountingPurchaseorderQueryParamFields string
+
+const (
+	CreateAccountingPurchaseorderQueryParamFieldsID              CreateAccountingPurchaseorderQueryParamFields = "id"
+	CreateAccountingPurchaseorderQueryParamFieldsCreatedAt       CreateAccountingPurchaseorderQueryParamFields = "created_at"
+	CreateAccountingPurchaseorderQueryParamFieldsUpdatedAt       CreateAccountingPurchaseorderQueryParamFields = "updated_at"
+	CreateAccountingPurchaseorderQueryParamFieldsPostedAt        CreateAccountingPurchaseorderQueryParamFields = "posted_at"
+	CreateAccountingPurchaseorderQueryParamFieldsContactID       CreateAccountingPurchaseorderQueryParamFields = "contact_id"
+	CreateAccountingPurchaseorderQueryParamFieldsAccountID       CreateAccountingPurchaseorderQueryParamFields = "account_id"
+	CreateAccountingPurchaseorderQueryParamFieldsCurrency        CreateAccountingPurchaseorderQueryParamFields = "currency"
+	CreateAccountingPurchaseorderQueryParamFieldsTotalAmount     CreateAccountingPurchaseorderQueryParamFields = "total_amount"
+	CreateAccountingPurchaseorderQueryParamFieldsShippingAddress CreateAccountingPurchaseorderQueryParamFields = "shipping_address"
+	CreateAccountingPurchaseorderQueryParamFieldsBillingAddress  CreateAccountingPurchaseorderQueryParamFields = "billing_address"
+	CreateAccountingPurchaseorderQueryParamFieldsStatus          CreateAccountingPurchaseorderQueryParamFields = "status"
+	CreateAccountingPurchaseorderQueryParamFieldsLineitems       CreateAccountingPurchaseorderQueryParamFields = "lineitems"
+	CreateAccountingPurchaseorderQueryParamFieldsRaw             CreateAccountingPurchaseorderQueryParamFields = "raw"
+)
+
+func (e CreateAccountingPurchaseorderQueryParamFields) ToPointer() *CreateAccountingPurchaseorderQueryParamFields {
+	return &e
+}
+func (e *CreateAccountingPurchaseorderQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "shipping_address":
+		fallthrough
+	case "billing_address":
+		fallthrough
+	case "status":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "raw":
+		*e = CreateAccountingPurchaseorderQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateAccountingPurchaseorderQueryParamFields: %v", v)
+	}
+}
 
 type CreateAccountingPurchaseorderRequest struct {
 	AccountingPurchaseorder shared.AccountingPurchaseorder `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateAccountingPurchaseorderQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +92,7 @@ func (c *CreateAccountingPurchaseorderRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAccountingPurchaseorderRequest) GetFields() []string {
+func (c *CreateAccountingPurchaseorderRequest) GetFields() []CreateAccountingPurchaseorderQueryParamFields {
 	if c == nil {
 		return nil
 	}

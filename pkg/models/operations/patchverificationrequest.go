@@ -3,16 +3,113 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchVerificationRequestQueryParamFields string
+
+const (
+	PatchVerificationRequestQueryParamFieldsID                        PatchVerificationRequestQueryParamFields = "id"
+	PatchVerificationRequestQueryParamFieldsCreatedAt                 PatchVerificationRequestQueryParamFields = "created_at"
+	PatchVerificationRequestQueryParamFieldsUpdatedAt                 PatchVerificationRequestQueryParamFields = "updated_at"
+	PatchVerificationRequestQueryParamFieldsPackageID                 PatchVerificationRequestQueryParamFields = "package_id"
+	PatchVerificationRequestQueryParamFieldsParameters                PatchVerificationRequestQueryParamFields = "parameters"
+	PatchVerificationRequestQueryParamFieldsTargetURL                 PatchVerificationRequestQueryParamFields = "target_url"
+	PatchVerificationRequestQueryParamFieldsCandidateID               PatchVerificationRequestQueryParamFields = "candidate_id"
+	PatchVerificationRequestQueryParamFieldsProfileIPAddress          PatchVerificationRequestQueryParamFields = "profile_ip_address"
+	PatchVerificationRequestQueryParamFieldsProfileName               PatchVerificationRequestQueryParamFields = "profile_name"
+	PatchVerificationRequestQueryParamFieldsProfileDateOfBirth        PatchVerificationRequestQueryParamFields = "profile_date_of_birth"
+	PatchVerificationRequestQueryParamFieldsProfileAddresses          PatchVerificationRequestQueryParamFields = "profile_addresses"
+	PatchVerificationRequestQueryParamFieldsProfileGender             PatchVerificationRequestQueryParamFields = "profile_gender"
+	PatchVerificationRequestQueryParamFieldsProfileEmails             PatchVerificationRequestQueryParamFields = "profile_emails"
+	PatchVerificationRequestQueryParamFieldsProfileTelephones         PatchVerificationRequestQueryParamFields = "profile_telephones"
+	PatchVerificationRequestQueryParamFieldsProfileNationalIdentifier PatchVerificationRequestQueryParamFields = "profile_national_identifier"
+	PatchVerificationRequestQueryParamFieldsResponseCompletedAt       PatchVerificationRequestQueryParamFields = "response_completed_at"
+	PatchVerificationRequestQueryParamFieldsResponseExpiresAt         PatchVerificationRequestQueryParamFields = "response_expires_at"
+	PatchVerificationRequestQueryParamFieldsResponseIssuedAt          PatchVerificationRequestQueryParamFields = "response_issued_at"
+	PatchVerificationRequestQueryParamFieldsResponseStatus            PatchVerificationRequestQueryParamFields = "response_status"
+	PatchVerificationRequestQueryParamFieldsResponseScore             PatchVerificationRequestQueryParamFields = "response_score"
+	PatchVerificationRequestQueryParamFieldsResponseRedirectURL       PatchVerificationRequestQueryParamFields = "response_redirect_url"
+	PatchVerificationRequestQueryParamFieldsResponseDownloadUrls      PatchVerificationRequestQueryParamFields = "response_download_urls"
+	PatchVerificationRequestQueryParamFieldsResponseDetails           PatchVerificationRequestQueryParamFields = "response_details"
+	PatchVerificationRequestQueryParamFieldsResponseSource            PatchVerificationRequestQueryParamFields = "response_source"
+	PatchVerificationRequestQueryParamFieldsRaw                       PatchVerificationRequestQueryParamFields = "raw"
+)
+
+func (e PatchVerificationRequestQueryParamFields) ToPointer() *PatchVerificationRequestQueryParamFields {
+	return &e
+}
+func (e *PatchVerificationRequestQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "package_id":
+		fallthrough
+	case "parameters":
+		fallthrough
+	case "target_url":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "profile_ip_address":
+		fallthrough
+	case "profile_name":
+		fallthrough
+	case "profile_date_of_birth":
+		fallthrough
+	case "profile_addresses":
+		fallthrough
+	case "profile_gender":
+		fallthrough
+	case "profile_emails":
+		fallthrough
+	case "profile_telephones":
+		fallthrough
+	case "profile_national_identifier":
+		fallthrough
+	case "response_completed_at":
+		fallthrough
+	case "response_expires_at":
+		fallthrough
+	case "response_issued_at":
+		fallthrough
+	case "response_status":
+		fallthrough
+	case "response_score":
+		fallthrough
+	case "response_redirect_url":
+		fallthrough
+	case "response_download_urls":
+		fallthrough
+	case "response_details":
+		fallthrough
+	case "response_source":
+		fallthrough
+	case "raw":
+		*e = PatchVerificationRequestQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchVerificationRequestQueryParamFields: %v", v)
+	}
+}
 
 type PatchVerificationRequestRequest struct {
 	VerificationRequest shared.VerificationRequest `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchVerificationRequestQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Request
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +130,7 @@ func (p *PatchVerificationRequestRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchVerificationRequestRequest) GetFields() []string {
+func (p *PatchVerificationRequestRequest) GetFields() []PatchVerificationRequestQueryParamFields {
 	if p == nil {
 		return nil
 	}

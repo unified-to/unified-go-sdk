@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateRepoCommitQueryParamFields string
+
+const (
+	UpdateRepoCommitQueryParamFieldsID        UpdateRepoCommitQueryParamFields = "id"
+	UpdateRepoCommitQueryParamFieldsCreatedAt UpdateRepoCommitQueryParamFields = "created_at"
+	UpdateRepoCommitQueryParamFieldsUpdatedAt UpdateRepoCommitQueryParamFields = "updated_at"
+	UpdateRepoCommitQueryParamFieldsUserID    UpdateRepoCommitQueryParamFields = "user_id"
+	UpdateRepoCommitQueryParamFieldsRepoID    UpdateRepoCommitQueryParamFields = "repo_id"
+	UpdateRepoCommitQueryParamFieldsMessage   UpdateRepoCommitQueryParamFields = "message"
+	UpdateRepoCommitQueryParamFieldsBranchID  UpdateRepoCommitQueryParamFields = "branch_id"
+	UpdateRepoCommitQueryParamFieldsRaw       UpdateRepoCommitQueryParamFields = "raw"
+)
+
+func (e UpdateRepoCommitQueryParamFields) ToPointer() *UpdateRepoCommitQueryParamFields {
+	return &e
+}
+func (e *UpdateRepoCommitQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "repo_id":
+		fallthrough
+	case "message":
+		fallthrough
+	case "branch_id":
+		fallthrough
+	case "raw":
+		*e = UpdateRepoCommitQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateRepoCommitQueryParamFields: %v", v)
+	}
+}
 
 type UpdateRepoCommitRequest struct {
 	RepoCommit shared.RepoCommit `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateRepoCommitQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Commit
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +79,7 @@ func (u *UpdateRepoCommitRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateRepoCommitRequest) GetFields() []string {
+func (u *UpdateRepoCommitRequest) GetFields() []UpdateRepoCommitQueryParamFields {
 	if u == nil {
 		return nil
 	}

@@ -3,15 +3,91 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetCrmEventQueryParamFields string
+
+const (
+	GetCrmEventQueryParamFieldsID             GetCrmEventQueryParamFields = "id"
+	GetCrmEventQueryParamFieldsCreatedAt      GetCrmEventQueryParamFields = "created_at"
+	GetCrmEventQueryParamFieldsUpdatedAt      GetCrmEventQueryParamFields = "updated_at"
+	GetCrmEventQueryParamFieldsType           GetCrmEventQueryParamFields = "type"
+	GetCrmEventQueryParamFieldsNote           GetCrmEventQueryParamFields = "note"
+	GetCrmEventQueryParamFieldsMeeting        GetCrmEventQueryParamFields = "meeting"
+	GetCrmEventQueryParamFieldsEmail          GetCrmEventQueryParamFields = "email"
+	GetCrmEventQueryParamFieldsCall           GetCrmEventQueryParamFields = "call"
+	GetCrmEventQueryParamFieldsTask           GetCrmEventQueryParamFields = "task"
+	GetCrmEventQueryParamFieldsMarketingEmail GetCrmEventQueryParamFields = "marketing_email"
+	GetCrmEventQueryParamFieldsForm           GetCrmEventQueryParamFields = "form"
+	GetCrmEventQueryParamFieldsPageView       GetCrmEventQueryParamFields = "page_view"
+	GetCrmEventQueryParamFieldsDealIds        GetCrmEventQueryParamFields = "deal_ids"
+	GetCrmEventQueryParamFieldsCompanyIds     GetCrmEventQueryParamFields = "company_ids"
+	GetCrmEventQueryParamFieldsContactIds     GetCrmEventQueryParamFields = "contact_ids"
+	GetCrmEventQueryParamFieldsLeadIds        GetCrmEventQueryParamFields = "lead_ids"
+	GetCrmEventQueryParamFieldsUserID         GetCrmEventQueryParamFields = "user_id"
+	GetCrmEventQueryParamFieldsRaw            GetCrmEventQueryParamFields = "raw"
+)
+
+func (e GetCrmEventQueryParamFields) ToPointer() *GetCrmEventQueryParamFields {
+	return &e
+}
+func (e *GetCrmEventQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "type":
+		fallthrough
+	case "note":
+		fallthrough
+	case "meeting":
+		fallthrough
+	case "email":
+		fallthrough
+	case "call":
+		fallthrough
+	case "task":
+		fallthrough
+	case "marketing_email":
+		fallthrough
+	case "form":
+		fallthrough
+	case "page_view":
+		fallthrough
+	case "deal_ids":
+		fallthrough
+	case "company_ids":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "lead_ids":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "raw":
+		*e = GetCrmEventQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetCrmEventQueryParamFields: %v", v)
+	}
+}
 
 type GetCrmEventRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetCrmEventQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Event
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +101,7 @@ func (g *GetCrmEventRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetCrmEventRequest) GetFields() []string {
+func (g *GetCrmEventRequest) GetFields() []GetCrmEventQueryParamFields {
 	if g == nil {
 		return nil
 	}

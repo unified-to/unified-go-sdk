@@ -3,26 +3,84 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListHrisGroupsQueryParamFields string
+
+const (
+	ListHrisGroupsQueryParamFieldsID          ListHrisGroupsQueryParamFields = "id"
+	ListHrisGroupsQueryParamFieldsCreatedAt   ListHrisGroupsQueryParamFields = "created_at"
+	ListHrisGroupsQueryParamFieldsUpdatedAt   ListHrisGroupsQueryParamFields = "updated_at"
+	ListHrisGroupsQueryParamFieldsName        ListHrisGroupsQueryParamFields = "name"
+	ListHrisGroupsQueryParamFieldsDescription ListHrisGroupsQueryParamFields = "description"
+	ListHrisGroupsQueryParamFieldsParentID    ListHrisGroupsQueryParamFields = "parent_id"
+	ListHrisGroupsQueryParamFieldsType        ListHrisGroupsQueryParamFields = "type"
+	ListHrisGroupsQueryParamFieldsUserIds     ListHrisGroupsQueryParamFields = "user_ids"
+	ListHrisGroupsQueryParamFieldsManagerIds  ListHrisGroupsQueryParamFields = "manager_ids"
+	ListHrisGroupsQueryParamFieldsIsActive    ListHrisGroupsQueryParamFields = "is_active"
+	ListHrisGroupsQueryParamFieldsCompanyID   ListHrisGroupsQueryParamFields = "company_id"
+	ListHrisGroupsQueryParamFieldsRaw         ListHrisGroupsQueryParamFields = "raw"
+)
+
+func (e ListHrisGroupsQueryParamFields) ToPointer() *ListHrisGroupsQueryParamFields {
+	return &e
+}
+func (e *ListHrisGroupsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "type":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "manager_ids":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "raw":
+		*e = ListHrisGroupsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListHrisGroupsQueryParamFields: %v", v)
+	}
+}
+
 type ListHrisGroupsRequest struct {
-	// The company ID to filter by
+	// The company ID to filter by (reference to HrisCompany)
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListHrisGroupsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                         `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                         `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                          `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -40,7 +98,7 @@ func (l *ListHrisGroupsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListHrisGroupsRequest) GetFields() []string {
+func (l *ListHrisGroupsRequest) GetFields() []ListHrisGroupsQueryParamFields {
 	if l == nil {
 		return nil
 	}

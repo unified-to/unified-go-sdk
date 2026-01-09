@@ -3,16 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateMetadataMetadataQueryParamFields string
+
+const (
+	UpdateMetadataMetadataQueryParamFieldsID             UpdateMetadataMetadataQueryParamFields = "id"
+	UpdateMetadataMetadataQueryParamFieldsCreatedAt      UpdateMetadataMetadataQueryParamFields = "created_at"
+	UpdateMetadataMetadataQueryParamFieldsUpdatedAt      UpdateMetadataMetadataQueryParamFields = "updated_at"
+	UpdateMetadataMetadataQueryParamFieldsName           UpdateMetadataMetadataQueryParamFields = "name"
+	UpdateMetadataMetadataQueryParamFieldsSlug           UpdateMetadataMetadataQueryParamFields = "slug"
+	UpdateMetadataMetadataQueryParamFieldsFormat         UpdateMetadataMetadataQueryParamFields = "format"
+	UpdateMetadataMetadataQueryParamFieldsOriginalFormat UpdateMetadataMetadataQueryParamFields = "original_format"
+	UpdateMetadataMetadataQueryParamFieldsOptions        UpdateMetadataMetadataQueryParamFields = "options"
+	UpdateMetadataMetadataQueryParamFieldsObjectType     UpdateMetadataMetadataQueryParamFields = "object_type"
+	UpdateMetadataMetadataQueryParamFieldsObjects        UpdateMetadataMetadataQueryParamFields = "objects"
+	UpdateMetadataMetadataQueryParamFieldsRaw            UpdateMetadataMetadataQueryParamFields = "raw"
+)
+
+func (e UpdateMetadataMetadataQueryParamFields) ToPointer() *UpdateMetadataMetadataQueryParamFields {
+	return &e
+}
+func (e *UpdateMetadataMetadataQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "slug":
+		fallthrough
+	case "format":
+		fallthrough
+	case "original_format":
+		fallthrough
+	case "options":
+		fallthrough
+	case "object_type":
+		fallthrough
+	case "objects":
+		fallthrough
+	case "raw":
+		*e = UpdateMetadataMetadataQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateMetadataMetadataQueryParamFields: %v", v)
+	}
+}
 
 type UpdateMetadataMetadataRequest struct {
 	MetadataMetadata shared.MetadataMetadata `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateMetadataMetadataQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Metadata
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +88,7 @@ func (u *UpdateMetadataMetadataRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateMetadataMetadataRequest) GetFields() []string {
+func (u *UpdateMetadataMetadataRequest) GetFields() []UpdateMetadataMetadataQueryParamFields {
 	if u == nil {
 		return nil
 	}

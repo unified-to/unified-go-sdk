@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateAccountingTaxrateQueryParamFields string
+
+const (
+	UpdateAccountingTaxrateQueryParamFieldsID          UpdateAccountingTaxrateQueryParamFields = "id"
+	UpdateAccountingTaxrateQueryParamFieldsCreatedAt   UpdateAccountingTaxrateQueryParamFields = "created_at"
+	UpdateAccountingTaxrateQueryParamFieldsUpdatedAt   UpdateAccountingTaxrateQueryParamFields = "updated_at"
+	UpdateAccountingTaxrateQueryParamFieldsName        UpdateAccountingTaxrateQueryParamFields = "name"
+	UpdateAccountingTaxrateQueryParamFieldsDescription UpdateAccountingTaxrateQueryParamFields = "description"
+	UpdateAccountingTaxrateQueryParamFieldsRate        UpdateAccountingTaxrateQueryParamFields = "rate"
+	UpdateAccountingTaxrateQueryParamFieldsIsActive    UpdateAccountingTaxrateQueryParamFields = "is_active"
+	UpdateAccountingTaxrateQueryParamFieldsRaw         UpdateAccountingTaxrateQueryParamFields = "raw"
+)
+
+func (e UpdateAccountingTaxrateQueryParamFields) ToPointer() *UpdateAccountingTaxrateQueryParamFields {
+	return &e
+}
+func (e *UpdateAccountingTaxrateQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "rate":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "raw":
+		*e = UpdateAccountingTaxrateQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateAccountingTaxrateQueryParamFields: %v", v)
+	}
+}
 
 type UpdateAccountingTaxrateRequest struct {
 	AccountingTaxrate shared.AccountingTaxrate `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateAccountingTaxrateQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Taxrate
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +79,7 @@ func (u *UpdateAccountingTaxrateRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateAccountingTaxrateRequest) GetFields() []string {
+func (u *UpdateAccountingTaxrateRequest) GetFields() []UpdateAccountingTaxrateQueryParamFields {
 	if u == nil {
 		return nil
 	}

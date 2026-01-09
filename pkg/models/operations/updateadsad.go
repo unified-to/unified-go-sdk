@@ -3,16 +3,89 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateAdsAdQueryParamFields string
+
+const (
+	UpdateAdsAdQueryParamFieldsID               UpdateAdsAdQueryParamFields = "id"
+	UpdateAdsAdQueryParamFieldsCreatedAt        UpdateAdsAdQueryParamFields = "created_at"
+	UpdateAdsAdQueryParamFieldsUpdatedAt        UpdateAdsAdQueryParamFields = "updated_at"
+	UpdateAdsAdQueryParamFieldsName             UpdateAdsAdQueryParamFields = "name"
+	UpdateAdsAdQueryParamFieldsCampaignID       UpdateAdsAdQueryParamFields = "campaign_id"
+	UpdateAdsAdQueryParamFieldsGroupID          UpdateAdsAdQueryParamFields = "group_id"
+	UpdateAdsAdQueryParamFieldsOrganizationID   UpdateAdsAdQueryParamFields = "organization_id"
+	UpdateAdsAdQueryParamFieldsIsActive         UpdateAdsAdQueryParamFields = "is_active"
+	UpdateAdsAdQueryParamFieldsAdType           UpdateAdsAdQueryParamFields = "ad_type"
+	UpdateAdsAdQueryParamFieldsCreativeAssetURL UpdateAdsAdQueryParamFields = "creative_asset_url"
+	UpdateAdsAdQueryParamFieldsAdCopy           UpdateAdsAdQueryParamFields = "ad_copy"
+	UpdateAdsAdQueryParamFieldsHeadline         UpdateAdsAdQueryParamFields = "headline"
+	UpdateAdsAdQueryParamFieldsDescription      UpdateAdsAdQueryParamFields = "description"
+	UpdateAdsAdQueryParamFieldsCta              UpdateAdsAdQueryParamFields = "cta"
+	UpdateAdsAdQueryParamFieldsFinalURL         UpdateAdsAdQueryParamFields = "final_url"
+	UpdateAdsAdQueryParamFieldsTargeting        UpdateAdsAdQueryParamFields = "targeting"
+	UpdateAdsAdQueryParamFieldsRaw              UpdateAdsAdQueryParamFields = "raw"
+)
+
+func (e UpdateAdsAdQueryParamFields) ToPointer() *UpdateAdsAdQueryParamFields {
+	return &e
+}
+func (e *UpdateAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "campaign_id":
+		fallthrough
+	case "group_id":
+		fallthrough
+	case "organization_id":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "ad_type":
+		fallthrough
+	case "creative_asset_url":
+		fallthrough
+	case "ad_copy":
+		fallthrough
+	case "headline":
+		fallthrough
+	case "description":
+		fallthrough
+	case "cta":
+		fallthrough
+	case "final_url":
+		fallthrough
+	case "targeting":
+		fallthrough
+	case "raw":
+		*e = UpdateAdsAdQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateAdsAdQueryParamFields: %v", v)
+	}
+}
 
 type UpdateAdsAdRequest struct {
 	AdsAd shared.AdsAd `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateAdsAdQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Ad
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +106,7 @@ func (u *UpdateAdsAdRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateAdsAdRequest) GetFields() []string {
+func (u *UpdateAdsAdRequest) GetFields() []UpdateAdsAdQueryParamFields {
 	if u == nil {
 		return nil
 	}

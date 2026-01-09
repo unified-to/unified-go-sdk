@@ -3,15 +3,97 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetHrisDeviceQueryParamFields string
+
+const (
+	GetHrisDeviceQueryParamFieldsID                 GetHrisDeviceQueryParamFields = "id"
+	GetHrisDeviceQueryParamFieldsCreatedAt          GetHrisDeviceQueryParamFields = "created_at"
+	GetHrisDeviceQueryParamFieldsUpdatedAt          GetHrisDeviceQueryParamFields = "updated_at"
+	GetHrisDeviceQueryParamFieldsName               GetHrisDeviceQueryParamFields = "name"
+	GetHrisDeviceQueryParamFieldsAssetTag           GetHrisDeviceQueryParamFields = "asset_tag"
+	GetHrisDeviceQueryParamFieldsVersion            GetHrisDeviceQueryParamFields = "version"
+	GetHrisDeviceQueryParamFieldsManufacturer       GetHrisDeviceQueryParamFields = "manufacturer"
+	GetHrisDeviceQueryParamFieldsModel              GetHrisDeviceQueryParamFields = "model"
+	GetHrisDeviceQueryParamFieldsOs                 GetHrisDeviceQueryParamFields = "os"
+	GetHrisDeviceQueryParamFieldsOsVersion          GetHrisDeviceQueryParamFields = "os_version"
+	GetHrisDeviceQueryParamFieldsUserIds            GetHrisDeviceQueryParamFields = "user_ids"
+	GetHrisDeviceQueryParamFieldsAdminUserIds       GetHrisDeviceQueryParamFields = "admin_user_ids"
+	GetHrisDeviceQueryParamFieldsLocationID         GetHrisDeviceQueryParamFields = "location_id"
+	GetHrisDeviceQueryParamFieldsHasAntivirus       GetHrisDeviceQueryParamFields = "has_antivirus"
+	GetHrisDeviceQueryParamFieldsHasPasswordManager GetHrisDeviceQueryParamFields = "has_password_manager"
+	GetHrisDeviceQueryParamFieldsHasFirewall        GetHrisDeviceQueryParamFields = "has_firewall"
+	GetHrisDeviceQueryParamFieldsHasHdEncrypted     GetHrisDeviceQueryParamFields = "has_hd_encrypted"
+	GetHrisDeviceQueryParamFieldsHasScreenlock      GetHrisDeviceQueryParamFields = "has_screenlock"
+	GetHrisDeviceQueryParamFieldsIsMissing          GetHrisDeviceQueryParamFields = "is_missing"
+	GetHrisDeviceQueryParamFieldsRaw                GetHrisDeviceQueryParamFields = "raw"
+)
+
+func (e GetHrisDeviceQueryParamFields) ToPointer() *GetHrisDeviceQueryParamFields {
+	return &e
+}
+func (e *GetHrisDeviceQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "asset_tag":
+		fallthrough
+	case "version":
+		fallthrough
+	case "manufacturer":
+		fallthrough
+	case "model":
+		fallthrough
+	case "os":
+		fallthrough
+	case "os_version":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "admin_user_ids":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "has_antivirus":
+		fallthrough
+	case "has_password_manager":
+		fallthrough
+	case "has_firewall":
+		fallthrough
+	case "has_hd_encrypted":
+		fallthrough
+	case "has_screenlock":
+		fallthrough
+	case "is_missing":
+		fallthrough
+	case "raw":
+		*e = GetHrisDeviceQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetHrisDeviceQueryParamFields: %v", v)
+	}
+}
 
 type GetHrisDeviceRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetHrisDeviceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Device
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +107,7 @@ func (g *GetHrisDeviceRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetHrisDeviceRequest) GetFields() []string {
+func (g *GetHrisDeviceRequest) GetFields() []GetHrisDeviceQueryParamFields {
 	if g == nil {
 		return nil
 	}

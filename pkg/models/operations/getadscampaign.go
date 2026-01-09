@@ -3,15 +3,76 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAdsCampaignQueryParamFields string
+
+const (
+	GetAdsCampaignQueryParamFieldsID               GetAdsCampaignQueryParamFields = "id"
+	GetAdsCampaignQueryParamFieldsCreatedAt        GetAdsCampaignQueryParamFields = "created_at"
+	GetAdsCampaignQueryParamFieldsUpdatedAt        GetAdsCampaignQueryParamFields = "updated_at"
+	GetAdsCampaignQueryParamFieldsName             GetAdsCampaignQueryParamFields = "name"
+	GetAdsCampaignQueryParamFieldsOrganizationID   GetAdsCampaignQueryParamFields = "organization_id"
+	GetAdsCampaignQueryParamFieldsIsActive         GetAdsCampaignQueryParamFields = "is_active"
+	GetAdsCampaignQueryParamFieldsStartAt          GetAdsCampaignQueryParamFields = "start_at"
+	GetAdsCampaignQueryParamFieldsEndAt            GetAdsCampaignQueryParamFields = "end_at"
+	GetAdsCampaignQueryParamFieldsBudgetAmount     GetAdsCampaignQueryParamFields = "budget_amount"
+	GetAdsCampaignQueryParamFieldsBudgetPeriod     GetAdsCampaignQueryParamFields = "budget_period"
+	GetAdsCampaignQueryParamFieldsTotalSpendAmount GetAdsCampaignQueryParamFields = "total_spend_amount"
+	GetAdsCampaignQueryParamFieldsTargeting        GetAdsCampaignQueryParamFields = "targeting"
+	GetAdsCampaignQueryParamFieldsRaw              GetAdsCampaignQueryParamFields = "raw"
+)
+
+func (e GetAdsCampaignQueryParamFields) ToPointer() *GetAdsCampaignQueryParamFields {
+	return &e
+}
+func (e *GetAdsCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "organization_id":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "budget_amount":
+		fallthrough
+	case "budget_period":
+		fallthrough
+	case "total_spend_amount":
+		fallthrough
+	case "targeting":
+		fallthrough
+	case "raw":
+		*e = GetAdsCampaignQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAdsCampaignQueryParamFields: %v", v)
+	}
+}
 
 type GetAdsCampaignRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAdsCampaignQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Campaign
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +86,7 @@ func (g *GetAdsCampaignRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAdsCampaignRequest) GetFields() []string {
+func (g *GetAdsCampaignRequest) GetFields() []GetAdsCampaignQueryParamFields {
 	if g == nil {
 		return nil
 	}

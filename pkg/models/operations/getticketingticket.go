@@ -3,15 +3,88 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetTicketingTicketQueryParamFields string
+
+const (
+	GetTicketingTicketQueryParamFieldsID          GetTicketingTicketQueryParamFields = "id"
+	GetTicketingTicketQueryParamFieldsCreatedAt   GetTicketingTicketQueryParamFields = "created_at"
+	GetTicketingTicketQueryParamFieldsUpdatedAt   GetTicketingTicketQueryParamFields = "updated_at"
+	GetTicketingTicketQueryParamFieldsCustomerID  GetTicketingTicketQueryParamFields = "customer_id"
+	GetTicketingTicketQueryParamFieldsSubject     GetTicketingTicketQueryParamFields = "subject"
+	GetTicketingTicketQueryParamFieldsDescription GetTicketingTicketQueryParamFields = "description"
+	GetTicketingTicketQueryParamFieldsStatus      GetTicketingTicketQueryParamFields = "status"
+	GetTicketingTicketQueryParamFieldsClosedAt    GetTicketingTicketQueryParamFields = "closed_at"
+	GetTicketingTicketQueryParamFieldsPriority    GetTicketingTicketQueryParamFields = "priority"
+	GetTicketingTicketQueryParamFieldsCategoryID  GetTicketingTicketQueryParamFields = "category_id"
+	GetTicketingTicketQueryParamFieldsCategory    GetTicketingTicketQueryParamFields = "category"
+	GetTicketingTicketQueryParamFieldsSource      GetTicketingTicketQueryParamFields = "source"
+	GetTicketingTicketQueryParamFieldsSourceRef   GetTicketingTicketQueryParamFields = "source_ref"
+	GetTicketingTicketQueryParamFieldsTags        GetTicketingTicketQueryParamFields = "tags"
+	GetTicketingTicketQueryParamFieldsUserID      GetTicketingTicketQueryParamFields = "user_id"
+	GetTicketingTicketQueryParamFieldsURL         GetTicketingTicketQueryParamFields = "url"
+	GetTicketingTicketQueryParamFieldsRaw         GetTicketingTicketQueryParamFields = "raw"
+)
+
+func (e GetTicketingTicketQueryParamFields) ToPointer() *GetTicketingTicketQueryParamFields {
+	return &e
+}
+func (e *GetTicketingTicketQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "customer_id":
+		fallthrough
+	case "subject":
+		fallthrough
+	case "description":
+		fallthrough
+	case "status":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "priority":
+		fallthrough
+	case "category_id":
+		fallthrough
+	case "category":
+		fallthrough
+	case "source":
+		fallthrough
+	case "source_ref":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "url":
+		fallthrough
+	case "raw":
+		*e = GetTicketingTicketQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetTicketingTicketQueryParamFields: %v", v)
+	}
+}
 
 type GetTicketingTicketRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetTicketingTicketQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Ticket
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +98,7 @@ func (g *GetTicketingTicketRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetTicketingTicketRequest) GetFields() []string {
+func (g *GetTicketingTicketRequest) GetFields() []GetTicketingTicketQueryParamFields {
 	if g == nil {
 		return nil
 	}

@@ -37,7 +37,6 @@ type AtsActivity struct {
 	Cc            []AtsEmail `json:"cc,omitempty"`
 	CreatedAt     *time.Time `json:"created_at,omitempty"`
 	Description   *string    `json:"description,omitempty"`
-	DocumentID    *string    `json:"document_id,omitempty"`
 	// IDs for AtsDocument.get
 	DocumentIds []string                 `json:"document_ids,omitempty"`
 	From        *PropertyAtsActivityFrom `json:"from,omitempty"`
@@ -106,13 +105,6 @@ func (a *AtsActivity) GetDescription() *string {
 		return nil
 	}
 	return a.Description
-}
-
-func (a *AtsActivity) GetDocumentID() *string {
-	if a == nil {
-		return nil
-	}
-	return a.DocumentID
 }
 
 func (a *AtsActivity) GetDocumentIds() []string {

@@ -3,9 +3,85 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type Fields string
+
+const (
+	FieldsID                  Fields = "id"
+	FieldsCreatedAt           Fields = "created_at"
+	FieldsUpdatedAt           Fields = "updated_at"
+	FieldsName                Fields = "name"
+	FieldsDescription         Fields = "description"
+	FieldsType                Fields = "type"
+	FieldsStatus              Fields = "status"
+	FieldsBalance             Fields = "balance"
+	FieldsCurrency            Fields = "currency"
+	FieldsCustomerDefinedCode Fields = "customer_defined_code"
+	FieldsIsPayable           Fields = "is_payable"
+	FieldsParentAccountID     Fields = "parent_account_id"
+	FieldsSection             Fields = "section"
+	FieldsSubsection          Fields = "subsection"
+	FieldsGroup               Fields = "group"
+	FieldsSubgroup            Fields = "subgroup"
+	FieldsParentID            Fields = "parent_id"
+	FieldsRaw                 Fields = "raw"
+)
+
+func (e Fields) ToPointer() *Fields {
+	return &e
+}
+func (e *Fields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "type":
+		fallthrough
+	case "status":
+		fallthrough
+	case "balance":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "customer_defined_code":
+		fallthrough
+	case "is_payable":
+		fallthrough
+	case "parent_account_id":
+		fallthrough
+	case "section":
+		fallthrough
+	case "subsection":
+		fallthrough
+	case "group":
+		fallthrough
+	case "subgroup":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = Fields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for Fields: %v", v)
+	}
+}
 
 type CreateAccountingAccountRequest struct {
 	// Chart of accounts
@@ -13,7 +89,7 @@ type CreateAccountingAccountRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []Fields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -32,7 +108,7 @@ func (c *CreateAccountingAccountRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAccountingAccountRequest) GetFields() []string {
+func (c *CreateAccountingAccountRequest) GetFields() []Fields {
 	if c == nil {
 		return nil
 	}

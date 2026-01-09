@@ -3,16 +3,68 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListMartechMembersQueryParamFields string
+
+const (
+	ListMartechMembersQueryParamFieldsID        ListMartechMembersQueryParamFields = "id"
+	ListMartechMembersQueryParamFieldsCreatedAt ListMartechMembersQueryParamFields = "created_at"
+	ListMartechMembersQueryParamFieldsUpdatedAt ListMartechMembersQueryParamFields = "updated_at"
+	ListMartechMembersQueryParamFieldsName      ListMartechMembersQueryParamFields = "name"
+	ListMartechMembersQueryParamFieldsFirstName ListMartechMembersQueryParamFields = "first_name"
+	ListMartechMembersQueryParamFieldsLastName  ListMartechMembersQueryParamFields = "last_name"
+	ListMartechMembersQueryParamFieldsEmails    ListMartechMembersQueryParamFields = "emails"
+	ListMartechMembersQueryParamFieldsListIds   ListMartechMembersQueryParamFields = "list_ids"
+	ListMartechMembersQueryParamFieldsTags      ListMartechMembersQueryParamFields = "tags"
+	ListMartechMembersQueryParamFieldsRaw       ListMartechMembersQueryParamFields = "raw"
+)
+
+func (e ListMartechMembersQueryParamFields) ToPointer() *ListMartechMembersQueryParamFields {
+	return &e
+}
+func (e *ListMartechMembersQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "list_ids":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "raw":
+		*e = ListMartechMembersQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListMartechMembersQueryParamFields: %v", v)
+	}
+}
 
 type ListMartechMembersRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Fields []ListMartechMembersQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                             `queryParam:"style=form,explode=true,name=limit"`
 	// The list ID to filter by
 	ListID *string  `queryParam:"style=form,explode=true,name=list_id"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
@@ -22,7 +74,7 @@ type ListMartechMembersRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -33,7 +85,7 @@ func (l *ListMartechMembersRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListMartechMembersRequest) GetFields() []string {
+func (l *ListMartechMembersRequest) GetFields() []ListMartechMembersQueryParamFields {
 	if l == nil {
 		return nil
 	}

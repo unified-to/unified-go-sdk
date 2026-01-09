@@ -3,15 +3,91 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type QueryParamFields string
+
+const (
+	QueryParamFieldsID                  QueryParamFields = "id"
+	QueryParamFieldsCreatedAt           QueryParamFields = "created_at"
+	QueryParamFieldsUpdatedAt           QueryParamFields = "updated_at"
+	QueryParamFieldsName                QueryParamFields = "name"
+	QueryParamFieldsDescription         QueryParamFields = "description"
+	QueryParamFieldsType                QueryParamFields = "type"
+	QueryParamFieldsStatus              QueryParamFields = "status"
+	QueryParamFieldsBalance             QueryParamFields = "balance"
+	QueryParamFieldsCurrency            QueryParamFields = "currency"
+	QueryParamFieldsCustomerDefinedCode QueryParamFields = "customer_defined_code"
+	QueryParamFieldsIsPayable           QueryParamFields = "is_payable"
+	QueryParamFieldsParentAccountID     QueryParamFields = "parent_account_id"
+	QueryParamFieldsSection             QueryParamFields = "section"
+	QueryParamFieldsSubsection          QueryParamFields = "subsection"
+	QueryParamFieldsGroup               QueryParamFields = "group"
+	QueryParamFieldsSubgroup            QueryParamFields = "subgroup"
+	QueryParamFieldsParentID            QueryParamFields = "parent_id"
+	QueryParamFieldsRaw                 QueryParamFields = "raw"
+)
+
+func (e QueryParamFields) ToPointer() *QueryParamFields {
+	return &e
+}
+func (e *QueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "type":
+		fallthrough
+	case "status":
+		fallthrough
+	case "balance":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "customer_defined_code":
+		fallthrough
+	case "is_payable":
+		fallthrough
+	case "parent_account_id":
+		fallthrough
+	case "section":
+		fallthrough
+	case "subsection":
+		fallthrough
+	case "group":
+		fallthrough
+	case "subgroup":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = QueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for QueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingAccountRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []QueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Account
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +101,7 @@ func (g *GetAccountingAccountRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingAccountRequest) GetFields() []string {
+func (g *GetAccountingAccountRequest) GetFields() []QueryParamFields {
 	if g == nil {
 		return nil
 	}

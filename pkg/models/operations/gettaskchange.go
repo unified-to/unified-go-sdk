@@ -3,15 +3,58 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetTaskChangeQueryParamFields string
+
+const (
+	GetTaskChangeQueryParamFieldsID        GetTaskChangeQueryParamFields = "id"
+	GetTaskChangeQueryParamFieldsCreatedAt GetTaskChangeQueryParamFields = "created_at"
+	GetTaskChangeQueryParamFieldsUpdatedAt GetTaskChangeQueryParamFields = "updated_at"
+	GetTaskChangeQueryParamFieldsTaskID    GetTaskChangeQueryParamFields = "task_id"
+	GetTaskChangeQueryParamFieldsUserID    GetTaskChangeQueryParamFields = "user_id"
+	GetTaskChangeQueryParamFieldsItems     GetTaskChangeQueryParamFields = "items"
+	GetTaskChangeQueryParamFieldsRaw       GetTaskChangeQueryParamFields = "raw"
+)
+
+func (e GetTaskChangeQueryParamFields) ToPointer() *GetTaskChangeQueryParamFields {
+	return &e
+}
+func (e *GetTaskChangeQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "task_id":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "items":
+		fallthrough
+	case "raw":
+		*e = GetTaskChangeQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetTaskChangeQueryParamFields: %v", v)
+	}
+}
 
 type GetTaskChangeRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetTaskChangeQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Change
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +68,7 @@ func (g *GetTaskChangeRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetTaskChangeRequest) GetFields() []string {
+func (g *GetTaskChangeRequest) GetFields() []GetTaskChangeQueryParamFields {
 	if g == nil {
 		return nil
 	}

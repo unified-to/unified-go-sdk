@@ -3,15 +3,103 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetCrmDealQueryParamFields string
+
+const (
+	GetCrmDealQueryParamFieldsID          GetCrmDealQueryParamFields = "id"
+	GetCrmDealQueryParamFieldsCreatedAt   GetCrmDealQueryParamFields = "created_at"
+	GetCrmDealQueryParamFieldsUpdatedAt   GetCrmDealQueryParamFields = "updated_at"
+	GetCrmDealQueryParamFieldsName        GetCrmDealQueryParamFields = "name"
+	GetCrmDealQueryParamFieldsAmount      GetCrmDealQueryParamFields = "amount"
+	GetCrmDealQueryParamFieldsCurrency    GetCrmDealQueryParamFields = "currency"
+	GetCrmDealQueryParamFieldsClosedAt    GetCrmDealQueryParamFields = "closed_at"
+	GetCrmDealQueryParamFieldsClosingAt   GetCrmDealQueryParamFields = "closing_at"
+	GetCrmDealQueryParamFieldsStage       GetCrmDealQueryParamFields = "stage"
+	GetCrmDealQueryParamFieldsStageID     GetCrmDealQueryParamFields = "stage_id"
+	GetCrmDealQueryParamFieldsPipeline    GetCrmDealQueryParamFields = "pipeline"
+	GetCrmDealQueryParamFieldsPipelineID  GetCrmDealQueryParamFields = "pipeline_id"
+	GetCrmDealQueryParamFieldsSource      GetCrmDealQueryParamFields = "source"
+	GetCrmDealQueryParamFieldsProbability GetCrmDealQueryParamFields = "probability"
+	GetCrmDealQueryParamFieldsTags        GetCrmDealQueryParamFields = "tags"
+	GetCrmDealQueryParamFieldsLostReason  GetCrmDealQueryParamFields = "lost_reason"
+	GetCrmDealQueryParamFieldsWonReason   GetCrmDealQueryParamFields = "won_reason"
+	GetCrmDealQueryParamFieldsUserID      GetCrmDealQueryParamFields = "user_id"
+	GetCrmDealQueryParamFieldsContactIds  GetCrmDealQueryParamFields = "contact_ids"
+	GetCrmDealQueryParamFieldsCompanyIds  GetCrmDealQueryParamFields = "company_ids"
+	GetCrmDealQueryParamFieldsMetadata    GetCrmDealQueryParamFields = "metadata"
+	GetCrmDealQueryParamFieldsRaw         GetCrmDealQueryParamFields = "raw"
+)
+
+func (e GetCrmDealQueryParamFields) ToPointer() *GetCrmDealQueryParamFields {
+	return &e
+}
+func (e *GetCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "closing_at":
+		fallthrough
+	case "stage":
+		fallthrough
+	case "stage_id":
+		fallthrough
+	case "pipeline":
+		fallthrough
+	case "pipeline_id":
+		fallthrough
+	case "source":
+		fallthrough
+	case "probability":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "lost_reason":
+		fallthrough
+	case "won_reason":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "company_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = GetCrmDealQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetCrmDealQueryParamFields: %v", v)
+	}
+}
 
 type GetCrmDealRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetCrmDealQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Deal
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +113,7 @@ func (g *GetCrmDealRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetCrmDealRequest) GetFields() []string {
+func (g *GetCrmDealRequest) GetFields() []GetCrmDealQueryParamFields {
 	if g == nil {
 		return nil
 	}

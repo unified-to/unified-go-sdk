@@ -3,26 +3,90 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAccountingExpensesQueryParamFields string
+
+const (
+	ListAccountingExpensesQueryParamFieldsID               ListAccountingExpensesQueryParamFields = "id"
+	ListAccountingExpensesQueryParamFieldsCreatedAt        ListAccountingExpensesQueryParamFields = "created_at"
+	ListAccountingExpensesQueryParamFieldsUpdatedAt        ListAccountingExpensesQueryParamFields = "updated_at"
+	ListAccountingExpensesQueryParamFieldsUserID           ListAccountingExpensesQueryParamFields = "user_id"
+	ListAccountingExpensesQueryParamFieldsName             ListAccountingExpensesQueryParamFields = "name"
+	ListAccountingExpensesQueryParamFieldsTotalAmount      ListAccountingExpensesQueryParamFields = "total_amount"
+	ListAccountingExpensesQueryParamFieldsCurrency         ListAccountingExpensesQueryParamFields = "currency"
+	ListAccountingExpensesQueryParamFieldsTaxAmount        ListAccountingExpensesQueryParamFields = "tax_amount"
+	ListAccountingExpensesQueryParamFieldsReimbursedAmount ListAccountingExpensesQueryParamFields = "reimbursed_amount"
+	ListAccountingExpensesQueryParamFieldsReimbursedAt     ListAccountingExpensesQueryParamFields = "reimbursed_at"
+	ListAccountingExpensesQueryParamFieldsApprovedAt       ListAccountingExpensesQueryParamFields = "approved_at"
+	ListAccountingExpensesQueryParamFieldsApproverUserID   ListAccountingExpensesQueryParamFields = "approver_user_id"
+	ListAccountingExpensesQueryParamFieldsLineitems        ListAccountingExpensesQueryParamFields = "lineitems"
+	ListAccountingExpensesQueryParamFieldsRaw              ListAccountingExpensesQueryParamFields = "raw"
+)
+
+func (e ListAccountingExpensesQueryParamFields) ToPointer() *ListAccountingExpensesQueryParamFields {
+	return &e
+}
+func (e *ListAccountingExpensesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "name":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "reimbursed_amount":
+		fallthrough
+	case "reimbursed_at":
+		fallthrough
+	case "approved_at":
+		fallthrough
+	case "approver_user_id":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "raw":
+		*e = ListAccountingExpensesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingExpensesQueryParamFields: %v", v)
+	}
+}
 
 type ListAccountingExpensesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAccountingExpensesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -33,7 +97,7 @@ func (l *ListAccountingExpensesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAccountingExpensesRequest) GetFields() []string {
+func (l *ListAccountingExpensesRequest) GetFields() []ListAccountingExpensesQueryParamFields {
 	if l == nil {
 		return nil
 	}

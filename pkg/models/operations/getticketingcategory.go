@@ -3,15 +3,61 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetTicketingCategoryQueryParamFields string
+
+const (
+	GetTicketingCategoryQueryParamFieldsID          GetTicketingCategoryQueryParamFields = "id"
+	GetTicketingCategoryQueryParamFieldsCreatedAt   GetTicketingCategoryQueryParamFields = "created_at"
+	GetTicketingCategoryQueryParamFieldsUpdatedAt   GetTicketingCategoryQueryParamFields = "updated_at"
+	GetTicketingCategoryQueryParamFieldsName        GetTicketingCategoryQueryParamFields = "name"
+	GetTicketingCategoryQueryParamFieldsDescription GetTicketingCategoryQueryParamFields = "description"
+	GetTicketingCategoryQueryParamFieldsIsActive    GetTicketingCategoryQueryParamFields = "is_active"
+	GetTicketingCategoryQueryParamFieldsParentID    GetTicketingCategoryQueryParamFields = "parent_id"
+	GetTicketingCategoryQueryParamFieldsRaw         GetTicketingCategoryQueryParamFields = "raw"
+)
+
+func (e GetTicketingCategoryQueryParamFields) ToPointer() *GetTicketingCategoryQueryParamFields {
+	return &e
+}
+func (e *GetTicketingCategoryQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = GetTicketingCategoryQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetTicketingCategoryQueryParamFields: %v", v)
+	}
+}
 
 type GetTicketingCategoryRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetTicketingCategoryQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Category
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +71,7 @@ func (g *GetTicketingCategoryRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetTicketingCategoryRequest) GetFields() []string {
+func (g *GetTicketingCategoryRequest) GetFields() []GetTicketingCategoryQueryParamFields {
 	if g == nil {
 		return nil
 	}

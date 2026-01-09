@@ -3,9 +3,88 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchCrmContactQueryParamFields string
+
+const (
+	PatchCrmContactQueryParamFieldsID         PatchCrmContactQueryParamFields = "id"
+	PatchCrmContactQueryParamFieldsCreatedAt  PatchCrmContactQueryParamFields = "created_at"
+	PatchCrmContactQueryParamFieldsUpdatedAt  PatchCrmContactQueryParamFields = "updated_at"
+	PatchCrmContactQueryParamFieldsName       PatchCrmContactQueryParamFields = "name"
+	PatchCrmContactQueryParamFieldsFirstName  PatchCrmContactQueryParamFields = "first_name"
+	PatchCrmContactQueryParamFieldsLastName   PatchCrmContactQueryParamFields = "last_name"
+	PatchCrmContactQueryParamFieldsTitle      PatchCrmContactQueryParamFields = "title"
+	PatchCrmContactQueryParamFieldsCompany    PatchCrmContactQueryParamFields = "company"
+	PatchCrmContactQueryParamFieldsEmails     PatchCrmContactQueryParamFields = "emails"
+	PatchCrmContactQueryParamFieldsTelephones PatchCrmContactQueryParamFields = "telephones"
+	PatchCrmContactQueryParamFieldsDealIds    PatchCrmContactQueryParamFields = "deal_ids"
+	PatchCrmContactQueryParamFieldsCompanyIds PatchCrmContactQueryParamFields = "company_ids"
+	PatchCrmContactQueryParamFieldsAddress    PatchCrmContactQueryParamFields = "address"
+	PatchCrmContactQueryParamFieldsUserID     PatchCrmContactQueryParamFields = "user_id"
+	PatchCrmContactQueryParamFieldsLinkUrls   PatchCrmContactQueryParamFields = "link_urls"
+	PatchCrmContactQueryParamFieldsMetadata   PatchCrmContactQueryParamFields = "metadata"
+	PatchCrmContactQueryParamFieldsDepartment PatchCrmContactQueryParamFields = "department"
+	PatchCrmContactQueryParamFieldsImageURL   PatchCrmContactQueryParamFields = "image_url"
+	PatchCrmContactQueryParamFieldsRaw        PatchCrmContactQueryParamFields = "raw"
+)
+
+func (e PatchCrmContactQueryParamFields) ToPointer() *PatchCrmContactQueryParamFields {
+	return &e
+}
+func (e *PatchCrmContactQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "title":
+		fallthrough
+	case "company":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "deal_ids":
+		fallthrough
+	case "company_ids":
+		fallthrough
+	case "address":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "link_urls":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "department":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "raw":
+		*e = PatchCrmContactQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchCrmContactQueryParamFields: %v", v)
+	}
+}
 
 type PatchCrmContactRequest struct {
 	// A contact represents a person that optionally is associated with a deal and/or a company
@@ -13,7 +92,7 @@ type PatchCrmContactRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchCrmContactQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Contact
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +113,7 @@ func (p *PatchCrmContactRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchCrmContactRequest) GetFields() []string {
+func (p *PatchCrmContactRequest) GetFields() []PatchCrmContactQueryParamFields {
 	if p == nil {
 		return nil
 	}

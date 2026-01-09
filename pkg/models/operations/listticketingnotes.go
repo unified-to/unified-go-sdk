@@ -3,9 +3,55 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListTicketingNotesQueryParamFields string
+
+const (
+	ListTicketingNotesQueryParamFieldsID          ListTicketingNotesQueryParamFields = "id"
+	ListTicketingNotesQueryParamFieldsCreatedAt   ListTicketingNotesQueryParamFields = "created_at"
+	ListTicketingNotesQueryParamFieldsUpdatedAt   ListTicketingNotesQueryParamFields = "updated_at"
+	ListTicketingNotesQueryParamFieldsCustomerID  ListTicketingNotesQueryParamFields = "customer_id"
+	ListTicketingNotesQueryParamFieldsDescription ListTicketingNotesQueryParamFields = "description"
+	ListTicketingNotesQueryParamFieldsTicketID    ListTicketingNotesQueryParamFields = "ticket_id"
+	ListTicketingNotesQueryParamFieldsUserID      ListTicketingNotesQueryParamFields = "user_id"
+	ListTicketingNotesQueryParamFieldsRaw         ListTicketingNotesQueryParamFields = "raw"
+)
+
+func (e ListTicketingNotesQueryParamFields) ToPointer() *ListTicketingNotesQueryParamFields {
+	return &e
+}
+func (e *ListTicketingNotesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "customer_id":
+		fallthrough
+	case "description":
+		fallthrough
+	case "ticket_id":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "raw":
+		*e = ListTicketingNotesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListTicketingNotesQueryParamFields: %v", v)
+	}
+}
 
 type ListTicketingNotesRequest struct {
 	// ID of the connection
@@ -13,10 +59,10 @@ type ListTicketingNotesRequest struct {
 	// The customer ID to filter by
 	CustomerID *string `queryParam:"style=form,explode=true,name=customer_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListTicketingNotesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                             `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                             `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                              `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -24,7 +70,7 @@ type ListTicketingNotesRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The ticket ID to filter by
 	TicketID *string `queryParam:"style=form,explode=true,name=ticket_id"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -42,7 +88,7 @@ func (l *ListTicketingNotesRequest) GetCustomerID() *string {
 	return l.CustomerID
 }
 
-func (l *ListTicketingNotesRequest) GetFields() []string {
+func (l *ListTicketingNotesRequest) GetFields() []ListTicketingNotesQueryParamFields {
 	if l == nil {
 		return nil
 	}

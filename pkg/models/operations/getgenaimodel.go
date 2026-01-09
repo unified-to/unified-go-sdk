@@ -3,15 +3,58 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetGenaiModelQueryParamFields string
+
+const (
+	GetGenaiModelQueryParamFieldsID             GetGenaiModelQueryParamFields = "id"
+	GetGenaiModelQueryParamFieldsName           GetGenaiModelQueryParamFields = "name"
+	GetGenaiModelQueryParamFieldsDescription    GetGenaiModelQueryParamFields = "description"
+	GetGenaiModelQueryParamFieldsMaxTokens      GetGenaiModelQueryParamFields = "max_tokens"
+	GetGenaiModelQueryParamFieldsWebURL         GetGenaiModelQueryParamFields = "web_url"
+	GetGenaiModelQueryParamFieldsHasTemperature GetGenaiModelQueryParamFields = "has_temperature"
+	GetGenaiModelQueryParamFieldsRaw            GetGenaiModelQueryParamFields = "raw"
+)
+
+func (e GetGenaiModelQueryParamFields) ToPointer() *GetGenaiModelQueryParamFields {
+	return &e
+}
+func (e *GetGenaiModelQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "max_tokens":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "has_temperature":
+		fallthrough
+	case "raw":
+		*e = GetGenaiModelQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetGenaiModelQueryParamFields: %v", v)
+	}
+}
 
 type GetGenaiModelRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetGenaiModelQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Model
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +68,7 @@ func (g *GetGenaiModelRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetGenaiModelRequest) GetFields() []string {
+func (g *GetGenaiModelRequest) GetFields() []GetGenaiModelQueryParamFields {
 	if g == nil {
 		return nil
 	}

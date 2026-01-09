@@ -3,32 +3,85 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListLmsInstructorsQueryParamFields string
+
+const (
+	ListLmsInstructorsQueryParamFieldsID         ListLmsInstructorsQueryParamFields = "id"
+	ListLmsInstructorsQueryParamFieldsCreatedAt  ListLmsInstructorsQueryParamFields = "created_at"
+	ListLmsInstructorsQueryParamFieldsUpdatedAt  ListLmsInstructorsQueryParamFields = "updated_at"
+	ListLmsInstructorsQueryParamFieldsName       ListLmsInstructorsQueryParamFields = "name"
+	ListLmsInstructorsQueryParamFieldsFirstName  ListLmsInstructorsQueryParamFields = "first_name"
+	ListLmsInstructorsQueryParamFieldsLastName   ListLmsInstructorsQueryParamFields = "last_name"
+	ListLmsInstructorsQueryParamFieldsEmails     ListLmsInstructorsQueryParamFields = "emails"
+	ListLmsInstructorsQueryParamFieldsTitle      ListLmsInstructorsQueryParamFields = "title"
+	ListLmsInstructorsQueryParamFieldsTelephones ListLmsInstructorsQueryParamFields = "telephones"
+	ListLmsInstructorsQueryParamFieldsImageURL   ListLmsInstructorsQueryParamFields = "image_url"
+	ListLmsInstructorsQueryParamFieldsRaw        ListLmsInstructorsQueryParamFields = "raw"
+)
+
+func (e ListLmsInstructorsQueryParamFields) ToPointer() *ListLmsInstructorsQueryParamFields {
+	return &e
+}
+func (e *ListLmsInstructorsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "title":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "raw":
+		*e = ListLmsInstructorsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListLmsInstructorsQueryParamFields: %v", v)
+	}
+}
+
 type ListLmsInstructorsRequest struct {
-	// The class ID to filter by
+	// The class ID to filter by (reference to LmsClass)
 	ClassID *string `queryParam:"style=form,explode=true,name=class_id"`
-	// The company ID to filter by
+	// The company ID to filter by (reference to HrisCompany)
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The course ID to filter by
+	// The course ID to filter by (reference to Course)
 	CourseID *string `queryParam:"style=form,explode=true,name=course_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	// The location ID to filter by
-	LocationID *string  `queryParam:"style=form,explode=true,name=location_id"`
-	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order      *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListLmsInstructorsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                             `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                             `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                              `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -60,7 +113,7 @@ func (l *ListLmsInstructorsRequest) GetCourseID() *string {
 	return l.CourseID
 }
 
-func (l *ListLmsInstructorsRequest) GetFields() []string {
+func (l *ListLmsInstructorsRequest) GetFields() []ListLmsInstructorsQueryParamFields {
 	if l == nil {
 		return nil
 	}
@@ -72,13 +125,6 @@ func (l *ListLmsInstructorsRequest) GetLimit() *float64 {
 		return nil
 	}
 	return l.Limit
-}
-
-func (l *ListLmsInstructorsRequest) GetLocationID() *string {
-	if l == nil {
-		return nil
-	}
-	return l.LocationID
 }
 
 func (l *ListLmsInstructorsRequest) GetOffset() *float64 {

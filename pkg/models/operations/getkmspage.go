@@ -3,15 +3,82 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetKmsPageQueryParamFields string
+
+const (
+	GetKmsPageQueryParamFieldsID           GetKmsPageQueryParamFields = "id"
+	GetKmsPageQueryParamFieldsCreatedAt    GetKmsPageQueryParamFields = "created_at"
+	GetKmsPageQueryParamFieldsUpdatedAt    GetKmsPageQueryParamFields = "updated_at"
+	GetKmsPageQueryParamFieldsTitle        GetKmsPageQueryParamFields = "title"
+	GetKmsPageQueryParamFieldsType         GetKmsPageQueryParamFields = "type"
+	GetKmsPageQueryParamFieldsSpaceID      GetKmsPageQueryParamFields = "space_id"
+	GetKmsPageQueryParamFieldsParentPageID GetKmsPageQueryParamFields = "parent_page_id"
+	GetKmsPageQueryParamFieldsParentID     GetKmsPageQueryParamFields = "parent_id"
+	GetKmsPageQueryParamFieldsIsActive     GetKmsPageQueryParamFields = "is_active"
+	GetKmsPageQueryParamFieldsUserID       GetKmsPageQueryParamFields = "user_id"
+	GetKmsPageQueryParamFieldsDownloadURL  GetKmsPageQueryParamFields = "download_url"
+	GetKmsPageQueryParamFieldsMetadata     GetKmsPageQueryParamFields = "metadata"
+	GetKmsPageQueryParamFieldsHasChildren  GetKmsPageQueryParamFields = "has_children"
+	GetKmsPageQueryParamFieldsWebURL       GetKmsPageQueryParamFields = "web_url"
+	GetKmsPageQueryParamFieldsRaw          GetKmsPageQueryParamFields = "raw"
+)
+
+func (e GetKmsPageQueryParamFields) ToPointer() *GetKmsPageQueryParamFields {
+	return &e
+}
+func (e *GetKmsPageQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "title":
+		fallthrough
+	case "type":
+		fallthrough
+	case "space_id":
+		fallthrough
+	case "parent_page_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "download_url":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "raw":
+		*e = GetKmsPageQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetKmsPageQueryParamFields: %v", v)
+	}
+}
 
 type GetKmsPageRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetKmsPageQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Page
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +92,7 @@ func (g *GetKmsPageRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetKmsPageRequest) GetFields() []string {
+func (g *GetKmsPageRequest) GetFields() []GetKmsPageQueryParamFields {
 	if g == nil {
 		return nil
 	}

@@ -3,15 +3,100 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetTaskTaskQueryParamFields string
+
+const (
+	GetTaskTaskQueryParamFieldsID              GetTaskTaskQueryParamFields = "id"
+	GetTaskTaskQueryParamFieldsCreatedAt       GetTaskTaskQueryParamFields = "created_at"
+	GetTaskTaskQueryParamFieldsUpdatedAt       GetTaskTaskQueryParamFields = "updated_at"
+	GetTaskTaskQueryParamFieldsName            GetTaskTaskQueryParamFields = "name"
+	GetTaskTaskQueryParamFieldsProjectID       GetTaskTaskQueryParamFields = "project_id"
+	GetTaskTaskQueryParamFieldsParentID        GetTaskTaskQueryParamFields = "parent_id"
+	GetTaskTaskQueryParamFieldsCompletedAt     GetTaskTaskQueryParamFields = "completed_at"
+	GetTaskTaskQueryParamFieldsStatus          GetTaskTaskQueryParamFields = "status"
+	GetTaskTaskQueryParamFieldsNotes           GetTaskTaskQueryParamFields = "notes"
+	GetTaskTaskQueryParamFieldsDueAt           GetTaskTaskQueryParamFields = "due_at"
+	GetTaskTaskQueryParamFieldsPriority        GetTaskTaskQueryParamFields = "priority"
+	GetTaskTaskQueryParamFieldsAssignedUserIds GetTaskTaskQueryParamFields = "assigned_user_ids"
+	GetTaskTaskQueryParamFieldsCreatorUserID   GetTaskTaskQueryParamFields = "creator_user_id"
+	GetTaskTaskQueryParamFieldsFollowerUserIds GetTaskTaskQueryParamFields = "follower_user_ids"
+	GetTaskTaskQueryParamFieldsGroupIds        GetTaskTaskQueryParamFields = "group_ids"
+	GetTaskTaskQueryParamFieldsTags            GetTaskTaskQueryParamFields = "tags"
+	GetTaskTaskQueryParamFieldsURL             GetTaskTaskQueryParamFields = "url"
+	GetTaskTaskQueryParamFieldsAttachmentIds   GetTaskTaskQueryParamFields = "attachment_ids"
+	GetTaskTaskQueryParamFieldsMetadata        GetTaskTaskQueryParamFields = "metadata"
+	GetTaskTaskQueryParamFieldsHasChildren     GetTaskTaskQueryParamFields = "has_children"
+	GetTaskTaskQueryParamFieldsRaw             GetTaskTaskQueryParamFields = "raw"
+)
+
+func (e GetTaskTaskQueryParamFields) ToPointer() *GetTaskTaskQueryParamFields {
+	return &e
+}
+func (e *GetTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "project_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "completed_at":
+		fallthrough
+	case "status":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "priority":
+		fallthrough
+	case "assigned_user_ids":
+		fallthrough
+	case "creator_user_id":
+		fallthrough
+	case "follower_user_ids":
+		fallthrough
+	case "group_ids":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "url":
+		fallthrough
+	case "attachment_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "raw":
+		*e = GetTaskTaskQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetTaskTaskQueryParamFields: %v", v)
+	}
+}
 
 type GetTaskTaskRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetTaskTaskQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Task
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +110,7 @@ func (g *GetTaskTaskRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetTaskTaskRequest) GetFields() []string {
+func (g *GetTaskTaskRequest) GetFields() []GetTaskTaskQueryParamFields {
 	if g == nil {
 		return nil
 	}

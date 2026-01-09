@@ -3,16 +3,80 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateAccountingExpenseQueryParamFields string
+
+const (
+	UpdateAccountingExpenseQueryParamFieldsID               UpdateAccountingExpenseQueryParamFields = "id"
+	UpdateAccountingExpenseQueryParamFieldsCreatedAt        UpdateAccountingExpenseQueryParamFields = "created_at"
+	UpdateAccountingExpenseQueryParamFieldsUpdatedAt        UpdateAccountingExpenseQueryParamFields = "updated_at"
+	UpdateAccountingExpenseQueryParamFieldsUserID           UpdateAccountingExpenseQueryParamFields = "user_id"
+	UpdateAccountingExpenseQueryParamFieldsName             UpdateAccountingExpenseQueryParamFields = "name"
+	UpdateAccountingExpenseQueryParamFieldsTotalAmount      UpdateAccountingExpenseQueryParamFields = "total_amount"
+	UpdateAccountingExpenseQueryParamFieldsCurrency         UpdateAccountingExpenseQueryParamFields = "currency"
+	UpdateAccountingExpenseQueryParamFieldsTaxAmount        UpdateAccountingExpenseQueryParamFields = "tax_amount"
+	UpdateAccountingExpenseQueryParamFieldsReimbursedAmount UpdateAccountingExpenseQueryParamFields = "reimbursed_amount"
+	UpdateAccountingExpenseQueryParamFieldsReimbursedAt     UpdateAccountingExpenseQueryParamFields = "reimbursed_at"
+	UpdateAccountingExpenseQueryParamFieldsApprovedAt       UpdateAccountingExpenseQueryParamFields = "approved_at"
+	UpdateAccountingExpenseQueryParamFieldsApproverUserID   UpdateAccountingExpenseQueryParamFields = "approver_user_id"
+	UpdateAccountingExpenseQueryParamFieldsLineitems        UpdateAccountingExpenseQueryParamFields = "lineitems"
+	UpdateAccountingExpenseQueryParamFieldsRaw              UpdateAccountingExpenseQueryParamFields = "raw"
+)
+
+func (e UpdateAccountingExpenseQueryParamFields) ToPointer() *UpdateAccountingExpenseQueryParamFields {
+	return &e
+}
+func (e *UpdateAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "name":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "reimbursed_amount":
+		fallthrough
+	case "reimbursed_at":
+		fallthrough
+	case "approved_at":
+		fallthrough
+	case "approver_user_id":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "raw":
+		*e = UpdateAccountingExpenseQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateAccountingExpenseQueryParamFields: %v", v)
+	}
+}
 
 type UpdateAccountingExpenseRequest struct {
 	AccountingExpense shared.AccountingExpense `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateAccountingExpenseQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Expense
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +97,7 @@ func (u *UpdateAccountingExpenseRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateAccountingExpenseRequest) GetFields() []string {
+func (u *UpdateAccountingExpenseRequest) GetFields() []UpdateAccountingExpenseQueryParamFields {
 	if u == nil {
 		return nil
 	}

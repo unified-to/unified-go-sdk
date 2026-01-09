@@ -3,16 +3,80 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateAdsGroupQueryParamFields string
+
+const (
+	CreateAdsGroupQueryParamFieldsID             CreateAdsGroupQueryParamFields = "id"
+	CreateAdsGroupQueryParamFieldsCreatedAt      CreateAdsGroupQueryParamFields = "created_at"
+	CreateAdsGroupQueryParamFieldsUpdatedAt      CreateAdsGroupQueryParamFields = "updated_at"
+	CreateAdsGroupQueryParamFieldsName           CreateAdsGroupQueryParamFields = "name"
+	CreateAdsGroupQueryParamFieldsCampaignID     CreateAdsGroupQueryParamFields = "campaign_id"
+	CreateAdsGroupQueryParamFieldsOrganizationID CreateAdsGroupQueryParamFields = "organization_id"
+	CreateAdsGroupQueryParamFieldsIsActive       CreateAdsGroupQueryParamFields = "is_active"
+	CreateAdsGroupQueryParamFieldsTargeting      CreateAdsGroupQueryParamFields = "targeting"
+	CreateAdsGroupQueryParamFieldsBidAmount      CreateAdsGroupQueryParamFields = "bid_amount"
+	CreateAdsGroupQueryParamFieldsBudgetAmount   CreateAdsGroupQueryParamFields = "budget_amount"
+	CreateAdsGroupQueryParamFieldsBudgetPeriod   CreateAdsGroupQueryParamFields = "budget_period"
+	CreateAdsGroupQueryParamFieldsStartAt        CreateAdsGroupQueryParamFields = "start_at"
+	CreateAdsGroupQueryParamFieldsEndAt          CreateAdsGroupQueryParamFields = "end_at"
+	CreateAdsGroupQueryParamFieldsRaw            CreateAdsGroupQueryParamFields = "raw"
+)
+
+func (e CreateAdsGroupQueryParamFields) ToPointer() *CreateAdsGroupQueryParamFields {
+	return &e
+}
+func (e *CreateAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "campaign_id":
+		fallthrough
+	case "organization_id":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "targeting":
+		fallthrough
+	case "bid_amount":
+		fallthrough
+	case "budget_amount":
+		fallthrough
+	case "budget_period":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "raw":
+		*e = CreateAdsGroupQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateAdsGroupQueryParamFields: %v", v)
+	}
+}
 
 type CreateAdsGroupRequest struct {
 	AdsGroup shared.AdsGroup `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateAdsGroupQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +95,7 @@ func (c *CreateAdsGroupRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAdsGroupRequest) GetFields() []string {
+func (c *CreateAdsGroupRequest) GetFields() []CreateAdsGroupQueryParamFields {
 	if c == nil {
 		return nil
 	}

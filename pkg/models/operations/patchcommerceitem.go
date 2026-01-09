@@ -3,16 +3,101 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchCommerceItemQueryParamFields string
+
+const (
+	PatchCommerceItemQueryParamFieldsID                PatchCommerceItemQueryParamFields = "id"
+	PatchCommerceItemQueryParamFieldsCreatedAt         PatchCommerceItemQueryParamFields = "created_at"
+	PatchCommerceItemQueryParamFieldsUpdatedAt         PatchCommerceItemQueryParamFields = "updated_at"
+	PatchCommerceItemQueryParamFieldsName              PatchCommerceItemQueryParamFields = "name"
+	PatchCommerceItemQueryParamFieldsPublicName        PatchCommerceItemQueryParamFields = "public_name"
+	PatchCommerceItemQueryParamFieldsSlug              PatchCommerceItemQueryParamFields = "slug"
+	PatchCommerceItemQueryParamFieldsDescription       PatchCommerceItemQueryParamFields = "description"
+	PatchCommerceItemQueryParamFieldsGlobalCode        PatchCommerceItemQueryParamFields = "global_code"
+	PatchCommerceItemQueryParamFieldsPublicDescription PatchCommerceItemQueryParamFields = "public_description"
+	PatchCommerceItemQueryParamFieldsIsActive          PatchCommerceItemQueryParamFields = "is_active"
+	PatchCommerceItemQueryParamFieldsIsTaxable         PatchCommerceItemQueryParamFields = "is_taxable"
+	PatchCommerceItemQueryParamFieldsVendorName        PatchCommerceItemQueryParamFields = "vendor_name"
+	PatchCommerceItemQueryParamFieldsType              PatchCommerceItemQueryParamFields = "type"
+	PatchCommerceItemQueryParamFieldsVariants          PatchCommerceItemQueryParamFields = "variants"
+	PatchCommerceItemQueryParamFieldsTags              PatchCommerceItemQueryParamFields = "tags"
+	PatchCommerceItemQueryParamFieldsMedia             PatchCommerceItemQueryParamFields = "media"
+	PatchCommerceItemQueryParamFieldsCollectionIds     PatchCommerceItemQueryParamFields = "collection_ids"
+	PatchCommerceItemQueryParamFieldsAccountID         PatchCommerceItemQueryParamFields = "account_id"
+	PatchCommerceItemQueryParamFieldsMetadata          PatchCommerceItemQueryParamFields = "metadata"
+	PatchCommerceItemQueryParamFieldsRaw               PatchCommerceItemQueryParamFields = "raw"
+	PatchCommerceItemQueryParamFieldsCollections       PatchCommerceItemQueryParamFields = "collections"
+)
+
+func (e PatchCommerceItemQueryParamFields) ToPointer() *PatchCommerceItemQueryParamFields {
+	return &e
+}
+func (e *PatchCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "public_name":
+		fallthrough
+	case "slug":
+		fallthrough
+	case "description":
+		fallthrough
+	case "global_code":
+		fallthrough
+	case "public_description":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_taxable":
+		fallthrough
+	case "vendor_name":
+		fallthrough
+	case "type":
+		fallthrough
+	case "variants":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "media":
+		fallthrough
+	case "collection_ids":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		fallthrough
+	case "collections":
+		*e = PatchCommerceItemQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchCommerceItemQueryParamFields: %v", v)
+	}
+}
 
 type PatchCommerceItemRequest struct {
 	CommerceItem shared.CommerceItem `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchCommerceItemQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Item
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +118,7 @@ func (p *PatchCommerceItemRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchCommerceItemRequest) GetFields() []string {
+func (p *PatchCommerceItemRequest) GetFields() []PatchCommerceItemQueryParamFields {
 	if p == nil {
 		return nil
 	}

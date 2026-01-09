@@ -3,15 +3,79 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAdsGroupQueryParamFields string
+
+const (
+	GetAdsGroupQueryParamFieldsID             GetAdsGroupQueryParamFields = "id"
+	GetAdsGroupQueryParamFieldsCreatedAt      GetAdsGroupQueryParamFields = "created_at"
+	GetAdsGroupQueryParamFieldsUpdatedAt      GetAdsGroupQueryParamFields = "updated_at"
+	GetAdsGroupQueryParamFieldsName           GetAdsGroupQueryParamFields = "name"
+	GetAdsGroupQueryParamFieldsCampaignID     GetAdsGroupQueryParamFields = "campaign_id"
+	GetAdsGroupQueryParamFieldsOrganizationID GetAdsGroupQueryParamFields = "organization_id"
+	GetAdsGroupQueryParamFieldsIsActive       GetAdsGroupQueryParamFields = "is_active"
+	GetAdsGroupQueryParamFieldsTargeting      GetAdsGroupQueryParamFields = "targeting"
+	GetAdsGroupQueryParamFieldsBidAmount      GetAdsGroupQueryParamFields = "bid_amount"
+	GetAdsGroupQueryParamFieldsBudgetAmount   GetAdsGroupQueryParamFields = "budget_amount"
+	GetAdsGroupQueryParamFieldsBudgetPeriod   GetAdsGroupQueryParamFields = "budget_period"
+	GetAdsGroupQueryParamFieldsStartAt        GetAdsGroupQueryParamFields = "start_at"
+	GetAdsGroupQueryParamFieldsEndAt          GetAdsGroupQueryParamFields = "end_at"
+	GetAdsGroupQueryParamFieldsRaw            GetAdsGroupQueryParamFields = "raw"
+)
+
+func (e GetAdsGroupQueryParamFields) ToPointer() *GetAdsGroupQueryParamFields {
+	return &e
+}
+func (e *GetAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "campaign_id":
+		fallthrough
+	case "organization_id":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "targeting":
+		fallthrough
+	case "bid_amount":
+		fallthrough
+	case "budget_amount":
+		fallthrough
+	case "budget_period":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "raw":
+		*e = GetAdsGroupQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAdsGroupQueryParamFields: %v", v)
+	}
+}
 
 type GetAdsGroupRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAdsGroupQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Group
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +89,7 @@ func (g *GetAdsGroupRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAdsGroupRequest) GetFields() []string {
+func (g *GetAdsGroupRequest) GetFields() []GetAdsGroupQueryParamFields {
 	if g == nil {
 		return nil
 	}

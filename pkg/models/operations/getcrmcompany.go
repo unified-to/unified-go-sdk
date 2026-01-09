@@ -3,15 +3,100 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetCrmCompanyQueryParamFields string
+
+const (
+	GetCrmCompanyQueryParamFieldsID          GetCrmCompanyQueryParamFields = "id"
+	GetCrmCompanyQueryParamFieldsCreatedAt   GetCrmCompanyQueryParamFields = "created_at"
+	GetCrmCompanyQueryParamFieldsUpdatedAt   GetCrmCompanyQueryParamFields = "updated_at"
+	GetCrmCompanyQueryParamFieldsName        GetCrmCompanyQueryParamFields = "name"
+	GetCrmCompanyQueryParamFieldsDealIds     GetCrmCompanyQueryParamFields = "deal_ids"
+	GetCrmCompanyQueryParamFieldsContactIds  GetCrmCompanyQueryParamFields = "contact_ids"
+	GetCrmCompanyQueryParamFieldsEmails      GetCrmCompanyQueryParamFields = "emails"
+	GetCrmCompanyQueryParamFieldsTelephones  GetCrmCompanyQueryParamFields = "telephones"
+	GetCrmCompanyQueryParamFieldsWebsites    GetCrmCompanyQueryParamFields = "websites"
+	GetCrmCompanyQueryParamFieldsAddress     GetCrmCompanyQueryParamFields = "address"
+	GetCrmCompanyQueryParamFieldsIsActive    GetCrmCompanyQueryParamFields = "is_active"
+	GetCrmCompanyQueryParamFieldsTags        GetCrmCompanyQueryParamFields = "tags"
+	GetCrmCompanyQueryParamFieldsDescription GetCrmCompanyQueryParamFields = "description"
+	GetCrmCompanyQueryParamFieldsIndustry    GetCrmCompanyQueryParamFields = "industry"
+	GetCrmCompanyQueryParamFieldsLinkUrls    GetCrmCompanyQueryParamFields = "link_urls"
+	GetCrmCompanyQueryParamFieldsEmployees   GetCrmCompanyQueryParamFields = "employees"
+	GetCrmCompanyQueryParamFieldsTimezone    GetCrmCompanyQueryParamFields = "timezone"
+	GetCrmCompanyQueryParamFieldsUserID      GetCrmCompanyQueryParamFields = "user_id"
+	GetCrmCompanyQueryParamFieldsMetadata    GetCrmCompanyQueryParamFields = "metadata"
+	GetCrmCompanyQueryParamFieldsDomains     GetCrmCompanyQueryParamFields = "domains"
+	GetCrmCompanyQueryParamFieldsRaw         GetCrmCompanyQueryParamFields = "raw"
+)
+
+func (e GetCrmCompanyQueryParamFields) ToPointer() *GetCrmCompanyQueryParamFields {
+	return &e
+}
+func (e *GetCrmCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "deal_ids":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "websites":
+		fallthrough
+	case "address":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "description":
+		fallthrough
+	case "industry":
+		fallthrough
+	case "link_urls":
+		fallthrough
+	case "employees":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "domains":
+		fallthrough
+	case "raw":
+		*e = GetCrmCompanyQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetCrmCompanyQueryParamFields: %v", v)
+	}
+}
 
 type GetCrmCompanyRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetCrmCompanyQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Company
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +110,7 @@ func (g *GetCrmCompanyRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetCrmCompanyRequest) GetFields() []string {
+func (g *GetCrmCompanyRequest) GetFields() []GetCrmCompanyQueryParamFields {
 	if g == nil {
 		return nil
 	}

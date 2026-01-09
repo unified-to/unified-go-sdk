@@ -3,16 +3,86 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchHrisLocationQueryParamFields string
+
+const (
+	PatchHrisLocationQueryParamFieldsID                 PatchHrisLocationQueryParamFields = "id"
+	PatchHrisLocationQueryParamFieldsCreatedAt          PatchHrisLocationQueryParamFields = "created_at"
+	PatchHrisLocationQueryParamFieldsUpdatedAt          PatchHrisLocationQueryParamFields = "updated_at"
+	PatchHrisLocationQueryParamFieldsName               PatchHrisLocationQueryParamFields = "name"
+	PatchHrisLocationQueryParamFieldsDescription        PatchHrisLocationQueryParamFields = "description"
+	PatchHrisLocationQueryParamFieldsAddress            PatchHrisLocationQueryParamFields = "address"
+	PatchHrisLocationQueryParamFieldsParentID           PatchHrisLocationQueryParamFields = "parent_id"
+	PatchHrisLocationQueryParamFieldsExternalIdentifier PatchHrisLocationQueryParamFields = "external_identifier"
+	PatchHrisLocationQueryParamFieldsTelephones         PatchHrisLocationQueryParamFields = "telephones"
+	PatchHrisLocationQueryParamFieldsTimezone           PatchHrisLocationQueryParamFields = "timezone"
+	PatchHrisLocationQueryParamFieldsCurrency           PatchHrisLocationQueryParamFields = "currency"
+	PatchHrisLocationQueryParamFieldsLanguageLocale     PatchHrisLocationQueryParamFields = "language_locale"
+	PatchHrisLocationQueryParamFieldsIsActive           PatchHrisLocationQueryParamFields = "is_active"
+	PatchHrisLocationQueryParamFieldsIsHq               PatchHrisLocationQueryParamFields = "is_hq"
+	PatchHrisLocationQueryParamFieldsCompanyID          PatchHrisLocationQueryParamFields = "company_id"
+	PatchHrisLocationQueryParamFieldsRaw                PatchHrisLocationQueryParamFields = "raw"
+)
+
+func (e PatchHrisLocationQueryParamFields) ToPointer() *PatchHrisLocationQueryParamFields {
+	return &e
+}
+func (e *PatchHrisLocationQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "address":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "external_identifier":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_hq":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "raw":
+		*e = PatchHrisLocationQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchHrisLocationQueryParamFields: %v", v)
+	}
+}
 
 type PatchHrisLocationRequest struct {
 	HrisLocation shared.HrisLocation `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchHrisLocationQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +103,7 @@ func (p *PatchHrisLocationRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchHrisLocationRequest) GetFields() []string {
+func (p *PatchHrisLocationRequest) GetFields() []PatchHrisLocationQueryParamFields {
 	if p == nil {
 		return nil
 	}

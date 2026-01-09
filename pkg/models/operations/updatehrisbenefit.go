@@ -3,9 +3,79 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateHrisBenefitQueryParamFields string
+
+const (
+	UpdateHrisBenefitQueryParamFieldsID                            UpdateHrisBenefitQueryParamFields = "id"
+	UpdateHrisBenefitQueryParamFieldsCreatedAt                     UpdateHrisBenefitQueryParamFields = "created_at"
+	UpdateHrisBenefitQueryParamFieldsUpdatedAt                     UpdateHrisBenefitQueryParamFields = "updated_at"
+	UpdateHrisBenefitQueryParamFieldsName                          UpdateHrisBenefitQueryParamFields = "name"
+	UpdateHrisBenefitQueryParamFieldsDescription                   UpdateHrisBenefitQueryParamFields = "description"
+	UpdateHrisBenefitQueryParamFieldsCompanyID                     UpdateHrisBenefitQueryParamFields = "company_id"
+	UpdateHrisBenefitQueryParamFieldsType                          UpdateHrisBenefitQueryParamFields = "type"
+	UpdateHrisBenefitQueryParamFieldsTax                           UpdateHrisBenefitQueryParamFields = "tax"
+	UpdateHrisBenefitQueryParamFieldsFrequency                     UpdateHrisBenefitQueryParamFields = "frequency"
+	UpdateHrisBenefitQueryParamFieldsIsActive                      UpdateHrisBenefitQueryParamFields = "is_active"
+	UpdateHrisBenefitQueryParamFieldsEmployerContributionType      UpdateHrisBenefitQueryParamFields = "employer_contribution_type"
+	UpdateHrisBenefitQueryParamFieldsEmployerContributionAmount    UpdateHrisBenefitQueryParamFields = "employer_contribution_amount"
+	UpdateHrisBenefitQueryParamFieldsEmployerContributionMaxAmount UpdateHrisBenefitQueryParamFields = "employer_contribution_max_amount"
+	UpdateHrisBenefitQueryParamFieldsCoverageLevel                 UpdateHrisBenefitQueryParamFields = "coverage_level"
+	UpdateHrisBenefitQueryParamFieldsCurrency                      UpdateHrisBenefitQueryParamFields = "currency"
+	UpdateHrisBenefitQueryParamFieldsRaw                           UpdateHrisBenefitQueryParamFields = "raw"
+)
+
+func (e UpdateHrisBenefitQueryParamFields) ToPointer() *UpdateHrisBenefitQueryParamFields {
+	return &e
+}
+func (e *UpdateHrisBenefitQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "type":
+		fallthrough
+	case "tax":
+		fallthrough
+	case "frequency":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "employer_contribution_type":
+		fallthrough
+	case "employer_contribution_amount":
+		fallthrough
+	case "employer_contribution_max_amount":
+		fallthrough
+	case "coverage_level":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "raw":
+		*e = UpdateHrisBenefitQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateHrisBenefitQueryParamFields: %v", v)
+	}
+}
 
 type UpdateHrisBenefitRequest struct {
 	// Company-wide benefit plans available to employees.
@@ -13,7 +83,7 @@ type UpdateHrisBenefitRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateHrisBenefitQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Benefit
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +104,7 @@ func (u *UpdateHrisBenefitRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateHrisBenefitRequest) GetFields() []string {
+func (u *UpdateHrisBenefitRequest) GetFields() []UpdateHrisBenefitQueryParamFields {
 	if u == nil {
 		return nil
 	}

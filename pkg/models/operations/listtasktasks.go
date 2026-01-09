@@ -3,21 +3,106 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListTaskTasksQueryParamFields string
+
+const (
+	ListTaskTasksQueryParamFieldsID              ListTaskTasksQueryParamFields = "id"
+	ListTaskTasksQueryParamFieldsCreatedAt       ListTaskTasksQueryParamFields = "created_at"
+	ListTaskTasksQueryParamFieldsUpdatedAt       ListTaskTasksQueryParamFields = "updated_at"
+	ListTaskTasksQueryParamFieldsName            ListTaskTasksQueryParamFields = "name"
+	ListTaskTasksQueryParamFieldsProjectID       ListTaskTasksQueryParamFields = "project_id"
+	ListTaskTasksQueryParamFieldsParentID        ListTaskTasksQueryParamFields = "parent_id"
+	ListTaskTasksQueryParamFieldsCompletedAt     ListTaskTasksQueryParamFields = "completed_at"
+	ListTaskTasksQueryParamFieldsStatus          ListTaskTasksQueryParamFields = "status"
+	ListTaskTasksQueryParamFieldsNotes           ListTaskTasksQueryParamFields = "notes"
+	ListTaskTasksQueryParamFieldsDueAt           ListTaskTasksQueryParamFields = "due_at"
+	ListTaskTasksQueryParamFieldsPriority        ListTaskTasksQueryParamFields = "priority"
+	ListTaskTasksQueryParamFieldsAssignedUserIds ListTaskTasksQueryParamFields = "assigned_user_ids"
+	ListTaskTasksQueryParamFieldsCreatorUserID   ListTaskTasksQueryParamFields = "creator_user_id"
+	ListTaskTasksQueryParamFieldsFollowerUserIds ListTaskTasksQueryParamFields = "follower_user_ids"
+	ListTaskTasksQueryParamFieldsGroupIds        ListTaskTasksQueryParamFields = "group_ids"
+	ListTaskTasksQueryParamFieldsTags            ListTaskTasksQueryParamFields = "tags"
+	ListTaskTasksQueryParamFieldsURL             ListTaskTasksQueryParamFields = "url"
+	ListTaskTasksQueryParamFieldsAttachmentIds   ListTaskTasksQueryParamFields = "attachment_ids"
+	ListTaskTasksQueryParamFieldsMetadata        ListTaskTasksQueryParamFields = "metadata"
+	ListTaskTasksQueryParamFieldsHasChildren     ListTaskTasksQueryParamFields = "has_children"
+	ListTaskTasksQueryParamFieldsRaw             ListTaskTasksQueryParamFields = "raw"
+)
+
+func (e ListTaskTasksQueryParamFields) ToPointer() *ListTaskTasksQueryParamFields {
+	return &e
+}
+func (e *ListTaskTasksQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "project_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "completed_at":
+		fallthrough
+	case "status":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "priority":
+		fallthrough
+	case "assigned_user_ids":
+		fallthrough
+	case "creator_user_id":
+		fallthrough
+	case "follower_user_ids":
+		fallthrough
+	case "group_ids":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "url":
+		fallthrough
+	case "attachment_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "raw":
+		*e = ListTaskTasksQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListTaskTasksQueryParamFields: %v", v)
+	}
+}
 
 type ListTaskTasksRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListTaskTasksQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                        `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                        `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                         `queryParam:"style=form,explode=true,name=order"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
-	// The project ID to filter by
+	// The project ID to filter by (reference to TaskProject)
 	ProjectID *string `queryParam:"style=form,explode=true,name=project_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
@@ -26,9 +111,9 @@ type ListTaskTasksRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The status to filter by
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -39,7 +124,7 @@ func (l *ListTaskTasksRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListTaskTasksRequest) GetFields() []string {
+func (l *ListTaskTasksRequest) GetFields() []ListTaskTasksQueryParamFields {
 	if l == nil {
 		return nil
 	}

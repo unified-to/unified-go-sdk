@@ -3,15 +3,94 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAccountingTransactionQueryParamFields string
+
+const (
+	GetAccountingTransactionQueryParamFieldsID              GetAccountingTransactionQueryParamFields = "id"
+	GetAccountingTransactionQueryParamFieldsCreatedAt       GetAccountingTransactionQueryParamFields = "created_at"
+	GetAccountingTransactionQueryParamFieldsUpdatedAt       GetAccountingTransactionQueryParamFields = "updated_at"
+	GetAccountingTransactionQueryParamFieldsMemo            GetAccountingTransactionQueryParamFields = "memo"
+	GetAccountingTransactionQueryParamFieldsTotalAmount     GetAccountingTransactionQueryParamFields = "total_amount"
+	GetAccountingTransactionQueryParamFieldsTaxAmount       GetAccountingTransactionQueryParamFields = "tax_amount"
+	GetAccountingTransactionQueryParamFieldsAccountID       GetAccountingTransactionQueryParamFields = "account_id"
+	GetAccountingTransactionQueryParamFieldsContactID       GetAccountingTransactionQueryParamFields = "contact_id"
+	GetAccountingTransactionQueryParamFieldsReference       GetAccountingTransactionQueryParamFields = "reference"
+	GetAccountingTransactionQueryParamFieldsSubTotalAmount  GetAccountingTransactionQueryParamFields = "sub_total_amount"
+	GetAccountingTransactionQueryParamFieldsSplitAccountID  GetAccountingTransactionQueryParamFields = "split_account_id"
+	GetAccountingTransactionQueryParamFieldsPaymentMethod   GetAccountingTransactionQueryParamFields = "payment_method"
+	GetAccountingTransactionQueryParamFieldsPaymentTerms    GetAccountingTransactionQueryParamFields = "payment_terms"
+	GetAccountingTransactionQueryParamFieldsCustomerMessage GetAccountingTransactionQueryParamFields = "customer_message"
+	GetAccountingTransactionQueryParamFieldsType            GetAccountingTransactionQueryParamFields = "type"
+	GetAccountingTransactionQueryParamFieldsLineitems       GetAccountingTransactionQueryParamFields = "lineitems"
+	GetAccountingTransactionQueryParamFieldsCurrency        GetAccountingTransactionQueryParamFields = "currency"
+	GetAccountingTransactionQueryParamFieldsContacts        GetAccountingTransactionQueryParamFields = "contacts"
+	GetAccountingTransactionQueryParamFieldsRaw             GetAccountingTransactionQueryParamFields = "raw"
+)
+
+func (e GetAccountingTransactionQueryParamFields) ToPointer() *GetAccountingTransactionQueryParamFields {
+	return &e
+}
+func (e *GetAccountingTransactionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "memo":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "sub_total_amount":
+		fallthrough
+	case "split_account_id":
+		fallthrough
+	case "payment_method":
+		fallthrough
+	case "payment_terms":
+		fallthrough
+	case "customer_message":
+		fallthrough
+	case "type":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "contacts":
+		fallthrough
+	case "raw":
+		*e = GetAccountingTransactionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAccountingTransactionQueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingTransactionRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAccountingTransactionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Transaction
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +104,7 @@ func (g *GetAccountingTransactionRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingTransactionRequest) GetFields() []string {
+func (g *GetAccountingTransactionRequest) GetFields() []GetAccountingTransactionQueryParamFields {
 	if g == nil {
 		return nil
 	}

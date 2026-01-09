@@ -3,28 +3,128 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListAccountingBillsQueryParamFields string
+
+const (
+	ListAccountingBillsQueryParamFieldsID                      ListAccountingBillsQueryParamFields = "id"
+	ListAccountingBillsQueryParamFieldsBillNumber              ListAccountingBillsQueryParamFields = "bill_number"
+	ListAccountingBillsQueryParamFieldsCreatedAt               ListAccountingBillsQueryParamFields = "created_at"
+	ListAccountingBillsQueryParamFieldsUpdatedAt               ListAccountingBillsQueryParamFields = "updated_at"
+	ListAccountingBillsQueryParamFieldsDueAt                   ListAccountingBillsQueryParamFields = "due_at"
+	ListAccountingBillsQueryParamFieldsPaidAt                  ListAccountingBillsQueryParamFields = "paid_at"
+	ListAccountingBillsQueryParamFieldsRefundedAt              ListAccountingBillsQueryParamFields = "refunded_at"
+	ListAccountingBillsQueryParamFieldsCancelledAt             ListAccountingBillsQueryParamFields = "cancelled_at"
+	ListAccountingBillsQueryParamFieldsPostedAt                ListAccountingBillsQueryParamFields = "posted_at"
+	ListAccountingBillsQueryParamFieldsTotalAmount             ListAccountingBillsQueryParamFields = "total_amount"
+	ListAccountingBillsQueryParamFieldsPaidAmount              ListAccountingBillsQueryParamFields = "paid_amount"
+	ListAccountingBillsQueryParamFieldsRefundAmount            ListAccountingBillsQueryParamFields = "refund_amount"
+	ListAccountingBillsQueryParamFieldsTaxAmount               ListAccountingBillsQueryParamFields = "tax_amount"
+	ListAccountingBillsQueryParamFieldsDiscountAmount          ListAccountingBillsQueryParamFields = "discount_amount"
+	ListAccountingBillsQueryParamFieldsBalanceAmount           ListAccountingBillsQueryParamFields = "balance_amount"
+	ListAccountingBillsQueryParamFieldsContactID               ListAccountingBillsQueryParamFields = "contact_id"
+	ListAccountingBillsQueryParamFieldsCurrency                ListAccountingBillsQueryParamFields = "currency"
+	ListAccountingBillsQueryParamFieldsNotes                   ListAccountingBillsQueryParamFields = "notes"
+	ListAccountingBillsQueryParamFieldsRefundReason            ListAccountingBillsQueryParamFields = "refund_reason"
+	ListAccountingBillsQueryParamFieldsLineitems               ListAccountingBillsQueryParamFields = "lineitems"
+	ListAccountingBillsQueryParamFieldsStatus                  ListAccountingBillsQueryParamFields = "status"
+	ListAccountingBillsQueryParamFieldsURL                     ListAccountingBillsQueryParamFields = "url"
+	ListAccountingBillsQueryParamFieldsPaymentCollectionMethod ListAccountingBillsQueryParamFields = "payment_collection_method"
+	ListAccountingBillsQueryParamFieldsAttachments             ListAccountingBillsQueryParamFields = "attachments"
+	ListAccountingBillsQueryParamFieldsSend                    ListAccountingBillsQueryParamFields = "send"
+	ListAccountingBillsQueryParamFieldsRaw                     ListAccountingBillsQueryParamFields = "raw"
+)
+
+func (e ListAccountingBillsQueryParamFields) ToPointer() *ListAccountingBillsQueryParamFields {
+	return &e
+}
+func (e *ListAccountingBillsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "bill_number":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "refunded_at":
+		fallthrough
+	case "cancelled_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "paid_amount":
+		fallthrough
+	case "refund_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "discount_amount":
+		fallthrough
+	case "balance_amount":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "refund_reason":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "status":
+		fallthrough
+	case "url":
+		fallthrough
+	case "payment_collection_method":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "send":
+		fallthrough
+	case "raw":
+		*e = ListAccountingBillsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingBillsQueryParamFields: %v", v)
+	}
+}
+
 type ListAccountingBillsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The org ID to filter by
+	Fields []ListAccountingBillsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                              `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                              `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                               `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by (reference to AccountingOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -42,7 +142,7 @@ func (l *ListAccountingBillsRequest) GetContactID() *string {
 	return l.ContactID
 }
 
-func (l *ListAccountingBillsRequest) GetFields() []string {
+func (l *ListAccountingBillsRequest) GetFields() []ListAccountingBillsQueryParamFields {
 	if l == nil {
 		return nil
 	}

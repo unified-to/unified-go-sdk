@@ -3,15 +3,115 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAtsCandidateQueryParamFields string
+
+const (
+	GetAtsCandidateQueryParamFieldsID                 GetAtsCandidateQueryParamFields = "id"
+	GetAtsCandidateQueryParamFieldsCreatedAt          GetAtsCandidateQueryParamFields = "created_at"
+	GetAtsCandidateQueryParamFieldsUpdatedAt          GetAtsCandidateQueryParamFields = "updated_at"
+	GetAtsCandidateQueryParamFieldsName               GetAtsCandidateQueryParamFields = "name"
+	GetAtsCandidateQueryParamFieldsFirstName          GetAtsCandidateQueryParamFields = "first_name"
+	GetAtsCandidateQueryParamFieldsLastName           GetAtsCandidateQueryParamFields = "last_name"
+	GetAtsCandidateQueryParamFieldsEmails             GetAtsCandidateQueryParamFields = "emails"
+	GetAtsCandidateQueryParamFieldsTitle              GetAtsCandidateQueryParamFields = "title"
+	GetAtsCandidateQueryParamFieldsTelephones         GetAtsCandidateQueryParamFields = "telephones"
+	GetAtsCandidateQueryParamFieldsCompanyName        GetAtsCandidateQueryParamFields = "company_name"
+	GetAtsCandidateQueryParamFieldsImageURL           GetAtsCandidateQueryParamFields = "image_url"
+	GetAtsCandidateQueryParamFieldsTags               GetAtsCandidateQueryParamFields = "tags"
+	GetAtsCandidateQueryParamFieldsAddress            GetAtsCandidateQueryParamFields = "address"
+	GetAtsCandidateQueryParamFieldsExternalIdentifier GetAtsCandidateQueryParamFields = "external_identifier"
+	GetAtsCandidateQueryParamFieldsLinkUrls           GetAtsCandidateQueryParamFields = "link_urls"
+	GetAtsCandidateQueryParamFieldsOrigin             GetAtsCandidateQueryParamFields = "origin"
+	GetAtsCandidateQueryParamFieldsCompanyID          GetAtsCandidateQueryParamFields = "company_id"
+	GetAtsCandidateQueryParamFieldsSources            GetAtsCandidateQueryParamFields = "sources"
+	GetAtsCandidateQueryParamFieldsDateOfBirth        GetAtsCandidateQueryParamFields = "date_of_birth"
+	GetAtsCandidateQueryParamFieldsUserID             GetAtsCandidateQueryParamFields = "user_id"
+	GetAtsCandidateQueryParamFieldsWebURL             GetAtsCandidateQueryParamFields = "web_url"
+	GetAtsCandidateQueryParamFieldsExperiences        GetAtsCandidateQueryParamFields = "experiences"
+	GetAtsCandidateQueryParamFieldsEducation          GetAtsCandidateQueryParamFields = "education"
+	GetAtsCandidateQueryParamFieldsSkills             GetAtsCandidateQueryParamFields = "skills"
+	GetAtsCandidateQueryParamFieldsMetadata           GetAtsCandidateQueryParamFields = "metadata"
+	GetAtsCandidateQueryParamFieldsRaw                GetAtsCandidateQueryParamFields = "raw"
+)
+
+func (e GetAtsCandidateQueryParamFields) ToPointer() *GetAtsCandidateQueryParamFields {
+	return &e
+}
+func (e *GetAtsCandidateQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "title":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "company_name":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "address":
+		fallthrough
+	case "external_identifier":
+		fallthrough
+	case "link_urls":
+		fallthrough
+	case "origin":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "sources":
+		fallthrough
+	case "date_of_birth":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "experiences":
+		fallthrough
+	case "education":
+		fallthrough
+	case "skills":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = GetAtsCandidateQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAtsCandidateQueryParamFields: %v", v)
+	}
+}
 
 type GetAtsCandidateRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAtsCandidateQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Candidate
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +125,7 @@ func (g *GetAtsCandidateRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAtsCandidateRequest) GetFields() []string {
+func (g *GetAtsCandidateRequest) GetFields() []GetAtsCandidateQueryParamFields {
 	if g == nil {
 		return nil
 	}

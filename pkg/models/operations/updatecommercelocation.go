@@ -3,16 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateCommerceLocationQueryParamFields string
+
+const (
+	UpdateCommerceLocationQueryParamFieldsID             UpdateCommerceLocationQueryParamFields = "id"
+	UpdateCommerceLocationQueryParamFieldsCreatedAt      UpdateCommerceLocationQueryParamFields = "created_at"
+	UpdateCommerceLocationQueryParamFieldsUpdatedAt      UpdateCommerceLocationQueryParamFields = "updated_at"
+	UpdateCommerceLocationQueryParamFieldsName           UpdateCommerceLocationQueryParamFields = "name"
+	UpdateCommerceLocationQueryParamFieldsAddress        UpdateCommerceLocationQueryParamFields = "address"
+	UpdateCommerceLocationQueryParamFieldsDescription    UpdateCommerceLocationQueryParamFields = "description"
+	UpdateCommerceLocationQueryParamFieldsIsActive       UpdateCommerceLocationQueryParamFields = "is_active"
+	UpdateCommerceLocationQueryParamFieldsLanguageLocale UpdateCommerceLocationQueryParamFields = "language_locale"
+	UpdateCommerceLocationQueryParamFieldsParentID       UpdateCommerceLocationQueryParamFields = "parent_id"
+	UpdateCommerceLocationQueryParamFieldsCurrency       UpdateCommerceLocationQueryParamFields = "currency"
+	UpdateCommerceLocationQueryParamFieldsRaw            UpdateCommerceLocationQueryParamFields = "raw"
+)
+
+func (e UpdateCommerceLocationQueryParamFields) ToPointer() *UpdateCommerceLocationQueryParamFields {
+	return &e
+}
+func (e *UpdateCommerceLocationQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "address":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "raw":
+		*e = UpdateCommerceLocationQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateCommerceLocationQueryParamFields: %v", v)
+	}
+}
 
 type UpdateCommerceLocationRequest struct {
 	CommerceLocation shared.CommerceLocation `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateCommerceLocationQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +88,7 @@ func (u *UpdateCommerceLocationRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateCommerceLocationRequest) GetFields() []string {
+func (u *UpdateCommerceLocationRequest) GetFields() []UpdateCommerceLocationQueryParamFields {
 	if u == nil {
 		return nil
 	}

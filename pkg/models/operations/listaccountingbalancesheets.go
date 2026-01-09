@@ -3,34 +3,90 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListAccountingBalancesheetsQueryParamFields string
+
+const (
+	ListAccountingBalancesheetsQueryParamFieldsID              ListAccountingBalancesheetsQueryParamFields = "id"
+	ListAccountingBalancesheetsQueryParamFieldsCreatedAt       ListAccountingBalancesheetsQueryParamFields = "created_at"
+	ListAccountingBalancesheetsQueryParamFieldsUpdatedAt       ListAccountingBalancesheetsQueryParamFields = "updated_at"
+	ListAccountingBalancesheetsQueryParamFieldsStartAt         ListAccountingBalancesheetsQueryParamFields = "start_at"
+	ListAccountingBalancesheetsQueryParamFieldsEndAt           ListAccountingBalancesheetsQueryParamFields = "end_at"
+	ListAccountingBalancesheetsQueryParamFieldsName            ListAccountingBalancesheetsQueryParamFields = "name"
+	ListAccountingBalancesheetsQueryParamFieldsCurrency        ListAccountingBalancesheetsQueryParamFields = "currency"
+	ListAccountingBalancesheetsQueryParamFieldsNetAssetsAmount ListAccountingBalancesheetsQueryParamFields = "net_assets_amount"
+	ListAccountingBalancesheetsQueryParamFieldsAssets          ListAccountingBalancesheetsQueryParamFields = "assets"
+	ListAccountingBalancesheetsQueryParamFieldsLiabilities     ListAccountingBalancesheetsQueryParamFields = "liabilities"
+	ListAccountingBalancesheetsQueryParamFieldsEquity          ListAccountingBalancesheetsQueryParamFields = "equity"
+	ListAccountingBalancesheetsQueryParamFieldsRaw             ListAccountingBalancesheetsQueryParamFields = "raw"
+)
+
+func (e ListAccountingBalancesheetsQueryParamFields) ToPointer() *ListAccountingBalancesheetsQueryParamFields {
+	return &e
+}
+func (e *ListAccountingBalancesheetsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "net_assets_amount":
+		fallthrough
+	case "assets":
+		fallthrough
+	case "liabilities":
+		fallthrough
+	case "equity":
+		fallthrough
+	case "raw":
+		*e = ListAccountingBalancesheetsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingBalancesheetsQueryParamFields: %v", v)
+	}
+}
+
 type ListAccountingBalancesheetsRequest struct {
-	// The category ID to filter by
+	// The category ID to filter by (reference to AccountingCategory)
 	CategoryID *string `queryParam:"style=form,explode=true,name=category_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// The end date to filter by (deprecated)
-	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
-	// The end date to filter by
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAccountingBalancesheetsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                      `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                      `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                       `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// The start date to filter by
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -55,13 +111,6 @@ func (l *ListAccountingBalancesheetsRequest) GetContactID() *string {
 	return l.ContactID
 }
 
-func (l *ListAccountingBalancesheetsRequest) GetEndLe() *string {
-	if l == nil {
-		return nil
-	}
-	return l.EndLe
-}
-
 func (l *ListAccountingBalancesheetsRequest) GetEndLt() *string {
 	if l == nil {
 		return nil
@@ -69,7 +118,7 @@ func (l *ListAccountingBalancesheetsRequest) GetEndLt() *string {
 	return l.EndLt
 }
 
-func (l *ListAccountingBalancesheetsRequest) GetFields() []string {
+func (l *ListAccountingBalancesheetsRequest) GetFields() []ListAccountingBalancesheetsQueryParamFields {
 	if l == nil {
 		return nil
 	}

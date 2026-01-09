@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateCommerceSaleschannelQueryParamFields string
+
+const (
+	CreateCommerceSaleschannelQueryParamFieldsID          CreateCommerceSaleschannelQueryParamFields = "id"
+	CreateCommerceSaleschannelQueryParamFieldsCreatedAt   CreateCommerceSaleschannelQueryParamFields = "created_at"
+	CreateCommerceSaleschannelQueryParamFieldsUpdatedAt   CreateCommerceSaleschannelQueryParamFields = "updated_at"
+	CreateCommerceSaleschannelQueryParamFieldsSlug        CreateCommerceSaleschannelQueryParamFields = "slug"
+	CreateCommerceSaleschannelQueryParamFieldsDescription CreateCommerceSaleschannelQueryParamFields = "description"
+	CreateCommerceSaleschannelQueryParamFieldsIsActive    CreateCommerceSaleschannelQueryParamFields = "is_active"
+	CreateCommerceSaleschannelQueryParamFieldsCollections CreateCommerceSaleschannelQueryParamFields = "collections"
+	CreateCommerceSaleschannelQueryParamFieldsRaw         CreateCommerceSaleschannelQueryParamFields = "raw"
+)
+
+func (e CreateCommerceSaleschannelQueryParamFields) ToPointer() *CreateCommerceSaleschannelQueryParamFields {
+	return &e
+}
+func (e *CreateCommerceSaleschannelQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "slug":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "collections":
+		fallthrough
+	case "raw":
+		*e = CreateCommerceSaleschannelQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateCommerceSaleschannelQueryParamFields: %v", v)
+	}
+}
 
 type CreateCommerceSaleschannelRequest struct {
 	CommerceSaleschannel shared.CommerceSaleschannel `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateCommerceSaleschannelQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +77,7 @@ func (c *CreateCommerceSaleschannelRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateCommerceSaleschannelRequest) GetFields() []string {
+func (c *CreateCommerceSaleschannelRequest) GetFields() []CreateCommerceSaleschannelQueryParamFields {
 	if c == nil {
 		return nil
 	}

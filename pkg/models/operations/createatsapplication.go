@@ -3,16 +3,89 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateAtsApplicationQueryParamFields string
+
+const (
+	CreateAtsApplicationQueryParamFieldsID             CreateAtsApplicationQueryParamFields = "id"
+	CreateAtsApplicationQueryParamFieldsCandidateID    CreateAtsApplicationQueryParamFields = "candidate_id"
+	CreateAtsApplicationQueryParamFieldsJobID          CreateAtsApplicationQueryParamFields = "job_id"
+	CreateAtsApplicationQueryParamFieldsCreatedAt      CreateAtsApplicationQueryParamFields = "created_at"
+	CreateAtsApplicationQueryParamFieldsUpdatedAt      CreateAtsApplicationQueryParamFields = "updated_at"
+	CreateAtsApplicationQueryParamFieldsAppliedAt      CreateAtsApplicationQueryParamFields = "applied_at"
+	CreateAtsApplicationQueryParamFieldsHiredAt        CreateAtsApplicationQueryParamFields = "hired_at"
+	CreateAtsApplicationQueryParamFieldsRejectedAt     CreateAtsApplicationQueryParamFields = "rejected_at"
+	CreateAtsApplicationQueryParamFieldsRejectedReason CreateAtsApplicationQueryParamFields = "rejected_reason"
+	CreateAtsApplicationQueryParamFieldsSource         CreateAtsApplicationQueryParamFields = "source"
+	CreateAtsApplicationQueryParamFieldsStatus         CreateAtsApplicationQueryParamFields = "status"
+	CreateAtsApplicationQueryParamFieldsOriginalStatus CreateAtsApplicationQueryParamFields = "original_status"
+	CreateAtsApplicationQueryParamFieldsAnswers        CreateAtsApplicationQueryParamFields = "answers"
+	CreateAtsApplicationQueryParamFieldsOffers         CreateAtsApplicationQueryParamFields = "offers"
+	CreateAtsApplicationQueryParamFieldsUserID         CreateAtsApplicationQueryParamFields = "user_id"
+	CreateAtsApplicationQueryParamFieldsMetadata       CreateAtsApplicationQueryParamFields = "metadata"
+	CreateAtsApplicationQueryParamFieldsRaw            CreateAtsApplicationQueryParamFields = "raw"
+)
+
+func (e CreateAtsApplicationQueryParamFields) ToPointer() *CreateAtsApplicationQueryParamFields {
+	return &e
+}
+func (e *CreateAtsApplicationQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "applied_at":
+		fallthrough
+	case "hired_at":
+		fallthrough
+	case "rejected_at":
+		fallthrough
+	case "rejected_reason":
+		fallthrough
+	case "source":
+		fallthrough
+	case "status":
+		fallthrough
+	case "original_status":
+		fallthrough
+	case "answers":
+		fallthrough
+	case "offers":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = CreateAtsApplicationQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateAtsApplicationQueryParamFields: %v", v)
+	}
+}
 
 type CreateAtsApplicationRequest struct {
 	AtsApplication shared.AtsApplication `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateAtsApplicationQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +104,7 @@ func (c *CreateAtsApplicationRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAtsApplicationRequest) GetFields() []string {
+func (c *CreateAtsApplicationRequest) GetFields() []CreateAtsApplicationQueryParamFields {
 	if c == nil {
 		return nil
 	}

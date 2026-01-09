@@ -3,16 +3,83 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateHrisTimeshiftQueryParamFields string
+
+const (
+	UpdateHrisTimeshiftQueryParamFieldsID             UpdateHrisTimeshiftQueryParamFields = "id"
+	UpdateHrisTimeshiftQueryParamFieldsCreatedAt      UpdateHrisTimeshiftQueryParamFields = "created_at"
+	UpdateHrisTimeshiftQueryParamFieldsUpdatedAt      UpdateHrisTimeshiftQueryParamFields = "updated_at"
+	UpdateHrisTimeshiftQueryParamFieldsEmployeeUserID UpdateHrisTimeshiftQueryParamFields = "employee_user_id"
+	UpdateHrisTimeshiftQueryParamFieldsStartAt        UpdateHrisTimeshiftQueryParamFields = "start_at"
+	UpdateHrisTimeshiftQueryParamFieldsEndAt          UpdateHrisTimeshiftQueryParamFields = "end_at"
+	UpdateHrisTimeshiftQueryParamFieldsLocationID     UpdateHrisTimeshiftQueryParamFields = "location_id"
+	UpdateHrisTimeshiftQueryParamFieldsCompanyID      UpdateHrisTimeshiftQueryParamFields = "company_id"
+	UpdateHrisTimeshiftQueryParamFieldsGroupID        UpdateHrisTimeshiftQueryParamFields = "group_id"
+	UpdateHrisTimeshiftQueryParamFieldsCompensation   UpdateHrisTimeshiftQueryParamFields = "compensation"
+	UpdateHrisTimeshiftQueryParamFieldsApproverUserID UpdateHrisTimeshiftQueryParamFields = "approver_user_id"
+	UpdateHrisTimeshiftQueryParamFieldsApprovedAt     UpdateHrisTimeshiftQueryParamFields = "approved_at"
+	UpdateHrisTimeshiftQueryParamFieldsHours          UpdateHrisTimeshiftQueryParamFields = "hours"
+	UpdateHrisTimeshiftQueryParamFieldsIsApproved     UpdateHrisTimeshiftQueryParamFields = "is_approved"
+	UpdateHrisTimeshiftQueryParamFieldsRaw            UpdateHrisTimeshiftQueryParamFields = "raw"
+)
+
+func (e UpdateHrisTimeshiftQueryParamFields) ToPointer() *UpdateHrisTimeshiftQueryParamFields {
+	return &e
+}
+func (e *UpdateHrisTimeshiftQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "employee_user_id":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "group_id":
+		fallthrough
+	case "compensation":
+		fallthrough
+	case "approver_user_id":
+		fallthrough
+	case "approved_at":
+		fallthrough
+	case "hours":
+		fallthrough
+	case "is_approved":
+		fallthrough
+	case "raw":
+		*e = UpdateHrisTimeshiftQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateHrisTimeshiftQueryParamFields: %v", v)
+	}
+}
 
 type UpdateHrisTimeshiftRequest struct {
 	HrisTimeshift shared.HrisTimeshift `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateHrisTimeshiftQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Timeshift
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +100,7 @@ func (u *UpdateHrisTimeshiftRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateHrisTimeshiftRequest) GetFields() []string {
+func (u *UpdateHrisTimeshiftRequest) GetFields() []UpdateHrisTimeshiftQueryParamFields {
 	if u == nil {
 		return nil
 	}

@@ -3,9 +3,73 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchHrisDeductionQueryParamFields string
+
+const (
+	PatchHrisDeductionQueryParamFieldsID            PatchHrisDeductionQueryParamFields = "id"
+	PatchHrisDeductionQueryParamFieldsCreatedAt     PatchHrisDeductionQueryParamFields = "created_at"
+	PatchHrisDeductionQueryParamFieldsUpdatedAt     PatchHrisDeductionQueryParamFields = "updated_at"
+	PatchHrisDeductionQueryParamFieldsUserID        PatchHrisDeductionQueryParamFields = "user_id"
+	PatchHrisDeductionQueryParamFieldsCompanyID     PatchHrisDeductionQueryParamFields = "company_id"
+	PatchHrisDeductionQueryParamFieldsBenefitID     PatchHrisDeductionQueryParamFields = "benefit_id"
+	PatchHrisDeductionQueryParamFieldsAmount        PatchHrisDeductionQueryParamFields = "amount"
+	PatchHrisDeductionQueryParamFieldsType          PatchHrisDeductionQueryParamFields = "type"
+	PatchHrisDeductionQueryParamFieldsCoverageLevel PatchHrisDeductionQueryParamFields = "coverage_level"
+	PatchHrisDeductionQueryParamFieldsFrequency     PatchHrisDeductionQueryParamFields = "frequency"
+	PatchHrisDeductionQueryParamFieldsStartAt       PatchHrisDeductionQueryParamFields = "start_at"
+	PatchHrisDeductionQueryParamFieldsEndAt         PatchHrisDeductionQueryParamFields = "end_at"
+	PatchHrisDeductionQueryParamFieldsIsActive      PatchHrisDeductionQueryParamFields = "is_active"
+	PatchHrisDeductionQueryParamFieldsRaw           PatchHrisDeductionQueryParamFields = "raw"
+)
+
+func (e PatchHrisDeductionQueryParamFields) ToPointer() *PatchHrisDeductionQueryParamFields {
+	return &e
+}
+func (e *PatchHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "benefit_id":
+		fallthrough
+	case "amount":
+		fallthrough
+	case "type":
+		fallthrough
+	case "coverage_level":
+		fallthrough
+	case "frequency":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "raw":
+		*e = PatchHrisDeductionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchHrisDeductionQueryParamFields: %v", v)
+	}
+}
 
 type PatchHrisDeductionRequest struct {
 	// Employee-specific deduction/benefit enrolment.
@@ -13,7 +77,7 @@ type PatchHrisDeductionRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchHrisDeductionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Deduction
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +98,7 @@ func (p *PatchHrisDeductionRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchHrisDeductionRequest) GetFields() []string {
+func (p *PatchHrisDeductionRequest) GetFields() []PatchHrisDeductionQueryParamFields {
 	if p == nil {
 		return nil
 	}

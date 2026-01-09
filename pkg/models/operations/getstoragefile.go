@@ -3,15 +3,88 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetStorageFileQueryParamFields string
+
+const (
+	GetStorageFileQueryParamFieldsID          GetStorageFileQueryParamFields = "id"
+	GetStorageFileQueryParamFieldsCreatedAt   GetStorageFileQueryParamFields = "created_at"
+	GetStorageFileQueryParamFieldsUpdatedAt   GetStorageFileQueryParamFields = "updated_at"
+	GetStorageFileQueryParamFieldsName        GetStorageFileQueryParamFields = "name"
+	GetStorageFileQueryParamFieldsDescription GetStorageFileQueryParamFields = "description"
+	GetStorageFileQueryParamFieldsParentID    GetStorageFileQueryParamFields = "parent_id"
+	GetStorageFileQueryParamFieldsUserID      GetStorageFileQueryParamFields = "user_id"
+	GetStorageFileQueryParamFieldsSize        GetStorageFileQueryParamFields = "size"
+	GetStorageFileQueryParamFieldsType        GetStorageFileQueryParamFields = "type"
+	GetStorageFileQueryParamFieldsMimeType    GetStorageFileQueryParamFields = "mime_type"
+	GetStorageFileQueryParamFieldsPermissions GetStorageFileQueryParamFields = "permissions"
+	GetStorageFileQueryParamFieldsDownloadURL GetStorageFileQueryParamFields = "download_url"
+	GetStorageFileQueryParamFieldsHash        GetStorageFileQueryParamFields = "hash"
+	GetStorageFileQueryParamFieldsData        GetStorageFileQueryParamFields = "data"
+	GetStorageFileQueryParamFieldsVersion     GetStorageFileQueryParamFields = "version"
+	GetStorageFileQueryParamFieldsWebURL      GetStorageFileQueryParamFields = "web_url"
+	GetStorageFileQueryParamFieldsRaw         GetStorageFileQueryParamFields = "raw"
+)
+
+func (e GetStorageFileQueryParamFields) ToPointer() *GetStorageFileQueryParamFields {
+	return &e
+}
+func (e *GetStorageFileQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "size":
+		fallthrough
+	case "type":
+		fallthrough
+	case "mime_type":
+		fallthrough
+	case "permissions":
+		fallthrough
+	case "download_url":
+		fallthrough
+	case "hash":
+		fallthrough
+	case "data":
+		fallthrough
+	case "version":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "raw":
+		*e = GetStorageFileQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetStorageFileQueryParamFields: %v", v)
+	}
+}
 
 type GetStorageFileRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetStorageFileQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the File
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +98,7 @@ func (g *GetStorageFileRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetStorageFileRequest) GetFields() []string {
+func (g *GetStorageFileRequest) GetFields() []GetStorageFileQueryParamFields {
 	if g == nil {
 		return nil
 	}

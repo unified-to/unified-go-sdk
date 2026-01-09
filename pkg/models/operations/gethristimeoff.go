@@ -3,15 +3,79 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetHrisTimeoffQueryParamFields string
+
+const (
+	GetHrisTimeoffQueryParamFieldsID             GetHrisTimeoffQueryParamFields = "id"
+	GetHrisTimeoffQueryParamFieldsCreatedAt      GetHrisTimeoffQueryParamFields = "created_at"
+	GetHrisTimeoffQueryParamFieldsUpdatedAt      GetHrisTimeoffQueryParamFields = "updated_at"
+	GetHrisTimeoffQueryParamFieldsUserID         GetHrisTimeoffQueryParamFields = "user_id"
+	GetHrisTimeoffQueryParamFieldsCompanyID      GetHrisTimeoffQueryParamFields = "company_id"
+	GetHrisTimeoffQueryParamFieldsStartAt        GetHrisTimeoffQueryParamFields = "start_at"
+	GetHrisTimeoffQueryParamFieldsEndAt          GetHrisTimeoffQueryParamFields = "end_at"
+	GetHrisTimeoffQueryParamFieldsIsPaid         GetHrisTimeoffQueryParamFields = "is_paid"
+	GetHrisTimeoffQueryParamFieldsStatus         GetHrisTimeoffQueryParamFields = "status"
+	GetHrisTimeoffQueryParamFieldsApproverUserID GetHrisTimeoffQueryParamFields = "approver_user_id"
+	GetHrisTimeoffQueryParamFieldsApprovedAt     GetHrisTimeoffQueryParamFields = "approved_at"
+	GetHrisTimeoffQueryParamFieldsComments       GetHrisTimeoffQueryParamFields = "comments"
+	GetHrisTimeoffQueryParamFieldsRaw            GetHrisTimeoffQueryParamFields = "raw"
+	GetHrisTimeoffQueryParamFieldsReason         GetHrisTimeoffQueryParamFields = "reason"
+)
+
+func (e GetHrisTimeoffQueryParamFields) ToPointer() *GetHrisTimeoffQueryParamFields {
+	return &e
+}
+func (e *GetHrisTimeoffQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "is_paid":
+		fallthrough
+	case "status":
+		fallthrough
+	case "approver_user_id":
+		fallthrough
+	case "approved_at":
+		fallthrough
+	case "comments":
+		fallthrough
+	case "raw":
+		fallthrough
+	case "reason":
+		*e = GetHrisTimeoffQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetHrisTimeoffQueryParamFields: %v", v)
+	}
+}
 
 type GetHrisTimeoffRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetHrisTimeoffQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Timeoff
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +89,7 @@ func (g *GetHrisTimeoffRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetHrisTimeoffRequest) GetFields() []string {
+func (g *GetHrisTimeoffRequest) GetFields() []GetHrisTimeoffQueryParamFields {
 	if g == nil {
 		return nil
 	}

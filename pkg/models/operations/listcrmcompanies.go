@@ -3,30 +3,115 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListCrmCompaniesQueryParamFields string
+
+const (
+	ListCrmCompaniesQueryParamFieldsID          ListCrmCompaniesQueryParamFields = "id"
+	ListCrmCompaniesQueryParamFieldsCreatedAt   ListCrmCompaniesQueryParamFields = "created_at"
+	ListCrmCompaniesQueryParamFieldsUpdatedAt   ListCrmCompaniesQueryParamFields = "updated_at"
+	ListCrmCompaniesQueryParamFieldsName        ListCrmCompaniesQueryParamFields = "name"
+	ListCrmCompaniesQueryParamFieldsDealIds     ListCrmCompaniesQueryParamFields = "deal_ids"
+	ListCrmCompaniesQueryParamFieldsContactIds  ListCrmCompaniesQueryParamFields = "contact_ids"
+	ListCrmCompaniesQueryParamFieldsEmails      ListCrmCompaniesQueryParamFields = "emails"
+	ListCrmCompaniesQueryParamFieldsTelephones  ListCrmCompaniesQueryParamFields = "telephones"
+	ListCrmCompaniesQueryParamFieldsWebsites    ListCrmCompaniesQueryParamFields = "websites"
+	ListCrmCompaniesQueryParamFieldsAddress     ListCrmCompaniesQueryParamFields = "address"
+	ListCrmCompaniesQueryParamFieldsIsActive    ListCrmCompaniesQueryParamFields = "is_active"
+	ListCrmCompaniesQueryParamFieldsTags        ListCrmCompaniesQueryParamFields = "tags"
+	ListCrmCompaniesQueryParamFieldsDescription ListCrmCompaniesQueryParamFields = "description"
+	ListCrmCompaniesQueryParamFieldsIndustry    ListCrmCompaniesQueryParamFields = "industry"
+	ListCrmCompaniesQueryParamFieldsLinkUrls    ListCrmCompaniesQueryParamFields = "link_urls"
+	ListCrmCompaniesQueryParamFieldsEmployees   ListCrmCompaniesQueryParamFields = "employees"
+	ListCrmCompaniesQueryParamFieldsTimezone    ListCrmCompaniesQueryParamFields = "timezone"
+	ListCrmCompaniesQueryParamFieldsUserID      ListCrmCompaniesQueryParamFields = "user_id"
+	ListCrmCompaniesQueryParamFieldsMetadata    ListCrmCompaniesQueryParamFields = "metadata"
+	ListCrmCompaniesQueryParamFieldsDomains     ListCrmCompaniesQueryParamFields = "domains"
+	ListCrmCompaniesQueryParamFieldsRaw         ListCrmCompaniesQueryParamFields = "raw"
+)
+
+func (e ListCrmCompaniesQueryParamFields) ToPointer() *ListCrmCompaniesQueryParamFields {
+	return &e
+}
+func (e *ListCrmCompaniesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "deal_ids":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "websites":
+		fallthrough
+	case "address":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "description":
+		fallthrough
+	case "industry":
+		fallthrough
+	case "link_urls":
+		fallthrough
+	case "employees":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "domains":
+		fallthrough
+	case "raw":
+		*e = ListCrmCompaniesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCrmCompaniesQueryParamFields: %v", v)
+	}
+}
+
 type ListCrmCompaniesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to CrmContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// The deal ID to filter by
+	// The deal ID to filter by (reference to CrmDeal)
 	DealID *string `queryParam:"style=form,explode=true,name=deal_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListCrmCompaniesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -51,7 +136,7 @@ func (l *ListCrmCompaniesRequest) GetDealID() *string {
 	return l.DealID
 }
 
-func (l *ListCrmCompaniesRequest) GetFields() []string {
+func (l *ListCrmCompaniesRequest) GetFields() []ListCrmCompaniesQueryParamFields {
 	if l == nil {
 		return nil
 	}

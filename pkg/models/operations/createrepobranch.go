@@ -3,16 +3,56 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateRepoBranchQueryParamFields string
+
+const (
+	CreateRepoBranchQueryParamFieldsID        CreateRepoBranchQueryParamFields = "id"
+	CreateRepoBranchQueryParamFieldsCreatedAt CreateRepoBranchQueryParamFields = "created_at"
+	CreateRepoBranchQueryParamFieldsUpdatedAt CreateRepoBranchQueryParamFields = "updated_at"
+	CreateRepoBranchQueryParamFieldsName      CreateRepoBranchQueryParamFields = "name"
+	CreateRepoBranchQueryParamFieldsRepoID    CreateRepoBranchQueryParamFields = "repo_id"
+	CreateRepoBranchQueryParamFieldsRaw       CreateRepoBranchQueryParamFields = "raw"
+)
+
+func (e CreateRepoBranchQueryParamFields) ToPointer() *CreateRepoBranchQueryParamFields {
+	return &e
+}
+func (e *CreateRepoBranchQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "repo_id":
+		fallthrough
+	case "raw":
+		*e = CreateRepoBranchQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateRepoBranchQueryParamFields: %v", v)
+	}
+}
 
 type CreateRepoBranchRequest struct {
 	RepoBranch shared.RepoBranch `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateRepoBranchQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +71,7 @@ func (c *CreateRepoBranchRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateRepoBranchRequest) GetFields() []string {
+func (c *CreateRepoBranchRequest) GetFields() []CreateRepoBranchQueryParamFields {
 	if c == nil {
 		return nil
 	}

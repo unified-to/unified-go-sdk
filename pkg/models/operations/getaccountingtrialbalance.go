@@ -3,15 +3,70 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAccountingTrialbalanceQueryParamFields string
+
+const (
+	GetAccountingTrialbalanceQueryParamFieldsID                GetAccountingTrialbalanceQueryParamFields = "id"
+	GetAccountingTrialbalanceQueryParamFieldsCreatedAt         GetAccountingTrialbalanceQueryParamFields = "created_at"
+	GetAccountingTrialbalanceQueryParamFieldsUpdatedAt         GetAccountingTrialbalanceQueryParamFields = "updated_at"
+	GetAccountingTrialbalanceQueryParamFieldsStartAt           GetAccountingTrialbalanceQueryParamFields = "start_at"
+	GetAccountingTrialbalanceQueryParamFieldsName              GetAccountingTrialbalanceQueryParamFields = "name"
+	GetAccountingTrialbalanceQueryParamFieldsCurrency          GetAccountingTrialbalanceQueryParamFields = "currency"
+	GetAccountingTrialbalanceQueryParamFieldsEndAt             GetAccountingTrialbalanceQueryParamFields = "end_at"
+	GetAccountingTrialbalanceQueryParamFieldsTotalDebitAmount  GetAccountingTrialbalanceQueryParamFields = "total_debit_amount"
+	GetAccountingTrialbalanceQueryParamFieldsTotalCreditAmount GetAccountingTrialbalanceQueryParamFields = "total_credit_amount"
+	GetAccountingTrialbalanceQueryParamFieldsSubItems          GetAccountingTrialbalanceQueryParamFields = "sub_items"
+	GetAccountingTrialbalanceQueryParamFieldsRaw               GetAccountingTrialbalanceQueryParamFields = "raw"
+)
+
+func (e GetAccountingTrialbalanceQueryParamFields) ToPointer() *GetAccountingTrialbalanceQueryParamFields {
+	return &e
+}
+func (e *GetAccountingTrialbalanceQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "total_debit_amount":
+		fallthrough
+	case "total_credit_amount":
+		fallthrough
+	case "sub_items":
+		fallthrough
+	case "raw":
+		*e = GetAccountingTrialbalanceQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAccountingTrialbalanceQueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingTrialbalanceRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAccountingTrialbalanceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Trialbalance
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +80,7 @@ func (g *GetAccountingTrialbalanceRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingTrialbalanceRequest) GetFields() []string {
+func (g *GetAccountingTrialbalanceRequest) GetFields() []GetAccountingTrialbalanceQueryParamFields {
 	if g == nil {
 		return nil
 	}

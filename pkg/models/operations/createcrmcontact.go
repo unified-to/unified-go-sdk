@@ -3,9 +3,88 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateCrmContactQueryParamFields string
+
+const (
+	CreateCrmContactQueryParamFieldsID         CreateCrmContactQueryParamFields = "id"
+	CreateCrmContactQueryParamFieldsCreatedAt  CreateCrmContactQueryParamFields = "created_at"
+	CreateCrmContactQueryParamFieldsUpdatedAt  CreateCrmContactQueryParamFields = "updated_at"
+	CreateCrmContactQueryParamFieldsName       CreateCrmContactQueryParamFields = "name"
+	CreateCrmContactQueryParamFieldsFirstName  CreateCrmContactQueryParamFields = "first_name"
+	CreateCrmContactQueryParamFieldsLastName   CreateCrmContactQueryParamFields = "last_name"
+	CreateCrmContactQueryParamFieldsTitle      CreateCrmContactQueryParamFields = "title"
+	CreateCrmContactQueryParamFieldsCompany    CreateCrmContactQueryParamFields = "company"
+	CreateCrmContactQueryParamFieldsEmails     CreateCrmContactQueryParamFields = "emails"
+	CreateCrmContactQueryParamFieldsTelephones CreateCrmContactQueryParamFields = "telephones"
+	CreateCrmContactQueryParamFieldsDealIds    CreateCrmContactQueryParamFields = "deal_ids"
+	CreateCrmContactQueryParamFieldsCompanyIds CreateCrmContactQueryParamFields = "company_ids"
+	CreateCrmContactQueryParamFieldsAddress    CreateCrmContactQueryParamFields = "address"
+	CreateCrmContactQueryParamFieldsUserID     CreateCrmContactQueryParamFields = "user_id"
+	CreateCrmContactQueryParamFieldsLinkUrls   CreateCrmContactQueryParamFields = "link_urls"
+	CreateCrmContactQueryParamFieldsMetadata   CreateCrmContactQueryParamFields = "metadata"
+	CreateCrmContactQueryParamFieldsDepartment CreateCrmContactQueryParamFields = "department"
+	CreateCrmContactQueryParamFieldsImageURL   CreateCrmContactQueryParamFields = "image_url"
+	CreateCrmContactQueryParamFieldsRaw        CreateCrmContactQueryParamFields = "raw"
+)
+
+func (e CreateCrmContactQueryParamFields) ToPointer() *CreateCrmContactQueryParamFields {
+	return &e
+}
+func (e *CreateCrmContactQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "title":
+		fallthrough
+	case "company":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "deal_ids":
+		fallthrough
+	case "company_ids":
+		fallthrough
+	case "address":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "link_urls":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "department":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "raw":
+		*e = CreateCrmContactQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateCrmContactQueryParamFields: %v", v)
+	}
+}
 
 type CreateCrmContactRequest struct {
 	// A contact represents a person that optionally is associated with a deal and/or a company
@@ -13,7 +92,7 @@ type CreateCrmContactRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateCrmContactQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -32,7 +111,7 @@ func (c *CreateCrmContactRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateCrmContactRequest) GetFields() []string {
+func (c *CreateCrmContactRequest) GetFields() []CreateCrmContactQueryParamFields {
 	if c == nil {
 		return nil
 	}

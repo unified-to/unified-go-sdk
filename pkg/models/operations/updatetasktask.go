@@ -3,16 +3,101 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateTaskTaskQueryParamFields string
+
+const (
+	UpdateTaskTaskQueryParamFieldsID              UpdateTaskTaskQueryParamFields = "id"
+	UpdateTaskTaskQueryParamFieldsCreatedAt       UpdateTaskTaskQueryParamFields = "created_at"
+	UpdateTaskTaskQueryParamFieldsUpdatedAt       UpdateTaskTaskQueryParamFields = "updated_at"
+	UpdateTaskTaskQueryParamFieldsName            UpdateTaskTaskQueryParamFields = "name"
+	UpdateTaskTaskQueryParamFieldsProjectID       UpdateTaskTaskQueryParamFields = "project_id"
+	UpdateTaskTaskQueryParamFieldsParentID        UpdateTaskTaskQueryParamFields = "parent_id"
+	UpdateTaskTaskQueryParamFieldsCompletedAt     UpdateTaskTaskQueryParamFields = "completed_at"
+	UpdateTaskTaskQueryParamFieldsStatus          UpdateTaskTaskQueryParamFields = "status"
+	UpdateTaskTaskQueryParamFieldsNotes           UpdateTaskTaskQueryParamFields = "notes"
+	UpdateTaskTaskQueryParamFieldsDueAt           UpdateTaskTaskQueryParamFields = "due_at"
+	UpdateTaskTaskQueryParamFieldsPriority        UpdateTaskTaskQueryParamFields = "priority"
+	UpdateTaskTaskQueryParamFieldsAssignedUserIds UpdateTaskTaskQueryParamFields = "assigned_user_ids"
+	UpdateTaskTaskQueryParamFieldsCreatorUserID   UpdateTaskTaskQueryParamFields = "creator_user_id"
+	UpdateTaskTaskQueryParamFieldsFollowerUserIds UpdateTaskTaskQueryParamFields = "follower_user_ids"
+	UpdateTaskTaskQueryParamFieldsGroupIds        UpdateTaskTaskQueryParamFields = "group_ids"
+	UpdateTaskTaskQueryParamFieldsTags            UpdateTaskTaskQueryParamFields = "tags"
+	UpdateTaskTaskQueryParamFieldsURL             UpdateTaskTaskQueryParamFields = "url"
+	UpdateTaskTaskQueryParamFieldsAttachmentIds   UpdateTaskTaskQueryParamFields = "attachment_ids"
+	UpdateTaskTaskQueryParamFieldsMetadata        UpdateTaskTaskQueryParamFields = "metadata"
+	UpdateTaskTaskQueryParamFieldsHasChildren     UpdateTaskTaskQueryParamFields = "has_children"
+	UpdateTaskTaskQueryParamFieldsRaw             UpdateTaskTaskQueryParamFields = "raw"
+)
+
+func (e UpdateTaskTaskQueryParamFields) ToPointer() *UpdateTaskTaskQueryParamFields {
+	return &e
+}
+func (e *UpdateTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "project_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "completed_at":
+		fallthrough
+	case "status":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "priority":
+		fallthrough
+	case "assigned_user_ids":
+		fallthrough
+	case "creator_user_id":
+		fallthrough
+	case "follower_user_ids":
+		fallthrough
+	case "group_ids":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "url":
+		fallthrough
+	case "attachment_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "raw":
+		*e = UpdateTaskTaskQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateTaskTaskQueryParamFields: %v", v)
+	}
+}
 
 type UpdateTaskTaskRequest struct {
 	TaskTask shared.TaskTask `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateTaskTaskQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Task
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +118,7 @@ func (u *UpdateTaskTaskRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateTaskTaskRequest) GetFields() []string {
+func (u *UpdateTaskTaskRequest) GetFields() []UpdateTaskTaskQueryParamFields {
 	if u == nil {
 		return nil
 	}

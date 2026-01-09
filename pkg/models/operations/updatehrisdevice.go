@@ -3,16 +3,98 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateHrisDeviceQueryParamFields string
+
+const (
+	UpdateHrisDeviceQueryParamFieldsID                 UpdateHrisDeviceQueryParamFields = "id"
+	UpdateHrisDeviceQueryParamFieldsCreatedAt          UpdateHrisDeviceQueryParamFields = "created_at"
+	UpdateHrisDeviceQueryParamFieldsUpdatedAt          UpdateHrisDeviceQueryParamFields = "updated_at"
+	UpdateHrisDeviceQueryParamFieldsName               UpdateHrisDeviceQueryParamFields = "name"
+	UpdateHrisDeviceQueryParamFieldsAssetTag           UpdateHrisDeviceQueryParamFields = "asset_tag"
+	UpdateHrisDeviceQueryParamFieldsVersion            UpdateHrisDeviceQueryParamFields = "version"
+	UpdateHrisDeviceQueryParamFieldsManufacturer       UpdateHrisDeviceQueryParamFields = "manufacturer"
+	UpdateHrisDeviceQueryParamFieldsModel              UpdateHrisDeviceQueryParamFields = "model"
+	UpdateHrisDeviceQueryParamFieldsOs                 UpdateHrisDeviceQueryParamFields = "os"
+	UpdateHrisDeviceQueryParamFieldsOsVersion          UpdateHrisDeviceQueryParamFields = "os_version"
+	UpdateHrisDeviceQueryParamFieldsUserIds            UpdateHrisDeviceQueryParamFields = "user_ids"
+	UpdateHrisDeviceQueryParamFieldsAdminUserIds       UpdateHrisDeviceQueryParamFields = "admin_user_ids"
+	UpdateHrisDeviceQueryParamFieldsLocationID         UpdateHrisDeviceQueryParamFields = "location_id"
+	UpdateHrisDeviceQueryParamFieldsHasAntivirus       UpdateHrisDeviceQueryParamFields = "has_antivirus"
+	UpdateHrisDeviceQueryParamFieldsHasPasswordManager UpdateHrisDeviceQueryParamFields = "has_password_manager"
+	UpdateHrisDeviceQueryParamFieldsHasFirewall        UpdateHrisDeviceQueryParamFields = "has_firewall"
+	UpdateHrisDeviceQueryParamFieldsHasHdEncrypted     UpdateHrisDeviceQueryParamFields = "has_hd_encrypted"
+	UpdateHrisDeviceQueryParamFieldsHasScreenlock      UpdateHrisDeviceQueryParamFields = "has_screenlock"
+	UpdateHrisDeviceQueryParamFieldsIsMissing          UpdateHrisDeviceQueryParamFields = "is_missing"
+	UpdateHrisDeviceQueryParamFieldsRaw                UpdateHrisDeviceQueryParamFields = "raw"
+)
+
+func (e UpdateHrisDeviceQueryParamFields) ToPointer() *UpdateHrisDeviceQueryParamFields {
+	return &e
+}
+func (e *UpdateHrisDeviceQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "asset_tag":
+		fallthrough
+	case "version":
+		fallthrough
+	case "manufacturer":
+		fallthrough
+	case "model":
+		fallthrough
+	case "os":
+		fallthrough
+	case "os_version":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "admin_user_ids":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "has_antivirus":
+		fallthrough
+	case "has_password_manager":
+		fallthrough
+	case "has_firewall":
+		fallthrough
+	case "has_hd_encrypted":
+		fallthrough
+	case "has_screenlock":
+		fallthrough
+	case "is_missing":
+		fallthrough
+	case "raw":
+		*e = UpdateHrisDeviceQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateHrisDeviceQueryParamFields: %v", v)
+	}
+}
 
 type UpdateHrisDeviceRequest struct {
 	HrisDevice shared.HrisDevice `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateHrisDeviceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Device
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +115,7 @@ func (u *UpdateHrisDeviceRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateHrisDeviceRequest) GetFields() []string {
+func (u *UpdateHrisDeviceRequest) GetFields() []UpdateHrisDeviceQueryParamFields {
 	if u == nil {
 		return nil
 	}

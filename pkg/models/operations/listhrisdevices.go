@@ -3,26 +3,108 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListHrisDevicesQueryParamFields string
+
+const (
+	ListHrisDevicesQueryParamFieldsID                 ListHrisDevicesQueryParamFields = "id"
+	ListHrisDevicesQueryParamFieldsCreatedAt          ListHrisDevicesQueryParamFields = "created_at"
+	ListHrisDevicesQueryParamFieldsUpdatedAt          ListHrisDevicesQueryParamFields = "updated_at"
+	ListHrisDevicesQueryParamFieldsName               ListHrisDevicesQueryParamFields = "name"
+	ListHrisDevicesQueryParamFieldsAssetTag           ListHrisDevicesQueryParamFields = "asset_tag"
+	ListHrisDevicesQueryParamFieldsVersion            ListHrisDevicesQueryParamFields = "version"
+	ListHrisDevicesQueryParamFieldsManufacturer       ListHrisDevicesQueryParamFields = "manufacturer"
+	ListHrisDevicesQueryParamFieldsModel              ListHrisDevicesQueryParamFields = "model"
+	ListHrisDevicesQueryParamFieldsOs                 ListHrisDevicesQueryParamFields = "os"
+	ListHrisDevicesQueryParamFieldsOsVersion          ListHrisDevicesQueryParamFields = "os_version"
+	ListHrisDevicesQueryParamFieldsUserIds            ListHrisDevicesQueryParamFields = "user_ids"
+	ListHrisDevicesQueryParamFieldsAdminUserIds       ListHrisDevicesQueryParamFields = "admin_user_ids"
+	ListHrisDevicesQueryParamFieldsLocationID         ListHrisDevicesQueryParamFields = "location_id"
+	ListHrisDevicesQueryParamFieldsHasAntivirus       ListHrisDevicesQueryParamFields = "has_antivirus"
+	ListHrisDevicesQueryParamFieldsHasPasswordManager ListHrisDevicesQueryParamFields = "has_password_manager"
+	ListHrisDevicesQueryParamFieldsHasFirewall        ListHrisDevicesQueryParamFields = "has_firewall"
+	ListHrisDevicesQueryParamFieldsHasHdEncrypted     ListHrisDevicesQueryParamFields = "has_hd_encrypted"
+	ListHrisDevicesQueryParamFieldsHasScreenlock      ListHrisDevicesQueryParamFields = "has_screenlock"
+	ListHrisDevicesQueryParamFieldsIsMissing          ListHrisDevicesQueryParamFields = "is_missing"
+	ListHrisDevicesQueryParamFieldsRaw                ListHrisDevicesQueryParamFields = "raw"
+)
+
+func (e ListHrisDevicesQueryParamFields) ToPointer() *ListHrisDevicesQueryParamFields {
+	return &e
+}
+func (e *ListHrisDevicesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "asset_tag":
+		fallthrough
+	case "version":
+		fallthrough
+	case "manufacturer":
+		fallthrough
+	case "model":
+		fallthrough
+	case "os":
+		fallthrough
+	case "os_version":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "admin_user_ids":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "has_antivirus":
+		fallthrough
+	case "has_password_manager":
+		fallthrough
+	case "has_firewall":
+		fallthrough
+	case "has_hd_encrypted":
+		fallthrough
+	case "has_screenlock":
+		fallthrough
+	case "is_missing":
+		fallthrough
+	case "raw":
+		*e = ListHrisDevicesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListHrisDevicesQueryParamFields: %v", v)
+	}
+}
 
 type ListHrisDevicesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListHrisDevicesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                          `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                          `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                           `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -33,7 +115,7 @@ func (l *ListHrisDevicesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListHrisDevicesRequest) GetFields() []string {
+func (l *ListHrisDevicesRequest) GetFields() []ListHrisDevicesQueryParamFields {
 	if l == nil {
 		return nil
 	}

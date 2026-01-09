@@ -3,16 +3,125 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateAccountingInvoiceQueryParamFields string
+
+const (
+	CreateAccountingInvoiceQueryParamFieldsID                      CreateAccountingInvoiceQueryParamFields = "id"
+	CreateAccountingInvoiceQueryParamFieldsCreatedAt               CreateAccountingInvoiceQueryParamFields = "created_at"
+	CreateAccountingInvoiceQueryParamFieldsUpdatedAt               CreateAccountingInvoiceQueryParamFields = "updated_at"
+	CreateAccountingInvoiceQueryParamFieldsDueAt                   CreateAccountingInvoiceQueryParamFields = "due_at"
+	CreateAccountingInvoiceQueryParamFieldsPaidAt                  CreateAccountingInvoiceQueryParamFields = "paid_at"
+	CreateAccountingInvoiceQueryParamFieldsRefundedAt              CreateAccountingInvoiceQueryParamFields = "refunded_at"
+	CreateAccountingInvoiceQueryParamFieldsCancelledAt             CreateAccountingInvoiceQueryParamFields = "cancelled_at"
+	CreateAccountingInvoiceQueryParamFieldsPostedAt                CreateAccountingInvoiceQueryParamFields = "posted_at"
+	CreateAccountingInvoiceQueryParamFieldsTotalAmount             CreateAccountingInvoiceQueryParamFields = "total_amount"
+	CreateAccountingInvoiceQueryParamFieldsPaidAmount              CreateAccountingInvoiceQueryParamFields = "paid_amount"
+	CreateAccountingInvoiceQueryParamFieldsRefundAmount            CreateAccountingInvoiceQueryParamFields = "refund_amount"
+	CreateAccountingInvoiceQueryParamFieldsTaxAmount               CreateAccountingInvoiceQueryParamFields = "tax_amount"
+	CreateAccountingInvoiceQueryParamFieldsDiscountAmount          CreateAccountingInvoiceQueryParamFields = "discount_amount"
+	CreateAccountingInvoiceQueryParamFieldsBalanceAmount           CreateAccountingInvoiceQueryParamFields = "balance_amount"
+	CreateAccountingInvoiceQueryParamFieldsInvoiceNumber           CreateAccountingInvoiceQueryParamFields = "invoice_number"
+	CreateAccountingInvoiceQueryParamFieldsReference               CreateAccountingInvoiceQueryParamFields = "reference"
+	CreateAccountingInvoiceQueryParamFieldsContactID               CreateAccountingInvoiceQueryParamFields = "contact_id"
+	CreateAccountingInvoiceQueryParamFieldsCurrency                CreateAccountingInvoiceQueryParamFields = "currency"
+	CreateAccountingInvoiceQueryParamFieldsNotes                   CreateAccountingInvoiceQueryParamFields = "notes"
+	CreateAccountingInvoiceQueryParamFieldsRefundReason            CreateAccountingInvoiceQueryParamFields = "refund_reason"
+	CreateAccountingInvoiceQueryParamFieldsLineitems               CreateAccountingInvoiceQueryParamFields = "lineitems"
+	CreateAccountingInvoiceQueryParamFieldsStatus                  CreateAccountingInvoiceQueryParamFields = "status"
+	CreateAccountingInvoiceQueryParamFieldsURL                     CreateAccountingInvoiceQueryParamFields = "url"
+	CreateAccountingInvoiceQueryParamFieldsPaymentCollectionMethod CreateAccountingInvoiceQueryParamFields = "payment_collection_method"
+	CreateAccountingInvoiceQueryParamFieldsInvoiceAt               CreateAccountingInvoiceQueryParamFields = "invoice_at"
+	CreateAccountingInvoiceQueryParamFieldsType                    CreateAccountingInvoiceQueryParamFields = "type"
+	CreateAccountingInvoiceQueryParamFieldsAttachments             CreateAccountingInvoiceQueryParamFields = "attachments"
+	CreateAccountingInvoiceQueryParamFieldsSend                    CreateAccountingInvoiceQueryParamFields = "send"
+	CreateAccountingInvoiceQueryParamFieldsRaw                     CreateAccountingInvoiceQueryParamFields = "raw"
+)
+
+func (e CreateAccountingInvoiceQueryParamFields) ToPointer() *CreateAccountingInvoiceQueryParamFields {
+	return &e
+}
+func (e *CreateAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "refunded_at":
+		fallthrough
+	case "cancelled_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "paid_amount":
+		fallthrough
+	case "refund_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "discount_amount":
+		fallthrough
+	case "balance_amount":
+		fallthrough
+	case "invoice_number":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "refund_reason":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "status":
+		fallthrough
+	case "url":
+		fallthrough
+	case "payment_collection_method":
+		fallthrough
+	case "invoice_at":
+		fallthrough
+	case "type":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "send":
+		fallthrough
+	case "raw":
+		*e = CreateAccountingInvoiceQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateAccountingInvoiceQueryParamFields: %v", v)
+	}
+}
 
 type CreateAccountingInvoiceRequest struct {
 	AccountingInvoice shared.AccountingInvoice `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateAccountingInvoiceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +140,7 @@ func (c *CreateAccountingInvoiceRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAccountingInvoiceRequest) GetFields() []string {
+func (c *CreateAccountingInvoiceRequest) GetFields() []CreateAccountingInvoiceQueryParamFields {
 	if c == nil {
 		return nil
 	}

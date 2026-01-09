@@ -3,16 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchKmsSpaceQueryParamFields string
+
+const (
+	PatchKmsSpaceQueryParamFieldsID            PatchKmsSpaceQueryParamFields = "id"
+	PatchKmsSpaceQueryParamFieldsCreatedAt     PatchKmsSpaceQueryParamFields = "created_at"
+	PatchKmsSpaceQueryParamFieldsUpdatedAt     PatchKmsSpaceQueryParamFields = "updated_at"
+	PatchKmsSpaceQueryParamFieldsName          PatchKmsSpaceQueryParamFields = "name"
+	PatchKmsSpaceQueryParamFieldsDescription   PatchKmsSpaceQueryParamFields = "description"
+	PatchKmsSpaceQueryParamFieldsParentSpaceID PatchKmsSpaceQueryParamFields = "parent_space_id"
+	PatchKmsSpaceQueryParamFieldsParentID      PatchKmsSpaceQueryParamFields = "parent_id"
+	PatchKmsSpaceQueryParamFieldsIsActive      PatchKmsSpaceQueryParamFields = "is_active"
+	PatchKmsSpaceQueryParamFieldsUserID        PatchKmsSpaceQueryParamFields = "user_id"
+	PatchKmsSpaceQueryParamFieldsParentPageID  PatchKmsSpaceQueryParamFields = "parent_page_id"
+	PatchKmsSpaceQueryParamFieldsRaw           PatchKmsSpaceQueryParamFields = "raw"
+)
+
+func (e PatchKmsSpaceQueryParamFields) ToPointer() *PatchKmsSpaceQueryParamFields {
+	return &e
+}
+func (e *PatchKmsSpaceQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parent_space_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "parent_page_id":
+		fallthrough
+	case "raw":
+		*e = PatchKmsSpaceQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchKmsSpaceQueryParamFields: %v", v)
+	}
+}
 
 type PatchKmsSpaceRequest struct {
 	KmsSpace shared.KmsSpace `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchKmsSpaceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +88,7 @@ func (p *PatchKmsSpaceRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchKmsSpaceRequest) GetFields() []string {
+func (p *PatchKmsSpaceRequest) GetFields() []PatchKmsSpaceQueryParamFields {
 	if p == nil {
 		return nil
 	}

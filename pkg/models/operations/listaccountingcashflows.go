@@ -3,34 +3,102 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListAccountingCashflowsQueryParamFields string
+
+const (
+	ListAccountingCashflowsQueryParamFieldsID                    ListAccountingCashflowsQueryParamFields = "id"
+	ListAccountingCashflowsQueryParamFieldsCreatedAt             ListAccountingCashflowsQueryParamFields = "created_at"
+	ListAccountingCashflowsQueryParamFieldsUpdatedAt             ListAccountingCashflowsQueryParamFields = "updated_at"
+	ListAccountingCashflowsQueryParamFieldsStartAt               ListAccountingCashflowsQueryParamFields = "start_at"
+	ListAccountingCashflowsQueryParamFieldsEndAt                 ListAccountingCashflowsQueryParamFields = "end_at"
+	ListAccountingCashflowsQueryParamFieldsCategoryIds           ListAccountingCashflowsQueryParamFields = "category_ids"
+	ListAccountingCashflowsQueryParamFieldsContactID             ListAccountingCashflowsQueryParamFields = "contact_id"
+	ListAccountingCashflowsQueryParamFieldsName                  ListAccountingCashflowsQueryParamFields = "name"
+	ListAccountingCashflowsQueryParamFieldsCurrency              ListAccountingCashflowsQueryParamFields = "currency"
+	ListAccountingCashflowsQueryParamFieldsCashBeginningAmount   ListAccountingCashflowsQueryParamFields = "cash_beginning_amount"
+	ListAccountingCashflowsQueryParamFieldsCashEndingAmount      ListAccountingCashflowsQueryParamFields = "cash_ending_amount"
+	ListAccountingCashflowsQueryParamFieldsNetChangeInCashAmount ListAccountingCashflowsQueryParamFields = "net_change_in_cash_amount"
+	ListAccountingCashflowsQueryParamFieldsOperatingSections     ListAccountingCashflowsQueryParamFields = "operating_sections"
+	ListAccountingCashflowsQueryParamFieldsInvestingSections     ListAccountingCashflowsQueryParamFields = "investing_sections"
+	ListAccountingCashflowsQueryParamFieldsFinancingSections     ListAccountingCashflowsQueryParamFields = "financing_sections"
+	ListAccountingCashflowsQueryParamFieldsRaw                   ListAccountingCashflowsQueryParamFields = "raw"
+)
+
+func (e ListAccountingCashflowsQueryParamFields) ToPointer() *ListAccountingCashflowsQueryParamFields {
+	return &e
+}
+func (e *ListAccountingCashflowsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "category_ids":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "cash_beginning_amount":
+		fallthrough
+	case "cash_ending_amount":
+		fallthrough
+	case "net_change_in_cash_amount":
+		fallthrough
+	case "operating_sections":
+		fallthrough
+	case "investing_sections":
+		fallthrough
+	case "financing_sections":
+		fallthrough
+	case "raw":
+		*e = ListAccountingCashflowsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingCashflowsQueryParamFields: %v", v)
+	}
+}
+
 type ListAccountingCashflowsRequest struct {
-	// The category ID to filter by
+	// The category ID to filter by (reference to AccountingCategory)
 	CategoryID *string `queryParam:"style=form,explode=true,name=category_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// The end date to filter by (deprecated)
-	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
-	// The end date to filter by
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAccountingCashflowsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                  `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                  `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                   `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// The start date to filter by
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -55,13 +123,6 @@ func (l *ListAccountingCashflowsRequest) GetContactID() *string {
 	return l.ContactID
 }
 
-func (l *ListAccountingCashflowsRequest) GetEndLe() *string {
-	if l == nil {
-		return nil
-	}
-	return l.EndLe
-}
-
 func (l *ListAccountingCashflowsRequest) GetEndLt() *string {
 	if l == nil {
 		return nil
@@ -69,7 +130,7 @@ func (l *ListAccountingCashflowsRequest) GetEndLt() *string {
 	return l.EndLt
 }
 
-func (l *ListAccountingCashflowsRequest) GetFields() []string {
+func (l *ListAccountingCashflowsRequest) GetFields() []ListAccountingCashflowsQueryParamFields {
 	if l == nil {
 		return nil
 	}

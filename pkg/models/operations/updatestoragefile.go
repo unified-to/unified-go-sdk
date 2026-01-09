@@ -3,16 +3,89 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateStorageFileQueryParamFields string
+
+const (
+	UpdateStorageFileQueryParamFieldsID          UpdateStorageFileQueryParamFields = "id"
+	UpdateStorageFileQueryParamFieldsCreatedAt   UpdateStorageFileQueryParamFields = "created_at"
+	UpdateStorageFileQueryParamFieldsUpdatedAt   UpdateStorageFileQueryParamFields = "updated_at"
+	UpdateStorageFileQueryParamFieldsName        UpdateStorageFileQueryParamFields = "name"
+	UpdateStorageFileQueryParamFieldsDescription UpdateStorageFileQueryParamFields = "description"
+	UpdateStorageFileQueryParamFieldsParentID    UpdateStorageFileQueryParamFields = "parent_id"
+	UpdateStorageFileQueryParamFieldsUserID      UpdateStorageFileQueryParamFields = "user_id"
+	UpdateStorageFileQueryParamFieldsSize        UpdateStorageFileQueryParamFields = "size"
+	UpdateStorageFileQueryParamFieldsType        UpdateStorageFileQueryParamFields = "type"
+	UpdateStorageFileQueryParamFieldsMimeType    UpdateStorageFileQueryParamFields = "mime_type"
+	UpdateStorageFileQueryParamFieldsPermissions UpdateStorageFileQueryParamFields = "permissions"
+	UpdateStorageFileQueryParamFieldsDownloadURL UpdateStorageFileQueryParamFields = "download_url"
+	UpdateStorageFileQueryParamFieldsHash        UpdateStorageFileQueryParamFields = "hash"
+	UpdateStorageFileQueryParamFieldsData        UpdateStorageFileQueryParamFields = "data"
+	UpdateStorageFileQueryParamFieldsVersion     UpdateStorageFileQueryParamFields = "version"
+	UpdateStorageFileQueryParamFieldsWebURL      UpdateStorageFileQueryParamFields = "web_url"
+	UpdateStorageFileQueryParamFieldsRaw         UpdateStorageFileQueryParamFields = "raw"
+)
+
+func (e UpdateStorageFileQueryParamFields) ToPointer() *UpdateStorageFileQueryParamFields {
+	return &e
+}
+func (e *UpdateStorageFileQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "size":
+		fallthrough
+	case "type":
+		fallthrough
+	case "mime_type":
+		fallthrough
+	case "permissions":
+		fallthrough
+	case "download_url":
+		fallthrough
+	case "hash":
+		fallthrough
+	case "data":
+		fallthrough
+	case "version":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "raw":
+		*e = UpdateStorageFileQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateStorageFileQueryParamFields: %v", v)
+	}
+}
 
 type UpdateStorageFileRequest struct {
 	StorageFile shared.StorageFile `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateStorageFileQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the File
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +106,7 @@ func (u *UpdateStorageFileRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateStorageFileRequest) GetFields() []string {
+func (u *UpdateStorageFileRequest) GetFields() []UpdateStorageFileQueryParamFields {
 	if u == nil {
 		return nil
 	}

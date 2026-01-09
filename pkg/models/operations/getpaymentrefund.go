@@ -3,15 +3,67 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetPaymentRefundQueryParamFields string
+
+const (
+	GetPaymentRefundQueryParamFieldsID          GetPaymentRefundQueryParamFields = "id"
+	GetPaymentRefundQueryParamFieldsCreatedAt   GetPaymentRefundQueryParamFields = "created_at"
+	GetPaymentRefundQueryParamFieldsUpdatedAt   GetPaymentRefundQueryParamFields = "updated_at"
+	GetPaymentRefundQueryParamFieldsTotalAmount GetPaymentRefundQueryParamFields = "total_amount"
+	GetPaymentRefundQueryParamFieldsPaymentID   GetPaymentRefundQueryParamFields = "payment_id"
+	GetPaymentRefundQueryParamFieldsCurrency    GetPaymentRefundQueryParamFields = "currency"
+	GetPaymentRefundQueryParamFieldsNotes       GetPaymentRefundQueryParamFields = "notes"
+	GetPaymentRefundQueryParamFieldsStatus      GetPaymentRefundQueryParamFields = "status"
+	GetPaymentRefundQueryParamFieldsReference   GetPaymentRefundQueryParamFields = "reference"
+	GetPaymentRefundQueryParamFieldsRaw         GetPaymentRefundQueryParamFields = "raw"
+)
+
+func (e GetPaymentRefundQueryParamFields) ToPointer() *GetPaymentRefundQueryParamFields {
+	return &e
+}
+func (e *GetPaymentRefundQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "payment_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "status":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "raw":
+		*e = GetPaymentRefundQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetPaymentRefundQueryParamFields: %v", v)
+	}
+}
 
 type GetPaymentRefundRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetPaymentRefundQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Refund
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +77,7 @@ func (g *GetPaymentRefundRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetPaymentRefundRequest) GetFields() []string {
+func (g *GetPaymentRefundRequest) GetFields() []GetPaymentRefundQueryParamFields {
 	if g == nil {
 		return nil
 	}

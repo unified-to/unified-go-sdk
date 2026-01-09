@@ -3,16 +3,80 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateAccountingSalesorderQueryParamFields string
+
+const (
+	CreateAccountingSalesorderQueryParamFieldsID              CreateAccountingSalesorderQueryParamFields = "id"
+	CreateAccountingSalesorderQueryParamFieldsCreatedAt       CreateAccountingSalesorderQueryParamFields = "created_at"
+	CreateAccountingSalesorderQueryParamFieldsUpdatedAt       CreateAccountingSalesorderQueryParamFields = "updated_at"
+	CreateAccountingSalesorderQueryParamFieldsPostedAt        CreateAccountingSalesorderQueryParamFields = "posted_at"
+	CreateAccountingSalesorderQueryParamFieldsContactID       CreateAccountingSalesorderQueryParamFields = "contact_id"
+	CreateAccountingSalesorderQueryParamFieldsAccountID       CreateAccountingSalesorderQueryParamFields = "account_id"
+	CreateAccountingSalesorderQueryParamFieldsCurrency        CreateAccountingSalesorderQueryParamFields = "currency"
+	CreateAccountingSalesorderQueryParamFieldsTotalAmount     CreateAccountingSalesorderQueryParamFields = "total_amount"
+	CreateAccountingSalesorderQueryParamFieldsShippingAddress CreateAccountingSalesorderQueryParamFields = "shipping_address"
+	CreateAccountingSalesorderQueryParamFieldsBillingAddress  CreateAccountingSalesorderQueryParamFields = "billing_address"
+	CreateAccountingSalesorderQueryParamFieldsStatus          CreateAccountingSalesorderQueryParamFields = "status"
+	CreateAccountingSalesorderQueryParamFieldsLineitems       CreateAccountingSalesorderQueryParamFields = "lineitems"
+	CreateAccountingSalesorderQueryParamFieldsSalesChannel    CreateAccountingSalesorderQueryParamFields = "sales_channel"
+	CreateAccountingSalesorderQueryParamFieldsRaw             CreateAccountingSalesorderQueryParamFields = "raw"
+)
+
+func (e CreateAccountingSalesorderQueryParamFields) ToPointer() *CreateAccountingSalesorderQueryParamFields {
+	return &e
+}
+func (e *CreateAccountingSalesorderQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "shipping_address":
+		fallthrough
+	case "billing_address":
+		fallthrough
+	case "status":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "sales_channel":
+		fallthrough
+	case "raw":
+		*e = CreateAccountingSalesorderQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateAccountingSalesorderQueryParamFields: %v", v)
+	}
+}
 
 type CreateAccountingSalesorderRequest struct {
 	AccountingSalesorder shared.AccountingSalesorder `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateAccountingSalesorderQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +95,7 @@ func (c *CreateAccountingSalesorderRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAccountingSalesorderRequest) GetFields() []string {
+func (c *CreateAccountingSalesorderRequest) GetFields() []CreateAccountingSalesorderQueryParamFields {
 	if c == nil {
 		return nil
 	}

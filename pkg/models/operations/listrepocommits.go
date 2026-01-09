@@ -3,28 +3,74 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListRepoCommitsQueryParamFields string
+
+const (
+	ListRepoCommitsQueryParamFieldsID        ListRepoCommitsQueryParamFields = "id"
+	ListRepoCommitsQueryParamFieldsCreatedAt ListRepoCommitsQueryParamFields = "created_at"
+	ListRepoCommitsQueryParamFieldsUpdatedAt ListRepoCommitsQueryParamFields = "updated_at"
+	ListRepoCommitsQueryParamFieldsUserID    ListRepoCommitsQueryParamFields = "user_id"
+	ListRepoCommitsQueryParamFieldsRepoID    ListRepoCommitsQueryParamFields = "repo_id"
+	ListRepoCommitsQueryParamFieldsMessage   ListRepoCommitsQueryParamFields = "message"
+	ListRepoCommitsQueryParamFieldsBranchID  ListRepoCommitsQueryParamFields = "branch_id"
+	ListRepoCommitsQueryParamFieldsRaw       ListRepoCommitsQueryParamFields = "raw"
+)
+
+func (e ListRepoCommitsQueryParamFields) ToPointer() *ListRepoCommitsQueryParamFields {
+	return &e
+}
+func (e *ListRepoCommitsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "repo_id":
+		fallthrough
+	case "message":
+		fallthrough
+	case "branch_id":
+		fallthrough
+	case "raw":
+		*e = ListRepoCommitsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListRepoCommitsQueryParamFields: %v", v)
+	}
+}
+
 type ListRepoCommitsRequest struct {
-	// The repo branch ID to filter by
+	// The repo branch ID to filter by (reference to RepoBranch)
 	BranchID *string `queryParam:"style=form,explode=true,name=branch_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListRepoCommitsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                          `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                          `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                           `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
-	// The repo ID to filter by
+	// The repo ID to filter by (reference to RepoRepository)
 	RepoID *string `queryParam:"style=form,explode=true,name=repo_id"`
 	Sort   *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -42,7 +88,7 @@ func (l *ListRepoCommitsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListRepoCommitsRequest) GetFields() []string {
+func (l *ListRepoCommitsRequest) GetFields() []ListRepoCommitsQueryParamFields {
 	if l == nil {
 		return nil
 	}

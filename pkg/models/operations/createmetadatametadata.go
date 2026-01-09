@@ -3,16 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateMetadataMetadataQueryParamFields string
+
+const (
+	CreateMetadataMetadataQueryParamFieldsID             CreateMetadataMetadataQueryParamFields = "id"
+	CreateMetadataMetadataQueryParamFieldsCreatedAt      CreateMetadataMetadataQueryParamFields = "created_at"
+	CreateMetadataMetadataQueryParamFieldsUpdatedAt      CreateMetadataMetadataQueryParamFields = "updated_at"
+	CreateMetadataMetadataQueryParamFieldsName           CreateMetadataMetadataQueryParamFields = "name"
+	CreateMetadataMetadataQueryParamFieldsSlug           CreateMetadataMetadataQueryParamFields = "slug"
+	CreateMetadataMetadataQueryParamFieldsFormat         CreateMetadataMetadataQueryParamFields = "format"
+	CreateMetadataMetadataQueryParamFieldsOriginalFormat CreateMetadataMetadataQueryParamFields = "original_format"
+	CreateMetadataMetadataQueryParamFieldsOptions        CreateMetadataMetadataQueryParamFields = "options"
+	CreateMetadataMetadataQueryParamFieldsObjectType     CreateMetadataMetadataQueryParamFields = "object_type"
+	CreateMetadataMetadataQueryParamFieldsObjects        CreateMetadataMetadataQueryParamFields = "objects"
+	CreateMetadataMetadataQueryParamFieldsRaw            CreateMetadataMetadataQueryParamFields = "raw"
+)
+
+func (e CreateMetadataMetadataQueryParamFields) ToPointer() *CreateMetadataMetadataQueryParamFields {
+	return &e
+}
+func (e *CreateMetadataMetadataQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "slug":
+		fallthrough
+	case "format":
+		fallthrough
+	case "original_format":
+		fallthrough
+	case "options":
+		fallthrough
+	case "object_type":
+		fallthrough
+	case "objects":
+		fallthrough
+	case "raw":
+		*e = CreateMetadataMetadataQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateMetadataMetadataQueryParamFields: %v", v)
+	}
+}
 
 type CreateMetadataMetadataRequest struct {
 	MetadataMetadata shared.MetadataMetadata `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateMetadataMetadataQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +86,7 @@ func (c *CreateMetadataMetadataRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateMetadataMetadataRequest) GetFields() []string {
+func (c *CreateMetadataMetadataRequest) GetFields() []CreateMetadataMetadataQueryParamFields {
 	if c == nil {
 		return nil
 	}

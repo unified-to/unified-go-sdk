@@ -3,16 +3,98 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreatePaymentSubscriptionQueryParamFields string
+
+const (
+	CreatePaymentSubscriptionQueryParamFieldsID                   CreatePaymentSubscriptionQueryParamFields = "id"
+	CreatePaymentSubscriptionQueryParamFieldsCreatedAt            CreatePaymentSubscriptionQueryParamFields = "created_at"
+	CreatePaymentSubscriptionQueryParamFieldsUpdatedAt            CreatePaymentSubscriptionQueryParamFields = "updated_at"
+	CreatePaymentSubscriptionQueryParamFieldsDescription          CreatePaymentSubscriptionQueryParamFields = "description"
+	CreatePaymentSubscriptionQueryParamFieldsContactID            CreatePaymentSubscriptionQueryParamFields = "contact_id"
+	CreatePaymentSubscriptionQueryParamFieldsInvoiceID            CreatePaymentSubscriptionQueryParamFields = "invoice_id"
+	CreatePaymentSubscriptionQueryParamFieldsCurrentPeriodEndAt   CreatePaymentSubscriptionQueryParamFields = "current_period_end_at"
+	CreatePaymentSubscriptionQueryParamFieldsCurrentPeriodStartAt CreatePaymentSubscriptionQueryParamFields = "current_period_start_at"
+	CreatePaymentSubscriptionQueryParamFieldsCanceledAt           CreatePaymentSubscriptionQueryParamFields = "canceled_at"
+	CreatePaymentSubscriptionQueryParamFieldsCurrency             CreatePaymentSubscriptionQueryParamFields = "currency"
+	CreatePaymentSubscriptionQueryParamFieldsStartAt              CreatePaymentSubscriptionQueryParamFields = "start_at"
+	CreatePaymentSubscriptionQueryParamFieldsEndAt                CreatePaymentSubscriptionQueryParamFields = "end_at"
+	CreatePaymentSubscriptionQueryParamFieldsStatus               CreatePaymentSubscriptionQueryParamFields = "status"
+	CreatePaymentSubscriptionQueryParamFieldsMonth                CreatePaymentSubscriptionQueryParamFields = "month"
+	CreatePaymentSubscriptionQueryParamFieldsIntervalUnit         CreatePaymentSubscriptionQueryParamFields = "interval_unit"
+	CreatePaymentSubscriptionQueryParamFieldsDayOfMonth           CreatePaymentSubscriptionQueryParamFields = "day_of_month"
+	CreatePaymentSubscriptionQueryParamFieldsDayOfWeek            CreatePaymentSubscriptionQueryParamFields = "day_of_week"
+	CreatePaymentSubscriptionQueryParamFieldsInterval             CreatePaymentSubscriptionQueryParamFields = "interval"
+	CreatePaymentSubscriptionQueryParamFieldsLineitems            CreatePaymentSubscriptionQueryParamFields = "lineitems"
+	CreatePaymentSubscriptionQueryParamFieldsRaw                  CreatePaymentSubscriptionQueryParamFields = "raw"
+)
+
+func (e CreatePaymentSubscriptionQueryParamFields) ToPointer() *CreatePaymentSubscriptionQueryParamFields {
+	return &e
+}
+func (e *CreatePaymentSubscriptionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "description":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "invoice_id":
+		fallthrough
+	case "current_period_end_at":
+		fallthrough
+	case "current_period_start_at":
+		fallthrough
+	case "canceled_at":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "status":
+		fallthrough
+	case "month":
+		fallthrough
+	case "interval_unit":
+		fallthrough
+	case "day_of_month":
+		fallthrough
+	case "day_of_week":
+		fallthrough
+	case "interval":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "raw":
+		*e = CreatePaymentSubscriptionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreatePaymentSubscriptionQueryParamFields: %v", v)
+	}
+}
 
 type CreatePaymentSubscriptionRequest struct {
 	PaymentSubscription shared.PaymentSubscription `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreatePaymentSubscriptionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +113,7 @@ func (c *CreatePaymentSubscriptionRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreatePaymentSubscriptionRequest) GetFields() []string {
+func (c *CreatePaymentSubscriptionRequest) GetFields() []CreatePaymentSubscriptionQueryParamFields {
 	if c == nil {
 		return nil
 	}

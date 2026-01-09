@@ -3,16 +3,116 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchAtsJobQueryParamFields string
+
+const (
+	PatchAtsJobQueryParamFieldsID                     PatchAtsJobQueryParamFields = "id"
+	PatchAtsJobQueryParamFieldsCreatedAt              PatchAtsJobQueryParamFields = "created_at"
+	PatchAtsJobQueryParamFieldsUpdatedAt              PatchAtsJobQueryParamFields = "updated_at"
+	PatchAtsJobQueryParamFieldsName                   PatchAtsJobQueryParamFields = "name"
+	PatchAtsJobQueryParamFieldsDescription            PatchAtsJobQueryParamFields = "description"
+	PatchAtsJobQueryParamFieldsRecruiterIds           PatchAtsJobQueryParamFields = "recruiter_ids"
+	PatchAtsJobQueryParamFieldsHiringManagerIds       PatchAtsJobQueryParamFields = "hiring_manager_ids"
+	PatchAtsJobQueryParamFieldsStatus                 PatchAtsJobQueryParamFields = "status"
+	PatchAtsJobQueryParamFieldsClosedAt               PatchAtsJobQueryParamFields = "closed_at"
+	PatchAtsJobQueryParamFieldsAddresses              PatchAtsJobQueryParamFields = "addresses"
+	PatchAtsJobQueryParamFieldsCompensation           PatchAtsJobQueryParamFields = "compensation"
+	PatchAtsJobQueryParamFieldsEmploymentType         PatchAtsJobQueryParamFields = "employment_type"
+	PatchAtsJobQueryParamFieldsRemote                 PatchAtsJobQueryParamFields = "remote"
+	PatchAtsJobQueryParamFieldsLanguageLocale         PatchAtsJobQueryParamFields = "language_locale"
+	PatchAtsJobQueryParamFieldsPublicJobUrls          PatchAtsJobQueryParamFields = "public_job_urls"
+	PatchAtsJobQueryParamFieldsNumberOfOpenings       PatchAtsJobQueryParamFields = "number_of_openings"
+	PatchAtsJobQueryParamFieldsCompanyID              PatchAtsJobQueryParamFields = "company_id"
+	PatchAtsJobQueryParamFieldsQuestions              PatchAtsJobQueryParamFields = "questions"
+	PatchAtsJobQueryParamFieldsPostings               PatchAtsJobQueryParamFields = "postings"
+	PatchAtsJobQueryParamFieldsGroups                 PatchAtsJobQueryParamFields = "groups"
+	PatchAtsJobQueryParamFieldsOpenings               PatchAtsJobQueryParamFields = "openings"
+	PatchAtsJobQueryParamFieldsMinimumExperienceYears PatchAtsJobQueryParamFields = "minimum_experience_years"
+	PatchAtsJobQueryParamFieldsMinimumDegree          PatchAtsJobQueryParamFields = "minimum_degree"
+	PatchAtsJobQueryParamFieldsSkills                 PatchAtsJobQueryParamFields = "skills"
+	PatchAtsJobQueryParamFieldsMetadata               PatchAtsJobQueryParamFields = "metadata"
+	PatchAtsJobQueryParamFieldsRaw                    PatchAtsJobQueryParamFields = "raw"
+)
+
+func (e PatchAtsJobQueryParamFields) ToPointer() *PatchAtsJobQueryParamFields {
+	return &e
+}
+func (e *PatchAtsJobQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "recruiter_ids":
+		fallthrough
+	case "hiring_manager_ids":
+		fallthrough
+	case "status":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "addresses":
+		fallthrough
+	case "compensation":
+		fallthrough
+	case "employment_type":
+		fallthrough
+	case "remote":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "public_job_urls":
+		fallthrough
+	case "number_of_openings":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "questions":
+		fallthrough
+	case "postings":
+		fallthrough
+	case "groups":
+		fallthrough
+	case "openings":
+		fallthrough
+	case "minimum_experience_years":
+		fallthrough
+	case "minimum_degree":
+		fallthrough
+	case "skills":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = PatchAtsJobQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchAtsJobQueryParamFields: %v", v)
+	}
+}
 
 type PatchAtsJobRequest struct {
 	AtsJob shared.AtsJob `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchAtsJobQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Job
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +133,7 @@ func (p *PatchAtsJobRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchAtsJobRequest) GetFields() []string {
+func (p *PatchAtsJobRequest) GetFields() []PatchAtsJobQueryParamFields {
 	if p == nil {
 		return nil
 	}

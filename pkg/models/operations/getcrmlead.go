@@ -3,15 +3,97 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetCrmLeadQueryParamFields string
+
+const (
+	GetCrmLeadQueryParamFieldsID            GetCrmLeadQueryParamFields = "id"
+	GetCrmLeadQueryParamFieldsCreatedAt     GetCrmLeadQueryParamFields = "created_at"
+	GetCrmLeadQueryParamFieldsUpdatedAt     GetCrmLeadQueryParamFields = "updated_at"
+	GetCrmLeadQueryParamFieldsName          GetCrmLeadQueryParamFields = "name"
+	GetCrmLeadQueryParamFieldsFirstName     GetCrmLeadQueryParamFields = "first_name"
+	GetCrmLeadQueryParamFieldsLastName      GetCrmLeadQueryParamFields = "last_name"
+	GetCrmLeadQueryParamFieldsUserID        GetCrmLeadQueryParamFields = "user_id"
+	GetCrmLeadQueryParamFieldsCreatorUserID GetCrmLeadQueryParamFields = "creator_user_id"
+	GetCrmLeadQueryParamFieldsContactID     GetCrmLeadQueryParamFields = "contact_id"
+	GetCrmLeadQueryParamFieldsCompanyID     GetCrmLeadQueryParamFields = "company_id"
+	GetCrmLeadQueryParamFieldsCompanyName   GetCrmLeadQueryParamFields = "company_name"
+	GetCrmLeadQueryParamFieldsIsActive      GetCrmLeadQueryParamFields = "is_active"
+	GetCrmLeadQueryParamFieldsAddress       GetCrmLeadQueryParamFields = "address"
+	GetCrmLeadQueryParamFieldsEmails        GetCrmLeadQueryParamFields = "emails"
+	GetCrmLeadQueryParamFieldsTelephones    GetCrmLeadQueryParamFields = "telephones"
+	GetCrmLeadQueryParamFieldsSource        GetCrmLeadQueryParamFields = "source"
+	GetCrmLeadQueryParamFieldsStatus        GetCrmLeadQueryParamFields = "status"
+	GetCrmLeadQueryParamFieldsLinkUrls      GetCrmLeadQueryParamFields = "link_urls"
+	GetCrmLeadQueryParamFieldsMetadata      GetCrmLeadQueryParamFields = "metadata"
+	GetCrmLeadQueryParamFieldsRaw           GetCrmLeadQueryParamFields = "raw"
+)
+
+func (e GetCrmLeadQueryParamFields) ToPointer() *GetCrmLeadQueryParamFields {
+	return &e
+}
+func (e *GetCrmLeadQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "creator_user_id":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "company_name":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "address":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "source":
+		fallthrough
+	case "status":
+		fallthrough
+	case "link_urls":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = GetCrmLeadQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetCrmLeadQueryParamFields: %v", v)
+	}
+}
 
 type GetCrmLeadRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetCrmLeadQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Lead
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +107,7 @@ func (g *GetCrmLeadRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetCrmLeadRequest) GetFields() []string {
+func (g *GetCrmLeadRequest) GetFields() []GetCrmLeadQueryParamFields {
 	if g == nil {
 		return nil
 	}

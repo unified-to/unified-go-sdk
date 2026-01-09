@@ -3,15 +3,79 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAccountingOrderQueryParamFields string
+
+const (
+	GetAccountingOrderQueryParamFieldsID              GetAccountingOrderQueryParamFields = "id"
+	GetAccountingOrderQueryParamFieldsCreatedAt       GetAccountingOrderQueryParamFields = "created_at"
+	GetAccountingOrderQueryParamFieldsUpdatedAt       GetAccountingOrderQueryParamFields = "updated_at"
+	GetAccountingOrderQueryParamFieldsPostedAt        GetAccountingOrderQueryParamFields = "posted_at"
+	GetAccountingOrderQueryParamFieldsContactID       GetAccountingOrderQueryParamFields = "contact_id"
+	GetAccountingOrderQueryParamFieldsAccountID       GetAccountingOrderQueryParamFields = "account_id"
+	GetAccountingOrderQueryParamFieldsType            GetAccountingOrderQueryParamFields = "type"
+	GetAccountingOrderQueryParamFieldsCurrency        GetAccountingOrderQueryParamFields = "currency"
+	GetAccountingOrderQueryParamFieldsTotalAmount     GetAccountingOrderQueryParamFields = "total_amount"
+	GetAccountingOrderQueryParamFieldsShippingAddress GetAccountingOrderQueryParamFields = "shipping_address"
+	GetAccountingOrderQueryParamFieldsBillingAddress  GetAccountingOrderQueryParamFields = "billing_address"
+	GetAccountingOrderQueryParamFieldsStatus          GetAccountingOrderQueryParamFields = "status"
+	GetAccountingOrderQueryParamFieldsLineitems       GetAccountingOrderQueryParamFields = "lineitems"
+	GetAccountingOrderQueryParamFieldsRaw             GetAccountingOrderQueryParamFields = "raw"
+)
+
+func (e GetAccountingOrderQueryParamFields) ToPointer() *GetAccountingOrderQueryParamFields {
+	return &e
+}
+func (e *GetAccountingOrderQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "type":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "shipping_address":
+		fallthrough
+	case "billing_address":
+		fallthrough
+	case "status":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "raw":
+		*e = GetAccountingOrderQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAccountingOrderQueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingOrderRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAccountingOrderQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Order
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +89,7 @@ func (g *GetAccountingOrderRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingOrderRequest) GetFields() []string {
+func (g *GetAccountingOrderRequest) GetFields() []GetAccountingOrderQueryParamFields {
 	if g == nil {
 		return nil
 	}

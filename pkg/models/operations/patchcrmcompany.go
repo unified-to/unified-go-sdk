@@ -3,9 +3,94 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchCrmCompanyQueryParamFields string
+
+const (
+	PatchCrmCompanyQueryParamFieldsID          PatchCrmCompanyQueryParamFields = "id"
+	PatchCrmCompanyQueryParamFieldsCreatedAt   PatchCrmCompanyQueryParamFields = "created_at"
+	PatchCrmCompanyQueryParamFieldsUpdatedAt   PatchCrmCompanyQueryParamFields = "updated_at"
+	PatchCrmCompanyQueryParamFieldsName        PatchCrmCompanyQueryParamFields = "name"
+	PatchCrmCompanyQueryParamFieldsDealIds     PatchCrmCompanyQueryParamFields = "deal_ids"
+	PatchCrmCompanyQueryParamFieldsContactIds  PatchCrmCompanyQueryParamFields = "contact_ids"
+	PatchCrmCompanyQueryParamFieldsEmails      PatchCrmCompanyQueryParamFields = "emails"
+	PatchCrmCompanyQueryParamFieldsTelephones  PatchCrmCompanyQueryParamFields = "telephones"
+	PatchCrmCompanyQueryParamFieldsWebsites    PatchCrmCompanyQueryParamFields = "websites"
+	PatchCrmCompanyQueryParamFieldsAddress     PatchCrmCompanyQueryParamFields = "address"
+	PatchCrmCompanyQueryParamFieldsIsActive    PatchCrmCompanyQueryParamFields = "is_active"
+	PatchCrmCompanyQueryParamFieldsTags        PatchCrmCompanyQueryParamFields = "tags"
+	PatchCrmCompanyQueryParamFieldsDescription PatchCrmCompanyQueryParamFields = "description"
+	PatchCrmCompanyQueryParamFieldsIndustry    PatchCrmCompanyQueryParamFields = "industry"
+	PatchCrmCompanyQueryParamFieldsLinkUrls    PatchCrmCompanyQueryParamFields = "link_urls"
+	PatchCrmCompanyQueryParamFieldsEmployees   PatchCrmCompanyQueryParamFields = "employees"
+	PatchCrmCompanyQueryParamFieldsTimezone    PatchCrmCompanyQueryParamFields = "timezone"
+	PatchCrmCompanyQueryParamFieldsUserID      PatchCrmCompanyQueryParamFields = "user_id"
+	PatchCrmCompanyQueryParamFieldsMetadata    PatchCrmCompanyQueryParamFields = "metadata"
+	PatchCrmCompanyQueryParamFieldsDomains     PatchCrmCompanyQueryParamFields = "domains"
+	PatchCrmCompanyQueryParamFieldsRaw         PatchCrmCompanyQueryParamFields = "raw"
+)
+
+func (e PatchCrmCompanyQueryParamFields) ToPointer() *PatchCrmCompanyQueryParamFields {
+	return &e
+}
+func (e *PatchCrmCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "deal_ids":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "websites":
+		fallthrough
+	case "address":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "description":
+		fallthrough
+	case "industry":
+		fallthrough
+	case "link_urls":
+		fallthrough
+	case "employees":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "domains":
+		fallthrough
+	case "raw":
+		*e = PatchCrmCompanyQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchCrmCompanyQueryParamFields: %v", v)
+	}
+}
 
 type PatchCrmCompanyRequest struct {
 	// A company represents an organization that optionally is associated with a deal and/or contacts
@@ -13,7 +98,7 @@ type PatchCrmCompanyRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchCrmCompanyQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Company
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +119,7 @@ func (p *PatchCrmCompanyRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchCrmCompanyRequest) GetFields() []string {
+func (p *PatchCrmCompanyRequest) GetFields() []PatchCrmCompanyQueryParamFields {
 	if p == nil {
 		return nil
 	}

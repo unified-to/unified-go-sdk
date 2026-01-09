@@ -3,16 +3,116 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateAtsCandidateQueryParamFields string
+
+const (
+	UpdateAtsCandidateQueryParamFieldsID                 UpdateAtsCandidateQueryParamFields = "id"
+	UpdateAtsCandidateQueryParamFieldsCreatedAt          UpdateAtsCandidateQueryParamFields = "created_at"
+	UpdateAtsCandidateQueryParamFieldsUpdatedAt          UpdateAtsCandidateQueryParamFields = "updated_at"
+	UpdateAtsCandidateQueryParamFieldsName               UpdateAtsCandidateQueryParamFields = "name"
+	UpdateAtsCandidateQueryParamFieldsFirstName          UpdateAtsCandidateQueryParamFields = "first_name"
+	UpdateAtsCandidateQueryParamFieldsLastName           UpdateAtsCandidateQueryParamFields = "last_name"
+	UpdateAtsCandidateQueryParamFieldsEmails             UpdateAtsCandidateQueryParamFields = "emails"
+	UpdateAtsCandidateQueryParamFieldsTitle              UpdateAtsCandidateQueryParamFields = "title"
+	UpdateAtsCandidateQueryParamFieldsTelephones         UpdateAtsCandidateQueryParamFields = "telephones"
+	UpdateAtsCandidateQueryParamFieldsCompanyName        UpdateAtsCandidateQueryParamFields = "company_name"
+	UpdateAtsCandidateQueryParamFieldsImageURL           UpdateAtsCandidateQueryParamFields = "image_url"
+	UpdateAtsCandidateQueryParamFieldsTags               UpdateAtsCandidateQueryParamFields = "tags"
+	UpdateAtsCandidateQueryParamFieldsAddress            UpdateAtsCandidateQueryParamFields = "address"
+	UpdateAtsCandidateQueryParamFieldsExternalIdentifier UpdateAtsCandidateQueryParamFields = "external_identifier"
+	UpdateAtsCandidateQueryParamFieldsLinkUrls           UpdateAtsCandidateQueryParamFields = "link_urls"
+	UpdateAtsCandidateQueryParamFieldsOrigin             UpdateAtsCandidateQueryParamFields = "origin"
+	UpdateAtsCandidateQueryParamFieldsCompanyID          UpdateAtsCandidateQueryParamFields = "company_id"
+	UpdateAtsCandidateQueryParamFieldsSources            UpdateAtsCandidateQueryParamFields = "sources"
+	UpdateAtsCandidateQueryParamFieldsDateOfBirth        UpdateAtsCandidateQueryParamFields = "date_of_birth"
+	UpdateAtsCandidateQueryParamFieldsUserID             UpdateAtsCandidateQueryParamFields = "user_id"
+	UpdateAtsCandidateQueryParamFieldsWebURL             UpdateAtsCandidateQueryParamFields = "web_url"
+	UpdateAtsCandidateQueryParamFieldsExperiences        UpdateAtsCandidateQueryParamFields = "experiences"
+	UpdateAtsCandidateQueryParamFieldsEducation          UpdateAtsCandidateQueryParamFields = "education"
+	UpdateAtsCandidateQueryParamFieldsSkills             UpdateAtsCandidateQueryParamFields = "skills"
+	UpdateAtsCandidateQueryParamFieldsMetadata           UpdateAtsCandidateQueryParamFields = "metadata"
+	UpdateAtsCandidateQueryParamFieldsRaw                UpdateAtsCandidateQueryParamFields = "raw"
+)
+
+func (e UpdateAtsCandidateQueryParamFields) ToPointer() *UpdateAtsCandidateQueryParamFields {
+	return &e
+}
+func (e *UpdateAtsCandidateQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "title":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "company_name":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "address":
+		fallthrough
+	case "external_identifier":
+		fallthrough
+	case "link_urls":
+		fallthrough
+	case "origin":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "sources":
+		fallthrough
+	case "date_of_birth":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "experiences":
+		fallthrough
+	case "education":
+		fallthrough
+	case "skills":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = UpdateAtsCandidateQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateAtsCandidateQueryParamFields: %v", v)
+	}
+}
 
 type UpdateAtsCandidateRequest struct {
 	AtsCandidate shared.AtsCandidate `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateAtsCandidateQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Candidate
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +133,7 @@ func (u *UpdateAtsCandidateRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateAtsCandidateRequest) GetFields() []string {
+func (u *UpdateAtsCandidateRequest) GetFields() []UpdateAtsCandidateQueryParamFields {
 	if u == nil {
 		return nil
 	}

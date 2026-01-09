@@ -3,16 +3,107 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchCommerceReviewQueryParamFields string
+
+const (
+	PatchCommerceReviewQueryParamFieldsID               PatchCommerceReviewQueryParamFields = "id"
+	PatchCommerceReviewQueryParamFieldsCreatedAt        PatchCommerceReviewQueryParamFields = "created_at"
+	PatchCommerceReviewQueryParamFieldsUpdatedAt        PatchCommerceReviewQueryParamFields = "updated_at"
+	PatchCommerceReviewQueryParamFieldsItemID           PatchCommerceReviewQueryParamFields = "item_id"
+	PatchCommerceReviewQueryParamFieldsItemVariantID    PatchCommerceReviewQueryParamFields = "item_variant_id"
+	PatchCommerceReviewQueryParamFieldsRating           PatchCommerceReviewQueryParamFields = "rating"
+	PatchCommerceReviewQueryParamFieldsTitle            PatchCommerceReviewQueryParamFields = "title"
+	PatchCommerceReviewQueryParamFieldsContent          PatchCommerceReviewQueryParamFields = "content"
+	PatchCommerceReviewQueryParamFieldsAuthorName       PatchCommerceReviewQueryParamFields = "author_name"
+	PatchCommerceReviewQueryParamFieldsAuthorEmail      PatchCommerceReviewQueryParamFields = "author_email"
+	PatchCommerceReviewQueryParamFieldsAuthorAvatarURL  PatchCommerceReviewQueryParamFields = "author_avatar_url"
+	PatchCommerceReviewQueryParamFieldsAuthorLocation   PatchCommerceReviewQueryParamFields = "author_location"
+	PatchCommerceReviewQueryParamFieldsVerifiedPurchase PatchCommerceReviewQueryParamFields = "verified_purchase"
+	PatchCommerceReviewQueryParamFieldsHelpfulVotes     PatchCommerceReviewQueryParamFields = "helpful_votes"
+	PatchCommerceReviewQueryParamFieldsUnhelpfulVotes   PatchCommerceReviewQueryParamFields = "unhelpful_votes"
+	PatchCommerceReviewQueryParamFieldsMedia            PatchCommerceReviewQueryParamFields = "media"
+	PatchCommerceReviewQueryParamFieldsStatus           PatchCommerceReviewQueryParamFields = "status"
+	PatchCommerceReviewQueryParamFieldsIsVerified       PatchCommerceReviewQueryParamFields = "is_verified"
+	PatchCommerceReviewQueryParamFieldsIsFeatured       PatchCommerceReviewQueryParamFields = "is_featured"
+	PatchCommerceReviewQueryParamFieldsIsPublic         PatchCommerceReviewQueryParamFields = "is_public"
+	PatchCommerceReviewQueryParamFieldsComments         PatchCommerceReviewQueryParamFields = "comments"
+	PatchCommerceReviewQueryParamFieldsMetadata         PatchCommerceReviewQueryParamFields = "metadata"
+	PatchCommerceReviewQueryParamFieldsRaw              PatchCommerceReviewQueryParamFields = "raw"
+)
+
+func (e PatchCommerceReviewQueryParamFields) ToPointer() *PatchCommerceReviewQueryParamFields {
+	return &e
+}
+func (e *PatchCommerceReviewQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "item_id":
+		fallthrough
+	case "item_variant_id":
+		fallthrough
+	case "rating":
+		fallthrough
+	case "title":
+		fallthrough
+	case "content":
+		fallthrough
+	case "author_name":
+		fallthrough
+	case "author_email":
+		fallthrough
+	case "author_avatar_url":
+		fallthrough
+	case "author_location":
+		fallthrough
+	case "verified_purchase":
+		fallthrough
+	case "helpful_votes":
+		fallthrough
+	case "unhelpful_votes":
+		fallthrough
+	case "media":
+		fallthrough
+	case "status":
+		fallthrough
+	case "is_verified":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "is_public":
+		fallthrough
+	case "comments":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = PatchCommerceReviewQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchCommerceReviewQueryParamFields: %v", v)
+	}
+}
 
 type PatchCommerceReviewRequest struct {
 	CommerceReview shared.CommerceReview `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchCommerceReviewQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Review
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +124,7 @@ func (p *PatchCommerceReviewRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchCommerceReviewRequest) GetFields() []string {
+func (p *PatchCommerceReviewRequest) GetFields() []PatchCommerceReviewQueryParamFields {
 	if p == nil {
 		return nil
 	}

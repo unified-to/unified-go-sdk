@@ -3,16 +3,65 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchCrmPipelineQueryParamFields string
+
+const (
+	PatchCrmPipelineQueryParamFieldsID              PatchCrmPipelineQueryParamFields = "id"
+	PatchCrmPipelineQueryParamFieldsCreatedAt       PatchCrmPipelineQueryParamFields = "created_at"
+	PatchCrmPipelineQueryParamFieldsUpdatedAt       PatchCrmPipelineQueryParamFields = "updated_at"
+	PatchCrmPipelineQueryParamFieldsName            PatchCrmPipelineQueryParamFields = "name"
+	PatchCrmPipelineQueryParamFieldsIsActive        PatchCrmPipelineQueryParamFields = "is_active"
+	PatchCrmPipelineQueryParamFieldsDealProbability PatchCrmPipelineQueryParamFields = "deal_probability"
+	PatchCrmPipelineQueryParamFieldsDisplayOrder    PatchCrmPipelineQueryParamFields = "display_order"
+	PatchCrmPipelineQueryParamFieldsStages          PatchCrmPipelineQueryParamFields = "stages"
+	PatchCrmPipelineQueryParamFieldsRaw             PatchCrmPipelineQueryParamFields = "raw"
+)
+
+func (e PatchCrmPipelineQueryParamFields) ToPointer() *PatchCrmPipelineQueryParamFields {
+	return &e
+}
+func (e *PatchCrmPipelineQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "deal_probability":
+		fallthrough
+	case "display_order":
+		fallthrough
+	case "stages":
+		fallthrough
+	case "raw":
+		*e = PatchCrmPipelineQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchCrmPipelineQueryParamFields: %v", v)
+	}
+}
 
 type PatchCrmPipelineRequest struct {
 	CrmPipeline shared.CrmPipeline `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchCrmPipelineQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Pipeline
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +82,7 @@ func (p *PatchCrmPipelineRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchCrmPipelineRequest) GetFields() []string {
+func (p *PatchCrmPipelineRequest) GetFields() []PatchCrmPipelineQueryParamFields {
 	if p == nil {
 		return nil
 	}

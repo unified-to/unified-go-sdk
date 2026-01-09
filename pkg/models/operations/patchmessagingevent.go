@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchMessagingEventQueryParamFields string
+
+const (
+	PatchMessagingEventQueryParamFieldsID        PatchMessagingEventQueryParamFields = "id"
+	PatchMessagingEventQueryParamFieldsCreatedAt PatchMessagingEventQueryParamFields = "created_at"
+	PatchMessagingEventQueryParamFieldsType      PatchMessagingEventQueryParamFields = "type"
+	PatchMessagingEventQueryParamFieldsChannel   PatchMessagingEventQueryParamFields = "channel"
+	PatchMessagingEventQueryParamFieldsMessage   PatchMessagingEventQueryParamFields = "message"
+	PatchMessagingEventQueryParamFieldsButton    PatchMessagingEventQueryParamFields = "button"
+	PatchMessagingEventQueryParamFieldsUser      PatchMessagingEventQueryParamFields = "user"
+	PatchMessagingEventQueryParamFieldsRaw       PatchMessagingEventQueryParamFields = "raw"
+)
+
+func (e PatchMessagingEventQueryParamFields) ToPointer() *PatchMessagingEventQueryParamFields {
+	return &e
+}
+func (e *PatchMessagingEventQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "type":
+		fallthrough
+	case "channel":
+		fallthrough
+	case "message":
+		fallthrough
+	case "button":
+		fallthrough
+	case "user":
+		fallthrough
+	case "raw":
+		*e = PatchMessagingEventQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchMessagingEventQueryParamFields: %v", v)
+	}
+}
 
 type PatchMessagingEventRequest struct {
 	MessagingEvent shared.MessagingEvent `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchMessagingEventQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Event
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +79,7 @@ func (p *PatchMessagingEventRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchMessagingEventRequest) GetFields() []string {
+func (p *PatchMessagingEventRequest) GetFields() []PatchMessagingEventQueryParamFields {
 	if p == nil {
 		return nil
 	}

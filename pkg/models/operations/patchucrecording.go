@@ -3,16 +3,80 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchUcRecordingQueryParamFields string
+
+const (
+	PatchUcRecordingQueryParamFieldsID           PatchUcRecordingQueryParamFields = "id"
+	PatchUcRecordingQueryParamFieldsCreatedAt    PatchUcRecordingQueryParamFields = "created_at"
+	PatchUcRecordingQueryParamFieldsUpdatedAt    PatchUcRecordingQueryParamFields = "updated_at"
+	PatchUcRecordingQueryParamFieldsStartAt      PatchUcRecordingQueryParamFields = "start_at"
+	PatchUcRecordingQueryParamFieldsEndAt        PatchUcRecordingQueryParamFields = "end_at"
+	PatchUcRecordingQueryParamFieldsExpiresAt    PatchUcRecordingQueryParamFields = "expires_at"
+	PatchUcRecordingQueryParamFieldsCallID       PatchUcRecordingQueryParamFields = "call_id"
+	PatchUcRecordingQueryParamFieldsWebURL       PatchUcRecordingQueryParamFields = "web_url"
+	PatchUcRecordingQueryParamFieldsContactID    PatchUcRecordingQueryParamFields = "contact_id"
+	PatchUcRecordingQueryParamFieldsContactName  PatchUcRecordingQueryParamFields = "contact_name"
+	PatchUcRecordingQueryParamFieldsContactPhone PatchUcRecordingQueryParamFields = "contact_phone"
+	PatchUcRecordingQueryParamFieldsUserID       PatchUcRecordingQueryParamFields = "user_id"
+	PatchUcRecordingQueryParamFieldsMedia        PatchUcRecordingQueryParamFields = "media"
+	PatchUcRecordingQueryParamFieldsRaw          PatchUcRecordingQueryParamFields = "raw"
+)
+
+func (e PatchUcRecordingQueryParamFields) ToPointer() *PatchUcRecordingQueryParamFields {
+	return &e
+}
+func (e *PatchUcRecordingQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "expires_at":
+		fallthrough
+	case "call_id":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "contact_name":
+		fallthrough
+	case "contact_phone":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "media":
+		fallthrough
+	case "raw":
+		*e = PatchUcRecordingQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchUcRecordingQueryParamFields: %v", v)
+	}
+}
 
 type PatchUcRecordingRequest struct {
 	UcRecording shared.UcRecording `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchUcRecordingQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Recording
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +97,7 @@ func (p *PatchUcRecordingRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchUcRecordingRequest) GetFields() []string {
+func (p *PatchUcRecordingRequest) GetFields() []PatchUcRecordingQueryParamFields {
 	if p == nil {
 		return nil
 	}

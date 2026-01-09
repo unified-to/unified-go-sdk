@@ -1,0 +1,24 @@
+# UpdateAdsAdQueryParamFields
+
+
+## Values
+
+| Name                                          | Value                                         |
+| --------------------------------------------- | --------------------------------------------- |
+| `UpdateAdsAdQueryParamFieldsID`               | id                                            |
+| `UpdateAdsAdQueryParamFieldsCreatedAt`        | created_at                                    |
+| `UpdateAdsAdQueryParamFieldsUpdatedAt`        | updated_at                                    |
+| `UpdateAdsAdQueryParamFieldsName`             | name                                          |
+| `UpdateAdsAdQueryParamFieldsCampaignID`       | campaign_id                                   |
+| `UpdateAdsAdQueryParamFieldsGroupID`          | group_id                                      |
+| `UpdateAdsAdQueryParamFieldsOrganizationID`   | organization_id                               |
+| `UpdateAdsAdQueryParamFieldsIsActive`         | is_active                                     |
+| `UpdateAdsAdQueryParamFieldsAdType`           | ad_type                                       |
+| `UpdateAdsAdQueryParamFieldsCreativeAssetURL` | creative_asset_url                            |
+| `UpdateAdsAdQueryParamFieldsAdCopy`           | ad_copy                                       |
+| `UpdateAdsAdQueryParamFieldsHeadline`         | headline                                      |
+| `UpdateAdsAdQueryParamFieldsDescription`      | description                                   |
+| `UpdateAdsAdQueryParamFieldsCta`              | cta                                           |
+| `UpdateAdsAdQueryParamFieldsFinalURL`         | final_url                                     |
+| `UpdateAdsAdQueryParamFieldsTargeting`        | targeting                                     |
+| `UpdateAdsAdQueryParamFieldsRaw`              | raw                                           |

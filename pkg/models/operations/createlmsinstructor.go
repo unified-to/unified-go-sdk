@@ -3,16 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateLmsInstructorQueryParamFields string
+
+const (
+	CreateLmsInstructorQueryParamFieldsID         CreateLmsInstructorQueryParamFields = "id"
+	CreateLmsInstructorQueryParamFieldsCreatedAt  CreateLmsInstructorQueryParamFields = "created_at"
+	CreateLmsInstructorQueryParamFieldsUpdatedAt  CreateLmsInstructorQueryParamFields = "updated_at"
+	CreateLmsInstructorQueryParamFieldsName       CreateLmsInstructorQueryParamFields = "name"
+	CreateLmsInstructorQueryParamFieldsFirstName  CreateLmsInstructorQueryParamFields = "first_name"
+	CreateLmsInstructorQueryParamFieldsLastName   CreateLmsInstructorQueryParamFields = "last_name"
+	CreateLmsInstructorQueryParamFieldsEmails     CreateLmsInstructorQueryParamFields = "emails"
+	CreateLmsInstructorQueryParamFieldsTitle      CreateLmsInstructorQueryParamFields = "title"
+	CreateLmsInstructorQueryParamFieldsTelephones CreateLmsInstructorQueryParamFields = "telephones"
+	CreateLmsInstructorQueryParamFieldsImageURL   CreateLmsInstructorQueryParamFields = "image_url"
+	CreateLmsInstructorQueryParamFieldsRaw        CreateLmsInstructorQueryParamFields = "raw"
+)
+
+func (e CreateLmsInstructorQueryParamFields) ToPointer() *CreateLmsInstructorQueryParamFields {
+	return &e
+}
+func (e *CreateLmsInstructorQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "title":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "raw":
+		*e = CreateLmsInstructorQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateLmsInstructorQueryParamFields: %v", v)
+	}
+}
 
 type CreateLmsInstructorRequest struct {
 	LmsInstructor shared.LmsInstructor `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateLmsInstructorQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +86,7 @@ func (c *CreateLmsInstructorRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateLmsInstructorRequest) GetFields() []string {
+func (c *CreateLmsInstructorRequest) GetFields() []CreateLmsInstructorQueryParamFields {
 	if c == nil {
 		return nil
 	}

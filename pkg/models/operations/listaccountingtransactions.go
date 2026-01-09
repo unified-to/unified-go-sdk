@@ -3,26 +3,105 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListAccountingTransactionsQueryParamFields string
+
+const (
+	ListAccountingTransactionsQueryParamFieldsID              ListAccountingTransactionsQueryParamFields = "id"
+	ListAccountingTransactionsQueryParamFieldsCreatedAt       ListAccountingTransactionsQueryParamFields = "created_at"
+	ListAccountingTransactionsQueryParamFieldsUpdatedAt       ListAccountingTransactionsQueryParamFields = "updated_at"
+	ListAccountingTransactionsQueryParamFieldsMemo            ListAccountingTransactionsQueryParamFields = "memo"
+	ListAccountingTransactionsQueryParamFieldsTotalAmount     ListAccountingTransactionsQueryParamFields = "total_amount"
+	ListAccountingTransactionsQueryParamFieldsTaxAmount       ListAccountingTransactionsQueryParamFields = "tax_amount"
+	ListAccountingTransactionsQueryParamFieldsAccountID       ListAccountingTransactionsQueryParamFields = "account_id"
+	ListAccountingTransactionsQueryParamFieldsContactID       ListAccountingTransactionsQueryParamFields = "contact_id"
+	ListAccountingTransactionsQueryParamFieldsReference       ListAccountingTransactionsQueryParamFields = "reference"
+	ListAccountingTransactionsQueryParamFieldsSubTotalAmount  ListAccountingTransactionsQueryParamFields = "sub_total_amount"
+	ListAccountingTransactionsQueryParamFieldsSplitAccountID  ListAccountingTransactionsQueryParamFields = "split_account_id"
+	ListAccountingTransactionsQueryParamFieldsPaymentMethod   ListAccountingTransactionsQueryParamFields = "payment_method"
+	ListAccountingTransactionsQueryParamFieldsPaymentTerms    ListAccountingTransactionsQueryParamFields = "payment_terms"
+	ListAccountingTransactionsQueryParamFieldsCustomerMessage ListAccountingTransactionsQueryParamFields = "customer_message"
+	ListAccountingTransactionsQueryParamFieldsType            ListAccountingTransactionsQueryParamFields = "type"
+	ListAccountingTransactionsQueryParamFieldsLineitems       ListAccountingTransactionsQueryParamFields = "lineitems"
+	ListAccountingTransactionsQueryParamFieldsCurrency        ListAccountingTransactionsQueryParamFields = "currency"
+	ListAccountingTransactionsQueryParamFieldsContacts        ListAccountingTransactionsQueryParamFields = "contacts"
+	ListAccountingTransactionsQueryParamFieldsRaw             ListAccountingTransactionsQueryParamFields = "raw"
+)
+
+func (e ListAccountingTransactionsQueryParamFields) ToPointer() *ListAccountingTransactionsQueryParamFields {
+	return &e
+}
+func (e *ListAccountingTransactionsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "memo":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "sub_total_amount":
+		fallthrough
+	case "split_account_id":
+		fallthrough
+	case "payment_method":
+		fallthrough
+	case "payment_terms":
+		fallthrough
+	case "customer_message":
+		fallthrough
+	case "type":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "contacts":
+		fallthrough
+	case "raw":
+		*e = ListAccountingTransactionsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingTransactionsQueryParamFields: %v", v)
+	}
+}
+
 type ListAccountingTransactionsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAccountingTransactionsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                     `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                     `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                      `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -40,7 +119,7 @@ func (l *ListAccountingTransactionsRequest) GetContactID() *string {
 	return l.ContactID
 }
 
-func (l *ListAccountingTransactionsRequest) GetFields() []string {
+func (l *ListAccountingTransactionsRequest) GetFields() []ListAccountingTransactionsQueryParamFields {
 	if l == nil {
 		return nil
 	}

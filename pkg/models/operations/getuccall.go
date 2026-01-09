@@ -3,15 +3,70 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetUcCallQueryParamFields string
+
+const (
+	GetUcCallQueryParamFieldsID        GetUcCallQueryParamFields = "id"
+	GetUcCallQueryParamFieldsCreatedAt GetUcCallQueryParamFields = "created_at"
+	GetUcCallQueryParamFieldsUpdatedAt GetUcCallQueryParamFields = "updated_at"
+	GetUcCallQueryParamFieldsContactID GetUcCallQueryParamFields = "contact_id"
+	GetUcCallQueryParamFieldsTelephone GetUcCallQueryParamFields = "telephone"
+	GetUcCallQueryParamFieldsStartAt   GetUcCallQueryParamFields = "start_at"
+	GetUcCallQueryParamFieldsEndAt     GetUcCallQueryParamFields = "end_at"
+	GetUcCallQueryParamFieldsUserID    GetUcCallQueryParamFields = "user_id"
+	GetUcCallQueryParamFieldsContacts  GetUcCallQueryParamFields = "contacts"
+	GetUcCallQueryParamFieldsIsPrivate GetUcCallQueryParamFields = "is_private"
+	GetUcCallQueryParamFieldsRaw       GetUcCallQueryParamFields = "raw"
+)
+
+func (e GetUcCallQueryParamFields) ToPointer() *GetUcCallQueryParamFields {
+	return &e
+}
+func (e *GetUcCallQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "telephone":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "contacts":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "raw":
+		*e = GetUcCallQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetUcCallQueryParamFields: %v", v)
+	}
+}
 
 type GetUcCallRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetUcCallQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Call
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +80,7 @@ func (g *GetUcCallRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetUcCallRequest) GetFields() []string {
+func (g *GetUcCallRequest) GetFields() []GetUcCallQueryParamFields {
 	if g == nil {
 		return nil
 	}

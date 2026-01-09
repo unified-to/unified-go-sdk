@@ -3,9 +3,82 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateCommerceCollectionQueryParamFields string
+
+const (
+	CreateCommerceCollectionQueryParamFieldsID                CreateCommerceCollectionQueryParamFields = "id"
+	CreateCommerceCollectionQueryParamFieldsCreatedAt         CreateCommerceCollectionQueryParamFields = "created_at"
+	CreateCommerceCollectionQueryParamFieldsUpdatedAt         CreateCommerceCollectionQueryParamFields = "updated_at"
+	CreateCommerceCollectionQueryParamFieldsName              CreateCommerceCollectionQueryParamFields = "name"
+	CreateCommerceCollectionQueryParamFieldsPublicName        CreateCommerceCollectionQueryParamFields = "public_name"
+	CreateCommerceCollectionQueryParamFieldsDescription       CreateCommerceCollectionQueryParamFields = "description"
+	CreateCommerceCollectionQueryParamFieldsPublicDescription CreateCommerceCollectionQueryParamFields = "public_description"
+	CreateCommerceCollectionQueryParamFieldsMedia             CreateCommerceCollectionQueryParamFields = "media"
+	CreateCommerceCollectionQueryParamFieldsIsVisible         CreateCommerceCollectionQueryParamFields = "is_visible"
+	CreateCommerceCollectionQueryParamFieldsIsActive          CreateCommerceCollectionQueryParamFields = "is_active"
+	CreateCommerceCollectionQueryParamFieldsIsFeatured        CreateCommerceCollectionQueryParamFields = "is_featured"
+	CreateCommerceCollectionQueryParamFieldsTags              CreateCommerceCollectionQueryParamFields = "tags"
+	CreateCommerceCollectionQueryParamFieldsType              CreateCommerceCollectionQueryParamFields = "type"
+	CreateCommerceCollectionQueryParamFieldsParentID          CreateCommerceCollectionQueryParamFields = "parent_id"
+	CreateCommerceCollectionQueryParamFieldsMetadata          CreateCommerceCollectionQueryParamFields = "metadata"
+	CreateCommerceCollectionQueryParamFieldsItemMetadata      CreateCommerceCollectionQueryParamFields = "item_metadata"
+	CreateCommerceCollectionQueryParamFieldsRaw               CreateCommerceCollectionQueryParamFields = "raw"
+)
+
+func (e CreateCommerceCollectionQueryParamFields) ToPointer() *CreateCommerceCollectionQueryParamFields {
+	return &e
+}
+func (e *CreateCommerceCollectionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "public_name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "public_description":
+		fallthrough
+	case "media":
+		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "type":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "item_metadata":
+		fallthrough
+	case "raw":
+		*e = CreateCommerceCollectionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateCommerceCollectionQueryParamFields: %v", v)
+	}
+}
 
 type CreateCommerceCollectionRequest struct {
 	// A collection of items/products/services
@@ -13,7 +86,7 @@ type CreateCommerceCollectionRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateCommerceCollectionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -32,7 +105,7 @@ func (c *CreateCommerceCollectionRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateCommerceCollectionRequest) GetFields() []string {
+func (c *CreateCommerceCollectionRequest) GetFields() []CreateCommerceCollectionQueryParamFields {
 	if c == nil {
 		return nil
 	}

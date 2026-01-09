@@ -3,24 +3,91 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListFormsFormsQueryParamFields string
+
+const (
+	ListFormsFormsQueryParamFieldsID                      ListFormsFormsQueryParamFields = "id"
+	ListFormsFormsQueryParamFieldsCreatedAt               ListFormsFormsQueryParamFields = "created_at"
+	ListFormsFormsQueryParamFieldsUpdatedAt               ListFormsFormsQueryParamFields = "updated_at"
+	ListFormsFormsQueryParamFieldsName                    ListFormsFormsQueryParamFields = "name"
+	ListFormsFormsQueryParamFieldsDescription             ListFormsFormsQueryParamFields = "description"
+	ListFormsFormsQueryParamFieldsFields                  ListFormsFormsQueryParamFields = "fields"
+	ListFormsFormsQueryParamFieldsIsActive                ListFormsFormsQueryParamFields = "is_active"
+	ListFormsFormsQueryParamFieldsPublishedURL            ListFormsFormsQueryParamFields = "published_url"
+	ListFormsFormsQueryParamFieldsResponseCount           ListFormsFormsQueryParamFields = "response_count"
+	ListFormsFormsQueryParamFieldsHasMultipleSubmissions  ListFormsFormsQueryParamFields = "has_multiple_submissions"
+	ListFormsFormsQueryParamFieldsHasProgressBar          ListFormsFormsQueryParamFields = "has_progress_bar"
+	ListFormsFormsQueryParamFieldsHasShuffleQuestions     ListFormsFormsQueryParamFields = "has_shuffle_questions"
+	ListFormsFormsQueryParamFieldsConfirmationMessage     ListFormsFormsQueryParamFields = "confirmation_message"
+	ListFormsFormsQueryParamFieldsConfirmationRedirectURL ListFormsFormsQueryParamFields = "confirmation_redirect_url"
+	ListFormsFormsQueryParamFieldsRaw                     ListFormsFormsQueryParamFields = "raw"
+)
+
+func (e ListFormsFormsQueryParamFields) ToPointer() *ListFormsFormsQueryParamFields {
+	return &e
+}
+func (e *ListFormsFormsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "fields":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "published_url":
+		fallthrough
+	case "response_count":
+		fallthrough
+	case "has_multiple_submissions":
+		fallthrough
+	case "has_progress_bar":
+		fallthrough
+	case "has_shuffle_questions":
+		fallthrough
+	case "confirmation_message":
+		fallthrough
+	case "confirmation_redirect_url":
+		fallthrough
+	case "raw":
+		*e = ListFormsFormsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListFormsFormsQueryParamFields: %v", v)
+	}
+}
 
 type ListFormsFormsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListFormsFormsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                         `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                         `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                          `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -31,7 +98,7 @@ func (l *ListFormsFormsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListFormsFormsRequest) GetFields() []string {
+func (l *ListFormsFormsRequest) GetFields() []ListFormsFormsQueryParamFields {
 	if l == nil {
 		return nil
 	}

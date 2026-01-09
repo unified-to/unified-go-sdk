@@ -3,34 +3,117 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListAccountingProfitlossesQueryParamFields string
+
+const (
+	ListAccountingProfitlossesQueryParamFieldsID                         ListAccountingProfitlossesQueryParamFields = "id"
+	ListAccountingProfitlossesQueryParamFieldsCreatedAt                  ListAccountingProfitlossesQueryParamFields = "created_at"
+	ListAccountingProfitlossesQueryParamFieldsUpdatedAt                  ListAccountingProfitlossesQueryParamFields = "updated_at"
+	ListAccountingProfitlossesQueryParamFieldsCategoryIds                ListAccountingProfitlossesQueryParamFields = "category_ids"
+	ListAccountingProfitlossesQueryParamFieldsStartAt                    ListAccountingProfitlossesQueryParamFields = "start_at"
+	ListAccountingProfitlossesQueryParamFieldsEndAt                      ListAccountingProfitlossesQueryParamFields = "end_at"
+	ListAccountingProfitlossesQueryParamFieldsName                       ListAccountingProfitlossesQueryParamFields = "name"
+	ListAccountingProfitlossesQueryParamFieldsCurrency                   ListAccountingProfitlossesQueryParamFields = "currency"
+	ListAccountingProfitlossesQueryParamFieldsIncome                     ListAccountingProfitlossesQueryParamFields = "income"
+	ListAccountingProfitlossesQueryParamFieldsExpenses                   ListAccountingProfitlossesQueryParamFields = "expenses"
+	ListAccountingProfitlossesQueryParamFieldsCostOfGoodsSold            ListAccountingProfitlossesQueryParamFields = "cost_of_goods_sold"
+	ListAccountingProfitlossesQueryParamFieldsGrossProfitAmount          ListAccountingProfitlossesQueryParamFields = "gross_profit_amount"
+	ListAccountingProfitlossesQueryParamFieldsNetProfitAmount            ListAccountingProfitlossesQueryParamFields = "net_profit_amount"
+	ListAccountingProfitlossesQueryParamFieldsIncomeTotalAmount          ListAccountingProfitlossesQueryParamFields = "income_total_amount"
+	ListAccountingProfitlossesQueryParamFieldsNetIncomeAmount            ListAccountingProfitlossesQueryParamFields = "net_income_amount"
+	ListAccountingProfitlossesQueryParamFieldsExpensesTotalAmount        ListAccountingProfitlossesQueryParamFields = "expenses_total_amount"
+	ListAccountingProfitlossesQueryParamFieldsCostOfGoodsSoldTotalAmount ListAccountingProfitlossesQueryParamFields = "cost_of_goods_sold_total_amount"
+	ListAccountingProfitlossesQueryParamFieldsIncomeSections             ListAccountingProfitlossesQueryParamFields = "income_sections"
+	ListAccountingProfitlossesQueryParamFieldsExpensesSections           ListAccountingProfitlossesQueryParamFields = "expenses_sections"
+	ListAccountingProfitlossesQueryParamFieldsCostOfGoodsSoldSections    ListAccountingProfitlossesQueryParamFields = "cost_of_goods_sold_sections"
+	ListAccountingProfitlossesQueryParamFieldsRaw                        ListAccountingProfitlossesQueryParamFields = "raw"
+)
+
+func (e ListAccountingProfitlossesQueryParamFields) ToPointer() *ListAccountingProfitlossesQueryParamFields {
+	return &e
+}
+func (e *ListAccountingProfitlossesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "category_ids":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "income":
+		fallthrough
+	case "expenses":
+		fallthrough
+	case "cost_of_goods_sold":
+		fallthrough
+	case "gross_profit_amount":
+		fallthrough
+	case "net_profit_amount":
+		fallthrough
+	case "income_total_amount":
+		fallthrough
+	case "net_income_amount":
+		fallthrough
+	case "expenses_total_amount":
+		fallthrough
+	case "cost_of_goods_sold_total_amount":
+		fallthrough
+	case "income_sections":
+		fallthrough
+	case "expenses_sections":
+		fallthrough
+	case "cost_of_goods_sold_sections":
+		fallthrough
+	case "raw":
+		*e = ListAccountingProfitlossesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingProfitlossesQueryParamFields: %v", v)
+	}
+}
+
 type ListAccountingProfitlossesRequest struct {
-	// The category ID to filter by
+	// The category ID to filter by (reference to AccountingCategory)
 	CategoryID *string `queryParam:"style=form,explode=true,name=category_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// The end date to filter by (deprecated)
-	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
-	// The end date to filter by
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAccountingProfitlossesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                     `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                     `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                      `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// The start date to filter by
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -55,13 +138,6 @@ func (l *ListAccountingProfitlossesRequest) GetContactID() *string {
 	return l.ContactID
 }
 
-func (l *ListAccountingProfitlossesRequest) GetEndLe() *string {
-	if l == nil {
-		return nil
-	}
-	return l.EndLe
-}
-
 func (l *ListAccountingProfitlossesRequest) GetEndLt() *string {
 	if l == nil {
 		return nil
@@ -69,7 +145,7 @@ func (l *ListAccountingProfitlossesRequest) GetEndLt() *string {
 	return l.EndLt
 }
 
-func (l *ListAccountingProfitlossesRequest) GetFields() []string {
+func (l *ListAccountingProfitlossesRequest) GetFields() []ListAccountingProfitlossesQueryParamFields {
 	if l == nil {
 		return nil
 	}

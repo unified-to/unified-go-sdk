@@ -3,19 +3,65 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListCommerceInventoriesQueryParamFields string
+
+const (
+	ListCommerceInventoriesQueryParamFieldsID            ListCommerceInventoriesQueryParamFields = "id"
+	ListCommerceInventoriesQueryParamFieldsUpdatedAt     ListCommerceInventoriesQueryParamFields = "updated_at"
+	ListCommerceInventoriesQueryParamFieldsItemID        ListCommerceInventoriesQueryParamFields = "item_id"
+	ListCommerceInventoriesQueryParamFieldsItemVariantID ListCommerceInventoriesQueryParamFields = "item_variant_id"
+	ListCommerceInventoriesQueryParamFieldsItemOptionID  ListCommerceInventoriesQueryParamFields = "item_option_id"
+	ListCommerceInventoriesQueryParamFieldsLocationID    ListCommerceInventoriesQueryParamFields = "location_id"
+	ListCommerceInventoriesQueryParamFieldsAvailable     ListCommerceInventoriesQueryParamFields = "available"
+	ListCommerceInventoriesQueryParamFieldsRaw           ListCommerceInventoriesQueryParamFields = "raw"
+)
+
+func (e ListCommerceInventoriesQueryParamFields) ToPointer() *ListCommerceInventoriesQueryParamFields {
+	return &e
+}
+func (e *ListCommerceInventoriesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "item_id":
+		fallthrough
+	case "item_variant_id":
+		fallthrough
+	case "item_option_id":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "available":
+		fallthrough
+	case "raw":
+		*e = ListCommerceInventoriesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCommerceInventoriesQueryParamFields: %v", v)
+	}
+}
 
 type ListCommerceInventoriesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	// The item variant ID to filter by
+	Fields []ListCommerceInventoriesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	// The item variant ID to filter by (reference to CommerceItemVariant)
 	ItemVariantID *string  `queryParam:"style=form,explode=true,name=item_variant_id"`
 	Limit         *float64 `queryParam:"style=form,explode=true,name=limit"`
-	// The location ID to filter by
+	// The location ID to filter by (reference to CommerceLocation)
 	LocationID *string  `queryParam:"style=form,explode=true,name=location_id"`
 	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order      *string  `queryParam:"style=form,explode=true,name=order"`
@@ -24,7 +70,7 @@ type ListCommerceInventoriesRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -35,7 +81,7 @@ func (l *ListCommerceInventoriesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListCommerceInventoriesRequest) GetFields() []string {
+func (l *ListCommerceInventoriesRequest) GetFields() []ListCommerceInventoriesQueryParamFields {
 	if l == nil {
 		return nil
 	}

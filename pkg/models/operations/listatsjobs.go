@@ -3,20 +3,120 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListAtsJobsQueryParamFields string
+
+const (
+	ListAtsJobsQueryParamFieldsID                     ListAtsJobsQueryParamFields = "id"
+	ListAtsJobsQueryParamFieldsCreatedAt              ListAtsJobsQueryParamFields = "created_at"
+	ListAtsJobsQueryParamFieldsUpdatedAt              ListAtsJobsQueryParamFields = "updated_at"
+	ListAtsJobsQueryParamFieldsName                   ListAtsJobsQueryParamFields = "name"
+	ListAtsJobsQueryParamFieldsDescription            ListAtsJobsQueryParamFields = "description"
+	ListAtsJobsQueryParamFieldsRecruiterIds           ListAtsJobsQueryParamFields = "recruiter_ids"
+	ListAtsJobsQueryParamFieldsHiringManagerIds       ListAtsJobsQueryParamFields = "hiring_manager_ids"
+	ListAtsJobsQueryParamFieldsStatus                 ListAtsJobsQueryParamFields = "status"
+	ListAtsJobsQueryParamFieldsClosedAt               ListAtsJobsQueryParamFields = "closed_at"
+	ListAtsJobsQueryParamFieldsAddresses              ListAtsJobsQueryParamFields = "addresses"
+	ListAtsJobsQueryParamFieldsCompensation           ListAtsJobsQueryParamFields = "compensation"
+	ListAtsJobsQueryParamFieldsEmploymentType         ListAtsJobsQueryParamFields = "employment_type"
+	ListAtsJobsQueryParamFieldsRemote                 ListAtsJobsQueryParamFields = "remote"
+	ListAtsJobsQueryParamFieldsLanguageLocale         ListAtsJobsQueryParamFields = "language_locale"
+	ListAtsJobsQueryParamFieldsPublicJobUrls          ListAtsJobsQueryParamFields = "public_job_urls"
+	ListAtsJobsQueryParamFieldsNumberOfOpenings       ListAtsJobsQueryParamFields = "number_of_openings"
+	ListAtsJobsQueryParamFieldsCompanyID              ListAtsJobsQueryParamFields = "company_id"
+	ListAtsJobsQueryParamFieldsQuestions              ListAtsJobsQueryParamFields = "questions"
+	ListAtsJobsQueryParamFieldsPostings               ListAtsJobsQueryParamFields = "postings"
+	ListAtsJobsQueryParamFieldsGroups                 ListAtsJobsQueryParamFields = "groups"
+	ListAtsJobsQueryParamFieldsOpenings               ListAtsJobsQueryParamFields = "openings"
+	ListAtsJobsQueryParamFieldsMinimumExperienceYears ListAtsJobsQueryParamFields = "minimum_experience_years"
+	ListAtsJobsQueryParamFieldsMinimumDegree          ListAtsJobsQueryParamFields = "minimum_degree"
+	ListAtsJobsQueryParamFieldsSkills                 ListAtsJobsQueryParamFields = "skills"
+	ListAtsJobsQueryParamFieldsMetadata               ListAtsJobsQueryParamFields = "metadata"
+	ListAtsJobsQueryParamFieldsRaw                    ListAtsJobsQueryParamFields = "raw"
+)
+
+func (e ListAtsJobsQueryParamFields) ToPointer() *ListAtsJobsQueryParamFields {
+	return &e
+}
+func (e *ListAtsJobsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "recruiter_ids":
+		fallthrough
+	case "hiring_manager_ids":
+		fallthrough
+	case "status":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "addresses":
+		fallthrough
+	case "compensation":
+		fallthrough
+	case "employment_type":
+		fallthrough
+	case "remote":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "public_job_urls":
+		fallthrough
+	case "number_of_openings":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "questions":
+		fallthrough
+	case "postings":
+		fallthrough
+	case "groups":
+		fallthrough
+	case "openings":
+		fallthrough
+	case "minimum_experience_years":
+		fallthrough
+	case "minimum_degree":
+		fallthrough
+	case "skills":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = ListAtsJobsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAtsJobsQueryParamFields: %v", v)
+	}
+}
+
 type ListAtsJobsRequest struct {
-	// The company ID to filter by
+	// The company ID to filter by (reference to AtsCompany)
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAtsJobsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                      `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                      `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                       `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -24,9 +124,9 @@ type ListAtsJobsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The status to filter by
 	Status *string `queryParam:"style=form,explode=true,name=status"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -44,7 +144,7 @@ func (l *ListAtsJobsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAtsJobsRequest) GetFields() []string {
+func (l *ListAtsJobsRequest) GetFields() []ListAtsJobsQueryParamFields {
 	if l == nil {
 		return nil
 	}

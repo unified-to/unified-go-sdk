@@ -3,18 +3,79 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListMessagingChannelsQueryParamFields string
+
+const (
+	ListMessagingChannelsQueryParamFieldsID              ListMessagingChannelsQueryParamFields = "id"
+	ListMessagingChannelsQueryParamFieldsCreatedAt       ListMessagingChannelsQueryParamFields = "created_at"
+	ListMessagingChannelsQueryParamFieldsUpdatedAt       ListMessagingChannelsQueryParamFields = "updated_at"
+	ListMessagingChannelsQueryParamFieldsName            ListMessagingChannelsQueryParamFields = "name"
+	ListMessagingChannelsQueryParamFieldsDescription     ListMessagingChannelsQueryParamFields = "description"
+	ListMessagingChannelsQueryParamFieldsParentChannelID ListMessagingChannelsQueryParamFields = "parent_channel_id"
+	ListMessagingChannelsQueryParamFieldsParentID        ListMessagingChannelsQueryParamFields = "parent_id"
+	ListMessagingChannelsQueryParamFieldsHasSubchannels  ListMessagingChannelsQueryParamFields = "has_subchannels"
+	ListMessagingChannelsQueryParamFieldsMembers         ListMessagingChannelsQueryParamFields = "members"
+	ListMessagingChannelsQueryParamFieldsIsActive        ListMessagingChannelsQueryParamFields = "is_active"
+	ListMessagingChannelsQueryParamFieldsIsPrivate       ListMessagingChannelsQueryParamFields = "is_private"
+	ListMessagingChannelsQueryParamFieldsWebURL          ListMessagingChannelsQueryParamFields = "web_url"
+	ListMessagingChannelsQueryParamFieldsRaw             ListMessagingChannelsQueryParamFields = "raw"
+)
+
+func (e ListMessagingChannelsQueryParamFields) ToPointer() *ListMessagingChannelsQueryParamFields {
+	return &e
+}
+func (e *ListMessagingChannelsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parent_channel_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "has_subchannels":
+		fallthrough
+	case "members":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "raw":
+		*e = ListMessagingChannelsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListMessagingChannelsQueryParamFields: %v", v)
+	}
+}
 
 type ListMessagingChannelsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListMessagingChannelsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                 `queryParam:"style=form,explode=true,name=order"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
@@ -23,7 +84,7 @@ type ListMessagingChannelsRequest struct {
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -34,7 +95,7 @@ func (l *ListMessagingChannelsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListMessagingChannelsRequest) GetFields() []string {
+func (l *ListMessagingChannelsRequest) GetFields() []ListMessagingChannelsQueryParamFields {
 	if l == nil {
 		return nil
 	}

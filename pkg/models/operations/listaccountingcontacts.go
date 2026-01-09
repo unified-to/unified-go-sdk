@@ -3,19 +3,107 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAccountingContactsQueryParamFields string
+
+const (
+	ListAccountingContactsQueryParamFieldsID                 ListAccountingContactsQueryParamFields = "id"
+	ListAccountingContactsQueryParamFieldsCreatedAt          ListAccountingContactsQueryParamFields = "created_at"
+	ListAccountingContactsQueryParamFieldsUpdatedAt          ListAccountingContactsQueryParamFields = "updated_at"
+	ListAccountingContactsQueryParamFieldsName               ListAccountingContactsQueryParamFields = "name"
+	ListAccountingContactsQueryParamFieldsFirstName          ListAccountingContactsQueryParamFields = "first_name"
+	ListAccountingContactsQueryParamFieldsLastName           ListAccountingContactsQueryParamFields = "last_name"
+	ListAccountingContactsQueryParamFieldsEmails             ListAccountingContactsQueryParamFields = "emails"
+	ListAccountingContactsQueryParamFieldsTelephones         ListAccountingContactsQueryParamFields = "telephones"
+	ListAccountingContactsQueryParamFieldsCurrency           ListAccountingContactsQueryParamFields = "currency"
+	ListAccountingContactsQueryParamFieldsBillingAddress     ListAccountingContactsQueryParamFields = "billing_address"
+	ListAccountingContactsQueryParamFieldsShippingAddress    ListAccountingContactsQueryParamFields = "shipping_address"
+	ListAccountingContactsQueryParamFieldsIsActive           ListAccountingContactsQueryParamFields = "is_active"
+	ListAccountingContactsQueryParamFieldsTaxExemption       ListAccountingContactsQueryParamFields = "tax_exemption"
+	ListAccountingContactsQueryParamFieldsTaxNumber          ListAccountingContactsQueryParamFields = "tax_number"
+	ListAccountingContactsQueryParamFieldsIsCustomer         ListAccountingContactsQueryParamFields = "is_customer"
+	ListAccountingContactsQueryParamFieldsIsSupplier         ListAccountingContactsQueryParamFields = "is_supplier"
+	ListAccountingContactsQueryParamFieldsPortalURL          ListAccountingContactsQueryParamFields = "portal_url"
+	ListAccountingContactsQueryParamFieldsPaymentMethods     ListAccountingContactsQueryParamFields = "payment_methods"
+	ListAccountingContactsQueryParamFieldsCompanyName        ListAccountingContactsQueryParamFields = "company_name"
+	ListAccountingContactsQueryParamFieldsIdentification     ListAccountingContactsQueryParamFields = "identification"
+	ListAccountingContactsQueryParamFieldsAssociatedContacts ListAccountingContactsQueryParamFields = "associated_contacts"
+	ListAccountingContactsQueryParamFieldsRaw                ListAccountingContactsQueryParamFields = "raw"
+)
+
+func (e ListAccountingContactsQueryParamFields) ToPointer() *ListAccountingContactsQueryParamFields {
+	return &e
+}
+func (e *ListAccountingContactsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "billing_address":
+		fallthrough
+	case "shipping_address":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "tax_exemption":
+		fallthrough
+	case "tax_number":
+		fallthrough
+	case "is_customer":
+		fallthrough
+	case "is_supplier":
+		fallthrough
+	case "portal_url":
+		fallthrough
+	case "payment_methods":
+		fallthrough
+	case "company_name":
+		fallthrough
+	case "identification":
+		fallthrough
+	case "associated_contacts":
+		fallthrough
+	case "raw":
+		*e = ListAccountingContactsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingContactsQueryParamFields: %v", v)
+	}
+}
 
 type ListAccountingContactsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The org ID to filter by
+	Fields []ListAccountingContactsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                  `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by (reference to AccountingOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
@@ -23,7 +111,7 @@ type ListAccountingContactsRequest struct {
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -34,7 +122,7 @@ func (l *ListAccountingContactsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAccountingContactsRequest) GetFields() []string {
+func (l *ListAccountingContactsRequest) GetFields() []ListAccountingContactsQueryParamFields {
 	if l == nil {
 		return nil
 	}

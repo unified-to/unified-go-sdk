@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateTicketingNoteQueryParamFields string
+
+const (
+	UpdateTicketingNoteQueryParamFieldsID          UpdateTicketingNoteQueryParamFields = "id"
+	UpdateTicketingNoteQueryParamFieldsCreatedAt   UpdateTicketingNoteQueryParamFields = "created_at"
+	UpdateTicketingNoteQueryParamFieldsUpdatedAt   UpdateTicketingNoteQueryParamFields = "updated_at"
+	UpdateTicketingNoteQueryParamFieldsCustomerID  UpdateTicketingNoteQueryParamFields = "customer_id"
+	UpdateTicketingNoteQueryParamFieldsDescription UpdateTicketingNoteQueryParamFields = "description"
+	UpdateTicketingNoteQueryParamFieldsTicketID    UpdateTicketingNoteQueryParamFields = "ticket_id"
+	UpdateTicketingNoteQueryParamFieldsUserID      UpdateTicketingNoteQueryParamFields = "user_id"
+	UpdateTicketingNoteQueryParamFieldsRaw         UpdateTicketingNoteQueryParamFields = "raw"
+)
+
+func (e UpdateTicketingNoteQueryParamFields) ToPointer() *UpdateTicketingNoteQueryParamFields {
+	return &e
+}
+func (e *UpdateTicketingNoteQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "customer_id":
+		fallthrough
+	case "description":
+		fallthrough
+	case "ticket_id":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "raw":
+		*e = UpdateTicketingNoteQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateTicketingNoteQueryParamFields: %v", v)
+	}
+}
 
 type UpdateTicketingNoteRequest struct {
 	TicketingNote shared.TicketingNote `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateTicketingNoteQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Note
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +79,7 @@ func (u *UpdateTicketingNoteRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateTicketingNoteRequest) GetFields() []string {
+func (u *UpdateTicketingNoteRequest) GetFields() []UpdateTicketingNoteQueryParamFields {
 	if u == nil {
 		return nil
 	}

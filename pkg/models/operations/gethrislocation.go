@@ -3,15 +3,85 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetHrisLocationQueryParamFields string
+
+const (
+	GetHrisLocationQueryParamFieldsID                 GetHrisLocationQueryParamFields = "id"
+	GetHrisLocationQueryParamFieldsCreatedAt          GetHrisLocationQueryParamFields = "created_at"
+	GetHrisLocationQueryParamFieldsUpdatedAt          GetHrisLocationQueryParamFields = "updated_at"
+	GetHrisLocationQueryParamFieldsName               GetHrisLocationQueryParamFields = "name"
+	GetHrisLocationQueryParamFieldsDescription        GetHrisLocationQueryParamFields = "description"
+	GetHrisLocationQueryParamFieldsAddress            GetHrisLocationQueryParamFields = "address"
+	GetHrisLocationQueryParamFieldsParentID           GetHrisLocationQueryParamFields = "parent_id"
+	GetHrisLocationQueryParamFieldsExternalIdentifier GetHrisLocationQueryParamFields = "external_identifier"
+	GetHrisLocationQueryParamFieldsTelephones         GetHrisLocationQueryParamFields = "telephones"
+	GetHrisLocationQueryParamFieldsTimezone           GetHrisLocationQueryParamFields = "timezone"
+	GetHrisLocationQueryParamFieldsCurrency           GetHrisLocationQueryParamFields = "currency"
+	GetHrisLocationQueryParamFieldsLanguageLocale     GetHrisLocationQueryParamFields = "language_locale"
+	GetHrisLocationQueryParamFieldsIsActive           GetHrisLocationQueryParamFields = "is_active"
+	GetHrisLocationQueryParamFieldsIsHq               GetHrisLocationQueryParamFields = "is_hq"
+	GetHrisLocationQueryParamFieldsCompanyID          GetHrisLocationQueryParamFields = "company_id"
+	GetHrisLocationQueryParamFieldsRaw                GetHrisLocationQueryParamFields = "raw"
+)
+
+func (e GetHrisLocationQueryParamFields) ToPointer() *GetHrisLocationQueryParamFields {
+	return &e
+}
+func (e *GetHrisLocationQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "address":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "external_identifier":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_hq":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "raw":
+		*e = GetHrisLocationQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetHrisLocationQueryParamFields: %v", v)
+	}
+}
 
 type GetHrisLocationRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetHrisLocationQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Location
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +95,7 @@ func (g *GetHrisLocationRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetHrisLocationRequest) GetFields() []string {
+func (g *GetHrisLocationRequest) GetFields() []GetHrisLocationQueryParamFields {
 	if g == nil {
 		return nil
 	}

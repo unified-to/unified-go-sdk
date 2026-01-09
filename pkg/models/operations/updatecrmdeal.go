@@ -3,9 +3,97 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateCrmDealQueryParamFields string
+
+const (
+	UpdateCrmDealQueryParamFieldsID          UpdateCrmDealQueryParamFields = "id"
+	UpdateCrmDealQueryParamFieldsCreatedAt   UpdateCrmDealQueryParamFields = "created_at"
+	UpdateCrmDealQueryParamFieldsUpdatedAt   UpdateCrmDealQueryParamFields = "updated_at"
+	UpdateCrmDealQueryParamFieldsName        UpdateCrmDealQueryParamFields = "name"
+	UpdateCrmDealQueryParamFieldsAmount      UpdateCrmDealQueryParamFields = "amount"
+	UpdateCrmDealQueryParamFieldsCurrency    UpdateCrmDealQueryParamFields = "currency"
+	UpdateCrmDealQueryParamFieldsClosedAt    UpdateCrmDealQueryParamFields = "closed_at"
+	UpdateCrmDealQueryParamFieldsClosingAt   UpdateCrmDealQueryParamFields = "closing_at"
+	UpdateCrmDealQueryParamFieldsStage       UpdateCrmDealQueryParamFields = "stage"
+	UpdateCrmDealQueryParamFieldsStageID     UpdateCrmDealQueryParamFields = "stage_id"
+	UpdateCrmDealQueryParamFieldsPipeline    UpdateCrmDealQueryParamFields = "pipeline"
+	UpdateCrmDealQueryParamFieldsPipelineID  UpdateCrmDealQueryParamFields = "pipeline_id"
+	UpdateCrmDealQueryParamFieldsSource      UpdateCrmDealQueryParamFields = "source"
+	UpdateCrmDealQueryParamFieldsProbability UpdateCrmDealQueryParamFields = "probability"
+	UpdateCrmDealQueryParamFieldsTags        UpdateCrmDealQueryParamFields = "tags"
+	UpdateCrmDealQueryParamFieldsLostReason  UpdateCrmDealQueryParamFields = "lost_reason"
+	UpdateCrmDealQueryParamFieldsWonReason   UpdateCrmDealQueryParamFields = "won_reason"
+	UpdateCrmDealQueryParamFieldsUserID      UpdateCrmDealQueryParamFields = "user_id"
+	UpdateCrmDealQueryParamFieldsContactIds  UpdateCrmDealQueryParamFields = "contact_ids"
+	UpdateCrmDealQueryParamFieldsCompanyIds  UpdateCrmDealQueryParamFields = "company_ids"
+	UpdateCrmDealQueryParamFieldsMetadata    UpdateCrmDealQueryParamFields = "metadata"
+	UpdateCrmDealQueryParamFieldsRaw         UpdateCrmDealQueryParamFields = "raw"
+)
+
+func (e UpdateCrmDealQueryParamFields) ToPointer() *UpdateCrmDealQueryParamFields {
+	return &e
+}
+func (e *UpdateCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "closing_at":
+		fallthrough
+	case "stage":
+		fallthrough
+	case "stage_id":
+		fallthrough
+	case "pipeline":
+		fallthrough
+	case "pipeline_id":
+		fallthrough
+	case "source":
+		fallthrough
+	case "probability":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "lost_reason":
+		fallthrough
+	case "won_reason":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "company_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = UpdateCrmDealQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateCrmDealQueryParamFields: %v", v)
+	}
+}
 
 type UpdateCrmDealRequest struct {
 	// A deal represents an opportunity with companies and/or contacts
@@ -13,7 +101,7 @@ type UpdateCrmDealRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateCrmDealQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Deal
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +122,7 @@ func (u *UpdateCrmDealRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateCrmDealRequest) GetFields() []string {
+func (u *UpdateCrmDealRequest) GetFields() []UpdateCrmDealQueryParamFields {
 	if u == nil {
 		return nil
 	}

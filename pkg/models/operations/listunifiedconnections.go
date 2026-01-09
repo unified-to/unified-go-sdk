@@ -114,7 +114,7 @@ type ListUnifiedConnectionsRequest struct {
 	Offset       *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order        *string  `queryParam:"style=form,explode=true,name=order"`
 	Sort         *string  `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 

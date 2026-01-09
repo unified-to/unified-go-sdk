@@ -114,8 +114,6 @@ type HrisEmployee struct {
 	CreatedAt        *time.Time                          `json:"created_at,omitempty"`
 	Currency         *string                             `json:"currency,omitempty"`
 	DateOfBirth      *time.Time                          `json:"date_of_birth,omitempty"`
-	Department       *string                             `json:"department,omitempty"`
-	Division         *string                             `json:"division,omitempty"`
 	Emails           []HrisEmail                         `json:"emails,omitempty"`
 	EmployeeNumber   *string                             `json:"employee_number,omitempty"`
 	EmployeeRoles    []PropertyHrisEmployeeEmployeeRoles `json:"employee_roles,omitempty"`
@@ -131,7 +129,6 @@ type HrisEmployee struct {
 	ImageURL       *string        `json:"image_url,omitempty"`
 	LanguageLocale *string        `json:"language_locale,omitempty"`
 	LastName       *string        `json:"last_name,omitempty"`
-	Location       *string        `json:"location,omitempty"`
 	Locations      []HrisLocation `json:"locations,omitempty"`
 	ManagerID      *string        `json:"manager_id,omitempty"`
 	MaritalStatus  *MaritalStatus `json:"marital_status,omitempty"`
@@ -212,20 +209,6 @@ func (h *HrisEmployee) GetDateOfBirth() *time.Time {
 		return nil
 	}
 	return h.DateOfBirth
-}
-
-func (h *HrisEmployee) GetDepartment() *string {
-	if h == nil {
-		return nil
-	}
-	return h.Department
-}
-
-func (h *HrisEmployee) GetDivision() *string {
-	if h == nil {
-		return nil
-	}
-	return h.Division
 }
 
 func (h *HrisEmployee) GetEmails() []HrisEmail {
@@ -324,13 +307,6 @@ func (h *HrisEmployee) GetLastName() *string {
 		return nil
 	}
 	return h.LastName
-}
-
-func (h *HrisEmployee) GetLocation() *string {
-	if h == nil {
-		return nil
-	}
-	return h.Location
 }
 
 func (h *HrisEmployee) GetLocations() []HrisLocation {

@@ -3,16 +3,83 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchFormsFormQueryParamFields string
+
+const (
+	PatchFormsFormQueryParamFieldsID                      PatchFormsFormQueryParamFields = "id"
+	PatchFormsFormQueryParamFieldsCreatedAt               PatchFormsFormQueryParamFields = "created_at"
+	PatchFormsFormQueryParamFieldsUpdatedAt               PatchFormsFormQueryParamFields = "updated_at"
+	PatchFormsFormQueryParamFieldsName                    PatchFormsFormQueryParamFields = "name"
+	PatchFormsFormQueryParamFieldsDescription             PatchFormsFormQueryParamFields = "description"
+	PatchFormsFormQueryParamFieldsFields                  PatchFormsFormQueryParamFields = "fields"
+	PatchFormsFormQueryParamFieldsIsActive                PatchFormsFormQueryParamFields = "is_active"
+	PatchFormsFormQueryParamFieldsPublishedURL            PatchFormsFormQueryParamFields = "published_url"
+	PatchFormsFormQueryParamFieldsResponseCount           PatchFormsFormQueryParamFields = "response_count"
+	PatchFormsFormQueryParamFieldsHasMultipleSubmissions  PatchFormsFormQueryParamFields = "has_multiple_submissions"
+	PatchFormsFormQueryParamFieldsHasProgressBar          PatchFormsFormQueryParamFields = "has_progress_bar"
+	PatchFormsFormQueryParamFieldsHasShuffleQuestions     PatchFormsFormQueryParamFields = "has_shuffle_questions"
+	PatchFormsFormQueryParamFieldsConfirmationMessage     PatchFormsFormQueryParamFields = "confirmation_message"
+	PatchFormsFormQueryParamFieldsConfirmationRedirectURL PatchFormsFormQueryParamFields = "confirmation_redirect_url"
+	PatchFormsFormQueryParamFieldsRaw                     PatchFormsFormQueryParamFields = "raw"
+)
+
+func (e PatchFormsFormQueryParamFields) ToPointer() *PatchFormsFormQueryParamFields {
+	return &e
+}
+func (e *PatchFormsFormQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "fields":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "published_url":
+		fallthrough
+	case "response_count":
+		fallthrough
+	case "has_multiple_submissions":
+		fallthrough
+	case "has_progress_bar":
+		fallthrough
+	case "has_shuffle_questions":
+		fallthrough
+	case "confirmation_message":
+		fallthrough
+	case "confirmation_redirect_url":
+		fallthrough
+	case "raw":
+		*e = PatchFormsFormQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchFormsFormQueryParamFields: %v", v)
+	}
+}
 
 type PatchFormsFormRequest struct {
 	FormsForm shared.FormsForm `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchFormsFormQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Form
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +100,7 @@ func (p *PatchFormsFormRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchFormsFormRequest) GetFields() []string {
+func (p *PatchFormsFormRequest) GetFields() []PatchFormsFormQueryParamFields {
 	if p == nil {
 		return nil
 	}

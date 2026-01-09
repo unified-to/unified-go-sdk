@@ -3,19 +3,83 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAccountingOrdersQueryParamFields string
+
+const (
+	ListAccountingOrdersQueryParamFieldsID              ListAccountingOrdersQueryParamFields = "id"
+	ListAccountingOrdersQueryParamFieldsCreatedAt       ListAccountingOrdersQueryParamFields = "created_at"
+	ListAccountingOrdersQueryParamFieldsUpdatedAt       ListAccountingOrdersQueryParamFields = "updated_at"
+	ListAccountingOrdersQueryParamFieldsPostedAt        ListAccountingOrdersQueryParamFields = "posted_at"
+	ListAccountingOrdersQueryParamFieldsContactID       ListAccountingOrdersQueryParamFields = "contact_id"
+	ListAccountingOrdersQueryParamFieldsAccountID       ListAccountingOrdersQueryParamFields = "account_id"
+	ListAccountingOrdersQueryParamFieldsType            ListAccountingOrdersQueryParamFields = "type"
+	ListAccountingOrdersQueryParamFieldsCurrency        ListAccountingOrdersQueryParamFields = "currency"
+	ListAccountingOrdersQueryParamFieldsTotalAmount     ListAccountingOrdersQueryParamFields = "total_amount"
+	ListAccountingOrdersQueryParamFieldsShippingAddress ListAccountingOrdersQueryParamFields = "shipping_address"
+	ListAccountingOrdersQueryParamFieldsBillingAddress  ListAccountingOrdersQueryParamFields = "billing_address"
+	ListAccountingOrdersQueryParamFieldsStatus          ListAccountingOrdersQueryParamFields = "status"
+	ListAccountingOrdersQueryParamFieldsLineitems       ListAccountingOrdersQueryParamFields = "lineitems"
+	ListAccountingOrdersQueryParamFieldsRaw             ListAccountingOrdersQueryParamFields = "raw"
+)
+
+func (e ListAccountingOrdersQueryParamFields) ToPointer() *ListAccountingOrdersQueryParamFields {
+	return &e
+}
+func (e *ListAccountingOrdersQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "type":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "shipping_address":
+		fallthrough
+	case "billing_address":
+		fallthrough
+	case "status":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "raw":
+		*e = ListAccountingOrdersQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingOrdersQueryParamFields: %v", v)
+	}
+}
 
 type ListAccountingOrdersRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The org ID to filter by
+	Fields []ListAccountingOrdersQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                               `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                               `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by (reference to AccountingOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
@@ -23,7 +87,7 @@ type ListAccountingOrdersRequest struct {
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -34,7 +98,7 @@ func (l *ListAccountingOrdersRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAccountingOrdersRequest) GetFields() []string {
+func (l *ListAccountingOrdersRequest) GetFields() []ListAccountingOrdersQueryParamFields {
 	if l == nil {
 		return nil
 	}

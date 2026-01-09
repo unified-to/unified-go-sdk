@@ -3,9 +3,70 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAtsInterviewsQueryParamFields string
+
+const (
+	ListAtsInterviewsQueryParamFieldsID                ListAtsInterviewsQueryParamFields = "id"
+	ListAtsInterviewsQueryParamFieldsCreatedAt         ListAtsInterviewsQueryParamFields = "created_at"
+	ListAtsInterviewsQueryParamFieldsUpdatedAt         ListAtsInterviewsQueryParamFields = "updated_at"
+	ListAtsInterviewsQueryParamFieldsCandidateID       ListAtsInterviewsQueryParamFields = "candidate_id"
+	ListAtsInterviewsQueryParamFieldsJobID             ListAtsInterviewsQueryParamFields = "job_id"
+	ListAtsInterviewsQueryParamFieldsApplicationID     ListAtsInterviewsQueryParamFields = "application_id"
+	ListAtsInterviewsQueryParamFieldsUserIds           ListAtsInterviewsQueryParamFields = "user_ids"
+	ListAtsInterviewsQueryParamFieldsStatus            ListAtsInterviewsQueryParamFields = "status"
+	ListAtsInterviewsQueryParamFieldsStartAt           ListAtsInterviewsQueryParamFields = "start_at"
+	ListAtsInterviewsQueryParamFieldsEndAt             ListAtsInterviewsQueryParamFields = "end_at"
+	ListAtsInterviewsQueryParamFieldsLocation          ListAtsInterviewsQueryParamFields = "location"
+	ListAtsInterviewsQueryParamFieldsExternalEventXref ListAtsInterviewsQueryParamFields = "external_event_xref"
+	ListAtsInterviewsQueryParamFieldsRaw               ListAtsInterviewsQueryParamFields = "raw"
+)
+
+func (e ListAtsInterviewsQueryParamFields) ToPointer() *ListAtsInterviewsQueryParamFields {
+	return &e
+}
+func (e *ListAtsInterviewsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "application_id":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "status":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "location":
+		fallthrough
+	case "external_event_xref":
+		fallthrough
+	case "raw":
+		*e = ListAtsInterviewsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAtsInterviewsQueryParamFields: %v", v)
+	}
+}
 
 type ListAtsInterviewsRequest struct {
 	// The application ID to filter by
@@ -13,16 +74,16 @@ type ListAtsInterviewsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAtsInterviewsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                            `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                            `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                             `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -40,7 +101,7 @@ func (l *ListAtsInterviewsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAtsInterviewsRequest) GetFields() []string {
+func (l *ListAtsInterviewsRequest) GetFields() []ListAtsInterviewsQueryParamFields {
 	if l == nil {
 		return nil
 	}

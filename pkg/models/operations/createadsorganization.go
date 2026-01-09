@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateAdsOrganizationQueryParamFields string
+
+const (
+	CreateAdsOrganizationQueryParamFieldsID        CreateAdsOrganizationQueryParamFields = "id"
+	CreateAdsOrganizationQueryParamFieldsCreatedAt CreateAdsOrganizationQueryParamFields = "created_at"
+	CreateAdsOrganizationQueryParamFieldsUpdatedAt CreateAdsOrganizationQueryParamFields = "updated_at"
+	CreateAdsOrganizationQueryParamFieldsName      CreateAdsOrganizationQueryParamFields = "name"
+	CreateAdsOrganizationQueryParamFieldsCurrency  CreateAdsOrganizationQueryParamFields = "currency"
+	CreateAdsOrganizationQueryParamFieldsTimezone  CreateAdsOrganizationQueryParamFields = "timezone"
+	CreateAdsOrganizationQueryParamFieldsParentID  CreateAdsOrganizationQueryParamFields = "parent_id"
+	CreateAdsOrganizationQueryParamFieldsRaw       CreateAdsOrganizationQueryParamFields = "raw"
+)
+
+func (e CreateAdsOrganizationQueryParamFields) ToPointer() *CreateAdsOrganizationQueryParamFields {
+	return &e
+}
+func (e *CreateAdsOrganizationQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = CreateAdsOrganizationQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateAdsOrganizationQueryParamFields: %v", v)
+	}
+}
 
 type CreateAdsOrganizationRequest struct {
 	AdsOrganization shared.AdsOrganization `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateAdsOrganizationQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +77,7 @@ func (c *CreateAdsOrganizationRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAdsOrganizationRequest) GetFields() []string {
+func (c *CreateAdsOrganizationRequest) GetFields() []CreateAdsOrganizationQueryParamFields {
 	if c == nil {
 		return nil
 	}

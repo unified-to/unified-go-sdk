@@ -3,9 +3,67 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAtsScorecardsQueryParamFields string
+
+const (
+	ListAtsScorecardsQueryParamFieldsID             ListAtsScorecardsQueryParamFields = "id"
+	ListAtsScorecardsQueryParamFieldsCreatedAt      ListAtsScorecardsQueryParamFields = "created_at"
+	ListAtsScorecardsQueryParamFieldsUpdatedAt      ListAtsScorecardsQueryParamFields = "updated_at"
+	ListAtsScorecardsQueryParamFieldsApplicationID  ListAtsScorecardsQueryParamFields = "application_id"
+	ListAtsScorecardsQueryParamFieldsInterviewerID  ListAtsScorecardsQueryParamFields = "interviewer_id"
+	ListAtsScorecardsQueryParamFieldsInterviewID    ListAtsScorecardsQueryParamFields = "interview_id"
+	ListAtsScorecardsQueryParamFieldsCandidateID    ListAtsScorecardsQueryParamFields = "candidate_id"
+	ListAtsScorecardsQueryParamFieldsJobID          ListAtsScorecardsQueryParamFields = "job_id"
+	ListAtsScorecardsQueryParamFieldsRecommendation ListAtsScorecardsQueryParamFields = "recommendation"
+	ListAtsScorecardsQueryParamFieldsComment        ListAtsScorecardsQueryParamFields = "comment"
+	ListAtsScorecardsQueryParamFieldsQuestions      ListAtsScorecardsQueryParamFields = "questions"
+	ListAtsScorecardsQueryParamFieldsRaw            ListAtsScorecardsQueryParamFields = "raw"
+)
+
+func (e ListAtsScorecardsQueryParamFields) ToPointer() *ListAtsScorecardsQueryParamFields {
+	return &e
+}
+func (e *ListAtsScorecardsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "application_id":
+		fallthrough
+	case "interviewer_id":
+		fallthrough
+	case "interview_id":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "recommendation":
+		fallthrough
+	case "comment":
+		fallthrough
+	case "questions":
+		fallthrough
+	case "raw":
+		*e = ListAtsScorecardsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAtsScorecardsQueryParamFields: %v", v)
+	}
+}
 
 type ListAtsScorecardsRequest struct {
 	// The application ID to filter by
@@ -15,7 +73,7 @@ type ListAtsScorecardsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []ListAtsScorecardsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The interview ID to filter by
 	InterviewID *string `queryParam:"style=form,explode=true,name=interview_id"`
 	// The job ID to filter by
@@ -28,7 +86,7 @@ type ListAtsScorecardsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -53,7 +111,7 @@ func (l *ListAtsScorecardsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAtsScorecardsRequest) GetFields() []string {
+func (l *ListAtsScorecardsRequest) GetFields() []ListAtsScorecardsQueryParamFields {
 	if l == nil {
 		return nil
 	}

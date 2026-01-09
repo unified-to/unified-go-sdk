@@ -462,29 +462,6 @@ func (e *ListDocumentID) IsExact() bool {
 	return false
 }
 
-type ListEndLe string
-
-const (
-	ListEndLeSupportedRequired ListEndLe = "supported-required"
-	ListEndLeSupported         ListEndLe = "supported"
-	ListEndLeNotSupported      ListEndLe = "not-supported"
-)
-
-func (e ListEndLe) ToPointer() *ListEndLe {
-	return &e
-}
-
-// IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *ListEndLe) IsExact() bool {
-	if e != nil {
-		switch *e {
-		case "supported-required", "supported", "not-supported":
-			return true
-		}
-	}
-	return false
-}
-
 type ListEndLt string
 
 const (
@@ -545,29 +522,6 @@ func (e ListExpand) ToPointer() *ListExpand {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListExpand) IsExact() bool {
-	if e != nil {
-		switch *e {
-		case "supported-required", "supported", "not-supported":
-			return true
-		}
-	}
-	return false
-}
-
-type ListExpandRecurringEvents string
-
-const (
-	ListExpandRecurringEventsSupportedRequired ListExpandRecurringEvents = "supported-required"
-	ListExpandRecurringEventsSupported         ListExpandRecurringEvents = "supported"
-	ListExpandRecurringEventsNotSupported      ListExpandRecurringEvents = "not-supported"
-)
-
-func (e ListExpandRecurringEvents) ToPointer() *ListExpandRecurringEvents {
-	return &e
-}
-
-// IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *ListExpandRecurringEvents) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -2141,29 +2095,6 @@ func (e *VirtualWebhookDealID) IsExact() bool {
 	return false
 }
 
-type VirtualWebhookEndLe string
-
-const (
-	VirtualWebhookEndLeSupportedRequired VirtualWebhookEndLe = "supported-required"
-	VirtualWebhookEndLeSupported         VirtualWebhookEndLe = "supported"
-	VirtualWebhookEndLeNotSupported      VirtualWebhookEndLe = "not-supported"
-)
-
-func (e VirtualWebhookEndLe) ToPointer() *VirtualWebhookEndLe {
-	return &e
-}
-
-// IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *VirtualWebhookEndLe) IsExact() bool {
-	if e != nil {
-		switch *e {
-		case "supported-required", "supported", "not-supported":
-			return true
-		}
-	}
-	return false
-}
-
 type VirtualWebhookEndLt string
 
 const (
@@ -2832,84 +2763,82 @@ func (e *VirtualWebhookUserMentionedID) IsExact() bool {
 }
 
 type IntegrationSupport struct {
-	FromWebhook               *FromWebhook               `json:"from_webhook,omitempty"`
-	InboundFields             map[string]string          `json:"inbound_fields,omitempty"`
-	ListAccountID             *ListAccountID             `json:"list_account_id,omitempty"`
-	ListAdID                  *ListAdID                  `json:"list_ad_id,omitempty"`
-	ListApplicationID         *ListApplicationID         `json:"list_application_id,omitempty"`
-	ListBenefitID             *ListBenefitID             `json:"list_benefit_id,omitempty"`
-	ListBranchID              *ListBranchID              `json:"list_branch_id,omitempty"`
-	ListCalendarID            *ListCalendarID            `json:"list_calendar_id,omitempty"`
-	ListCallID                *ListCallID                `json:"list_call_id,omitempty"`
-	ListCampaignID            *ListCampaignID            `json:"list_campaign_id,omitempty"`
-	ListCandidateID           *ListCandidateID           `json:"list_candidate_id,omitempty"`
-	ListCategoryID            *ListCategoryID            `json:"list_category_id,omitempty"`
-	ListChannelID             *ListChannelID             `json:"list_channel_id,omitempty"`
-	ListClassID               *ListClassID               `json:"list_class_id,omitempty"`
-	ListCollectionID          *ListCollectionID          `json:"list_collection_id,omitempty"`
-	ListCompanyID             *ListCompanyID             `json:"list_company_id,omitempty"`
-	ListContactID             *ListContactID             `json:"list_contact_id,omitempty"`
-	ListCourseID              *ListCourseID              `json:"list_course_id,omitempty"`
-	ListCustomerID            *ListCustomerID            `json:"list_customer_id,omitempty"`
-	ListDealID                *ListDealID                `json:"list_deal_id,omitempty"`
-	ListDocumentID            *ListDocumentID            `json:"list_document_id,omitempty"`
-	ListEndLe                 *ListEndLe                 `json:"list_end_le,omitempty"`
-	ListEndLt                 *ListEndLt                 `json:"list_end_lt,omitempty"`
-	ListEventID               *ListEventID               `json:"list_event_id,omitempty"`
-	ListExpand                *ListExpand                `json:"list_expand,omitempty"`
-	ListExpandRecurringEvents *ListExpandRecurringEvents `json:"list_expand_recurring_events,omitempty"`
-	ListFormID                *ListFormID                `json:"list_form_id,omitempty"`
-	ListGroupID               *ListGroupID               `json:"list_group_id,omitempty"`
-	ListInstructorID          *ListInstructorID          `json:"list_instructor_id,omitempty"`
-	ListInterviewID           *ListInterviewID           `json:"list_interview_id,omitempty"`
-	ListInvoiceID             *ListInvoiceID             `json:"list_invoice_id,omitempty"`
-	ListItemID                *ListItemID                `json:"list_item_id,omitempty"`
-	ListItemVariantID         *ListItemVariantID         `json:"list_item_variant_id,omitempty"`
-	ListJobID                 *ListJobID                 `json:"list_job_id,omitempty"`
-	ListLeadID                *ListLeadID                `json:"list_lead_id,omitempty"`
-	ListLimit                 *ListLimit                 `json:"list_limit,omitempty"`
-	ListLinkID                *ListLinkID                `json:"list_link_id,omitempty"`
-	ListListID                *ListListID                `json:"list_list_id,omitempty"`
-	ListLocationID            *ListLocationID            `json:"list_location_id,omitempty"`
-	ListOffset                *ListOffset                `json:"list_offset,omitempty"`
-	ListOrder                 *ListOrder                 `json:"list_order,omitempty"`
-	ListOrgID                 *ListOrgID                 `json:"list_org_id,omitempty"`
-	ListPackageID             *ListPackageID             `json:"list_package_id,omitempty"`
-	ListPageID                *ListPageID                `json:"list_page_id,omitempty"`
-	ListParentID              *ListParentID              `json:"list_parent_id,omitempty"`
-	ListPaymentID             *ListPaymentID             `json:"list_payment_id,omitempty"`
-	ListPayslipID             *ListPayslipID             `json:"list_payslip_id,omitempty"`
-	ListPipelineID            *ListPipelineID            `json:"list_pipeline_id,omitempty"`
-	ListProjectID             *ListProjectID             `json:"list_project_id,omitempty"`
-	ListQuery                 *ListQuery                 `json:"list_query,omitempty"`
-	ListRawFields             *ListRawFields             `json:"list_raw_fields,omitempty"`
-	ListRepoID                *ListRepoID                `json:"list_repo_id,omitempty"`
-	ListRootID                *ListRootID                `json:"list_root_id,omitempty"`
-	ListSaleschannelID        *ListSaleschannelID        `json:"list_saleschannel_id,omitempty"`
-	ListSortByCreatedAt       *ListSortByCreatedAt       `json:"list_sort_by_created_at,omitempty"`
-	ListSortByName            *ListSortByName            `json:"list_sort_by_name,omitempty"`
-	ListSortByUpdatedAt       *ListSortByUpdatedAt       `json:"list_sort_by_updated_at,omitempty"`
-	ListSpaceID               *ListSpaceID               `json:"list_space_id,omitempty"`
-	ListStartGte              *ListStartGte              `json:"list_start_gte,omitempty"`
-	ListStatus                *ListStatus                `json:"list_status,omitempty"`
-	ListStudentID             *ListStudentID             `json:"list_student_id,omitempty"`
-	ListTaskID                *ListTaskID                `json:"list_task_id,omitempty"`
-	ListTeacherID             *ListTeacherID             `json:"list_teacher_id,omitempty"`
-	ListTicketID              *ListTicketID              `json:"list_ticket_id,omitempty"`
-	ListType                  *ListType                  `json:"list_type,omitempty"`
-	ListUpdatedGte            *ListUpdatedGte            `json:"list_updated_gte,omitempty"`
-	ListUserID                *ListUserID                `json:"list_user_id,omitempty"`
-	ListUserMentionedID       *ListUserMentionedID       `json:"list_user_mentioned_id,omitempty"`
-	Methods                   map[string]bool            `json:"methods,omitempty"`
-	NativeWebhookCalendarID   *NativeWebhookCalendarID   `json:"native_webhook_calendar_id,omitempty"`
-	NativeWebhookChannelID    *NativeWebhookChannelID    `json:"native_webhook_channel_id,omitempty"`
-	NativeWebhookCompanyID    *NativeWebhookCompanyID    `json:"native_webhook_company_id,omitempty"`
-	NativeWebhookEventID      *NativeWebhookEventID      `json:"native_webhook_event_id,omitempty"`
-	NativeWebhookFormID       *NativeWebhookFormID       `json:"native_webhook_form_id,omitempty"`
-	NativeWebhookParentID     *NativeWebhookParentID     `json:"native_webhook_parent_id,omitempty"`
-	NativeWebhookProjectID    *NativeWebhookProjectID    `json:"native_webhook_project_id,omitempty"`
-	NativeWebhookTaskID       *NativeWebhookTaskID       `json:"native_webhook_task_id,omitempty"`
-	OutboundFields            map[string]string          `json:"outbound_fields,omitempty"`
+	FromWebhook             *FromWebhook             `json:"from_webhook,omitempty"`
+	InboundFields           map[string]string        `json:"inbound_fields,omitempty"`
+	ListAccountID           *ListAccountID           `json:"list_account_id,omitempty"`
+	ListAdID                *ListAdID                `json:"list_ad_id,omitempty"`
+	ListApplicationID       *ListApplicationID       `json:"list_application_id,omitempty"`
+	ListBenefitID           *ListBenefitID           `json:"list_benefit_id,omitempty"`
+	ListBranchID            *ListBranchID            `json:"list_branch_id,omitempty"`
+	ListCalendarID          *ListCalendarID          `json:"list_calendar_id,omitempty"`
+	ListCallID              *ListCallID              `json:"list_call_id,omitempty"`
+	ListCampaignID          *ListCampaignID          `json:"list_campaign_id,omitempty"`
+	ListCandidateID         *ListCandidateID         `json:"list_candidate_id,omitempty"`
+	ListCategoryID          *ListCategoryID          `json:"list_category_id,omitempty"`
+	ListChannelID           *ListChannelID           `json:"list_channel_id,omitempty"`
+	ListClassID             *ListClassID             `json:"list_class_id,omitempty"`
+	ListCollectionID        *ListCollectionID        `json:"list_collection_id,omitempty"`
+	ListCompanyID           *ListCompanyID           `json:"list_company_id,omitempty"`
+	ListContactID           *ListContactID           `json:"list_contact_id,omitempty"`
+	ListCourseID            *ListCourseID            `json:"list_course_id,omitempty"`
+	ListCustomerID          *ListCustomerID          `json:"list_customer_id,omitempty"`
+	ListDealID              *ListDealID              `json:"list_deal_id,omitempty"`
+	ListDocumentID          *ListDocumentID          `json:"list_document_id,omitempty"`
+	ListEndLt               *ListEndLt               `json:"list_end_lt,omitempty"`
+	ListEventID             *ListEventID             `json:"list_event_id,omitempty"`
+	ListExpand              *ListExpand              `json:"list_expand,omitempty"`
+	ListFormID              *ListFormID              `json:"list_form_id,omitempty"`
+	ListGroupID             *ListGroupID             `json:"list_group_id,omitempty"`
+	ListInstructorID        *ListInstructorID        `json:"list_instructor_id,omitempty"`
+	ListInterviewID         *ListInterviewID         `json:"list_interview_id,omitempty"`
+	ListInvoiceID           *ListInvoiceID           `json:"list_invoice_id,omitempty"`
+	ListItemID              *ListItemID              `json:"list_item_id,omitempty"`
+	ListItemVariantID       *ListItemVariantID       `json:"list_item_variant_id,omitempty"`
+	ListJobID               *ListJobID               `json:"list_job_id,omitempty"`
+	ListLeadID              *ListLeadID              `json:"list_lead_id,omitempty"`
+	ListLimit               *ListLimit               `json:"list_limit,omitempty"`
+	ListLinkID              *ListLinkID              `json:"list_link_id,omitempty"`
+	ListListID              *ListListID              `json:"list_list_id,omitempty"`
+	ListLocationID          *ListLocationID          `json:"list_location_id,omitempty"`
+	ListOffset              *ListOffset              `json:"list_offset,omitempty"`
+	ListOrder               *ListOrder               `json:"list_order,omitempty"`
+	ListOrgID               *ListOrgID               `json:"list_org_id,omitempty"`
+	ListPackageID           *ListPackageID           `json:"list_package_id,omitempty"`
+	ListPageID              *ListPageID              `json:"list_page_id,omitempty"`
+	ListParentID            *ListParentID            `json:"list_parent_id,omitempty"`
+	ListPaymentID           *ListPaymentID           `json:"list_payment_id,omitempty"`
+	ListPayslipID           *ListPayslipID           `json:"list_payslip_id,omitempty"`
+	ListPipelineID          *ListPipelineID          `json:"list_pipeline_id,omitempty"`
+	ListProjectID           *ListProjectID           `json:"list_project_id,omitempty"`
+	ListQuery               *ListQuery               `json:"list_query,omitempty"`
+	ListRawFields           *ListRawFields           `json:"list_raw_fields,omitempty"`
+	ListRepoID              *ListRepoID              `json:"list_repo_id,omitempty"`
+	ListRootID              *ListRootID              `json:"list_root_id,omitempty"`
+	ListSaleschannelID      *ListSaleschannelID      `json:"list_saleschannel_id,omitempty"`
+	ListSortByCreatedAt     *ListSortByCreatedAt     `json:"list_sort_by_created_at,omitempty"`
+	ListSortByName          *ListSortByName          `json:"list_sort_by_name,omitempty"`
+	ListSortByUpdatedAt     *ListSortByUpdatedAt     `json:"list_sort_by_updated_at,omitempty"`
+	ListSpaceID             *ListSpaceID             `json:"list_space_id,omitempty"`
+	ListStartGte            *ListStartGte            `json:"list_start_gte,omitempty"`
+	ListStatus              *ListStatus              `json:"list_status,omitempty"`
+	ListStudentID           *ListStudentID           `json:"list_student_id,omitempty"`
+	ListTaskID              *ListTaskID              `json:"list_task_id,omitempty"`
+	ListTeacherID           *ListTeacherID           `json:"list_teacher_id,omitempty"`
+	ListTicketID            *ListTicketID            `json:"list_ticket_id,omitempty"`
+	ListType                *ListType                `json:"list_type,omitempty"`
+	ListUpdatedGte          *ListUpdatedGte          `json:"list_updated_gte,omitempty"`
+	ListUserID              *ListUserID              `json:"list_user_id,omitempty"`
+	ListUserMentionedID     *ListUserMentionedID     `json:"list_user_mentioned_id,omitempty"`
+	Methods                 map[string]bool          `json:"methods,omitempty"`
+	NativeWebhookCalendarID *NativeWebhookCalendarID `json:"native_webhook_calendar_id,omitempty"`
+	NativeWebhookChannelID  *NativeWebhookChannelID  `json:"native_webhook_channel_id,omitempty"`
+	NativeWebhookCompanyID  *NativeWebhookCompanyID  `json:"native_webhook_company_id,omitempty"`
+	NativeWebhookEventID    *NativeWebhookEventID    `json:"native_webhook_event_id,omitempty"`
+	NativeWebhookFormID     *NativeWebhookFormID     `json:"native_webhook_form_id,omitempty"`
+	NativeWebhookParentID   *NativeWebhookParentID   `json:"native_webhook_parent_id,omitempty"`
+	NativeWebhookProjectID  *NativeWebhookProjectID  `json:"native_webhook_project_id,omitempty"`
+	NativeWebhookTaskID     *NativeWebhookTaskID     `json:"native_webhook_task_id,omitempty"`
+	OutboundFields          map[string]string        `json:"outbound_fields,omitempty"`
 	// objects that we map from in the integration
 	RawObjects                    []string                                 `json:"raw_objects,omitempty"`
 	SearchDomain                  *SearchDomain                            `json:"search_domain,omitempty"`
@@ -2931,7 +2860,6 @@ type IntegrationSupport struct {
 	VirtualWebhookContactID       *VirtualWebhookContactID                 `json:"virtual_webhook_contact_id,omitempty"`
 	VirtualWebhookCustomerID      *VirtualWebhookCustomerID                `json:"virtual_webhook_customer_id,omitempty"`
 	VirtualWebhookDealID          *VirtualWebhookDealID                    `json:"virtual_webhook_deal_id,omitempty"`
-	VirtualWebhookEndLe           *VirtualWebhookEndLe                     `json:"virtual_webhook_end_le,omitempty"`
 	VirtualWebhookEndLt           *VirtualWebhookEndLt                     `json:"virtual_webhook_end_lt,omitempty"`
 	VirtualWebhookEventID         *VirtualWebhookEventID                   `json:"virtual_webhook_event_id,omitempty"`
 	VirtualWebhookExpand          *VirtualWebhookExpand                    `json:"virtual_webhook_expand,omitempty"`
@@ -3111,13 +3039,6 @@ func (i *IntegrationSupport) GetListDocumentID() *ListDocumentID {
 	return i.ListDocumentID
 }
 
-func (i *IntegrationSupport) GetListEndLe() *ListEndLe {
-	if i == nil {
-		return nil
-	}
-	return i.ListEndLe
-}
-
 func (i *IntegrationSupport) GetListEndLt() *ListEndLt {
 	if i == nil {
 		return nil
@@ -3137,13 +3058,6 @@ func (i *IntegrationSupport) GetListExpand() *ListExpand {
 		return nil
 	}
 	return i.ListExpand
-}
-
-func (i *IntegrationSupport) GetListExpandRecurringEvents() *ListExpandRecurringEvents {
-	if i == nil {
-		return nil
-	}
-	return i.ListExpandRecurringEvents
 }
 
 func (i *IntegrationSupport) GetListFormID() *ListFormID {
@@ -3648,13 +3562,6 @@ func (i *IntegrationSupport) GetVirtualWebhookDealID() *VirtualWebhookDealID {
 		return nil
 	}
 	return i.VirtualWebhookDealID
-}
-
-func (i *IntegrationSupport) GetVirtualWebhookEndLe() *VirtualWebhookEndLe {
-	if i == nil {
-		return nil
-	}
-	return i.VirtualWebhookEndLe
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookEndLt() *VirtualWebhookEndLt {

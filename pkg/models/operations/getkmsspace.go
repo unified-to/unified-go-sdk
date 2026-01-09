@@ -3,15 +3,70 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetKmsSpaceQueryParamFields string
+
+const (
+	GetKmsSpaceQueryParamFieldsID            GetKmsSpaceQueryParamFields = "id"
+	GetKmsSpaceQueryParamFieldsCreatedAt     GetKmsSpaceQueryParamFields = "created_at"
+	GetKmsSpaceQueryParamFieldsUpdatedAt     GetKmsSpaceQueryParamFields = "updated_at"
+	GetKmsSpaceQueryParamFieldsName          GetKmsSpaceQueryParamFields = "name"
+	GetKmsSpaceQueryParamFieldsDescription   GetKmsSpaceQueryParamFields = "description"
+	GetKmsSpaceQueryParamFieldsParentSpaceID GetKmsSpaceQueryParamFields = "parent_space_id"
+	GetKmsSpaceQueryParamFieldsParentID      GetKmsSpaceQueryParamFields = "parent_id"
+	GetKmsSpaceQueryParamFieldsIsActive      GetKmsSpaceQueryParamFields = "is_active"
+	GetKmsSpaceQueryParamFieldsUserID        GetKmsSpaceQueryParamFields = "user_id"
+	GetKmsSpaceQueryParamFieldsParentPageID  GetKmsSpaceQueryParamFields = "parent_page_id"
+	GetKmsSpaceQueryParamFieldsRaw           GetKmsSpaceQueryParamFields = "raw"
+)
+
+func (e GetKmsSpaceQueryParamFields) ToPointer() *GetKmsSpaceQueryParamFields {
+	return &e
+}
+func (e *GetKmsSpaceQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parent_space_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "parent_page_id":
+		fallthrough
+	case "raw":
+		*e = GetKmsSpaceQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetKmsSpaceQueryParamFields: %v", v)
+	}
+}
 
 type GetKmsSpaceRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetKmsSpaceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Space
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +80,7 @@ func (g *GetKmsSpaceRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetKmsSpaceRequest) GetFields() []string {
+func (g *GetKmsSpaceRequest) GetFields() []GetKmsSpaceQueryParamFields {
 	if g == nil {
 		return nil
 	}

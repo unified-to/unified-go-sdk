@@ -3,15 +3,73 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAccountingBalancesheetQueryParamFields string
+
+const (
+	GetAccountingBalancesheetQueryParamFieldsID              GetAccountingBalancesheetQueryParamFields = "id"
+	GetAccountingBalancesheetQueryParamFieldsCreatedAt       GetAccountingBalancesheetQueryParamFields = "created_at"
+	GetAccountingBalancesheetQueryParamFieldsUpdatedAt       GetAccountingBalancesheetQueryParamFields = "updated_at"
+	GetAccountingBalancesheetQueryParamFieldsStartAt         GetAccountingBalancesheetQueryParamFields = "start_at"
+	GetAccountingBalancesheetQueryParamFieldsEndAt           GetAccountingBalancesheetQueryParamFields = "end_at"
+	GetAccountingBalancesheetQueryParamFieldsName            GetAccountingBalancesheetQueryParamFields = "name"
+	GetAccountingBalancesheetQueryParamFieldsCurrency        GetAccountingBalancesheetQueryParamFields = "currency"
+	GetAccountingBalancesheetQueryParamFieldsNetAssetsAmount GetAccountingBalancesheetQueryParamFields = "net_assets_amount"
+	GetAccountingBalancesheetQueryParamFieldsAssets          GetAccountingBalancesheetQueryParamFields = "assets"
+	GetAccountingBalancesheetQueryParamFieldsLiabilities     GetAccountingBalancesheetQueryParamFields = "liabilities"
+	GetAccountingBalancesheetQueryParamFieldsEquity          GetAccountingBalancesheetQueryParamFields = "equity"
+	GetAccountingBalancesheetQueryParamFieldsRaw             GetAccountingBalancesheetQueryParamFields = "raw"
+)
+
+func (e GetAccountingBalancesheetQueryParamFields) ToPointer() *GetAccountingBalancesheetQueryParamFields {
+	return &e
+}
+func (e *GetAccountingBalancesheetQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "net_assets_amount":
+		fallthrough
+	case "assets":
+		fallthrough
+	case "liabilities":
+		fallthrough
+	case "equity":
+		fallthrough
+	case "raw":
+		*e = GetAccountingBalancesheetQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAccountingBalancesheetQueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingBalancesheetRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAccountingBalancesheetQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Balancesheet
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +83,7 @@ func (g *GetAccountingBalancesheetRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingBalancesheetRequest) GetFields() []string {
+func (g *GetAccountingBalancesheetRequest) GetFields() []GetAccountingBalancesheetQueryParamFields {
 	if g == nil {
 		return nil
 	}

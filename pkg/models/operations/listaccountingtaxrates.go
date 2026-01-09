@@ -3,26 +3,72 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAccountingTaxratesQueryParamFields string
+
+const (
+	ListAccountingTaxratesQueryParamFieldsID          ListAccountingTaxratesQueryParamFields = "id"
+	ListAccountingTaxratesQueryParamFieldsCreatedAt   ListAccountingTaxratesQueryParamFields = "created_at"
+	ListAccountingTaxratesQueryParamFieldsUpdatedAt   ListAccountingTaxratesQueryParamFields = "updated_at"
+	ListAccountingTaxratesQueryParamFieldsName        ListAccountingTaxratesQueryParamFields = "name"
+	ListAccountingTaxratesQueryParamFieldsDescription ListAccountingTaxratesQueryParamFields = "description"
+	ListAccountingTaxratesQueryParamFieldsRate        ListAccountingTaxratesQueryParamFields = "rate"
+	ListAccountingTaxratesQueryParamFieldsIsActive    ListAccountingTaxratesQueryParamFields = "is_active"
+	ListAccountingTaxratesQueryParamFieldsRaw         ListAccountingTaxratesQueryParamFields = "raw"
+)
+
+func (e ListAccountingTaxratesQueryParamFields) ToPointer() *ListAccountingTaxratesQueryParamFields {
+	return &e
+}
+func (e *ListAccountingTaxratesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "rate":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "raw":
+		*e = ListAccountingTaxratesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingTaxratesQueryParamFields: %v", v)
+	}
+}
 
 type ListAccountingTaxratesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The org ID to filter by
+	Fields []ListAccountingTaxratesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                  `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by (reference to AccountingOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -33,7 +79,7 @@ func (l *ListAccountingTaxratesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAccountingTaxratesRequest) GetFields() []string {
+func (l *ListAccountingTaxratesRequest) GetFields() []ListAccountingTaxratesQueryParamFields {
 	if l == nil {
 		return nil
 	}

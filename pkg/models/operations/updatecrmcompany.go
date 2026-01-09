@@ -3,9 +3,94 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateCrmCompanyQueryParamFields string
+
+const (
+	UpdateCrmCompanyQueryParamFieldsID          UpdateCrmCompanyQueryParamFields = "id"
+	UpdateCrmCompanyQueryParamFieldsCreatedAt   UpdateCrmCompanyQueryParamFields = "created_at"
+	UpdateCrmCompanyQueryParamFieldsUpdatedAt   UpdateCrmCompanyQueryParamFields = "updated_at"
+	UpdateCrmCompanyQueryParamFieldsName        UpdateCrmCompanyQueryParamFields = "name"
+	UpdateCrmCompanyQueryParamFieldsDealIds     UpdateCrmCompanyQueryParamFields = "deal_ids"
+	UpdateCrmCompanyQueryParamFieldsContactIds  UpdateCrmCompanyQueryParamFields = "contact_ids"
+	UpdateCrmCompanyQueryParamFieldsEmails      UpdateCrmCompanyQueryParamFields = "emails"
+	UpdateCrmCompanyQueryParamFieldsTelephones  UpdateCrmCompanyQueryParamFields = "telephones"
+	UpdateCrmCompanyQueryParamFieldsWebsites    UpdateCrmCompanyQueryParamFields = "websites"
+	UpdateCrmCompanyQueryParamFieldsAddress     UpdateCrmCompanyQueryParamFields = "address"
+	UpdateCrmCompanyQueryParamFieldsIsActive    UpdateCrmCompanyQueryParamFields = "is_active"
+	UpdateCrmCompanyQueryParamFieldsTags        UpdateCrmCompanyQueryParamFields = "tags"
+	UpdateCrmCompanyQueryParamFieldsDescription UpdateCrmCompanyQueryParamFields = "description"
+	UpdateCrmCompanyQueryParamFieldsIndustry    UpdateCrmCompanyQueryParamFields = "industry"
+	UpdateCrmCompanyQueryParamFieldsLinkUrls    UpdateCrmCompanyQueryParamFields = "link_urls"
+	UpdateCrmCompanyQueryParamFieldsEmployees   UpdateCrmCompanyQueryParamFields = "employees"
+	UpdateCrmCompanyQueryParamFieldsTimezone    UpdateCrmCompanyQueryParamFields = "timezone"
+	UpdateCrmCompanyQueryParamFieldsUserID      UpdateCrmCompanyQueryParamFields = "user_id"
+	UpdateCrmCompanyQueryParamFieldsMetadata    UpdateCrmCompanyQueryParamFields = "metadata"
+	UpdateCrmCompanyQueryParamFieldsDomains     UpdateCrmCompanyQueryParamFields = "domains"
+	UpdateCrmCompanyQueryParamFieldsRaw         UpdateCrmCompanyQueryParamFields = "raw"
+)
+
+func (e UpdateCrmCompanyQueryParamFields) ToPointer() *UpdateCrmCompanyQueryParamFields {
+	return &e
+}
+func (e *UpdateCrmCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "deal_ids":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "websites":
+		fallthrough
+	case "address":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "description":
+		fallthrough
+	case "industry":
+		fallthrough
+	case "link_urls":
+		fallthrough
+	case "employees":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "domains":
+		fallthrough
+	case "raw":
+		*e = UpdateCrmCompanyQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateCrmCompanyQueryParamFields: %v", v)
+	}
+}
 
 type UpdateCrmCompanyRequest struct {
 	// A company represents an organization that optionally is associated with a deal and/or contacts
@@ -13,7 +98,7 @@ type UpdateCrmCompanyRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateCrmCompanyQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Company
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +119,7 @@ func (u *UpdateCrmCompanyRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateCrmCompanyRequest) GetFields() []string {
+func (u *UpdateCrmCompanyRequest) GetFields() []UpdateCrmCompanyQueryParamFields {
 	if u == nil {
 		return nil
 	}

@@ -3,16 +3,125 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateAccountingInvoiceQueryParamFields string
+
+const (
+	UpdateAccountingInvoiceQueryParamFieldsID                      UpdateAccountingInvoiceQueryParamFields = "id"
+	UpdateAccountingInvoiceQueryParamFieldsCreatedAt               UpdateAccountingInvoiceQueryParamFields = "created_at"
+	UpdateAccountingInvoiceQueryParamFieldsUpdatedAt               UpdateAccountingInvoiceQueryParamFields = "updated_at"
+	UpdateAccountingInvoiceQueryParamFieldsDueAt                   UpdateAccountingInvoiceQueryParamFields = "due_at"
+	UpdateAccountingInvoiceQueryParamFieldsPaidAt                  UpdateAccountingInvoiceQueryParamFields = "paid_at"
+	UpdateAccountingInvoiceQueryParamFieldsRefundedAt              UpdateAccountingInvoiceQueryParamFields = "refunded_at"
+	UpdateAccountingInvoiceQueryParamFieldsCancelledAt             UpdateAccountingInvoiceQueryParamFields = "cancelled_at"
+	UpdateAccountingInvoiceQueryParamFieldsPostedAt                UpdateAccountingInvoiceQueryParamFields = "posted_at"
+	UpdateAccountingInvoiceQueryParamFieldsTotalAmount             UpdateAccountingInvoiceQueryParamFields = "total_amount"
+	UpdateAccountingInvoiceQueryParamFieldsPaidAmount              UpdateAccountingInvoiceQueryParamFields = "paid_amount"
+	UpdateAccountingInvoiceQueryParamFieldsRefundAmount            UpdateAccountingInvoiceQueryParamFields = "refund_amount"
+	UpdateAccountingInvoiceQueryParamFieldsTaxAmount               UpdateAccountingInvoiceQueryParamFields = "tax_amount"
+	UpdateAccountingInvoiceQueryParamFieldsDiscountAmount          UpdateAccountingInvoiceQueryParamFields = "discount_amount"
+	UpdateAccountingInvoiceQueryParamFieldsBalanceAmount           UpdateAccountingInvoiceQueryParamFields = "balance_amount"
+	UpdateAccountingInvoiceQueryParamFieldsInvoiceNumber           UpdateAccountingInvoiceQueryParamFields = "invoice_number"
+	UpdateAccountingInvoiceQueryParamFieldsReference               UpdateAccountingInvoiceQueryParamFields = "reference"
+	UpdateAccountingInvoiceQueryParamFieldsContactID               UpdateAccountingInvoiceQueryParamFields = "contact_id"
+	UpdateAccountingInvoiceQueryParamFieldsCurrency                UpdateAccountingInvoiceQueryParamFields = "currency"
+	UpdateAccountingInvoiceQueryParamFieldsNotes                   UpdateAccountingInvoiceQueryParamFields = "notes"
+	UpdateAccountingInvoiceQueryParamFieldsRefundReason            UpdateAccountingInvoiceQueryParamFields = "refund_reason"
+	UpdateAccountingInvoiceQueryParamFieldsLineitems               UpdateAccountingInvoiceQueryParamFields = "lineitems"
+	UpdateAccountingInvoiceQueryParamFieldsStatus                  UpdateAccountingInvoiceQueryParamFields = "status"
+	UpdateAccountingInvoiceQueryParamFieldsURL                     UpdateAccountingInvoiceQueryParamFields = "url"
+	UpdateAccountingInvoiceQueryParamFieldsPaymentCollectionMethod UpdateAccountingInvoiceQueryParamFields = "payment_collection_method"
+	UpdateAccountingInvoiceQueryParamFieldsInvoiceAt               UpdateAccountingInvoiceQueryParamFields = "invoice_at"
+	UpdateAccountingInvoiceQueryParamFieldsType                    UpdateAccountingInvoiceQueryParamFields = "type"
+	UpdateAccountingInvoiceQueryParamFieldsAttachments             UpdateAccountingInvoiceQueryParamFields = "attachments"
+	UpdateAccountingInvoiceQueryParamFieldsSend                    UpdateAccountingInvoiceQueryParamFields = "send"
+	UpdateAccountingInvoiceQueryParamFieldsRaw                     UpdateAccountingInvoiceQueryParamFields = "raw"
+)
+
+func (e UpdateAccountingInvoiceQueryParamFields) ToPointer() *UpdateAccountingInvoiceQueryParamFields {
+	return &e
+}
+func (e *UpdateAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "refunded_at":
+		fallthrough
+	case "cancelled_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "paid_amount":
+		fallthrough
+	case "refund_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "discount_amount":
+		fallthrough
+	case "balance_amount":
+		fallthrough
+	case "invoice_number":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "refund_reason":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "status":
+		fallthrough
+	case "url":
+		fallthrough
+	case "payment_collection_method":
+		fallthrough
+	case "invoice_at":
+		fallthrough
+	case "type":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "send":
+		fallthrough
+	case "raw":
+		*e = UpdateAccountingInvoiceQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateAccountingInvoiceQueryParamFields: %v", v)
+	}
+}
 
 type UpdateAccountingInvoiceRequest struct {
 	AccountingInvoice shared.AccountingInvoice `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateAccountingInvoiceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Invoice
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +142,7 @@ func (u *UpdateAccountingInvoiceRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateAccountingInvoiceRequest) GetFields() []string {
+func (u *UpdateAccountingInvoiceRequest) GetFields() []UpdateAccountingInvoiceQueryParamFields {
 	if u == nil {
 		return nil
 	}

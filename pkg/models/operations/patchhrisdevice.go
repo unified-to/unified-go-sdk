@@ -3,16 +3,98 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchHrisDeviceQueryParamFields string
+
+const (
+	PatchHrisDeviceQueryParamFieldsID                 PatchHrisDeviceQueryParamFields = "id"
+	PatchHrisDeviceQueryParamFieldsCreatedAt          PatchHrisDeviceQueryParamFields = "created_at"
+	PatchHrisDeviceQueryParamFieldsUpdatedAt          PatchHrisDeviceQueryParamFields = "updated_at"
+	PatchHrisDeviceQueryParamFieldsName               PatchHrisDeviceQueryParamFields = "name"
+	PatchHrisDeviceQueryParamFieldsAssetTag           PatchHrisDeviceQueryParamFields = "asset_tag"
+	PatchHrisDeviceQueryParamFieldsVersion            PatchHrisDeviceQueryParamFields = "version"
+	PatchHrisDeviceQueryParamFieldsManufacturer       PatchHrisDeviceQueryParamFields = "manufacturer"
+	PatchHrisDeviceQueryParamFieldsModel              PatchHrisDeviceQueryParamFields = "model"
+	PatchHrisDeviceQueryParamFieldsOs                 PatchHrisDeviceQueryParamFields = "os"
+	PatchHrisDeviceQueryParamFieldsOsVersion          PatchHrisDeviceQueryParamFields = "os_version"
+	PatchHrisDeviceQueryParamFieldsUserIds            PatchHrisDeviceQueryParamFields = "user_ids"
+	PatchHrisDeviceQueryParamFieldsAdminUserIds       PatchHrisDeviceQueryParamFields = "admin_user_ids"
+	PatchHrisDeviceQueryParamFieldsLocationID         PatchHrisDeviceQueryParamFields = "location_id"
+	PatchHrisDeviceQueryParamFieldsHasAntivirus       PatchHrisDeviceQueryParamFields = "has_antivirus"
+	PatchHrisDeviceQueryParamFieldsHasPasswordManager PatchHrisDeviceQueryParamFields = "has_password_manager"
+	PatchHrisDeviceQueryParamFieldsHasFirewall        PatchHrisDeviceQueryParamFields = "has_firewall"
+	PatchHrisDeviceQueryParamFieldsHasHdEncrypted     PatchHrisDeviceQueryParamFields = "has_hd_encrypted"
+	PatchHrisDeviceQueryParamFieldsHasScreenlock      PatchHrisDeviceQueryParamFields = "has_screenlock"
+	PatchHrisDeviceQueryParamFieldsIsMissing          PatchHrisDeviceQueryParamFields = "is_missing"
+	PatchHrisDeviceQueryParamFieldsRaw                PatchHrisDeviceQueryParamFields = "raw"
+)
+
+func (e PatchHrisDeviceQueryParamFields) ToPointer() *PatchHrisDeviceQueryParamFields {
+	return &e
+}
+func (e *PatchHrisDeviceQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "asset_tag":
+		fallthrough
+	case "version":
+		fallthrough
+	case "manufacturer":
+		fallthrough
+	case "model":
+		fallthrough
+	case "os":
+		fallthrough
+	case "os_version":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "admin_user_ids":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "has_antivirus":
+		fallthrough
+	case "has_password_manager":
+		fallthrough
+	case "has_firewall":
+		fallthrough
+	case "has_hd_encrypted":
+		fallthrough
+	case "has_screenlock":
+		fallthrough
+	case "is_missing":
+		fallthrough
+	case "raw":
+		*e = PatchHrisDeviceQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchHrisDeviceQueryParamFields: %v", v)
+	}
+}
 
 type PatchHrisDeviceRequest struct {
 	HrisDevice shared.HrisDevice `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchHrisDeviceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Device
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +115,7 @@ func (p *PatchHrisDeviceRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchHrisDeviceRequest) GetFields() []string {
+func (p *PatchHrisDeviceRequest) GetFields() []PatchHrisDeviceQueryParamFields {
 	if p == nil {
 		return nil
 	}

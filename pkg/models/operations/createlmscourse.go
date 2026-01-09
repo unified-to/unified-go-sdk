@@ -3,16 +3,83 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateLmsCourseQueryParamFields string
+
+const (
+	CreateLmsCourseQueryParamFieldsID            CreateLmsCourseQueryParamFields = "id"
+	CreateLmsCourseQueryParamFieldsCreatedAt     CreateLmsCourseQueryParamFields = "created_at"
+	CreateLmsCourseQueryParamFieldsUpdatedAt     CreateLmsCourseQueryParamFields = "updated_at"
+	CreateLmsCourseQueryParamFieldsName          CreateLmsCourseQueryParamFields = "name"
+	CreateLmsCourseQueryParamFieldsDescription   CreateLmsCourseQueryParamFields = "description"
+	CreateLmsCourseQueryParamFieldsIsPrivate     CreateLmsCourseQueryParamFields = "is_private"
+	CreateLmsCourseQueryParamFieldsIsActive      CreateLmsCourseQueryParamFields = "is_active"
+	CreateLmsCourseQueryParamFieldsPriceAmount   CreateLmsCourseQueryParamFields = "price_amount"
+	CreateLmsCourseQueryParamFieldsLanguages     CreateLmsCourseQueryParamFields = "languages"
+	CreateLmsCourseQueryParamFieldsCategories    CreateLmsCourseQueryParamFields = "categories"
+	CreateLmsCourseQueryParamFieldsCurrency      CreateLmsCourseQueryParamFields = "currency"
+	CreateLmsCourseQueryParamFieldsMedia         CreateLmsCourseQueryParamFields = "media"
+	CreateLmsCourseQueryParamFieldsInstructorIds CreateLmsCourseQueryParamFields = "instructor_ids"
+	CreateLmsCourseQueryParamFieldsStudentIds    CreateLmsCourseQueryParamFields = "student_ids"
+	CreateLmsCourseQueryParamFieldsRaw           CreateLmsCourseQueryParamFields = "raw"
+)
+
+func (e CreateLmsCourseQueryParamFields) ToPointer() *CreateLmsCourseQueryParamFields {
+	return &e
+}
+func (e *CreateLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "price_amount":
+		fallthrough
+	case "languages":
+		fallthrough
+	case "categories":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "media":
+		fallthrough
+	case "instructor_ids":
+		fallthrough
+	case "student_ids":
+		fallthrough
+	case "raw":
+		*e = CreateLmsCourseQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateLmsCourseQueryParamFields: %v", v)
+	}
+}
 
 type CreateLmsCourseRequest struct {
 	LmsCourse shared.LmsCourse `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateLmsCourseQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +98,7 @@ func (c *CreateLmsCourseRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateLmsCourseRequest) GetFields() []string {
+func (c *CreateLmsCourseRequest) GetFields() []CreateLmsCourseQueryParamFields {
 	if c == nil {
 		return nil
 	}

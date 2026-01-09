@@ -3,9 +3,97 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateCrmDealQueryParamFields string
+
+const (
+	CreateCrmDealQueryParamFieldsID          CreateCrmDealQueryParamFields = "id"
+	CreateCrmDealQueryParamFieldsCreatedAt   CreateCrmDealQueryParamFields = "created_at"
+	CreateCrmDealQueryParamFieldsUpdatedAt   CreateCrmDealQueryParamFields = "updated_at"
+	CreateCrmDealQueryParamFieldsName        CreateCrmDealQueryParamFields = "name"
+	CreateCrmDealQueryParamFieldsAmount      CreateCrmDealQueryParamFields = "amount"
+	CreateCrmDealQueryParamFieldsCurrency    CreateCrmDealQueryParamFields = "currency"
+	CreateCrmDealQueryParamFieldsClosedAt    CreateCrmDealQueryParamFields = "closed_at"
+	CreateCrmDealQueryParamFieldsClosingAt   CreateCrmDealQueryParamFields = "closing_at"
+	CreateCrmDealQueryParamFieldsStage       CreateCrmDealQueryParamFields = "stage"
+	CreateCrmDealQueryParamFieldsStageID     CreateCrmDealQueryParamFields = "stage_id"
+	CreateCrmDealQueryParamFieldsPipeline    CreateCrmDealQueryParamFields = "pipeline"
+	CreateCrmDealQueryParamFieldsPipelineID  CreateCrmDealQueryParamFields = "pipeline_id"
+	CreateCrmDealQueryParamFieldsSource      CreateCrmDealQueryParamFields = "source"
+	CreateCrmDealQueryParamFieldsProbability CreateCrmDealQueryParamFields = "probability"
+	CreateCrmDealQueryParamFieldsTags        CreateCrmDealQueryParamFields = "tags"
+	CreateCrmDealQueryParamFieldsLostReason  CreateCrmDealQueryParamFields = "lost_reason"
+	CreateCrmDealQueryParamFieldsWonReason   CreateCrmDealQueryParamFields = "won_reason"
+	CreateCrmDealQueryParamFieldsUserID      CreateCrmDealQueryParamFields = "user_id"
+	CreateCrmDealQueryParamFieldsContactIds  CreateCrmDealQueryParamFields = "contact_ids"
+	CreateCrmDealQueryParamFieldsCompanyIds  CreateCrmDealQueryParamFields = "company_ids"
+	CreateCrmDealQueryParamFieldsMetadata    CreateCrmDealQueryParamFields = "metadata"
+	CreateCrmDealQueryParamFieldsRaw         CreateCrmDealQueryParamFields = "raw"
+)
+
+func (e CreateCrmDealQueryParamFields) ToPointer() *CreateCrmDealQueryParamFields {
+	return &e
+}
+func (e *CreateCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "closing_at":
+		fallthrough
+	case "stage":
+		fallthrough
+	case "stage_id":
+		fallthrough
+	case "pipeline":
+		fallthrough
+	case "pipeline_id":
+		fallthrough
+	case "source":
+		fallthrough
+	case "probability":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "lost_reason":
+		fallthrough
+	case "won_reason":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "company_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = CreateCrmDealQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateCrmDealQueryParamFields: %v", v)
+	}
+}
 
 type CreateCrmDealRequest struct {
 	// A deal represents an opportunity with companies and/or contacts
@@ -13,7 +101,7 @@ type CreateCrmDealRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateCrmDealQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -32,7 +120,7 @@ func (c *CreateCrmDealRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateCrmDealRequest) GetFields() []string {
+func (c *CreateCrmDealRequest) GetFields() []CreateCrmDealQueryParamFields {
 	if c == nil {
 		return nil
 	}

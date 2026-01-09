@@ -545,10 +545,8 @@ type HrisMetadata struct {
 	ExtraData *HrisMetadataExtraData `json:"extra_data,omitempty"`
 	Format    *HrisMetadataFormat    `json:"format,omitempty"`
 	ID        *string                `json:"id,omitempty"`
-	Key       *string                `json:"key,omitempty"`
 	Namespace *string                `json:"namespace,omitempty"`
 	Slug      *string                `json:"slug,omitempty"`
-	Type      *string                `json:"type,omitempty"`
 	Value     *HrisMetadataValue     `json:"value,omitempty"`
 }
 
@@ -573,13 +571,6 @@ func (h *HrisMetadata) GetID() *string {
 	return h.ID
 }
 
-func (h *HrisMetadata) GetKey() *string {
-	if h == nil {
-		return nil
-	}
-	return h.Key
-}
-
 func (h *HrisMetadata) GetNamespace() *string {
 	if h == nil {
 		return nil
@@ -592,13 +583,6 @@ func (h *HrisMetadata) GetSlug() *string {
 		return nil
 	}
 	return h.Slug
-}
-
-func (h *HrisMetadata) GetType() *string {
-	if h == nil {
-		return nil
-	}
-	return h.Type
 }
 
 func (h *HrisMetadata) GetValue() *HrisMetadataValue {

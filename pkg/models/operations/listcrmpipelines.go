@@ -3,24 +3,73 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListCrmPipelinesQueryParamFields string
+
+const (
+	ListCrmPipelinesQueryParamFieldsID              ListCrmPipelinesQueryParamFields = "id"
+	ListCrmPipelinesQueryParamFieldsCreatedAt       ListCrmPipelinesQueryParamFields = "created_at"
+	ListCrmPipelinesQueryParamFieldsUpdatedAt       ListCrmPipelinesQueryParamFields = "updated_at"
+	ListCrmPipelinesQueryParamFieldsName            ListCrmPipelinesQueryParamFields = "name"
+	ListCrmPipelinesQueryParamFieldsIsActive        ListCrmPipelinesQueryParamFields = "is_active"
+	ListCrmPipelinesQueryParamFieldsDealProbability ListCrmPipelinesQueryParamFields = "deal_probability"
+	ListCrmPipelinesQueryParamFieldsDisplayOrder    ListCrmPipelinesQueryParamFields = "display_order"
+	ListCrmPipelinesQueryParamFieldsStages          ListCrmPipelinesQueryParamFields = "stages"
+	ListCrmPipelinesQueryParamFieldsRaw             ListCrmPipelinesQueryParamFields = "raw"
+)
+
+func (e ListCrmPipelinesQueryParamFields) ToPointer() *ListCrmPipelinesQueryParamFields {
+	return &e
+}
+func (e *ListCrmPipelinesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "deal_probability":
+		fallthrough
+	case "display_order":
+		fallthrough
+	case "stages":
+		fallthrough
+	case "raw":
+		*e = ListCrmPipelinesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCrmPipelinesQueryParamFields: %v", v)
+	}
+}
 
 type ListCrmPipelinesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListCrmPipelinesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -31,7 +80,7 @@ func (l *ListCrmPipelinesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListCrmPipelinesRequest) GetFields() []string {
+func (l *ListCrmPipelinesRequest) GetFields() []ListCrmPipelinesQueryParamFields {
 	if l == nil {
 		return nil
 	}

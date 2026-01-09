@@ -3,16 +3,158 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchHrisEmployeeQueryParamFields string
+
+const (
+	PatchHrisEmployeeQueryParamFieldsID                    PatchHrisEmployeeQueryParamFields = "id"
+	PatchHrisEmployeeQueryParamFieldsCreatedAt             PatchHrisEmployeeQueryParamFields = "created_at"
+	PatchHrisEmployeeQueryParamFieldsUpdatedAt             PatchHrisEmployeeQueryParamFields = "updated_at"
+	PatchHrisEmployeeQueryParamFieldsName                  PatchHrisEmployeeQueryParamFields = "name"
+	PatchHrisEmployeeQueryParamFieldsFirstName             PatchHrisEmployeeQueryParamFields = "first_name"
+	PatchHrisEmployeeQueryParamFieldsLastName              PatchHrisEmployeeQueryParamFields = "last_name"
+	PatchHrisEmployeeQueryParamFieldsEmails                PatchHrisEmployeeQueryParamFields = "emails"
+	PatchHrisEmployeeQueryParamFieldsTitle                 PatchHrisEmployeeQueryParamFields = "title"
+	PatchHrisEmployeeQueryParamFieldsManagerID             PatchHrisEmployeeQueryParamFields = "manager_id"
+	PatchHrisEmployeeQueryParamFieldsEmploymentStatus      PatchHrisEmployeeQueryParamFields = "employment_status"
+	PatchHrisEmployeeQueryParamFieldsGender                PatchHrisEmployeeQueryParamFields = "gender"
+	PatchHrisEmployeeQueryParamFieldsTelephones            PatchHrisEmployeeQueryParamFields = "telephones"
+	PatchHrisEmployeeQueryParamFieldsDateOfBirth           PatchHrisEmployeeQueryParamFields = "date_of_birth"
+	PatchHrisEmployeeQueryParamFieldsEmployeeNumber        PatchHrisEmployeeQueryParamFields = "employee_number"
+	PatchHrisEmployeeQueryParamFieldsHiredAt               PatchHrisEmployeeQueryParamFields = "hired_at"
+	PatchHrisEmployeeQueryParamFieldsTerminatedAt          PatchHrisEmployeeQueryParamFields = "terminated_at"
+	PatchHrisEmployeeQueryParamFieldsTerminationReason     PatchHrisEmployeeQueryParamFields = "termination_reason"
+	PatchHrisEmployeeQueryParamFieldsMaritalStatus         PatchHrisEmployeeQueryParamFields = "marital_status"
+	PatchHrisEmployeeQueryParamFieldsEmploymentType        PatchHrisEmployeeQueryParamFields = "employment_type"
+	PatchHrisEmployeeQueryParamFieldsAddress               PatchHrisEmployeeQueryParamFields = "address"
+	PatchHrisEmployeeQueryParamFieldsLanguageLocale        PatchHrisEmployeeQueryParamFields = "language_locale"
+	PatchHrisEmployeeQueryParamFieldsCurrency              PatchHrisEmployeeQueryParamFields = "currency"
+	PatchHrisEmployeeQueryParamFieldsTimezone              PatchHrisEmployeeQueryParamFields = "timezone"
+	PatchHrisEmployeeQueryParamFieldsImageURL              PatchHrisEmployeeQueryParamFields = "image_url"
+	PatchHrisEmployeeQueryParamFieldsCompanyID             PatchHrisEmployeeQueryParamFields = "company_id"
+	PatchHrisEmployeeQueryParamFieldsPronouns              PatchHrisEmployeeQueryParamFields = "pronouns"
+	PatchHrisEmployeeQueryParamFieldsEmployeeRoles         PatchHrisEmployeeQueryParamFields = "employee_roles"
+	PatchHrisEmployeeQueryParamFieldsCompensation          PatchHrisEmployeeQueryParamFields = "compensation"
+	PatchHrisEmployeeQueryParamFieldsSalutation            PatchHrisEmployeeQueryParamFields = "salutation"
+	PatchHrisEmployeeQueryParamFieldsBio                   PatchHrisEmployeeQueryParamFields = "bio"
+	PatchHrisEmployeeQueryParamFieldsSsnSin                PatchHrisEmployeeQueryParamFields = "ssn_sin"
+	PatchHrisEmployeeQueryParamFieldsGroups                PatchHrisEmployeeQueryParamFields = "groups"
+	PatchHrisEmployeeQueryParamFieldsLocations             PatchHrisEmployeeQueryParamFields = "locations"
+	PatchHrisEmployeeQueryParamFieldsMetadata              PatchHrisEmployeeQueryParamFields = "metadata"
+	PatchHrisEmployeeQueryParamFieldsStorageQuotaAllocated PatchHrisEmployeeQueryParamFields = "storage_quota_allocated"
+	PatchHrisEmployeeQueryParamFieldsStorageQuotaUsed      PatchHrisEmployeeQueryParamFields = "storage_quota_used"
+	PatchHrisEmployeeQueryParamFieldsStorageQuotaAvailable PatchHrisEmployeeQueryParamFields = "storage_quota_available"
+	PatchHrisEmployeeQueryParamFieldsRelationships         PatchHrisEmployeeQueryParamFields = "relationships"
+	PatchHrisEmployeeQueryParamFieldsHasMfa                PatchHrisEmployeeQueryParamFields = "has_mfa"
+	PatchHrisEmployeeQueryParamFieldsRaw                   PatchHrisEmployeeQueryParamFields = "raw"
+)
+
+func (e PatchHrisEmployeeQueryParamFields) ToPointer() *PatchHrisEmployeeQueryParamFields {
+	return &e
+}
+func (e *PatchHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "title":
+		fallthrough
+	case "manager_id":
+		fallthrough
+	case "employment_status":
+		fallthrough
+	case "gender":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "date_of_birth":
+		fallthrough
+	case "employee_number":
+		fallthrough
+	case "hired_at":
+		fallthrough
+	case "terminated_at":
+		fallthrough
+	case "termination_reason":
+		fallthrough
+	case "marital_status":
+		fallthrough
+	case "employment_type":
+		fallthrough
+	case "address":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "pronouns":
+		fallthrough
+	case "employee_roles":
+		fallthrough
+	case "compensation":
+		fallthrough
+	case "salutation":
+		fallthrough
+	case "bio":
+		fallthrough
+	case "ssn_sin":
+		fallthrough
+	case "groups":
+		fallthrough
+	case "locations":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "storage_quota_allocated":
+		fallthrough
+	case "storage_quota_used":
+		fallthrough
+	case "storage_quota_available":
+		fallthrough
+	case "relationships":
+		fallthrough
+	case "has_mfa":
+		fallthrough
+	case "raw":
+		*e = PatchHrisEmployeeQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchHrisEmployeeQueryParamFields: %v", v)
+	}
+}
 
 type PatchHrisEmployeeRequest struct {
 	HrisEmployee shared.HrisEmployee `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchHrisEmployeeQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Employee
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +175,7 @@ func (p *PatchHrisEmployeeRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchHrisEmployeeRequest) GetFields() []string {
+func (p *PatchHrisEmployeeRequest) GetFields() []PatchHrisEmployeeQueryParamFields {
 	if p == nil {
 		return nil
 	}

@@ -3,16 +3,83 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateKmsPageQueryParamFields string
+
+const (
+	UpdateKmsPageQueryParamFieldsID           UpdateKmsPageQueryParamFields = "id"
+	UpdateKmsPageQueryParamFieldsCreatedAt    UpdateKmsPageQueryParamFields = "created_at"
+	UpdateKmsPageQueryParamFieldsUpdatedAt    UpdateKmsPageQueryParamFields = "updated_at"
+	UpdateKmsPageQueryParamFieldsTitle        UpdateKmsPageQueryParamFields = "title"
+	UpdateKmsPageQueryParamFieldsType         UpdateKmsPageQueryParamFields = "type"
+	UpdateKmsPageQueryParamFieldsSpaceID      UpdateKmsPageQueryParamFields = "space_id"
+	UpdateKmsPageQueryParamFieldsParentPageID UpdateKmsPageQueryParamFields = "parent_page_id"
+	UpdateKmsPageQueryParamFieldsParentID     UpdateKmsPageQueryParamFields = "parent_id"
+	UpdateKmsPageQueryParamFieldsIsActive     UpdateKmsPageQueryParamFields = "is_active"
+	UpdateKmsPageQueryParamFieldsUserID       UpdateKmsPageQueryParamFields = "user_id"
+	UpdateKmsPageQueryParamFieldsDownloadURL  UpdateKmsPageQueryParamFields = "download_url"
+	UpdateKmsPageQueryParamFieldsMetadata     UpdateKmsPageQueryParamFields = "metadata"
+	UpdateKmsPageQueryParamFieldsHasChildren  UpdateKmsPageQueryParamFields = "has_children"
+	UpdateKmsPageQueryParamFieldsWebURL       UpdateKmsPageQueryParamFields = "web_url"
+	UpdateKmsPageQueryParamFieldsRaw          UpdateKmsPageQueryParamFields = "raw"
+)
+
+func (e UpdateKmsPageQueryParamFields) ToPointer() *UpdateKmsPageQueryParamFields {
+	return &e
+}
+func (e *UpdateKmsPageQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "title":
+		fallthrough
+	case "type":
+		fallthrough
+	case "space_id":
+		fallthrough
+	case "parent_page_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "download_url":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "raw":
+		*e = UpdateKmsPageQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateKmsPageQueryParamFields: %v", v)
+	}
+}
 
 type UpdateKmsPageRequest struct {
 	KmsPage shared.KmsPage `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateKmsPageQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Page
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +100,7 @@ func (u *UpdateKmsPageRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateKmsPageRequest) GetFields() []string {
+func (u *UpdateKmsPageRequest) GetFields() []UpdateKmsPageQueryParamFields {
 	if u == nil {
 		return nil
 	}

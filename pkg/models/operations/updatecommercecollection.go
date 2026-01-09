@@ -3,9 +3,82 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateCommerceCollectionQueryParamFields string
+
+const (
+	UpdateCommerceCollectionQueryParamFieldsID                UpdateCommerceCollectionQueryParamFields = "id"
+	UpdateCommerceCollectionQueryParamFieldsCreatedAt         UpdateCommerceCollectionQueryParamFields = "created_at"
+	UpdateCommerceCollectionQueryParamFieldsUpdatedAt         UpdateCommerceCollectionQueryParamFields = "updated_at"
+	UpdateCommerceCollectionQueryParamFieldsName              UpdateCommerceCollectionQueryParamFields = "name"
+	UpdateCommerceCollectionQueryParamFieldsPublicName        UpdateCommerceCollectionQueryParamFields = "public_name"
+	UpdateCommerceCollectionQueryParamFieldsDescription       UpdateCommerceCollectionQueryParamFields = "description"
+	UpdateCommerceCollectionQueryParamFieldsPublicDescription UpdateCommerceCollectionQueryParamFields = "public_description"
+	UpdateCommerceCollectionQueryParamFieldsMedia             UpdateCommerceCollectionQueryParamFields = "media"
+	UpdateCommerceCollectionQueryParamFieldsIsVisible         UpdateCommerceCollectionQueryParamFields = "is_visible"
+	UpdateCommerceCollectionQueryParamFieldsIsActive          UpdateCommerceCollectionQueryParamFields = "is_active"
+	UpdateCommerceCollectionQueryParamFieldsIsFeatured        UpdateCommerceCollectionQueryParamFields = "is_featured"
+	UpdateCommerceCollectionQueryParamFieldsTags              UpdateCommerceCollectionQueryParamFields = "tags"
+	UpdateCommerceCollectionQueryParamFieldsType              UpdateCommerceCollectionQueryParamFields = "type"
+	UpdateCommerceCollectionQueryParamFieldsParentID          UpdateCommerceCollectionQueryParamFields = "parent_id"
+	UpdateCommerceCollectionQueryParamFieldsMetadata          UpdateCommerceCollectionQueryParamFields = "metadata"
+	UpdateCommerceCollectionQueryParamFieldsItemMetadata      UpdateCommerceCollectionQueryParamFields = "item_metadata"
+	UpdateCommerceCollectionQueryParamFieldsRaw               UpdateCommerceCollectionQueryParamFields = "raw"
+)
+
+func (e UpdateCommerceCollectionQueryParamFields) ToPointer() *UpdateCommerceCollectionQueryParamFields {
+	return &e
+}
+func (e *UpdateCommerceCollectionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "public_name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "public_description":
+		fallthrough
+	case "media":
+		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "type":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "item_metadata":
+		fallthrough
+	case "raw":
+		*e = UpdateCommerceCollectionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateCommerceCollectionQueryParamFields: %v", v)
+	}
+}
 
 type UpdateCommerceCollectionRequest struct {
 	// A collection of items/products/services
@@ -13,7 +86,7 @@ type UpdateCommerceCollectionRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateCommerceCollectionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Collection
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +107,7 @@ func (u *UpdateCommerceCollectionRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateCommerceCollectionRequest) GetFields() []string {
+func (u *UpdateCommerceCollectionRequest) GetFields() []UpdateCommerceCollectionQueryParamFields {
 	if u == nil {
 		return nil
 	}

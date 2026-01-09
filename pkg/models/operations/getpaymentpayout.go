@@ -3,15 +3,61 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetPaymentPayoutQueryParamFields string
+
+const (
+	GetPaymentPayoutQueryParamFieldsID          GetPaymentPayoutQueryParamFields = "id"
+	GetPaymentPayoutQueryParamFieldsCreatedAt   GetPaymentPayoutQueryParamFields = "created_at"
+	GetPaymentPayoutQueryParamFieldsUpdatedAt   GetPaymentPayoutQueryParamFields = "updated_at"
+	GetPaymentPayoutQueryParamFieldsTotalAmount GetPaymentPayoutQueryParamFields = "total_amount"
+	GetPaymentPayoutQueryParamFieldsCurrency    GetPaymentPayoutQueryParamFields = "currency"
+	GetPaymentPayoutQueryParamFieldsNotes       GetPaymentPayoutQueryParamFields = "notes"
+	GetPaymentPayoutQueryParamFieldsStatus      GetPaymentPayoutQueryParamFields = "status"
+	GetPaymentPayoutQueryParamFieldsRaw         GetPaymentPayoutQueryParamFields = "raw"
+)
+
+func (e GetPaymentPayoutQueryParamFields) ToPointer() *GetPaymentPayoutQueryParamFields {
+	return &e
+}
+func (e *GetPaymentPayoutQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "status":
+		fallthrough
+	case "raw":
+		*e = GetPaymentPayoutQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetPaymentPayoutQueryParamFields: %v", v)
+	}
+}
 
 type GetPaymentPayoutRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetPaymentPayoutQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Payout
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +71,7 @@ func (g *GetPaymentPayoutRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetPaymentPayoutRequest) GetFields() []string {
+func (g *GetPaymentPayoutRequest) GetFields() []GetPaymentPayoutQueryParamFields {
 	if g == nil {
 		return nil
 	}

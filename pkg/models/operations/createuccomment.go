@@ -3,16 +3,59 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateUcCommentQueryParamFields string
+
+const (
+	CreateUcCommentQueryParamFieldsID        CreateUcCommentQueryParamFields = "id"
+	CreateUcCommentQueryParamFieldsCreatedAt CreateUcCommentQueryParamFields = "created_at"
+	CreateUcCommentQueryParamFieldsUpdatedAt CreateUcCommentQueryParamFields = "updated_at"
+	CreateUcCommentQueryParamFieldsContent   CreateUcCommentQueryParamFields = "content"
+	CreateUcCommentQueryParamFieldsUserID    CreateUcCommentQueryParamFields = "user_id"
+	CreateUcCommentQueryParamFieldsCallID    CreateUcCommentQueryParamFields = "call_id"
+	CreateUcCommentQueryParamFieldsRaw       CreateUcCommentQueryParamFields = "raw"
+)
+
+func (e CreateUcCommentQueryParamFields) ToPointer() *CreateUcCommentQueryParamFields {
+	return &e
+}
+func (e *CreateUcCommentQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "content":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "call_id":
+		fallthrough
+	case "raw":
+		*e = CreateUcCommentQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateUcCommentQueryParamFields: %v", v)
+	}
+}
 
 type CreateUcCommentRequest struct {
 	UcComment shared.UcComment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateUcCommentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +74,7 @@ func (c *CreateUcCommentRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateUcCommentRequest) GetFields() []string {
+func (c *CreateUcCommentRequest) GetFields() []CreateUcCommentQueryParamFields {
 	if c == nil {
 		return nil
 	}

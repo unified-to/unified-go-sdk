@@ -3,29 +3,102 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListCommerceCollectionsQueryParamFields string
+
+const (
+	ListCommerceCollectionsQueryParamFieldsID                ListCommerceCollectionsQueryParamFields = "id"
+	ListCommerceCollectionsQueryParamFieldsCreatedAt         ListCommerceCollectionsQueryParamFields = "created_at"
+	ListCommerceCollectionsQueryParamFieldsUpdatedAt         ListCommerceCollectionsQueryParamFields = "updated_at"
+	ListCommerceCollectionsQueryParamFieldsName              ListCommerceCollectionsQueryParamFields = "name"
+	ListCommerceCollectionsQueryParamFieldsPublicName        ListCommerceCollectionsQueryParamFields = "public_name"
+	ListCommerceCollectionsQueryParamFieldsDescription       ListCommerceCollectionsQueryParamFields = "description"
+	ListCommerceCollectionsQueryParamFieldsPublicDescription ListCommerceCollectionsQueryParamFields = "public_description"
+	ListCommerceCollectionsQueryParamFieldsMedia             ListCommerceCollectionsQueryParamFields = "media"
+	ListCommerceCollectionsQueryParamFieldsIsVisible         ListCommerceCollectionsQueryParamFields = "is_visible"
+	ListCommerceCollectionsQueryParamFieldsIsActive          ListCommerceCollectionsQueryParamFields = "is_active"
+	ListCommerceCollectionsQueryParamFieldsIsFeatured        ListCommerceCollectionsQueryParamFields = "is_featured"
+	ListCommerceCollectionsQueryParamFieldsTags              ListCommerceCollectionsQueryParamFields = "tags"
+	ListCommerceCollectionsQueryParamFieldsType              ListCommerceCollectionsQueryParamFields = "type"
+	ListCommerceCollectionsQueryParamFieldsParentID          ListCommerceCollectionsQueryParamFields = "parent_id"
+	ListCommerceCollectionsQueryParamFieldsMetadata          ListCommerceCollectionsQueryParamFields = "metadata"
+	ListCommerceCollectionsQueryParamFieldsItemMetadata      ListCommerceCollectionsQueryParamFields = "item_metadata"
+	ListCommerceCollectionsQueryParamFieldsRaw               ListCommerceCollectionsQueryParamFields = "raw"
+)
+
+func (e ListCommerceCollectionsQueryParamFields) ToPointer() *ListCommerceCollectionsQueryParamFields {
+	return &e
+}
+func (e *ListCommerceCollectionsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "public_name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "public_description":
+		fallthrough
+	case "media":
+		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "type":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "item_metadata":
+		fallthrough
+	case "raw":
+		*e = ListCommerceCollectionsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCommerceCollectionsQueryParamFields: %v", v)
+	}
+}
 
 type ListCommerceCollectionsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListCommerceCollectionsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                  `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                  `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                   `queryParam:"style=form,explode=true,name=order"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
-	// The saleschannel ID to filter by
+	// The saleschannel ID to filter by (reference to CommerceSaleschannel)
 	SaleschannelID *string `queryParam:"style=form,explode=true,name=saleschannel_id"`
 	Sort           *string `queryParam:"style=form,explode=true,name=sort"`
 	Type           *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -36,7 +109,7 @@ func (l *ListCommerceCollectionsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListCommerceCollectionsRequest) GetFields() []string {
+func (l *ListCommerceCollectionsRequest) GetFields() []ListCommerceCollectionsQueryParamFields {
 	if l == nil {
 		return nil
 	}

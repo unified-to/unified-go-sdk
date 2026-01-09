@@ -3,15 +3,82 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetHrisPayslipQueryParamFields string
+
+const (
+	GetHrisPayslipQueryParamFieldsID          GetHrisPayslipQueryParamFields = "id"
+	GetHrisPayslipQueryParamFieldsCreatedAt   GetHrisPayslipQueryParamFields = "created_at"
+	GetHrisPayslipQueryParamFieldsUpdatedAt   GetHrisPayslipQueryParamFields = "updated_at"
+	GetHrisPayslipQueryParamFieldsUserID      GetHrisPayslipQueryParamFields = "user_id"
+	GetHrisPayslipQueryParamFieldsCompanyID   GetHrisPayslipQueryParamFields = "company_id"
+	GetHrisPayslipQueryParamFieldsPaymentType GetHrisPayslipQueryParamFields = "payment_type"
+	GetHrisPayslipQueryParamFieldsPaidAt      GetHrisPayslipQueryParamFields = "paid_at"
+	GetHrisPayslipQueryParamFieldsStartAt     GetHrisPayslipQueryParamFields = "start_at"
+	GetHrisPayslipQueryParamFieldsEndAt       GetHrisPayslipQueryParamFields = "end_at"
+	GetHrisPayslipQueryParamFieldsCurrency    GetHrisPayslipQueryParamFields = "currency"
+	GetHrisPayslipQueryParamFieldsGrossAmount GetHrisPayslipQueryParamFields = "gross_amount"
+	GetHrisPayslipQueryParamFieldsNetAmount   GetHrisPayslipQueryParamFields = "net_amount"
+	GetHrisPayslipQueryParamFieldsDetails     GetHrisPayslipQueryParamFields = "details"
+	GetHrisPayslipQueryParamFieldsRaw         GetHrisPayslipQueryParamFields = "raw"
+	GetHrisPayslipQueryParamFieldsDeduction   GetHrisPayslipQueryParamFields = "deduction"
+)
+
+func (e GetHrisPayslipQueryParamFields) ToPointer() *GetHrisPayslipQueryParamFields {
+	return &e
+}
+func (e *GetHrisPayslipQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "payment_type":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "gross_amount":
+		fallthrough
+	case "net_amount":
+		fallthrough
+	case "details":
+		fallthrough
+	case "raw":
+		fallthrough
+	case "deduction":
+		*e = GetHrisPayslipQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetHrisPayslipQueryParamFields: %v", v)
+	}
+}
 
 type GetHrisPayslipRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetHrisPayslipQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Payslip
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +92,7 @@ func (g *GetHrisPayslipRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetHrisPayslipRequest) GetFields() []string {
+func (g *GetHrisPayslipRequest) GetFields() []GetHrisPayslipQueryParamFields {
 	if g == nil {
 		return nil
 	}

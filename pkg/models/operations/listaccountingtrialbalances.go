@@ -3,30 +3,83 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListAccountingTrialbalancesQueryParamFields string
+
+const (
+	ListAccountingTrialbalancesQueryParamFieldsID                ListAccountingTrialbalancesQueryParamFields = "id"
+	ListAccountingTrialbalancesQueryParamFieldsCreatedAt         ListAccountingTrialbalancesQueryParamFields = "created_at"
+	ListAccountingTrialbalancesQueryParamFieldsUpdatedAt         ListAccountingTrialbalancesQueryParamFields = "updated_at"
+	ListAccountingTrialbalancesQueryParamFieldsStartAt           ListAccountingTrialbalancesQueryParamFields = "start_at"
+	ListAccountingTrialbalancesQueryParamFieldsName              ListAccountingTrialbalancesQueryParamFields = "name"
+	ListAccountingTrialbalancesQueryParamFieldsCurrency          ListAccountingTrialbalancesQueryParamFields = "currency"
+	ListAccountingTrialbalancesQueryParamFieldsEndAt             ListAccountingTrialbalancesQueryParamFields = "end_at"
+	ListAccountingTrialbalancesQueryParamFieldsTotalDebitAmount  ListAccountingTrialbalancesQueryParamFields = "total_debit_amount"
+	ListAccountingTrialbalancesQueryParamFieldsTotalCreditAmount ListAccountingTrialbalancesQueryParamFields = "total_credit_amount"
+	ListAccountingTrialbalancesQueryParamFieldsSubItems          ListAccountingTrialbalancesQueryParamFields = "sub_items"
+	ListAccountingTrialbalancesQueryParamFieldsRaw               ListAccountingTrialbalancesQueryParamFields = "raw"
+)
+
+func (e ListAccountingTrialbalancesQueryParamFields) ToPointer() *ListAccountingTrialbalancesQueryParamFields {
+	return &e
+}
+func (e *ListAccountingTrialbalancesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "total_debit_amount":
+		fallthrough
+	case "total_credit_amount":
+		fallthrough
+	case "sub_items":
+		fallthrough
+	case "raw":
+		*e = ListAccountingTrialbalancesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingTrialbalancesQueryParamFields: %v", v)
+	}
+}
+
 type ListAccountingTrialbalancesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The end date to filter by (deprecated)
-	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
-	// The end date to filter by
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAccountingTrialbalancesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                      `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                      `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                       `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// The start date to filter by
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -37,13 +90,6 @@ func (l *ListAccountingTrialbalancesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAccountingTrialbalancesRequest) GetEndLe() *string {
-	if l == nil {
-		return nil
-	}
-	return l.EndLe
-}
-
 func (l *ListAccountingTrialbalancesRequest) GetEndLt() *string {
 	if l == nil {
 		return nil
@@ -51,7 +97,7 @@ func (l *ListAccountingTrialbalancesRequest) GetEndLt() *string {
 	return l.EndLt
 }
 
-func (l *ListAccountingTrialbalancesRequest) GetFields() []string {
+func (l *ListAccountingTrialbalancesRequest) GetFields() []ListAccountingTrialbalancesQueryParamFields {
 	if l == nil {
 		return nil
 	}

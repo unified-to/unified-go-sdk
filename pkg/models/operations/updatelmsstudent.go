@@ -3,16 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateLmsStudentQueryParamFields string
+
+const (
+	UpdateLmsStudentQueryParamFieldsID         UpdateLmsStudentQueryParamFields = "id"
+	UpdateLmsStudentQueryParamFieldsCreatedAt  UpdateLmsStudentQueryParamFields = "created_at"
+	UpdateLmsStudentQueryParamFieldsUpdatedAt  UpdateLmsStudentQueryParamFields = "updated_at"
+	UpdateLmsStudentQueryParamFieldsName       UpdateLmsStudentQueryParamFields = "name"
+	UpdateLmsStudentQueryParamFieldsFirstName  UpdateLmsStudentQueryParamFields = "first_name"
+	UpdateLmsStudentQueryParamFieldsLastName   UpdateLmsStudentQueryParamFields = "last_name"
+	UpdateLmsStudentQueryParamFieldsEmails     UpdateLmsStudentQueryParamFields = "emails"
+	UpdateLmsStudentQueryParamFieldsTelephones UpdateLmsStudentQueryParamFields = "telephones"
+	UpdateLmsStudentQueryParamFieldsAddress    UpdateLmsStudentQueryParamFields = "address"
+	UpdateLmsStudentQueryParamFieldsImageURL   UpdateLmsStudentQueryParamFields = "image_url"
+	UpdateLmsStudentQueryParamFieldsRaw        UpdateLmsStudentQueryParamFields = "raw"
+)
+
+func (e UpdateLmsStudentQueryParamFields) ToPointer() *UpdateLmsStudentQueryParamFields {
+	return &e
+}
+func (e *UpdateLmsStudentQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "address":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "raw":
+		*e = UpdateLmsStudentQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateLmsStudentQueryParamFields: %v", v)
+	}
+}
 
 type UpdateLmsStudentRequest struct {
 	LmsStudent shared.LmsStudent `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateLmsStudentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Student
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +88,7 @@ func (u *UpdateLmsStudentRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateLmsStudentRequest) GetFields() []string {
+func (u *UpdateLmsStudentRequest) GetFields() []UpdateLmsStudentQueryParamFields {
 	if u == nil {
 		return nil
 	}

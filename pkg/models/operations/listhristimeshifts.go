@@ -3,23 +3,88 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListHrisTimeshiftsQueryParamFields string
+
+const (
+	ListHrisTimeshiftsQueryParamFieldsID             ListHrisTimeshiftsQueryParamFields = "id"
+	ListHrisTimeshiftsQueryParamFieldsCreatedAt      ListHrisTimeshiftsQueryParamFields = "created_at"
+	ListHrisTimeshiftsQueryParamFieldsUpdatedAt      ListHrisTimeshiftsQueryParamFields = "updated_at"
+	ListHrisTimeshiftsQueryParamFieldsEmployeeUserID ListHrisTimeshiftsQueryParamFields = "employee_user_id"
+	ListHrisTimeshiftsQueryParamFieldsStartAt        ListHrisTimeshiftsQueryParamFields = "start_at"
+	ListHrisTimeshiftsQueryParamFieldsEndAt          ListHrisTimeshiftsQueryParamFields = "end_at"
+	ListHrisTimeshiftsQueryParamFieldsLocationID     ListHrisTimeshiftsQueryParamFields = "location_id"
+	ListHrisTimeshiftsQueryParamFieldsCompanyID      ListHrisTimeshiftsQueryParamFields = "company_id"
+	ListHrisTimeshiftsQueryParamFieldsGroupID        ListHrisTimeshiftsQueryParamFields = "group_id"
+	ListHrisTimeshiftsQueryParamFieldsCompensation   ListHrisTimeshiftsQueryParamFields = "compensation"
+	ListHrisTimeshiftsQueryParamFieldsApproverUserID ListHrisTimeshiftsQueryParamFields = "approver_user_id"
+	ListHrisTimeshiftsQueryParamFieldsApprovedAt     ListHrisTimeshiftsQueryParamFields = "approved_at"
+	ListHrisTimeshiftsQueryParamFieldsHours          ListHrisTimeshiftsQueryParamFields = "hours"
+	ListHrisTimeshiftsQueryParamFieldsIsApproved     ListHrisTimeshiftsQueryParamFields = "is_approved"
+	ListHrisTimeshiftsQueryParamFieldsRaw            ListHrisTimeshiftsQueryParamFields = "raw"
+)
+
+func (e ListHrisTimeshiftsQueryParamFields) ToPointer() *ListHrisTimeshiftsQueryParamFields {
+	return &e
+}
+func (e *ListHrisTimeshiftsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "employee_user_id":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "group_id":
+		fallthrough
+	case "compensation":
+		fallthrough
+	case "approver_user_id":
+		fallthrough
+	case "approved_at":
+		fallthrough
+	case "hours":
+		fallthrough
+	case "is_approved":
+		fallthrough
+	case "raw":
+		*e = ListHrisTimeshiftsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListHrisTimeshiftsQueryParamFields: %v", v)
+	}
+}
+
 type ListHrisTimeshiftsRequest struct {
-	// The company ID to filter by
+	// The company ID to filter by (reference to HrisCompany)
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The end date to filter by (deprecated)
-	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
-	// The end date to filter by
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	// The location ID to filter by
+	Fields []ListHrisTimeshiftsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                             `queryParam:"style=form,explode=true,name=limit"`
+	// The location ID to filter by (reference to HrisLocation)
 	LocationID *string  `queryParam:"style=form,explode=true,name=location_id"`
 	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order      *string  `queryParam:"style=form,explode=true,name=order"`
@@ -28,11 +93,11 @@ type ListHrisTimeshiftsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// The start date to filter by
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -50,13 +115,6 @@ func (l *ListHrisTimeshiftsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListHrisTimeshiftsRequest) GetEndLe() *string {
-	if l == nil {
-		return nil
-	}
-	return l.EndLe
-}
-
 func (l *ListHrisTimeshiftsRequest) GetEndLt() *string {
 	if l == nil {
 		return nil
@@ -64,7 +122,7 @@ func (l *ListHrisTimeshiftsRequest) GetEndLt() *string {
 	return l.EndLt
 }
 
-func (l *ListHrisTimeshiftsRequest) GetFields() []string {
+func (l *ListHrisTimeshiftsRequest) GetFields() []ListHrisTimeshiftsQueryParamFields {
 	if l == nil {
 		return nil
 	}

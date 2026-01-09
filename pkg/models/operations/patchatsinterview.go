@@ -3,16 +3,77 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchAtsInterviewQueryParamFields string
+
+const (
+	PatchAtsInterviewQueryParamFieldsID                PatchAtsInterviewQueryParamFields = "id"
+	PatchAtsInterviewQueryParamFieldsCreatedAt         PatchAtsInterviewQueryParamFields = "created_at"
+	PatchAtsInterviewQueryParamFieldsUpdatedAt         PatchAtsInterviewQueryParamFields = "updated_at"
+	PatchAtsInterviewQueryParamFieldsCandidateID       PatchAtsInterviewQueryParamFields = "candidate_id"
+	PatchAtsInterviewQueryParamFieldsJobID             PatchAtsInterviewQueryParamFields = "job_id"
+	PatchAtsInterviewQueryParamFieldsApplicationID     PatchAtsInterviewQueryParamFields = "application_id"
+	PatchAtsInterviewQueryParamFieldsUserIds           PatchAtsInterviewQueryParamFields = "user_ids"
+	PatchAtsInterviewQueryParamFieldsStatus            PatchAtsInterviewQueryParamFields = "status"
+	PatchAtsInterviewQueryParamFieldsStartAt           PatchAtsInterviewQueryParamFields = "start_at"
+	PatchAtsInterviewQueryParamFieldsEndAt             PatchAtsInterviewQueryParamFields = "end_at"
+	PatchAtsInterviewQueryParamFieldsLocation          PatchAtsInterviewQueryParamFields = "location"
+	PatchAtsInterviewQueryParamFieldsExternalEventXref PatchAtsInterviewQueryParamFields = "external_event_xref"
+	PatchAtsInterviewQueryParamFieldsRaw               PatchAtsInterviewQueryParamFields = "raw"
+)
+
+func (e PatchAtsInterviewQueryParamFields) ToPointer() *PatchAtsInterviewQueryParamFields {
+	return &e
+}
+func (e *PatchAtsInterviewQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "application_id":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "status":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "location":
+		fallthrough
+	case "external_event_xref":
+		fallthrough
+	case "raw":
+		*e = PatchAtsInterviewQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchAtsInterviewQueryParamFields: %v", v)
+	}
+}
 
 type PatchAtsInterviewRequest struct {
 	AtsInterview shared.AtsInterview `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchAtsInterviewQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Interview
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +94,7 @@ func (p *PatchAtsInterviewRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchAtsInterviewRequest) GetFields() []string {
+func (p *PatchAtsInterviewRequest) GetFields() []PatchAtsInterviewQueryParamFields {
 	if p == nil {
 		return nil
 	}

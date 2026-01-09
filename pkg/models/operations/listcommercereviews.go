@@ -3,18 +3,109 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListCommerceReviewsQueryParamFields string
+
+const (
+	ListCommerceReviewsQueryParamFieldsID               ListCommerceReviewsQueryParamFields = "id"
+	ListCommerceReviewsQueryParamFieldsCreatedAt        ListCommerceReviewsQueryParamFields = "created_at"
+	ListCommerceReviewsQueryParamFieldsUpdatedAt        ListCommerceReviewsQueryParamFields = "updated_at"
+	ListCommerceReviewsQueryParamFieldsItemID           ListCommerceReviewsQueryParamFields = "item_id"
+	ListCommerceReviewsQueryParamFieldsItemVariantID    ListCommerceReviewsQueryParamFields = "item_variant_id"
+	ListCommerceReviewsQueryParamFieldsRating           ListCommerceReviewsQueryParamFields = "rating"
+	ListCommerceReviewsQueryParamFieldsTitle            ListCommerceReviewsQueryParamFields = "title"
+	ListCommerceReviewsQueryParamFieldsContent          ListCommerceReviewsQueryParamFields = "content"
+	ListCommerceReviewsQueryParamFieldsAuthorName       ListCommerceReviewsQueryParamFields = "author_name"
+	ListCommerceReviewsQueryParamFieldsAuthorEmail      ListCommerceReviewsQueryParamFields = "author_email"
+	ListCommerceReviewsQueryParamFieldsAuthorAvatarURL  ListCommerceReviewsQueryParamFields = "author_avatar_url"
+	ListCommerceReviewsQueryParamFieldsAuthorLocation   ListCommerceReviewsQueryParamFields = "author_location"
+	ListCommerceReviewsQueryParamFieldsVerifiedPurchase ListCommerceReviewsQueryParamFields = "verified_purchase"
+	ListCommerceReviewsQueryParamFieldsHelpfulVotes     ListCommerceReviewsQueryParamFields = "helpful_votes"
+	ListCommerceReviewsQueryParamFieldsUnhelpfulVotes   ListCommerceReviewsQueryParamFields = "unhelpful_votes"
+	ListCommerceReviewsQueryParamFieldsMedia            ListCommerceReviewsQueryParamFields = "media"
+	ListCommerceReviewsQueryParamFieldsStatus           ListCommerceReviewsQueryParamFields = "status"
+	ListCommerceReviewsQueryParamFieldsIsVerified       ListCommerceReviewsQueryParamFields = "is_verified"
+	ListCommerceReviewsQueryParamFieldsIsFeatured       ListCommerceReviewsQueryParamFields = "is_featured"
+	ListCommerceReviewsQueryParamFieldsIsPublic         ListCommerceReviewsQueryParamFields = "is_public"
+	ListCommerceReviewsQueryParamFieldsComments         ListCommerceReviewsQueryParamFields = "comments"
+	ListCommerceReviewsQueryParamFieldsMetadata         ListCommerceReviewsQueryParamFields = "metadata"
+	ListCommerceReviewsQueryParamFieldsRaw              ListCommerceReviewsQueryParamFields = "raw"
+)
+
+func (e ListCommerceReviewsQueryParamFields) ToPointer() *ListCommerceReviewsQueryParamFields {
+	return &e
+}
+func (e *ListCommerceReviewsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "item_id":
+		fallthrough
+	case "item_variant_id":
+		fallthrough
+	case "rating":
+		fallthrough
+	case "title":
+		fallthrough
+	case "content":
+		fallthrough
+	case "author_name":
+		fallthrough
+	case "author_email":
+		fallthrough
+	case "author_avatar_url":
+		fallthrough
+	case "author_location":
+		fallthrough
+	case "verified_purchase":
+		fallthrough
+	case "helpful_votes":
+		fallthrough
+	case "unhelpful_votes":
+		fallthrough
+	case "media":
+		fallthrough
+	case "status":
+		fallthrough
+	case "is_verified":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "is_public":
+		fallthrough
+	case "comments":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = ListCommerceReviewsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCommerceReviewsQueryParamFields: %v", v)
+	}
+}
+
 type ListCommerceReviewsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	// The item ID to filter by
+	Fields []ListCommerceReviewsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	// The item ID to filter by (reference to CommerceItem)
 	ItemID *string  `queryParam:"style=form,explode=true,name=item_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
@@ -24,7 +115,7 @@ type ListCommerceReviewsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -42,7 +133,7 @@ func (l *ListCommerceReviewsRequest) GetContactID() *string {
 	return l.ContactID
 }
 
-func (l *ListCommerceReviewsRequest) GetFields() []string {
+func (l *ListCommerceReviewsRequest) GetFields() []ListCommerceReviewsQueryParamFields {
 	if l == nil {
 		return nil
 	}

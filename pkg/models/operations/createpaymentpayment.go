@@ -3,16 +3,74 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreatePaymentPaymentQueryParamFields string
+
+const (
+	CreatePaymentPaymentQueryParamFieldsID            CreatePaymentPaymentQueryParamFields = "id"
+	CreatePaymentPaymentQueryParamFieldsCreatedAt     CreatePaymentPaymentQueryParamFields = "created_at"
+	CreatePaymentPaymentQueryParamFieldsUpdatedAt     CreatePaymentPaymentQueryParamFields = "updated_at"
+	CreatePaymentPaymentQueryParamFieldsTotalAmount   CreatePaymentPaymentQueryParamFields = "total_amount"
+	CreatePaymentPaymentQueryParamFieldsContactID     CreatePaymentPaymentQueryParamFields = "contact_id"
+	CreatePaymentPaymentQueryParamFieldsPaymentMethod CreatePaymentPaymentQueryParamFields = "payment_method"
+	CreatePaymentPaymentQueryParamFieldsCurrency      CreatePaymentPaymentQueryParamFields = "currency"
+	CreatePaymentPaymentQueryParamFieldsNotes         CreatePaymentPaymentQueryParamFields = "notes"
+	CreatePaymentPaymentQueryParamFieldsInvoiceID     CreatePaymentPaymentQueryParamFields = "invoice_id"
+	CreatePaymentPaymentQueryParamFieldsAccountID     CreatePaymentPaymentQueryParamFields = "account_id"
+	CreatePaymentPaymentQueryParamFieldsReference     CreatePaymentPaymentQueryParamFields = "reference"
+	CreatePaymentPaymentQueryParamFieldsRaw           CreatePaymentPaymentQueryParamFields = "raw"
+)
+
+func (e CreatePaymentPaymentQueryParamFields) ToPointer() *CreatePaymentPaymentQueryParamFields {
+	return &e
+}
+func (e *CreatePaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "payment_method":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "invoice_id":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "raw":
+		*e = CreatePaymentPaymentQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreatePaymentPaymentQueryParamFields: %v", v)
+	}
+}
 
 type CreatePaymentPaymentRequest struct {
 	PaymentPayment shared.PaymentPayment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreatePaymentPaymentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +89,7 @@ func (c *CreatePaymentPaymentRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreatePaymentPaymentRequest) GetFields() []string {
+func (c *CreatePaymentPaymentRequest) GetFields() []CreatePaymentPaymentQueryParamFields {
 	if c == nil {
 		return nil
 	}

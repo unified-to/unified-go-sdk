@@ -3,9 +3,58 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAdsReportsQueryParamFields string
+
+const (
+	ListAdsReportsQueryParamFieldsID             ListAdsReportsQueryParamFields = "id"
+	ListAdsReportsQueryParamFieldsCreatedAt      ListAdsReportsQueryParamFields = "created_at"
+	ListAdsReportsQueryParamFieldsUpdatedAt      ListAdsReportsQueryParamFields = "updated_at"
+	ListAdsReportsQueryParamFieldsCurrency       ListAdsReportsQueryParamFields = "currency"
+	ListAdsReportsQueryParamFieldsMetrics        ListAdsReportsQueryParamFields = "metrics"
+	ListAdsReportsQueryParamFieldsStartAt        ListAdsReportsQueryParamFields = "start_at"
+	ListAdsReportsQueryParamFieldsEndAt          ListAdsReportsQueryParamFields = "end_at"
+	ListAdsReportsQueryParamFieldsOrganizationID ListAdsReportsQueryParamFields = "organization_id"
+	ListAdsReportsQueryParamFieldsRaw            ListAdsReportsQueryParamFields = "raw"
+)
+
+func (e ListAdsReportsQueryParamFields) ToPointer() *ListAdsReportsQueryParamFields {
+	return &e
+}
+func (e *ListAdsReportsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "metrics":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "organization_id":
+		fallthrough
+	case "raw":
+		*e = ListAdsReportsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAdsReportsQueryParamFields: %v", v)
+	}
+}
 
 type ListAdsReportsRequest struct {
 	// The campaign ID to filter by
@@ -13,11 +62,11 @@ type ListAdsReportsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The org ID to filter by
+	Fields []ListAdsReportsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                         `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                         `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                          `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by (reference to AdsOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
@@ -25,7 +74,7 @@ type ListAdsReportsRequest struct {
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -43,7 +92,7 @@ func (l *ListAdsReportsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAdsReportsRequest) GetFields() []string {
+func (l *ListAdsReportsRequest) GetFields() []ListAdsReportsQueryParamFields {
 	if l == nil {
 		return nil
 	}

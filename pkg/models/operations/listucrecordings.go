@@ -3,36 +3,98 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListUcRecordingsQueryParamFields string
+
+const (
+	ListUcRecordingsQueryParamFieldsID           ListUcRecordingsQueryParamFields = "id"
+	ListUcRecordingsQueryParamFieldsCreatedAt    ListUcRecordingsQueryParamFields = "created_at"
+	ListUcRecordingsQueryParamFieldsUpdatedAt    ListUcRecordingsQueryParamFields = "updated_at"
+	ListUcRecordingsQueryParamFieldsStartAt      ListUcRecordingsQueryParamFields = "start_at"
+	ListUcRecordingsQueryParamFieldsEndAt        ListUcRecordingsQueryParamFields = "end_at"
+	ListUcRecordingsQueryParamFieldsExpiresAt    ListUcRecordingsQueryParamFields = "expires_at"
+	ListUcRecordingsQueryParamFieldsCallID       ListUcRecordingsQueryParamFields = "call_id"
+	ListUcRecordingsQueryParamFieldsWebURL       ListUcRecordingsQueryParamFields = "web_url"
+	ListUcRecordingsQueryParamFieldsContactID    ListUcRecordingsQueryParamFields = "contact_id"
+	ListUcRecordingsQueryParamFieldsContactName  ListUcRecordingsQueryParamFields = "contact_name"
+	ListUcRecordingsQueryParamFieldsContactPhone ListUcRecordingsQueryParamFields = "contact_phone"
+	ListUcRecordingsQueryParamFieldsUserID       ListUcRecordingsQueryParamFields = "user_id"
+	ListUcRecordingsQueryParamFieldsMedia        ListUcRecordingsQueryParamFields = "media"
+	ListUcRecordingsQueryParamFieldsRaw          ListUcRecordingsQueryParamFields = "raw"
+)
+
+func (e ListUcRecordingsQueryParamFields) ToPointer() *ListUcRecordingsQueryParamFields {
+	return &e
+}
+func (e *ListUcRecordingsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "expires_at":
+		fallthrough
+	case "call_id":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "contact_name":
+		fallthrough
+	case "contact_phone":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "media":
+		fallthrough
+	case "raw":
+		*e = ListUcRecordingsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListUcRecordingsQueryParamFields: %v", v)
+	}
+}
 
 type ListUcRecordingsRequest struct {
 	// The call ID to filter by
 	CallID *string `queryParam:"style=form,explode=true,name=call_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to UcContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// The end date to filter by (deprecated)
-	EndLe *string `queryParam:"style=form,explode=true,name=end_le"`
-	// The end date to filter by
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListUcRecordingsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// The start date to filter by
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -57,13 +119,6 @@ func (l *ListUcRecordingsRequest) GetContactID() *string {
 	return l.ContactID
 }
 
-func (l *ListUcRecordingsRequest) GetEndLe() *string {
-	if l == nil {
-		return nil
-	}
-	return l.EndLe
-}
-
 func (l *ListUcRecordingsRequest) GetEndLt() *string {
 	if l == nil {
 		return nil
@@ -71,7 +126,7 @@ func (l *ListUcRecordingsRequest) GetEndLt() *string {
 	return l.EndLt
 }
 
-func (l *ListUcRecordingsRequest) GetFields() []string {
+func (l *ListUcRecordingsRequest) GetFields() []ListUcRecordingsQueryParamFields {
 	if l == nil {
 		return nil
 	}

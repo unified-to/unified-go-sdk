@@ -3,16 +3,101 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateTaskTaskQueryParamFields string
+
+const (
+	CreateTaskTaskQueryParamFieldsID              CreateTaskTaskQueryParamFields = "id"
+	CreateTaskTaskQueryParamFieldsCreatedAt       CreateTaskTaskQueryParamFields = "created_at"
+	CreateTaskTaskQueryParamFieldsUpdatedAt       CreateTaskTaskQueryParamFields = "updated_at"
+	CreateTaskTaskQueryParamFieldsName            CreateTaskTaskQueryParamFields = "name"
+	CreateTaskTaskQueryParamFieldsProjectID       CreateTaskTaskQueryParamFields = "project_id"
+	CreateTaskTaskQueryParamFieldsParentID        CreateTaskTaskQueryParamFields = "parent_id"
+	CreateTaskTaskQueryParamFieldsCompletedAt     CreateTaskTaskQueryParamFields = "completed_at"
+	CreateTaskTaskQueryParamFieldsStatus          CreateTaskTaskQueryParamFields = "status"
+	CreateTaskTaskQueryParamFieldsNotes           CreateTaskTaskQueryParamFields = "notes"
+	CreateTaskTaskQueryParamFieldsDueAt           CreateTaskTaskQueryParamFields = "due_at"
+	CreateTaskTaskQueryParamFieldsPriority        CreateTaskTaskQueryParamFields = "priority"
+	CreateTaskTaskQueryParamFieldsAssignedUserIds CreateTaskTaskQueryParamFields = "assigned_user_ids"
+	CreateTaskTaskQueryParamFieldsCreatorUserID   CreateTaskTaskQueryParamFields = "creator_user_id"
+	CreateTaskTaskQueryParamFieldsFollowerUserIds CreateTaskTaskQueryParamFields = "follower_user_ids"
+	CreateTaskTaskQueryParamFieldsGroupIds        CreateTaskTaskQueryParamFields = "group_ids"
+	CreateTaskTaskQueryParamFieldsTags            CreateTaskTaskQueryParamFields = "tags"
+	CreateTaskTaskQueryParamFieldsURL             CreateTaskTaskQueryParamFields = "url"
+	CreateTaskTaskQueryParamFieldsAttachmentIds   CreateTaskTaskQueryParamFields = "attachment_ids"
+	CreateTaskTaskQueryParamFieldsMetadata        CreateTaskTaskQueryParamFields = "metadata"
+	CreateTaskTaskQueryParamFieldsHasChildren     CreateTaskTaskQueryParamFields = "has_children"
+	CreateTaskTaskQueryParamFieldsRaw             CreateTaskTaskQueryParamFields = "raw"
+)
+
+func (e CreateTaskTaskQueryParamFields) ToPointer() *CreateTaskTaskQueryParamFields {
+	return &e
+}
+func (e *CreateTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "project_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "completed_at":
+		fallthrough
+	case "status":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "priority":
+		fallthrough
+	case "assigned_user_ids":
+		fallthrough
+	case "creator_user_id":
+		fallthrough
+	case "follower_user_ids":
+		fallthrough
+	case "group_ids":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "url":
+		fallthrough
+	case "attachment_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "raw":
+		*e = CreateTaskTaskQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateTaskTaskQueryParamFields: %v", v)
+	}
+}
 
 type CreateTaskTaskRequest struct {
 	TaskTask shared.TaskTask `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateTaskTaskQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +116,7 @@ func (c *CreateTaskTaskRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateTaskTaskRequest) GetFields() []string {
+func (c *CreateTaskTaskRequest) GetFields() []CreateTaskTaskQueryParamFields {
 	if c == nil {
 		return nil
 	}

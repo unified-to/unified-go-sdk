@@ -3,18 +3,91 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListStorageFilesQueryParamFields string
+
+const (
+	ListStorageFilesQueryParamFieldsID          ListStorageFilesQueryParamFields = "id"
+	ListStorageFilesQueryParamFieldsCreatedAt   ListStorageFilesQueryParamFields = "created_at"
+	ListStorageFilesQueryParamFieldsUpdatedAt   ListStorageFilesQueryParamFields = "updated_at"
+	ListStorageFilesQueryParamFieldsName        ListStorageFilesQueryParamFields = "name"
+	ListStorageFilesQueryParamFieldsDescription ListStorageFilesQueryParamFields = "description"
+	ListStorageFilesQueryParamFieldsParentID    ListStorageFilesQueryParamFields = "parent_id"
+	ListStorageFilesQueryParamFieldsUserID      ListStorageFilesQueryParamFields = "user_id"
+	ListStorageFilesQueryParamFieldsSize        ListStorageFilesQueryParamFields = "size"
+	ListStorageFilesQueryParamFieldsType        ListStorageFilesQueryParamFields = "type"
+	ListStorageFilesQueryParamFieldsMimeType    ListStorageFilesQueryParamFields = "mime_type"
+	ListStorageFilesQueryParamFieldsPermissions ListStorageFilesQueryParamFields = "permissions"
+	ListStorageFilesQueryParamFieldsDownloadURL ListStorageFilesQueryParamFields = "download_url"
+	ListStorageFilesQueryParamFieldsHash        ListStorageFilesQueryParamFields = "hash"
+	ListStorageFilesQueryParamFieldsData        ListStorageFilesQueryParamFields = "data"
+	ListStorageFilesQueryParamFieldsVersion     ListStorageFilesQueryParamFields = "version"
+	ListStorageFilesQueryParamFieldsWebURL      ListStorageFilesQueryParamFields = "web_url"
+	ListStorageFilesQueryParamFieldsRaw         ListStorageFilesQueryParamFields = "raw"
+)
+
+func (e ListStorageFilesQueryParamFields) ToPointer() *ListStorageFilesQueryParamFields {
+	return &e
+}
+func (e *ListStorageFilesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "size":
+		fallthrough
+	case "type":
+		fallthrough
+	case "mime_type":
+		fallthrough
+	case "permissions":
+		fallthrough
+	case "download_url":
+		fallthrough
+	case "hash":
+		fallthrough
+	case "data":
+		fallthrough
+	case "version":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "raw":
+		*e = ListStorageFilesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListStorageFilesQueryParamFields: %v", v)
+	}
+}
 
 type ListStorageFilesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListStorageFilesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
@@ -24,7 +97,7 @@ type ListStorageFilesRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The type to filter by
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -35,7 +108,7 @@ func (l *ListStorageFilesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListStorageFilesRequest) GetFields() []string {
+func (l *ListStorageFilesRequest) GetFields() []ListStorageFilesQueryParamFields {
 	if l == nil {
 		return nil
 	}

@@ -3,15 +3,76 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetPaymentLinkQueryParamFields string
+
+const (
+	GetPaymentLinkQueryParamFieldsID              GetPaymentLinkQueryParamFields = "id"
+	GetPaymentLinkQueryParamFieldsCreatedAt       GetPaymentLinkQueryParamFields = "created_at"
+	GetPaymentLinkQueryParamFieldsUpdatedAt       GetPaymentLinkQueryParamFields = "updated_at"
+	GetPaymentLinkQueryParamFieldsIsActive        GetPaymentLinkQueryParamFields = "is_active"
+	GetPaymentLinkQueryParamFieldsLineitems       GetPaymentLinkQueryParamFields = "lineitems"
+	GetPaymentLinkQueryParamFieldsCurrency        GetPaymentLinkQueryParamFields = "currency"
+	GetPaymentLinkQueryParamFieldsAmount          GetPaymentLinkQueryParamFields = "amount"
+	GetPaymentLinkQueryParamFieldsPaymentID       GetPaymentLinkQueryParamFields = "payment_id"
+	GetPaymentLinkQueryParamFieldsContactID       GetPaymentLinkQueryParamFields = "contact_id"
+	GetPaymentLinkQueryParamFieldsURL             GetPaymentLinkQueryParamFields = "url"
+	GetPaymentLinkQueryParamFieldsIsChargeableNow GetPaymentLinkQueryParamFields = "is_chargeable_now"
+	GetPaymentLinkQueryParamFieldsSuccessURL      GetPaymentLinkQueryParamFields = "success_url"
+	GetPaymentLinkQueryParamFieldsRaw             GetPaymentLinkQueryParamFields = "raw"
+)
+
+func (e GetPaymentLinkQueryParamFields) ToPointer() *GetPaymentLinkQueryParamFields {
+	return &e
+}
+func (e *GetPaymentLinkQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "amount":
+		fallthrough
+	case "payment_id":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "url":
+		fallthrough
+	case "is_chargeable_now":
+		fallthrough
+	case "success_url":
+		fallthrough
+	case "raw":
+		*e = GetPaymentLinkQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetPaymentLinkQueryParamFields: %v", v)
+	}
+}
 
 type GetPaymentLinkRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetPaymentLinkQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Link
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +86,7 @@ func (g *GetPaymentLinkRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetPaymentLinkRequest) GetFields() []string {
+func (g *GetPaymentLinkRequest) GetFields() []GetPaymentLinkQueryParamFields {
 	if g == nil {
 		return nil
 	}

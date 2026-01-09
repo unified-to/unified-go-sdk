@@ -3,15 +3,91 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetVerificationPackageQueryParamFields string
+
+const (
+	GetVerificationPackageQueryParamFieldsID                     GetVerificationPackageQueryParamFields = "id"
+	GetVerificationPackageQueryParamFieldsCreatedAt              GetVerificationPackageQueryParamFields = "created_at"
+	GetVerificationPackageQueryParamFieldsUpdatedAt              GetVerificationPackageQueryParamFields = "updated_at"
+	GetVerificationPackageQueryParamFieldsName                   GetVerificationPackageQueryParamFields = "name"
+	GetVerificationPackageQueryParamFieldsType                   GetVerificationPackageQueryParamFields = "type"
+	GetVerificationPackageQueryParamFieldsAliases                GetVerificationPackageQueryParamFields = "aliases"
+	GetVerificationPackageQueryParamFieldsTags                   GetVerificationPackageQueryParamFields = "tags"
+	GetVerificationPackageQueryParamFieldsDescription            GetVerificationPackageQueryParamFields = "description"
+	GetVerificationPackageQueryParamFieldsParameters             GetVerificationPackageQueryParamFields = "parameters"
+	GetVerificationPackageQueryParamFieldsAverageProcessingTimes GetVerificationPackageQueryParamFields = "average_processing_times"
+	GetVerificationPackageQueryParamFieldsHasRedirectURL         GetVerificationPackageQueryParamFields = "has_redirect_url"
+	GetVerificationPackageQueryParamFieldsHasTargetURL           GetVerificationPackageQueryParamFields = "has_target_url"
+	GetVerificationPackageQueryParamFieldsNeedsIPAddress         GetVerificationPackageQueryParamFields = "needs_ip_address"
+	GetVerificationPackageQueryParamFieldsCostAmount             GetVerificationPackageQueryParamFields = "cost_amount"
+	GetVerificationPackageQueryParamFieldsCurrency               GetVerificationPackageQueryParamFields = "currency"
+	GetVerificationPackageQueryParamFieldsMaxScore               GetVerificationPackageQueryParamFields = "max_score"
+	GetVerificationPackageQueryParamFieldsInfoURL                GetVerificationPackageQueryParamFields = "info_url"
+	GetVerificationPackageQueryParamFieldsRaw                    GetVerificationPackageQueryParamFields = "raw"
+)
+
+func (e GetVerificationPackageQueryParamFields) ToPointer() *GetVerificationPackageQueryParamFields {
+	return &e
+}
+func (e *GetVerificationPackageQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "type":
+		fallthrough
+	case "aliases":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parameters":
+		fallthrough
+	case "average_processing_times":
+		fallthrough
+	case "has_redirect_url":
+		fallthrough
+	case "has_target_url":
+		fallthrough
+	case "needs_ip_address":
+		fallthrough
+	case "cost_amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "max_score":
+		fallthrough
+	case "info_url":
+		fallthrough
+	case "raw":
+		*e = GetVerificationPackageQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetVerificationPackageQueryParamFields: %v", v)
+	}
+}
 
 type GetVerificationPackageRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetVerificationPackageQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Package
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +101,7 @@ func (g *GetVerificationPackageRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetVerificationPackageRequest) GetFields() []string {
+func (g *GetVerificationPackageRequest) GetFields() []GetVerificationPackageQueryParamFields {
 	if g == nil {
 		return nil
 	}

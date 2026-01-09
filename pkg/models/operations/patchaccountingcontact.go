@@ -3,16 +3,104 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchAccountingContactQueryParamFields string
+
+const (
+	PatchAccountingContactQueryParamFieldsID                 PatchAccountingContactQueryParamFields = "id"
+	PatchAccountingContactQueryParamFieldsCreatedAt          PatchAccountingContactQueryParamFields = "created_at"
+	PatchAccountingContactQueryParamFieldsUpdatedAt          PatchAccountingContactQueryParamFields = "updated_at"
+	PatchAccountingContactQueryParamFieldsName               PatchAccountingContactQueryParamFields = "name"
+	PatchAccountingContactQueryParamFieldsFirstName          PatchAccountingContactQueryParamFields = "first_name"
+	PatchAccountingContactQueryParamFieldsLastName           PatchAccountingContactQueryParamFields = "last_name"
+	PatchAccountingContactQueryParamFieldsEmails             PatchAccountingContactQueryParamFields = "emails"
+	PatchAccountingContactQueryParamFieldsTelephones         PatchAccountingContactQueryParamFields = "telephones"
+	PatchAccountingContactQueryParamFieldsCurrency           PatchAccountingContactQueryParamFields = "currency"
+	PatchAccountingContactQueryParamFieldsBillingAddress     PatchAccountingContactQueryParamFields = "billing_address"
+	PatchAccountingContactQueryParamFieldsShippingAddress    PatchAccountingContactQueryParamFields = "shipping_address"
+	PatchAccountingContactQueryParamFieldsIsActive           PatchAccountingContactQueryParamFields = "is_active"
+	PatchAccountingContactQueryParamFieldsTaxExemption       PatchAccountingContactQueryParamFields = "tax_exemption"
+	PatchAccountingContactQueryParamFieldsTaxNumber          PatchAccountingContactQueryParamFields = "tax_number"
+	PatchAccountingContactQueryParamFieldsIsCustomer         PatchAccountingContactQueryParamFields = "is_customer"
+	PatchAccountingContactQueryParamFieldsIsSupplier         PatchAccountingContactQueryParamFields = "is_supplier"
+	PatchAccountingContactQueryParamFieldsPortalURL          PatchAccountingContactQueryParamFields = "portal_url"
+	PatchAccountingContactQueryParamFieldsPaymentMethods     PatchAccountingContactQueryParamFields = "payment_methods"
+	PatchAccountingContactQueryParamFieldsCompanyName        PatchAccountingContactQueryParamFields = "company_name"
+	PatchAccountingContactQueryParamFieldsIdentification     PatchAccountingContactQueryParamFields = "identification"
+	PatchAccountingContactQueryParamFieldsAssociatedContacts PatchAccountingContactQueryParamFields = "associated_contacts"
+	PatchAccountingContactQueryParamFieldsRaw                PatchAccountingContactQueryParamFields = "raw"
+)
+
+func (e PatchAccountingContactQueryParamFields) ToPointer() *PatchAccountingContactQueryParamFields {
+	return &e
+}
+func (e *PatchAccountingContactQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
+		fallthrough
+	case "emails":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "billing_address":
+		fallthrough
+	case "shipping_address":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "tax_exemption":
+		fallthrough
+	case "tax_number":
+		fallthrough
+	case "is_customer":
+		fallthrough
+	case "is_supplier":
+		fallthrough
+	case "portal_url":
+		fallthrough
+	case "payment_methods":
+		fallthrough
+	case "company_name":
+		fallthrough
+	case "identification":
+		fallthrough
+	case "associated_contacts":
+		fallthrough
+	case "raw":
+		*e = PatchAccountingContactQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchAccountingContactQueryParamFields: %v", v)
+	}
+}
 
 type PatchAccountingContactRequest struct {
 	AccountingContact shared.AccountingContact `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchAccountingContactQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Contact
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +121,7 @@ func (p *PatchAccountingContactRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchAccountingContactRequest) GetFields() []string {
+func (p *PatchAccountingContactRequest) GetFields() []PatchAccountingContactQueryParamFields {
 	if p == nil {
 		return nil
 	}

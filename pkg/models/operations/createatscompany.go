@@ -3,16 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateAtsCompanyQueryParamFields string
+
+const (
+	CreateAtsCompanyQueryParamFieldsID           CreateAtsCompanyQueryParamFields = "id"
+	CreateAtsCompanyQueryParamFieldsCreatedAt    CreateAtsCompanyQueryParamFields = "created_at"
+	CreateAtsCompanyQueryParamFieldsUpdatedAt    CreateAtsCompanyQueryParamFields = "updated_at"
+	CreateAtsCompanyQueryParamFieldsName         CreateAtsCompanyQueryParamFields = "name"
+	CreateAtsCompanyQueryParamFieldsAddress      CreateAtsCompanyQueryParamFields = "address"
+	CreateAtsCompanyQueryParamFieldsWebsiteURL   CreateAtsCompanyQueryParamFields = "website_url"
+	CreateAtsCompanyQueryParamFieldsPhone        CreateAtsCompanyQueryParamFields = "phone"
+	CreateAtsCompanyQueryParamFieldsParentID     CreateAtsCompanyQueryParamFields = "parent_id"
+	CreateAtsCompanyQueryParamFieldsRecruiterIds CreateAtsCompanyQueryParamFields = "recruiter_ids"
+	CreateAtsCompanyQueryParamFieldsMetadata     CreateAtsCompanyQueryParamFields = "metadata"
+	CreateAtsCompanyQueryParamFieldsRaw          CreateAtsCompanyQueryParamFields = "raw"
+)
+
+func (e CreateAtsCompanyQueryParamFields) ToPointer() *CreateAtsCompanyQueryParamFields {
+	return &e
+}
+func (e *CreateAtsCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "address":
+		fallthrough
+	case "website_url":
+		fallthrough
+	case "phone":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "recruiter_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = CreateAtsCompanyQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateAtsCompanyQueryParamFields: %v", v)
+	}
+}
 
 type CreateAtsCompanyRequest struct {
 	AtsCompany shared.AtsCompany `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateAtsCompanyQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +86,7 @@ func (c *CreateAtsCompanyRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAtsCompanyRequest) GetFields() []string {
+func (c *CreateAtsCompanyRequest) GetFields() []CreateAtsCompanyQueryParamFields {
 	if c == nil {
 		return nil
 	}

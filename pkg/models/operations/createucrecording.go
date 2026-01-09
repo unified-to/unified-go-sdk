@@ -3,16 +3,80 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateUcRecordingQueryParamFields string
+
+const (
+	CreateUcRecordingQueryParamFieldsID           CreateUcRecordingQueryParamFields = "id"
+	CreateUcRecordingQueryParamFieldsCreatedAt    CreateUcRecordingQueryParamFields = "created_at"
+	CreateUcRecordingQueryParamFieldsUpdatedAt    CreateUcRecordingQueryParamFields = "updated_at"
+	CreateUcRecordingQueryParamFieldsStartAt      CreateUcRecordingQueryParamFields = "start_at"
+	CreateUcRecordingQueryParamFieldsEndAt        CreateUcRecordingQueryParamFields = "end_at"
+	CreateUcRecordingQueryParamFieldsExpiresAt    CreateUcRecordingQueryParamFields = "expires_at"
+	CreateUcRecordingQueryParamFieldsCallID       CreateUcRecordingQueryParamFields = "call_id"
+	CreateUcRecordingQueryParamFieldsWebURL       CreateUcRecordingQueryParamFields = "web_url"
+	CreateUcRecordingQueryParamFieldsContactID    CreateUcRecordingQueryParamFields = "contact_id"
+	CreateUcRecordingQueryParamFieldsContactName  CreateUcRecordingQueryParamFields = "contact_name"
+	CreateUcRecordingQueryParamFieldsContactPhone CreateUcRecordingQueryParamFields = "contact_phone"
+	CreateUcRecordingQueryParamFieldsUserID       CreateUcRecordingQueryParamFields = "user_id"
+	CreateUcRecordingQueryParamFieldsMedia        CreateUcRecordingQueryParamFields = "media"
+	CreateUcRecordingQueryParamFieldsRaw          CreateUcRecordingQueryParamFields = "raw"
+)
+
+func (e CreateUcRecordingQueryParamFields) ToPointer() *CreateUcRecordingQueryParamFields {
+	return &e
+}
+func (e *CreateUcRecordingQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "expires_at":
+		fallthrough
+	case "call_id":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "contact_name":
+		fallthrough
+	case "contact_phone":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "media":
+		fallthrough
+	case "raw":
+		*e = CreateUcRecordingQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateUcRecordingQueryParamFields: %v", v)
+	}
+}
 
 type CreateUcRecordingRequest struct {
 	UcRecording shared.UcRecording `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateUcRecordingQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +95,7 @@ func (c *CreateUcRecordingRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateUcRecordingRequest) GetFields() []string {
+func (c *CreateUcRecordingRequest) GetFields() []CreateUcRecordingQueryParamFields {
 	if c == nil {
 		return nil
 	}

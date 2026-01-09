@@ -3,9 +3,82 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchCommerceCollectionQueryParamFields string
+
+const (
+	PatchCommerceCollectionQueryParamFieldsID                PatchCommerceCollectionQueryParamFields = "id"
+	PatchCommerceCollectionQueryParamFieldsCreatedAt         PatchCommerceCollectionQueryParamFields = "created_at"
+	PatchCommerceCollectionQueryParamFieldsUpdatedAt         PatchCommerceCollectionQueryParamFields = "updated_at"
+	PatchCommerceCollectionQueryParamFieldsName              PatchCommerceCollectionQueryParamFields = "name"
+	PatchCommerceCollectionQueryParamFieldsPublicName        PatchCommerceCollectionQueryParamFields = "public_name"
+	PatchCommerceCollectionQueryParamFieldsDescription       PatchCommerceCollectionQueryParamFields = "description"
+	PatchCommerceCollectionQueryParamFieldsPublicDescription PatchCommerceCollectionQueryParamFields = "public_description"
+	PatchCommerceCollectionQueryParamFieldsMedia             PatchCommerceCollectionQueryParamFields = "media"
+	PatchCommerceCollectionQueryParamFieldsIsVisible         PatchCommerceCollectionQueryParamFields = "is_visible"
+	PatchCommerceCollectionQueryParamFieldsIsActive          PatchCommerceCollectionQueryParamFields = "is_active"
+	PatchCommerceCollectionQueryParamFieldsIsFeatured        PatchCommerceCollectionQueryParamFields = "is_featured"
+	PatchCommerceCollectionQueryParamFieldsTags              PatchCommerceCollectionQueryParamFields = "tags"
+	PatchCommerceCollectionQueryParamFieldsType              PatchCommerceCollectionQueryParamFields = "type"
+	PatchCommerceCollectionQueryParamFieldsParentID          PatchCommerceCollectionQueryParamFields = "parent_id"
+	PatchCommerceCollectionQueryParamFieldsMetadata          PatchCommerceCollectionQueryParamFields = "metadata"
+	PatchCommerceCollectionQueryParamFieldsItemMetadata      PatchCommerceCollectionQueryParamFields = "item_metadata"
+	PatchCommerceCollectionQueryParamFieldsRaw               PatchCommerceCollectionQueryParamFields = "raw"
+)
+
+func (e PatchCommerceCollectionQueryParamFields) ToPointer() *PatchCommerceCollectionQueryParamFields {
+	return &e
+}
+func (e *PatchCommerceCollectionQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "public_name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "public_description":
+		fallthrough
+	case "media":
+		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "type":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "item_metadata":
+		fallthrough
+	case "raw":
+		*e = PatchCommerceCollectionQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchCommerceCollectionQueryParamFields: %v", v)
+	}
+}
 
 type PatchCommerceCollectionRequest struct {
 	// A collection of items/products/services
@@ -13,7 +86,7 @@ type PatchCommerceCollectionRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchCommerceCollectionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Collection
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +107,7 @@ func (p *PatchCommerceCollectionRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchCommerceCollectionRequest) GetFields() []string {
+func (p *PatchCommerceCollectionRequest) GetFields() []PatchCommerceCollectionQueryParamFields {
 	if p == nil {
 		return nil
 	}

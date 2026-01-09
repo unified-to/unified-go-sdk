@@ -3,26 +3,87 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAccountingPurchaseordersQueryParamFields string
+
+const (
+	ListAccountingPurchaseordersQueryParamFieldsID              ListAccountingPurchaseordersQueryParamFields = "id"
+	ListAccountingPurchaseordersQueryParamFieldsCreatedAt       ListAccountingPurchaseordersQueryParamFields = "created_at"
+	ListAccountingPurchaseordersQueryParamFieldsUpdatedAt       ListAccountingPurchaseordersQueryParamFields = "updated_at"
+	ListAccountingPurchaseordersQueryParamFieldsPostedAt        ListAccountingPurchaseordersQueryParamFields = "posted_at"
+	ListAccountingPurchaseordersQueryParamFieldsContactID       ListAccountingPurchaseordersQueryParamFields = "contact_id"
+	ListAccountingPurchaseordersQueryParamFieldsAccountID       ListAccountingPurchaseordersQueryParamFields = "account_id"
+	ListAccountingPurchaseordersQueryParamFieldsCurrency        ListAccountingPurchaseordersQueryParamFields = "currency"
+	ListAccountingPurchaseordersQueryParamFieldsTotalAmount     ListAccountingPurchaseordersQueryParamFields = "total_amount"
+	ListAccountingPurchaseordersQueryParamFieldsShippingAddress ListAccountingPurchaseordersQueryParamFields = "shipping_address"
+	ListAccountingPurchaseordersQueryParamFieldsBillingAddress  ListAccountingPurchaseordersQueryParamFields = "billing_address"
+	ListAccountingPurchaseordersQueryParamFieldsStatus          ListAccountingPurchaseordersQueryParamFields = "status"
+	ListAccountingPurchaseordersQueryParamFieldsLineitems       ListAccountingPurchaseordersQueryParamFields = "lineitems"
+	ListAccountingPurchaseordersQueryParamFieldsRaw             ListAccountingPurchaseordersQueryParamFields = "raw"
+)
+
+func (e ListAccountingPurchaseordersQueryParamFields) ToPointer() *ListAccountingPurchaseordersQueryParamFields {
+	return &e
+}
+func (e *ListAccountingPurchaseordersQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "shipping_address":
+		fallthrough
+	case "billing_address":
+		fallthrough
+	case "status":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "raw":
+		*e = ListAccountingPurchaseordersQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingPurchaseordersQueryParamFields: %v", v)
+	}
+}
 
 type ListAccountingPurchaseordersRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The org ID to filter by
+	Fields []ListAccountingPurchaseordersQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                       `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                       `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                        `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by (reference to AccountingOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -33,7 +94,7 @@ func (l *ListAccountingPurchaseordersRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAccountingPurchaseordersRequest) GetFields() []string {
+func (l *ListAccountingPurchaseordersRequest) GetFields() []ListAccountingPurchaseordersQueryParamFields {
 	if l == nil {
 		return nil
 	}

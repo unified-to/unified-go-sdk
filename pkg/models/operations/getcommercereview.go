@@ -3,15 +3,106 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetCommerceReviewQueryParamFields string
+
+const (
+	GetCommerceReviewQueryParamFieldsID               GetCommerceReviewQueryParamFields = "id"
+	GetCommerceReviewQueryParamFieldsCreatedAt        GetCommerceReviewQueryParamFields = "created_at"
+	GetCommerceReviewQueryParamFieldsUpdatedAt        GetCommerceReviewQueryParamFields = "updated_at"
+	GetCommerceReviewQueryParamFieldsItemID           GetCommerceReviewQueryParamFields = "item_id"
+	GetCommerceReviewQueryParamFieldsItemVariantID    GetCommerceReviewQueryParamFields = "item_variant_id"
+	GetCommerceReviewQueryParamFieldsRating           GetCommerceReviewQueryParamFields = "rating"
+	GetCommerceReviewQueryParamFieldsTitle            GetCommerceReviewQueryParamFields = "title"
+	GetCommerceReviewQueryParamFieldsContent          GetCommerceReviewQueryParamFields = "content"
+	GetCommerceReviewQueryParamFieldsAuthorName       GetCommerceReviewQueryParamFields = "author_name"
+	GetCommerceReviewQueryParamFieldsAuthorEmail      GetCommerceReviewQueryParamFields = "author_email"
+	GetCommerceReviewQueryParamFieldsAuthorAvatarURL  GetCommerceReviewQueryParamFields = "author_avatar_url"
+	GetCommerceReviewQueryParamFieldsAuthorLocation   GetCommerceReviewQueryParamFields = "author_location"
+	GetCommerceReviewQueryParamFieldsVerifiedPurchase GetCommerceReviewQueryParamFields = "verified_purchase"
+	GetCommerceReviewQueryParamFieldsHelpfulVotes     GetCommerceReviewQueryParamFields = "helpful_votes"
+	GetCommerceReviewQueryParamFieldsUnhelpfulVotes   GetCommerceReviewQueryParamFields = "unhelpful_votes"
+	GetCommerceReviewQueryParamFieldsMedia            GetCommerceReviewQueryParamFields = "media"
+	GetCommerceReviewQueryParamFieldsStatus           GetCommerceReviewQueryParamFields = "status"
+	GetCommerceReviewQueryParamFieldsIsVerified       GetCommerceReviewQueryParamFields = "is_verified"
+	GetCommerceReviewQueryParamFieldsIsFeatured       GetCommerceReviewQueryParamFields = "is_featured"
+	GetCommerceReviewQueryParamFieldsIsPublic         GetCommerceReviewQueryParamFields = "is_public"
+	GetCommerceReviewQueryParamFieldsComments         GetCommerceReviewQueryParamFields = "comments"
+	GetCommerceReviewQueryParamFieldsMetadata         GetCommerceReviewQueryParamFields = "metadata"
+	GetCommerceReviewQueryParamFieldsRaw              GetCommerceReviewQueryParamFields = "raw"
+)
+
+func (e GetCommerceReviewQueryParamFields) ToPointer() *GetCommerceReviewQueryParamFields {
+	return &e
+}
+func (e *GetCommerceReviewQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "item_id":
+		fallthrough
+	case "item_variant_id":
+		fallthrough
+	case "rating":
+		fallthrough
+	case "title":
+		fallthrough
+	case "content":
+		fallthrough
+	case "author_name":
+		fallthrough
+	case "author_email":
+		fallthrough
+	case "author_avatar_url":
+		fallthrough
+	case "author_location":
+		fallthrough
+	case "verified_purchase":
+		fallthrough
+	case "helpful_votes":
+		fallthrough
+	case "unhelpful_votes":
+		fallthrough
+	case "media":
+		fallthrough
+	case "status":
+		fallthrough
+	case "is_verified":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "is_public":
+		fallthrough
+	case "comments":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = GetCommerceReviewQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetCommerceReviewQueryParamFields: %v", v)
+	}
+}
 
 type GetCommerceReviewRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetCommerceReviewQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Review
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +116,7 @@ func (g *GetCommerceReviewRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetCommerceReviewRequest) GetFields() []string {
+func (g *GetCommerceReviewRequest) GetFields() []GetCommerceReviewQueryParamFields {
 	if g == nil {
 		return nil
 	}

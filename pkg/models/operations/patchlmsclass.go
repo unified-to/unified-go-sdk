@@ -3,16 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchLmsClassQueryParamFields string
+
+const (
+	PatchLmsClassQueryParamFieldsID            PatchLmsClassQueryParamFields = "id"
+	PatchLmsClassQueryParamFieldsCreatedAt     PatchLmsClassQueryParamFields = "created_at"
+	PatchLmsClassQueryParamFieldsUpdatedAt     PatchLmsClassQueryParamFields = "updated_at"
+	PatchLmsClassQueryParamFieldsName          PatchLmsClassQueryParamFields = "name"
+	PatchLmsClassQueryParamFieldsDescription   PatchLmsClassQueryParamFields = "description"
+	PatchLmsClassQueryParamFieldsMedia         PatchLmsClassQueryParamFields = "media"
+	PatchLmsClassQueryParamFieldsCourseID      PatchLmsClassQueryParamFields = "course_id"
+	PatchLmsClassQueryParamFieldsInstructorIds PatchLmsClassQueryParamFields = "instructor_ids"
+	PatchLmsClassQueryParamFieldsStudentIds    PatchLmsClassQueryParamFields = "student_ids"
+	PatchLmsClassQueryParamFieldsLanguages     PatchLmsClassQueryParamFields = "languages"
+	PatchLmsClassQueryParamFieldsRaw           PatchLmsClassQueryParamFields = "raw"
+)
+
+func (e PatchLmsClassQueryParamFields) ToPointer() *PatchLmsClassQueryParamFields {
+	return &e
+}
+func (e *PatchLmsClassQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "media":
+		fallthrough
+	case "course_id":
+		fallthrough
+	case "instructor_ids":
+		fallthrough
+	case "student_ids":
+		fallthrough
+	case "languages":
+		fallthrough
+	case "raw":
+		*e = PatchLmsClassQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchLmsClassQueryParamFields: %v", v)
+	}
+}
 
 type PatchLmsClassRequest struct {
 	LmsClass shared.LmsClass `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchLmsClassQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Class
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +88,7 @@ func (p *PatchLmsClassRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchLmsClassRequest) GetFields() []string {
+func (p *PatchLmsClassRequest) GetFields() []PatchLmsClassQueryParamFields {
 	if p == nil {
 		return nil
 	}

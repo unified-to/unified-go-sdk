@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateTaskCommentQueryParamFields string
+
+const (
+	UpdateTaskCommentQueryParamFieldsID        UpdateTaskCommentQueryParamFields = "id"
+	UpdateTaskCommentQueryParamFieldsCreatedAt UpdateTaskCommentQueryParamFields = "created_at"
+	UpdateTaskCommentQueryParamFieldsUpdatedAt UpdateTaskCommentQueryParamFields = "updated_at"
+	UpdateTaskCommentQueryParamFieldsText      UpdateTaskCommentQueryParamFields = "text"
+	UpdateTaskCommentQueryParamFieldsUserID    UpdateTaskCommentQueryParamFields = "user_id"
+	UpdateTaskCommentQueryParamFieldsUserName  UpdateTaskCommentQueryParamFields = "user_name"
+	UpdateTaskCommentQueryParamFieldsTaskID    UpdateTaskCommentQueryParamFields = "task_id"
+	UpdateTaskCommentQueryParamFieldsRaw       UpdateTaskCommentQueryParamFields = "raw"
+)
+
+func (e UpdateTaskCommentQueryParamFields) ToPointer() *UpdateTaskCommentQueryParamFields {
+	return &e
+}
+func (e *UpdateTaskCommentQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "text":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "user_name":
+		fallthrough
+	case "task_id":
+		fallthrough
+	case "raw":
+		*e = UpdateTaskCommentQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateTaskCommentQueryParamFields: %v", v)
+	}
+}
 
 type UpdateTaskCommentRequest struct {
 	TaskComment shared.TaskComment `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateTaskCommentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Comment
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +79,7 @@ func (u *UpdateTaskCommentRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateTaskCommentRequest) GetFields() []string {
+func (u *UpdateTaskCommentRequest) GetFields() []UpdateTaskCommentQueryParamFields {
 	if u == nil {
 		return nil
 	}

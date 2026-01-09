@@ -3,16 +3,95 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateAtsActivityQueryParamFields string
+
+const (
+	CreateAtsActivityQueryParamFieldsID            CreateAtsActivityQueryParamFields = "id"
+	CreateAtsActivityQueryParamFieldsCreatedAt     CreateAtsActivityQueryParamFields = "created_at"
+	CreateAtsActivityQueryParamFieldsUpdatedAt     CreateAtsActivityQueryParamFields = "updated_at"
+	CreateAtsActivityQueryParamFieldsCandidateID   CreateAtsActivityQueryParamFields = "candidate_id"
+	CreateAtsActivityQueryParamFieldsApplicationID CreateAtsActivityQueryParamFields = "application_id"
+	CreateAtsActivityQueryParamFieldsJobID         CreateAtsActivityQueryParamFields = "job_id"
+	CreateAtsActivityQueryParamFieldsInterviewID   CreateAtsActivityQueryParamFields = "interview_id"
+	CreateAtsActivityQueryParamFieldsDocumentIds   CreateAtsActivityQueryParamFields = "document_ids"
+	CreateAtsActivityQueryParamFieldsTitle         CreateAtsActivityQueryParamFields = "title"
+	CreateAtsActivityQueryParamFieldsDescription   CreateAtsActivityQueryParamFields = "description"
+	CreateAtsActivityQueryParamFieldsIsPrivate     CreateAtsActivityQueryParamFields = "is_private"
+	CreateAtsActivityQueryParamFieldsUserIds       CreateAtsActivityQueryParamFields = "user_ids"
+	CreateAtsActivityQueryParamFieldsType          CreateAtsActivityQueryParamFields = "type"
+	CreateAtsActivityQueryParamFieldsFrom          CreateAtsActivityQueryParamFields = "from"
+	CreateAtsActivityQueryParamFieldsTo            CreateAtsActivityQueryParamFields = "to"
+	CreateAtsActivityQueryParamFieldsCc            CreateAtsActivityQueryParamFields = "cc"
+	CreateAtsActivityQueryParamFieldsBcc           CreateAtsActivityQueryParamFields = "bcc"
+	CreateAtsActivityQueryParamFieldsSubType       CreateAtsActivityQueryParamFields = "sub_type"
+	CreateAtsActivityQueryParamFieldsRaw           CreateAtsActivityQueryParamFields = "raw"
+)
+
+func (e CreateAtsActivityQueryParamFields) ToPointer() *CreateAtsActivityQueryParamFields {
+	return &e
+}
+func (e *CreateAtsActivityQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "application_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "interview_id":
+		fallthrough
+	case "document_ids":
+		fallthrough
+	case "title":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "type":
+		fallthrough
+	case "from":
+		fallthrough
+	case "to":
+		fallthrough
+	case "cc":
+		fallthrough
+	case "bcc":
+		fallthrough
+	case "sub_type":
+		fallthrough
+	case "raw":
+		*e = CreateAtsActivityQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateAtsActivityQueryParamFields: %v", v)
+	}
+}
 
 type CreateAtsActivityRequest struct {
 	AtsActivity shared.AtsActivity `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateAtsActivityQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +110,7 @@ func (c *CreateAtsActivityRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateAtsActivityRequest) GetFields() []string {
+func (c *CreateAtsActivityRequest) GetFields() []CreateAtsActivityQueryParamFields {
 	if c == nil {
 		return nil
 	}

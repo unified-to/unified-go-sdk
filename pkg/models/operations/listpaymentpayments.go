@@ -3,18 +3,76 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListPaymentPaymentsQueryParamFields string
+
+const (
+	ListPaymentPaymentsQueryParamFieldsID            ListPaymentPaymentsQueryParamFields = "id"
+	ListPaymentPaymentsQueryParamFieldsCreatedAt     ListPaymentPaymentsQueryParamFields = "created_at"
+	ListPaymentPaymentsQueryParamFieldsUpdatedAt     ListPaymentPaymentsQueryParamFields = "updated_at"
+	ListPaymentPaymentsQueryParamFieldsTotalAmount   ListPaymentPaymentsQueryParamFields = "total_amount"
+	ListPaymentPaymentsQueryParamFieldsContactID     ListPaymentPaymentsQueryParamFields = "contact_id"
+	ListPaymentPaymentsQueryParamFieldsPaymentMethod ListPaymentPaymentsQueryParamFields = "payment_method"
+	ListPaymentPaymentsQueryParamFieldsCurrency      ListPaymentPaymentsQueryParamFields = "currency"
+	ListPaymentPaymentsQueryParamFieldsNotes         ListPaymentPaymentsQueryParamFields = "notes"
+	ListPaymentPaymentsQueryParamFieldsInvoiceID     ListPaymentPaymentsQueryParamFields = "invoice_id"
+	ListPaymentPaymentsQueryParamFieldsAccountID     ListPaymentPaymentsQueryParamFields = "account_id"
+	ListPaymentPaymentsQueryParamFieldsReference     ListPaymentPaymentsQueryParamFields = "reference"
+	ListPaymentPaymentsQueryParamFieldsRaw           ListPaymentPaymentsQueryParamFields = "raw"
+)
+
+func (e ListPaymentPaymentsQueryParamFields) ToPointer() *ListPaymentPaymentsQueryParamFields {
+	return &e
+}
+func (e *ListPaymentPaymentsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "payment_method":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "invoice_id":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "raw":
+		*e = ListPaymentPaymentsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListPaymentPaymentsQueryParamFields: %v", v)
+	}
+}
+
 type ListPaymentPaymentsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	// The invoice ID to filter by
+	Fields []ListPaymentPaymentsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	// The invoice ID to filter by (reference to AccountingInvoice)
 	InvoiceID *string  `queryParam:"style=form,explode=true,name=invoice_id"`
 	Limit     *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset    *float64 `queryParam:"style=form,explode=true,name=offset"`
@@ -24,7 +82,7 @@ type ListPaymentPaymentsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -42,7 +100,7 @@ func (l *ListPaymentPaymentsRequest) GetContactID() *string {
 	return l.ContactID
 }
 
-func (l *ListPaymentPaymentsRequest) GetFields() []string {
+func (l *ListPaymentPaymentsRequest) GetFields() []ListPaymentPaymentsQueryParamFields {
 	if l == nil {
 		return nil
 	}

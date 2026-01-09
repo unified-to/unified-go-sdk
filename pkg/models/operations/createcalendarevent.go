@@ -3,16 +3,110 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateCalendarEventQueryParamFields string
+
+const (
+	CreateCalendarEventQueryParamFieldsID                CreateCalendarEventQueryParamFields = "id"
+	CreateCalendarEventQueryParamFieldsCreatedAt         CreateCalendarEventQueryParamFields = "created_at"
+	CreateCalendarEventQueryParamFieldsUpdatedAt         CreateCalendarEventQueryParamFields = "updated_at"
+	CreateCalendarEventQueryParamFieldsCalendarID        CreateCalendarEventQueryParamFields = "calendar_id"
+	CreateCalendarEventQueryParamFieldsSubject           CreateCalendarEventQueryParamFields = "subject"
+	CreateCalendarEventQueryParamFieldsStartAt           CreateCalendarEventQueryParamFields = "start_at"
+	CreateCalendarEventQueryParamFieldsEndAt             CreateCalendarEventQueryParamFields = "end_at"
+	CreateCalendarEventQueryParamFieldsIsAllDay          CreateCalendarEventQueryParamFields = "is_all_day"
+	CreateCalendarEventQueryParamFieldsTimezone          CreateCalendarEventQueryParamFields = "timezone"
+	CreateCalendarEventQueryParamFieldsNotes             CreateCalendarEventQueryParamFields = "notes"
+	CreateCalendarEventQueryParamFieldsLocation          CreateCalendarEventQueryParamFields = "location"
+	CreateCalendarEventQueryParamFieldsIsFree            CreateCalendarEventQueryParamFields = "is_free"
+	CreateCalendarEventQueryParamFieldsIsPrivate         CreateCalendarEventQueryParamFields = "is_private"
+	CreateCalendarEventQueryParamFieldsStatus            CreateCalendarEventQueryParamFields = "status"
+	CreateCalendarEventQueryParamFieldsOrganizer         CreateCalendarEventQueryParamFields = "organizer"
+	CreateCalendarEventQueryParamFieldsAttendees         CreateCalendarEventQueryParamFields = "attendees"
+	CreateCalendarEventQueryParamFieldsRecurringEventID  CreateCalendarEventQueryParamFields = "recurring_event_id"
+	CreateCalendarEventQueryParamFieldsRecurrence        CreateCalendarEventQueryParamFields = "recurrence"
+	CreateCalendarEventQueryParamFieldsWebURL            CreateCalendarEventQueryParamFields = "web_url"
+	CreateCalendarEventQueryParamFieldsHasConference     CreateCalendarEventQueryParamFields = "has_conference"
+	CreateCalendarEventQueryParamFieldsConference        CreateCalendarEventQueryParamFields = "conference"
+	CreateCalendarEventQueryParamFieldsAttachments       CreateCalendarEventQueryParamFields = "attachments"
+	CreateCalendarEventQueryParamFieldsSendNotifications CreateCalendarEventQueryParamFields = "send_notifications"
+	CreateCalendarEventQueryParamFieldsRaw               CreateCalendarEventQueryParamFields = "raw"
+)
+
+func (e CreateCalendarEventQueryParamFields) ToPointer() *CreateCalendarEventQueryParamFields {
+	return &e
+}
+func (e *CreateCalendarEventQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "calendar_id":
+		fallthrough
+	case "subject":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "is_all_day":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "location":
+		fallthrough
+	case "is_free":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "status":
+		fallthrough
+	case "organizer":
+		fallthrough
+	case "attendees":
+		fallthrough
+	case "recurring_event_id":
+		fallthrough
+	case "recurrence":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "has_conference":
+		fallthrough
+	case "conference":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "send_notifications":
+		fallthrough
+	case "raw":
+		*e = CreateCalendarEventQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateCalendarEventQueryParamFields: %v", v)
+	}
+}
 
 type CreateCalendarEventRequest struct {
 	CalendarEvent shared.CalendarEvent `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateCalendarEventQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +125,7 @@ func (c *CreateCalendarEventRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateCalendarEventRequest) GetFields() []string {
+func (c *CreateCalendarEventRequest) GetFields() []CreateCalendarEventQueryParamFields {
 	if c == nil {
 		return nil
 	}

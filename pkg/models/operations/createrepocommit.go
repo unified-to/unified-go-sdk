@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateRepoCommitQueryParamFields string
+
+const (
+	CreateRepoCommitQueryParamFieldsID        CreateRepoCommitQueryParamFields = "id"
+	CreateRepoCommitQueryParamFieldsCreatedAt CreateRepoCommitQueryParamFields = "created_at"
+	CreateRepoCommitQueryParamFieldsUpdatedAt CreateRepoCommitQueryParamFields = "updated_at"
+	CreateRepoCommitQueryParamFieldsUserID    CreateRepoCommitQueryParamFields = "user_id"
+	CreateRepoCommitQueryParamFieldsRepoID    CreateRepoCommitQueryParamFields = "repo_id"
+	CreateRepoCommitQueryParamFieldsMessage   CreateRepoCommitQueryParamFields = "message"
+	CreateRepoCommitQueryParamFieldsBranchID  CreateRepoCommitQueryParamFields = "branch_id"
+	CreateRepoCommitQueryParamFieldsRaw       CreateRepoCommitQueryParamFields = "raw"
+)
+
+func (e CreateRepoCommitQueryParamFields) ToPointer() *CreateRepoCommitQueryParamFields {
+	return &e
+}
+func (e *CreateRepoCommitQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "repo_id":
+		fallthrough
+	case "message":
+		fallthrough
+	case "branch_id":
+		fallthrough
+	case "raw":
+		*e = CreateRepoCommitQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateRepoCommitQueryParamFields: %v", v)
+	}
+}
 
 type CreateRepoCommitRequest struct {
 	RepoCommit shared.RepoCommit `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateRepoCommitQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +77,7 @@ func (c *CreateRepoCommitRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateRepoCommitRequest) GetFields() []string {
+func (c *CreateRepoCommitRequest) GetFields() []CreateRepoCommitQueryParamFields {
 	if c == nil {
 		return nil
 	}

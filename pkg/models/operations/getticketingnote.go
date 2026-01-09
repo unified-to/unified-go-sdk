@@ -3,15 +3,61 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetTicketingNoteQueryParamFields string
+
+const (
+	GetTicketingNoteQueryParamFieldsID          GetTicketingNoteQueryParamFields = "id"
+	GetTicketingNoteQueryParamFieldsCreatedAt   GetTicketingNoteQueryParamFields = "created_at"
+	GetTicketingNoteQueryParamFieldsUpdatedAt   GetTicketingNoteQueryParamFields = "updated_at"
+	GetTicketingNoteQueryParamFieldsCustomerID  GetTicketingNoteQueryParamFields = "customer_id"
+	GetTicketingNoteQueryParamFieldsDescription GetTicketingNoteQueryParamFields = "description"
+	GetTicketingNoteQueryParamFieldsTicketID    GetTicketingNoteQueryParamFields = "ticket_id"
+	GetTicketingNoteQueryParamFieldsUserID      GetTicketingNoteQueryParamFields = "user_id"
+	GetTicketingNoteQueryParamFieldsRaw         GetTicketingNoteQueryParamFields = "raw"
+)
+
+func (e GetTicketingNoteQueryParamFields) ToPointer() *GetTicketingNoteQueryParamFields {
+	return &e
+}
+func (e *GetTicketingNoteQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "customer_id":
+		fallthrough
+	case "description":
+		fallthrough
+	case "ticket_id":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "raw":
+		*e = GetTicketingNoteQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetTicketingNoteQueryParamFields: %v", v)
+	}
+}
 
 type GetTicketingNoteRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetTicketingNoteQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Note
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +71,7 @@ func (g *GetTicketingNoteRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetTicketingNoteRequest) GetFields() []string {
+func (g *GetTicketingNoteRequest) GetFields() []GetTicketingNoteQueryParamFields {
 	if g == nil {
 		return nil
 	}

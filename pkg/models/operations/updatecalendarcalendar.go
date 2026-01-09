@@ -3,16 +3,65 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateCalendarCalendarQueryParamFields string
+
+const (
+	UpdateCalendarCalendarQueryParamFieldsID          UpdateCalendarCalendarQueryParamFields = "id"
+	UpdateCalendarCalendarQueryParamFieldsCreatedAt   UpdateCalendarCalendarQueryParamFields = "created_at"
+	UpdateCalendarCalendarQueryParamFieldsUpdatedAt   UpdateCalendarCalendarQueryParamFields = "updated_at"
+	UpdateCalendarCalendarQueryParamFieldsName        UpdateCalendarCalendarQueryParamFields = "name"
+	UpdateCalendarCalendarQueryParamFieldsDescription UpdateCalendarCalendarQueryParamFields = "description"
+	UpdateCalendarCalendarQueryParamFieldsTimezone    UpdateCalendarCalendarQueryParamFields = "timezone"
+	UpdateCalendarCalendarQueryParamFieldsPrimary     UpdateCalendarCalendarQueryParamFields = "primary"
+	UpdateCalendarCalendarQueryParamFieldsIsPrimary   UpdateCalendarCalendarQueryParamFields = "is_primary"
+	UpdateCalendarCalendarQueryParamFieldsRaw         UpdateCalendarCalendarQueryParamFields = "raw"
+)
+
+func (e UpdateCalendarCalendarQueryParamFields) ToPointer() *UpdateCalendarCalendarQueryParamFields {
+	return &e
+}
+func (e *UpdateCalendarCalendarQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "primary":
+		fallthrough
+	case "is_primary":
+		fallthrough
+	case "raw":
+		*e = UpdateCalendarCalendarQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateCalendarCalendarQueryParamFields: %v", v)
+	}
+}
 
 type UpdateCalendarCalendarRequest struct {
 	CalendarCalendar shared.CalendarCalendar `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateCalendarCalendarQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Calendar
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +82,7 @@ func (u *UpdateCalendarCalendarRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateCalendarCalendarRequest) GetFields() []string {
+func (u *UpdateCalendarCalendarRequest) GetFields() []UpdateCalendarCalendarQueryParamFields {
 	if u == nil {
 		return nil
 	}

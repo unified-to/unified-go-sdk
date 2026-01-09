@@ -3,16 +3,74 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchHrisGroupQueryParamFields string
+
+const (
+	PatchHrisGroupQueryParamFieldsID          PatchHrisGroupQueryParamFields = "id"
+	PatchHrisGroupQueryParamFieldsCreatedAt   PatchHrisGroupQueryParamFields = "created_at"
+	PatchHrisGroupQueryParamFieldsUpdatedAt   PatchHrisGroupQueryParamFields = "updated_at"
+	PatchHrisGroupQueryParamFieldsName        PatchHrisGroupQueryParamFields = "name"
+	PatchHrisGroupQueryParamFieldsDescription PatchHrisGroupQueryParamFields = "description"
+	PatchHrisGroupQueryParamFieldsParentID    PatchHrisGroupQueryParamFields = "parent_id"
+	PatchHrisGroupQueryParamFieldsType        PatchHrisGroupQueryParamFields = "type"
+	PatchHrisGroupQueryParamFieldsUserIds     PatchHrisGroupQueryParamFields = "user_ids"
+	PatchHrisGroupQueryParamFieldsManagerIds  PatchHrisGroupQueryParamFields = "manager_ids"
+	PatchHrisGroupQueryParamFieldsIsActive    PatchHrisGroupQueryParamFields = "is_active"
+	PatchHrisGroupQueryParamFieldsCompanyID   PatchHrisGroupQueryParamFields = "company_id"
+	PatchHrisGroupQueryParamFieldsRaw         PatchHrisGroupQueryParamFields = "raw"
+)
+
+func (e PatchHrisGroupQueryParamFields) ToPointer() *PatchHrisGroupQueryParamFields {
+	return &e
+}
+func (e *PatchHrisGroupQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "type":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "manager_ids":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "company_id":
+		fallthrough
+	case "raw":
+		*e = PatchHrisGroupQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchHrisGroupQueryParamFields: %v", v)
+	}
+}
 
 type PatchHrisGroupRequest struct {
 	HrisGroup shared.HrisGroup `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchHrisGroupQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Group
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +91,7 @@ func (p *PatchHrisGroupRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchHrisGroupRequest) GetFields() []string {
+func (p *PatchHrisGroupRequest) GetFields() []PatchHrisGroupQueryParamFields {
 	if p == nil {
 		return nil
 	}

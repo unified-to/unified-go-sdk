@@ -3,16 +3,116 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchAccountingBillQueryParamFields string
+
+const (
+	PatchAccountingBillQueryParamFieldsID                      PatchAccountingBillQueryParamFields = "id"
+	PatchAccountingBillQueryParamFieldsBillNumber              PatchAccountingBillQueryParamFields = "bill_number"
+	PatchAccountingBillQueryParamFieldsCreatedAt               PatchAccountingBillQueryParamFields = "created_at"
+	PatchAccountingBillQueryParamFieldsUpdatedAt               PatchAccountingBillQueryParamFields = "updated_at"
+	PatchAccountingBillQueryParamFieldsDueAt                   PatchAccountingBillQueryParamFields = "due_at"
+	PatchAccountingBillQueryParamFieldsPaidAt                  PatchAccountingBillQueryParamFields = "paid_at"
+	PatchAccountingBillQueryParamFieldsRefundedAt              PatchAccountingBillQueryParamFields = "refunded_at"
+	PatchAccountingBillQueryParamFieldsCancelledAt             PatchAccountingBillQueryParamFields = "cancelled_at"
+	PatchAccountingBillQueryParamFieldsPostedAt                PatchAccountingBillQueryParamFields = "posted_at"
+	PatchAccountingBillQueryParamFieldsTotalAmount             PatchAccountingBillQueryParamFields = "total_amount"
+	PatchAccountingBillQueryParamFieldsPaidAmount              PatchAccountingBillQueryParamFields = "paid_amount"
+	PatchAccountingBillQueryParamFieldsRefundAmount            PatchAccountingBillQueryParamFields = "refund_amount"
+	PatchAccountingBillQueryParamFieldsTaxAmount               PatchAccountingBillQueryParamFields = "tax_amount"
+	PatchAccountingBillQueryParamFieldsDiscountAmount          PatchAccountingBillQueryParamFields = "discount_amount"
+	PatchAccountingBillQueryParamFieldsBalanceAmount           PatchAccountingBillQueryParamFields = "balance_amount"
+	PatchAccountingBillQueryParamFieldsContactID               PatchAccountingBillQueryParamFields = "contact_id"
+	PatchAccountingBillQueryParamFieldsCurrency                PatchAccountingBillQueryParamFields = "currency"
+	PatchAccountingBillQueryParamFieldsNotes                   PatchAccountingBillQueryParamFields = "notes"
+	PatchAccountingBillQueryParamFieldsRefundReason            PatchAccountingBillQueryParamFields = "refund_reason"
+	PatchAccountingBillQueryParamFieldsLineitems               PatchAccountingBillQueryParamFields = "lineitems"
+	PatchAccountingBillQueryParamFieldsStatus                  PatchAccountingBillQueryParamFields = "status"
+	PatchAccountingBillQueryParamFieldsURL                     PatchAccountingBillQueryParamFields = "url"
+	PatchAccountingBillQueryParamFieldsPaymentCollectionMethod PatchAccountingBillQueryParamFields = "payment_collection_method"
+	PatchAccountingBillQueryParamFieldsAttachments             PatchAccountingBillQueryParamFields = "attachments"
+	PatchAccountingBillQueryParamFieldsSend                    PatchAccountingBillQueryParamFields = "send"
+	PatchAccountingBillQueryParamFieldsRaw                     PatchAccountingBillQueryParamFields = "raw"
+)
+
+func (e PatchAccountingBillQueryParamFields) ToPointer() *PatchAccountingBillQueryParamFields {
+	return &e
+}
+func (e *PatchAccountingBillQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "bill_number":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "due_at":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "refunded_at":
+		fallthrough
+	case "cancelled_at":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "paid_amount":
+		fallthrough
+	case "refund_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "discount_amount":
+		fallthrough
+	case "balance_amount":
+		fallthrough
+	case "contact_id":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "refund_reason":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "status":
+		fallthrough
+	case "url":
+		fallthrough
+	case "payment_collection_method":
+		fallthrough
+	case "attachments":
+		fallthrough
+	case "send":
+		fallthrough
+	case "raw":
+		*e = PatchAccountingBillQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchAccountingBillQueryParamFields: %v", v)
+	}
+}
 
 type PatchAccountingBillRequest struct {
 	AccountingBill shared.AccountingBill `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchAccountingBillQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Bill
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +133,7 @@ func (p *PatchAccountingBillRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchAccountingBillRequest) GetFields() []string {
+func (p *PatchAccountingBillRequest) GetFields() []PatchAccountingBillQueryParamFields {
 	if p == nil {
 		return nil
 	}

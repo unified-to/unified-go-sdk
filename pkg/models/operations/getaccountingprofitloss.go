@@ -3,15 +3,100 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAccountingProfitlossQueryParamFields string
+
+const (
+	GetAccountingProfitlossQueryParamFieldsID                         GetAccountingProfitlossQueryParamFields = "id"
+	GetAccountingProfitlossQueryParamFieldsCreatedAt                  GetAccountingProfitlossQueryParamFields = "created_at"
+	GetAccountingProfitlossQueryParamFieldsUpdatedAt                  GetAccountingProfitlossQueryParamFields = "updated_at"
+	GetAccountingProfitlossQueryParamFieldsCategoryIds                GetAccountingProfitlossQueryParamFields = "category_ids"
+	GetAccountingProfitlossQueryParamFieldsStartAt                    GetAccountingProfitlossQueryParamFields = "start_at"
+	GetAccountingProfitlossQueryParamFieldsEndAt                      GetAccountingProfitlossQueryParamFields = "end_at"
+	GetAccountingProfitlossQueryParamFieldsName                       GetAccountingProfitlossQueryParamFields = "name"
+	GetAccountingProfitlossQueryParamFieldsCurrency                   GetAccountingProfitlossQueryParamFields = "currency"
+	GetAccountingProfitlossQueryParamFieldsIncome                     GetAccountingProfitlossQueryParamFields = "income"
+	GetAccountingProfitlossQueryParamFieldsExpenses                   GetAccountingProfitlossQueryParamFields = "expenses"
+	GetAccountingProfitlossQueryParamFieldsCostOfGoodsSold            GetAccountingProfitlossQueryParamFields = "cost_of_goods_sold"
+	GetAccountingProfitlossQueryParamFieldsGrossProfitAmount          GetAccountingProfitlossQueryParamFields = "gross_profit_amount"
+	GetAccountingProfitlossQueryParamFieldsNetProfitAmount            GetAccountingProfitlossQueryParamFields = "net_profit_amount"
+	GetAccountingProfitlossQueryParamFieldsIncomeTotalAmount          GetAccountingProfitlossQueryParamFields = "income_total_amount"
+	GetAccountingProfitlossQueryParamFieldsNetIncomeAmount            GetAccountingProfitlossQueryParamFields = "net_income_amount"
+	GetAccountingProfitlossQueryParamFieldsExpensesTotalAmount        GetAccountingProfitlossQueryParamFields = "expenses_total_amount"
+	GetAccountingProfitlossQueryParamFieldsCostOfGoodsSoldTotalAmount GetAccountingProfitlossQueryParamFields = "cost_of_goods_sold_total_amount"
+	GetAccountingProfitlossQueryParamFieldsIncomeSections             GetAccountingProfitlossQueryParamFields = "income_sections"
+	GetAccountingProfitlossQueryParamFieldsExpensesSections           GetAccountingProfitlossQueryParamFields = "expenses_sections"
+	GetAccountingProfitlossQueryParamFieldsCostOfGoodsSoldSections    GetAccountingProfitlossQueryParamFields = "cost_of_goods_sold_sections"
+	GetAccountingProfitlossQueryParamFieldsRaw                        GetAccountingProfitlossQueryParamFields = "raw"
+)
+
+func (e GetAccountingProfitlossQueryParamFields) ToPointer() *GetAccountingProfitlossQueryParamFields {
+	return &e
+}
+func (e *GetAccountingProfitlossQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "category_ids":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "income":
+		fallthrough
+	case "expenses":
+		fallthrough
+	case "cost_of_goods_sold":
+		fallthrough
+	case "gross_profit_amount":
+		fallthrough
+	case "net_profit_amount":
+		fallthrough
+	case "income_total_amount":
+		fallthrough
+	case "net_income_amount":
+		fallthrough
+	case "expenses_total_amount":
+		fallthrough
+	case "cost_of_goods_sold_total_amount":
+		fallthrough
+	case "income_sections":
+		fallthrough
+	case "expenses_sections":
+		fallthrough
+	case "cost_of_goods_sold_sections":
+		fallthrough
+	case "raw":
+		*e = GetAccountingProfitlossQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAccountingProfitlossQueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingProfitlossRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAccountingProfitlossQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Profitloss
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +110,7 @@ func (g *GetAccountingProfitlossRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingProfitlossRequest) GetFields() []string {
+func (g *GetAccountingProfitlossRequest) GetFields() []GetAccountingProfitlossQueryParamFields {
 	if g == nil {
 		return nil
 	}

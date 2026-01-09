@@ -3,15 +3,73 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetAccountingReportQueryParamFields string
+
+const (
+	GetAccountingReportQueryParamFieldsID            GetAccountingReportQueryParamFields = "id"
+	GetAccountingReportQueryParamFieldsCreatedAt     GetAccountingReportQueryParamFields = "created_at"
+	GetAccountingReportQueryParamFieldsUpdatedAt     GetAccountingReportQueryParamFields = "updated_at"
+	GetAccountingReportQueryParamFieldsType          GetAccountingReportQueryParamFields = "type"
+	GetAccountingReportQueryParamFieldsName          GetAccountingReportQueryParamFields = "name"
+	GetAccountingReportQueryParamFieldsCurrency      GetAccountingReportQueryParamFields = "currency"
+	GetAccountingReportQueryParamFieldsStartAt       GetAccountingReportQueryParamFields = "start_at"
+	GetAccountingReportQueryParamFieldsEndAt         GetAccountingReportQueryParamFields = "end_at"
+	GetAccountingReportQueryParamFieldsBalanceSheet  GetAccountingReportQueryParamFields = "balance_sheet"
+	GetAccountingReportQueryParamFieldsProfitAndLoss GetAccountingReportQueryParamFields = "profit_and_loss"
+	GetAccountingReportQueryParamFieldsTrialBalance  GetAccountingReportQueryParamFields = "trial_balance"
+	GetAccountingReportQueryParamFieldsRaw           GetAccountingReportQueryParamFields = "raw"
+)
+
+func (e GetAccountingReportQueryParamFields) ToPointer() *GetAccountingReportQueryParamFields {
+	return &e
+}
+func (e *GetAccountingReportQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "type":
+		fallthrough
+	case "name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "balance_sheet":
+		fallthrough
+	case "profit_and_loss":
+		fallthrough
+	case "trial_balance":
+		fallthrough
+	case "raw":
+		*e = GetAccountingReportQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetAccountingReportQueryParamFields: %v", v)
+	}
+}
 
 type GetAccountingReportRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetAccountingReportQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Report
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +83,7 @@ func (g *GetAccountingReportRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetAccountingReportRequest) GetFields() []string {
+func (g *GetAccountingReportRequest) GetFields() []GetAccountingReportQueryParamFields {
 	if g == nil {
 		return nil
 	}

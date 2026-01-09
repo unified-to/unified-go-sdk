@@ -3,16 +3,71 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateTaskProjectQueryParamFields string
+
+const (
+	CreateTaskProjectQueryParamFieldsID          CreateTaskProjectQueryParamFields = "id"
+	CreateTaskProjectQueryParamFieldsCreatedAt   CreateTaskProjectQueryParamFields = "created_at"
+	CreateTaskProjectQueryParamFieldsUpdatedAt   CreateTaskProjectQueryParamFields = "updated_at"
+	CreateTaskProjectQueryParamFieldsName        CreateTaskProjectQueryParamFields = "name"
+	CreateTaskProjectQueryParamFieldsParentID    CreateTaskProjectQueryParamFields = "parent_id"
+	CreateTaskProjectQueryParamFieldsUserIds     CreateTaskProjectQueryParamFields = "user_ids"
+	CreateTaskProjectQueryParamFieldsGroupIds    CreateTaskProjectQueryParamFields = "group_ids"
+	CreateTaskProjectQueryParamFieldsDescription CreateTaskProjectQueryParamFields = "description"
+	CreateTaskProjectQueryParamFieldsHasTasks    CreateTaskProjectQueryParamFields = "has_tasks"
+	CreateTaskProjectQueryParamFieldsHasChildren CreateTaskProjectQueryParamFields = "has_children"
+	CreateTaskProjectQueryParamFieldsRaw         CreateTaskProjectQueryParamFields = "raw"
+)
+
+func (e CreateTaskProjectQueryParamFields) ToPointer() *CreateTaskProjectQueryParamFields {
+	return &e
+}
+func (e *CreateTaskProjectQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "group_ids":
+		fallthrough
+	case "description":
+		fallthrough
+	case "has_tasks":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "raw":
+		*e = CreateTaskProjectQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateTaskProjectQueryParamFields: %v", v)
+	}
+}
 
 type CreateTaskProjectRequest struct {
 	TaskProject shared.TaskProject `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateTaskProjectQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +86,7 @@ func (c *CreateTaskProjectRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateTaskProjectRequest) GetFields() []string {
+func (c *CreateTaskProjectRequest) GetFields() []CreateTaskProjectQueryParamFields {
 	if c == nil {
 		return nil
 	}

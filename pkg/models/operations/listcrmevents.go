@@ -3,22 +3,98 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
 
+type ListCrmEventsQueryParamFields string
+
+const (
+	ListCrmEventsQueryParamFieldsID             ListCrmEventsQueryParamFields = "id"
+	ListCrmEventsQueryParamFieldsCreatedAt      ListCrmEventsQueryParamFields = "created_at"
+	ListCrmEventsQueryParamFieldsUpdatedAt      ListCrmEventsQueryParamFields = "updated_at"
+	ListCrmEventsQueryParamFieldsType           ListCrmEventsQueryParamFields = "type"
+	ListCrmEventsQueryParamFieldsNote           ListCrmEventsQueryParamFields = "note"
+	ListCrmEventsQueryParamFieldsMeeting        ListCrmEventsQueryParamFields = "meeting"
+	ListCrmEventsQueryParamFieldsEmail          ListCrmEventsQueryParamFields = "email"
+	ListCrmEventsQueryParamFieldsCall           ListCrmEventsQueryParamFields = "call"
+	ListCrmEventsQueryParamFieldsTask           ListCrmEventsQueryParamFields = "task"
+	ListCrmEventsQueryParamFieldsMarketingEmail ListCrmEventsQueryParamFields = "marketing_email"
+	ListCrmEventsQueryParamFieldsForm           ListCrmEventsQueryParamFields = "form"
+	ListCrmEventsQueryParamFieldsPageView       ListCrmEventsQueryParamFields = "page_view"
+	ListCrmEventsQueryParamFieldsDealIds        ListCrmEventsQueryParamFields = "deal_ids"
+	ListCrmEventsQueryParamFieldsCompanyIds     ListCrmEventsQueryParamFields = "company_ids"
+	ListCrmEventsQueryParamFieldsContactIds     ListCrmEventsQueryParamFields = "contact_ids"
+	ListCrmEventsQueryParamFieldsLeadIds        ListCrmEventsQueryParamFields = "lead_ids"
+	ListCrmEventsQueryParamFieldsUserID         ListCrmEventsQueryParamFields = "user_id"
+	ListCrmEventsQueryParamFieldsRaw            ListCrmEventsQueryParamFields = "raw"
+)
+
+func (e ListCrmEventsQueryParamFields) ToPointer() *ListCrmEventsQueryParamFields {
+	return &e
+}
+func (e *ListCrmEventsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "type":
+		fallthrough
+	case "note":
+		fallthrough
+	case "meeting":
+		fallthrough
+	case "email":
+		fallthrough
+	case "call":
+		fallthrough
+	case "task":
+		fallthrough
+	case "marketing_email":
+		fallthrough
+	case "form":
+		fallthrough
+	case "page_view":
+		fallthrough
+	case "deal_ids":
+		fallthrough
+	case "company_ids":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "lead_ids":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "raw":
+		*e = ListCrmEventsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListCrmEventsQueryParamFields: %v", v)
+	}
+}
+
 type ListCrmEventsRequest struct {
-	// The company ID to filter by
+	// The company ID to filter by (reference to CrmCompany)
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// The contact ID to filter by
+	// The contact ID to filter by (reference to CrmContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// The deal ID to filter by
+	// The deal ID to filter by (reference to CrmDeal)
 	DealID *string `queryParam:"style=form,explode=true,name=deal_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	// The CRM lead ID to filter by
+	Fields []ListCrmEventsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	// The CRM lead ID to filter by (reference to CrmLead)
 	LeadID *string  `queryParam:"style=form,explode=true,name=lead_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
@@ -29,9 +105,9 @@ type ListCrmEventsRequest struct {
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -63,7 +139,7 @@ func (l *ListCrmEventsRequest) GetDealID() *string {
 	return l.DealID
 }
 
-func (l *ListCrmEventsRequest) GetFields() []string {
+func (l *ListCrmEventsRequest) GetFields() []ListCrmEventsQueryParamFields {
 	if l == nil {
 		return nil
 	}

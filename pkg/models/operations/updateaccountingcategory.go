@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateAccountingCategoryQueryParamFields string
+
+const (
+	UpdateAccountingCategoryQueryParamFieldsID          UpdateAccountingCategoryQueryParamFields = "id"
+	UpdateAccountingCategoryQueryParamFieldsCreatedAt   UpdateAccountingCategoryQueryParamFields = "created_at"
+	UpdateAccountingCategoryQueryParamFieldsUpdatedAt   UpdateAccountingCategoryQueryParamFields = "updated_at"
+	UpdateAccountingCategoryQueryParamFieldsName        UpdateAccountingCategoryQueryParamFields = "name"
+	UpdateAccountingCategoryQueryParamFieldsDescription UpdateAccountingCategoryQueryParamFields = "description"
+	UpdateAccountingCategoryQueryParamFieldsIsActive    UpdateAccountingCategoryQueryParamFields = "is_active"
+	UpdateAccountingCategoryQueryParamFieldsParentID    UpdateAccountingCategoryQueryParamFields = "parent_id"
+	UpdateAccountingCategoryQueryParamFieldsRaw         UpdateAccountingCategoryQueryParamFields = "raw"
+)
+
+func (e UpdateAccountingCategoryQueryParamFields) ToPointer() *UpdateAccountingCategoryQueryParamFields {
+	return &e
+}
+func (e *UpdateAccountingCategoryQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "raw":
+		*e = UpdateAccountingCategoryQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateAccountingCategoryQueryParamFields: %v", v)
+	}
+}
 
 type UpdateAccountingCategoryRequest struct {
 	AccountingCategory shared.AccountingCategory `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateAccountingCategoryQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Category
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +79,7 @@ func (u *UpdateAccountingCategoryRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateAccountingCategoryRequest) GetFields() []string {
+func (u *UpdateAccountingCategoryRequest) GetFields() []UpdateAccountingCategoryQueryParamFields {
 	if u == nil {
 		return nil
 	}

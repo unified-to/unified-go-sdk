@@ -3,15 +3,67 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetRepoPullrequestQueryParamFields string
+
+const (
+	GetRepoPullrequestQueryParamFieldsID        GetRepoPullrequestQueryParamFields = "id"
+	GetRepoPullrequestQueryParamFieldsCreatedAt GetRepoPullrequestQueryParamFields = "created_at"
+	GetRepoPullrequestQueryParamFieldsUpdatedAt GetRepoPullrequestQueryParamFields = "updated_at"
+	GetRepoPullrequestQueryParamFieldsUserIds   GetRepoPullrequestQueryParamFields = "user_ids"
+	GetRepoPullrequestQueryParamFieldsRepoID    GetRepoPullrequestQueryParamFields = "repo_id"
+	GetRepoPullrequestQueryParamFieldsStatus    GetRepoPullrequestQueryParamFields = "status"
+	GetRepoPullrequestQueryParamFieldsLabels    GetRepoPullrequestQueryParamFields = "labels"
+	GetRepoPullrequestQueryParamFieldsClosedAt  GetRepoPullrequestQueryParamFields = "closed_at"
+	GetRepoPullrequestQueryParamFieldsCommitIds GetRepoPullrequestQueryParamFields = "commit_ids"
+	GetRepoPullrequestQueryParamFieldsRaw       GetRepoPullrequestQueryParamFields = "raw"
+)
+
+func (e GetRepoPullrequestQueryParamFields) ToPointer() *GetRepoPullrequestQueryParamFields {
+	return &e
+}
+func (e *GetRepoPullrequestQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "repo_id":
+		fallthrough
+	case "status":
+		fallthrough
+	case "labels":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "commit_ids":
+		fallthrough
+	case "raw":
+		*e = GetRepoPullrequestQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetRepoPullrequestQueryParamFields: %v", v)
+	}
+}
 
 type GetRepoPullrequestRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetRepoPullrequestQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Pullrequest
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +77,7 @@ func (g *GetRepoPullrequestRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetRepoPullrequestRequest) GetFields() []string {
+func (g *GetRepoPullrequestRequest) GetFields() []GetRepoPullrequestQueryParamFields {
 	if g == nil {
 		return nil
 	}

@@ -3,18 +3,85 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListKmsPagesQueryParamFields string
+
+const (
+	ListKmsPagesQueryParamFieldsID           ListKmsPagesQueryParamFields = "id"
+	ListKmsPagesQueryParamFieldsCreatedAt    ListKmsPagesQueryParamFields = "created_at"
+	ListKmsPagesQueryParamFieldsUpdatedAt    ListKmsPagesQueryParamFields = "updated_at"
+	ListKmsPagesQueryParamFieldsTitle        ListKmsPagesQueryParamFields = "title"
+	ListKmsPagesQueryParamFieldsType         ListKmsPagesQueryParamFields = "type"
+	ListKmsPagesQueryParamFieldsSpaceID      ListKmsPagesQueryParamFields = "space_id"
+	ListKmsPagesQueryParamFieldsParentPageID ListKmsPagesQueryParamFields = "parent_page_id"
+	ListKmsPagesQueryParamFieldsParentID     ListKmsPagesQueryParamFields = "parent_id"
+	ListKmsPagesQueryParamFieldsIsActive     ListKmsPagesQueryParamFields = "is_active"
+	ListKmsPagesQueryParamFieldsUserID       ListKmsPagesQueryParamFields = "user_id"
+	ListKmsPagesQueryParamFieldsDownloadURL  ListKmsPagesQueryParamFields = "download_url"
+	ListKmsPagesQueryParamFieldsMetadata     ListKmsPagesQueryParamFields = "metadata"
+	ListKmsPagesQueryParamFieldsHasChildren  ListKmsPagesQueryParamFields = "has_children"
+	ListKmsPagesQueryParamFieldsWebURL       ListKmsPagesQueryParamFields = "web_url"
+	ListKmsPagesQueryParamFieldsRaw          ListKmsPagesQueryParamFields = "raw"
+)
+
+func (e ListKmsPagesQueryParamFields) ToPointer() *ListKmsPagesQueryParamFields {
+	return &e
+}
+func (e *ListKmsPagesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "title":
+		fallthrough
+	case "type":
+		fallthrough
+	case "space_id":
+		fallthrough
+	case "parent_page_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "download_url":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "has_children":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "raw":
+		*e = ListKmsPagesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListKmsPagesQueryParamFields: %v", v)
+	}
+}
 
 type ListKmsPagesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListKmsPagesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                       `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                       `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                        `queryParam:"style=form,explode=true,name=order"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
@@ -22,9 +89,9 @@ type ListKmsPagesRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// The space ID to filter by
+	// The space ID to filter by (reference to KmsSpace)
 	SpaceID *string `queryParam:"style=form,explode=true,name=space_id"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -35,7 +102,7 @@ func (l *ListKmsPagesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListKmsPagesRequest) GetFields() []string {
+func (l *ListKmsPagesRequest) GetFields() []ListKmsPagesQueryParamFields {
 	if l == nil {
 		return nil
 	}

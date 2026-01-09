@@ -3,24 +3,85 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAccountingOrganizationsQueryParamFields string
+
+const (
+	ListAccountingOrganizationsQueryParamFieldsID                 ListAccountingOrganizationsQueryParamFields = "id"
+	ListAccountingOrganizationsQueryParamFieldsCreatedAt          ListAccountingOrganizationsQueryParamFields = "created_at"
+	ListAccountingOrganizationsQueryParamFieldsUpdatedAt          ListAccountingOrganizationsQueryParamFields = "updated_at"
+	ListAccountingOrganizationsQueryParamFieldsName               ListAccountingOrganizationsQueryParamFields = "name"
+	ListAccountingOrganizationsQueryParamFieldsLegalName          ListAccountingOrganizationsQueryParamFields = "legal_name"
+	ListAccountingOrganizationsQueryParamFieldsCurrency           ListAccountingOrganizationsQueryParamFields = "currency"
+	ListAccountingOrganizationsQueryParamFieldsAddress            ListAccountingOrganizationsQueryParamFields = "address"
+	ListAccountingOrganizationsQueryParamFieldsTaxNumber          ListAccountingOrganizationsQueryParamFields = "tax_number"
+	ListAccountingOrganizationsQueryParamFieldsTimezone           ListAccountingOrganizationsQueryParamFields = "timezone"
+	ListAccountingOrganizationsQueryParamFieldsWebsite            ListAccountingOrganizationsQueryParamFields = "website"
+	ListAccountingOrganizationsQueryParamFieldsFiscalYearEndMonth ListAccountingOrganizationsQueryParamFields = "fiscal_year_end_month"
+	ListAccountingOrganizationsQueryParamFieldsOrganizationCode   ListAccountingOrganizationsQueryParamFields = "organization_code"
+	ListAccountingOrganizationsQueryParamFieldsRaw                ListAccountingOrganizationsQueryParamFields = "raw"
+)
+
+func (e ListAccountingOrganizationsQueryParamFields) ToPointer() *ListAccountingOrganizationsQueryParamFields {
+	return &e
+}
+func (e *ListAccountingOrganizationsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "legal_name":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "address":
+		fallthrough
+	case "tax_number":
+		fallthrough
+	case "timezone":
+		fallthrough
+	case "website":
+		fallthrough
+	case "fiscal_year_end_month":
+		fallthrough
+	case "organization_code":
+		fallthrough
+	case "raw":
+		*e = ListAccountingOrganizationsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingOrganizationsQueryParamFields: %v", v)
+	}
+}
 
 type ListAccountingOrganizationsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAccountingOrganizationsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                      `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                      `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                       `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -31,7 +92,7 @@ func (l *ListAccountingOrganizationsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAccountingOrganizationsRequest) GetFields() []string {
+func (l *ListAccountingOrganizationsRequest) GetFields() []ListAccountingOrganizationsQueryParamFields {
 	if l == nil {
 		return nil
 	}

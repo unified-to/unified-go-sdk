@@ -3,9 +3,52 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListUcCommentsQueryParamFields string
+
+const (
+	ListUcCommentsQueryParamFieldsID        ListUcCommentsQueryParamFields = "id"
+	ListUcCommentsQueryParamFieldsCreatedAt ListUcCommentsQueryParamFields = "created_at"
+	ListUcCommentsQueryParamFieldsUpdatedAt ListUcCommentsQueryParamFields = "updated_at"
+	ListUcCommentsQueryParamFieldsContent   ListUcCommentsQueryParamFields = "content"
+	ListUcCommentsQueryParamFieldsUserID    ListUcCommentsQueryParamFields = "user_id"
+	ListUcCommentsQueryParamFieldsCallID    ListUcCommentsQueryParamFields = "call_id"
+	ListUcCommentsQueryParamFieldsRaw       ListUcCommentsQueryParamFields = "raw"
+)
+
+func (e ListUcCommentsQueryParamFields) ToPointer() *ListUcCommentsQueryParamFields {
+	return &e
+}
+func (e *ListUcCommentsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "content":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "call_id":
+		fallthrough
+	case "raw":
+		*e = ListUcCommentsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListUcCommentsQueryParamFields: %v", v)
+	}
+}
 
 type ListUcCommentsRequest struct {
 	// The call ID to filter by
@@ -13,18 +56,18 @@ type ListUcCommentsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListUcCommentsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                         `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                         `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                          `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -42,7 +85,7 @@ func (l *ListUcCommentsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListUcCommentsRequest) GetFields() []string {
+func (l *ListUcCommentsRequest) GetFields() []ListUcCommentsQueryParamFields {
 	if l == nil {
 		return nil
 	}

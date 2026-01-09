@@ -3,15 +3,61 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetTaskCommentQueryParamFields string
+
+const (
+	GetTaskCommentQueryParamFieldsID        GetTaskCommentQueryParamFields = "id"
+	GetTaskCommentQueryParamFieldsCreatedAt GetTaskCommentQueryParamFields = "created_at"
+	GetTaskCommentQueryParamFieldsUpdatedAt GetTaskCommentQueryParamFields = "updated_at"
+	GetTaskCommentQueryParamFieldsText      GetTaskCommentQueryParamFields = "text"
+	GetTaskCommentQueryParamFieldsUserID    GetTaskCommentQueryParamFields = "user_id"
+	GetTaskCommentQueryParamFieldsUserName  GetTaskCommentQueryParamFields = "user_name"
+	GetTaskCommentQueryParamFieldsTaskID    GetTaskCommentQueryParamFields = "task_id"
+	GetTaskCommentQueryParamFieldsRaw       GetTaskCommentQueryParamFields = "raw"
+)
+
+func (e GetTaskCommentQueryParamFields) ToPointer() *GetTaskCommentQueryParamFields {
+	return &e
+}
+func (e *GetTaskCommentQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "text":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "user_name":
+		fallthrough
+	case "task_id":
+		fallthrough
+	case "raw":
+		*e = GetTaskCommentQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetTaskCommentQueryParamFields: %v", v)
+	}
+}
 
 type GetTaskCommentRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetTaskCommentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Comment
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +71,7 @@ func (g *GetTaskCommentRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetTaskCommentRequest) GetFields() []string {
+func (g *GetTaskCommentRequest) GetFields() []GetTaskCommentQueryParamFields {
 	if g == nil {
 		return nil
 	}

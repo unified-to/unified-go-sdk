@@ -3,9 +3,88 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAtsActivitiesQueryParamFields string
+
+const (
+	ListAtsActivitiesQueryParamFieldsID            ListAtsActivitiesQueryParamFields = "id"
+	ListAtsActivitiesQueryParamFieldsCreatedAt     ListAtsActivitiesQueryParamFields = "created_at"
+	ListAtsActivitiesQueryParamFieldsUpdatedAt     ListAtsActivitiesQueryParamFields = "updated_at"
+	ListAtsActivitiesQueryParamFieldsCandidateID   ListAtsActivitiesQueryParamFields = "candidate_id"
+	ListAtsActivitiesQueryParamFieldsApplicationID ListAtsActivitiesQueryParamFields = "application_id"
+	ListAtsActivitiesQueryParamFieldsJobID         ListAtsActivitiesQueryParamFields = "job_id"
+	ListAtsActivitiesQueryParamFieldsInterviewID   ListAtsActivitiesQueryParamFields = "interview_id"
+	ListAtsActivitiesQueryParamFieldsDocumentIds   ListAtsActivitiesQueryParamFields = "document_ids"
+	ListAtsActivitiesQueryParamFieldsTitle         ListAtsActivitiesQueryParamFields = "title"
+	ListAtsActivitiesQueryParamFieldsDescription   ListAtsActivitiesQueryParamFields = "description"
+	ListAtsActivitiesQueryParamFieldsIsPrivate     ListAtsActivitiesQueryParamFields = "is_private"
+	ListAtsActivitiesQueryParamFieldsUserIds       ListAtsActivitiesQueryParamFields = "user_ids"
+	ListAtsActivitiesQueryParamFieldsType          ListAtsActivitiesQueryParamFields = "type"
+	ListAtsActivitiesQueryParamFieldsFrom          ListAtsActivitiesQueryParamFields = "from"
+	ListAtsActivitiesQueryParamFieldsTo            ListAtsActivitiesQueryParamFields = "to"
+	ListAtsActivitiesQueryParamFieldsCc            ListAtsActivitiesQueryParamFields = "cc"
+	ListAtsActivitiesQueryParamFieldsBcc           ListAtsActivitiesQueryParamFields = "bcc"
+	ListAtsActivitiesQueryParamFieldsSubType       ListAtsActivitiesQueryParamFields = "sub_type"
+	ListAtsActivitiesQueryParamFieldsRaw           ListAtsActivitiesQueryParamFields = "raw"
+)
+
+func (e ListAtsActivitiesQueryParamFields) ToPointer() *ListAtsActivitiesQueryParamFields {
+	return &e
+}
+func (e *ListAtsActivitiesQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "candidate_id":
+		fallthrough
+	case "application_id":
+		fallthrough
+	case "job_id":
+		fallthrough
+	case "interview_id":
+		fallthrough
+	case "document_ids":
+		fallthrough
+	case "title":
+		fallthrough
+	case "description":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "user_ids":
+		fallthrough
+	case "type":
+		fallthrough
+	case "from":
+		fallthrough
+	case "to":
+		fallthrough
+	case "cc":
+		fallthrough
+	case "bcc":
+		fallthrough
+	case "sub_type":
+		fallthrough
+	case "raw":
+		*e = ListAtsActivitiesQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAtsActivitiesQueryParamFields: %v", v)
+	}
+}
 
 type ListAtsActivitiesRequest struct {
 	// The application ID to filter by
@@ -17,7 +96,7 @@ type ListAtsActivitiesRequest struct {
 	// The document ID to filter by
 	DocumentID *string `queryParam:"style=form,explode=true,name=document_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []ListAtsActivitiesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The interview ID to filter by
 	InterviewID *string `queryParam:"style=form,explode=true,name=interview_id"`
 	// The job ID to filter by
@@ -32,9 +111,9 @@ type ListAtsActivitiesRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The type to filter by
 	Type *string `queryParam:"style=form,explode=true,name=type"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
-	// The user/employee ID to filter by
+	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
@@ -66,7 +145,7 @@ func (l *ListAtsActivitiesRequest) GetDocumentID() *string {
 	return l.DocumentID
 }
 
-func (l *ListAtsActivitiesRequest) GetFields() []string {
+func (l *ListAtsActivitiesRequest) GetFields() []ListAtsActivitiesQueryParamFields {
 	if l == nil {
 		return nil
 	}

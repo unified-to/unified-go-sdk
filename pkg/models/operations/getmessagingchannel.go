@@ -3,15 +3,76 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type GetMessagingChannelQueryParamFields string
+
+const (
+	GetMessagingChannelQueryParamFieldsID              GetMessagingChannelQueryParamFields = "id"
+	GetMessagingChannelQueryParamFieldsCreatedAt       GetMessagingChannelQueryParamFields = "created_at"
+	GetMessagingChannelQueryParamFieldsUpdatedAt       GetMessagingChannelQueryParamFields = "updated_at"
+	GetMessagingChannelQueryParamFieldsName            GetMessagingChannelQueryParamFields = "name"
+	GetMessagingChannelQueryParamFieldsDescription     GetMessagingChannelQueryParamFields = "description"
+	GetMessagingChannelQueryParamFieldsParentChannelID GetMessagingChannelQueryParamFields = "parent_channel_id"
+	GetMessagingChannelQueryParamFieldsParentID        GetMessagingChannelQueryParamFields = "parent_id"
+	GetMessagingChannelQueryParamFieldsHasSubchannels  GetMessagingChannelQueryParamFields = "has_subchannels"
+	GetMessagingChannelQueryParamFieldsMembers         GetMessagingChannelQueryParamFields = "members"
+	GetMessagingChannelQueryParamFieldsIsActive        GetMessagingChannelQueryParamFields = "is_active"
+	GetMessagingChannelQueryParamFieldsIsPrivate       GetMessagingChannelQueryParamFields = "is_private"
+	GetMessagingChannelQueryParamFieldsWebURL          GetMessagingChannelQueryParamFields = "web_url"
+	GetMessagingChannelQueryParamFieldsRaw             GetMessagingChannelQueryParamFields = "raw"
+)
+
+func (e GetMessagingChannelQueryParamFields) ToPointer() *GetMessagingChannelQueryParamFields {
+	return &e
+}
+func (e *GetMessagingChannelQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "description":
+		fallthrough
+	case "parent_channel_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "has_subchannels":
+		fallthrough
+	case "members":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "is_private":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "raw":
+		*e = GetMessagingChannelQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetMessagingChannelQueryParamFields: %v", v)
+	}
+}
 
 type GetMessagingChannelRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []GetMessagingChannelQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Channel
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -25,7 +86,7 @@ func (g *GetMessagingChannelRequest) GetConnectionID() string {
 	return g.ConnectionID
 }
 
-func (g *GetMessagingChannelRequest) GetFields() []string {
+func (g *GetMessagingChannelRequest) GetFields() []GetMessagingChannelQueryParamFields {
 	if g == nil {
 		return nil
 	}

@@ -3,16 +3,62 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type UpdateCommerceInventoryQueryParamFields string
+
+const (
+	UpdateCommerceInventoryQueryParamFieldsID            UpdateCommerceInventoryQueryParamFields = "id"
+	UpdateCommerceInventoryQueryParamFieldsUpdatedAt     UpdateCommerceInventoryQueryParamFields = "updated_at"
+	UpdateCommerceInventoryQueryParamFieldsItemID        UpdateCommerceInventoryQueryParamFields = "item_id"
+	UpdateCommerceInventoryQueryParamFieldsItemVariantID UpdateCommerceInventoryQueryParamFields = "item_variant_id"
+	UpdateCommerceInventoryQueryParamFieldsItemOptionID  UpdateCommerceInventoryQueryParamFields = "item_option_id"
+	UpdateCommerceInventoryQueryParamFieldsLocationID    UpdateCommerceInventoryQueryParamFields = "location_id"
+	UpdateCommerceInventoryQueryParamFieldsAvailable     UpdateCommerceInventoryQueryParamFields = "available"
+	UpdateCommerceInventoryQueryParamFieldsRaw           UpdateCommerceInventoryQueryParamFields = "raw"
+)
+
+func (e UpdateCommerceInventoryQueryParamFields) ToPointer() *UpdateCommerceInventoryQueryParamFields {
+	return &e
+}
+func (e *UpdateCommerceInventoryQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "item_id":
+		fallthrough
+	case "item_variant_id":
+		fallthrough
+	case "item_option_id":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "available":
+		fallthrough
+	case "raw":
+		*e = UpdateCommerceInventoryQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateCommerceInventoryQueryParamFields: %v", v)
+	}
+}
 
 type UpdateCommerceInventoryRequest struct {
 	CommerceInventory shared.CommerceInventory `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []UpdateCommerceInventoryQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Inventory
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -33,7 +79,7 @@ func (u *UpdateCommerceInventoryRequest) GetConnectionID() string {
 	return u.ConnectionID
 }
 
-func (u *UpdateCommerceInventoryRequest) GetFields() []string {
+func (u *UpdateCommerceInventoryRequest) GetFields() []UpdateCommerceInventoryQueryParamFields {
 	if u == nil {
 		return nil
 	}

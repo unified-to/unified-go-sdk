@@ -3,9 +3,97 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type PatchCrmDealQueryParamFields string
+
+const (
+	PatchCrmDealQueryParamFieldsID          PatchCrmDealQueryParamFields = "id"
+	PatchCrmDealQueryParamFieldsCreatedAt   PatchCrmDealQueryParamFields = "created_at"
+	PatchCrmDealQueryParamFieldsUpdatedAt   PatchCrmDealQueryParamFields = "updated_at"
+	PatchCrmDealQueryParamFieldsName        PatchCrmDealQueryParamFields = "name"
+	PatchCrmDealQueryParamFieldsAmount      PatchCrmDealQueryParamFields = "amount"
+	PatchCrmDealQueryParamFieldsCurrency    PatchCrmDealQueryParamFields = "currency"
+	PatchCrmDealQueryParamFieldsClosedAt    PatchCrmDealQueryParamFields = "closed_at"
+	PatchCrmDealQueryParamFieldsClosingAt   PatchCrmDealQueryParamFields = "closing_at"
+	PatchCrmDealQueryParamFieldsStage       PatchCrmDealQueryParamFields = "stage"
+	PatchCrmDealQueryParamFieldsStageID     PatchCrmDealQueryParamFields = "stage_id"
+	PatchCrmDealQueryParamFieldsPipeline    PatchCrmDealQueryParamFields = "pipeline"
+	PatchCrmDealQueryParamFieldsPipelineID  PatchCrmDealQueryParamFields = "pipeline_id"
+	PatchCrmDealQueryParamFieldsSource      PatchCrmDealQueryParamFields = "source"
+	PatchCrmDealQueryParamFieldsProbability PatchCrmDealQueryParamFields = "probability"
+	PatchCrmDealQueryParamFieldsTags        PatchCrmDealQueryParamFields = "tags"
+	PatchCrmDealQueryParamFieldsLostReason  PatchCrmDealQueryParamFields = "lost_reason"
+	PatchCrmDealQueryParamFieldsWonReason   PatchCrmDealQueryParamFields = "won_reason"
+	PatchCrmDealQueryParamFieldsUserID      PatchCrmDealQueryParamFields = "user_id"
+	PatchCrmDealQueryParamFieldsContactIds  PatchCrmDealQueryParamFields = "contact_ids"
+	PatchCrmDealQueryParamFieldsCompanyIds  PatchCrmDealQueryParamFields = "company_ids"
+	PatchCrmDealQueryParamFieldsMetadata    PatchCrmDealQueryParamFields = "metadata"
+	PatchCrmDealQueryParamFieldsRaw         PatchCrmDealQueryParamFields = "raw"
+)
+
+func (e PatchCrmDealQueryParamFields) ToPointer() *PatchCrmDealQueryParamFields {
+	return &e
+}
+func (e *PatchCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "name":
+		fallthrough
+	case "amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "closing_at":
+		fallthrough
+	case "stage":
+		fallthrough
+	case "stage_id":
+		fallthrough
+	case "pipeline":
+		fallthrough
+	case "pipeline_id":
+		fallthrough
+	case "source":
+		fallthrough
+	case "probability":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "lost_reason":
+		fallthrough
+	case "won_reason":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "contact_ids":
+		fallthrough
+	case "company_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "raw":
+		*e = PatchCrmDealQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PatchCrmDealQueryParamFields: %v", v)
+	}
+}
 
 type PatchCrmDealRequest struct {
 	// A deal represents an opportunity with companies and/or contacts
@@ -13,7 +101,7 @@ type PatchCrmDealRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []PatchCrmDealQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Deal
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -34,7 +122,7 @@ func (p *PatchCrmDealRequest) GetConnectionID() string {
 	return p.ConnectionID
 }
 
-func (p *PatchCrmDealRequest) GetFields() []string {
+func (p *PatchCrmDealRequest) GetFields() []PatchCrmDealQueryParamFields {
 	if p == nil {
 		return nil
 	}

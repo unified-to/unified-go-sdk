@@ -3,16 +3,68 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type CreateGenaiEmbeddingQueryParamFields string
+
+const (
+	CreateGenaiEmbeddingQueryParamFieldsModelID         CreateGenaiEmbeddingQueryParamFields = "model_id"
+	CreateGenaiEmbeddingQueryParamFieldsContent         CreateGenaiEmbeddingQueryParamFields = "content"
+	CreateGenaiEmbeddingQueryParamFieldsEncondingFormat CreateGenaiEmbeddingQueryParamFields = "enconding_format"
+	CreateGenaiEmbeddingQueryParamFieldsType            CreateGenaiEmbeddingQueryParamFields = "type"
+	CreateGenaiEmbeddingQueryParamFieldsDimension       CreateGenaiEmbeddingQueryParamFields = "dimension"
+	CreateGenaiEmbeddingQueryParamFieldsMaxTokens       CreateGenaiEmbeddingQueryParamFields = "max_tokens"
+	CreateGenaiEmbeddingQueryParamFieldsEmbeddings      CreateGenaiEmbeddingQueryParamFields = "embeddings"
+	CreateGenaiEmbeddingQueryParamFieldsTokensUsed      CreateGenaiEmbeddingQueryParamFields = "tokens_used"
+	CreateGenaiEmbeddingQueryParamFieldsRaw             CreateGenaiEmbeddingQueryParamFields = "raw"
+	CreateGenaiEmbeddingQueryParamFieldsID              CreateGenaiEmbeddingQueryParamFields = "id"
+)
+
+func (e CreateGenaiEmbeddingQueryParamFields) ToPointer() *CreateGenaiEmbeddingQueryParamFields {
+	return &e
+}
+func (e *CreateGenaiEmbeddingQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "model_id":
+		fallthrough
+	case "content":
+		fallthrough
+	case "enconding_format":
+		fallthrough
+	case "type":
+		fallthrough
+	case "dimension":
+		fallthrough
+	case "max_tokens":
+		fallthrough
+	case "embeddings":
+		fallthrough
+	case "tokens_used":
+		fallthrough
+	case "raw":
+		fallthrough
+	case "id":
+		*e = CreateGenaiEmbeddingQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateGenaiEmbeddingQueryParamFields: %v", v)
+	}
+}
 
 type CreateGenaiEmbeddingRequest struct {
 	GenaiEmbedding shared.GenaiEmbedding `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
+	Fields []CreateGenaiEmbeddingQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
@@ -31,7 +83,7 @@ func (c *CreateGenaiEmbeddingRequest) GetConnectionID() string {
 	return c.ConnectionID
 }
 
-func (c *CreateGenaiEmbeddingRequest) GetFields() []string {
+func (c *CreateGenaiEmbeddingRequest) GetFields() []CreateGenaiEmbeddingQueryParamFields {
 	if c == nil {
 		return nil
 	}

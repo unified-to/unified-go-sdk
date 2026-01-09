@@ -3,26 +3,72 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListTaskCommentsQueryParamFields string
+
+const (
+	ListTaskCommentsQueryParamFieldsID        ListTaskCommentsQueryParamFields = "id"
+	ListTaskCommentsQueryParamFieldsCreatedAt ListTaskCommentsQueryParamFields = "created_at"
+	ListTaskCommentsQueryParamFieldsUpdatedAt ListTaskCommentsQueryParamFields = "updated_at"
+	ListTaskCommentsQueryParamFieldsText      ListTaskCommentsQueryParamFields = "text"
+	ListTaskCommentsQueryParamFieldsUserID    ListTaskCommentsQueryParamFields = "user_id"
+	ListTaskCommentsQueryParamFieldsUserName  ListTaskCommentsQueryParamFields = "user_name"
+	ListTaskCommentsQueryParamFieldsTaskID    ListTaskCommentsQueryParamFields = "task_id"
+	ListTaskCommentsQueryParamFieldsRaw       ListTaskCommentsQueryParamFields = "raw"
+)
+
+func (e ListTaskCommentsQueryParamFields) ToPointer() *ListTaskCommentsQueryParamFields {
+	return &e
+}
+func (e *ListTaskCommentsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "text":
+		fallthrough
+	case "user_id":
+		fallthrough
+	case "user_name":
+		fallthrough
+	case "task_id":
+		fallthrough
+	case "raw":
+		*e = ListTaskCommentsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListTaskCommentsQueryParamFields: %v", v)
+	}
+}
 
 type ListTaskCommentsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListTaskCommentsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// The task ID to filter by
+	// The task ID to filter by (reference to TaskTask)
 	TaskID *string `queryParam:"style=form,explode=true,name=task_id"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -33,7 +79,7 @@ func (l *ListTaskCommentsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListTaskCommentsRequest) GetFields() []string {
+func (l *ListTaskCommentsRequest) GetFields() []ListTaskCommentsQueryParamFields {
 	if l == nil {
 		return nil
 	}

@@ -3,26 +3,81 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"net/http"
 )
+
+type ListAccountingJournalsQueryParamFields string
+
+const (
+	ListAccountingJournalsQueryParamFieldsID          ListAccountingJournalsQueryParamFields = "id"
+	ListAccountingJournalsQueryParamFieldsCreatedAt   ListAccountingJournalsQueryParamFields = "created_at"
+	ListAccountingJournalsQueryParamFieldsUpdatedAt   ListAccountingJournalsQueryParamFields = "updated_at"
+	ListAccountingJournalsQueryParamFieldsReference   ListAccountingJournalsQueryParamFields = "reference"
+	ListAccountingJournalsQueryParamFieldsTaxAmount   ListAccountingJournalsQueryParamFields = "tax_amount"
+	ListAccountingJournalsQueryParamFieldsCurrency    ListAccountingJournalsQueryParamFields = "currency"
+	ListAccountingJournalsQueryParamFieldsLineitems   ListAccountingJournalsQueryParamFields = "lineitems"
+	ListAccountingJournalsQueryParamFieldsTaxrateID   ListAccountingJournalsQueryParamFields = "taxrate_id"
+	ListAccountingJournalsQueryParamFieldsDescription ListAccountingJournalsQueryParamFields = "description"
+	ListAccountingJournalsQueryParamFieldsPostedAt    ListAccountingJournalsQueryParamFields = "posted_at"
+	ListAccountingJournalsQueryParamFieldsRaw         ListAccountingJournalsQueryParamFields = "raw"
+)
+
+func (e ListAccountingJournalsQueryParamFields) ToPointer() *ListAccountingJournalsQueryParamFields {
+	return &e
+}
+func (e *ListAccountingJournalsQueryParamFields) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
+		fallthrough
+	case "reference":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "lineitems":
+		fallthrough
+	case "taxrate_id":
+		fallthrough
+	case "description":
+		fallthrough
+	case "posted_at":
+		fallthrough
+	case "raw":
+		*e = ListAccountingJournalsQueryParamFields(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListAccountingJournalsQueryParamFields: %v", v)
+	}
+}
 
 type ListAccountingJournalsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Comma-delimited fields to return
-	Fields []string `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The org ID to filter by
+	Fields []ListAccountingJournalsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                  `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by (reference to AccountingOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Return only results whose updated date is equal or greater to this value
+	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
@@ -33,7 +88,7 @@ func (l *ListAccountingJournalsRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
-func (l *ListAccountingJournalsRequest) GetFields() []string {
+func (l *ListAccountingJournalsRequest) GetFields() []ListAccountingJournalsQueryParamFields {
 	if l == nil {
 		return nil
 	}
