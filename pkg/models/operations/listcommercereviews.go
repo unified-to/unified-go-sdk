@@ -103,7 +103,7 @@ type ListCommerceReviewsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListCommerceReviewsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The item ID to filter by (reference to CommerceItem)
 	ItemID *string  `queryParam:"style=form,explode=true,name=item_id"`

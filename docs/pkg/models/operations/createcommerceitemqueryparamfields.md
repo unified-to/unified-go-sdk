@@ -12,6 +12,7 @@
 | `CreateCommerceItemQueryParamFieldsPublicName`        | public_name                                           |
 | `CreateCommerceItemQueryParamFieldsSlug`              | slug                                                  |
 | `CreateCommerceItemQueryParamFieldsDescription`       | description                                           |
+| `CreateCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                            |
 | `CreateCommerceItemQueryParamFieldsGlobalCode`        | global_code                                           |
 | `CreateCommerceItemQueryParamFieldsPublicDescription` | public_description                                    |
 | `CreateCommerceItemQueryParamFieldsIsActive`          | is_active                                             |

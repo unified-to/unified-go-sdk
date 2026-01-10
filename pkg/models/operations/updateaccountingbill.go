@@ -111,7 +111,7 @@ type UpdateAccountingBillRequest struct {
 	AccountingBill shared.AccountingBill `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateAccountingBillQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Bill
 	ID string `pathParam:"style=simple,explode=false,name=id"`

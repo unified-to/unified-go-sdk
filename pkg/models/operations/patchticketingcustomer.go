@@ -57,7 +57,7 @@ type PatchTicketingCustomerRequest struct {
 	TicketingCustomer shared.TicketingCustomer `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []PatchTicketingCustomerQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Customer
 	ID string `pathParam:"style=simple,explode=false,name=id"`

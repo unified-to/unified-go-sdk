@@ -12,21 +12,20 @@ import (
 type CreateKmsPageQueryParamFields string
 
 const (
-	CreateKmsPageQueryParamFieldsID           CreateKmsPageQueryParamFields = "id"
-	CreateKmsPageQueryParamFieldsCreatedAt    CreateKmsPageQueryParamFields = "created_at"
-	CreateKmsPageQueryParamFieldsUpdatedAt    CreateKmsPageQueryParamFields = "updated_at"
-	CreateKmsPageQueryParamFieldsTitle        CreateKmsPageQueryParamFields = "title"
-	CreateKmsPageQueryParamFieldsType         CreateKmsPageQueryParamFields = "type"
-	CreateKmsPageQueryParamFieldsSpaceID      CreateKmsPageQueryParamFields = "space_id"
-	CreateKmsPageQueryParamFieldsParentPageID CreateKmsPageQueryParamFields = "parent_page_id"
-	CreateKmsPageQueryParamFieldsParentID     CreateKmsPageQueryParamFields = "parent_id"
-	CreateKmsPageQueryParamFieldsIsActive     CreateKmsPageQueryParamFields = "is_active"
-	CreateKmsPageQueryParamFieldsUserID       CreateKmsPageQueryParamFields = "user_id"
-	CreateKmsPageQueryParamFieldsDownloadURL  CreateKmsPageQueryParamFields = "download_url"
-	CreateKmsPageQueryParamFieldsMetadata     CreateKmsPageQueryParamFields = "metadata"
-	CreateKmsPageQueryParamFieldsHasChildren  CreateKmsPageQueryParamFields = "has_children"
-	CreateKmsPageQueryParamFieldsWebURL       CreateKmsPageQueryParamFields = "web_url"
-	CreateKmsPageQueryParamFieldsRaw          CreateKmsPageQueryParamFields = "raw"
+	CreateKmsPageQueryParamFieldsID          CreateKmsPageQueryParamFields = "id"
+	CreateKmsPageQueryParamFieldsCreatedAt   CreateKmsPageQueryParamFields = "created_at"
+	CreateKmsPageQueryParamFieldsUpdatedAt   CreateKmsPageQueryParamFields = "updated_at"
+	CreateKmsPageQueryParamFieldsTitle       CreateKmsPageQueryParamFields = "title"
+	CreateKmsPageQueryParamFieldsType        CreateKmsPageQueryParamFields = "type"
+	CreateKmsPageQueryParamFieldsSpaceID     CreateKmsPageQueryParamFields = "space_id"
+	CreateKmsPageQueryParamFieldsParentID    CreateKmsPageQueryParamFields = "parent_id"
+	CreateKmsPageQueryParamFieldsIsActive    CreateKmsPageQueryParamFields = "is_active"
+	CreateKmsPageQueryParamFieldsUserID      CreateKmsPageQueryParamFields = "user_id"
+	CreateKmsPageQueryParamFieldsDownloadURL CreateKmsPageQueryParamFields = "download_url"
+	CreateKmsPageQueryParamFieldsMetadata    CreateKmsPageQueryParamFields = "metadata"
+	CreateKmsPageQueryParamFieldsHasChildren CreateKmsPageQueryParamFields = "has_children"
+	CreateKmsPageQueryParamFieldsWebURL      CreateKmsPageQueryParamFields = "web_url"
+	CreateKmsPageQueryParamFieldsRaw         CreateKmsPageQueryParamFields = "raw"
 )
 
 func (e CreateKmsPageQueryParamFields) ToPointer() *CreateKmsPageQueryParamFields {
@@ -49,8 +48,6 @@ func (e *CreateKmsPageQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "type":
 		fallthrough
 	case "space_id":
-		fallthrough
-	case "parent_page_id":
 		fallthrough
 	case "parent_id":
 		fallthrough
@@ -78,7 +75,7 @@ type CreateKmsPageRequest struct {
 	KmsPage shared.KmsPage `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []CreateKmsPageQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`

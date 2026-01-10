@@ -12,7 +12,6 @@
 | `GetAccountingTransactionQueryParamFieldsTotalAmount`     | total_amount                                              |
 | `GetAccountingTransactionQueryParamFieldsTaxAmount`       | tax_amount                                                |
 | `GetAccountingTransactionQueryParamFieldsAccountID`       | account_id                                                |
-| `GetAccountingTransactionQueryParamFieldsContactID`       | contact_id                                                |
 | `GetAccountingTransactionQueryParamFieldsReference`       | reference                                                 |
 | `GetAccountingTransactionQueryParamFieldsSubTotalAmount`  | sub_total_amount                                          |
 | `GetAccountingTransactionQueryParamFieldsSplitAccountID`  | split_account_id                                          |

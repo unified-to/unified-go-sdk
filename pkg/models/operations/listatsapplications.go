@@ -87,7 +87,7 @@ type ListAtsApplicationsRequest struct {
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListAtsApplicationsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The job ID to filter by
 	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`

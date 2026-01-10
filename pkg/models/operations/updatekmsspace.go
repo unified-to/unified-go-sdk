@@ -12,17 +12,16 @@ import (
 type UpdateKmsSpaceQueryParamFields string
 
 const (
-	UpdateKmsSpaceQueryParamFieldsID            UpdateKmsSpaceQueryParamFields = "id"
-	UpdateKmsSpaceQueryParamFieldsCreatedAt     UpdateKmsSpaceQueryParamFields = "created_at"
-	UpdateKmsSpaceQueryParamFieldsUpdatedAt     UpdateKmsSpaceQueryParamFields = "updated_at"
-	UpdateKmsSpaceQueryParamFieldsName          UpdateKmsSpaceQueryParamFields = "name"
-	UpdateKmsSpaceQueryParamFieldsDescription   UpdateKmsSpaceQueryParamFields = "description"
-	UpdateKmsSpaceQueryParamFieldsParentSpaceID UpdateKmsSpaceQueryParamFields = "parent_space_id"
-	UpdateKmsSpaceQueryParamFieldsParentID      UpdateKmsSpaceQueryParamFields = "parent_id"
-	UpdateKmsSpaceQueryParamFieldsIsActive      UpdateKmsSpaceQueryParamFields = "is_active"
-	UpdateKmsSpaceQueryParamFieldsUserID        UpdateKmsSpaceQueryParamFields = "user_id"
-	UpdateKmsSpaceQueryParamFieldsParentPageID  UpdateKmsSpaceQueryParamFields = "parent_page_id"
-	UpdateKmsSpaceQueryParamFieldsRaw           UpdateKmsSpaceQueryParamFields = "raw"
+	UpdateKmsSpaceQueryParamFieldsID           UpdateKmsSpaceQueryParamFields = "id"
+	UpdateKmsSpaceQueryParamFieldsCreatedAt    UpdateKmsSpaceQueryParamFields = "created_at"
+	UpdateKmsSpaceQueryParamFieldsUpdatedAt    UpdateKmsSpaceQueryParamFields = "updated_at"
+	UpdateKmsSpaceQueryParamFieldsName         UpdateKmsSpaceQueryParamFields = "name"
+	UpdateKmsSpaceQueryParamFieldsDescription  UpdateKmsSpaceQueryParamFields = "description"
+	UpdateKmsSpaceQueryParamFieldsParentID     UpdateKmsSpaceQueryParamFields = "parent_id"
+	UpdateKmsSpaceQueryParamFieldsIsActive     UpdateKmsSpaceQueryParamFields = "is_active"
+	UpdateKmsSpaceQueryParamFieldsUserID       UpdateKmsSpaceQueryParamFields = "user_id"
+	UpdateKmsSpaceQueryParamFieldsParentPageID UpdateKmsSpaceQueryParamFields = "parent_page_id"
+	UpdateKmsSpaceQueryParamFieldsRaw          UpdateKmsSpaceQueryParamFields = "raw"
 )
 
 func (e UpdateKmsSpaceQueryParamFields) ToPointer() *UpdateKmsSpaceQueryParamFields {
@@ -44,8 +43,6 @@ func (e *UpdateKmsSpaceQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "description":
 		fallthrough
-	case "parent_space_id":
-		fallthrough
 	case "parent_id":
 		fallthrough
 	case "is_active":
@@ -66,7 +63,7 @@ type UpdateKmsSpaceRequest struct {
 	KmsSpace shared.KmsSpace `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateKmsSpaceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Space
 	ID string `pathParam:"style=simple,explode=false,name=id"`

@@ -8,17 +8,16 @@ import (
 )
 
 type KmsSpace struct {
-	CreatedAt     *time.Time     `json:"created_at,omitempty"`
-	Description   *string        `json:"description,omitempty"`
-	ID            *string        `json:"id,omitempty"`
-	IsActive      *bool          `json:"is_active,omitempty"`
-	Name          string         `json:"name"`
-	ParentID      *string        `json:"parent_id,omitempty"`
-	ParentPageID  *string        `json:"parent_page_id,omitempty"`
-	ParentSpaceID *string        `default:"sp" json:"parent_space_id"`
-	Raw           map[string]any `json:"raw,omitempty"`
-	UpdatedAt     *time.Time     `json:"updated_at,omitempty"`
-	UserID        *string        `json:"user_id,omitempty"`
+	CreatedAt    *time.Time     `json:"created_at,omitempty"`
+	Description  *string        `json:"description,omitempty"`
+	ID           *string        `json:"id,omitempty"`
+	IsActive     *bool          `json:"is_active,omitempty"`
+	Name         string         `json:"name"`
+	ParentID     *string        `json:"parent_id,omitempty"`
+	ParentPageID *string        `json:"parent_page_id,omitempty"`
+	Raw          map[string]any `json:"raw,omitempty"`
+	UpdatedAt    *time.Time     `json:"updated_at,omitempty"`
+	UserID       *string        `json:"user_id,omitempty"`
 }
 
 func (k KmsSpace) MarshalJSON() ([]byte, error) {
@@ -79,13 +78,6 @@ func (k *KmsSpace) GetParentPageID() *string {
 		return nil
 	}
 	return k.ParentPageID
-}
-
-func (k *KmsSpace) GetParentSpaceID() *string {
-	if k == nil {
-		return nil
-	}
-	return k.ParentSpaceID
 }
 
 func (k *KmsSpace) GetRaw() map[string]any {

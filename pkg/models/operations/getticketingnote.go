@@ -56,7 +56,7 @@ func (e *GetTicketingNoteQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetTicketingNoteRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetTicketingNoteQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Note
 	ID string `pathParam:"style=simple,explode=false,name=id"`

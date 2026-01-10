@@ -16,7 +16,6 @@
 | `PatchAccountingAccountQueryParamFieldsCurrency`            | currency                                                    |
 | `PatchAccountingAccountQueryParamFieldsCustomerDefinedCode` | customer_defined_code                                       |
 | `PatchAccountingAccountQueryParamFieldsIsPayable`           | is_payable                                                  |
-| `PatchAccountingAccountQueryParamFieldsParentAccountID`     | parent_account_id                                           |
 | `PatchAccountingAccountQueryParamFieldsSection`             | section                                                     |
 | `PatchAccountingAccountQueryParamFieldsSubsection`          | subsection                                                  |
 | `PatchAccountingAccountQueryParamFieldsGroup`               | group                                                       |

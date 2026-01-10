@@ -98,7 +98,7 @@ func (e *GetAccountingContactQueryParamFields) UnmarshalJSON(data []byte) error 
 type GetAccountingContactRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingContactQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Contact
 	ID string `pathParam:"style=simple,explode=false,name=id"`

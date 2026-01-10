@@ -12,7 +12,6 @@
 | `PatchAccountingTransactionQueryParamFieldsTotalAmount`     | total_amount                                                |
 | `PatchAccountingTransactionQueryParamFieldsTaxAmount`       | tax_amount                                                  |
 | `PatchAccountingTransactionQueryParamFieldsAccountID`       | account_id                                                  |
-| `PatchAccountingTransactionQueryParamFieldsContactID`       | contact_id                                                  |
 | `PatchAccountingTransactionQueryParamFieldsReference`       | reference                                                   |
 | `PatchAccountingTransactionQueryParamFieldsSubTotalAmount`  | sub_total_amount                                            |
 | `PatchAccountingTransactionQueryParamFieldsSplitAccountID`  | split_account_id                                            |

@@ -71,7 +71,7 @@ func (e *GetMessagingChannelQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetMessagingChannelRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetMessagingChannelQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Channel
 	ID string `pathParam:"style=simple,explode=false,name=id"`

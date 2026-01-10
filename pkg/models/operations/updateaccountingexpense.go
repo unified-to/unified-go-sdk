@@ -75,7 +75,7 @@ type UpdateAccountingExpenseRequest struct {
 	AccountingExpense shared.AccountingExpense `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateAccountingExpenseQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Expense
 	ID string `pathParam:"style=simple,explode=false,name=id"`

@@ -36,7 +36,6 @@ const (
 	UpdateAccountingInvoiceQueryParamFieldsStatus                  UpdateAccountingInvoiceQueryParamFields = "status"
 	UpdateAccountingInvoiceQueryParamFieldsURL                     UpdateAccountingInvoiceQueryParamFields = "url"
 	UpdateAccountingInvoiceQueryParamFieldsPaymentCollectionMethod UpdateAccountingInvoiceQueryParamFields = "payment_collection_method"
-	UpdateAccountingInvoiceQueryParamFieldsInvoiceAt               UpdateAccountingInvoiceQueryParamFields = "invoice_at"
 	UpdateAccountingInvoiceQueryParamFieldsType                    UpdateAccountingInvoiceQueryParamFields = "type"
 	UpdateAccountingInvoiceQueryParamFieldsAttachments             UpdateAccountingInvoiceQueryParamFields = "attachments"
 	UpdateAccountingInvoiceQueryParamFieldsSend                    UpdateAccountingInvoiceQueryParamFields = "send"
@@ -100,8 +99,6 @@ func (e *UpdateAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) err
 		fallthrough
 	case "payment_collection_method":
 		fallthrough
-	case "invoice_at":
-		fallthrough
 	case "type":
 		fallthrough
 	case "attachments":
@@ -120,7 +117,7 @@ type UpdateAccountingInvoiceRequest struct {
 	AccountingInvoice shared.AccountingInvoice `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateAccountingInvoiceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Invoice
 	ID string `pathParam:"style=simple,explode=false,name=id"`

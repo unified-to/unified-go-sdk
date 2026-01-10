@@ -19,7 +19,6 @@ const (
 	CreateAccountingTransactionQueryParamFieldsTotalAmount     CreateAccountingTransactionQueryParamFields = "total_amount"
 	CreateAccountingTransactionQueryParamFieldsTaxAmount       CreateAccountingTransactionQueryParamFields = "tax_amount"
 	CreateAccountingTransactionQueryParamFieldsAccountID       CreateAccountingTransactionQueryParamFields = "account_id"
-	CreateAccountingTransactionQueryParamFieldsContactID       CreateAccountingTransactionQueryParamFields = "contact_id"
 	CreateAccountingTransactionQueryParamFieldsReference       CreateAccountingTransactionQueryParamFields = "reference"
 	CreateAccountingTransactionQueryParamFieldsSubTotalAmount  CreateAccountingTransactionQueryParamFields = "sub_total_amount"
 	CreateAccountingTransactionQueryParamFieldsSplitAccountID  CreateAccountingTransactionQueryParamFields = "split_account_id"
@@ -56,8 +55,6 @@ func (e *CreateAccountingTransactionQueryParamFields) UnmarshalJSON(data []byte)
 		fallthrough
 	case "account_id":
 		fallthrough
-	case "contact_id":
-		fallthrough
 	case "reference":
 		fallthrough
 	case "sub_total_amount":
@@ -90,7 +87,7 @@ type CreateAccountingTransactionRequest struct {
 	AccountingTransaction shared.AccountingTransaction `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []CreateAccountingTransactionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`

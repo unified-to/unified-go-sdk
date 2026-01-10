@@ -16,7 +16,6 @@
 | `FieldsCurrency`            | currency                    |
 | `FieldsCustomerDefinedCode` | customer_defined_code       |
 | `FieldsIsPayable`           | is_payable                  |
-| `FieldsParentAccountID`     | parent_account_id           |
 | `FieldsSection`             | section                     |
 | `FieldsSubsection`          | subsection                  |
 | `FieldsGroup`               | group                       |

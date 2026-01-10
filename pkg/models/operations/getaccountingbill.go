@@ -110,7 +110,7 @@ func (e *GetAccountingBillQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetAccountingBillRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingBillQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Bill
 	ID string `pathParam:"style=simple,explode=false,name=id"`

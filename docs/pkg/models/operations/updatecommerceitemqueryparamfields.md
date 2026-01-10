@@ -12,6 +12,7 @@
 | `UpdateCommerceItemQueryParamFieldsPublicName`        | public_name                                           |
 | `UpdateCommerceItemQueryParamFieldsSlug`              | slug                                                  |
 | `UpdateCommerceItemQueryParamFieldsDescription`       | description                                           |
+| `UpdateCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                            |
 | `UpdateCommerceItemQueryParamFieldsGlobalCode`        | global_code                                           |
 | `UpdateCommerceItemQueryParamFieldsPublicDescription` | public_description                                    |
 | `UpdateCommerceItemQueryParamFieldsIsActive`          | is_active                                             |

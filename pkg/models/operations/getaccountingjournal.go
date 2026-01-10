@@ -65,7 +65,7 @@ func (e *GetAccountingJournalQueryParamFields) UnmarshalJSON(data []byte) error 
 type GetAccountingJournalRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingJournalQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Journal
 	ID string `pathParam:"style=simple,explode=false,name=id"`

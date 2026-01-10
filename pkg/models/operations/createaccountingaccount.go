@@ -23,7 +23,6 @@ const (
 	FieldsCurrency            Fields = "currency"
 	FieldsCustomerDefinedCode Fields = "customer_defined_code"
 	FieldsIsPayable           Fields = "is_payable"
-	FieldsParentAccountID     Fields = "parent_account_id"
 	FieldsSection             Fields = "section"
 	FieldsSubsection          Fields = "subsection"
 	FieldsGroup               Fields = "group"
@@ -63,8 +62,6 @@ func (e *Fields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "is_payable":
 		fallthrough
-	case "parent_account_id":
-		fallthrough
 	case "section":
 		fallthrough
 	case "subsection":
@@ -88,7 +85,7 @@ type CreateAccountingAccountRequest struct {
 	AccountingAccount shared.AccountingAccount `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []Fields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`

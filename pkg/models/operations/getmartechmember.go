@@ -62,7 +62,7 @@ func (e *GetMartechMemberQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetMartechMemberRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetMartechMemberQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Member
 	ID string `pathParam:"style=simple,explode=false,name=id"`

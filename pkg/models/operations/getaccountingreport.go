@@ -68,7 +68,7 @@ func (e *GetAccountingReportQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetAccountingReportRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingReportQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Report
 	ID string `pathParam:"style=simple,explode=false,name=id"`

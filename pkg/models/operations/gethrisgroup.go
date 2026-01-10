@@ -68,7 +68,7 @@ func (e *GetHrisGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetHrisGroupRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetHrisGroupQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Group
 	ID string `pathParam:"style=simple,explode=false,name=id"`

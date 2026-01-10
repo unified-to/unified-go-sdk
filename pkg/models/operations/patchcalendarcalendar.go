@@ -18,7 +18,6 @@ const (
 	PatchCalendarCalendarQueryParamFieldsName        PatchCalendarCalendarQueryParamFields = "name"
 	PatchCalendarCalendarQueryParamFieldsDescription PatchCalendarCalendarQueryParamFields = "description"
 	PatchCalendarCalendarQueryParamFieldsTimezone    PatchCalendarCalendarQueryParamFields = "timezone"
-	PatchCalendarCalendarQueryParamFieldsPrimary     PatchCalendarCalendarQueryParamFields = "primary"
 	PatchCalendarCalendarQueryParamFieldsIsPrimary   PatchCalendarCalendarQueryParamFields = "is_primary"
 	PatchCalendarCalendarQueryParamFieldsRaw         PatchCalendarCalendarQueryParamFields = "raw"
 )
@@ -44,8 +43,6 @@ func (e *PatchCalendarCalendarQueryParamFields) UnmarshalJSON(data []byte) error
 		fallthrough
 	case "timezone":
 		fallthrough
-	case "primary":
-		fallthrough
 	case "is_primary":
 		fallthrough
 	case "raw":
@@ -60,7 +57,7 @@ type PatchCalendarCalendarRequest struct {
 	CalendarCalendar shared.CalendarCalendar `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []PatchCalendarCalendarQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Calendar
 	ID string `pathParam:"style=simple,explode=false,name=id"`

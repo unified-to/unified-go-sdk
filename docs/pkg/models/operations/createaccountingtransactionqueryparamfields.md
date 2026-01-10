@@ -12,7 +12,6 @@
 | `CreateAccountingTransactionQueryParamFieldsTotalAmount`     | total_amount                                                 |
 | `CreateAccountingTransactionQueryParamFieldsTaxAmount`       | tax_amount                                                   |
 | `CreateAccountingTransactionQueryParamFieldsAccountID`       | account_id                                                   |
-| `CreateAccountingTransactionQueryParamFieldsContactID`       | contact_id                                                   |
 | `CreateAccountingTransactionQueryParamFieldsReference`       | reference                                                    |
 | `CreateAccountingTransactionQueryParamFieldsSubTotalAmount`  | sub_total_amount                                             |
 | `CreateAccountingTransactionQueryParamFieldsSplitAccountID`  | split_account_id                                             |

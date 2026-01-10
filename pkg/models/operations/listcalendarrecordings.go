@@ -66,7 +66,7 @@ type ListCalendarRecordingsRequest struct {
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// The event ID to filter by (reference to CalendarEvent)
 	EventID *string `queryParam:"style=form,explode=true,name=event_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListCalendarRecordingsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                                 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                                 `queryParam:"style=form,explode=true,name=offset"`

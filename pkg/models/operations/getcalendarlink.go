@@ -65,7 +65,7 @@ func (e *GetCalendarLinkQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetCalendarLinkRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetCalendarLinkQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Link
 	ID string `pathParam:"style=simple,explode=false,name=id"`

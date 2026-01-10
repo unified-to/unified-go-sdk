@@ -56,7 +56,7 @@ func (e *GetAccountingCategoryQueryParamFields) UnmarshalJSON(data []byte) error
 type GetAccountingCategoryRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingCategoryQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Category
 	ID string `pathParam:"style=simple,explode=false,name=id"`

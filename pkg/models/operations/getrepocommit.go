@@ -56,7 +56,7 @@ func (e *GetRepoCommitQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetRepoCommitRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetRepoCommitQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Commit
 	ID string `pathParam:"style=simple,explode=false,name=id"`

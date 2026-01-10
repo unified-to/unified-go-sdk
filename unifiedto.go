@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.792.0
+// Generated from OpenAPI doc version 1.0 and generator version 2.793.0
 
 import (
 	"context"
@@ -100,6 +100,7 @@ type UnifiedTo struct {
 	Collection        *Collection
 	Inventory         *Inventory
 	Item              *Item
+	Itemvariant       *Itemvariant
 	Location          *Location
 	Review            *Review
 	Saleschannel      *Saleschannel
@@ -251,9 +252,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.14",
+		SDKVersion: "0.36.15",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.14 2.792.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.15 2.793.0 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -317,6 +318,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Collection = newCollection(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Inventory = newInventory(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Item = newItem(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Itemvariant = newItemvariant(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Location = newLocation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Review = newReview(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Saleschannel = newSaleschannel(sdk, sdk.sdkConfiguration, sdk.hooks)

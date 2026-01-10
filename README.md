@@ -459,36 +459,42 @@ func main() {
 * [CreateCommerceCollection](docs/sdks/commerce/README.md#createcommercecollection) - Create a collection
 * [CreateCommerceInventory](docs/sdks/commerce/README.md#createcommerceinventory) - Create an inventory
 * [CreateCommerceItem](docs/sdks/commerce/README.md#createcommerceitem) - Create an item
+* [CreateCommerceItemvariant](docs/sdks/commerce/README.md#createcommerceitemvariant) - Create an itemvariant
 * [CreateCommerceLocation](docs/sdks/commerce/README.md#createcommercelocation) - Create a location
 * [CreateCommerceReview](docs/sdks/commerce/README.md#createcommercereview) - Create a review
 * [CreateCommerceSaleschannel](docs/sdks/commerce/README.md#createcommercesaleschannel) - Create a saleschannel
 * [GetCommerceCollection](docs/sdks/commerce/README.md#getcommercecollection) - Retrieve a collection
 * [GetCommerceInventory](docs/sdks/commerce/README.md#getcommerceinventory) - Retrieve an inventory
 * [GetCommerceItem](docs/sdks/commerce/README.md#getcommerceitem) - Retrieve an item
+* [GetCommerceItemvariant](docs/sdks/commerce/README.md#getcommerceitemvariant) - Retrieve an itemvariant
 * [GetCommerceLocation](docs/sdks/commerce/README.md#getcommercelocation) - Retrieve a location
 * [GetCommerceReview](docs/sdks/commerce/README.md#getcommercereview) - Retrieve a review
 * [GetCommerceSaleschannel](docs/sdks/commerce/README.md#getcommercesaleschannel) - Retrieve a saleschannel
 * [ListCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [ListCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
 * [ListCommerceItems](docs/sdks/commerce/README.md#listcommerceitems) - List all items
+* [ListCommerceItemvariants](docs/sdks/commerce/README.md#listcommerceitemvariants) - List all itemvariants
 * [ListCommerceLocations](docs/sdks/commerce/README.md#listcommercelocations) - List all locations
 * [ListCommerceReviews](docs/sdks/commerce/README.md#listcommercereviews) - List all reviews
 * [ListCommerceSaleschannels](docs/sdks/commerce/README.md#listcommercesaleschannels) - List all saleschannels
 * [PatchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
 * [PatchCommerceInventory](docs/sdks/commerce/README.md#patchcommerceinventory) - Update an inventory
 * [PatchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
+* [PatchCommerceItemvariant](docs/sdks/commerce/README.md#patchcommerceitemvariant) - Update an itemvariant
 * [PatchCommerceLocation](docs/sdks/commerce/README.md#patchcommercelocation) - Update a location
 * [PatchCommerceReview](docs/sdks/commerce/README.md#patchcommercereview) - Update a review
 * [PatchCommerceSaleschannel](docs/sdks/commerce/README.md#patchcommercesaleschannel) - Update a saleschannel
 * [RemoveCommerceCollection](docs/sdks/commerce/README.md#removecommercecollection) - Remove a collection
 * [RemoveCommerceInventory](docs/sdks/commerce/README.md#removecommerceinventory) - Remove an inventory
 * [RemoveCommerceItem](docs/sdks/commerce/README.md#removecommerceitem) - Remove an item
+* [RemoveCommerceItemvariant](docs/sdks/commerce/README.md#removecommerceitemvariant) - Remove an itemvariant
 * [RemoveCommerceLocation](docs/sdks/commerce/README.md#removecommercelocation) - Remove a location
 * [RemoveCommerceReview](docs/sdks/commerce/README.md#removecommercereview) - Remove a review
 * [RemoveCommerceSaleschannel](docs/sdks/commerce/README.md#removecommercesaleschannel) - Remove a saleschannel
 * [UpdateCommerceCollection](docs/sdks/commerce/README.md#updatecommercecollection) - Update a collection
 * [UpdateCommerceInventory](docs/sdks/commerce/README.md#updatecommerceinventory) - Update an inventory
 * [UpdateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
+* [UpdateCommerceItemvariant](docs/sdks/commerce/README.md#updatecommerceitemvariant) - Update an itemvariant
 * [UpdateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
 * [UpdateCommerceReview](docs/sdks/commerce/README.md#updatecommercereview) - Update a review
 * [UpdateCommerceSaleschannel](docs/sdks/commerce/README.md#updatecommercesaleschannel) - Update a saleschannel
@@ -873,6 +879,15 @@ func main() {
 * [PatchCommerceItem](docs/sdks/item/README.md#patchcommerceitem) - Update an item
 * [RemoveCommerceItem](docs/sdks/item/README.md#removecommerceitem) - Remove an item
 * [UpdateCommerceItem](docs/sdks/item/README.md#updatecommerceitem) - Update an item
+
+### [Itemvariant](docs/sdks/itemvariant/README.md)
+
+* [CreateCommerceItemvariant](docs/sdks/itemvariant/README.md#createcommerceitemvariant) - Create an itemvariant
+* [GetCommerceItemvariant](docs/sdks/itemvariant/README.md#getcommerceitemvariant) - Retrieve an itemvariant
+* [ListCommerceItemvariants](docs/sdks/itemvariant/README.md#listcommerceitemvariants) - List all itemvariants
+* [PatchCommerceItemvariant](docs/sdks/itemvariant/README.md#patchcommerceitemvariant) - Update an itemvariant
+* [RemoveCommerceItemvariant](docs/sdks/itemvariant/README.md#removecommerceitemvariant) - Remove an itemvariant
+* [UpdateCommerceItemvariant](docs/sdks/itemvariant/README.md#updatecommerceitemvariant) - Update an itemvariant
 
 ### [Job](docs/sdks/job/README.md)
 

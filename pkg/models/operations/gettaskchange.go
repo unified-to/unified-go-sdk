@@ -53,7 +53,7 @@ func (e *GetTaskChangeQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetTaskChangeRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetTaskChangeQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Change
 	ID string `pathParam:"style=simple,explode=false,name=id"`

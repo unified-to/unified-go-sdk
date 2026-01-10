@@ -110,7 +110,7 @@ func (e *GetAtsJobQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetAtsJobRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAtsJobQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Job
 	ID string `pathParam:"style=simple,explode=false,name=id"`

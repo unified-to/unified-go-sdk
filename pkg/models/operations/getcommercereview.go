@@ -101,7 +101,7 @@ func (e *GetCommerceReviewQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetCommerceReviewRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetCommerceReviewQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Review
 	ID string `pathParam:"style=simple,explode=false,name=id"`

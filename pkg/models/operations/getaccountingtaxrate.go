@@ -56,7 +56,7 @@ func (e *GetAccountingTaxrateQueryParamFields) UnmarshalJSON(data []byte) error 
 type GetAccountingTaxrateRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingTaxrateQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Taxrate
 	ID string `pathParam:"style=simple,explode=false,name=id"`

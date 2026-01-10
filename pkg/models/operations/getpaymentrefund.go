@@ -62,7 +62,7 @@ func (e *GetPaymentRefundQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetPaymentRefundRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetPaymentRefundQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Refund
 	ID string `pathParam:"style=simple,explode=false,name=id"`

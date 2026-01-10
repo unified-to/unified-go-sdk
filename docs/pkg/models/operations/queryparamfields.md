@@ -16,7 +16,6 @@
 | `QueryParamFieldsCurrency`            | currency                              |
 | `QueryParamFieldsCustomerDefinedCode` | customer_defined_code                 |
 | `QueryParamFieldsIsPayable`           | is_payable                            |
-| `QueryParamFieldsParentAccountID`     | parent_account_id                     |
 | `QueryParamFieldsSection`             | section                               |
 | `QueryParamFieldsSubsection`          | subsection                            |
 | `QueryParamFieldsGroup`               | group                                 |

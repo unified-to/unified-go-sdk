@@ -56,7 +56,7 @@ func (e *ListTicketingCategoriesQueryParamFields) UnmarshalJSON(data []byte) err
 type ListTicketingCategoriesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListTicketingCategoriesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                                  `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                                  `queryParam:"style=form,explode=true,name=offset"`

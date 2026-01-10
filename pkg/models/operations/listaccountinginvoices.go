@@ -36,7 +36,6 @@ const (
 	ListAccountingInvoicesQueryParamFieldsStatus                  ListAccountingInvoicesQueryParamFields = "status"
 	ListAccountingInvoicesQueryParamFieldsURL                     ListAccountingInvoicesQueryParamFields = "url"
 	ListAccountingInvoicesQueryParamFieldsPaymentCollectionMethod ListAccountingInvoicesQueryParamFields = "payment_collection_method"
-	ListAccountingInvoicesQueryParamFieldsInvoiceAt               ListAccountingInvoicesQueryParamFields = "invoice_at"
 	ListAccountingInvoicesQueryParamFieldsType                    ListAccountingInvoicesQueryParamFields = "type"
 	ListAccountingInvoicesQueryParamFieldsAttachments             ListAccountingInvoicesQueryParamFields = "attachments"
 	ListAccountingInvoicesQueryParamFieldsSend                    ListAccountingInvoicesQueryParamFields = "send"
@@ -100,8 +99,6 @@ func (e *ListAccountingInvoicesQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "payment_collection_method":
 		fallthrough
-	case "invoice_at":
-		fallthrough
 	case "type":
 		fallthrough
 	case "attachments":
@@ -121,7 +118,7 @@ type ListAccountingInvoicesRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListAccountingInvoicesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                                 `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                                 `queryParam:"style=form,explode=true,name=offset"`

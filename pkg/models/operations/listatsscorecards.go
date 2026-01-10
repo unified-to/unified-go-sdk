@@ -72,7 +72,7 @@ type ListAtsScorecardsRequest struct {
 	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListAtsScorecardsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The interview ID to filter by
 	InterviewID *string `queryParam:"style=form,explode=true,name=interview_id"`

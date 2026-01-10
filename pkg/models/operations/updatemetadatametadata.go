@@ -66,7 +66,7 @@ type UpdateMetadataMetadataRequest struct {
 	MetadataMetadata shared.MetadataMetadata `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateMetadataMetadataQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Metadata
 	ID string `pathParam:"style=simple,explode=false,name=id"`

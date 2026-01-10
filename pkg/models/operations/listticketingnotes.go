@@ -58,7 +58,7 @@ type ListTicketingNotesRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The customer ID to filter by
 	CustomerID *string `queryParam:"style=form,explode=true,name=customer_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListTicketingNotesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                             `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                             `queryParam:"style=form,explode=true,name=offset"`

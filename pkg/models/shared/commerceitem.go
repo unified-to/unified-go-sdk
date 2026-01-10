@@ -27,6 +27,7 @@ type CommerceItem struct {
 	Raw               map[string]any      `json:"raw,omitempty"`
 	Slug              *string             `json:"slug,omitempty"`
 	Tags              []string            `json:"tags,omitempty"`
+	TaxrateID         *string             `json:"taxrate_id,omitempty"`
 	Type              *string             `json:"type,omitempty"`
 	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
 	// first variant is the default variant
@@ -162,6 +163,13 @@ func (c *CommerceItem) GetTags() []string {
 		return nil
 	}
 	return c.Tags
+}
+
+func (c *CommerceItem) GetTaxrateID() *string {
+	if c == nil {
+		return nil
+	}
+	return c.TaxrateID
 }
 
 func (c *CommerceItem) GetType() *string {

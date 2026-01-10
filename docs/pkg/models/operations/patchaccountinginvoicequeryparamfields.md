@@ -29,7 +29,6 @@
 | `PatchAccountingInvoiceQueryParamFieldsStatus`                  | status                                                          |
 | `PatchAccountingInvoiceQueryParamFieldsURL`                     | url                                                             |
 | `PatchAccountingInvoiceQueryParamFieldsPaymentCollectionMethod` | payment_collection_method                                       |
-| `PatchAccountingInvoiceQueryParamFieldsInvoiceAt`               | invoice_at                                                      |
 | `PatchAccountingInvoiceQueryParamFieldsType`                    | type                                                            |
 | `PatchAccountingInvoiceQueryParamFieldsAttachments`             | attachments                                                     |
 | `PatchAccountingInvoiceQueryParamFieldsSend`                    | send                                                            |

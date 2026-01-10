@@ -86,7 +86,7 @@ func (e *GetVerificationPackageQueryParamFields) UnmarshalJSON(data []byte) erro
 type GetVerificationPackageRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetVerificationPackageQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Package
 	ID string `pathParam:"style=simple,explode=false,name=id"`

@@ -56,7 +56,7 @@ func (e *GetTicketingCustomerQueryParamFields) UnmarshalJSON(data []byte) error 
 type GetTicketingCustomerRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetTicketingCustomerQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Customer
 	ID string `pathParam:"style=simple,explode=false,name=id"`

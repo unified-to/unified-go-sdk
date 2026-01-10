@@ -36,7 +36,6 @@ const (
 	GetAccountingInvoiceQueryParamFieldsStatus                  GetAccountingInvoiceQueryParamFields = "status"
 	GetAccountingInvoiceQueryParamFieldsURL                     GetAccountingInvoiceQueryParamFields = "url"
 	GetAccountingInvoiceQueryParamFieldsPaymentCollectionMethod GetAccountingInvoiceQueryParamFields = "payment_collection_method"
-	GetAccountingInvoiceQueryParamFieldsInvoiceAt               GetAccountingInvoiceQueryParamFields = "invoice_at"
 	GetAccountingInvoiceQueryParamFieldsType                    GetAccountingInvoiceQueryParamFields = "type"
 	GetAccountingInvoiceQueryParamFieldsAttachments             GetAccountingInvoiceQueryParamFields = "attachments"
 	GetAccountingInvoiceQueryParamFieldsSend                    GetAccountingInvoiceQueryParamFields = "send"
@@ -100,8 +99,6 @@ func (e *GetAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "payment_collection_method":
 		fallthrough
-	case "invoice_at":
-		fallthrough
 	case "type":
 		fallthrough
 	case "attachments":
@@ -119,7 +116,7 @@ func (e *GetAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) error 
 type GetAccountingInvoiceRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingInvoiceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Invoice
 	ID string `pathParam:"style=simple,explode=false,name=id"`

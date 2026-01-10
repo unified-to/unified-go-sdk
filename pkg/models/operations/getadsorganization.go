@@ -56,7 +56,7 @@ func (e *GetAdsOrganizationQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetAdsOrganizationRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAdsOrganizationQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Organization
 	ID string `pathParam:"style=simple,explode=false,name=id"`

@@ -12,6 +12,7 @@
 | `PatchCommerceItemQueryParamFieldsPublicName`        | public_name                                          |
 | `PatchCommerceItemQueryParamFieldsSlug`              | slug                                                 |
 | `PatchCommerceItemQueryParamFieldsDescription`       | description                                          |
+| `PatchCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                           |
 | `PatchCommerceItemQueryParamFieldsGlobalCode`        | global_code                                          |
 | `PatchCommerceItemQueryParamFieldsPublicDescription` | public_description                                   |
 | `PatchCommerceItemQueryParamFieldsIsActive`          | is_active                                            |

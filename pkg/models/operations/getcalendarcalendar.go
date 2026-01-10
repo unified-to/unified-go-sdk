@@ -18,7 +18,6 @@ const (
 	GetCalendarCalendarQueryParamFieldsName        GetCalendarCalendarQueryParamFields = "name"
 	GetCalendarCalendarQueryParamFieldsDescription GetCalendarCalendarQueryParamFields = "description"
 	GetCalendarCalendarQueryParamFieldsTimezone    GetCalendarCalendarQueryParamFields = "timezone"
-	GetCalendarCalendarQueryParamFieldsPrimary     GetCalendarCalendarQueryParamFields = "primary"
 	GetCalendarCalendarQueryParamFieldsIsPrimary   GetCalendarCalendarQueryParamFields = "is_primary"
 	GetCalendarCalendarQueryParamFieldsRaw         GetCalendarCalendarQueryParamFields = "raw"
 )
@@ -44,8 +43,6 @@ func (e *GetCalendarCalendarQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "timezone":
 		fallthrough
-	case "primary":
-		fallthrough
 	case "is_primary":
 		fallthrough
 	case "raw":
@@ -59,7 +56,7 @@ func (e *GetCalendarCalendarQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetCalendarCalendarRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetCalendarCalendarQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Calendar
 	ID string `pathParam:"style=simple,explode=false,name=id"`

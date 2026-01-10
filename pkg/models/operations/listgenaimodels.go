@@ -53,7 +53,7 @@ func (e *ListGenaiModelsQueryParamFields) UnmarshalJSON(data []byte) error {
 type ListGenaiModelsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListGenaiModelsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                          `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                          `queryParam:"style=form,explode=true,name=offset"`

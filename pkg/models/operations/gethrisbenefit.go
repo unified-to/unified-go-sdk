@@ -80,7 +80,7 @@ func (e *GetHrisBenefitQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetHrisBenefitRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetHrisBenefitQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Benefit
 	ID string `pathParam:"style=simple,explode=false,name=id"`

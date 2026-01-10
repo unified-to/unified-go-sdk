@@ -56,7 +56,7 @@ func (e *ListTaskCommentsQueryParamFields) UnmarshalJSON(data []byte) error {
 type ListTaskCommentsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListTaskCommentsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`

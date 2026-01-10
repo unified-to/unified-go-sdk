@@ -52,6 +52,8 @@
 | `PropertyConnectionPermissionsPaymentSubscriptionWrite`     | payment_subscription_write                                  |
 | `PropertyConnectionPermissionsCommerceItemRead`             | commerce_item_read                                          |
 | `PropertyConnectionPermissionsCommerceItemWrite`            | commerce_item_write                                         |
+| `PropertyConnectionPermissionsCommerceItemvariantRead`      | commerce_itemvariant_read                                   |
+| `PropertyConnectionPermissionsCommerceItemvariantWrite`     | commerce_itemvariant_write                                  |
 | `PropertyConnectionPermissionsCommerceCollectionRead`       | commerce_collection_read                                    |
 | `PropertyConnectionPermissionsCommerceCollectionWrite`      | commerce_collection_write                                   |
 | `PropertyConnectionPermissionsCommerceInventoryRead`        | commerce_inventory_read                                     |

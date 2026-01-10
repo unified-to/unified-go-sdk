@@ -19,7 +19,6 @@ const (
 	ListAccountingTransactionsQueryParamFieldsTotalAmount     ListAccountingTransactionsQueryParamFields = "total_amount"
 	ListAccountingTransactionsQueryParamFieldsTaxAmount       ListAccountingTransactionsQueryParamFields = "tax_amount"
 	ListAccountingTransactionsQueryParamFieldsAccountID       ListAccountingTransactionsQueryParamFields = "account_id"
-	ListAccountingTransactionsQueryParamFieldsContactID       ListAccountingTransactionsQueryParamFields = "contact_id"
 	ListAccountingTransactionsQueryParamFieldsReference       ListAccountingTransactionsQueryParamFields = "reference"
 	ListAccountingTransactionsQueryParamFieldsSubTotalAmount  ListAccountingTransactionsQueryParamFields = "sub_total_amount"
 	ListAccountingTransactionsQueryParamFieldsSplitAccountID  ListAccountingTransactionsQueryParamFields = "split_account_id"
@@ -56,8 +55,6 @@ func (e *ListAccountingTransactionsQueryParamFields) UnmarshalJSON(data []byte) 
 		fallthrough
 	case "account_id":
 		fallthrough
-	case "contact_id":
-		fallthrough
 	case "reference":
 		fallthrough
 	case "sub_total_amount":
@@ -91,7 +88,7 @@ type ListAccountingTransactionsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListAccountingTransactionsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                                     `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                                     `queryParam:"style=form,explode=true,name=offset"`

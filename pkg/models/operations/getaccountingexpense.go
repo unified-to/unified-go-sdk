@@ -74,7 +74,7 @@ func (e *GetAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) error 
 type GetAccountingExpenseRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingExpenseQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Expense
 	ID string `pathParam:"style=simple,explode=false,name=id"`

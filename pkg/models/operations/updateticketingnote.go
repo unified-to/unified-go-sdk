@@ -57,7 +57,7 @@ type UpdateTicketingNoteRequest struct {
 	TicketingNote shared.TicketingNote `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateTicketingNoteQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Note
 	ID string `pathParam:"style=simple,explode=false,name=id"`

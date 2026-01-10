@@ -23,7 +23,6 @@ const (
 	QueryParamFieldsCurrency            QueryParamFields = "currency"
 	QueryParamFieldsCustomerDefinedCode QueryParamFields = "customer_defined_code"
 	QueryParamFieldsIsPayable           QueryParamFields = "is_payable"
-	QueryParamFieldsParentAccountID     QueryParamFields = "parent_account_id"
 	QueryParamFieldsSection             QueryParamFields = "section"
 	QueryParamFieldsSubsection          QueryParamFields = "subsection"
 	QueryParamFieldsGroup               QueryParamFields = "group"
@@ -63,8 +62,6 @@ func (e *QueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "is_payable":
 		fallthrough
-	case "parent_account_id":
-		fallthrough
 	case "section":
 		fallthrough
 	case "subsection":
@@ -86,7 +83,7 @@ func (e *QueryParamFields) UnmarshalJSON(data []byte) error {
 type GetAccountingAccountRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []QueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Account
 	ID string `pathParam:"style=simple,explode=false,name=id"`

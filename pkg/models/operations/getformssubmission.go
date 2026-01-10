@@ -56,7 +56,7 @@ func (e *GetFormsSubmissionQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetFormsSubmissionRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetFormsSubmissionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Submission
 	ID string `pathParam:"style=simple,explode=false,name=id"`

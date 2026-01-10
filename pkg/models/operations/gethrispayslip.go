@@ -77,7 +77,7 @@ func (e *GetHrisPayslipQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetHrisPayslipRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetHrisPayslipQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Payslip
 	ID string `pathParam:"style=simple,explode=false,name=id"`

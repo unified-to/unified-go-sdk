@@ -11,6 +11,5 @@
 | `ListCalendarCalendarsQueryParamFieldsName`        | name                                               |
 | `ListCalendarCalendarsQueryParamFieldsDescription` | description                                        |
 | `ListCalendarCalendarsQueryParamFieldsTimezone`    | timezone                                           |
-| `ListCalendarCalendarsQueryParamFieldsPrimary`     | primary                                            |
 | `ListCalendarCalendarsQueryParamFieldsIsPrimary`   | is_primary                                         |
 | `ListCalendarCalendarsQueryParamFieldsRaw`         | raw                                                |

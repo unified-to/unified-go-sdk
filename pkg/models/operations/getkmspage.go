@@ -12,21 +12,20 @@ import (
 type GetKmsPageQueryParamFields string
 
 const (
-	GetKmsPageQueryParamFieldsID           GetKmsPageQueryParamFields = "id"
-	GetKmsPageQueryParamFieldsCreatedAt    GetKmsPageQueryParamFields = "created_at"
-	GetKmsPageQueryParamFieldsUpdatedAt    GetKmsPageQueryParamFields = "updated_at"
-	GetKmsPageQueryParamFieldsTitle        GetKmsPageQueryParamFields = "title"
-	GetKmsPageQueryParamFieldsType         GetKmsPageQueryParamFields = "type"
-	GetKmsPageQueryParamFieldsSpaceID      GetKmsPageQueryParamFields = "space_id"
-	GetKmsPageQueryParamFieldsParentPageID GetKmsPageQueryParamFields = "parent_page_id"
-	GetKmsPageQueryParamFieldsParentID     GetKmsPageQueryParamFields = "parent_id"
-	GetKmsPageQueryParamFieldsIsActive     GetKmsPageQueryParamFields = "is_active"
-	GetKmsPageQueryParamFieldsUserID       GetKmsPageQueryParamFields = "user_id"
-	GetKmsPageQueryParamFieldsDownloadURL  GetKmsPageQueryParamFields = "download_url"
-	GetKmsPageQueryParamFieldsMetadata     GetKmsPageQueryParamFields = "metadata"
-	GetKmsPageQueryParamFieldsHasChildren  GetKmsPageQueryParamFields = "has_children"
-	GetKmsPageQueryParamFieldsWebURL       GetKmsPageQueryParamFields = "web_url"
-	GetKmsPageQueryParamFieldsRaw          GetKmsPageQueryParamFields = "raw"
+	GetKmsPageQueryParamFieldsID          GetKmsPageQueryParamFields = "id"
+	GetKmsPageQueryParamFieldsCreatedAt   GetKmsPageQueryParamFields = "created_at"
+	GetKmsPageQueryParamFieldsUpdatedAt   GetKmsPageQueryParamFields = "updated_at"
+	GetKmsPageQueryParamFieldsTitle       GetKmsPageQueryParamFields = "title"
+	GetKmsPageQueryParamFieldsType        GetKmsPageQueryParamFields = "type"
+	GetKmsPageQueryParamFieldsSpaceID     GetKmsPageQueryParamFields = "space_id"
+	GetKmsPageQueryParamFieldsParentID    GetKmsPageQueryParamFields = "parent_id"
+	GetKmsPageQueryParamFieldsIsActive    GetKmsPageQueryParamFields = "is_active"
+	GetKmsPageQueryParamFieldsUserID      GetKmsPageQueryParamFields = "user_id"
+	GetKmsPageQueryParamFieldsDownloadURL GetKmsPageQueryParamFields = "download_url"
+	GetKmsPageQueryParamFieldsMetadata    GetKmsPageQueryParamFields = "metadata"
+	GetKmsPageQueryParamFieldsHasChildren GetKmsPageQueryParamFields = "has_children"
+	GetKmsPageQueryParamFieldsWebURL      GetKmsPageQueryParamFields = "web_url"
+	GetKmsPageQueryParamFieldsRaw         GetKmsPageQueryParamFields = "raw"
 )
 
 func (e GetKmsPageQueryParamFields) ToPointer() *GetKmsPageQueryParamFields {
@@ -49,8 +48,6 @@ func (e *GetKmsPageQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "type":
 		fallthrough
 	case "space_id":
-		fallthrough
-	case "parent_page_id":
 		fallthrough
 	case "parent_id":
 		fallthrough
@@ -77,7 +74,7 @@ func (e *GetKmsPageQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetKmsPageRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetKmsPageQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Page
 	ID string `pathParam:"style=simple,explode=false,name=id"`

@@ -74,7 +74,7 @@ func (e *GetUcRecordingQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetUcRecordingRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetUcRecordingQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Recording
 	ID string `pathParam:"style=simple,explode=false,name=id"`

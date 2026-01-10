@@ -110,7 +110,7 @@ type ListCalendarEventsRequest struct {
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Whether to flatten grouped or recurring items into individual entries.
 	Expand *bool `queryParam:"style=form,explode=true,name=expand"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListCalendarEventsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                             `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                             `queryParam:"style=form,explode=true,name=offset"`

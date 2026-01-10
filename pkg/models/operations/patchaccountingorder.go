@@ -75,7 +75,7 @@ type PatchAccountingOrderRequest struct {
 	AccountingOrder shared.AccountingOrder `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []PatchAccountingOrderQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Order
 	ID string `pathParam:"style=simple,explode=false,name=id"`

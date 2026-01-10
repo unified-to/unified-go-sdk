@@ -83,7 +83,7 @@ func (e *GetAtsApplicationQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetAtsApplicationRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAtsApplicationQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Application
 	ID string `pathParam:"style=simple,explode=false,name=id"`

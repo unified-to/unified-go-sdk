@@ -70,7 +70,7 @@ type ListPaymentPaymentsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListPaymentPaymentsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The invoice ID to filter by (reference to AccountingInvoice)
 	InvoiceID *string  `queryParam:"style=form,explode=true,name=invoice_id"`

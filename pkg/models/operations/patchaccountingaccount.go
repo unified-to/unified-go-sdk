@@ -23,7 +23,6 @@ const (
 	PatchAccountingAccountQueryParamFieldsCurrency            PatchAccountingAccountQueryParamFields = "currency"
 	PatchAccountingAccountQueryParamFieldsCustomerDefinedCode PatchAccountingAccountQueryParamFields = "customer_defined_code"
 	PatchAccountingAccountQueryParamFieldsIsPayable           PatchAccountingAccountQueryParamFields = "is_payable"
-	PatchAccountingAccountQueryParamFieldsParentAccountID     PatchAccountingAccountQueryParamFields = "parent_account_id"
 	PatchAccountingAccountQueryParamFieldsSection             PatchAccountingAccountQueryParamFields = "section"
 	PatchAccountingAccountQueryParamFieldsSubsection          PatchAccountingAccountQueryParamFields = "subsection"
 	PatchAccountingAccountQueryParamFieldsGroup               PatchAccountingAccountQueryParamFields = "group"
@@ -63,8 +62,6 @@ func (e *PatchAccountingAccountQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "is_payable":
 		fallthrough
-	case "parent_account_id":
-		fallthrough
 	case "section":
 		fallthrough
 	case "subsection":
@@ -88,7 +85,7 @@ type PatchAccountingAccountRequest struct {
 	AccountingAccount shared.AccountingAccount `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []PatchAccountingAccountQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Account
 	ID string `pathParam:"style=simple,explode=false,name=id"`

@@ -85,7 +85,7 @@ type ListAdsAdsRequest struct {
 	CampaignID *string `queryParam:"style=form,explode=true,name=campaign_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListAdsAdsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The group ID to filter by (reference to HrisGroup)
 	GroupID *string  `queryParam:"style=form,explode=true,name=group_id"`

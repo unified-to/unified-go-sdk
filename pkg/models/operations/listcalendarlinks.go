@@ -65,7 +65,7 @@ func (e *ListCalendarLinksQueryParamFields) UnmarshalJSON(data []byte) error {
 type ListCalendarLinksRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListCalendarLinksQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                            `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                            `queryParam:"style=form,explode=true,name=offset"`

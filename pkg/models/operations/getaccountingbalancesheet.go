@@ -68,7 +68,7 @@ func (e *GetAccountingBalancesheetQueryParamFields) UnmarshalJSON(data []byte) e
 type GetAccountingBalancesheetRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingBalancesheetQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Balancesheet
 	ID string `pathParam:"style=simple,explode=false,name=id"`

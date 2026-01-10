@@ -19,7 +19,6 @@ const (
 	GetAccountingTransactionQueryParamFieldsTotalAmount     GetAccountingTransactionQueryParamFields = "total_amount"
 	GetAccountingTransactionQueryParamFieldsTaxAmount       GetAccountingTransactionQueryParamFields = "tax_amount"
 	GetAccountingTransactionQueryParamFieldsAccountID       GetAccountingTransactionQueryParamFields = "account_id"
-	GetAccountingTransactionQueryParamFieldsContactID       GetAccountingTransactionQueryParamFields = "contact_id"
 	GetAccountingTransactionQueryParamFieldsReference       GetAccountingTransactionQueryParamFields = "reference"
 	GetAccountingTransactionQueryParamFieldsSubTotalAmount  GetAccountingTransactionQueryParamFields = "sub_total_amount"
 	GetAccountingTransactionQueryParamFieldsSplitAccountID  GetAccountingTransactionQueryParamFields = "split_account_id"
@@ -56,8 +55,6 @@ func (e *GetAccountingTransactionQueryParamFields) UnmarshalJSON(data []byte) er
 		fallthrough
 	case "account_id":
 		fallthrough
-	case "contact_id":
-		fallthrough
 	case "reference":
 		fallthrough
 	case "sub_total_amount":
@@ -89,7 +86,7 @@ func (e *GetAccountingTransactionQueryParamFields) UnmarshalJSON(data []byte) er
 type GetAccountingTransactionRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingTransactionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Transaction
 	ID string `pathParam:"style=simple,explode=false,name=id"`

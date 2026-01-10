@@ -56,7 +56,7 @@ func (e *ListFormsSubmissionsQueryParamFields) UnmarshalJSON(data []byte) error 
 type ListFormsSubmissionsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListFormsSubmissionsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The form ID to filter by
 	FormID *string  `queryParam:"style=form,explode=true,name=form_id"`

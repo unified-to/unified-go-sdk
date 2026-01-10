@@ -18,7 +18,6 @@ const (
 	ListCalendarCalendarsQueryParamFieldsName        ListCalendarCalendarsQueryParamFields = "name"
 	ListCalendarCalendarsQueryParamFieldsDescription ListCalendarCalendarsQueryParamFields = "description"
 	ListCalendarCalendarsQueryParamFieldsTimezone    ListCalendarCalendarsQueryParamFields = "timezone"
-	ListCalendarCalendarsQueryParamFieldsPrimary     ListCalendarCalendarsQueryParamFields = "primary"
 	ListCalendarCalendarsQueryParamFieldsIsPrimary   ListCalendarCalendarsQueryParamFields = "is_primary"
 	ListCalendarCalendarsQueryParamFieldsRaw         ListCalendarCalendarsQueryParamFields = "raw"
 )
@@ -44,8 +43,6 @@ func (e *ListCalendarCalendarsQueryParamFields) UnmarshalJSON(data []byte) error
 		fallthrough
 	case "timezone":
 		fallthrough
-	case "primary":
-		fallthrough
 	case "is_primary":
 		fallthrough
 	case "raw":
@@ -59,7 +56,7 @@ func (e *ListCalendarCalendarsQueryParamFields) UnmarshalJSON(data []byte) error
 type ListCalendarCalendarsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListCalendarCalendarsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                                `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                                `queryParam:"style=form,explode=true,name=offset"`

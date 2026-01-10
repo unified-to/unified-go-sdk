@@ -67,7 +67,7 @@ type ListUcCallsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by (reference to UcContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListUcCallsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                      `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                      `queryParam:"style=form,explode=true,name=offset"`

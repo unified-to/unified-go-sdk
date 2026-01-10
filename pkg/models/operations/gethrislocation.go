@@ -80,7 +80,7 @@ func (e *GetHrisLocationQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetHrisLocationRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetHrisLocationQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Location
 	ID string `pathParam:"style=simple,explode=false,name=id"`

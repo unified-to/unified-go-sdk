@@ -12,17 +12,16 @@ import (
 type GetKmsSpaceQueryParamFields string
 
 const (
-	GetKmsSpaceQueryParamFieldsID            GetKmsSpaceQueryParamFields = "id"
-	GetKmsSpaceQueryParamFieldsCreatedAt     GetKmsSpaceQueryParamFields = "created_at"
-	GetKmsSpaceQueryParamFieldsUpdatedAt     GetKmsSpaceQueryParamFields = "updated_at"
-	GetKmsSpaceQueryParamFieldsName          GetKmsSpaceQueryParamFields = "name"
-	GetKmsSpaceQueryParamFieldsDescription   GetKmsSpaceQueryParamFields = "description"
-	GetKmsSpaceQueryParamFieldsParentSpaceID GetKmsSpaceQueryParamFields = "parent_space_id"
-	GetKmsSpaceQueryParamFieldsParentID      GetKmsSpaceQueryParamFields = "parent_id"
-	GetKmsSpaceQueryParamFieldsIsActive      GetKmsSpaceQueryParamFields = "is_active"
-	GetKmsSpaceQueryParamFieldsUserID        GetKmsSpaceQueryParamFields = "user_id"
-	GetKmsSpaceQueryParamFieldsParentPageID  GetKmsSpaceQueryParamFields = "parent_page_id"
-	GetKmsSpaceQueryParamFieldsRaw           GetKmsSpaceQueryParamFields = "raw"
+	GetKmsSpaceQueryParamFieldsID           GetKmsSpaceQueryParamFields = "id"
+	GetKmsSpaceQueryParamFieldsCreatedAt    GetKmsSpaceQueryParamFields = "created_at"
+	GetKmsSpaceQueryParamFieldsUpdatedAt    GetKmsSpaceQueryParamFields = "updated_at"
+	GetKmsSpaceQueryParamFieldsName         GetKmsSpaceQueryParamFields = "name"
+	GetKmsSpaceQueryParamFieldsDescription  GetKmsSpaceQueryParamFields = "description"
+	GetKmsSpaceQueryParamFieldsParentID     GetKmsSpaceQueryParamFields = "parent_id"
+	GetKmsSpaceQueryParamFieldsIsActive     GetKmsSpaceQueryParamFields = "is_active"
+	GetKmsSpaceQueryParamFieldsUserID       GetKmsSpaceQueryParamFields = "user_id"
+	GetKmsSpaceQueryParamFieldsParentPageID GetKmsSpaceQueryParamFields = "parent_page_id"
+	GetKmsSpaceQueryParamFieldsRaw          GetKmsSpaceQueryParamFields = "raw"
 )
 
 func (e GetKmsSpaceQueryParamFields) ToPointer() *GetKmsSpaceQueryParamFields {
@@ -44,8 +43,6 @@ func (e *GetKmsSpaceQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "description":
 		fallthrough
-	case "parent_space_id":
-		fallthrough
 	case "parent_id":
 		fallthrough
 	case "is_active":
@@ -65,7 +62,7 @@ func (e *GetKmsSpaceQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetKmsSpaceRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetKmsSpaceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Space
 	ID string `pathParam:"style=simple,explode=false,name=id"`

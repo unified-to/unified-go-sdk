@@ -62,7 +62,7 @@ func (e *ListRepoPullrequestsQueryParamFields) UnmarshalJSON(data []byte) error 
 type ListRepoPullrequestsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListRepoPullrequestsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                               `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                               `queryParam:"style=form,explode=true,name=offset"`

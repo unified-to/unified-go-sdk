@@ -32,21 +32,20 @@ func (e *KmsPageType) IsExact() bool {
 }
 
 type KmsPage struct {
-	CreatedAt    *time.Time        `json:"created_at,omitempty"`
-	DownloadURL  *string           `json:"download_url,omitempty"`
-	HasChildren  *bool             `json:"has_children,omitempty"`
-	ID           *string           `json:"id,omitempty"`
-	IsActive     *bool             `json:"is_active,omitempty"`
-	Metadata     []KmsPageMetadata `json:"metadata,omitempty"`
-	ParentID     *string           `json:"parent_id,omitempty"`
-	ParentPageID *string           `json:"parent_page_id,omitempty"`
-	Raw          map[string]any    `json:"raw,omitempty"`
-	SpaceID      *string           `json:"space_id,omitempty"`
-	Title        string            `json:"title"`
-	Type         KmsPageType       `json:"type"`
-	UpdatedAt    *time.Time        `json:"updated_at,omitempty"`
-	UserID       *string           `json:"user_id,omitempty"`
-	WebURL       *string           `json:"web_url,omitempty"`
+	CreatedAt   *time.Time        `json:"created_at,omitempty"`
+	DownloadURL *string           `json:"download_url,omitempty"`
+	HasChildren *bool             `json:"has_children,omitempty"`
+	ID          *string           `json:"id,omitempty"`
+	IsActive    *bool             `json:"is_active,omitempty"`
+	Metadata    []KmsPageMetadata `json:"metadata,omitempty"`
+	ParentID    *string           `json:"parent_id,omitempty"`
+	Raw         map[string]any    `json:"raw,omitempty"`
+	SpaceID     *string           `json:"space_id,omitempty"`
+	Title       string            `json:"title"`
+	Type        KmsPageType       `json:"type"`
+	UpdatedAt   *time.Time        `json:"updated_at,omitempty"`
+	UserID      *string           `json:"user_id,omitempty"`
+	WebURL      *string           `json:"web_url,omitempty"`
 }
 
 func (k KmsPage) MarshalJSON() ([]byte, error) {
@@ -107,13 +106,6 @@ func (k *KmsPage) GetParentID() *string {
 		return nil
 	}
 	return k.ParentID
-}
-
-func (k *KmsPage) GetParentPageID() *string {
-	if k == nil {
-		return nil
-	}
-	return k.ParentPageID
 }
 
 func (k *KmsPage) GetRaw() map[string]any {

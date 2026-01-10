@@ -55,7 +55,7 @@ type ListUcCommentsRequest struct {
 	CallID *string `queryParam:"style=form,explode=true,name=call_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListUcCommentsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                         `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                         `queryParam:"style=form,explode=true,name=offset"`

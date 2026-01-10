@@ -550,10 +550,8 @@ type KmsPageMetadata struct {
 	ExtraData *KmsPageMetadataExtraData `json:"extra_data,omitempty"`
 	Format    *KmsPageMetadataFormat    `json:"format,omitempty"`
 	ID        *string                   `json:"id,omitempty"`
-	Key       *string                   `json:"key,omitempty"`
 	Namespace *string                   `json:"namespace,omitempty"`
 	Slug      *string                   `json:"slug,omitempty"`
-	Type      *string                   `json:"type,omitempty"`
 	Value     *KmsPageMetadataValue     `json:"value,omitempty"`
 }
 
@@ -578,13 +576,6 @@ func (k *KmsPageMetadata) GetID() *string {
 	return k.ID
 }
 
-func (k *KmsPageMetadata) GetKey() *string {
-	if k == nil {
-		return nil
-	}
-	return k.Key
-}
-
 func (k *KmsPageMetadata) GetNamespace() *string {
 	if k == nil {
 		return nil
@@ -597,13 +588,6 @@ func (k *KmsPageMetadata) GetSlug() *string {
 		return nil
 	}
 	return k.Slug
-}
-
-func (k *KmsPageMetadata) GetType() *string {
-	if k == nil {
-		return nil
-	}
-	return k.Type
 }
 
 func (k *KmsPageMetadata) GetValue() *KmsPageMetadataValue {

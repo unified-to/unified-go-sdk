@@ -12,7 +12,6 @@
 | `UpdateAccountingTransactionQueryParamFieldsTotalAmount`     | total_amount                                                 |
 | `UpdateAccountingTransactionQueryParamFieldsTaxAmount`       | tax_amount                                                   |
 | `UpdateAccountingTransactionQueryParamFieldsAccountID`       | account_id                                                   |
-| `UpdateAccountingTransactionQueryParamFieldsContactID`       | contact_id                                                   |
 | `UpdateAccountingTransactionQueryParamFieldsReference`       | reference                                                    |
 | `UpdateAccountingTransactionQueryParamFieldsSubTotalAmount`  | sub_total_amount                                             |
 | `UpdateAccountingTransactionQueryParamFieldsSplitAccountID`  | split_account_id                                             |

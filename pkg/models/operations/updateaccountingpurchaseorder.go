@@ -72,7 +72,7 @@ type UpdateAccountingPurchaseorderRequest struct {
 	AccountingPurchaseorder shared.AccountingPurchaseorder `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateAccountingPurchaseorderQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Purchaseorder
 	ID string `pathParam:"style=simple,explode=false,name=id"`

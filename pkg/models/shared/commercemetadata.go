@@ -547,10 +547,8 @@ type CommerceMetadata struct {
 	Format      *CommerceMetadataFormat    `json:"format,omitempty"`
 	ID          *string                    `json:"id,omitempty"`
 	IsRequired  *bool                      `json:"is_required,omitempty"`
-	Key         *string                    `json:"key,omitempty"`
 	Namespace   *string                    `json:"namespace,omitempty"`
 	Slug        *string                    `json:"slug,omitempty"`
-	Type        *string                    `json:"type,omitempty"`
 	Value       *CommerceMetadataValue     `json:"value,omitempty"`
 }
 
@@ -589,13 +587,6 @@ func (c *CommerceMetadata) GetIsRequired() *bool {
 	return c.IsRequired
 }
 
-func (c *CommerceMetadata) GetKey() *string {
-	if c == nil {
-		return nil
-	}
-	return c.Key
-}
-
 func (c *CommerceMetadata) GetNamespace() *string {
 	if c == nil {
 		return nil
@@ -608,13 +599,6 @@ func (c *CommerceMetadata) GetSlug() *string {
 		return nil
 	}
 	return c.Slug
-}
-
-func (c *CommerceMetadata) GetType() *string {
-	if c == nil {
-		return nil
-	}
-	return c.Type
 }
 
 func (c *CommerceMetadata) GetValue() *CommerceMetadataValue {

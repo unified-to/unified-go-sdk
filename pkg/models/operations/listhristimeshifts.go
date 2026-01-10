@@ -81,7 +81,7 @@ type ListHrisTimeshiftsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListHrisTimeshiftsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                             `queryParam:"style=form,explode=true,name=limit"`
 	// The location ID to filter by (reference to HrisLocation)

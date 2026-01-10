@@ -95,7 +95,7 @@ func (e *GetAccountingProfitlossQueryParamFields) UnmarshalJSON(data []byte) err
 type GetAccountingProfitlossRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAccountingProfitlossQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Profitloss
 	ID string `pathParam:"style=simple,explode=false,name=id"`

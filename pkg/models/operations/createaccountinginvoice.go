@@ -36,7 +36,6 @@ const (
 	CreateAccountingInvoiceQueryParamFieldsStatus                  CreateAccountingInvoiceQueryParamFields = "status"
 	CreateAccountingInvoiceQueryParamFieldsURL                     CreateAccountingInvoiceQueryParamFields = "url"
 	CreateAccountingInvoiceQueryParamFieldsPaymentCollectionMethod CreateAccountingInvoiceQueryParamFields = "payment_collection_method"
-	CreateAccountingInvoiceQueryParamFieldsInvoiceAt               CreateAccountingInvoiceQueryParamFields = "invoice_at"
 	CreateAccountingInvoiceQueryParamFieldsType                    CreateAccountingInvoiceQueryParamFields = "type"
 	CreateAccountingInvoiceQueryParamFieldsAttachments             CreateAccountingInvoiceQueryParamFields = "attachments"
 	CreateAccountingInvoiceQueryParamFieldsSend                    CreateAccountingInvoiceQueryParamFields = "send"
@@ -100,8 +99,6 @@ func (e *CreateAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) err
 		fallthrough
 	case "payment_collection_method":
 		fallthrough
-	case "invoice_at":
-		fallthrough
 	case "type":
 		fallthrough
 	case "attachments":
@@ -120,7 +117,7 @@ type CreateAccountingInvoiceRequest struct {
 	AccountingInvoice shared.AccountingInvoice `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []CreateAccountingInvoiceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`

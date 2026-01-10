@@ -19,7 +19,6 @@ const (
 	UpdateAccountingTransactionQueryParamFieldsTotalAmount     UpdateAccountingTransactionQueryParamFields = "total_amount"
 	UpdateAccountingTransactionQueryParamFieldsTaxAmount       UpdateAccountingTransactionQueryParamFields = "tax_amount"
 	UpdateAccountingTransactionQueryParamFieldsAccountID       UpdateAccountingTransactionQueryParamFields = "account_id"
-	UpdateAccountingTransactionQueryParamFieldsContactID       UpdateAccountingTransactionQueryParamFields = "contact_id"
 	UpdateAccountingTransactionQueryParamFieldsReference       UpdateAccountingTransactionQueryParamFields = "reference"
 	UpdateAccountingTransactionQueryParamFieldsSubTotalAmount  UpdateAccountingTransactionQueryParamFields = "sub_total_amount"
 	UpdateAccountingTransactionQueryParamFieldsSplitAccountID  UpdateAccountingTransactionQueryParamFields = "split_account_id"
@@ -56,8 +55,6 @@ func (e *UpdateAccountingTransactionQueryParamFields) UnmarshalJSON(data []byte)
 		fallthrough
 	case "account_id":
 		fallthrough
-	case "contact_id":
-		fallthrough
 	case "reference":
 		fallthrough
 	case "sub_total_amount":
@@ -90,7 +87,7 @@ type UpdateAccountingTransactionRequest struct {
 	AccountingTransaction shared.AccountingTransaction `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateAccountingTransactionQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Transaction
 	ID string `pathParam:"style=simple,explode=false,name=id"`

@@ -95,7 +95,7 @@ func (e *GetTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetTaskTaskRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetTaskTaskQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Task
 	ID string `pathParam:"style=simple,explode=false,name=id"`

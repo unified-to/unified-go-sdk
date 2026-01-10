@@ -12,21 +12,20 @@ import (
 type ListKmsPagesQueryParamFields string
 
 const (
-	ListKmsPagesQueryParamFieldsID           ListKmsPagesQueryParamFields = "id"
-	ListKmsPagesQueryParamFieldsCreatedAt    ListKmsPagesQueryParamFields = "created_at"
-	ListKmsPagesQueryParamFieldsUpdatedAt    ListKmsPagesQueryParamFields = "updated_at"
-	ListKmsPagesQueryParamFieldsTitle        ListKmsPagesQueryParamFields = "title"
-	ListKmsPagesQueryParamFieldsType         ListKmsPagesQueryParamFields = "type"
-	ListKmsPagesQueryParamFieldsSpaceID      ListKmsPagesQueryParamFields = "space_id"
-	ListKmsPagesQueryParamFieldsParentPageID ListKmsPagesQueryParamFields = "parent_page_id"
-	ListKmsPagesQueryParamFieldsParentID     ListKmsPagesQueryParamFields = "parent_id"
-	ListKmsPagesQueryParamFieldsIsActive     ListKmsPagesQueryParamFields = "is_active"
-	ListKmsPagesQueryParamFieldsUserID       ListKmsPagesQueryParamFields = "user_id"
-	ListKmsPagesQueryParamFieldsDownloadURL  ListKmsPagesQueryParamFields = "download_url"
-	ListKmsPagesQueryParamFieldsMetadata     ListKmsPagesQueryParamFields = "metadata"
-	ListKmsPagesQueryParamFieldsHasChildren  ListKmsPagesQueryParamFields = "has_children"
-	ListKmsPagesQueryParamFieldsWebURL       ListKmsPagesQueryParamFields = "web_url"
-	ListKmsPagesQueryParamFieldsRaw          ListKmsPagesQueryParamFields = "raw"
+	ListKmsPagesQueryParamFieldsID          ListKmsPagesQueryParamFields = "id"
+	ListKmsPagesQueryParamFieldsCreatedAt   ListKmsPagesQueryParamFields = "created_at"
+	ListKmsPagesQueryParamFieldsUpdatedAt   ListKmsPagesQueryParamFields = "updated_at"
+	ListKmsPagesQueryParamFieldsTitle       ListKmsPagesQueryParamFields = "title"
+	ListKmsPagesQueryParamFieldsType        ListKmsPagesQueryParamFields = "type"
+	ListKmsPagesQueryParamFieldsSpaceID     ListKmsPagesQueryParamFields = "space_id"
+	ListKmsPagesQueryParamFieldsParentID    ListKmsPagesQueryParamFields = "parent_id"
+	ListKmsPagesQueryParamFieldsIsActive    ListKmsPagesQueryParamFields = "is_active"
+	ListKmsPagesQueryParamFieldsUserID      ListKmsPagesQueryParamFields = "user_id"
+	ListKmsPagesQueryParamFieldsDownloadURL ListKmsPagesQueryParamFields = "download_url"
+	ListKmsPagesQueryParamFieldsMetadata    ListKmsPagesQueryParamFields = "metadata"
+	ListKmsPagesQueryParamFieldsHasChildren ListKmsPagesQueryParamFields = "has_children"
+	ListKmsPagesQueryParamFieldsWebURL      ListKmsPagesQueryParamFields = "web_url"
+	ListKmsPagesQueryParamFieldsRaw         ListKmsPagesQueryParamFields = "raw"
 )
 
 func (e ListKmsPagesQueryParamFields) ToPointer() *ListKmsPagesQueryParamFields {
@@ -49,8 +48,6 @@ func (e *ListKmsPagesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "type":
 		fallthrough
 	case "space_id":
-		fallthrough
-	case "parent_page_id":
 		fallthrough
 	case "parent_id":
 		fallthrough
@@ -77,7 +74,7 @@ func (e *ListKmsPagesQueryParamFields) UnmarshalJSON(data []byte) error {
 type ListKmsPagesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListKmsPagesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                       `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                       `queryParam:"style=form,explode=true,name=offset"`

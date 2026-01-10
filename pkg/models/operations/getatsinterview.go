@@ -71,7 +71,7 @@ func (e *GetAtsInterviewQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetAtsInterviewRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetAtsInterviewQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Interview
 	ID string `pathParam:"style=simple,explode=false,name=id"`

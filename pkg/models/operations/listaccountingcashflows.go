@@ -86,7 +86,7 @@ type ListAccountingCashflowsRequest struct {
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListAccountingCashflowsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                                  `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                                  `queryParam:"style=form,explode=true,name=offset"`

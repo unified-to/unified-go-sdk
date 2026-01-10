@@ -93,7 +93,7 @@ type UpdateHrisDeviceRequest struct {
 	HrisDevice shared.HrisDevice `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateHrisDeviceQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Device
 	ID string `pathParam:"style=simple,explode=false,name=id"`

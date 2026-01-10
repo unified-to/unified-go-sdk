@@ -10,7 +10,6 @@
 | `ID`                                       | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
 | `IsPrimary`                                | **bool*                                    | :heavy_minus_sign:                         | N/A                                        |
 | `Name`                                     | *string*                                   | :heavy_check_mark:                         | N/A                                        |
-| `Primary`                                  | **bool*                                    | :heavy_minus_sign:                         | N/A                                        |
 | `Raw`                                      | map[string]*any*                           | :heavy_minus_sign:                         | N/A                                        |
 | `Timezone`                                 | **string*                                  | :heavy_minus_sign:                         | N/A                                        |
 | `UpdatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |

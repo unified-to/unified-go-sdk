@@ -30,6 +30,7 @@
 | `ObjectTypePaymentRefund`           | payment_refund                      |
 | `ObjectTypePaymentSubscription`     | payment_subscription                |
 | `ObjectTypeCommerceItem`            | commerce_item                       |
+| `ObjectTypeCommerceItemvariant`     | commerce_itemvariant                |
 | `ObjectTypeCommerceCollection`      | commerce_collection                 |
 | `ObjectTypeCommerceInventory`       | commerce_inventory                  |
 | `ObjectTypeCommerceLocation`        | commerce_location                   |

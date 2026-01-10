@@ -60,7 +60,7 @@ type PatchCrmPipelineRequest struct {
 	CrmPipeline shared.CrmPipeline `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []PatchCrmPipelineQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Pipeline
 	ID string `pathParam:"style=simple,explode=false,name=id"`

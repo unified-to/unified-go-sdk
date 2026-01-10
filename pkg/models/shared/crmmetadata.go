@@ -545,10 +545,8 @@ type CrmMetadata struct {
 	ExtraData *CrmMetadataExtraData `json:"extra_data,omitempty"`
 	Format    *CrmMetadataFormat    `json:"format,omitempty"`
 	ID        *string               `json:"id,omitempty"`
-	Key       *string               `json:"key,omitempty"`
 	Namespace *string               `json:"namespace,omitempty"`
 	Slug      *string               `json:"slug,omitempty"`
-	Type      *string               `json:"type,omitempty"`
 	Value     *CrmMetadataValue     `json:"value,omitempty"`
 }
 
@@ -573,13 +571,6 @@ func (c *CrmMetadata) GetID() *string {
 	return c.ID
 }
 
-func (c *CrmMetadata) GetKey() *string {
-	if c == nil {
-		return nil
-	}
-	return c.Key
-}
-
 func (c *CrmMetadata) GetNamespace() *string {
 	if c == nil {
 		return nil
@@ -592,13 +583,6 @@ func (c *CrmMetadata) GetSlug() *string {
 		return nil
 	}
 	return c.Slug
-}
-
-func (c *CrmMetadata) GetType() *string {
-	if c == nil {
-		return nil
-	}
-	return c.Type
 }
 
 func (c *CrmMetadata) GetValue() *CrmMetadataValue {

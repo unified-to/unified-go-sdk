@@ -29,7 +29,6 @@
 | `ListAccountingInvoicesQueryParamFieldsStatus`                  | status                                                          |
 | `ListAccountingInvoicesQueryParamFieldsURL`                     | url                                                             |
 | `ListAccountingInvoicesQueryParamFieldsPaymentCollectionMethod` | payment_collection_method                                       |
-| `ListAccountingInvoicesQueryParamFieldsInvoiceAt`               | invoice_at                                                      |
 | `ListAccountingInvoicesQueryParamFieldsType`                    | type                                                            |
 | `ListAccountingInvoicesQueryParamFieldsAttachments`             | attachments                                                     |
 | `ListAccountingInvoicesQueryParamFieldsSend`                    | send                                                            |

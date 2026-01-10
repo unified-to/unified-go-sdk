@@ -70,7 +70,6 @@ type AccountingAccount struct {
 	ID                  *string        `json:"id,omitempty"`
 	IsPayable           *bool          `json:"is_payable,omitempty"`
 	Name                *string        `json:"name,omitempty"`
-	ParentAccountID     *string        `json:"parent_account_id,omitempty"`
 	ParentID            *string        `json:"parent_id,omitempty"`
 	Raw                 map[string]any `json:"raw,omitempty"`
 	Section             *string        `json:"section,omitempty"`
@@ -153,13 +152,6 @@ func (a *AccountingAccount) GetName() *string {
 		return nil
 	}
 	return a.Name
-}
-
-func (a *AccountingAccount) GetParentAccountID() *string {
-	if a == nil {
-		return nil
-	}
-	return a.ParentAccountID
 }
 
 func (a *AccountingAccount) GetParentID() *string {

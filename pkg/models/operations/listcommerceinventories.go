@@ -56,7 +56,7 @@ func (e *ListCommerceInventoriesQueryParamFields) UnmarshalJSON(data []byte) err
 type ListCommerceInventoriesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListCommerceInventoriesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The item variant ID to filter by (reference to CommerceItemVariant)
 	ItemVariantID *string  `queryParam:"style=form,explode=true,name=item_variant_id"`

@@ -83,7 +83,7 @@ func (e *GetStorageFileQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetStorageFileRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetStorageFileQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the File
 	ID string `pathParam:"style=simple,explode=false,name=id"`

@@ -16,7 +16,6 @@
 | `ListAccountingAccountsQueryParamFieldsCurrency`            | currency                                                    |
 | `ListAccountingAccountsQueryParamFieldsCustomerDefinedCode` | customer_defined_code                                       |
 | `ListAccountingAccountsQueryParamFieldsIsPayable`           | is_payable                                                  |
-| `ListAccountingAccountsQueryParamFieldsParentAccountID`     | parent_account_id                                           |
 | `ListAccountingAccountsQueryParamFieldsSection`             | section                                                     |
 | `ListAccountingAccountsQueryParamFieldsSubsection`          | subsection                                                  |
 | `ListAccountingAccountsQueryParamFieldsGroup`               | group                                                       |

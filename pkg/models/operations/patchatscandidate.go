@@ -111,7 +111,7 @@ type PatchAtsCandidateRequest struct {
 	AtsCandidate shared.AtsCandidate `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []PatchAtsCandidateQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Candidate
 	ID string `pathParam:"style=simple,explode=false,name=id"`

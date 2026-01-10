@@ -69,7 +69,7 @@ type PatchAtsDocumentRequest struct {
 	AtsDocument shared.AtsDocument `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []PatchAtsDocumentQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Document
 	ID string `pathParam:"style=simple,explode=false,name=id"`

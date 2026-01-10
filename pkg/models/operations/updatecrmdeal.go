@@ -100,7 +100,7 @@ type UpdateCrmDealRequest struct {
 	CrmDeal shared.CrmDeal `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateCrmDealQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Deal
 	ID string `pathParam:"style=simple,explode=false,name=id"`

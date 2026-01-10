@@ -95,7 +95,7 @@ func (e *ListTaskTasksQueryParamFields) UnmarshalJSON(data []byte) error {
 type ListTaskTasksRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListTaskTasksQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                        `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                        `queryParam:"style=form,explode=true,name=offset"`

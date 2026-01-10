@@ -11,6 +11,5 @@
 | `PatchCalendarCalendarQueryParamFieldsName`        | name                                               |
 | `PatchCalendarCalendarQueryParamFieldsDescription` | description                                        |
 | `PatchCalendarCalendarQueryParamFieldsTimezone`    | timezone                                           |
-| `PatchCalendarCalendarQueryParamFieldsPrimary`     | primary                                            |
 | `PatchCalendarCalendarQueryParamFieldsIsPrimary`   | is_primary                                         |
 | `PatchCalendarCalendarQueryParamFieldsRaw`         | raw                                                |

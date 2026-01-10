@@ -19,6 +19,7 @@ const (
 	ListCommerceItemsQueryParamFieldsPublicName        ListCommerceItemsQueryParamFields = "public_name"
 	ListCommerceItemsQueryParamFieldsSlug              ListCommerceItemsQueryParamFields = "slug"
 	ListCommerceItemsQueryParamFieldsDescription       ListCommerceItemsQueryParamFields = "description"
+	ListCommerceItemsQueryParamFieldsTaxrateID         ListCommerceItemsQueryParamFields = "taxrate_id"
 	ListCommerceItemsQueryParamFieldsGlobalCode        ListCommerceItemsQueryParamFields = "global_code"
 	ListCommerceItemsQueryParamFieldsPublicDescription ListCommerceItemsQueryParamFields = "public_description"
 	ListCommerceItemsQueryParamFieldsIsActive          ListCommerceItemsQueryParamFields = "is_active"
@@ -57,6 +58,8 @@ func (e *ListCommerceItemsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "slug":
 		fallthrough
 	case "description":
+		fallthrough
+	case "taxrate_id":
 		fallthrough
 	case "global_code":
 		fallthrough
@@ -97,7 +100,7 @@ type ListCommerceItemsRequest struct {
 	CollectionID *string `queryParam:"style=form,explode=true,name=collection_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListCommerceItemsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                            `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                            `queryParam:"style=form,explode=true,name=offset"`

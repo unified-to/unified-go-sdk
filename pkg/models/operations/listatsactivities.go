@@ -95,7 +95,7 @@ type ListAtsActivitiesRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The document ID to filter by
 	DocumentID *string `queryParam:"style=form,explode=true,name=document_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListAtsActivitiesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The interview ID to filter by
 	InterviewID *string `queryParam:"style=form,explode=true,name=interview_id"`

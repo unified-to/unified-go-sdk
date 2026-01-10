@@ -102,7 +102,7 @@ type ListCrmDealsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by (reference to CrmContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListCrmDealsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                       `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                       `queryParam:"style=form,explode=true,name=offset"`

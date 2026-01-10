@@ -56,7 +56,7 @@ func (e *GetCommerceInventoryQueryParamFields) UnmarshalJSON(data []byte) error 
 type GetCommerceInventoryRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetCommerceInventoryQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Inventory
 	ID string `pathParam:"style=simple,explode=false,name=id"`

@@ -67,7 +67,7 @@ type ListLmsClassesRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The course ID to filter by (reference to Course)
 	CourseID *string `queryParam:"style=form,explode=true,name=course_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListLmsClassesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                         `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                         `queryParam:"style=form,explode=true,name=offset"`

@@ -12,17 +12,16 @@ import (
 type ListKmsSpacesQueryParamFields string
 
 const (
-	ListKmsSpacesQueryParamFieldsID            ListKmsSpacesQueryParamFields = "id"
-	ListKmsSpacesQueryParamFieldsCreatedAt     ListKmsSpacesQueryParamFields = "created_at"
-	ListKmsSpacesQueryParamFieldsUpdatedAt     ListKmsSpacesQueryParamFields = "updated_at"
-	ListKmsSpacesQueryParamFieldsName          ListKmsSpacesQueryParamFields = "name"
-	ListKmsSpacesQueryParamFieldsDescription   ListKmsSpacesQueryParamFields = "description"
-	ListKmsSpacesQueryParamFieldsParentSpaceID ListKmsSpacesQueryParamFields = "parent_space_id"
-	ListKmsSpacesQueryParamFieldsParentID      ListKmsSpacesQueryParamFields = "parent_id"
-	ListKmsSpacesQueryParamFieldsIsActive      ListKmsSpacesQueryParamFields = "is_active"
-	ListKmsSpacesQueryParamFieldsUserID        ListKmsSpacesQueryParamFields = "user_id"
-	ListKmsSpacesQueryParamFieldsParentPageID  ListKmsSpacesQueryParamFields = "parent_page_id"
-	ListKmsSpacesQueryParamFieldsRaw           ListKmsSpacesQueryParamFields = "raw"
+	ListKmsSpacesQueryParamFieldsID           ListKmsSpacesQueryParamFields = "id"
+	ListKmsSpacesQueryParamFieldsCreatedAt    ListKmsSpacesQueryParamFields = "created_at"
+	ListKmsSpacesQueryParamFieldsUpdatedAt    ListKmsSpacesQueryParamFields = "updated_at"
+	ListKmsSpacesQueryParamFieldsName         ListKmsSpacesQueryParamFields = "name"
+	ListKmsSpacesQueryParamFieldsDescription  ListKmsSpacesQueryParamFields = "description"
+	ListKmsSpacesQueryParamFieldsParentID     ListKmsSpacesQueryParamFields = "parent_id"
+	ListKmsSpacesQueryParamFieldsIsActive     ListKmsSpacesQueryParamFields = "is_active"
+	ListKmsSpacesQueryParamFieldsUserID       ListKmsSpacesQueryParamFields = "user_id"
+	ListKmsSpacesQueryParamFieldsParentPageID ListKmsSpacesQueryParamFields = "parent_page_id"
+	ListKmsSpacesQueryParamFieldsRaw          ListKmsSpacesQueryParamFields = "raw"
 )
 
 func (e ListKmsSpacesQueryParamFields) ToPointer() *ListKmsSpacesQueryParamFields {
@@ -44,8 +43,6 @@ func (e *ListKmsSpacesQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "description":
 		fallthrough
-	case "parent_space_id":
-		fallthrough
 	case "parent_id":
 		fallthrough
 	case "is_active":
@@ -65,7 +62,7 @@ func (e *ListKmsSpacesQueryParamFields) UnmarshalJSON(data []byte) error {
 type ListKmsSpacesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []ListKmsSpacesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                        `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                        `queryParam:"style=form,explode=true,name=offset"`

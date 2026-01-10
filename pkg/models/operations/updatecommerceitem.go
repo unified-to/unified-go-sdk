@@ -19,6 +19,7 @@ const (
 	UpdateCommerceItemQueryParamFieldsPublicName        UpdateCommerceItemQueryParamFields = "public_name"
 	UpdateCommerceItemQueryParamFieldsSlug              UpdateCommerceItemQueryParamFields = "slug"
 	UpdateCommerceItemQueryParamFieldsDescription       UpdateCommerceItemQueryParamFields = "description"
+	UpdateCommerceItemQueryParamFieldsTaxrateID         UpdateCommerceItemQueryParamFields = "taxrate_id"
 	UpdateCommerceItemQueryParamFieldsGlobalCode        UpdateCommerceItemQueryParamFields = "global_code"
 	UpdateCommerceItemQueryParamFieldsPublicDescription UpdateCommerceItemQueryParamFields = "public_description"
 	UpdateCommerceItemQueryParamFieldsIsActive          UpdateCommerceItemQueryParamFields = "is_active"
@@ -58,6 +59,8 @@ func (e *UpdateCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "description":
 		fallthrough
+	case "taxrate_id":
+		fallthrough
 	case "global_code":
 		fallthrough
 	case "public_description":
@@ -96,7 +99,7 @@ type UpdateCommerceItemRequest struct {
 	CommerceItem shared.CommerceItem `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []UpdateCommerceItemQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Item
 	ID string `pathParam:"style=simple,explode=false,name=id"`

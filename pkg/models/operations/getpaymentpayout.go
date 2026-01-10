@@ -56,7 +56,7 @@ func (e *GetPaymentPayoutQueryParamFields) UnmarshalJSON(data []byte) error {
 type GetPaymentPayoutRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
-	// Comma-delimited fields to return
+	// Fields to return
 	Fields []GetPaymentPayoutQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// ID of the Payout
 	ID string `pathParam:"style=simple,explode=false,name=id"`
